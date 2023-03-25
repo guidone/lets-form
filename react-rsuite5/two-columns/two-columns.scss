@@ -1,0 +1,29 @@
+.gforms-two-columns {
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+
+    .left, .right {
+      // disable width 300 of text input
+      .rs-form-control-wrapper {
+        > .rs-input, > .rs-input-number {
+          width: auto;
+        }
+      }
+    }
+
+    .left {
+      flex: 1 0;
+      align-self: auto;
+      margin-right: 5px;
+    }
+
+    .right {
+      margin-left: 5px;
+      flex: 1 0;
+      align-self: auto;
+    }
+}

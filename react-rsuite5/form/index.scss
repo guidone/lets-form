@@ -1,0 +1,13 @@
+.gforms-rsuite5-form {
+  .gforms-toolbar {
+    margin-top: 15px;
+  }
+  // makes tooltip inside labels with smaller margins
+  .rs-form-control-label {
+    > .rs-form-help-text.rs-form-help-text-tooltip {
+      margin-top: 0px;
+      margin-left: 5px;
+    }
+  }
+
+}
