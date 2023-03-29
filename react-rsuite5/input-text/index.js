@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Input, InputGroup } from 'rsuite';
 import _ from 'lodash';
 
-import { Asterisk } from '../../components';
+import { RequiredIcon } from '../../components';
 
 const TextInput = ({
   name,
@@ -19,7 +19,8 @@ const TextInput = ({
   prefix,
   postfix,
   onChange,
-  onBlur
+  onBlur,
+  inside = false
 }) => {
   const inner = (
     <Form.Control
@@ -42,11 +43,11 @@ const TextInput = ({
       {label && <Form.ControlLabel>
         {label}
         {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
-        {required && <Asterisk />}
+        {required && <RequiredIcon />}
       </Form.ControlLabel>}
       {!needsGroup && inner}
       {needsGroup && (
-        <InputGroup>
+        <InputGroup inside={inside}>
           {prefix && <InputGroup.Addon>{prefix}</InputGroup.Addon>}
           {inner}
           {postfix && <InputGroup.Addon>{postfix}</InputGroup.Addon>}

@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-
+import _ from 'lodash';
 import { InputLabel, MenuItem, FormControl, Select, FormHelperText } from '@mui/material';
 
 // DOC: https://mui.com/material-ui/api/select/
@@ -14,9 +14,10 @@ const MuiSelect = ({
   disabled = false,
   readOnly = false,
   required = false,
-  // TODO implement error, but first error layout
   error,
-  minWidth,
+  fullWidth,
+  width,
+  floatingLabel,
   autoWidth,
   size,
   variant,
@@ -32,31 +33,39 @@ const MuiSelect = ({
   );
 
   return (
-    <FormControl
-      sx={minWidth ? { minWidth} : undefined}
-      variant={variant}
-      size={size}
-      disabled={disabled}
-      required={required}
-    >
-      <InputLabel id={`${name}-label`}>{label}</InputLabel>
-      <Select
-        labelId={`${name}-label`}
-        id={name}
-        value={value}
-        onChange={handleChange}
-        onBlur={onBlur}
-        placeholder={placeholder}
-        label={label}
-        autoWidth={autoWidth}
-        inputProps={readOnly ? { readOnly: true } : undefined }
+    <div className="lf-control-select">
+      <FormControl
+        size={size}
+        disabled={disabled}
+        required={required}
+        error={error != null}
+        sx={{ mt: 2 }}
+        variant={variant ?? undefined}
+        fullWidth={fullWidth}
       >
-        {(options || []).map(({ value, label }) => (
-          <MenuItem key={value} value={value}>{label}</MenuItem>
-        ))}
-      </Select>
-      {hint && <FormHelperText>{hint}</FormHelperText>}
-    </FormControl>
+        {label && (
+          <InputLabel id={`mui_select_${name}`}>{label}</InputLabel>
+        )}
+        <Select
+          id={name}
+          labelId={`mui_select_${name}`}
+          value={value}
+          onChange={handleChange}
+          onBlur={onBlur}
+          placeholder={placeholder}
+          label={floatingLabel ? label : undefined}
+          style={_.isNumber(width) && !fullWidth ? { width: `${parseInt(width, 10)}px` } : undefined}
+          autoWidth={autoWidth}
+          inputProps={readOnly ? { readOnly: true } : undefined }
+        >
+          {(options || []).map(({ value, label }) => (
+            <MenuItem key={value} value={value}>{label}</MenuItem>
+          ))}
+        </Select>
+        {hint && !error && <FormHelperText>{hint}</FormHelperText>}
+        {error && <FormHelperText>{error}</FormHelperText>}
+      </FormControl>
+    </div>
   );
 };
 

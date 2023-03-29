@@ -1,10 +1,9 @@
 import _ from 'lodash';
 
-import { FIELDS_KEY } from './fields-keys';
+//import { FIELDS_KEY } from './fields-keys';
 
-// TODO fix this
-//import { enumFramework } from '../../types';
-const enumFramework = ['react', 'react-rsuite5', 'react-material-ui'];
+import { FRAMEWORKS, FIELDS_KEY } from '../costants';
+
 
 
 
@@ -16,7 +15,6 @@ const enumFramework = ['react', 'react-rsuite5', 'react-material-ui'];
  * @returns
  */
 const cleanUp = json => {
-  console.log('------------------------------ passo di qua')
   if (_.isArray(json)) {
     return json.map(item => cleanUp(item));
   } else if (_.isObject(json)) {
@@ -25,7 +23,7 @@ const cleanUp = json => {
     // clone and remove id and empty keys
     const cloned = _.omit(json, ['id', ...emptyKeys]);
     // clean all platform subkeys
-    enumFramework.forEach(key => {
+    FRAMEWORKS.forEach(key => {
       if (cloned[key]) {
         cloned[key] = cleanUp(cloned[key]);
       }

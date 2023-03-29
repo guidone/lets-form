@@ -1,13 +1,24 @@
-import React, { useCallback } from 'react';
-import { Form, InputNumber as RsuiteInputNumber } from 'rsuite';
+import React, { useCallback, useState } from 'react';
+import { Form, InputNumber, InputGroup } from 'rsuite';
 import _ from 'lodash';
 
-// TODO move this up
-import { Asterisk } from '../../components';
+import { RequiredIcon } from '../../components';
+import { CrossCirle } from '../../assets/icons';
 
-const hasDecimals = f => Math.floor(f) !== f;
+const hasDecimals = f => _.isString(f) && (f.includes(',') || f.includes('.'));
 
-const InputNumber = ({
+const InputWithClear = ({ onClear, ...props }) => {
+  return (
+    <InputGroup>
+    <InputNumber {...props} />
+    <InputGroup.Button onClick={onClear}>
+      <CrossCirle width={20} height={20} />
+    </InputGroup.Button>
+  </InputGroup>
+  );
+};
+
+const InputNumberRSuite5 = ({
   name,
   label,
   hint,
@@ -25,21 +36,37 @@ const InputNumber = ({
   postfix,
   onChange = () => {},
   step = 1,
-  onBlur
+  onBlur,
+  inside = false,
+  allowClear
 }) => {
-  const onChangeCallback = useCallback(
+  const [currentValue, setCurrentValue] = useState(value ?? null);
+  const handleChange = useCallback(
     value => {
-      let parsed;
-      if (hasDecimals(step)) {
-        parsed = parseFloat(value, 10);
-      } else {
-        parsed = parseInt(value, 10);
+      let parsed = value;
+      if (_.isString(value)) {
+        if (hasDecimals(value)) {
+          parsed = parseFloat(value);
+        } else {
+          parsed = parseInt(value, 10);
+        }
       }
+      // set the original value again, otherwise never be able to
+      // input a float number i.e. "0.2"
+      setCurrentValue(value);
       if (!isNaN(parsed)) {
         onChange(parsed);
       }
     },
-    [onChange, step]
+    [onChange]
+  );
+
+  const handleClear = useCallback(
+    () => {
+      onChange(undefined);
+      setCurrentValue(null);
+    },
+    [onChange]
   );
 
   return (
@@ -47,18 +74,20 @@ const InputNumber = ({
       {label && <Form.ControlLabel>
         {label}
         {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
-        {required && <Asterisk />}
+        {required && <RequiredIcon />}
       </Form.ControlLabel>}
       <Form.Control
-        accepter={RsuiteInputNumber}
-        value={value}
-        onChange={onChangeCallback}
+        accepter={allowClear ? InputWithClear : InputNumber}
+        value={currentValue}
+        onChange={handleChange}
+        onClear={handleClear}
         onBlur={onBlur}
         disabled={disabled}
         size={size}
         min={min}
         max={max}
         step={step}
+        inside={inside}
         prefix={prefix}
         postfix={postfix}
         placeholder={placeholder}
@@ -70,4 +99,4 @@ const InputNumber = ({
   );
 };
 
-export { InputNumber };
+export { InputNumberRSuite5 as InputNumber };

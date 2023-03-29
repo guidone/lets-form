@@ -1,35 +1,35 @@
-.gforms-two-columns {
+.lf-three-columns {
   display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: stretch;
-    align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
 
-    .left, .right, .center {
-      .rs-form-control-wrapper {
-        > .rs-input, > .rs-input-number {
-          width: auto;
-        }
+  .left, .right, .center {
+    .rs-form-control-wrapper {
+      > .rs-input, > .rs-input-number {
+        //width: auto;
       }
     }
+  }
 
-    .left {
-      flex: 1 0;
-      align-self: auto;
-      margin-right: 5px;
-    }
+  .left {
+    flex: 1 0;
+    align-self: auto;
+    margin-right: 5px;
+  }
 
-    .center {
-      margin-left: 5px;
-      margin-right: 5px;
-      flex: 1 0;
-      align-self: auto;
-    }
+  .center {
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1 0;
+    align-self: auto;
+  }
 
-    .right {
-      margin-left: 5px;
-      flex: 1 0;
-      align-self: auto;
-    }
+  .right {
+    margin-left: 5px;
+    flex: 1 0;
+    align-self: auto;
+  }
 }

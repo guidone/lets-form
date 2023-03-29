@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import { Form, SelectPicker } from 'rsuite';
 
-import { Asterisk } from '../../components';
+import { RequiredIcon } from '../../components';
 
 const Select = ({
   name,
@@ -31,7 +31,7 @@ const Select = ({
         <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
-          {required && <Asterisk />}
+          {required && <RequiredIcon />}
         </Form.ControlLabel>
       )}
       <Form.Control

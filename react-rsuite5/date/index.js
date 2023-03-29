@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { Form, DatePicker } from 'rsuite';
 import * as locales from 'rsuite/locales';
 
-import { Asterisk } from '../../components';
+import { RequiredIcon } from '../../components';
 
 const SelectDate = ({
   name,
@@ -30,7 +30,7 @@ const SelectDate = ({
         <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
-          {required && <Asterisk />}
+          {required && <RequiredIcon />}
         </Form.ControlLabel>
       )}
       <Form.Control

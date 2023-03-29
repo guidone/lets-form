@@ -1,16 +1,9 @@
 import React, { useState } from 'react';
-
 import { Form, Divider, IconButton } from 'rsuite';
 
-//import ArrowDownIcon from '@rsuite/icons/ArrowDown';
-//import ArrowUpIcon from '@rsuite/icons/ArrowUp';
+import { ChevronUp, ChevronDown } from '../../assets/icons';
 
 import './fields-group.scss';
-
-const ArrowDownIcon = () => <span>-</span>
-const ArrowUpIcon = () => <span>+</span>
-
-
 
 const FieldsGroup = ({
   name,
@@ -38,7 +31,7 @@ const FieldsGroup = ({
             disabled={disabled}
             className="arrow"
             appearance="link"
-            icon={isOpen ? <ArrowUpIcon /> : <ArrowDownIcon />}
+            icon={isOpen ? <ChevronUp color="#3498ff"/> : <ChevronDown color="#3498ff" />}
             size="sm"
             onClick={event => {
               setIsOpen(!isOpen);

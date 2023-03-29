@@ -1,2 +1,2 @@
 export * from './validation-errors';
-export * from './asterisk';
+export * from './required-icon';

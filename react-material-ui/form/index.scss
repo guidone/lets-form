@@ -1,0 +1,17 @@
+.lf-lets-form-edit-mode {
+  .lf-form-react-material-ui {
+    // add some margin, not in edit mode
+    //7> *:not(:first-child) {
+    //  margin-top: -24px;
+    //}
+    .form-generator-field-wrapper {
+      margin-top: 0px;
+    }
+  }
+}
+
+.lf-form-react-material-ui {
+  .lf-toolbar {
+    margin-top: 15px; // TODO perhaps use form margins
+  }
+}

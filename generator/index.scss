@@ -1,0 +1,35 @@
+.lf-missing-component {
+  border: 1px solid #bbbbbb;
+  background-color: #f6f6f6;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+
+  .icon {
+    order: 0;
+    flex: 0 0;
+    align-self: auto;
+    margin-top: 2px;
+  }
+
+  .tag-component {
+    background-color: #673ab7;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 1px 4px 2px 4px;
+    border-radius: 3px;
+    line-height: 17px;
+  }
+
+  .message {
+    display: inline-block;
+    margin-left: 10px;
+    order: 0;
+    flex: 1 0;
+    align-self: auto;
+  }
+}

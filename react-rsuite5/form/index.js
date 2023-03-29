@@ -17,7 +17,6 @@ const FormRsuite5 = ({
   onSubmit = () => {},
   onReset = () => {}
 }) => {
-  // class="rs-form rs-form-vertical rs-form-fluid"
   if (onlyFields) {
     return (
       <div className={classNames('rs-form', {
@@ -31,8 +30,8 @@ const FormRsuite5 = ({
 
   return (
     <Form
-      className="gforms-rsuite5-form"
-      onSubmit={onSubmit}
+      className="lf-form-react-rsuite5"
+      //onSubmit={onSubmit}
       layout={layout}
       fluid={fluid}
       readOnly={readOnly}
@@ -44,7 +43,7 @@ const FormRsuite5 = ({
         {children}
       </div>
       {!hideToolbar && (
-        <ButtonToolbar className="gforms-toolbar">
+        <ButtonToolbar className="lf-toolbar">
           <Button
             onClick={onReset}
           >Cancel</Button>

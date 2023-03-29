@@ -15,6 +15,11 @@ import { Slider } from './slider';
 import { CheckboxGroup } from './checkbox-group';
 import { RadioGroup } from './radio-group';
 import { InputTag } from './input-tag';
+import { InputMask } from './input-mask';
+import { Textarea } from './textarea';
+import { Rate } from './rate';
+import { Placeholder } from './placeholder';
+import { Multiselect } from './multiselect';
 
 const Fields = {
   'text-input': {
@@ -58,6 +63,21 @@ const Fields = {
   },
   'input-tag': {
     'react-rsuite5': InputTag
+  },
+  'input-mask': {
+    'react-rsuite5': InputMask
+  },
+  'textarea': {
+    'react-rsuite5': Textarea
+  },
+  'rate': {
+    'react-rsuite5': Rate
+  },
+  'placeholder': {
+    'react-rsuite5': Placeholder
+  },
+  'multiselect': {
+    'react-rsuite5': Multiselect
   }
 };
 
@@ -69,4 +89,5 @@ const FormGenerator = GenerateGenerator({ Fields, Forms });
 
 export default FormGenerator ;
 export * from '../helpers';
+export * from '../costants';
 export { Fields, Forms };

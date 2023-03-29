@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
 import _ from 'lodash';
 import { Form, IconButton } from 'rsuite';
-//import PlusIcon from '@rsuite/icons/Plus';
-//import MinusIcon from '@rsuite/icons/Minus';
+import { PlusCircle, MinusCircle } from '../../assets/icons';
+
 
 import './list-array.scss';
 
-import { Asterisk } from '../../components';
+import { RequiredIcon } from '../../components';
 
 import FormGenerator, { fillIds } from '../../react-rsuite5';
 
-const PlusIcon = () => <span>+</span>;
-const MinusIcon = () => <span>-</span>;
 
 
 
 const ArrayItem = ({
   children,
   item,
+  disabled,
   onAdd = () => {},
   onRemove = () => {},
   disableAdd = false,
@@ -34,10 +33,10 @@ const ArrayItem = ({
       <div className="buttons">
         {showAdd && (
           <IconButton
-            disabled={disableAdd}
+            disabled={disableAdd || disabled}
             className="arrow"
             appearance="link"
-            icon={<PlusIcon />}
+            icon={<PlusCircle height={16} width={16} color="#3498ff" />}
             size="sm"
             onClick={event => {
               onAdd();
@@ -47,8 +46,9 @@ const ArrayItem = ({
         {!showAdd && (
           <IconButton
             className="arrow"
+            disabled={disabled}
             appearance="link"
-            icon={<MinusIcon />}
+            icon={<MinusCircle height={16} width={16} color="#3498ff" />}
             size="sm"
             onClick={event => {
               onRemove();
@@ -75,6 +75,7 @@ const ListArray = ({
   value,
   onChange = () => {},
   onBlur = () => {},
+  disabled = false,
   fields,
   hint,
   required,
@@ -84,7 +85,9 @@ const ListArray = ({
   maxHeigth = 200,
   leftMargin = 15
 }) => {
-  const [items, setItems] = useState(fillIds(value) || [{ id: _.uniqueId() }]);
+  const [items, setItems] = useState(
+    _.isArray(value) && !_.isEmpty(value) ? fillIds(value) : [{ id: _.uniqueId() }]
+  );
 
   // TODO aggiungere params per layouat dentro
   const form = {
@@ -109,10 +112,10 @@ const ListArray = ({
     {label && <Form.ControlLabel>
         {label}
         {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
-        {required && <Asterisk />}
+        {required && <RequiredIcon />}
       </Form.ControlLabel>}
     <div style={style}>
-      {items.map((item, idx) => {
+      {(_.isArray(items) ? items : []).map((item, idx) => {
 
         const canAdd = idx === (items.length - 1) && !isEmptyItem(item);
 
@@ -121,6 +124,7 @@ const ListArray = ({
         return (
           <ArrayItem
             key={item.id}
+            disabled={disabled}
             disableAdd={!canAdd}
             showAdd={showAdd}
             onAdd={() => {
@@ -137,6 +141,7 @@ const ListArray = ({
           >
             <FormGenerator
               form={form}
+              disabled={disabled}
               framework="react-rsuite5"
               defaultValues={item}
               onlyFields={true}

@@ -11,7 +11,7 @@ const ThreeColumns = ({
 }) => {
   return (
     <Form.Group controlId={name}>
-      <div className="gforms-two-columns">
+      <div className="lf-three-columns">
         <div className="left">
           {_.isFunction(children) && children('left')}
         </div>

@@ -11,7 +11,9 @@ const Toggle = ({
   onChange,
   size,
   labelPlacement,
-  onBlur
+  onBlur,
+  required,
+  disableRipple
 }) => {
 
   const handleChange = useCallback(
@@ -29,6 +31,8 @@ const Toggle = ({
       onBlur={onBlur}
       color={color}
       size={size}
+      required={required}
+      disableRipple={disableRipple}
     />
   );
 

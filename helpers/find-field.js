@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 import { reduceFields } from './reduce-fields';
 
-const createEmptyField = (fields, component) => {
+const createEmptyField = (Manifests, fields, component, framework) => {
   const countFields = reduceFields(
     fields,
     (field, accumulator) => accumulator + 1,
@@ -23,11 +23,16 @@ const createEmptyField = (fields, component) => {
     ++retries;
   }
 
+  let defaultValues = framework && Manifests[component] && Manifests[component].defaults && Manifests[component].defaults[framework] ?
+    Manifests[component].defaults[framework] : {}
+
+
   return {
     component,
     label: `Field ${countFields + 1}`,
     name: newName,
-    id: newId
+    id: newId,
+    ...defaultValues
   };
 };
 

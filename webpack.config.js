@@ -44,6 +44,9 @@ module.exports = {
       'react-dom': 'umd react-dom',
       'prop-types': 'umd prop-types',
       '@mui/material': 'umd @mui/material',
+      'react-bootstrap': 'umd react-bootstrap',
+      'antd': 'umd antd',
+      'dayjs': 'umd dayjs'
     }
   ],
   /*

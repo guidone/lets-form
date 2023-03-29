@@ -1,0 +1,8 @@
+.lf-form-react-rsuite5 {
+  .lf-control-slider {
+    // give some bottom space to slider, otherwise attached to next label
+    .rs-slider {
+      margin-bottom: 40px;
+    }
+  }
+}

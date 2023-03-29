@@ -68,6 +68,7 @@ const mapFields = (
     return newField;
   });
 
+  // check if some element of the array is changed, keep instance consistency otherwise
   const hasChanges = fields.some((field, idx) => field !== newFields[idx]);
 
   return hasChanges ? newFields : fields;

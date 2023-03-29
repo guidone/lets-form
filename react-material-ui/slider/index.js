@@ -1,23 +1,29 @@
 import React, { useCallback } from 'react';
+import _ from 'lodash';
+import { Slider, FormHelperText, FormControl, FormLabel } from '@mui/material';
 
-
-import { Slider, FormGroup, FormControlLabel, FormLabel } from '@mui/material';
+  // DOCS: https://mui.com/material-ui/api/slider/
 
 const SliderMui = ({
   name,
   label,
   value,
   disabled = false,
+  required,
   color,
   onChange,
   size,
   valueLabelDisplay,
   onBlur,
+  error,
   min,
   max,
   step,
+  hint,
   showMarks,
-  labelPlacement
+  customMarks,
+  width,
+  fullWidth
 }) => {
 
   const handleChange = useCallback(
@@ -27,41 +33,38 @@ const SliderMui = ({
     [onChange]
   );
 
-  // TODO label?
+
   // TODO marks with items
 
 
-  // DOCS: https://mui.com/material-ui/api/slider/
-  const ctrl = (
-    <Slider
-      name={name}
-      marks={showMarks}
-      value={value}
-      onChange={handleChange}
-      disabled={disabled}
-      onBlur={onBlur}
-      color={color}
-      min={min}
-      max={max}
-      step={step}
-      size={size}
-      valueLabelDisplay={valueLabelDisplay}
-    />
-  );
-
   return (
-    <FormGroup>
-      {label && !labelPlacement && <FormLabel>{label}</FormLabel>}
-      {label && labelPlacement && (
-        <FormControlLabel
-          labelPlacement={labelPlacement ? labelPlacement : undefined}
+    <div className="lf-control-slider">
+      <FormControl
+        required={required}
+        error={error != null}
+        fullWidth={fullWidth}
+        sx={{ mt: 2 }}
+      >
+        {label && <FormLabel>{label}</FormLabel>}
+        <Slider
+          name={name}
+          marks={customMarks ? customMarks : showMarks}
+          value={value}
+          onChange={handleChange}
           disabled={disabled}
-          label={label}
-          control={ctrl}
+          onBlur={onBlur}
+          color={color}
+          style={_.isNumber(width) && !fullWidth ? { width: `${parseInt(width, 10)}px` } : undefined}
+          min={min}
+          max={max}
+          step={step}
+          size={size}
+          valueLabelDisplay={valueLabelDisplay}
         />
-      )}
-      {!(label && labelPlacement) && ctrl}
-    </FormGroup>
+        {hint && !error && <FormHelperText>{hint}</FormHelperText>}
+        {error && <FormHelperText>{error}</FormHelperText>}
+      </FormControl>
+    </div>
   );
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Form, Toggle } from 'rsuite';
 
-import { Asterisk } from '../../components';
+import { RequiredIcon } from '../../components';
 
 import './index.scss';
 
@@ -27,7 +27,7 @@ const ToggleInput = ({
         <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
-          {required && <Asterisk />}
+          {required && <RequiredIcon />}
         </Form.ControlLabel>
       )}
       <Form.Control

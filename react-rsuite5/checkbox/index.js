@@ -2,6 +2,8 @@ import React, { useCallback } from 'react';
 import _ from 'lodash';
 import { Form, Checkbox } from 'rsuite';
 
+import './index.scss';
+
 const CheckboxRSuite = ({
   name,
   label,
@@ -28,7 +30,7 @@ const CheckboxRSuite = ({
   );
 
   return (
-    <Form.Group controlId={name}>
+    <Form.Group controlId={name} className="lt-control-checkbox">
       <Form.Control
         accepter={Checkbox}
         name={name}
@@ -42,6 +44,7 @@ const CheckboxRSuite = ({
         {...rest}
       >
         {label}
+        {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
       </Form.Control>
       {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
     </Form.Group>

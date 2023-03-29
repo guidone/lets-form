@@ -5,15 +5,9 @@ import { TextInput } from './input-text';
 import { Select } from './select';
 import { Toggle } from './toggle';
 import { Slider } from './slider';
-
-/*import { ToggleInput } from './toggle';
-
-import { FieldsGroup } from './group';
-import { ListArray } from './array';
-import { TwoColumns } from './two-columns';
-import { ThreeColumns } from './three-columns';
-import { InputNumber } from './input-number';*/
-
+import { Placeholder } from './placeholder';
+import { Checkbox } from './checkbox';
+import { Rate } from './rate';
 
 const Fields = {
   'text-input': {
@@ -25,27 +19,18 @@ const Fields = {
   'toggle': {
     'react-material-ui': Toggle
   },
+  'checkbox': {
+    'react-material-ui': Checkbox
+  },
   'slider': {
     'react-material-ui': Slider
+  },
+  'placeholder': {
+    'react-material-ui': Placeholder
+  },
+  'rate': {
+    'react-material-ui': Rate
   }
-  /*'toggle': {
-    'react-rsuite5': ToggleInput
-  },
-  'group': {
-    'react-rsuite5': FieldsGroup
-  },
-  'array': {
-    'react-rsuite5': ListArray
-  },
-  'two-columns': {
-    'react-rsuite5': TwoColumns
-  },
-  'three-columns': {
-    'react-rsuite5': ThreeColumns
-  },
-  'input-number': {
-    'react-rsuite5': InputNumber
-  }*/
 };
 
 const Forms = {
@@ -56,4 +41,5 @@ const FormGenerator = GenerateGenerator({ Fields, Forms });
 
 export default FormGenerator ;
 export * from '../helpers';
+export * from '../costants';
 export { Fields, Forms };

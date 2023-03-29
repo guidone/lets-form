@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, TagInput } from 'rsuite';
 import _ from 'lodash';
 
-import { Asterisk } from '../../components';
+import { RequiredIcon } from '../../components';
 
 import './index.scss';
 
@@ -26,7 +26,7 @@ const InputTag = ({
       {label && <Form.ControlLabel>
         {label}
         {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
-        {required && <Asterisk />}
+        {required && <RequiredIcon />}
       </Form.ControlLabel>}
       <Form.Control
         name={name}

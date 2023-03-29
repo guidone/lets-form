@@ -2,7 +2,14 @@ import React, { useCallback } from 'react';
 import _ from 'lodash';
 import { Form, Slider } from 'rsuite';
 
-import { Asterisk } from '../../components';
+import { RequiredIcon } from '../../components';
+
+import './index.scss';
+
+const validateMarks = marks => {
+  return _.isArray(marks) &&
+    marks.every(mark => _.isObject(mark) && mark.value && mark.label);
+};
 
 const SliderRsuite = ({
   name,
@@ -23,19 +30,19 @@ const SliderRsuite = ({
 
   const handleRenderMark = useCallback(
     number => {
-      const found = marks.find(({ value }) => value === number);
+      const found = marks.find((mark) => mark && mark.value === number);
       return found ? found.label : undefined;
     },
     [marks]
   );
 
   return (
-    <Form.Group controlId={name}>
+    <Form.Group controlId={name} className="lf-control-slider">
       {label && (
         <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
-          {required && <Asterisk />}
+          {required && <RequiredIcon />}
         </Form.ControlLabel>
       )}
       <Slider
@@ -46,7 +53,7 @@ const SliderRsuite = ({
         onChange={onChange}
         readOnly={readOnly}
         onBlur={onBlur}
-        renderMark={handleRenderMark}
+        renderMark={validateMarks(marks) ? handleRenderMark : undefined}
         errorMessage={_.isString(error) ? error : undefined }
         disabled={disabled}
         tooltip={showTooltip}

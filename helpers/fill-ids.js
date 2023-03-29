@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import { FIELDS_KEY } from './fields-keys';
+import { FIELDS_KEY } from '../costants';
 
 const fillIds = (fields, namespace = '') => {
   if (_.isEmpty(fields)) {
