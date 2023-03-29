@@ -1,3 +1,4 @@
+import React from 'react';
 
 export const PlusCircle = ({ width = 24, height = 24, color = '#000000' }) => (
   <svg width={`${width}px`} height={`${height}px`} viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">

@@ -7,7 +7,7 @@
   "scripts": {
     "prebuild": "./scripts/copy-all-files.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production --progress",
+    "build:webpack": "webpack --mode production --progress",
     "build-rsuite5": "webpack --mode production --progress --config ./webpack.config-rsuite5.js"
   },
   "author": "Guido Bellomo",
