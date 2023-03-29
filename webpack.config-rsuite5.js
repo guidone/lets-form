@@ -23,13 +23,13 @@ if (process.env.ANALYZE === 'true') {
 module.exports = {
   mode: 'production',
   entry: {
-    'lets-form': path.join(__dirname, 'index.js')
+    'lets-form': path.join(__dirname, 'react-rsuite5/index.js')
   },
   output: {
-    path: path.join(__dirname, 'dist'),
-    library: 'lets-form',
-    filename: "lets-form.min.js",
-    libraryTarget: "umd",
+    path: __dirname,
+    library: 'lets-form/rsuite5',
+    filename: 'rsuite5.js',
+    libraryTarget: 'umd',
   },
   externals: [
     {
