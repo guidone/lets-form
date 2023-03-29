@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define(["react", "rsuite", "rsuite/locales"], factory);
 	else if(typeof exports === 'object')
-		exports["lets-form/rsuite5"] = factory(require("react"), require("rsuite"), require("rsuite/locales"));
+		exports["lets-form-rsuite5"] = factory(require("react"), require("rsuite"), require("rsuite/locales"));
 	else
-		root["lets-form/rsuite5"] = factory(root["react"], root["rsuite"], root["rsuite/locales"]);
+		root["lets-form-rsuite5"] = factory(root["react"], root["rsuite"], root["rsuite/locales"]);
 })(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__1186__, __WEBPACK_EXTERNAL_MODULE__977__) => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
@@ -84,16 +84,16 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-missing-component{border:1px solid #bbb;background-color:#f6f6f6;padding:20px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-missing-component .icon{order:0;flex:0 0;align-self:auto;margin-top:2px}.lf-missing-component .tag-component{background-color:#673ab7;color:#fff;font-size:12px;padding:1px 4px 2px 4px;border-radius:3px;line-height:17px}.lf-missing-component .message{display:inline-block;margin-left:10px;order:0;flex:1 0;align-self:auto}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-missing-component{border:1px solid #bbb;background-color:#f6f6f6;padding:20px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-missing-component .icon{order:0;flex:0 0;align-self:auto;margin-top:2px}.lf-missing-component .tag-component{background-color:#673ab7;color:#fff;font-size:12px;padding:1px 4px 2px 4px;border-radius:3px;line-height:17px}.lf-missing-component .message{display:inline-block;margin-left:10px;order:0;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./generator/index.scss"],"names":[],"mappings":"AAAA,sBACE,qBAAA,CACA,wBAAA,CACA,YAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,4BACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,cAAA,CAGF,qCACE,wBAAA,CACA,UAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,gBAAA,CAGF,+BACE,oBAAA,CACA,gBAAA,CACA,OAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n\n  .icon {\n    order: 0;\n    flex: 0 0;\n    align-self: auto;\n    margin-top: 2px;\n  }\n\n  .tag-component {\n    background-color: #673ab7;\n    color: #ffffff;\n    font-size: 12px;\n    padding: 1px 4px 2px 4px;\n    border-radius: 3px;\n    line-height: 17px;\n  }\n\n  .message {\n    display: inline-block;\n    margin-left: 10px;\n    order: 0;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -107,16 +107,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-missing-component{border:1px solid
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".gforms-list-array .gforms-array-item{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;align-items:stretch;margin-top:5px;position:relative}.gforms-list-array .gforms-array-item .rs-form-group{margin-bottom:5px !important}.gforms-list-array .gforms-array-item>.inner-form{order:0;flex:1 0 auto;align-self:auto}.gforms-list-array .gforms-array-item>.inner-form .rs-form-inline .rs-input,.gforms-list-array .gforms-array-item>.inner-form .rs-form-inline .rs-input-number{width:auto}.gforms-list-array .gforms-array-item>.buttons{flex:0 0 auto;align-self:center;margin-top:-5px}.gforms-list-array .gforms-array-item:not(:first-child){border-top:1px solid #eee;padding-top:10px}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".gforms-list-array .gforms-array-item{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;align-items:stretch;margin-top:5px;position:relative}.gforms-list-array .gforms-array-item .rs-form-group{margin-bottom:5px !important}.gforms-list-array .gforms-array-item>.inner-form{order:0;flex:1 0 auto;align-self:auto}.gforms-list-array .gforms-array-item>.inner-form .rs-form-inline .rs-input,.gforms-list-array .gforms-array-item>.inner-form .rs-form-inline .rs-input-number{width:auto}.gforms-list-array .gforms-array-item>.buttons{flex:0 0 auto;align-self:center;margin-top:-5px}.gforms-list-array .gforms-array-item:not(:first-child){border-top:1px solid #eee;padding-top:10px}", "",{"version":3,"sources":["webpack://./react-rsuite5/array/list-array.scss"],"names":[],"mappings":"AAEE,sCACE,YAAA,CACA,kBAAA,CACA,gBAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,cAAA,CACA,iBAAA,CAGA,qDACE,4BAAA,CAGF,kDACE,OAAA,CACA,aAAA,CACA,eAAA,CAIE,+JACE,UAAA,CAKN,+CACE,aAAA,CACA,iBAAA,CACA,eAAA,CAIJ,wDACE,yBAAA,CACA,gBAAA","sourcesContent":[".gforms-list-array {\n\n  .gforms-array-item {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n    margin-top: 5px;\n    position: relative;\n\n\n    .rs-form-group {\n      margin-bottom: 5px !important;\n    }\n\n    > .inner-form {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n\n      .rs-form-inline {\n        // remove the 300px default size for inline in array, too big\n        .rs-input, .rs-input-number {\n          width: auto;\n        }\n      }\n    }\n\n    > .buttons {\n      flex: 0 0 auto;\n      align-self: center;\n      margin-top: -5px;\n    }\n  }\n\n  .gforms-array-item:not(:first-child) {\n    border-top: 1px solid #eeeeee;\n    padding-top: 10px;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -130,16 +130,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".gforms-list-array .gforms-array-item{
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text{align-items:inherit;margin-top:-1px;display:inline-block;margin-left:5px}.lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text svg{margin-top:-2px}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text{align-items:inherit;margin-top:-1px;display:inline-block;margin-left:5px}.lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text svg{margin-top:-2px}", "",{"version":3,"sources":["webpack://./react-rsuite5/checkbox/index.scss"],"names":[],"mappings":"AAEI,+DACE,mBAAA,CACA,eAAA,CACA,oBAAA,CACA,eAAA,CAEA,mEACE,eAAA","sourcesContent":[".lf-form-react-rsuite5 {\n  .lt-control-checkbox {\n    .rs-form-help-text {\n      align-items: inherit;\n      margin-top: -1px;\n      display: inline-block;\n      margin-left: 5px;\n\n      svg {\n        margin-top: -2px;\n      }\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -153,16 +153,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lt-control-che
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-toolbar{margin-top:15px}.lf-form-react-rsuite5 .rs-form-control-label>.rs-form-help-text.rs-form-help-text-tooltip{margin-top:0px;margin-left:5px}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-toolbar{margin-top:15px}.lf-form-react-rsuite5 .rs-form-control-label>.rs-form-help-text.rs-form-help-text-tooltip{margin-top:0px;margin-left:5px}", "",{"version":3,"sources":["webpack://./react-rsuite5/form/index.scss"],"names":[],"mappings":"AACE,mCACE,eAAA,CAIA,2FACE,cAAA,CACA,eAAA","sourcesContent":[".lf-form-react-rsuite5 {\n  .lf-toolbar {\n    margin-top: 15px;\n  }\n  // makes tooltip inside labels with smaller margins\n  .rs-form-control-label {\n    > .rs-form-help-text.rs-form-help-text-tooltip {\n      margin-top: 0px;\n      margin-left: 5px;\n    }\n  }\n\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -176,16 +176,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-toolbar{mar
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".rsuite5-fields-group .arrow{padding:0px}.rsuite5-fields-group .arrow .rs-icon{font-size:24px}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".rsuite5-fields-group .arrow{padding:0px}.rsuite5-fields-group .arrow .rs-icon{font-size:24px}", "",{"version":3,"sources":["webpack://./react-rsuite5/group/fields-group.scss"],"names":[],"mappings":"AACE,6BACE,WAAA,CACA,sCACE,cAAA","sourcesContent":[".rsuite5-fields-group {\n  .arrow {\n    padding: 0px;\n    .rs-icon {\n      font-size: 24px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -199,16 +199,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".rsuite5-fields-group .arrow{padding:0
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lets-form-input-tag .rs-picker-input{min-width:120px}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lets-form-input-tag .rs-picker-input{min-width:120px}", "",{"version":3,"sources":["webpack://./react-rsuite5/input-tag/index.scss"],"names":[],"mappings":"AACE,sCAEE,eAAA","sourcesContent":[".lets-form-input-tag {\n  .rs-picker-input {\n    // minimum width, otherwise if empty, the rightmost end is cut\n    min-width: 120px;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -222,16 +222,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lets-form-input-tag .rs-picker-input{
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-control-slider .rs-slider{margin-bottom:40px}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-control-slider .rs-slider{margin-bottom:40px}", "",{"version":3,"sources":["webpack://./react-rsuite5/slider/index.scss"],"names":[],"mappings":"AAGI,qDACE,kBAAA","sourcesContent":[".lf-form-react-rsuite5 {\n  .lf-control-slider {\n    // give some bottom space to slider, otherwise attached to next label\n    .rs-slider {\n      margin-bottom: 40px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -245,16 +245,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-control-sli
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch}.lf-three-columns .left{flex:1 0;align-self:auto;margin-right:5px}.lf-three-columns .center{margin-left:5px;margin-right:5px;flex:1 0;align-self:auto}.lf-three-columns .right{margin-left:5px;flex:1 0;align-self:auto}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch}.lf-three-columns .left{flex:1 0;align-self:auto;margin-right:5px}.lf-three-columns .center{margin-left:5px;margin-right:5px;flex:1 0;align-self:auto}.lf-three-columns .right{margin-left:5px;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./react-rsuite5/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,kBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CAUA,wBACE,QAAA,CACA,eAAA,CACA,gBAAA,CAGF,0BACE,eAAA,CACA,gBAAA,CACA,QAAA,CACA,eAAA,CAGF,yBACE,eAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n\n  .left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 5px;\n  }\n\n  .center {\n    margin-left: 5px;\n    margin-right: 5px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    margin-left: 5px;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -268,16 +268,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-di
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -291,16 +291,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8081);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".gforms-two-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch}.gforms-two-columns .left .rs-form-control-wrapper>.rs-input,.gforms-two-columns .left .rs-form-control-wrapper>.rs-input-number,.gforms-two-columns .right .rs-form-control-wrapper>.rs-input,.gforms-two-columns .right .rs-form-control-wrapper>.rs-input-number{width:auto}.gforms-two-columns .left{flex:1 0;align-self:auto;margin-right:5px}.gforms-two-columns .right{margin-left:5px;flex:1 0;align-self:auto}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".gforms-two-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch}.gforms-two-columns .left .rs-form-control-wrapper>.rs-input,.gforms-two-columns .left .rs-form-control-wrapper>.rs-input-number,.gforms-two-columns .right .rs-form-control-wrapper>.rs-input,.gforms-two-columns .right .rs-form-control-wrapper>.rs-input-number{width:auto}.gforms-two-columns .left{flex:1 0;align-self:auto;margin-right:5px}.gforms-two-columns .right{margin-left:5px;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./react-rsuite5/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,oBACE,YAAA,CACE,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CAKI,oQACE,UAAA,CAKN,0BACE,QAAA,CACA,eAAA,CACA,gBAAA,CAGF,2BACE,eAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".gforms-two-columns {\n  display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n\n    .left, .right {\n      // disable width 300 of text input\n      .rs-form-control-wrapper {\n        > .rs-input, > .rs-input-number {\n          width: auto;\n        }\n      }\n    }\n\n    .left {\n      flex: 1 0;\n      align-self: auto;\n      margin-right: 5px;\n    }\n\n    .right {\n      margin-left: 5px;\n      flex: 1 0;\n      align-self: auto;\n    }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -399,14 +399,25 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 
-/***/ 8081:
+/***/ 7537:
 /***/ ((module) => {
 
 "use strict";
 
 
-module.exports = function (i) {
-  return i[1];
+module.exports = function (item) {
+  var content = item[1];
+  var cssMapping = item[3];
+  if (!cssMapping) {
+    return content;
+  }
+  if (typeof btoa === "function") {
+    var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(cssMapping))));
+    var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
+    var sourceMapping = "/*# ".concat(data, " */");
+    return [content].concat([sourceMapping]).join("\n");
+  }
+  return [content].join("\n");
 };
 
 /***/ }),
@@ -30930,7 +30941,89 @@ var ValidationErrors = function ValidationErrors(_ref) {
   }));
 };
 
+;// CONCATENATED MODULE: ./assets/icons/plus-circle.js
+
+var PlusCircle = function PlusCircle(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 24 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 24 : _ref$height,
+    _ref$color = _ref.color,
+    color = _ref$color === void 0 ? '#000000' : _ref$color;
+  return /*#__PURE__*/external_react_default().createElement("svg", {
+    width: "".concat(width, "px"),
+    height: "".concat(height, "px"),
+    viewBox: "0 0 20 20",
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none"
+  }, /*#__PURE__*/external_react_default().createElement("path", {
+    fill: color,
+    fillRule: "evenodd",
+    d: "M10 3a7 7 0 100 14 7 7 0 000-14zm-9 7a9 9 0 1118 0 9 9 0 01-18 0zm14 .069a1 1 0 01-1 1h-2.931V14a1 1 0 11-2 0v-2.931H6a1 1 0 110-2h3.069V6a1 1 0 112 0v3.069H14a1 1 0 011 1z"
+  }));
+};
+;// CONCATENATED MODULE: ./assets/icons/minus-circle.js
+
+var MinusCircle = function MinusCircle(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 24 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 24 : _ref$height,
+    _ref$color = _ref.color,
+    color = _ref$color === void 0 ? '#000000' : _ref$color;
+  return /*#__PURE__*/external_react_default().createElement("svg", {
+    width: "".concat(width, "px"),
+    height: "".concat(height, "px"),
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/external_react_default().createElement("path", {
+    fill: color,
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12ZM12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM7 11C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11H7Z"
+  }));
+};
+;// CONCATENATED MODULE: ./assets/icons/chevron-down.js
+
+var ChevronDown = function ChevronDown(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 24 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 24 : _ref$height,
+    _ref$color = _ref.color,
+    color = _ref$color === void 0 ? '#000000' : _ref$color;
+  return /*#__PURE__*/external_react_default().createElement("svg", {
+    width: "".concat(width, "px"),
+    height: "".concat(height, "px"),
+    fill: color,
+    viewBox: "0 0 24 24",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/external_react_default().createElement("path", {
+    d: "M17,8H7a1,1,0,0,0-.768,1.641l5,6a1,1,0,0,0,1.536,0l5-6A1,1,0,0,0,17,8Zm-5,5.438L9.135,10h5.73Z"
+  }));
+};
+;// CONCATENATED MODULE: ./assets/icons/chevron-up.js
+
+var ChevronUp = function ChevronUp(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 24 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 24 : _ref$height,
+    _ref$color = _ref.color,
+    color = _ref$color === void 0 ? '#000000' : _ref$color;
+  return /*#__PURE__*/external_react_default().createElement("svg", {
+    width: "".concat(width, "px"),
+    height: "".concat(height, "px"),
+    viewBox: "0 0 24 24",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/external_react_default().createElement("path", {
+    fill: color,
+    d: "M12.768,8.359a1.035,1.035,0,0,0-1.536,0l-5,6A1,1,0,0,0,7,16H17a1,1,0,0,0,.768-1.641ZM9.135,14,12,10.563,14.865,14Z"
+  }));
+};
 ;// CONCATENATED MODULE: ./assets/icons/asterisk.js
+
 var Asterisk = function Asterisk(_ref) {
   var _ref$width = _ref.width,
     width = _ref$width === void 0 ? 24 : _ref$width,
@@ -30939,14 +31032,14 @@ var Asterisk = function Asterisk(_ref) {
     _ref$color = _ref.color,
     color = _ref$color === void 0 ? '#000000' : _ref$color,
     style = _ref.style;
-  return /*#__PURE__*/React.createElement("svg", {
+  return /*#__PURE__*/external_react_default().createElement("svg", {
     width: "".concat(width, "px"),
     height: "".concat(height, "px"),
     style: style,
     version: "1.1",
     id: "_x32_",
     viewBox: "0 0 512 512"
-  }, /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("polygon", {
+  }, /*#__PURE__*/external_react_default().createElement("g", null, /*#__PURE__*/external_react_default().createElement("polygon", {
     style: {
       fill: color
     },
@@ -30954,6 +31047,57 @@ var Asterisk = function Asterisk(_ref) {
     points: "501.539,169.221 453.886,86.7 303.669,173.449 303.669,0 208.365,0 208.365,173.479 58.114,86.73\r 10.461,169.261 160.674,255.99 10.501,342.71 58.154,425.231 208.365,338.482 208.365,512 303.669,512 303.669,338.542\r 453.846,425.271 501.499,342.74 351.267,255.99 \t"
   })));
 };
+;// CONCATENATED MODULE: ./assets/icons/warning.js
+
+var Warning = function Warning(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 24 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 24 : _ref$height,
+    _ref$color = _ref.color,
+    color = _ref$color === void 0 ? '#000000' : _ref$color;
+  return /*#__PURE__*/external_react_default().createElement("svg", {
+    fill: color,
+    width: "".concat(width, "px"),
+    height: "".concat(height, "px"),
+    viewBox: "0 0 1920 1920",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/external_react_default().createElement("path", {
+    d: "M960 0c530.193 0 960 429.807 960 960s-429.807 960-960 960S0 1490.193 0 960 429.807 0 960 0Zm-9.838 1342.685c-84.47 0-153.19 68.721-153.19 153.19 0 84.47 68.72 153.192 153.19 153.192s153.19-68.721 153.19-153.191-68.72-153.19-153.19-153.19ZM1153.658 320H746.667l99.118 898.623h208.755L1153.658 320Z",
+    fillRule: "evenodd"
+  }));
+};
+;// CONCATENATED MODULE: ./assets/icons/cross-circle.js
+
+var CrossCirle = function CrossCirle(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 24 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 24 : _ref$height,
+    _ref$color = _ref.color,
+    color = _ref$color === void 0 ? '#000000' : _ref$color;
+  return /*#__PURE__*/external_react_default().createElement("svg", {
+    width: "".concat(width, "px"),
+    height: "".concat(height, "px"),
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/external_react_default().createElement("path", {
+    d: "M16 8L8 16M8.00001 8L16 16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z",
+    stroke: color,
+    strokeSidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }));
+};
+;// CONCATENATED MODULE: ./assets/icons/index.js
+
+
+
+
+
+
+
 ;// CONCATENATED MODULE: ./components/required-icon/index.js
 
 
@@ -30975,25 +31119,6 @@ var RequiredIcon = function RequiredIcon() {
 var FRAMEWORKS = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd'];
 var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design'];
 var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
-;// CONCATENATED MODULE: ./assets/icons/warning.js
-var Warning = function Warning(_ref) {
-  var _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 24 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height,
-    _ref$color = _ref.color,
-    color = _ref$color === void 0 ? '#000000' : _ref$color;
-  return /*#__PURE__*/React.createElement("svg", {
-    fill: color,
-    width: "".concat(width, "px"),
-    height: "".concat(height, "px"),
-    viewBox: "0 0 1920 1920",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/React.createElement("path", {
-    d: "M960 0c530.193 0 960 429.807 960 960s-429.807 960-960 960S0 1490.193 0 960 429.807 0 960 0Zm-9.838 1342.685c-84.47 0-153.19 68.721-153.19 153.19 0 84.47 68.72 153.192 153.19 153.192s153.19-68.721 153.19-153.191-68.72-153.19-153.19-153.19ZM1153.658 320H746.667l99.118 898.623h208.755L1153.658 320Z",
-    fillRule: "evenodd"
-  }));
-};
 ;// CONCATENATED MODULE: ./helpers/replace-field.js
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -32228,42 +32353,6 @@ var Select = function Select(_ref) {
   }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 };
 
-;// CONCATENATED MODULE: ./assets/icons/chevron-up.js
-var ChevronUp = function ChevronUp(_ref) {
-  var _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 24 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height,
-    _ref$color = _ref.color,
-    color = _ref$color === void 0 ? '#000000' : _ref$color;
-  return /*#__PURE__*/React.createElement("svg", {
-    width: "".concat(width, "px"),
-    height: "".concat(height, "px"),
-    viewBox: "0 0 24 24",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/React.createElement("path", {
-    fill: color,
-    d: "M12.768,8.359a1.035,1.035,0,0,0-1.536,0l-5,6A1,1,0,0,0,7,16H17a1,1,0,0,0,.768-1.641ZM9.135,14,12,10.563,14.865,14Z"
-  }));
-};
-;// CONCATENATED MODULE: ./assets/icons/chevron-down.js
-var ChevronDown = function ChevronDown(_ref) {
-  var _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 24 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height,
-    _ref$color = _ref.color,
-    color = _ref$color === void 0 ? '#000000' : _ref$color;
-  return /*#__PURE__*/React.createElement("svg", {
-    width: "".concat(width, "px"),
-    height: "".concat(height, "px"),
-    fill: color,
-    viewBox: "0 0 24 24",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/React.createElement("path", {
-    d: "M17,8H7a1,1,0,0,0-.768,1.641l5,6a1,1,0,0,0,1.536,0l5-6A1,1,0,0,0,17,8Zm-5,5.438L9.135,10h5.73Z"
-  }));
-};
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/group/fields-group.scss
 var fields_group = __webpack_require__(6112);
 ;// CONCATENATED MODULE: ./react-rsuite5/group/fields-group.scss
@@ -32347,47 +32436,6 @@ var FieldsGroup = function FieldsGroup(_ref) {
   })), (isOpen || !collapsible) && /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, children));
 };
 
-;// CONCATENATED MODULE: ./assets/icons/plus-circle.js
-var PlusCircle = function PlusCircle(_ref) {
-  var _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 24 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height,
-    _ref$color = _ref.color,
-    color = _ref$color === void 0 ? '#000000' : _ref$color;
-  return /*#__PURE__*/React.createElement("svg", {
-    width: "".concat(width, "px"),
-    height: "".concat(height, "px"),
-    viewBox: "0 0 20 20",
-    xmlns: "http://www.w3.org/2000/svg",
-    fill: "none"
-  }, /*#__PURE__*/React.createElement("path", {
-    fill: color,
-    fillRule: "evenodd",
-    d: "M10 3a7 7 0 100 14 7 7 0 000-14zm-9 7a9 9 0 1118 0 9 9 0 01-18 0zm14 .069a1 1 0 01-1 1h-2.931V14a1 1 0 11-2 0v-2.931H6a1 1 0 110-2h3.069V6a1 1 0 112 0v3.069H14a1 1 0 011 1z"
-  }));
-};
-;// CONCATENATED MODULE: ./assets/icons/minus-circle.js
-var MinusCircle = function MinusCircle(_ref) {
-  var _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 24 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height,
-    _ref$color = _ref.color,
-    color = _ref$color === void 0 ? '#000000' : _ref$color;
-  return /*#__PURE__*/React.createElement("svg", {
-    width: "".concat(width, "px"),
-    height: "".concat(height, "px"),
-    viewBox: "0 0 24 24",
-    fill: "none",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/React.createElement("path", {
-    fill: color,
-    fillRule: "evenodd",
-    clipRule: "evenodd",
-    d: "M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12ZM12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM7 11C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11H7Z"
-  }));
-};
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/array/list-array.scss
 var list_array = __webpack_require__(858);
 ;// CONCATENATED MODULE: ./react-rsuite5/array/list-array.scss
@@ -32686,28 +32734,6 @@ var ThreeColumns = function ThreeColumns(_ref) {
   }, lodash_default().isFunction(children) && children('right'))));
 };
 
-;// CONCATENATED MODULE: ./assets/icons/cross-circle.js
-var CrossCirle = function CrossCirle(_ref) {
-  var _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 24 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height,
-    _ref$color = _ref.color,
-    color = _ref$color === void 0 ? '#000000' : _ref$color;
-  return /*#__PURE__*/React.createElement("svg", {
-    width: "".concat(width, "px"),
-    height: "".concat(height, "px"),
-    viewBox: "0 0 24 24",
-    fill: "none",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/React.createElement("path", {
-    d: "M16 8L8 16M8.00001 8L16 16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z",
-    stroke: color,
-    strokeSidth: "1.5",
-    strokeLinecap: "round",
-    strokeLinejoin: "round"
-  }));
-};
 ;// CONCATENATED MODULE: ./react-rsuite5/input-number/index.js
 var _excluded = ["onClear"];
 function input_number_slicedToArray(arr, i) { return input_number_arrayWithHoles(arr) || input_number_iterableToArrayLimit(arr, i) || input_number_unsupportedIterableToArray(arr, i) || input_number_nonIterableRest(); }
@@ -33604,3 +33630,4 @@ var FormGenerator = GenerateGenerator({
 /******/ })()
 ;
 });
+//# sourceMappingURL=lets-form-rsuite5.min.js.map

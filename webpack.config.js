@@ -27,6 +27,7 @@ module.exports = module.exports = (env = {}) => {
   let entryPoint = path.join(__dirname, 'index.js');
   let outputFile = 'lets-form.min.js';
   let entryPointName = 'lets-form';
+  let outputPath = 'dist';
 
   if (env.framework === 'rsuite5') {
     console.log('Building for RSuite5 framework');
@@ -34,6 +35,7 @@ module.exports = module.exports = (env = {}) => {
     entryPoint = path.join(__dirname, 'react-rsuite5/index.js');
     outputFile = 'rsuite5.js';
     entryPointName = 'lets-form-rsuite5';
+    outputPath = null;
   } else {
     console.log('Building for ALL frameworks');
   }
@@ -44,7 +46,7 @@ module.exports = module.exports = (env = {}) => {
       [entryPointName]: entryPoint
     },
     output: {
-      path: path.join(__dirname, 'dist'),
+      path: outputPath ? path.join(__dirname, outputPath) : __dirname,
       library: library,
       filename: outputFile,
       libraryTarget: 'umd',
@@ -62,52 +64,6 @@ module.exports = module.exports = (env = {}) => {
         'dayjs': 'umd dayjs'
       }
     ],
-    /*
-
-    externals: {
-      react: {
-        root: 'React',
-        commonjs2: 'react',
-        commonjs: 'react',
-        amd: 'react',
-        umd: 'react'
-      },
-      'react-dom': {
-          root: 'ReactDOM',
-          commonjs2: 'react-dom',
-          commonjs: 'react-dom',
-          amd: 'react-dom',
-          umd: 'react-dom'
-      },
-      'prop-types': {
-        root: 'PropTypes',
-        commonjs2: 'prop-types',
-        commonjs: 'prop-types',
-        amd: 'prop-types',
-        umd: 'prop-types'
-      },
-      'react-addons-css-transition-group': {
-        commonjs: 'react-addons-css-transition-group',
-        commonjs2: 'react-addons-css-transition-group',
-        amd: 'react-addons-css-transition-group',
-        umd: 'react-addons-css-transition-group',
-        root: ['React','addons','CSSTransitionGroup']
-      },
-      'rsuite': {
-        commonjs2: 'rsuite',
-        commonjs: 'rsuite',
-        umd: 'rsuite',
-        amd: 'rsuite'
-      },
-      '@mui/material': {
-        commonjs2: '@mui/material',
-        commonjs: '@mui/material',
-        umd: '@mui/material',
-        amd: '@mui/material'
-      }
-    },
-    */
-
     optimization: {
       minimize: false
     },
