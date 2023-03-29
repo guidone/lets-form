@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useCallback, useState } from 'react';
 import { Form, InputNumber, InputGroup } from 'rsuite';
 import _ from 'lodash';
@@ -6,17 +7,6 @@ import { RequiredIcon } from '../../components';
 import { CrossCirle } from '../../assets/icons';
 
 const hasDecimals = f => _.isString(f) && (f.includes(',') || f.includes('.'));
-
-const InputWithClear = ({ onClear, ...props }) => {
-  return (
-    <InputGroup>
-    <InputNumber {...props} />
-    <InputGroup.Button onClick={onClear}>
-      <CrossCirle width={20} height={20} />
-    </InputGroup.Button>
-  </InputGroup>
-  );
-};
 
 const InputNumberRSuite5 = ({
   name,
@@ -62,7 +52,8 @@ const InputNumberRSuite5 = ({
   );
 
   const handleClear = useCallback(
-    () => {
+    (e) => {
+      e.preventDefault();
       onChange(undefined);
       setCurrentValue(null);
     },
@@ -70,14 +61,14 @@ const InputNumberRSuite5 = ({
   );
 
   return (
-    <Form.Group controlId={name}>
+    <Form.Group className="lf-control-input-number">
       {label && <Form.ControlLabel>
         {label}
         {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
         {required && <RequiredIcon />}
       </Form.ControlLabel>}
       <Form.Control
-        accepter={allowClear ? InputWithClear : InputNumber}
+        accepter={InputNumber}
         value={currentValue}
         onChange={handleChange}
         onClear={handleClear}
@@ -89,7 +80,12 @@ const InputNumberRSuite5 = ({
         step={step}
         inside={inside}
         prefix={prefix}
-        postfix={postfix}
+        postfix={allowClear ?
+          (<a href="#" onClick={handleClear}>
+            <CrossCirle width={16} height={16} />
+          </a>)
+          : postfix
+        }
         placeholder={placeholder}
         readOnly={readOnly}
         errorMessage={_.isString(error) ? error : undefined }

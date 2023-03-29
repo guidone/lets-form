@@ -1,16 +1,11 @@
 import React from 'react';
-import DOMPurify from 'dompurify';
-import _ from 'lodash';
-import MD from 'markdown-it';
-
-const md = MD({
-  breaks: true
-});
+import isEmpty from 'lodash/isEmpty';
+import markdown from 'micro-down';
 
 const Placeholder = ({ text }) => {
-  if (!_.isEmpty(text)) {
+  if (!isEmpty(text)) {
     return (
-      <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(md.render(text)) }} />
+      <div dangerouslySetInnerHTML={{ __html: markdown.parse(text) }} />
     );
   } else {
     return <div />;

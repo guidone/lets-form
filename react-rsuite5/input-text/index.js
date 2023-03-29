@@ -20,6 +20,7 @@ const TextInput = ({
   postfix,
   onChange,
   onBlur,
+  width,
   inside = false
 }) => {
   const inner = (
@@ -33,6 +34,7 @@ const TextInput = ({
       size={size}
       placeholder={placeholder}
       readOnly={readOnly}
+      style={_.isNumber(width) ? { width: `${width}px` } : undefined}
       errorMessage={_.isString(error) ? error : undefined }
     />
   );

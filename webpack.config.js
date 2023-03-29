@@ -21,8 +21,6 @@ if (process.env.ANALYZE === 'true') {
 
 
 module.exports = module.exports = (env = {}) => {
-  console.log('env-->', env)
-
   let library = 'lets-form';
   let entryPoint = path.join(__dirname, 'index.js');
   let outputFile = 'lets-form.min.js';

@@ -437,6 +437,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           onlyFields={onlyFields}
           hideToolbar={hideToolbar}
           onReset={handleReset}
+          disabled={disabled}
+          readOnly={readOnly}
+          plaintext={plaintext}
           {..._.omit(form, 'id', 'fields', 'version')}
         >
           {renderFields({
