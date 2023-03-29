@@ -5,7 +5,7 @@
   "main": "dist/lets-form.min.js",
   "module": "dist/lets-form.min.js",
   "scripts": {
-    "prebuild": "echo 12",
+    "prebuild": "./scripts/copy-all-files.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production --progress"
   },
