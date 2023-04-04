@@ -1,6 +1,6 @@
 {
   "name": "lets-form",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "JSON to React form generator, supporting multiple frameworks (Bootstrap, Material UI, RSuite, etc)",
   "main": "dist/lets-form.min.js",
   "module": "dist/lets-form.min.js",
@@ -10,8 +10,7 @@
     "build:webpack": "webpack --mode production --progress",
     "build-rsuite5": "npm run build:webpack -- --env framework=\"rsuite5\"",
     "build-antd": "npm run build:webpack -- --env framework=\"antd\"",
-    "build-react": "npm run build:webpack -- --env framework=\"react\"",
-    "build-antd": "npm run build:webpack -- --env framework=\"antd\""
+    "build-react": "npm run build:webpack -- --env framework=\"react\""
   },
   "author": "Guido Bellomo",
   "license": "ISC",
