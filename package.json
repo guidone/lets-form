@@ -9,6 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:webpack": "webpack --mode production --progress",
     "build-rsuite5": "npm run build:webpack -- --env framework=\"rsuite5\"",
+    "build-antd": "npm run build:webpack -- --env framework=\"antd\"",
     "build-react": "npm run build:webpack -- --env framework=\"react\"",
     "build-antd": "npm run build:webpack -- --env framework=\"antd\""
   },

@@ -27,7 +27,14 @@ module.exports = module.exports = (env = {}) => {
   let entryPointName = 'lets-form';
   let outputPath = 'dist';
 
-  if (env.framework === 'rsuite5') {
+  if (env.framework === 'antd') {
+    console.log('Building for Ant Design framework');
+    library = 'lets-form-antd';
+    entryPoint = path.join(__dirname, 'react-antd/index.js');
+    outputFile = 'antd.js';
+    entryPointName = 'lets-form-antd';
+    outputPath = null;
+  } else if (env.framework === 'rsuite5') {
     console.log('Building for RSuite5 framework');
     library = 'lets-form-rsuite5';
     entryPoint = path.join(__dirname, 'react-rsuite5/index.js');
