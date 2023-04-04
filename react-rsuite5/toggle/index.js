@@ -1,7 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import Form from 'rsuite/Form';
-import Toggle from 'rsuite/Toggle';
+import { Form, Toggle } from 'rsuite';
 
 import { RequiredIcon } from '../../components';
 

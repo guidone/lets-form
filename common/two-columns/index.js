@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import Form from 'rsuite/Form';
+import { Form } from 'rsuite';
 import classNames from 'classnames';
 
 import './two-columns.scss';

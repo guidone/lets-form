@@ -59,9 +59,7 @@ module.exports = module.exports = (env = {}) => {
         '@mui/material': 'umd @mui/material',
         'react-bootstrap': 'umd react-bootstrap',
         'antd': 'umd antd',
-        'dayjs': 'umd dayjs',
-        'rsuite/Form': 'umd rsuite/Form',
-        'rsuite/Toggle': 'umr rsuite/Toggle'
+        'dayjs': 'umd dayjs'
       }
     ],
     optimization: {

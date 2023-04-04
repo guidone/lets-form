@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("rsuite"), require("rsuite/Form"), require("rsuite/locales"));
+		module.exports = factory(require("react"), require("rsuite"), require("rsuite/locales"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "rsuite", "rsuite/Form", "rsuite/locales"], factory);
+		define(["react", "rsuite", "rsuite/locales"], factory);
 	else if(typeof exports === 'object')
-		exports["lets-form-rsuite5"] = factory(require("react"), require("rsuite"), require("rsuite/Form"), require("rsuite/locales"));
+		exports["lets-form-rsuite5"] = factory(require("react"), require("rsuite"), require("rsuite/locales"));
 	else
-		root["lets-form-rsuite5"] = factory(root["react"], root["rsuite"], root["rsuite/Form"], root["rsuite/locales"]);
-})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__1186__, __WEBPACK_EXTERNAL_MODULE__8187__, __WEBPACK_EXTERNAL_MODULE__977__) => {
+		root["lets-form-rsuite5"] = factory(root["react"], root["rsuite"], root["rsuite/locales"]);
+})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__1186__, __WEBPACK_EXTERNAL_MODULE__977__) => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -2178,14 +2178,6 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__8156__;
 
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__1186__;
-
-/***/ }),
-
-/***/ 8187:
-/***/ ((module) => {
-
-"use strict";
-module.exports = __WEBPACK_EXTERNAL_MODULE__8187__;
 
 /***/ }),
 
@@ -6156,12 +6148,6 @@ var TextInput = function TextInput(_ref) {
   }, prefix && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup.Addon, null, prefix), inner, postfix && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup.Addon, null, postfix)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 };
 
-// EXTERNAL MODULE: external "rsuite/Form"
-var Form_ = __webpack_require__(8187);
-var Form_default = /*#__PURE__*/__webpack_require__.n(Form_);
-;// CONCATENATED MODULE: external "rsuite/Toggle"
-const Toggle_namespaceObject = rsuite/Toggle;
-var Toggle_default = /*#__PURE__*/__webpack_require__.n(Toggle_namespaceObject);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/toggle/index.scss
 var toggle = __webpack_require__(8078);
 ;// CONCATENATED MODULE: ./react-rsuite5/toggle/index.scss
@@ -6199,7 +6185,6 @@ var toggle_update = injectStylesIntoStyleTag_default()(toggle/* default */.Z, to
 
 
 
-
 var ToggleInput = function ToggleInput(_ref) {
   var name = _ref.name,
     label = _ref.label,
@@ -6216,14 +6201,14 @@ var ToggleInput = function ToggleInput(_ref) {
     checkedChildren = _ref.checkedChildren,
     unCheckedChildren = _ref.unCheckedChildren,
     error = _ref.error;
-  return /*#__PURE__*/external_react_default().createElement((Form_default()).Group, {
+  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
     controlId: name,
     className: "lf-react-rsuite5-toggle"
-  }, label && /*#__PURE__*/external_react_default().createElement((Form_default()).ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement((Form_default()).HelpText, {
+  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
     tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement((Form_default()).Control, {
+  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
     name: name,
-    accepter: (Toggle_default()),
+    accepter: external_rsuite_.Toggle,
     value: value,
     onChange: onChange,
     disabled: disabled,
@@ -6231,7 +6216,7 @@ var ToggleInput = function ToggleInput(_ref) {
     checkedChildren: checkedChildren && checkedChildren !== '' ? checkedChildren : undefined,
     errorMessage: isString_default()(error) ? error : undefined,
     size: size
-  }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement((Form_default()).HelpText, null, hint));
+  }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 };
 
 ;// CONCATENATED MODULE: ./react-rsuite5/select/index.js
@@ -6616,7 +6601,7 @@ var TwoColumns = function TwoColumns(_ref) {
   var name = _ref.name,
     children = _ref.children,
     layout = _ref.layout;
-  return /*#__PURE__*/external_react_default().createElement((Form_default()).Group, {
+  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
     controlId: name
   }, /*#__PURE__*/external_react_default().createElement("div", {
     className: classnames_default()('lf-two-columns', layout)

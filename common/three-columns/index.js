@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'lodash';
-
 import { Form } from 'rsuite';
 
 import './three-columns.scss';
