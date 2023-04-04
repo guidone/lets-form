@@ -6596,20 +6596,17 @@ var two_columns_update = injectStylesIntoStyleTag_default()(two_columns/* defaul
 
 
 
-
 var TwoColumns = function TwoColumns(_ref) {
   var name = _ref.name,
     children = _ref.children,
     layout = _ref.layout;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    controlId: name
-  }, /*#__PURE__*/external_react_default().createElement("div", {
+  return /*#__PURE__*/external_react_default().createElement("div", {
     className: classnames_default()('lf-two-columns', layout)
   }, /*#__PURE__*/external_react_default().createElement("div", {
     className: "left"
   }, isFunction_default()(children) && children('left')), /*#__PURE__*/external_react_default().createElement("div", {
     className: "right"
-  }, isFunction_default()(children) && children('right'))));
+  }, isFunction_default()(children) && children('right')));
 };
 
 ;// CONCATENATED MODULE: ./react-rsuite5/two-columns/index.js
@@ -6649,13 +6646,10 @@ var three_columns_update = injectStylesIntoStyleTag_default()(three_columns/* de
 
 
 
-
 var ThreeColumns = function ThreeColumns(_ref) {
   var name = _ref.name,
     children = _ref.children;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    controlId: name
-  }, /*#__PURE__*/external_react_default().createElement("div", {
+  return /*#__PURE__*/external_react_default().createElement("div", {
     className: "lf-three-columns"
   }, /*#__PURE__*/external_react_default().createElement("div", {
     className: "left"
@@ -6663,7 +6657,7 @@ var ThreeColumns = function ThreeColumns(_ref) {
     className: "center"
   }, isFunction_default()(children) && children('center')), /*#__PURE__*/external_react_default().createElement("div", {
     className: "right"
-  }, isFunction_default()(children) && children('right'))));
+  }, isFunction_default()(children) && children('right')));
 };
 
 ;// CONCATENATED MODULE: ./react-rsuite5/three-columns/index.js

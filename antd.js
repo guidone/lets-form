@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("antd"), require("dayjs"), require("rsuite"));
+		module.exports = factory(require("react"), require("antd"), require("dayjs"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "antd", "dayjs", "rsuite"], factory);
+		define(["react", "antd", "dayjs"], factory);
 	else if(typeof exports === 'object')
-		exports["lets-form-antd"] = factory(require("react"), require("antd"), require("dayjs"), require("rsuite"));
+		exports["lets-form-antd"] = factory(require("react"), require("antd"), require("dayjs"));
 	else
-		root["lets-form-antd"] = factory(root["react"], root["antd"], root["dayjs"], root["rsuite"]);
-})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__2721__, __WEBPACK_EXTERNAL_MODULE__5760__, __WEBPACK_EXTERNAL_MODULE__1186__) => {
+		root["lets-form-antd"] = factory(root["react"], root["antd"], root["dayjs"]);
+})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__2721__, __WEBPACK_EXTERNAL_MODULE__5760__) => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -2424,14 +2424,6 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__5760__;
 
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__8156__;
-
-/***/ }),
-
-/***/ 1186:
-/***/ ((module) => {
-
-"use strict";
-module.exports = __WEBPACK_EXTERNAL_MODULE__1186__;
 
 /***/ })
 
@@ -10625,8 +10617,6 @@ var Placeholder = function Placeholder(_ref) {
 // EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
 var lodash_isFunction = __webpack_require__(3560);
 var isFunction_default = /*#__PURE__*/__webpack_require__.n(lodash_isFunction);
-// EXTERNAL MODULE: external "rsuite"
-var external_rsuite_ = __webpack_require__(1186);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/three-columns/three-columns.scss
 var three_columns = __webpack_require__(1861);
 ;// CONCATENATED MODULE: ./common/three-columns/three-columns.scss
@@ -10662,13 +10652,10 @@ var three_columns_update = injectStylesIntoStyleTag_default()(three_columns/* de
 
 
 
-
 var ThreeColumns = function ThreeColumns(_ref) {
   var name = _ref.name,
     children = _ref.children;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    controlId: name
-  }, /*#__PURE__*/external_react_default().createElement("div", {
+  return /*#__PURE__*/external_react_default().createElement("div", {
     className: "lf-three-columns"
   }, /*#__PURE__*/external_react_default().createElement("div", {
     className: "left"
@@ -10676,7 +10663,7 @@ var ThreeColumns = function ThreeColumns(_ref) {
     className: "center"
   }, isFunction_default()(children) && children('center')), /*#__PURE__*/external_react_default().createElement("div", {
     className: "right"
-  }, isFunction_default()(children) && children('right'))));
+  }, isFunction_default()(children) && children('right')));
 };
 
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/two-columns/two-columns.scss
@@ -10715,20 +10702,17 @@ var two_columns_update = injectStylesIntoStyleTag_default()(two_columns/* defaul
 
 
 
-
 var TwoColumns = function TwoColumns(_ref) {
   var name = _ref.name,
     children = _ref.children,
     layout = _ref.layout;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    controlId: name
-  }, /*#__PURE__*/external_react_default().createElement("div", {
+  return /*#__PURE__*/external_react_default().createElement("div", {
     className: classnames_default()('lf-two-columns', layout)
   }, /*#__PURE__*/external_react_default().createElement("div", {
     className: "left"
   }, isFunction_default()(children) && children('left')), /*#__PURE__*/external_react_default().createElement("div", {
     className: "right"
-  }, isFunction_default()(children) && children('right'))));
+  }, isFunction_default()(children) && children('right')));
 };
 
 ;// CONCATENATED MODULE: ./common/index.js
