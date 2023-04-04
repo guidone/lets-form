@@ -1,6 +1,6 @@
 import { mapFields } from './map-fields';
 
-const addField = (form, newField, id) => {
+const addField = (form, newField, id, target = 'fields') => {
   if (id != null) {
     return {
       ...form,
@@ -11,9 +11,8 @@ const addField = (form, newField, id) => {
           if (field.id === id) {
             return {
               ...field,
-              // TODO could be leftColumns
-              fields: [
-                ...(field.fields || []),
+              [target]: [
+                ...(field[target] || []),
                 newField
               ]
             };

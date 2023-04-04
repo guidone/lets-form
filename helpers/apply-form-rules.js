@@ -29,8 +29,33 @@ const testCondition = (condition, values = {}) => {
     values[condition.field] != condition.value
   ) {
     return true;
+  } else if (
+    condition?.type === 'not_empty' &&
+    !_.isEmpty(condition?.field) &&
+    // eslint-disable-next-line eqeqeq
+    (values[condition.field] != null && values[condition.field] !== '')
+  ) {
+    return true;
+  } else if (
+    condition?.type === 'empty' &&
+    !_.isEmpty(condition?.field) &&
+    // eslint-disable-next-line eqeqeq
+    (values[condition.field] == null || values[condition.field] === '')
+  ) {
+    return true;
   }
   return false;
+};
+
+const testConditions = (conditions, values) => {
+  if (_.isArray(conditions)) {
+    if (!_.isEmpty(conditions)) {
+      return conditions.every(condition => testCondition(condition, values));
+    }
+    return false;
+  }
+
+  return testCondition(conditions, values);
 };
 
 const PREDICATES = {
@@ -78,10 +103,7 @@ const PREDICATES = {
       return field;
     }
   },
-}
-
-
-
+};
 
 const applyFormRules = (
   fields,
@@ -95,7 +117,7 @@ const applyFormRules = (
 
   rules.forEach(rule => {
     // if test condition passes and exists a predicate, then execute it
-    if (testCondition(rule.condition, values)) {
+    if (testConditions(rule.condition, values)) {
       if (PREDICATES[rule.verb]) {
         newFields = mapFields(newFields, PREDICATES[rule.verb](rule.names));
       }

@@ -1,0 +1,120 @@
+.lf-two-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  min-height: 40px;
+
+  /*.left, .right {
+    // disable width 300 of text input
+    .rs-form-control-wrapper {
+      > .rs-input, > .rs-input-number {
+        width: auto;
+      }
+    }
+  }*/
+
+  .left {
+    flex: 1 0;
+    align-self: auto;
+    margin-right: 10px;
+  }
+
+  .right {
+    margin-left: 10px;
+    flex: 1 0;
+    align-self: auto;
+  }
+
+  &.layout-1-2 {
+    .left {
+      flex: 1 0;
+    }
+    .right {
+      flex: 2 0;
+    }
+  }
+
+  &.layout-1-3 {
+    .left {
+      flex: 1 0;
+    }
+    .right {
+      flex: 3 0;
+    }
+  }
+
+  &.layout-1-4 {
+    .left {
+      flex: 1 0;
+    }
+    .right {
+      flex: 4 0;
+    }
+  }
+
+  &.layout-1-5 {
+    .left {
+      flex: 1 0;
+    }
+    .right {
+      flex: 4 0;
+    }
+  }
+
+  &.layout-2-1 {
+    .left {
+      flex: 2 0;
+    }
+    .right {
+      flex: 1 0;
+    }
+  }
+
+  &.layout-3-1 {
+    .left {
+      flex: 3 0;
+    }
+    .right {
+      flex: 1 0;
+    }
+  }
+
+  &.layout-4-1 {
+    .left {
+      flex: 4 0;
+    }
+    .right {
+      flex: 1 0;
+    }
+  }
+
+  &.layout-5-1 {
+    .left {
+      flex: 4 0;
+    }
+    .right {
+      flex: 1 0;
+    }
+  }
+
+  &.layout-3-2 {
+    .left {
+      flex: 3 0;
+    }
+    .right {
+      flex: 2 0;
+    }
+  }
+
+  &.layout-2-3 {
+    .left {
+      flex: 2 0;
+    }
+    .right {
+      flex: 3 0;
+    }
+  }
+}

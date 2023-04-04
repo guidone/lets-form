@@ -1,6 +1,7 @@
 import React from 'react';
-
-import { Form, Toggle } from 'rsuite';
+import _ from 'lodash';
+import Form from 'rsuite/Form';
+import Toggle from 'rsuite/Toggle';
 
 import { RequiredIcon } from '../../components';
 
@@ -18,11 +19,11 @@ const ToggleInput = ({
   onChange,
   checkedChildren,
   unCheckedChildren,
-  onBlur
+  error
 }) => {
 
   return (
-    <Form.Group controlId={name} className="gforms-react-rsuite5-toggle">
+    <Form.Group controlId={name} className="lf-react-rsuite5-toggle">
       {label && (
         <Form.ControlLabel>
           {label}
@@ -38,11 +39,11 @@ const ToggleInput = ({
         disabled={disabled}
         unCheckedChildren={unCheckedChildren && unCheckedChildren !== '' ? unCheckedChildren : undefined}
         checkedChildren={checkedChildren && checkedChildren !== '' ? checkedChildren : undefined}
+        errorMessage={_.isString(error) ? error : undefined }
         size={size}
       >
         </Form.Control>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
-
     </Form.Group>
   );
 };

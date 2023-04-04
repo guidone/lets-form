@@ -8,6 +8,9 @@ import { Slider } from './slider';
 import { Placeholder } from './placeholder';
 import { Checkbox } from './checkbox';
 import { Rate } from './rate';
+import { Date } from './date';
+import { ThreeColumns } from './three-columns';
+import { TwoColumns } from './two-columns';
 
 const Fields = {
   'text-input': {
@@ -30,6 +33,15 @@ const Fields = {
   },
   'rate': {
     'react-material-ui': Rate
+  },
+  'date': {
+    'react-material-ui': Date
+  },
+  'three-columns': {
+    'react-material-ui': ThreeColumns
+  },
+  'two-columns': {
+    'react-material-ui': TwoColumns
   }
 };
 

@@ -8,7 +8,9 @@
     "prebuild": "./scripts/copy-all-files.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:webpack": "webpack --mode production --progress",
-    "build-rsuite5": "webpack --mode production --progress --config ./webpack.config-rsuite5.js"
+    "build-rsuite5": "npm run build:webpack -- --env framework=\"rsuite5\"",
+    "build-react": "npm run build:webpack -- --env framework=\"react\"",
+    "build-antd": "npm run build:webpack -- --env framework=\"antd\""
   },
   "author": "Guido Bellomo",
   "license": "ISC",
@@ -37,6 +39,7 @@
     "@babel/preset-react": "^7.7.0",
     "@babel/preset-typescript": "^7.12.7",
     "@babel/runtime-corejs2": "^7.8.4",
+    "@mui/x-date-pickers": "^6.0.3",
     "antd": "^5.3.3",
     "babel-loader": "^8.0.0",
     "babel-plugin-istanbul": "^4.1.4",

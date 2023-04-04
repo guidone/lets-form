@@ -15,8 +15,23 @@ import { applyFormRules, reduceFields, validateRulesDefinition  } from '../helpe
 
 import './index.scss';
 
+const enrichWithLabels = (validationErrors, fields) => {
+  const result = { ...validationErrors };
+  const collectLabels = reduceFields(
+    fields,
+    (field, accumulator) => field.label ? { ...accumulator, [field.name]: field.label } : accumulator,
+    {}
+  );
 
-
+  Object
+    .keys(result)
+    .forEach(key => {
+      if (result[key] && result[key].ref && collectLabels[result[key].ref.name]) {
+        result[key].ref.label = collectLabels[result[key].ref.name];
+      }
+    });
+  return result;
+};
 
 
 
@@ -106,14 +121,17 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     onChange,
     getValues,
     Wrapper,
+    GroupWrapper,
+    BottomView,
     debug,
     disabled,
     readOnly,
     plaintext,
     errors,
-    showErrors
+    showErrors,
+    level = 1
   }) => {
-    return (fields || [])
+    const renderedFields = (fields || [])
       .filter(field => Wrapper || field.hidden !== true)
       .map((field, index) => {
         let Component;
@@ -146,6 +164,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               <>
                 {renderFields({
                   Wrapper,
+                  GroupWrapper,
+                  BottomView,
                   onChange,
                   fields: field.fields,
                   control,
@@ -155,12 +175,14 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   readOnly,
                   plaintext,
                   errors,
-                  showErrors
+                  showErrors,
+                  level: level + 1
                 })}
+                {BottomView && <BottomView field={field} target="fields" />}
               </>
             </Component>
           );
-          return Wrapper ? <Wrapper field={field} index={index}>{component}</Wrapper> : component;
+          return GroupWrapper ? <GroupWrapper field={field} level={level} index={index}>{component}</GroupWrapper> : component;
         } else if (field.component === 'two-columns') {
           const component = (
             <Component
@@ -171,11 +193,13 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               {...additionalFields}
             >
             {column => {
-              if (column === 'left' && _.isArray(field.leftFields) && !_.isEmpty(field.leftFields)) {
+              if (column === 'left') {
                 return (
                   <>
                     {renderFields({
                       Wrapper,
+                      GroupWrapper,
+                      BottomView,
                       onChange,
                       fields: field.leftFields,
                       control,
@@ -185,15 +209,19 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       readOnly,
                       plaintext,
                       errors,
-                      showErrors
+                      showErrors,
+                      level: level + 1
                     })}
+                    {BottomView && <BottomView field={field} target="leftFields" />}
                   </>
                 )
-              } else if (column === 'right' && _.isArray(field.rightFields) && !_.isEmpty(field.rightFields)) {
+              } else if (column === 'right') {
                 return (
                   <>
                     {renderFields({
                       Wrapper,
+                      GroupWrapper,
+                      BottomView,
                       onChange,
                       fields: field.rightFields,
                       control,
@@ -203,15 +231,17 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       readOnly,
                       plaintext,
                       errors,
-                      showErrors
+                      showErrors,
+                      level: level + 1
                     })}
+                    {BottomView && <BottomView field={field} target="rightFields" />}
                   </>
                 )
               }
             }}
             </Component>
           );
-          return Wrapper ? <Wrapper field={field} index={index}>{component}</Wrapper> : component;
+          return GroupWrapper ? <GroupWrapper level={level} field={field} index={index}>{component}</GroupWrapper> : component;
         } else if (field.component === 'three-columns') {
           const component = (
             <Component
@@ -222,11 +252,13 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               {...additionalFields}
             >
             {column => {
-              if (column === 'left' && _.isArray(field.leftFields) && !_.isEmpty(field.leftFields)) {
+              if (column === 'left') {
                 return (
                   <>
                     {renderFields({
                       Wrapper,
+                      GroupWrapper,
+                      BottomView,
                       onChange,
                       fields: field.leftFields,
                       control,
@@ -236,15 +268,19 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       readOnly,
                       plaintext,
                       errors,
-                      showErrors
+                      showErrors,
+                      level: level + 1
                     })}
+                    {BottomView && <BottomView field={field} target="leftFields" />}
                   </>
                 )
-              } else if (column === 'center' && _.isArray(field.centerFields) && !_.isEmpty(field.centerFields)) {
+              } else if (column === 'center') {
                 return (
                   <>
                     {renderFields({
                       Wrapper,
+                      GroupWrapper,
+                      BottomView,
                       onChange,
                       fields: field.centerFields,
                       control,
@@ -254,15 +290,19 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       readOnly,
                       plaintext,
                       errors,
-                      showErrors
+                      showErrors,
+                      level: level + 1
                     })}
+                    {BottomView && <BottomView field={field} target="centerFields" />}
                   </>
                 )
-              } else if (column === 'right' && _.isArray(field.rightFields) && !_.isEmpty(field.rightFields)) {
+              } else if (column === 'right') {
                 return (
                   <>
                     {renderFields({
                       Wrapper,
+                      GroupWrapper,
+                      BottomView,
                       onChange,
                       fields: field.rightFields,
                       control,
@@ -272,15 +312,17 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       readOnly,
                       plaintext,
                       errors,
-                      showErrors
+                      showErrors,
+                      level: level + 1
                     })}
+                    {BottomView && <BottomView field={field} target="rightFields" />}
                   </>
                 )
               }
             }}
             </Component>
           );
-          return Wrapper ? <Wrapper field={field} index={index}>{component}</Wrapper> : component;
+          return GroupWrapper ? <GroupWrapper field={field} level={level} index={index}>{component}</GroupWrapper> : component;
         }
 
 
@@ -322,12 +364,19 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 }}
               />;
 
-              return Wrapper ? <Wrapper field={field} cacca={true} index={index}>{component}</Wrapper> : component;
+              return Wrapper ? <Wrapper field={field} level={level} index={index}>{component}</Wrapper> : component;
               }
             }
           />
         );
       });
+
+    return renderedFields;
+
+    /*return BottomView ?
+      [...renderedFields, <BottomView />]
+      : renderedFields;
+      */
   }
 
 
@@ -340,6 +389,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     onReset = () => {},
     onError = () => {},
     wrapper,
+    groupWrapper,
+    bottomView,
     defaultValues = {},
     onlyFields = false,
     debug = false,
@@ -425,11 +476,13 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const Form = Forms[framework];
     const Wrapper = wrapper;
+    const GroupWrapper = groupWrapper;
+    const BottomView = bottomView;
 
     return (
       <div className={classNames('lf-lets-form', className)}>
         {validationErrors && showErrors === 'groupedTop' && (
-          <ValidationErrors errors={validationErrors}/>
+          <ValidationErrors className="top" errors={enrichWithLabels(validationErrors, formFields)}/>
         )}
         <Form
           onSubmit={handleSubmit(onHandleSubmit, onHandleError)}
@@ -444,6 +497,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         >
           {renderFields({
             Wrapper,
+            GroupWrapper,
+            BottomView,
             onChange: handleChange,
             fields: formFields, // take from state
             control,
@@ -458,7 +513,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           })}
           {children}
           {validationErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (
-            <ValidationErrors errors={validationErrors}/>
+            <ValidationErrors className="bottom" errors={enrichWithLabels(validationErrors, formFields)}/>
           )}
         </Form>
       </div>

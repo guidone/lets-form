@@ -1,7 +1,8 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
-
 import Button from 'react-bootstrap/Button';
+
+import './index.scss';
 
 const FormBootstrap = ({
   children,
@@ -19,7 +20,7 @@ const FormBootstrap = ({
         {children}
       </div>
       {!hideToolbar && (
-        <>
+        <div className="lf-toolbar">
           <Button
             variant="primary"
             onClick={onSubmit}
@@ -33,7 +34,7 @@ const FormBootstrap = ({
           >
             Cancel
           </Button>
-        </>
+        </div>
       )}
     </Form>
   );

@@ -2,45 +2,32 @@ import { GenerateGenerator } from "../generator";
 
 import { FormReact } from './form';
 import { TextInput } from './input-text';
-/*import { ToggleInput } from './toggle';
-import { Select } from './select';
-import { FieldsGroup } from './group';
-import { ListArray } from './array';
-import { TwoColumns } from './two-columns';
+import { Checkbox } from './checkbox';
+import { Textarea } from './textarea';
 import { ThreeColumns } from './three-columns';
-import { InputNumber } from './input-number';*/
-
+import { TwoColumns } from './two-columns';
 
 const Fields = {
   'text-input': {
     'react': TextInput
   },
-  /*'toggle': {
-    'react-rsuite5': ToggleInput
+  'checkbox': {
+    'react': Checkbox
   },
-  'select': {
-    'react-rsuite5': Select
-  },
-  'group': {
-    'react-rsuite5': FieldsGroup
-  },
-  'array': {
-    'react-rsuite5': ListArray
-  },
-  'two-columns': {
-    'react-rsuite5': TwoColumns
+  'textarea': {
+    'react': Textarea
   },
   'three-columns': {
-    'react-rsuite5': ThreeColumns
+    'react': ThreeColumns
   },
-  'input-number': {
-    'react-rsuite5': InputNumber
-  }*/
+  'two-columns': {
+    'react': TwoColumns
+  }
 };
 
 const Forms = {
   'react': FormReact
-}
+};
 
 const FormGenerator = GenerateGenerator({ Fields, Forms });
 

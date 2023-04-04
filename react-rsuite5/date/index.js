@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { Form, DatePicker } from 'rsuite';
+import { Form, DatePicker, CustomProvider } from 'rsuite';
 import * as locales from 'rsuite/locales';
 
 import { RequiredIcon } from '../../components';
@@ -24,6 +24,9 @@ const SelectDate = ({
   format,
   ...rest
 }) => {
+
+  console.log('---', locale && locales[locale])
+
   return (
     <Form.Group controlId={name}>
       {label && (
@@ -33,23 +36,26 @@ const SelectDate = ({
           {required && <RequiredIcon />}
         </Form.ControlLabel>
       )}
-      <Form.Control
-        accepter={DatePicker}
-        appearance={appearance ?? undefined}
-        locale={locale && locales[locale] ? locales[locale].DatePicker : undefined}
-        name={name}
-        format={format}
-        value={value}
-        onChange={onChange}
-        readOnly={readOnly}
-        plaintext={plaintext}
-        onBlur={onBlur}
-        errorMessage={_.isString(error) ? error : undefined }
-        disabled={disabled}
-        placeholder={placeholder}
-        {...rest}
-      />
-      {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
+      <CustomProvider
+        locale={locale && locales[locale] ? locales[locale] : undefined}
+      >
+        <Form.Control
+          accepter={DatePicker}
+          appearance={appearance ?? undefined}
+          name={name}
+          format={format}
+          value={value}
+          onChange={onChange}
+          readOnly={readOnly}
+          plaintext={plaintext}
+          onBlur={onBlur}
+          errorMessage={_.isString(error) ? error : undefined }
+          disabled={disabled}
+          placeholder={placeholder}
+          {...rest}
+        />
+        {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
+      </CustomProvider>
     </Form.Group>
   );
 };

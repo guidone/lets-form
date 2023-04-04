@@ -3,8 +3,7 @@ import _ from 'lodash';
 
 import { RequiredIcon } from '../../components';
 
-
-const TextInput = ({
+const Textarea = ({
   name,
   label,
   hint,
@@ -16,6 +15,7 @@ const TextInput = ({
   readOnly,
   required,
   size,
+  rows,
   width
 }) => {
   const hasError = error && _.isString(error);
@@ -30,10 +30,10 @@ const TextInput = ({
         {label}
         {required && <RequiredIcon />}
       </label>
-      <input
+      <textarea
         type="text"
         id={name}
-        value={value}
+        rows={rows}
         onChange={handleChange}
         onBlur={onBlur}
         className={size && `lf-form-react-input-${size}`}
@@ -41,11 +41,11 @@ const TextInput = ({
         required={error != null}
         disabled={disabled}
         readOnly={readOnly}
-      />
+      >{value}</textarea>
       {hint && !hasError && <div className="lf-form-react-message">{hint}</div>}
       {hasError && <div className="lf-form-react-error-message">{error}</div>}
     </div>
   );
 };
 
-export { TextInput };
+export { Textarea };

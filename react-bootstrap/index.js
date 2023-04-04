@@ -7,9 +7,11 @@ import { Checkbox } from './checkbox';
 import { Toggle } from './toggle';
 import { CheckboxGroup } from './checkbox-group';
 import { Placeholder } from './placeholder';
-
-/*import { Toggle } from './toggle';
-import { Slider } from './slider';*/
+import { Date } from './date';
+import { Textarea } from './textarea';
+import { Slider } from './slider';
+import { ThreeColumns } from './three-columns';
+import { TwoColumns } from './two-columns';
 
 const Fields = {
   'text-input': {
@@ -29,17 +31,27 @@ const Fields = {
   },
   'placeholder': {
     'react-bootstrap': Placeholder
-  }
-  /*
-
+  },
+  'date': {
+    'react-bootstrap': Date
+  },
+  'textarea': {
+    'react-bootstrap': Textarea
+  },
   'slider': {
-    'react-material-ui': Slider
-  }*/
+    'react-bootstrap': Slider
+  },
+  'three-columns': {
+    'react-bootstrap': ThreeColumns
+  },
+  'two-columns': {
+    'react-bootstrap': TwoColumns
+  }
 };
 
 const Forms = {
   'react-bootstrap': FormBootstrap
-}
+};
 
 const FormGenerator = GenerateGenerator({ Fields, Forms });
 

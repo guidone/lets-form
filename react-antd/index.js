@@ -12,6 +12,8 @@ import { Placeholder } from './placeholder';
 import { InputNumber } from './input-number';
 import { Textarea } from './textarea';
 import { Multiselect } from './multiselect';
+import { ThreeColumns } from './three-columns';
+import { TwoColumns } from './two-columns';
 
 const Fields = {
   'text-input': {
@@ -46,6 +48,12 @@ const Fields = {
   },
   'multiselect': {
     'react-antd': Multiselect
+  },
+  'three-columns': {
+    'react-antd': ThreeColumns
+  },
+  'two-columns': {
+    'react-antd': TwoColumns
   }
 };
 

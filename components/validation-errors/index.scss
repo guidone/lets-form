@@ -1,0 +1,14 @@
+.lf-validation-errors {
+  border: 1px solid #eebdd2;
+  background-color: #ffddd2;
+  padding: 15px;
+  color: #000000;
+
+  &.bottom {
+    margin-top: 15px;
+  }
+
+  &.top {
+    margin-bottom: 15px;
+  }
+}

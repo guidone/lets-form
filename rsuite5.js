@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("rsuite"), require("rsuite/locales"));
+		module.exports = factory(require("react"), require("rsuite"), require("rsuite/Form"), require("rsuite/locales"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "rsuite", "rsuite/locales"], factory);
+		define(["react", "rsuite", "rsuite/Form", "rsuite/locales"], factory);
 	else if(typeof exports === 'object')
-		exports["lets-form-rsuite5"] = factory(require("react"), require("rsuite"), require("rsuite/locales"));
+		exports["lets-form-rsuite5"] = factory(require("react"), require("rsuite"), require("rsuite/Form"), require("rsuite/locales"));
 	else
-		root["lets-form-rsuite5"] = factory(root["react"], root["rsuite"], root["rsuite/locales"]);
-})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__1186__, __WEBPACK_EXTERNAL_MODULE__977__) => {
+		root["lets-form-rsuite5"] = factory(root["react"], root["rsuite"], root["rsuite/Form"], root["rsuite/locales"]);
+})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__1186__, __WEBPACK_EXTERNAL_MODULE__8187__, __WEBPACK_EXTERNAL_MODULE__977__) => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -77,6 +77,75 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
+/***/ 1861:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-three-columns .left{flex:1 0;align-self:auto;margin-right:10px}.lf-three-columns .center{margin-left:10px;margin-right:10px;flex:1 0;align-self:auto}.lf-three-columns .right{margin-left:10px;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./common/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,kBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAUA,wBACE,QAAA,CACA,eAAA,CACA,iBAAA,CAGF,0BACE,gBAAA,CACA,iBAAA,CACA,QAAA,CACA,eAAA,CAGF,yBACE,gBAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 10px;\n  }\n\n  .center {\n    margin-left: 10px;\n    margin-right: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    margin-left: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 5318:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-two-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-two-columns .left{flex:1 0;align-self:auto;margin-right:10px}.lf-two-columns .right{margin-left:10px;flex:1 0;align-self:auto}.lf-two-columns.layout-1-2 .left{flex:1 0}.lf-two-columns.layout-1-2 .right{flex:2 0}.lf-two-columns.layout-1-3 .left{flex:1 0}.lf-two-columns.layout-1-3 .right{flex:3 0}.lf-two-columns.layout-1-4 .left{flex:1 0}.lf-two-columns.layout-1-4 .right{flex:4 0}.lf-two-columns.layout-1-5 .left{flex:1 0}.lf-two-columns.layout-1-5 .right{flex:4 0}.lf-two-columns.layout-2-1 .left{flex:2 0}.lf-two-columns.layout-2-1 .right{flex:1 0}.lf-two-columns.layout-3-1 .left{flex:3 0}.lf-two-columns.layout-3-1 .right{flex:1 0}.lf-two-columns.layout-4-1 .left{flex:4 0}.lf-two-columns.layout-4-1 .right{flex:1 0}.lf-two-columns.layout-5-1 .left{flex:4 0}.lf-two-columns.layout-5-1 .right{flex:1 0}.lf-two-columns.layout-3-2 .left{flex:3 0}.lf-two-columns.layout-3-2 .right{flex:2 0}.lf-two-columns.layout-2-3 .left{flex:2 0}.lf-two-columns.layout-2-3 .right{flex:3 0}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,gBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAWA,sBACE,QAAA,CACA,eAAA,CACA,iBAAA,CAGF,uBACE,gBAAA,CACA,QAAA,CACA,eAAA,CAIA,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA","sourcesContent":[".lf-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  /*.left, .right {\n    // disable width 300 of text input\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 10px;\n  }\n\n  .right {\n    margin-left: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 7242:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-validation-errors{border:1px solid #eebdd2;background-color:#ffddd2;padding:15px;color:#000}.lf-validation-errors.bottom{margin-top:15px}.lf-validation-errors.top{margin-bottom:15px}", "",{"version":3,"sources":["webpack://./components/validation-errors/index.scss"],"names":[],"mappings":"AAAA,sBACE,wBAAA,CACA,wBAAA,CACA,YAAA,CACA,UAAA,CAEA,6BACE,eAAA,CAGF,0BACE,kBAAA","sourcesContent":[".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n\n  &.bottom {\n    margin-top: 15px;\n  }\n\n  &.top {\n    margin-bottom: 15px;\n  }\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ 5861:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -93,7 +162,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-missing-component{border:1px solid #bbb;background-color:#f6f6f6;padding:20px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-missing-component .icon{order:0;flex:0 0;align-self:auto;margin-top:2px}.lf-missing-component .tag-component{background-color:#673ab7;color:#fff;font-size:12px;padding:1px 4px 2px 4px;border-radius:3px;line-height:17px}.lf-missing-component .message{display:inline-block;margin-left:10px;order:0;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./generator/index.scss"],"names":[],"mappings":"AAAA,sBACE,qBAAA,CACA,wBAAA,CACA,YAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,4BACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,cAAA,CAGF,qCACE,wBAAA,CACA,UAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,gBAAA,CAGF,+BACE,oBAAA,CACA,gBAAA,CACA,OAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n\n  .icon {\n    order: 0;\n    flex: 0 0;\n    align-self: auto;\n    margin-top: 2px;\n  }\n\n  .tag-component {\n    background-color: #673ab7;\n    color: #ffffff;\n    font-size: 12px;\n    padding: 1px 4px 2px 4px;\n    border-radius: 3px;\n    line-height: 17px;\n  }\n\n  .message {\n    display: inline-block;\n    margin-left: 10px;\n    order: 0;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-icon-asterisk{margin-top:-3px}.lf-missing-component{border:1px solid #bbb;background-color:#f6f6f6;padding:20px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-missing-component .icon{order:0;flex:0 0;align-self:auto;margin-top:2px}.lf-missing-component .tag-component{background-color:#673ab7;color:#fff;font-size:12px;padding:1px 4px 2px 4px;border-radius:3px;line-height:17px}.lf-missing-component .message{display:inline-block;margin-left:10px;order:0;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./generator/index.scss"],"names":[],"mappings":"AAAA,kBACE,eAAA,CAGF,sBACE,qBAAA,CACA,wBAAA,CACA,YAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,4BACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,cAAA,CAGF,qCACE,wBAAA,CACA,UAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,gBAAA,CAGF,+BACE,oBAAA,CACA,gBAAA,CACA,OAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-icon-asterisk {\n  margin-top: -3px;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n\n  .icon {\n    order: 0;\n    flex: 0 0;\n    align-self: auto;\n    margin-top: 2px;\n  }\n\n  .tag-component {\n    background-color: #673ab7;\n    color: #ffffff;\n    font-size: 12px;\n    padding: 1px 4px 2px 4px;\n    border-radius: 3px;\n    line-height: 17px;\n  }\n\n  .message {\n    display: inline-block;\n    margin-left: 10px;\n    order: 0;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -162,7 +231,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lt-control-che
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-toolbar{margin-top:15px}.lf-form-react-rsuite5 .rs-form-control-label>.rs-form-help-text.rs-form-help-text-tooltip{margin-top:0px;margin-left:5px}", "",{"version":3,"sources":["webpack://./react-rsuite5/form/index.scss"],"names":[],"mappings":"AACE,mCACE,eAAA,CAIA,2FACE,cAAA,CACA,eAAA","sourcesContent":[".lf-form-react-rsuite5 {\n  .lf-toolbar {\n    margin-top: 15px;\n  }\n  // makes tooltip inside labels with smaller margins\n  .rs-form-control-label {\n    > .rs-form-help-text.rs-form-help-text-tooltip {\n      margin-top: 0px;\n      margin-left: 5px;\n    }\n  }\n\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-toolbar{margin-top:24px}.lf-form-react-rsuite5 .rs-form-control-label>.rs-form-help-text.rs-form-help-text-tooltip{margin-top:0px;margin-left:5px}", "",{"version":3,"sources":["webpack://./react-rsuite5/form/index.scss"],"names":[],"mappings":"AACE,mCACE,eAAA,CAIA,2FACE,cAAA,CACA,eAAA","sourcesContent":[".lf-form-react-rsuite5 {\n  .lf-toolbar {\n    margin-top: 24px;\n  }\n  // makes tooltip inside labels with smaller margins\n  .rs-form-control-label {\n    > .rs-form-help-text.rs-form-help-text-tooltip {\n      margin-top: 0px;\n      margin-left: 5px;\n    }\n  }\n\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -185,7 +254,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-toolbar{mar
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".rsuite5-fields-group .arrow{padding:0px}.rsuite5-fields-group .arrow .rs-icon{font-size:24px}", "",{"version":3,"sources":["webpack://./react-rsuite5/group/fields-group.scss"],"names":[],"mappings":"AACE,6BACE,WAAA,CACA,sCACE,cAAA","sourcesContent":[".rsuite5-fields-group {\n  .arrow {\n    padding: 0px;\n    .rs-icon {\n      font-size: 24px;\n    }\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".rsuite5-fields-group .rs-divider-horizontal.rs-divider-with-text{margin:15px 0px}.rsuite5-fields-group .arrow{padding:0px}.rsuite5-fields-group .arrow .rs-icon{font-size:24px}", "",{"version":3,"sources":["webpack://./react-rsuite5/group/fields-group.scss"],"names":[],"mappings":"AAEE,kEACE,eAAA,CAGF,6BACE,WAAA,CACA,sCACE,cAAA","sourcesContent":[".rsuite5-fields-group {\n\n  .rs-divider-horizontal.rs-divider-with-text {\n    margin: 15px 0px;\n  }\n\n  .arrow {\n    padding: 0px;\n    .rs-icon {\n      font-size: 24px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -238,29 +307,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-control-sli
 
 /***/ }),
 
-/***/ 3522:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch}.lf-three-columns .left{flex:1 0;align-self:auto;margin-right:5px}.lf-three-columns .center{margin-left:5px;margin-right:5px;flex:1 0;align-self:auto}.lf-three-columns .right{margin-left:5px;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./react-rsuite5/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,kBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CAUA,wBACE,QAAA,CACA,eAAA,CACA,gBAAA,CAGF,0BACE,eAAA,CACA,gBAAA,CACA,QAAA,CACA,eAAA,CAGF,yBACE,eAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n\n  .left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 5px;\n  }\n\n  .center {\n    margin-left: 5px;\n    margin-right: 5px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    margin-left: 5px;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
 /***/ 8078:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -278,29 +324,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-di
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 870:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".gforms-two-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch}.gforms-two-columns .left .rs-form-control-wrapper>.rs-input,.gforms-two-columns .left .rs-form-control-wrapper>.rs-input-number,.gforms-two-columns .right .rs-form-control-wrapper>.rs-input,.gforms-two-columns .right .rs-form-control-wrapper>.rs-input-number{width:auto}.gforms-two-columns .left{flex:1 0;align-self:auto;margin-right:5px}.gforms-two-columns .right{margin-left:5px;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./react-rsuite5/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,oBACE,YAAA,CACE,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CAKI,oQACE,UAAA,CAKN,0BACE,QAAA,CACA,eAAA,CACA,gBAAA,CAGF,2BACE,eAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".gforms-two-columns {\n  display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n\n    .left, .right {\n      // disable width 300 of text input\n      .rs-form-control-wrapper {\n        > .rs-input, > .rs-input-number {\n          width: auto;\n        }\n      }\n    }\n\n    .left {\n      flex: 1 0;\n      align-self: auto;\n      margin-right: 5px;\n    }\n\n    .right {\n      margin-left: 5px;\n      flex: 1 0;\n      align-self: auto;\n    }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -435,38 +458,6 @@ module.exports = Symbol;
 
 /***/ }),
 
-/***/ 4963:
-/***/ ((module) => {
-
-/**
- * A specialized version of `_.filter` for arrays without support for
- * iteratee shorthands.
- *
- * @private
- * @param {Array} [array] The array to iterate over.
- * @param {Function} predicate The function invoked per iteration.
- * @returns {Array} Returns the new filtered array.
- */
-function arrayFilter(array, predicate) {
-  var index = -1,
-      length = array == null ? 0 : array.length,
-      resIndex = 0,
-      result = [];
-
-  while (++index < length) {
-    var value = array[index];
-    if (predicate(value, index, array)) {
-      result[resIndex++] = value;
-    }
-  }
-  return result;
-}
-
-module.exports = arrayFilter;
-
-
-/***/ }),
-
 /***/ 9932:
 /***/ ((module) => {
 
@@ -590,38 +581,6 @@ module.exports = identity;
 
 /***/ }),
 
-/***/ 760:
-/***/ ((module) => {
-
-/**
- * A specialized version of `_.filter` for arrays without support for
- * iteratee shorthands.
- *
- * @private
- * @param {Array} [array] The array to iterate over.
- * @param {Function} predicate The function invoked per iteration.
- * @returns {Array} Returns the new filtered array.
- */
-function arrayFilter(array, predicate) {
-  var index = -1,
-      length = array == null ? 0 : array.length,
-      resIndex = 0,
-      result = [];
-
-  while (++index < length) {
-    var value = array[index];
-    if (predicate(value, index, array)) {
-      result[resIndex++] = value;
-    }
-  }
-  return result;
-}
-
-module.exports = arrayFilter;
-
-
-/***/ }),
-
 /***/ 4239:
 /***/ ((module) => {
 
@@ -647,34 +606,6 @@ function objectToString(value) {
 }
 
 module.exports = objectToString;
-
-
-/***/ }),
-
-/***/ 7206:
-/***/ ((module) => {
-
-/**
- * This method returns the first argument it receives.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Util
- * @param {*} value Any value.
- * @returns {*} Returns `value`.
- * @example
- *
- * var object = { 'a': 1 };
- *
- * console.log(_.identity(object) === object);
- * // => true
- */
-function identity(value) {
-  return value;
-}
-
-module.exports = identity;
 
 
 /***/ }),
@@ -1837,53 +1768,6 @@ module.exports = last;
 
 /***/ }),
 
-/***/ 4885:
-/***/ ((module) => {
-
-/** Error message constants. */
-var FUNC_ERROR_TEXT = 'Expected a function';
-
-/**
- * Creates a function that negates the result of the predicate `func`. The
- * `func` predicate is invoked with the `this` binding and arguments of the
- * created function.
- *
- * @static
- * @memberOf _
- * @since 3.0.0
- * @category Function
- * @param {Function} predicate The predicate to negate.
- * @returns {Function} Returns the new negated function.
- * @example
- *
- * function isEven(n) {
- *   return n % 2 == 0;
- * }
- *
- * _.filter([1, 2, 3, 4, 5, 6], _.negate(isEven));
- * // => [1, 3, 5]
- */
-function negate(predicate) {
-  if (typeof predicate != 'function') {
-    throw new TypeError(FUNC_ERROR_TEXT);
-  }
-  return function() {
-    var args = arguments;
-    switch (args.length) {
-      case 0: return !predicate.call(this);
-      case 1: return !predicate.call(this, args[0]);
-      case 2: return !predicate.call(this, args[0], args[1]);
-      case 3: return !predicate.call(this, args[0], args[1], args[2]);
-    }
-    return !predicate.apply(this, args);
-  };
-}
-
-module.exports = negate;
-
-
-/***/ }),
-
 /***/ 7557:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -1944,59 +1828,6 @@ var omit = flatRest(function(object, paths) {
 });
 
 module.exports = omit;
-
-
-/***/ }),
-
-/***/ 3063:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var arrayFilter = __webpack_require__(4963),
-    baseFilter = __webpack_require__(760),
-    baseIteratee = __webpack_require__(7206),
-    isArray = __webpack_require__(1469),
-    negate = __webpack_require__(4885);
-
-/**
- * The opposite of `_.filter`; this method returns the elements of `collection`
- * that `predicate` does **not** return truthy for.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Collection
- * @param {Array|Object} collection The collection to iterate over.
- * @param {Function} [predicate=_.identity] The function invoked per iteration.
- * @returns {Array} Returns the new filtered array.
- * @see _.filter
- * @example
- *
- * var users = [
- *   { 'user': 'barney', 'age': 36, 'active': false },
- *   { 'user': 'fred',   'age': 40, 'active': true }
- * ];
- *
- * _.reject(users, function(o) { return !o.active; });
- * // => objects for ['fred']
- *
- * // The `_.matches` iteratee shorthand.
- * _.reject(users, { 'age': 40, 'active': true });
- * // => objects for ['barney']
- *
- * // The `_.matchesProperty` iteratee shorthand.
- * _.reject(users, ['active', false]);
- * // => objects for ['fred']
- *
- * // The `_.property` iteratee shorthand.
- * _.reject(users, 'active');
- * // => objects for ['barney']
- */
-function reject(collection, predicate) {
-  var func = isArray(collection) ? arrayFilter : baseFilter;
-  return func(collection, negate(baseIteratee(predicate, 3)));
-}
-
-module.exports = reject;
 
 
 /***/ }),
@@ -2350,6 +2181,14 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__1186__;
 
 /***/ }),
 
+/***/ 8187:
+/***/ ((module) => {
+
+"use strict";
+module.exports = __WEBPACK_EXTERNAL_MODULE__8187__;
+
+/***/ }),
+
 /***/ 977:
 /***/ ((module) => {
 
@@ -2464,15 +2303,14 @@ __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ react_rsuite5),
   "deleteField": () => (/* reexport */ deleteField),
   "fillIds": () => (/* reexport */ fillIds),
+  "filterFields": () => (/* reexport */ filterFields),
   "findField": () => (/* reexport */ findField),
+  "isValidDayjsFormat": () => (/* reexport */ isValidDayjsFormat),
   "reduceFields": () => (/* reexport */ reduceFields),
   "replaceField": () => (/* reexport */ replaceField),
   "validateRulesDefinition": () => (/* reexport */ validateRulesDefinition)
 });
 
-// EXTERNAL MODULE: ./node_modules/lodash/isArray.js
-var isArray = __webpack_require__(1469);
-var isArray_default = /*#__PURE__*/__webpack_require__.n(isArray);
 // EXTERNAL MODULE: ./node_modules/lodash/omit.js
 var omit = __webpack_require__(7557);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
@@ -4819,18 +4657,74 @@ function useForm(props = {}) {
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
 var classnames = __webpack_require__(4184);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__(3379);
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI = __webpack_require__(7795);
+var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
+var insertBySelector = __webpack_require__(569);
+var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+var setAttributesWithoutAttributes = __webpack_require__(3565);
+var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement = __webpack_require__(9216);
+var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+var styleTagTransform = __webpack_require__(4589);
+var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/validation-errors/index.scss
+var validation_errors = __webpack_require__(7242);
+;// CONCATENATED MODULE: ./components/validation-errors/index.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (styleTagTransform_default());
+options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      options.insert = insertBySelector_default().bind(null, "head");
+    
+options.domAPI = (styleDomAPI_default());
+options.insertStyleElement = (insertStyleElement_default());
+
+var update = injectStylesIntoStyleTag_default()(validation_errors/* default */.Z, options);
+
+
+
+
+       /* harmony default export */ const components_validation_errors = (validation_errors/* default */.Z && validation_errors/* default.locals */.Z.locals ? validation_errors/* default.locals */.Z.locals : undefined);
+
 ;// CONCATENATED MODULE: ./components/validation-errors/index.js
+
+
 
 var ValidationErrors = function ValidationErrors(_ref) {
   var _ref$errors = _ref.errors,
-    errors = _ref$errors === void 0 ? {} : _ref$errors;
+    errors = _ref$errors === void 0 ? {} : _ref$errors,
+    className = _ref.className;
   var keys = Object.keys(errors);
   return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "validation-errors"
+    className: classnames_default()('lf-validation-errors', className)
   }, keys.map(function (fieldName) {
+    var label = fieldName;
+    if (errors[fieldName] && errors[fieldName].ref && errors[fieldName].ref.label) {
+      label = errors[fieldName].ref.label;
+    }
     return /*#__PURE__*/external_react_default().createElement("div", {
       key: fieldName
-    }, "- ", fieldName, ": ", errors[fieldName].message ? errors[fieldName].message : 'This is required');
+    }, /*#__PURE__*/external_react_default().createElement("b", null, label, ":"), "\xA0", errors[fieldName].message ? errors[fieldName].message : 'This is required');
   }));
 };
 
@@ -4931,6 +4825,7 @@ var Asterisk = function Asterisk(_ref) {
     style: style,
     version: "1.1",
     id: "_x32_",
+    className: "lf-icon-asterisk",
     viewBox: "0 0 512 512"
   }, /*#__PURE__*/external_react_default().createElement("g", null, /*#__PURE__*/external_react_default().createElement("polygon", {
     style: {
@@ -5012,109 +4907,192 @@ var RequiredIcon = function RequiredIcon() {
 var FRAMEWORKS = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd'];
 var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design'];
 var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
-;// CONCATENATED MODULE: ./helpers/replace-field.js
+;// CONCATENATED MODULE: ./helpers/map-fields.js
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-var replaceFieldInArray = function replaceFieldInArray(fields, field) {
-  var found = fields.some(function (_ref) {
-    var id = _ref.id;
-    return id === field.id;
-  });
-  if (found) {
-    // if found, stop recursion (id is unique), return new array
-    return fields.map(function (f) {
-      return f.id === field.id ? field : f;
-    });
+/**
+ * mapFields
+ * Return an array of fields with the only elements changed by the predicate, it takes a field as parameter
+ * and return the same field or a changed one. It recursively iterate over subfields for group, two-columns and
+ * three columns components
+ * @param {Array} fields
+ * @param {Function} predicate Take a field as paramenter and return a field object
+ * @returns
+ */
+var mapFields = function mapFields(fields) {
+  var predicate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (obj) {
+    return obj;
+  };
+  if (!fields) {
+    return fields;
   }
-  // if still not found, then check if any group has it
-  var foundField = false;
-  var newFields = fields.map(function (currentField) {
-    // skip if already found
-    if (foundField) {
-      return currentField;
-    }
-    if (currentField.component === 'group') {
-      var newSubfields = replaceFieldInArray(currentField.fields, field);
-      if (newSubfields !== currentField.fields) {
-        // if instance is different, it was found, return new instance and mark as found
-        foundField = true;
-        return _objectSpread(_objectSpread({}, currentField), {}, {
-          fields: newSubfields
+  // replace with predicated
+  var newFields = fields.map(function (field) {
+    var newField = predicate(field);
+    if (field.component === 'group') {
+      var _newFields = mapFields(field.fields, predicate);
+      if (_newFields !== field.fields) {
+        newField = _objectSpread(_objectSpread({}, newField), {}, {
+          fields: _newFields
+        });
+      }
+    } else if (field.component === 'two-columns') {
+      var newLeftFields = mapFields(field.leftFields, predicate);
+      if (newLeftFields !== field.leftFields) {
+        newField = _objectSpread(_objectSpread({}, newField), {}, {
+          leftFields: newLeftFields
+        });
+      }
+      var newRightFields = mapFields(field.rightFields, predicate);
+      if (newRightFields !== field.rightFields) {
+        newField = _objectSpread(_objectSpread({}, newField), {}, {
+          rightFields: newRightFields
+        });
+      }
+    } else if (field.component === 'three-columns') {
+      var _newLeftFields = mapFields(field.leftFields, predicate);
+      if (_newLeftFields !== field.leftFields) {
+        newField = _objectSpread(_objectSpread({}, newField), {}, {
+          leftFields: _newLeftFields
+        });
+      }
+      var newCenterFields = mapFields(field.centerFields, predicate);
+      if (newCenterFields !== field.centerFields) {
+        newField = _objectSpread(_objectSpread({}, newField), {}, {
+          centerFields: newCenterFields
+        });
+      }
+      var _newRightFields = mapFields(field.rightFields, predicate);
+      if (_newRightFields !== field.rightFields) {
+        newField = _objectSpread(_objectSpread({}, newField), {}, {
+          rightFields: _newRightFields
         });
       }
     }
-    return currentField;
+    return newField;
   });
-  return foundField ? newFields : fields;
+
+  // check if some element of the array is changed, keep instance consistency otherwise
+  var hasChanges = fields.some(function (field, idx) {
+    return field !== newFields[idx];
+  });
+  return hasChanges ? newFields : fields;
 };
+
+;// CONCATENATED MODULE: ./helpers/replace-field.js
+function replace_field_typeof(obj) { "@babel/helpers - typeof"; return replace_field_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, replace_field_typeof(obj); }
+function replace_field_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function replace_field_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? replace_field_ownKeys(Object(source), !0).forEach(function (key) { replace_field_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : replace_field_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function replace_field_defineProperty(obj, key, value) { key = replace_field_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function replace_field_toPropertyKey(arg) { var key = replace_field_toPrimitive(arg, "string"); return replace_field_typeof(key) === "symbol" ? key : String(key); }
+function replace_field_toPrimitive(input, hint) { if (replace_field_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (replace_field_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
 var replaceField = function replaceField(form, field) {
-  var newFields = replaceFieldInArray(form.fields, field);
-  if (form.fields !== newFields) {
-    return _objectSpread(_objectSpread({}, form), {}, {
-      fields: newFields
-    });
-  }
-  // return unchanged
-  return form;
+  return replace_field_objectSpread(replace_field_objectSpread({}, form), {}, {
+    fields: mapFields(form.fields, function (currentField) {
+      if (currentField.id === field.id) {
+        return field;
+      }
+      return currentField;
+    })
+  });
 };
 
-// EXTERNAL MODULE: ./node_modules/lodash/reject.js
-var reject = __webpack_require__(3063);
-var reject_default = /*#__PURE__*/__webpack_require__.n(reject);
-;// CONCATENATED MODULE: ./helpers/delete-field.js
+;// CONCATENATED MODULE: ./helpers/filter-fields.js
+function filter_fields_typeof(obj) { "@babel/helpers - typeof"; return filter_fields_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, filter_fields_typeof(obj); }
+function filter_fields_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function filter_fields_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? filter_fields_ownKeys(Object(source), !0).forEach(function (key) { filter_fields_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : filter_fields_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function filter_fields_defineProperty(obj, key, value) { key = filter_fields_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function filter_fields_toPropertyKey(arg) { var key = filter_fields_toPrimitive(arg, "string"); return filter_fields_typeof(key) === "symbol" ? key : String(key); }
+function filter_fields_toPrimitive(input, hint) { if (filter_fields_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (filter_fields_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+/**
+ * filterFields
+ * Filter field calling recursively fields in group, two-columns, three columns
+ * @param {Array} fields
+ * @param {Function} predicate Take a field as paramenter and return a field object
+ * @returns
+ */
+var filterFields = function filterFields(fields) {
+  var predicate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (obj) {
+    return obj;
+  };
+  if (!fields) {
+    return fields;
+  }
+  // replace with predicated
+  var newFields = fields.map(function (field) {
+    if (!predicate(field)) {
+      return null;
+    }
+    var newField = field;
+    if (field.component === 'group') {
+      var _newFields = filterFields(field.fields, predicate);
+      if (_newFields !== field.fields) {
+        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
+          fields: _newFields
+        });
+      }
+    } else if (field.component === 'two-columns') {
+      var newLeftFields = filterFields(field.leftFields, predicate);
+      if (newLeftFields !== field.leftFields) {
+        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
+          leftFields: newLeftFields
+        });
+      }
+      var newRightFields = filterFields(field.rightFields, predicate);
+      if (newRightFields !== field.rightFields) {
+        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
+          rightFields: newRightFields
+        });
+      }
+    } else if (field.component === 'three-columns') {
+      var _newLeftFields = filterFields(field.leftFields, predicate);
+      if (_newLeftFields !== field.leftFields) {
+        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
+          leftFields: _newLeftFields
+        });
+      }
+      var newCenterFields = filterFields(field.centerFields, predicate);
+      if (newCenterFields !== field.centerFields) {
+        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
+          centerFields: newCenterFields
+        });
+      }
+      var _newRightFields = filterFields(field.rightFields, predicate);
+      if (_newRightFields !== field.rightFields) {
+        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
+          rightFields: _newRightFields
+        });
+      }
+    }
+    return newField;
+  }).filter(Boolean);
 
+  // check if some element of the array is changed, keep instance consistency otherwise
+  var hasChanges = fields.length !== newFields.length || fields.some(function (field, idx) {
+    return field !== newFields[idx];
+  });
+  return hasChanges ? newFields : fields;
+};
+
+;// CONCATENATED MODULE: ./helpers/delete-field.js
 function delete_field_typeof(obj) { "@babel/helpers - typeof"; return delete_field_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, delete_field_typeof(obj); }
 function delete_field_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function delete_field_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? delete_field_ownKeys(Object(source), !0).forEach(function (key) { delete_field_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : delete_field_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 function delete_field_defineProperty(obj, key, value) { key = delete_field_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function delete_field_toPropertyKey(arg) { var key = delete_field_toPrimitive(arg, "string"); return delete_field_typeof(key) === "symbol" ? key : String(key); }
 function delete_field_toPrimitive(input, hint) { if (delete_field_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (delete_field_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-var deleteFieldInArray = function deleteFieldInArray(fields, field) {
-  var found = fields.some(function (_ref) {
-    var id = _ref.id;
-    return id === field.id;
-  });
-  if (found) {
-    // if found, stop recursion (id is unique), return new array
-    //return fields.map(f => f.id === field.id ? field : f);
-    return reject_default()(fields, function (f) {
-      return f.id === field.id;
-    });
-  }
-  // if still not found, then check if any group has it
-  var foundField = false;
-  var newFields = fields.map(function (currentField) {
-    // skip if already found
-    if (foundField) {
-      return currentField;
-    }
-    if (currentField.component === 'group') {
-      var newSubfields = deleteFieldInArray(currentField.fields, field);
-      if (newSubfields !== currentField.fields) {
-        // if instance is different, it was found, return new instance and mark as found
-        foundField = true;
-        return delete_field_objectSpread(delete_field_objectSpread({}, currentField), {}, {
-          fields: newSubfields
-        });
-      }
-    }
-    return currentField;
-  });
-  return foundField ? newFields : fields;
-};
+
 var deleteField = function deleteField(form, field) {
-  var newFields = deleteFieldInArray(form.fields, field);
-  if (form.fields !== newFields) {
-    return delete_field_objectSpread(delete_field_objectSpread({}, form), {}, {
-      fields: newFields
-    });
-  }
-  // return unchanged
-  return form;
+  return delete_field_objectSpread(delete_field_objectSpread({}, form), {}, {
+    fields: filterFields(form.fields, function (currentField) {
+      return currentField.id !== field.id;
+    })
+  });
 };
 
 // EXTERNAL MODULE: ./node_modules/lodash/uniqueId.js
@@ -5172,6 +5150,9 @@ var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
 // EXTERNAL MODULE: ./node_modules/lodash/isObject.js
 var lodash_isObject = __webpack_require__(3218);
 var isObject_default = /*#__PURE__*/__webpack_require__.n(lodash_isObject);
+// EXTERNAL MODULE: ./node_modules/lodash/isArray.js
+var isArray = __webpack_require__(1469);
+var isArray_default = /*#__PURE__*/__webpack_require__.n(isArray);
 ;// CONCATENATED MODULE: ./helpers/cleanup.js
 
 
@@ -5225,82 +5206,6 @@ var cleanUp = function cleanUp(json) {
   return json;
 };
 
-;// CONCATENATED MODULE: ./helpers/map-fields.js
-function map_fields_typeof(obj) { "@babel/helpers - typeof"; return map_fields_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, map_fields_typeof(obj); }
-function map_fields_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function map_fields_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? map_fields_ownKeys(Object(source), !0).forEach(function (key) { map_fields_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : map_fields_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function map_fields_defineProperty(obj, key, value) { key = map_fields_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function map_fields_toPropertyKey(arg) { var key = map_fields_toPrimitive(arg, "string"); return map_fields_typeof(key) === "symbol" ? key : String(key); }
-function map_fields_toPrimitive(input, hint) { if (map_fields_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (map_fields_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-/**
- * mapFields
- * Return an array of fields with the only elements changed by the predicate, it takes a field as parameter
- * and return the same field or a changed one. It recursively iterate over subfields for group, two-columns and
- * three columns components
- * @param {Array} fields
- * @param {Function} predicate Take a field as paramenter and return a field object
- * @returns
- */
-var mapFields = function mapFields(fields) {
-  var predicate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (obj) {
-    return obj;
-  };
-  if (!fields) {
-    return fields;
-  }
-  // replace with predicated
-  var newFields = fields.map(function (field) {
-    var newField = predicate(field);
-    if (field.component === 'group') {
-      var _newFields = mapFields(field.fields, predicate);
-      if (_newFields !== field.fields) {
-        newField = map_fields_objectSpread(map_fields_objectSpread({}, newField), {}, {
-          fields: _newFields
-        });
-      }
-    } else if (field.component === 'two-columns') {
-      var newLeftFields = mapFields(field.leftFields, predicate);
-      if (newLeftFields !== field.leftFields) {
-        newField = map_fields_objectSpread(map_fields_objectSpread({}, newField), {}, {
-          leftFields: newLeftFields
-        });
-      }
-      var newRightFields = mapFields(field.rightFields, predicate);
-      if (newRightFields !== field.rightFields) {
-        newField = map_fields_objectSpread(map_fields_objectSpread({}, newField), {}, {
-          rightFields: newRightFields
-        });
-      }
-    } else if (field.component === 'three-columns') {
-      var _newLeftFields = mapFields(field.leftFields, predicate);
-      if (_newLeftFields !== field.leftFields) {
-        newField = map_fields_objectSpread(map_fields_objectSpread({}, newField), {}, {
-          leftFields: _newLeftFields
-        });
-      }
-      var newCenterFields = mapFields(field.centerFields, predicate);
-      if (newCenterFields !== field.centerFields) {
-        newField = map_fields_objectSpread(map_fields_objectSpread({}, newField), {}, {
-          centerFields: newCenterFields
-        });
-      }
-      var _newRightFields = mapFields(field.rightFields, predicate);
-      if (_newRightFields !== field.rightFields) {
-        newField = map_fields_objectSpread(map_fields_objectSpread({}, newField), {}, {
-          rightFields: _newRightFields
-        });
-      }
-    }
-    return newField;
-  });
-
-  // check if some element of the array is changed, keep instance consistency otherwise
-  var hasChanges = fields.some(function (field, idx) {
-    return field !== newFields[idx];
-  });
-  return hasChanges ? newFields : fields;
-};
-
 ;// CONCATENATED MODULE: ./helpers/add-field.js
 function add_field_typeof(obj) { "@babel/helpers - typeof"; return add_field_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, add_field_typeof(obj); }
 function add_field_toConsumableArray(arr) { return add_field_arrayWithoutHoles(arr) || add_field_iterableToArray(arr) || add_field_unsupportedIterableToArray(arr) || add_field_nonIterableSpread(); }
@@ -5316,16 +5221,14 @@ function add_field_toPropertyKey(arg) { var key = add_field_toPrimitive(arg, "st
 function add_field_toPrimitive(input, hint) { if (add_field_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (add_field_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 var addField = function addField(form, newField, id) {
+  var target = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'fields';
   if (id != null) {
     return add_field_objectSpread(add_field_objectSpread({}, form), {}, {
       fields: mapFields(form.fields,
       // if right field id, append to fields
       function (field) {
         if (field.id === id) {
-          return add_field_objectSpread(add_field_objectSpread({}, field), {}, {
-            // TODO could be leftColumns
-            fields: [].concat(add_field_toConsumableArray(field.fields || []), [newField])
-          });
+          return add_field_objectSpread(add_field_objectSpread({}, field), {}, add_field_defineProperty({}, target, [].concat(add_field_toConsumableArray(field[target] || []), [newField])));
         }
         return field;
       })
@@ -5424,6 +5327,7 @@ var fieldExists = function fieldExists(fields, predicate) {
 
 ;// CONCATENATED MODULE: ./helpers/apply-form-rules.js
 
+
 function apply_form_rules_typeof(obj) { "@babel/helpers - typeof"; return apply_form_rules_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, apply_form_rules_typeof(obj); }
 function apply_form_rules_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function apply_form_rules_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? apply_form_rules_ownKeys(Object(source), !0).forEach(function (key) { apply_form_rules_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : apply_form_rules_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -5447,8 +5351,27 @@ var testCondition = function testCondition(condition) {
   // eslint-disable-next-line eqeqeq
   values[condition.field] != condition.value) {
     return true;
+  } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'not_empty' && !isEmpty_default()(condition === null || condition === void 0 ? void 0 : condition.field) &&
+  // eslint-disable-next-line eqeqeq
+  values[condition.field] != null && values[condition.field] !== '') {
+    return true;
+  } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'empty' && !isEmpty_default()(condition === null || condition === void 0 ? void 0 : condition.field) && (
+  // eslint-disable-next-line eqeqeq
+  values[condition.field] == null || values[condition.field] === '')) {
+    return true;
   }
   return false;
+};
+var testConditions = function testConditions(conditions, values) {
+  if (isArray_default()(conditions)) {
+    if (!isEmpty_default()(conditions)) {
+      return conditions.every(function (condition) {
+        return testCondition(condition, values);
+      });
+    }
+    return false;
+  }
+  return testCondition(conditions, values);
 };
 var PREDICATES = {
   enable: function enable(names) {
@@ -5499,7 +5422,7 @@ var applyFormRules = function applyFormRules(fields, rules, values) {
   var newFields = fields;
   rules.forEach(function (rule) {
     // if test condition passes and exists a predicate, then execute it
-    if (testCondition(rule.condition, values)) {
+    if (testConditions(rule.condition, values)) {
       if (PREDICATES[rule.verb]) {
         newFields = mapFields(newFields, PREDICATES[rule.verb](rule.names));
       }
@@ -5524,6 +5447,27 @@ var validateRulesDefinition = function validateRulesDefinition(rules) {
   return 'Rules object is not an array';
 };
 
+// EXTERNAL MODULE: ./node_modules/lodash/isString.js
+var lodash_isString = __webpack_require__(7037);
+var isString_default = /*#__PURE__*/__webpack_require__.n(lodash_isString);
+;// CONCATENATED MODULE: ./helpers/is-valid-dayjs-format.js
+
+
+var DAYJS_VALID_TOKENS = ['YY', 'YYYY', 'M', 'MM', 'MMM', 'MMMM', 'D', 'DD', 'Do', 'd', 'dd', 'ddd', 'dddd', 'A', 'a', 'H', 'HH', 'h', 'hh', 'm', 'mm', 's', 'ss'];
+var isValidDayjsFormat = function isValidDayjsFormat(str) {
+  if (isString_default()(str) && !isEmpty_default()(str)) {
+    var tokens = str.match(/([A-Za-z0-9]{1,})/gm);
+    var isValid = tokens.every(function (t) {
+      return DAYJS_VALID_TOKENS.includes(t);
+    });
+    if (!isValid) {
+      console.error(["MUI: The token \"".concat(str, "\" is not supported by the Date and Time Pickers."), 'Please try using another token or open an issue on https://github.com/mui/mui-x/issues/new/choose if you think it should be supported.'].join('\n'));
+    }
+    return isValid;
+  }
+  return false;
+};
+
 ;// CONCATENATED MODULE: ./helpers/index.js
 
 
@@ -5533,24 +5477,8 @@ var validateRulesDefinition = function validateRulesDefinition(rules) {
 
 
 
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
-var injectStylesIntoStyleTag = __webpack_require__(3379);
-var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
-var styleDomAPI = __webpack_require__(7795);
-var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
-var insertBySelector = __webpack_require__(569);
-var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
-var setAttributesWithoutAttributes = __webpack_require__(3565);
-var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
-var insertStyleElement = __webpack_require__(9216);
-var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
-var styleTagTransform = __webpack_require__(4589);
-var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
+
+
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./generator/index.scss
 var cjs_js_generator = __webpack_require__(5861);
 ;// CONCATENATED MODULE: ./generator/index.scss
@@ -5565,17 +5493,17 @@ var cjs_js_generator = __webpack_require__(5861);
       
       
 
-var options = {};
+var generator_options = {};
 
-options.styleTagTransform = (styleTagTransform_default());
-options.setAttributes = (setAttributesWithoutAttributes_default());
+generator_options.styleTagTransform = (styleTagTransform_default());
+generator_options.setAttributes = (setAttributesWithoutAttributes_default());
 
-      options.insert = insertBySelector_default().bind(null, "head");
+      generator_options.insert = insertBySelector_default().bind(null, "head");
     
-options.domAPI = (styleDomAPI_default());
-options.insertStyleElement = (insertStyleElement_default());
+generator_options.domAPI = (styleDomAPI_default());
+generator_options.insertStyleElement = (insertStyleElement_default());
 
-var update = injectStylesIntoStyleTag_default()(cjs_js_generator/* default */.Z, options);
+var generator_update = injectStylesIntoStyleTag_default()(cjs_js_generator/* default */.Z, generator_options);
 
 
 
@@ -5583,19 +5511,13 @@ var update = injectStylesIntoStyleTag_default()(cjs_js_generator/* default */.Z,
        /* harmony default export */ const generator = (cjs_js_generator/* default */.Z && cjs_js_generator/* default.locals */.Z.locals ? cjs_js_generator/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./generator/index.js
+
+
 function generator_typeof(obj) { "@babel/helpers - typeof"; return generator_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, generator_typeof(obj); }
-
-
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || generator_unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-function generator_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function generator_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? generator_ownKeys(Object(source), !0).forEach(function (key) { generator_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : generator_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function generator_defineProperty(obj, key, value) { key = generator_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function generator_toPropertyKey(arg) { var key = generator_toPrimitive(arg, "string"); return generator_typeof(key) === "symbol" ? key : String(key); }
-function generator_toPrimitive(input, hint) { if (generator_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (generator_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function generator_toConsumableArray(arr) { return generator_arrayWithoutHoles(arr) || generator_iterableToArray(arr) || generator_unsupportedIterableToArray(arr) || generator_nonIterableSpread(); }
 function generator_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -5603,6 +5525,11 @@ function generator_unsupportedIterableToArray(o, minLen) { if (!o) return; if (t
 function generator_iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
 function generator_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return generator_arrayLikeToArray(arr); }
 function generator_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function generator_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function generator_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? generator_ownKeys(Object(source), !0).forEach(function (key) { generator_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : generator_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function generator_defineProperty(obj, key, value) { key = generator_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function generator_toPropertyKey(arg) { var key = generator_toPrimitive(arg, "string"); return generator_typeof(key) === "symbol" ? key : String(key); }
+function generator_toPrimitive(input, hint) { if (generator_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (generator_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 
 
@@ -5616,6 +5543,18 @@ function generator_arrayLikeToArray(arr, len) { if (len == null || len > arr.len
 //import PropTypes from 'prop-types';
 
 
+var enrichWithLabels = function enrichWithLabels(validationErrors, fields) {
+  var result = generator_objectSpread({}, validationErrors);
+  var collectLabels = reduceFields(fields, function (field, accumulator) {
+    return field.label ? generator_objectSpread(generator_objectSpread({}, accumulator), {}, generator_defineProperty({}, field.name, field.label)) : accumulator;
+  }, {});
+  Object.keys(result).forEach(function (key) {
+    if (result[key] && result[key].ref && collectLabels[result[key].ref.name]) {
+      result[key].ref.label = collectLabels[result[key].ref.name];
+    }
+  });
+  return result;
+};
 var errorToString = function errorToString(error) {
   if (error) {
     if (error.message) {
@@ -5699,13 +5638,17 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       _onChange = _ref3.onChange,
       getValues = _ref3.getValues,
       Wrapper = _ref3.Wrapper,
+      GroupWrapper = _ref3.GroupWrapper,
+      BottomView = _ref3.BottomView,
       debug = _ref3.debug,
       disabled = _ref3.disabled,
       readOnly = _ref3.readOnly,
       plaintext = _ref3.plaintext,
       errors = _ref3.errors,
-      showErrors = _ref3.showErrors;
-    return (fields || []).filter(function (field) {
+      showErrors = _ref3.showErrors,
+      _ref3$level = _ref3.level,
+      level = _ref3$level === void 0 ? 1 : _ref3$level;
+    var renderedFields = (fields || []).filter(function (field) {
       return Wrapper || field.hidden !== true;
     }).map(function (field, index) {
       var Component;
@@ -5731,6 +5674,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           disabled: field.disabled
         }, additionalFields), /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, renderFields({
           Wrapper: Wrapper,
+          GroupWrapper: GroupWrapper,
+          BottomView: BottomView,
           onChange: _onChange,
           fields: field.fields,
           control: control,
@@ -5740,10 +5685,15 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           readOnly: readOnly,
           plaintext: plaintext,
           errors: errors,
-          showErrors: showErrors
-        })));
-        return Wrapper ? /*#__PURE__*/external_react_default().createElement(Wrapper, {
+          showErrors: showErrors,
+          level: level + 1
+        }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
           field: field,
+          target: "fields"
+        })));
+        return GroupWrapper ? /*#__PURE__*/external_react_default().createElement(GroupWrapper, {
+          field: field,
+          level: level,
           index: index
         }, component) : component;
       } else if (field.component === 'two-columns') {
@@ -5753,9 +5703,11 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           lfFramework: framework,
           name: field.name
         }, additionalFields), function (column) {
-          if (column === 'left' && isArray_default()(field.leftFields) && !isEmpty_default()(field.leftFields)) {
+          if (column === 'left') {
             return /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, renderFields({
               Wrapper: Wrapper,
+              GroupWrapper: GroupWrapper,
+              BottomView: BottomView,
               onChange: _onChange,
               fields: field.leftFields,
               control: control,
@@ -5765,11 +5717,17 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               readOnly: readOnly,
               plaintext: plaintext,
               errors: errors,
-              showErrors: showErrors
+              showErrors: showErrors,
+              level: level + 1
+            }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              field: field,
+              target: "leftFields"
             }));
-          } else if (column === 'right' && isArray_default()(field.rightFields) && !isEmpty_default()(field.rightFields)) {
+          } else if (column === 'right') {
             return /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, renderFields({
               Wrapper: Wrapper,
+              GroupWrapper: GroupWrapper,
+              BottomView: BottomView,
               onChange: _onChange,
               fields: field.rightFields,
               control: control,
@@ -5779,11 +5737,16 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               readOnly: readOnly,
               plaintext: plaintext,
               errors: errors,
-              showErrors: showErrors
+              showErrors: showErrors,
+              level: level + 1
+            }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              field: field,
+              target: "rightFields"
             }));
           }
         });
-        return Wrapper ? /*#__PURE__*/external_react_default().createElement(Wrapper, {
+        return GroupWrapper ? /*#__PURE__*/external_react_default().createElement(GroupWrapper, {
+          level: level,
           field: field,
           index: index
         }, _component) : _component;
@@ -5794,9 +5757,11 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           lfComponent: field.component,
           lfFramework: framework
         }, additionalFields), function (column) {
-          if (column === 'left' && isArray_default()(field.leftFields) && !isEmpty_default()(field.leftFields)) {
+          if (column === 'left') {
             return /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, renderFields({
               Wrapper: Wrapper,
+              GroupWrapper: GroupWrapper,
+              BottomView: BottomView,
               onChange: _onChange,
               fields: field.leftFields,
               control: control,
@@ -5806,11 +5771,17 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               readOnly: readOnly,
               plaintext: plaintext,
               errors: errors,
-              showErrors: showErrors
+              showErrors: showErrors,
+              level: level + 1
+            }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              field: field,
+              target: "leftFields"
             }));
-          } else if (column === 'center' && isArray_default()(field.centerFields) && !isEmpty_default()(field.centerFields)) {
+          } else if (column === 'center') {
             return /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, renderFields({
               Wrapper: Wrapper,
+              GroupWrapper: GroupWrapper,
+              BottomView: BottomView,
               onChange: _onChange,
               fields: field.centerFields,
               control: control,
@@ -5820,11 +5791,17 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               readOnly: readOnly,
               plaintext: plaintext,
               errors: errors,
-              showErrors: showErrors
+              showErrors: showErrors,
+              level: level + 1
+            }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              field: field,
+              target: "centerFields"
             }));
-          } else if (column === 'right' && isArray_default()(field.rightFields) && !isEmpty_default()(field.rightFields)) {
+          } else if (column === 'right') {
             return /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, renderFields({
               Wrapper: Wrapper,
+              GroupWrapper: GroupWrapper,
+              BottomView: BottomView,
               onChange: _onChange,
               fields: field.rightFields,
               control: control,
@@ -5834,12 +5811,17 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               readOnly: readOnly,
               plaintext: plaintext,
               errors: errors,
-              showErrors: showErrors
+              showErrors: showErrors,
+              level: level + 1
+            }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              field: field,
+              target: "rightFields"
             }));
           }
         });
-        return Wrapper ? /*#__PURE__*/external_react_default().createElement(Wrapper, {
+        return GroupWrapper ? /*#__PURE__*/external_react_default().createElement(GroupWrapper, {
           field: field,
+          level: level,
           index: index
         }, _component2) : _component2;
       }
@@ -5875,13 +5857,20 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           }));
           return Wrapper ? /*#__PURE__*/external_react_default().createElement(Wrapper, {
             field: field,
-            cacca: true,
+            level: level,
             index: index
           }, component) : component;
         }
       });
     });
+    return renderedFields;
+
+    /*return BottomView ?
+      [...renderedFields, <BottomView />]
+      : renderedFields;
+      */
   };
+
   var FormGenerator = /*#__PURE__*/external_react_default().memo(function (_ref5) {
     var framework = _ref5.framework,
       form = _ref5.form,
@@ -5894,6 +5883,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       _ref5$onError = _ref5.onError,
       onError = _ref5$onError === void 0 ? function () {} : _ref5$onError,
       wrapper = _ref5.wrapper,
+      groupWrapper = _ref5.groupWrapper,
+      bottomView = _ref5.bottomView,
       _ref5$defaultValues = _ref5.defaultValues,
       defaultValues = _ref5$defaultValues === void 0 ? {} : _ref5$defaultValues,
       _ref5$onlyFields = _ref5.onlyFields,
@@ -5977,10 +5968,13 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
     }
     var Form = Forms[framework];
     var Wrapper = wrapper;
+    var GroupWrapper = groupWrapper;
+    var BottomView = bottomView;
     return /*#__PURE__*/external_react_default().createElement("div", {
       className: classnames_default()('lf-lets-form', className)
     }, validationErrors && showErrors === 'groupedTop' && /*#__PURE__*/external_react_default().createElement(ValidationErrors, {
-      errors: validationErrors
+      className: "top",
+      errors: enrichWithLabels(validationErrors, formFields)
     }), /*#__PURE__*/external_react_default().createElement(Form, _extends({
       onSubmit: handleSubmit(onHandleSubmit, onHandleError),
       defaultValues: defaultValues,
@@ -5992,6 +5986,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       plaintext: plaintext
     }, omit_default()(form, 'id', 'fields', 'version')), renderFields({
       Wrapper: Wrapper,
+      GroupWrapper: GroupWrapper,
+      BottomView: BottomView,
       onChange: handleChange,
       fields: formFields,
       // take from state
@@ -6005,7 +6001,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       plaintext: plaintext || form.plaintext,
       showErrors: showErrors
     }), children, validationErrors && (showErrors === 'groupedBottom' || isEmpty_default()(showErrors)) && /*#__PURE__*/external_react_default().createElement(ValidationErrors, {
-      errors: validationErrors
+      className: "bottom",
+      errors: enrichWithLabels(validationErrors, formFields)
     })));
   }, function (prevProps, nextProps) {
     if (DEBUG_RENDER) {
@@ -6105,9 +6102,6 @@ var FormRsuite5 = function FormRsuite5(_ref) {
   }, "Submit")));
 };
 
-// EXTERNAL MODULE: ./node_modules/lodash/isString.js
-var lodash_isString = __webpack_require__(7037);
-var isString_default = /*#__PURE__*/__webpack_require__.n(lodash_isString);
 ;// CONCATENATED MODULE: ./react-rsuite5/input-text/index.js
 
 
@@ -6162,6 +6156,12 @@ var TextInput = function TextInput(_ref) {
   }, prefix && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup.Addon, null, prefix), inner, postfix && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup.Addon, null, postfix)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 };
 
+// EXTERNAL MODULE: external "rsuite/Form"
+var Form_ = __webpack_require__(8187);
+var Form_default = /*#__PURE__*/__webpack_require__.n(Form_);
+;// CONCATENATED MODULE: external "rsuite/Toggle"
+const Toggle_namespaceObject = rsuite/Toggle;
+var Toggle_default = /*#__PURE__*/__webpack_require__.n(Toggle_namespaceObject);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/toggle/index.scss
 var toggle = __webpack_require__(8078);
 ;// CONCATENATED MODULE: ./react-rsuite5/toggle/index.scss
@@ -6198,6 +6198,8 @@ var toggle_update = injectStylesIntoStyleTag_default()(toggle/* default */.Z, to
 
 
 
+
+
 var ToggleInput = function ToggleInput(_ref) {
   var name = _ref.name,
     label = _ref.label,
@@ -6213,22 +6215,23 @@ var ToggleInput = function ToggleInput(_ref) {
     onChange = _ref.onChange,
     checkedChildren = _ref.checkedChildren,
     unCheckedChildren = _ref.unCheckedChildren,
-    onBlur = _ref.onBlur;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
+    error = _ref.error;
+  return /*#__PURE__*/external_react_default().createElement((Form_default()).Group, {
     controlId: name,
-    className: "gforms-react-rsuite5-toggle"
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
+    className: "lf-react-rsuite5-toggle"
+  }, label && /*#__PURE__*/external_react_default().createElement((Form_default()).ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement((Form_default()).HelpText, {
     tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
+  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement((Form_default()).Control, {
     name: name,
-    accepter: external_rsuite_.Toggle,
+    accepter: (Toggle_default()),
     value: value,
     onChange: onChange,
     disabled: disabled,
     unCheckedChildren: unCheckedChildren && unCheckedChildren !== '' ? unCheckedChildren : undefined,
     checkedChildren: checkedChildren && checkedChildren !== '' ? checkedChildren : undefined,
+    errorMessage: isString_default()(error) ? error : undefined,
     size: size
-  }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
+  }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement((Form_default()).HelpText, null, hint));
 };
 
 ;// CONCATENATED MODULE: ./react-rsuite5/select/index.js
@@ -6572,9 +6575,9 @@ var ListArray = function ListArray(_ref2) {
 // EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
 var lodash_isFunction = __webpack_require__(3560);
 var isFunction_default = /*#__PURE__*/__webpack_require__.n(lodash_isFunction);
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/two-columns/two-columns.scss
-var two_columns = __webpack_require__(870);
-;// CONCATENATED MODULE: ./react-rsuite5/two-columns/two-columns.scss
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/two-columns/two-columns.scss
+var two_columns = __webpack_require__(5318);
+;// CONCATENATED MODULE: ./common/two-columns/two-columns.scss
 
       
       
@@ -6603,19 +6606,20 @@ var two_columns_update = injectStylesIntoStyleTag_default()(two_columns/* defaul
 
        /* harmony default export */ const two_columns_two_columns = (two_columns/* default */.Z && two_columns/* default.locals */.Z.locals ? two_columns/* default.locals */.Z.locals : undefined);
 
-;// CONCATENATED MODULE: ./react-rsuite5/two-columns/index.js
+;// CONCATENATED MODULE: ./common/two-columns/index.js
+
 
 
 
 
 var TwoColumns = function TwoColumns(_ref) {
   var name = _ref.name,
-    children = _ref.children;
-  // TODO fix the onblur thing, also in group
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
+    children = _ref.children,
+    layout = _ref.layout;
+  return /*#__PURE__*/external_react_default().createElement((Form_default()).Group, {
     controlId: name
   }, /*#__PURE__*/external_react_default().createElement("div", {
-    className: "gforms-two-columns"
+    className: classnames_default()('lf-two-columns', layout)
   }, /*#__PURE__*/external_react_default().createElement("div", {
     className: "left"
   }, isFunction_default()(children) && children('left')), /*#__PURE__*/external_react_default().createElement("div", {
@@ -6623,9 +6627,11 @@ var TwoColumns = function TwoColumns(_ref) {
   }, isFunction_default()(children) && children('right'))));
 };
 
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/three-columns/three-columns.scss
-var three_columns = __webpack_require__(3522);
-;// CONCATENATED MODULE: ./react-rsuite5/three-columns/three-columns.scss
+;// CONCATENATED MODULE: ./react-rsuite5/two-columns/index.js
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/three-columns/three-columns.scss
+var three_columns = __webpack_require__(1861);
+;// CONCATENATED MODULE: ./common/three-columns/three-columns.scss
 
       
       
@@ -6654,7 +6660,7 @@ var three_columns_update = injectStylesIntoStyleTag_default()(three_columns/* de
 
        /* harmony default export */ const three_columns_three_columns = (three_columns/* default */.Z && three_columns/* default.locals */.Z.locals ? three_columns/* default.locals */.Z.locals : undefined);
 
-;// CONCATENATED MODULE: ./react-rsuite5/three-columns/index.js
+;// CONCATENATED MODULE: ./common/three-columns/index.js
 
 
 
@@ -6674,6 +6680,8 @@ var ThreeColumns = function ThreeColumns(_ref) {
     className: "right"
   }, isFunction_default()(children) && children('right'))));
 };
+
+;// CONCATENATED MODULE: ./react-rsuite5/three-columns/index.js
 
 ;// CONCATENATED MODULE: ./react-rsuite5/input-number/index.js
 
@@ -6808,14 +6816,16 @@ var SelectDate = function SelectDate(_ref) {
     locale = _ref.locale,
     format = _ref.format,
     rest = _objectWithoutProperties(_ref, _excluded);
+  console.log('---', locale && locales_[locale]);
   return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
     controlId: name
   }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
     tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, date_extends({
+  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.CustomProvider, {
+    locale: locale && locales_[locale] ? locales_[locale] : undefined
+  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, date_extends({
     accepter: external_rsuite_.DatePicker,
     appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
-    locale: locale && locales_[locale] ? locales_[locale].DatePicker : undefined,
     name: name,
     format: format,
     value: value,
@@ -6826,7 +6836,7 @@ var SelectDate = function SelectDate(_ref) {
     errorMessage: isString_default()(error) ? error : undefined,
     disabled: disabled,
     placeholder: placeholder
-  }, rest)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
+  }, rest)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint)));
 };
 
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/checkbox/index.scss
@@ -7382,6 +7392,8 @@ var Placeholder = function Placeholder(_ref) {
 };
 
 ;// CONCATENATED MODULE: ./common/index.js
+
+
 
 ;// CONCATENATED MODULE: ./react-rsuite5/placeholder/index.js
 
