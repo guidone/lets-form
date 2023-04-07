@@ -5790,6 +5790,7 @@ function i18n_defineProperty(obj, key, value) { key = i18n_toPropertyKey(key); i
 function i18n_toPropertyKey(arg) { var key = i18n_toPrimitive(arg, "string"); return i18n_typeof(key) === "symbol" ? key : String(key); }
 function i18n_toPrimitive(input, hint) { if (i18n_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (i18n_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
+
 var I18N = function I18N(Component) {
   var propNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
   var funcPropNames = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
@@ -5808,7 +5809,7 @@ var I18N = function I18N(Component) {
       }
       return i18n_objectSpread(i18n_objectSpread({}, acc), {}, i18n_defineProperty({}, propName, props[propName]));
     }, {});
-    return /*#__PURE__*/React.createElement(Component, newProps);
+    return /*#__PURE__*/external_react_default().createElement(Component, newProps);
   };
 };
 ;// CONCATENATED MODULE: ./components/index.js

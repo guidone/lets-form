@@ -1,3 +1,4 @@
+import React from 'react';
 import _ from 'lodash';
 
 import { i18n } from '../../helpers';
