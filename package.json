@@ -7,6 +7,7 @@
   "scripts": {
     "prebuild": "./scripts/copy-all-files.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build-rsuite5 && npm run build-antd && echo \"\n\nAll done.\"",
     "build:webpack": "webpack --mode production --progress",
     "build-rsuite5": "npm run build:webpack -- --env framework=\"rsuite5\"",
     "build-antd": "npm run build:webpack -- --env framework=\"antd\"",

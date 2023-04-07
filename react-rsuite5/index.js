@@ -4,7 +4,7 @@ import { FormRsuite5 } from './form';
 import { TextInput } from './input-text';
 import { ToggleInput } from './toggle';
 import { Select } from './select';
-import { FieldsGroup } from './group';
+import { Group } from './group';
 import { ListArray } from './array';
 import { TwoColumns } from './two-columns';
 import { ThreeColumns } from './three-columns';
@@ -20,6 +20,8 @@ import { Textarea } from './textarea';
 import { Rate } from './rate';
 import { Placeholder } from './placeholder';
 import { Multiselect } from './multiselect';
+import { MultiselectLanguage } from './multiselect-language';
+import { InputTextI18N } from './input-text-i18n';
 
 const Fields = {
   'text-input': {
@@ -32,7 +34,7 @@ const Fields = {
     'react-rsuite5': Select
   },
   'group': {
-    'react-rsuite5': FieldsGroup
+    'react-rsuite5': Group
   },
   'array': {
     'react-rsuite5': ListArray
@@ -78,6 +80,12 @@ const Fields = {
   },
   'multiselect': {
     'react-rsuite5': Multiselect
+  },
+  'multiselect-language': {
+    'react-rsuite5': MultiselectLanguage
+  },
+  'input-text-i18n': {
+    'react-rsuite5': InputTextI18N
   }
 };
 

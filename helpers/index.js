@@ -1,4 +1,5 @@
 export * from './replace-field';
+export * from './map-fields';
 export * from './delete-field';
 export * from './fill-ids';
 export * from './cleanup';
@@ -8,3 +9,5 @@ export * from './apply-form-rules';
 export * from './validate-rules-definition';
 export * from './is-valid-dayjs-format';
 export * from './filter-fields';
+export * from './get-locales';
+export * from './i18n';

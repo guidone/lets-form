@@ -77,6 +77,29 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
+/***/ 88:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-group .header{align-items:center;background:rgba(0,0,0,0);display:flex;margin:15px 0px;height:1px;flex-direction:row}.lf-control-group .header .inner-text{flex:0 0 auto;padding:0 12px;display:inline-block}.lf-control-group .header:before{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header:after{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header.left:before{content:none;border:none;flex:unset}.lf-control-group .header.right:after{content:none;border:none;flex:unset}", "",{"version":3,"sources":["webpack://./common/group/group.scss"],"names":[],"mappings":"AAEE,0BACE,kBAAA,CACA,wBAAA,CACA,YAAA,CACA,eAAA,CACA,UAAA,CACA,kBAAA,CAEA,sCACE,aAAA,CACA,cAAA,CACA,oBAAA,CAGF,iCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAGF,gCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAIA,sCACE,YAAA,CACA,WAAA,CACA,UAAA,CAKF,sCACE,YAAA,CACA,WAAA,CACA,UAAA","sourcesContent":[".lf-control-group {\n\n  .header {\n    align-items: center;\n    background: transparent;\n    display: flex;\n    margin: 15px 0px;\n    height: 1px;\n    flex-direction: row;\n\n    .inner-text {\n      flex: 0 0 auto;\n      padding: 0 12px;\n      display: inline-block;\n    }\n\n    &:before {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &:after {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &.left {\n      &:before {\n        content: none;\n        border: none;\n        flex: unset;\n      }\n    }\n\n    &.right {\n      &:after {\n        content: none;\n        border: none;\n        flex: unset;\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ 1861:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -93,7 +116,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-three-columns .left{flex:1 0;align-self:auto;margin-right:10px}.lf-three-columns .center{margin-left:10px;margin-right:10px;flex:1 0;align-self:auto}.lf-three-columns .right{margin-left:10px;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./common/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,kBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAUA,wBACE,QAAA,CACA,eAAA,CACA,iBAAA,CAGF,0BACE,gBAAA,CACA,iBAAA,CACA,QAAA,CACA,eAAA,CAGF,yBACE,gBAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 10px;\n  }\n\n  .center {\n    margin-left: 10px;\n    margin-right: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    margin-left: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-three-columns .left{flex:1 0;align-self:auto;margin-right:10px}.lf-three-columns .center{margin-left:10px;margin-right:10px;flex:1 0;align-self:auto}.lf-three-columns .right{margin-left:10px;flex:1 0;align-self:auto}.lf-form-react-rsuite5 .lf-three-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,kBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAUA,wBACE,QAAA,CACA,eAAA,CACA,iBAAA,CAGF,0BACE,gBAAA,CACA,iBAAA,CACA,QAAA,CACA,eAAA,CAGF,yBACE,gBAAA,CACA,QAAA,CACA,eAAA,CAKF,yCACE,oCAAA","sourcesContent":[".lf-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 10px;\n  }\n\n  .center {\n    margin-left: 10px;\n    margin-right: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    margin-left: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n}\n\n.lf-form-react-rsuite5 {\n  .lf-three-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -116,7 +139,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-di
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-two-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-two-columns .left{flex:1 0;align-self:auto;margin-right:10px}.lf-two-columns .right{margin-left:10px;flex:1 0;align-self:auto}.lf-two-columns.layout-1-2 .left{flex:1 0}.lf-two-columns.layout-1-2 .right{flex:2 0}.lf-two-columns.layout-1-3 .left{flex:1 0}.lf-two-columns.layout-1-3 .right{flex:3 0}.lf-two-columns.layout-1-4 .left{flex:1 0}.lf-two-columns.layout-1-4 .right{flex:4 0}.lf-two-columns.layout-1-5 .left{flex:1 0}.lf-two-columns.layout-1-5 .right{flex:4 0}.lf-two-columns.layout-2-1 .left{flex:2 0}.lf-two-columns.layout-2-1 .right{flex:1 0}.lf-two-columns.layout-3-1 .left{flex:3 0}.lf-two-columns.layout-3-1 .right{flex:1 0}.lf-two-columns.layout-4-1 .left{flex:4 0}.lf-two-columns.layout-4-1 .right{flex:1 0}.lf-two-columns.layout-5-1 .left{flex:4 0}.lf-two-columns.layout-5-1 .right{flex:1 0}.lf-two-columns.layout-3-2 .left{flex:3 0}.lf-two-columns.layout-3-2 .right{flex:2 0}.lf-two-columns.layout-2-3 .left{flex:2 0}.lf-two-columns.layout-2-3 .right{flex:3 0}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,gBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAWA,sBACE,QAAA,CACA,eAAA,CACA,iBAAA,CAGF,uBACE,gBAAA,CACA,QAAA,CACA,eAAA,CAIA,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA","sourcesContent":[".lf-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  /*.left, .right {\n    // disable width 300 of text input\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 10px;\n  }\n\n  .right {\n    margin-left: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-two-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-two-columns .left{flex:1 0;align-self:auto;margin-right:10px}.lf-two-columns .right{margin-left:10px;flex:1 0;align-self:auto}.lf-two-columns.layout-1-2 .left{flex:1 0}.lf-two-columns.layout-1-2 .right{flex:2 0}.lf-two-columns.layout-1-3 .left{flex:1 0}.lf-two-columns.layout-1-3 .right{flex:3 0}.lf-two-columns.layout-1-4 .left{flex:1 0}.lf-two-columns.layout-1-4 .right{flex:4 0}.lf-two-columns.layout-1-5 .left{flex:1 0}.lf-two-columns.layout-1-5 .right{flex:4 0}.lf-two-columns.layout-2-1 .left{flex:2 0}.lf-two-columns.layout-2-1 .right{flex:1 0}.lf-two-columns.layout-3-1 .left{flex:3 0}.lf-two-columns.layout-3-1 .right{flex:1 0}.lf-two-columns.layout-4-1 .left{flex:4 0}.lf-two-columns.layout-4-1 .right{flex:1 0}.lf-two-columns.layout-5-1 .left{flex:4 0}.lf-two-columns.layout-5-1 .right{flex:1 0}.lf-two-columns.layout-3-2 .left{flex:3 0}.lf-two-columns.layout-3-2 .right{flex:2 0}.lf-two-columns.layout-2-3 .left{flex:2 0}.lf-two-columns.layout-2-3 .right{flex:3 0}.lf-form-react-rsuite5 .lf-two-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,gBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAEA,sBACE,QAAA,CACA,eAAA,CACA,iBAAA,CAGF,uBACE,gBAAA,CACA,QAAA,CACA,eAAA,CAIA,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAMJ,uCACE,oCAAA","sourcesContent":[".lf-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 10px;\n  }\n\n  .right {\n    margin-left: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n}\n\n.lf-form-react-rsuite5 {\n  .lf-two-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -163,6 +186,29 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-validation-errors{border:1px solid
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-icon-asterisk{margin-top:-3px}.lf-missing-component{border:1px solid #bbb;background-color:#f6f6f6;padding:20px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-missing-component .icon{order:0;flex:0 0;align-self:auto;margin-top:2px}.lf-missing-component .tag-component{background-color:#673ab7;color:#fff;font-size:12px;padding:1px 4px 2px 4px;border-radius:3px;line-height:17px}.lf-missing-component .message{display:inline-block;margin-left:10px;order:0;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./generator/index.scss"],"names":[],"mappings":"AAAA,kBACE,eAAA,CAGF,sBACE,qBAAA,CACA,wBAAA,CACA,YAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,4BACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,cAAA,CAGF,qCACE,wBAAA,CACA,UAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,gBAAA,CAGF,+BACE,oBAAA,CACA,gBAAA,CACA,OAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-icon-asterisk {\n  margin-top: -3px;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n\n  .icon {\n    order: 0;\n    flex: 0 0;\n    align-self: auto;\n    margin-top: 2px;\n  }\n\n  .tag-component {\n    background-color: #673ab7;\n    color: #ffffff;\n    font-size: 12px;\n    padding: 1px 4px 2px 4px;\n    border-radius: 3px;\n    line-height: 17px;\n  }\n\n  .message {\n    display: inline-block;\n    margin-left: 10px;\n    order: 0;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 2191:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .lf-buttons{margin-top:25px}", "",{"version":3,"sources":["webpack://./react-antd/form/index.scss"],"names":[],"mappings":"AACE,gCACE,eAAA","sourcesContent":[".lf-form-react-antd {\n  .lf-buttons {\n    margin-top: 25px;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2535,7 +2581,10 @@ __webpack_require__.d(__webpack_exports__, {
   "fillIds": () => (/* reexport */ fillIds),
   "filterFields": () => (/* reexport */ filterFields),
   "findField": () => (/* reexport */ findField),
+  "getLocales": () => (/* reexport */ getLocales),
+  "i18n": () => (/* reexport */ i18n),
   "isValidDayjsFormat": () => (/* reexport */ isValidDayjsFormat),
+  "mapFields": () => (/* reexport */ mapFields),
   "reduceFields": () => (/* reexport */ reduceFields),
   "replaceField": () => (/* reexport */ replaceField),
   "validateRulesDefinition": () => (/* reexport */ validateRulesDefinition)
@@ -5010,13 +5059,13 @@ var ChevronDown = function ChevronDown(_ref) {
     height = _ref$height === void 0 ? 24 : _ref$height,
     _ref$color = _ref.color,
     color = _ref$color === void 0 ? '#000000' : _ref$color;
-  return /*#__PURE__*/React.createElement("svg", {
+  return /*#__PURE__*/external_react_default().createElement("svg", {
     width: "".concat(width, "px"),
     height: "".concat(height, "px"),
     fill: color,
     viewBox: "0 0 24 24",
     xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/React.createElement("path", {
+  }, /*#__PURE__*/external_react_default().createElement("path", {
     d: "M17,8H7a1,1,0,0,0-.768,1.641l5,6a1,1,0,0,0,1.536,0l5-6A1,1,0,0,0,17,8Zm-5,5.438L9.135,10h5.73Z"
   }));
 };
@@ -5029,12 +5078,12 @@ var ChevronUp = function ChevronUp(_ref) {
     height = _ref$height === void 0 ? 24 : _ref$height,
     _ref$color = _ref.color,
     color = _ref$color === void 0 ? '#000000' : _ref$color;
-  return /*#__PURE__*/React.createElement("svg", {
+  return /*#__PURE__*/external_react_default().createElement("svg", {
     width: "".concat(width, "px"),
     height: "".concat(height, "px"),
     viewBox: "0 0 24 24",
     xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/React.createElement("path", {
+  }, /*#__PURE__*/external_react_default().createElement("path", {
     fill: color,
     d: "M12.768,8.359a1.035,1.035,0,0,0-1.536,0l-5,6A1,1,0,0,0,7,16H17a1,1,0,0,0,.768-1.641ZM9.135,14,12,10.563,14.865,14Z"
   }));
@@ -5116,6 +5165,7 @@ var CrossCirle = function CrossCirle(_ref) {
 
 
 
+
 ;// CONCATENATED MODULE: ./components/required-icon/index.js
 
 
@@ -5130,13 +5180,9 @@ var RequiredIcon = function RequiredIcon() {
   });
 };
 
-;// CONCATENATED MODULE: ./components/index.js
-
-
-;// CONCATENATED MODULE: ./costants.js
-var FRAMEWORKS = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd'];
-var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design'];
-var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
+// EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
+var lodash_isFunction = __webpack_require__(3560);
+var isFunction_default = /*#__PURE__*/__webpack_require__.n(lodash_isFunction);
 ;// CONCATENATED MODULE: ./helpers/map-fields.js
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -5330,7 +5376,6 @@ var uniqueId = __webpack_require__(3955);
 var uniqueId_default = /*#__PURE__*/__webpack_require__.n(uniqueId);
 ;// CONCATENATED MODULE: ./helpers/fill-ids.js
 
-
 function fill_ids_typeof(obj) { "@babel/helpers - typeof"; return fill_ids_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, fill_ids_typeof(obj); }
 function fill_ids_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function fill_ids_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? fill_ids_ownKeys(Object(source), !0).forEach(function (key) { fill_ids_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : fill_ids_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -5340,32 +5385,14 @@ function fill_ids_toPrimitive(input, hint) { if (fill_ids_typeof(input) !== "obj
 
 var fillIds = function fillIds(fields) {
   var namespace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-  if (isEmpty_default()(fields)) {
-    return fields;
-  }
-  var newFields = fields.map(function (field) {
-    var newField = field;
+  return mapFields(fields, function (field) {
     if (!field.id) {
-      newField = fill_ids_objectSpread({
+      return fill_ids_objectSpread({
         id: uniqueId_default()(namespace)
       }, field);
     }
-    FIELDS_KEY.forEach(function (fieldsKey) {
-      if (!isEmpty_default()(field[fieldsKey])) {
-        var _newFields = fillIds(field[fieldsKey], namespace);
-        // if any changes in the subfields create new instance
-        if (_newFields !== field[fieldsKey]) {
-          newField = fill_ids_objectSpread(fill_ids_objectSpread({}, newField), {}, fill_ids_defineProperty({}, fieldsKey, _newFields));
-        }
-      }
-    });
-    return newField;
+    return field;
   });
-  // dont return a new instance of the array if there's no change
-  var isAnyChanges = fields.some(function (field, idx) {
-    return field !== newFields[idx];
-  });
-  return isAnyChanges ? newFields : fields;
 };
 
 // EXTERNAL MODULE: ./node_modules/lodash/isNumber.js
@@ -5383,6 +5410,10 @@ var isObject_default = /*#__PURE__*/__webpack_require__.n(lodash_isObject);
 // EXTERNAL MODULE: ./node_modules/lodash/isArray.js
 var isArray = __webpack_require__(1469);
 var isArray_default = /*#__PURE__*/__webpack_require__.n(isArray);
+;// CONCATENATED MODULE: ./costants.js
+var FRAMEWORKS = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd'];
+var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design'];
+var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
 ;// CONCATENATED MODULE: ./helpers/cleanup.js
 
 
@@ -5698,6 +5729,44 @@ var isValidDayjsFormat = function isValidDayjsFormat(str) {
   return false;
 };
 
+;// CONCATENATED MODULE: ./common/data/locales.json
+const locales_namespaceObject = JSON.parse('{"Q":{"af-ZA":["Afrikaans","Afrikaans"],"ar":["العربية","Arabic"],"bg-BG":["Български","Bulgarian"],"ca-AD":["Català","Catalan"],"cs-CZ":["Čeština","Czech"],"cy-GB":["Cymraeg","Welsh"],"da-DK":["Dansk","Danish"],"de-AT":["Deutsch (Österreich)","German (Austria)"],"de-CH":["Deutsch (Schweiz)","German (Switzerland)"],"de-DE":["Deutsch (Deutschland)","German (Germany)"],"el-GR":["Ελληνικά","Greek"],"en-GB":["English (UK)","English (UK)"],"en-US":["English (US)","English (US)"],"es-CL":["Español (Chile)","Spanish (Chile)"],"es-ES":["Español (España)","Spanish (Spain)"],"es-MX":["Español (México)","Spanish (Mexico)"],"et-EE":["Eesti keel","Estonian"],"eu":["Euskara","Basque"],"fa-IR":["فارسی","Persian"],"fi-FI":["Suomi","Finnish"],"fr-CA":["Français (Canada)","French (Canada)"],"fr-FR":["Français (France)","French (France)"],"he-IL":["עברית","Hebrew"],"hi-IN":["हिंदी","Hindi"],"hr-HR":["Hrvatski","Croatian"],"hu-HU":["Magyar","Hungarian"],"id-ID":["Bahasa Indonesia","Indonesian"],"is-IS":["Íslenska","Icelandic"],"it-IT":["Italiano","Italian"],"ja-JP":["日本語","Japanese"],"km-KH":["ភាសាខ្មែរ","Khmer"],"ko-KR":["한국어","Korean"],"la":["Latina","Latin"],"lt-LT":["Lietuvių kalba","Lithuanian"],"lv-LV":["Latviešu","Latvian"],"mn-MN":["Монгол","Mongolian"],"nb-NO":["Norsk bokmål","Norwegian (Bokmål)"],"nl-NL":["Nederlands","Dutch"],"nn-NO":["Norsk nynorsk","Norwegian (Nynorsk)"],"pl-PL":["Polski","Polish"],"pt-BR":["Português (Brasil)","Portuguese (Brazil)"],"pt-PT":["Português (Portugal)","Portuguese (Portugal)"],"ro-RO":["Română","Romanian"],"ru-RU":["Русский","Russian"],"sk-SK":["Slovenčina","Slovak"],"sl-SI":["Slovenščina","Slovenian"],"sr-RS":["Српски / Srpski","Serbian"],"sv-SE":["Svenska","Swedish"],"th-TH":["ไทย","Thai"],"tr-TR":["Türkçe","Turkish"],"uk-UA":["Українська","Ukrainian"],"vi-VN":["Tiếng Việt","Vietnamese"],"zh-CN":["中文 (中国大陆)","Chinese (PRC)"],"zh-TW":["中文 (台灣)","Chinese (Taiwan)"]}}');
+;// CONCATENATED MODULE: ./helpers/get-locales.js
+
+var LANGUAGES_OPTIONS = Object.keys(locales_namespaceObject.Q).map(function (lang) {
+  return {
+    code: lang,
+    name: locales_namespaceObject.Q[lang][1],
+    label: "".concat(locales_namespaceObject.Q[lang][1], " - ").concat(locales_namespaceObject.Q[lang][0])
+  };
+});
+var getLocales = function getLocales() {
+  return LANGUAGES_OPTIONS;
+};
+;// CONCATENATED MODULE: ./helpers/i18n.js
+
+
+var i18n = function i18n(value, locale) {
+  if (isString_default()(value)) {
+    return value;
+  } else if (isObject_default()(value)) {
+    if (locale && value[locale]) {
+      return value[locale];
+    }
+    // TODO understand what's the proper behaviour here
+    if (value['en'] || value['en-UK'] || value['en-US']) {
+      if (!locale) {
+        console.warn("[LetsForm] missing locale for translation, defaulting to English: ", value);
+      } else {
+        console.warn("[LetsForm] missing translation for ".concat(locale, ", defaulting to English: "), value);
+      }
+      return value['en'] || value['en-UK'] || value['en-US'];
+    }
+    console.warn("[LetsForm] missing translation for ".concat(locale, ": "), value);
+    return '';
+  }
+  return value;
+};
 ;// CONCATENATED MODULE: ./helpers/index.js
 
 
@@ -5709,6 +5778,47 @@ var isValidDayjsFormat = function isValidDayjsFormat(str) {
 
 
 
+
+
+
+;// CONCATENATED MODULE: ./components/i18n/index.js
+
+function i18n_typeof(obj) { "@babel/helpers - typeof"; return i18n_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, i18n_typeof(obj); }
+function i18n_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function i18n_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? i18n_ownKeys(Object(source), !0).forEach(function (key) { i18n_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : i18n_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function i18n_defineProperty(obj, key, value) { key = i18n_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function i18n_toPropertyKey(arg) { var key = i18n_toPrimitive(arg, "string"); return i18n_typeof(key) === "symbol" ? key : String(key); }
+function i18n_toPrimitive(input, hint) { if (i18n_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (i18n_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var I18N = function I18N(Component) {
+  var propNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+  var funcPropNames = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  return function (props) {
+    var lfLocale = props.lfLocale;
+    var newProps = Object.keys(props).reduce(function (acc, propName) {
+      // translate simpe field
+      if (propNames.includes(propName)) {
+        return i18n_objectSpread(i18n_objectSpread({}, acc), {}, i18n_defineProperty({}, propName, i18n(props[propName], lfLocale)));
+      } else if (isFunction_default()(funcPropNames[propName])) {
+        // pass the value trough the mapper
+        var translated = funcPropNames[propName](props[propName], function (string) {
+          return i18n(string, lfLocale);
+        });
+        return i18n_objectSpread(i18n_objectSpread({}, acc), {}, i18n_defineProperty({}, propName, translated));
+      }
+      return i18n_objectSpread(i18n_objectSpread({}, acc), {}, i18n_defineProperty({}, propName, props[propName]));
+    }, {});
+    return /*#__PURE__*/React.createElement(Component, newProps);
+  };
+};
+;// CONCATENATED MODULE: ./components/index.js
+
+
+
+;// CONCATENATED MODULE: ./form-context/index.js
+
+var FormContext = /*#__PURE__*/(0,external_react_.createContext)();
+/* harmony default export */ const form_context = (FormContext);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./generator/index.scss
 var cjs_js_generator = __webpack_require__(5861);
 ;// CONCATENATED MODULE: ./generator/index.scss
@@ -5771,6 +5881,7 @@ function generator_toPrimitive(input, hint) { if (generator_typeof(input) !== "o
 
 
 //import PropTypes from 'prop-types';
+
 
 
 var enrichWithLabels = function enrichWithLabels(validationErrors, fields) {
@@ -5877,7 +5988,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       errors = _ref3.errors,
       showErrors = _ref3.showErrors,
       _ref3$level = _ref3.level,
-      level = _ref3$level === void 0 ? 1 : _ref3$level;
+      level = _ref3$level === void 0 ? 1 : _ref3$level,
+      locale = _ref3.locale;
     var renderedFields = (fields || []).filter(function (field) {
       return Wrapper || field.hidden !== true;
     }).map(function (field, index) {
@@ -5898,6 +6010,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           key: field.name,
           lfComponent: field.component,
           lfFramework: framework,
+          lfLocale: locale,
           name: field.name,
           label: field.label,
           hint: field.hint,
@@ -5916,7 +6029,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           plaintext: plaintext,
           errors: errors,
           showErrors: showErrors,
-          level: level + 1
+          level: level + 1,
+          locale: locale
         }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
           field: field,
           target: "fields"
@@ -5931,6 +6045,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           key: field.name,
           lfComponent: field.component,
           lfFramework: framework,
+          lfLocale: locale,
           name: field.name
         }, additionalFields), function (column) {
           if (column === 'left') {
@@ -5948,7 +6063,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               plaintext: plaintext,
               errors: errors,
               showErrors: showErrors,
-              level: level + 1
+              level: level + 1,
+              locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               field: field,
               target: "leftFields"
@@ -5968,7 +6084,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               plaintext: plaintext,
               errors: errors,
               showErrors: showErrors,
-              level: level + 1
+              level: level + 1,
+              locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               field: field,
               target: "rightFields"
@@ -5985,7 +6102,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           key: field.name,
           name: field.name,
           lfComponent: field.component,
-          lfFramework: framework
+          lfFramework: framework,
+          lfLocale: locale
         }, additionalFields), function (column) {
           if (column === 'left') {
             return /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, renderFields({
@@ -6002,7 +6120,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               plaintext: plaintext,
               errors: errors,
               showErrors: showErrors,
-              level: level + 1
+              level: level + 1,
+              locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               field: field,
               target: "leftFields"
@@ -6022,7 +6141,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               plaintext: plaintext,
               errors: errors,
               showErrors: showErrors,
-              level: level + 1
+              level: level + 1,
+              locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               field: field,
               target: "centerFields"
@@ -6042,7 +6162,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               plaintext: plaintext,
               errors: errors,
               showErrors: showErrors,
-              level: level + 1
+              level: level + 1,
+              locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               field: field,
               target: "rightFields"
@@ -6069,6 +6190,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
             key: "field_".concat(field.name),
             lfComponent: field.component,
             lfFramework: framework,
+            lfLocale: locale,
             name: field.name,
             label: field.label,
             hint: field.hint,
@@ -6094,13 +6216,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       });
     });
     return renderedFields;
-
-    /*return BottomView ?
-      [...renderedFields, <BottomView />]
-      : renderedFields;
-      */
   };
-
   var FormGenerator = /*#__PURE__*/external_react_default().memo(function (_ref5) {
     var framework = _ref5.framework,
       form = _ref5.form,
@@ -6112,6 +6228,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       onReset = _ref5$onReset === void 0 ? function () {} : _ref5$onReset,
       _ref5$onError = _ref5.onError,
       onError = _ref5$onError === void 0 ? function () {} : _ref5$onError,
+      locale = _ref5.locale,
       wrapper = _ref5.wrapper,
       groupWrapper = _ref5.groupWrapper,
       bottomView = _ref5.bottomView,
@@ -6200,7 +6317,13 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
     var Wrapper = wrapper;
     var GroupWrapper = groupWrapper;
     var BottomView = bottomView;
-    return /*#__PURE__*/external_react_default().createElement("div", {
+    return /*#__PURE__*/external_react_default().createElement(form_context.Provider, {
+      value: {
+        locales: form.locales,
+        locale: locale
+        // ..more
+      }
+    }, /*#__PURE__*/external_react_default().createElement("div", {
       className: classnames_default()('lf-lets-form', className)
     }, validationErrors && showErrors === 'groupedTop' && /*#__PURE__*/external_react_default().createElement(ValidationErrors, {
       className: "top",
@@ -6229,16 +6352,17 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       disabled: disabled || form.disabled,
       readOnly: readOnly || form.readOnly,
       plaintext: plaintext || form.plaintext,
-      showErrors: showErrors
+      showErrors: showErrors,
+      locale: locale
     }), children, validationErrors && (showErrors === 'groupedBottom' || isEmpty_default()(showErrors)) && /*#__PURE__*/external_react_default().createElement(ValidationErrors, {
       className: "bottom",
       errors: enrichWithLabels(validationErrors, formFields)
-    })));
+    }))));
   }, function (prevProps, nextProps) {
     if (DEBUG_RENDER) {
-      console.log('Form generator re-render: are equal' + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form));
+      console.log("[LetsForm]Form generator ".concat(nextProps.form.name ? '(' + nextProps.form.name + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale));
     }
-    var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form;
+    var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale;
     console.log('Is re-rendering?', !isEqual);
     return isEqual;
   });
@@ -6248,7 +6372,39 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
 
 // EXTERNAL MODULE: external "antd"
 var external_antd_ = __webpack_require__(2721);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-antd/form/index.scss
+var cjs_js_react_antd_form = __webpack_require__(2191);
+;// CONCATENATED MODULE: ./react-antd/form/index.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var form_options = {};
+
+form_options.styleTagTransform = (styleTagTransform_default());
+form_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      form_options.insert = insertBySelector_default().bind(null, "head");
+    
+form_options.domAPI = (styleDomAPI_default());
+form_options.insertStyleElement = (insertStyleElement_default());
+
+var form_update = injectStylesIntoStyleTag_default()(cjs_js_react_antd_form/* default */.Z, form_options);
+
+
+
+
+       /* harmony default export */ const react_antd_form = (cjs_js_react_antd_form/* default */.Z && cjs_js_react_antd_form/* default.locals */.Z.locals ? cjs_js_react_antd_form/* default.locals */.Z.locals : undefined);
+
 ;// CONCATENATED MODULE: ./react-antd/form/index.js
+
 
 
 var buildColObject = function buildColObject(span, offset) {
@@ -10614,9 +10770,6 @@ var Placeholder = function Placeholder(_ref) {
   }
 };
 
-// EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
-var lodash_isFunction = __webpack_require__(3560);
-var isFunction_default = /*#__PURE__*/__webpack_require__.n(lodash_isFunction);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/three-columns/three-columns.scss
 var three_columns = __webpack_require__(1861);
 ;// CONCATENATED MODULE: ./common/three-columns/three-columns.scss
@@ -10715,7 +10868,91 @@ var TwoColumns = function TwoColumns(_ref) {
   }, isFunction_default()(children) && children('right')));
 };
 
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/group/group.scss
+var group = __webpack_require__(88);
+;// CONCATENATED MODULE: ./common/group/group.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var group_options = {};
+
+group_options.styleTagTransform = (styleTagTransform_default());
+group_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      group_options.insert = insertBySelector_default().bind(null, "head");
+    
+group_options.domAPI = (styleDomAPI_default());
+group_options.insertStyleElement = (insertStyleElement_default());
+
+var group_update = injectStylesIntoStyleTag_default()(group/* default */.Z, group_options);
+
+
+
+
+       /* harmony default export */ const group_group = (group/* default */.Z && group/* default.locals */.Z.locals ? group/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./common/group/index.js
+function group_slicedToArray(arr, i) { return group_arrayWithHoles(arr) || group_iterableToArrayLimit(arr, i) || group_unsupportedIterableToArray(arr, i) || group_nonIterableRest(); }
+function group_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function group_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return group_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return group_arrayLikeToArray(o, minLen); }
+function group_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function group_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function group_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/anchor-has-content */
+
+
+
+
+
+var Group = I18N(function (_ref) {
+  var label = _ref.label,
+    _ref$disabled = _ref.disabled,
+    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    _ref$open = _ref.open,
+    open = _ref$open === void 0 ? true : _ref$open,
+    _ref$collapsible = _ref.collapsible,
+    collapsible = _ref$collapsible === void 0 ? true : _ref$collapsible,
+    align = _ref.align,
+    children = _ref.children;
+  var _useState = (0,external_react_.useState)(open),
+    _useState2 = group_slicedToArray(_useState, 2),
+    isOpen = _useState2[0],
+    setIsOpen = _useState2[1];
+  var handleClick = (0,external_react_.useCallback)(function (event) {
+    event.preventDefault();
+    setIsOpen(!isOpen);
+  }, [isOpen]);
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-control-group"
+  }, /*#__PURE__*/external_react_default().createElement("div", {
+    role: "separator",
+    className: classnames_default()('header', align)
+  }, /*#__PURE__*/external_react_default().createElement("span", {
+    class: "inner-text"
+  }, label, collapsible && /*#__PURE__*/external_react_default().createElement("a", {
+    href: "#",
+    className: "lf-btn-collapse",
+    disabled: disabled,
+    appearance: "link",
+    onClick: handleClick
+  }, isOpen ? /*#__PURE__*/external_react_default().createElement(ChevronUp, {
+    color: "#3498ff"
+  }) : /*#__PURE__*/external_react_default().createElement(ChevronDown, {
+    color: "#3498ff"
+  })))), (isOpen || !collapsible) && /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, children));
+}, ['label']);
+
 ;// CONCATENATED MODULE: ./common/index.js
+
 
 
 
@@ -10953,7 +11190,10 @@ var Multiselect = function Multiselect(_ref) {
 
 ;// CONCATENATED MODULE: ./react-antd/two-columns/index.js
 
+;// CONCATENATED MODULE: ./react-antd/group/index.js
+
 ;// CONCATENATED MODULE: ./react-antd/index.js
+
 
 
 
@@ -11008,6 +11248,9 @@ var Fields = {
   },
   'two-columns': {
     'react-antd': TwoColumns
+  },
+  'group': {
+    'react-antd': Group
   }
 };
 var Forms = {

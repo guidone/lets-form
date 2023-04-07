@@ -14,6 +14,7 @@ import { Textarea } from './textarea';
 import { Multiselect } from './multiselect';
 import { ThreeColumns } from './three-columns';
 import { TwoColumns } from './two-columns';
+import { Group } from './group';
 
 const Fields = {
   'text-input': {
@@ -54,6 +55,9 @@ const Fields = {
   },
   'two-columns': {
     'react-antd': TwoColumns
+  },
+  'group': {
+    'react-antd': Group
   }
 };
 

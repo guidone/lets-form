@@ -11,6 +11,7 @@ import { Rate } from './rate';
 import { Date } from './date';
 import { ThreeColumns } from './three-columns';
 import { TwoColumns } from './two-columns';
+import { Group } from './group';
 
 const Fields = {
   'text-input': {
@@ -42,6 +43,9 @@ const Fields = {
   },
   'two-columns': {
     'react-material-ui': TwoColumns
+  },
+  'group': {
+    'react-material-ui': Group
   }
 };
 

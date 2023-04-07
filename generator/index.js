@@ -11,6 +11,8 @@ import { Warning  } from '../assets/icons';
 import { applyFormRules, reduceFields, validateRulesDefinition  } from '../helpers';
 //import PropTypes from 'prop-types';
 
+import FormContext from '../form-context';
+
 
 
 import './index.scss';
@@ -129,7 +131,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     plaintext,
     errors,
     showErrors,
-    level = 1
+    level = 1,
+    locale
   }) => {
     const renderedFields = (fields || [])
       .filter(field => Wrapper || field.hidden !== true)
@@ -155,6 +158,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               key={field.name}
               lfComponent={field.component}
               lfFramework={framework}
+              lfLocale={locale}
               name={field.name}
               label={field.label}
               hint={field.hint}
@@ -176,7 +180,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   plaintext,
                   errors,
                   showErrors,
-                  level: level + 1
+                  level: level + 1,
+                  locale
                 })}
                 {BottomView && <BottomView field={field} target="fields" />}
               </>
@@ -189,6 +194,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               key={field.name}
               lfComponent={field.component}
               lfFramework={framework}
+              lfLocale={locale}
               name={field.name}
               {...additionalFields}
             >
@@ -210,7 +216,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       plaintext,
                       errors,
                       showErrors,
-                      level: level + 1
+                      level: level + 1,
+                      locale
                     })}
                     {BottomView && <BottomView field={field} target="leftFields" />}
                   </>
@@ -232,7 +239,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       plaintext,
                       errors,
                       showErrors,
-                      level: level + 1
+                      level: level + 1,
+                      locale
                     })}
                     {BottomView && <BottomView field={field} target="rightFields" />}
                   </>
@@ -249,6 +257,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               name={field.name}
               lfComponent={field.component}
               lfFramework={framework}
+              lfLocale={locale}
               {...additionalFields}
             >
             {column => {
@@ -269,7 +278,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       plaintext,
                       errors,
                       showErrors,
-                      level: level + 1
+                      level: level + 1,
+                      locale
                     })}
                     {BottomView && <BottomView field={field} target="leftFields" />}
                   </>
@@ -291,7 +301,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       plaintext,
                       errors,
                       showErrors,
-                      level: level + 1
+                      level: level + 1,
+                      locale
                     })}
                     {BottomView && <BottomView field={field} target="centerFields" />}
                   </>
@@ -313,7 +324,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       plaintext,
                       errors,
                       showErrors,
-                      level: level + 1
+                      level: level + 1,
+                      locale
                     })}
                     {BottomView && <BottomView field={field} target="rightFields" />}
                   </>
@@ -343,6 +355,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 key={`field_${field.name}`}
                 lfComponent={field.component}
                 lfFramework={framework}
+                lfLocale={locale}
                 name={field.name}
                 label={field.label}
                 hint={field.hint}
@@ -372,11 +385,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       });
 
     return renderedFields;
-
-    /*return BottomView ?
-      [...renderedFields, <BottomView />]
-      : renderedFields;
-      */
   }
 
 
@@ -388,6 +396,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     onSubmit = () => {},
     onReset = () => {},
     onError = () => {},
+    locale,
     wrapper,
     groupWrapper,
     bottomView,
@@ -480,58 +489,67 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const BottomView = bottomView;
 
     return (
-      <div className={classNames('lf-lets-form', className)}>
-        {validationErrors && showErrors === 'groupedTop' && (
-          <ValidationErrors className="top" errors={enrichWithLabels(validationErrors, formFields)}/>
-        )}
-        <Form
-          onSubmit={handleSubmit(onHandleSubmit, onHandleError)}
-          defaultValues={defaultValues}
-          onlyFields={onlyFields}
-          hideToolbar={hideToolbar}
-          onReset={handleReset}
-          disabled={disabled}
-          readOnly={readOnly}
-          plaintext={plaintext}
-          {..._.omit(form, 'id', 'fields', 'version')}
-        >
-          {renderFields({
-            Wrapper,
-            GroupWrapper,
-            BottomView,
-            onChange: handleChange,
-            fields: formFields, // take from state
-            control,
-            framework,
-            getValues,
-            debug,
-            errors,
-            disabled: disabled || form.disabled,
-            readOnly: readOnly || form.readOnly,
-            plaintext: plaintext || form.plaintext,
-            showErrors
-          })}
-          {children}
-          {validationErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (
-            <ValidationErrors className="bottom" errors={enrichWithLabels(validationErrors, formFields)}/>
+      <FormContext.Provider value={{
+        locales: form.locales,
+        locale: locale
+        // ..more
+      }}>
+        <div className={classNames('lf-lets-form', className)}>
+          {validationErrors && showErrors === 'groupedTop' && (
+            <ValidationErrors className="top" errors={enrichWithLabels(validationErrors, formFields)}/>
           )}
-        </Form>
-      </div>
-    )
+          <Form
+            onSubmit={handleSubmit(onHandleSubmit, onHandleError)}
+            defaultValues={defaultValues}
+            onlyFields={onlyFields}
+            hideToolbar={hideToolbar}
+            onReset={handleReset}
+            disabled={disabled}
+            readOnly={readOnly}
+            plaintext={plaintext}
+            {..._.omit(form, 'id', 'fields', 'version')}
+          >
+            {renderFields({
+              Wrapper,
+              GroupWrapper,
+              BottomView,
+              onChange: handleChange,
+              fields: formFields, // take from state
+              control,
+              framework,
+              getValues,
+              debug,
+              errors,
+              disabled: disabled || form.disabled,
+              readOnly: readOnly || form.readOnly,
+              plaintext: plaintext || form.plaintext,
+              showErrors,
+              locale
+            })}
+            {children}
+            {validationErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (
+              <ValidationErrors className="bottom" errors={enrichWithLabels(validationErrors, formFields)}/>
+            )}
+          </Form>
+        </div>
+      </FormContext.Provider>
+    );
   }, function (prevProps, nextProps) {
     if (DEBUG_RENDER) {
-      console.log('Form generator re-render: are equal'
+      console.log(`[LetsForm]Form generator ${nextProps.form.name ? '(' + nextProps.form.name + `)` : ''} re-render: `
         + ' framework=' + (prevProps.framework === nextProps.framework)
         + ' onChange=' + (prevProps.onChange === nextProps.onChange)
         + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper)
         + ' form=' + (prevProps.form === nextProps.form)
+        + ' locale=' + (prevProps.locale === nextProps.locale)
       );
     }
 
     const isEqual = prevProps.framework === nextProps.framework
       && prevProps.onChange === nextProps.onChange
       && prevProps.wrapper === nextProps.wrapper
-      && prevProps.form === nextProps.form;
+      && prevProps.form === nextProps.form
+      && prevProps.locale === nextProps.locale;
     console.log('Is re-rendering?', !isEqual);
     return isEqual;
   });

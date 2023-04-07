@@ -5,3 +5,4 @@ export * from './chevron-up';
 export * from './asterisk';
 export * from './warning';
 export * from './cross-circle';
+export * from './check';

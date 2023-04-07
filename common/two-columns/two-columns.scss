@@ -7,15 +7,6 @@
   align-items: stretch;
   min-height: 40px;
 
-  /*.left, .right {
-    // disable width 300 of text input
-    .rs-form-control-wrapper {
-      > .rs-input, > .rs-input-number {
-        width: auto;
-      }
-    }
-  }*/
-
   .left {
     flex: 1 0;
     align-self: auto;
@@ -116,5 +107,11 @@
     .right {
       flex: 3 0;
     }
+  }
+}
+
+.lf-form-react-rsuite5 {
+  .lf-two-columns {
+    margin-bottom: var(--lf-field-margin);
   }
 }

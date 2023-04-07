@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import _ from 'lodash';
 import { Form, IconButton } from 'rsuite';
-import { PlusCircle, MinusCircle } from '../../assets/icons';
 
+import { PlusCircle, MinusCircle } from '../../assets/icons';
+import { RequiredIcon } from '../../components';
+import FormGenerator, { fillIds } from '../../react-rsuite5';
+import { useFormContext } from '../../hooks';
 
 import './list-array.scss';
-
-import { RequiredIcon } from '../../components';
-
-import FormGenerator, { fillIds } from '../../react-rsuite5';
-
-
 
 
 const ArrayItem = ({
@@ -83,15 +80,17 @@ const ListArray = ({
   name,
   label,
   maxHeigth = 200,
-  leftMargin = 15
+  leftMargin = 0
 }) => {
   const [items, setItems] = useState(
     _.isArray(value) && !_.isEmpty(value) ? fillIds(value) : [{ id: _.uniqueId() }]
   );
+  const { locales } = useFormContext();
 
   // TODO aggiungere params per layouat dentro
   const form = {
     layout: 'inline',
+    locales, // copy the locales from the main form
     fields
   };
 

@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Form, Space, Button } from 'antd';
 
+import './index.scss';
+
 const buildColObject = (span, offset) => {
   if (span || offset) {
     const result = {};
@@ -35,8 +37,6 @@ const FormAntD = ({
   wrapperColOffset,
   children
 }) => {
-
-
   return (
     <Form
       className="lf-form-react-antd"

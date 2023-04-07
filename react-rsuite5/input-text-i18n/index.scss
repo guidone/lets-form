@@ -1,0 +1,73 @@
+.lf-input-text-i18n-item-locale {
+  font-size: 0.9em;
+}
+
+.lf-input-text-i18n {
+  .rs-input-group-addon {
+    //margin-top: -5px;
+    //margin-right: -3px;
+    padding: 2px 4px !important;
+
+    .status {
+      font-size: 10px;
+    }
+
+    .btn-clear {
+      display: inline-block;
+      margin-left: 5px;
+      margin-top: -2px;
+      color: #666666;
+      text-decoration: none;
+
+      &:hover {
+        color: #1675e0;
+      }
+    }
+  }
+
+  .group-input-select {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+
+    .translation-control {
+      order: 0;
+      flex: 1 0 auto;
+      align-self: auto;
+      width: unset !important;
+      //border-right: none;
+      //border-top-right-radius: 0px;
+      //border-bottom-right-radius: 0px;
+      z-index: 1;
+
+
+
+      .translated {
+        color: #999999;
+      }
+
+      /*&.rs-input-group-focus {
+        z-index: 3; // no bigger than 7 (z of the dropdown)
+      }*/
+
+
+    }
+
+    .select-control {
+      order: 1;
+      flex: 0 0 auto;
+      align-self: center;
+      z-index: 2;
+      margin-left: 5px;
+
+      /*.rs-picker-toggle {
+
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+      }*/
+    }
+  }
+}

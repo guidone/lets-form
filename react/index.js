@@ -6,6 +6,7 @@ import { Checkbox } from './checkbox';
 import { Textarea } from './textarea';
 import { ThreeColumns } from './three-columns';
 import { TwoColumns } from './two-columns';
+import { Group } from './group';
 
 const Fields = {
   'text-input': {
@@ -22,6 +23,9 @@ const Fields = {
   },
   'two-columns': {
     'react': TwoColumns
+  },
+  'group': {
+    'react': Group
   }
 };
 

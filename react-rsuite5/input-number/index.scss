@@ -1,0 +1,8 @@
+.lf-form-react-rsuite5 {
+  // fix: RSuite puts a hardcoded with 300px for grouped input numbers
+  .lf-control-input-number.rs-form-group {
+     .rs-input-group {
+      width: auto;
+    }
+  }
+}

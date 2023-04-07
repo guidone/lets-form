@@ -77,6 +77,29 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
+/***/ 88:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-group .header{align-items:center;background:rgba(0,0,0,0);display:flex;margin:15px 0px;height:1px;flex-direction:row}.lf-control-group .header .inner-text{flex:0 0 auto;padding:0 12px;display:inline-block}.lf-control-group .header:before{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header:after{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header.left:before{content:none;border:none;flex:unset}.lf-control-group .header.right:after{content:none;border:none;flex:unset}", "",{"version":3,"sources":["webpack://./common/group/group.scss"],"names":[],"mappings":"AAEE,0BACE,kBAAA,CACA,wBAAA,CACA,YAAA,CACA,eAAA,CACA,UAAA,CACA,kBAAA,CAEA,sCACE,aAAA,CACA,cAAA,CACA,oBAAA,CAGF,iCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAGF,gCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAIA,sCACE,YAAA,CACA,WAAA,CACA,UAAA,CAKF,sCACE,YAAA,CACA,WAAA,CACA,UAAA","sourcesContent":[".lf-control-group {\n\n  .header {\n    align-items: center;\n    background: transparent;\n    display: flex;\n    margin: 15px 0px;\n    height: 1px;\n    flex-direction: row;\n\n    .inner-text {\n      flex: 0 0 auto;\n      padding: 0 12px;\n      display: inline-block;\n    }\n\n    &:before {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &:after {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &.left {\n      &:before {\n        content: none;\n        border: none;\n        flex: unset;\n      }\n    }\n\n    &.right {\n      &:after {\n        content: none;\n        border: none;\n        flex: unset;\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ 1861:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -93,7 +116,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-three-columns .left{flex:1 0;align-self:auto;margin-right:10px}.lf-three-columns .center{margin-left:10px;margin-right:10px;flex:1 0;align-self:auto}.lf-three-columns .right{margin-left:10px;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./common/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,kBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAUA,wBACE,QAAA,CACA,eAAA,CACA,iBAAA,CAGF,0BACE,gBAAA,CACA,iBAAA,CACA,QAAA,CACA,eAAA,CAGF,yBACE,gBAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 10px;\n  }\n\n  .center {\n    margin-left: 10px;\n    margin-right: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    margin-left: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-three-columns .left{flex:1 0;align-self:auto;margin-right:10px}.lf-three-columns .center{margin-left:10px;margin-right:10px;flex:1 0;align-self:auto}.lf-three-columns .right{margin-left:10px;flex:1 0;align-self:auto}.lf-form-react-rsuite5 .lf-three-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,kBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAUA,wBACE,QAAA,CACA,eAAA,CACA,iBAAA,CAGF,0BACE,gBAAA,CACA,iBAAA,CACA,QAAA,CACA,eAAA,CAGF,yBACE,gBAAA,CACA,QAAA,CACA,eAAA,CAKF,yCACE,oCAAA","sourcesContent":[".lf-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 10px;\n  }\n\n  .center {\n    margin-left: 10px;\n    margin-right: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    margin-left: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n}\n\n.lf-form-react-rsuite5 {\n  .lf-three-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -116,7 +139,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-di
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-two-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-two-columns .left{flex:1 0;align-self:auto;margin-right:10px}.lf-two-columns .right{margin-left:10px;flex:1 0;align-self:auto}.lf-two-columns.layout-1-2 .left{flex:1 0}.lf-two-columns.layout-1-2 .right{flex:2 0}.lf-two-columns.layout-1-3 .left{flex:1 0}.lf-two-columns.layout-1-3 .right{flex:3 0}.lf-two-columns.layout-1-4 .left{flex:1 0}.lf-two-columns.layout-1-4 .right{flex:4 0}.lf-two-columns.layout-1-5 .left{flex:1 0}.lf-two-columns.layout-1-5 .right{flex:4 0}.lf-two-columns.layout-2-1 .left{flex:2 0}.lf-two-columns.layout-2-1 .right{flex:1 0}.lf-two-columns.layout-3-1 .left{flex:3 0}.lf-two-columns.layout-3-1 .right{flex:1 0}.lf-two-columns.layout-4-1 .left{flex:4 0}.lf-two-columns.layout-4-1 .right{flex:1 0}.lf-two-columns.layout-5-1 .left{flex:4 0}.lf-two-columns.layout-5-1 .right{flex:1 0}.lf-two-columns.layout-3-2 .left{flex:3 0}.lf-two-columns.layout-3-2 .right{flex:2 0}.lf-two-columns.layout-2-3 .left{flex:2 0}.lf-two-columns.layout-2-3 .right{flex:3 0}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,gBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAWA,sBACE,QAAA,CACA,eAAA,CACA,iBAAA,CAGF,uBACE,gBAAA,CACA,QAAA,CACA,eAAA,CAIA,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA","sourcesContent":[".lf-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  /*.left, .right {\n    // disable width 300 of text input\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 10px;\n  }\n\n  .right {\n    margin-left: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-two-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-two-columns .left{flex:1 0;align-self:auto;margin-right:10px}.lf-two-columns .right{margin-left:10px;flex:1 0;align-self:auto}.lf-two-columns.layout-1-2 .left{flex:1 0}.lf-two-columns.layout-1-2 .right{flex:2 0}.lf-two-columns.layout-1-3 .left{flex:1 0}.lf-two-columns.layout-1-3 .right{flex:3 0}.lf-two-columns.layout-1-4 .left{flex:1 0}.lf-two-columns.layout-1-4 .right{flex:4 0}.lf-two-columns.layout-1-5 .left{flex:1 0}.lf-two-columns.layout-1-5 .right{flex:4 0}.lf-two-columns.layout-2-1 .left{flex:2 0}.lf-two-columns.layout-2-1 .right{flex:1 0}.lf-two-columns.layout-3-1 .left{flex:3 0}.lf-two-columns.layout-3-1 .right{flex:1 0}.lf-two-columns.layout-4-1 .left{flex:4 0}.lf-two-columns.layout-4-1 .right{flex:1 0}.lf-two-columns.layout-5-1 .left{flex:4 0}.lf-two-columns.layout-5-1 .right{flex:1 0}.lf-two-columns.layout-3-2 .left{flex:3 0}.lf-two-columns.layout-3-2 .right{flex:2 0}.lf-two-columns.layout-2-3 .left{flex:2 0}.lf-two-columns.layout-2-3 .right{flex:3 0}.lf-form-react-rsuite5 .lf-two-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,gBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAEA,sBACE,QAAA,CACA,eAAA,CACA,iBAAA,CAGF,uBACE,gBAAA,CACA,QAAA,CACA,eAAA,CAIA,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAMJ,uCACE,oCAAA","sourcesContent":[".lf-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 10px;\n  }\n\n  .right {\n    margin-left: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n}\n\n.lf-form-react-rsuite5 {\n  .lf-two-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -231,14 +254,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lt-control-che
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-toolbar{margin-top:24px}.lf-form-react-rsuite5 .rs-form-control-label>.rs-form-help-text.rs-form-help-text-tooltip{margin-top:0px;margin-left:5px}", "",{"version":3,"sources":["webpack://./react-rsuite5/form/index.scss"],"names":[],"mappings":"AACE,mCACE,eAAA,CAIA,2FACE,cAAA,CACA,eAAA","sourcesContent":[".lf-form-react-rsuite5 {\n  .lf-toolbar {\n    margin-top: 24px;\n  }\n  // makes tooltip inside labels with smaller margins\n  .rs-form-control-label {\n    > .rs-form-help-text.rs-form-help-text-tooltip {\n      margin-top: 0px;\n      margin-left: 5px;\n    }\n  }\n\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5{--lf-field-margin: 24px}.lf-form-react-rsuite5 .lf-toolbar{margin-top:24px}.lf-form-react-rsuite5 .rs-form-control-label>.rs-form-help-text.rs-form-help-text-tooltip{margin-top:0px;margin-left:5px}", "",{"version":3,"sources":["webpack://./react-rsuite5/form/index.scss"],"names":[],"mappings":"AAAA,uBACE,uBAAA,CAEA,mCACE,eAAA,CAIA,2FACE,cAAA,CACA,eAAA","sourcesContent":[".lf-form-react-rsuite5 {\n  --lf-field-margin: 24px;\n\n  .lf-toolbar {\n    margin-top: 24px;\n  }\n  // makes tooltip inside labels with smaller margins\n  .rs-form-control-label {\n    > .rs-form-help-text.rs-form-help-text-tooltip {\n      margin-top: 0px;\n      margin-left: 5px;\n    }\n  }\n\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ 6112:
+/***/ 8710:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -254,7 +277,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-toolbar{mar
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".rsuite5-fields-group .rs-divider-horizontal.rs-divider-with-text{margin:15px 0px}.rsuite5-fields-group .arrow{padding:0px}.rsuite5-fields-group .arrow .rs-icon{font-size:24px}", "",{"version":3,"sources":["webpack://./react-rsuite5/group/fields-group.scss"],"names":[],"mappings":"AAEE,kEACE,eAAA,CAGF,6BACE,WAAA,CACA,sCACE,cAAA","sourcesContent":[".rsuite5-fields-group {\n\n  .rs-divider-horizontal.rs-divider-with-text {\n    margin: 15px 0px;\n  }\n\n  .arrow {\n    padding: 0px;\n    .rs-icon {\n      font-size: 24px;\n    }\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-control-input-number.rs-form-group .rs-input-group{width:auto}", "",{"version":3,"sources":["webpack://./react-rsuite5/input-number/index.scss"],"names":[],"mappings":"AAGK,8EACC,UAAA","sourcesContent":[".lf-form-react-rsuite5 {\n  // fix: RSuite puts a hardcoded with 300px for grouped input numbers\n  .lf-control-input-number.rs-form-group {\n     .rs-input-group {\n      width: auto;\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -278,6 +301,29 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".rsuite5-fields-group .rs-divider-hori
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lets-form-input-tag .rs-picker-input{min-width:120px}", "",{"version":3,"sources":["webpack://./react-rsuite5/input-tag/index.scss"],"names":[],"mappings":"AACE,sCAEE,eAAA","sourcesContent":[".lets-form-input-tag {\n  .rs-picker-input {\n    // minimum width, otherwise if empty, the rightmost end is cut\n    min-width: 120px;\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 8727:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-input-text-i18n-item-locale{font-size:.9em}.lf-input-text-i18n .rs-input-group-addon{padding:2px 4px !important}.lf-input-text-i18n .rs-input-group-addon .status{font-size:10px}.lf-input-text-i18n .rs-input-group-addon .btn-clear{display:inline-block;margin-left:5px;margin-top:-2px;color:#666;text-decoration:none}.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover{color:#1675e0}.lf-input-text-i18n .group-input-select{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-input-text-i18n .group-input-select .translation-control{order:0;flex:1 0 auto;align-self:auto;width:unset !important;z-index:1}.lf-input-text-i18n .group-input-select .translation-control .translated{color:#999}.lf-input-text-i18n .group-input-select .select-control{order:1;flex:0 0 auto;align-self:center;z-index:2;margin-left:5px}", "",{"version":3,"sources":["webpack://./react-rsuite5/input-text-i18n/index.scss"],"names":[],"mappings":"AAAA,gCACE,cAAA,CAIA,0CAGE,0BAAA,CAEA,kDACE,cAAA,CAGF,qDACE,oBAAA,CACA,eAAA,CACA,eAAA,CACA,UAAA,CACA,oBAAA,CAEA,2DACE,aAAA,CAKN,wCACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,6DACE,OAAA,CACA,aAAA,CACA,eAAA,CACA,sBAAA,CAIA,SAAA,CAIA,yEACE,UAAA,CAUJ,wDACE,OAAA,CACA,aAAA,CACA,iBAAA,CACA,SAAA,CACA,eAAA","sourcesContent":[".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n {\n  .rs-input-group-addon {\n    //margin-top: -5px;\n    //margin-right: -3px;\n    padding: 2px 4px !important;\n\n    .status {\n      font-size: 10px;\n    }\n\n    .btn-clear {\n      display: inline-block;\n      margin-left: 5px;\n      margin-top: -2px;\n      color: #666666;\n      text-decoration: none;\n\n      &:hover {\n        color: #1675e0;\n      }\n    }\n  }\n\n  .group-input-select {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: flex-start;\n\n    .translation-control {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n      width: unset !important;\n      //border-right: none;\n      //border-top-right-radius: 0px;\n      //border-bottom-right-radius: 0px;\n      z-index: 1;\n\n\n\n      .translated {\n        color: #999999;\n      }\n\n      /*&.rs-input-group-focus {\n        z-index: 3; // no bigger than 7 (z of the dropdown)\n      }*/\n\n\n    }\n\n    .select-control {\n      order: 1;\n      flex: 0 0 auto;\n      align-self: center;\n      z-index: 2;\n      margin-left: 5px;\n\n      /*.rs-picker-toggle {\n\n          border-top-left-radius: 0px;\n          border-bottom-left-radius: 0px;\n      }*/\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2297,7 +2343,10 @@ __webpack_require__.d(__webpack_exports__, {
   "fillIds": () => (/* reexport */ fillIds),
   "filterFields": () => (/* reexport */ filterFields),
   "findField": () => (/* reexport */ findField),
+  "getLocales": () => (/* reexport */ getLocales),
+  "i18n": () => (/* reexport */ i18n),
   "isValidDayjsFormat": () => (/* reexport */ isValidDayjsFormat),
+  "mapFields": () => (/* reexport */ mapFields),
   "reduceFields": () => (/* reexport */ reduceFields),
   "replaceField": () => (/* reexport */ replaceField),
   "validateRulesDefinition": () => (/* reexport */ validateRulesDefinition)
@@ -4870,7 +4919,31 @@ var CrossCirle = function CrossCirle(_ref) {
     strokeLinejoin: "round"
   }));
 };
+;// CONCATENATED MODULE: ./assets/icons/check.js
+var IconCheck = function IconCheck(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 24 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 24 : _ref$height;
+  return /*#__PURE__*/React.createElement("svg", {
+    width: "".concat(width, "px"),
+    height: "".concat(height, "px"),
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/React.createElement("g", {
+    id: "Interface / Check"
+  }, /*#__PURE__*/React.createElement("path", {
+    id: "Vector",
+    d: "M6 12L10.2426 16.2426L18.727 7.75732",
+    stroke: "#000000",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })));
+};
 ;// CONCATENATED MODULE: ./assets/icons/index.js
+
 
 
 
@@ -4892,13 +4965,9 @@ var RequiredIcon = function RequiredIcon() {
   });
 };
 
-;// CONCATENATED MODULE: ./components/index.js
-
-
-;// CONCATENATED MODULE: ./costants.js
-var FRAMEWORKS = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd'];
-var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design'];
-var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
+// EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
+var lodash_isFunction = __webpack_require__(3560);
+var isFunction_default = /*#__PURE__*/__webpack_require__.n(lodash_isFunction);
 ;// CONCATENATED MODULE: ./helpers/map-fields.js
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -5092,7 +5161,6 @@ var uniqueId = __webpack_require__(3955);
 var uniqueId_default = /*#__PURE__*/__webpack_require__.n(uniqueId);
 ;// CONCATENATED MODULE: ./helpers/fill-ids.js
 
-
 function fill_ids_typeof(obj) { "@babel/helpers - typeof"; return fill_ids_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, fill_ids_typeof(obj); }
 function fill_ids_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function fill_ids_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? fill_ids_ownKeys(Object(source), !0).forEach(function (key) { fill_ids_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : fill_ids_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -5102,32 +5170,14 @@ function fill_ids_toPrimitive(input, hint) { if (fill_ids_typeof(input) !== "obj
 
 var fillIds = function fillIds(fields) {
   var namespace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-  if (isEmpty_default()(fields)) {
-    return fields;
-  }
-  var newFields = fields.map(function (field) {
-    var newField = field;
+  return mapFields(fields, function (field) {
     if (!field.id) {
-      newField = fill_ids_objectSpread({
+      return fill_ids_objectSpread({
         id: uniqueId_default()(namespace)
       }, field);
     }
-    FIELDS_KEY.forEach(function (fieldsKey) {
-      if (!isEmpty_default()(field[fieldsKey])) {
-        var _newFields = fillIds(field[fieldsKey], namespace);
-        // if any changes in the subfields create new instance
-        if (_newFields !== field[fieldsKey]) {
-          newField = fill_ids_objectSpread(fill_ids_objectSpread({}, newField), {}, fill_ids_defineProperty({}, fieldsKey, _newFields));
-        }
-      }
-    });
-    return newField;
+    return field;
   });
-  // dont return a new instance of the array if there's no change
-  var isAnyChanges = fields.some(function (field, idx) {
-    return field !== newFields[idx];
-  });
-  return isAnyChanges ? newFields : fields;
 };
 
 // EXTERNAL MODULE: ./node_modules/lodash/isNumber.js
@@ -5145,6 +5195,10 @@ var isObject_default = /*#__PURE__*/__webpack_require__.n(lodash_isObject);
 // EXTERNAL MODULE: ./node_modules/lodash/isArray.js
 var isArray = __webpack_require__(1469);
 var isArray_default = /*#__PURE__*/__webpack_require__.n(isArray);
+;// CONCATENATED MODULE: ./costants.js
+var FRAMEWORKS = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd'];
+var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design'];
+var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
 ;// CONCATENATED MODULE: ./helpers/cleanup.js
 
 
@@ -5460,6 +5514,44 @@ var isValidDayjsFormat = function isValidDayjsFormat(str) {
   return false;
 };
 
+;// CONCATENATED MODULE: ./common/data/locales.json
+const locales_namespaceObject = JSON.parse('{"Q":{"af-ZA":["Afrikaans","Afrikaans"],"ar":["العربية","Arabic"],"bg-BG":["Български","Bulgarian"],"ca-AD":["Català","Catalan"],"cs-CZ":["Čeština","Czech"],"cy-GB":["Cymraeg","Welsh"],"da-DK":["Dansk","Danish"],"de-AT":["Deutsch (Österreich)","German (Austria)"],"de-CH":["Deutsch (Schweiz)","German (Switzerland)"],"de-DE":["Deutsch (Deutschland)","German (Germany)"],"el-GR":["Ελληνικά","Greek"],"en-GB":["English (UK)","English (UK)"],"en-US":["English (US)","English (US)"],"es-CL":["Español (Chile)","Spanish (Chile)"],"es-ES":["Español (España)","Spanish (Spain)"],"es-MX":["Español (México)","Spanish (Mexico)"],"et-EE":["Eesti keel","Estonian"],"eu":["Euskara","Basque"],"fa-IR":["فارسی","Persian"],"fi-FI":["Suomi","Finnish"],"fr-CA":["Français (Canada)","French (Canada)"],"fr-FR":["Français (France)","French (France)"],"he-IL":["עברית","Hebrew"],"hi-IN":["हिंदी","Hindi"],"hr-HR":["Hrvatski","Croatian"],"hu-HU":["Magyar","Hungarian"],"id-ID":["Bahasa Indonesia","Indonesian"],"is-IS":["Íslenska","Icelandic"],"it-IT":["Italiano","Italian"],"ja-JP":["日本語","Japanese"],"km-KH":["ភាសាខ្មែរ","Khmer"],"ko-KR":["한국어","Korean"],"la":["Latina","Latin"],"lt-LT":["Lietuvių kalba","Lithuanian"],"lv-LV":["Latviešu","Latvian"],"mn-MN":["Монгол","Mongolian"],"nb-NO":["Norsk bokmål","Norwegian (Bokmål)"],"nl-NL":["Nederlands","Dutch"],"nn-NO":["Norsk nynorsk","Norwegian (Nynorsk)"],"pl-PL":["Polski","Polish"],"pt-BR":["Português (Brasil)","Portuguese (Brazil)"],"pt-PT":["Português (Portugal)","Portuguese (Portugal)"],"ro-RO":["Română","Romanian"],"ru-RU":["Русский","Russian"],"sk-SK":["Slovenčina","Slovak"],"sl-SI":["Slovenščina","Slovenian"],"sr-RS":["Српски / Srpski","Serbian"],"sv-SE":["Svenska","Swedish"],"th-TH":["ไทย","Thai"],"tr-TR":["Türkçe","Turkish"],"uk-UA":["Українська","Ukrainian"],"vi-VN":["Tiếng Việt","Vietnamese"],"zh-CN":["中文 (中国大陆)","Chinese (PRC)"],"zh-TW":["中文 (台灣)","Chinese (Taiwan)"]}}');
+;// CONCATENATED MODULE: ./helpers/get-locales.js
+
+var LANGUAGES_OPTIONS = Object.keys(locales_namespaceObject.Q).map(function (lang) {
+  return {
+    code: lang,
+    name: locales_namespaceObject.Q[lang][1],
+    label: "".concat(locales_namespaceObject.Q[lang][1], " - ").concat(locales_namespaceObject.Q[lang][0])
+  };
+});
+var getLocales = function getLocales() {
+  return LANGUAGES_OPTIONS;
+};
+;// CONCATENATED MODULE: ./helpers/i18n.js
+
+
+var i18n = function i18n(value, locale) {
+  if (isString_default()(value)) {
+    return value;
+  } else if (isObject_default()(value)) {
+    if (locale && value[locale]) {
+      return value[locale];
+    }
+    // TODO understand what's the proper behaviour here
+    if (value['en'] || value['en-UK'] || value['en-US']) {
+      if (!locale) {
+        console.warn("[LetsForm] missing locale for translation, defaulting to English: ", value);
+      } else {
+        console.warn("[LetsForm] missing translation for ".concat(locale, ", defaulting to English: "), value);
+      }
+      return value['en'] || value['en-UK'] || value['en-US'];
+    }
+    console.warn("[LetsForm] missing translation for ".concat(locale, ": "), value);
+    return '';
+  }
+  return value;
+};
 ;// CONCATENATED MODULE: ./helpers/index.js
 
 
@@ -5471,6 +5563,47 @@ var isValidDayjsFormat = function isValidDayjsFormat(str) {
 
 
 
+
+
+
+;// CONCATENATED MODULE: ./components/i18n/index.js
+
+function i18n_typeof(obj) { "@babel/helpers - typeof"; return i18n_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, i18n_typeof(obj); }
+function i18n_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function i18n_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? i18n_ownKeys(Object(source), !0).forEach(function (key) { i18n_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : i18n_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function i18n_defineProperty(obj, key, value) { key = i18n_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function i18n_toPropertyKey(arg) { var key = i18n_toPrimitive(arg, "string"); return i18n_typeof(key) === "symbol" ? key : String(key); }
+function i18n_toPrimitive(input, hint) { if (i18n_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (i18n_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var I18N = function I18N(Component) {
+  var propNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+  var funcPropNames = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  return function (props) {
+    var lfLocale = props.lfLocale;
+    var newProps = Object.keys(props).reduce(function (acc, propName) {
+      // translate simpe field
+      if (propNames.includes(propName)) {
+        return i18n_objectSpread(i18n_objectSpread({}, acc), {}, i18n_defineProperty({}, propName, i18n(props[propName], lfLocale)));
+      } else if (isFunction_default()(funcPropNames[propName])) {
+        // pass the value trough the mapper
+        var translated = funcPropNames[propName](props[propName], function (string) {
+          return i18n(string, lfLocale);
+        });
+        return i18n_objectSpread(i18n_objectSpread({}, acc), {}, i18n_defineProperty({}, propName, translated));
+      }
+      return i18n_objectSpread(i18n_objectSpread({}, acc), {}, i18n_defineProperty({}, propName, props[propName]));
+    }, {});
+    return /*#__PURE__*/React.createElement(Component, newProps);
+  };
+};
+;// CONCATENATED MODULE: ./components/index.js
+
+
+
+;// CONCATENATED MODULE: ./form-context/index.js
+
+var FormContext = /*#__PURE__*/(0,external_react_.createContext)();
+/* harmony default export */ const form_context = (FormContext);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./generator/index.scss
 var cjs_js_generator = __webpack_require__(5861);
 ;// CONCATENATED MODULE: ./generator/index.scss
@@ -5533,6 +5666,7 @@ function generator_toPrimitive(input, hint) { if (generator_typeof(input) !== "o
 
 
 //import PropTypes from 'prop-types';
+
 
 
 var enrichWithLabels = function enrichWithLabels(validationErrors, fields) {
@@ -5639,7 +5773,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       errors = _ref3.errors,
       showErrors = _ref3.showErrors,
       _ref3$level = _ref3.level,
-      level = _ref3$level === void 0 ? 1 : _ref3$level;
+      level = _ref3$level === void 0 ? 1 : _ref3$level,
+      locale = _ref3.locale;
     var renderedFields = (fields || []).filter(function (field) {
       return Wrapper || field.hidden !== true;
     }).map(function (field, index) {
@@ -5660,6 +5795,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           key: field.name,
           lfComponent: field.component,
           lfFramework: framework,
+          lfLocale: locale,
           name: field.name,
           label: field.label,
           hint: field.hint,
@@ -5678,7 +5814,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           plaintext: plaintext,
           errors: errors,
           showErrors: showErrors,
-          level: level + 1
+          level: level + 1,
+          locale: locale
         }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
           field: field,
           target: "fields"
@@ -5693,6 +5830,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           key: field.name,
           lfComponent: field.component,
           lfFramework: framework,
+          lfLocale: locale,
           name: field.name
         }, additionalFields), function (column) {
           if (column === 'left') {
@@ -5710,7 +5848,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               plaintext: plaintext,
               errors: errors,
               showErrors: showErrors,
-              level: level + 1
+              level: level + 1,
+              locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               field: field,
               target: "leftFields"
@@ -5730,7 +5869,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               plaintext: plaintext,
               errors: errors,
               showErrors: showErrors,
-              level: level + 1
+              level: level + 1,
+              locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               field: field,
               target: "rightFields"
@@ -5747,7 +5887,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           key: field.name,
           name: field.name,
           lfComponent: field.component,
-          lfFramework: framework
+          lfFramework: framework,
+          lfLocale: locale
         }, additionalFields), function (column) {
           if (column === 'left') {
             return /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, renderFields({
@@ -5764,7 +5905,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               plaintext: plaintext,
               errors: errors,
               showErrors: showErrors,
-              level: level + 1
+              level: level + 1,
+              locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               field: field,
               target: "leftFields"
@@ -5784,7 +5926,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               plaintext: plaintext,
               errors: errors,
               showErrors: showErrors,
-              level: level + 1
+              level: level + 1,
+              locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               field: field,
               target: "centerFields"
@@ -5804,7 +5947,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               plaintext: plaintext,
               errors: errors,
               showErrors: showErrors,
-              level: level + 1
+              level: level + 1,
+              locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               field: field,
               target: "rightFields"
@@ -5831,6 +5975,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
             key: "field_".concat(field.name),
             lfComponent: field.component,
             lfFramework: framework,
+            lfLocale: locale,
             name: field.name,
             label: field.label,
             hint: field.hint,
@@ -5856,13 +6001,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       });
     });
     return renderedFields;
-
-    /*return BottomView ?
-      [...renderedFields, <BottomView />]
-      : renderedFields;
-      */
   };
-
   var FormGenerator = /*#__PURE__*/external_react_default().memo(function (_ref5) {
     var framework = _ref5.framework,
       form = _ref5.form,
@@ -5874,6 +6013,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       onReset = _ref5$onReset === void 0 ? function () {} : _ref5$onReset,
       _ref5$onError = _ref5.onError,
       onError = _ref5$onError === void 0 ? function () {} : _ref5$onError,
+      locale = _ref5.locale,
       wrapper = _ref5.wrapper,
       groupWrapper = _ref5.groupWrapper,
       bottomView = _ref5.bottomView,
@@ -5962,7 +6102,13 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
     var Wrapper = wrapper;
     var GroupWrapper = groupWrapper;
     var BottomView = bottomView;
-    return /*#__PURE__*/external_react_default().createElement("div", {
+    return /*#__PURE__*/external_react_default().createElement(form_context.Provider, {
+      value: {
+        locales: form.locales,
+        locale: locale
+        // ..more
+      }
+    }, /*#__PURE__*/external_react_default().createElement("div", {
       className: classnames_default()('lf-lets-form', className)
     }, validationErrors && showErrors === 'groupedTop' && /*#__PURE__*/external_react_default().createElement(ValidationErrors, {
       className: "top",
@@ -5991,16 +6137,17 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       disabled: disabled || form.disabled,
       readOnly: readOnly || form.readOnly,
       plaintext: plaintext || form.plaintext,
-      showErrors: showErrors
+      showErrors: showErrors,
+      locale: locale
     }), children, validationErrors && (showErrors === 'groupedBottom' || isEmpty_default()(showErrors)) && /*#__PURE__*/external_react_default().createElement(ValidationErrors, {
       className: "bottom",
       errors: enrichWithLabels(validationErrors, formFields)
-    })));
+    }))));
   }, function (prevProps, nextProps) {
     if (DEBUG_RENDER) {
-      console.log('Form generator re-render: are equal' + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form));
+      console.log("[LetsForm]Form generator ".concat(nextProps.form.name ? '(' + nextProps.form.name + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale));
     }
-    var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form;
+    var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale;
     console.log('Is re-rendering?', !isEqual);
     return isEqual;
   });
@@ -6100,7 +6247,7 @@ var FormRsuite5 = function FormRsuite5(_ref) {
 
 
 
-var TextInput = function TextInput(_ref) {
+var TextInput = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -6123,6 +6270,11 @@ var TextInput = function TextInput(_ref) {
     width = _ref.width,
     _ref$inside = _ref.inside,
     inside = _ref$inside === void 0 ? false : _ref$inside;
+  // TODO create a specific hook
+  //const { locale } = useContext(FormContext);
+
+  //console.log('input text using locale', locale)
+
   var inner = /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
     name: name,
     accepter: external_rsuite_.Input,
@@ -6146,7 +6298,7 @@ var TextInput = function TextInput(_ref) {
   }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup, {
     inside: inside
   }, prefix && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup.Addon, null, prefix), inner, postfix && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup.Addon, null, postfix)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+}, ['label', 'hint', 'placeholder']);
 
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/toggle/index.scss
 var toggle = __webpack_require__(8078);
@@ -6221,10 +6373,16 @@ var ToggleInput = function ToggleInput(_ref) {
 
 ;// CONCATENATED MODULE: ./react-rsuite5/select/index.js
 
+function select_typeof(obj) { "@babel/helpers - typeof"; return select_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, select_typeof(obj); }
+function select_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function select_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? select_ownKeys(Object(source), !0).forEach(function (key) { select_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : select_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function select_defineProperty(obj, key, value) { key = select_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function select_toPropertyKey(arg) { var key = select_toPrimitive(arg, "string"); return select_typeof(key) === "symbol" ? key : String(key); }
+function select_toPrimitive(input, hint) { if (select_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (select_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 
 
-var Select = function Select(_ref) {
+var Select = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -6273,11 +6431,19 @@ var Select = function Select(_ref) {
     searchable: searchable,
     cleanable: cleanable
   }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+}, ['label', 'hint', 'placeholder'], {
+  options: function options(value, i18n) {
+    return value.map(function (value) {
+      return select_objectSpread(select_objectSpread({}, value), {}, {
+        label: i18n(value.label)
+      });
+    });
+  }
+});
 
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/group/fields-group.scss
-var fields_group = __webpack_require__(6112);
-;// CONCATENATED MODULE: ./react-rsuite5/group/fields-group.scss
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/group/group.scss
+var group = __webpack_require__(88);
+;// CONCATENATED MODULE: ./common/group/group.scss
 
       
       
@@ -6289,75 +6455,87 @@ var fields_group = __webpack_require__(6112);
       
       
 
-var fields_group_options = {};
+var group_options = {};
 
-fields_group_options.styleTagTransform = (styleTagTransform_default());
-fields_group_options.setAttributes = (setAttributesWithoutAttributes_default());
+group_options.styleTagTransform = (styleTagTransform_default());
+group_options.setAttributes = (setAttributesWithoutAttributes_default());
 
-      fields_group_options.insert = insertBySelector_default().bind(null, "head");
+      group_options.insert = insertBySelector_default().bind(null, "head");
     
-fields_group_options.domAPI = (styleDomAPI_default());
-fields_group_options.insertStyleElement = (insertStyleElement_default());
+group_options.domAPI = (styleDomAPI_default());
+group_options.insertStyleElement = (insertStyleElement_default());
 
-var fields_group_update = injectStylesIntoStyleTag_default()(fields_group/* default */.Z, fields_group_options);
-
-
+var group_update = injectStylesIntoStyleTag_default()(group/* default */.Z, group_options);
 
 
-       /* harmony default export */ const group_fields_group = (fields_group/* default */.Z && fields_group/* default.locals */.Z.locals ? fields_group/* default.locals */.Z.locals : undefined);
 
-;// CONCATENATED MODULE: ./react-rsuite5/group/index.js
+
+       /* harmony default export */ const group_group = (group/* default */.Z && group/* default.locals */.Z.locals ? group/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./common/group/index.js
 function group_slicedToArray(arr, i) { return group_arrayWithHoles(arr) || group_iterableToArrayLimit(arr, i) || group_unsupportedIterableToArray(arr, i) || group_nonIterableRest(); }
 function group_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function group_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return group_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return group_arrayLikeToArray(o, minLen); }
 function group_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function group_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function group_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/anchor-has-content */
 
 
 
 
-var FieldsGroup = function FieldsGroup(_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    size = _ref.size,
-    placeholder = _ref.placeholder,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+
+var Group = I18N(function (_ref) {
+  var label = _ref.label,
     _ref$disabled = _ref.disabled,
     disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
     _ref$open = _ref.open,
     open = _ref$open === void 0 ? true : _ref$open,
     _ref$collapsible = _ref.collapsible,
     collapsible = _ref$collapsible === void 0 ? true : _ref$collapsible,
+    align = _ref.align,
     children = _ref.children;
   var _useState = (0,external_react_.useState)(open),
     _useState2 = group_slicedToArray(_useState, 2),
     isOpen = _useState2[0],
     setIsOpen = _useState2[1];
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    controlId: name,
-    className: "rsuite5-fields-group"
-  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Divider, null, label, collapsible && /*#__PURE__*/external_react_default().createElement(external_rsuite_.IconButton, {
+  var handleClick = (0,external_react_.useCallback)(function (event) {
+    event.preventDefault();
+    setIsOpen(!isOpen);
+  }, [isOpen]);
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-control-group"
+  }, /*#__PURE__*/external_react_default().createElement("div", {
+    role: "separator",
+    className: classnames_default()('header', align)
+  }, /*#__PURE__*/external_react_default().createElement("span", {
+    class: "inner-text"
+  }, label, collapsible && /*#__PURE__*/external_react_default().createElement("a", {
+    href: "#",
+    className: "lf-btn-collapse",
     disabled: disabled,
-    className: "arrow",
     appearance: "link",
-    icon: isOpen ? /*#__PURE__*/external_react_default().createElement(ChevronUp, {
-      color: "#3498ff"
-    }) : /*#__PURE__*/external_react_default().createElement(ChevronDown, {
-      color: "#3498ff"
-    }),
-    size: "sm",
-    onClick: function onClick(event) {
-      setIsOpen(!isOpen);
-    }
-  })), (isOpen || !collapsible) && /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, children));
-};
+    onClick: handleClick
+  }, isOpen ? /*#__PURE__*/external_react_default().createElement(ChevronUp, {
+    color: "#3498ff"
+  }) : /*#__PURE__*/external_react_default().createElement(ChevronDown, {
+    color: "#3498ff"
+  })))), (isOpen || !collapsible) && /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, children));
+}, ['label']);
 
+;// CONCATENATED MODULE: ./react-rsuite5/group/index.js
+
+;// CONCATENATED MODULE: ./hooks/index.js
+
+
+var hooks_useFormContext = function useFormContext() {
+  var context = (0,external_react_.useContext)(form_context);
+
+  // put here some defaults
+
+  return context;
+};
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/array/list-array.scss
 var list_array = __webpack_require__(858);
 ;// CONCATENATED MODULE: ./react-rsuite5/array/list-array.scss
@@ -6405,6 +6583,7 @@ function array_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeo
 function array_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function array_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function array_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -6483,17 +6662,21 @@ var ListArray = function ListArray(_ref2) {
     _ref2$maxHeigth = _ref2.maxHeigth,
     maxHeigth = _ref2$maxHeigth === void 0 ? 200 : _ref2$maxHeigth,
     _ref2$leftMargin = _ref2.leftMargin,
-    leftMargin = _ref2$leftMargin === void 0 ? 15 : _ref2$leftMargin;
+    leftMargin = _ref2$leftMargin === void 0 ? 0 : _ref2$leftMargin;
   var _useState = (0,external_react_.useState)(isArray_default()(value) && !isEmpty_default()(value) ? fillIds(value) : [{
       id: uniqueId_default()()
     }]),
     _useState2 = array_slicedToArray(_useState, 2),
     items = _useState2[0],
     setItems = _useState2[1];
+  var _useFormContext = hooks_useFormContext(),
+    locales = _useFormContext.locales;
 
   // TODO aggiungere params per layouat dentro
   var form = {
     layout: 'inline',
+    locales: locales,
+    // copy the locales from the main form
     fields: fields
   };
   var style = {};
@@ -6557,9 +6740,6 @@ var ListArray = function ListArray(_ref2) {
   })));
 };
 
-// EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
-var lodash_isFunction = __webpack_require__(3560);
-var isFunction_default = /*#__PURE__*/__webpack_require__.n(lodash_isFunction);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/two-columns/two-columns.scss
 var two_columns = __webpack_require__(5318);
 ;// CONCATENATED MODULE: ./common/two-columns/two-columns.scss
@@ -6662,6 +6842,37 @@ var ThreeColumns = function ThreeColumns(_ref) {
 
 ;// CONCATENATED MODULE: ./react-rsuite5/three-columns/index.js
 
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/input-number/index.scss
+var input_number = __webpack_require__(8710);
+;// CONCATENATED MODULE: ./react-rsuite5/input-number/index.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var input_number_options = {};
+
+input_number_options.styleTagTransform = (styleTagTransform_default());
+input_number_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      input_number_options.insert = insertBySelector_default().bind(null, "head");
+    
+input_number_options.domAPI = (styleDomAPI_default());
+input_number_options.insertStyleElement = (insertStyleElement_default());
+
+var input_number_update = injectStylesIntoStyleTag_default()(input_number/* default */.Z, input_number_options);
+
+
+
+
+       /* harmony default export */ const react_rsuite5_input_number = (input_number/* default */.Z && input_number/* default.locals */.Z.locals ? input_number/* default.locals */.Z.locals : undefined);
+
 ;// CONCATENATED MODULE: ./react-rsuite5/input-number/index.js
 
 function input_number_slicedToArray(arr, i) { return input_number_arrayWithHoles(arr) || input_number_iterableToArrayLimit(arr, i) || input_number_unsupportedIterableToArray(arr, i) || input_number_nonIterableRest(); }
@@ -6675,10 +6886,11 @@ function input_number_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; 
 
 
 
+
 var hasDecimals = function hasDecimals(f) {
   return isString_default()(f) && (f.includes(',') || f.includes('.'));
 };
-var InputNumberRSuite5 = function InputNumberRSuite5(_ref) {
+var InputNumberRSuite5 = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -6759,7 +6971,7 @@ var InputNumberRSuite5 = function InputNumberRSuite5(_ref) {
     readOnly: readOnly,
     errorMessage: isString_default()(error) ? error : undefined
   }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+}, ['label', 'hint', 'placeholder']);
 
 // EXTERNAL MODULE: external "rsuite/locales"
 var locales_ = __webpack_require__(977);
@@ -6998,13 +7210,20 @@ var SliderRsuite = function SliderRsuite(_ref) {
 };
 
 ;// CONCATENATED MODULE: ./react-rsuite5/checkbox-group/index.js
+function checkbox_group_typeof(obj) { "@babel/helpers - typeof"; return checkbox_group_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, checkbox_group_typeof(obj); }
 var checkbox_group_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
+function checkbox_group_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function checkbox_group_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? checkbox_group_ownKeys(Object(source), !0).forEach(function (key) { checkbox_group_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : checkbox_group_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function checkbox_group_defineProperty(obj, key, value) { key = checkbox_group_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function checkbox_group_toPropertyKey(arg) { var key = checkbox_group_toPrimitive(arg, "string"); return checkbox_group_typeof(key) === "symbol" ? key : String(key); }
+function checkbox_group_toPrimitive(input, hint) { if (checkbox_group_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (checkbox_group_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function checkbox_group_extends() { checkbox_group_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return checkbox_group_extends.apply(this, arguments); }
 function checkbox_group_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = checkbox_group_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function checkbox_group_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
-var CheckboxGroupRSuite = function CheckboxGroupRSuite(_ref) {
+
+var CheckboxGroupRSuite = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -7044,7 +7263,15 @@ var CheckboxGroupRSuite = function CheckboxGroupRSuite(_ref) {
       readOnly: readOnly
     }, label);
   })), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+}, ['label', 'hint', 'placeholder'], {
+  options: function options(value, i18n) {
+    return value.map(function (value) {
+      return checkbox_group_objectSpread(checkbox_group_objectSpread({}, value), {}, {
+        label: i18n(value.label)
+      });
+    });
+  }
+});
 
 ;// CONCATENATED MODULE: ./react-rsuite5/radio-group/index.js
 var radio_group_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
@@ -7374,6 +7601,7 @@ var Placeholder = function Placeholder(_ref) {
 
 
 
+
 ;// CONCATENATED MODULE: ./react-rsuite5/placeholder/index.js
 
 
@@ -7454,7 +7682,312 @@ var Multiselect = function Multiselect(_ref) {
   }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 };
 
+;// CONCATENATED MODULE: ./react-rsuite5/multiselect-language/index.js
+
+
+
+
+
+var renderValue = function renderValue(values, items, tags) {
+  return items.map(function (item, index) {
+    return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Tag, {
+      key: index
+    }, item.name, " ", /*#__PURE__*/external_react_default().createElement("b", null, item.value));
+  });
+};
+var multiselect_language_LANGUAGES_OPTIONS = Object.keys(locales_namespaceObject.Q).map(function (lang) {
+  return {
+    value: lang,
+    name: locales_namespaceObject.Q[lang][1],
+    label: "".concat(locales_namespaceObject.Q[lang][1], " - ").concat(locales_namespaceObject.Q[lang][0])
+  };
+});
+var MultiselectLanguage = function MultiselectLanguage(_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    hint = _ref.hint,
+    value = _ref.value,
+    size = _ref.size,
+    placeholder = _ref.placeholder,
+    options = _ref.options,
+    _ref$tooltip = _ref.tooltip,
+    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+    _ref$disabled = _ref.disabled,
+    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    _ref$readOnly = _ref.readOnly,
+    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+    _ref$required = _ref.required,
+    required = _ref$required === void 0 ? false : _ref$required,
+    error = _ref.error,
+    _ref$block = _ref.block,
+    block = _ref$block === void 0 ? false : _ref$block,
+    _ref$searchable = _ref.searchable,
+    searchable = _ref$searchable === void 0 ? false : _ref$searchable,
+    _ref$cleanable = _ref.cleanable,
+    cleanable = _ref$cleanable === void 0 ? false : _ref$cleanable,
+    onChange = _ref.onChange,
+    onBlur = _ref.onBlur,
+    placement = _ref.placement,
+    appearance = _ref.appearance;
+  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
+    controlId: name
+  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
+    tooltip: true
+  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
+    accepter: external_rsuite_.TagPicker,
+    appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
+    name: name,
+    value: value,
+    onChange: onChange,
+    readOnly: readOnly,
+    onBlur: onBlur,
+    placement: placement,
+    errorMessage: isString_default()(error) ? error : undefined,
+    disabled: disabled,
+    size: size,
+    placeholder: placeholder,
+    data: multiselect_language_LANGUAGES_OPTIONS,
+    block: true,
+    renderValue: renderValue,
+    searchable: true,
+    cleanable: true
+  }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
+};
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/input-text-i18n/index.scss
+var input_text_i18n = __webpack_require__(8727);
+;// CONCATENATED MODULE: ./react-rsuite5/input-text-i18n/index.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var input_text_i18n_options = {};
+
+input_text_i18n_options.styleTagTransform = (styleTagTransform_default());
+input_text_i18n_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      input_text_i18n_options.insert = insertBySelector_default().bind(null, "head");
+    
+input_text_i18n_options.domAPI = (styleDomAPI_default());
+input_text_i18n_options.insertStyleElement = (insertStyleElement_default());
+
+var input_text_i18n_update = injectStylesIntoStyleTag_default()(input_text_i18n/* default */.Z, input_text_i18n_options);
+
+
+
+
+       /* harmony default export */ const react_rsuite5_input_text_i18n = (input_text_i18n/* default */.Z && input_text_i18n/* default.locals */.Z.locals ? input_text_i18n/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./react-rsuite5/input-text-i18n/index.js
+function input_text_i18n_typeof(obj) { "@babel/helpers - typeof"; return input_text_i18n_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, input_text_i18n_typeof(obj); }
+
+
+
+
+function input_text_i18n_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function input_text_i18n_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? input_text_i18n_ownKeys(Object(source), !0).forEach(function (key) { input_text_i18n_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : input_text_i18n_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function input_text_i18n_defineProperty(obj, key, value) { key = input_text_i18n_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function input_text_i18n_toPropertyKey(arg) { var key = input_text_i18n_toPrimitive(arg, "string"); return input_text_i18n_typeof(key) === "symbol" ? key : String(key); }
+function input_text_i18n_toPrimitive(input, hint) { if (input_text_i18n_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (input_text_i18n_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function input_text_i18n_slicedToArray(arr, i) { return input_text_i18n_arrayWithHoles(arr) || input_text_i18n_iterableToArrayLimit(arr, i) || input_text_i18n_unsupportedIterableToArray(arr, i) || input_text_i18n_nonIterableRest(); }
+function input_text_i18n_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function input_text_i18n_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return input_text_i18n_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return input_text_i18n_arrayLikeToArray(o, minLen); }
+function input_text_i18n_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function input_text_i18n_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function input_text_i18n_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/anchor-has-content */
+
+
+
+
+
+
+
+
+var input_text_i18n_LANGUAGES_OPTIONS = Object.keys(locales_namespaceObject.Q).map(function (lang) {
+  return {
+    value: lang,
+    name: locales_namespaceObject.Q[lang][1],
+    label: locales_namespaceObject.Q[lang][1]
+  };
+});
+var languageMenuItem = function languageMenuItem(label, item) {
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-input-text-i18n-item-locale"
+  }, item.label, " ", /*#__PURE__*/external_react_default().createElement("b", null, item.value), item.filled && /*#__PURE__*/external_react_default().createElement(IconCheck, {
+    width: 16,
+    height: 16
+  }));
+};
+var InputTextI18N = function InputTextI18N(props) {
+  var name = props.name,
+    label = props.label,
+    hint = props.hint,
+    value = props.value,
+    size = props.size,
+    placeholder = props.placeholder,
+    _props$tooltip = props.tooltip,
+    tooltip = _props$tooltip === void 0 ? false : _props$tooltip,
+    _props$disabled = props.disabled,
+    disabled = _props$disabled === void 0 ? false : _props$disabled,
+    _props$readOnly = props.readOnly,
+    readOnly = _props$readOnly === void 0 ? false : _props$readOnly,
+    _props$required = props.required,
+    required = _props$required === void 0 ? false : _props$required,
+    width = props.width,
+    error = props.error,
+    _onChange = props.onChange,
+    onBlur = props.onBlur,
+    defaultLocale = props.defaultLocale;
+  var _useContext = (0,external_react_.useContext)(form_context),
+    _useContext$locales = _useContext.locales,
+    locales = _useContext$locales === void 0 ? [] : _useContext$locales;
+  var preselectedLanguage = null;
+  if (defaultLocale && locales.includes(defaultLocale)) {
+    preselectedLanguage = defaultLocale;
+  } else if (!isEmpty_default()(locales)) {
+    preselectedLanguage = locales[0];
+  }
+  var totalLocales = !isEmpty_default()(locales) ? locales.length : input_text_i18n_LANGUAGES_OPTIONS.length;
+  var _useState = (0,external_react_.useState)(preselectedLanguage),
+    _useState2 = input_text_i18n_slicedToArray(_useState, 2),
+    currentLanguage = _useState2[0],
+    setCurrentLanguage = _useState2[1];
+  var _useState3 = (0,external_react_.useState)(value),
+    _useState4 = input_text_i18n_slicedToArray(_useState3, 2),
+    currentValue = _useState4[0],
+    setCurrentValue = _useState4[1];
+  var _useState5 = (0,external_react_.useState)(isObject_default()(value) ? value[preselectedLanguage] : null),
+    _useState6 = input_text_i18n_slicedToArray(_useState5, 2),
+    translation = _useState6[0],
+    setTranslation = _useState6[1];
+
+  // if no locales, then use plain input text
+  if (isEmpty_default()(locales)) {
+    return /*#__PURE__*/external_react_default().createElement(TextInput, props);
+  }
+  // evaluate current translated locales
+  var translatedLocales = isObject_default()(currentValue) ? Object.keys(currentValue).filter(function (locale) {
+    return isEmpty_default()(locales) || locales.includes(locale);
+  }) : [];
+
+  //console.log('current value', currentValue);
+  //console.log('translation', translation, ' language ', currentLanguage, 'translated', translatedLocales);
+
+  var multiValuesAndNoLang = isObject_default()(currentValue) && Object.keys(currentValue).length !== 0 && !currentLanguage;
+  var languageData = input_text_i18n_LANGUAGES_OPTIONS.filter(function (item) {
+    return isEmpty_default()(locales) || locales.includes(item.value);
+  }).map(function (item) {
+    return input_text_i18n_objectSpread(input_text_i18n_objectSpread({}, item), {}, {
+      filled: currentValue && !isEmpty_default()(currentValue[item.value])
+    });
+  });
+  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
+    className: "lf-input-text-i18n"
+  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
+    tooltip: true
+  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement("div", {
+    className: "group-input-select"
+  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup, {
+    className: "translation-control",
+    inside: true
+  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
+    name: name,
+    style: width ? {
+      width: "".concat(width, "px")
+    } : undefined,
+    accepter: external_rsuite_.Input,
+    value: multiValuesAndNoLang ? '<multiple translations>' : translation,
+    readOnly: readOnly || multiValuesAndNoLang,
+    onChange: function onChange(value) {
+      // update the UI
+      setTranslation(value);
+      if (isEmpty_default()(value)) {
+        // in case the user entered an empty value...
+        if (isObject_default()(currentValue) && currentLanguage) {
+          // if i18n object and a language is selected, then void the value for that language
+          var newCurrentValue = omit_default()(currentValue, currentLanguage);
+          setCurrentValue(newCurrentValue);
+          _onChange(newCurrentValue);
+        } else if (isString_default()(currentValue)) {
+          setCurrentValue(value);
+          _onChange(value);
+        }
+      } else {
+        // in case the user entered a non empty value...
+        if (currentLanguage) {
+          // if a current language is selected, then the typed text ends up
+          // in a i18n object
+          var _newCurrentValue = input_text_i18n_objectSpread(input_text_i18n_objectSpread({}, currentValue), {}, input_text_i18n_defineProperty({}, currentLanguage, value));
+          setCurrentValue(_newCurrentValue);
+          _onChange(_newCurrentValue);
+          //setTranslation(value);
+        } else if (isObject_default()(currentValue)) {
+          // language is not selected, but the current value is a i18n object, do nothing
+          // just update the UI, do nothing in the current value
+          //setTranslation(value);
+        } else {
+          // if language not selected and current value is not an object
+          // just set the current value as string
+          //setTranslation(value);
+          setCurrentValue(value);
+          _onChange(value);
+        }
+      }
+    },
+    onBlur: onBlur,
+    disabled: disabled,
+    size: size,
+    placeholder: placeholder,
+    errorMessage: isString_default()(error) ? error : undefined
+  }), /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup.Addon, null, /*#__PURE__*/external_react_default().createElement("span", {
+    className: "status"
+  }, /*#__PURE__*/external_react_default().createElement("span", {
+    className: "translated"
+  }, translatedLocales.length), "\xA0/\xA0", /*#__PURE__*/external_react_default().createElement("span", null, totalLocales)))), /*#__PURE__*/external_react_default().createElement("div", {
+    className: "select-control"
+  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.SelectPicker, {
+    appearance: "subtle",
+    cleanable: false,
+    size: "xs",
+    readOnly: readOnly,
+    value: currentLanguage,
+    placement: "bottomEnd",
+    placeholder: "n/a",
+    searchable: languageData.length > 20,
+    renderValue: function renderValue(value) {
+      return /*#__PURE__*/external_react_default().createElement("span", null, value);
+    },
+    renderMenuItem: languageMenuItem,
+    onChange: function onChange(value) {
+      if (isString_default()(currentValue) && !isEmpty_default()(currentValue)) {
+        // if currentValue is a string and not empty,
+        setCurrentLanguage(value);
+        setCurrentValue(input_text_i18n_defineProperty({}, value, currentValue));
+      } else if (isObject_default()(currentValue)) {
+        var _currentValue$value;
+        // it's already a i18n object, just switch the language
+        setCurrentLanguage(value);
+        setTranslation((_currentValue$value = currentValue[value]) !== null && _currentValue$value !== void 0 ? _currentValue$value : '');
+      } else {
+        setCurrentLanguage(value);
+      }
+    },
+    data: languageData
+  }))), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
+};
+
 ;// CONCATENATED MODULE: ./react-rsuite5/index.js
+
+
 
 
 
@@ -7487,7 +8020,7 @@ var Fields = {
     'react-rsuite5': Select
   },
   'group': {
-    'react-rsuite5': FieldsGroup
+    'react-rsuite5': Group
   },
   'array': {
     'react-rsuite5': ListArray
@@ -7533,6 +8066,12 @@ var Fields = {
   },
   'multiselect': {
     'react-rsuite5': Multiselect
+  },
+  'multiselect-language': {
+    'react-rsuite5': MultiselectLanguage
+  },
+  'input-text-i18n': {
+    'react-rsuite5': InputTextI18N
   }
 };
 var Forms = {

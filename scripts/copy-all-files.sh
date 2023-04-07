@@ -12,3 +12,5 @@ cp -avR ../form-builder/src/components/lets-form/react-antd/* ./react-antd
 cp -avR ../form-builder/src/components/lets-form/react-bootstrap/* ./react-bootstrap
 cp -avR ../form-builder/src/components/lets-form/react-material-ui/* ./react-material-ui
 cp -avR ../form-builder/src/components/lets-form/react-rsuite5/* ./react-rsuite5
+cp -avR ../form-builder/src/components/lets-form/form-context/* ./form-context
+cp -avR ../form-builder/src/components/lets-form/hooks/* ./hooks
