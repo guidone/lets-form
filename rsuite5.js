@@ -93,7 +93,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-group .header{align-items:center;background:rgba(0,0,0,0);display:flex;margin:15px 0px;height:1px;flex-direction:row}.lf-control-group .header .inner-text{flex:0 0 auto;padding:0 12px;display:inline-block}.lf-control-group .header:before{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header:after{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header.left:before{content:none;border:none;flex:unset}.lf-control-group .header.right:after{content:none;border:none;flex:unset}", "",{"version":3,"sources":["webpack://./common/group/group.scss"],"names":[],"mappings":"AAEE,0BACE,kBAAA,CACA,wBAAA,CACA,YAAA,CACA,eAAA,CACA,UAAA,CACA,kBAAA,CAEA,sCACE,aAAA,CACA,cAAA,CACA,oBAAA,CAGF,iCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAGF,gCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAIA,sCACE,YAAA,CACA,WAAA,CACA,UAAA,CAKF,sCACE,YAAA,CACA,WAAA,CACA,UAAA","sourcesContent":[".lf-control-group {\n\n  .header {\n    align-items: center;\n    background: transparent;\n    display: flex;\n    margin: 15px 0px;\n    height: 1px;\n    flex-direction: row;\n\n    .inner-text {\n      flex: 0 0 auto;\n      padding: 0 12px;\n      display: inline-block;\n    }\n\n    &:before {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &:after {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &.left {\n      &:before {\n        content: none;\n        border: none;\n        flex: unset;\n      }\n    }\n\n    &.right {\n      &:after {\n        content: none;\n        border: none;\n        flex: unset;\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-group{margin-bottom:var(--lf-field-margin)}.lf-control-group.bottom-border.open{border-bottom:1px solid #e5e5ea;padding-bottom:15px}.lf-control-group .header{align-items:center;background:rgba(0,0,0,0);display:flex;margin:15px 0px;height:1px;flex-direction:row}.lf-control-group .header .inner-text{flex:0 0 auto;padding:0 12px;display:inline-block}.lf-control-group .header:before{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header:after{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header.left:before{flex:0 0 10px}.lf-control-group .header.right:after{flex:0 0 10px}", "",{"version":3,"sources":["webpack://./common/group/group.scss"],"names":[],"mappings":"AAAA,kBACE,oCAAA,CAEA,qCACE,+BAAA,CACA,mBAAA,CAGF,0BACE,kBAAA,CACA,wBAAA,CACA,YAAA,CACA,eAAA,CACA,UAAA,CACA,kBAAA,CAEA,sCACE,aAAA,CACA,cAAA,CACA,oBAAA,CAGF,iCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAGF,gCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAIA,sCACE,aAAA,CAKF,sCACE,aAAA","sourcesContent":[".lf-control-group {\n  margin-bottom: var(--lf-field-margin);\n\n  &.bottom-border.open {\n    border-bottom: 1px solid #e5e5ea;\n    padding-bottom: 15px;\n  }\n\n  .header {\n    align-items: center;\n    background: transparent;\n    display: flex;\n    margin: 15px 0px;\n    height: 1px;\n    flex-direction: row;\n\n    .inner-text {\n      flex: 0 0 auto;\n      padding: 0 12px;\n      display: inline-block;\n    }\n\n    &:before {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &:after {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &.left {\n      &:before {\n        flex: 0 0 10px;\n      }\n    }\n\n    &.right {\n      &:after {\n        flex: 0 0 10px;\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -208,7 +208,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-icon-asterisk{margin-top:-3px}.lf-
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".gforms-list-array .gforms-array-item{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;align-items:stretch;margin-top:5px;position:relative}.gforms-list-array .gforms-array-item .rs-form-group{margin-bottom:5px !important}.gforms-list-array .gforms-array-item>.inner-form{order:0;flex:1 0 auto;align-self:auto}.gforms-list-array .gforms-array-item>.inner-form .rs-form-inline .rs-input,.gforms-list-array .gforms-array-item>.inner-form .rs-form-inline .rs-input-number{width:auto}.gforms-list-array .gforms-array-item>.buttons{flex:0 0 auto;align-self:center;margin-top:-5px}.gforms-list-array .gforms-array-item:not(:first-child){border-top:1px solid #eee;padding-top:10px}", "",{"version":3,"sources":["webpack://./react-rsuite5/array/list-array.scss"],"names":[],"mappings":"AAEE,sCACE,YAAA,CACA,kBAAA,CACA,gBAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,cAAA,CACA,iBAAA,CAGA,qDACE,4BAAA,CAGF,kDACE,OAAA,CACA,aAAA,CACA,eAAA,CAIE,+JACE,UAAA,CAKN,+CACE,aAAA,CACA,iBAAA,CACA,eAAA,CAIJ,wDACE,yBAAA,CACA,gBAAA","sourcesContent":[".gforms-list-array {\n\n  .gforms-array-item {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n    margin-top: 5px;\n    position: relative;\n\n\n    .rs-form-group {\n      margin-bottom: 5px !important;\n    }\n\n    > .inner-form {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n\n      .rs-form-inline {\n        // remove the 300px default size for inline in array, too big\n        .rs-input, .rs-input-number {\n          width: auto;\n        }\n      }\n    }\n\n    > .buttons {\n      flex: 0 0 auto;\n      align-self: center;\n      margin-top: -5px;\n    }\n  }\n\n  .gforms-array-item:not(:first-child) {\n    border-top: 1px solid #eeeeee;\n    padding-top: 10px;\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".gforms-list-array .gforms-array-item{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;align-items:stretch;margin-top:5px;position:relative}.gforms-list-array .gforms-array-item .rs-form-group{margin-bottom:5px !important}.gforms-list-array .gforms-array-item>.inner-form{order:0;flex:1 0 auto;align-self:auto}.gforms-list-array .gforms-array-item>.buttons{flex:0 0 auto;align-self:center;margin-top:-5px}.gforms-list-array .gforms-array-item:not(:first-child){border-top:1px solid #eee;padding-top:10px}", "",{"version":3,"sources":["webpack://./react-rsuite5/array/list-array.scss"],"names":[],"mappings":"AAEE,sCACE,YAAA,CACA,kBAAA,CACA,gBAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,cAAA,CACA,iBAAA,CAEA,qDACE,4BAAA,CAGF,kDACE,OAAA,CACA,aAAA,CACA,eAAA,CAUF,+CACE,aAAA,CACA,iBAAA,CACA,eAAA,CAIJ,wDACE,yBAAA,CACA,gBAAA","sourcesContent":[".gforms-list-array {\n\n  .gforms-array-item {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n    margin-top: 5px;\n    position: relative;\n\n    .rs-form-group {\n      margin-bottom: 5px !important;\n    }\n\n    > .inner-form {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n\n      .rs-form-inline {\n        // remove the 300px default size for inline in array, too big\n        .rs-input, .rs-input-number {\n          //width: auto;\n        }\n      }\n    }\n\n    > .buttons {\n      flex: 0 0 auto;\n      align-self: center;\n      margin-top: -5px;\n    }\n  }\n\n  .gforms-array-item:not(:first-child) {\n    border-top: 1px solid #eeeeee;\n    padding-top: 10px;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -323,7 +323,30 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lets-form-input-tag .rs-picker-input{
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-input-text-i18n-item-locale{font-size:.9em}.lf-input-text-i18n .rs-input-group-addon{padding:2px 4px !important}.lf-input-text-i18n .rs-input-group-addon .status{font-size:10px}.lf-input-text-i18n .rs-input-group-addon .btn-clear{display:inline-block;margin-left:5px;margin-top:-2px;color:#666;text-decoration:none}.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover{color:#1675e0}.lf-input-text-i18n .group-input-select{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-input-text-i18n .group-input-select .translation-control{order:0;flex:1 0 auto;align-self:auto;width:unset !important;z-index:1}.lf-input-text-i18n .group-input-select .translation-control .translated{color:#999}.lf-input-text-i18n .group-input-select .select-control{order:1;flex:0 0 auto;align-self:center;z-index:2;margin-left:5px}", "",{"version":3,"sources":["webpack://./react-rsuite5/input-text-i18n/index.scss"],"names":[],"mappings":"AAAA,gCACE,cAAA,CAIA,0CAGE,0BAAA,CAEA,kDACE,cAAA,CAGF,qDACE,oBAAA,CACA,eAAA,CACA,eAAA,CACA,UAAA,CACA,oBAAA,CAEA,2DACE,aAAA,CAKN,wCACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,6DACE,OAAA,CACA,aAAA,CACA,eAAA,CACA,sBAAA,CAIA,SAAA,CAIA,yEACE,UAAA,CAUJ,wDACE,OAAA,CACA,aAAA,CACA,iBAAA,CACA,SAAA,CACA,eAAA","sourcesContent":[".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n {\n  .rs-input-group-addon {\n    //margin-top: -5px;\n    //margin-right: -3px;\n    padding: 2px 4px !important;\n\n    .status {\n      font-size: 10px;\n    }\n\n    .btn-clear {\n      display: inline-block;\n      margin-left: 5px;\n      margin-top: -2px;\n      color: #666666;\n      text-decoration: none;\n\n      &:hover {\n        color: #1675e0;\n      }\n    }\n  }\n\n  .group-input-select {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: flex-start;\n\n    .translation-control {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n      width: unset !important;\n      //border-right: none;\n      //border-top-right-radius: 0px;\n      //border-bottom-right-radius: 0px;\n      z-index: 1;\n\n\n\n      .translated {\n        color: #999999;\n      }\n\n      /*&.rs-input-group-focus {\n        z-index: 3; // no bigger than 7 (z of the dropdown)\n      }*/\n\n\n    }\n\n    .select-control {\n      order: 1;\n      flex: 0 0 auto;\n      align-self: center;\n      z-index: 2;\n      margin-left: 5px;\n\n      /*.rs-picker-toggle {\n\n          border-top-left-radius: 0px;\n          border-bottom-left-radius: 0px;\n      }*/\n    }\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-input-text-i18n-item-locale{font-size:.9em}.lf-input-text-i18n .rs-input-group-addon{padding:2px 4px !important}.lf-input-text-i18n .rs-input-group-addon .status{font-size:10px}.lf-input-text-i18n .rs-input-group-addon .btn-clear{display:inline-block;margin-left:5px;margin-top:-2px;color:#666;text-decoration:none}.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover{color:#1675e0}.lf-input-text-i18n .group-input-select{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-input-text-i18n .group-input-select .translation-control{order:0;flex:1 0 auto;align-self:auto;width:unset !important;z-index:1}.lf-input-text-i18n .group-input-select .translation-control .translated{color:#999}.lf-input-text-i18n .group-input-select .select-control{order:1;flex:0 0 auto;align-self:center;z-index:2;margin-left:5px}.lf-input-text-i18n .group-input-select.textarea .select-control{align-self:self-start}", "",{"version":3,"sources":["webpack://./react-rsuite5/input-text-i18n/index.scss"],"names":[],"mappings":"AAAA,gCACE,cAAA,CAIA,0CACE,0BAAA,CAEA,kDACE,cAAA,CAGF,qDACE,oBAAA,CACA,eAAA,CACA,eAAA,CACA,UAAA,CACA,oBAAA,CAEA,2DACE,aAAA,CAKN,wCACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,6DACE,OAAA,CACA,aAAA,CACA,eAAA,CACA,sBAAA,CACA,SAAA,CAEA,yEACE,UAAA,CAIJ,wDACE,OAAA,CACA,aAAA,CACA,iBAAA,CACA,SAAA,CACA,eAAA,CAIA,iEACE,qBAAA","sourcesContent":[".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n {\n  .rs-input-group-addon {\n    padding: 2px 4px !important;\n\n    .status {\n      font-size: 10px;\n    }\n\n    .btn-clear {\n      display: inline-block;\n      margin-left: 5px;\n      margin-top: -2px;\n      color: #666666;\n      text-decoration: none;\n\n      &:hover {\n        color: #1675e0;\n      }\n    }\n  }\n\n  .group-input-select {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: flex-start;\n\n    .translation-control {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n      width: unset !important;\n      z-index: 1;\n\n      .translated {\n        color: #999999;\n      }\n    }\n\n    .select-control {\n      order: 1;\n      flex: 0 0 auto;\n      align-self: center;\n      z-index: 2;\n      margin-left: 5px;\n    }\n\n    &.textarea {\n      .select-control {\n        align-self: self-start;\n      }\n    }\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 6237:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-multiselect-language .btn-add-all{padding-left:5px;font-size:12px}", "",{"version":3,"sources":["webpack://./react-rsuite5/multiselect-language/multiselect-language.scss"],"names":[],"mappings":"AACE,8CACE,gBAAA,CACA,cAAA","sourcesContent":[".lf-control-multiselect-language {\n  .btn-add-all {\n    padding-left: 5px;\n    font-size: 12px;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2342,11 +2365,13 @@ __webpack_require__.d(__webpack_exports__, {
   "deleteField": () => (/* reexport */ deleteField),
   "fillIds": () => (/* reexport */ fillIds),
   "filterFields": () => (/* reexport */ filterFields),
+  "filterOptions": () => (/* reexport */ filterOptions),
   "findField": () => (/* reexport */ findField),
   "getLocales": () => (/* reexport */ getLocales),
   "i18n": () => (/* reexport */ i18n),
   "isValidDayjsFormat": () => (/* reexport */ isValidDayjsFormat),
   "mapFields": () => (/* reexport */ mapFields),
+  "passRest": () => (/* reexport */ passRest),
   "reduceFields": () => (/* reexport */ reduceFields),
   "replaceField": () => (/* reexport */ replaceField),
   "validateRulesDefinition": () => (/* reexport */ validateRulesDefinition)
@@ -5374,6 +5399,7 @@ var fieldExists = function fieldExists(fields, predicate) {
 ;// CONCATENATED MODULE: ./helpers/apply-form-rules.js
 
 
+
 function apply_form_rules_typeof(obj) { "@babel/helpers - typeof"; return apply_form_rules_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, apply_form_rules_typeof(obj); }
 function apply_form_rules_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function apply_form_rules_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? apply_form_rules_ownKeys(Object(source), !0).forEach(function (key) { apply_form_rules_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : apply_form_rules_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -5459,6 +5485,38 @@ var PREDICATES = {
       }
       return field;
     };
+  },
+  setValue: function setValue(names, object, condition, values) {
+    return function (field) {
+      if (names.indexOf(field.name) !== -1 && isObject_default()(object) && !isEmpty_default()(object.key) && !isEmpty_default()(object.value)) {
+        return apply_form_rules_objectSpread(apply_form_rules_objectSpread({}, field), {}, apply_form_rules_defineProperty({}, object.key, evaluateValue(object.value, {
+          values: values,
+          condition: condition
+        })));
+      }
+      return field;
+    };
+  }
+};
+
+// TODO implement more ${} tokens
+var evaluateValue = function evaluateValue(value, _ref) {
+  var values = _ref.values,
+    condition = _ref.condition;
+  // eslint-disable-next-line no-template-curly-in-string
+  if (value === '${VALUE}') {
+    return values[condition.field];
+    // eslint-disable-next-line no-template-curly-in-string
+  } else if (value === '${EMPTY}') {
+    return '';
+    // eslint-disable-next-line no-template-curly-in-string
+  } else if (value === '${NULL}') {
+    return null;
+    // eslint-disable-next-line no-template-curly-in-string
+  } else if (value === '${UNDEFINED}') {
+    return null;
+  } else {
+    return value;
   }
 };
 var applyFormRules = function applyFormRules(fields, rules, values) {
@@ -5469,8 +5527,9 @@ var applyFormRules = function applyFormRules(fields, rules, values) {
   rules.forEach(function (rule) {
     // if test condition passes and exists a predicate, then execute it
     if (testConditions(rule.condition, values)) {
+      // if there's a verb for it, then apply it
       if (PREDICATES[rule.verb]) {
-        newFields = mapFields(newFields, PREDICATES[rule.verb](rule.names));
+        newFields = mapFields(newFields, PREDICATES[rule.verb](rule.names, rule.object, rule.condition, values));
       }
     }
   });
@@ -5522,7 +5581,7 @@ var LANGUAGES_OPTIONS = Object.keys(locales_namespaceObject.Q).map(function (lan
   return {
     code: lang,
     name: locales_namespaceObject.Q[lang][1],
-    label: "".concat(locales_namespaceObject.Q[lang][1], " - ").concat(locales_namespaceObject.Q[lang][0])
+    label: "".concat(locales_namespaceObject.Q[lang][1])
   };
 });
 var getLocales = function getLocales() {
@@ -5538,7 +5597,11 @@ var i18n = function i18n(value, locale) {
     if (locale && value[locale]) {
       return value[locale];
     }
-    // TODO understand what's the proper behaviour here
+    // if there's no dialect, then try with the first two letters
+    if (locale && value[locale.substr(0, 2)]) {
+      return value[locale.substr(0, 2)];
+    }
+    // if nothing found, defaults to english but with warning
     if (value['en'] || value['en-UK'] || value['en-US']) {
       if (!locale) {
         console.warn("[LetsForm] missing locale for translation, defaulting to English: ", value);
@@ -5552,7 +5615,26 @@ var i18n = function i18n(value, locale) {
   }
   return value;
 };
+;// CONCATENATED MODULE: ./helpers/pass-rest.js
+
+var passRest = function passRest(props) {
+  return omit_default()(props, 'lfFramework', 'lfComponent', 'lfLocale');
+};
+;// CONCATENATED MODULE: ./helpers/filter-options.js
+
+
+var filterOptions = function filterOptions(options, filterValue) {
+  var filterKey = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'value';
+  if (isArray_default()(options) && !isEmpty_default()(filterKey) && !isEmpty_default()(filterValue)) {
+    return options.filter(function (item) {
+      return item[filterKey] === filterValue;
+    });
+  }
+  return options;
+};
 ;// CONCATENATED MODULE: ./helpers/index.js
+
+
 
 
 
@@ -5818,10 +5900,12 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           level: level + 1,
           locale: locale
         }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+          key: "bottom_view_".concat(field.name),
           field: field,
           target: "fields"
         })));
         return GroupWrapper ? /*#__PURE__*/external_react_default().createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
           field: field,
           level: level,
           index: index
@@ -5852,6 +5936,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               level: level + 1,
               locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              key: "bottom_view_".concat(field.name),
               field: field,
               target: "leftFields"
             }));
@@ -5873,19 +5958,21 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               level: level + 1,
               locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              key: "bottom_view_".concat(field.name),
               field: field,
               target: "rightFields"
             }));
           }
         });
         return GroupWrapper ? /*#__PURE__*/external_react_default().createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
           level: level,
           field: field,
           index: index
         }, _component) : _component;
       } else if (field.component === 'three-columns') {
         var _component2 = /*#__PURE__*/external_react_default().createElement(Component, _extends({
-          key: field.name,
+          key: "three-columns-".concat(field.name),
           name: field.name,
           lfComponent: field.component,
           lfFramework: framework,
@@ -5909,6 +5996,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               level: level + 1,
               locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              key: "bottom_view_".concat(field.name),
               field: field,
               target: "leftFields"
             }));
@@ -5930,6 +6018,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               level: level + 1,
               locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              key: "bottom_view_".concat(field.name),
               field: field,
               target: "centerFields"
             }));
@@ -5951,12 +6040,14 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               level: level + 1,
               locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              key: "bottom_view_".concat(field.name),
               field: field,
               target: "rightFields"
             }));
           }
         });
         return GroupWrapper ? /*#__PURE__*/external_react_default().createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
           field: field,
           level: level,
           index: index
@@ -5972,12 +6063,19 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
         control: control,
         render: function render(_ref4) {
           var fieldInfo = _ref4.field;
-          var component = /*#__PURE__*/external_react_default().createElement(Component, _extends({}, fieldInfo, {
+          var component = /*#__PURE__*/external_react_default().createElement(Component
+          //{...fieldInfo}
+          // not sure about this, not passing the ref
+          , _extends({
+            name: fieldInfo.name,
+            value: fieldInfo.value
+            //onChange={fieldInfo.onChange}
+            ,
+            onBlur: fieldInfo.onBlur,
             key: "field_".concat(field.name),
             lfComponent: field.component,
             lfFramework: framework,
             lfLocale: locale,
-            name: field.name,
             label: field.label,
             hint: field.hint,
             disabled: disabled || field.disabled,
@@ -5994,6 +6092,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
             }
           }));
           return Wrapper ? /*#__PURE__*/external_react_default().createElement(Wrapper, {
+            key: "wrapper_".concat(field.name),
             field: field,
             level: level,
             index: index
@@ -6035,9 +6134,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       children = _ref5.children,
       className = _ref5.className;
     if (debug) {
-      console.log('Generating form -> ', form);
+      console.log("[LetsForm] Render form (".concat(form.name, ")"));
     }
-    // TODO replace this
     var showErrors = form.showErrors;
     var collectedRules = collectRules(form);
     var _useForm = useForm({
@@ -6097,7 +6195,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       onChange(values);
     }, [onChange, formFields, formRules]);
     if (debug) {
-      console.log('validation', errors);
+      console.log('[LetsForm] Validation', errors);
     }
     var Form = Forms[framework];
     var Wrapper = wrapper;
@@ -6146,7 +6244,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
     }))));
   }, function (prevProps, nextProps) {
     if (DEBUG_RENDER) {
-      console.log("[LetsForm]Form generator ".concat(nextProps.form.name ? '(' + nextProps.form.name + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale));
+      console.log("[LetsForm] Form generator ".concat(nextProps.form.name ? '(' + nextProps.form.name + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale));
     }
     var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale;
     console.log('Is re-rendering?', !isEqual);
@@ -6338,7 +6436,7 @@ var toggle_update = injectStylesIntoStyleTag_default()(toggle/* default */.Z, to
 
 
 
-var ToggleInput = function ToggleInput(_ref) {
+var ToggleInput = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -6370,16 +6468,21 @@ var ToggleInput = function ToggleInput(_ref) {
     errorMessage: isString_default()(error) ? error : undefined,
     size: size
   }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+}, ['label', 'hint', 'placeholder']);
 
 ;// CONCATENATED MODULE: ./react-rsuite5/select/index.js
-
 function select_typeof(obj) { "@babel/helpers - typeof"; return select_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, select_typeof(obj); }
+
+var _excluded = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue"];
 function select_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function select_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? select_ownKeys(Object(source), !0).forEach(function (key) { select_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : select_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 function select_defineProperty(obj, key, value) { key = select_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function select_toPropertyKey(arg) { var key = select_toPrimitive(arg, "string"); return select_typeof(key) === "symbol" ? key : String(key); }
 function select_toPrimitive(input, hint) { if (select_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (select_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function select_extends() { select_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return select_extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -6409,12 +6512,15 @@ var Select = I18N(function (_ref) {
     onChange = _ref.onChange,
     onBlur = _ref.onBlur,
     placement = _ref.placement,
-    appearance = _ref.appearance;
+    appearance = _ref.appearance,
+    filterKey = _ref.filterKey,
+    filterValue = _ref.filterValue,
+    rest = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
     controlId: name
   }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
     tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
+  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, select_extends({
     accepter: external_rsuite_.SelectPicker,
     appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
     name: name,
@@ -6427,14 +6533,14 @@ var Select = I18N(function (_ref) {
     disabled: disabled,
     size: size,
     placeholder: placeholder,
-    data: options || [],
+    data: filterOptions(options, filterValue, filterKey) || [],
     block: block,
     searchable: searchable,
     cleanable: cleanable
-  }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
+  }, passRest(rest))), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 }, ['label', 'hint', 'placeholder'], {
   options: function options(value, i18n) {
-    return value.map(function (value) {
+    return (value !== null && value !== void 0 ? value : []).map(function (value) {
       return select_objectSpread(select_objectSpread({}, value), {}, {
         label: i18n(value.label)
       });
@@ -6495,6 +6601,8 @@ var Group = I18N(function (_ref) {
     open = _ref$open === void 0 ? true : _ref$open,
     _ref$collapsible = _ref.collapsible,
     collapsible = _ref$collapsible === void 0 ? true : _ref$collapsible,
+    _ref$bottomBorder = _ref.bottomBorder,
+    bottomBorder = _ref$bottomBorder === void 0 ? false : _ref$bottomBorder,
     align = _ref.align,
     children = _ref.children;
   var _useState = (0,external_react_.useState)(open),
@@ -6506,12 +6614,16 @@ var Group = I18N(function (_ref) {
     setIsOpen(!isOpen);
   }, [isOpen]);
   return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-control-group"
+    className: classnames_default()('lf-control-group', {
+      'bottom-border': bottomBorder,
+      'open': isOpen,
+      'close': !isOpen
+    })
   }, /*#__PURE__*/external_react_default().createElement("div", {
     role: "separator",
     className: classnames_default()('header', align)
   }, /*#__PURE__*/external_react_default().createElement("span", {
-    class: "inner-text"
+    className: "inner-text"
   }, label, collapsible && /*#__PURE__*/external_react_default().createElement("a", {
     href: "#",
     className: "lf-btn-collapse",
@@ -6876,6 +6988,7 @@ var input_number_update = injectStylesIntoStyleTag_default()(input_number/* defa
 
 ;// CONCATENATED MODULE: ./react-rsuite5/input-number/index.js
 
+
 function input_number_slicedToArray(arr, i) { return input_number_arrayWithHoles(arr) || input_number_iterableToArrayLimit(arr, i) || input_number_unsupportedIterableToArray(arr, i) || input_number_nonIterableRest(); }
 function input_number_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function input_number_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return input_number_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return input_number_arrayLikeToArray(o, minLen); }
@@ -6911,6 +7024,7 @@ var InputNumberRSuite5 = I18N(function (_ref) {
     error = _ref.error,
     prefix = _ref.prefix,
     postfix = _ref.postfix,
+    width = _ref.width,
     _ref$onChange = _ref.onChange,
     onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
     _ref$step = _ref.step,
@@ -6959,6 +7073,9 @@ var InputNumberRSuite5 = I18N(function (_ref) {
     min: min,
     max: max,
     step: step,
+    style: isNumber_default()(width) ? {
+      width: "".concat(width, "px")
+    } : undefined,
     inside: inside,
     prefix: prefix,
     postfix: allowClear ? /*#__PURE__*/external_react_default().createElement("a", {
@@ -6978,15 +7095,17 @@ var InputNumberRSuite5 = I18N(function (_ref) {
 var locales_ = __webpack_require__(977);
 ;// CONCATENATED MODULE: ./react-rsuite5/date/index.js
 
-var _excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format"];
+var date_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"];
 function date_extends() { date_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return date_extends.apply(this, arguments); }
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+function date_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = date_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function date_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
 
-var SelectDate = function SelectDate(_ref) {
+
+
+var SelectDate = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -7005,16 +7124,16 @@ var SelectDate = function SelectDate(_ref) {
     onChange = _ref.onChange,
     onBlur = _ref.onBlur,
     appearance = _ref.appearance,
-    locale = _ref.locale,
     format = _ref.format,
-    rest = _objectWithoutProperties(_ref, _excluded);
-  console.log('---', locale && locales_[locale]);
+    lfLocale = _ref.lfLocale,
+    rest = date_objectWithoutProperties(_ref, date_excluded);
+  var localeCode = lfLocale && isString_default()(lfLocale) ? lfLocale.replace('-', '') : undefined;
   return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
     controlId: name
   }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
     tooltip: true
   }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.CustomProvider, {
-    locale: locale && locales_[locale] ? locales_[locale] : undefined
+    locale: localeCode && locales_[localeCode] ? locales_[localeCode] : undefined
   }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, date_extends({
     accepter: external_rsuite_.DatePicker,
     appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
@@ -7029,7 +7148,7 @@ var SelectDate = function SelectDate(_ref) {
     disabled: disabled,
     placeholder: placeholder
   }, rest)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint)));
-};
+}, ['label', 'hint', 'placeholder']);
 
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/checkbox/index.scss
 var cjs_js_react_rsuite5_checkbox = __webpack_require__(5964);
@@ -7064,14 +7183,21 @@ var checkbox_update = injectStylesIntoStyleTag_default()(cjs_js_react_rsuite5_ch
 
 ;// CONCATENATED MODULE: ./react-rsuite5/checkbox/index.js
 
-var checkbox_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format"];
+var checkbox_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "indeterminate", "error", "onChange", "onBlur", "appearance", "locale", "format"];
 function checkbox_extends() { checkbox_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return checkbox_extends.apply(this, arguments); }
+function checkbox_slicedToArray(arr, i) { return checkbox_arrayWithHoles(arr) || checkbox_iterableToArrayLimit(arr, i) || checkbox_unsupportedIterableToArray(arr, i) || checkbox_nonIterableRest(); }
+function checkbox_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function checkbox_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return checkbox_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return checkbox_arrayLikeToArray(o, minLen); }
+function checkbox_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function checkbox_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function checkbox_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function checkbox_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = checkbox_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function checkbox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
-var CheckboxRSuite = function CheckboxRSuite(_ref) {
+
+var CheckboxRSuite = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -7086,6 +7212,8 @@ var CheckboxRSuite = function CheckboxRSuite(_ref) {
     readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
     _ref$required = _ref.required,
     required = _ref$required === void 0 ? false : _ref$required,
+    _ref$indeterminate = _ref.indeterminate,
+    indeterminate = _ref$indeterminate === void 0 ? true : _ref$indeterminate,
     error = _ref.error,
     onChange = _ref.onChange,
     onBlur = _ref.onBlur,
@@ -7093,16 +7221,36 @@ var CheckboxRSuite = function CheckboxRSuite(_ref) {
     locale = _ref.locale,
     format = _ref.format,
     rest = checkbox_objectWithoutProperties(_ref, checkbox_excluded);
+  var _useState = (0,external_react_.useState)(value !== null && value !== void 0 ? value : null),
+    _useState2 = checkbox_slicedToArray(_useState, 2),
+    isChecked = _useState2[0],
+    setIsChecked = _useState2[1];
   var handleChange = (0,external_react_.useCallback)(function (valueType, checked) {
-    return onChange(checked);
-  }, [onChange]);
+    console.log('ora??', checked);
+    var newValue;
+    if (isChecked === true) {
+      newValue = false;
+    }
+    if (isChecked === false) {
+      if (indeterminate) {
+        newValue = null;
+      } else {
+        newValue = true;
+      }
+    } else if (isChecked === null) {
+      newValue = true;
+    }
+    onChange(newValue);
+    setIsChecked(newValue);
+  }, [onChange, indeterminate, isChecked]);
   return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
     controlId: name,
     className: "lt-control-checkbox"
   }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, checkbox_extends({
     accepter: external_rsuite_.Checkbox,
+    indeterminate: isChecked === null,
     name: name,
-    checked: value,
+    checked: isChecked,
     onChange: handleChange,
     readOnly: readOnly,
     plaintext: plaintext,
@@ -7112,7 +7260,7 @@ var CheckboxRSuite = function CheckboxRSuite(_ref) {
   }, rest), label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
     tooltip: true
   }, hint)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+}, ['label', 'hint', 'placeholder']);
 
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/slider/index.scss
 var slider = __webpack_require__(9906);
@@ -7146,10 +7294,16 @@ var slider_update = injectStylesIntoStyleTag_default()(slider/* default */.Z, sl
        /* harmony default export */ const react_rsuite5_slider = (slider/* default */.Z && slider/* default.locals */.Z.locals ? slider/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-rsuite5/slider/index.js
+function slider_typeof(obj) { "@babel/helpers - typeof"; return slider_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, slider_typeof(obj); }
 
 
 
 var slider_excluded = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks"];
+function slider_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function slider_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? slider_ownKeys(Object(source), !0).forEach(function (key) { slider_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : slider_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function slider_defineProperty(obj, key, value) { key = slider_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function slider_toPropertyKey(arg) { var key = slider_toPrimitive(arg, "string"); return slider_typeof(key) === "symbol" ? key : String(key); }
+function slider_toPrimitive(input, hint) { if (slider_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (slider_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function slider_extends() { slider_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return slider_extends.apply(this, arguments); }
 function slider_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = slider_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function slider_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -7162,7 +7316,7 @@ var validateMarks = function validateMarks(marks) {
     return isObject_default()(mark) && mark.value && mark.label;
   });
 };
-var SliderRsuite = function SliderRsuite(_ref) {
+var SliderRsuite = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -7208,7 +7362,15 @@ var SliderRsuite = function SliderRsuite(_ref) {
     disabled: disabled,
     tooltip: showTooltip
   }, rest)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+}, ['label', 'hint', 'placeholder'], {
+  marks: function marks(value, i18n) {
+    return value.map(function (value) {
+      return slider_objectSpread(slider_objectSpread({}, value), {}, {
+        label: i18n(value.label)
+      });
+    });
+  }
+});
 
 ;// CONCATENATED MODULE: ./react-rsuite5/checkbox-group/index.js
 function checkbox_group_typeof(obj) { "@babel/helpers - typeof"; return checkbox_group_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, checkbox_group_typeof(obj); }
@@ -7266,7 +7428,7 @@ var CheckboxGroupRSuite = I18N(function (_ref) {
   })), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 }, ['label', 'hint', 'placeholder'], {
   options: function options(value, i18n) {
-    return value.map(function (value) {
+    return (value !== null && value !== void 0 ? value : []).map(function (value) {
       return checkbox_group_objectSpread(checkbox_group_objectSpread({}, value), {}, {
         label: i18n(value.label)
       });
@@ -7275,13 +7437,20 @@ var CheckboxGroupRSuite = I18N(function (_ref) {
 });
 
 ;// CONCATENATED MODULE: ./react-rsuite5/radio-group/index.js
+function radio_group_typeof(obj) { "@babel/helpers - typeof"; return radio_group_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, radio_group_typeof(obj); }
 var radio_group_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
+function radio_group_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function radio_group_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? radio_group_ownKeys(Object(source), !0).forEach(function (key) { radio_group_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : radio_group_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function radio_group_defineProperty(obj, key, value) { key = radio_group_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function radio_group_toPropertyKey(arg) { var key = radio_group_toPrimitive(arg, "string"); return radio_group_typeof(key) === "symbol" ? key : String(key); }
+function radio_group_toPrimitive(input, hint) { if (radio_group_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (radio_group_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function radio_group_extends() { radio_group_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return radio_group_extends.apply(this, arguments); }
 function radio_group_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = radio_group_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function radio_group_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
-var RadioGroupRSuite = function RadioGroupRSuite(_ref) {
+
+var RadioGroupRSuite = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -7321,7 +7490,15 @@ var RadioGroupRSuite = function RadioGroupRSuite(_ref) {
       readOnly: readOnly
     }, label);
   })), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+}, ['label', 'hint', 'placeholder'], {
+  options: function options(value, i18n) {
+    return (value !== null && value !== void 0 ? value : []).map(function (value) {
+      return radio_group_objectSpread(radio_group_objectSpread({}, value), {}, {
+        label: i18n(value.label)
+      });
+    });
+  }
+});
 
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/input-tag/index.scss
 var input_tag = __webpack_require__(5679);
@@ -7360,7 +7537,7 @@ var input_tag_update = injectStylesIntoStyleTag_default()(input_tag/* default */
 
 
 
-var InputTag = function InputTag(_ref) {
+var InputTag = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -7395,7 +7572,7 @@ var InputTag = function InputTag(_ref) {
     readOnly: readOnly,
     errorMessage: isString_default()(error) ? error : undefined
   }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+}, ['label', 'hint', 'placeholder']);
 
 ;// CONCATENATED MODULE: ./react-rsuite5/input-mask/index.js
 
@@ -7425,7 +7602,7 @@ var prepareMask = function prepareMask(str) {
     return token;
   });
 };
-var InputMask = function InputMask(_ref) {
+var InputMask = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -7453,7 +7630,6 @@ var InputMask = function InputMask(_ref) {
     inside = _ref$inside === void 0 ? false : _ref$inside,
     rest = input_mask_objectWithoutProperties(_ref, input_mask_excluded);
   var parsedMask = prepareMask(mask);
-  console.log('parsedMask', parsedMask);
   var inner = /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, input_mask_extends({
     name: name,
     accepter: external_rsuite_.MaskedInput,
@@ -7476,7 +7652,7 @@ var InputMask = function InputMask(_ref) {
   }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup, {
     inside: inside
   }, prefix && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup.Addon, null, prefix), inner, postfix && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup.Addon, null, postfix)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+}, ['label', 'hint', 'placeholder']);
 
 ;// CONCATENATED MODULE: ./react-rsuite5/textarea/index.js
 
@@ -7489,7 +7665,7 @@ var ControlTextare = function ControlTextare(props) {
     as: "textarea"
   }, props));
 };
-var Textarea = function Textarea(_ref) {
+var Textarea = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -7526,14 +7702,14 @@ var Textarea = function Textarea(_ref) {
   }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
     tooltip: true
   }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), inner, hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+}, ['label', 'hint', 'placeholder']);
 
 ;// CONCATENATED MODULE: ./react-rsuite5/rate/index.js
 
 
 
 
-var RateRSuite = function RateRSuite(_ref) {
+var RateRSuite = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -7576,7 +7752,7 @@ var RateRSuite = function RateRSuite(_ref) {
     readOnly: readOnly,
     errorMessage: isString_default()(error) ? error : undefined
   }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+}, ['label', 'hint', 'placeholder']);
 
 // EXTERNAL MODULE: ./node_modules/micro-down/dist/index.js
 var dist = __webpack_require__(7305);
@@ -7608,7 +7784,7 @@ var Placeholder = function Placeholder(_ref) {
 
 
 
-var PlaceholderRSuite5 = function PlaceholderRSuite5(_ref) {
+var PlaceholderRSuite5 = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -7625,14 +7801,20 @@ var PlaceholderRSuite5 = function PlaceholderRSuite5(_ref) {
   }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(Placeholder, {
     text: text
   }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+}, ['label', 'hint', 'text']);
 
 ;// CONCATENATED MODULE: ./react-rsuite5/multiselect/index.js
 
+function multiselect_typeof(obj) { "@babel/helpers - typeof"; return multiselect_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, multiselect_typeof(obj); }
+function multiselect_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function multiselect_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? multiselect_ownKeys(Object(source), !0).forEach(function (key) { multiselect_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : multiselect_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function multiselect_defineProperty(obj, key, value) { key = multiselect_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function multiselect_toPropertyKey(arg) { var key = multiselect_toPrimitive(arg, "string"); return multiselect_typeof(key) === "symbol" ? key : String(key); }
+function multiselect_toPrimitive(input, hint) { if (multiselect_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (multiselect_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 
 
-var Multiselect = function Multiselect(_ref) {
+var Multiselect = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -7681,36 +7863,79 @@ var Multiselect = function Multiselect(_ref) {
     searchable: searchable,
     cleanable: cleanable
   }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+}, ['label', 'hint', 'placeholder'], {
+  options: function options(value, i18n) {
+    return (value !== null && value !== void 0 ? value : []).map(function (value) {
+      return multiselect_objectSpread(multiselect_objectSpread({}, value), {}, {
+        label: i18n(value.label)
+      });
+    });
+  }
+});
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/multiselect-language/multiselect-language.scss
+var multiselect_language = __webpack_require__(6237);
+;// CONCATENATED MODULE: ./react-rsuite5/multiselect-language/multiselect-language.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var multiselect_language_options = {};
+
+multiselect_language_options.styleTagTransform = (styleTagTransform_default());
+multiselect_language_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      multiselect_language_options.insert = insertBySelector_default().bind(null, "head");
+    
+multiselect_language_options.domAPI = (styleDomAPI_default());
+multiselect_language_options.insertStyleElement = (insertStyleElement_default());
+
+var multiselect_language_update = injectStylesIntoStyleTag_default()(multiselect_language/* default */.Z, multiselect_language_options);
+
+
+
+
+       /* harmony default export */ const multiselect_language_multiselect_language = (multiselect_language/* default */.Z && multiselect_language/* default.locals */.Z.locals ? multiselect_language/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-rsuite5/multiselect-language/index.js
 
+function multiselect_language_slicedToArray(arr, i) { return multiselect_language_arrayWithHoles(arr) || multiselect_language_iterableToArrayLimit(arr, i) || multiselect_language_unsupportedIterableToArray(arr, i) || multiselect_language_nonIterableRest(); }
+function multiselect_language_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function multiselect_language_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return multiselect_language_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return multiselect_language_arrayLikeToArray(o, minLen); }
+function multiselect_language_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function multiselect_language_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function multiselect_language_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+/* eslint-disable jsx-a11y/anchor-is-valid */
 
 
 
 
-var renderValue = function renderValue(values, items, tags) {
-  return items.map(function (item, index) {
-    return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Tag, {
-      key: index
-    }, item.name, " ", /*#__PURE__*/external_react_default().createElement("b", null, item.value));
-  });
+
+var renderItem = function renderItem(label, item) {
+  return /*#__PURE__*/external_react_default().createElement("div", null, label, " ", /*#__PURE__*/external_react_default().createElement("b", null, item.value));
 };
+var ALL_LOCALES = Object.keys(locales_namespaceObject.Q);
 var multiselect_language_LANGUAGES_OPTIONS = Object.keys(locales_namespaceObject.Q).map(function (lang) {
   return {
     value: lang,
     name: locales_namespaceObject.Q[lang][1],
-    label: "".concat(locales_namespaceObject.Q[lang][1], " - ").concat(locales_namespaceObject.Q[lang][0])
+    label: "".concat(locales_namespaceObject.Q[lang][1])
   };
 });
-var MultiselectLanguage = function MultiselectLanguage(_ref) {
+var MultiselectLanguage = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
     value = _ref.value,
     size = _ref.size,
     placeholder = _ref.placeholder,
-    options = _ref.options,
     _ref$tooltip = _ref.tooltip,
     tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
     _ref$disabled = _ref.disabled,
@@ -7720,26 +7945,33 @@ var MultiselectLanguage = function MultiselectLanguage(_ref) {
     _ref$required = _ref.required,
     required = _ref$required === void 0 ? false : _ref$required,
     error = _ref.error,
-    _ref$block = _ref.block,
-    block = _ref$block === void 0 ? false : _ref$block,
-    _ref$searchable = _ref.searchable,
-    searchable = _ref$searchable === void 0 ? false : _ref$searchable,
-    _ref$cleanable = _ref.cleanable,
-    cleanable = _ref$cleanable === void 0 ? false : _ref$cleanable,
     onChange = _ref.onChange,
     onBlur = _ref.onBlur,
     placement = _ref.placement,
     appearance = _ref.appearance;
+  var _useState = (0,external_react_.useState)(value),
+    _useState2 = multiselect_language_slicedToArray(_useState, 2),
+    locales = _useState2[0],
+    setLocales = _useState2[1];
+  var handleAddAll = (0,external_react_.useCallback)(function (e) {
+    e.preventDefault();
+    setLocales(ALL_LOCALES);
+    onChange(ALL_LOCALES);
+  }, [onChange]);
+  var handleChange = (0,external_react_.useCallback)(function (value) {
+    setLocales(value);
+    onChange(value);
+  }, [onChange]);
   return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    controlId: name
+    className: "lf-control-multiselect-language"
   }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
     tooltip: true
   }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
-    accepter: external_rsuite_.TagPicker,
+    accepter: external_rsuite_.CheckPicker,
     appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
     name: name,
-    value: value,
-    onChange: onChange,
+    value: locales,
+    onChange: handleChange,
     readOnly: readOnly,
     onBlur: onBlur,
     placement: placement,
@@ -7748,12 +7980,19 @@ var MultiselectLanguage = function MultiselectLanguage(_ref) {
     size: size,
     placeholder: placeholder,
     data: multiselect_language_LANGUAGES_OPTIONS,
-    block: true,
-    renderValue: renderValue,
+    block: true
+    //renderValue={renderValue}
+    ,
+    renderMenuItem: renderItem,
     searchable: true,
     cleanable: true
-  }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
+  }), !(Array.isArray(locales) && locales.length === ALL_LOCALES.length) && /*#__PURE__*/external_react_default().createElement("div", {
+    className: "btn-add-all"
+  }, /*#__PURE__*/external_react_default().createElement("a", {
+    href: "#",
+    onClick: handleAddAll
+  }, "add all locales")), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
+}, ['label', 'hint', 'placeholder']);
 
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/input-text-i18n/index.scss
 var input_text_i18n = __webpack_require__(8727);
@@ -7792,6 +8031,7 @@ function input_text_i18n_typeof(obj) { "@babel/helpers - typeof"; return input_t
 
 
 
+var input_text_i18n_excluded = ["value"];
 function input_text_i18n_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function input_text_i18n_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? input_text_i18n_ownKeys(Object(source), !0).forEach(function (key) { input_text_i18n_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : input_text_i18n_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 function input_text_i18n_defineProperty(obj, key, value) { key = input_text_i18n_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -7803,8 +8043,13 @@ function input_text_i18n_unsupportedIterableToArray(o, minLen) { if (!o) return;
 function input_text_i18n_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function input_text_i18n_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function input_text_i18n_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function input_text_i18n_extends() { input_text_i18n_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return input_text_i18n_extends.apply(this, arguments); }
+function input_text_i18n_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = input_text_i18n_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function input_text_i18n_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
+
+
 
 
 
@@ -7828,6 +8073,14 @@ var languageMenuItem = function languageMenuItem(label, item) {
     height: 16
   }));
 };
+var TextareaAccepter = function TextareaAccepter(_ref) {
+  var value = _ref.value,
+    props = input_text_i18n_objectWithoutProperties(_ref, input_text_i18n_excluded);
+  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Input, input_text_i18n_extends({
+    as: "textarea",
+    value: value
+  }, props));
+};
 var InputTextI18N = function InputTextI18N(props) {
   var name = props.name,
     label = props.label,
@@ -7847,15 +8100,29 @@ var InputTextI18N = function InputTextI18N(props) {
     error = props.error,
     _onChange = props.onChange,
     onBlur = props.onBlur,
-    defaultLocale = props.defaultLocale;
+    defaultLocale = props.defaultLocale,
+    _props$textarea = props.textarea,
+    textarea = _props$textarea === void 0 ? false : _props$textarea,
+    rows = props.rows;
   var _useContext = (0,external_react_.useContext)(form_context),
     _useContext$locales = _useContext.locales,
     locales = _useContext$locales === void 0 ? [] : _useContext$locales;
   var preselectedLanguage = null;
-  if (defaultLocale && locales.includes(defaultLocale)) {
-    preselectedLanguage = defaultLocale;
-  } else if (!isEmpty_default()(locales)) {
-    preselectedLanguage = locales[0];
+  if (isObject_default()(value)) {
+    // preselect a value in the drop down of the language only if there's a i18n object
+    // in value, otherwise is a simple string and by definition is not associated with any
+    // language
+    if (defaultLocale && locales.includes(defaultLocale)) {
+      preselectedLanguage = defaultLocale;
+    } else if (!isEmpty_default()(locales)) {
+      preselectedLanguage = locales[0];
+    }
+  }
+  var preselectedValue = null;
+  if (isObject_default()(value)) {
+    preselectedValue = preselectedLanguage ? value[preselectedLanguage] : null;
+  } else if (isString_default()(value)) {
+    preselectedValue = value;
   }
   var totalLocales = !isEmpty_default()(locales) ? locales.length : input_text_i18n_LANGUAGES_OPTIONS.length;
   var _useState = (0,external_react_.useState)(preselectedLanguage),
@@ -7866,23 +8133,55 @@ var InputTextI18N = function InputTextI18N(props) {
     _useState4 = input_text_i18n_slicedToArray(_useState3, 2),
     currentValue = _useState4[0],
     setCurrentValue = _useState4[1];
-  var _useState5 = (0,external_react_.useState)(isObject_default()(value) ? value[preselectedLanguage] : null),
+  var _useState5 = (0,external_react_.useState)(preselectedValue),
     _useState6 = input_text_i18n_slicedToArray(_useState5, 2),
     translation = _useState6[0],
     setTranslation = _useState6[1];
+  var handleChange = (0,external_react_.useCallback)(function (value) {
+    // update the UI
+    setTranslation(value);
+    if (isEmpty_default()(value)) {
+      // in case the user entered an empty value...
+      if (isObject_default()(currentValue) && currentLanguage) {
+        // if i18n object and a language is selected, then void the value for that language
+        var newCurrentValue = omit_default()(currentValue, currentLanguage);
+        setCurrentValue(newCurrentValue);
+        _onChange(newCurrentValue);
+      } else if (isString_default()(currentValue)) {
+        setCurrentValue(value);
+        _onChange(value);
+      }
+    } else {
+      // in case the user entered a non empty value...
+      if (currentLanguage) {
+        // if a current language is selected, then the typed text ends up
+        // in a i18n object
+        var _newCurrentValue = input_text_i18n_objectSpread(input_text_i18n_objectSpread({}, currentValue), {}, input_text_i18n_defineProperty({}, currentLanguage, value));
+        setCurrentValue(_newCurrentValue);
+        _onChange(_newCurrentValue);
+        //setTranslation(value);
+      } else if (isObject_default()(currentValue)) {
+        // language is not selected, but the current value is a i18n object, do nothing
+        // just update the UI, do nothing in the current value
+        //setTranslation(value);
+      } else {
+        // if language not selected and current value is not an object
+        // just set the current value as string
+        //setTranslation(value);
+        setCurrentValue(value);
+        _onChange(value);
+      }
+    }
+  }, [currentLanguage, currentValue, _onChange]);
 
   // if no locales, then use plain input text
   if (isEmpty_default()(locales)) {
-    return /*#__PURE__*/external_react_default().createElement(TextInput, props);
+    return textarea ? /*#__PURE__*/external_react_default().createElement(Textarea, props) : /*#__PURE__*/external_react_default().createElement(TextInput, props);
   }
   // evaluate current translated locales
   var translatedLocales = isObject_default()(currentValue) ? Object.keys(currentValue).filter(function (locale) {
     return isEmpty_default()(locales) || locales.includes(locale);
   }) : [];
-
-  //console.log('current value', currentValue);
-  //console.log('translation', translation, ' language ', currentLanguage, 'translated', translatedLocales);
-
   var multiValuesAndNoLang = isObject_default()(currentValue) && Object.keys(currentValue).length !== 0 && !currentLanguage;
   var languageData = input_text_i18n_LANGUAGES_OPTIONS.filter(function (item) {
     return isEmpty_default()(locales) || locales.includes(item.value);
@@ -7896,54 +8195,22 @@ var InputTextI18N = function InputTextI18N(props) {
   }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
     tooltip: true
   }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement("div", {
-    className: "group-input-select"
+    className: classnames_default()('group-input-select', {
+      'textarea': textarea
+    })
   }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup, {
     className: "translation-control",
     inside: true
   }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
     name: name,
+    rows: rows,
     style: width ? {
       width: "".concat(width, "px")
     } : undefined,
-    accepter: external_rsuite_.Input,
+    accepter: textarea ? TextareaAccepter : external_rsuite_.Input,
     value: multiValuesAndNoLang ? '<multiple translations>' : translation,
     readOnly: readOnly || multiValuesAndNoLang,
-    onChange: function onChange(value) {
-      // update the UI
-      setTranslation(value);
-      if (isEmpty_default()(value)) {
-        // in case the user entered an empty value...
-        if (isObject_default()(currentValue) && currentLanguage) {
-          // if i18n object and a language is selected, then void the value for that language
-          var newCurrentValue = omit_default()(currentValue, currentLanguage);
-          setCurrentValue(newCurrentValue);
-          _onChange(newCurrentValue);
-        } else if (isString_default()(currentValue)) {
-          setCurrentValue(value);
-          _onChange(value);
-        }
-      } else {
-        // in case the user entered a non empty value...
-        if (currentLanguage) {
-          // if a current language is selected, then the typed text ends up
-          // in a i18n object
-          var _newCurrentValue = input_text_i18n_objectSpread(input_text_i18n_objectSpread({}, currentValue), {}, input_text_i18n_defineProperty({}, currentLanguage, value));
-          setCurrentValue(_newCurrentValue);
-          _onChange(_newCurrentValue);
-          //setTranslation(value);
-        } else if (isObject_default()(currentValue)) {
-          // language is not selected, but the current value is a i18n object, do nothing
-          // just update the UI, do nothing in the current value
-          //setTranslation(value);
-        } else {
-          // if language not selected and current value is not an object
-          // just set the current value as string
-          //setTranslation(value);
-          setCurrentValue(value);
-          _onChange(value);
-        }
-      }
-    },
+    onChange: handleChange,
     onBlur: onBlur,
     disabled: disabled,
     size: size,
@@ -7972,7 +8239,9 @@ var InputTextI18N = function InputTextI18N(props) {
       if (isString_default()(currentValue) && !isEmpty_default()(currentValue)) {
         // if currentValue is a string and not empty,
         setCurrentLanguage(value);
-        setCurrentValue(input_text_i18n_defineProperty({}, value, currentValue));
+        var newValue = input_text_i18n_defineProperty({}, value, currentValue);
+        setCurrentValue(newValue);
+        _onChange(newValue);
       } else if (isObject_default()(currentValue)) {
         var _currentValue$value;
         // it's already a i18n object, just switch the language
@@ -7986,7 +8255,91 @@ var InputTextI18N = function InputTextI18N(props) {
   }))), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 };
 
+;// CONCATENATED MODULE: ./react-rsuite5/select-states/index.js
+function select_states_typeof(obj) { "@babel/helpers - typeof"; return select_states_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, select_states_typeof(obj); }
+
+
+var select_states_excluded = ["country", "placeholder"];
+function select_states_extends() { select_states_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return select_states_extends.apply(this, arguments); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == select_states_typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator.return && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, catch: function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+function select_states_slicedToArray(arr, i) { return select_states_arrayWithHoles(arr) || select_states_iterableToArrayLimit(arr, i) || select_states_unsupportedIterableToArray(arr, i) || select_states_nonIterableRest(); }
+function select_states_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function select_states_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return select_states_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return select_states_arrayLikeToArray(o, minLen); }
+function select_states_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function select_states_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function select_states_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function select_states_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = select_states_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function select_states_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+var LETS_FORM_COUNTRIES = 'https://unpkg.com/lets-form-countries@1.0.1';
+var SelectStates = function SelectStates(_ref) {
+  var country = _ref.country,
+    placeholder = _ref.placeholder,
+    props = select_states_objectWithoutProperties(_ref, select_states_excluded);
+  var _useState = (0,external_react_.useState)(null),
+    _useState2 = select_states_slicedToArray(_useState, 2),
+    options = _useState2[0],
+    setOptions = _useState2[1];
+  var _useState3 = (0,external_react_.useState)(false),
+    _useState4 = select_states_slicedToArray(_useState3, 2),
+    disabled = _useState4[0],
+    setDisabled = _useState4[1];
+  (0,external_react_.useEffect)(function () {
+    var fetchData = /*#__PURE__*/function () {
+      var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(c) {
+        var res, _country;
+        return _regeneratorRuntime().wrap(function _callee$(_context) {
+          while (1) switch (_context.prev = _context.next) {
+            case 0:
+              _context.prev = 0;
+              _context.next = 3;
+              return fetch("".concat(LETS_FORM_COUNTRIES, "/").concat(c.toUpperCase(), ".json"));
+            case 3:
+              res = _context.sent;
+              _context.next = 6;
+              return res.json();
+            case 6:
+              _country = _context.sent;
+              setOptions(_country.provinces.map(function (province) {
+                return {
+                  value: province,
+                  label: province
+                };
+              }));
+              setDisabled(false);
+              _context.next = 14;
+              break;
+            case 11:
+              _context.prev = 11;
+              _context.t0 = _context["catch"](0);
+              console.error("[LetsForm] Error fetching states for country ".concat(c));
+            case 14:
+            case "end":
+              return _context.stop();
+          }
+        }, _callee, null, [[0, 11]]);
+      }));
+      return function fetchData(_x2) {
+        return _ref2.apply(this, arguments);
+      };
+    }();
+    if (isString_default()(country) && !isEmpty_default()(country)) {
+      setDisabled(true);
+      fetchData(country);
+    }
+  }, [country]);
+  return /*#__PURE__*/external_react_default().createElement(Select, select_states_extends({}, props, {
+    options: options !== null && options !== void 0 ? options : [],
+    placeholder: disabled ? 'Loading...' : placeholder,
+    disabled: disabled
+  }));
+};
+
 ;// CONCATENATED MODULE: ./react-rsuite5/index.js
+
 
 
 
@@ -8073,6 +8426,9 @@ var Fields = {
   },
   'input-text-i18n': {
     'react-rsuite5': InputTextI18N
+  },
+  'select-states': {
+    'react-rsuite5': SelectStates
   }
 };
 var Forms = {

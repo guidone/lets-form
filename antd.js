@@ -93,7 +93,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-group .header{align-items:center;background:rgba(0,0,0,0);display:flex;margin:15px 0px;height:1px;flex-direction:row}.lf-control-group .header .inner-text{flex:0 0 auto;padding:0 12px;display:inline-block}.lf-control-group .header:before{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header:after{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header.left:before{content:none;border:none;flex:unset}.lf-control-group .header.right:after{content:none;border:none;flex:unset}", "",{"version":3,"sources":["webpack://./common/group/group.scss"],"names":[],"mappings":"AAEE,0BACE,kBAAA,CACA,wBAAA,CACA,YAAA,CACA,eAAA,CACA,UAAA,CACA,kBAAA,CAEA,sCACE,aAAA,CACA,cAAA,CACA,oBAAA,CAGF,iCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAGF,gCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAIA,sCACE,YAAA,CACA,WAAA,CACA,UAAA,CAKF,sCACE,YAAA,CACA,WAAA,CACA,UAAA","sourcesContent":[".lf-control-group {\n\n  .header {\n    align-items: center;\n    background: transparent;\n    display: flex;\n    margin: 15px 0px;\n    height: 1px;\n    flex-direction: row;\n\n    .inner-text {\n      flex: 0 0 auto;\n      padding: 0 12px;\n      display: inline-block;\n    }\n\n    &:before {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &:after {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &.left {\n      &:before {\n        content: none;\n        border: none;\n        flex: unset;\n      }\n    }\n\n    &.right {\n      &:after {\n        content: none;\n        border: none;\n        flex: unset;\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-group{margin-bottom:var(--lf-field-margin)}.lf-control-group.bottom-border.open{border-bottom:1px solid #e5e5ea;padding-bottom:15px}.lf-control-group .header{align-items:center;background:rgba(0,0,0,0);display:flex;margin:15px 0px;height:1px;flex-direction:row}.lf-control-group .header .inner-text{flex:0 0 auto;padding:0 12px;display:inline-block}.lf-control-group .header:before{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header:after{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header.left:before{flex:0 0 10px}.lf-control-group .header.right:after{flex:0 0 10px}", "",{"version":3,"sources":["webpack://./common/group/group.scss"],"names":[],"mappings":"AAAA,kBACE,oCAAA,CAEA,qCACE,+BAAA,CACA,mBAAA,CAGF,0BACE,kBAAA,CACA,wBAAA,CACA,YAAA,CACA,eAAA,CACA,UAAA,CACA,kBAAA,CAEA,sCACE,aAAA,CACA,cAAA,CACA,oBAAA,CAGF,iCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAGF,gCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAIA,sCACE,aAAA,CAKF,sCACE,aAAA","sourcesContent":[".lf-control-group {\n  margin-bottom: var(--lf-field-margin);\n\n  &.bottom-border.open {\n    border-bottom: 1px solid #e5e5ea;\n    padding-bottom: 15px;\n  }\n\n  .header {\n    align-items: center;\n    background: transparent;\n    display: flex;\n    margin: 15px 0px;\n    height: 1px;\n    flex-direction: row;\n\n    .inner-text {\n      flex: 0 0 auto;\n      padding: 0 12px;\n      display: inline-block;\n    }\n\n    &:before {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &:after {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &.left {\n      &:before {\n        flex: 0 0 10px;\n      }\n    }\n\n    &.right {\n      &:after {\n        flex: 0 0 10px;\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -495,13 +495,6 @@ module.exports = function (item) {
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 !function(u,r){ true?module.exports=r(__webpack_require__(5760)):0}(this,(function(u){"use strict";function r(u){return u&&"object"==typeof u&&"default"in u?u:{default:u}}var n=r(u),e={s:["nokkrar sekúndur","nokkrar sekúndur","nokkrum sekúndum"],m:["mínúta","mínútu","mínútu"],mm:["mínútur","mínútur","mínútum"],h:["klukkustund","klukkustund","klukkustund"],hh:["klukkustundir","klukkustundir","klukkustundum"],d:["dagur","dag","degi"],dd:["dagar","daga","dögum"],M:["mánuður","mánuð","mánuði"],MM:["mánuðir","mánuði","mánuðum"],y:["ár","ár","ári"],yy:["ár","ár","árum"]};function t(u,r,n,t){var a=function(u,r,n,t){var a=t?0:n?1:2,d=2===u.length&&r%10==1?u[0]:u,m=e[d][a];return 1===u.length?m:"%d "+m}(n,u,t,r);return a.replace("%d",u)}var a={name:"is",weekdays:"sunnudagur_mánudagur_þriðjudagur_miðvikudagur_fimmtudagur_föstudagur_laugardagur".split("_"),months:"janúar_febrúar_mars_apríl_maí_júní_júlí_ágúst_september_október_nóvember_desember".split("_"),weekStart:1,weekdaysShort:"sun_mán_þri_mið_fim_fös_lau".split("_"),monthsShort:"jan_feb_mar_apr_maí_jún_júl_ágú_sep_okt_nóv_des".split("_"),weekdaysMin:"Su_Má_Þr_Mi_Fi_Fö_La".split("_"),ordinal:function(u){return u},formats:{LT:"H:mm",LTS:"H:mm:ss",L:"DD.MM.YYYY",LL:"D. MMMM YYYY",LLL:"D. MMMM YYYY [kl.] H:mm",LLLL:"dddd, D. MMMM YYYY [kl.] H:mm"},relativeTime:{future:"eftir %s",past:"fyrir %s síðan",s:t,m:t,mm:t,h:t,hh:t,d:t,dd:t,M:t,MM:t,y:t,yy:t}};return n.default.locale(a,null,!0),a}));
-
-/***/ }),
-
-/***/ 3706:
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-!function(e,o){ true?module.exports=o(__webpack_require__(5760)):0}(this,(function(e){"use strict";function o(e){return e&&"object"==typeof e&&"default"in e?e:{default:e}}var n=o(e),t={name:"it-ch",weekdays:"domenica_lunedì_martedì_mercoledì_giovedì_venerdì_sabato".split("_"),months:"gennaio_febbraio_marzo_aprile_maggio_giugno_luglio_agosto_settembre_ottobre_novembre_dicembre".split("_"),weekStart:1,weekdaysShort:"dom_lun_mar_mer_gio_ven_sab".split("_"),monthsShort:"gen_feb_mar_apr_mag_giu_lug_ago_set_ott_nov_dic".split("_"),weekdaysMin:"do_lu_ma_me_gi_ve_sa".split("_"),ordinal:function(e){return e},formats:{LT:"HH:mm",LTS:"HH:mm:ss",L:"DD.MM.YYYY",LL:"D MMMM YYYY",LLL:"D MMMM YYYY HH:mm",LLLL:"dddd D MMMM YYYY HH:mm"},relativeTime:{future:"tra %s",past:"%s fa",s:"alcuni secondi",m:"un minuto",mm:"%d minuti",h:"un'ora",hh:"%d ore",d:"un giorno",dd:"%d giorni",M:"un mese",MM:"%d mesi",y:"un anno",yy:"%d anni"}};return n.default.locale(t,null,!0),t}));
 
 /***/ }),
 
@@ -2580,11 +2573,13 @@ __webpack_require__.d(__webpack_exports__, {
   "deleteField": () => (/* reexport */ deleteField),
   "fillIds": () => (/* reexport */ fillIds),
   "filterFields": () => (/* reexport */ filterFields),
+  "filterOptions": () => (/* reexport */ filterOptions),
   "findField": () => (/* reexport */ findField),
   "getLocales": () => (/* reexport */ getLocales),
   "i18n": () => (/* reexport */ i18n),
   "isValidDayjsFormat": () => (/* reexport */ isValidDayjsFormat),
   "mapFields": () => (/* reexport */ mapFields),
+  "passRest": () => (/* reexport */ passRest),
   "reduceFields": () => (/* reexport */ reduceFields),
   "replaceField": () => (/* reexport */ replaceField),
   "validateRulesDefinition": () => (/* reexport */ validateRulesDefinition)
@@ -5589,6 +5584,7 @@ var fieldExists = function fieldExists(fields, predicate) {
 ;// CONCATENATED MODULE: ./helpers/apply-form-rules.js
 
 
+
 function apply_form_rules_typeof(obj) { "@babel/helpers - typeof"; return apply_form_rules_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, apply_form_rules_typeof(obj); }
 function apply_form_rules_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function apply_form_rules_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? apply_form_rules_ownKeys(Object(source), !0).forEach(function (key) { apply_form_rules_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : apply_form_rules_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -5674,6 +5670,38 @@ var PREDICATES = {
       }
       return field;
     };
+  },
+  setValue: function setValue(names, object, condition, values) {
+    return function (field) {
+      if (names.indexOf(field.name) !== -1 && isObject_default()(object) && !isEmpty_default()(object.key) && !isEmpty_default()(object.value)) {
+        return apply_form_rules_objectSpread(apply_form_rules_objectSpread({}, field), {}, apply_form_rules_defineProperty({}, object.key, evaluateValue(object.value, {
+          values: values,
+          condition: condition
+        })));
+      }
+      return field;
+    };
+  }
+};
+
+// TODO implement more ${} tokens
+var evaluateValue = function evaluateValue(value, _ref) {
+  var values = _ref.values,
+    condition = _ref.condition;
+  // eslint-disable-next-line no-template-curly-in-string
+  if (value === '${VALUE}') {
+    return values[condition.field];
+    // eslint-disable-next-line no-template-curly-in-string
+  } else if (value === '${EMPTY}') {
+    return '';
+    // eslint-disable-next-line no-template-curly-in-string
+  } else if (value === '${NULL}') {
+    return null;
+    // eslint-disable-next-line no-template-curly-in-string
+  } else if (value === '${UNDEFINED}') {
+    return null;
+  } else {
+    return value;
   }
 };
 var applyFormRules = function applyFormRules(fields, rules, values) {
@@ -5684,8 +5712,9 @@ var applyFormRules = function applyFormRules(fields, rules, values) {
   rules.forEach(function (rule) {
     // if test condition passes and exists a predicate, then execute it
     if (testConditions(rule.condition, values)) {
+      // if there's a verb for it, then apply it
       if (PREDICATES[rule.verb]) {
-        newFields = mapFields(newFields, PREDICATES[rule.verb](rule.names));
+        newFields = mapFields(newFields, PREDICATES[rule.verb](rule.names, rule.object, rule.condition, values));
       }
     }
   });
@@ -5737,7 +5766,7 @@ var LANGUAGES_OPTIONS = Object.keys(locales_namespaceObject.Q).map(function (lan
   return {
     code: lang,
     name: locales_namespaceObject.Q[lang][1],
-    label: "".concat(locales_namespaceObject.Q[lang][1], " - ").concat(locales_namespaceObject.Q[lang][0])
+    label: "".concat(locales_namespaceObject.Q[lang][1])
   };
 });
 var getLocales = function getLocales() {
@@ -5753,7 +5782,11 @@ var i18n = function i18n(value, locale) {
     if (locale && value[locale]) {
       return value[locale];
     }
-    // TODO understand what's the proper behaviour here
+    // if there's no dialect, then try with the first two letters
+    if (locale && value[locale.substr(0, 2)]) {
+      return value[locale.substr(0, 2)];
+    }
+    // if nothing found, defaults to english but with warning
     if (value['en'] || value['en-UK'] || value['en-US']) {
       if (!locale) {
         console.warn("[LetsForm] missing locale for translation, defaulting to English: ", value);
@@ -5767,7 +5800,26 @@ var i18n = function i18n(value, locale) {
   }
   return value;
 };
+;// CONCATENATED MODULE: ./helpers/pass-rest.js
+
+var passRest = function passRest(props) {
+  return omit_default()(props, 'lfFramework', 'lfComponent', 'lfLocale');
+};
+;// CONCATENATED MODULE: ./helpers/filter-options.js
+
+
+var filterOptions = function filterOptions(options, filterValue) {
+  var filterKey = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'value';
+  if (isArray_default()(options) && !isEmpty_default()(filterKey) && !isEmpty_default()(filterValue)) {
+    return options.filter(function (item) {
+      return item[filterKey] === filterValue;
+    });
+  }
+  return options;
+};
 ;// CONCATENATED MODULE: ./helpers/index.js
+
+
 
 
 
@@ -6033,10 +6085,12 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           level: level + 1,
           locale: locale
         }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+          key: "bottom_view_".concat(field.name),
           field: field,
           target: "fields"
         })));
         return GroupWrapper ? /*#__PURE__*/external_react_default().createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
           field: field,
           level: level,
           index: index
@@ -6067,6 +6121,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               level: level + 1,
               locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              key: "bottom_view_".concat(field.name),
               field: field,
               target: "leftFields"
             }));
@@ -6088,19 +6143,21 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               level: level + 1,
               locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              key: "bottom_view_".concat(field.name),
               field: field,
               target: "rightFields"
             }));
           }
         });
         return GroupWrapper ? /*#__PURE__*/external_react_default().createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
           level: level,
           field: field,
           index: index
         }, _component) : _component;
       } else if (field.component === 'three-columns') {
         var _component2 = /*#__PURE__*/external_react_default().createElement(Component, _extends({
-          key: field.name,
+          key: "three-columns-".concat(field.name),
           name: field.name,
           lfComponent: field.component,
           lfFramework: framework,
@@ -6124,6 +6181,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               level: level + 1,
               locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              key: "bottom_view_".concat(field.name),
               field: field,
               target: "leftFields"
             }));
@@ -6145,6 +6203,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               level: level + 1,
               locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              key: "bottom_view_".concat(field.name),
               field: field,
               target: "centerFields"
             }));
@@ -6166,12 +6225,14 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               level: level + 1,
               locale: locale
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
+              key: "bottom_view_".concat(field.name),
               field: field,
               target: "rightFields"
             }));
           }
         });
         return GroupWrapper ? /*#__PURE__*/external_react_default().createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
           field: field,
           level: level,
           index: index
@@ -6187,12 +6248,19 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
         control: control,
         render: function render(_ref4) {
           var fieldInfo = _ref4.field;
-          var component = /*#__PURE__*/external_react_default().createElement(Component, _extends({}, fieldInfo, {
+          var component = /*#__PURE__*/external_react_default().createElement(Component
+          //{...fieldInfo}
+          // not sure about this, not passing the ref
+          , _extends({
+            name: fieldInfo.name,
+            value: fieldInfo.value
+            //onChange={fieldInfo.onChange}
+            ,
+            onBlur: fieldInfo.onBlur,
             key: "field_".concat(field.name),
             lfComponent: field.component,
             lfFramework: framework,
             lfLocale: locale,
-            name: field.name,
             label: field.label,
             hint: field.hint,
             disabled: disabled || field.disabled,
@@ -6209,6 +6277,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
             }
           }));
           return Wrapper ? /*#__PURE__*/external_react_default().createElement(Wrapper, {
+            key: "wrapper_".concat(field.name),
             field: field,
             level: level,
             index: index
@@ -6250,9 +6319,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       children = _ref5.children,
       className = _ref5.className;
     if (debug) {
-      console.log('Generating form -> ', form);
+      console.log("[LetsForm] Render form (".concat(form.name, ")"));
     }
-    // TODO replace this
     var showErrors = form.showErrors;
     var collectedRules = collectRules(form);
     var _useForm = useForm({
@@ -6312,7 +6380,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       onChange(values);
     }, [onChange, formFields, formRules]);
     if (debug) {
-      console.log('validation', errors);
+      console.log('[LetsForm] Validation', errors);
     }
     var Form = Forms[framework];
     var Wrapper = wrapper;
@@ -6361,7 +6429,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
     }))));
   }, function (prevProps, nextProps) {
     if (DEBUG_RENDER) {
-      console.log("[LetsForm]Form generator ".concat(nextProps.form.name ? '(' + nextProps.form.name + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale));
+      console.log("[LetsForm] Form generator ".concat(nextProps.form.name ? '(' + nextProps.form.name + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale));
     }
     var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale;
     console.log('Is re-rendering?', !isEqual);
@@ -6480,7 +6548,8 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
-var TextInput = function TextInput(_ref) {
+
+var TextInput = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -6535,7 +6604,7 @@ var TextInput = function TextInput(_ref) {
       width: "".concat(width, "px")
     } : undefined
   }, omit_default()(rest, 'lfFramework', 'lfComponent'))));
-};
+}, ['label', 'hint', 'placeholder']);
 
 ;// CONCATENATED MODULE: ./react-antd/toggle/index.js
 var toggle_excluded = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "checkedChildren", "unCheckedChildren"];
@@ -6543,7 +6612,8 @@ function toggle_objectWithoutProperties(source, excluded) { if (source == null) 
 function toggle_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
-var Toggle = function Toggle(_ref) {
+
+var Toggle = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -6574,27 +6644,6 @@ var Toggle = function Toggle(_ref) {
   var handleChange = (0,external_react_.useCallback)(function (e) {
     return onChange(e.target.checked);
   }, [onChange]);
-
-  /*
-         <Input
-        placeholder={placeholder}
-        readOnly={readOnly}
-        onChange={handleChange}
-        onBlur={onBlur}
-        value={value}
-        size={size}
-        prefix={prefix}
-        suffix={postfix}
-        allowClear={allowClear}
-        bordered={bordered}
-        disabled={disabled}
-        showCount={showCount}
-        maxLength={maxLength}
-        style={_.isNumber(width) ? { width: `${width}px` } : undefined}
-        {...rest}
-      />
-   */
-
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
     label: label,
     name: name,
@@ -6613,7 +6662,7 @@ var Toggle = function Toggle(_ref) {
     checkedChildren: checkedChildren,
     unCheckedChildren: unCheckedChildren
   }));
-};
+}, ['label', 'hint']);
 
 ;// CONCATENATED MODULE: ./react-antd/checkbox/index.js
 var checkbox_excluded = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "checkedChildren", "unCheckedChildren"];
@@ -6621,7 +6670,8 @@ function checkbox_objectWithoutProperties(source, excluded) { if (source == null
 function checkbox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
-var CheckboxAntd = function CheckboxAntd(_ref) {
+
+var CheckboxAntd = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -6665,7 +6715,7 @@ var CheckboxAntd = function CheckboxAntd(_ref) {
     checked: value,
     disabled: disabled
   }, label));
-};
+}, ['label', 'hint', 'placeholder']);
 
 // EXTERNAL MODULE: external "dayjs"
 var external_dayjs_ = __webpack_require__(5760);
@@ -10119,8 +10169,6 @@ date_picker_locale_zh_TW_locale.lang.ok = '確 定';
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
 /* harmony default export */ const date_picker_locale_zh_TW = (date_picker_locale_zh_TW_locale);
-// EXTERNAL MODULE: ./node_modules/dayjs/locale/it-ch.js
-var it_ch = __webpack_require__(3706);
 // EXTERNAL MODULE: ./node_modules/dayjs/locale/ar.js
 var ar = __webpack_require__(3939);
 // EXTERNAL MODULE: ./node_modules/dayjs/locale/az.js
@@ -10233,10 +10281,20 @@ var uk = __webpack_require__(4685);
 var vi = __webpack_require__(7553);
 // EXTERNAL MODULE: ./node_modules/dayjs/locale/zh.js
 var zh = __webpack_require__(2009);
+;// CONCATENATED MODULE: ./hooks/index.js
+
+
+var hooks_useFormContext = function useFormContext() {
+  var context = (0,external_react_.useContext)(form_context);
+
+  // put here some defaults
+
+  return context;
+};
 ;// CONCATENATED MODULE: ./react-antd/date/index.js
 
 
-var date_excluded = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "placement", "format", "showNow", "showToday", "picker", "mode", "locale"];
+var date_excluded = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "placement", "format", "showNow", "showToday", "picker", "mode", "lfLocale"];
 function date_extends() { date_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return date_extends.apply(this, arguments); }
 function date_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = date_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function date_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -10308,10 +10366,6 @@ function date_objectWithoutPropertiesLoose(source, excluded) { if (source == nul
 
 
 
-//import 'dayjs/locale/de';
-//import daysLocaleIt from 'dayjs/locale/it';
-
-
 
 
 
@@ -10375,73 +10429,75 @@ function date_objectWithoutPropertiesLoose(source, excluded) { if (source == nul
 
 
 
+
+
 var ANTD_LOCALES_MAPPING = {
-  'ar_EG': date_picker_locale_ar_EG,
-  'az_AZ': date_picker_locale_az_AZ,
-  'bg_BG': date_picker_locale_bg_BG,
-  'bn_BD': date_picker_locale_bn_BD,
-  'by_BY': date_picker_locale_by_BY,
-  'ca_ES': date_picker_locale_ca_ES,
-  'cs_CZ': date_picker_locale_cs_CZ,
-  'da_DK': date_picker_locale_da_DK,
-  'de_DE': date_picker_locale_de_DE,
-  'el_GR': date_picker_locale_el_GR,
-  'en_GB': date_picker_locale_en_GB,
-  'en_US': date_picker_locale_en_US,
-  'es_ES': date_picker_locale_es_ES,
-  'eu_ES': date_picker_locale_eu_ES,
-  'et_EE': date_picker_locale_et_EE,
-  'fa_IR': date_picker_locale_fa_IR,
-  'fi_FI': date_picker_locale_fi_FI,
-  'fr_BE': date_picker_locale_fr_BE,
-  'fr_CA': date_picker_locale_fr_CA,
-  'fr_FR': date_picker_locale_fr_FR,
-  'ga_IE': date_picker_locale_ga_IE,
-  'gl_ES': date_picker_locale_gl_ES,
-  'he_IL': date_picker_locale_he_IL,
-  'hi_IN': date_picker_locale_hi_IN,
-  'hr_HR': date_picker_locale_hr_HR,
-  'hu_HU': date_picker_locale_hu_HU,
-  'id_ID': date_picker_locale_id_ID,
-  'it_IT': date_picker_locale_it_IT,
-  'is_IS': date_picker_locale_is_IS,
-  'ja_JP': date_picker_locale_ja_JP,
-  'ka_GE': date_picker_locale_ka_GE,
-  'kmr_IQ': date_picker_locale_kmr_IQ,
-  'kn_IN': date_picker_locale_kn_IN,
-  'kk_KZ': date_picker_locale_kk_KZ,
-  'km_KH': date_picker_locale_km_KH,
-  'ko_KR': date_picker_locale_ko_KR,
-  'lt_LT': date_picker_locale_lt_LT,
-  'lv_LV': date_picker_locale_lv_LV,
-  'mk_MK': date_picker_locale_mk_MK,
-  'ml_IN': date_picker_locale_ml_IN,
-  'mn_MN': date_picker_locale_mn_MN,
-  'ms_MY': date_picker_locale_ms_MY,
-  'nb_NO': date_picker_locale_nb_NO,
-  'nl_BE': date_picker_locale_nl_BE,
-  'nl_NL': date_picker_locale_nl_NL,
-  'pl_PL': date_picker_locale_pl_PL,
-  'pt_BR': date_picker_locale_pt_BR,
-  'pt_PT': date_picker_locale_pt_PT,
-  'ro_RO': date_picker_locale_ro_RO,
-  'ru_RU': date_picker_locale_ru_RU,
-  'si_LK': date_picker_locale_si_LK,
-  'sk_SK': date_picker_locale_sk_SK,
-  'sr_RS': date_picker_locale_sr_RS,
-  'sl_SI': locale_sl_SI,
-  'sv_SE': date_picker_locale_sv_SE,
-  'ta_IN': date_picker_locale_ta_IN,
-  'th_TH': date_picker_locale_th_TH,
-  'tr_TR': date_picker_locale_tr_TR,
-  'tk_TK': date_picker_locale_tk_TK,
-  'ur_PK': date_picker_locale_ur_PK,
-  'uk_UA': date_picker_locale_uk_UA,
-  'vi_VN': date_picker_locale_vi_VN,
-  'zh_CN': date_picker_locale_zh_CN,
-  'zh_TW': date_picker_locale_zh_TW
+  'ar-EG': date_picker_locale_ar_EG,
+  'az-AZ': date_picker_locale_az_AZ,
+  'bg-BG': date_picker_locale_bg_BG,
+  'bn-BD': date_picker_locale_bn_BD,
+  'by-BY': date_picker_locale_by_BY,
+  'ca-ES': date_picker_locale_ca_ES,
+  'cs-CZ': date_picker_locale_cs_CZ,
+  'da-DK': date_picker_locale_da_DK,
+  'de-DE': date_picker_locale_de_DE,
+  'el-GR': date_picker_locale_el_GR,
+  'en-GB': date_picker_locale_en_GB,
+  'en-US': date_picker_locale_en_US,
+  'es-ES': date_picker_locale_es_ES,
+  'eu-ES': date_picker_locale_eu_ES,
+  'et-EE': date_picker_locale_et_EE,
+  'fa-IR': date_picker_locale_fa_IR,
+  'fi-FI': date_picker_locale_fi_FI,
+  'fr-BE': date_picker_locale_fr_BE,
+  'fr-CA': date_picker_locale_fr_CA,
+  'fr-FR': date_picker_locale_fr_FR,
+  'ga-IE': date_picker_locale_ga_IE,
+  'gl-ES': date_picker_locale_gl_ES,
+  'he-IL': date_picker_locale_he_IL,
+  'hi-IN': date_picker_locale_hi_IN,
+  'hr-HR': date_picker_locale_hr_HR,
+  'hu-HU': date_picker_locale_hu_HU,
+  'id-ID': date_picker_locale_id_ID,
+  'it-IT': date_picker_locale_it_IT,
+  'is-IS': date_picker_locale_is_IS,
+  'ja-JP': date_picker_locale_ja_JP,
+  'ka-GE': date_picker_locale_ka_GE,
+  'km-_IQ': date_picker_locale_kmr_IQ,
+  'kn-IN': date_picker_locale_kn_IN,
+  'kk-KZ': date_picker_locale_kk_KZ,
+  'km-KH': date_picker_locale_km_KH,
+  'ko-KR': date_picker_locale_ko_KR,
+  'lt-LT': date_picker_locale_lt_LT,
+  'lv-LV': date_picker_locale_lv_LV,
+  'mk-MK': date_picker_locale_mk_MK,
+  'ml-IN': date_picker_locale_ml_IN,
+  'mn-MN': date_picker_locale_mn_MN,
+  'ms-MY': date_picker_locale_ms_MY,
+  'nb-NO': date_picker_locale_nb_NO,
+  'nl-BE': date_picker_locale_nl_BE,
+  'nl-NL': date_picker_locale_nl_NL,
+  'pl-PL': date_picker_locale_pl_PL,
+  'pt-BR': date_picker_locale_pt_BR,
+  'pt-PT': date_picker_locale_pt_PT,
+  'ro-RO': date_picker_locale_ro_RO,
+  'ru-RU': date_picker_locale_ru_RU,
+  'si-LK': date_picker_locale_si_LK,
+  'sk-SK': date_picker_locale_sk_SK,
+  'sr-RS': date_picker_locale_sr_RS,
+  'sl-SI': locale_sl_SI,
+  'sv-SE': date_picker_locale_sv_SE,
+  'ta-IN': date_picker_locale_ta_IN,
+  'th-TH': date_picker_locale_th_TH,
+  'tr-TR': date_picker_locale_tr_TR,
+  'tk-TK': date_picker_locale_tk_TK,
+  'ur-PK': date_picker_locale_ur_PK,
+  'uk-UA': date_picker_locale_uk_UA,
+  'vi-VN': date_picker_locale_vi_VN,
+  'zh-CN': date_picker_locale_zh_CN,
+  'zh-TW': date_picker_locale_zh_TW
 };
-var DateAntd = function DateAntd(_ref) {
+var DateAntd = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -10472,8 +10528,10 @@ var DateAntd = function DateAntd(_ref) {
     showToday = _ref.showToday,
     picker = _ref.picker,
     mode = _ref.mode,
-    locale = _ref.locale,
+    lfLocale = _ref.lfLocale,
     rest = date_objectWithoutProperties(_ref, date_excluded);
+  var _useFormContext = hooks_useFormContext(),
+    locale = _useFormContext.locale;
   var handleChange = (0,external_react_.useCallback)(function (d) {
     return onChange(d.toDate ? d.toDate() : undefined);
   }, [onChange]);
@@ -10493,6 +10551,8 @@ var DateAntd = function DateAntd(_ref) {
     hasFeedback: error != null,
     validateStatus: error ? 'error' : undefined
   }, /*#__PURE__*/external_react_default().createElement(external_antd_.DatePicker, date_extends({
+    key: "".concat(name, "-").concat(lfLocale !== null && lfLocale !== void 0 ? lfLocale : '') // add key or will not re-render if locale is changed
+    ,
     bordered: bordered,
     inputReadOnly: readOnly,
     placeholder: placeholder,
@@ -10508,23 +10568,30 @@ var DateAntd = function DateAntd(_ref) {
     showToday: showToday,
     picker: picker,
     mode: mode,
-    locale: ANTD_LOCALES_MAPPING[locale],
+    locale: ANTD_LOCALES_MAPPING[lfLocale],
     style: isNumber_default()(width) ? {
       width: "".concat(width, "px")
     } : undefined
   }, omit_default()(rest, 'lfFramework', 'lfComponent'))));
-};
+}, ['label', 'hint', 'placeholder']);
 
 ;// CONCATENATED MODULE: ./react-antd/select/index.js
+function select_typeof(obj) { "@babel/helpers - typeof"; return select_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, select_typeof(obj); }
 
-
-var select_excluded = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "showSearch", "placement", "showArrow", "listHeight", "virtual"];
+var select_excluded = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "showSearch", "placement", "showArrow", "listHeight", "virtual", "options", "filterKey", "filterValue"];
+function select_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function select_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? select_ownKeys(Object(source), !0).forEach(function (key) { select_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : select_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function select_defineProperty(obj, key, value) { key = select_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function select_toPropertyKey(arg) { var key = select_toPrimitive(arg, "string"); return select_typeof(key) === "symbol" ? key : String(key); }
+function select_toPrimitive(input, hint) { if (select_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (select_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function select_extends() { select_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return select_extends.apply(this, arguments); }
 function select_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = select_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function select_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
-var SelectAntd = function SelectAntd(_ref) {
+
+
+var SelectAntd = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -10554,6 +10621,9 @@ var SelectAntd = function SelectAntd(_ref) {
     showArrow = _ref.showArrow,
     listHeight = _ref.listHeight,
     virtual = _ref.virtual,
+    options = _ref.options,
+    filterKey = _ref.filterKey,
+    filterValue = _ref.filterValue,
     rest = select_objectWithoutProperties(_ref, select_excluded);
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
     label: label,
@@ -10577,21 +10647,37 @@ var SelectAntd = function SelectAntd(_ref) {
     virtual: virtual,
     showSearch: showSearch,
     allowClear: allowClear,
+    options: filterOptions(options, filterValue, filterKey) || [],
     style: isNumber_default()(width) ? {
       width: "".concat(width, "px")
     } : undefined
-  }, omit_default()(rest, 'lfFramework', 'lfComponent'))));
-};
+  }, passRest(rest))));
+}, ['label', 'hint', 'placeholder'], {
+  options: function options(value, i18n) {
+    return (value !== null && value !== void 0 ? value : []).map(function (value) {
+      return select_objectSpread(select_objectSpread({}, value), {}, {
+        label: i18n(value.label)
+      });
+    });
+  }
+});
 
 ;// CONCATENATED MODULE: ./react-antd/radio-group/index.js
+function radio_group_typeof(obj) { "@babel/helpers - typeof"; return radio_group_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, radio_group_typeof(obj); }
 
 var radio_group_excluded = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "options", "maxLength", "inline", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "optionType"];
+function radio_group_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function radio_group_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? radio_group_ownKeys(Object(source), !0).forEach(function (key) { radio_group_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : radio_group_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function radio_group_defineProperty(obj, key, value) { key = radio_group_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function radio_group_toPropertyKey(arg) { var key = radio_group_toPrimitive(arg, "string"); return radio_group_typeof(key) === "symbol" ? key : String(key); }
+function radio_group_toPrimitive(input, hint) { if (radio_group_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (radio_group_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function radio_group_extends() { radio_group_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return radio_group_extends.apply(this, arguments); }
 function radio_group_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = radio_group_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function radio_group_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
-var RadioGroup = function RadioGroup(_ref) {
+
+var RadioGroup = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -10662,7 +10748,15 @@ var RadioGroup = function RadioGroup(_ref) {
     hasFeedback: error != null,
     validateStatus: error ? 'error' : undefined
   }, ctrl);
-};
+}, ['label', 'hint', 'placeholder'], {
+  options: function options(value, i18n) {
+    return (value !== null && value !== void 0 ? value : []).map(function (value) {
+      return radio_group_objectSpread(radio_group_objectSpread({}, value), {}, {
+        label: i18n(value.label)
+      });
+    });
+  }
+});
 
 ;// CONCATENATED MODULE: ./react-antd/rate/index.js
 
@@ -10671,7 +10765,8 @@ function rate_objectWithoutProperties(source, excluded) { if (source == null) re
 function rate_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
-var RateAntd = function RateAntd(_ref) {
+
+var RateAntd = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -10749,7 +10844,7 @@ var RateAntd = function RateAntd(_ref) {
     count: count,
     tooltips: mappedTooltips
   }));
-};
+}, ['label', 'hint']);
 
 // EXTERNAL MODULE: ./node_modules/micro-down/dist/index.js
 var dist = __webpack_require__(7305);
@@ -10922,6 +11017,8 @@ var Group = I18N(function (_ref) {
     open = _ref$open === void 0 ? true : _ref$open,
     _ref$collapsible = _ref.collapsible,
     collapsible = _ref$collapsible === void 0 ? true : _ref$collapsible,
+    _ref$bottomBorder = _ref.bottomBorder,
+    bottomBorder = _ref$bottomBorder === void 0 ? false : _ref$bottomBorder,
     align = _ref.align,
     children = _ref.children;
   var _useState = (0,external_react_.useState)(open),
@@ -10933,12 +11030,16 @@ var Group = I18N(function (_ref) {
     setIsOpen(!isOpen);
   }, [isOpen]);
   return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-control-group"
+    className: classnames_default()('lf-control-group', {
+      'bottom-border': bottomBorder,
+      'open': isOpen,
+      'close': !isOpen
+    })
   }, /*#__PURE__*/external_react_default().createElement("div", {
     role: "separator",
     className: classnames_default()('header', align)
   }, /*#__PURE__*/external_react_default().createElement("span", {
-    class: "inner-text"
+    className: "inner-text"
   }, label, collapsible && /*#__PURE__*/external_react_default().createElement("a", {
     href: "#",
     className: "lf-btn-collapse",
@@ -10961,7 +11062,8 @@ var Group = I18N(function (_ref) {
 
 
 
-var PlaceholderAntd = function PlaceholderAntd(_ref) {
+
+var PlaceholderAntd = I18N(function (_ref) {
   var hint = _ref.hint,
     text = _ref.text,
     tooltip = _ref.tooltip,
@@ -10974,7 +11076,7 @@ var PlaceholderAntd = function PlaceholderAntd(_ref) {
   }, /*#__PURE__*/external_react_default().createElement(Placeholder, {
     text: text
   }));
-};
+}, ['label', 'hint', 'text']);
 
 ;// CONCATENATED MODULE: ./react-antd/input-number/index.js
 
@@ -10985,7 +11087,8 @@ function input_number_objectWithoutProperties(source, excluded) { if (source == 
 function input_number_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
-var InputNumberAntd = function InputNumberAntd(_ref) {
+
+var InputNumberAntd = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -11015,7 +11118,6 @@ var InputNumberAntd = function InputNumberAntd(_ref) {
     max = _ref.max,
     step = _ref.step,
     rest = input_number_objectWithoutProperties(_ref, input_number_excluded);
-  console.log('ora con width', width);
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
     label: label,
     name: name,
@@ -11044,7 +11146,7 @@ var InputNumberAntd = function InputNumberAntd(_ref) {
       width: "".concat(width, "px")
     } : undefined
   }, omit_default()(rest, 'lfFramework', 'lfComponent'))));
-};
+}, ['label', 'hint', 'placeholder']);
 
 ;// CONCATENATED MODULE: ./react-antd/textarea/index.js
 
@@ -11055,7 +11157,8 @@ function textarea_objectWithoutProperties(source, excluded) { if (source == null
 function textarea_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
-var TextareaAntd = function TextareaAntd(_ref) {
+
+var TextareaAntd = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -11106,7 +11209,7 @@ var TextareaAntd = function TextareaAntd(_ref) {
       width: "".concat(width, "px")
     } : undefined
   }, omit_default()(rest, 'lfFramework', 'lfComponent'))));
-};
+}, ['label', 'hint', 'placeholder']);
 
 ;// CONCATENATED MODULE: ./react-antd/multiselect/index.js
 
@@ -11117,7 +11220,8 @@ function multiselect_objectWithoutProperties(source, excluded) { if (source == n
 function multiselect_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
-var Multiselect = function Multiselect(_ref) {
+
+var Multiselect = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -11185,7 +11289,7 @@ var Multiselect = function Multiselect(_ref) {
       width: "".concat(width, "px")
     } : undefined
   }, omit_default()(rest, 'lfFramework', 'lfComponent'))));
-};
+}, ['label', 'hint', 'placeholder']);
 
 ;// CONCATENATED MODULE: ./react-antd/three-columns/index.js
 
@@ -11193,7 +11297,99 @@ var Multiselect = function Multiselect(_ref) {
 
 ;// CONCATENATED MODULE: ./react-antd/group/index.js
 
+;// CONCATENATED MODULE: ./react-antd/slider/index.js
+function slider_typeof(obj) { "@babel/helpers - typeof"; return slider_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, slider_typeof(obj); }
+
+
+var slider_excluded = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "keyboard", "dots", "min", "max", "step", "reverse", "tooltipOpen", "tooltipPlacement", "error", "onChange", "onBlur", "width", "marks", "included"];
+function slider_extends() { slider_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return slider_extends.apply(this, arguments); }
+function slider_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function slider_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? slider_ownKeys(Object(source), !0).forEach(function (key) { slider_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : slider_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function slider_defineProperty(obj, key, value) { key = slider_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function slider_toPropertyKey(arg) { var key = slider_toPrimitive(arg, "string"); return slider_typeof(key) === "symbol" ? key : String(key); }
+function slider_toPrimitive(input, hint) { if (slider_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (slider_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function slider_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = slider_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function slider_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+var SliderAnt = I18N(function (_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    hint = _ref.hint,
+    value = _ref.value,
+    size = _ref.size,
+    placeholder = _ref.placeholder,
+    showCount = _ref.showCount,
+    _ref$tooltip = _ref.tooltip,
+    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+    _ref$disabled = _ref.disabled,
+    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    _ref$readOnly = _ref.readOnly,
+    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+    _ref$required = _ref.required,
+    required = _ref$required === void 0 ? false : _ref$required,
+    keyboard = _ref.keyboard,
+    dots = _ref.dots,
+    min = _ref.min,
+    max = _ref.max,
+    step = _ref.step,
+    reverse = _ref.reverse,
+    tooltipOpen = _ref.tooltipOpen,
+    tooltipPlacement = _ref.tooltipPlacement,
+    error = _ref.error,
+    onChange = _ref.onChange,
+    onBlur = _ref.onBlur,
+    width = _ref.width,
+    marks = _ref.marks,
+    included = _ref.included,
+    rest = slider_objectWithoutProperties(_ref, slider_excluded);
+  var antdMarks = undefined;
+  if (isArray_default()(marks) && !isEmpty_default()(marks)) {
+    antdMarks = marks.reduce(function (accumulator, value) {
+      return slider_objectSpread(slider_objectSpread({}, accumulator), {}, slider_defineProperty({}, value.value, value.label));
+    }, {});
+  }
+  return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
+    label: label,
+    name: name,
+    help: error != null ? error : hint && !tooltip ? hint : undefined,
+    required: required,
+    tooltip: tooltip && hint,
+    hasFeedback: error != null,
+    validateStatus: error ? 'error' : undefined
+  }, /*#__PURE__*/external_react_default().createElement(external_antd_.Slider, slider_extends({
+    readOnly: readOnly,
+    included: included,
+    onChange: onChange,
+    onBlur: onBlur,
+    defaultValue: value,
+    disabled: disabled,
+    keyboard: keyboard,
+    dots: dots,
+    min: min,
+    max: max,
+    step: step,
+    reverse: reverse,
+    marks: antdMarks,
+    tooltip: {
+      open: tooltipOpen === null ? undefined : tooltipOpen,
+      placement: tooltipPlacement
+    }
+  }, passRest(rest))));
+}, ['label', 'hint'], {
+  marks: function marks(value, i18n) {
+    return value.map(function (value) {
+      return slider_objectSpread(slider_objectSpread({}, value), {}, {
+        label: i18n(value.label)
+      });
+    });
+  }
+});
+
 ;// CONCATENATED MODULE: ./react-antd/index.js
+
 
 
 
@@ -11252,6 +11448,9 @@ var Fields = {
   },
   'group': {
     'react-antd': Group
+  },
+  'slider': {
+    'react-antd': SliderAnt
   }
 };
 var Forms = {
