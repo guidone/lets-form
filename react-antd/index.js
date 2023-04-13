@@ -15,6 +15,7 @@ import { Multiselect } from './multiselect';
 import { ThreeColumns } from './three-columns';
 import { TwoColumns } from './two-columns';
 import { Group } from './group';
+import { Slider } from './slider';
 
 const Fields = {
   'text-input': {
@@ -58,6 +59,9 @@ const Fields = {
   },
   'group': {
     'react-antd': Group
+  },
+  'slider': {
+    'react-antd': Slider
   }
 };
 

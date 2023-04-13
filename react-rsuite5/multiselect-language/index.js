@@ -1,78 +1,105 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
-import { Form, TagPicker, Tag } from 'rsuite';
+import { Form, CheckPicker } from 'rsuite';
 
-import { RequiredIcon } from '../../components';
+import { RequiredIcon, I18N } from '../../components';
 
 import LOCALES from '../../common/data/locales.json';
 
-const renderValue = (values, items, tags) => {
-  return items.map((item, index) => (
-    <Tag key={index}>
-      {item.name} <b>{item.value}</b>
-    </Tag>
-  ));
-};
+import './multiselect-language.scss';
 
+const renderItem = (label, item) => (
+  <div>
+    {label} <b>{item.value}</b>
+  </div>
+)
+
+const ALL_LOCALES = Object.keys(LOCALES['language-names']);
 const LANGUAGES_OPTIONS = Object.keys(LOCALES['language-names'])
   .map(lang => ({
     value: lang,
     name: LOCALES['language-names'][lang][1],
-    label: `${LOCALES['language-names'][lang][1]} - ${LOCALES['language-names'][lang][0]}`
+    label: `${LOCALES['language-names'][lang][1]}`
   }))
 
-const MultiselectLanguage = ({
-  name,
-  label,
-  hint,
-  value,
-  size,
-  placeholder,
-  options,
-  tooltip = false,
-  disabled = false,
-  readOnly = false,
-  required = false,
-  error,
-  block = false,
-  searchable = false,
-  cleanable = false,
-  onChange,
-  onBlur,
-  placement,
-  appearance
-}) => {
-  return (
-    <Form.Group controlId={name}>
-      {label && (
-        <Form.ControlLabel>
-          {label}
-          {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
-          {required && <RequiredIcon />}
-        </Form.ControlLabel>
-      )}
-      <Form.Control
-        accepter={TagPicker}
-        appearance={appearance ?? undefined}
-        name={name}
-        value={value}
-        onChange={onChange}
-        readOnly={readOnly}
-        onBlur={onBlur}
-        placement={placement}
-        errorMessage={_.isString(error) ? error : undefined }
-        disabled={disabled}
-        size={size}
-        placeholder={placeholder}
-        data={LANGUAGES_OPTIONS}
-        block
-        renderValue={renderValue}
-        searchable
-        cleanable
-      />
-      {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
-    </Form.Group>
-  );
-};
+const MultiselectLanguage = I18N(
+  ({
+    name,
+    label,
+    hint,
+    value,
+    size,
+    placeholder,
+    tooltip = false,
+    disabled = false,
+    readOnly = false,
+    required = false,
+    error,
+    onChange,
+    onBlur,
+    placement,
+    appearance
+  }) => {
+    const [locales, setLocales] = useState(value);
+    const handleAddAll = useCallback(
+      e => {
+        e.preventDefault();
+        setLocales(ALL_LOCALES);
+        onChange(ALL_LOCALES);
+      },
+      [onChange]
+    );
+    const handleChange = useCallback(
+      value => {
+        setLocales(value);
+        onChange(value);
+      },
+      [onChange]
+    );
+
+    return (
+      <Form.Group className="lf-control-multiselect-language">
+        {label && (
+          <Form.ControlLabel>
+            {label}
+            {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
+            {required && <RequiredIcon />}
+          </Form.ControlLabel>
+        )}
+        <Form.Control
+          accepter={CheckPicker}
+          appearance={appearance ?? undefined}
+          name={name}
+          value={locales}
+          onChange={handleChange}
+          readOnly={readOnly}
+          onBlur={onBlur}
+          placement={placement}
+          errorMessage={_.isString(error) ? error : undefined }
+          disabled={disabled}
+          size={size}
+          placeholder={placeholder}
+          data={LANGUAGES_OPTIONS}
+          block
+          //renderValue={renderValue}
+          renderMenuItem={renderItem}
+          searchable
+          cleanable
+        />
+        {!(Array.isArray(locales) && locales.length === ALL_LOCALES.length) && (
+          <div className="btn-add-all">
+            <a
+              href="#"
+              onClick={handleAddAll}
+            >add all locales</a>
+          </div>
+        )}
+        {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
+      </Form.Group>
+    );
+  },
+  ['label', 'hint', 'placeholder']
+);
 
 export { MultiselectLanguage };

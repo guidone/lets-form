@@ -68,10 +68,6 @@ import localeVietnamese from 'antd/es/date-picker/locale/vi_VN';
 import localeChineseSimplified from 'antd/es/date-picker/locale/zh_CN';
 import localeChineseTWTraditional from 'antd/es/date-picker/locale/zh_TW';
 
-//import 'dayjs/locale/de';
-//import daysLocaleIt from 'dayjs/locale/it';
-import daysLocaleItCh from 'dayjs/locale/it-ch';
-
 import 'dayjs/locale/ar';
 import 'dayjs/locale/az';
 import 'dayjs/locale/bg';
@@ -137,147 +133,155 @@ import 'dayjs/locale/vi';
 import 'dayjs/locale/zh';
 import 'dayjs/locale/zh';
 
+import { I18N } from '../../components';
+import { useFormContext } from '../../hooks';
 
 const ANTD_LOCALES_MAPPING = {
-  'ar_EG': localeArabic,
-  'az_AZ': localeAzerbaijani,
-  'bg_BG': localeBulgarian,
-  'bn_BD': localeBanglaBangladesh,
-  'by_BY': localeBelarusian,
-  'ca_ES': localeCatalan,
-  'cs_CZ': localeCzech,
-  'da_DK': localeDanish,
-  'de_DE': localeGerman,
-  'el_GR': localeGreek,
-  'en_GB': localeEnglishUnitedKingdom,
-  'en_US': localeEnglish,
-  'es_ES': localeSpanish,
-  'eu_ES': localeBasque,
-  'et_EE': localeEstonian,
-  'fa_IR': localePersian,
-  'fi_FI': localeFinnish,
-  'fr_BE': localeFrenchBelgium,
-  'fr_CA': localeFrenchCanada,
-  'fr_FR': localeFrenchFrance,
-  'ga_IE': localeIrishIreland,
-  'gl_ES': localeGalicianSpain,
-  'he_IL': localeHebrew,
-  'hi_IN': localeHindi,
-  'hr_HR': localeCroatian,
-  'hu_HU': localeHungarian,
-  'id_ID': localeIndonesian,
-  'it_IT': localeItalian,
-  'is_IS': localeIcelandic,
-  'ja_JP': localeJapanese,
-  'ka_GE': localeGeorgian,
-  'kmr_IQ': localeKurdishKurmanji,
-  'kn_IN': localeKannada,
-  'kk_KZ': localeKazakh,
-  'km_KH': localeKhmer,
-  'ko_KR': localeKorean,
-  'lt_LT': localeLithuanian,
-  'lv_LV': localeLatvian,
-  'mk_MK': localeMacedonian,
-  'ml_IN': localeMalayalamIndia,
-  'mn_MN': localeMongolian,
-  'ms_MY': localeMalayMalaysia,
-  'nb_NO': localeNorwegian,
-  'nl_BE': localeDutchBelgium,
-  'nl_NL': localeDutch,
-  'pl_PL': localePolish,
-  'pt_BR': localePortugueseBrazil,
-  'pt_PT': localePortuguese,
-  'ro_RO': localeRomanian,
-  'ru_RU': localeRussian,
-  'si_LK': localeSinhalese,
-  'sk_SK': localeSlovak,
-  'sr_RS': localeSerbian,
-  'sl_SI': localeSlovenian,
-  'sv_SE': localeSwedish,
-  'ta_IN': localeTamil,
-  'th_TH': localeThai,
-  'tr_TR': localeTurkish,
-  'tk_TK': localeTurkmen,
-  'ur_PK': localeUrduPakistan,
-  'uk_UA': localeUkrainian,
-  'vi_VN': localeVietnamese,
-  'zh_CN': localeChineseSimplified,
-  'zh_TW': localeChineseTWTraditional
+  'ar-EG': localeArabic,
+  'az-AZ': localeAzerbaijani,
+  'bg-BG': localeBulgarian,
+  'bn-BD': localeBanglaBangladesh,
+  'by-BY': localeBelarusian,
+  'ca-ES': localeCatalan,
+  'cs-CZ': localeCzech,
+  'da-DK': localeDanish,
+  'de-DE': localeGerman,
+  'el-GR': localeGreek,
+  'en-GB': localeEnglishUnitedKingdom,
+  'en-US': localeEnglish,
+  'es-ES': localeSpanish,
+  'eu-ES': localeBasque,
+  'et-EE': localeEstonian,
+  'fa-IR': localePersian,
+  'fi-FI': localeFinnish,
+  'fr-BE': localeFrenchBelgium,
+  'fr-CA': localeFrenchCanada,
+  'fr-FR': localeFrenchFrance,
+  'ga-IE': localeIrishIreland,
+  'gl-ES': localeGalicianSpain,
+  'he-IL': localeHebrew,
+  'hi-IN': localeHindi,
+  'hr-HR': localeCroatian,
+  'hu-HU': localeHungarian,
+  'id-ID': localeIndonesian,
+  'it-IT': localeItalian,
+  'is-IS': localeIcelandic,
+  'ja-JP': localeJapanese,
+  'ka-GE': localeGeorgian,
+  'km-_IQ': localeKurdishKurmanji,
+  'kn-IN': localeKannada,
+  'kk-KZ': localeKazakh,
+  'km-KH': localeKhmer,
+  'ko-KR': localeKorean,
+  'lt-LT': localeLithuanian,
+  'lv-LV': localeLatvian,
+  'mk-MK': localeMacedonian,
+  'ml-IN': localeMalayalamIndia,
+  'mn-MN': localeMongolian,
+  'ms-MY': localeMalayMalaysia,
+  'nb-NO': localeNorwegian,
+  'nl-BE': localeDutchBelgium,
+  'nl-NL': localeDutch,
+  'pl-PL': localePolish,
+  'pt-BR': localePortugueseBrazil,
+  'pt-PT': localePortuguese,
+  'ro-RO': localeRomanian,
+  'ru-RU': localeRussian,
+  'si-LK': localeSinhalese,
+  'sk-SK': localeSlovak,
+  'sr-RS': localeSerbian,
+  'sl-SI': localeSlovenian,
+  'sv-SE': localeSwedish,
+  'ta-IN': localeTamil,
+  'th-TH': localeThai,
+  'tr-TR': localeTurkish,
+  'tk-TK': localeTurkmen,
+  'ur-PK': localeUrduPakistan,
+  'uk-UA': localeUkrainian,
+  'vi-VN': localeVietnamese,
+  'zh-CN': localeChineseSimplified,
+  'zh-TW': localeChineseTWTraditional
 };
 
-const DateAntd = ({
-  name,
-  label,
-  hint,
-  value,
-  size,
-  placeholder,
-  showCount,
-  tooltip = false,
-  disabled = false,
-  readOnly = false,
-  required = false,
-  maxLength,
-  error,
-  prefix,
-  postfix,
-  allowClear,
-  bordered,
-  onChange,
-  onBlur,
-  width,
-  placement,
-  format,
-  showNow,
-  showToday,
-  picker,
-  mode,
-  locale,
-  ...rest
-}) => {
-  const handleChange = useCallback(
-    d => onChange(d.toDate ? d.toDate() : undefined),
-    [onChange]
-  );
-  // set locale for dates
-  let defaultValue = dayjs(value);
-  if (defaultValue && locale) {
-    defaultValue = defaultValue.locale(locale);
-  }
+const DateAntd = I18N(
+  ({
+    name,
+    label,
+    hint,
+    value,
+    size,
+    placeholder,
+    showCount,
+    tooltip = false,
+    disabled = false,
+    readOnly = false,
+    required = false,
+    maxLength,
+    error,
+    prefix,
+    postfix,
+    allowClear,
+    bordered,
+    onChange,
+    onBlur,
+    width,
+    placement,
+    format,
+    showNow,
+    showToday,
+    picker,
+    mode,
+    lfLocale,
+    // locale,
+    ...rest
+  }) => {
+    const { locale } = useFormContext();
+    const handleChange = useCallback(
+      d => onChange(d.toDate ? d.toDate() : undefined),
+      [onChange]
+    );
+    // set locale for dates
+    let defaultValue = dayjs(value);
+    if (defaultValue && locale) {
+      defaultValue = defaultValue.locale(locale);
+    }
 
-  return (
-    <Form.Item
-      label={label}
-      // not needed, breaks in case date is set
-      //name={name}
-      help={error != null ? error : (hint && !tooltip ? hint : undefined)}
-      required={required}
-      tooltip={tooltip && hint}
-      hasFeedback={error != null}
-      validateStatus={error ? 'error': undefined}
-    >
-      <DatePicker
-        bordered={bordered}
-        inputReadOnly={readOnly}
-        placeholder={placeholder}
-        onChange={handleChange}
-        placement={placement}
-        size={size}
-        onBlur={onBlur}
-        defaultValue={defaultValue}
-        disabled={disabled}
-        allowClear={allowClear}
-        format={format}
-        showNow={showNow}
-        showToday={showToday}
-        picker={picker}
-        mode={mode}
-        locale={ANTD_LOCALES_MAPPING[locale]}
-        style={_.isNumber(width) ? { width: `${width}px` } : undefined}
-        {...(_.omit(rest, 'lfFramework', 'lfComponent'))}
-      />
-    </Form.Item>
-  )
-};
+    return (
+      <Form.Item
+        label={label}
+        // not needed, breaks in case date is set
+        //name={name}
+        help={error != null ? error : (hint && !tooltip ? hint : undefined)}
+        required={required}
+        tooltip={tooltip && hint}
+        hasFeedback={error != null}
+        validateStatus={error ? 'error': undefined}
+      >
+        <DatePicker
+          key={`${name}-${lfLocale ?? ''}`} // add key or will not re-render if locale is changed
+          bordered={bordered}
+          inputReadOnly={readOnly}
+          placeholder={placeholder}
+          onChange={handleChange}
+          placement={placement}
+          size={size}
+          onBlur={onBlur}
+          defaultValue={defaultValue}
+          disabled={disabled}
+          allowClear={allowClear}
+          format={format}
+          showNow={showNow}
+          showToday={showToday}
+          picker={picker}
+          mode={mode}
+          locale={ANTD_LOCALES_MAPPING[lfLocale]}
+          style={_.isNumber(width) ? { width: `${width}px` } : undefined}
+          {...(_.omit(rest, 'lfFramework', 'lfComponent'))}
+        />
+      </Form.Item>
+    )
+  },
+  ['label', 'hint', 'placeholder']
+);
 
 export { DateAntd as Date };

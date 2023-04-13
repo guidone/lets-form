@@ -11,3 +11,5 @@ export * from './is-valid-dayjs-format';
 export * from './filter-fields';
 export * from './get-locales';
 export * from './i18n';
+export * from './pass-rest';
+export * from './filter-options';

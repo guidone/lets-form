@@ -183,11 +183,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   level: level + 1,
                   locale
                 })}
-                {BottomView && <BottomView field={field} target="fields" />}
+                {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="fields" />}
               </>
             </Component>
           );
-          return GroupWrapper ? <GroupWrapper field={field} level={level} index={index}>{component}</GroupWrapper> : component;
+          return GroupWrapper ? <GroupWrapper key={`wrapper_${field.name}`} field={field} level={level} index={index}>{component}</GroupWrapper> : component;
         } else if (field.component === 'two-columns') {
           const component = (
             <Component
@@ -219,7 +219,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       level: level + 1,
                       locale
                     })}
-                    {BottomView && <BottomView field={field} target="leftFields" />}
+                    {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="leftFields" />}
                   </>
                 )
               } else if (column === 'right') {
@@ -242,18 +242,18 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       level: level + 1,
                       locale
                     })}
-                    {BottomView && <BottomView field={field} target="rightFields" />}
+                    {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="rightFields" />}
                   </>
                 )
               }
             }}
             </Component>
           );
-          return GroupWrapper ? <GroupWrapper level={level} field={field} index={index}>{component}</GroupWrapper> : component;
+          return GroupWrapper ? <GroupWrapper key={`wrapper_${field.name}`} level={level} field={field} index={index}>{component}</GroupWrapper> : component;
         } else if (field.component === 'three-columns') {
           const component = (
             <Component
-              key={field.name}
+              key={`three-columns-${field.name}`}
               name={field.name}
               lfComponent={field.component}
               lfFramework={framework}
@@ -281,7 +281,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       level: level + 1,
                       locale
                     })}
-                    {BottomView && <BottomView field={field} target="leftFields" />}
+                    {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="leftFields" />}
                   </>
                 )
               } else if (column === 'center') {
@@ -304,7 +304,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       level: level + 1,
                       locale
                     })}
-                    {BottomView && <BottomView field={field} target="centerFields" />}
+                    {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="centerFields" />}
                   </>
                 )
               } else if (column === 'right') {
@@ -327,14 +327,14 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       level: level + 1,
                       locale
                     })}
-                    {BottomView && <BottomView field={field} target="rightFields" />}
+                    {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="rightFields" />}
                   </>
                 )
               }
             }}
             </Component>
           );
-          return GroupWrapper ? <GroupWrapper field={field} level={level} index={index}>{component}</GroupWrapper> : component;
+          return GroupWrapper ? <GroupWrapper key={`wrapper_${field.name}`} field={field} level={level} index={index}>{component}</GroupWrapper> : component;
         }
 
 
@@ -351,12 +351,16 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             control={control}
             render={({ field: fieldInfo }) => {
               const component = <Component
-                {...fieldInfo}
+                //{...fieldInfo}
+                // not sure about this, not passing the ref
+                name={fieldInfo.name}
+                value={fieldInfo.value}
+                //onChange={fieldInfo.onChange}
+                onBlur={fieldInfo.onBlur}
                 key={`field_${field.name}`}
                 lfComponent={field.component}
                 lfFramework={framework}
                 lfLocale={locale}
-                name={field.name}
                 label={field.label}
                 hint={field.hint}
                 disabled={disabled || field.disabled}
@@ -377,7 +381,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 }}
               />;
 
-              return Wrapper ? <Wrapper field={field} level={level} index={index}>{component}</Wrapper> : component;
+              return Wrapper ? <Wrapper key={`wrapper_${field.name}`} field={field} level={level} index={index}>{component}</Wrapper> : component;
               }
             }
           />
@@ -412,9 +416,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     //rules
   }) => {
     if (debug) {
-      console.log('Generating form -> ', form);
+      console.log(`[LetsForm] Render form (${form.name})`);
     }
-    // TODO replace this
     const { showErrors } = form;
     const collectedRules = collectRules(form)
 
@@ -480,7 +483,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     );
 
     if (debug) {
-      console.log('validation', errors)
+      console.log('[LetsForm] Validation', errors)
     }
 
     const Form = Forms[framework];
@@ -536,7 +539,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     );
   }, function (prevProps, nextProps) {
     if (DEBUG_RENDER) {
-      console.log(`[LetsForm]Form generator ${nextProps.form.name ? '(' + nextProps.form.name + `)` : ''} re-render: `
+      console.log(`[LetsForm] Form generator ${nextProps.form.name ? '(' + nextProps.form.name + `)` : ''} re-render: `
         + ' framework=' + (prevProps.framework === nextProps.framework)
         + ' onChange=' + (prevProps.onChange === nextProps.onChange)
         + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper)

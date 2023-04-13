@@ -6,6 +6,7 @@ import { Select } from './select';
 import { Checkbox } from './checkbox';
 import { Toggle } from './toggle';
 import { CheckboxGroup } from './checkbox-group';
+import { RadioGroup } from './radio-group';
 import { Placeholder } from './placeholder';
 import { Date } from './date';
 import { Textarea } from './textarea';
@@ -50,6 +51,9 @@ const Fields = {
   },
   'group': {
     'react-bootstrap': Group
+  },
+  'radio-group': {
+    'react-bootstrap': RadioGroup
   }
 };
 

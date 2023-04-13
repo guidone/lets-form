@@ -14,6 +14,7 @@ const Group = I18N(
     disabled = false,
     open = true,
     collapsible = true,
+    bottomBorder = false,
     align,
     children
   }) => {
@@ -27,12 +28,18 @@ const Group = I18N(
     );
 
     return (
-      <div className="lf-control-group">
+      <div
+        className={classNames('lf-control-group', {
+          'bottom-border': bottomBorder,
+          'open': isOpen,
+          'close': !isOpen
+        })}
+      >
         <div
           role="separator"
           className={classNames('header', align)}
         >
-          <span class="inner-text">
+          <span className="inner-text">
           {label}
           {collapsible && (
             <a

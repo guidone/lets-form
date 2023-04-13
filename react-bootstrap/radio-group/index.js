@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 
 import { RequiredIcon, I18N } from '../../components';
 
-const CheckboxGroupBootstrap = I18N(
+const RadioGroupBootstrap = I18N(
   ({
     name,
     label,
@@ -40,7 +40,7 @@ const CheckboxGroupBootstrap = I18N(
 
     return (
       <Form.Group
-        className="lf-control-checkbox-group mb-3"
+        className="lf-control-radio-group mb-3"
       >
         <Form.Label>
           {label}
@@ -56,6 +56,7 @@ const CheckboxGroupBootstrap = I18N(
             >
               <Form.Check.Input
                 disabled={disabled}
+                type="radio"
                 value={value}
                 name={name}
                 isInvalid={error != null}
@@ -83,4 +84,4 @@ const CheckboxGroupBootstrap = I18N(
   }
 );
 
-export { CheckboxGroupBootstrap as CheckboxGroup };
+export { RadioGroupBootstrap as RadioGroup };

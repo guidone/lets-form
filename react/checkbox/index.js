@@ -20,7 +20,7 @@ const Checkbox = ({
 
   return (
     <div className="lf-form-react-control-group">
-      <label for={name} class="lf-form-react-checkbox">
+      <label for={name} className="lf-form-react-checkbox">
         <input
           type="checkbox"
           id={name}

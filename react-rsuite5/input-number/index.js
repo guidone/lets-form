@@ -27,6 +27,7 @@ const InputNumberRSuite5 = I18N(
     error,
     prefix,
     postfix,
+    width,
     onChange = () => {},
     step = 1,
     onBlur,
@@ -81,6 +82,7 @@ const InputNumberRSuite5 = I18N(
           min={min}
           max={max}
           step={step}
+          style={_.isNumber(width) ? { width: `${width}px`} : undefined}
           inside={inside}
           prefix={prefix}
           postfix={allowClear ?

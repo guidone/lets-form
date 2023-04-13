@@ -1,54 +1,58 @@
 import React, { useCallback } from 'react';
-
 import { Switch, FormGroup, FormControlLabel } from '@mui/material';
 
-const Toggle = ({
-  name,
-  label,
-  value,
-  disabled = false,
-  color,
-  onChange,
-  size,
-  labelPlacement,
-  onBlur,
-  required,
-  disableRipple
-}) => {
+import { I18N } from '../../components';
 
-  const handleChange = useCallback(
-    e => {
-      onChange(e.target.checked);
-    },
-    [onChange]
-  );
+const Toggle = I18N(
+  ({
+    name,
+    label,
+    value,
+    disabled = false,
+    color,
+    onChange,
+    size,
+    labelPlacement,
+    onBlur,
+    required,
+    disableRipple
+  }) => {
 
-  const switchCtrl = (
-    <Switch
-      checked={value}
-      onChange={handleChange}
-      disabled={disabled}
-      onBlur={onBlur}
-      color={color}
-      size={size}
-      required={required}
-      disableRipple={disableRipple}
-    />
-  );
+    const handleChange = useCallback(
+      e => {
+        onChange(e.target.checked);
+      },
+      [onChange]
+    );
 
-  return (
-    <FormGroup>
-      {label && (
-        <FormControlLabel
-          labelPlacement={labelPlacement ? labelPlacement : undefined}
-          disabled={disabled}
-          label={label}
-          control={switchCtrl}
-        />
-      )}
-      {!label && switchCtrl}
-    </FormGroup>
-  );
-};
+    const switchCtrl = (
+      <Switch
+        checked={value}
+        onChange={handleChange}
+        disabled={disabled}
+        onBlur={onBlur}
+        color={color}
+        size={size}
+        required={required}
+        disableRipple={disableRipple}
+      />
+    );
+
+    return (
+      <FormGroup>
+        {label && (
+          <FormControlLabel
+            labelPlacement={labelPlacement ? labelPlacement : undefined}
+            disabled={disabled}
+            label={label}
+            control={switchCtrl}
+          />
+        )}
+        {!label && switchCtrl}
+      </FormGroup>
+    );
+  },
+  ['label', 'hint']
+);
 
 export { Toggle };

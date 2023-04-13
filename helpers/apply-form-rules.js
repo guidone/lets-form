@@ -103,6 +103,38 @@ const PREDICATES = {
       return field;
     }
   },
+  setValue: (names, object, condition, values) => {
+    return field => {
+      if (names.indexOf(field.name) !== -1 && _.isObject(object) && !_.isEmpty(object.key) && !_.isEmpty(object.value)) {
+        return {
+          ...field,
+          [object.key]: evaluateValue(object.value, { values, condition })
+        };
+      }
+      return field;
+    }
+
+  }
+};
+
+
+// TODO implement more ${} tokens
+const evaluateValue = (value, { values, condition }) => {
+  // eslint-disable-next-line no-template-curly-in-string
+  if (value === '${VALUE}') {
+    return values[condition.field];
+    // eslint-disable-next-line no-template-curly-in-string
+  } else if (value === '${EMPTY}') {
+    return '';
+    // eslint-disable-next-line no-template-curly-in-string
+  } else if (value === '${NULL}') {
+    return null;
+    // eslint-disable-next-line no-template-curly-in-string
+  } else if (value === '${UNDEFINED}') {
+    return null;
+  } else {
+    return value;
+  }
 };
 
 const applyFormRules = (
@@ -118,8 +150,10 @@ const applyFormRules = (
   rules.forEach(rule => {
     // if test condition passes and exists a predicate, then execute it
     if (testConditions(rule.condition, values)) {
+      // if there's a verb for it, then apply it
       if (PREDICATES[rule.verb]) {
-        newFields = mapFields(newFields, PREDICATES[rule.verb](rule.names));
+        newFields =
+          mapFields(newFields, PREDICATES[rule.verb](rule.names, rule.object, rule.condition, values));
       }
     }
   });

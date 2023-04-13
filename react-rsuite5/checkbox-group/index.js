@@ -51,7 +51,7 @@ const CheckboxGroupRSuite = I18N(
   },
   ['label', 'hint', 'placeholder'],
   {
-    options: (value, i18n) => value.map(value => ({ ...value, label: i18n(value.label) }))
+    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
   }
 );
 

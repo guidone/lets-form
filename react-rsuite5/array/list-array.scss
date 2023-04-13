@@ -10,7 +10,6 @@
     margin-top: 5px;
     position: relative;
 
-
     .rs-form-group {
       margin-bottom: 5px !important;
     }
@@ -23,7 +22,7 @@
       .rs-form-inline {
         // remove the 300px default size for inline in array, too big
         .rs-input, .rs-input-number {
-          width: auto;
+          //width: auto;
         }
       }
     }

@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import { Form, SelectPicker } from 'rsuite';
 
+import { passRest, filterOptions } from '../../helpers';
 import { RequiredIcon, I18N } from '../../components';
 
 const Select = I18N(
@@ -24,7 +25,10 @@ const Select = I18N(
     onChange,
     onBlur,
     placement,
-    appearance
+    appearance,
+    filterKey,
+    filterValue,
+    ...rest
   }) => {
     return (
       <Form.Group controlId={name}>
@@ -48,10 +52,11 @@ const Select = I18N(
           disabled={disabled}
           size={size}
           placeholder={placeholder}
-          data={options || []}
+          data={filterOptions(options, filterValue, filterKey) || []}
           block={block}
           searchable={searchable}
           cleanable={cleanable}
+          {...passRest(rest)}
         />
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>
@@ -59,7 +64,7 @@ const Select = I18N(
   },
   ['label', 'hint', 'placeholder'],
   {
-    options: (value, i18n) => value.map(value => ({ ...value, label: i18n(value.label) }))
+    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
   }
 );
 

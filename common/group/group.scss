@@ -1,4 +1,10 @@
 .lf-control-group {
+  margin-bottom: var(--lf-field-margin);
+
+  &.bottom-border.open {
+    border-bottom: 1px solid #e5e5ea;
+    padding-bottom: 15px;
+  }
 
   .header {
     align-items: center;
@@ -28,17 +34,13 @@
 
     &.left {
       &:before {
-        content: none;
-        border: none;
-        flex: unset;
+        flex: 0 0 10px;
       }
     }
 
     &.right {
       &:after {
-        content: none;
-        border: none;
-        flex: unset;
+        flex: 0 0 10px;
       }
     }
   }

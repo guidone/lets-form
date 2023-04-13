@@ -6,7 +6,7 @@ const LANGUAGES_OPTIONS = Object
   .map(lang => ({
     code: lang,
     name: LOCALES['language-names'][lang][1],
-    label: `${LOCALES['language-names'][lang][1]} - ${LOCALES['language-names'][lang][0]}`
+    label: `${LOCALES['language-names'][lang][1]}`
   }));
 
   export const getLocales = () => LANGUAGES_OPTIONS;
