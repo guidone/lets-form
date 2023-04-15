@@ -5909,8 +5909,6 @@ var generator_update = injectStylesIntoStyleTag_default()(cjs_js_generator/* def
 
        /* harmony default export */ const generator = (cjs_js_generator/* default */.Z && cjs_js_generator/* default.locals */.Z.locals ? cjs_js_generator/* default.locals */.Z.locals : undefined);
 
-// EXTERNAL MODULE: external "antd"
-var external_antd_ = __webpack_require__(2721);
 ;// CONCATENATED MODULE: ./generator/index.js
 
 
@@ -5943,7 +5941,6 @@ function generator_toPrimitive(input, hint) { if (generator_typeof(input) !== "o
 
 
 //import PropTypes from 'prop-types';
-
 
 
 
@@ -6450,6 +6447,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
   return FormGenerator;
 };
 
+// EXTERNAL MODULE: external "antd"
+var external_antd_ = __webpack_require__(2721);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-antd/form/index.scss
 var cjs_js_react_antd_form = __webpack_require__(2191);
 ;// CONCATENATED MODULE: ./react-antd/form/index.scss

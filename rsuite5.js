@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("antd"), require("rsuite"), require("rsuite/locales"));
+		module.exports = factory(require("react"), require("rsuite"), require("rsuite/locales"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "antd", "rsuite", "rsuite/locales"], factory);
+		define(["react", "rsuite", "rsuite/locales"], factory);
 	else if(typeof exports === 'object')
-		exports["lets-form-rsuite5"] = factory(require("react"), require("antd"), require("rsuite"), require("rsuite/locales"));
+		exports["lets-form-rsuite5"] = factory(require("react"), require("rsuite"), require("rsuite/locales"));
 	else
-		root["lets-form-rsuite5"] = factory(root["react"], root["antd"], root["rsuite"], root["rsuite/locales"]);
-})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__2721__, __WEBPACK_EXTERNAL_MODULE__1186__, __WEBPACK_EXTERNAL_MODULE__977__) => {
+		root["lets-form-rsuite5"] = factory(root["react"], root["rsuite"], root["rsuite/locales"]);
+})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__1186__, __WEBPACK_EXTERNAL_MODULE__977__) => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -2231,14 +2231,6 @@ function styleTagTransform(css, styleElement) {
   }
 }
 module.exports = styleTagTransform;
-
-/***/ }),
-
-/***/ 2721:
-/***/ ((module) => {
-
-"use strict";
-module.exports = __WEBPACK_EXTERNAL_MODULE__2721__;
 
 /***/ }),
 
@@ -5732,8 +5724,6 @@ var generator_update = injectStylesIntoStyleTag_default()(cjs_js_generator/* def
 
        /* harmony default export */ const generator = (cjs_js_generator/* default */.Z && cjs_js_generator/* default.locals */.Z.locals ? cjs_js_generator/* default.locals */.Z.locals : undefined);
 
-// EXTERNAL MODULE: external "antd"
-var external_antd_ = __webpack_require__(2721);
 ;// CONCATENATED MODULE: ./generator/index.js
 
 
@@ -5766,7 +5756,6 @@ function generator_toPrimitive(input, hint) { if (generator_typeof(input) !== "o
 
 
 //import PropTypes from 'prop-types';
-
 
 
 

@@ -13,10 +13,7 @@ import { applyFormRules, reduceFields, validateRulesDefinition  } from '../helpe
 
 import FormContext from '../form-context';
 
-
-
 import './index.scss';
-import { message } from 'antd';
 
 const enrichWithLabels = (validationErrors, fields) => {
   const result = { ...validationErrors };

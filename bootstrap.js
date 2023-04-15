@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("antd"), require("prop-types"), require("dayjs"));
+		module.exports = factory(require("react"), require("prop-types"), require("dayjs"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "antd", "prop-types", "dayjs"], factory);
+		define(["react", "prop-types", "dayjs"], factory);
 	else if(typeof exports === 'object')
-		exports["lets-form-bootstrap"] = factory(require("react"), require("antd"), require("prop-types"), require("dayjs"));
+		exports["lets-form-bootstrap"] = factory(require("react"), require("prop-types"), require("dayjs"));
 	else
-		root["lets-form-bootstrap"] = factory(root["react"], root["antd"], root["prop-types"], root["dayjs"]);
-})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__2721__, __WEBPACK_EXTERNAL_MODULE__5099__, __WEBPACK_EXTERNAL_MODULE__5760__) => {
+		root["lets-form-bootstrap"] = factory(root["react"], root["prop-types"], root["dayjs"]);
+})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__5099__, __WEBPACK_EXTERNAL_MODULE__5760__) => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -2149,14 +2149,6 @@ if (__DEV__) {
 
 module.exports = warning;
 
-
-/***/ }),
-
-/***/ 2721:
-/***/ ((module) => {
-
-"use strict";
-module.exports = __WEBPACK_EXTERNAL_MODULE__2721__;
 
 /***/ }),
 
@@ -5627,8 +5619,6 @@ var generator_update = injectStylesIntoStyleTag_default()(cjs_js_generator/* def
 
        /* harmony default export */ const generator = (cjs_js_generator/* default */.Z && cjs_js_generator/* default.locals */.Z.locals ? cjs_js_generator/* default.locals */.Z.locals : undefined);
 
-// EXTERNAL MODULE: external "antd"
-var external_antd_ = __webpack_require__(2721);
 ;// CONCATENATED MODULE: ./generator/index.js
 
 
@@ -5661,7 +5651,6 @@ function generator_toPrimitive(input, hint) { if (generator_typeof(input) !== "o
 
 
 //import PropTypes from 'prop-types';
-
 
 
 
