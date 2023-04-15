@@ -16,6 +16,9 @@ const TextInput = I18N(
     value,
     onChange,
     onBlur,
+    inputType,
+    autocomplete,
+    inputMode,
     size,
     error,
     disabled = false,
@@ -59,11 +62,13 @@ const TextInput = I18N(
             required={floatingLabel ? required : undefined}
             style={_.isNumber(width) && !fullWidth ? { width: `${parseInt(width, 10)}px` } : undefined}
             onChange={handleChange}
+            type={inputType}
             InputProps={{
               startAdornment: prefix ? <InputAdornment position="start">{prefix}</InputAdornment> : undefined,
               endAdornment: postfix ? <InputAdornment position="end">{postfix}</InputAdornment>: undefined,
               disableUnderline,
-              readOnly
+              readOnly,
+              autoComplete: autocomplete
             }}
             variant={variant ?? undefined}
             onBlur={onBlur}

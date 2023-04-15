@@ -16,6 +16,7 @@ import FormContext from '../form-context';
 
 
 import './index.scss';
+import { message } from 'antd';
 
 const enrichWithLabels = (validationErrors, fields) => {
   const result = { ...validationErrors };
@@ -63,16 +64,19 @@ const errorToString = error => {
 
 const DEBUG_RENDER = true;
 
-const translateValidation = validation => {
+const translateValidation = (validation, locale) => {
   if (!_.isEmpty(validation.message)) {
+    const errorMessage = _.isObject(validation.message) && validation.message[locale] ?
+      validation.message[locale] : validation.message.toString();
+
     let result = {};
     if (validation.required) {
-      result.required = validation.message
+      result.required = errorMessage
     }
     ['min', 'max', 'minLength', 'maxLength', 'pattern'].forEach(key => {
       result[key] = {
         value: validation[key],
-        message: validation.message
+        message: errorMessage
       }
     });
     return result;
@@ -338,10 +342,13 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         }
 
 
-        const rules = translateValidation({
-          required: field.required,
-          ...field.validation
-        });
+        const rules = translateValidation(
+          {
+            required: field.required,
+            ...field.validation
+          },
+          locale
+        );
 
         return (
           <Controller

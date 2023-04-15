@@ -34,7 +34,9 @@ const Forms = {
 };
 
 const FormGenerator = GenerateGenerator({ Fields, Forms });
-
-export default FormGenerator ;
+const LetsForm = ({ framework, children, ...rest}) => (
+  <FormGenerator framework="react" {...rest}>{children}</FormGenerator>
+);
+export default LetsForm;
 export * from '../helpers';
 export { Fields, Forms };

@@ -5,6 +5,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
 import { RequiredIcon ,I18N } from '../../components';
+import { passRest } from '../../helpers';
 
 // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -17,6 +18,9 @@ const TextInput = I18N(
     onChange,
     onBlur,
     size,
+    inputType,
+    inputMode,
+    autocomplete,
     disabled = false,
     readOnly = false,
     plaintext = false,
@@ -25,7 +29,8 @@ const TextInput = I18N(
     prefix,
     postfix,
     placeholder,
-    floatingLabel = false
+    floatingLabel = false,
+    ...rest
   }) => {
 
     const handleChange = useCallback(
@@ -38,6 +43,9 @@ const TextInput = I18N(
     const inner = (
       <Form.Control
         name={name}
+        type={inputType ?? 'text'}
+        inputmode={inputMode}
+        autocomplete={autocomplete}
         value={value}
         plaintext={plaintext}
         onChange={handleChange}
@@ -47,6 +55,7 @@ const TextInput = I18N(
         disabled={disabled}
         readOnly={readOnly}
         isInvalid={error != null}
+        {...passRest(rest)}
       />
     );
 

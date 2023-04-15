@@ -17,7 +17,7 @@ const CheckboxRSuite = I18N(
     disabled = false,
     readOnly = false,
     required = false,
-    indeterminate = true,
+    indeterminate,
     error,
     onChange,
     onBlur,
@@ -29,7 +29,6 @@ const CheckboxRSuite = I18N(
     const [isChecked, setIsChecked] = useState(value ?? null);
     const handleChange = useCallback(
       (valueType, checked) => {
-        console.log('ora??', checked)
         let newValue;
         if (isChecked === true) {
           newValue = false;
@@ -52,7 +51,7 @@ const CheckboxRSuite = I18N(
       <Form.Group controlId={name} className="lt-control-checkbox">
         <Form.Control
           accepter={Checkbox}
-          indeterminate={isChecked === null}
+          indeterminate={indeterminate && isChecked === null}
           name={name}
           checked={isChecked}
           onChange={handleChange}

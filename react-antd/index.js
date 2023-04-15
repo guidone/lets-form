@@ -70,8 +70,10 @@ const Forms = {
 };
 
 const FormGenerator = GenerateGenerator({ Fields, Forms });
-
-export default FormGenerator ;
+const LetsForm = ({ framework, children, ...rest}) => (
+  <FormGenerator framework="react-antd" {...rest}>{children}</FormGenerator>
+);
+export default LetsForm;
 export * from '../helpers';
 export * from '../costants';
 export { Fields, Forms };

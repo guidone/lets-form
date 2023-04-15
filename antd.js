@@ -2577,6 +2577,7 @@ __webpack_require__.d(__webpack_exports__, {
   "findField": () => (/* reexport */ findField),
   "getLocales": () => (/* reexport */ getLocales),
   "i18n": () => (/* reexport */ i18n),
+  "isEmptyForm": () => (/* reexport */ isEmptyForm),
   "isValidDayjsFormat": () => (/* reexport */ isValidDayjsFormat),
   "mapFields": () => (/* reexport */ mapFields),
   "passRest": () => (/* reexport */ passRest),
@@ -2588,6 +2589,9 @@ __webpack_require__.d(__webpack_exports__, {
 // EXTERNAL MODULE: ./node_modules/lodash/omit.js
 var omit = __webpack_require__(7557);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
+// EXTERNAL MODULE: ./node_modules/lodash/isObject.js
+var isObject = __webpack_require__(3218);
+var isObject_default = /*#__PURE__*/__webpack_require__.n(isObject);
 // EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(1609);
 var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
@@ -2604,12 +2608,12 @@ var isDateObject = (value) => value instanceof Date;
 var isNullOrUndefined = (value) => value == null;
 
 const isObjectType = (value) => typeof value === 'object';
-var isObject = (value) => !isNullOrUndefined(value) &&
+var index_esm_isObject = (value) => !isNullOrUndefined(value) &&
     !Array.isArray(value) &&
     isObjectType(value) &&
     !isDateObject(value);
 
-var getEventValue = (event) => isObject(event) && event.target
+var getEventValue = (event) => index_esm_isObject(event) && event.target
     ? isCheckBoxInput(event.target)
         ? event.target.checked
         : event.target.value
@@ -2621,7 +2625,7 @@ var isNameInFieldArray = (names, name) => names.has(getNodeParentName(name));
 
 var isPlainObject = (tempObject) => {
     const prototypeCopy = tempObject.constructor && tempObject.constructor.prototype;
-    return (isObject(prototypeCopy) && prototypeCopy.hasOwnProperty('isPrototypeOf'));
+    return (index_esm_isObject(prototypeCopy) && prototypeCopy.hasOwnProperty('isPrototypeOf'));
 };
 
 var isWeb = typeof window !== 'undefined' &&
@@ -2638,7 +2642,7 @@ function cloneObject(data) {
         copy = new Set(data);
     }
     else if (!(isWeb && (data instanceof Blob || data instanceof FileList)) &&
-        (isArray || isObject(data))) {
+        (isArray || index_esm_isObject(data))) {
         copy = isArray ? [] : {};
         if (!Array.isArray(data) && !isPlainObject(data)) {
             copy = data;
@@ -2660,7 +2664,7 @@ var compact = (value) => Array.isArray(value) ? value.filter(Boolean) : [];
 var isUndefined = (val) => val === undefined;
 
 var get = (obj, path, defaultValue) => {
-    if (!path || !isObject(obj)) {
+    if (!path || !index_esm_isObject(obj)) {
         return defaultValue;
     }
     const result = compact(path.split(/[,[\].]+?/)).reduce((result, key) => isNullOrUndefined(result) ? result : result[key], obj);
@@ -2779,7 +2783,7 @@ var getProxyFormState = (formState, control, localProxyFormState, isRoot = true)
     return result;
 };
 
-var isEmptyObject = (value) => isObject(value) && !Object.keys(value).length;
+var isEmptyObject = (value) => index_esm_isObject(value) && !Object.keys(value).length;
 
 var shouldRenderFormState = (formStateData, _proxyFormState, updateFormState, isRoot) => {
     updateFormState(formStateData);
@@ -2953,7 +2957,7 @@ function set(object, path, value) {
         if (index !== lastIndex) {
             const objValue = object[key];
             newValue =
-                isObject(objValue) || Array.isArray(objValue)
+                index_esm_isObject(objValue) || Array.isArray(objValue)
                     ? objValue
                     : !isNaN(+tempPath[index + 1])
                         ? []
@@ -3152,7 +3156,7 @@ const focusFieldBy = (fields, callback, fieldsNames) => {
                     break;
                 }
             }
-            else if (isObject(currentField)) {
+            else if (index_esm_isObject(currentField)) {
                 focusFieldBy(currentField, callback);
             }
         }
@@ -3264,7 +3268,7 @@ function getValidateError(result, ref, type = 'validate') {
     }
 }
 
-var getValueAndMessage = (validationData) => isObject(validationData) && !isRegex(validationData)
+var getValueAndMessage = (validationData) => index_esm_isObject(validationData) && !isRegex(validationData)
     ? validationData
     : {
         value: validationData,
@@ -3417,7 +3421,7 @@ var validateField = async (field, formValues, validateAllFieldCriteria, shouldUs
                 }
             }
         }
-        else if (isObject(validate)) {
+        else if (index_esm_isObject(validate)) {
             let validationResult = {};
             for (const key in validate) {
                 if (!isEmptyObject(validationResult) && !validateAllFieldCriteria) {
@@ -3525,7 +3529,7 @@ function unset(object, path) {
         delete childObject[key];
     }
     if (index !== 0 &&
-        ((isObject(childObject) && isEmptyObject(childObject)) ||
+        ((index_esm_isObject(childObject) && isEmptyObject(childObject)) ||
             (Array.isArray(childObject) && isEmptyArray(childObject)))) {
         unset(object, paths.slice(0, -1));
     }
@@ -3801,7 +3805,7 @@ function deepEqual(object1, object2) {
         if (key !== 'ref') {
             const val2 = object2[key];
             if ((isDateObject(val1) && isDateObject(val2)) ||
-                (isObject(val1) && isObject(val2)) ||
+                (index_esm_isObject(val1) && index_esm_isObject(val2)) ||
                 (Array.isArray(val1) && Array.isArray(val2))
                 ? !deepEqual(val1, val2)
                 : val1 !== val2) {
@@ -3829,10 +3833,10 @@ var objectHasFunction = (data) => {
 
 function markFieldsDirty(data, fields = {}) {
     const isParentNodeArray = Array.isArray(data);
-    if (isObject(data) || isParentNodeArray) {
+    if (index_esm_isObject(data) || isParentNodeArray) {
         for (const key in data) {
             if (Array.isArray(data[key]) ||
-                (isObject(data[key]) && !objectHasFunction(data[key]))) {
+                (index_esm_isObject(data[key]) && !objectHasFunction(data[key]))) {
                 fields[key] = Array.isArray(data[key]) ? [] : {};
                 markFieldsDirty(data[key], fields[key]);
             }
@@ -3845,10 +3849,10 @@ function markFieldsDirty(data, fields = {}) {
 }
 function getDirtyFieldsFromDefaultValues(data, formValues, dirtyFieldsFromValues) {
     const isParentNodeArray = Array.isArray(data);
-    if (isObject(data) || isParentNodeArray) {
+    if (index_esm_isObject(data) || isParentNodeArray) {
         for (const key in data) {
             if (Array.isArray(data[key]) ||
-                (isObject(data[key]) && !objectHasFunction(data[key]))) {
+                (index_esm_isObject(data[key]) && !objectHasFunction(data[key]))) {
                 if (isUndefined(formValues) ||
                     isPrimitive(dirtyFieldsFromValues[key])) {
                     dirtyFieldsFromValues[key] = Array.isArray(data[key])
@@ -3920,7 +3924,7 @@ var getRuleValue = (rule) => isUndefined(rule)
     ? rule
     : isRegex(rule)
         ? rule.source
-        : isObject(rule)
+        : index_esm_isObject(rule)
             ? isRegex(rule.value)
                 ? rule.value.source
                 : rule.value
@@ -4006,7 +4010,7 @@ function createFormControl(props = {}, flushRootRender) {
         errors: {},
     };
     let _fields = {};
-    let _defaultValues = isObject(_options.defaultValues) || isObject(_options.values)
+    let _defaultValues = index_esm_isObject(_options.defaultValues) || index_esm_isObject(_options.values)
         ? cloneObject(_options.defaultValues || _options.values) || {}
         : {};
     let _formValues = _options.shouldUnregister
@@ -5399,9 +5403,6 @@ var isBoolean_default = /*#__PURE__*/__webpack_require__.n(lodash_isBoolean);
 // EXTERNAL MODULE: ./node_modules/lodash/keys.js
 var keys = __webpack_require__(3674);
 var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
-// EXTERNAL MODULE: ./node_modules/lodash/isObject.js
-var lodash_isObject = __webpack_require__(3218);
-var isObject_default = /*#__PURE__*/__webpack_require__.n(lodash_isObject);
 // EXTERNAL MODULE: ./node_modules/lodash/isArray.js
 var isArray = __webpack_require__(1469);
 var isArray_default = /*#__PURE__*/__webpack_require__.n(isArray);
@@ -5817,7 +5818,12 @@ var filterOptions = function filterOptions(options, filterValue) {
   }
   return options;
 };
+;// CONCATENATED MODULE: ./helpers/is-empty-form.js
+var isEmptyForm = function isEmptyForm(form) {
+  return !form || !Array.isArray(form.fields) || form.fields.length === 0;
+};
 ;// CONCATENATED MODULE: ./helpers/index.js
+
 
 
 
@@ -5903,7 +5909,10 @@ var generator_update = injectStylesIntoStyleTag_default()(cjs_js_generator/* def
 
        /* harmony default export */ const generator = (cjs_js_generator/* default */.Z && cjs_js_generator/* default.locals */.Z.locals ? cjs_js_generator/* default.locals */.Z.locals : undefined);
 
+// EXTERNAL MODULE: external "antd"
+var external_antd_ = __webpack_require__(2721);
 ;// CONCATENATED MODULE: ./generator/index.js
+
 
 
 function generator_typeof(obj) { "@babel/helpers - typeof"; return generator_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, generator_typeof(obj); }
@@ -5934,6 +5943,7 @@ function generator_toPrimitive(input, hint) { if (generator_typeof(input) !== "o
 
 
 //import PropTypes from 'prop-types';
+
 
 
 
@@ -5973,16 +5983,17 @@ var errorToString = function errorToString(error) {
 //console.log('Fields---', Fields)
 
 var DEBUG_RENDER = true;
-var translateValidation = function translateValidation(validation) {
+var translateValidation = function translateValidation(validation, locale) {
   if (!isEmpty_default()(validation.message)) {
+    var errorMessage = isObject_default()(validation.message) && validation.message[locale] ? validation.message[locale] : validation.message.toString();
     var result = {};
     if (validation.required) {
-      result.required = validation.message;
+      result.required = errorMessage;
     }
     ['min', 'max', 'minLength', 'maxLength', 'pattern'].forEach(function (key) {
       result[key] = {
         value: validation[key],
-        message: validation.message
+        message: errorMessage
       };
     });
     return result;
@@ -6240,7 +6251,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       }
       var rules = translateValidation(generator_objectSpread({
         required: field.required
-      }, field.validation));
+      }, field.validation), locale);
       return /*#__PURE__*/external_react_default().createElement(Controller, {
         key: "field_".concat(field.name),
         name: field.name,
@@ -6439,8 +6450,6 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
   return FormGenerator;
 };
 
-// EXTERNAL MODULE: external "antd"
-var external_antd_ = __webpack_require__(2721);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-antd/form/index.scss
 var cjs_js_react_antd_form = __webpack_require__(2191);
 ;// CONCATENATED MODULE: ./react-antd/form/index.scss
@@ -11389,6 +11398,10 @@ var SliderAnt = I18N(function (_ref) {
 });
 
 ;// CONCATENATED MODULE: ./react-antd/index.js
+var react_antd_excluded = ["framework", "children"];
+function react_antd_extends() { react_antd_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_antd_extends.apply(this, arguments); }
+function react_antd_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_antd_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function react_antd_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
@@ -11460,7 +11473,15 @@ var FormGenerator = GenerateGenerator({
   Fields: Fields,
   Forms: Forms
 });
-/* harmony default export */ const react_antd = (FormGenerator);
+var LetsForm = function LetsForm(_ref) {
+  var framework = _ref.framework,
+    children = _ref.children,
+    rest = react_antd_objectWithoutProperties(_ref, react_antd_excluded);
+  return /*#__PURE__*/React.createElement(FormGenerator, react_antd_extends({
+    framework: "react-antd"
+  }, rest), children);
+};
+/* harmony default export */ const react_antd = (LetsForm);
 
 
 

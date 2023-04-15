@@ -98,8 +98,11 @@ const Forms = {
 };
 
 const FormGenerator = GenerateGenerator({ Fields, Forms });
+const LetsForm = ({ framework, children, ...rest}) => (
+  <FormGenerator framework="react-rsuite5" {...rest}>{children}</FormGenerator>
+);
 
-export default FormGenerator ;
+export default LetsForm ;
 export * from '../helpers';
 export * from '../costants';
 export { Fields, Forms };

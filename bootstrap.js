@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("prop-types"), require("dayjs"));
+		module.exports = factory(require("react"), require("antd"), require("prop-types"), require("dayjs"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "prop-types", "dayjs"], factory);
+		define(["react", "antd", "prop-types", "dayjs"], factory);
 	else if(typeof exports === 'object')
-		exports["lets-form-bootstrap"] = factory(require("react"), require("prop-types"), require("dayjs"));
+		exports["lets-form-bootstrap"] = factory(require("react"), require("antd"), require("prop-types"), require("dayjs"));
 	else
-		root["lets-form-bootstrap"] = factory(root["react"], root["prop-types"], root["dayjs"]);
-})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__5099__, __WEBPACK_EXTERNAL_MODULE__5760__) => {
+		root["lets-form-bootstrap"] = factory(root["react"], root["antd"], root["prop-types"], root["dayjs"]);
+})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__2721__, __WEBPACK_EXTERNAL_MODULE__5099__, __WEBPACK_EXTERNAL_MODULE__5760__) => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -2152,6 +2152,14 @@ module.exports = warning;
 
 /***/ }),
 
+/***/ 2721:
+/***/ ((module) => {
+
+"use strict";
+module.exports = __WEBPACK_EXTERNAL_MODULE__2721__;
+
+/***/ }),
+
 /***/ 5760:
 /***/ ((module) => {
 
@@ -2287,6 +2295,7 @@ __webpack_require__.d(__webpack_exports__, {
   "findField": () => (/* reexport */ findField),
   "getLocales": () => (/* reexport */ getLocales),
   "i18n": () => (/* reexport */ i18n),
+  "isEmptyForm": () => (/* reexport */ isEmptyForm),
   "isValidDayjsFormat": () => (/* reexport */ isValidDayjsFormat),
   "mapFields": () => (/* reexport */ mapFields),
   "passRest": () => (/* reexport */ passRest),
@@ -2298,6 +2307,9 @@ __webpack_require__.d(__webpack_exports__, {
 // EXTERNAL MODULE: ./node_modules/lodash/omit.js
 var omit = __webpack_require__(7557);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
+// EXTERNAL MODULE: ./node_modules/lodash/isObject.js
+var isObject = __webpack_require__(3218);
+var isObject_default = /*#__PURE__*/__webpack_require__.n(isObject);
 // EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(1609);
 var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
@@ -2314,12 +2326,12 @@ var isDateObject = (value) => value instanceof Date;
 var isNullOrUndefined = (value) => value == null;
 
 const isObjectType = (value) => typeof value === 'object';
-var isObject = (value) => !isNullOrUndefined(value) &&
+var index_esm_isObject = (value) => !isNullOrUndefined(value) &&
     !Array.isArray(value) &&
     isObjectType(value) &&
     !isDateObject(value);
 
-var getEventValue = (event) => isObject(event) && event.target
+var getEventValue = (event) => index_esm_isObject(event) && event.target
     ? isCheckBoxInput(event.target)
         ? event.target.checked
         : event.target.value
@@ -2331,7 +2343,7 @@ var isNameInFieldArray = (names, name) => names.has(getNodeParentName(name));
 
 var isPlainObject = (tempObject) => {
     const prototypeCopy = tempObject.constructor && tempObject.constructor.prototype;
-    return (isObject(prototypeCopy) && prototypeCopy.hasOwnProperty('isPrototypeOf'));
+    return (index_esm_isObject(prototypeCopy) && prototypeCopy.hasOwnProperty('isPrototypeOf'));
 };
 
 var isWeb = typeof window !== 'undefined' &&
@@ -2348,7 +2360,7 @@ function cloneObject(data) {
         copy = new Set(data);
     }
     else if (!(isWeb && (data instanceof Blob || data instanceof FileList)) &&
-        (isArray || isObject(data))) {
+        (isArray || index_esm_isObject(data))) {
         copy = isArray ? [] : {};
         if (!Array.isArray(data) && !isPlainObject(data)) {
             copy = data;
@@ -2370,7 +2382,7 @@ var compact = (value) => Array.isArray(value) ? value.filter(Boolean) : [];
 var isUndefined = (val) => val === undefined;
 
 var get = (obj, path, defaultValue) => {
-    if (!path || !isObject(obj)) {
+    if (!path || !index_esm_isObject(obj)) {
         return defaultValue;
     }
     const result = compact(path.split(/[,[\].]+?/)).reduce((result, key) => isNullOrUndefined(result) ? result : result[key], obj);
@@ -2489,7 +2501,7 @@ var getProxyFormState = (formState, control, localProxyFormState, isRoot = true)
     return result;
 };
 
-var isEmptyObject = (value) => isObject(value) && !Object.keys(value).length;
+var isEmptyObject = (value) => index_esm_isObject(value) && !Object.keys(value).length;
 
 var shouldRenderFormState = (formStateData, _proxyFormState, updateFormState, isRoot) => {
     updateFormState(formStateData);
@@ -2663,7 +2675,7 @@ function set(object, path, value) {
         if (index !== lastIndex) {
             const objValue = object[key];
             newValue =
-                isObject(objValue) || Array.isArray(objValue)
+                index_esm_isObject(objValue) || Array.isArray(objValue)
                     ? objValue
                     : !isNaN(+tempPath[index + 1])
                         ? []
@@ -2862,7 +2874,7 @@ const focusFieldBy = (fields, callback, fieldsNames) => {
                     break;
                 }
             }
-            else if (isObject(currentField)) {
+            else if (index_esm_isObject(currentField)) {
                 focusFieldBy(currentField, callback);
             }
         }
@@ -2974,7 +2986,7 @@ function getValidateError(result, ref, type = 'validate') {
     }
 }
 
-var getValueAndMessage = (validationData) => isObject(validationData) && !isRegex(validationData)
+var getValueAndMessage = (validationData) => index_esm_isObject(validationData) && !isRegex(validationData)
     ? validationData
     : {
         value: validationData,
@@ -3127,7 +3139,7 @@ var validateField = async (field, formValues, validateAllFieldCriteria, shouldUs
                 }
             }
         }
-        else if (isObject(validate)) {
+        else if (index_esm_isObject(validate)) {
             let validationResult = {};
             for (const key in validate) {
                 if (!isEmptyObject(validationResult) && !validateAllFieldCriteria) {
@@ -3235,7 +3247,7 @@ function unset(object, path) {
         delete childObject[key];
     }
     if (index !== 0 &&
-        ((isObject(childObject) && isEmptyObject(childObject)) ||
+        ((index_esm_isObject(childObject) && isEmptyObject(childObject)) ||
             (Array.isArray(childObject) && isEmptyArray(childObject)))) {
         unset(object, paths.slice(0, -1));
     }
@@ -3511,7 +3523,7 @@ function deepEqual(object1, object2) {
         if (key !== 'ref') {
             const val2 = object2[key];
             if ((isDateObject(val1) && isDateObject(val2)) ||
-                (isObject(val1) && isObject(val2)) ||
+                (index_esm_isObject(val1) && index_esm_isObject(val2)) ||
                 (Array.isArray(val1) && Array.isArray(val2))
                 ? !deepEqual(val1, val2)
                 : val1 !== val2) {
@@ -3539,10 +3551,10 @@ var objectHasFunction = (data) => {
 
 function markFieldsDirty(data, fields = {}) {
     const isParentNodeArray = Array.isArray(data);
-    if (isObject(data) || isParentNodeArray) {
+    if (index_esm_isObject(data) || isParentNodeArray) {
         for (const key in data) {
             if (Array.isArray(data[key]) ||
-                (isObject(data[key]) && !objectHasFunction(data[key]))) {
+                (index_esm_isObject(data[key]) && !objectHasFunction(data[key]))) {
                 fields[key] = Array.isArray(data[key]) ? [] : {};
                 markFieldsDirty(data[key], fields[key]);
             }
@@ -3555,10 +3567,10 @@ function markFieldsDirty(data, fields = {}) {
 }
 function getDirtyFieldsFromDefaultValues(data, formValues, dirtyFieldsFromValues) {
     const isParentNodeArray = Array.isArray(data);
-    if (isObject(data) || isParentNodeArray) {
+    if (index_esm_isObject(data) || isParentNodeArray) {
         for (const key in data) {
             if (Array.isArray(data[key]) ||
-                (isObject(data[key]) && !objectHasFunction(data[key]))) {
+                (index_esm_isObject(data[key]) && !objectHasFunction(data[key]))) {
                 if (isUndefined(formValues) ||
                     isPrimitive(dirtyFieldsFromValues[key])) {
                     dirtyFieldsFromValues[key] = Array.isArray(data[key])
@@ -3630,7 +3642,7 @@ var getRuleValue = (rule) => isUndefined(rule)
     ? rule
     : isRegex(rule)
         ? rule.source
-        : isObject(rule)
+        : index_esm_isObject(rule)
             ? isRegex(rule.value)
                 ? rule.value.source
                 : rule.value
@@ -3716,7 +3728,7 @@ function createFormControl(props = {}, flushRootRender) {
         errors: {},
     };
     let _fields = {};
-    let _defaultValues = isObject(_options.defaultValues) || isObject(_options.values)
+    let _defaultValues = index_esm_isObject(_options.defaultValues) || index_esm_isObject(_options.values)
         ? cloneObject(_options.defaultValues || _options.values) || {}
         : {};
     let _formValues = _options.shouldUnregister
@@ -5109,9 +5121,6 @@ var isBoolean_default = /*#__PURE__*/__webpack_require__.n(lodash_isBoolean);
 // EXTERNAL MODULE: ./node_modules/lodash/keys.js
 var keys = __webpack_require__(3674);
 var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
-// EXTERNAL MODULE: ./node_modules/lodash/isObject.js
-var lodash_isObject = __webpack_require__(3218);
-var isObject_default = /*#__PURE__*/__webpack_require__.n(lodash_isObject);
 // EXTERNAL MODULE: ./node_modules/lodash/isArray.js
 var isArray = __webpack_require__(1469);
 var isArray_default = /*#__PURE__*/__webpack_require__.n(isArray);
@@ -5527,7 +5536,12 @@ var filterOptions = function filterOptions(options, filterValue) {
   }
   return options;
 };
+;// CONCATENATED MODULE: ./helpers/is-empty-form.js
+var isEmptyForm = function isEmptyForm(form) {
+  return !form || !Array.isArray(form.fields) || form.fields.length === 0;
+};
 ;// CONCATENATED MODULE: ./helpers/index.js
+
 
 
 
@@ -5613,7 +5627,10 @@ var generator_update = injectStylesIntoStyleTag_default()(cjs_js_generator/* def
 
        /* harmony default export */ const generator = (cjs_js_generator/* default */.Z && cjs_js_generator/* default.locals */.Z.locals ? cjs_js_generator/* default.locals */.Z.locals : undefined);
 
+// EXTERNAL MODULE: external "antd"
+var external_antd_ = __webpack_require__(2721);
 ;// CONCATENATED MODULE: ./generator/index.js
+
 
 
 function generator_typeof(obj) { "@babel/helpers - typeof"; return generator_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, generator_typeof(obj); }
@@ -5644,6 +5661,7 @@ function generator_toPrimitive(input, hint) { if (generator_typeof(input) !== "o
 
 
 //import PropTypes from 'prop-types';
+
 
 
 
@@ -5683,16 +5701,17 @@ var errorToString = function errorToString(error) {
 //console.log('Fields---', Fields)
 
 var DEBUG_RENDER = true;
-var translateValidation = function translateValidation(validation) {
+var translateValidation = function translateValidation(validation, locale) {
   if (!isEmpty_default()(validation.message)) {
+    var errorMessage = isObject_default()(validation.message) && validation.message[locale] ? validation.message[locale] : validation.message.toString();
     var result = {};
     if (validation.required) {
-      result.required = validation.message;
+      result.required = errorMessage;
     }
     ['min', 'max', 'minLength', 'maxLength', 'pattern'].forEach(function (key) {
       result[key] = {
         value: validation[key],
-        message: validation.message
+        message: errorMessage
       };
     });
     return result;
@@ -5950,7 +5969,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       }
       var rules = translateValidation(generator_objectSpread({
         required: field.required
-      }, field.validation));
+      }, field.validation), locale);
       return /*#__PURE__*/external_react_default().createElement(Controller, {
         key: "field_".concat(field.name),
         name: field.name,
@@ -7117,6 +7136,11 @@ InputGroup.displayName = 'InputGroup';
 ;// CONCATENATED MODULE: ./react-bootstrap/input-text/index.js
 
 
+var input_text_excluded = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "inputType", "inputMode", "autocomplete", "disabled", "readOnly", "plaintext", "error", "required", "prefix", "postfix", "placeholder", "floatingLabel"];
+function input_text_extends() { input_text_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return input_text_extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = input_text_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function input_text_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -7133,6 +7157,9 @@ var TextInput = I18N(function (_ref) {
     onChange = _ref.onChange,
     onBlur = _ref.onBlur,
     size = _ref.size,
+    inputType = _ref.inputType,
+    inputMode = _ref.inputMode,
+    autocomplete = _ref.autocomplete,
     _ref$disabled = _ref.disabled,
     disabled = _ref$disabled === void 0 ? false : _ref$disabled,
     _ref$readOnly = _ref.readOnly,
@@ -7145,12 +7172,16 @@ var TextInput = I18N(function (_ref) {
     postfix = _ref.postfix,
     placeholder = _ref.placeholder,
     _ref$floatingLabel = _ref.floatingLabel,
-    floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel;
+    floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
+    rest = _objectWithoutProperties(_ref, input_text_excluded);
   var handleChange = (0,external_react_.useCallback)(function (e) {
     onChange(e.target.value);
   }, [onChange]);
-  var inner = /*#__PURE__*/external_react_default().createElement(esm_Form.Control, {
+  var inner = /*#__PURE__*/external_react_default().createElement(esm_Form.Control, input_text_extends({
     name: name,
+    type: inputType !== null && inputType !== void 0 ? inputType : 'text',
+    inputmode: inputMode,
+    autocomplete: autocomplete,
     value: value,
     plaintext: plaintext,
     onChange: handleChange,
@@ -7160,7 +7191,7 @@ var TextInput = I18N(function (_ref) {
     disabled: disabled,
     readOnly: readOnly,
     isInvalid: error != null
-  });
+  }, passRest(rest)));
   var innerGroup = inner;
   var needsGroup = postfix || prefix;
   if (needsGroup) {
@@ -7188,7 +7219,7 @@ function select_defineProperty(obj, key, value) { key = select_toPropertyKey(key
 function select_toPropertyKey(arg) { var key = select_toPrimitive(arg, "string"); return select_typeof(key) === "symbol" ? key : String(key); }
 function select_toPrimitive(input, hint) { if (select_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (select_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function select_extends() { select_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return select_extends.apply(this, arguments); }
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = select_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function select_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = select_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function select_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
@@ -7217,7 +7248,7 @@ var Select = I18N(function (_ref) {
     floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
     filterKey = _ref.filterKey,
     filterValue = _ref.filterValue,
-    rest = _objectWithoutProperties(_ref, select_excluded);
+    rest = select_objectWithoutProperties(_ref, select_excluded);
   var handleChange = (0,external_react_.useCallback)(function (e) {
     onChange(e.target.value !== placeholder ? e.target.value : undefined);
   }, [onChange, placeholder]);
@@ -7973,6 +8004,10 @@ var Slider = I18N(function (_ref) {
 ;// CONCATENATED MODULE: ./react-bootstrap/group/index.js
 
 ;// CONCATENATED MODULE: ./react-bootstrap/index.js
+var react_bootstrap_excluded = ["framework", "children"];
+function react_bootstrap_extends() { react_bootstrap_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_bootstrap_extends.apply(this, arguments); }
+function react_bootstrap_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_bootstrap_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function react_bootstrap_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
@@ -8036,7 +8071,15 @@ var FormGenerator = GenerateGenerator({
   Fields: Fields,
   Forms: Forms
 });
-/* harmony default export */ const react_bootstrap = (FormGenerator);
+var LetsForm = function LetsForm(_ref) {
+  var framework = _ref.framework,
+    children = _ref.children,
+    rest = react_bootstrap_objectWithoutProperties(_ref, react_bootstrap_excluded);
+  return /*#__PURE__*/React.createElement(FormGenerator, react_bootstrap_extends({
+    framework: "react-bootstrap"
+  }, rest), children);
+};
+/* harmony default export */ const react_bootstrap = (LetsForm);
 
 
 
