@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { GenerateGenerator } from "../generator";
 
 import { FormMaterialUI } from './form';

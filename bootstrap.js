@@ -2296,6 +2296,9 @@ __webpack_require__.d(__webpack_exports__, {
   "validateRulesDefinition": () => (/* reexport */ validateRulesDefinition)
 });
 
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(8156);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 // EXTERNAL MODULE: ./node_modules/lodash/omit.js
 var omit = __webpack_require__(7557);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
@@ -2305,9 +2308,6 @@ var isObject_default = /*#__PURE__*/__webpack_require__.n(isObject);
 // EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(1609);
 var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(8156);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 ;// CONCATENATED MODULE: ./node_modules/react-hook-form/dist/index.esm.mjs
 
 
@@ -8012,6 +8012,7 @@ function react_bootstrap_objectWithoutPropertiesLoose(source, excluded) { if (so
 
 
 
+
 var Fields = {
   'text-input': {
     'react-bootstrap': TextInput
@@ -8064,7 +8065,7 @@ var LetsForm = function LetsForm(_ref) {
   var framework = _ref.framework,
     children = _ref.children,
     rest = react_bootstrap_objectWithoutProperties(_ref, react_bootstrap_excluded);
-  return /*#__PURE__*/React.createElement(FormGenerator, react_bootstrap_extends({
+  return /*#__PURE__*/external_react_default().createElement(FormGenerator, react_bootstrap_extends({
     framework: "react-bootstrap"
   }, rest), children);
 };
