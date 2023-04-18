@@ -8428,22 +8428,26 @@ var SelectStates = function SelectStates(_ref) {
     _useState4 = select_states_slicedToArray(_useState3, 2),
     disabled = _useState4[0],
     setDisabled = _useState4[1];
+  console.log('[StateControl] re-render');
   (0,external_react_.useEffect)(function () {
+    console.log('[StateControl] applying effect');
     var fetchData = /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(c) {
         var res, _country;
         return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) switch (_context.prev = _context.next) {
             case 0:
-              _context.prev = 0;
-              _context.next = 3;
+              console.log('[StateControl] actually loading the states');
+              _context.prev = 1;
+              _context.next = 4;
               return fetch("".concat(LETS_FORM_COUNTRIES, "/").concat(c.toUpperCase(), ".json"));
-            case 3:
+            case 4:
               res = _context.sent;
-              _context.next = 6;
+              _context.next = 7;
               return res.json();
-            case 6:
+            case 7:
               _country = _context.sent;
+              console.log('[StateControl] states loaded', _country);
               setOptions(_country.provinces.map(function (province) {
                 return {
                   value: province,
@@ -8451,23 +8455,24 @@ var SelectStates = function SelectStates(_ref) {
                 };
               }));
               setDisabled(false);
-              _context.next = 14;
+              _context.next = 16;
               break;
-            case 11:
-              _context.prev = 11;
-              _context.t0 = _context["catch"](0);
+            case 13:
+              _context.prev = 13;
+              _context.t0 = _context["catch"](1);
               console.error("[LetsForm] Error fetching states for country ".concat(c));
-            case 14:
+            case 16:
             case "end":
               return _context.stop();
           }
-        }, _callee, null, [[0, 11]]);
+        }, _callee, null, [[1, 13]]);
       }));
       return function fetchData(_x2) {
         return _ref2.apply(this, arguments);
       };
     }();
     if (isString_default()(country) && !isEmpty_default()(country)) {
+      console.log('[StateControl] decided lo load');
       setDisabled(true);
       fetchData(country);
     }
