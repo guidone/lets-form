@@ -25,6 +25,7 @@ import { Multiselect } from './multiselect';
 import { MultiselectLanguage } from './multiselect-language';
 import { InputTextI18N } from './input-text-i18n';
 import { SelectStates } from './select-states';
+import { PlaceholderImage } from './placeholder-image';
 
 const Fields = {
   'text-input': {
@@ -92,6 +93,9 @@ const Fields = {
   },
   'select-states': {
     'react-rsuite5': SelectStates
+  },
+  'placeholder-image': {
+    'react-rsuite5': PlaceholderImage
   }
 };
 

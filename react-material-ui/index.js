@@ -8,6 +8,7 @@ import { Select } from './select';
 import { Toggle } from './toggle';
 import { Slider } from './slider';
 import { Placeholder } from './placeholder';
+import { PlaceholderImage } from './placeholder-image';
 import { Checkbox } from './checkbox';
 import { Rate } from './rate';
 import { Date } from './date';
@@ -48,6 +49,9 @@ const Fields = {
   },
   'group': {
     'react-material-ui': Group
+  },
+  'placeholder-image': {
+    'react-material-ui': PlaceholderImage
   }
 };
 

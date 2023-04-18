@@ -11,6 +11,7 @@ import { Select } from './select';
 import { RadioGroup } from './radio-group';
 import { Rate } from './rate';
 import { Placeholder } from './placeholder';
+import { PlaceholderImage } from './placeholder-image';
 import { InputNumber } from './input-number';
 import { Textarea } from './textarea';
 import { Multiselect } from './multiselect';
@@ -43,6 +44,9 @@ const Fields = {
   },
   'placeholder': {
     'react-antd': Placeholder
+  },
+  'placeholder-image': {
+    'react-antd': PlaceholderImage
   },
   'input-number': {
     'react-antd': InputNumber

@@ -100,6 +100,29 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-group{margin-bottom:var(--
 
 /***/ }),
 
+/***/ 2558:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-placeholder-image{min-height:20px}", "",{"version":3,"sources":["webpack://./common/placeholder-image/placeholder-image.scss"],"names":[],"mappings":"AAAA,8BACE,eAAA","sourcesContent":[".lf-control-placeholder-image {\n  min-height: 20px;\n\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ 1861:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -139,7 +162,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-di
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-two-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-two-columns .left{flex:1 0;align-self:auto;margin-right:10px}.lf-two-columns .right{margin-left:10px;flex:1 0;align-self:auto}.lf-two-columns.layout-1-2 .left{flex:1 0}.lf-two-columns.layout-1-2 .right{flex:2 0}.lf-two-columns.layout-1-3 .left{flex:1 0}.lf-two-columns.layout-1-3 .right{flex:3 0}.lf-two-columns.layout-1-4 .left{flex:1 0}.lf-two-columns.layout-1-4 .right{flex:4 0}.lf-two-columns.layout-1-5 .left{flex:1 0}.lf-two-columns.layout-1-5 .right{flex:4 0}.lf-two-columns.layout-2-1 .left{flex:2 0}.lf-two-columns.layout-2-1 .right{flex:1 0}.lf-two-columns.layout-3-1 .left{flex:3 0}.lf-two-columns.layout-3-1 .right{flex:1 0}.lf-two-columns.layout-4-1 .left{flex:4 0}.lf-two-columns.layout-4-1 .right{flex:1 0}.lf-two-columns.layout-5-1 .left{flex:4 0}.lf-two-columns.layout-5-1 .right{flex:1 0}.lf-two-columns.layout-3-2 .left{flex:3 0}.lf-two-columns.layout-3-2 .right{flex:2 0}.lf-two-columns.layout-2-3 .left{flex:2 0}.lf-two-columns.layout-2-3 .right{flex:3 0}.lf-form-react-rsuite5 .lf-two-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,gBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAEA,sBACE,QAAA,CACA,eAAA,CACA,iBAAA,CAGF,uBACE,gBAAA,CACA,QAAA,CACA,eAAA,CAIA,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAMJ,uCACE,oCAAA","sourcesContent":[".lf-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 10px;\n  }\n\n  .right {\n    margin-left: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n}\n\n.lf-form-react-rsuite5 {\n  .lf-two-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-two-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-two-columns .left{flex:1 0;align-self:auto;margin-right:10px}.lf-two-columns .right{margin-left:10px;flex:1 0;align-self:auto}.lf-two-columns.layout-1-2 .left{flex:1 0}.lf-two-columns.layout-1-2 .right{flex:2 0}.lf-two-columns.layout-1-3 .left{flex:1 0}.lf-two-columns.layout-1-3 .right{flex:3 0}.lf-two-columns.layout-1-4 .left{flex:1 0}.lf-two-columns.layout-1-4 .right{flex:4 0}.lf-two-columns.layout-1-5 .left{flex:1 0}.lf-two-columns.layout-1-5 .right{flex:4 0}.lf-two-columns.layout-2-1 .left{flex:2 0}.lf-two-columns.layout-2-1 .right{flex:1 0}.lf-two-columns.layout-3-1 .left{flex:3 0}.lf-two-columns.layout-3-1 .right{flex:1 0}.lf-two-columns.layout-4-1 .left{flex:4 0}.lf-two-columns.layout-4-1 .right{flex:1 0}.lf-two-columns.layout-5-1 .left{flex:4 0}.lf-two-columns.layout-5-1 .right{flex:1 0}.lf-two-columns.layout-3-2 .left{flex:3 0}.lf-two-columns.layout-3-2 .right{flex:2 0}.lf-two-columns.layout-2-3 .left{flex:2 0}.lf-two-columns.layout-2-3 .right{flex:3 0}.lf-two-columns.layout-0-1 .left{flex:0 0 auto}.lf-two-columns.layout-0-1 .right{flex:1 0}.lf-two-columns.layout-1-0 .left{flex:1 0}.lf-two-columns.layout-1-0 .right{flex:0 0 auto}.lf-form-react-rsuite5 .lf-two-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,gBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAEA,sBACE,QAAA,CACA,eAAA,CACA,iBAAA,CAGF,uBACE,gBAAA,CACA,QAAA,CACA,eAAA,CAIA,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,aAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,aAAA,CAMJ,uCACE,oCAAA","sourcesContent":[".lf-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 10px;\n  }\n\n  .right {\n    margin-left: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-0-1 {\n    .left {\n      flex: 0 0 auto;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-0 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0 auto;\n    }\n  }\n}\n\n.lf-form-react-rsuite5 {\n  .lf-two-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2288,6 +2311,7 @@ __webpack_require__.d(__webpack_exports__, {
   "getLocales": () => (/* reexport */ getLocales),
   "i18n": () => (/* reexport */ i18n),
   "isEmptyForm": () => (/* reexport */ isEmptyForm),
+  "isI18n": () => (/* reexport */ isI18n),
   "isValidDayjsFormat": () => (/* reexport */ isValidDayjsFormat),
   "mapFields": () => (/* reexport */ mapFields),
   "passRest": () => (/* reexport */ passRest),
@@ -5104,6 +5128,9 @@ var fillIds = function fillIds(fields) {
   });
 };
 
+// EXTERNAL MODULE: ./node_modules/lodash/isArray.js
+var isArray = __webpack_require__(1469);
+var isArray_default = /*#__PURE__*/__webpack_require__.n(isArray);
 // EXTERNAL MODULE: ./node_modules/lodash/isNumber.js
 var isNumber = __webpack_require__(1763);
 var isNumber_default = /*#__PURE__*/__webpack_require__.n(isNumber);
@@ -5113,13 +5140,17 @@ var isBoolean_default = /*#__PURE__*/__webpack_require__.n(lodash_isBoolean);
 // EXTERNAL MODULE: ./node_modules/lodash/keys.js
 var keys = __webpack_require__(3674);
 var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
-// EXTERNAL MODULE: ./node_modules/lodash/isArray.js
-var isArray = __webpack_require__(1469);
-var isArray_default = /*#__PURE__*/__webpack_require__.n(isArray);
 ;// CONCATENATED MODULE: ./costants.js
 var FRAMEWORKS = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd'];
 var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design'];
 var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
+;// CONCATENATED MODULE: ./helpers/is-i18n.js
+
+var isI18n = function isI18n(obj) {
+  return isObject_default()(obj) && Object.keys(obj).every(function (key) {
+    return key.length === 2 || key.length === 5;
+  });
+};
 ;// CONCATENATED MODULE: ./helpers/cleanup.js
 
 
@@ -5127,16 +5158,46 @@ var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
 
 
 
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-//import { FIELDS_KEY } from './fields-keys';
+function cleanup_typeof(obj) { "@babel/helpers - typeof"; return cleanup_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, cleanup_typeof(obj); }
+function cleanup_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function cleanup_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? cleanup_ownKeys(Object(source), !0).forEach(function (key) { cleanup_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : cleanup_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function cleanup_defineProperty(obj, key, value) { key = cleanup_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function cleanup_toPropertyKey(arg) { var key = cleanup_toPrimitive(arg, "string"); return cleanup_typeof(key) === "symbol" ? key : String(key); }
+function cleanup_toPrimitive(input, hint) { if (cleanup_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (cleanup_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 
+
+var collectEmptyKeys = function collectEmptyKeys(obj) {
+  return keys_default()(obj).filter(function (key) {
+    return isEmpty_default()(obj[key]) && !(isBoolean_default()(obj[key]) || isNumber_default()(obj[key]));
+  });
+};
+var removeEmptyKeys = function removeEmptyKeys(obj) {
+  // collect all empty keys
+  var emptyKeys = collectEmptyKeys(obj);
+  console.log('da ', obj, 'tolgo', emptyKeys);
+  // clone and remove id and empty keys
+  return omit_default()(obj, emptyKeys);
+};
+var removeUnusedLocalesFromI18n = function removeUnusedLocalesFromI18n(obj, locales) {
+  var keysToRemove = Object.keys(obj).filter(function (key) {
+    return !locales.includes(key);
+  });
+  return !isEmpty_default()(keysToRemove) ? omit_default()(obj, keysToRemove) : obj;
+};
+var removeUnusedLocalesFromObj = function removeUnusedLocalesFromObj(obj, locales) {
+  var cloned = cleanup_objectSpread({}, obj);
+  Object.keys(obj).forEach(function (key) {
+    if (isArray_default()(cloned[key])) {
+      cloned[key] = cloned[key].map(function (item) {
+        return removeUnusedLocalesFromObj(item, locales);
+      });
+    } else if (isI18n(cloned[key])) {
+      cloned[key] = removeUnusedLocalesFromI18n(cloned[key], locales);
+    }
+  });
+  return cloned;
+};
 
 /**
  * cleanUp
@@ -5145,42 +5206,43 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
  * @returns
  */
 var cleanUp = function cleanUp(json) {
-  if (isArray_default()(json)) {
-    return json.map(function (item) {
-      return cleanUp(item);
-    });
-  } else if (isObject_default()(json)) {
-    // collect all empty keys
-    var emptyKeys = keys_default()(json).filter(function (key) {
-      return isEmpty_default()(json[key]) && !(isBoolean_default()(json[key]) || isNumber_default()(json[key]));
-    });
-    // clone and remove id and empty keys
-    var cloned = omit_default()(json, ['id'].concat(_toConsumableArray(emptyKeys)));
-    // clean all platform subkeys
-    FRAMEWORKS.forEach(function (key) {
-      if (cloned[key]) {
-        cloned[key] = cleanUp(cloned[key]);
+  var emptyKeys = keys_default()(json).filter(function (key) {
+    return isEmpty_default()(json[key]) && !(isBoolean_default()(json[key]) || isNumber_default()(json[key]));
+  });
+  var cleanedUp = omit_default()(json, emptyKeys);
+  return cleanup_objectSpread(cleanup_objectSpread({}, cleanedUp), {}, {
+    fields: mapFields(json.fields, function (field) {
+      // clone and remove id
+      var cloned = omit_default()(field, 'id');
+      // clean all platform subkeys
+      FRAMEWORKS.forEach(function (key) {
+        if (cloned[key]) {
+          cloned[key] = removeEmptyKeys(cloned[key]);
+          // remove if empty after cleaning
+          if (Object.keys(cloned[key]).length === 0) {
+            delete cloned[key];
+          }
+        }
+      });
+      // collect all empty keys
+      cloned = removeEmptyKeys(field);
+      // cycle all keys and check if it's an i18n object
+      if (isArray_default()(json.locales) && !isEmpty_default()(json.locales)) {
+        cloned = removeUnusedLocalesFromObj(cloned, json.locales);
       }
-    });
-    // recurse for all fields keys
-    FIELDS_KEY.forEach(function (key) {
-      if (cloned[key]) {
-        cloned[key] = cleanUp(cloned[key]);
-      }
-    });
-    return cloned;
-  }
-  return json;
+      return cloned;
+    })
+  });
 };
 
 ;// CONCATENATED MODULE: ./helpers/add-field.js
 function add_field_typeof(obj) { "@babel/helpers - typeof"; return add_field_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, add_field_typeof(obj); }
-function add_field_toConsumableArray(arr) { return add_field_arrayWithoutHoles(arr) || add_field_iterableToArray(arr) || add_field_unsupportedIterableToArray(arr) || add_field_nonIterableSpread(); }
-function add_field_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function add_field_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return add_field_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return add_field_arrayLikeToArray(o, minLen); }
-function add_field_iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function add_field_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return add_field_arrayLikeToArray(arr); }
-function add_field_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function add_field_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function add_field_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? add_field_ownKeys(Object(source), !0).forEach(function (key) { add_field_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : add_field_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 function add_field_defineProperty(obj, key, value) { key = add_field_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -5195,14 +5257,14 @@ var addField = function addField(form, newField, id) {
       // if right field id, append to fields
       function (field) {
         if (field.id === id) {
-          return add_field_objectSpread(add_field_objectSpread({}, field), {}, add_field_defineProperty({}, target, [].concat(add_field_toConsumableArray(field[target] || []), [newField])));
+          return add_field_objectSpread(add_field_objectSpread({}, field), {}, add_field_defineProperty({}, target, [].concat(_toConsumableArray(field[target] || []), [newField])));
         }
         return field;
       })
     });
   } else {
     return add_field_objectSpread(add_field_objectSpread({}, form), {}, {
-      fields: [].concat(add_field_toConsumableArray(form.fields), [newField])
+      fields: [].concat(_toConsumableArray(form.fields), [newField])
     });
   }
 };
@@ -5533,6 +5595,7 @@ var isEmptyForm = function isEmptyForm(form) {
   return !form || !Array.isArray(form.fields) || form.fields.length === 0;
 };
 ;// CONCATENATED MODULE: ./helpers/index.js
+
 
 
 
@@ -7780,7 +7843,73 @@ var Group = I18N(function (_ref) {
   })))), (isOpen || !collapsible) && /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, children));
 }, ['label']);
 
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/placeholder-image/placeholder-image.scss
+var placeholder_image = __webpack_require__(2558);
+;// CONCATENATED MODULE: ./common/placeholder-image/placeholder-image.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var placeholder_image_options = {};
+
+placeholder_image_options.styleTagTransform = (styleTagTransform_default());
+placeholder_image_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      placeholder_image_options.insert = insertBySelector_default().bind(null, "head");
+    
+placeholder_image_options.domAPI = (styleDomAPI_default());
+placeholder_image_options.insertStyleElement = (insertStyleElement_default());
+
+var placeholder_image_update = injectStylesIntoStyleTag_default()(placeholder_image/* default */.Z, placeholder_image_options);
+
+
+
+
+       /* harmony default export */ const placeholder_image_placeholder_image = (placeholder_image/* default */.Z && placeholder_image/* default.locals */.Z.locals ? placeholder_image/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./common/placeholder-image/index.js
+
+
+
+// add maxHeight
+// generalize for all components
+// cleanup
+// spostare in layout
+
+var PlaceholderImage = function PlaceholderImage(_ref) {
+  var url = _ref.url,
+    label = _ref.label,
+    name = _ref.name,
+    maxWidth = _ref.maxWidth,
+    minHeight = _ref.minHeight,
+    marginTop = _ref.marginTop,
+    align = _ref.align;
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-control-placeholder-image",
+    style: {
+      textAlign: align ? align : undefined
+    }
+  }, url && /*#__PURE__*/external_react_default().createElement("img", {
+    src: url,
+    alt: label || name,
+    style: {
+      marginTop: marginTop ? marginTop : undefined,
+      maxWidth: maxWidth ? maxWidth : undefined,
+      minHeight: minHeight ? minHeight : undefined,
+      textAlign: align ? align : undefined
+    }
+  }));
+};
+
 ;// CONCATENATED MODULE: ./common/index.js
+
 
 
 
@@ -7800,6 +7929,8 @@ var PlaceholderBootstrap = I18N(function (_ref) {
     text: text
   }), hint && /*#__PURE__*/external_react_default().createElement(esm_Form.Text, null, hint));
 }, ['label', 'hint', 'text']);
+
+;// CONCATENATED MODULE: ./react-bootstrap/placeholder-image/index.js
 
 // EXTERNAL MODULE: external "dayjs"
 var external_dayjs_ = __webpack_require__(5760);
@@ -8013,6 +8144,7 @@ function react_bootstrap_objectWithoutPropertiesLoose(source, excluded) { if (so
 
 
 
+
 var Fields = {
   'text-input': {
     'react-bootstrap': TextInput
@@ -8031,6 +8163,9 @@ var Fields = {
   },
   'placeholder': {
     'react-bootstrap': PlaceholderBootstrap
+  },
+  'placeholder-image': {
+    'react-bootstrap': PlaceholderImage
   },
   'date': {
     'react-bootstrap': date_Date

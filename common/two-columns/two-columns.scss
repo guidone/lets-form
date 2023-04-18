@@ -108,6 +108,24 @@
       flex: 3 0;
     }
   }
+
+  &.layout-0-1 {
+    .left {
+      flex: 0 0 auto;
+    }
+    .right {
+      flex: 1 0;
+    }
+  }
+
+  &.layout-1-0 {
+    .left {
+      flex: 1 0;
+    }
+    .right {
+      flex: 0 0 auto;
+    }
+  }
 }
 
 .lf-form-react-rsuite5 {

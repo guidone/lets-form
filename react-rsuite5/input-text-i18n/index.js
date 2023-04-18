@@ -183,7 +183,7 @@ const InputTextI18N = (props) => {
             size="xs"
             readOnly={readOnly}
             value={currentLanguage}
-            placement="autoVerticalStart"
+            placement="autoVerticalEnd"
             placeholder="no tx"
             searchable={languageData.length > 20}
             renderValue={value => <span>{value}</span>}

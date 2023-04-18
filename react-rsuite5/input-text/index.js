@@ -23,6 +23,9 @@ const TextInput = I18N(
     onChange,
     onBlur,
     width,
+    autocomplete,
+    inputMode,
+    inputType,
     inside = false
   }) => {
     // TODO create a specific hook
@@ -38,6 +41,9 @@ const TextInput = I18N(
         onChange={onChange}
         onBlur={onBlur}
         disabled={disabled}
+        autoComplete={autocomplete}
+        inputMode={inputMode}
+        type={inputType}
         size={size}
         placeholder={placeholder}
         readOnly={readOnly}

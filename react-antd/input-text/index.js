@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { Form, Input } from 'antd';
 
 import { I18N } from '../../components';
+import { passRest } from '../../helpers';
 
 const TextInput = I18N(
   ({
@@ -58,7 +59,7 @@ const TextInput = I18N(
           showCount={showCount}
           maxLength={maxLength}
           style={_.isNumber(width) ? { width: `${width}px` } : undefined}
-          {...(_.omit(rest, 'lfFramework', 'lfComponent'))}
+          {...passRest(rest)}
         />
       </Form.Item>
     )

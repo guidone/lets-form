@@ -10,6 +10,7 @@ import { Toggle } from './toggle';
 import { CheckboxGroup } from './checkbox-group';
 import { RadioGroup } from './radio-group';
 import { Placeholder } from './placeholder';
+import { PlaceholderImage } from './placeholder-image';
 import { Date } from './date';
 import { Textarea } from './textarea';
 import { Slider } from './slider';
@@ -35,6 +36,9 @@ const Fields = {
   },
   'placeholder': {
     'react-bootstrap': Placeholder
+  },
+  'placeholder-image': {
+    'react-bootstrap': PlaceholderImage
   },
   'date': {
     'react-bootstrap': Date

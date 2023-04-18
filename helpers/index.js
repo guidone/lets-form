@@ -14,3 +14,4 @@ export * from './i18n';
 export * from './pass-rest';
 export * from './filter-options';
 export * from './is-empty-form';
+export * from './is-i18n';
