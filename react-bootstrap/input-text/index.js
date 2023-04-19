@@ -6,6 +6,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
 import { RequiredIcon ,I18N } from '../../components';
 import { passRest } from '../../helpers';
+import { TextOrIcon } from '../../common';
 
 // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -64,9 +65,9 @@ const TextInput = I18N(
     if (needsGroup) {
       innerGroup = (
         <InputGroup>
-          {prefix && <InputGroup.Text>{prefix}</InputGroup.Text>}
+          {prefix && <InputGroup.Text>{TextOrIcon(prefix)}</InputGroup.Text>}
           {inner}
-          {postfix && <InputGroup.Text>{postfix}</InputGroup.Text>}
+          {postfix && <InputGroup.Text>{TextOrIcon(postfix)}</InputGroup.Text>}
         </InputGroup>
       );
     }

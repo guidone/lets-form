@@ -1,0 +1,18 @@
+.lf-control-input-text {
+
+  .lf-prefix-icon {
+    max-height: 16px;
+  }
+
+  &.lf-size-small {
+    .lf-prefix-icon {
+      max-height: 12px;
+    }
+  }
+
+  &.lf-size-large {
+    .lf-prefix-icon {
+      max-height: 18px;
+    }
+  }
+}

@@ -1,9 +1,12 @@
 import React from 'react';
 import { Form, Input, InputGroup } from 'rsuite';
 import _ from 'lodash';
+import classNames from 'classnames';
 
 import { RequiredIcon, I18N } from '../../components';
+import { TextOrIcon } from '../../common';
 
+import './input-text.scss';
 
 const TextInput = I18N(
   ({
@@ -28,10 +31,9 @@ const TextInput = I18N(
     inputType,
     inside = false
   }) => {
-    // TODO create a specific hook
-    //const { locale } = useContext(FormContext);
 
-    //console.log('input text using locale', locale)
+
+
 
     const inner = (
       <Form.Control
@@ -54,7 +56,9 @@ const TextInput = I18N(
 
     const needsGroup = postfix || prefix;
     return (
-      <Form.Group controlId={name}>
+      <Form.Group
+        className={classNames('lf-control-input-text', `lf-size-${size}`)}
+      >
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
@@ -63,9 +67,9 @@ const TextInput = I18N(
         {!needsGroup && inner}
         {needsGroup && (
           <InputGroup inside={inside}>
-            {prefix && <InputGroup.Addon>{prefix}</InputGroup.Addon>}
+            {prefix && <InputGroup.Addon>{TextOrIcon(prefix)}</InputGroup.Addon>}
             {inner}
-            {postfix && <InputGroup.Addon>{postfix}</InputGroup.Addon>}
+            {postfix && <InputGroup.Addon>{TextOrIcon(postfix)}</InputGroup.Addon>}
           </InputGroup>
         )}
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}

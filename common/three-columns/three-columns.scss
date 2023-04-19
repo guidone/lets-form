@@ -18,21 +18,133 @@
   .left {
     flex: 1 0;
     align-self: auto;
-    margin-right: 10px;
+    margin-right: 20px;
   }
 
   .center {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 20px;
     flex: 1 0;
     align-self: auto;
   }
 
   .right {
-    margin-left: 10px;
     flex: 1 0;
     align-self: auto;
   }
+
+  .left:empty {
+    display: none;
+  }
+
+  &.layout-0-1-0 {
+    .left {
+      flex: 0 0;
+    }
+    .center {
+      flex: 1 0;
+    }
+    .right {
+      flex: 0 0;
+    }
+  }
+
+  &.layout-1-0-0 {
+    .left {
+      flex: 1 0;
+    }
+    .center {
+      flex: 0 0;
+    }
+    .right {
+      flex: 0 0;
+    }
+  }
+
+  &.layout-1-1-1 {
+    .left {
+      flex: 1 0;
+    }
+    .center {
+      flex: 1 0;
+    }
+    .right {
+      flex: 1 0;
+    }
+  }
+
+  &.layout-1-1-2 {
+    .left {
+      flex: 1 0;
+    }
+    .center {
+      flex: 1 0;
+    }
+    .right {
+      flex: 2 0;
+    }
+  }
+
+  &.layout-1-2-1 {
+    .left {
+      flex: 1 0;
+    }
+    .center {
+      flex: 2 0;
+    }
+    .right {
+      flex: 1 0;
+    }
+  }
+
+  &.layout-2-1-1 {
+    .left {
+      flex: 2 0;
+    }
+    .center {
+      flex: 1 0;
+    }
+    .right {
+      flex: 1 0;
+    }
+  }
+
+  &.layout-1-1-3 {
+    .left {
+      flex: 1 0;
+    }
+    .center {
+      flex: 1 0;
+    }
+    .right {
+      flex: 3 0;
+    }
+  }
+
+  &.layout-1-3-1 {
+    .left {
+      flex: 1 0;
+    }
+    .center {
+      flex: 3 0;
+    }
+    .right {
+      flex: 1 0;
+    }
+  }
+
+  &.layout-3-1-1 {
+    .left {
+      flex: 3 0;
+    }
+    .center {
+      flex: 1 0;
+    }
+    .right {
+      flex: 1 0;
+    }
+  }
+
+
 }
 
 .lf-form-react-rsuite5 {

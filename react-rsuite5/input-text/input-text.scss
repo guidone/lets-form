@@ -1,0 +1,31 @@
+.lf-control-input-text {
+
+  // this ensure the icon is centered vertically
+  .lf-prefix-icon {
+    max-height: 16px;
+  }
+
+  &.lf-size-lg {
+    .lf-prefix-icon {
+      max-height: 22px;
+    }
+  }
+
+  &.lf-size-md {
+    .lf-prefix-icon {
+      max-height: 16px;
+    }
+  }
+
+  &.lf-size-sm {
+    .lf-prefix-icon {
+      max-height: 10px;
+    }
+  }
+
+  &.lf-size-xs {
+    .lf-prefix-icon {
+      max-height: 4px;
+    }
+  }
+}

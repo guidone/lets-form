@@ -1,19 +1,20 @@
+/* eslint-disable no-new-func */
 import React, { useCallback, useState, useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import classNames from 'classnames';
-
-//import { DevTool } from '@hookform/devtools';
 import _ from 'lodash';
 
 import { ValidationErrors } from '../components';
 import { FRAMEWORKS } from '../costants';
 import { Warning  } from '../assets/icons';
-import { applyFormRules, reduceFields, validateRulesDefinition  } from '../helpers';
+import { reduceFields, applyTransformers, isI18n  } from '../helpers';
 //import PropTypes from 'prop-types';
 
 import FormContext from '../form-context';
 
 import './index.scss';
+
+const DEBUG_RENDER = true;
 
 const enrichWithLabels = (validationErrors, fields) => {
   const result = { ...validationErrors };
@@ -56,26 +57,47 @@ const errorToString = error => {
 }
 
 
-//console.log('Form---', Forms)
-//console.log('Fields---', Fields)
-
-const DEBUG_RENDER = true;
 
 const translateValidation = (validation, locale) => {
   if (!_.isEmpty(validation.message)) {
-    const errorMessage = _.isObject(validation.message) && validation.message[locale] ?
-      validation.message[locale] : validation.message.toString();
+    let errorMessage;
+    if (_.isString(validation.message)) {
+      errorMessage = validation.message;
+    } else if (isI18n(validation.message)) {
+      if (validation.message[locale]) {
+        errorMessage = validation.message[locale];
+      } else if (validation.message['en-US']) {
+        // otherwise default to english
+        errorMessage = validation.message['en-US'];
+      } else if (Object.keys(validation.message) !== 0) {
+        // otherwise get the first available translation
+        errorMessage = validation.message[Object.keys(validation.message)[0]];
+      } else {
+        errorMessage = 'Field is required';
+      }
+    }
 
     let result = {};
     if (validation.required) {
       result.required = errorMessage
     }
-    ['min', 'max', 'minLength', 'maxLength', 'pattern'].forEach(key => {
-      result[key] = {
-        value: validation[key],
-        message: errorMessage
+    // min / max validation
+    ['min', 'max', 'minLength', 'maxLength'].forEach(key => {
+      if (validation[key] != null) {
+        result[key] = {
+          value: validation[key],
+          message: errorMessage
+        }
       }
     });
+    // validation with regex
+    if (validation.pattern) {
+      result.pattern = {
+        value: new RegExp(validation.pattern),
+        message: errorMessage
+      };
+    }
+
     return result;
   }
   return validation;
@@ -96,23 +118,46 @@ const MissingComponent = ({ lfComponent, label, lfFramework }) => {
   );
 }
 
-// Collect all rules from the form and defined inside fields (useful in manifests)
-const collectRules = form => {
-  return reduceFields(
+const collectTransformers = form => {
+  const mainTransformer = !_.isEmpty(form.transformer) ?
+    makeTransformer(form.transformer) : null;
+
+  const collected = reduceFields(
     form.fields,
     (field, acc) => {
-      if (field.rules) {
-        const validation = validateRulesDefinition(field.rules);
-        if (validation == null) {
-          return [...acc, ...field.rules];
+      if (field.transformer) {
+        const transformer = makeTransformer(field.transformer);
+        if (transformer != null) {
+          return [...acc, transformer];
         } else {
-          console.error('Wrong rules format', field, ' errors: ', validation);
+          console.error('[LetForm] Wrong transformer', field.transformer);
         }
       }
       return acc;
     },
-    form.rules ?? []
+    []
   );
+
+  return mainTransformer != null ? [mainTransformer, ...(collected || [])] : collected;
+};
+
+
+const makeTransformer = (str) => {
+  if (_.isEmpty(str)) {
+    return null;
+  }
+  try {
+    return new Function(
+      'api',
+      'const { setValue, disable, enable, values, show, hide } = api;\n' +
+      str +
+      '\nreturn api.fields();' // leave /n or a comment can void anything
+    );
+  } catch(e) {
+    console.error(`LetsForm] Invalid JavaScript code for rules`, e);
+    console.error(`LetsForm] Transformer: `, str);
+    return null;
+  }
 };
 
 
@@ -347,6 +392,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           locale
         );
 
+        console.log('rule validation', rules)
+
         return (
           <Controller
             key={`field_${field.name}`}
@@ -416,32 +463,36 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     plaintext = false,
     hideToolbar = false,
     children,
-    className
+    className,
+
     //rules
   }) => {
     if (debug) {
       console.log(`[LetsForm] Render form (${form.name})`);
     }
     const { showErrors } = form;
-    const collectedRules = collectRules(form)
+    const [transformers, setTransformers] = useState(collectTransformers(form));
 
     const { handleSubmit, formState: { errors }, reset, control, getValues } = useForm({
       defaultValues,
       mode: form.validationMode
     });
     const [validationErrors, setValidationErrors] = useState();
-    // store form fields, apply immediately form rules (collected from all fields)
-    const [formRules, setFormRules] = useState(collectedRules);
+    // store form fields, apply immediately transformers (collected from all fields)
     const [formFields, setFormFields] = useState(
-      applyFormRules(form.fields, collectedRules, defaultValues)
+      applyTransformers(form.fields, transformers, defaultValues)
     );
 
     // update internal state if form changes
     useEffect(
       () => {
-        const collectedRules = collectRules(form);
-        setFormFields(applyFormRules(form.fields, collectedRules, defaultValues));
-        setFormRules(collectRules(form));
+        const newTransformers = collectTransformers(form);
+        console.log('collected newTransformers', newTransformers)
+        //        //const collectedRules = collectRules(form);
+        //const newTransformer = !_.isEmpty(form.transformer) ? makeTransformer(form.transformer) : null;
+        const newFormFields = applyTransformers(form.fields, newTransformers, defaultValues);
+        setFormFields(newFormFields);
+        setTransformers(newTransformers);
       },
       // eslint-disable-next-line react-hooks/exhaustive-deps
       [form] // don't put defaultValues here
@@ -449,7 +500,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const onHandleSubmit = useCallback(
       data => {
-        console.log('submitting', data)
         setValidationErrors(null);
         onSubmit(data);
       },
@@ -475,15 +525,14 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const handleChange = useCallback(
       (values) => {
-        console.log('on change nel main form', values, ' with rulkes', formRules)
-        // TODO rename to applyFieldsRules
-        const newFormFields = applyFormRules(formFields, formRules ?? [], values);
+        console.log('changed values, transformers?', transformers)
+        const newFormFields = applyTransformers(formFields, transformers, values);
         if (newFormFields !== formFields) {
           setFormFields(newFormFields);
         }
         onChange(values);
       },
-      [onChange, formFields, formRules]
+      [onChange, formFields, transformers]
     );
 
     if (debug) {

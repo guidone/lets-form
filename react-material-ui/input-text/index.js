@@ -5,6 +5,7 @@ import { FormControl, InputLabel, FormHelperText, InputAdornment } from '@mui/ma
 
 import { passRest } from '../../helpers';
 import { I18N } from '../../components';
+import { TextOrIcon } from '../../common';
 
 // DOC: https://mui.com/material-ui/api/input/
 
@@ -64,8 +65,8 @@ const TextInput = I18N(
             onChange={handleChange}
             type={inputType}
             InputProps={{
-              startAdornment: prefix ? <InputAdornment position="start">{prefix}</InputAdornment> : undefined,
-              endAdornment: postfix ? <InputAdornment position="end">{postfix}</InputAdornment>: undefined,
+              startAdornment: prefix ? <InputAdornment position="start">{TextOrIcon(prefix)}</InputAdornment> : undefined,
+              endAdornment: postfix ? <InputAdornment position="end">{TextOrIcon(postfix)}</InputAdornment>: undefined,
               disableUnderline,
               readOnly,
               autoComplete: autocomplete

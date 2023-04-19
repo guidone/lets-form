@@ -1,9 +1,14 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
 import { Form, Input } from 'antd';
+import classNames from 'classnames';
 
 import { I18N } from '../../components';
 import { passRest } from '../../helpers';
+import { TextOrIcon } from '../../common';
+
+import './input-text.scss';
+
 
 const TextInput = I18N(
   ({
@@ -36,6 +41,7 @@ const TextInput = I18N(
 
     return (
       <Form.Item
+        className={classNames('lf-control-input-text', `lf-size-${size}`)}
         label={label}
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}
@@ -51,8 +57,8 @@ const TextInput = I18N(
           onBlur={onBlur}
           value={value}
           size={size}
-          prefix={prefix}
-          suffix={postfix}
+          prefix={TextOrIcon(prefix)}
+          suffix={TextOrIcon(postfix)}
           allowClear={allowClear}
           bordered={bordered}
           disabled={disabled}

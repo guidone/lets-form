@@ -14,6 +14,7 @@ const PlaceholderImage = ({
   maxWidth,
   minHeight,
   marginTop,
+  marginBottom,
   align
 }) => {
   return (
@@ -29,6 +30,7 @@ const PlaceholderImage = ({
           alt={label || name}
           style={{
             marginTop: marginTop ? marginTop : undefined,
+            marginBottom: marginBottom ? marginBottom : undefined,
             maxWidth: maxWidth ? maxWidth : undefined,
             minHeight: minHeight ? minHeight : undefined,
             textAlign: align ? align : undefined

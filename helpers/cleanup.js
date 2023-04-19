@@ -13,7 +13,6 @@ _.keys(obj).filter(key => _.isEmpty(obj[key]) && !(_.isBoolean(obj[key]) || _.is
 const removeEmptyKeys = obj => {
   // collect all empty keys
   const emptyKeys = collectEmptyKeys(obj);
-  console.log('da ', obj, 'tolgo', emptyKeys)
   // clone and remove id and empty keys
   return _.omit(obj, emptyKeys);
 }
@@ -26,14 +25,15 @@ const removeUnusedLocalesFromI18n = (obj, locales) => {
 const removeUnusedLocalesFromObj = (obj, locales) => {
   let cloned = { ...obj };
   Object.keys(obj)
+    .filter(key => key !== 'rules') // don't apply to rules
     .forEach(key => {
       if (_.isArray(cloned[key])) {
         cloned[key] = cloned[key]
           .map(item => removeUnusedLocalesFromObj(item, locales));
       } else if (isI18n(cloned[key])) {
-      cloned[key] = removeUnusedLocalesFromI18n(cloned[key], locales);
-    }
-  });
+        cloned[key] = removeUnusedLocalesFromI18n(cloned[key], locales);
+      }
+    });
   return cloned;
 }
 
@@ -46,7 +46,6 @@ const removeUnusedLocalesFromObj = (obj, locales) => {
 const cleanUp = json => {
   const emptyKeys = _.keys(json).filter(key => _.isEmpty(json[key]) && !(_.isBoolean(json[key]) || _.isNumber(json[key])));
   const cleanedUp = _.omit(json, emptyKeys);
-
 
   return {
     ...cleanedUp,
@@ -71,7 +70,6 @@ const cleanUp = json => {
         if (_.isArray(json.locales) && !_.isEmpty(json.locales)) {
           cloned = removeUnusedLocalesFromObj(cloned, json.locales);
         }
-
         return cloned;
       }
     )
