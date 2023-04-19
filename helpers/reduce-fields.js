@@ -2,9 +2,9 @@ import _ from 'lodash';
 
 const reduceFields = (fields, predicate, accumulator = {}) => {
   if (_.isEmpty(fields) || !_.isArray(fields)) {
-    return null;
+    return accumulator;
   }
-  let result = accumulator;
+  let result = _.clone(accumulator);
   fields.forEach(field => {
     result = predicate(field, result);
     if (field.component === 'group') {

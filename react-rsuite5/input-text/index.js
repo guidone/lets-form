@@ -5,6 +5,7 @@ import classNames from 'classnames';
 
 import { RequiredIcon, I18N } from '../../components';
 import { TextOrIcon } from '../../common';
+import { passRest, makeWidthStyle } from '../../helpers';
 
 import './input-text.scss';
 
@@ -25,16 +26,14 @@ const TextInput = I18N(
     postfix,
     onChange,
     onBlur,
+    fullWidth,
     width,
     autocomplete,
     inputMode,
     inputType,
-    inside = false
+    inside = false,
+    ...rest
   }) => {
-
-
-
-
     const inner = (
       <Form.Control
         name={name}
@@ -49,8 +48,8 @@ const TextInput = I18N(
         size={size}
         placeholder={placeholder}
         readOnly={readOnly}
-        style={_.isNumber(width) ? { width: `${width}px` } : undefined}
         errorMessage={_.isString(error) ? error : undefined }
+        {...passRest(rest)}
       />
     );
 
@@ -58,6 +57,8 @@ const TextInput = I18N(
     return (
       <Form.Group
         className={classNames('lf-control-input-text', `lf-size-${size}`)}
+        //style={_.isNumber(width) ? { width: `${width}px` } : undefined}
+        style={makeWidthStyle(fullWidth, width)}
       >
         {label && <Form.ControlLabel>
           {label}

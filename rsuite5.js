@@ -1195,6 +1195,49 @@ module.exports = toKey;
 
 /***/ }),
 
+/***/ 6678:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseClone = __webpack_require__(5990);
+
+/** Used to compose bitmasks for cloning. */
+var CLONE_SYMBOLS_FLAG = 4;
+
+/**
+ * Creates a shallow clone of `value`.
+ *
+ * **Note:** This method is loosely based on the
+ * [structured clone algorithm](https://mdn.io/Structured_clone_algorithm)
+ * and supports cloning arrays, array buffers, booleans, date objects, maps,
+ * numbers, `Object` objects, regexes, sets, strings, symbols, and typed
+ * arrays. The own enumerable properties of `arguments` objects are cloned
+ * as plain objects. An empty object is returned for uncloneable values such
+ * as error objects, functions, DOM nodes, and WeakMaps.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to clone.
+ * @returns {*} Returns the cloned value.
+ * @see _.cloneDeep
+ * @example
+ *
+ * var objects = [{ 'a': 1 }, { 'b': 2 }];
+ *
+ * var shallow = _.clone(objects);
+ * console.log(shallow[0] === objects[0]);
+ * // => true
+ */
+function clone(value) {
+  return baseClone(value, CLONE_SYMBOLS_FLAG);
+}
+
+module.exports = clone;
+
+
+/***/ }),
+
 /***/ 7813:
 /***/ ((module) => {
 
@@ -2420,6 +2463,7 @@ __webpack_require__.d(__webpack_exports__, {
   "isI18n": () => (/* reexport */ isI18n),
   "isUrl": () => (/* reexport */ isUrl),
   "isValidDayjsFormat": () => (/* reexport */ isValidDayjsFormat),
+  "makeWidthStyle": () => (/* reexport */ makeWidthStyle),
   "mapFields": () => (/* reexport */ mapFields),
   "passRest": () => (/* reexport */ passRest),
   "reduceFields": () => (/* reexport */ reduceFields),
@@ -4776,6 +4820,9 @@ function useForm(props = {}) {
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
 var classnames = __webpack_require__(4184);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+// EXTERNAL MODULE: ./node_modules/lodash/isObject.js
+var lodash_isObject = __webpack_require__(3218);
+var isObject_default = /*#__PURE__*/__webpack_require__.n(lodash_isObject);
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(3379);
 var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
@@ -4829,17 +4876,37 @@ var update = injectStylesIntoStyleTag_default()(validation_errors/* default */.Z
 
 
 
+
+
+
+var tx = function tx(str, locale) {
+  if (isString_default()(str)) {
+    return str;
+  } else if (isObject_default()(str)) {
+    if (!isEmpty_default()(str[locale])) {
+      return str[locale];
+    } else if (!isEmpty_default()(str['en-US'])) {
+      return str['en-US'];
+    } else if (Object.keys(str).length !== 0) {
+      return str[Object.keys(str)[0]];
+    } else {
+      return '';
+    }
+  }
+};
 var ValidationErrors = function ValidationErrors(_ref) {
   var _ref$errors = _ref.errors,
     errors = _ref$errors === void 0 ? {} : _ref$errors,
-    className = _ref.className;
+    className = _ref.className,
+    locale = _ref.locale;
   var keys = Object.keys(errors);
+  console.log('re-renders', errors);
   return /*#__PURE__*/external_react_default().createElement("div", {
     className: classnames_default()('lf-validation-errors', className)
   }, keys.map(function (fieldName) {
     var label = fieldName;
     if (errors[fieldName] && errors[fieldName].ref && errors[fieldName].ref.label) {
-      label = errors[fieldName].ref.label;
+      label = tx(errors[fieldName].ref.label, locale);
     }
     return /*#__PURE__*/external_react_default().createElement("div", {
       key: fieldName
@@ -5274,9 +5341,6 @@ var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
 var FRAMEWORKS = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd'];
 var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design'];
 var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
-// EXTERNAL MODULE: ./node_modules/lodash/isObject.js
-var lodash_isObject = __webpack_require__(3218);
-var isObject_default = /*#__PURE__*/__webpack_require__.n(lodash_isObject);
 ;// CONCATENATED MODULE: ./helpers/is-i18n.js
 
 var isI18n = function isI18n(obj) {
@@ -5404,15 +5468,19 @@ var addField = function addField(form, newField, id) {
   }
 };
 
+// EXTERNAL MODULE: ./node_modules/lodash/clone.js
+var clone = __webpack_require__(6678);
+var clone_default = /*#__PURE__*/__webpack_require__.n(clone);
 ;// CONCATENATED MODULE: ./helpers/reduce-fields.js
+
 
 
 var reduceFields = function reduceFields(fields, predicate) {
   var accumulator = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
   if (isEmpty_default()(fields) || !isArray_default()(fields)) {
-    return null;
+    return accumulator;
   }
-  var result = accumulator;
+  var result = clone_default()(accumulator);
   fields.forEach(function (field) {
     result = predicate(field, result);
     if (field.component === 'group') {
@@ -5827,7 +5895,28 @@ var applyTransformers = function applyTransformers(fields, transformers, values)
 var isUrl = function isUrl(url) {
   return isString_default()(url) && url.match(/^http[s]{0,1}:\/\//);
 };
+;// CONCATENATED MODULE: ./helpers/make-width-style.js
+function make_width_style_typeof(obj) { "@babel/helpers - typeof"; return make_width_style_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, make_width_style_typeof(obj); }
+function make_width_style_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function make_width_style_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? make_width_style_ownKeys(Object(source), !0).forEach(function (key) { make_width_style_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : make_width_style_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function make_width_style_defineProperty(obj, key, value) { key = make_width_style_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function make_width_style_toPropertyKey(arg) { var key = make_width_style_toPrimitive(arg, "string"); return make_width_style_typeof(key) === "symbol" ? key : String(key); }
+function make_width_style_toPrimitive(input, hint) { if (make_width_style_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (make_width_style_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var makeWidthStyle = function makeWidthStyle(fullWidth, width) {
+  var style = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  if (fullWidth) {
+    return make_width_style_objectSpread(make_width_style_objectSpread({}, style), {}, {
+      width: '100%'
+    });
+  } else if (width) {
+    return make_width_style_objectSpread(make_width_style_objectSpread({}, style), {}, {
+      width: "".concat(parseInt(width, 10), "px")
+    });
+  }
+  return style;
+};
 ;// CONCATENATED MODULE: ./helpers/index.js
+
 
 
 
@@ -6285,10 +6374,12 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           index: index
         }, _component2) : _component2;
       }
+
+      // generate the validation rule, takes into account react-hook-form
+      // validation format and i18n strings
       var rules = translateValidation(generator_objectSpread({
         required: field.required
       }, field.validation), locale);
-      console.log('rule validation', rules);
       return /*#__PURE__*/external_react_default().createElement(Controller, {
         key: "field_".concat(field.name),
         name: field.name,
@@ -6396,9 +6487,6 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
     // update internal state if form changes
     (0,external_react_.useEffect)(function () {
       var newTransformers = collectTransformers(form);
-      console.log('collected newTransformers', newTransformers);
-      //        //const collectedRules = collectRules(form);
-      //const newTransformer = !_.isEmpty(form.transformer) ? makeTransformer(form.transformer) : null;
       var newFormFields = applyTransformers(form.fields, newTransformers, defaultValues);
       setFormFields(newFormFields);
       setTransformers(newTransformers);
@@ -6421,7 +6509,6 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       reset(defaultValues);
     }, [defaultValues, reset]);
     var handleChange = (0,external_react_.useCallback)(function (values) {
-      console.log('changed values, transformers?', transformers);
       var newFormFields = applyTransformers(formFields, transformers, values);
       if (newFormFields !== formFields) {
         setFormFields(newFormFields);
@@ -6445,6 +6532,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       className: classnames_default()('lf-lets-form', className)
     }, validationErrors && showErrors === 'groupedTop' && /*#__PURE__*/external_react_default().createElement(ValidationErrors, {
       className: "top",
+      locale: locale,
       errors: enrichWithLabels(validationErrors, formFields)
     }), /*#__PURE__*/external_react_default().createElement(Form, _extends({
       onSubmit: handleSubmit(onHandleSubmit, onHandleError),
@@ -6474,6 +6562,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       locale: locale
     }), children, validationErrors && (showErrors === 'groupedBottom' || isEmpty_default()(showErrors)) && /*#__PURE__*/external_react_default().createElement(ValidationErrors, {
       className: "bottom",
+      locale: locale,
       errors: enrichWithLabels(validationErrors, formFields)
     }))));
   }, function (prevProps, nextProps) {
@@ -6925,6 +7014,10 @@ var input_text_update = injectStylesIntoStyleTag_default()(input_text/* default 
 
 ;// CONCATENATED MODULE: ./react-rsuite5/input-text/index.js
 
+var _excluded = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside"];
+function input_text_extends() { input_text_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return input_text_extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
@@ -6952,13 +7045,15 @@ var TextInput = I18N(function (_ref) {
     postfix = _ref.postfix,
     onChange = _ref.onChange,
     onBlur = _ref.onBlur,
+    fullWidth = _ref.fullWidth,
     width = _ref.width,
     autocomplete = _ref.autocomplete,
     inputMode = _ref.inputMode,
     inputType = _ref.inputType,
     _ref$inside = _ref.inside,
-    inside = _ref$inside === void 0 ? false : _ref$inside;
-  var inner = /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
+    inside = _ref$inside === void 0 ? false : _ref$inside,
+    rest = _objectWithoutProperties(_ref, _excluded);
+  var inner = /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, input_text_extends({
     name: name,
     accepter: external_rsuite_.Input,
     value: value,
@@ -6971,14 +7066,14 @@ var TextInput = I18N(function (_ref) {
     size: size,
     placeholder: placeholder,
     readOnly: readOnly,
-    style: isNumber_default()(width) ? {
-      width: "".concat(width, "px")
-    } : undefined,
     errorMessage: isString_default()(error) ? error : undefined
-  });
+  }, passRest(rest)));
   var needsGroup = postfix || prefix;
   return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
     className: classnames_default()('lf-control-input-text', "lf-size-".concat(size))
+    //style={_.isNumber(width) ? { width: `${width}px` } : undefined}
+    ,
+    style: makeWidthStyle(fullWidth, width)
   }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
     tooltip: true
   }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup, {
@@ -7060,15 +7155,15 @@ var ToggleInput = I18N(function (_ref) {
 ;// CONCATENATED MODULE: ./react-rsuite5/select/index.js
 function select_typeof(obj) { "@babel/helpers - typeof"; return select_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, select_typeof(obj); }
 
-var _excluded = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue"];
+var select_excluded = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue"];
 function select_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function select_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? select_ownKeys(Object(source), !0).forEach(function (key) { select_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : select_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 function select_defineProperty(obj, key, value) { key = select_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function select_toPropertyKey(arg) { var key = select_toPrimitive(arg, "string"); return select_typeof(key) === "symbol" ? key : String(key); }
 function select_toPrimitive(input, hint) { if (select_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (select_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function select_extends() { select_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return select_extends.apply(this, arguments); }
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+function select_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = select_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function select_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
@@ -7102,7 +7197,7 @@ var Select = I18N(function (_ref) {
     appearance = _ref.appearance,
     filterKey = _ref.filterKey,
     filterValue = _ref.filterValue,
-    rest = _objectWithoutProperties(_ref, _excluded);
+    rest = select_objectWithoutProperties(_ref, select_excluded);
   return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
     controlId: name
   }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
@@ -7762,7 +7857,7 @@ var SliderRsuite = I18N(function (_ref) {
   }, rest)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 }, ['label', 'hint', 'placeholder'], {
   marks: function marks(value, i18n) {
-    return value.map(function (value) {
+    return (Array.isArray(value) ? value : []).map(function (value) {
       return slider_objectSpread(slider_objectSpread({}, value), {}, {
         label: i18n(value.label)
       });

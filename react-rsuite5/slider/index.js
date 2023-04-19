@@ -66,7 +66,9 @@ const SliderRsuite = I18N(
   },
   ['label', 'hint', 'placeholder'],
   {
-    marks: (value, i18n) => value.map(value => ({ ...value, label: i18n(value.label) }))
+    marks: (value, i18n) => {
+      return (Array.isArray(value) ? value : []).map(value => ({ ...value, label: i18n(value.label) }))
+    }
   }
 );
 

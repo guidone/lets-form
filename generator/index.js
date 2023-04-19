@@ -383,7 +383,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           return GroupWrapper ? <GroupWrapper key={`wrapper_${field.name}`} field={field} level={level} index={index}>{component}</GroupWrapper> : component;
         }
 
-
+        // generate the validation rule, takes into account react-hook-form
+        // validation format and i18n strings
         const rules = translateValidation(
           {
             required: field.required,
@@ -391,8 +392,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           },
           locale
         );
-
-        console.log('rule validation', rules)
 
         return (
           <Controller
@@ -487,9 +486,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     useEffect(
       () => {
         const newTransformers = collectTransformers(form);
-        console.log('collected newTransformers', newTransformers)
-        //        //const collectedRules = collectRules(form);
-        //const newTransformer = !_.isEmpty(form.transformer) ? makeTransformer(form.transformer) : null;
         const newFormFields = applyTransformers(form.fields, newTransformers, defaultValues);
         setFormFields(newFormFields);
         setTransformers(newTransformers);
@@ -525,7 +521,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const handleChange = useCallback(
       (values) => {
-        console.log('changed values, transformers?', transformers)
         const newFormFields = applyTransformers(formFields, transformers, values);
         if (newFormFields !== formFields) {
           setFormFields(newFormFields);
@@ -552,7 +547,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       }}>
         <div className={classNames('lf-lets-form', className)}>
           {validationErrors && showErrors === 'groupedTop' && (
-            <ValidationErrors className="top" errors={enrichWithLabels(validationErrors, formFields)}/>
+            <ValidationErrors
+              className="top"
+              locale={locale}
+              errors={enrichWithLabels(validationErrors, formFields)}
+            />
           )}
           <Form
             onSubmit={handleSubmit(onHandleSubmit, onHandleError)}
@@ -584,7 +583,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             })}
             {children}
             {validationErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (
-              <ValidationErrors className="bottom" errors={enrichWithLabels(validationErrors, formFields)}/>
+              <ValidationErrors
+                className="bottom"
+                locale={locale}
+                errors={enrichWithLabels(validationErrors, formFields)}
+              />
             )}
           </Form>
         </div>

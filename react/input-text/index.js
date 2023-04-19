@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import _ from 'lodash';
 
 import { RequiredIcon } from '../../components';
-
+import { makeWidthStyle, passRest } from '../../helpers';
 
 const TextInput = ({
   name,
@@ -16,7 +16,9 @@ const TextInput = ({
   readOnly,
   required,
   size,
-  width
+  width,
+  fullWidth,
+  ...rest
 }) => {
   const hasError = error && _.isString(error);
   const handleChange = useCallback(
@@ -36,11 +38,13 @@ const TextInput = ({
         value={value}
         onChange={handleChange}
         onBlur={onBlur}
-        className={size && `lf-form-react-input-${size}`}
-        style={(!size || size === 'custom') && _.isNumber(width) ? { width: `${width}px`} : undefined}
+        style={makeWidthStyle(fullWidth, width)}
+        //className={size && `lf-form-react-input-${size}`}
+        //style={(!size || size === 'custom') && _.isNumber(width) ? { width: `${width}px`} : undefined}
         required={error != null}
         disabled={disabled}
         readOnly={readOnly}
+        {...passRest(rest)}
       />
       {hint && !hasError && <div className="lf-form-react-message">{hint}</div>}
       {hasError && <div className="lf-form-react-error-message">{error}</div>}

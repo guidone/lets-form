@@ -4,7 +4,7 @@ import { Form, Input } from 'antd';
 import classNames from 'classnames';
 
 import { I18N } from '../../components';
-import { passRest } from '../../helpers';
+import { passRest, makeWidthStyle } from '../../helpers';
 import { TextOrIcon } from '../../common';
 
 import './input-text.scss';
@@ -31,6 +31,7 @@ const TextInput = I18N(
     bordered,
     onChange,
     onBlur,
+    fullWidth,
     width,
     ...rest
   }) => {
@@ -64,7 +65,7 @@ const TextInput = I18N(
           disabled={disabled}
           showCount={showCount}
           maxLength={maxLength}
-          style={_.isNumber(width) ? { width: `${width}px` } : undefined}
+          style={makeWidthStyle(fullWidth, width)}
           {...passRest(rest)}
         />
       </Form.Item>

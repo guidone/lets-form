@@ -5,10 +5,12 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
 import { RequiredIcon ,I18N } from '../../components';
-import { passRest } from '../../helpers';
+import { passRest, makeWidthStyle } from '../../helpers';
 import { TextOrIcon } from '../../common';
 
 // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
+
+
 
 const TextInput = I18N(
   ({
@@ -30,6 +32,8 @@ const TextInput = I18N(
     prefix,
     postfix,
     placeholder,
+    fullWidth,
+    width,
     floatingLabel = false,
     ...rest
   }) => {
@@ -56,6 +60,7 @@ const TextInput = I18N(
         disabled={disabled}
         readOnly={readOnly}
         isInvalid={error != null}
+        style={makeWidthStyle(fullWidth, width)}
         {...passRest(rest)}
       />
     );
