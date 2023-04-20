@@ -119,14 +119,25 @@ const MissingComponent = ({ lfComponent, label, lfFramework }) => {
 }
 
 const collectTransformers = form => {
+  const fieldList = reduceFields(
+    form.fields,
+    (field, accumulator) => {
+      if (field.component !== 'group' && field.component !== 'two-columns' && field.component !== 'three-columns') {
+        return [...accumulator, field.name];
+      }
+      return accumulator;
+    },
+    []
+  );
+
   const mainTransformer = !_.isEmpty(form.transformer) ?
-    makeTransformer(form.transformer) : null;
+    makeTransformer(form.transformer, fieldList) : null;
 
   const collected = reduceFields(
     form.fields,
     (field, acc) => {
       if (field.transformer) {
-        const transformer = makeTransformer(field.transformer);
+        const transformer = makeTransformer(field.transformer, fieldList);
         if (transformer != null) {
           return [...acc, transformer];
         } else {
@@ -142,14 +153,19 @@ const collectTransformers = form => {
 };
 
 
-const makeTransformer = (str) => {
+const makeTransformer = (str, fieldList) => {
   if (_.isEmpty(str)) {
     return null;
   }
   try {
+    let spreadVars = '';
+    if (!_.isEmpty(fieldList)) {
+      spreadVars = 'const { ' + fieldList.join(', ') + ' } = values;\n';
+    }
     return new Function(
       'api',
-      'const { setValue, disable, enable, values, show, hide } = api;\n' +
+      `const { setValue, disable, enable, values, show, hide } = api;\n` +
+      spreadVars +
       str +
       '\nreturn api.fields();' // leave /n or a comment can void anything
     );

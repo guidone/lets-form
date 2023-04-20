@@ -5755,7 +5755,11 @@ var applyTransformers = function applyTransformers(fields, transformers, values)
       return isFunction_default()(transformer);
     }).forEach(function (transformer) {
       var api = new ApiFactory(fields, values);
-      newFields = transformer(api);
+      try {
+        newFields = transformer(api);
+      } catch (e) {
+        console.error('[LetsForm] Error on transformer: ', e);
+      }
     });
     return newFields;
   }
@@ -6003,10 +6007,16 @@ var MissingComponent = function MissingComponent(_ref) {
   }, lfComponent), " (", /*#__PURE__*/external_react_default().createElement("em", null, "\"", label, "\""), ") is not available for this framework (", /*#__PURE__*/external_react_default().createElement("b", null, lfFramework), ")"));
 };
 var collectTransformers = function collectTransformers(form) {
-  var mainTransformer = !isEmpty_default()(form.transformer) ? makeTransformer(form.transformer) : null;
+  var fieldList = reduceFields(form.fields, function (field, accumulator) {
+    if (field.component !== 'group' && field.component !== 'two-columns' && field.component !== 'three-columns') {
+      return [].concat(generator_toConsumableArray(accumulator), [field.name]);
+    }
+    return accumulator;
+  }, []);
+  var mainTransformer = !isEmpty_default()(form.transformer) ? makeTransformer(form.transformer, fieldList) : null;
   var collected = reduceFields(form.fields, function (field, acc) {
     if (field.transformer) {
-      var transformer = makeTransformer(field.transformer);
+      var transformer = makeTransformer(field.transformer, fieldList);
       if (transformer != null) {
         return [].concat(generator_toConsumableArray(acc), [transformer]);
       } else {
@@ -6017,12 +6027,16 @@ var collectTransformers = function collectTransformers(form) {
   }, []);
   return mainTransformer != null ? [mainTransformer].concat(generator_toConsumableArray(collected || [])) : collected;
 };
-var makeTransformer = function makeTransformer(str) {
+var makeTransformer = function makeTransformer(str, fieldList) {
   if (isEmpty_default()(str)) {
     return null;
   }
   try {
-    return new Function('api', 'const { setValue, disable, enable, values, show, hide } = api;\n' + str + '\nreturn api.fields();' // leave /n or a comment can void anything
+    var spreadVars = '';
+    if (!isEmpty_default()(fieldList)) {
+      spreadVars = 'const { ' + fieldList.join(', ') + ' } = values;\n';
+    }
+    return new Function('api', "const { setValue, disable, enable, values, show, hide } = api;\n" + spreadVars + str + '\nreturn api.fields();' // leave /n or a comment can void anything
     );
   } catch (e) {
     console.error("LetsForm] Invalid JavaScript code for rules", e);

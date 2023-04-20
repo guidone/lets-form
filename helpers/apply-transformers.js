@@ -115,7 +115,11 @@ const applyTransformers = (fields, transformers, values) => {
       .filter(transformer => _.isFunction(transformer))
       .forEach(transformer => {
         const api = new ApiFactory(fields, values);
-        newFields = transformer(api);
+        try {
+          newFields = transformer(api);
+        } catch(e) {
+          console.error('[LetsForm] Error on transformer: ', e);
+        }
       });
 
     return newFields;
