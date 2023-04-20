@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="https://github.com/guidone/lets-form/raw/master/docs/logo/redbot-logo.svg">
+  <img width="300" src="https://raw.githubusercontent.com/guidone/lets-form/main/scripts/assets/logo-ext%403x.png">
 </p>
