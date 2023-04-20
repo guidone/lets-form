@@ -1,2 +1,3 @@
-# lets-form
-A JSON form generator for React with Material UI / AntDesign / Bootstrap / RSuite
+<p align="center">
+  <img src="https://github.com/guidone/lets-form/raw/master/docs/logo/redbot-logo.svg">
+</p>
