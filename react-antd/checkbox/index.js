@@ -38,6 +38,7 @@ const CheckboxAntd = I18N(
       <Form.Item
         name={name}
         className="lt-control-checkbox"
+        data-lf-field-name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}
         hasFeedback={error != null}
         validateStatus={error ? 'error': undefined}

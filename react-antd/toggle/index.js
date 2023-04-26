@@ -37,6 +37,8 @@ const Toggle = I18N(
 
     return (
       <Form.Item
+        data-lf-field-name={name}
+        className="lf-control-toggle"
         label={label}
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}

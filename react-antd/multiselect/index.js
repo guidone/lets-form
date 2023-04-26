@@ -39,6 +39,8 @@ const Multiselect = I18N(
     return (
       <Form.Item
         label={label}
+        data-lf-field-name={name}
+        className="lf-control-multiselect"
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}
         required={required}

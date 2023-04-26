@@ -39,7 +39,10 @@ const Toggle = I18N(
     );
 
     return (
-      <FormGroup>
+      <FormGroup
+        data-lf-field-name={name}
+        className="lf-control-toggle"
+      >
         {label && (
           <FormControlLabel
             labelPlacement={labelPlacement ? labelPlacement : undefined}

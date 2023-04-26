@@ -39,6 +39,8 @@ const SelectAntd = I18N(
   }) => {
     return (
       <Form.Item
+        data-lf-field-name={name}
+        className="lf-control-select"
         label={label}
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}

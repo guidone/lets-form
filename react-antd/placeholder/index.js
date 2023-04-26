@@ -6,6 +6,7 @@ import { I18N } from '../../components';
 
 const PlaceholderAntd = I18N(
   ({
+    name,
     hint,
     text,
     tooltip,
@@ -14,6 +15,7 @@ const PlaceholderAntd = I18N(
     return (
       <Form.Item
         label={label}
+        data-lf-field-name={name}
         help={hint && !tooltip ? hint : undefined}
         tooltip={tooltip && hint}
         className="lf-control-placeholder"

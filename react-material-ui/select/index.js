@@ -40,7 +40,10 @@ const MuiSelect = I18N(
     const filteredOptions = filterOptions(options, filterValue, filterKey);
 
     return (
-      <div className="lf-control-select">
+      <div
+        className="lf-control-select"
+        data-lf-field-name={name}
+      >
         <FormControl
           size={size}
           disabled={disabled}

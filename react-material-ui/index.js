@@ -15,6 +15,8 @@ import { Date } from './date';
 import { ThreeColumns } from './three-columns';
 import { TwoColumns } from './two-columns';
 import { Group } from './group';
+import { Divider } from './divider';
+import { ReactView } from './react-view';
 
 const Fields = {
   'text-input': {
@@ -52,6 +54,12 @@ const Fields = {
   },
   'placeholder-image': {
     'react-material-ui': PlaceholderImage
+  },
+  'divider': {
+    'react-material-ui': Divider
+  },
+  'react-view': {
+    'react-material-ui': ReactView
   }
 };
 

@@ -9,6 +9,8 @@ import { Textarea } from './textarea';
 import { ThreeColumns } from './three-columns';
 import { TwoColumns } from './two-columns';
 import { Group } from './group';
+import { Divider } from './divider';
+import { ReactView } from './react-view';
 
 const Fields = {
   'text-input': {
@@ -28,6 +30,12 @@ const Fields = {
   },
   'group': {
     'react': Group
+  },
+  'divider': {
+    'react': Divider
+  },
+  'react-view': {
+    'react': ReactView
   }
 };
 

@@ -19,7 +19,10 @@ const Checkbox = ({
   const hasError = error && _.isString(error);
 
   return (
-    <div className="lf-form-react-control-group">
+    <div
+      className="lf-control-checkbox lf-form-react-control-group"
+      data-lf-field-name={name}
+    >
       <label for={name} className="lf-form-react-checkbox">
         <input
           type="checkbox"

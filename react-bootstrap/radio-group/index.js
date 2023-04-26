@@ -41,6 +41,7 @@ const RadioGroupBootstrap = I18N(
     return (
       <Form.Group
         className="lf-control-radio-group mb-3"
+        data-lf-field-name={name}
       >
         <Form.Label>
           {label}

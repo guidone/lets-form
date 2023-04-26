@@ -251,6 +251,7 @@ const DateAntd = I18N(
         label={label}
         // not needed, breaks in case date is set
         //name={name}
+        data-lf-field-name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}
         required={required}
         tooltip={tooltip && hint}

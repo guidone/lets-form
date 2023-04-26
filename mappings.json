@@ -1,0 +1,1022 @@
+{
+  "text-input": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "placeholder": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "fullWidth": [
+      "react",
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "width": [
+      "react",
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "size": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "prefix": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "inside": [
+      "react-rsuite5"
+    ],
+    "postfix": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "tooltip": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "floatingLabel": [
+      "react-material-ui",
+      "react-bootstrap"
+    ],
+    "disableUnderline": [
+      "react-material-ui"
+    ],
+    "variant": [
+      "react-material-ui"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
+    "showCount": [
+      "react-antd"
+    ],
+    "maxLength": [
+      "react-antd"
+    ],
+    "allowClear": [
+      "react-antd"
+    ],
+    "bordered": [
+      "react-antd"
+    ],
+    "inputMode": null,
+    "autocomplete": null,
+    "inputType": null,
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "toggle": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "size": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-antd"
+    ],
+    "checkedChildren": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "unCheckedChildren": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "tooltip": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
+    "labelPlacement": [
+      "react-material-ui"
+    ],
+    "disableRipple": [
+      "react-material-ui"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "select": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "placeholder": null,
+    "options": null,
+    "filterKey": null,
+    "filterValue": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "placement": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "size": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "block": [
+      "react-rsuite5"
+    ],
+    "searchable": [
+      "react-rsuite5"
+    ],
+    "cleanable": [
+      "react-rsuite5"
+    ],
+    "tooltip": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "appearance": [
+      "react-rsuite5"
+    ],
+    "autoWidth": [
+      "react-material-ui"
+    ],
+    "fullWidth": [
+      "react-material-ui"
+    ],
+    "width": [
+      "react-material-ui",
+      "react-antd"
+    ],
+    "floatingLabel": [
+      "react-material-ui",
+      "react-bootstrap"
+    ],
+    "variant": [
+      "react-material-ui"
+    ],
+    "allowClear": [
+      "react-antd"
+    ],
+    "bordered": [
+      "react-antd"
+    ],
+    "showSearch": [
+      "react-antd"
+    ],
+    "showArrow": [
+      "react-antd"
+    ],
+    "virtual": [
+      "react-antd"
+    ],
+    "listHeight": [
+      "react-antd"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "group": {
+    "name": null,
+    "label": null,
+    "hidden": null,
+    "align": null,
+    "collapsible": null,
+    "open": null,
+    "bottomBorder": null
+  },
+  "two-columns": {
+    "name": null,
+    "layout": null,
+    "leftAlignment": null,
+    "rightAlignment": null,
+    "hidden": null
+  },
+  "three-columns": {
+    "name": null,
+    "layout": null,
+    "leftAlignment": null,
+    "centerAlignment": null,
+    "rightAlignment": null,
+    "hidden": null
+  },
+  "array": {
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "input-number": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "placeholder": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "size": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "width": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "allowClear": [
+      "react-rsuite5"
+    ],
+    "min": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "step": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "max": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "prefix": [
+      "react-rsuite5"
+    ],
+    "inside": [
+      "react-rsuite5"
+    ],
+    "postfix": [
+      "react-rsuite5"
+    ],
+    "tooltip": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "showControls": [
+      "react-antd"
+    ],
+    "stringMode": [
+      "react-antd"
+    ],
+    "bordered": [
+      "react-antd"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "slider": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "tooltip": [
+      "react-rsuite5"
+    ],
+    "min": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "step": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "max": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "vertical": [
+      "react-rsuite5"
+    ],
+    "progress": [
+      "react-rsuite5"
+    ],
+    "showTooltip": [
+      "react-rsuite5"
+    ],
+    "graduated": [
+      "react-rsuite5"
+    ],
+    "marks": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "size": [
+      "react-material-ui"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
+    "fullWidth": [
+      "react-material-ui"
+    ],
+    "width": [
+      "react-material-ui"
+    ],
+    "valueLabelDisplay": [
+      "react-material-ui"
+    ],
+    "showMarks": [
+      "react-material-ui"
+    ],
+    "customMarks": [
+      "react-material-ui"
+    ],
+    "keyboard": [
+      "react-antd"
+    ],
+    "dots": [
+      "react-antd"
+    ],
+    "reverse": [
+      "react-antd"
+    ],
+    "tooltipOpen": [
+      "react-antd"
+    ],
+    "tooltipPlacement": [
+      "react-antd"
+    ],
+    "included": [
+      "react-antd"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "date": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "placeholder": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "format": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-antd"
+    ],
+    "block": [
+      "react-rsuite5"
+    ],
+    "cleanable": [
+      "react-rsuite5"
+    ],
+    "editable": [
+      "react-rsuite5"
+    ],
+    "oneTap": [
+      "react-rsuite5"
+    ],
+    "showMeridian": [
+      "react-rsuite5"
+    ],
+    "showWeekNumbers": [
+      "react-rsuite5"
+    ],
+    "isoWeek": [
+      "react-rsuite5"
+    ],
+    "size": [
+      "react-rsuite5",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "appearance": [
+      "react-rsuite5"
+    ],
+    "placement": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "fullWidth": [
+      "react-material-ui"
+    ],
+    "disableFuture": [
+      "react-material-ui"
+    ],
+    "disableHighlightToday": [
+      "react-material-ui"
+    ],
+    "disableOpenPicker": [
+      "react-material-ui"
+    ],
+    "disablePast": [
+      "react-material-ui"
+    ],
+    "displayWeekNumber": [
+      "react-material-ui"
+    ],
+    "reduceAnimations": [
+      "react-material-ui"
+    ],
+    "showDaysOutsideCurrentMonth": [
+      "react-material-ui"
+    ],
+    "maxDate": [
+      "react-material-ui"
+    ],
+    "minDate": [
+      "react-material-ui"
+    ],
+    "prefix": [
+      "react-bootstrap"
+    ],
+    "postfix": [
+      "react-bootstrap"
+    ],
+    "floatingLabel": [
+      "react-bootstrap"
+    ],
+    "width": [
+      "react-antd"
+    ],
+    "bordered": [
+      "react-antd"
+    ],
+    "allowClear": [
+      "react-antd"
+    ],
+    "tooltip": [
+      "react-antd"
+    ],
+    "showTime": [
+      "react-antd"
+    ],
+    "showNow": [
+      "react-antd"
+    ],
+    "showToday": [
+      "react-antd"
+    ],
+    "picker": [
+      "react-antd"
+    ],
+    "mode": [
+      "react-antd"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "checkbox": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "indeterminate": [
+      "react-rsuite5"
+    ],
+    "size": [
+      "react-material-ui"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
+    "labelPlacement": [
+      "react-material-ui"
+    ],
+    "disableRipple": [
+      "react-material-ui"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "checkbox-group": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "options": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "inline": [
+      "react-rsuite5",
+      "react-bootstrap"
+    ],
+    "tooltip": [
+      "react-rsuite5"
+    ],
+    "reverse": [
+      "react-bootstrap"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "radio-group": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "options": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "inline": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "tooltip": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "optionType": [
+      "react-antd"
+    ],
+    "size": [
+      "react-antd"
+    ]
+  },
+  "input-tag": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "trigger": [
+      "react-rsuite5"
+    ],
+    "block": [
+      "react-rsuite5"
+    ],
+    "size": [
+      "react-rsuite5"
+    ],
+    "tooltip": [
+      "react-rsuite5"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "input-mask": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "placeholder": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "mask": [
+      "react-rsuite5"
+    ],
+    "guide": [
+      "react-rsuite5"
+    ],
+    "keepCharPositions": [
+      "react-rsuite5"
+    ],
+    "showMask": [
+      "react-rsuite5"
+    ],
+    "placeholderChar": [
+      "react-rsuite5"
+    ],
+    "tooltip": [
+      "react-rsuite5"
+    ],
+    "size": [
+      "react-rsuite5"
+    ],
+    "prefix": [
+      "react-rsuite5"
+    ],
+    "inside": [
+      "react-rsuite5"
+    ],
+    "postfix": [
+      "react-rsuite5"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "textarea": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "placeholder": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "size": [
+      "react",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "width": [
+      "react",
+      "react-antd"
+    ],
+    "rows": [
+      "react",
+      "react-rsuite5",
+      "react-bootstrap"
+    ],
+    "tooltip": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "showCount": [
+      "react-antd"
+    ],
+    "maxLength": [
+      "react-antd"
+    ],
+    "allowClear": [
+      "react-antd"
+    ],
+    "autoSize": [
+      "react-antd"
+    ],
+    "bordered": [
+      "react-antd"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "rate": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "allowHalf": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "cleanable": [
+      "react-rsuite5"
+    ],
+    "vertical": [
+      "react-rsuite5"
+    ],
+    "max": [
+      "react-rsuite5",
+      "react-material-ui"
+    ],
+    "color": [
+      "react-rsuite5"
+    ],
+    "size": [
+      "react-rsuite5",
+      "react-material-ui"
+    ],
+    "tooltip": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "precision": [
+      "react-material-ui"
+    ],
+    "count": [
+      "react-antd"
+    ],
+    "allowClear": [
+      "react-antd"
+    ],
+    "tooltips": [
+      "react-antd"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "placeholder": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "text": null,
+    "hidden": null,
+    "tooltip": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "multiselect": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "options": null,
+    "placeholder": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "placement": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "size": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "block": [
+      "react-rsuite5"
+    ],
+    "searchable": [
+      "react-rsuite5"
+    ],
+    "cleanable": [
+      "react-rsuite5"
+    ],
+    "tooltip": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "preventOverflow": [
+      "react-rsuite5"
+    ],
+    "width": [
+      "react-antd"
+    ],
+    "listHeight": [
+      "react-antd"
+    ],
+    "allowClear": [
+      "react-antd"
+    ],
+    "bordered": [
+      "react-antd"
+    ],
+    "showSearch": [
+      "react-antd"
+    ],
+    "showArrow": [
+      "react-antd"
+    ],
+    "virtual": [
+      "react-antd"
+    ],
+    "maxTagCount": [
+      "react-antd"
+    ],
+    "maxTagPlaceholder": [
+      "react-antd"
+    ],
+    "maxTagTextLength": [
+      "react-antd"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "multiselect-language": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "placeholder": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "placement": [
+      "react-rsuite5"
+    ],
+    "size": [
+      "react-rsuite5"
+    ],
+    "tooltip": [
+      "react-rsuite5"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "input-text-i18n": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "placeholder": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "size": [
+      "react-rsuite5"
+    ],
+    "width": [
+      "react-rsuite5"
+    ],
+    "textarea": [
+      "react-rsuite5"
+    ],
+    "rows": [
+      "react-rsuite5"
+    ],
+    "tooltip": [
+      "react-rsuite5"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "select-states": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "placeholder": null,
+    "filterKey": null,
+    "filterValue": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "country": null,
+    "placement": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "size": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "block": [
+      "react-rsuite5"
+    ],
+    "searchable": [
+      "react-rsuite5"
+    ],
+    "cleanable": [
+      "react-rsuite5"
+    ],
+    "tooltip": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "appearance": [
+      "react-rsuite5"
+    ],
+    "autoWidth": [
+      "react-material-ui"
+    ],
+    "fullWidth": [
+      "react-material-ui"
+    ],
+    "width": [
+      "react-material-ui",
+      "react-antd"
+    ],
+    "floatingLabel": [
+      "react-material-ui",
+      "react-bootstrap"
+    ],
+    "variant": [
+      "react-material-ui"
+    ],
+    "allowClear": [
+      "react-antd"
+    ],
+    "bordered": [
+      "react-antd"
+    ],
+    "showSearch": [
+      "react-antd"
+    ],
+    "showArrow": [
+      "react-antd"
+    ],
+    "virtual": [
+      "react-antd"
+    ],
+    "listHeight": [
+      "react-antd"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "placeholder-image": {
+    "name": null,
+    "url": null,
+    "maxWidth": null,
+    "minHeight": null,
+    "align": null,
+    "marginTop": null,
+    "marginBottom": null,
+    "hidden": null
+  },
+  "button": {
+    "name": null,
+    "initialValue": null,
+    "buttonType": null,
+    "labelOn": null,
+    "labelOff": null,
+    "iconOn": null,
+    "iconOff": null,
+    "hint": null,
+    "hidden": null,
+    "size": [
+      "react-rsuite5"
+    ],
+    "appearance": [
+      "react-rsuite5"
+    ]
+  },
+  "divider": {
+    "name": null,
+    "size": null,
+    "color": null,
+    "hidden": null
+  }
+}

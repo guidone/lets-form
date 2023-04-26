@@ -48,7 +48,7 @@ const CheckboxRSuite = I18N(
     );
 
     return (
-      <Form.Group controlId={name} className="lt-control-checkbox">
+      <Form.Group data-lf-field-name={name} className="lt-control-checkbox">
         <Form.Control
           accepter={Checkbox}
           indeterminate={indeterminate && isChecked === null}

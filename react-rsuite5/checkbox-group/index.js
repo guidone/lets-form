@@ -22,7 +22,7 @@ const CheckboxGroupRSuite = I18N(
     ...rest
   }) => {
     return (
-      <Form.Group controlId={name}>
+      <Form.Group data-lf-field-name={name} className="lf-control-checkbox-group">
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}

@@ -46,7 +46,10 @@ const Rate = I18N(
     );
 
     return (
-      <div className="lf-control-rate">
+      <div
+        className="lf-control-rate"
+        data-lf-field-name={name}
+      >
         <FormControl
           required
           error={error != null}

@@ -19,6 +19,8 @@ import { ThreeColumns } from './three-columns';
 import { TwoColumns } from './two-columns';
 import { Group } from './group';
 import { Slider } from './slider';
+import { Divider } from './divider';
+import { ReactView } from './react-view';
 
 const Fields = {
   'text-input': {
@@ -68,6 +70,12 @@ const Fields = {
   },
   'slider': {
     'react-antd': Slider
+  },
+  'divider': {
+    'react-antd': Divider
+  },
+  'react-view': {
+    'react-antd': ReactView
   }
 };
 

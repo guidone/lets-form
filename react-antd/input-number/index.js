@@ -36,6 +36,8 @@ const InputNumberAntd = I18N(
       <Form.Item
         label={label}
         name={name}
+        data-lf-field-name={name}
+        className="lf-control-input-number"
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}
         required={required}
         tooltip={tooltip && hint}

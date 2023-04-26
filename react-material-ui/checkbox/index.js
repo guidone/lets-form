@@ -41,7 +41,10 @@ const CheckboxMUI = I18N(
     );
 
     return (
-      <FormGroup>
+      <FormGroup
+        data-lf-field-name={name}
+        className="lf-control-checkbox"
+      >
         {label && (
           <FormControlLabel
             labelPlacement={labelPlacement ? labelPlacement : undefined}

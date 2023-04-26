@@ -27,7 +27,7 @@ const Multiselect = I18N(
     appearance
   }) => {
     return (
-      <Form.Group controlId={name}>
+      <Form.Group data-lf-field-name={name} className="lf-control-multiselect">
         {label && (
           <Form.ControlLabel>
             {label}

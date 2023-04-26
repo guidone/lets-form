@@ -44,7 +44,10 @@ const TextInput = I18N(
     );
 
     return (
-      <div className="lf-control-input-text">
+      <div
+        data-lf-field-name={name}
+        className="lf-control-input-text"
+      >
         <FormControl
           required={required}
           error={error != null}

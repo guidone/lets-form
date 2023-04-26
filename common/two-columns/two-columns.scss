@@ -1,4 +1,5 @@
-.lf-two-columns {
+.lf-control-two-columns {
+  margin-bottom: var(--lf-field-margin);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -10,11 +11,10 @@
   .left {
     flex: 1 0;
     align-self: auto;
-    margin-right: 10px;
+    margin-right: var(--lf-field-column-margin);
   }
 
   .right {
-    margin-left: 10px;
     flex: 1 0;
     align-self: auto;
   }

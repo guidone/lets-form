@@ -7,6 +7,7 @@ import './index.scss';
 
 const FormRsuite5 = ({
   children,
+  name,
   layout,
   fluid = false,
   disabled = false,
@@ -30,15 +31,14 @@ const FormRsuite5 = ({
 
   return (
     <Form
-      className="lf-form-react-rsuite5"
-      //onSubmit={onSubmit}
+      className="lf-form lf-form-react-rsuite5"
+      data-lf-form-name={name}
       layout={layout}
       fluid={fluid}
       readOnly={readOnly}
       disabled={disabled}
       plaintext={plaintext}
     >
-
       <div>
         {children}
       </div>

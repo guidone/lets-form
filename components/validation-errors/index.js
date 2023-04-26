@@ -28,7 +28,6 @@ const ValidationErrors = ({
 }) => {
   const keys = Object.keys(errors);
 
-  console.log('re-renders', errors)
   return (
     <div className={classNames('lf-validation-errors', className)}>
       {keys.map(fieldName => {

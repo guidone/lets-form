@@ -25,7 +25,10 @@ const Textarea = ({
   );
 
   return (
-    <div className="lf-form-react-control-group">
+    <div
+      className="lf-form-react-control-group lf-control-textarea"
+      data-lf-field-name={name}
+    >
       <label for={name}>
         {label}
         {required && <RequiredIcon />}

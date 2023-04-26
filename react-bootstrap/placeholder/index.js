@@ -9,11 +9,13 @@ const PlaceholderBootstrap = I18N(
   ({
     label,
     hint,
-    text
+    text,
+    name
   }) => {
     return (
       <Form.Group
         className="lf-control-placeholder mb-3"
+        data-lf-field-name={name}
       >
         <Form.Label>
           {label}

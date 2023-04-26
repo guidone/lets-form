@@ -27,7 +27,10 @@ const TextInput = ({
   );
 
   return (
-    <div className="lf-form-react-control-group">
+    <div
+      className="lf-form-react-control-group lf-control-input-text"
+      data-lf-field-name={name}
+    >
       <label for={name}>
         {label}
         {required && <RequiredIcon />}

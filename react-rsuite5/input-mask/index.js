@@ -74,7 +74,7 @@ const InputMask = I18N(
     const needsGroup = postfix || prefix;
 
     return (
-      <Form.Group controlId={name}>
+      <Form.Group data-lf-field-name={name} className="lf-control-input-mask">
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}

@@ -59,7 +59,7 @@ const MultiselectLanguage = I18N(
     );
 
     return (
-      <Form.Group className="lf-control-multiselect-language">
+      <Form.Group data-lf-field-name={name} className="lf-control-multiselect-language">
         {label && (
           <Form.ControlLabel>
             {label}

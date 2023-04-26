@@ -1,4 +1,5 @@
-.lf-three-columns {
+.lf-control-three-columns {
+  margin-bottom: var(--lf-field-margin);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -18,11 +19,11 @@
   .left {
     flex: 1 0;
     align-self: auto;
-    margin-right: 20px;
+    margin-right: var(--lf-field-column-margin);
   }
 
   .center {
-    margin-right: 20px;
+    margin-right: var(--lf-field-column-margin);
     flex: 1 0;
     align-self: auto;
   }

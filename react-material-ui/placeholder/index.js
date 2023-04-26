@@ -7,10 +7,14 @@ import { I18N } from '../../components';
 const PlaceholderMUI = I18N(
   ({
     hint,
-    text
+    text,
+    name
   }) => {
     return (
-      <FormControl className="lf-control-placeholder">
+      <FormControl
+        className="lf-control-placeholder"
+        data-lf-field-name={name}
+      >
         <Placeholder text={text} />
         {hint && <FormHelperText>{hint}</FormHelperText>}
       </FormControl>

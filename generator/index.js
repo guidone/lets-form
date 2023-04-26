@@ -7,7 +7,7 @@ import _ from 'lodash';
 import { ValidationErrors } from '../components';
 import { FRAMEWORKS } from '../costants';
 import { Warning  } from '../assets/icons';
-import { reduceFields, applyTransformers, isI18n  } from '../helpers';
+import { reduceFields, applyTransformers, isI18n, i18n  } from '../helpers';
 //import PropTypes from 'prop-types';
 
 import FormContext from '../form-context';
@@ -54,12 +54,13 @@ const errorToString = error => {
     return 'Invalid value';
   }
   return undefined;
-}
+};
 
 
 
-const translateValidation = (validation, locale) => {
-  if (!_.isEmpty(validation.message)) {
+const translateValidation = (validation, locale, onJavascriptError) => {
+  // if any validation object
+  if (validation != null) {
     let errorMessage;
     if (_.isString(validation.message)) {
       errorMessage = validation.message;
@@ -98,6 +99,49 @@ const translateValidation = (validation, locale) => {
       };
     }
 
+
+    if (!_.isEmpty(_.trim(validation.validate))) {
+      try {
+        const validator = new Function(
+          'value',
+          'formValues',
+          validation.validate
+        );
+        // wrap the validator function, if returns strictly false then re-use
+        // the provided message, if it's a string return the string, but it will not i18n
+        result.validate = (value, formValues) => {
+          let v;
+          try {
+            v = validator(value, formValues);
+          } catch(e) {
+            console.error(`[LetsForm] Error executing validate function: `, e);
+            const error = new Error('Error compiling validate function: ' + e.message, { cause: e });
+            error.sourceCode = validation.validate;
+            error.errorType = 'runtime';
+            onJavascriptError(error);
+          }
+          if (v === true) {
+            return true;
+          } else if (v === false) {
+            return errorMessage;
+          } else if (_.isString(v)) {
+            return v;
+          } else if (isI18n(v)) {
+            return i18n(v, locale);
+          }
+          return true;
+        }
+      } catch(e) {
+        console.error(`[LetsForm] Invalid validate function: `, e);
+        const error = new Error('Error compiling validate function: ' + e.message, { cause: e });
+        error.sourceCode = validation.validate;
+        error.errorType = 'compile';
+        onJavascriptError(error);
+      }
+    } else {
+      result.validate = undefined;
+    }
+
     return result;
   }
   return validation;
@@ -118,7 +162,7 @@ const MissingComponent = ({ lfComponent, label, lfFramework }) => {
   );
 }
 
-const collectTransformers = form => {
+const collectTransformers = (form, onJavascriptError) => {
   const fieldList = reduceFields(
     form.fields,
     (field, accumulator) => {
@@ -129,19 +173,33 @@ const collectTransformers = form => {
     },
     []
   );
+  let mainTransformer;
 
-  const mainTransformer = !_.isEmpty(form.transformer) ?
-    makeTransformer(form.transformer, fieldList) : null;
+  try {
+    mainTransformer = !_.isEmpty(form.transformer) ? makeTransformer(form.transformer, fieldList) : null;
+  } catch(e) {
+    const error = new Error('Error compiling main transformer: ' + e.message, { cause: e });
+    error.sourceCode = form.transformer;
+    console.log('salvo il code', error.sourceCode)
+    error.errorType = 'compile';
+    onJavascriptError(error);
+  }
 
   const collected = reduceFields(
     form.fields,
     (field, acc) => {
       if (field.transformer) {
-        const transformer = makeTransformer(field.transformer, fieldList);
+        let transformer;
+        try {
+          transformer = makeTransformer(field.transformer, fieldList);
+        } catch(e) {
+          const error = new Error('Error compiling transformer. ' + e.message, { cause: e });
+          error.sourceCode = field.transformer;
+          error.errorType = 'compile';
+          onJavascriptError(error);
+        }
         if (transformer != null) {
           return [...acc, transformer];
-        } else {
-          console.error('[LetForm] Wrong transformer', field.transformer);
         }
       }
       return acc;
@@ -164,7 +222,7 @@ const makeTransformer = (str, fieldList) => {
     }
     return new Function(
       'api',
-      `const { setValue, disable, enable, values, show, hide } = api;\n` +
+      `const { setValue, disable, enable, values, show, hide, css, element, style } = api;\n` +
       spreadVars +
       str +
       '\nreturn api.fields();' // leave /n or a comment can void anything
@@ -172,7 +230,7 @@ const makeTransformer = (str, fieldList) => {
   } catch(e) {
     console.error(`LetsForm] Invalid JavaScript code for rules`, e);
     console.error(`LetsForm] Transformer: `, str);
-    return null;
+    throw e;
   }
 };
 
@@ -194,7 +252,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     errors,
     showErrors,
     level = 1,
-    locale
+    locale,
+    onJavascriptError
   }) => {
     const renderedFields = (fields || [])
       .filter(field => Wrapper || field.hidden !== true)
@@ -243,7 +302,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   errors,
                   showErrors,
                   level: level + 1,
-                  locale
+                  locale,
+                  onJavascriptError
                 })}
                 {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="fields" />}
               </>
@@ -279,7 +339,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       errors,
                       showErrors,
                       level: level + 1,
-                      locale
+                      locale,
+                      onJavascriptError
                     })}
                     {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="leftFields" />}
                   </>
@@ -302,7 +363,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       errors,
                       showErrors,
                       level: level + 1,
-                      locale
+                      locale,
+                      onJavascriptError
                     })}
                     {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="rightFields" />}
                   </>
@@ -341,7 +403,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       errors,
                       showErrors,
                       level: level + 1,
-                      locale
+                      locale,
+                      onJavascriptError
                     })}
                     {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="leftFields" />}
                   </>
@@ -364,7 +427,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       errors,
                       showErrors,
                       level: level + 1,
-                      locale
+                      locale,
+                      onJavascriptError
                     })}
                     {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="centerFields" />}
                   </>
@@ -387,7 +451,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       errors,
                       showErrors,
                       level: level + 1,
-                      locale
+                      locale,
+                      onJavascriptError
                     })}
                     {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="rightFields" />}
                   </>
@@ -406,7 +471,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             required: field.required,
             ...field.validation
           },
-          locale
+          locale,
+          onJavascriptError
         );
 
         return (
@@ -466,6 +532,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     onSubmit = () => {},
     onReset = () => {},
     onError = () => {},
+    onJavascriptError = () => {},
     locale,
     wrapper,
     groupWrapper,
@@ -478,15 +545,14 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     plaintext = false,
     hideToolbar = false,
     children,
-    className,
-
-    //rules
+    className
   }) => {
     if (debug) {
       console.log(`[LetsForm] Render form (${form.name})`);
     }
     const { showErrors } = form;
-    const [transformers, setTransformers] = useState(collectTransformers(form));
+    const [formName, setFormName] = useState(form.name ?? _.uniqueId('form_'))
+    const [transformers, setTransformers] = useState(collectTransformers(form, onJavascriptError));
 
     const { handleSubmit, formState: { errors }, reset, control, getValues } = useForm({
       defaultValues,
@@ -495,19 +561,20 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [validationErrors, setValidationErrors] = useState();
     // store form fields, apply immediately transformers (collected from all fields)
     const [formFields, setFormFields] = useState(
-      applyTransformers(form.fields, transformers, defaultValues)
+      applyTransformers(formName, framework, form.fields, transformers, defaultValues, onJavascriptError)
     );
 
     // update internal state if form changes
     useEffect(
       () => {
-        const newTransformers = collectTransformers(form);
-        const newFormFields = applyTransformers(form.fields, newTransformers, defaultValues);
+        const newTransformers = collectTransformers(form, onJavascriptError);
+        const newFormFields = applyTransformers(formName, framework, form.fields, newTransformers, defaultValues, onJavascriptError);
         setFormFields(newFormFields);
+        setFormName(form.name ?? _.uniqueId('form_'));
         setTransformers(newTransformers);
       },
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      [form] // don't put defaultValues here
+      [form, framework] // don't put defaultValues here
     );
 
     const onHandleSubmit = useCallback(
@@ -520,7 +587,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const onHandleError = useCallback(
       data => {
-        console.log('error', data);
         setValidationErrors(data);
         onError(data);
       },
@@ -537,13 +603,13 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const handleChange = useCallback(
       (values) => {
-        const newFormFields = applyTransformers(formFields, transformers, values);
+        const newFormFields = applyTransformers(formName, framework, formFields, transformers, values, onJavascriptError);
         if (newFormFields !== formFields) {
           setFormFields(newFormFields);
         }
         onChange(values);
       },
-      [onChange, formFields, transformers]
+      [onChange, formFields, formName, transformers, framework, onJavascriptError]
     );
 
     if (debug) {
@@ -571,6 +637,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           )}
           <Form
             onSubmit={handleSubmit(onHandleSubmit, onHandleError)}
+            name={formName}
             defaultValues={defaultValues}
             onlyFields={onlyFields}
             hideToolbar={hideToolbar}
@@ -595,7 +662,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               readOnly: readOnly || form.readOnly,
               plaintext: plaintext || form.plaintext,
               showErrors,
-              locale
+              locale,
+              onJavascriptError
             })}
             {children}
             {validationErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (

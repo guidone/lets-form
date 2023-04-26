@@ -10,6 +10,7 @@ import './group.scss';
 
 const Group = I18N(
   ({
+    name,
     label,
     disabled = false,
     open = true,
@@ -29,6 +30,7 @@ const Group = I18N(
 
     return (
       <div
+        data-lf-field-name={name}
         className={classNames('lf-control-group', {
           'bottom-border': bottomBorder,
           'open': isOpen,

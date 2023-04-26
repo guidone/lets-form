@@ -145,7 +145,7 @@ const InputTextI18N = (props) => {
     .map(item => ({ ...item, filled: currentValue && !_.isEmpty(currentValue[item.value]) }));
 
   return (
-    <Form.Group className="lf-input-text-i18n">
+    <Form.Group data-lf-field-name={name} className="lf-input-text-i18n">
       {label && <Form.ControlLabel>
         {label}
         {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}

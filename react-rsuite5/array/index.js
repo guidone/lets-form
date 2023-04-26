@@ -11,6 +11,7 @@ import './list-array.scss';
 
 
 const ArrayItem = ({
+  name,
   children,
   item,
   disabled,
@@ -23,7 +24,10 @@ const ArrayItem = ({
 
 
   return (
-    <div className="gforms-array-item">
+    <div
+      data-lf-field-name={name}
+      className="gforms-array-item"
+    >
       <div className="inner-form">
         {children}
       </div>

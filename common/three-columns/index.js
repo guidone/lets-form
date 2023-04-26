@@ -13,7 +13,10 @@ const ThreeColumns = ({
   rightAlignment
 }) => {
   return (
-    <div key={name} className={classNames('lf-three-columns', layout)}>
+    <div
+      data-lf-field-name={name}
+      className={classNames('lf-control-three-columns', layout)}
+    >
       <div
         className="left"
         style={{ alignSelf: leftAlignment ? leftAlignment : undefined }}

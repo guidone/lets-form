@@ -17,6 +17,8 @@ import { Slider } from './slider';
 import { ThreeColumns } from './three-columns';
 import { TwoColumns } from './two-columns';
 import { Group } from './group';
+import { Divider } from './divider';
+import { ReactView } from './react-view';
 
 const Fields = {
   'text-input': {
@@ -60,6 +62,12 @@ const Fields = {
   },
   'radio-group': {
     'react-bootstrap': RadioGroup
+  },
+  'divider': {
+    'react-bootstrap': Divider
+  },
+  'react-view': {
+    'react-bootstrap': ReactView
   }
 };
 

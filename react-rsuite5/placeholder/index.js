@@ -14,7 +14,7 @@ const PlaceholderRSuite5 = I18N(
     required = false
   }) => {
     return (
-      <Form.Group controlId={name} className="lf-control-placeholder">
+      <Form.Group data-lf-field-name={name} className="lf-control-placeholder">
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}

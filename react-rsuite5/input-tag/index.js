@@ -23,7 +23,7 @@ const InputTag = I18N(
     onBlur
   }) => {
     return (
-      <Form.Group controlId={name} className="lets-form-input-tag">
+      <Form.Group data-lf-field-name={name} className="lf-control-input-tag">
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}

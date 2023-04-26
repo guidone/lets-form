@@ -35,6 +35,7 @@ const Checkbox = I18N(
     return (
       <Form.Group
         className="lf-control-checkbox mb-3"
+        data-lf-field-name={name}
       >
         <Form.Check type="checkbox">
           <Form.Check.Input

@@ -43,6 +43,7 @@ const TextInput = I18N(
     return (
       <Form.Item
         className={classNames('lf-control-input-text', `lf-size-${size}`)}
+        data-lf-field-name={name}
         label={label}
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}

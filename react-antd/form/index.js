@@ -20,6 +20,7 @@ const buildColObject = (span, offset) => {
 
 
 const FormAntD = ({
+  name,
   values,
   onReset = () => {},
   onSubmit = () => {},
@@ -39,7 +40,8 @@ const FormAntD = ({
 }) => {
   return (
     <Form
-      className="lf-form-react-antd"
+      className="lf-form lf-form-react-antd"
+      data-lf-form-name={name}
       layout={layout}
       labelAlign={labelAlign}
       labelWrap={labelWrap}

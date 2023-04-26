@@ -77,6 +77,29 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
+/***/ 1760:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-divider{min-height:15px;font-size:1px;display:flex;margin-bottom:var(--lf-field-margin)}.lf-control-divider .bar{width:100%;margin-top:5px;margin-bottom:5px}", "",{"version":3,"sources":["webpack://./common/divider/divider.scss"],"names":[],"mappings":"AAAA,oBACE,eAAA,CACA,aAAA,CACA,YAAA,CACA,oCAAA,CAEA,yBACE,UAAA,CACA,cAAA,CACA,iBAAA","sourcesContent":[".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n  margin-bottom: var(--lf-field-margin);\n\n  .bar {\n    width: 100%;\n    margin-top: 5px;\n    margin-bottom: 5px;\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ 88:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -123,6 +146,29 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-placeholder-image{min-heig
 
 /***/ }),
 
+/***/ 860:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-placeholder ol,.lf-control-placeholder ul{padding-left:1rem}", "",{"version":3,"sources":["webpack://./common/placeholder/placeholder.scss"],"names":[],"mappings":"AACE,sDACE,iBAAA","sourcesContent":[".lf-control-placeholder {\n  ol, ul {\n    padding-left: 1rem;\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ 1861:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -139,7 +185,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-placeholder-image{min-heig
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-three-columns .left{flex:1 0;align-self:auto;margin-right:20px}.lf-three-columns .center{margin-right:20px;flex:1 0;align-self:auto}.lf-three-columns .right{flex:1 0;align-self:auto}.lf-three-columns .left:empty{display:none}.lf-three-columns.layout-0-1-0 .left{flex:0 0}.lf-three-columns.layout-0-1-0 .center{flex:1 0}.lf-three-columns.layout-0-1-0 .right{flex:0 0}.lf-three-columns.layout-1-0-0 .left{flex:1 0}.lf-three-columns.layout-1-0-0 .center{flex:0 0}.lf-three-columns.layout-1-0-0 .right{flex:0 0}.lf-three-columns.layout-1-1-1 .left{flex:1 0}.lf-three-columns.layout-1-1-1 .center{flex:1 0}.lf-three-columns.layout-1-1-1 .right{flex:1 0}.lf-three-columns.layout-1-1-2 .left{flex:1 0}.lf-three-columns.layout-1-1-2 .center{flex:1 0}.lf-three-columns.layout-1-1-2 .right{flex:2 0}.lf-three-columns.layout-1-2-1 .left{flex:1 0}.lf-three-columns.layout-1-2-1 .center{flex:2 0}.lf-three-columns.layout-1-2-1 .right{flex:1 0}.lf-three-columns.layout-2-1-1 .left{flex:2 0}.lf-three-columns.layout-2-1-1 .center{flex:1 0}.lf-three-columns.layout-2-1-1 .right{flex:1 0}.lf-three-columns.layout-1-1-3 .left{flex:1 0}.lf-three-columns.layout-1-1-3 .center{flex:1 0}.lf-three-columns.layout-1-1-3 .right{flex:3 0}.lf-three-columns.layout-1-3-1 .left{flex:1 0}.lf-three-columns.layout-1-3-1 .center{flex:3 0}.lf-three-columns.layout-1-3-1 .right{flex:1 0}.lf-three-columns.layout-3-1-1 .left{flex:3 0}.lf-three-columns.layout-3-1-1 .center{flex:1 0}.lf-three-columns.layout-3-1-1 .right{flex:1 0}.lf-form-react-rsuite5 .lf-three-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,kBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAUA,wBACE,QAAA,CACA,eAAA,CACA,iBAAA,CAGF,0BACE,iBAAA,CACA,QAAA,CACA,eAAA,CAGF,yBACE,QAAA,CACA,eAAA,CAGF,8BACE,YAAA,CAIA,qCACE,QAAA,CAEF,uCACE,QAAA,CAEF,sCACE,QAAA,CAKF,qCACE,QAAA,CAEF,uCACE,QAAA,CAEF,sCACE,QAAA,CAKF,qCACE,QAAA,CAEF,uCACE,QAAA,CAEF,sCACE,QAAA,CAKF,qCACE,QAAA,CAEF,uCACE,QAAA,CAEF,sCACE,QAAA,CAKF,qCACE,QAAA,CAEF,uCACE,QAAA,CAEF,sCACE,QAAA,CAKF,qCACE,QAAA,CAEF,uCACE,QAAA,CAEF,sCACE,QAAA,CAKF,qCACE,QAAA,CAEF,uCACE,QAAA,CAEF,sCACE,QAAA,CAKF,qCACE,QAAA,CAEF,uCACE,QAAA,CAEF,sCACE,QAAA,CAKF,qCACE,QAAA,CAEF,uCACE,QAAA,CAEF,sCACE,QAAA,CAQJ,yCACE,oCAAA","sourcesContent":[".lf-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 20px;\n  }\n\n  .center {\n    margin-right: 20px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .left:empty {\n    display: none;\n  }\n\n  &.layout-0-1-0 {\n    .left {\n      flex: 0 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-0-0 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 0 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-1-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-2-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-2-1-1 {\n    .left {\n      flex: 2 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-3-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1-1 {\n    .left {\n      flex: 3 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n\n}\n\n.lf-form-react-rsuite5 {\n  .lf-three-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-three-columns{margin-bottom:var(--lf-field-margin);display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-control-three-columns .left{flex:1 0;align-self:auto;margin-right:var(--lf-field-column-margin)}.lf-control-three-columns .center{margin-right:var(--lf-field-column-margin);flex:1 0;align-self:auto}.lf-control-three-columns .right{flex:1 0;align-self:auto}.lf-control-three-columns .left:empty{display:none}.lf-control-three-columns.layout-0-1-0 .left{flex:0 0}.lf-control-three-columns.layout-0-1-0 .center{flex:1 0}.lf-control-three-columns.layout-0-1-0 .right{flex:0 0}.lf-control-three-columns.layout-1-0-0 .left{flex:1 0}.lf-control-three-columns.layout-1-0-0 .center{flex:0 0}.lf-control-three-columns.layout-1-0-0 .right{flex:0 0}.lf-control-three-columns.layout-1-1-1 .left{flex:1 0}.lf-control-three-columns.layout-1-1-1 .center{flex:1 0}.lf-control-three-columns.layout-1-1-1 .right{flex:1 0}.lf-control-three-columns.layout-1-1-2 .left{flex:1 0}.lf-control-three-columns.layout-1-1-2 .center{flex:1 0}.lf-control-three-columns.layout-1-1-2 .right{flex:2 0}.lf-control-three-columns.layout-1-2-1 .left{flex:1 0}.lf-control-three-columns.layout-1-2-1 .center{flex:2 0}.lf-control-three-columns.layout-1-2-1 .right{flex:1 0}.lf-control-three-columns.layout-2-1-1 .left{flex:2 0}.lf-control-three-columns.layout-2-1-1 .center{flex:1 0}.lf-control-three-columns.layout-2-1-1 .right{flex:1 0}.lf-control-three-columns.layout-1-1-3 .left{flex:1 0}.lf-control-three-columns.layout-1-1-3 .center{flex:1 0}.lf-control-three-columns.layout-1-1-3 .right{flex:3 0}.lf-control-three-columns.layout-1-3-1 .left{flex:1 0}.lf-control-three-columns.layout-1-3-1 .center{flex:3 0}.lf-control-three-columns.layout-1-3-1 .right{flex:1 0}.lf-control-three-columns.layout-3-1-1 .left{flex:3 0}.lf-control-three-columns.layout-3-1-1 .center{flex:1 0}.lf-control-three-columns.layout-3-1-1 .right{flex:1 0}.lf-form-react-rsuite5 .lf-three-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,0BACE,oCAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAUA,gCACE,QAAA,CACA,eAAA,CACA,0CAAA,CAGF,kCACE,0CAAA,CACA,QAAA,CACA,eAAA,CAGF,iCACE,QAAA,CACA,eAAA,CAGF,sCACE,YAAA,CAIA,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAQJ,yCACE,oCAAA","sourcesContent":[".lf-control-three-columns {\n  margin-bottom: var(--lf-field-margin);\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: var(--lf-field-column-margin);\n  }\n\n  .center {\n    margin-right: var(--lf-field-column-margin);\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .left:empty {\n    display: none;\n  }\n\n  &.layout-0-1-0 {\n    .left {\n      flex: 0 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-0-0 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 0 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-1-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-2-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-2-1-1 {\n    .left {\n      flex: 2 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-3-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1-1 {\n    .left {\n      flex: 3 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n\n}\n\n.lf-form-react-rsuite5 {\n  .lf-three-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -162,7 +208,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-three-columns{display:flex;flex-di
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-two-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-two-columns .left{flex:1 0;align-self:auto;margin-right:10px}.lf-two-columns .right{margin-left:10px;flex:1 0;align-self:auto}.lf-two-columns.layout-1-2 .left{flex:1 0}.lf-two-columns.layout-1-2 .right{flex:2 0}.lf-two-columns.layout-1-3 .left{flex:1 0}.lf-two-columns.layout-1-3 .right{flex:3 0}.lf-two-columns.layout-1-4 .left{flex:1 0}.lf-two-columns.layout-1-4 .right{flex:4 0}.lf-two-columns.layout-1-5 .left{flex:1 0}.lf-two-columns.layout-1-5 .right{flex:4 0}.lf-two-columns.layout-2-1 .left{flex:2 0}.lf-two-columns.layout-2-1 .right{flex:1 0}.lf-two-columns.layout-3-1 .left{flex:3 0}.lf-two-columns.layout-3-1 .right{flex:1 0}.lf-two-columns.layout-4-1 .left{flex:4 0}.lf-two-columns.layout-4-1 .right{flex:1 0}.lf-two-columns.layout-5-1 .left{flex:4 0}.lf-two-columns.layout-5-1 .right{flex:1 0}.lf-two-columns.layout-3-2 .left{flex:3 0}.lf-two-columns.layout-3-2 .right{flex:2 0}.lf-two-columns.layout-2-3 .left{flex:2 0}.lf-two-columns.layout-2-3 .right{flex:3 0}.lf-two-columns.layout-0-1 .left{flex:0 0 auto}.lf-two-columns.layout-0-1 .right{flex:1 0}.lf-two-columns.layout-1-0 .left{flex:1 0}.lf-two-columns.layout-1-0 .right{flex:0 0 auto}.lf-form-react-rsuite5 .lf-two-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,gBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAEA,sBACE,QAAA,CACA,eAAA,CACA,iBAAA,CAGF,uBACE,gBAAA,CACA,QAAA,CACA,eAAA,CAIA,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,QAAA,CAKF,iCACE,aAAA,CAEF,kCACE,QAAA,CAKF,iCACE,QAAA,CAEF,kCACE,aAAA,CAMJ,uCACE,oCAAA","sourcesContent":[".lf-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: 10px;\n  }\n\n  .right {\n    margin-left: 10px;\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-0-1 {\n    .left {\n      flex: 0 0 auto;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-0 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0 auto;\n    }\n  }\n}\n\n.lf-form-react-rsuite5 {\n  .lf-two-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-two-columns{margin-bottom:var(--lf-field-margin);display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-control-two-columns .left{flex:1 0;align-self:auto;margin-right:var(--lf-field-column-margin)}.lf-control-two-columns .right{flex:1 0;align-self:auto}.lf-control-two-columns.layout-1-2 .left{flex:1 0}.lf-control-two-columns.layout-1-2 .right{flex:2 0}.lf-control-two-columns.layout-1-3 .left{flex:1 0}.lf-control-two-columns.layout-1-3 .right{flex:3 0}.lf-control-two-columns.layout-1-4 .left{flex:1 0}.lf-control-two-columns.layout-1-4 .right{flex:4 0}.lf-control-two-columns.layout-1-5 .left{flex:1 0}.lf-control-two-columns.layout-1-5 .right{flex:4 0}.lf-control-two-columns.layout-2-1 .left{flex:2 0}.lf-control-two-columns.layout-2-1 .right{flex:1 0}.lf-control-two-columns.layout-3-1 .left{flex:3 0}.lf-control-two-columns.layout-3-1 .right{flex:1 0}.lf-control-two-columns.layout-4-1 .left{flex:4 0}.lf-control-two-columns.layout-4-1 .right{flex:1 0}.lf-control-two-columns.layout-5-1 .left{flex:4 0}.lf-control-two-columns.layout-5-1 .right{flex:1 0}.lf-control-two-columns.layout-3-2 .left{flex:3 0}.lf-control-two-columns.layout-3-2 .right{flex:2 0}.lf-control-two-columns.layout-2-3 .left{flex:2 0}.lf-control-two-columns.layout-2-3 .right{flex:3 0}.lf-control-two-columns.layout-0-1 .left{flex:0 0 auto}.lf-control-two-columns.layout-0-1 .right{flex:1 0}.lf-control-two-columns.layout-1-0 .left{flex:1 0}.lf-control-two-columns.layout-1-0 .right{flex:0 0 auto}.lf-form-react-rsuite5 .lf-two-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,wBACE,oCAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAEA,8BACE,QAAA,CACA,eAAA,CACA,0CAAA,CAGF,+BACE,QAAA,CACA,eAAA,CAIA,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,aAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,aAAA,CAMJ,uCACE,oCAAA","sourcesContent":[".lf-control-two-columns {\n  margin-bottom: var(--lf-field-margin);\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: var(--lf-field-column-margin);\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-0-1 {\n    .left {\n      flex: 0 0 auto;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-0 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0 auto;\n    }\n  }\n}\n\n.lf-form-react-rsuite5 {\n  .lf-two-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -208,7 +254,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-validation-errors{border:1px solid
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-icon-asterisk{margin-top:-3px}.lf-missing-component{border:1px solid #bbb;background-color:#f6f6f6;padding:20px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-missing-component .icon{order:0;flex:0 0;align-self:auto;margin-top:2px}.lf-missing-component .tag-component{background-color:#673ab7;color:#fff;font-size:12px;padding:1px 4px 2px 4px;border-radius:3px;line-height:17px}.lf-missing-component .message{display:inline-block;margin-left:10px;order:0;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./generator/index.scss"],"names":[],"mappings":"AAAA,kBACE,eAAA,CAGF,sBACE,qBAAA,CACA,wBAAA,CACA,YAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,4BACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,cAAA,CAGF,qCACE,wBAAA,CACA,UAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,gBAAA,CAGF,+BACE,oBAAA,CACA,gBAAA,CACA,OAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-icon-asterisk {\n  margin-top: -3px;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n\n  .icon {\n    order: 0;\n    flex: 0 0;\n    align-self: auto;\n    margin-top: 2px;\n  }\n\n  .tag-component {\n    background-color: #673ab7;\n    color: #ffffff;\n    font-size: 12px;\n    padding: 1px 4px 2px 4px;\n    border-radius: 3px;\n    line-height: 17px;\n  }\n\n  .message {\n    display: inline-block;\n    margin-left: 10px;\n    order: 0;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form{--lf-field-margin: 24px;--lf-field-column-margin: 20px}.lf-icon-asterisk{margin-top:-3px}.lf-missing-component{border:1px solid #bbb;background-color:#f6f6f6;padding:20px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-missing-component .icon{order:0;flex:0 0;align-self:auto;margin-top:2px}.lf-missing-component .tag-component{background-color:#673ab7;color:#fff;font-size:12px;padding:1px 4px 2px 4px;border-radius:3px;line-height:17px}.lf-missing-component .message{display:inline-block;margin-left:10px;order:0;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./generator/index.scss"],"names":[],"mappings":"AAAA,SACE,uBAAA,CACA,8BAAA,CAGF,kBACE,eAAA,CAGF,sBACE,qBAAA,CACA,wBAAA,CACA,YAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,4BACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,cAAA,CAGF,qCACE,wBAAA,CACA,UAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,gBAAA,CAGF,+BACE,oBAAA,CACA,gBAAA,CACA,OAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-form {\n  --lf-field-margin: 24px;\n  --lf-field-column-margin: 20px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n\n  .icon {\n    order: 0;\n    flex: 0 0;\n    align-self: auto;\n    margin-top: 2px;\n  }\n\n  .tag-component {\n    background-color: #673ab7;\n    color: #ffffff;\n    font-size: 12px;\n    padding: 1px 4px 2px 4px;\n    border-radius: 3px;\n    line-height: 17px;\n  }\n\n  .message {\n    display: inline-block;\n    margin-left: 10px;\n    order: 0;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -809,6 +855,25 @@ module.exports = arrayMap;
 
 /***/ }),
 
+/***/ 4286:
+/***/ ((module) => {
+
+/**
+ * Converts an ASCII `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function asciiToArray(string) {
+  return string.split('');
+}
+
+module.exports = asciiToArray;
+
+
+/***/ }),
+
 /***/ 4865:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -933,6 +998,36 @@ module.exports = objectToString;
 
 /***/ }),
 
+/***/ 2118:
+/***/ ((module) => {
+
+/**
+ * A specialized version of `_.indexOf` which performs strict equality
+ * comparisons of values, i.e. `===`.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} value The value to search for.
+ * @param {number} fromIndex The index to search from.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function strictIndexOf(array, value, fromIndex) {
+  var index = fromIndex - 1,
+      length = array.length;
+
+  while (++index < length) {
+    if (array[index] === value) {
+      return index;
+    }
+  }
+  return -1;
+}
+
+module.exports = strictIndexOf;
+
+
+/***/ }),
+
 /***/ 280:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -942,6 +1037,44 @@ var overArg = __webpack_require__(5569);
 var nativeKeys = overArg(Object.keys, Object);
 
 module.exports = nativeKeys;
+
+
+/***/ }),
+
+/***/ 4259:
+/***/ ((module) => {
+
+/**
+ * The base implementation of `_.slice` without an iteratee call guard.
+ *
+ * @private
+ * @param {Array} array The array to slice.
+ * @param {number} [start=0] The start position.
+ * @param {number} [end=array.length] The end position.
+ * @returns {Array} Returns the slice of `array`.
+ */
+function baseSlice(array, start, end) {
+  var index = -1,
+      length = array.length;
+
+  if (start < 0) {
+    start = -start > length ? 0 : (length + start);
+  }
+  end = end > length ? length : end;
+  if (end < 0) {
+    end += length;
+  }
+  length = start > end ? 0 : ((end - start) >>> 0);
+  start >>>= 0;
+
+  var result = Array(length);
+  while (++index < length) {
+    result[index] = array[index + start];
+  }
+  return result;
+}
+
+module.exports = baseSlice;
 
 
 /***/ }),
@@ -986,6 +1119,32 @@ function baseToString(value) {
 }
 
 module.exports = baseToString;
+
+
+/***/ }),
+
+/***/ 7561:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var trimmedEndIndex = __webpack_require__(7990);
+
+/** Used to match leading whitespace. */
+var reTrimStart = /^\s+/;
+
+/**
+ * The base implementation of `_.trim`.
+ *
+ * @private
+ * @param {string} string The string to trim.
+ * @returns {string} Returns the trimmed string.
+ */
+function baseTrim(string) {
+  return string
+    ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, '')
+    : string;
+}
+
+module.exports = baseTrim;
 
 
 /***/ }),
@@ -1064,6 +1223,84 @@ function castArray() {
 }
 
 module.exports = castArray;
+
+
+/***/ }),
+
+/***/ 180:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseSlice = __webpack_require__(4259);
+
+/**
+ * Casts `array` to a slice if it's needed.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {number} start The start position.
+ * @param {number} [end=array.length] The end position.
+ * @returns {Array} Returns the cast slice.
+ */
+function castSlice(array, start, end) {
+  var length = array.length;
+  end = end === undefined ? length : end;
+  return (!start && end >= length) ? array : baseSlice(array, start, end);
+}
+
+module.exports = castSlice;
+
+
+/***/ }),
+
+/***/ 5512:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseIndexOf = __webpack_require__(2118);
+
+/**
+ * Used by `_.trim` and `_.trimEnd` to get the index of the last string symbol
+ * that is not found in the character symbols.
+ *
+ * @private
+ * @param {Array} strSymbols The string symbols to inspect.
+ * @param {Array} chrSymbols The character symbols to find.
+ * @returns {number} Returns the index of the last unmatched string symbol.
+ */
+function charsEndIndex(strSymbols, chrSymbols) {
+  var index = strSymbols.length;
+
+  while (index-- && baseIndexOf(chrSymbols, strSymbols[index], 0) > -1) {}
+  return index;
+}
+
+module.exports = charsEndIndex;
+
+
+/***/ }),
+
+/***/ 9817:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseIndexOf = __webpack_require__(2118);
+
+/**
+ * Used by `_.trim` and `_.trimStart` to get the index of the first string symbol
+ * that is not found in the character symbols.
+ *
+ * @private
+ * @param {Array} strSymbols The string symbols to inspect.
+ * @param {Array} chrSymbols The character symbols to find.
+ * @returns {number} Returns the index of the first unmatched string symbol.
+ */
+function charsStartIndex(strSymbols, chrSymbols) {
+  var index = -1,
+      length = strSymbols.length;
+
+  while (++index < length && baseIndexOf(chrSymbols, strSymbols[index], 0) > -1) {}
+  return index;
+}
+
+module.exports = charsStartIndex;
 
 
 /***/ }),
@@ -1284,6 +1521,31 @@ module.exports = objectToString;
 
 /***/ }),
 
+/***/ 2689:
+/***/ ((module) => {
+
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */
+function stubFalse() {
+  return false;
+}
+
+module.exports = stubFalse;
+
+
+/***/ }),
+
 /***/ 5726:
 /***/ ((module) => {
 
@@ -1375,6 +1637,31 @@ module.exports = root;
 
 /***/ }),
 
+/***/ 3140:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var asciiToArray = __webpack_require__(4286),
+    hasUnicode = __webpack_require__(2689),
+    unicodeToArray = __webpack_require__(676);
+
+/**
+ * Converts `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function stringToArray(string) {
+  return hasUnicode(string)
+    ? unicodeToArray(string)
+    : asciiToArray(string);
+}
+
+module.exports = stringToArray;
+
+
+/***/ }),
+
 /***/ 327:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -1399,6 +1686,51 @@ function toKey(value) {
 }
 
 module.exports = toKey;
+
+
+/***/ }),
+
+/***/ 7990:
+/***/ ((module) => {
+
+/** Used to match a single whitespace character. */
+var reWhitespace = /\s/;
+
+/**
+ * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
+ * character of `string`.
+ *
+ * @private
+ * @param {string} string The string to inspect.
+ * @returns {number} Returns the index of the last non-whitespace character.
+ */
+function trimmedEndIndex(string) {
+  var index = string.length;
+
+  while (index-- && reWhitespace.test(string.charAt(index))) {}
+  return index;
+}
+
+module.exports = trimmedEndIndex;
+
+
+/***/ }),
+
+/***/ 676:
+/***/ ((module) => {
+
+/**
+ * Converts an ASCII `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function asciiToArray(string) {
+  return string.split('');
+}
+
+module.exports = asciiToArray;
 
 
 /***/ }),
@@ -2233,6 +2565,60 @@ module.exports = toString;
 
 /***/ }),
 
+/***/ 2742:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseToString = __webpack_require__(531),
+    baseTrim = __webpack_require__(7561),
+    castSlice = __webpack_require__(180),
+    charsEndIndex = __webpack_require__(5512),
+    charsStartIndex = __webpack_require__(9817),
+    stringToArray = __webpack_require__(3140),
+    toString = __webpack_require__(9833);
+
+/**
+ * Removes leading and trailing whitespace or specified characters from `string`.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category String
+ * @param {string} [string=''] The string to trim.
+ * @param {string} [chars=whitespace] The characters to trim.
+ * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+ * @returns {string} Returns the trimmed string.
+ * @example
+ *
+ * _.trim('  abc  ');
+ * // => 'abc'
+ *
+ * _.trim('-_-abc-_-', '_-');
+ * // => 'abc'
+ *
+ * _.map(['  foo  ', '  bar  '], _.trim);
+ * // => ['foo', 'bar']
+ */
+function trim(string, chars, guard) {
+  string = toString(string);
+  if (string && (guard || chars === undefined)) {
+    return baseTrim(string);
+  }
+  if (!string || !(chars = baseToString(chars))) {
+    return string;
+  }
+  var strSymbols = stringToArray(string),
+      chrSymbols = stringToArray(chars),
+      start = charsStartIndex(strSymbols, chrSymbols),
+      end = charsEndIndex(strSymbols, chrSymbols) + 1;
+
+  return castSlice(strSymbols, start, end).join('');
+}
+
+module.exports = trim;
+
+
+/***/ }),
+
 /***/ 3955:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -2682,15 +3068,21 @@ __webpack_require__.d(__webpack_exports__, {
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(8156);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+// EXTERNAL MODULE: ./node_modules/lodash/uniqueId.js
+var uniqueId = __webpack_require__(3955);
+var uniqueId_default = /*#__PURE__*/__webpack_require__.n(uniqueId);
 // EXTERNAL MODULE: ./node_modules/lodash/omit.js
 var omit = __webpack_require__(7557);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
-// EXTERNAL MODULE: ./node_modules/lodash/isString.js
-var isString = __webpack_require__(7037);
-var isString_default = /*#__PURE__*/__webpack_require__.n(isString);
+// EXTERNAL MODULE: ./node_modules/lodash/trim.js
+var trim = __webpack_require__(2742);
+var trim_default = /*#__PURE__*/__webpack_require__.n(trim);
 // EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(1609);
 var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
+// EXTERNAL MODULE: ./node_modules/lodash/isString.js
+var isString = __webpack_require__(7037);
+var isString_default = /*#__PURE__*/__webpack_require__.n(isString);
 ;// CONCATENATED MODULE: ./node_modules/react-hook-form/dist/index.esm.mjs
 
 
@@ -5108,7 +5500,6 @@ var ValidationErrors = function ValidationErrors(_ref) {
     className = _ref.className,
     locale = _ref.locale;
   var keys = Object.keys(errors);
-  console.log('re-renders', errors);
   return /*#__PURE__*/external_react_default().createElement("div", {
     className: classnames_default()('lf-validation-errors', className)
   }, keys.map(function (fieldName) {
@@ -5486,9 +5877,6 @@ var deleteField = function deleteField(form, field) {
   });
 };
 
-// EXTERNAL MODULE: ./node_modules/lodash/uniqueId.js
-var uniqueId = __webpack_require__(3955);
-var uniqueId_default = /*#__PURE__*/__webpack_require__.n(uniqueId);
 ;// CONCATENATED MODULE: ./helpers/fill-ids.js
 
 function fill_ids_typeof(obj) { "@babel/helpers - typeof"; return fill_ids_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, fill_ids_typeof(obj); }
@@ -5979,7 +6367,11 @@ var filterOptions = function filterOptions(options, filterValue) {
 var isEmptyForm = function isEmptyForm(form) {
   return !form || !Array.isArray(form.fields) || form.fields.length === 0;
 };
+;// CONCATENATED MODULE: ./mappings.json
+const mappings_namespaceObject = JSON.parse('{"text-input":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"variant":["react-material-ui"],"color":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"width":["react-rsuite5","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-antd"],"step":["react-rsuite5","react-antd"],"max":["react-rsuite5","react-antd"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"optionType":["react-antd"],"size":["react-antd"]},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react","react-bootstrap","react-antd"],"width":["react","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"width":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select-states":{"name":null,"label":null,"hint":null,"placeholder":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"country":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"maxWidth":null,"minHeight":null,"align":null,"marginTop":null,"marginBottom":null,"hidden":null},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null}}');
 ;// CONCATENATED MODULE: ./helpers/apply-transformers.js
+
+
 
 
 
@@ -5991,27 +6383,88 @@ function apply_transformers_toPropertyKey(arg) { var key = apply_transformers_to
 function apply_transformers_toPrimitive(input, hint) { if (apply_transformers_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (apply_transformers_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 
-var ApiFactory = function ApiFactory(formFields, currenValues) {
+// cannot import manifest, need to stay in the other repo
+// this is going open source, while the manifests are ip
+
+
+var translateValidationKey = function translateValidationKey(str) {
+  if (str.startsWith('validation')) {
+    str = str.replace(/^validation/, '');
+    if (str.length !== 0) {
+      str = str[0].toLowerCase() + str.slice(1);
+    }
+    return str;
+  } else {
+    return str;
+  }
+};
+var ApiFactory = function ApiFactory(formName, framework, formFields, currenValues) {
   var _fields = formFields;
   return {
     fields: function fields() {
       return _fields;
     },
-    setValue: function setValue(name, key, value, framework) {
+    element: function element(name) {
+      var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
+      if (form) {
+        return form.querySelector("[data-lf-field-name=".concat(name, "]"));
+      }
+      return null;
+    },
+    style: function style(name, prop, value) {
+      // find the form, then the element, then apply the style
+      var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
+      if (form) {
+        var element = form.querySelector("[data-lf-field-name=".concat(name, "]"));
+        if (element) {
+          if (isString_default()(prop)) {
+            element.style[prop] = value;
+          } else if (isObject_default()(prop)) {
+            Object.keys(prop).forEach(function (key) {
+              return element.style[key] = prop[key];
+            });
+          }
+        }
+      }
+    },
+    css: function css(className, obj) {
+      // find the form
+      var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
+      if (form) {
+        var element = form.querySelector(className);
+        if (element && isObject_default()(obj)) {
+          Object.keys(obj).forEach(function (key) {
+            return element.style[key] = obj[key];
+          });
+        }
+      }
+    },
+    setValue: function setValue(name, key, value) {
       _fields = mapFields(_fields, function (field) {
         if (field.name === name) {
-          if (framework != null && framework !== '*') {
-            // apply framework specific value
-            return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, apply_transformers_defineProperty({}, framework, apply_transformers_objectSpread(apply_transformers_objectSpread({}, field[framework]), {}, apply_transformers_defineProperty({}, key, value))));
-          } else if (framework === '*') {
-            // apply custom value to all frameworks
-            var newField = apply_transformers_objectSpread({}, field);
-            FRAMEWORKS.forEach(function (framework) {
-              newField[framework] = apply_transformers_objectSpread(apply_transformers_objectSpread({}, newField[framework]), {}, apply_transformers_defineProperty({}, key, value));
-            });
-            return newField;
+          // check if the field exists in the manifest mapping
+          // and if needs to be added in a framework sub set
+          if (mappings_namespaceObject[field.component] && mappings_namespaceObject[field.component][key] !== undefined) {
+            if (mappings_namespaceObject[field.component][key] === null) {
+              // key property exists but it's just common property to all frameworks
+              return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, apply_transformers_defineProperty({}, key, value));
+            } else if (mappings_namespaceObject[field.component][key] === 'validation') {
+              var _field$validation;
+              // handle special case of validation fields
+              return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
+                validation: apply_transformers_objectSpread(apply_transformers_objectSpread({}, (_field$validation = field.validation) !== null && _field$validation !== void 0 ? _field$validation : {}), {}, apply_transformers_defineProperty({}, translateValidationKey(key), value))
+              });
+              // handle special case of validation
+            } else if (isArray_default()(mappings_namespaceObject[field.component][key]) && mappings_namespaceObject[field.component][key].includes(framework)) {
+              var _field$framework;
+              // key property it's a framework specific key, belongs to one or more frameworks, so it must be
+              // set in the specific subset, use the current framework so set it
+              return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, apply_transformers_defineProperty({}, framework, apply_transformers_objectSpread(apply_transformers_objectSpread({}, (_field$framework = field[framework]) !== null && _field$framework !== void 0 ? _field$framework : {}), {}, apply_transformers_defineProperty({}, key, value))));
+            } else {
+              console.warning("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\" in framework \"").concat(framework, "\""));
+            }
           } else {
-            return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, apply_transformers_defineProperty({}, key, value));
+            console.error("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\""));
           }
         }
         return field;
@@ -6060,18 +6513,23 @@ var ApiFactory = function ApiFactory(formFields, currenValues) {
     values: Object.freeze(apply_transformers_objectSpread({}, currenValues))
   };
 };
-var applyTransformers = function applyTransformers(fields, transformers, values) {
+var applyTransformers = function applyTransformers(formName, framework, fields, transformers, values, onJavascriptError) {
   if (isArray_default()(transformers) && !isEmpty_default()(transformers) && isFunction_default()(transformers[0])) {
     var newFields = fields;
     // apply all transformers
     transformers.filter(function (transformer) {
       return isFunction_default()(transformer);
     }).forEach(function (transformer) {
-      var api = new ApiFactory(fields, values);
+      var api = new ApiFactory(formName, framework, fields, values);
       try {
         newFields = transformer(api);
       } catch (e) {
         console.error('[LetsForm] Error on transformer: ', e);
+        var error = new Error('Error executing transformer: ' + e.message, {
+          cause: e
+        });
+        error.errorType = 'runtime';
+        onJavascriptError(error);
       }
     });
     return newFields;
@@ -6199,6 +6657,8 @@ var generator_update = injectStylesIntoStyleTag_default()(cjs_js_generator/* def
 
 
 
+
+
 function generator_typeof(obj) { "@babel/helpers - typeof"; return generator_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, generator_typeof(obj); }
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || generator_unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -6260,8 +6720,9 @@ var errorToString = function errorToString(error) {
   }
   return undefined;
 };
-var translateValidation = function translateValidation(validation, locale) {
-  if (!isEmpty_default()(validation.message)) {
+var translateValidation = function translateValidation(validation, locale, onJavascriptError) {
+  // if any validation object
+  if (validation != null) {
     var errorMessage;
     if (isString_default()(validation.message)) {
       errorMessage = validation.message;
@@ -6298,6 +6759,47 @@ var translateValidation = function translateValidation(validation, locale) {
         message: errorMessage
       };
     }
+    if (!isEmpty_default()(trim_default()(validation.validate))) {
+      try {
+        var validator = new Function('value', 'formValues', validation.validate);
+        // wrap the validator function, if returns strictly false then re-use
+        // the provided message, if it's a string return the string, but it will not i18n
+        result.validate = function (value, formValues) {
+          var v;
+          try {
+            v = validator(value, formValues);
+          } catch (e) {
+            console.error("[LetsForm] Error executing validate function: ", e);
+            var error = new Error('Error compiling validate function: ' + e.message, {
+              cause: e
+            });
+            error.sourceCode = validation.validate;
+            error.errorType = 'runtime';
+            onJavascriptError(error);
+          }
+          if (v === true) {
+            return true;
+          } else if (v === false) {
+            return errorMessage;
+          } else if (isString_default()(v)) {
+            return v;
+          } else if (isI18n(v)) {
+            return i18n(v, locale);
+          }
+          return true;
+        };
+      } catch (e) {
+        console.error("[LetsForm] Invalid validate function: ", e);
+        var error = new Error('Error compiling validate function: ' + e.message, {
+          cause: e
+        });
+        error.sourceCode = validation.validate;
+        error.errorType = 'compile';
+        onJavascriptError(error);
+      }
+    } else {
+      result.validate = undefined;
+    }
     return result;
   }
   return validation;
@@ -6319,21 +6821,40 @@ var MissingComponent = function MissingComponent(_ref) {
     className: "tag-component"
   }, lfComponent), " (", /*#__PURE__*/external_react_default().createElement("em", null, "\"", label, "\""), ") is not available for this framework (", /*#__PURE__*/external_react_default().createElement("b", null, lfFramework), ")"));
 };
-var collectTransformers = function collectTransformers(form) {
+var collectTransformers = function collectTransformers(form, onJavascriptError) {
   var fieldList = reduceFields(form.fields, function (field, accumulator) {
     if (field.component !== 'group' && field.component !== 'two-columns' && field.component !== 'three-columns') {
       return [].concat(generator_toConsumableArray(accumulator), [field.name]);
     }
     return accumulator;
   }, []);
-  var mainTransformer = !isEmpty_default()(form.transformer) ? makeTransformer(form.transformer, fieldList) : null;
+  var mainTransformer;
+  try {
+    mainTransformer = !isEmpty_default()(form.transformer) ? makeTransformer(form.transformer, fieldList) : null;
+  } catch (e) {
+    var error = new Error('Error compiling main transformer: ' + e.message, {
+      cause: e
+    });
+    error.sourceCode = form.transformer;
+    console.log('salvo il code', error.sourceCode);
+    error.errorType = 'compile';
+    onJavascriptError(error);
+  }
   var collected = reduceFields(form.fields, function (field, acc) {
     if (field.transformer) {
-      var transformer = makeTransformer(field.transformer, fieldList);
+      var transformer;
+      try {
+        transformer = makeTransformer(field.transformer, fieldList);
+      } catch (e) {
+        var _error = new Error('Error compiling transformer. ' + e.message, {
+          cause: e
+        });
+        _error.sourceCode = field.transformer;
+        _error.errorType = 'compile';
+        onJavascriptError(_error);
+      }
       if (transformer != null) {
         return [].concat(generator_toConsumableArray(acc), [transformer]);
-      } else {
-        console.error('[LetForm] Wrong transformer', field.transformer);
       }
     }
     return acc;
@@ -6349,12 +6870,12 @@ var makeTransformer = function makeTransformer(str, fieldList) {
     if (!isEmpty_default()(fieldList)) {
       spreadVars = 'const { ' + fieldList.join(', ') + ' } = values;\n';
     }
-    return new Function('api', "const { setValue, disable, enable, values, show, hide } = api;\n" + spreadVars + str + '\nreturn api.fields();' // leave /n or a comment can void anything
+    return new Function('api', "const { setValue, disable, enable, values, show, hide, css, element, style } = api;\n" + spreadVars + str + '\nreturn api.fields();' // leave /n or a comment can void anything
     );
   } catch (e) {
     console.error("LetsForm] Invalid JavaScript code for rules", e);
     console.error("LetsForm] Transformer: ", str);
-    return null;
+    throw e;
   }
 };
 var GenerateGenerator = function GenerateGenerator(_ref2) {
@@ -6377,7 +6898,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       showErrors = _ref3.showErrors,
       _ref3$level = _ref3.level,
       level = _ref3$level === void 0 ? 1 : _ref3$level,
-      locale = _ref3.locale;
+      locale = _ref3.locale,
+      onJavascriptError = _ref3.onJavascriptError;
     var renderedFields = (fields || []).filter(function (field) {
       return Wrapper || field.hidden !== true;
     }).map(function (field, index) {
@@ -6418,7 +6940,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           errors: errors,
           showErrors: showErrors,
           level: level + 1,
-          locale: locale
+          locale: locale,
+          onJavascriptError: onJavascriptError
         }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
           key: "bottom_view_".concat(field.name),
           field: field,
@@ -6454,7 +6977,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               errors: errors,
               showErrors: showErrors,
               level: level + 1,
-              locale: locale
+              locale: locale,
+              onJavascriptError: onJavascriptError
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               key: "bottom_view_".concat(field.name),
               field: field,
@@ -6476,7 +7000,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               errors: errors,
               showErrors: showErrors,
               level: level + 1,
-              locale: locale
+              locale: locale,
+              onJavascriptError: onJavascriptError
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               key: "bottom_view_".concat(field.name),
               field: field,
@@ -6514,7 +7039,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               errors: errors,
               showErrors: showErrors,
               level: level + 1,
-              locale: locale
+              locale: locale,
+              onJavascriptError: onJavascriptError
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               key: "bottom_view_".concat(field.name),
               field: field,
@@ -6536,7 +7062,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               errors: errors,
               showErrors: showErrors,
               level: level + 1,
-              locale: locale
+              locale: locale,
+              onJavascriptError: onJavascriptError
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               key: "bottom_view_".concat(field.name),
               field: field,
@@ -6558,7 +7085,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               errors: errors,
               showErrors: showErrors,
               level: level + 1,
-              locale: locale
+              locale: locale,
+              onJavascriptError: onJavascriptError
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               key: "bottom_view_".concat(field.name),
               field: field,
@@ -6578,7 +7106,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       // validation format and i18n strings
       var rules = translateValidation(generator_objectSpread({
         required: field.required
-      }, field.validation), locale);
+      }, field.validation), locale, onJavascriptError);
       return /*#__PURE__*/external_react_default().createElement(Controller, {
         key: "field_".concat(field.name),
         name: field.name,
@@ -6626,6 +7154,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
     return renderedFields;
   };
   var FormGenerator = /*#__PURE__*/external_react_default().memo(function (_ref5) {
+    var _form$name;
     var framework = _ref5.framework,
       form = _ref5.form,
       _ref5$onChange = _ref5.onChange,
@@ -6636,6 +7165,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       onReset = _ref5$onReset === void 0 ? function () {} : _ref5$onReset,
       _ref5$onError = _ref5.onError,
       onError = _ref5$onError === void 0 ? function () {} : _ref5$onError,
+      _ref5$onJavascriptErr = _ref5.onJavascriptError,
+      onJavascriptError = _ref5$onJavascriptErr === void 0 ? function () {} : _ref5$onJavascriptErr,
       locale = _ref5.locale,
       wrapper = _ref5.wrapper,
       groupWrapper = _ref5.groupWrapper,
@@ -6660,10 +7191,14 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       console.log("[LetsForm] Render form (".concat(form.name, ")"));
     }
     var showErrors = form.showErrors;
-    var _useState = (0,external_react_.useState)(collectTransformers(form)),
+    var _useState = (0,external_react_.useState)((_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : uniqueId_default()('form_')),
       _useState2 = _slicedToArray(_useState, 2),
-      transformers = _useState2[0],
-      setTransformers = _useState2[1];
+      formName = _useState2[0],
+      setFormName = _useState2[1];
+    var _useState3 = (0,external_react_.useState)(collectTransformers(form, onJavascriptError)),
+      _useState4 = _slicedToArray(_useState3, 2),
+      transformers = _useState4[0],
+      setTransformers = _useState4[1];
     var _useForm = useForm({
         defaultValues: defaultValues,
         mode: form.validationMode
@@ -6673,25 +7208,27 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       reset = _useForm.reset,
       control = _useForm.control,
       getValues = _useForm.getValues;
-    var _useState3 = (0,external_react_.useState)(),
-      _useState4 = _slicedToArray(_useState3, 2),
-      validationErrors = _useState4[0],
-      setValidationErrors = _useState4[1];
-    // store form fields, apply immediately transformers (collected from all fields)
-    var _useState5 = (0,external_react_.useState)(applyTransformers(form.fields, transformers, defaultValues)),
+    var _useState5 = (0,external_react_.useState)(),
       _useState6 = _slicedToArray(_useState5, 2),
-      formFields = _useState6[0],
-      setFormFields = _useState6[1];
+      validationErrors = _useState6[0],
+      setValidationErrors = _useState6[1];
+    // store form fields, apply immediately transformers (collected from all fields)
+    var _useState7 = (0,external_react_.useState)(applyTransformers(formName, framework, form.fields, transformers, defaultValues, onJavascriptError)),
+      _useState8 = _slicedToArray(_useState7, 2),
+      formFields = _useState8[0],
+      setFormFields = _useState8[1];
 
     // update internal state if form changes
     (0,external_react_.useEffect)(function () {
-      var newTransformers = collectTransformers(form);
-      var newFormFields = applyTransformers(form.fields, newTransformers, defaultValues);
+      var _form$name2;
+      var newTransformers = collectTransformers(form, onJavascriptError);
+      var newFormFields = applyTransformers(formName, framework, form.fields, newTransformers, defaultValues, onJavascriptError);
       setFormFields(newFormFields);
+      setFormName((_form$name2 = form.name) !== null && _form$name2 !== void 0 ? _form$name2 : uniqueId_default()('form_'));
       setTransformers(newTransformers);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [form] // don't put defaultValues here
+    [form, framework] // don't put defaultValues here
     );
 
     var onHandleSubmit = (0,external_react_.useCallback)(function (data) {
@@ -6699,7 +7236,6 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       onSubmit(data);
     }, [onSubmit]);
     var onHandleError = (0,external_react_.useCallback)(function (data) {
-      console.log('error', data);
       setValidationErrors(data);
       onError(data);
     }, [onError]);
@@ -6708,12 +7244,12 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       reset(defaultValues);
     }, [defaultValues, reset]);
     var handleChange = (0,external_react_.useCallback)(function (values) {
-      var newFormFields = applyTransformers(formFields, transformers, values);
+      var newFormFields = applyTransformers(formName, framework, formFields, transformers, values, onJavascriptError);
       if (newFormFields !== formFields) {
         setFormFields(newFormFields);
       }
       onChange(values);
-    }, [onChange, formFields, transformers]);
+    }, [onChange, formFields, formName, transformers, framework, onJavascriptError]);
     if (debug) {
       console.log('[LetsForm] Validation', errors);
     }
@@ -6735,6 +7271,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       errors: enrichWithLabels(validationErrors, formFields)
     }), /*#__PURE__*/external_react_default().createElement(Form, _extends({
       onSubmit: handleSubmit(onHandleSubmit, onHandleError),
+      name: formName,
       defaultValues: defaultValues,
       onlyFields: onlyFields,
       hideToolbar: hideToolbar,
@@ -6758,7 +7295,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       readOnly: readOnly || form.readOnly,
       plaintext: plaintext || form.plaintext,
       showErrors: showErrors,
-      locale: locale
+      locale: locale,
+      onJavascriptError: onJavascriptError
     }), children, validationErrors && (showErrors === 'groupedBottom' || isEmpty_default()(showErrors)) && /*#__PURE__*/external_react_default().createElement(ValidationErrors, {
       className: "bottom",
       locale: locale,
@@ -6827,7 +7365,8 @@ var buildColObject = function buildColObject(span, offset) {
   return undefined;
 };
 var FormAntD = function FormAntD(_ref) {
-  var values = _ref.values,
+  var name = _ref.name,
+    values = _ref.values,
     _ref$onReset = _ref.onReset,
     onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset,
     _ref$onSubmit = _ref.onSubmit,
@@ -6846,7 +7385,8 @@ var FormAntD = function FormAntD(_ref) {
     wrapperColOffset = _ref.wrapperColOffset,
     children = _ref.children;
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form, {
-    className: "lf-form-react-antd",
+    className: "lf-form lf-form-react-antd",
+    "data-lf-form-name": name,
     layout: layout,
     labelAlign: labelAlign,
     labelWrap: labelWrap,
@@ -6879,14 +7419,49 @@ var FormAntD = function FormAntD(_ref) {
 // EXTERNAL MODULE: ./node_modules/micro-down/dist/index.js
 var dist = __webpack_require__(7305);
 var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/placeholder/placeholder.scss
+var placeholder = __webpack_require__(860);
+;// CONCATENATED MODULE: ./common/placeholder/placeholder.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var placeholder_options = {};
+
+placeholder_options.styleTagTransform = (styleTagTransform_default());
+placeholder_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      placeholder_options.insert = insertBySelector_default().bind(null, "head");
+    
+placeholder_options.domAPI = (styleDomAPI_default());
+placeholder_options.insertStyleElement = (insertStyleElement_default());
+
+var placeholder_update = injectStylesIntoStyleTag_default()(placeholder/* default */.Z, placeholder_options);
+
+
+
+
+       /* harmony default export */ const placeholder_placeholder = (placeholder/* default */.Z && placeholder/* default.locals */.Z.locals ? placeholder/* default.locals */.Z.locals : undefined);
+
 ;// CONCATENATED MODULE: ./common/placeholder/index.js
 
 
 
+
 var Placeholder = function Placeholder(_ref) {
-  var text = _ref.text;
+  var text = _ref.text,
+    name = _ref.name;
   if (!isEmpty_default()(text)) {
     return /*#__PURE__*/external_react_default().createElement("div", {
+      className: "lf-control-placeholder",
+      "data-lf-field-name": name,
       dangerouslySetInnerHTML: {
         __html: dist_default().parse(text)
       }
@@ -6940,8 +7515,8 @@ var ThreeColumns = function ThreeColumns(_ref) {
     centerAlignment = _ref.centerAlignment,
     rightAlignment = _ref.rightAlignment;
   return /*#__PURE__*/external_react_default().createElement("div", {
-    key: name,
-    className: classnames_default()('lf-three-columns', layout)
+    "data-lf-field-name": name,
+    className: classnames_default()('lf-control-three-columns', layout)
   }, /*#__PURE__*/external_react_default().createElement("div", {
     className: "left",
     style: {
@@ -7003,7 +7578,8 @@ var TwoColumns = function TwoColumns(_ref) {
     leftAlignment = _ref.leftAlignment,
     rightAlignment = _ref.rightAlignment;
   return /*#__PURE__*/external_react_default().createElement("div", {
-    className: classnames_default()('lf-two-columns', layout)
+    className: classnames_default()('lf-control-two-columns', layout),
+    "data-lf-field-name": name
   }, /*#__PURE__*/external_react_default().createElement("div", {
     className: "left",
     style: {
@@ -7063,7 +7639,8 @@ function group_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var Group = I18N(function (_ref) {
-  var label = _ref.label,
+  var name = _ref.name,
+    label = _ref.label,
     _ref$disabled = _ref.disabled,
     disabled = _ref$disabled === void 0 ? false : _ref$disabled,
     _ref$open = _ref.open,
@@ -7083,6 +7660,7 @@ var Group = I18N(function (_ref) {
     setIsOpen(!isOpen);
   }, [isOpen]);
   return /*#__PURE__*/external_react_default().createElement("div", {
+    "data-lf-field-name": name,
     className: classnames_default()('lf-control-group', {
       'bottom-border': bottomBorder,
       'open': isOpen,
@@ -7157,6 +7735,7 @@ var PlaceholderImage = function PlaceholderImage(_ref) {
     align = _ref.align;
   return /*#__PURE__*/external_react_default().createElement("div", {
     className: "lf-control-placeholder-image",
+    "data-lf-field-name": name,
     style: {
       textAlign: align ? align : undefined
     }
@@ -7187,7 +7766,78 @@ var TextOrIcon = function TextOrIcon(str) {
     return /*#__PURE__*/external_react_default().createElement("span", null, str);
   }
 };
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/divider/divider.scss
+var divider = __webpack_require__(1760);
+;// CONCATENATED MODULE: ./common/divider/divider.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var divider_options = {};
+
+divider_options.styleTagTransform = (styleTagTransform_default());
+divider_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      divider_options.insert = insertBySelector_default().bind(null, "head");
+    
+divider_options.domAPI = (styleDomAPI_default());
+divider_options.insertStyleElement = (insertStyleElement_default());
+
+var divider_update = injectStylesIntoStyleTag_default()(divider/* default */.Z, divider_options);
+
+
+
+
+       /* harmony default export */ const divider_divider = (divider/* default */.Z && divider/* default.locals */.Z.locals ? divider/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./common/divider/index.js
+
+
+var Divider = function Divider(_ref) {
+  var name = _ref.name,
+    size = _ref.size,
+    color = _ref.color;
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-control-divider",
+    "data-lf-field-name": name
+  }, /*#__PURE__*/external_react_default().createElement("div", {
+    className: "bar",
+    style: {
+      height: "".concat(size, "px"),
+      backgroundColor: color
+    }
+  }, "&npsb;"));
+};
+
+;// CONCATENATED MODULE: ./common/react-view/index.js
+var _excluded = ["name", "view"];
+function react_view_extends() { react_view_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_view_extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+var ReactView = function ReactView(_ref) {
+  var name = _ref.name,
+    view = _ref.view,
+    rest = _objectWithoutProperties(_ref, _excluded);
+  var View = view;
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-control-react-view",
+    "data-lf-field-name": name
+  }, View && /*#__PURE__*/external_react_default().createElement(View, react_view_extends({
+    name: name
+  }, rest)));
+};
+
 ;// CONCATENATED MODULE: ./common/index.js
+
+
 
 
 
@@ -7226,10 +7876,10 @@ var input_text_update = injectStylesIntoStyleTag_default()(input_text/* default 
        /* harmony default export */ const input_text_input_text = (input_text/* default */.Z && input_text/* default.locals */.Z.locals ? input_text/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-antd/input-text/index.js
-var _excluded = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "fullWidth", "width"];
+var input_text_excluded = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "fullWidth", "width"];
 function input_text_extends() { input_text_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return input_text_extends.apply(this, arguments); }
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+function input_text_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = input_text_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function input_text_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
@@ -7263,12 +7913,13 @@ var TextInput = I18N(function (_ref) {
     onBlur = _ref.onBlur,
     fullWidth = _ref.fullWidth,
     width = _ref.width,
-    rest = _objectWithoutProperties(_ref, _excluded);
+    rest = input_text_objectWithoutProperties(_ref, input_text_excluded);
   var handleChange = (0,external_react_.useCallback)(function (e) {
     return onChange(e.target.value);
   }, [onChange]);
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
     className: classnames_default()('lf-control-input-text', "lf-size-".concat(size)),
+    "data-lf-field-name": name,
     label: label,
     name: name,
     help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -7333,6 +7984,8 @@ var Toggle = I18N(function (_ref) {
     return onChange(e.target.checked);
   }, [onChange]);
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
+    "data-lf-field-name": name,
+    className: "lf-control-toggle",
     label: label,
     name: name,
     help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -7393,6 +8046,7 @@ var CheckboxAntd = I18N(function (_ref) {
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
     name: name,
     className: "lt-control-checkbox",
+    "data-lf-field-name": name,
     help: error != null ? error : hint && !tooltip ? hint : undefined,
     hasFeedback: error != null,
     validateStatus: error ? 'error' : undefined
@@ -11233,6 +11887,7 @@ var DateAntd = I18N(function (_ref) {
     // not needed, breaks in case date is set
     //name={name}
     ,
+    "data-lf-field-name": name,
     help: error != null ? error : hint && !tooltip ? hint : undefined,
     required: required,
     tooltip: tooltip && hint,
@@ -11314,6 +11969,8 @@ var SelectAntd = I18N(function (_ref) {
     filterValue = _ref.filterValue,
     rest = select_objectWithoutProperties(_ref, select_excluded);
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
+    "data-lf-field-name": name,
+    className: "lf-control-select",
     label: label,
     name: name,
     help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -11428,6 +12085,8 @@ var RadioGroup = I18N(function (_ref) {
     })));
   }
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
+    "data-lf-field-name": name,
+    className: "lf-control-radio-group",
     label: label,
     name: name,
     help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -11514,6 +12173,8 @@ var RateAntd = I18N(function (_ref) {
    */
 
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
+    "data-lf-field-name": name,
+    className: "lf-control-rate",
     label: label,
     name: name,
     help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -11540,12 +12201,14 @@ var RateAntd = I18N(function (_ref) {
 
 
 var PlaceholderAntd = I18N(function (_ref) {
-  var hint = _ref.hint,
+  var name = _ref.name,
+    hint = _ref.hint,
     text = _ref.text,
     tooltip = _ref.tooltip,
     label = _ref.label;
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
     label: label,
+    "data-lf-field-name": name,
     help: hint && !tooltip ? hint : undefined,
     tooltip: tooltip && hint,
     className: "lf-control-placeholder"
@@ -11599,6 +12262,8 @@ var InputNumberAntd = I18N(function (_ref) {
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
     label: label,
     name: name,
+    "data-lf-field-name": name,
+    className: "lf-control-input-number",
     help: error != null ? error : hint && !tooltip ? hint : undefined,
     required: required,
     tooltip: tooltip && hint,
@@ -11664,6 +12329,8 @@ var TextareaAntd = I18N(function (_ref) {
     return onChange(e.target.value);
   }, [onChange]);
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
+    "data-lf-field-name": name,
+    className: "lf-control-textarea",
     label: label,
     name: name,
     help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -11735,6 +12402,8 @@ var Multiselect = I18N(function (_ref) {
     rest = multiselect_objectWithoutProperties(_ref, multiselect_excluded);
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
     label: label,
+    "data-lf-field-name": name,
+    className: "lf-control-multiselect",
     name: name,
     help: error != null ? error : hint && !tooltip ? hint : undefined,
     required: required,
@@ -11830,6 +12499,8 @@ var SliderAnt = I18N(function (_ref) {
     }, {});
   }
   return /*#__PURE__*/external_react_default().createElement(external_antd_.Form.Item, {
+    "data-lf-field-name": name,
+    className: "lf-control-slider",
     label: label,
     name: name,
     help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -11866,11 +12537,17 @@ var SliderAnt = I18N(function (_ref) {
   }
 });
 
+;// CONCATENATED MODULE: ./react-antd/divider/index.js
+
+;// CONCATENATED MODULE: ./react-antd/react-view/index.js
+
 ;// CONCATENATED MODULE: ./react-antd/index.js
 var react_antd_excluded = ["framework", "children"];
 function react_antd_extends() { react_antd_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_antd_extends.apply(this, arguments); }
 function react_antd_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_antd_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function react_antd_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
 
 
 
@@ -11938,6 +12615,12 @@ var Fields = {
   },
   'slider': {
     'react-antd': SliderAnt
+  },
+  'divider': {
+    'react-antd': Divider
+  },
+  'react-view': {
+    'react-antd': ReactView
   }
 };
 var Forms = {

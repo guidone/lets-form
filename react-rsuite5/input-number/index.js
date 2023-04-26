@@ -65,7 +65,7 @@ const InputNumberRSuite5 = I18N(
     );
 
     return (
-      <Form.Group className="lf-control-input-number">
+      <Form.Group data-lf-field-name={name} className="lf-control-input-number">
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}

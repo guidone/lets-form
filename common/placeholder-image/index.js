@@ -20,6 +20,7 @@ const PlaceholderImage = ({
   return (
     <div
       className="lf-control-placeholder-image"
+      data-lf-field-name={name}
       style={{
         textAlign: align ? align : undefined
       }}

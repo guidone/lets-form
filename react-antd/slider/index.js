@@ -44,6 +44,8 @@ const SliderAnt = I18N(
 
     return (
       <Form.Item
+        data-lf-field-name={name}
+        className="lf-control-slider"
         label={label}
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}

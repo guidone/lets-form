@@ -1,0 +1,12 @@
+.lf-control-divider {
+  min-height: 15px;
+  font-size: 1px;
+  display: flex;
+  margin-bottom: var(--lf-field-margin);
+
+  .bar {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}

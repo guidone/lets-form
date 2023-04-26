@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import './index.scss';
 
 const FormBootstrap = ({
+  name,
   children,
   onSubmit,
   onReset,
@@ -13,7 +14,8 @@ const FormBootstrap = ({
 
   return (
     <Form
-    className="lf-form-react-bootstrap"
+      className="lf-form lf-form-react-bootstrap"
+      data-lf-form-name={name}
       onSubmit={onSubmit}
     >
       <div>

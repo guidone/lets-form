@@ -29,7 +29,7 @@ const SelectDate = I18N(
   }) => {
     const localeCode = lfLocale && _.isString(lfLocale) ? lfLocale.replace('-', '') : undefined;
     return (
-      <Form.Group controlId={name}>
+      <Form.Group data-lf-field-name={name} className="lf-control-date">
         {label && (
           <Form.ControlLabel>
             {label}

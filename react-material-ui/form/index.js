@@ -4,6 +4,7 @@ import { Button, Stack } from '@mui/material';
 import './index.scss';
 
 const FormMaterialUI = ({
+  name,
   children,
   onSubmit = () => {},
   onReset = () => {}
@@ -11,7 +12,8 @@ const FormMaterialUI = ({
 
   return (
     <form
-      className="lf-form-react-material-ui"
+      className="lf-form lf-form-react-material-ui"
+      data-lf-form-name={name}
       onSubmit={onSubmit}
     >
       {children}

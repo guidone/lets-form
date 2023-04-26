@@ -33,6 +33,8 @@ const TextareaAntd = I18N(
 
     return (
       <Form.Item
+        data-lf-field-name={name}
+        className="lf-control-textarea"
         label={label}
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}

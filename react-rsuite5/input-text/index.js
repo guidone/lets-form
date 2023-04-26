@@ -57,7 +57,7 @@ const TextInput = I18N(
     return (
       <Form.Group
         className={classNames('lf-control-input-text', `lf-size-${size}`)}
-        //style={_.isNumber(width) ? { width: `${width}px` } : undefined}
+        data-lf-field-name={name}
         style={makeWidthStyle(fullWidth, width)}
       >
         {label && <Form.ControlLabel>

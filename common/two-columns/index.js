@@ -12,7 +12,7 @@ const TwoColumns = ({
   rightAlignment
 }) => {
   return (
-    <div className={classNames('lf-two-columns', layout)}>
+    <div className={classNames('lf-control-two-columns', layout)} data-lf-field-name={name}>
       <div
         className="left"
         style={{ alignSelf: leftAlignment ? leftAlignment : undefined }}

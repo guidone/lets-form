@@ -35,7 +35,10 @@ const SliderMui = I18N(
     );
 
     return (
-      <div className="lf-control-slider">
+      <div
+        className="lf-control-slider"
+        data-lf-field-name={name}
+      >
         <FormControl
           required={required}
           error={error != null}

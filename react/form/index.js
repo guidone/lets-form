@@ -6,16 +6,20 @@ import React from 'react';
 import './index.scss';
 
 const FormReact = ({
+  name,
   children,
   hideToolbar = false,
   onSubmit = () => {},
   onReset = () => {}
 }) => {
 
-  // pure-form-aligned
-
+  // TODO pure-form-aligned
   return (
-    <form onSubmit={onSubmit} className="lf-form-react lf-form-react-stacked">
+    <form
+      onSubmit={onSubmit}
+      className="lf-form lf-form-react lf-form-react-stacked"
+      data-lf-form-name={name}
+    >
       {children}
       {!hideToolbar && (
         <div className="lf-toolbar">
@@ -34,4 +38,4 @@ const FormReact = ({
   );
 };
 
-export { FormReact }
+export { FormReact };

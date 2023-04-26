@@ -82,6 +82,7 @@ const TextInput = I18N(
     return (
       <Form.Group
         className="lf-control-input-text mb-3"
+        data-lf-field-name={name}
       >
         {useFloatingLabels && (
           <FloatingLabel

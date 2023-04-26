@@ -41,6 +41,7 @@ const CheckboxGroupBootstrap = I18N(
     return (
       <Form.Group
         className="lf-control-checkbox-group mb-3"
+        data-lf-field-name={name}
       >
         <Form.Label>
           {label}

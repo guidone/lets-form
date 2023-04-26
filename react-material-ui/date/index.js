@@ -14,6 +14,7 @@ import { I18N } from '../../components';
 
 const Date = I18N(
   ({
+    name,
     label,
     hint,
     value,
@@ -53,7 +54,10 @@ const Date = I18N(
     }
 
     return (
-      <div className="lf-control-date">
+      <div
+        data-lf-field-name={name}
+        className="lf-control-date"
+      >
         <LocalizationProvider
           dateAdapter={AdapterDayjs}
           adapterLocale={localeCode ?? undefined}
