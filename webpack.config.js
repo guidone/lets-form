@@ -48,6 +48,13 @@ module.exports = module.exports = (env = {}) => {
     outputFile = 'bootstrap.js';
     entryPointName = 'lets-form-bootstrap';
     outputPath = null;
+  } else if (env.framework === 'helpers') {
+    console.log('Building helpers library');
+    library = 'lets-form-helpers';
+    entryPoint = path.join(__dirname, 'helpers/index.js');
+    outputFile = 'helpers.js';
+    entryPointName = 'lets-form-helpers';
+    outputPath = null;
   } else {
     console.log('Building for ALL frameworks');
   }

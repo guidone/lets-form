@@ -12,7 +12,8 @@
     "build-rsuite5": "npm run build:webpack -- --env framework=\"rsuite5\"",
     "build-bootstrap": "npm run build:webpack -- --env framework=\"bootstrap\"",
     "build-antd": "npm run build:webpack -- --env framework=\"antd\"",
-    "build-react": "npm run build:webpack -- --env framework=\"react\""
+    "build-react": "npm run build:webpack -- --env framework=\"react\"",
+    "build-helpers": "npm run build:webpack -- --env framework=\"helpers\""
   },
   "author": "Guido Bellomo",
   "license": "ISC",
