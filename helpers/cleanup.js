@@ -65,7 +65,7 @@ const cleanUp = json => {
           }
         });
         // collect all empty keys
-        cloned = removeEmptyKeys(field);
+        cloned = removeEmptyKeys(cloned);
         // cycle all keys and check if it's an i18n object
         if (_.isArray(json.locales) && !_.isEmpty(json.locales)) {
           cloned = removeUnusedLocalesFromObj(cloned, json.locales);

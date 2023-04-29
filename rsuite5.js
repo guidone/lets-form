@@ -2859,6 +2859,7 @@ __webpack_require__.d(__webpack_exports__, {
   "applyFormRules": () => (/* reexport */ applyFormRules),
   "applyTransformers": () => (/* reexport */ applyTransformers),
   "cleanUp": () => (/* reexport */ cleanUp),
+  "collectNames": () => (/* reexport */ collectNames),
   "createEmptyField": () => (/* reexport */ createEmptyField),
   "default": () => (/* binding */ react_rsuite5),
   "deleteField": () => (/* reexport */ deleteField),
@@ -5835,7 +5836,7 @@ var cleanUp = function cleanUp(json) {
         }
       });
       // collect all empty keys
-      cloned = removeEmptyKeys(field);
+      cloned = removeEmptyKeys(cloned);
       // cycle all keys and check if it's an i18n object
       if (isArray_default()(json.locales) && !isEmpty_default()(json.locales)) {
         cloned = removeUnusedLocalesFromObj(cloned, json.locales);
@@ -6221,6 +6222,7 @@ function apply_transformers_toPropertyKey(arg) { var key = apply_transformers_to
 function apply_transformers_toPrimitive(input, hint) { if (apply_transformers_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (apply_transformers_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 
+
 // cannot import manifest, need to stay in the other repo
 // this is going open source, while the manifests are ip
 
@@ -6238,11 +6240,23 @@ var translateValidationKey = function translateValidationKey(str) {
 };
 var ApiFactory = function ApiFactory(formName, framework, formFields, currenValues) {
   var _fields = formFields;
+  var fieldExists = function fieldExists(name) {
+    if (findField(_fields, function (field) {
+      return field.name === name;
+    }) != null) {
+      return true;
+    } else {
+      throw new Error("Field \"".concat(name, "\" doesn't exist in the form"));
+    }
+  };
   return {
     fields: function fields() {
       return _fields;
     },
     element: function element(name) {
+      if (!fieldExists(name)) {
+        return;
+      }
       var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
       if (form) {
         return form.querySelector("[data-lf-field-name=".concat(name, "]"));
@@ -6250,6 +6264,9 @@ var ApiFactory = function ApiFactory(formName, framework, formFields, currenValu
       return null;
     },
     style: function style(name, prop, value) {
+      if (!fieldExists(name)) {
+        return;
+      }
       // find the form, then the element, then apply the style
       var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
       if (form) {
@@ -6278,6 +6295,9 @@ var ApiFactory = function ApiFactory(formName, framework, formFields, currenValu
       }
     },
     setValue: function setValue(name, key, value) {
+      if (!fieldExists(name)) {
+        return;
+      }
       _fields = mapFields(_fields, function (field) {
         if (field.name === name) {
           // check if the field exists in the manifest mapping
@@ -6309,6 +6329,9 @@ var ApiFactory = function ApiFactory(formName, framework, formFields, currenValu
       });
     },
     enable: function enable(name) {
+      if (!fieldExists(name)) {
+        return;
+      }
       _fields = mapFields(_fields, function (field) {
         if (field.name === name) {
           return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
@@ -6319,6 +6342,9 @@ var ApiFactory = function ApiFactory(formName, framework, formFields, currenValu
       });
     },
     disable: function disable(name) {
+      if (!fieldExists(name)) {
+        return;
+      }
       _fields = mapFields(_fields, function (field) {
         if (field.name === name) {
           return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
@@ -6329,6 +6355,9 @@ var ApiFactory = function ApiFactory(formName, framework, formFields, currenValu
       });
     },
     show: function show(name) {
+      if (!fieldExists(name)) {
+        return;
+      }
       _fields = mapFields(_fields, function (field) {
         if (field.name === name) {
           return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
@@ -6339,6 +6368,9 @@ var ApiFactory = function ApiFactory(formName, framework, formFields, currenValu
       });
     },
     hide: function hide(name) {
+      if (!fieldExists(name)) {
+        return;
+      }
       _fields = mapFields(_fields, function (field) {
         if (field.name === name) {
           return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
@@ -6400,7 +6432,29 @@ var makeWidthStyle = function makeWidthStyle(fullWidth, width) {
   }
   return style;
 };
+;// CONCATENATED MODULE: ./helpers/collect-names.js
+
+
+function collect_names_toConsumableArray(arr) { return collect_names_arrayWithoutHoles(arr) || collect_names_iterableToArray(arr) || collect_names_unsupportedIterableToArray(arr) || collect_names_nonIterableSpread(); }
+function collect_names_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function collect_names_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return collect_names_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return collect_names_arrayLikeToArray(o, minLen); }
+function collect_names_iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function collect_names_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return collect_names_arrayLikeToArray(arr); }
+function collect_names_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+
+var collectNames = function collectNames(form) {
+  if (form && isArray_default()(form.fields) && !isEmpty_default()(form.fields)) {
+    return reduceFields(form.fields, function (field, accumulator) {
+      if (!accumulator.includes(field.name)) {
+        return [].concat(collect_names_toConsumableArray(accumulator), [field.name]);
+      }
+      return accumulator;
+    }, []);
+  }
+  return [];
+};
 ;// CONCATENATED MODULE: ./helpers/index.js
+
 
 
 

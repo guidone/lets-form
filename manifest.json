@@ -1,0 +1,235 @@
+{
+  "text-input": {
+    "label": "Text Input",
+    "category": "general",
+    "documentation": "https://github.com/guidone/lets-form/wiki/Input-text",
+    "name": "text-input",
+    "description": "Basic input text",
+    "common": [
+      {
+        "name": "name",
+        "type": "string",
+        "description": "The name of the field and the key of the JSON"
+      },
+      {
+        "name": "label",
+        "type": "string | i18n"
+      },
+      {
+        "name": "hint",
+        "type": "string | i18n"
+      },
+      {
+        "name": "placeholder",
+        "type": "string | i18n"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean"
+      },
+      {
+        "name": "readOnly",
+        "type": "boolean"
+      },
+      {
+        "name": "hidden",
+        "type": "boolean"
+      }
+    ],
+    "react": [
+      {
+        "name": "fullWidth",
+        "type": "boolean"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Size of the field in pixel"
+      }
+    ],
+    "react-rsuite5": [
+      {
+        "name": "size",
+        "type": "string",
+        "options": [
+          "lg",
+          "md",
+          "sm",
+          "xs"
+        ]
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Size of the field in pixel"
+      },
+      {
+        "name": "prefix",
+        "type": "string"
+      },
+      {
+        "name": "inside",
+        "type": "boolean",
+        "description": "Show prefix and postfix inside the input box"
+      },
+      {
+        "name": "postfix",
+        "type": "string"
+      },
+      {
+        "name": "tooltip",
+        "type": "boolean",
+        "description": "Show hint as tooltip next to label"
+      }
+    ],
+    "react-material-ui": [
+      {
+        "name": "floatingLabel",
+        "type": "boolean",
+        "description": "Show floating label for the control"
+      },
+      {
+        "name": "disableUnderline",
+        "type": "boolean",
+        "description": "Disable underline in \"filled\" and \"standard\" variant"
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Size of the field in pixel"
+      },
+      {
+        "name": "size",
+        "type": "string",
+        "options": [
+          "small",
+          "medium"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "outlined",
+          "filled",
+          "standard"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "error",
+          "info",
+          "primary",
+          "secondary",
+          "success",
+          "warning"
+        ]
+      },
+      {
+        "name": "prefix",
+        "type": "string"
+      },
+      {
+        "name": "postfix",
+        "type": "string"
+      }
+    ],
+    "react-bootstrap": [
+      {
+        "name": "size",
+        "type": "string",
+        "options": [
+          "lg",
+          "sm"
+        ]
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Size of the field in pixel"
+      },
+      {
+        "name": "prefix",
+        "type": "string"
+      },
+      {
+        "name": "postfix",
+        "type": "string"
+      },
+      {
+        "name": "floatingLabel",
+        "type": "boolean",
+        "description": "Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"
+      }
+    ],
+    "react-antd": [
+      {
+        "name": "size",
+        "type": "string",
+        "options": [
+          "small",
+          "default",
+          "large"
+        ]
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Size of the field in pixel"
+      },
+      {
+        "name": "prefix",
+        "type": "string"
+      },
+      {
+        "name": "postfix",
+        "type": "string"
+      },
+      {
+        "name": "showCount",
+        "type": "boolean"
+      },
+      {
+        "name": "maxLength",
+        "type": "number"
+      },
+      {
+        "name": "allowClear",
+        "type": "boolean"
+      },
+      {
+        "name": "tooltip",
+        "type": "boolean"
+      },
+      {
+        "name": "bordered",
+        "type": "boolean"
+      }
+    ],
+    "frameworks": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react",
+      "react-bootstrap",
+      "react-antd"
+    ]
+  }
+}

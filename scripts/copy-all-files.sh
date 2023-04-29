@@ -6,6 +6,7 @@ cp -avR ../form-builder/src/components/lets-form/generator/* ./generator
 cp -avR ../form-builder/src/components/lets-form/helpers/* ./helpers
 cp -av ../form-builder/src/components/lets-form/costants.js ./costants.js
 cp -av ../form-builder/src/components/lets-form/mappings.json ./mappings.json
+cp -av ../form-builder/src/components/lets-form/manifest.json ./manifest.json
 cp -avR ../form-builder/src/components/lets-form/index.js ./index.js
 cp -avR ../form-builder/src/components/lets-form/assets/* ./icons
 cp -avR ../form-builder/src/components/lets-form/react/* ./react

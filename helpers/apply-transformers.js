@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 import { mapFields } from './map-fields';
+import { findField } from './find-field';
 
 // cannot import manifest, need to stay in the other repo
 // this is going open source, while the manifests are ip
@@ -23,12 +24,23 @@ const translateValidationKey = str => {
 const ApiFactory = function(formName, framework, formFields, currenValues) {
   let fields = formFields;
 
+  const fieldExists = name => {
+    if (findField(fields, field => field.name === name) != null) {
+      return true;
+    } else {
+      throw new Error(`Field "${name}" doesn't exist in the form`);
+    }
+  }
+
   return {
     fields: () => {
       return fields;
     },
 
     element: name => {
+      if (!fieldExists(name)) {
+        return;
+      }
       const form = document.querySelector(`[data-lf-form-name=${formName}]`);
       if (form) {
         return form.querySelector(`[data-lf-field-name=${name}]`);
@@ -37,6 +49,9 @@ const ApiFactory = function(formName, framework, formFields, currenValues) {
     },
 
     style: (name, prop, value) => {
+      if (!fieldExists(name)) {
+        return;
+      }
       // find the form, then the element, then apply the style
       const form = document.querySelector(`[data-lf-form-name=${formName}]`);
       if (form) {
@@ -64,6 +79,9 @@ const ApiFactory = function(formName, framework, formFields, currenValues) {
     },
 
     setValue: (name, key, value) => {
+      if (!fieldExists(name)) {
+        return;
+      }
       fields = mapFields(
         fields,
         field => {
@@ -109,6 +127,9 @@ const ApiFactory = function(formName, framework, formFields, currenValues) {
       );
     },
     enable: (name) => {
+      if (!fieldExists(name)) {
+        return;
+      }
       fields = mapFields(
         fields,
         field => {
@@ -121,8 +142,12 @@ const ApiFactory = function(formName, framework, formFields, currenValues) {
           return field;
         }
       );
+
     },
     disable: (name) => {
+      if (!fieldExists(name)) {
+        return;
+      }
       fields = mapFields(
         fields,
         field => {
@@ -137,6 +162,9 @@ const ApiFactory = function(formName, framework, formFields, currenValues) {
       );
     },
     show: (name) => {
+      if (!fieldExists(name)) {
+        return;
+      }
       fields = mapFields(
         fields,
         field => {
@@ -151,6 +179,9 @@ const ApiFactory = function(formName, framework, formFields, currenValues) {
       );
     },
     hide: (name) => {
+      if (!fieldExists(name)) {
+        return;
+      }
       fields = mapFields(
         fields,
         field => {
