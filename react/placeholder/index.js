@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 
 import { Placeholder } from '../../common';
 import { I18N } from '../../components';
