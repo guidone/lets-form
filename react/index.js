@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { GenerateGenerator } from "../generator";
+import { GenerateGenerator } from '../generator';
 
 import { FormReact } from './form';
 import { TextInput } from './input-text';
@@ -11,6 +11,7 @@ import { TwoColumns } from './two-columns';
 import { Group } from './group';
 import { Divider } from './divider';
 import { ReactView } from './react-view';
+import { Placeholder } from './placeholder';
 
 const Fields = {
   'text-input': {
@@ -36,6 +37,9 @@ const Fields = {
   },
   'react-view': {
     'react': ReactView
+  },
+  'placeholder': {
+    'react': Placeholder
   }
 };
 
@@ -49,4 +53,5 @@ const LetsForm = ({ framework, children, ...rest}) => (
 );
 export default LetsForm;
 export * from '../helpers';
+export * from '../costants';
 export { Fields, Forms };

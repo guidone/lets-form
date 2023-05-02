@@ -2604,6 +2604,9 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
+  "FIELDS_KEY": () => (/* reexport */ FIELDS_KEY),
+  "FRAMEWORKS": () => (/* reexport */ FRAMEWORKS),
+  "FRAMEWORKS_LABELS": () => (/* reexport */ FRAMEWORKS_LABELS),
   "Fields": () => (/* binding */ Fields),
   "Forms": () => (/* binding */ Forms),
   "addField": () => (/* reexport */ addField),
@@ -2645,8 +2648,8 @@ var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 var trim = __webpack_require__(2742);
 var trim_default = /*#__PURE__*/__webpack_require__.n(trim);
 // EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
-var lodash_isEmpty = __webpack_require__(1609);
-var isEmpty_default = /*#__PURE__*/__webpack_require__.n(lodash_isEmpty);
+var isEmpty = __webpack_require__(1609);
+var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
 // EXTERNAL MODULE: ./node_modules/lodash/isString.js
 var isString = __webpack_require__(7037);
 var isString_default = /*#__PURE__*/__webpack_require__.n(isString);
@@ -5479,8 +5482,8 @@ var keys = __webpack_require__(3674);
 var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
 ;// CONCATENATED MODULE: ./costants.js
 var FRAMEWORKS = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd'];
-var FRAMEWORKS_LABELS = (/* unused pure expression or super */ null && (['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design']));
-var FIELDS_KEY = (/* unused pure expression or super */ null && (['fields', 'leftFields', 'rightField', 'centerFields']));
+var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design'];
+var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
 ;// CONCATENATED MODULE: ./helpers/is-i18n.js
 
 var isI18n = function isI18n(obj) {
@@ -7354,6 +7357,7 @@ var Group = I18N(function (_ref) {
 
 // EXTERNAL MODULE: ./node_modules/micro-down/dist/index.js
 var dist = __webpack_require__(7305);
+var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/placeholder/placeholder.scss
 var placeholder = __webpack_require__(860);
 ;// CONCATENATED MODULE: ./common/placeholder/placeholder.scss
@@ -7393,16 +7397,16 @@ var placeholder_update = injectStylesIntoStyleTag_default()(placeholder/* defaul
 var Placeholder = function Placeholder(_ref) {
   var text = _ref.text,
     name = _ref.name;
-  if (!isEmpty(text)) {
-    return /*#__PURE__*/React.createElement("div", {
+  if (!isEmpty_default()(text)) {
+    return /*#__PURE__*/external_react_default().createElement("div", {
       className: "lf-control-placeholder",
       "data-lf-field-name": name,
       dangerouslySetInnerHTML: {
-        __html: markdown.parse(text)
+        __html: dist_default().parse(text)
       }
     });
   } else {
-    return /*#__PURE__*/React.createElement("div", null);
+    return /*#__PURE__*/external_react_default().createElement("div", null);
   }
 };
 
@@ -7570,11 +7574,33 @@ var ReactView = function ReactView(_ref) {
 
 ;// CONCATENATED MODULE: ./react/react-view/index.js
 
+;// CONCATENATED MODULE: ./react/placeholder/index.js
+
+
+
+var PlaceholderReact = I18N(function (_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    hint = _ref.hint,
+    text = _ref.text;
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-form-react-control-group lf-control-placeholder",
+    "data-lf-field-name": name
+  }, /*#__PURE__*/external_react_default().createElement("label", {
+    for: name
+  }, label), /*#__PURE__*/external_react_default().createElement(Placeholder, {
+    text: text
+  }), hint && /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-form-react-message"
+  }, hint));
+}, ['label', 'hint', 'text']);
+
 ;// CONCATENATED MODULE: ./react/index.js
 var react_excluded = ["framework", "children"];
 function react_extends() { react_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_extends.apply(this, arguments); }
 function react_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function react_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -7610,6 +7636,9 @@ var Fields = {
   },
   'react-view': {
     'react': ReactView
+  },
+  'placeholder': {
+    'react': PlaceholderReact
   }
 };
 var Forms = {
@@ -7628,6 +7657,7 @@ var LetsForm = function LetsForm(_ref) {
   }, rest), children);
 };
 /* harmony default export */ const react = (LetsForm);
+
 
 
 })();
