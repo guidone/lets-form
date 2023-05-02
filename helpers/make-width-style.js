@@ -10,5 +10,8 @@ export const makeWidthStyle = (fullWidth, width, style = {}) => {
       width: `${parseInt(width, 10)}px`
     };
   }
-  return style;
+  return {
+    ...style,
+    width: 'auto'
+  };
 };

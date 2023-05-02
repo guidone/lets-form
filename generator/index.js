@@ -7,7 +7,7 @@ import _ from 'lodash';
 import { ValidationErrors } from '../components';
 import { FRAMEWORKS } from '../costants';
 import { Warning  } from '../assets/icons';
-import { reduceFields, applyTransformers, isI18n, i18n  } from '../helpers';
+import { reduceFields, applyTransformers, isI18n, i18n } from '../helpers';
 //import PropTypes from 'prop-types';
 
 import FormContext from '../form-context';
@@ -65,17 +65,9 @@ const translateValidation = (validation, locale, onJavascriptError) => {
     if (_.isString(validation.message)) {
       errorMessage = validation.message;
     } else if (isI18n(validation.message)) {
-      if (validation.message[locale]) {
-        errorMessage = validation.message[locale];
-      } else if (validation.message['en-US']) {
-        // otherwise default to english
-        errorMessage = validation.message['en-US'];
-      } else if (Object.keys(validation.message) !== 0) {
-        // otherwise get the first available translation
-        errorMessage = validation.message[Object.keys(validation.message)[0]];
-      } else {
-        errorMessage = 'Field is required';
-      }
+      errorMessage = i18n(validation.message, locale) ?? 'Field is required';
+    } else {
+      errorMessage = 'Field is required';
     }
 
     let result = {};
@@ -475,6 +467,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           onJavascriptError
         );
 
+        console.log(` --rules ${field.name}`, rules)
+
         return (
           <Controller
             key={`field_${field.name}`}
@@ -483,11 +477,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             control={control}
             render={({ field: fieldInfo }) => {
               const component = <Component
-                //{...fieldInfo}
                 // not sure about this, not passing the ref
                 name={fieldInfo.name}
                 value={fieldInfo.value}
-                //onChange={fieldInfo.onChange}
+
                 onBlur={fieldInfo.onBlur}
                 key={`field_${field.name}`}
                 lfComponent={field.component}

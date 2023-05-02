@@ -6279,7 +6279,9 @@ var makeWidthStyle = function makeWidthStyle(fullWidth, width) {
       width: "".concat(parseInt(width, 10), "px")
     });
   }
-  return style;
+  return make_width_style_objectSpread(make_width_style_objectSpread({}, style), {}, {
+    width: 'auto'
+  });
 };
 ;// CONCATENATED MODULE: ./helpers/collect-names.js
 
@@ -6468,17 +6470,10 @@ var translateValidation = function translateValidation(validation, locale, onJav
     if (isString_default()(validation.message)) {
       errorMessage = validation.message;
     } else if (isI18n(validation.message)) {
-      if (validation.message[locale]) {
-        errorMessage = validation.message[locale];
-      } else if (validation.message['en-US']) {
-        // otherwise default to english
-        errorMessage = validation.message['en-US'];
-      } else if (Object.keys(validation.message) !== 0) {
-        // otherwise get the first available translation
-        errorMessage = validation.message[Object.keys(validation.message)[0]];
-      } else {
-        errorMessage = 'Field is required';
-      }
+      var _i18n;
+      errorMessage = (_i18n = i18n(validation.message, locale)) !== null && _i18n !== void 0 ? _i18n : 'Field is required';
+    } else {
+      errorMessage = 'Field is required';
     }
     var result = {};
     if (validation.required) {
@@ -6848,6 +6843,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       var rules = translateValidation(generator_objectSpread({
         required: field.required
       }, field.validation), locale, onJavascriptError);
+      console.log(" --rules ".concat(field.name), rules);
       return /*#__PURE__*/external_react_default().createElement(Controller, {
         key: "field_".concat(field.name),
         name: field.name,
@@ -6856,13 +6852,10 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
         render: function render(_ref4) {
           var fieldInfo = _ref4.field;
           var component = /*#__PURE__*/external_react_default().createElement(Component
-          //{...fieldInfo}
           // not sure about this, not passing the ref
           , _extends({
             name: fieldInfo.name,
-            value: fieldInfo.value
-            //onChange={fieldInfo.onChange}
-            ,
+            value: fieldInfo.value,
             onBlur: fieldInfo.onBlur,
             key: "field_".concat(field.name),
             lfComponent: field.component,

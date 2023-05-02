@@ -48,6 +48,20 @@ module.exports = module.exports = (env = {}) => {
     outputFile = 'bootstrap.js';
     entryPointName = 'lets-form-bootstrap';
     outputPath = null;
+  } else if (env.framework === 'react') {
+    console.log('Building for React framework');
+    library = 'lets-form-react';
+    entryPoint = path.join(__dirname, 'react/index.js');
+    outputFile = 'react.js';
+    entryPointName = 'lets-form-react';
+    outputPath = null;
+  } else if (env.framework === 'material-ui') {
+    console.log('Building for Material UI framework');
+    library = 'lets-form-material-ui';
+    entryPoint = path.join(__dirname, 'react-material-ui/index.js');
+    outputFile = 'material-ui.js';
+    entryPointName = 'lets-form-material-ui';
+    outputPath = null;
   } else {
     console.log('Building for ALL frameworks');
   }

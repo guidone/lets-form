@@ -1,5 +1,9 @@
 .lf-control-input-text {
 
+  .rs-form-control-wrapper>.rs-input, .rs-form-control-wrapper>.rs-input-number {
+    width: 100%;
+  }
+
   // this ensure the icon is centered vertically
   .lf-prefix-icon {
     max-height: 16px;

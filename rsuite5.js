@@ -438,7 +438,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-input-text-i18n-item-locale{font-s
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-input-text .lf-prefix-icon{max-height:16px}.lf-control-input-text.lf-size-lg .lf-prefix-icon{max-height:22px}.lf-control-input-text.lf-size-md .lf-prefix-icon{max-height:16px}.lf-control-input-text.lf-size-sm .lf-prefix-icon{max-height:10px}.lf-control-input-text.lf-size-xs .lf-prefix-icon{max-height:4px}", "",{"version":3,"sources":["webpack://./react-rsuite5/input-text/input-text.scss"],"names":[],"mappings":"AAGE,uCACE,eAAA,CAIA,kDACE,eAAA,CAKF,kDACE,eAAA,CAKF,kDACE,eAAA,CAKF,kDACE,cAAA","sourcesContent":[".lf-control-input-text {\n\n  // this ensure the icon is centered vertically\n  .lf-prefix-icon {\n    max-height: 16px;\n  }\n\n  &.lf-size-lg {\n    .lf-prefix-icon {\n      max-height: 22px;\n    }\n  }\n\n  &.lf-size-md {\n    .lf-prefix-icon {\n      max-height: 16px;\n    }\n  }\n\n  &.lf-size-sm {\n    .lf-prefix-icon {\n      max-height: 10px;\n    }\n  }\n\n  &.lf-size-xs {\n    .lf-prefix-icon {\n      max-height: 4px;\n    }\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-input-text .rs-form-control-wrapper>.rs-input,.lf-control-input-text .rs-form-control-wrapper>.rs-input-number{width:100%}.lf-control-input-text .lf-prefix-icon{max-height:16px}.lf-control-input-text.lf-size-lg .lf-prefix-icon{max-height:22px}.lf-control-input-text.lf-size-md .lf-prefix-icon{max-height:16px}.lf-control-input-text.lf-size-sm .lf-prefix-icon{max-height:10px}.lf-control-input-text.lf-size-xs .lf-prefix-icon{max-height:4px}", "",{"version":3,"sources":["webpack://./react-rsuite5/input-text/input-text.scss"],"names":[],"mappings":"AAEE,2HACE,UAAA,CAIF,uCACE,eAAA,CAIA,kDACE,eAAA,CAKF,kDACE,eAAA,CAKF,kDACE,eAAA,CAKF,kDACE,cAAA","sourcesContent":[".lf-control-input-text {\n\n  .rs-form-control-wrapper>.rs-input, .rs-form-control-wrapper>.rs-input-number {\n    width: 100%;\n  }\n\n  // this ensure the icon is centered vertically\n  .lf-prefix-icon {\n    max-height: 16px;\n  }\n\n  &.lf-size-lg {\n    .lf-prefix-icon {\n      max-height: 22px;\n    }\n  }\n\n  &.lf-size-md {\n    .lf-prefix-icon {\n      max-height: 16px;\n    }\n  }\n\n  &.lf-size-sm {\n    .lf-prefix-icon {\n      max-height: 10px;\n    }\n  }\n\n  &.lf-size-xs {\n    .lf-prefix-icon {\n      max-height: 4px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6430,7 +6430,9 @@ var makeWidthStyle = function makeWidthStyle(fullWidth, width) {
       width: "".concat(parseInt(width, 10), "px")
     });
   }
-  return style;
+  return make_width_style_objectSpread(make_width_style_objectSpread({}, style), {}, {
+    width: 'auto'
+  });
 };
 ;// CONCATENATED MODULE: ./helpers/collect-names.js
 
@@ -6619,17 +6621,10 @@ var translateValidation = function translateValidation(validation, locale, onJav
     if (isString_default()(validation.message)) {
       errorMessage = validation.message;
     } else if (isI18n(validation.message)) {
-      if (validation.message[locale]) {
-        errorMessage = validation.message[locale];
-      } else if (validation.message['en-US']) {
-        // otherwise default to english
-        errorMessage = validation.message['en-US'];
-      } else if (Object.keys(validation.message) !== 0) {
-        // otherwise get the first available translation
-        errorMessage = validation.message[Object.keys(validation.message)[0]];
-      } else {
-        errorMessage = 'Field is required';
-      }
+      var _i18n;
+      errorMessage = (_i18n = i18n(validation.message, locale)) !== null && _i18n !== void 0 ? _i18n : 'Field is required';
+    } else {
+      errorMessage = 'Field is required';
     }
     var result = {};
     if (validation.required) {
@@ -6999,6 +6994,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       var rules = translateValidation(generator_objectSpread({
         required: field.required
       }, field.validation), locale, onJavascriptError);
+      console.log(" --rules ".concat(field.name), rules);
       return /*#__PURE__*/external_react_default().createElement(Controller, {
         key: "field_".concat(field.name),
         name: field.name,
@@ -7007,13 +7003,10 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
         render: function render(_ref4) {
           var fieldInfo = _ref4.field;
           var component = /*#__PURE__*/external_react_default().createElement(Component
-          //{...fieldInfo}
           // not sure about this, not passing the ref
           , _extends({
             name: fieldInfo.name,
-            value: fieldInfo.value
-            //onChange={fieldInfo.onChange}
-            ,
+            value: fieldInfo.value,
             onBlur: fieldInfo.onBlur,
             key: "field_".concat(field.name),
             lfComponent: field.component,
@@ -7809,7 +7802,7 @@ var TextInput = I18N(function (_ref) {
   }, passRest(rest)));
   var needsGroup = postfix || prefix;
   return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    className: classnames_default()('lf-control-input-text', "lf-size-".concat(size)),
+    className: classnames_default()('lf-control-input-text', size ? "lf-size-".concat(size) : undefined),
     "data-lf-field-name": name,
     style: makeWidthStyle(fullWidth, width)
   }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {

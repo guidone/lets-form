@@ -56,7 +56,7 @@ const TextInput = I18N(
     const needsGroup = postfix || prefix;
     return (
       <Form.Group
-        className={classNames('lf-control-input-text', `lf-size-${size}`)}
+        className={classNames('lf-control-input-text', size ? `lf-size-${size}` : undefined)}
         data-lf-field-name={name}
         style={makeWidthStyle(fullWidth, width)}
       >
