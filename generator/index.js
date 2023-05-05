@@ -467,8 +467,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           onJavascriptError
         );
 
-        console.log(` --rules ${field.name}`, rules)
-
         return (
           <Controller
             key={`field_${field.name}`}
@@ -490,7 +488,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 hint={field.hint}
                 disabled={disabled || field.disabled}
                 readOnly={readOnly || field.readOnly}
-                plaintex={plaintext || field.plaintext}
+                plaintext={plaintext}
                 size={field.size}
                 placeholder={field.placeholder}
                 error={errors && errors[field.name] ?

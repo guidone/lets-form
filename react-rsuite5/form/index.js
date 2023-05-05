@@ -45,12 +45,12 @@ const FormRsuite5 = ({
       {!hideToolbar && (
         <ButtonToolbar className="lf-toolbar">
           <Button
-            onClick={onReset}
-          >Cancel</Button>
-          <Button
             appearance="primary"
             onClick={onSubmit}
           >Submit</Button>
+          <Button
+            onClick={onReset}
+          >Cancel</Button>
         </ButtonToolbar>
       )}
     </Form>

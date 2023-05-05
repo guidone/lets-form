@@ -12,6 +12,10 @@ import { Group } from './group';
 import { Divider } from './divider';
 import { ReactView } from './react-view';
 import { Placeholder } from './placeholder';
+import { Select } from './select';
+import { DateInput } from './date';
+//import { Toggle } from './toggle';
+import { DateTime } from './datetime';
 
 const Fields = {
   'text-input': {
@@ -40,7 +44,20 @@ const Fields = {
   },
   'placeholder': {
     'react': Placeholder
+  },
+  'select': {
+    'react': Select
+  },
+  'date': {
+    'react': DateInput
+  },
+  'datetime': {
+    'react': DateTime
   }
+  // Removed, doesn't work
+  /*'toggle': {
+    'react': Toggle
+  }*/
 };
 
 const Forms = {

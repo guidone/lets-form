@@ -1,18 +1,24 @@
-.lf-control-input-text {
+.lf-form-react-antd {
+  .lf-control-input-text {
 
-  .lf-prefix-icon {
-    max-height: 16px;
-  }
-
-  &.lf-size-small {
     .lf-prefix-icon {
-      max-height: 12px;
+      max-height: 16px;
     }
-  }
 
-  &.lf-size-large {
-    .lf-prefix-icon {
-      max-height: 18px;
+    &.lf-size-small {
+      .lf-prefix-icon {
+        max-height: 12px;
+      }
+    }
+
+    &.lf-size-large {
+      .lf-prefix-icon {
+        max-height: 18px;
+      }
+    }
+
+    input[type="color"] {
+      min-width: 60px;
     }
   }
 }

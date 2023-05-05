@@ -134,6 +134,15 @@
     "disabled": null,
     "readOnly": null,
     "hidden": null,
+    "fullWidth": [
+      "react",
+      "react-material-ui"
+    ],
+    "width": [
+      "react",
+      "react-material-ui",
+      "react-antd"
+    ],
     "placement": [
       "react-rsuite5",
       "react-antd"
@@ -162,13 +171,6 @@
     ],
     "autoWidth": [
       "react-material-ui"
-    ],
-    "fullWidth": [
-      "react-material-ui"
-    ],
-    "width": [
-      "react-material-ui",
-      "react-antd"
     ],
     "floatingLabel": [
       "react-material-ui",
@@ -247,6 +249,9 @@
     "size": [
       "react-rsuite5",
       "react-antd"
+    ],
+    "fullWidth": [
+      "react-rsuite5"
     ],
     "width": [
       "react-rsuite5",
@@ -917,6 +922,15 @@
     "readOnly": null,
     "hidden": null,
     "country": null,
+    "fullWidth": [
+      "react",
+      "react-material-ui"
+    ],
+    "width": [
+      "react",
+      "react-material-ui",
+      "react-antd"
+    ],
     "placement": [
       "react-rsuite5",
       "react-antd"
@@ -945,13 +959,6 @@
     ],
     "autoWidth": [
       "react-material-ui"
-    ],
-    "fullWidth": [
-      "react-material-ui"
-    ],
-    "width": [
-      "react-material-ui",
-      "react-antd"
     ],
     "floatingLabel": [
       "react-material-ui",
@@ -1018,5 +1025,125 @@
     "size": null,
     "color": null,
     "hidden": null
+  },
+  "datetime": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "placeholder": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "format": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-antd"
+    ],
+    "block": [
+      "react-rsuite5"
+    ],
+    "cleanable": [
+      "react-rsuite5"
+    ],
+    "editable": [
+      "react-rsuite5"
+    ],
+    "oneTap": [
+      "react-rsuite5"
+    ],
+    "showMeridian": [
+      "react-rsuite5"
+    ],
+    "showWeekNumbers": [
+      "react-rsuite5"
+    ],
+    "isoWeek": [
+      "react-rsuite5"
+    ],
+    "size": [
+      "react-rsuite5",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "appearance": [
+      "react-rsuite5"
+    ],
+    "placement": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "fullWidth": [
+      "react-material-ui"
+    ],
+    "disableFuture": [
+      "react-material-ui"
+    ],
+    "disableHighlightToday": [
+      "react-material-ui"
+    ],
+    "disableOpenPicker": [
+      "react-material-ui"
+    ],
+    "disablePast": [
+      "react-material-ui"
+    ],
+    "displayWeekNumber": [
+      "react-material-ui"
+    ],
+    "reduceAnimations": [
+      "react-material-ui"
+    ],
+    "showDaysOutsideCurrentMonth": [
+      "react-material-ui"
+    ],
+    "maxDate": [
+      "react-material-ui"
+    ],
+    "minDate": [
+      "react-material-ui"
+    ],
+    "prefix": [
+      "react-bootstrap"
+    ],
+    "postfix": [
+      "react-bootstrap"
+    ],
+    "floatingLabel": [
+      "react-bootstrap"
+    ],
+    "width": [
+      "react-antd"
+    ],
+    "bordered": [
+      "react-antd"
+    ],
+    "allowClear": [
+      "react-antd"
+    ],
+    "tooltip": [
+      "react-antd"
+    ],
+    "showTime": [
+      "react-antd"
+    ],
+    "showNow": [
+      "react-antd"
+    ],
+    "showToday": [
+      "react-antd"
+    ],
+    "picker": [
+      "react-antd"
+    ],
+    "mode": [
+      "react-antd"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
   }
 }

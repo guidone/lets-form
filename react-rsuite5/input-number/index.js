@@ -2,9 +2,11 @@
 import React, { useCallback, useState } from 'react';
 import { Form, InputNumber } from 'rsuite';
 import _ from 'lodash';
+import classNames from 'classnames';
 
 import { RequiredIcon, I18N } from '../../components';
 import { CrossCirle } from '../../assets/icons';
+import { makeWidthStyle } from '../../helpers';
 
 import './index.scss';
 
@@ -28,6 +30,7 @@ const InputNumberRSuite5 = I18N(
     prefix,
     postfix,
     width,
+    fullWidth,
     onChange = () => {},
     step = 1,
     onBlur,
@@ -39,7 +42,10 @@ const InputNumberRSuite5 = I18N(
       value => {
         let parsed = value;
         if (_.isString(value)) {
-          if (hasDecimals(value)) {
+          if (value === '') {
+            // void if the user deleted all chars
+            parsed = null;
+          } else if (hasDecimals(value)) {
             parsed = parseFloat(value);
           } else {
             parsed = parseInt(value, 10);
@@ -65,7 +71,16 @@ const InputNumberRSuite5 = I18N(
     );
 
     return (
-      <Form.Group data-lf-field-name={name} className="lf-control-input-number">
+      <Form.Group
+        data-lf-field-name={name}
+        className={classNames(
+          'lf-control-input-number', {
+            [`lf-size-${size}`]: size != null,
+            'lf-full-width': fullWidth || width != null
+          }
+        )}
+        style={makeWidthStyle(fullWidth, width)}
+      >
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
@@ -82,7 +97,6 @@ const InputNumberRSuite5 = I18N(
           min={min}
           max={max}
           step={step}
-          style={_.isNumber(width) ? { width: `${width}px`} : undefined}
           inside={inside}
           prefix={prefix}
           postfix={allowClear ?

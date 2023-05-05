@@ -1,58 +1,27 @@
 import React, { useCallback } from 'react';
-import _ from 'lodash';
 
-import { RequiredIcon } from '../../components';
-import { makeWidthStyle, passRest } from '../../helpers';
+import { I18N, ReactGenericInput } from '../../components';
 
-const TextInput = ({
-  name,
-  label,
-  hint,
-  value,
-  onChange,
-  onBlur,
-  error,
-  disabled,
-  readOnly,
-  required,
-  size,
-  width,
-  fullWidth,
-  ...rest
-}) => {
-  const hasError = error && _.isString(error);
-  const handleChange = useCallback(
-    e => onChange(e.target.value),
-    [onChange]
-  );
+import './input-text.scss';
 
-  return (
-    <div
-      className="lf-form-react-control-group lf-control-input-text"
-      data-lf-field-name={name}
-    >
-      <label for={name}>
-        {label}
-        {required && <RequiredIcon />}
-      </label>
-      <input
-        type="text"
-        id={name}
-        value={value}
+const TextInput = I18N(
+  ({ onChange, ...rest}) => {
+    const handleChange = useCallback(
+      e => onChange(e.target.value),
+      [onChange]
+    );
+
+    return (
+      <ReactGenericInput
+        component="input-text"
+        className="lf-control-input-text"
         onChange={handleChange}
-        onBlur={onBlur}
-        style={makeWidthStyle(fullWidth, width)}
-        //className={size && `lf-form-react-input-${size}`}
-        //style={(!size || size === 'custom') && _.isNumber(width) ? { width: `${width}px`} : undefined}
-        required={error != null}
-        disabled={disabled}
-        readOnly={readOnly}
-        {...passRest(rest)}
+        {...rest}
       />
-      {hint && !hasError && <div className="lf-form-react-message">{hint}</div>}
-      {hasError && <div className="lf-form-react-error-message">{error}</div>}
-    </div>
-  );
-};
+    );
+  },
+  ['label', 'hint', 'placeholder']
+);
+
 
 export { TextInput };

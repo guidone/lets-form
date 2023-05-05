@@ -23,8 +23,9 @@ const createEmptyField = (Manifests, fields, component, framework) => {
     ++retries;
   }
 
-  let defaultValues = framework && Manifests[component] && Manifests[component].defaults && Manifests[component].defaults[framework] ?
-    Manifests[component].defaults[framework] : {}
+  let defaultValues = framework && Manifests[component] && Manifests[component].defaultValues && Manifests[component].defaultValues[framework] ?
+    Manifests[component].defaultValues[framework] : {}
+
 
 
   return {

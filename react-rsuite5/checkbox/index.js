@@ -69,7 +69,7 @@ const CheckboxRSuite = I18N(
       </Form.Group>
     );
   },
-  ['label', 'hint', 'placeholder']
+  ['label', 'hint']
 );
 
 export { CheckboxRSuite as Checkbox };

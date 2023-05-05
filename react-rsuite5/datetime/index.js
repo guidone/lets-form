@@ -4,7 +4,7 @@ import _ from 'lodash';
 import { I18N, RSuiteGenericDate } from '../../components';
 import { isValidDate } from '../../helpers';
 
-const SelectDate = I18N(
+const SelectDatetime = I18N(
   ({
     onChange,
     value,
@@ -22,10 +22,10 @@ const SelectDate = I18N(
       }
     }
 
-    // send always date string in format yyyy-mm-dd
+    // send always date string in iso format
     const handleChange = useCallback(
       d => {
-        onChange(d.toISOString().split('T')[0]);
+        onChange(d.toISOString());
       },
       [onChange]
     );
@@ -41,4 +41,4 @@ const SelectDate = I18N(
   ['label', 'hint', 'placeholder']
 );
 
-export { SelectDate };
+export { SelectDatetime };

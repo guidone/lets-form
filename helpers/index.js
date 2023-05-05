@@ -19,3 +19,4 @@ export * from './apply-transformers';
 export * from './is-url';
 export * from './make-width-style';
 export * from './collect-names';
+export * from './is-valid-date';

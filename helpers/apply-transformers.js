@@ -207,7 +207,7 @@ const applyTransformers = (formName, framework, fields, transformers, values, on
     transformers
       .filter(transformer => _.isFunction(transformer))
       .forEach(transformer => {
-        const api = new ApiFactory(formName, framework, fields, values);
+        const api = new ApiFactory(formName, framework, newFields, values);
         try {
           newFields = transformer(api);
         } catch(e) {

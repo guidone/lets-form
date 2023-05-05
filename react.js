@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"));
+		module.exports = factory(require("react"), require("rsuite"), require("rsuite/locales"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react"], factory);
+		define(["react", "rsuite", "rsuite/locales"], factory);
 	else if(typeof exports === 'object')
-		exports["lets-form-react"] = factory(require("react"));
+		exports["lets-form-react"] = factory(require("react"), require("rsuite"), require("rsuite/locales"));
 	else
-		root["lets-form-react"] = factory(root["react"]);
-})(self, (__WEBPACK_EXTERNAL_MODULE__8156__) => {
+		root["lets-form-react"] = factory(root["react"], root["rsuite"], root["rsuite/locales"]);
+})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__1186__, __WEBPACK_EXTERNAL_MODULE__977__) => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -277,7 +277,30 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form{--lf-field-margin: 24px;--lf-
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react input[type=text],.lf-form-react input[type=password],.lf-form-react input[type=email],.lf-form-react input[type=url],.lf-form-react input[type=date],.lf-form-react input[type=month],.lf-form-react input[type=time],.lf-form-react input[type=datetime],.lf-form-react input[type=datetime-local],.lf-form-react input[type=week],.lf-form-react input[type=number],.lf-form-react input[type=search],.lf-form-react input[type=tel],.lf-form-react input[type=color],.lf-form-react select,.lf-form-react textarea{padding:.5em .6em;display:inline-block;border:1px solid #ccc;border-radius:4px;vertical-align:middle;box-sizing:border-box}.lf-form-react input:not([type]){padding:.5em .6em;display:inline-block;border:1px solid #ccc;box-shadow:inset 0 1px 3px #ddd;border-radius:4px;box-sizing:border-box}.lf-form-react input[type=color]{padding:.2em .5em}.lf-form-react input[type=text]:focus,.lf-form-react input[type=password]:focus,.lf-form-react input[type=email]:focus,.lf-form-react input[type=url]:focus,.lf-form-react input[type=date]:focus,.lf-form-react input[type=month]:focus,.lf-form-react input[type=time]:focus,.lf-form-react input[type=datetime]:focus,.lf-form-react input[type=datetime-local]:focus,.lf-form-react input[type=week]:focus,.lf-form-react input[type=number]:focus,.lf-form-react input[type=search]:focus,.lf-form-react input[type=tel]:focus,.lf-form-react input[type=color]:focus,.lf-form-react select:focus,.lf-form-react textarea:focus{outline:0;border-color:#129fea}.lf-form-react input:not([type]):focus{outline:0;border-color:#129fea}.lf-form-react input[type=file]:focus,.lf-form-react input[type=radio]:focus,.lf-form-react input[type=checkbox]:focus{outline:thin solid #129fea;outline:1px auto #129fea}.lf-form-react .lf-form-react-checkbox,.lf-form-react .lf-form-react-radio{display:block}.lf-form-react input[type=text][disabled],.lf-form-react input[type=password][disabled],.lf-form-react input[type=email][disabled],.lf-form-react input[type=url][disabled],.lf-form-react input[type=date][disabled],.lf-form-react input[type=month][disabled],.lf-form-react input[type=time][disabled],.lf-form-react input[type=datetime][disabled],.lf-form-react input[type=datetime-local][disabled],.lf-form-react input[type=week][disabled],.lf-form-react input[type=number][disabled],.lf-form-react input[type=search][disabled],.lf-form-react input[type=tel][disabled],.lf-form-react input[type=color][disabled],.lf-form-react select[disabled],.lf-form-react textarea[disabled]{cursor:not-allowed;background-color:#eaeded;color:#cad2d3}.lf-form-react input[readonly],.lf-form-react select[readonly],.lf-form-react textarea[readonly]{background-color:#eee;color:#777;border-color:#ccc}.lf-form-react input:focus:invalid,.lf-form-react textarea:focus:invalid,.lf-form-react select:focus:invalid{color:#b94a48;border-color:#e9322d}.lf-form-react input[type=file]:focus:invalid:focus,.lf-form-react input[type=radio]:focus:invalid:focus,.lf-form-react input[type=checkbox]:focus:invalid:focus{outline-color:#e9322d}.lf-form-react select{height:2.25em;border:1px solid #ccc;background-color:#fff}.lf-form-react select[multiple]{height:auto}.lf-form-react label{margin:3px 0px}.lf-form-react fieldset{margin:0;padding:.35em 0 .75em;border:0}.lf-form-react legend{display:block;width:100%;padding:.3em 0;color:#333;border-bottom:1px solid #e5e5e5}.lf-form-react-stacked input[type=text],.lf-form-react-stacked input[type=password],.lf-form-react-stacked input[type=email],.lf-form-react-stacked input[type=url],.lf-form-react-stacked input[type=date],.lf-form-react-stacked input[type=month],.lf-form-react-stacked input[type=time],.lf-form-react-stacked input[type=datetime],.lf-form-react-stacked input[type=datetime-local],.lf-form-react-stacked input[type=week],.lf-form-react-stacked input[type=number],.lf-form-react-stacked input[type=search],.lf-form-react-stacked input[type=tel],.lf-form-react-stacked input[type=color],.lf-form-react-stacked input[type=file],.lf-form-react-stacked select,.lf-form-react-stacked label,.lf-form-react-stacked textarea{display:block}.pure-form-aligned input,.pure-form-aligned textarea,.pure-form-aligned select,.pure-form-message-inline{display:inline-block;vertical-align:middle}.pure-form-aligned textarea{vertical-align:top}.pure-form-aligned .pure-control-group{margin-bottom:.5em}.pure-form-aligned .pure-control-group label{text-align:right;display:inline-block;vertical-align:middle;width:10em;margin:0 1em 0 0}.pure-form-aligned .pure-controls{margin:1.5em 0 0 11em}.lf-form-react .lf-form-react-input-1{width:100%}.lf-form-react .lf-form-react-input-3-4{width:75%}.lf-form-react .lf-form-react-input-2-3{width:66%}.lf-form-react .lf-form-react-input-1-2{width:50%}.lf-form-react .lf-form-react-input-1-3{width:33%}.lf-form-react .lf-form-react-input-1-4{width:25%}.lf-form-react-message{display:block;color:#666;font-size:.875em}.lf-form-react-error-message{color:#f30;display:block;font-size:.875em}.lf-form-react-control-group:not(:first-child){margin-top:15px}.lf-form-react-primary-button{appearance:button;background-color:#1652f0;border:1px solid #1652f0;border-radius:4px;box-sizing:border-box;color:#fff;cursor:pointer;font-size:14px;line-height:1.15;overflow:visible;padding:8px 16px;position:relative;text-align:center;text-transform:none;transition:all 80ms ease-in-out;user-select:none;-webkit-user-select:none;touch-action:manipulation;width:fit-content}.lf-form-react-primary-button:focus{outline:0}.lf-form-react-primary-button:hover{background-color:#0a46e4;border-color:#0a46e4}.lf-form-react-primary-button:active{background-color:#0039d7;border-color:#0039d7}.lf-form-react-secondary-button{appearance:button;background-color:#999;border:1px solid #999;border-radius:4px;box-sizing:border-box;color:#fff;cursor:pointer;font-size:14px;line-height:1.15;overflow:visible;padding:8px 16px;position:relative;text-align:center;text-transform:none;transition:all 80ms ease-in-out;user-select:none;-webkit-user-select:none;touch-action:manipulation;width:fit-content}.lf-form-react-secondary-button:focus{outline:0}.lf-form-react-secondary-button:hover{background-color:#888;border-color:#888}.lf-form-react-secondary-button:active{background-color:#888;border-color:#888}.lf-form-react .lf-toolbar{margin-top:15px}.lf-form-react .lf-toolbar button:not(:first-child){margin-left:10px}", "",{"version":3,"sources":["webpack://./react/form/index.scss"],"names":[],"mappings":"AAEA,qgBAgBI,iBAAA,CACA,oBAAA,CACA,qBAAA,CACA,iBAAA,CACA,qBAAA,CACA,qBAAA,CAOJ,iCACI,iBAAA,CACA,oBAAA,CACA,qBAAA,CACA,+BAAA,CACA,iBAAA,CACA,qBAAA,CAMJ,iCACI,iBAAA,CAIJ,qmBAgBI,SAAA,CACA,oBAAA,CAOJ,uCACI,SAAA,CACA,oBAAA,CAGJ,uHAGI,0BAAA,CACA,wBAAA,CAEJ,2EAGI,aAAA,CAGJ,qqBAgBI,kBAAA,CACA,wBAAA,CACA,aAAA,CAGJ,iGAGI,qBAAA,CACA,UAAA,CACA,iBAAA,CAGJ,6GAGI,aAAA,CACA,oBAAA,CAEJ,iKAGI,qBAAA,CAEJ,sBAEI,aAAA,CACA,qBAAA,CACA,qBAAA,CAEJ,gCACI,WAAA,CAEJ,qBAEI,cAAA,CAEJ,wBACI,QAAA,CACA,qBAAA,CACA,QAAA,CAEJ,sBACI,aAAA,CACA,UAAA,CACA,cAAA,CAGA,UAAA,CACA,+BAAA,CAGJ,0sBAkBI,aAAA,CAWJ,yGAII,oBAAA,CACA,qBAAA,CAEJ,4BACI,kBAAA,CAIJ,uCACI,kBAAA,CAEJ,6CACI,gBAAA,CACA,oBAAA,CACA,qBAAA,CACA,UAAA,CACA,gBAAA,CAEJ,kCACI,qBAAA,CAKJ,sCACI,UAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAGJ,uBACI,aAAA,CACA,UAAA,CACA,gBAAA,CAEJ,6BACE,UAAA,CACA,aAAA,CACA,gBAAA,CAIF,+CACE,eAAA,CAIF,8BACE,iBAAA,CACA,wBAAA,CACA,wBAAA,CACA,iBAAA,CACA,qBAAA,CACA,UAAA,CACA,cAAA,CACA,cAAA,CACA,gBAAA,CACA,gBAAA,CACA,gBAAA,CACA,iBAAA,CACA,iBAAA,CACA,mBAAA,CACA,+BAAA,CACA,gBAAA,CACA,wBAAA,CACA,yBAAA,CACA,iBAAA,CAEA,oCACE,SAAA,CAEF,oCACE,wBAAA,CACA,oBAAA,CAEF,qCACE,wBAAA,CACA,oBAAA,CAIJ,gCACE,iBAAA,CACA,qBAAA,CACA,qBAAA,CACA,iBAAA,CACA,qBAAA,CACA,UAAA,CACA,cAAA,CACA,cAAA,CACA,gBAAA,CACA,gBAAA,CACA,gBAAA,CACA,iBAAA,CACA,iBAAA,CACA,mBAAA,CACA,+BAAA,CACA,gBAAA,CACA,wBAAA,CACA,yBAAA,CACA,iBAAA,CAEA,sCACE,SAAA,CAEF,sCACE,qBAAA,CACA,iBAAA,CAEF,uCACE,qBAAA,CACA,iBAAA,CAKF,2BACE,eAAA,CACA,oDACE,gBAAA","sourcesContent":["\n\n.lf-form-react input[type=\"text\"],\n.lf-form-react input[type=\"password\"],\n.lf-form-react input[type=\"email\"],\n.lf-form-react input[type=\"url\"],\n.lf-form-react input[type=\"date\"],\n.lf-form-react input[type=\"month\"],\n.lf-form-react input[type=\"time\"],\n.lf-form-react input[type=\"datetime\"],\n.lf-form-react input[type=\"datetime-local\"],\n.lf-form-react input[type=\"week\"],\n.lf-form-react input[type=\"number\"],\n.lf-form-react input[type=\"search\"],\n.lf-form-react input[type=\"tel\"],\n.lf-form-react input[type=\"color\"],\n.lf-form-react select,\n.lf-form-react textarea {\n    padding: 0.5em 0.6em;\n    display: inline-block;\n    border: 1px solid #ccc;\n    border-radius: 4px;\n    vertical-align: middle;\n    box-sizing: border-box;\n}\n\n/*\nNeed to separate out the :not() selector from the rest of the CSS 2.1 selectors\nsince IE8 won't execute CSS that contains a CSS3 selector.\n*/\n.lf-form-react input:not([type]) {\n    padding: 0.5em 0.6em;\n    display: inline-block;\n    border: 1px solid #ccc;\n    box-shadow: inset 0 1px 3px #ddd;\n    border-radius: 4px;\n    box-sizing: border-box;\n}\n\n\n/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */\n/* May be able to remove this tweak as color inputs become more standardized across browsers. */\n.lf-form-react input[type=\"color\"] {\n    padding: 0.2em 0.5em;\n}\n\n\n.lf-form-react input[type=\"text\"]:focus,\n.lf-form-react input[type=\"password\"]:focus,\n.lf-form-react input[type=\"email\"]:focus,\n.lf-form-react input[type=\"url\"]:focus,\n.lf-form-react input[type=\"date\"]:focus,\n.lf-form-react input[type=\"month\"]:focus,\n.lf-form-react input[type=\"time\"]:focus,\n.lf-form-react input[type=\"datetime\"]:focus,\n.lf-form-react input[type=\"datetime-local\"]:focus,\n.lf-form-react input[type=\"week\"]:focus,\n.lf-form-react input[type=\"number\"]:focus,\n.lf-form-react input[type=\"search\"]:focus,\n.lf-form-react input[type=\"tel\"]:focus,\n.lf-form-react input[type=\"color\"]:focus,\n.lf-form-react select:focus,\n.lf-form-react textarea:focus {\n    outline: 0;\n    border-color: #129FEA;\n}\n\n/*\nNeed to separate out the :not() selector from the rest of the CSS 2.1 selectors\nsince IE8 won't execute CSS that contains a CSS3 selector.\n*/\n.lf-form-react input:not([type]):focus {\n    outline: 0;\n    border-color: #129FEA;\n}\n\n.lf-form-react input[type=\"file\"]:focus,\n.lf-form-react input[type=\"radio\"]:focus,\n.lf-form-react input[type=\"checkbox\"]:focus {\n    outline: thin solid #129FEA;\n    outline: 1px auto #129FEA;\n}\n.lf-form-react .lf-form-react-checkbox,\n.lf-form-react .lf-form-react-radio {\n    //margin: 0.5em 0;\n    display: block;\n}\n\n.lf-form-react input[type=\"text\"][disabled],\n.lf-form-react input[type=\"password\"][disabled],\n.lf-form-react input[type=\"email\"][disabled],\n.lf-form-react input[type=\"url\"][disabled],\n.lf-form-react input[type=\"date\"][disabled],\n.lf-form-react input[type=\"month\"][disabled],\n.lf-form-react input[type=\"time\"][disabled],\n.lf-form-react input[type=\"datetime\"][disabled],\n.lf-form-react input[type=\"datetime-local\"][disabled],\n.lf-form-react input[type=\"week\"][disabled],\n.lf-form-react input[type=\"number\"][disabled],\n.lf-form-react input[type=\"search\"][disabled],\n.lf-form-react input[type=\"tel\"][disabled],\n.lf-form-react input[type=\"color\"][disabled],\n.lf-form-react select[disabled],\n.lf-form-react textarea[disabled] {\n    cursor: not-allowed;\n    background-color: #eaeded;\n    color: #cad2d3;\n}\n\n.lf-form-react input[readonly],\n.lf-form-react select[readonly],\n.lf-form-react textarea[readonly] {\n    background-color: #eee; /* menu hover bg color */\n    color: #777; /* menu text color */\n    border-color: #ccc;\n}\n\n.lf-form-react input:focus:invalid,\n.lf-form-react textarea:focus:invalid,\n.lf-form-react select:focus:invalid {\n    color: #b94a48;\n    border-color: #e9322d;\n}\n.lf-form-react input[type=\"file\"]:focus:invalid:focus,\n.lf-form-react input[type=\"radio\"]:focus:invalid:focus,\n.lf-form-react input[type=\"checkbox\"]:focus:invalid:focus {\n    outline-color: #e9322d;\n}\n.lf-form-react select {\n    /* Normalizes the height; padding is not sufficient. */\n    height: 2.25em;\n    border: 1px solid #ccc;\n    background-color: white;\n}\n.lf-form-react select[multiple] {\n    height: auto;\n}\n.lf-form-react label {\n    //margin: 0.5em 0 0.2em;\n    margin: 3px 0px;\n}\n.lf-form-react fieldset {\n    margin: 0;\n    padding: 0.35em 0 0.75em;\n    border: 0;\n}\n.lf-form-react legend {\n    display: block;\n    width: 100%;\n    padding: 0.3em 0;\n    //margin-bottom: 0.3em;\n    //margin\n    color: #333;\n    border-bottom: 1px solid #e5e5e5;\n}\n\n.lf-form-react-stacked input[type=\"text\"],\n.lf-form-react-stacked input[type=\"password\"],\n.lf-form-react-stacked input[type=\"email\"],\n.lf-form-react-stacked input[type=\"url\"],\n.lf-form-react-stacked input[type=\"date\"],\n.lf-form-react-stacked input[type=\"month\"],\n.lf-form-react-stacked input[type=\"time\"],\n.lf-form-react-stacked input[type=\"datetime\"],\n.lf-form-react-stacked input[type=\"datetime-local\"],\n.lf-form-react-stacked input[type=\"week\"],\n.lf-form-react-stacked input[type=\"number\"],\n.lf-form-react-stacked input[type=\"search\"],\n.lf-form-react-stacked input[type=\"tel\"],\n.lf-form-react-stacked input[type=\"color\"],\n.lf-form-react-stacked input[type=\"file\"],\n.lf-form-react-stacked select,\n.lf-form-react-stacked label,\n.lf-form-react-stacked textarea {\n    display: block;\n    //margin: 3px 0;\n}\n\n\n\n\n\n\n\n\n.pure-form-aligned input,\n.pure-form-aligned textarea,\n.pure-form-aligned select,\n.pure-form-message-inline {\n    display: inline-block;\n    vertical-align: middle;\n}\n.pure-form-aligned textarea {\n    vertical-align: top;\n}\n\n/* Aligned Forms */\n.pure-form-aligned .pure-control-group {\n    margin-bottom: 0.5em;\n}\n.pure-form-aligned .pure-control-group label {\n    text-align: right;\n    display: inline-block;\n    vertical-align: middle;\n    width: 10em;\n    margin: 0 1em 0 0;\n}\n.pure-form-aligned .pure-controls {\n    margin: 1.5em 0 0 11em;\n}\n\n\n\n.lf-form-react .lf-form-react-input-1 {\n    width: 100%;\n}\n.lf-form-react .lf-form-react-input-3-4 {\n    width: 75%;\n}\n.lf-form-react .lf-form-react-input-2-3 {\n    width: 66%;\n}\n.lf-form-react .lf-form-react-input-1-2 {\n    width: 50%;\n}\n.lf-form-react .lf-form-react-input-1-3 {\n    width: 33%;\n}\n.lf-form-react .lf-form-react-input-1-4 {\n    width: 25%;\n}\n\n.lf-form-react-message {\n    display: block;\n    color: #666;\n    font-size: 0.875em;\n}\n.lf-form-react-error-message {\n  color: #FF3300;\n  display: block;\n  font-size: 0.875em;\n}\n\n\n.lf-form-react-control-group:not(:first-child) {\n  margin-top: 15px;\n}\n\n\n.lf-form-react-primary-button {\n  appearance: button;\n  background-color: #1652F0;\n  border: 1px solid #1652F0;\n  border-radius: 4px;\n  box-sizing: border-box;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.15;\n  overflow: visible;\n  padding: 8px 16px;\n  position: relative;\n  text-align: center;\n  text-transform: none;\n  transition: all 80ms ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  width: fit-content;\n\n  &:focus {\n    outline: 0;\n  }\n  &:hover {\n    background-color: #0A46E4;\n    border-color: #0A46E4;\n  }\n  &:active {\n    background-color: #0039D7;\n    border-color: #0039D7;\n  }\n}\n\n.lf-form-react-secondary-button {\n  appearance: button;\n  background-color: #999999;\n  border: 1px solid #999999;\n  border-radius: 4px;\n  box-sizing: border-box;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.15;\n  overflow: visible;\n  padding: 8px 16px;\n  position: relative;\n  text-align: center;\n  text-transform: none;\n  transition: all 80ms ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  width: fit-content;\n\n  &:focus {\n    outline: 0;\n  }\n  &:hover {\n    background-color: #888888;\n    border-color: #888888;\n  }\n  &:active {\n    background-color: #888888;\n    border-color: #888888;\n  }\n}\n\n.lf-form-react {\n  .lf-toolbar {\n    margin-top: 15px;\n    button:not(:first-child) {\n      margin-left: 10px;\n    }\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react input[type=text],.lf-form-react input[type=password],.lf-form-react input[type=email],.lf-form-react input[type=url],.lf-form-react input[type=date],.lf-form-react input[type=month],.lf-form-react input[type=time],.lf-form-react input[type=datetime],.lf-form-react input[type=datetime-local],.lf-form-react input[type=week],.lf-form-react input[type=number],.lf-form-react input[type=search],.lf-form-react input[type=tel],.lf-form-react input[type=color],.lf-form-react select,.lf-form-react textarea{padding:.5em .6em;display:inline-block;border:1px solid #ccc;border-radius:4px;vertical-align:middle;box-sizing:border-box}.lf-form-react input:not([type]){padding:.5em .6em;display:inline-block;border:1px solid #ccc;border-radius:4px;box-sizing:border-box}.lf-form-react input[type=color]{padding:.2em .5em}.lf-form-react input[type=text]:focus,.lf-form-react input[type=password]:focus,.lf-form-react input[type=email]:focus,.lf-form-react input[type=url]:focus,.lf-form-react input[type=date]:focus,.lf-form-react input[type=month]:focus,.lf-form-react input[type=time]:focus,.lf-form-react input[type=datetime]:focus,.lf-form-react input[type=datetime-local]:focus,.lf-form-react input[type=week]:focus,.lf-form-react input[type=number]:focus,.lf-form-react input[type=search]:focus,.lf-form-react input[type=tel]:focus,.lf-form-react input[type=color]:focus,.lf-form-react select:focus,.lf-form-react textarea:focus{outline:0;border-color:#129fea}.lf-form-react input:not([type]):focus{outline:0;border-color:#129fea}.lf-form-react input[type=file]:focus,.lf-form-react input[type=radio]:focus,.lf-form-react input[type=checkbox]:focus{outline:thin solid #129fea;outline:1px auto #129fea}.lf-form-react .lf-form-react-checkbox,.lf-form-react .lf-form-react-radio{display:block}.lf-form-react input[type=text][disabled],.lf-form-react input[type=password][disabled],.lf-form-react input[type=email][disabled],.lf-form-react input[type=url][disabled],.lf-form-react input[type=date][disabled],.lf-form-react input[type=month][disabled],.lf-form-react input[type=time][disabled],.lf-form-react input[type=datetime][disabled],.lf-form-react input[type=datetime-local][disabled],.lf-form-react input[type=week][disabled],.lf-form-react input[type=number][disabled],.lf-form-react input[type=search][disabled],.lf-form-react input[type=tel][disabled],.lf-form-react input[type=color][disabled],.lf-form-react select[disabled],.lf-form-react textarea[disabled]{cursor:not-allowed;background-color:#eaeded;color:#cad2d3}.lf-form-react input[readonly],.lf-form-react select[readonly],.lf-form-react textarea[readonly]{background-color:#eee;color:#777;border-color:#ccc}.lf-form-react input:focus:invalid,.lf-form-react textarea:focus:invalid,.lf-form-react select:focus:invalid{color:#b94a48;border-color:#e9322d}.lf-form-react input[type=file]:focus:invalid:focus,.lf-form-react input[type=radio]:focus:invalid:focus,.lf-form-react input[type=checkbox]:focus:invalid:focus{outline-color:#e9322d}.lf-form-react select{height:2.25em;border:1px solid #ccc;background-color:#fff}.lf-form-react select[multiple]{height:auto}.lf-form-react label{margin:3px 0px}.lf-form-react fieldset{margin:0;padding:.35em 0 .75em;border:0}.lf-form-react legend{display:block;width:100%;padding:.3em 0;color:#333;border-bottom:1px solid #e5e5e5}.lf-form-react-stacked input[type=text],.lf-form-react-stacked input[type=password],.lf-form-react-stacked input[type=email],.lf-form-react-stacked input[type=url],.lf-form-react-stacked input[type=date],.lf-form-react-stacked input[type=month],.lf-form-react-stacked input[type=time],.lf-form-react-stacked input[type=datetime],.lf-form-react-stacked input[type=datetime-local],.lf-form-react-stacked input[type=week],.lf-form-react-stacked input[type=number],.lf-form-react-stacked input[type=search],.lf-form-react-stacked input[type=tel],.lf-form-react-stacked input[type=color],.lf-form-react-stacked input[type=file],.lf-form-react-stacked select,.lf-form-react-stacked label,.lf-form-react-stacked textarea{display:block}.pure-form-aligned input,.pure-form-aligned textarea,.pure-form-aligned select,.pure-form-message-inline{display:inline-block;vertical-align:middle}.pure-form-aligned textarea{vertical-align:top}.pure-form-aligned .pure-control-group{margin-bottom:.5em}.pure-form-aligned .pure-control-group label{text-align:right;display:inline-block;vertical-align:middle;width:10em;margin:0 1em 0 0}.pure-form-aligned .pure-controls{margin:1.5em 0 0 11em}.lf-form-react .lf-form-react-input-1{width:100%}.lf-form-react .lf-form-react-input-3-4{width:75%}.lf-form-react .lf-form-react-input-2-3{width:66%}.lf-form-react .lf-form-react-input-1-2{width:50%}.lf-form-react .lf-form-react-input-1-3{width:33%}.lf-form-react .lf-form-react-input-1-4{width:25%}.lf-form-react-message{display:block;color:#666;font-size:.875em}.lf-form-react-error-message{color:#f30;display:block;font-size:.875em}.lf-form-react-control-group:not(:first-child){margin-top:15px}.lf-form-react-primary-button{appearance:button;background-color:#1652f0;border:1px solid #1652f0;border-radius:4px;box-sizing:border-box;color:#fff;cursor:pointer;font-size:14px;line-height:1.15;overflow:visible;padding:8px 16px;position:relative;text-align:center;text-transform:none;transition:all 80ms ease-in-out;user-select:none;-webkit-user-select:none;touch-action:manipulation;width:fit-content}.lf-form-react-primary-button:focus{outline:0}.lf-form-react-primary-button:hover{background-color:#0a46e4;border-color:#0a46e4}.lf-form-react-primary-button:active{background-color:#0039d7;border-color:#0039d7}.lf-form-react-secondary-button{appearance:button;background-color:#999;border:1px solid #999;border-radius:4px;box-sizing:border-box;color:#fff;cursor:pointer;font-size:14px;line-height:1.15;overflow:visible;padding:8px 16px;position:relative;text-align:center;text-transform:none;transition:all 80ms ease-in-out;user-select:none;-webkit-user-select:none;touch-action:manipulation;width:fit-content}.lf-form-react-secondary-button:focus{outline:0}.lf-form-react-secondary-button:hover{background-color:#888;border-color:#888}.lf-form-react-secondary-button:active{background-color:#888;border-color:#888}.lf-form-react .lf-toolbar{margin-top:15px}.lf-form-react .lf-toolbar button:not(:first-child){margin-left:10px}", "",{"version":3,"sources":["webpack://./react/form/index.scss"],"names":[],"mappings":"AAEA,qgBAgBI,iBAAA,CACA,oBAAA,CACA,qBAAA,CACA,iBAAA,CACA,qBAAA,CACA,qBAAA,CAOJ,iCACI,iBAAA,CACA,oBAAA,CACA,qBAAA,CACA,iBAAA,CACA,qBAAA,CAMJ,iCACI,iBAAA,CAIJ,qmBAgBI,SAAA,CACA,oBAAA,CAOJ,uCACI,SAAA,CACA,oBAAA,CAGJ,uHAGI,0BAAA,CACA,wBAAA,CAEJ,2EAGI,aAAA,CAGJ,qqBAgBI,kBAAA,CACA,wBAAA,CACA,aAAA,CAGJ,iGAGI,qBAAA,CACA,UAAA,CACA,iBAAA,CAGJ,6GAGI,aAAA,CACA,oBAAA,CAEJ,iKAGI,qBAAA,CAEJ,sBAEI,aAAA,CACA,qBAAA,CACA,qBAAA,CAEJ,gCACI,WAAA,CAEJ,qBAEI,cAAA,CAEJ,wBACI,QAAA,CACA,qBAAA,CACA,QAAA,CAEJ,sBACI,aAAA,CACA,UAAA,CACA,cAAA,CAGA,UAAA,CACA,+BAAA,CAGJ,0sBAkBI,aAAA,CAWJ,yGAII,oBAAA,CACA,qBAAA,CAEJ,4BACI,kBAAA,CAIJ,uCACI,kBAAA,CAEJ,6CACI,gBAAA,CACA,oBAAA,CACA,qBAAA,CACA,UAAA,CACA,gBAAA,CAEJ,kCACI,qBAAA,CAKJ,sCACI,UAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAGJ,uBACI,aAAA,CACA,UAAA,CACA,gBAAA,CAEJ,6BACE,UAAA,CACA,aAAA,CACA,gBAAA,CAIF,+CACE,eAAA,CAIF,8BACE,iBAAA,CACA,wBAAA,CACA,wBAAA,CACA,iBAAA,CACA,qBAAA,CACA,UAAA,CACA,cAAA,CACA,cAAA,CACA,gBAAA,CACA,gBAAA,CACA,gBAAA,CACA,iBAAA,CACA,iBAAA,CACA,mBAAA,CACA,+BAAA,CACA,gBAAA,CACA,wBAAA,CACA,yBAAA,CACA,iBAAA,CAEA,oCACE,SAAA,CAEF,oCACE,wBAAA,CACA,oBAAA,CAEF,qCACE,wBAAA,CACA,oBAAA,CAIJ,gCACE,iBAAA,CACA,qBAAA,CACA,qBAAA,CACA,iBAAA,CACA,qBAAA,CACA,UAAA,CACA,cAAA,CACA,cAAA,CACA,gBAAA,CACA,gBAAA,CACA,gBAAA,CACA,iBAAA,CACA,iBAAA,CACA,mBAAA,CACA,+BAAA,CACA,gBAAA,CACA,wBAAA,CACA,yBAAA,CACA,iBAAA,CAEA,sCACE,SAAA,CAEF,sCACE,qBAAA,CACA,iBAAA,CAEF,uCACE,qBAAA,CACA,iBAAA,CAKF,2BACE,eAAA,CACA,oDACE,gBAAA","sourcesContent":["\n\n.lf-form-react input[type=\"text\"],\n.lf-form-react input[type=\"password\"],\n.lf-form-react input[type=\"email\"],\n.lf-form-react input[type=\"url\"],\n.lf-form-react input[type=\"date\"],\n.lf-form-react input[type=\"month\"],\n.lf-form-react input[type=\"time\"],\n.lf-form-react input[type=\"datetime\"],\n.lf-form-react input[type=\"datetime-local\"],\n.lf-form-react input[type=\"week\"],\n.lf-form-react input[type=\"number\"],\n.lf-form-react input[type=\"search\"],\n.lf-form-react input[type=\"tel\"],\n.lf-form-react input[type=\"color\"],\n.lf-form-react select,\n.lf-form-react textarea {\n    padding: 0.5em 0.6em;\n    display: inline-block;\n    border: 1px solid #ccc;\n    border-radius: 4px;\n    vertical-align: middle;\n    box-sizing: border-box;\n}\n\n/*\nNeed to separate out the :not() selector from the rest of the CSS 2.1 selectors\nsince IE8 won't execute CSS that contains a CSS3 selector.\n*/\n.lf-form-react input:not([type]) {\n    padding: 0.5em 0.6em;\n    display: inline-block;\n    border: 1px solid #ccc;\n    border-radius: 4px;\n    box-sizing: border-box;\n}\n\n\n/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */\n/* May be able to remove this tweak as color inputs become more standardized across browsers. */\n.lf-form-react input[type=\"color\"] {\n    padding: 0.2em 0.5em;\n}\n\n\n.lf-form-react input[type=\"text\"]:focus,\n.lf-form-react input[type=\"password\"]:focus,\n.lf-form-react input[type=\"email\"]:focus,\n.lf-form-react input[type=\"url\"]:focus,\n.lf-form-react input[type=\"date\"]:focus,\n.lf-form-react input[type=\"month\"]:focus,\n.lf-form-react input[type=\"time\"]:focus,\n.lf-form-react input[type=\"datetime\"]:focus,\n.lf-form-react input[type=\"datetime-local\"]:focus,\n.lf-form-react input[type=\"week\"]:focus,\n.lf-form-react input[type=\"number\"]:focus,\n.lf-form-react input[type=\"search\"]:focus,\n.lf-form-react input[type=\"tel\"]:focus,\n.lf-form-react input[type=\"color\"]:focus,\n.lf-form-react select:focus,\n.lf-form-react textarea:focus {\n    outline: 0;\n    border-color: #129FEA;\n}\n\n/*\nNeed to separate out the :not() selector from the rest of the CSS 2.1 selectors\nsince IE8 won't execute CSS that contains a CSS3 selector.\n*/\n.lf-form-react input:not([type]):focus {\n    outline: 0;\n    border-color: #129FEA;\n}\n\n.lf-form-react input[type=\"file\"]:focus,\n.lf-form-react input[type=\"radio\"]:focus,\n.lf-form-react input[type=\"checkbox\"]:focus {\n    outline: thin solid #129FEA;\n    outline: 1px auto #129FEA;\n}\n.lf-form-react .lf-form-react-checkbox,\n.lf-form-react .lf-form-react-radio {\n    //margin: 0.5em 0;\n    display: block;\n}\n\n.lf-form-react input[type=\"text\"][disabled],\n.lf-form-react input[type=\"password\"][disabled],\n.lf-form-react input[type=\"email\"][disabled],\n.lf-form-react input[type=\"url\"][disabled],\n.lf-form-react input[type=\"date\"][disabled],\n.lf-form-react input[type=\"month\"][disabled],\n.lf-form-react input[type=\"time\"][disabled],\n.lf-form-react input[type=\"datetime\"][disabled],\n.lf-form-react input[type=\"datetime-local\"][disabled],\n.lf-form-react input[type=\"week\"][disabled],\n.lf-form-react input[type=\"number\"][disabled],\n.lf-form-react input[type=\"search\"][disabled],\n.lf-form-react input[type=\"tel\"][disabled],\n.lf-form-react input[type=\"color\"][disabled],\n.lf-form-react select[disabled],\n.lf-form-react textarea[disabled] {\n    cursor: not-allowed;\n    background-color: #eaeded;\n    color: #cad2d3;\n}\n\n.lf-form-react input[readonly],\n.lf-form-react select[readonly],\n.lf-form-react textarea[readonly] {\n    background-color: #eee; /* menu hover bg color */\n    color: #777; /* menu text color */\n    border-color: #ccc;\n}\n\n.lf-form-react input:focus:invalid,\n.lf-form-react textarea:focus:invalid,\n.lf-form-react select:focus:invalid {\n    color: #b94a48;\n    border-color: #e9322d;\n}\n.lf-form-react input[type=\"file\"]:focus:invalid:focus,\n.lf-form-react input[type=\"radio\"]:focus:invalid:focus,\n.lf-form-react input[type=\"checkbox\"]:focus:invalid:focus {\n    outline-color: #e9322d;\n}\n.lf-form-react select {\n    /* Normalizes the height; padding is not sufficient. */\n    height: 2.25em;\n    border: 1px solid #ccc;\n    background-color: white;\n}\n.lf-form-react select[multiple] {\n    height: auto;\n}\n.lf-form-react label {\n    //margin: 0.5em 0 0.2em;\n    margin: 3px 0px;\n}\n.lf-form-react fieldset {\n    margin: 0;\n    padding: 0.35em 0 0.75em;\n    border: 0;\n}\n.lf-form-react legend {\n    display: block;\n    width: 100%;\n    padding: 0.3em 0;\n    //margin-bottom: 0.3em;\n    //margin\n    color: #333;\n    border-bottom: 1px solid #e5e5e5;\n}\n\n.lf-form-react-stacked input[type=\"text\"],\n.lf-form-react-stacked input[type=\"password\"],\n.lf-form-react-stacked input[type=\"email\"],\n.lf-form-react-stacked input[type=\"url\"],\n.lf-form-react-stacked input[type=\"date\"],\n.lf-form-react-stacked input[type=\"month\"],\n.lf-form-react-stacked input[type=\"time\"],\n.lf-form-react-stacked input[type=\"datetime\"],\n.lf-form-react-stacked input[type=\"datetime-local\"],\n.lf-form-react-stacked input[type=\"week\"],\n.lf-form-react-stacked input[type=\"number\"],\n.lf-form-react-stacked input[type=\"search\"],\n.lf-form-react-stacked input[type=\"tel\"],\n.lf-form-react-stacked input[type=\"color\"],\n.lf-form-react-stacked input[type=\"file\"],\n.lf-form-react-stacked select,\n.lf-form-react-stacked label,\n.lf-form-react-stacked textarea {\n    display: block;\n    //margin: 3px 0;\n}\n\n\n\n\n\n\n\n\n.pure-form-aligned input,\n.pure-form-aligned textarea,\n.pure-form-aligned select,\n.pure-form-message-inline {\n    display: inline-block;\n    vertical-align: middle;\n}\n.pure-form-aligned textarea {\n    vertical-align: top;\n}\n\n/* Aligned Forms */\n.pure-form-aligned .pure-control-group {\n    margin-bottom: 0.5em;\n}\n.pure-form-aligned .pure-control-group label {\n    text-align: right;\n    display: inline-block;\n    vertical-align: middle;\n    width: 10em;\n    margin: 0 1em 0 0;\n}\n.pure-form-aligned .pure-controls {\n    margin: 1.5em 0 0 11em;\n}\n\n\n\n.lf-form-react .lf-form-react-input-1 {\n    width: 100%;\n}\n.lf-form-react .lf-form-react-input-3-4 {\n    width: 75%;\n}\n.lf-form-react .lf-form-react-input-2-3 {\n    width: 66%;\n}\n.lf-form-react .lf-form-react-input-1-2 {\n    width: 50%;\n}\n.lf-form-react .lf-form-react-input-1-3 {\n    width: 33%;\n}\n.lf-form-react .lf-form-react-input-1-4 {\n    width: 25%;\n}\n\n.lf-form-react-message {\n    display: block;\n    color: #666;\n    font-size: 0.875em;\n}\n.lf-form-react-error-message {\n  color: #FF3300;\n  display: block;\n  font-size: 0.875em;\n}\n\n\n.lf-form-react-control-group:not(:first-child) {\n  margin-top: 15px;\n}\n\n\n.lf-form-react-primary-button {\n  appearance: button;\n  background-color: #1652F0;\n  border: 1px solid #1652F0;\n  border-radius: 4px;\n  box-sizing: border-box;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.15;\n  overflow: visible;\n  padding: 8px 16px;\n  position: relative;\n  text-align: center;\n  text-transform: none;\n  transition: all 80ms ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  width: fit-content;\n\n  &:focus {\n    outline: 0;\n  }\n  &:hover {\n    background-color: #0A46E4;\n    border-color: #0A46E4;\n  }\n  &:active {\n    background-color: #0039D7;\n    border-color: #0039D7;\n  }\n}\n\n.lf-form-react-secondary-button {\n  appearance: button;\n  background-color: #999999;\n  border: 1px solid #999999;\n  border-radius: 4px;\n  box-sizing: border-box;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.15;\n  overflow: visible;\n  padding: 8px 16px;\n  position: relative;\n  text-align: center;\n  text-transform: none;\n  transition: all 80ms ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  width: fit-content;\n\n  &:focus {\n    outline: 0;\n  }\n  &:hover {\n    background-color: #888888;\n    border-color: #888888;\n  }\n  &:active {\n    background-color: #888888;\n    border-color: #888888;\n  }\n}\n\n.lf-form-react {\n  .lf-toolbar {\n    margin-top: 15px;\n    button:not(:first-child) {\n      margin-left: 10px;\n    }\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 3050:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react .lf-control-input-text input[type=color]{min-width:60px}", "",{"version":3,"sources":["webpack://./react/input-text/input-text.scss"],"names":[],"mappings":"AAEI,wDACE,cAAA","sourcesContent":[".lf-form-react {\n  .lf-control-input-text {\n    input[type=color] {\n      min-width: 60px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -613,6 +636,31 @@ module.exports = strictIndexOf;
 
 /***/ }),
 
+/***/ 1761:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseGetTag = __webpack_require__(4239),
+    isObjectLike = __webpack_require__(7005);
+
+/** `Object#toString` result references. */
+var dateTag = '[object Date]';
+
+/**
+ * The base implementation of `_.isDate` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a date object, else `false`.
+ */
+function baseIsDate(value) {
+  return isObjectLike(value) && baseGetTag(value) == dateTag;
+}
+
+module.exports = baseIsDate;
+
+
+/***/ }),
+
 /***/ 280:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -730,6 +778,27 @@ function baseTrim(string) {
 }
 
 module.exports = baseTrim;
+
+
+/***/ }),
+
+/***/ 7518:
+/***/ ((module) => {
+
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */
+function baseUnary(func) {
+  return function(value) {
+    return func(value);
+  };
+}
+
+module.exports = baseUnary;
 
 
 /***/ }),
@@ -1156,6 +1225,44 @@ module.exports = stubFalse;
 
 /***/ }),
 
+/***/ 1167:
+/***/ ((module, exports, __webpack_require__) => {
+
+/* module decorator */ module = __webpack_require__.nmd(module);
+var freeGlobal = __webpack_require__(1957);
+
+/** Detect free variable `exports`. */
+var freeExports =  true && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && "object" == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Detect free variable `process` from Node.js. */
+var freeProcess = moduleExports && freeGlobal.process;
+
+/** Used to access faster Node.js helpers. */
+var nodeUtil = (function() {
+  try {
+    // Use `util.types` for Node.js 10+.
+    var types = freeModule && freeModule.require && freeModule.require('util').types;
+
+    if (types) {
+      return types;
+    }
+
+    // Legacy `process.binding('util')` for Node.js < 10.
+    return freeProcess && freeProcess.binding && freeProcess.binding('util');
+  } catch (e) {}
+}());
+
+module.exports = nodeUtil;
+
+
+/***/ }),
+
 /***/ 5569:
 /***/ ((module) => {
 
@@ -1562,6 +1669,40 @@ function stubFalse() {
 }
 
 module.exports = stubFalse;
+
+
+/***/ }),
+
+/***/ 7960:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseIsDate = __webpack_require__(1761),
+    baseUnary = __webpack_require__(7518),
+    nodeUtil = __webpack_require__(1167);
+
+/* Node.js helper references. */
+var nodeIsDate = nodeUtil && nodeUtil.isDate;
+
+/**
+ * Checks if `value` is classified as a `Date` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a date object, else `false`.
+ * @example
+ *
+ * _.isDate(new Date);
+ * // => true
+ *
+ * _.isDate('Mon April 23 2012');
+ * // => false
+ */
+var isDate = nodeIsDate ? baseUnary(nodeIsDate) : baseIsDate;
+
+module.exports = isDate;
 
 
 /***/ }),
@@ -2508,6 +2649,22 @@ module.exports = styleTagTransform;
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__8156__;
 
+/***/ }),
+
+/***/ 1186:
+/***/ ((module) => {
+
+"use strict";
+module.exports = __WEBPACK_EXTERNAL_MODULE__1186__;
+
+/***/ }),
+
+/***/ 977:
+/***/ ((module) => {
+
+"use strict";
+module.exports = __WEBPACK_EXTERNAL_MODULE__977__;
+
 /***/ })
 
 /******/ 	});
@@ -2525,12 +2682,15 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__8156__;
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
 /******/ 			id: moduleId,
-/******/ 			// no module.loaded needed
+/******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -2589,6 +2749,15 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__8156__;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -2626,6 +2795,7 @@ __webpack_require__.d(__webpack_exports__, {
   "isEmptyForm": () => (/* reexport */ isEmptyForm),
   "isI18n": () => (/* reexport */ isI18n),
   "isUrl": () => (/* reexport */ is_url_isUrl),
+  "isValidDate": () => (/* reexport */ isValidDate),
   "isValidDayjsFormat": () => (/* reexport */ isValidDayjsFormat),
   "makeWidthStyle": () => (/* reexport */ makeWidthStyle),
   "mapFields": () => (/* reexport */ mapFields),
@@ -5245,7 +5415,7 @@ var CrossCirle = function CrossCirle(_ref) {
 ;// CONCATENATED MODULE: ./components/required-icon/index.js
 
 
-var RequiredIcon = function RequiredIcon() {
+var required_icon_RequiredIcon = function RequiredIcon() {
   return /*#__PURE__*/external_react_default().createElement(Asterisk, {
     color: "#ff6633",
     width: 12,
@@ -5670,7 +5840,7 @@ var createEmptyField = function createEmptyField(Manifests, fields, component, f
     });
     ++retries;
   }
-  var defaultValues = framework && Manifests[component] && Manifests[component].defaults && Manifests[component].defaults[framework] ? Manifests[component].defaults[framework] : {};
+  var defaultValues = framework && Manifests[component] && Manifests[component].defaultValues && Manifests[component].defaultValues[framework] ? Manifests[component].defaultValues[framework] : {};
   return find_field_objectSpread({
     component: component,
     label: "Field ".concat(countFields + 1),
@@ -5938,7 +6108,7 @@ var isEmptyForm = function isEmptyForm(form) {
   return !form || !Array.isArray(form.fields) || form.fields.length === 0;
 };
 ;// CONCATENATED MODULE: ./mappings.json
-const mappings_namespaceObject = JSON.parse('{"text-input":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"variant":["react-material-ui"],"color":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"width":["react-rsuite5","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-antd"],"step":["react-rsuite5","react-antd"],"max":["react-rsuite5","react-antd"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"optionType":["react-antd"],"size":["react-antd"]},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react","react-bootstrap","react-antd"],"width":["react","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"width":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select-states":{"name":null,"label":null,"hint":null,"placeholder":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"country":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"maxWidth":null,"minHeight":null,"align":null,"marginTop":null,"marginBottom":null,"hidden":null},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null}}');
+const mappings_namespaceObject = JSON.parse('{"text-input":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"variant":["react-material-ui"],"color":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-antd"],"step":["react-rsuite5","react-antd"],"max":["react-rsuite5","react-antd"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"optionType":["react-antd"],"size":["react-antd"]},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react","react-bootstrap","react-antd"],"width":["react","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"width":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select-states":{"name":null,"label":null,"hint":null,"placeholder":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"country":null,"fullWidth":["react","react-material-ui"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"maxWidth":null,"minHeight":null,"align":null,"marginTop":null,"marginBottom":null,"hidden":null},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
 ;// CONCATENATED MODULE: ./helpers/apply-transformers.js
 
 
@@ -6121,7 +6291,7 @@ var applyTransformers = function applyTransformers(formName, framework, fields, 
     transformers.filter(function (transformer) {
       return isFunction_default()(transformer);
     }).forEach(function (transformer) {
-      var api = new ApiFactory(formName, framework, fields, values);
+      var api = new ApiFactory(formName, framework, newFields, values);
       try {
         newFields = transformer(api);
       } catch (e) {
@@ -6186,7 +6356,12 @@ var collectNames = function collectNames(form) {
   }
   return [];
 };
+;// CONCATENATED MODULE: ./helpers/is-valid-date.js
+var isValidDate = function isValidDate(d) {
+  return d instanceof Date && !isNaN(d);
+};
 ;// CONCATENATED MODULE: ./helpers/index.js
+
 
 
 
@@ -6239,7 +6414,276 @@ var I18N = function I18N(Component) {
     return /*#__PURE__*/external_react_default().createElement(Component, newProps);
   };
 };
+// EXTERNAL MODULE: ./node_modules/lodash/isDate.js
+var isDate = __webpack_require__(7960);
+var isDate_default = /*#__PURE__*/__webpack_require__.n(isDate);
+;// CONCATENATED MODULE: ./components/plaintext/locales/yes.json
+const yes_namespaceObject = JSON.parse('{"en-US":"Yes","af-ZA":"Ja","ar":"نعم","bg-BG":"Да","ca-AD":"Sí","cs-CZ":"Ano","cy-GB":"Ie","da-DK":"Ja","de-AT":"Ja","de-CH":"Ja","de-DE":"Ja","el-GR":"Ναί","en-GB":"Yes","es-CL":"Sí","es-ES":"Sí","es-MX":"Sí","et-EE":"Jah","eu":"Bai","fa-IR":"آره","fi-FI":"Joo","fr-CA":"Oui","fr-FR":"Oui","he-IL":"כן","hi-IN":"हाँ","hr-HR":"Da","hu-HU":"Igen","id-ID":"Ya","is-IS":"Já","it-IT":"Si","ja-JP":"はい","km-KH":"បាត","ko-KR":"예","la":"Sic","lt-LT":"Taip","lv-LV":"Jā","mn-MN":"Мон","nb-NO":"Ja","nl-NL":"Ja","pl-PL":"Tak","pt-BR":"Sim","pt-PT":"Sim","ro-RO":"da","ru-RU":"Да","sk-SK":"Áno","sl-SI":"DA","sr-RS":"да","sv-SE":"Ja","th-TH":"ใช่","tr-TR":"Evet","uk-UA":"Так","vi-VN":"Đúng","zh-CN":"是的","zh-TW":"是的"}');
+;// CONCATENATED MODULE: ./components/plaintext/locales/no.json
+const no_namespaceObject = JSON.parse('{"en-US":"No","af-ZA":"Geen","ar":"لا","bg-BG":"Не","ca-AD":"No","cs-CZ":"Ne","cy-GB":"Na","da-DK":"Ingen","de-AT":"NEIN","de-CH":"NEIN","de-DE":"NEIN","el-GR":"Οχι","en-GB":"No","es-CL":"No","es-ES":"No","es-MX":"No","et-EE":"Mitte","eu":"Ez-","fa-IR":"هیچ","fi-FI":"Ei","fr-CA":"Non","fr-FR":"Non","he-IL":"לא","hi-IN":"नहीं","hr-HR":"Ne","hu-HU":"Nem","id-ID":"TIDAK","is-IS":"Nei","it-IT":"No","ja-JP":"いいえ","km-KH":"ដេលក្ផាន","ko-KR":"아니요","la":"Non","lt-LT":"Ne","lv-LV":"Nē","mn-MN":"-Гүй / -битгий","nb-NO":"Nei","nl-NL":"Nee","pl-PL":"NIE","pt-BR":"Não","pt-PT":"Não","ro-RO":"Nu","ru-RU":"Нет","sk-SK":"Nie","sl-SI":"Ne","sr-RS":"Не","sv-SE":"Nej","th-TH":"เลขที่","tr-TR":"HAYIR","uk-UA":"Немає","vi-VN":"KHÔNG","zh-CN":"不","zh-TW":"不"}');
+;// CONCATENATED MODULE: ./components/plaintext/locales/index.js
+
+
+
+;// CONCATENATED MODULE: ./components/plaintext/index.js
+
+
+
+
+
+var Plaintext = function Plaintext(_ref) {
+  var value = _ref.value,
+    component = _ref.component,
+    options = _ref.options,
+    locale = _ref.locale;
+  var d;
+  switch (component) {
+    case 'input-text':
+    case 'text-input':
+      return /*#__PURE__*/external_react_default().createElement("span", null, value);
+    case 'date':
+      if (isDate_default()(value)) {
+        d = value;
+      } else if (isString_default()(value) && isValidDate(new Date(value))) {
+        d = new Date(value);
+      }
+      return /*#__PURE__*/external_react_default().createElement("span", null, d ? d.toLocaleDateString() : '');
+    case 'datetime':
+      if (isDate_default()(value)) {
+        d = value;
+      } else if (isString_default()(value) && isValidDate(new Date(value))) {
+        d = new Date(value);
+      }
+      return /*#__PURE__*/external_react_default().createElement("span", null, d ? d.toLocaleDateString() + ' ' + d.toLocaleTimeString() : '');
+    case 'toggle':
+    case 'checkbox':
+      if (value === true || value === 1) {
+        return /*#__PURE__*/external_react_default().createElement("span", null, i18n(yes_namespaceObject, locale));
+      } else if (value === false || value === 0) {
+        return /*#__PURE__*/external_react_default().createElement("span", null, i18n(no_namespaceObject, locale));
+      }
+      return /*#__PURE__*/external_react_default().createElement("span", null, "-");
+    case 'select':
+      var found = (options !== null && options !== void 0 ? options : []).find(function (option) {
+        return option.value === value;
+      });
+      var label = '';
+      if (found) {
+        if (isI18n(found.label)) {
+          label = i18n(found.label, locale);
+        } else {
+          label = found.label;
+        }
+      }
+      return /*#__PURE__*/external_react_default().createElement("span", null, label);
+    default:
+      return /*#__PURE__*/external_react_default().createElement("span", null, value);
+  }
+};
+var IfNotPlaintext = function IfNotPlaintext(_ref2) {
+  var plaintext = _ref2.plaintext,
+    value = _ref2.value,
+    component = _ref2.component,
+    options = _ref2.options,
+    children = _ref2.children,
+    locale = _ref2.locale;
+  if (plaintext) {
+    return /*#__PURE__*/external_react_default().createElement(Plaintext, {
+      value: value,
+      component: component,
+      options: options,
+      locale: locale
+    });
+  } else {
+    return children;
+  }
+};
+
+;// CONCATENATED MODULE: ./components/react-generic-input/index.js
+
+var _excluded = ["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "plaintext", "required", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+
+var ReactGenericInput = function ReactGenericInput(_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    lfLocale = _ref.lfLocale,
+    hint = _ref.hint,
+    value = _ref.value,
+    onChange = _ref.onChange,
+    onBlur = _ref.onBlur,
+    error = _ref.error,
+    className = _ref.className,
+    disabled = _ref.disabled,
+    readOnly = _ref.readOnly,
+    plaintext = _ref.plaintext,
+    required = _ref.required,
+    size = _ref.size,
+    width = _ref.width,
+    fullWidth = _ref.fullWidth,
+    placeholder = _ref.placeholder,
+    autocomplete = _ref.autocomplete,
+    inputType = _ref.inputType,
+    inputMode = _ref.inputMode,
+    component = _ref.component,
+    rest = _objectWithoutProperties(_ref, _excluded);
+  var hasError = error && isString_default()(error);
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: classnames_default()('lf-form-react-control-group', className),
+    "data-lf-field-name": name
+  }, /*#__PURE__*/external_react_default().createElement("label", {
+    for: name
+  }, label, required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(IfNotPlaintext, {
+    value: value,
+    component: component,
+    plaintext: plaintext
+  }, /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, /*#__PURE__*/external_react_default().createElement("input", _extends({
+    type: inputType,
+    lang: lfLocale,
+    id: name,
+    defaultValue: value,
+    onChange: onChange,
+    onBlur: onBlur,
+    placeholder: placeholder,
+    style: makeWidthStyle(fullWidth, width),
+    autoComplete: autocomplete,
+    inputMode: inputMode,
+    disabled: disabled,
+    readOnly: readOnly
+  }, passRest(rest))), hint && !hasError && /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-form-react-message"
+  }, hint), hasError && /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-form-react-error-message"
+  }, error))));
+};
+
+// EXTERNAL MODULE: external "rsuite"
+var external_rsuite_ = __webpack_require__(1186);
+// EXTERNAL MODULE: external "rsuite/locales"
+var locales_ = __webpack_require__(977);
+;// CONCATENATED MODULE: ./components/rsuite-generic-date/index.js
+
+var rsuite_generic_date_excluded = (/* unused pure expression or super */ null && (["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"]));
+function rsuite_generic_date_extends() { rsuite_generic_date_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return rsuite_generic_date_extends.apply(this, arguments); }
+function rsuite_generic_date_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = rsuite_generic_date_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function rsuite_generic_date_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+var RSuiteGenericDate = function RSuiteGenericDate(_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    hint = _ref.hint,
+    value = _ref.value,
+    placeholder = _ref.placeholder,
+    plaintext = _ref.plaintext,
+    _ref$tooltip = _ref.tooltip,
+    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+    _ref$disabled = _ref.disabled,
+    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    _ref$readOnly = _ref.readOnly,
+    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+    _ref$required = _ref.required,
+    required = _ref$required === void 0 ? false : _ref$required,
+    error = _ref.error,
+    onChange = _ref.onChange,
+    onBlur = _ref.onBlur,
+    appearance = _ref.appearance,
+    format = _ref.format,
+    lfLocale = _ref.lfLocale,
+    rest = rsuite_generic_date_objectWithoutProperties(_ref, rsuite_generic_date_excluded);
+  var localeCode = lfLocale && _isString(lfLocale) ? lfLocale.replace('-', '') : undefined;
+  return /*#__PURE__*/React.createElement(Form.Group, {
+    "data-lf-field-name": name,
+    className: "lf-control-date"
+  }, label && /*#__PURE__*/React.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React.createElement(Form.HelpText, {
+    tooltip: true
+  }, hint), required && /*#__PURE__*/React.createElement(RequiredIcon, null)), /*#__PURE__*/React.createElement(CustomProvider, {
+    locale: localeCode && locales[localeCode] ? locales[localeCode] : undefined
+  }, /*#__PURE__*/React.createElement(Form.Control, rsuite_generic_date_extends({
+    accepter: DatePicker,
+    appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
+    name: name,
+    format: format || 'yyyy-MM-dd',
+    defaultValue: value,
+    onChange: onChange,
+    readOnly: readOnly,
+    plaintext: plaintext,
+    onBlur: onBlur,
+    errorMessage: _isString(error) ? error : undefined,
+    disabled: disabled,
+    placeholder: placeholder
+  }, rest)), hint && !tooltip && /*#__PURE__*/React.createElement(Form.HelpText, null, hint)));
+};
+
+;// CONCATENATED MODULE: ./components/react-generic-checkbox/index.js
+
+var react_generic_checkbox_excluded = ["name", "label", "lfLocale", "className", "inputType", "hint", "plaintext", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"];
+function react_generic_checkbox_extends() { react_generic_checkbox_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_generic_checkbox_extends.apply(this, arguments); }
+function react_generic_checkbox_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_generic_checkbox_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function react_generic_checkbox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+var ReactGenericCheckbox = function ReactGenericCheckbox(_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    lfLocale = _ref.lfLocale,
+    className = _ref.className,
+    inputType = _ref.inputType,
+    hint = _ref.hint,
+    plaintext = _ref.plaintext,
+    value = _ref.value,
+    defaultValue = _ref.defaultValue,
+    onChange = _ref.onChange,
+    onBlur = _ref.onBlur,
+    error = _ref.error,
+    disabled = _ref.disabled,
+    readOnly = _ref.readOnly,
+    required = _ref.required,
+    rest = react_generic_checkbox_objectWithoutProperties(_ref, react_generic_checkbox_excluded);
+  var hasError = error && isString_default()(error);
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: classnames_default()('lf-form-react-control-group', className),
+    "data-lf-field-name": name
+  }, !plaintext && /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, /*#__PURE__*/external_react_default().createElement("label", {
+    for: name,
+    className: "lf-form-react-checkbox"
+  }, /*#__PURE__*/external_react_default().createElement("input", react_generic_checkbox_extends({
+    type: inputType,
+    id: name,
+    onChange: onChange,
+    onBlur: onBlur,
+    required: error != null,
+    disabled: disabled,
+    readOnly: readOnly,
+    defaultChecked: value
+  }, passRest(rest))), " ", label, " ", required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), hint && !hasError && /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-form-react-form-message"
+  }, hint), hasError && /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-form-react-error-message"
+  }, error)), plaintext && /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, /*#__PURE__*/external_react_default().createElement("label", {
+    for: name
+  }, label), /*#__PURE__*/external_react_default().createElement(Plaintext, {
+    value: value,
+    component: "toggle",
+    locale: lfLocale
+  })));
+};
+
 ;// CONCATENATED MODULE: ./components/index.js
+
+
+
+
 
 
 
@@ -6289,7 +6733,7 @@ function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArra
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function generator_extends() { generator_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return generator_extends.apply(this, arguments); }
 function generator_toConsumableArray(arr) { return generator_arrayWithoutHoles(arr) || generator_iterableToArray(arr) || generator_unsupportedIterableToArray(arr) || generator_nonIterableSpread(); }
 function generator_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function generator_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return generator_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return generator_arrayLikeToArray(o, minLen); }
@@ -6534,7 +6978,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
 
       // special case of group
       if (field.component === 'group') {
-        var component = /*#__PURE__*/external_react_default().createElement(Component, _extends({
+        var component = /*#__PURE__*/external_react_default().createElement(Component, generator_extends({
           key: field.name,
           lfComponent: field.component,
           lfFramework: framework,
@@ -6572,7 +7016,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           index: index
         }, component) : component;
       } else if (field.component === 'two-columns') {
-        var _component = /*#__PURE__*/external_react_default().createElement(Component, _extends({
+        var _component = /*#__PURE__*/external_react_default().createElement(Component, generator_extends({
           key: field.name,
           lfComponent: field.component,
           lfFramework: framework,
@@ -6634,7 +7078,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           index: index
         }, _component) : _component;
       } else if (field.component === 'three-columns') {
-        var _component2 = /*#__PURE__*/external_react_default().createElement(Component, _extends({
+        var _component2 = /*#__PURE__*/external_react_default().createElement(Component, generator_extends({
           key: "three-columns-".concat(field.name),
           name: field.name,
           lfComponent: field.component,
@@ -6725,7 +7169,6 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       var rules = translateValidation(generator_objectSpread({
         required: field.required
       }, field.validation), locale, onJavascriptError);
-      console.log(" --rules ".concat(field.name), rules);
       return /*#__PURE__*/external_react_default().createElement(Controller, {
         key: "field_".concat(field.name),
         name: field.name,
@@ -6735,7 +7178,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           var fieldInfo = _ref4.field;
           var component = /*#__PURE__*/external_react_default().createElement(Component
           // not sure about this, not passing the ref
-          , _extends({
+          , generator_extends({
             name: fieldInfo.name,
             value: fieldInfo.value,
             onBlur: fieldInfo.onBlur,
@@ -6747,7 +7190,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
             hint: field.hint,
             disabled: disabled || field.disabled,
             readOnly: readOnly || field.readOnly,
-            plaintex: plaintext || field.plaintext,
+            plaintext: plaintext,
             size: field.size,
             placeholder: field.placeholder,
             error: errors && errors[field.name] ? showErrors === 'inline' ? errorToString(errors[field.name]) : true : undefined
@@ -6885,7 +7328,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       className: "top",
       locale: locale,
       errors: enrichWithLabels(validationErrors, formFields)
-    }), /*#__PURE__*/external_react_default().createElement(Form, _extends({
+    }), /*#__PURE__*/external_react_default().createElement(Form, generator_extends({
       onSubmit: handleSubmit(onHandleSubmit, onHandleError),
       name: formName,
       defaultValues: defaultValues,
@@ -6995,105 +7438,85 @@ var FormReact = function FormReact(_ref) {
   }, "Cancel")));
 };
 
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react/input-text/input-text.scss
+var input_text = __webpack_require__(3050);
+;// CONCATENATED MODULE: ./react/input-text/input-text.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var input_text_options = {};
+
+input_text_options.styleTagTransform = (styleTagTransform_default());
+input_text_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      input_text_options.insert = insertBySelector_default().bind(null, "head");
+    
+input_text_options.domAPI = (styleDomAPI_default());
+input_text_options.insertStyleElement = (insertStyleElement_default());
+
+var input_text_update = injectStylesIntoStyleTag_default()(input_text/* default */.Z, input_text_options);
+
+
+
+
+       /* harmony default export */ const input_text_input_text = (input_text/* default */.Z && input_text/* default.locals */.Z.locals ? input_text/* default.locals */.Z.locals : undefined);
+
 ;// CONCATENATED MODULE: ./react/input-text/index.js
-
-var _excluded = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "readOnly", "required", "size", "width", "fullWidth"];
+var input_text_excluded = ["onChange"];
 function input_text_extends() { input_text_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return input_text_extends.apply(this, arguments); }
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+function input_text_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = input_text_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function input_text_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
-var TextInput = function TextInput(_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    error = _ref.error,
-    disabled = _ref.disabled,
-    readOnly = _ref.readOnly,
-    required = _ref.required,
-    size = _ref.size,
-    width = _ref.width,
-    fullWidth = _ref.fullWidth,
-    rest = _objectWithoutProperties(_ref, _excluded);
-  var hasError = error && isString_default()(error);
+var TextInput = I18N(function (_ref) {
+  var onChange = _ref.onChange,
+    rest = input_text_objectWithoutProperties(_ref, input_text_excluded);
   var handleChange = (0,external_react_.useCallback)(function (e) {
     return onChange(e.target.value);
   }, [onChange]);
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-form-react-control-group lf-control-input-text",
-    "data-lf-field-name": name
-  }, /*#__PURE__*/external_react_default().createElement("label", {
-    for: name
-  }, label, required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement("input", input_text_extends({
-    type: "text",
-    id: name,
-    value: value,
-    onChange: handleChange,
-    onBlur: onBlur,
-    style: makeWidthStyle(fullWidth, width)
-    //className={size && `lf-form-react-input-${size}`}
-    //style={(!size || size === 'custom') && _.isNumber(width) ? { width: `${width}px`} : undefined}
-    ,
-    required: error != null,
-    disabled: disabled,
-    readOnly: readOnly
-  }, passRest(rest))), hint && !hasError && /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-form-react-message"
-  }, hint), hasError && /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-form-react-error-message"
-  }, error));
-};
+  return /*#__PURE__*/external_react_default().createElement(ReactGenericInput, input_text_extends({
+    component: "input-text",
+    className: "lf-control-input-text",
+    onChange: handleChange
+  }, rest));
+}, ['label', 'hint', 'placeholder']);
 
 ;// CONCATENATED MODULE: ./react/checkbox/index.js
+var checkbox_excluded = ["onChange"];
+function checkbox_extends() { checkbox_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return checkbox_extends.apply(this, arguments); }
+function checkbox_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = checkbox_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function checkbox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
-var Checkbox = function Checkbox(_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    _onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    error = _ref.error,
-    disabled = _ref.disabled,
-    readOnly = _ref.readOnly,
-    required = _ref.required;
-  var hasError = error && isString_default()(error);
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-control-checkbox lf-form-react-control-group",
-    "data-lf-field-name": name
-  }, /*#__PURE__*/external_react_default().createElement("label", {
-    for: name,
-    className: "lf-form-react-checkbox"
-  }, /*#__PURE__*/external_react_default().createElement("input", {
-    type: "checkbox",
-    id: name,
-    onChange: function onChange(e) {
-      return _onChange(e.target.checked);
-    },
-    onBlur: onBlur,
-    required: error != null,
-    disabled: disabled,
-    readOnly: readOnly,
-    checked: value
-  }), " ", label, " ", required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), hint && !hasError && /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-form-react-form-message"
-  }, hint), hasError && /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-form-react-error-message"
-  }, error));
-};
+var Checkbox = I18N(function (_ref) {
+  var onChange = _ref.onChange,
+    rest = checkbox_objectWithoutProperties(_ref, checkbox_excluded);
+  var handleChange = (0,external_react_.useCallback)(function (e) {
+    onChange(e.target.checked);
+  }, [onChange]);
+  return /*#__PURE__*/external_react_default().createElement(ReactGenericCheckbox, checkbox_extends({
+    inputType: "checkbox",
+    className: "lf-control-checkbox",
+    onChange: handleChange
+  }, rest));
+}, ['hint', 'label']);
 
 ;// CONCATENATED MODULE: ./react/textarea/index.js
 
 
 
 
-var Textarea = function Textarea(_ref) {
+var Textarea = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -7116,7 +7539,7 @@ var Textarea = function Textarea(_ref) {
     "data-lf-field-name": name
   }, /*#__PURE__*/external_react_default().createElement("label", {
     for: name
-  }, label, required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement("textarea", {
+  }, label, required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement("textarea", {
     type: "text",
     id: name,
     rows: rows,
@@ -7134,7 +7557,7 @@ var Textarea = function Textarea(_ref) {
   }, hint), hasError && /*#__PURE__*/external_react_default().createElement("div", {
     className: "lf-form-react-error-message"
   }, error));
-};
+}, ['label', 'hint', 'placeholder']);
 
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/three-columns/three-columns.scss
 var three_columns = __webpack_require__(1861);
@@ -7595,6 +8018,164 @@ var PlaceholderReact = I18N(function (_ref) {
   }, hint));
 }, ['label', 'hint', 'text']);
 
+;// CONCATENATED MODULE: ./react/select/index.js
+function select_typeof(obj) { "@babel/helpers - typeof"; return select_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, select_typeof(obj); }
+
+var select_excluded = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "plaintext", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey"];
+function select_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function select_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? select_ownKeys(Object(source), !0).forEach(function (key) { select_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : select_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function select_defineProperty(obj, key, value) { key = select_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function select_toPropertyKey(arg) { var key = select_toPrimitive(arg, "string"); return select_typeof(key) === "symbol" ? key : String(key); }
+function select_toPrimitive(input, hint) { if (select_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (select_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function select_extends() { select_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return select_extends.apply(this, arguments); }
+function select_toConsumableArray(arr) { return select_arrayWithoutHoles(arr) || select_iterableToArray(arr) || select_unsupportedIterableToArray(arr) || select_nonIterableSpread(); }
+function select_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function select_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return select_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return select_arrayLikeToArray(o, minLen); }
+function select_iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function select_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return select_arrayLikeToArray(arr); }
+function select_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function select_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = select_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function select_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+var Select = I18N(function (_ref) {
+  var _filterOptions;
+  var name = _ref.name,
+    lfLocale = _ref.lfLocale,
+    label = _ref.label,
+    hint = _ref.hint,
+    value = _ref.value,
+    onChange = _ref.onChange,
+    onBlur = _ref.onBlur,
+    error = _ref.error,
+    disabled = _ref.disabled,
+    placeholder = _ref.placeholder,
+    readOnly = _ref.readOnly,
+    plaintext = _ref.plaintext,
+    required = _ref.required,
+    size = _ref.size,
+    width = _ref.width,
+    fullWidth = _ref.fullWidth,
+    options = _ref.options,
+    filterValue = _ref.filterValue,
+    filterKey = _ref.filterKey,
+    rest = select_objectWithoutProperties(_ref, select_excluded);
+  var hasError = error && isString_default()(error);
+  var handleChange = (0,external_react_.useCallback)(function (e) {
+    return onChange(e.target.value === '' ? null : e.target.value);
+  }, [onChange]);
+  var opts = (_filterOptions = filterOptions(options, filterValue, filterKey)) !== null && _filterOptions !== void 0 ? _filterOptions : [];
+  if (placeholder) {
+    opts = [{
+      value: '',
+      label: placeholder
+    }].concat(select_toConsumableArray(opts));
+  }
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-form-react-control-group lf-control-input-text",
+    "data-lf-field-name": name
+  }, /*#__PURE__*/external_react_default().createElement("label", {
+    for: name
+  }, label, required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(IfNotPlaintext, {
+    plaintext: plaintext,
+    value: value,
+    options: options,
+    component: "select",
+    locale: lfLocale
+  }, /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, /*#__PURE__*/external_react_default().createElement("select", select_extends({
+    id: name,
+    value: value,
+    onChange: handleChange,
+    onBlur: onBlur,
+    placeholder: placeholder,
+    style: makeWidthStyle(fullWidth, width),
+    disabled: disabled,
+    readOnly: readOnly
+  }, passRest(rest)), opts.map(function (option) {
+    return /*#__PURE__*/external_react_default().createElement("option", {
+      key: option.value,
+      value: option.value
+    }, option.label);
+  })), hint && !hasError && /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-form-react-message"
+  }, hint), hasError && /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-form-react-error-message"
+  }, error))));
+}, ['label', 'hint', 'placeholder'], {
+  options: function options(value, i18n) {
+    return (value !== null && value !== void 0 ? value : []).map(function (value) {
+      return select_objectSpread(select_objectSpread({}, value), {}, {
+        label: i18n(value.label)
+      });
+    });
+  }
+});
+
+;// CONCATENATED MODULE: ./react/date/index.js
+
+var date_excluded = ["onChange", "value"];
+function date_extends() { date_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return date_extends.apply(this, arguments); }
+function date_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = date_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function date_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+//const dateOr
+
+var DateInput = I18N(function (_ref) {
+  var onChange = _ref.onChange,
+    value = _ref.value,
+    rest = date_objectWithoutProperties(_ref, date_excluded);
+  var handleChange = (0,external_react_.useCallback)(function (e) {
+    return onChange(e.target.value);
+  }, [onChange]);
+  var currentDate = value;
+  if (isDate_default()(value)) {
+    // only take 2023-11-12
+    currentDate = value.toISOString().split('T')[0];
+  }
+  return /*#__PURE__*/external_react_default().createElement(ReactGenericInput, date_extends({
+    inputType: "date",
+    component: "date",
+    className: "lf-control-date",
+    value: currentDate,
+    onChange: handleChange
+  }, rest));
+}, ['label', 'hint', 'placeholder']);
+
+;// CONCATENATED MODULE: ./react/datetime/index.js
+
+var datetime_excluded = ["onChange", "value"];
+function datetime_extends() { datetime_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return datetime_extends.apply(this, arguments); }
+function datetime_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = datetime_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function datetime_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+var DateTime = I18N(function (_ref) {
+  var onChange = _ref.onChange,
+    value = _ref.value,
+    rest = datetime_objectWithoutProperties(_ref, datetime_excluded);
+  var handleChange = (0,external_react_.useCallback)(function (e) {
+    onChange(e.target.value);
+  }, [onChange]);
+  var currentDate = value;
+  if (isDate_default()(value)) {
+    // only keep iso up to the minutes digits
+    var match = value.toISOString().match(/(.*?T[0-9]{1,2}:[0-9]{1,2})/gm);
+    if (match != null) {
+      currentDate = match[0];
+    }
+  }
+  return /*#__PURE__*/external_react_default().createElement(ReactGenericInput, datetime_extends({
+    inputType: "datetime-local",
+    component: "datetime",
+    className: "lf-control-datetime",
+    value: currentDate,
+    onChange: handleChange
+  }, rest));
+}, ['label', 'hint', 'placeholder']);
+
 ;// CONCATENATED MODULE: ./react/index.js
 var react_excluded = ["framework", "children"];
 function react_extends() { react_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_extends.apply(this, arguments); }
@@ -7611,6 +8192,10 @@ function react_objectWithoutPropertiesLoose(source, excluded) { if (source == nu
 
 
 
+
+
+
+//import { Toggle } from './toggle';
 
 var Fields = {
   'text-input': {
@@ -7639,8 +8224,22 @@ var Fields = {
   },
   'placeholder': {
     'react': PlaceholderReact
+  },
+  'select': {
+    'react': Select
+  },
+  'date': {
+    'react': DateInput
+  },
+  'datetime': {
+    'react': DateTime
   }
+  // Removed, doesn't work
+  /*'toggle': {
+    'react': Toggle
+  }*/
 };
+
 var Forms = {
   'react': FormReact
 };

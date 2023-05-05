@@ -12,6 +12,7 @@ import { TwoColumns } from './two-columns';
 import { ThreeColumns } from './three-columns';
 import { InputNumber } from './input-number';
 import { SelectDate } from './date';
+import { SelectDatetime } from './datetime';
 import { Checkbox } from './checkbox';
 import { Slider } from './slider';
 import { CheckboxGroup } from './checkbox-group';
@@ -108,6 +109,9 @@ const Fields = {
   },
   'react-view': {
     'react-rsuite5': ReactView
+  },
+  'datetime': {
+    'react-rsuite5': SelectDatetime
   }
 };
 

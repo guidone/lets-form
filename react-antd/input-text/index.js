@@ -33,6 +33,9 @@ const TextInput = I18N(
     onBlur,
     fullWidth,
     width,
+    inputType,
+    inputMode,
+    autocomplete,
     ...rest
   }) => {
     const handleChange = useCallback(
@@ -55,6 +58,9 @@ const TextInput = I18N(
         <Input
           placeholder={placeholder}
           readOnly={readOnly}
+          autocomplete={autocomplete}
+          type={inputType ?? 'text'}
+          inputmode={inputMode}
           onChange={handleChange}
           onBlur={onBlur}
           value={value}

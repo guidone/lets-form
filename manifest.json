@@ -5,6 +5,19 @@
     "documentation": "https://github.com/guidone/lets-form/wiki/Input-text",
     "name": "text-input",
     "description": "Basic input text",
+    "defaultValues": {
+      "react-material-ui": {
+        "react-material-ui": {
+          "variant": "standard",
+          "floatingLabel": true
+        }
+      },
+      "react-antd": {
+        "react-antd": {
+          "bordered": true
+        }
+      }
+    },
     "common": [
       {
         "name": "name",
@@ -462,6 +475,66 @@
     "label": "Select",
     "category": "general",
     "name": "select",
+    "defaultValues": {
+      "react": {
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react-rsuite5": {
+        "react-rsuite5": {
+          "cleanable": false,
+          "searchable": false
+        },
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react-antd": {
+        "react-antd": {
+          "bordered": true,
+          "listHeight": 256,
+          "virtual": true,
+          "showArrow": true
+        },
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      }
+    },
     "common": [
       {
         "name": "name",
@@ -503,6 +576,17 @@
       {
         "name": "hidden",
         "type": "boolean"
+      }
+    ],
+    "react": [
+      {
+        "name": "fullWidth",
+        "type": "boolean"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Size of the field in pixel"
       }
     ],
     "react-rsuite5": [
@@ -674,6 +758,7 @@
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
+      "react",
       "react-bootstrap",
       "react-antd"
     ]
@@ -928,6 +1013,16 @@
     "category": "general",
     "name": "input-number",
     "description": "Basic input number",
+    "defaultValues": {
+      "react-antd": {
+        "react-antd": {
+          "showControls": true,
+          "stringMode": false,
+          "bordered": true
+        },
+        "step": 1
+      }
+    },
     "common": [
       {
         "name": "name",
@@ -971,8 +1066,13 @@
         ]
       },
       {
+        "name": "fullWidth",
+        "type": "boolean"
+      },
+      {
         "name": "width",
-        "type": "number"
+        "type": "number",
+        "description": "Size of the field in pixel"
       },
       {
         "name": "allowClear",
@@ -1063,6 +1163,36 @@
     "label": "Slider",
     "category": "general",
     "name": "slider",
+    "defaultValues": {
+      "react-material-ui": {
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "fullWidth": true
+      },
+      "react-rsuite5": {
+        "react-rsuite5": {
+          "progress": true,
+          "graduated": false
+        },
+        "min": 0,
+        "max": 100,
+        "step": 10
+      },
+      "react-bootstrap": {
+        "min": 0,
+        "max": 100,
+        "step": 10
+      },
+      "react-antd": {
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "react-antd": {
+          "tooltipOpen": null
+        }
+      }
+    },
     "common": [
       {
         "name": "name",
@@ -1283,6 +1413,14 @@
     "label": "Date",
     "category": "general",
     "name": "date",
+    "defaultValues": {
+      "react-antd": {
+        "react-antd": {
+          "bordered": true,
+          "picker": "date"
+        }
+      }
+    },
     "common": [
       {
         "name": "name",
@@ -1542,6 +1680,7 @@
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
+      "react",
       "react-bootstrap",
       "react-antd"
     ]
@@ -2250,6 +2389,49 @@
     "label": "MultiSelect",
     "category": "general",
     "name": "multiselect",
+    "defaultValues": {
+      "react-antd": {
+        "react-antd": {
+          "bordered": true,
+          "listHeight": 256,
+          "virtual": true,
+          "showArrow": true
+        },
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react-rsuite5": {
+        "react-rsuite5": {
+          "block": true
+        },
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      }
+    },
     "common": [
       {
         "name": "name",
@@ -2420,6 +2602,21 @@
     "category": "advanced",
     "description": "Select one or more locales, returns an array (i.e. it-IT, en-GB, ...)",
     "name": "multiselect-language",
+    "defaultValues": {
+      "react-antd": {
+        "react-antd": {
+          "bordered": true,
+          "listHeight": 256,
+          "virtual": true,
+          "showArrow": true
+        }
+      },
+      "react-rsuite5": {
+        "react-rsuite5": {
+          "block": true
+        }
+      }
+    },
     "common": [
       {
         "name": "name",
@@ -2496,6 +2693,12 @@
     "category": "advanced",
     "name": "input-text-i18n",
     "description": "Input text in different languages",
+    "defaultValues": {
+      "react-rsuite5": {
+        "textarea": false,
+        "rows": 3
+      }
+    },
     "common": [
       {
         "name": "name",
@@ -2564,6 +2767,66 @@
     "label": "Select States",
     "category": "advanced",
     "name": "select-states",
+    "defaultValues": {
+      "react": {
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react-rsuite5": {
+        "react-rsuite5": {
+          "cleanable": false,
+          "searchable": false
+        },
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react-antd": {
+        "react-antd": {
+          "bordered": true,
+          "listHeight": 256,
+          "virtual": true,
+          "showArrow": true
+        },
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      }
+    },
     "description": "Show states/provinces for a country, ",
     "common": [
       {
@@ -2802,6 +3065,17 @@
           "ZM",
           "ZW"
         ]
+      }
+    ],
+    "react": [
+      {
+        "name": "fullWidth",
+        "type": "boolean"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Size of the field in pixel"
       }
     ],
     "react-rsuite5": [
@@ -3136,6 +3410,279 @@
       "react",
       "react-bootstrap",
       "react-antd"
+    ]
+  },
+  "datetime": {
+    "label": "Date Time",
+    "category": "general",
+    "name": "datetime",
+    "defaultValues": {
+      "react-antd": {
+        "react-antd": {
+          "bordered": true,
+          "picker": "date"
+        }
+      }
+    },
+    "common": [
+      {
+        "name": "name",
+        "type": "string",
+        "description": "The name of the field and the key of the JSON"
+      },
+      {
+        "name": "label",
+        "type": "string | i18n"
+      },
+      {
+        "name": "hint",
+        "type": "string | i18n"
+      },
+      {
+        "name": "placeholder",
+        "type": "string | i18n"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean"
+      },
+      {
+        "name": "readOnly",
+        "type": "boolean"
+      },
+      {
+        "name": "hidden",
+        "type": "boolean"
+      }
+    ],
+    "react-rsuite5": [
+      {
+        "name": "format",
+        "type": "string",
+        "description": "Check https://date-fns.org library for available formats"
+      },
+      {
+        "name": "block",
+        "type": "boolean",
+        "description": "Only in fluid layout"
+      },
+      {
+        "name": "cleanable",
+        "type": "boolean"
+      },
+      {
+        "name": "editable",
+        "type": "boolean",
+        "description": "Rendered as an input, the date can be entered via the keyboard"
+      },
+      {
+        "name": "oneTap",
+        "type": "boolean",
+        "description": "One click to complete the selection date"
+      },
+      {
+        "name": "showMeridian",
+        "type": "boolean",
+        "description": "Display hours in 12 format"
+      },
+      {
+        "name": "showWeekNumbers",
+        "type": "boolean"
+      },
+      {
+        "name": "isoWeek",
+        "type": "boolean",
+        "description": "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
+      },
+      {
+        "name": "size",
+        "type": "string",
+        "options": [
+          "lg",
+          "md",
+          "sm",
+          "xs"
+        ]
+      },
+      {
+        "name": "appearance",
+        "type": "string",
+        "options": [
+          "default",
+          "subtle"
+        ]
+      },
+      {
+        "name": "placement",
+        "type": "string",
+        "options": [
+          "topStart",
+          "topEnd",
+          "leftStart",
+          "rightStart",
+          "leftEnd",
+          "rightEnd",
+          "bottomStart",
+          "bottomEnd",
+          "auto",
+          "autoVerticalStart",
+          "autoVerticalEnd",
+          "autoHorizontalStart",
+          "autoHorizontalEnd"
+        ]
+      }
+    ],
+    "react-material-ui": [
+      {
+        "name": "format",
+        "type": "string",
+        "description": "Date format, i.e. DD/MM/YYYY"
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean"
+      },
+      {
+        "name": "disableFuture",
+        "type": "boolean"
+      },
+      {
+        "name": "disableHighlightToday",
+        "type": "boolean"
+      },
+      {
+        "name": "disableOpenPicker",
+        "type": "boolean"
+      },
+      {
+        "name": "disablePast",
+        "type": "boolean"
+      },
+      {
+        "name": "displayWeekNumber",
+        "type": "boolean"
+      },
+      {
+        "name": "reduceAnimations",
+        "type": "boolean"
+      },
+      {
+        "name": "showDaysOutsideCurrentMonth",
+        "type": "boolean"
+      },
+      {
+        "name": "maxDate",
+        "type": "date"
+      },
+      {
+        "name": "minDate",
+        "type": "date"
+      }
+    ],
+    "react-bootstrap": [
+      {
+        "name": "size",
+        "type": "string",
+        "options": [
+          "lg",
+          "sm"
+        ]
+      },
+      {
+        "name": "prefix",
+        "type": "string"
+      },
+      {
+        "name": "postfix",
+        "type": "string"
+      },
+      {
+        "name": "floatingLabel",
+        "type": "boolean",
+        "description": "Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"
+      }
+    ],
+    "react-antd": [
+      {
+        "name": "size",
+        "type": "string",
+        "options": [
+          "small",
+          "default",
+          "large"
+        ]
+      },
+      {
+        "name": "width",
+        "type": "number"
+      },
+      {
+        "name": "bordered",
+        "type": "boolean"
+      },
+      {
+        "name": "allowClear",
+        "type": "boolean"
+      },
+      {
+        "name": "tooltip",
+        "type": "boolean"
+      },
+      {
+        "name": "showTime",
+        "type": "boolean"
+      },
+      {
+        "name": "showNow",
+        "type": "boolean",
+        "description": "Show now button"
+      },
+      {
+        "name": "showToday",
+        "type": "boolean",
+        "description": "Show today button"
+      },
+      {
+        "name": "placement",
+        "type": "string",
+        "options": [
+          "bottomLeft",
+          "bottomRight",
+          "topLeft",
+          "topRight"
+        ]
+      },
+      {
+        "name": "format",
+        "type": "string",
+        "description": "Date format, i.e. DD/MM/YYYY"
+      },
+      {
+        "name": "picker",
+        "type": "string",
+        "options": [
+          "date",
+          "week",
+          "month",
+          "quarter",
+          "year"
+        ]
+      },
+      {
+        "name": "mode",
+        "type": "string",
+        "options": [
+          "time",
+          "date",
+          "month",
+          "year",
+          "decade"
+        ]
+      }
+    ],
+    "frameworks": [
+      "react-rsuite5",
+      "react"
     ]
   }
 }

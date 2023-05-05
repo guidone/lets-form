@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("prop-types"), require("dayjs"));
+		module.exports = factory(require("react"), require("rsuite"), require("rsuite/locales"), require("prop-types"), require("dayjs"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "prop-types", "dayjs"], factory);
+		define(["react", "rsuite", "rsuite/locales", "prop-types", "dayjs"], factory);
 	else if(typeof exports === 'object')
-		exports["lets-form-bootstrap"] = factory(require("react"), require("prop-types"), require("dayjs"));
+		exports["lets-form-bootstrap"] = factory(require("react"), require("rsuite"), require("rsuite/locales"), require("prop-types"), require("dayjs"));
 	else
-		root["lets-form-bootstrap"] = factory(root["react"], root["prop-types"], root["dayjs"]);
-})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__5099__, __WEBPACK_EXTERNAL_MODULE__5760__) => {
+		root["lets-form-bootstrap"] = factory(root["react"], root["rsuite"], root["rsuite/locales"], root["prop-types"], root["dayjs"]);
+})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__1186__, __WEBPACK_EXTERNAL_MODULE__977__, __WEBPACK_EXTERNAL_MODULE__5099__, __WEBPACK_EXTERNAL_MODULE__5760__) => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -613,6 +613,31 @@ module.exports = strictIndexOf;
 
 /***/ }),
 
+/***/ 1761:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseGetTag = __webpack_require__(4239),
+    isObjectLike = __webpack_require__(7005);
+
+/** `Object#toString` result references. */
+var dateTag = '[object Date]';
+
+/**
+ * The base implementation of `_.isDate` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a date object, else `false`.
+ */
+function baseIsDate(value) {
+  return isObjectLike(value) && baseGetTag(value) == dateTag;
+}
+
+module.exports = baseIsDate;
+
+
+/***/ }),
+
 /***/ 280:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -730,6 +755,27 @@ function baseTrim(string) {
 }
 
 module.exports = baseTrim;
+
+
+/***/ }),
+
+/***/ 7518:
+/***/ ((module) => {
+
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */
+function baseUnary(func) {
+  return function(value) {
+    return func(value);
+  };
+}
+
+module.exports = baseUnary;
 
 
 /***/ }),
@@ -1156,6 +1202,44 @@ module.exports = stubFalse;
 
 /***/ }),
 
+/***/ 1167:
+/***/ ((module, exports, __webpack_require__) => {
+
+/* module decorator */ module = __webpack_require__.nmd(module);
+var freeGlobal = __webpack_require__(1957);
+
+/** Detect free variable `exports`. */
+var freeExports =  true && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && "object" == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Detect free variable `process` from Node.js. */
+var freeProcess = moduleExports && freeGlobal.process;
+
+/** Used to access faster Node.js helpers. */
+var nodeUtil = (function() {
+  try {
+    // Use `util.types` for Node.js 10+.
+    var types = freeModule && freeModule.require && freeModule.require('util').types;
+
+    if (types) {
+      return types;
+    }
+
+    // Legacy `process.binding('util')` for Node.js < 10.
+    return freeProcess && freeProcess.binding && freeProcess.binding('util');
+  } catch (e) {}
+}());
+
+module.exports = nodeUtil;
+
+
+/***/ }),
+
 /***/ 5569:
 /***/ ((module) => {
 
@@ -1562,6 +1646,40 @@ function stubFalse() {
 }
 
 module.exports = stubFalse;
+
+
+/***/ }),
+
+/***/ 7960:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseIsDate = __webpack_require__(1761),
+    baseUnary = __webpack_require__(7518),
+    nodeUtil = __webpack_require__(1167);
+
+/* Node.js helper references. */
+var nodeIsDate = nodeUtil && nodeUtil.isDate;
+
+/**
+ * Checks if `value` is classified as a `Date` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a date object, else `false`.
+ * @example
+ *
+ * _.isDate(new Date);
+ * // => true
+ *
+ * _.isDate('Mon April 23 2012');
+ * // => false
+ */
+var isDate = nodeIsDate ? baseUnary(nodeIsDate) : baseIsDate;
+
+module.exports = isDate;
 
 
 /***/ }),
@@ -2626,6 +2744,22 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__5099__;
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__8156__;
 
+/***/ }),
+
+/***/ 1186:
+/***/ ((module) => {
+
+"use strict";
+module.exports = __WEBPACK_EXTERNAL_MODULE__1186__;
+
+/***/ }),
+
+/***/ 977:
+/***/ ((module) => {
+
+"use strict";
+module.exports = __WEBPACK_EXTERNAL_MODULE__977__;
+
 /***/ })
 
 /******/ 	});
@@ -2643,12 +2777,15 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__8156__;
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
 /******/ 			id: moduleId,
-/******/ 			// no module.loaded needed
+/******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -2707,6 +2844,15 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__8156__;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -2740,14 +2886,15 @@ __webpack_require__.d(__webpack_exports__, {
   "filterOptions": () => (/* reexport */ filterOptions),
   "findField": () => (/* reexport */ findField),
   "getLocales": () => (/* reexport */ getLocales),
-  "i18n": () => (/* reexport */ i18n),
+  "i18n": () => (/* reexport */ i18n_i18n),
   "isEmptyForm": () => (/* reexport */ isEmptyForm),
-  "isI18n": () => (/* reexport */ isI18n),
+  "isI18n": () => (/* reexport */ is_i18n_isI18n),
   "isUrl": () => (/* reexport */ isUrl),
+  "isValidDate": () => (/* reexport */ is_valid_date_isValidDate),
   "isValidDayjsFormat": () => (/* reexport */ isValidDayjsFormat),
-  "makeWidthStyle": () => (/* reexport */ makeWidthStyle),
+  "makeWidthStyle": () => (/* reexport */ make_width_style_makeWidthStyle),
   "mapFields": () => (/* reexport */ mapFields),
-  "passRest": () => (/* reexport */ passRest),
+  "passRest": () => (/* reexport */ pass_rest_passRest),
   "reduceFields": () => (/* reexport */ reduceFields),
   "replaceField": () => (/* reexport */ replaceField),
   "validateRulesDefinition": () => (/* reexport */ validateRulesDefinition)
@@ -5363,7 +5510,7 @@ var CrossCirle = function CrossCirle(_ref) {
 ;// CONCATENATED MODULE: ./components/required-icon/index.js
 
 
-var RequiredIcon = function RequiredIcon() {
+var required_icon_RequiredIcon = function RequiredIcon() {
   return /*#__PURE__*/external_react_default().createElement(Asterisk, {
     color: "#ff6633",
     width: 12,
@@ -5604,7 +5751,7 @@ var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'Reac
 var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
 ;// CONCATENATED MODULE: ./helpers/is-i18n.js
 
-var isI18n = function isI18n(obj) {
+var is_i18n_isI18n = function isI18n(obj) {
   return isObject_default()(obj) && Object.keys(obj).every(function (key) {
     return key.length === 2 || key.length === 5 && key[2] === '-';
   });
@@ -5652,7 +5799,7 @@ var removeUnusedLocalesFromObj = function removeUnusedLocalesFromObj(obj, locale
       cloned[key] = cloned[key].map(function (item) {
         return removeUnusedLocalesFromObj(item, locales);
       });
-    } else if (isI18n(cloned[key])) {
+    } else if (is_i18n_isI18n(cloned[key])) {
       cloned[key] = removeUnusedLocalesFromI18n(cloned[key], locales);
     }
   });
@@ -5788,7 +5935,7 @@ var createEmptyField = function createEmptyField(Manifests, fields, component, f
     });
     ++retries;
   }
-  var defaultValues = framework && Manifests[component] && Manifests[component].defaults && Manifests[component].defaults[framework] ? Manifests[component].defaults[framework] : {};
+  var defaultValues = framework && Manifests[component] && Manifests[component].defaultValues && Manifests[component].defaultValues[framework] ? Manifests[component].defaultValues[framework] : {};
   return find_field_objectSpread({
     component: component,
     label: "Field ".concat(countFields + 1),
@@ -6009,7 +6156,7 @@ var getLocales = function getLocales() {
 ;// CONCATENATED MODULE: ./helpers/i18n.js
 
 
-var i18n = function i18n(value, locale) {
+var i18n_i18n = function i18n(value, locale) {
   if (isString_default()(value)) {
     return value;
   } else if (isObject_default()(value)) {
@@ -6036,7 +6183,7 @@ var i18n = function i18n(value, locale) {
 };
 ;// CONCATENATED MODULE: ./helpers/pass-rest.js
 
-var passRest = function passRest(props) {
+var pass_rest_passRest = function passRest(props) {
   return omit_default()(props, 'lfFramework', 'lfComponent', 'lfLocale', 'transformer');
 };
 ;// CONCATENATED MODULE: ./helpers/filter-options.js
@@ -6056,7 +6203,7 @@ var isEmptyForm = function isEmptyForm(form) {
   return !form || !Array.isArray(form.fields) || form.fields.length === 0;
 };
 ;// CONCATENATED MODULE: ./mappings.json
-const mappings_namespaceObject = JSON.parse('{"text-input":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"variant":["react-material-ui"],"color":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"width":["react-rsuite5","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-antd"],"step":["react-rsuite5","react-antd"],"max":["react-rsuite5","react-antd"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"optionType":["react-antd"],"size":["react-antd"]},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react","react-bootstrap","react-antd"],"width":["react","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"width":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select-states":{"name":null,"label":null,"hint":null,"placeholder":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"country":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"maxWidth":null,"minHeight":null,"align":null,"marginTop":null,"marginBottom":null,"hidden":null},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null}}');
+const mappings_namespaceObject = JSON.parse('{"text-input":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"variant":["react-material-ui"],"color":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-antd"],"step":["react-rsuite5","react-antd"],"max":["react-rsuite5","react-antd"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"optionType":["react-antd"],"size":["react-antd"]},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react","react-bootstrap","react-antd"],"width":["react","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"width":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select-states":{"name":null,"label":null,"hint":null,"placeholder":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"country":null,"fullWidth":["react","react-material-ui"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"maxWidth":null,"minHeight":null,"align":null,"marginTop":null,"marginBottom":null,"hidden":null},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
 ;// CONCATENATED MODULE: ./helpers/apply-transformers.js
 
 
@@ -6239,7 +6386,7 @@ var applyTransformers = function applyTransformers(formName, framework, fields, 
     transformers.filter(function (transformer) {
       return isFunction_default()(transformer);
     }).forEach(function (transformer) {
-      var api = new ApiFactory(formName, framework, fields, values);
+      var api = new ApiFactory(formName, framework, newFields, values);
       try {
         newFields = transformer(api);
       } catch (e) {
@@ -6268,7 +6415,7 @@ function make_width_style_objectSpread(target) { for (var i = 1; i < arguments.l
 function make_width_style_defineProperty(obj, key, value) { key = make_width_style_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function make_width_style_toPropertyKey(arg) { var key = make_width_style_toPrimitive(arg, "string"); return make_width_style_typeof(key) === "symbol" ? key : String(key); }
 function make_width_style_toPrimitive(input, hint) { if (make_width_style_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (make_width_style_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-var makeWidthStyle = function makeWidthStyle(fullWidth, width) {
+var make_width_style_makeWidthStyle = function makeWidthStyle(fullWidth, width) {
   var style = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
   if (fullWidth) {
     return make_width_style_objectSpread(make_width_style_objectSpread({}, style), {}, {
@@ -6304,7 +6451,12 @@ var collectNames = function collectNames(form) {
   }
   return [];
 };
+;// CONCATENATED MODULE: ./helpers/is-valid-date.js
+var is_valid_date_isValidDate = function isValidDate(d) {
+  return d instanceof Date && !isNaN(d);
+};
 ;// CONCATENATED MODULE: ./helpers/index.js
+
 
 
 
@@ -6344,11 +6496,11 @@ var I18N = function I18N(Component) {
     var newProps = Object.keys(props).reduce(function (acc, propName) {
       // translate simpe field
       if (propNames.includes(propName)) {
-        return i18n_objectSpread(i18n_objectSpread({}, acc), {}, i18n_defineProperty({}, propName, i18n(props[propName], lfLocale)));
+        return i18n_objectSpread(i18n_objectSpread({}, acc), {}, i18n_defineProperty({}, propName, i18n_i18n(props[propName], lfLocale)));
       } else if (isFunction_default()(funcPropNames[propName])) {
         // pass the value trough the mapper
         var translated = funcPropNames[propName](props[propName], function (string) {
-          return i18n(string, lfLocale);
+          return i18n_i18n(string, lfLocale);
         });
         return i18n_objectSpread(i18n_objectSpread({}, acc), {}, i18n_defineProperty({}, propName, translated));
       }
@@ -6357,7 +6509,275 @@ var I18N = function I18N(Component) {
     return /*#__PURE__*/external_react_default().createElement(Component, newProps);
   };
 };
+// EXTERNAL MODULE: ./node_modules/lodash/isDate.js
+var isDate = __webpack_require__(7960);
+;// CONCATENATED MODULE: ./components/plaintext/locales/yes.json
+const yes_namespaceObject = {};
+;// CONCATENATED MODULE: ./components/plaintext/locales/no.json
+const no_namespaceObject = {};
+;// CONCATENATED MODULE: ./components/plaintext/locales/index.js
+
+
+
+;// CONCATENATED MODULE: ./components/plaintext/index.js
+
+
+
+
+
+var plaintext_Plaintext = function Plaintext(_ref) {
+  var value = _ref.value,
+    component = _ref.component,
+    options = _ref.options,
+    locale = _ref.locale;
+  var d;
+  switch (component) {
+    case 'input-text':
+    case 'text-input':
+      return /*#__PURE__*/React.createElement("span", null, value);
+    case 'date':
+      if (_isDate(value)) {
+        d = value;
+      } else if (_isString(value) && isValidDate(new Date(value))) {
+        d = new Date(value);
+      }
+      return /*#__PURE__*/React.createElement("span", null, d ? d.toLocaleDateString() : '');
+    case 'datetime':
+      if (_isDate(value)) {
+        d = value;
+      } else if (_isString(value) && isValidDate(new Date(value))) {
+        d = new Date(value);
+      }
+      return /*#__PURE__*/React.createElement("span", null, d ? d.toLocaleDateString() + ' ' + d.toLocaleTimeString() : '');
+    case 'toggle':
+    case 'checkbox':
+      if (value === true || value === 1) {
+        return /*#__PURE__*/React.createElement("span", null, i18n(YesLabel, locale));
+      } else if (value === false || value === 0) {
+        return /*#__PURE__*/React.createElement("span", null, i18n(NoLabel, locale));
+      }
+      return /*#__PURE__*/React.createElement("span", null, "-");
+    case 'select':
+      var found = (options !== null && options !== void 0 ? options : []).find(function (option) {
+        return option.value === value;
+      });
+      var label = '';
+      if (found) {
+        if (isI18n(found.label)) {
+          label = i18n(found.label, locale);
+        } else {
+          label = found.label;
+        }
+      }
+      return /*#__PURE__*/React.createElement("span", null, label);
+    default:
+      return /*#__PURE__*/React.createElement("span", null, value);
+  }
+};
+var plaintext_IfNotPlaintext = function IfNotPlaintext(_ref2) {
+  var plaintext = _ref2.plaintext,
+    value = _ref2.value,
+    component = _ref2.component,
+    options = _ref2.options,
+    children = _ref2.children,
+    locale = _ref2.locale;
+  if (plaintext) {
+    return /*#__PURE__*/React.createElement(plaintext_Plaintext, {
+      value: value,
+      component: component,
+      options: options,
+      locale: locale
+    });
+  } else {
+    return children;
+  }
+};
+
+;// CONCATENATED MODULE: ./components/react-generic-input/index.js
+
+var _excluded = (/* unused pure expression or super */ null && (["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "plaintext", "required", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component"]));
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+
+var ReactGenericInput = function ReactGenericInput(_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    lfLocale = _ref.lfLocale,
+    hint = _ref.hint,
+    value = _ref.value,
+    onChange = _ref.onChange,
+    onBlur = _ref.onBlur,
+    error = _ref.error,
+    className = _ref.className,
+    disabled = _ref.disabled,
+    readOnly = _ref.readOnly,
+    plaintext = _ref.plaintext,
+    required = _ref.required,
+    size = _ref.size,
+    width = _ref.width,
+    fullWidth = _ref.fullWidth,
+    placeholder = _ref.placeholder,
+    autocomplete = _ref.autocomplete,
+    inputType = _ref.inputType,
+    inputMode = _ref.inputMode,
+    component = _ref.component,
+    rest = _objectWithoutProperties(_ref, _excluded);
+  var hasError = error && _isString(error);
+  return /*#__PURE__*/React.createElement("div", {
+    className: classNames('lf-form-react-control-group', className),
+    "data-lf-field-name": name
+  }, /*#__PURE__*/React.createElement("label", {
+    for: name
+  }, label, required && /*#__PURE__*/React.createElement(RequiredIcon, null)), /*#__PURE__*/React.createElement(IfNotPlaintext, {
+    value: value,
+    component: component,
+    plaintext: plaintext
+  }, /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("input", _extends({
+    type: inputType,
+    lang: lfLocale,
+    id: name,
+    defaultValue: value,
+    onChange: onChange,
+    onBlur: onBlur,
+    placeholder: placeholder,
+    style: makeWidthStyle(fullWidth, width),
+    autoComplete: autocomplete,
+    inputMode: inputMode,
+    disabled: disabled,
+    readOnly: readOnly
+  }, passRest(rest))), hint && !hasError && /*#__PURE__*/React.createElement("div", {
+    className: "lf-form-react-message"
+  }, hint), hasError && /*#__PURE__*/React.createElement("div", {
+    className: "lf-form-react-error-message"
+  }, error))));
+};
+
+// EXTERNAL MODULE: external "rsuite"
+var external_rsuite_ = __webpack_require__(1186);
+// EXTERNAL MODULE: external "rsuite/locales"
+var locales_ = __webpack_require__(977);
+;// CONCATENATED MODULE: ./components/rsuite-generic-date/index.js
+
+var rsuite_generic_date_excluded = (/* unused pure expression or super */ null && (["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"]));
+function rsuite_generic_date_extends() { rsuite_generic_date_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return rsuite_generic_date_extends.apply(this, arguments); }
+function rsuite_generic_date_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = rsuite_generic_date_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function rsuite_generic_date_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+var RSuiteGenericDate = function RSuiteGenericDate(_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    hint = _ref.hint,
+    value = _ref.value,
+    placeholder = _ref.placeholder,
+    plaintext = _ref.plaintext,
+    _ref$tooltip = _ref.tooltip,
+    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+    _ref$disabled = _ref.disabled,
+    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    _ref$readOnly = _ref.readOnly,
+    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+    _ref$required = _ref.required,
+    required = _ref$required === void 0 ? false : _ref$required,
+    error = _ref.error,
+    onChange = _ref.onChange,
+    onBlur = _ref.onBlur,
+    appearance = _ref.appearance,
+    format = _ref.format,
+    lfLocale = _ref.lfLocale,
+    rest = rsuite_generic_date_objectWithoutProperties(_ref, rsuite_generic_date_excluded);
+  var localeCode = lfLocale && _isString(lfLocale) ? lfLocale.replace('-', '') : undefined;
+  return /*#__PURE__*/React.createElement(Form.Group, {
+    "data-lf-field-name": name,
+    className: "lf-control-date"
+  }, label && /*#__PURE__*/React.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React.createElement(Form.HelpText, {
+    tooltip: true
+  }, hint), required && /*#__PURE__*/React.createElement(RequiredIcon, null)), /*#__PURE__*/React.createElement(CustomProvider, {
+    locale: localeCode && locales[localeCode] ? locales[localeCode] : undefined
+  }, /*#__PURE__*/React.createElement(Form.Control, rsuite_generic_date_extends({
+    accepter: DatePicker,
+    appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
+    name: name,
+    format: format || 'yyyy-MM-dd',
+    defaultValue: value,
+    onChange: onChange,
+    readOnly: readOnly,
+    plaintext: plaintext,
+    onBlur: onBlur,
+    errorMessage: _isString(error) ? error : undefined,
+    disabled: disabled,
+    placeholder: placeholder
+  }, rest)), hint && !tooltip && /*#__PURE__*/React.createElement(Form.HelpText, null, hint)));
+};
+
+;// CONCATENATED MODULE: ./components/react-generic-checkbox/index.js
+
+var react_generic_checkbox_excluded = (/* unused pure expression or super */ null && (["name", "label", "lfLocale", "className", "inputType", "hint", "plaintext", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"]));
+function react_generic_checkbox_extends() { react_generic_checkbox_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_generic_checkbox_extends.apply(this, arguments); }
+function react_generic_checkbox_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_generic_checkbox_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function react_generic_checkbox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+var ReactGenericCheckbox = function ReactGenericCheckbox(_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    lfLocale = _ref.lfLocale,
+    className = _ref.className,
+    inputType = _ref.inputType,
+    hint = _ref.hint,
+    plaintext = _ref.plaintext,
+    value = _ref.value,
+    defaultValue = _ref.defaultValue,
+    onChange = _ref.onChange,
+    onBlur = _ref.onBlur,
+    error = _ref.error,
+    disabled = _ref.disabled,
+    readOnly = _ref.readOnly,
+    required = _ref.required,
+    rest = react_generic_checkbox_objectWithoutProperties(_ref, react_generic_checkbox_excluded);
+  var hasError = error && _isString(error);
+  return /*#__PURE__*/React.createElement("div", {
+    className: classNames('lf-form-react-control-group', className),
+    "data-lf-field-name": name
+  }, !plaintext && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("label", {
+    for: name,
+    className: "lf-form-react-checkbox"
+  }, /*#__PURE__*/React.createElement("input", react_generic_checkbox_extends({
+    type: inputType,
+    id: name,
+    onChange: onChange,
+    onBlur: onBlur,
+    required: error != null,
+    disabled: disabled,
+    readOnly: readOnly,
+    defaultChecked: value
+  }, passRest(rest))), " ", label, " ", required && /*#__PURE__*/React.createElement(RequiredIcon, null)), hint && !hasError && /*#__PURE__*/React.createElement("div", {
+    className: "lf-form-react-form-message"
+  }, hint), hasError && /*#__PURE__*/React.createElement("div", {
+    className: "lf-form-react-error-message"
+  }, error)), plaintext && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("label", {
+    for: name
+  }, label), /*#__PURE__*/React.createElement(Plaintext, {
+    value: value,
+    component: "toggle",
+    locale: lfLocale
+  })));
+};
+
 ;// CONCATENATED MODULE: ./components/index.js
+
+
+
+
 
 
 
@@ -6407,7 +6827,7 @@ function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArra
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function generator_extends() { generator_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return generator_extends.apply(this, arguments); }
 function generator_toConsumableArray(arr) { return generator_arrayWithoutHoles(arr) || generator_iterableToArray(arr) || generator_unsupportedIterableToArray(arr) || generator_nonIterableSpread(); }
 function generator_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function generator_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return generator_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return generator_arrayLikeToArray(o, minLen); }
@@ -6469,9 +6889,9 @@ var translateValidation = function translateValidation(validation, locale, onJav
     var errorMessage;
     if (isString_default()(validation.message)) {
       errorMessage = validation.message;
-    } else if (isI18n(validation.message)) {
+    } else if (is_i18n_isI18n(validation.message)) {
       var _i18n;
-      errorMessage = (_i18n = i18n(validation.message, locale)) !== null && _i18n !== void 0 ? _i18n : 'Field is required';
+      errorMessage = (_i18n = i18n_i18n(validation.message, locale)) !== null && _i18n !== void 0 ? _i18n : 'Field is required';
     } else {
       errorMessage = 'Field is required';
     }
@@ -6519,8 +6939,8 @@ var translateValidation = function translateValidation(validation, locale, onJav
             return errorMessage;
           } else if (isString_default()(v)) {
             return v;
-          } else if (isI18n(v)) {
-            return i18n(v, locale);
+          } else if (is_i18n_isI18n(v)) {
+            return i18n_i18n(v, locale);
           }
           return true;
         };
@@ -6652,7 +7072,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
 
       // special case of group
       if (field.component === 'group') {
-        var component = /*#__PURE__*/external_react_default().createElement(Component, _extends({
+        var component = /*#__PURE__*/external_react_default().createElement(Component, generator_extends({
           key: field.name,
           lfComponent: field.component,
           lfFramework: framework,
@@ -6690,7 +7110,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           index: index
         }, component) : component;
       } else if (field.component === 'two-columns') {
-        var _component = /*#__PURE__*/external_react_default().createElement(Component, _extends({
+        var _component = /*#__PURE__*/external_react_default().createElement(Component, generator_extends({
           key: field.name,
           lfComponent: field.component,
           lfFramework: framework,
@@ -6752,7 +7172,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           index: index
         }, _component) : _component;
       } else if (field.component === 'three-columns') {
-        var _component2 = /*#__PURE__*/external_react_default().createElement(Component, _extends({
+        var _component2 = /*#__PURE__*/external_react_default().createElement(Component, generator_extends({
           key: "three-columns-".concat(field.name),
           name: field.name,
           lfComponent: field.component,
@@ -6843,7 +7263,6 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       var rules = translateValidation(generator_objectSpread({
         required: field.required
       }, field.validation), locale, onJavascriptError);
-      console.log(" --rules ".concat(field.name), rules);
       return /*#__PURE__*/external_react_default().createElement(Controller, {
         key: "field_".concat(field.name),
         name: field.name,
@@ -6853,7 +7272,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           var fieldInfo = _ref4.field;
           var component = /*#__PURE__*/external_react_default().createElement(Component
           // not sure about this, not passing the ref
-          , _extends({
+          , generator_extends({
             name: fieldInfo.name,
             value: fieldInfo.value,
             onBlur: fieldInfo.onBlur,
@@ -6865,7 +7284,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
             hint: field.hint,
             disabled: disabled || field.disabled,
             readOnly: readOnly || field.readOnly,
-            plaintex: plaintext || field.plaintext,
+            plaintext: plaintext,
             size: field.size,
             placeholder: field.placeholder,
             error: errors && errors[field.name] ? showErrors === 'inline' ? errorToString(errors[field.name]) : true : undefined
@@ -7003,7 +7422,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       className: "top",
       locale: locale,
       errors: enrichWithLabels(validationErrors, formFields)
-    }), /*#__PURE__*/external_react_default().createElement(Form, _extends({
+    }), /*#__PURE__*/external_react_default().createElement(Form, generator_extends({
       onSubmit: handleSubmit(onHandleSubmit, onHandleError),
       name: formName,
       defaultValues: defaultValues,
@@ -7740,7 +8159,7 @@ const Form_propTypes = {
   validated: (external_prop_types_default()).bool,
   as: (external_prop_types_default()).elementType
 };
-const Form = /*#__PURE__*/external_react_.forwardRef(({
+const Form_Form = /*#__PURE__*/external_react_.forwardRef(({
   className,
   validated,
   // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
@@ -7751,9 +8170,9 @@ const Form = /*#__PURE__*/external_react_.forwardRef(({
   ref: ref,
   className: classnames_default()(className, validated && 'was-validated')
 }));
-Form.displayName = 'Form';
-Form.propTypes = Form_propTypes;
-/* harmony default export */ const esm_Form = (Object.assign(Form, {
+Form_Form.displayName = 'Form';
+Form_Form.propTypes = Form_propTypes;
+/* harmony default export */ const esm_Form = (Object.assign(Form_Form, {
   Group: esm_FormGroup,
   Control: esm_FormControl,
   Floating: FormFloating,
@@ -7766,8 +8185,8 @@ Form.propTypes = Form_propTypes;
   FloatingLabel: esm_FloatingLabel
 }));
 ;// CONCATENATED MODULE: ./node_modules/@restart/ui/esm/Button.js
-const _excluded = ["as", "disabled"];
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+const Button_excluded = ["as", "disabled"];
+function Button_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 function isTrivialHref(href) {
@@ -7842,7 +8261,7 @@ const Button = /*#__PURE__*/external_react_.forwardRef((_ref, ref) => {
       as: asProp,
       disabled
     } = _ref,
-    props = _objectWithoutPropertiesLoose(_ref, _excluded);
+    props = Button_objectWithoutPropertiesLoose(_ref, Button_excluded);
   const [buttonProps, {
     tagName: Component
   }] = useButtonProps(Object.assign({
@@ -8418,13 +8837,13 @@ var Divider = function Divider(_ref) {
 ;// CONCATENATED MODULE: ./common/react-view/index.js
 var react_view_excluded = ["name", "view"];
 function react_view_extends() { react_view_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_view_extends.apply(this, arguments); }
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_view_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function react_view_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_view_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function react_view_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 var ReactView = function ReactView(_ref) {
   var name = _ref.name,
     view = _ref.view,
-    rest = _objectWithoutProperties(_ref, react_view_excluded);
+    rest = react_view_objectWithoutProperties(_ref, react_view_excluded);
   var View = view;
   return /*#__PURE__*/external_react_default().createElement("div", {
     className: "lf-control-react-view",
@@ -8504,8 +8923,8 @@ var TextInput = I18N(function (_ref) {
     disabled: disabled,
     readOnly: readOnly,
     isInvalid: error != null,
-    style: makeWidthStyle(fullWidth, width)
-  }, passRest(rest)));
+    style: make_width_style_makeWidthStyle(fullWidth, width)
+  }, pass_rest_passRest(rest)));
   var innerGroup = inner;
   var needsGroup = postfix || prefix;
   if (needsGroup) {
@@ -8518,7 +8937,7 @@ var TextInput = I18N(function (_ref) {
   }, useFloatingLabels && /*#__PURE__*/external_react_default().createElement(esm_FloatingLabel, {
     label: label,
     className: "mb-3"
-  }, innerGroup), !useFloatingLabels && /*#__PURE__*/external_react_default().createElement(esm_Form.Label, null, label, required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), !useFloatingLabels && innerGroup, hint && !error && /*#__PURE__*/external_react_default().createElement(esm_Form.Text, null, hint), isString_default()(error) && !isEmpty_default()(error) && /*#__PURE__*/external_react_default().createElement(esm_Form.Control.Feedback, {
+  }, innerGroup), !useFloatingLabels && /*#__PURE__*/external_react_default().createElement(esm_Form.Label, null, label, required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), !useFloatingLabels && innerGroup, hint && !error && /*#__PURE__*/external_react_default().createElement(esm_Form.Text, null, hint), isString_default()(error) && !isEmpty_default()(error) && /*#__PURE__*/external_react_default().createElement(esm_Form.Control.Feedback, {
     type: "invalid"
   }, error));
 }, ['label', 'hint', 'placeholder']);
@@ -8579,7 +8998,7 @@ var Select = I18N(function (_ref) {
     disabled: disabled,
     readOnly: readOnly,
     isInvalid: error != null
-  }, passRest(rest)), placeholder && /*#__PURE__*/external_react_default().createElement("option", null, placeholder), (filteredOptions !== null && filteredOptions !== void 0 ? filteredOptions : []).map(function (_ref2) {
+  }, pass_rest_passRest(rest)), placeholder && /*#__PURE__*/external_react_default().createElement("option", null, placeholder), (filteredOptions !== null && filteredOptions !== void 0 ? filteredOptions : []).map(function (_ref2) {
     var value = _ref2.value,
       label = _ref2.label;
     return /*#__PURE__*/external_react_default().createElement("option", {
@@ -8590,7 +9009,7 @@ var Select = I18N(function (_ref) {
   return /*#__PURE__*/external_react_default().createElement(esm_Form.Group, {
     className: "lf-control-input-text mb-3",
     "data-lf-field-name": name
-  }, !floatingLabel && /*#__PURE__*/external_react_default().createElement(esm_Form.Label, null, label, required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), !floatingLabel && inner, floatingLabel && /*#__PURE__*/external_react_default().createElement(esm_FloatingLabel, {
+  }, !floatingLabel && /*#__PURE__*/external_react_default().createElement(esm_Form.Label, null, label, required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), !floatingLabel && inner, floatingLabel && /*#__PURE__*/external_react_default().createElement(esm_FloatingLabel, {
     label: label
   }, inner), hint && !error && /*#__PURE__*/external_react_default().createElement(esm_Form.Text, null, hint), isString_default()(error) && !isEmpty_default()(error) && /*#__PURE__*/external_react_default().createElement(esm_Form.Control.Feedback, {
     type: "invalid"
@@ -8773,7 +9192,7 @@ var CheckboxGroupBootstrap = I18N(function (_ref) {
   return /*#__PURE__*/external_react_default().createElement(esm_Form.Group, {
     className: "lf-control-checkbox-group mb-3",
     "data-lf-field-name": name
-  }, /*#__PURE__*/external_react_default().createElement(esm_Form.Label, null, label, required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref2, idx) {
+  }, /*#__PURE__*/external_react_default().createElement(esm_Form.Label, null, label, required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref2, idx) {
     var value = _ref2.value,
       label = _ref2.label;
     return /*#__PURE__*/external_react_default().createElement(esm_Form.Check, {
@@ -8872,7 +9291,7 @@ var RadioGroupBootstrap = I18N(function (_ref) {
   return /*#__PURE__*/external_react_default().createElement(esm_Form.Group, {
     className: "lf-control-radio-group mb-3",
     "data-lf-field-name": name
-  }, /*#__PURE__*/external_react_default().createElement(esm_Form.Label, null, label, required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref2, idx) {
+  }, /*#__PURE__*/external_react_default().createElement(esm_Form.Label, null, label, required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref2, idx) {
     var value = _ref2.value,
       label = _ref2.label;
     return /*#__PURE__*/external_react_default().createElement(esm_Form.Check, {
@@ -9007,7 +9426,7 @@ var date_Date = I18N(function (_ref) {
   }, useFloatingLabels && /*#__PURE__*/external_react_default().createElement(esm_FloatingLabel, {
     label: label,
     className: "mb-3"
-  }, innerGroup), !useFloatingLabels && /*#__PURE__*/external_react_default().createElement(esm_Form.Label, null, label, required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), !useFloatingLabels && innerGroup, hint && !error && /*#__PURE__*/external_react_default().createElement(esm_Form.Text, null, hint), isString_default()(error) && !isEmpty_default()(error) && /*#__PURE__*/external_react_default().createElement(esm_Form.Control.Feedback, {
+  }, innerGroup), !useFloatingLabels && /*#__PURE__*/external_react_default().createElement(esm_Form.Label, null, label, required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), !useFloatingLabels && innerGroup, hint && !error && /*#__PURE__*/external_react_default().createElement(esm_Form.Text, null, hint), isString_default()(error) && !isEmpty_default()(error) && /*#__PURE__*/external_react_default().createElement(esm_Form.Control.Feedback, {
     type: "invalid"
   }, error));
 }, ['label', 'hint', 'placeholder']);
@@ -9045,7 +9464,7 @@ var Textarea = I18N(function (_ref) {
   return /*#__PURE__*/external_react_default().createElement(esm_Form.Group, {
     className: "lf-control-input-text mb-3",
     "data-lf-field-name": name
-  }, /*#__PURE__*/external_react_default().createElement(esm_Form.Label, null, label, required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(esm_Form.Control, {
+  }, /*#__PURE__*/external_react_default().createElement(esm_Form.Label, null, label, required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(esm_Form.Control, {
     name: name,
     as: "textarea",
     rows: rows,
@@ -9095,7 +9514,7 @@ var Slider = I18N(function (_ref) {
   return /*#__PURE__*/external_react_default().createElement(esm_Form.Group, {
     className: "lf-control-input-text mb-3",
     "data-lf-field-name": name
-  }, /*#__PURE__*/external_react_default().createElement(esm_Form.Label, null, label, required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(esm_Form.Range, {
+  }, /*#__PURE__*/external_react_default().createElement(esm_Form.Label, null, label, required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(esm_Form.Range, {
     name: name,
     defaultValue: value,
     onChange: handleChange,
