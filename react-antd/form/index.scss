@@ -1,5 +1,11 @@
 .lf-form-react-antd {
-  .lf-buttons {
+  .lf-toolbar {
     margin-top: 25px;
+    display: flex;
+
+    button:not(:first-child) {
+      margin-left: 10px;
+    }
   }
+
 }

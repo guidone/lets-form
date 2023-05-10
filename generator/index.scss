@@ -1,6 +1,23 @@
 .lf-form {
   --lf-field-margin: 24px;
   --lf-field-column-margin: 20px;
+
+  &.lf-form-buttons-align-center {
+    .lf-toolbar {
+      justify-content: center;
+    }
+  }
+  &.lf-form-buttons-align-left {
+    .lf-toolbar {
+      justify-content: flex-start;
+    }
+  }
+  &.lf-form-buttons-align-right {
+    .lf-toolbar {
+      justify-content: flex-end;
+    }
+  }
+
 }
 
 .lf-icon-asterisk {

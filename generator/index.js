@@ -147,7 +147,7 @@ const MissingComponent = ({ lfComponent, label, lfFramework }) => {
         <Warning color="#ff6633" height={16}/>
       </div>
       <div className="message">
-        The component <span className="tag-component">{lfComponent}</span> (<em>"{label}"</em>)
+        The component <span className="tag-component">{lfComponent}</span> (<em>"{_.isString(label) ? label : 'unknown'}"</em>)
         is not available for this framework (<b>{lfFramework}</b>)
       </div>
     </div>
@@ -155,6 +155,9 @@ const MissingComponent = ({ lfComponent, label, lfFramework }) => {
 }
 
 const collectTransformers = (form, onJavascriptError) => {
+  let transformers = {};
+
+  // collect all fieldlist needed to compile the transformer
   const fieldList = reduceFields(
     form.fields,
     (field, accumulator) => {
@@ -165,19 +168,21 @@ const collectTransformers = (form, onJavascriptError) => {
     },
     []
   );
-  let mainTransformer;
 
+  // compile transformer of the form
   try {
-    mainTransformer = !_.isEmpty(form.transformer) ? makeTransformer(form.transformer, fieldList) : null;
+    if (!_.isEmpty(form.transformer)) {
+      transformers.onRender = [makeTransformer(form.transformer, fieldList)];
+    }
   } catch(e) {
     const error = new Error('Error compiling main transformer: ' + e.message, { cause: e });
     error.sourceCode = form.transformer;
-    console.log('salvo il code', error.sourceCode)
     error.errorType = 'compile';
     onJavascriptError(error);
   }
 
-  const collected = reduceFields(
+  // collect transformers for each field and put it onChange
+  transformers = reduceFields(
     form.fields,
     (field, acc) => {
       if (field.transformer) {
@@ -190,35 +195,49 @@ const collectTransformers = (form, onJavascriptError) => {
           error.errorType = 'compile';
           onJavascriptError(error);
         }
+        // push into the onChange list of txs
         if (transformer != null) {
-          return [...acc, transformer];
+          if (acc.onChange == null) {
+            acc.onChange = {};
+          }
+          acc.onChange[field.name] = [transformer];
         }
       }
       return acc;
     },
-    []
+    transformers
   );
 
-  return mainTransformer != null ? [mainTransformer, ...(collected || [])] : collected;
+  return transformers;
 };
 
+const AsyncGeneratorFunction = async function* () {}.constructor;
+
+//const yieldReplacer = /((setValue|hide|show|enable|disable|show|hide|arraySetValue)\(.*?\)[;]{0,1})/;
 
 const makeTransformer = (str, fieldList) => {
   if (_.isEmpty(str)) {
     return null;
   }
+
+  const yieldedStr = str.replaceAll(
+    /((setValue|hide|show|enable|disable|show|hide|arraySetValue)\(.*?\)[;]{0,1})/g,
+    '$& yield Promise.resolve(api.fields());\n'
+  );
+
   try {
     let spreadVars = '';
     if (!_.isEmpty(fieldList)) {
       spreadVars = 'const { ' + fieldList.join(', ') + ' } = values;\n';
     }
-    return new Function(
+    const tx = new AsyncGeneratorFunction(
       'api',
-      `const { setValue, disable, enable, values, show, hide, css, element, style } = api;\n` +
+      `const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue } = api;\n` +
       spreadVars +
-      str +
-      '\nreturn api.fields();' // leave /n or a comment can void anything
+      yieldedStr +
+      '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
     );
+    return tx;
   } catch(e) {
     console.error(`LetsForm] Invalid JavaScript code for rules`, e);
     console.error(`LetsForm] Transformer: `, str);
@@ -226,10 +245,35 @@ const makeTransformer = (str, fieldList) => {
   }
 };
 
+/**
+ * Merge additional components to the main library
+ * @param {*} main
+ * @param {*} additional
+ * @returns
+ */
+const mergeComponents = (main, additional) => {
+  // if not empty, then merge, overwriting is ok
+  if (!_.isEmpty(additional) && Object.keys(additional).length !== 0) {
+    Object.keys(additional).forEach(componentName => {
+      if (main[componentName] == null) {
+        main[componentName] = additional[componentName];
+      } else {
+        main[componentName] = {
+          ...main[componentName],
+          ...additional[componentName]
+        };
+      }
+    });
+  }
+
+  return main;
+};
+
 
 const GenerateGenerator = ({ Forms, Fields }) => {
 
-  const renderFields = ({ fields,
+  const renderFields = ({
+    fields,
     control,
     framework,
     onChange,
@@ -245,16 +289,17 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     showErrors,
     level = 1,
     locale,
-    onJavascriptError
+    onJavascriptError,
+    Components
   }) => {
     const renderedFields = (fields || [])
       .filter(field => Wrapper || field.hidden !== true)
       .map((field, index) => {
         let Component;
-        if (Fields[field.component] && Fields[field.component][framework]) {
-          Component = Fields[field.component][framework];
-        } else if (Fields[field.component] && Fields[field.component]['*']) {
-          Component = Fields[field.component]['*'];
+        if (Components[field.component] && Components[field.component][framework]) {
+          Component = Components[field.component][framework];
+        } else if (Components[field.component] && Components[field.component]['*']) {
+          Component = Components[field.component]['*'];
         } else {
           Component = MissingComponent;
         }
@@ -295,7 +340,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   showErrors,
                   level: level + 1,
                   locale,
-                  onJavascriptError
+                  onJavascriptError,
+                  Components
                 })}
                 {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="fields" />}
               </>
@@ -332,7 +378,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       showErrors,
                       level: level + 1,
                       locale,
-                      onJavascriptError
+                      onJavascriptError,
+                      Components
                     })}
                     {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="leftFields" />}
                   </>
@@ -356,7 +403,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       showErrors,
                       level: level + 1,
                       locale,
-                      onJavascriptError
+                      onJavascriptError,
+                      Components
                     })}
                     {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="rightFields" />}
                   </>
@@ -396,7 +444,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       showErrors,
                       level: level + 1,
                       locale,
-                      onJavascriptError
+                      onJavascriptError,
+                      Components
                     })}
                     {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="leftFields" />}
                   </>
@@ -420,7 +469,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       showErrors,
                       level: level + 1,
                       locale,
-                      onJavascriptError
+                      onJavascriptError,
+                      Components
                     })}
                     {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="centerFields" />}
                   </>
@@ -444,7 +494,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       showErrors,
                       level: level + 1,
                       locale,
-                      onJavascriptError
+                      onJavascriptError,
+                      Components
                     })}
                     {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="rightFields" />}
                   </>
@@ -478,7 +529,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 // not sure about this, not passing the ref
                 name={fieldInfo.name}
                 value={fieldInfo.value}
-
                 onBlur={fieldInfo.onBlur}
                 key={`field_${field.name}`}
                 lfComponent={field.component}
@@ -500,7 +550,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 onChange={(value, opts) => {
                   // TODO use callback
                   fieldInfo.onChange(value);
-                  onChange({ ...getValues(), [field.name]: value }, opts);
+                  onChange({ ...getValues(), [field.name]: value }, field.name);
                 }}
               />;
 
@@ -513,8 +563,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     return renderedFields;
   }
-
-
 
   const FormGenerator = React.memo(({
     framework,
@@ -536,6 +584,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     plaintext = false,
     hideToolbar = false,
     children,
+    components,
     className
   }) => {
     if (debug) {
@@ -543,7 +592,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     }
     const { showErrors } = form;
     const [formName, setFormName] = useState(form.name ?? _.uniqueId('form_'))
-    const [transformers, setTransformers] = useState(collectTransformers(form, onJavascriptError));
+    const [transformers, setTransformers] = useState(null);
 
     const { handleSubmit, formState: { errors }, reset, control, getValues } = useForm({
       defaultValues,
@@ -551,18 +600,58 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     });
     const [validationErrors, setValidationErrors] = useState();
     // store form fields, apply immediately transformers (collected from all fields)
-    const [formFields, setFormFields] = useState(
-      applyTransformers(formName, framework, form.fields, transformers, defaultValues, onJavascriptError)
-    );
+    const [formFields, setFormFields] = useState(null);
 
     // update internal state if form changes
     useEffect(
       () => {
-        const newTransformers = collectTransformers(form, onJavascriptError);
-        const newFormFields = applyTransformers(formName, framework, form.fields, newTransformers, defaultValues, onJavascriptError);
-        setFormFields(newFormFields);
-        setFormName(form.name ?? _.uniqueId('form_'));
-        setTransformers(newTransformers);
+        const f = async () => {
+          const newTransformers = collectTransformers(form, onJavascriptError);
+
+          // initial fields values
+          let newFields = form.fields;
+          // apply onRender transformers
+          if (!_.isEmpty(newTransformers.onRender)) {
+            for await(const newFormFields of applyTransformers(
+              formName,
+              framework,
+              newFields,
+              newTransformers.onRender,
+              defaultValues,
+              onJavascriptError
+            )) {
+              newFields = newFormFields;
+              setFormFields(newFormFields);
+            }
+          }
+          // collect list of fields with an onChange transformer
+          const onChangeFields = Object.keys(newTransformers.onChange || {})
+            .filter(fieldName => !_.isEmpty(newTransformers.onChange[fieldName]))
+
+          // execute all onChange transformers at the bootstrap of the form
+          for(let idx = 0; idx < onChangeFields.length; idx++) {
+            for await(const newFormFields of applyTransformers(
+              formName,
+              framework,
+              newFields,
+              newTransformers.onChange[onChangeFields[idx]],
+              defaultValues,
+              onJavascriptError
+            )) {
+              newFields = newFormFields;
+              setFormFields(newFormFields);
+            }
+          }
+
+          // if transformed fields different than current one, then save
+          if (newFields !== formFields) {
+            setFormFields(newFields);
+          }
+
+          setFormName(form.name ?? _.uniqueId('form_'));
+          setTransformers(newTransformers);
+        }
+        f();
       },
       // eslint-disable-next-line react-hooks/exhaustive-deps
       [form, framework] // don't put defaultValues here
@@ -593,11 +682,25 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     );
 
     const handleChange = useCallback(
-      (values) => {
-        const newFormFields = applyTransformers(formName, framework, formFields, transformers, values, onJavascriptError);
-        if (newFormFields !== formFields) {
-          setFormFields(newFormFields);
+      async (values, fieldName) => {
+
+        // if the changed field has a transformer
+        if (transformers.onChange != null && !_.isEmpty(transformers.onChange[fieldName])) {
+          // execute the async generator transformer
+          for await(const f of applyTransformers(
+            formName,
+            framework,
+            formFields,
+            transformers.onChange[fieldName],
+            values,
+            onJavascriptError
+          )) {
+            if (f !== formFields) {
+              setFormFields(f);
+            }
+          }
         }
+
         onChange(values);
       },
       [onChange, formFields, formName, transformers, framework, onJavascriptError]
@@ -636,7 +739,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             disabled={disabled}
             readOnly={readOnly}
             plaintext={plaintext}
+            locale={locale}
             {..._.omit(form, 'id', 'fields', 'version')}
+            labelSubmit={i18n(form.labelSubmit, locale) || 'Submit'}
+            labelCancel={i18n(form.labelCancel, locale) || 'Cancel'}
           >
             {renderFields({
               Wrapper,
@@ -654,7 +760,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               plaintext: plaintext || form.plaintext,
               showErrors,
               locale,
-              onJavascriptError
+              onJavascriptError,
+              Components: mergeComponents(Fields, components)
             })}
             {children}
             {validationErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (

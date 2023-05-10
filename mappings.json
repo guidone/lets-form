@@ -129,6 +129,7 @@
     "hint": null,
     "placeholder": null,
     "options": null,
+    "showImageOptions": null,
     "filterKey": null,
     "filterValue": null,
     "disabled": null,
@@ -230,6 +231,17 @@
     "hidden": null
   },
   "array": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "fields": null,
+    "layout": null,
+    "tooltip": [
+      "react-rsuite5"
+    ],
     "validationMinLength": "validation",
     "validationMin": "validation",
     "validationMaxLength": "validation",
@@ -902,88 +914,6 @@
     ],
     "tooltip": [
       "react-rsuite5"
-    ],
-    "validationMinLength": "validation",
-    "validationMin": "validation",
-    "validationMaxLength": "validation",
-    "validationMax": "validation",
-    "validationPattern": "validation",
-    "validationMessage": "validation",
-    "required": null
-  },
-  "select-states": {
-    "name": null,
-    "label": null,
-    "hint": null,
-    "placeholder": null,
-    "filterKey": null,
-    "filterValue": null,
-    "disabled": null,
-    "readOnly": null,
-    "hidden": null,
-    "country": null,
-    "fullWidth": [
-      "react",
-      "react-material-ui"
-    ],
-    "width": [
-      "react",
-      "react-material-ui",
-      "react-antd"
-    ],
-    "placement": [
-      "react-rsuite5",
-      "react-antd"
-    ],
-    "size": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react-bootstrap",
-      "react-antd"
-    ],
-    "block": [
-      "react-rsuite5"
-    ],
-    "searchable": [
-      "react-rsuite5"
-    ],
-    "cleanable": [
-      "react-rsuite5"
-    ],
-    "tooltip": [
-      "react-rsuite5",
-      "react-antd"
-    ],
-    "appearance": [
-      "react-rsuite5"
-    ],
-    "autoWidth": [
-      "react-material-ui"
-    ],
-    "floatingLabel": [
-      "react-material-ui",
-      "react-bootstrap"
-    ],
-    "variant": [
-      "react-material-ui"
-    ],
-    "allowClear": [
-      "react-antd"
-    ],
-    "bordered": [
-      "react-antd"
-    ],
-    "showSearch": [
-      "react-antd"
-    ],
-    "showArrow": [
-      "react-antd"
-    ],
-    "virtual": [
-      "react-antd"
-    ],
-    "listHeight": [
-      "react-antd"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",

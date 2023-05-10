@@ -1,9 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
-import { Form, Select } from 'antd';
+import { Form, Select, Space } from 'antd';
 
 import { I18N } from '../../components';
 import { passRest, filterOptions } from '../../helpers';
+
+import './select.scss';
 
 const SelectAntd = I18N(
   ({
@@ -35,6 +37,7 @@ const SelectAntd = I18N(
     options,
     filterKey,
     filterValue,
+    showImageOptions = false,
     ...rest
   }) => {
     return (
@@ -63,10 +66,28 @@ const SelectAntd = I18N(
           virtual={virtual}
           showSearch={showSearch}
           allowClear={allowClear}
-          options={filterOptions(options, filterValue, filterKey) || []}
           style={_.isNumber(width) ? { width: `${width}px` } : undefined}
           {...passRest(rest)}
-        />
+        >
+          {(filterOptions(options, filterValue, filterKey) || [])
+            .map(option => (
+              <Select.Option
+
+                key={option.value}
+                value={option.value}
+                label={option.label}>
+
+                {option.image && showImageOptions && (
+                  <Space className="lf-control-select-option-antd">
+                    <img src={option.image} alt={option.label}/>
+                    {option.label}
+                  </Space>
+                )}
+
+              </Select.Option>
+            ))
+          }
+        </Select>
       </Form.Item>
     )
   },

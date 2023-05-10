@@ -1,3 +1,8 @@
 .lf-form-react-bootstrap .lf-toolbar {
   margin-top: 15px;
+  display: flex;
+
+  button:not(:first-child) {
+    margin-left: 10px;
+  }
 }

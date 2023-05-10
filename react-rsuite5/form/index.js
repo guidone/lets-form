@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-
 import { Form, ButtonToolbar, Button } from 'rsuite';
 
 import './index.scss';
@@ -11,6 +10,9 @@ const FormRsuite5 = ({
   layout,
   fluid = false,
   disabled = false,
+  buttonsAlign,
+  labelSubmit = 'Submit',
+  labelCancel = 'Cancel',
   readOnly = false,
   onlyFields = false,
   plaintext = false,
@@ -19,11 +21,12 @@ const FormRsuite5 = ({
   onReset = () => {}
 }) => {
   if (onlyFields) {
+    // TODO check this
     return (
       <div className={classNames('rs-form', {
         [`rs-form-${layout}`]: true,
-        'rs-form-fluid': fluid }
-      )}>
+        'rs-form-fluid': fluid
+      })}>
         {children}
       </div>
     );
@@ -31,7 +34,9 @@ const FormRsuite5 = ({
 
   return (
     <Form
-      className="lf-form lf-form-react-rsuite5"
+      className={classNames('lf-form lf-form-react-rsuite5', {
+        [buttonsAlign ? `lf-form-buttons-align-${buttonsAlign}` : undefined]: true
+      })}
       data-lf-form-name={name}
       layout={layout}
       fluid={fluid}
@@ -47,10 +52,10 @@ const FormRsuite5 = ({
           <Button
             appearance="primary"
             onClick={onSubmit}
-          >Submit</Button>
+          >{labelSubmit}</Button>
           <Button
             onClick={onReset}
-          >Cancel</Button>
+          >{labelCancel}</Button>
         </ButtonToolbar>
       )}
     </Form>

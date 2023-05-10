@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import classNames from 'classnames';
 
 import './index.scss';
 
@@ -8,13 +9,18 @@ const FormBootstrap = ({
   name,
   children,
   onSubmit,
+  buttonsAlign,
   onReset,
-  hideToolbar = false
+  hideToolbar = false,
+  labelSubmit = 'Submit',
+  labelCancel = 'Cancel',
 }) => {
 
   return (
     <Form
-      className="lf-form lf-form-react-bootstrap"
+      className={classNames('lf-form lf-form-react-bootstrap', {
+        [buttonsAlign ? `lf-form-buttons-align-${buttonsAlign}` : undefined]: true
+      })}
       data-lf-form-name={name}
       onSubmit={onSubmit}
     >
@@ -26,16 +32,11 @@ const FormBootstrap = ({
           <Button
             variant="primary"
             onClick={onSubmit}
-          >
-            Submit
-          </Button>
-          {' '}
+          >{labelSubmit}</Button>
           <Button
             variant="secondary"
             onClick={onReset}
-          >
-            Cancel
-          </Button>
+          >{labelCancel}</Button>
         </div>
       )}
     </Form>

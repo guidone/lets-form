@@ -25,7 +25,6 @@ import { Placeholder } from './placeholder';
 import { Multiselect } from './multiselect';
 import { MultiselectLanguage } from './multiselect-language';
 import { InputTextI18N } from './input-text-i18n';
-import { SelectStates } from './select-states';
 import { PlaceholderImage } from './placeholder-image';
 import { Button } from './button';
 import { Divider } from './divider';
@@ -94,9 +93,6 @@ const Fields = {
   },
   'input-text-i18n': {
     'react-rsuite5': InputTextI18N
-  },
-  'select-states': {
-    'react-rsuite5': SelectStates
   },
   'placeholder-image': {
     'react-rsuite5': PlaceholderImage

@@ -5,6 +5,27 @@ import { Form, SelectPicker } from 'rsuite';
 import { passRest, filterOptions } from '../../helpers';
 import { RequiredIcon, I18N } from '../../components';
 
+import './select.scss';
+
+const menuItem = (value, item) => {
+  return (
+    <div className="lf-control-select-option-rsuite5">
+      {item.image && <img src={item.image} alt={item.label} />}
+      <span>{item.label}</span>
+    </div>
+  )
+};
+
+const manuValue = (value, item) => {
+  return (
+    <div className="lf-control-select-option-rsuite5">
+      {item.image && <img src={item.image} alt={item.label} />}
+      <span>{item.label}</span>
+    </div>
+  )
+};
+
+
 const Select = I18N(
   ({
     name,
@@ -28,6 +49,7 @@ const Select = I18N(
     appearance,
     filterKey,
     filterValue,
+    showImageOptions,
     ...rest
   }) => {
     return (
@@ -52,6 +74,8 @@ const Select = I18N(
           disabled={disabled}
           size={size}
           placeholder={placeholder}
+          renderMenuItem={showImageOptions ? menuItem : undefined}
+          renderValue={showImageOptions ? menuItem : undefined}
           data={filterOptions(options, filterValue, filterKey) || []}
           block={block}
           searchable={searchable}

@@ -1,14 +1,15 @@
 import React from 'react';
-
-//import 'purecss/build/forms.css';
-//import 'purecss/build/buttons.css';
+import classNames from 'classnames';
 
 import './index.scss';
 
 const FormReact = ({
   name,
   children,
+  buttonsAlign,
   hideToolbar = false,
+  labelSubmit = 'Submit',
+  labelCancel = 'Cancel',
   onSubmit = () => {},
   onReset = () => {}
 }) => {
@@ -17,7 +18,9 @@ const FormReact = ({
   return (
     <form
       onSubmit={onSubmit}
-      className="lf-form lf-form-react lf-form-react-stacked"
+      className={classNames('lf-form lf-form-react lf-form-react-stacked', {
+        [buttonsAlign ? `lf-form-buttons-align-${buttonsAlign}` : undefined]: true
+      })}
       data-lf-form-name={name}
     >
       {children}
@@ -27,11 +30,12 @@ const FormReact = ({
             type="submit"
             onClick={onSubmit}
             className="lf-form-react-primary-button"
-          >Submit</button>
+          >{labelSubmit}</button>
           <button
             type="button"
             className="lf-form-react-secondary-button"
-            onClick={onReset}>Cancel</button>
+            onClick={onReset}
+          >{labelCancel}</button>
         </div>
       )}
     </form>

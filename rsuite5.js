@@ -77,6 +77,29 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
+/***/ 3010:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-common-array .lf-control-common-array-item{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;align-items:stretch;margin-top:5px;position:relative;border-left:5px solid #ddd;padding-left:10px}.lf-control-common-array .lf-control-common-array-item .rs-form-group{margin-bottom:5px !important}.lf-control-common-array .lf-control-common-array-item>.inner-form{order:0;flex:1 0 auto;align-self:auto;--lf-field-margin: 0px}.lf-control-common-array .lf-control-common-array-item>.buttons{flex:0 0 auto;align-self:flex-start}.lf-control-common-array .lf-control-common-array-item:not(:first-child){border-top:1px solid #eee;padding-top:10px}", "",{"version":3,"sources":["webpack://./common/array/list-array.scss"],"names":[],"mappings":"AAEE,uDACE,YAAA,CACA,kBAAA,CACA,gBAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,cAAA,CACA,iBAAA,CACA,0BAAA,CACA,iBAAA,CAEA,sEACE,4BAAA,CAGF,mEACE,OAAA,CACA,aAAA,CACA,eAAA,CACA,sBAAA,CAUF,gEACE,aAAA,CACA,qBAAA,CAKJ,yEACE,yBAAA,CACA,gBAAA","sourcesContent":[".lf-control-common-array {\n\n  .lf-control-common-array-item {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n    margin-top: 5px;\n    position: relative;\n    border-left: 5px solid #dddddd;\n    padding-left: 10px;\n\n    .rs-form-group {\n      margin-bottom: 5px !important;\n    }\n\n    > .inner-form {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n      --lf-field-margin: 0px;\n\n      .rs-form-inline {\n        // remove the 300px default size for inline in array, too big\n        .rs-input, .rs-input-number {\n          //width: auto;\n        }\n      }\n    }\n\n    > .buttons {\n      flex: 0 0 auto;\n      align-self: flex-start;\n\n    }\n  }\n\n  .lf-control-common-array-item:not(:first-child) {\n    border-top: 1px solid #eeeeee;\n    padding-top: 10px;\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ 1760:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -254,30 +277,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-validation-errors{border:1px solid
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-form{--lf-field-margin: 24px;--lf-field-column-margin: 20px}.lf-icon-asterisk{margin-top:-3px;display:inline-block}.lf-missing-component{border:1px solid #bbb;background-color:#f6f6f6;padding:20px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-missing-component .icon{order:0;flex:0 0;align-self:auto;margin-top:2px}.lf-missing-component .tag-component{background-color:#673ab7;color:#fff;font-size:12px;padding:1px 4px 2px 4px;border-radius:3px;line-height:17px}.lf-missing-component .message{display:inline-block;margin-left:10px;order:0;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./generator/index.scss"],"names":[],"mappings":"AAAA,SACE,uBAAA,CACA,8BAAA,CAGF,kBACE,eAAA,CACA,oBAAA,CAGF,sBACE,qBAAA,CACA,wBAAA,CACA,YAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,4BACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,cAAA,CAGF,qCACE,wBAAA,CACA,UAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,gBAAA,CAGF,+BACE,oBAAA,CACA,gBAAA,CACA,OAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-form {\n  --lf-field-margin: 24px;\n  --lf-field-column-margin: 20px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n\n  .icon {\n    order: 0;\n    flex: 0 0;\n    align-self: auto;\n    margin-top: 2px;\n  }\n\n  .tag-component {\n    background-color: #673ab7;\n    color: #ffffff;\n    font-size: 12px;\n    padding: 1px 4px 2px 4px;\n    border-radius: 3px;\n    line-height: 17px;\n  }\n\n  .message {\n    display: inline-block;\n    margin-left: 10px;\n    order: 0;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 858:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".gforms-list-array .gforms-array-item{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;align-items:stretch;margin-top:5px;position:relative}.gforms-list-array .gforms-array-item .rs-form-group{margin-bottom:5px !important}.gforms-list-array .gforms-array-item>.inner-form{order:0;flex:1 0 auto;align-self:auto}.gforms-list-array .gforms-array-item>.buttons{flex:0 0 auto;align-self:center;margin-top:-5px}.gforms-list-array .gforms-array-item:not(:first-child){border-top:1px solid #eee;padding-top:10px}", "",{"version":3,"sources":["webpack://./react-rsuite5/array/list-array.scss"],"names":[],"mappings":"AAEE,sCACE,YAAA,CACA,kBAAA,CACA,gBAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,cAAA,CACA,iBAAA,CAEA,qDACE,4BAAA,CAGF,kDACE,OAAA,CACA,aAAA,CACA,eAAA,CAUF,+CACE,aAAA,CACA,iBAAA,CACA,eAAA,CAIJ,wDACE,yBAAA,CACA,gBAAA","sourcesContent":[".gforms-list-array {\n\n  .gforms-array-item {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n    margin-top: 5px;\n    position: relative;\n\n    .rs-form-group {\n      margin-bottom: 5px !important;\n    }\n\n    > .inner-form {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n\n      .rs-form-inline {\n        // remove the 300px default size for inline in array, too big\n        .rs-input, .rs-input-number {\n          //width: auto;\n        }\n      }\n    }\n\n    > .buttons {\n      flex: 0 0 auto;\n      align-self: center;\n      margin-top: -5px;\n    }\n  }\n\n  .gforms-array-item:not(:first-child) {\n    border-top: 1px solid #eeeeee;\n    padding-top: 10px;\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form{--lf-field-margin: 24px;--lf-field-column-margin: 20px}.lf-form.lf-form-buttons-align-center .lf-toolbar{justify-content:center}.lf-form.lf-form-buttons-align-left .lf-toolbar{justify-content:flex-start}.lf-form.lf-form-buttons-align-right .lf-toolbar{justify-content:flex-end}.lf-icon-asterisk{margin-top:-3px;display:inline-block}.lf-missing-component{border:1px solid #bbb;background-color:#f6f6f6;padding:20px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-missing-component .icon{order:0;flex:0 0;align-self:auto;margin-top:2px}.lf-missing-component .tag-component{background-color:#673ab7;color:#fff;font-size:12px;padding:1px 4px 2px 4px;border-radius:3px;line-height:17px}.lf-missing-component .message{display:inline-block;margin-left:10px;order:0;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./generator/index.scss"],"names":[],"mappings":"AAAA,SACE,uBAAA,CACA,8BAAA,CAGE,kDACE,sBAAA,CAIF,gDACE,0BAAA,CAIF,iDACE,wBAAA,CAMN,kBACE,eAAA,CACA,oBAAA,CAGF,sBACE,qBAAA,CACA,wBAAA,CACA,YAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,4BACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,cAAA,CAGF,qCACE,wBAAA,CACA,UAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,gBAAA,CAGF,+BACE,oBAAA,CACA,gBAAA,CACA,OAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-form {\n  --lf-field-margin: 24px;\n  --lf-field-column-margin: 20px;\n\n  &.lf-form-buttons-align-center {\n    .lf-toolbar {\n      justify-content: center;\n    }\n  }\n  &.lf-form-buttons-align-left {\n    .lf-toolbar {\n      justify-content: flex-start;\n    }\n  }\n  &.lf-form-buttons-align-right {\n    .lf-toolbar {\n      justify-content: flex-end;\n    }\n  }\n\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n\n  .icon {\n    order: 0;\n    flex: 0 0;\n    align-self: auto;\n    margin-top: 2px;\n  }\n\n  .tag-component {\n    background-color: #673ab7;\n    color: #ffffff;\n    font-size: 12px;\n    padding: 1px 4px 2px 4px;\n    border-radius: 3px;\n    line-height: 17px;\n  }\n\n  .message {\n    display: inline-block;\n    margin-left: 10px;\n    order: 0;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -462,6 +462,29 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-input-text .rs-form-contro
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-multiselect-language .btn-add-all{padding-left:5px;font-size:12px}", "",{"version":3,"sources":["webpack://./react-rsuite5/multiselect-language/multiselect-language.scss"],"names":[],"mappings":"AACE,8CACE,gBAAA,CACA,cAAA","sourcesContent":[".lf-control-multiselect-language {\n  .btn-add-all {\n    padding-left: 5px;\n    font-size: 12px;\n  }\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 8963:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-select-option-rsuite5 img{width:20px;max-width:20px;max-height:20px;margin-right:6px;margin-top:-4px}", "",{"version":3,"sources":["webpack://./react-rsuite5/select/select.scss"],"names":[],"mappings":"AAEI,sCACE,UAAA,CACA,cAAA,CACA,eAAA,CACA,gBAAA,CACA,eAAA","sourcesContent":["\n  .lf-control-select-option-rsuite5 {\n    img {\n      width: 20px;\n      max-width: 20px;\n      max-height: 20px;\n      margin-right: 6px;\n      margin-top: -4px;\n\n    }\n  }\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5605,7 +5628,7 @@ var CrossCirle = function CrossCirle(_ref) {
   }, /*#__PURE__*/external_react_default().createElement("path", {
     d: "M16 8L8 16M8.00001 8L16 16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z",
     stroke: color,
-    strokeSidth: "1.5",
+    strokeWidth: "1.5",
     strokeLinecap: "round",
     strokeLinejoin: "round"
   }));
@@ -5922,7 +5945,11 @@ var removeUnusedLocalesFromI18n = function removeUnusedLocalesFromI18n(obj, loca
   var keysToRemove = Object.keys(obj).filter(function (key) {
     return !locales.includes(key);
   });
-  return !isEmpty_default()(keysToRemove) ? omit_default()(obj, keysToRemove) : obj;
+  var cleaned = !isEmpty_default()(keysToRemove) ? omit_default()(obj, keysToRemove) : obj;
+  if (Object.keys(cleaned).length !== 0) {
+    return cleaned;
+  }
+  return null;
 };
 var removeUnusedLocalesFromObj = function removeUnusedLocalesFromObj(obj, locales) {
   var cloned = cleanup_objectSpread({}, obj);
@@ -5948,10 +5975,19 @@ var removeUnusedLocalesFromObj = function removeUnusedLocalesFromObj(obj, locale
  * @returns
  */
 var cleanUp = function cleanUp(json) {
-  var emptyKeys = keys_default()(json).filter(function (key) {
-    return isEmpty_default()(json[key]) && !(isBoolean_default()(json[key]) || isNumber_default()(json[key]));
+  var cloned = cleanup_objectSpread({}, json);
+
+  // remove unused locales
+  if (cloned.labelSubmit && is_i18n_isI18n(cloned.labelSubmit)) {
+    cloned.labelSubmit = removeUnusedLocalesFromI18n(cloned.labelSubmit, json.locales);
+  }
+  if (cloned.labelCancel && is_i18n_isI18n(cloned.labelCancel)) {
+    cloned.labelCancel = removeUnusedLocalesFromI18n(cloned.labelCancel, json.locales);
+  }
+  var emptyKeys = keys_default()(cloned).filter(function (key) {
+    return isEmpty_default()(cloned[key]) && !(isBoolean_default()(cloned[key]) || isNumber_default()(cloned[key]));
   });
-  var cleanedUp = omit_default()(json, emptyKeys);
+  var cleanedUp = omit_default()(cloned, emptyKeys);
   return cleanup_objectSpread(cleanup_objectSpread({}, cleanedUp), {}, {
     fields: mapFields(json.fields, function (field) {
       // clone and remove id
@@ -6338,19 +6374,26 @@ var isEmptyForm = function isEmptyForm(form) {
   return !form || !Array.isArray(form.fields) || form.fields.length === 0;
 };
 ;// CONCATENATED MODULE: ./mappings.json
-const mappings_namespaceObject = JSON.parse('{"text-input":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"variant":["react-material-ui"],"color":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-antd"],"step":["react-rsuite5","react-antd"],"max":["react-rsuite5","react-antd"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"optionType":["react-antd"],"size":["react-antd"]},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react","react-bootstrap","react-antd"],"width":["react","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"width":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select-states":{"name":null,"label":null,"hint":null,"placeholder":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"country":null,"fullWidth":["react","react-material-ui"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"maxWidth":null,"minHeight":null,"align":null,"marginTop":null,"marginBottom":null,"hidden":null},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
+const mappings_namespaceObject = JSON.parse('{"text-input":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"variant":["react-material-ui"],"color":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"fields":null,"layout":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-antd"],"step":["react-rsuite5","react-antd"],"max":["react-rsuite5","react-antd"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"optionType":["react-antd"],"size":["react-antd"]},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react","react-bootstrap","react-antd"],"width":["react","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"width":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"maxWidth":null,"minHeight":null,"align":null,"marginTop":null,"marginBottom":null,"hidden":null},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
 ;// CONCATENATED MODULE: ./helpers/apply-transformers.js
 
 
 
 
-
 function apply_transformers_typeof(obj) { "@babel/helpers - typeof"; return apply_transformers_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, apply_transformers_typeof(obj); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == apply_transformers_typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator.return && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, catch: function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
 function apply_transformers_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function apply_transformers_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? apply_transformers_ownKeys(Object(source), !0).forEach(function (key) { apply_transformers_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : apply_transformers_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 function apply_transformers_defineProperty(obj, key, value) { key = apply_transformers_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function apply_transformers_toPropertyKey(arg) { var key = apply_transformers_toPrimitive(arg, "string"); return apply_transformers_typeof(key) === "symbol" ? key : String(key); }
 function apply_transformers_toPrimitive(input, hint) { if (apply_transformers_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (apply_transformers_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _awaitAsyncGenerator(value) { return new _OverloadYield(value, 0); }
+function _wrapAsyncGenerator(fn) { return function () { return new _AsyncGenerator(fn.apply(this, arguments)); }; }
+function _AsyncGenerator(gen) { var front, back; function resume(key, arg) { try { var result = gen[key](arg), value = result.value, overloaded = value instanceof _OverloadYield; Promise.resolve(overloaded ? value.v : value).then(function (arg) { if (overloaded) { var nextKey = "return" === key ? "return" : "next"; if (!value.k || arg.done) return resume(nextKey, arg); arg = gen[nextKey](arg).value; } settle(result.done ? "return" : "normal", arg); }, function (err) { resume("throw", err); }); } catch (err) { settle("throw", err); } } function settle(type, value) { switch (type) { case "return": front.resolve({ value: value, done: !0 }); break; case "throw": front.reject(value); break; default: front.resolve({ value: value, done: !1 }); } (front = front.next) ? resume(front.key, front.arg) : back = null; } this._invoke = function (key, arg) { return new Promise(function (resolve, reject) { var request = { key: key, arg: arg, resolve: resolve, reject: reject, next: null }; back ? back = back.next = request : (front = back = request, resume(key, arg)); }); }, "function" != typeof gen.return && (this.return = void 0); }
+_AsyncGenerator.prototype["function" == typeof Symbol && Symbol.asyncIterator || "@@asyncIterator"] = function () { return this; }, _AsyncGenerator.prototype.next = function (arg) { return this._invoke("next", arg); }, _AsyncGenerator.prototype.throw = function (arg) { return this._invoke("throw", arg); }, _AsyncGenerator.prototype.return = function (arg) { return this._invoke("return", arg); };
+function _OverloadYield(value, kind) { this.v = value, this.k = kind; }
+function _asyncIterator(iterable) { var method, async, sync, retry = 2; for ("undefined" != typeof Symbol && (async = Symbol.asyncIterator, sync = Symbol.iterator); retry--;) { if (async && null != (method = iterable[async])) return method.call(iterable); if (sync && null != (method = iterable[sync])) return new AsyncFromSyncIterator(method.call(iterable)); async = "@@asyncIterator", sync = "@@iterator"; } throw new TypeError("Object is not async iterable"); }
+function AsyncFromSyncIterator(s) { function AsyncFromSyncIteratorContinuation(r) { if (Object(r) !== r) return Promise.reject(new TypeError(r + " is not an object.")); var done = r.done; return Promise.resolve(r.value).then(function (value) { return { value: value, done: done }; }); } return AsyncFromSyncIterator = function AsyncFromSyncIterator(s) { this.s = s, this.n = s.next; }, AsyncFromSyncIterator.prototype = { s: null, n: null, next: function next() { return AsyncFromSyncIteratorContinuation(this.n.apply(this.s, arguments)); }, return: function _return(value) { var ret = this.s.return; return void 0 === ret ? Promise.resolve({ value: value, done: !0 }) : AsyncFromSyncIteratorContinuation(ret.apply(this.s, arguments)); }, throw: function _throw(value) { var thr = this.s.return; return void 0 === thr ? Promise.reject(value) : AsyncFromSyncIteratorContinuation(thr.apply(this.s, arguments)); } }, new AsyncFromSyncIterator(s); }
 
 
 
@@ -6511,32 +6554,142 @@ var ApiFactory = function ApiFactory(formName, framework, formFields, currenValu
         return field;
       });
     },
+    /**
+     * Change field property inside and array
+     * @param {*} arrayName
+     * @param {*} arrayFieldName
+     * @param {*} key
+     * @param {*} value
+     * @returns
+     */
+    arraySetValue: function arraySetValue(arrayName, arrayFieldName, key, value) {
+      if (!fieldExists(arrayName)) {
+        return;
+      }
+      _fields = mapFields(_fields, function (arrayField) {
+        if (arrayField.component === 'array' && arrayField.name === arrayName) {
+          var newFields = mapFields(arrayField.fields, function (field) {
+            if (field.name === arrayFieldName) {
+              return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, apply_transformers_defineProperty({}, key, value));
+            }
+            return field;
+          });
+          return apply_transformers_objectSpread(apply_transformers_objectSpread({}, arrayField), {}, {
+            fields: newFields
+          });
+        }
+        return arrayField;
+      });
+    },
     values: Object.freeze(apply_transformers_objectSpread({}, currenValues))
   };
 };
-var applyTransformers = function applyTransformers(formName, framework, fields, transformers, values, onJavascriptError) {
-  if (isArray_default()(transformers) && !isEmpty_default()(transformers) && isFunction_default()(transformers[0])) {
-    var newFields = fields;
-    // apply all transformers
-    transformers.filter(function (transformer) {
-      return isFunction_default()(transformer);
-    }).forEach(function (transformer) {
-      var api = new ApiFactory(formName, framework, newFields, values);
-      try {
-        newFields = transformer(api);
-      } catch (e) {
-        console.error('[LetsForm] Error on transformer: ', e);
-        var error = new Error('Error executing transformer: ' + e.message, {
-          cause: e
-        });
-        error.errorType = 'runtime';
-        onJavascriptError(error);
+var applyTransformers = /*#__PURE__*/function () {
+  var _ref = _wrapAsyncGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(formName, framework, fields, transformers, values, onJavascriptError) {
+    var newFields, txs, idx, api, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _iterator, _step, f, error;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          if (!(isArray_default()(transformers) && !isEmpty_default()(transformers))) {
+            _context.next = 52;
+            break;
+          }
+          newFields = fields; // apply all transformers
+          txs = transformers;
+          /*.filter(transformer => _.isFunction(transformer))*/
+          idx = 0;
+        case 4:
+          if (!(idx < txs.length)) {
+            _context.next = 48;
+            break;
+          }
+          api = new ApiFactory(formName, framework, newFields, values);
+          _context.prev = 6;
+          //newFields = await txs[idx](api);
+          //console.log('sto per chiamare', txs[idx])
+          _iteratorAbruptCompletion = false;
+          _didIteratorError = false;
+          _context.prev = 9;
+          _iterator = _asyncIterator(txs[idx](api));
+        case 11:
+          _context.next = 13;
+          return _awaitAsyncGenerator(_iterator.next());
+        case 13:
+          if (!(_iteratorAbruptCompletion = !(_step = _context.sent).done)) {
+            _context.next = 21;
+            break;
+          }
+          f = _step.value;
+          newFields = f;
+          _context.next = 18;
+          return f;
+        case 18:
+          _iteratorAbruptCompletion = false;
+          _context.next = 11;
+          break;
+        case 21:
+          _context.next = 27;
+          break;
+        case 23:
+          _context.prev = 23;
+          _context.t0 = _context["catch"](9);
+          _didIteratorError = true;
+          _iteratorError = _context.t0;
+        case 27:
+          _context.prev = 27;
+          _context.prev = 28;
+          if (!(_iteratorAbruptCompletion && _iterator.return != null)) {
+            _context.next = 32;
+            break;
+          }
+          _context.next = 32;
+          return _awaitAsyncGenerator(_iterator.return());
+        case 32:
+          _context.prev = 32;
+          if (!_didIteratorError) {
+            _context.next = 35;
+            break;
+          }
+          throw _iteratorError;
+        case 35:
+          return _context.finish(32);
+        case 36:
+          return _context.finish(27);
+        case 37:
+          _context.next = 45;
+          break;
+        case 39:
+          _context.prev = 39;
+          _context.t1 = _context["catch"](6);
+          console.error('[LetsForm] Error on transformer: ', _context.t1);
+          error = new Error('Error executing transformer: ' + _context.t1.message, {
+            cause: _context.t1
+          });
+          error.errorType = 'runtime';
+          onJavascriptError(error);
+        case 45:
+          idx++;
+          _context.next = 4;
+          break;
+        case 48:
+          _context.next = 50;
+          return newFields;
+        case 50:
+          _context.next = 54;
+          break;
+        case 52:
+          _context.next = 54;
+          return fields;
+        case 54:
+        case "end":
+          return _context.stop();
       }
-    });
-    return newFields;
-  }
-  return fields;
-};
+    }, _callee, null, [[6, 39], [9, 23, 27, 37], [28,, 32, 36]]);
+  }));
+  return function applyTransformers(_x, _x2, _x3, _x4, _x5, _x6) {
+    return _ref.apply(this, arguments);
+  };
+}();
 
 ;// CONCATENATED MODULE: ./helpers/is-url.js
 
@@ -6959,11 +7112,14 @@ var generator_update = injectStylesIntoStyleTag_default()(cjs_js_generator/* def
 
 
 function generator_typeof(obj) { "@babel/helpers - typeof"; return generator_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, generator_typeof(obj); }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || generator_unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function generator_extends() { generator_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return generator_extends.apply(this, arguments); }
+function generator_regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ generator_regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == generator_typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator.return && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, catch: function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
 function generator_toConsumableArray(arr) { return generator_arrayWithoutHoles(arr) || generator_iterableToArray(arr) || generator_unsupportedIterableToArray(arr) || generator_nonIterableSpread(); }
 function generator_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function generator_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return generator_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return generator_arrayLikeToArray(o, minLen); }
@@ -6975,6 +7131,13 @@ function generator_objectSpread(target) { for (var i = 1; i < arguments.length; 
 function generator_defineProperty(obj, key, value) { key = generator_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function generator_toPropertyKey(arg) { var key = generator_toPrimitive(arg, "string"); return generator_typeof(key) === "symbol" ? key : String(key); }
 function generator_toPrimitive(input, hint) { if (generator_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (generator_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function generator_asyncIterator(iterable) { var method, async, sync, retry = 2; for ("undefined" != typeof Symbol && (async = Symbol.asyncIterator, sync = Symbol.iterator); retry--;) { if (async && null != (method = iterable[async])) return method.call(iterable); if (sync && null != (method = iterable[sync])) return new generator_AsyncFromSyncIterator(method.call(iterable)); async = "@@asyncIterator", sync = "@@iterator"; } throw new TypeError("Object is not async iterable"); }
+function generator_AsyncFromSyncIterator(s) { function AsyncFromSyncIteratorContinuation(r) { if (Object(r) !== r) return Promise.reject(new TypeError(r + " is not an object.")); var done = r.done; return Promise.resolve(r.value).then(function (value) { return { value: value, done: done }; }); } return generator_AsyncFromSyncIterator = function AsyncFromSyncIterator(s) { this.s = s, this.n = s.next; }, generator_AsyncFromSyncIterator.prototype = { s: null, n: null, next: function next() { return AsyncFromSyncIteratorContinuation(this.n.apply(this.s, arguments)); }, return: function _return(value) { var ret = this.s.return; return void 0 === ret ? Promise.resolve({ value: value, done: !0 }) : AsyncFromSyncIteratorContinuation(ret.apply(this.s, arguments)); }, throw: function _throw(value) { var thr = this.s.return; return void 0 === thr ? Promise.reject(value) : AsyncFromSyncIteratorContinuation(thr.apply(this.s, arguments)); } }, new generator_AsyncFromSyncIterator(s); }
+function generator_awaitAsyncGenerator(value) { return new generator_OverloadYield(value, 0); }
+function generator_wrapAsyncGenerator(fn) { return function () { return new generator_AsyncGenerator(fn.apply(this, arguments)); }; }
+function generator_AsyncGenerator(gen) { var front, back; function resume(key, arg) { try { var result = gen[key](arg), value = result.value, overloaded = value instanceof generator_OverloadYield; Promise.resolve(overloaded ? value.v : value).then(function (arg) { if (overloaded) { var nextKey = "return" === key ? "return" : "next"; if (!value.k || arg.done) return resume(nextKey, arg); arg = gen[nextKey](arg).value; } settle(result.done ? "return" : "normal", arg); }, function (err) { resume("throw", err); }); } catch (err) { settle("throw", err); } } function settle(type, value) { switch (type) { case "return": front.resolve({ value: value, done: !0 }); break; case "throw": front.reject(value); break; default: front.resolve({ value: value, done: !1 }); } (front = front.next) ? resume(front.key, front.arg) : back = null; } this._invoke = function (key, arg) { return new Promise(function (resolve, reject) { var request = { key: key, arg: arg, resolve: resolve, reject: reject, next: null }; back ? back = back.next = request : (front = back = request, resume(key, arg)); }); }, "function" != typeof gen.return && (this.return = void 0); }
+generator_AsyncGenerator.prototype["function" == typeof Symbol && Symbol.asyncIterator || "@@asyncIterator"] = function () { return this; }, generator_AsyncGenerator.prototype.next = function (arg) { return this._invoke("next", arg); }, generator_AsyncGenerator.prototype.throw = function (arg) { return this._invoke("throw", arg); }, generator_AsyncGenerator.prototype.return = function (arg) { return this._invoke("return", arg); };
+function generator_OverloadYield(value, kind) { this.v = value, this.k = kind; }
 /* eslint-disable no-new-func */
 
 
@@ -7096,10 +7259,10 @@ var translateValidation = function translateValidation(validation, locale, onJav
   }
   return validation;
 };
-var MissingComponent = function MissingComponent(_ref) {
-  var lfComponent = _ref.lfComponent,
-    label = _ref.label,
-    lfFramework = _ref.lfFramework;
+var MissingComponent = function MissingComponent(_ref2) {
+  var lfComponent = _ref2.lfComponent,
+    label = _ref2.label,
+    lfFramework = _ref2.lfFramework;
   return /*#__PURE__*/external_react_default().createElement("div", {
     className: "lf-missing-component"
   }, /*#__PURE__*/external_react_default().createElement("div", {
@@ -7111,28 +7274,35 @@ var MissingComponent = function MissingComponent(_ref) {
     className: "message"
   }, "The component ", /*#__PURE__*/external_react_default().createElement("span", {
     className: "tag-component"
-  }, lfComponent), " (", /*#__PURE__*/external_react_default().createElement("em", null, "\"", label, "\""), ") is not available for this framework (", /*#__PURE__*/external_react_default().createElement("b", null, lfFramework), ")"));
+  }, lfComponent), " (", /*#__PURE__*/external_react_default().createElement("em", null, "\"", isString_default()(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/external_react_default().createElement("b", null, lfFramework), ")"));
 };
 var collectTransformers = function collectTransformers(form, onJavascriptError) {
+  var transformers = {};
+
+  // collect all fieldlist needed to compile the transformer
   var fieldList = reduceFields(form.fields, function (field, accumulator) {
     if (field.component !== 'group' && field.component !== 'two-columns' && field.component !== 'three-columns') {
       return [].concat(generator_toConsumableArray(accumulator), [field.name]);
     }
     return accumulator;
   }, []);
-  var mainTransformer;
+
+  // compile transformer of the form
   try {
-    mainTransformer = !isEmpty_default()(form.transformer) ? makeTransformer(form.transformer, fieldList) : null;
+    if (!isEmpty_default()(form.transformer)) {
+      transformers.onRender = [makeTransformer(form.transformer, fieldList)];
+    }
   } catch (e) {
     var error = new Error('Error compiling main transformer: ' + e.message, {
       cause: e
     });
     error.sourceCode = form.transformer;
-    console.log('salvo il code', error.sourceCode);
     error.errorType = 'compile';
     onJavascriptError(error);
   }
-  var collected = reduceFields(form.fields, function (field, acc) {
+
+  // collect transformers for each field and put it onChange
+  transformers = reduceFields(form.fields, function (field, acc) {
     if (field.transformer) {
       var transformer;
       try {
@@ -7145,61 +7315,101 @@ var collectTransformers = function collectTransformers(form, onJavascriptError) 
         _error.errorType = 'compile';
         onJavascriptError(_error);
       }
+      // push into the onChange list of txs
       if (transformer != null) {
-        return [].concat(generator_toConsumableArray(acc), [transformer]);
+        if (acc.onChange == null) {
+          acc.onChange = {};
+        }
+        acc.onChange[field.name] = [transformer];
       }
     }
     return acc;
-  }, []);
-  return mainTransformer != null ? [mainTransformer].concat(generator_toConsumableArray(collected || [])) : collected;
+  }, transformers);
+  return transformers;
 };
+var AsyncGeneratorFunction = /*#__PURE__*/generator_wrapAsyncGenerator( /*#__PURE__*/generator_regeneratorRuntime().mark(function _callee() {
+  return generator_regeneratorRuntime().wrap(function _callee$(_context) {
+    while (1) switch (_context.prev = _context.next) {
+      case 0:
+      case "end":
+        return _context.stop();
+    }
+  }, _callee);
+})).constructor;
+
+//const yieldReplacer = /((setValue|hide|show|enable|disable|show|hide|arraySetValue)\(.*?\)[;]{0,1})/;
+
 var makeTransformer = function makeTransformer(str, fieldList) {
   if (isEmpty_default()(str)) {
     return null;
   }
+  var yieldedStr = str.replaceAll(/((setValue|hide|show|enable|disable|show|hide|arraySetValue)\(.*?\)[;]{0,1})/g, '$& yield Promise.resolve(api.fields());\n');
   try {
     var spreadVars = '';
     if (!isEmpty_default()(fieldList)) {
       spreadVars = 'const { ' + fieldList.join(', ') + ' } = values;\n';
     }
-    return new Function('api', "const { setValue, disable, enable, values, show, hide, css, element, style } = api;\n" + spreadVars + str + '\nreturn api.fields();' // leave /n or a comment can void anything
+    var tx = new AsyncGeneratorFunction('api', "const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue } = api;\n" + spreadVars + yieldedStr + '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
     );
+
+    return tx;
   } catch (e) {
     console.error("LetsForm] Invalid JavaScript code for rules", e);
     console.error("LetsForm] Transformer: ", str);
     throw e;
   }
 };
-var GenerateGenerator = function GenerateGenerator(_ref2) {
-  var Forms = _ref2.Forms,
-    Fields = _ref2.Fields;
-  var renderFields = function renderFields(_ref3) {
-    var fields = _ref3.fields,
-      control = _ref3.control,
-      framework = _ref3.framework,
-      _onChange = _ref3.onChange,
-      getValues = _ref3.getValues,
-      Wrapper = _ref3.Wrapper,
-      GroupWrapper = _ref3.GroupWrapper,
-      BottomView = _ref3.BottomView,
-      debug = _ref3.debug,
-      disabled = _ref3.disabled,
-      readOnly = _ref3.readOnly,
-      plaintext = _ref3.plaintext,
-      errors = _ref3.errors,
-      showErrors = _ref3.showErrors,
-      _ref3$level = _ref3.level,
-      level = _ref3$level === void 0 ? 1 : _ref3$level,
-      locale = _ref3.locale,
-      onJavascriptError = _ref3.onJavascriptError;
+
+/**
+ * Merge additional components to the main library
+ * @param {*} main
+ * @param {*} additional
+ * @returns
+ */
+var mergeComponents = function mergeComponents(main, additional) {
+  // if not empty, then merge, overwriting is ok
+  if (!isEmpty_default()(additional) && Object.keys(additional).length !== 0) {
+    Object.keys(additional).forEach(function (componentName) {
+      if (main[componentName] == null) {
+        main[componentName] = additional[componentName];
+      } else {
+        main[componentName] = generator_objectSpread(generator_objectSpread({}, main[componentName]), additional[componentName]);
+      }
+    });
+  }
+  return main;
+};
+var GenerateGenerator = function GenerateGenerator(_ref3) {
+  var Forms = _ref3.Forms,
+    Fields = _ref3.Fields;
+  var renderFields = function renderFields(_ref4) {
+    var fields = _ref4.fields,
+      control = _ref4.control,
+      framework = _ref4.framework,
+      _onChange = _ref4.onChange,
+      getValues = _ref4.getValues,
+      Wrapper = _ref4.Wrapper,
+      GroupWrapper = _ref4.GroupWrapper,
+      BottomView = _ref4.BottomView,
+      debug = _ref4.debug,
+      disabled = _ref4.disabled,
+      readOnly = _ref4.readOnly,
+      plaintext = _ref4.plaintext,
+      errors = _ref4.errors,
+      showErrors = _ref4.showErrors,
+      _ref4$level = _ref4.level,
+      level = _ref4$level === void 0 ? 1 : _ref4$level,
+      locale = _ref4.locale,
+      onJavascriptError = _ref4.onJavascriptError,
+      Components = _ref4.Components;
     var renderedFields = (fields || []).filter(function (field) {
       return Wrapper || field.hidden !== true;
     }).map(function (field, index) {
       var Component;
-      if (Fields[field.component] && Fields[field.component][framework]) {
-        Component = Fields[field.component][framework];
-      } else if (Fields[field.component] && Fields[field.component]['*']) {
-        Component = Fields[field.component]['*'];
+      if (Components[field.component] && Components[field.component][framework]) {
+        Component = Components[field.component][framework];
+      } else if (Components[field.component] && Components[field.component]['*']) {
+        Component = Components[field.component]['*'];
       } else {
         Component = MissingComponent;
       }
@@ -7233,7 +7443,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
           showErrors: showErrors,
           level: level + 1,
           locale: locale,
-          onJavascriptError: onJavascriptError
+          onJavascriptError: onJavascriptError,
+          Components: Components
         }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
           key: "bottom_view_".concat(field.name),
           field: field,
@@ -7270,7 +7481,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               showErrors: showErrors,
               level: level + 1,
               locale: locale,
-              onJavascriptError: onJavascriptError
+              onJavascriptError: onJavascriptError,
+              Components: Components
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               key: "bottom_view_".concat(field.name),
               field: field,
@@ -7293,7 +7505,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               showErrors: showErrors,
               level: level + 1,
               locale: locale,
-              onJavascriptError: onJavascriptError
+              onJavascriptError: onJavascriptError,
+              Components: Components
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               key: "bottom_view_".concat(field.name),
               field: field,
@@ -7332,7 +7545,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               showErrors: showErrors,
               level: level + 1,
               locale: locale,
-              onJavascriptError: onJavascriptError
+              onJavascriptError: onJavascriptError,
+              Components: Components
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               key: "bottom_view_".concat(field.name),
               field: field,
@@ -7355,7 +7569,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               showErrors: showErrors,
               level: level + 1,
               locale: locale,
-              onJavascriptError: onJavascriptError
+              onJavascriptError: onJavascriptError,
+              Components: Components
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               key: "bottom_view_".concat(field.name),
               field: field,
@@ -7378,7 +7593,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
               showErrors: showErrors,
               level: level + 1,
               locale: locale,
-              onJavascriptError: onJavascriptError
+              onJavascriptError: onJavascriptError,
+              Components: Components
             }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
               key: "bottom_view_".concat(field.name),
               field: field,
@@ -7404,8 +7620,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
         name: field.name,
         rules: rules,
         control: control,
-        render: function render(_ref4) {
-          var fieldInfo = _ref4.field;
+        render: function render(_ref5) {
+          var fieldInfo = _ref5.field;
           var component = /*#__PURE__*/external_react_default().createElement(Component
           // not sure about this, not passing the ref
           , generator_extends({
@@ -7428,7 +7644,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
             onChange: function onChange(value, opts) {
               // TODO use callback
               fieldInfo.onChange(value);
-              _onChange(generator_objectSpread(generator_objectSpread({}, getValues()), {}, generator_defineProperty({}, field.name, value)), opts);
+              _onChange(generator_objectSpread(generator_objectSpread({}, getValues()), {}, generator_defineProperty({}, field.name, value)), field.name);
             }
           }));
           return Wrapper ? /*#__PURE__*/external_react_default().createElement(Wrapper, {
@@ -7442,40 +7658,41 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
     });
     return renderedFields;
   };
-  var FormGenerator = /*#__PURE__*/external_react_default().memo(function (_ref5) {
+  var FormGenerator = /*#__PURE__*/external_react_default().memo(function (_ref6) {
     var _form$name;
-    var framework = _ref5.framework,
-      form = _ref5.form,
-      _ref5$onChange = _ref5.onChange,
-      onChange = _ref5$onChange === void 0 ? function () {} : _ref5$onChange,
-      _ref5$onSubmit = _ref5.onSubmit,
-      onSubmit = _ref5$onSubmit === void 0 ? function () {} : _ref5$onSubmit,
-      _ref5$onReset = _ref5.onReset,
-      onReset = _ref5$onReset === void 0 ? function () {} : _ref5$onReset,
-      _ref5$onError = _ref5.onError,
-      onError = _ref5$onError === void 0 ? function () {} : _ref5$onError,
-      _ref5$onJavascriptErr = _ref5.onJavascriptError,
-      onJavascriptError = _ref5$onJavascriptErr === void 0 ? function () {} : _ref5$onJavascriptErr,
-      locale = _ref5.locale,
-      wrapper = _ref5.wrapper,
-      groupWrapper = _ref5.groupWrapper,
-      bottomView = _ref5.bottomView,
-      _ref5$defaultValues = _ref5.defaultValues,
-      defaultValues = _ref5$defaultValues === void 0 ? {} : _ref5$defaultValues,
-      _ref5$onlyFields = _ref5.onlyFields,
-      onlyFields = _ref5$onlyFields === void 0 ? false : _ref5$onlyFields,
-      _ref5$debug = _ref5.debug,
-      debug = _ref5$debug === void 0 ? false : _ref5$debug,
-      _ref5$disabled = _ref5.disabled,
-      disabled = _ref5$disabled === void 0 ? false : _ref5$disabled,
-      _ref5$readOnly = _ref5.readOnly,
-      readOnly = _ref5$readOnly === void 0 ? false : _ref5$readOnly,
-      _ref5$plaintext = _ref5.plaintext,
-      plaintext = _ref5$plaintext === void 0 ? false : _ref5$plaintext,
-      _ref5$hideToolbar = _ref5.hideToolbar,
-      hideToolbar = _ref5$hideToolbar === void 0 ? false : _ref5$hideToolbar,
-      children = _ref5.children,
-      className = _ref5.className;
+    var framework = _ref6.framework,
+      form = _ref6.form,
+      _ref6$onChange = _ref6.onChange,
+      onChange = _ref6$onChange === void 0 ? function () {} : _ref6$onChange,
+      _ref6$onSubmit = _ref6.onSubmit,
+      onSubmit = _ref6$onSubmit === void 0 ? function () {} : _ref6$onSubmit,
+      _ref6$onReset = _ref6.onReset,
+      onReset = _ref6$onReset === void 0 ? function () {} : _ref6$onReset,
+      _ref6$onError = _ref6.onError,
+      onError = _ref6$onError === void 0 ? function () {} : _ref6$onError,
+      _ref6$onJavascriptErr = _ref6.onJavascriptError,
+      onJavascriptError = _ref6$onJavascriptErr === void 0 ? function () {} : _ref6$onJavascriptErr,
+      locale = _ref6.locale,
+      wrapper = _ref6.wrapper,
+      groupWrapper = _ref6.groupWrapper,
+      bottomView = _ref6.bottomView,
+      _ref6$defaultValues = _ref6.defaultValues,
+      defaultValues = _ref6$defaultValues === void 0 ? {} : _ref6$defaultValues,
+      _ref6$onlyFields = _ref6.onlyFields,
+      onlyFields = _ref6$onlyFields === void 0 ? false : _ref6$onlyFields,
+      _ref6$debug = _ref6.debug,
+      debug = _ref6$debug === void 0 ? false : _ref6$debug,
+      _ref6$disabled = _ref6.disabled,
+      disabled = _ref6$disabled === void 0 ? false : _ref6$disabled,
+      _ref6$readOnly = _ref6.readOnly,
+      readOnly = _ref6$readOnly === void 0 ? false : _ref6$readOnly,
+      _ref6$plaintext = _ref6.plaintext,
+      plaintext = _ref6$plaintext === void 0 ? false : _ref6$plaintext,
+      _ref6$hideToolbar = _ref6.hideToolbar,
+      hideToolbar = _ref6$hideToolbar === void 0 ? false : _ref6$hideToolbar,
+      children = _ref6.children,
+      components = _ref6.components,
+      className = _ref6.className;
     if (debug) {
       console.log("[LetsForm] Render form (".concat(form.name, ")"));
     }
@@ -7484,7 +7701,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       _useState2 = _slicedToArray(_useState, 2),
       formName = _useState2[0],
       setFormName = _useState2[1];
-    var _useState3 = (0,external_react_.useState)(collectTransformers(form, onJavascriptError)),
+    var _useState3 = (0,external_react_.useState)(null),
       _useState4 = _slicedToArray(_useState3, 2),
       transformers = _useState4[0],
       setTransformers = _useState4[1];
@@ -7502,19 +7719,153 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       validationErrors = _useState6[0],
       setValidationErrors = _useState6[1];
     // store form fields, apply immediately transformers (collected from all fields)
-    var _useState7 = (0,external_react_.useState)(applyTransformers(formName, framework, form.fields, transformers, defaultValues, onJavascriptError)),
+    var _useState7 = (0,external_react_.useState)(null),
       _useState8 = _slicedToArray(_useState7, 2),
       formFields = _useState8[0],
       setFormFields = _useState8[1];
 
     // update internal state if form changes
     (0,external_react_.useEffect)(function () {
-      var _form$name2;
-      var newTransformers = collectTransformers(form, onJavascriptError);
-      var newFormFields = applyTransformers(formName, framework, form.fields, newTransformers, defaultValues, onJavascriptError);
-      setFormFields(newFormFields);
-      setFormName((_form$name2 = form.name) !== null && _form$name2 !== void 0 ? _form$name2 : uniqueId_default()('form_'));
-      setTransformers(newTransformers);
+      var f = /*#__PURE__*/function () {
+        var _ref7 = _asyncToGenerator( /*#__PURE__*/generator_regeneratorRuntime().mark(function _callee2() {
+          var _form$name2;
+          var newTransformers, newFields, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _iterator, _step, newFormFields, onChangeFields, idx, _iteratorAbruptCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, _newFormFields;
+          return generator_regeneratorRuntime().wrap(function _callee2$(_context2) {
+            while (1) switch (_context2.prev = _context2.next) {
+              case 0:
+                newTransformers = collectTransformers(form, onJavascriptError); // initial fields values
+                newFields = form.fields; // apply onRender transformers
+                if (isEmpty_default()(newTransformers.onRender)) {
+                  _context2.next = 32;
+                  break;
+                }
+                _iteratorAbruptCompletion = false;
+                _didIteratorError = false;
+                _context2.prev = 5;
+                _iterator = generator_asyncIterator(applyTransformers(formName, framework, newFields, newTransformers.onRender, defaultValues, onJavascriptError));
+              case 7:
+                _context2.next = 9;
+                return _iterator.next();
+              case 9:
+                if (!(_iteratorAbruptCompletion = !(_step = _context2.sent).done)) {
+                  _context2.next = 16;
+                  break;
+                }
+                newFormFields = _step.value;
+                newFields = newFormFields;
+                setFormFields(newFormFields);
+              case 13:
+                _iteratorAbruptCompletion = false;
+                _context2.next = 7;
+                break;
+              case 16:
+                _context2.next = 22;
+                break;
+              case 18:
+                _context2.prev = 18;
+                _context2.t0 = _context2["catch"](5);
+                _didIteratorError = true;
+                _iteratorError = _context2.t0;
+              case 22:
+                _context2.prev = 22;
+                _context2.prev = 23;
+                if (!(_iteratorAbruptCompletion && _iterator.return != null)) {
+                  _context2.next = 27;
+                  break;
+                }
+                _context2.next = 27;
+                return _iterator.return();
+              case 27:
+                _context2.prev = 27;
+                if (!_didIteratorError) {
+                  _context2.next = 30;
+                  break;
+                }
+                throw _iteratorError;
+              case 30:
+                return _context2.finish(27);
+              case 31:
+                return _context2.finish(22);
+              case 32:
+                // collect list of fields with an onChange transformer
+                onChangeFields = Object.keys(newTransformers.onChange || {}).filter(function (fieldName) {
+                  return !isEmpty_default()(newTransformers.onChange[fieldName]);
+                }); // execute all onChange transformers at the bootstrap of the form
+                idx = 0;
+              case 34:
+                if (!(idx < onChangeFields.length)) {
+                  _context2.next = 67;
+                  break;
+                }
+                _iteratorAbruptCompletion2 = false;
+                _didIteratorError2 = false;
+                _context2.prev = 37;
+                _iterator2 = generator_asyncIterator(applyTransformers(formName, framework, newFields, newTransformers.onChange[onChangeFields[idx]], defaultValues, onJavascriptError));
+              case 39:
+                _context2.next = 41;
+                return _iterator2.next();
+              case 41:
+                if (!(_iteratorAbruptCompletion2 = !(_step2 = _context2.sent).done)) {
+                  _context2.next = 48;
+                  break;
+                }
+                _newFormFields = _step2.value;
+                newFields = _newFormFields;
+                setFormFields(_newFormFields);
+              case 45:
+                _iteratorAbruptCompletion2 = false;
+                _context2.next = 39;
+                break;
+              case 48:
+                _context2.next = 54;
+                break;
+              case 50:
+                _context2.prev = 50;
+                _context2.t1 = _context2["catch"](37);
+                _didIteratorError2 = true;
+                _iteratorError2 = _context2.t1;
+              case 54:
+                _context2.prev = 54;
+                _context2.prev = 55;
+                if (!(_iteratorAbruptCompletion2 && _iterator2.return != null)) {
+                  _context2.next = 59;
+                  break;
+                }
+                _context2.next = 59;
+                return _iterator2.return();
+              case 59:
+                _context2.prev = 59;
+                if (!_didIteratorError2) {
+                  _context2.next = 62;
+                  break;
+                }
+                throw _iteratorError2;
+              case 62:
+                return _context2.finish(59);
+              case 63:
+                return _context2.finish(54);
+              case 64:
+                idx++;
+                _context2.next = 34;
+                break;
+              case 67:
+                // if transformed fields different than current one, then save
+                if (newFields !== formFields) {
+                  setFormFields(newFields);
+                }
+                setFormName((_form$name2 = form.name) !== null && _form$name2 !== void 0 ? _form$name2 : uniqueId_default()('form_'));
+                setTransformers(newTransformers);
+              case 70:
+              case "end":
+                return _context2.stop();
+            }
+          }, _callee2, null, [[5, 18, 22, 32], [23,, 27, 31], [37, 50, 54, 64], [55,, 59, 63]]);
+        }));
+        return function f() {
+          return _ref7.apply(this, arguments);
+        };
+      }();
+      f();
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [form, framework] // don't put defaultValues here
@@ -7532,13 +7883,77 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       setValidationErrors(null);
       reset(defaultValues);
     }, [defaultValues, reset]);
-    var handleChange = (0,external_react_.useCallback)(function (values) {
-      var newFormFields = applyTransformers(formName, framework, formFields, transformers, values, onJavascriptError);
-      if (newFormFields !== formFields) {
-        setFormFields(newFormFields);
-      }
-      onChange(values);
-    }, [onChange, formFields, formName, transformers, framework, onJavascriptError]);
+    var handleChange = (0,external_react_.useCallback)( /*#__PURE__*/function () {
+      var _ref8 = _asyncToGenerator( /*#__PURE__*/generator_regeneratorRuntime().mark(function _callee3(values, fieldName) {
+        var _iteratorAbruptCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, f;
+        return generator_regeneratorRuntime().wrap(function _callee3$(_context3) {
+          while (1) switch (_context3.prev = _context3.next) {
+            case 0:
+              if (!(transformers.onChange != null && !isEmpty_default()(transformers.onChange[fieldName]))) {
+                _context3.next = 29;
+                break;
+              }
+              // execute the async generator transformer
+              _iteratorAbruptCompletion3 = false;
+              _didIteratorError3 = false;
+              _context3.prev = 3;
+              _iterator3 = generator_asyncIterator(applyTransformers(formName, framework, formFields, transformers.onChange[fieldName], values, onJavascriptError));
+            case 5:
+              _context3.next = 7;
+              return _iterator3.next();
+            case 7:
+              if (!(_iteratorAbruptCompletion3 = !(_step3 = _context3.sent).done)) {
+                _context3.next = 13;
+                break;
+              }
+              f = _step3.value;
+              if (f !== formFields) {
+                setFormFields(f);
+              }
+            case 10:
+              _iteratorAbruptCompletion3 = false;
+              _context3.next = 5;
+              break;
+            case 13:
+              _context3.next = 19;
+              break;
+            case 15:
+              _context3.prev = 15;
+              _context3.t0 = _context3["catch"](3);
+              _didIteratorError3 = true;
+              _iteratorError3 = _context3.t0;
+            case 19:
+              _context3.prev = 19;
+              _context3.prev = 20;
+              if (!(_iteratorAbruptCompletion3 && _iterator3.return != null)) {
+                _context3.next = 24;
+                break;
+              }
+              _context3.next = 24;
+              return _iterator3.return();
+            case 24:
+              _context3.prev = 24;
+              if (!_didIteratorError3) {
+                _context3.next = 27;
+                break;
+              }
+              throw _iteratorError3;
+            case 27:
+              return _context3.finish(24);
+            case 28:
+              return _context3.finish(19);
+            case 29:
+              onChange(values);
+            case 30:
+            case "end":
+              return _context3.stop();
+          }
+        }, _callee3, null, [[3, 15, 19, 29], [20,, 24, 28]]);
+      }));
+      return function (_x2, _x3) {
+        return _ref8.apply(this, arguments);
+      };
+    }(), [onChange, formFields, formName, transformers, framework, onJavascriptError]);
     if (debug) {
       console.log('[LetsForm] Validation', errors);
     }
@@ -7567,8 +7982,12 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       onReset: handleReset,
       disabled: disabled,
       readOnly: readOnly,
-      plaintext: plaintext
-    }, omit_default()(form, 'id', 'fields', 'version')), renderFields({
+      plaintext: plaintext,
+      locale: locale
+    }, omit_default()(form, 'id', 'fields', 'version'), {
+      labelSubmit: i18n_i18n(form.labelSubmit, locale) || 'Submit',
+      labelCancel: i18n_i18n(form.labelCancel, locale) || 'Cancel'
+    }), renderFields({
       Wrapper: Wrapper,
       GroupWrapper: GroupWrapper,
       BottomView: BottomView,
@@ -7585,7 +8004,8 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       plaintext: plaintext || form.plaintext,
       showErrors: showErrors,
       locale: locale,
-      onJavascriptError: onJavascriptError
+      onJavascriptError: onJavascriptError,
+      Components: mergeComponents(Fields, components)
     }), children, validationErrors && (showErrors === 'groupedBottom' || isEmpty_default()(showErrors)) && /*#__PURE__*/external_react_default().createElement(ValidationErrors, {
       className: "bottom",
       locale: locale,
@@ -7651,6 +8071,11 @@ var FormRsuite5 = function FormRsuite5(_ref) {
     fluid = _ref$fluid === void 0 ? false : _ref$fluid,
     _ref$disabled = _ref.disabled,
     disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    buttonsAlign = _ref.buttonsAlign,
+    _ref$labelSubmit = _ref.labelSubmit,
+    labelSubmit = _ref$labelSubmit === void 0 ? 'Submit' : _ref$labelSubmit,
+    _ref$labelCancel = _ref.labelCancel,
+    labelCancel = _ref$labelCancel === void 0 ? 'Cancel' : _ref$labelCancel,
     _ref$readOnly = _ref.readOnly,
     readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
     _ref$onlyFields = _ref.onlyFields,
@@ -7665,12 +8090,13 @@ var FormRsuite5 = function FormRsuite5(_ref) {
     onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset;
   if (onlyFields) {
     var _classNames;
+    // TODO check this
     return /*#__PURE__*/external_react_default().createElement("div", {
       className: classnames_default()('rs-form', (_classNames = {}, form_defineProperty(_classNames, "rs-form-".concat(layout), true), form_defineProperty(_classNames, 'rs-form-fluid', fluid), _classNames))
     }, children);
   }
   return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form, {
-    className: "lf-form lf-form-react-rsuite5",
+    className: classnames_default()('lf-form lf-form-react-rsuite5', form_defineProperty({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
     "data-lf-form-name": name,
     layout: layout,
     fluid: fluid,
@@ -7682,9 +8108,9 @@ var FormRsuite5 = function FormRsuite5(_ref) {
   }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Button, {
     appearance: "primary",
     onClick: onSubmit
-  }, "Submit"), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Button, {
+  }, labelSubmit), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Button, {
     onClick: onReset
-  }, "Cancel")));
+  }, labelCancel)));
 };
 
 // EXTERNAL MODULE: ./node_modules/micro-down/dist/index.js
@@ -8106,7 +8532,228 @@ var ReactView = function ReactView(_ref) {
   }, rest)));
 };
 
+;// CONCATENATED MODULE: ./common/array/helpers/is-empty-item.js
+
+var isEmptyItem = function isEmptyItem(obj) {
+  return Object.keys(obj).filter(function (key) {
+    return key !== 'id';
+  }).every(function (key) {
+    return isEmpty_default()(obj[key]);
+  });
+};
+;// CONCATENATED MODULE: ./common/array/views/array-item.js
+
+// TODO togliere
+
+
+var ArrayItem = function ArrayItem(_ref) {
+  var name = _ref.name,
+    children = _ref.children,
+    item = _ref.item,
+    disabled = _ref.disabled,
+    readOnly = _ref.readOnly,
+    _ref$onAdd = _ref.onAdd,
+    onAdd = _ref$onAdd === void 0 ? function () {} : _ref$onAdd,
+    _ref$onRemove = _ref.onRemove,
+    onRemove = _ref$onRemove === void 0 ? function () {} : _ref$onRemove,
+    _ref$disableAdd = _ref.disableAdd,
+    disableAdd = _ref$disableAdd === void 0 ? false : _ref$disableAdd,
+    _ref$showAdd = _ref.showAdd,
+    showAdd = _ref$showAdd === void 0 ? false : _ref$showAdd,
+    _ref$leftMargin = _ref.leftMargin,
+    leftMargin = _ref$leftMargin === void 0 ? 10 : _ref$leftMargin;
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-control-common-array-item"
+  }, /*#__PURE__*/external_react_default().createElement("div", {
+    className: "inner-form"
+  }, children), /*#__PURE__*/external_react_default().createElement("div", {
+    className: "buttons"
+  }, showAdd && /*#__PURE__*/external_react_default().createElement(external_rsuite_.IconButton, {
+    disabled: disableAdd || disabled || readOnly,
+    className: "arrow",
+    appearance: "link",
+    icon: /*#__PURE__*/external_react_default().createElement(PlusCircle, {
+      height: 16,
+      width: 16,
+      color: "#3498ff"
+    }),
+    size: "sm",
+    onClick: onAdd
+  }), !showAdd && /*#__PURE__*/external_react_default().createElement(external_rsuite_.IconButton, {
+    className: "arrow",
+    disabled: disabled || readOnly,
+    appearance: "link",
+    icon: /*#__PURE__*/external_react_default().createElement(MinusCircle, {
+      height: 16,
+      width: 16,
+      color: "#3498ff"
+    }),
+    size: "sm",
+    onClick: function onClick(event) {
+      onRemove(item);
+    }
+  })));
+};
+
+;// CONCATENATED MODULE: ./hooks/index.js
+
+
+var hooks_useFormContext = function useFormContext() {
+  var context = (0,external_react_.useContext)(form_context);
+
+  // put here some defaults
+
+  return context;
+};
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/array/list-array.scss
+var list_array = __webpack_require__(3010);
+;// CONCATENATED MODULE: ./common/array/list-array.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var list_array_options = {};
+
+list_array_options.styleTagTransform = (styleTagTransform_default());
+list_array_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      list_array_options.insert = insertBySelector_default().bind(null, "head");
+    
+list_array_options.domAPI = (styleDomAPI_default());
+list_array_options.insertStyleElement = (insertStyleElement_default());
+
+var list_array_update = injectStylesIntoStyleTag_default()(list_array/* default */.Z, list_array_options);
+
+
+
+
+       /* harmony default export */ const array_list_array = (list_array/* default */.Z && list_array/* default.locals */.Z.locals ? list_array/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./common/array/index.js
+
+
+
+
+
+function array_toConsumableArray(arr) { return array_arrayWithoutHoles(arr) || array_iterableToArray(arr) || array_unsupportedIterableToArray(arr) || array_nonIterableSpread(); }
+function array_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function array_iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function array_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return array_arrayLikeToArray(arr); }
+function array_slicedToArray(arr, i) { return array_arrayWithHoles(arr) || array_iterableToArrayLimit(arr, i) || array_unsupportedIterableToArray(arr, i) || array_nonIterableRest(); }
+function array_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function array_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return array_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return array_arrayLikeToArray(o, minLen); }
+function array_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function array_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function array_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var ListArray = function ListArray(_ref) {
+  var value = _ref.value,
+    _ref$onChange = _ref.onChange,
+    _onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
+    _ref$onBlur = _ref.onBlur,
+    onBlur = _ref$onBlur === void 0 ? function () {} : _ref$onBlur,
+    _ref$disabled = _ref.disabled,
+    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    _ref$readOnly = _ref.readOnly,
+    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+    fields = _ref.fields,
+    _ref$layout = _ref.layout,
+    layout = _ref$layout === void 0 ? 'vertical' : _ref$layout,
+    maxHeight = _ref.maxHeight,
+    _ref$leftMargin = _ref.leftMargin,
+    leftMargin = _ref$leftMargin === void 0 ? 0 : _ref$leftMargin;
+  var _useState = (0,external_react_.useState)(isArray_default()(value) && !isEmpty_default()(value) ? fillIds(value) : [{
+      id: uniqueId_default()()
+    }]),
+    _useState2 = array_slicedToArray(_useState, 2),
+    items = _useState2[0],
+    setItems = _useState2[1];
+  var _useFormContext = hooks_useFormContext(),
+    locales = _useFormContext.locales;
+  var form = {
+    layout: layout,
+    fluid: true,
+    locales: locales,
+    // copy the locales from the main form
+    fields: fields
+  };
+  var style = {};
+  if (maxHeight) {
+    //style.maxHeigth = _.isNumber(maxHeigth) ? `${maxHeigth}px` : maxHeigth;
+    style = {
+      maxHeight: "".concat(maxHeight, "px"),
+      overflowY: 'scroll'
+    };
+  }
+  if (leftMargin != null) {
+    style.marginLeft = isNumber_default()(leftMargin) ? "".concat(leftMargin, "px") : leftMargin;
+  }
+  var handleAdd = (0,external_react_.useCallback)(function () {
+    setItems(function (items) {
+      return [].concat(array_toConsumableArray(items), [{
+        id: uniqueId_default()()
+      }]);
+    });
+  }, []);
+  var handleRemove = (0,external_react_.useCallback)(function (item) {
+    var newItems = items.filter(function (i) {
+      return i.id !== item.id;
+    });
+    setItems(newItems);
+    _onChange(newItems.map(function (i) {
+      return omit_default()(i, 'id');
+    }));
+  }, [items, _onChange]);
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-control-common-array",
+    style: style
+  }, (isArray_default()(items) ? items : []).map(function (item, idx) {
+    var canAdd = idx === items.length - 1 && !isEmptyItem(item);
+    var showAdd = idx === items.length - 1 || items.length === 1;
+    return /*#__PURE__*/external_react_default().createElement(ArrayItem, {
+      key: item.id,
+      item: item,
+      disabled: disabled,
+      readOnly: readOnly,
+      disableAdd: !canAdd,
+      showAdd: showAdd,
+      onAdd: handleAdd,
+      onRemove: handleRemove
+    }, /*#__PURE__*/external_react_default().createElement(react_rsuite5, {
+      form: form,
+      disabled: disabled,
+      readOnly: readOnly,
+      framework: "react-rsuite5",
+      defaultValues: item,
+      onlyFields: true,
+      onChange: function onChange(value) {
+        console.log('changed item', value);
+        var newItems = items.map(function (i) {
+          return i.id === value.id ? value : i;
+        });
+        setItems(newItems);
+        _onChange(newItems.map(function (i) {
+          return omit_default()(i, 'id');
+        }));
+      }
+    }));
+  }));
+};
+
 ;// CONCATENATED MODULE: ./common/index.js
+
 
 
 
@@ -8290,10 +8937,41 @@ var ToggleInput = I18N(function (_ref) {
   }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 }, ['label', 'hint', 'placeholder']);
 
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/select/select.scss
+var select_select = __webpack_require__(8963);
+;// CONCATENATED MODULE: ./react-rsuite5/select/select.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var select_options = {};
+
+select_options.styleTagTransform = (styleTagTransform_default());
+select_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      select_options.insert = insertBySelector_default().bind(null, "head");
+    
+select_options.domAPI = (styleDomAPI_default());
+select_options.insertStyleElement = (insertStyleElement_default());
+
+var select_update = injectStylesIntoStyleTag_default()(select_select/* default */.Z, select_options);
+
+
+
+
+       /* harmony default export */ const react_rsuite5_select_select = (select_select/* default */.Z && select_select/* default.locals */.Z.locals ? select_select/* default.locals */.Z.locals : undefined);
+
 ;// CONCATENATED MODULE: ./react-rsuite5/select/index.js
 function select_typeof(obj) { "@babel/helpers - typeof"; return select_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, select_typeof(obj); }
 
-var select_excluded = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue"];
+var select_excluded = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions"];
 function select_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function select_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? select_ownKeys(Object(source), !0).forEach(function (key) { select_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : select_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 function select_defineProperty(obj, key, value) { key = select_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -8306,6 +8984,23 @@ function select_objectWithoutPropertiesLoose(source, excluded) { if (source == n
 
 
 
+
+var menuItem = function menuItem(value, item) {
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-control-select-option-rsuite5"
+  }, item.image && /*#__PURE__*/external_react_default().createElement("img", {
+    src: item.image,
+    alt: item.label
+  }), /*#__PURE__*/external_react_default().createElement("span", null, item.label));
+};
+var manuValue = function manuValue(value, item) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "lf-control-select-option-rsuite5"
+  }, item.image && /*#__PURE__*/React.createElement("img", {
+    src: item.image,
+    alt: item.label
+  }), /*#__PURE__*/React.createElement("span", null, item.label));
+};
 var Select = I18N(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
@@ -8335,6 +9030,7 @@ var Select = I18N(function (_ref) {
     appearance = _ref.appearance,
     filterKey = _ref.filterKey,
     filterValue = _ref.filterValue,
+    showImageOptions = _ref.showImageOptions,
     rest = select_objectWithoutProperties(_ref, select_excluded);
   return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
     controlId: name
@@ -8353,6 +9049,8 @@ var Select = I18N(function (_ref) {
     disabled: disabled,
     size: size,
     placeholder: placeholder,
+    renderMenuItem: showImageOptions ? menuItem : undefined,
+    renderValue: showImageOptions ? menuItem : undefined,
     data: filterOptions(options, filterValue, filterKey) || [],
     block: block,
     searchable: searchable,
@@ -8370,220 +9068,24 @@ var Select = I18N(function (_ref) {
 
 ;// CONCATENATED MODULE: ./react-rsuite5/group/index.js
 
-;// CONCATENATED MODULE: ./hooks/index.js
-
-
-var hooks_useFormContext = function useFormContext() {
-  var context = (0,external_react_.useContext)(form_context);
-
-  // put here some defaults
-
-  return context;
-};
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/array/list-array.scss
-var list_array = __webpack_require__(858);
-;// CONCATENATED MODULE: ./react-rsuite5/array/list-array.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var list_array_options = {};
-
-list_array_options.styleTagTransform = (styleTagTransform_default());
-list_array_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      list_array_options.insert = insertBySelector_default().bind(null, "head");
-    
-list_array_options.domAPI = (styleDomAPI_default());
-list_array_options.insertStyleElement = (insertStyleElement_default());
-
-var list_array_update = injectStylesIntoStyleTag_default()(list_array/* default */.Z, list_array_options);
-
-
-
-
-       /* harmony default export */ const array_list_array = (list_array/* default */.Z && list_array/* default.locals */.Z.locals ? list_array/* default.locals */.Z.locals : undefined);
-
 ;// CONCATENATED MODULE: ./react-rsuite5/array/index.js
 
 
 
 
-
-function array_toConsumableArray(arr) { return array_arrayWithoutHoles(arr) || array_iterableToArray(arr) || array_unsupportedIterableToArray(arr) || array_nonIterableSpread(); }
-function array_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function array_iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function array_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return array_arrayLikeToArray(arr); }
-function array_slicedToArray(arr, i) { return array_arrayWithHoles(arr) || array_iterableToArrayLimit(arr, i) || array_unsupportedIterableToArray(arr, i) || array_nonIterableRest(); }
-function array_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function array_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return array_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return array_arrayLikeToArray(o, minLen); }
-function array_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function array_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function array_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-
-var ArrayItem = function ArrayItem(_ref) {
-  var name = _ref.name,
-    children = _ref.children,
-    item = _ref.item,
-    disabled = _ref.disabled,
-    _ref$onAdd = _ref.onAdd,
-    onAdd = _ref$onAdd === void 0 ? function () {} : _ref$onAdd,
-    _ref$onRemove = _ref.onRemove,
-    onRemove = _ref$onRemove === void 0 ? function () {} : _ref$onRemove,
-    _ref$disableAdd = _ref.disableAdd,
-    disableAdd = _ref$disableAdd === void 0 ? false : _ref$disableAdd,
-    _ref$showAdd = _ref.showAdd,
-    showAdd = _ref$showAdd === void 0 ? false : _ref$showAdd,
-    _ref$leftMargin = _ref.leftMargin,
-    leftMargin = _ref$leftMargin === void 0 ? 10 : _ref$leftMargin;
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    "data-lf-field-name": name,
-    className: "gforms-array-item"
-  }, /*#__PURE__*/external_react_default().createElement("div", {
-    className: "inner-form"
-  }, children), /*#__PURE__*/external_react_default().createElement("div", {
-    className: "buttons"
-  }, showAdd && /*#__PURE__*/external_react_default().createElement(external_rsuite_.IconButton, {
-    disabled: disableAdd || disabled,
-    className: "arrow",
-    appearance: "link",
-    icon: /*#__PURE__*/external_react_default().createElement(PlusCircle, {
-      height: 16,
-      width: 16,
-      color: "#3498ff"
-    }),
-    size: "sm",
-    onClick: function onClick(event) {
-      onAdd();
-    }
-  }), !showAdd && /*#__PURE__*/external_react_default().createElement(external_rsuite_.IconButton, {
-    className: "arrow",
-    disabled: disabled,
-    appearance: "link",
-    icon: /*#__PURE__*/external_react_default().createElement(MinusCircle, {
-      height: 16,
-      width: 16,
-      color: "#3498ff"
-    }),
-    size: "sm",
-    onClick: function onClick(event) {
-      onRemove();
-    }
-  })));
-};
-var isEmptyItem = function isEmptyItem(obj) {
-  return Object.keys(obj).filter(function (key) {
-    return key !== 'id';
-  }).every(function (key) {
-    return isEmpty_default()(obj[key]);
-  });
-};
-var ListArray = function ListArray(_ref2) {
-  var value = _ref2.value,
-    _ref2$onChange = _ref2.onChange,
-    _onChange = _ref2$onChange === void 0 ? function () {} : _ref2$onChange,
-    _ref2$onBlur = _ref2.onBlur,
-    onBlur = _ref2$onBlur === void 0 ? function () {} : _ref2$onBlur,
-    _ref2$disabled = _ref2.disabled,
-    disabled = _ref2$disabled === void 0 ? false : _ref2$disabled,
-    fields = _ref2.fields,
-    hint = _ref2.hint,
-    required = _ref2.required,
-    tooltip = _ref2.tooltip,
-    name = _ref2.name,
-    label = _ref2.label,
-    _ref2$maxHeigth = _ref2.maxHeigth,
-    maxHeigth = _ref2$maxHeigth === void 0 ? 200 : _ref2$maxHeigth,
-    _ref2$leftMargin = _ref2.leftMargin,
-    leftMargin = _ref2$leftMargin === void 0 ? 0 : _ref2$leftMargin;
-  var _useState = (0,external_react_.useState)(isArray_default()(value) && !isEmpty_default()(value) ? fillIds(value) : [{
-      id: uniqueId_default()()
-    }]),
-    _useState2 = array_slicedToArray(_useState, 2),
-    items = _useState2[0],
-    setItems = _useState2[1];
-  var _useFormContext = hooks_useFormContext(),
-    locales = _useFormContext.locales;
-
-  // TODO aggiungere params per layouat dentro
-  var form = {
-    layout: 'inline',
-    locales: locales,
-    // copy the locales from the main form
-    fields: fields
-  };
-  var style = {};
-  if (maxHeigth) {
-    //style.maxHeigth = _.isNumber(maxHeigth) ? `${maxHeigth}px` : maxHeigth;
-    style = {
-      maxHeigth: '200px',
-      // TODO chissa perche' non lo prende
-      overflowY: 'scroll'
-    };
-  }
-  if (leftMargin != null) {
-    style.marginLeft = isNumber_default()(leftMargin) ? "".concat(leftMargin, "px") : leftMargin;
-  }
+var ListArrayRSuite5 = function ListArrayRSuite5(props) {
+  // TODO fix spread here
+  var hint = props.hint,
+    required = props.required,
+    tooltip = props.tooltip,
+    name = props.name,
+    label = props.label;
   return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    controlId: name,
-    className: "gforms-list-array"
+    "data-lf-field-name": name,
+    className: "lf-control-array"
   }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
     tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement("div", {
-    style: style
-  }, (isArray_default()(items) ? items : []).map(function (item, idx) {
-    var canAdd = idx === items.length - 1 && !isEmptyItem(item);
-    var showAdd = idx === items.length - 1 || items.length === 1;
-    return /*#__PURE__*/external_react_default().createElement(ArrayItem, {
-      key: item.id,
-      disabled: disabled,
-      disableAdd: !canAdd,
-      showAdd: showAdd,
-      onAdd: function onAdd() {
-        setItems([].concat(array_toConsumableArray(items), [{
-          id: uniqueId_default()()
-        }]));
-      },
-      onRemove: function onRemove() {
-        var newItems = items.filter(function (i) {
-          return i.id !== item.id;
-        });
-        setItems(newItems);
-        _onChange(newItems.map(function (i) {
-          return omit_default()(i, 'id');
-        }));
-      }
-    }, /*#__PURE__*/external_react_default().createElement(react_rsuite5, {
-      form: form,
-      disabled: disabled,
-      framework: "react-rsuite5",
-      defaultValues: item,
-      onlyFields: true,
-      onChange: function onChange(value) {
-        console.log('changed item', value);
-        var newItems = items.map(function (i) {
-          return i.id === value.id ? value : i;
-        });
-        setItems(newItems);
-        _onChange(newItems.map(function (i) {
-          return omit_default()(i, 'id');
-        }));
-      }
-    }));
-  })));
+  }, hint), required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(ListArray, props), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 };
 
 ;// CONCATENATED MODULE: ./react-rsuite5/two-columns/index.js
@@ -8710,6 +9212,7 @@ var InputNumberRSuite5 = I18N(function (_ref) {
   }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
     tooltip: true
   }, hint), required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
+    name: name,
     accepter: external_rsuite_.InputNumber,
     value: currentValue,
     onChange: handleChange,
@@ -9888,89 +10391,6 @@ var InputTextI18N = function InputTextI18N(props) {
   }))), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 };
 
-;// CONCATENATED MODULE: ./react-rsuite5/select-states/index.js
-function select_states_typeof(obj) { "@babel/helpers - typeof"; return select_states_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, select_states_typeof(obj); }
-
-
-var select_states_excluded = ["country", "placeholder"];
-function select_states_extends() { select_states_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return select_states_extends.apply(this, arguments); }
-function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == select_states_typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator.return && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, catch: function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-function select_states_slicedToArray(arr, i) { return select_states_arrayWithHoles(arr) || select_states_iterableToArrayLimit(arr, i) || select_states_unsupportedIterableToArray(arr, i) || select_states_nonIterableRest(); }
-function select_states_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function select_states_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return select_states_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return select_states_arrayLikeToArray(o, minLen); }
-function select_states_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function select_states_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function select_states_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-function select_states_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = select_states_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function select_states_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-var LETS_FORM_COUNTRIES = 'https://unpkg.com/lets-form-countries@1.0.1';
-var SelectStates = function SelectStates(_ref) {
-  var country = _ref.country,
-    placeholder = _ref.placeholder,
-    props = select_states_objectWithoutProperties(_ref, select_states_excluded);
-  var _useState = (0,external_react_.useState)(null),
-    _useState2 = select_states_slicedToArray(_useState, 2),
-    options = _useState2[0],
-    setOptions = _useState2[1];
-  var _useState3 = (0,external_react_.useState)(false),
-    _useState4 = select_states_slicedToArray(_useState3, 2),
-    disabled = _useState4[0],
-    setDisabled = _useState4[1];
-  (0,external_react_.useEffect)(function () {
-    var fetchData = /*#__PURE__*/function () {
-      var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(c) {
-        var res, _country;
-        return _regeneratorRuntime().wrap(function _callee$(_context) {
-          while (1) switch (_context.prev = _context.next) {
-            case 0:
-              _context.prev = 0;
-              _context.next = 3;
-              return fetch("".concat(LETS_FORM_COUNTRIES, "/").concat(c.toUpperCase(), ".json"));
-            case 3:
-              res = _context.sent;
-              _context.next = 6;
-              return res.json();
-            case 6:
-              _country = _context.sent;
-              setOptions(_country.provinces.map(function (province) {
-                return {
-                  value: province,
-                  label: province
-                };
-              }));
-              setDisabled(false);
-              _context.next = 14;
-              break;
-            case 11:
-              _context.prev = 11;
-              _context.t0 = _context["catch"](0);
-              console.error("[LetsForm] Error fetching states for country ".concat(c));
-            case 14:
-            case "end":
-              return _context.stop();
-          }
-        }, _callee, null, [[0, 11]]);
-      }));
-      return function fetchData(_x2) {
-        return _ref2.apply(this, arguments);
-      };
-    }();
-    if (isString_default()(country) && !isEmpty_default()(country)) {
-      setDisabled(true);
-      fetchData(country);
-    }
-  }, [country]);
-  return /*#__PURE__*/external_react_default().createElement(Select, select_states_extends({}, props, {
-    options: options !== null && options !== void 0 ? options : [],
-    placeholder: disabled ? 'Loading...' : placeholder,
-    disabled: disabled
-  }));
-};
-
 ;// CONCATENATED MODULE: ./react-rsuite5/placeholder-image/index.js
 
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/button/button.scss
@@ -10108,7 +10528,6 @@ function react_rsuite5_objectWithoutPropertiesLoose(source, excluded) { if (sour
 
 
 
-
 var Fields = {
   'text-input': {
     'react-rsuite5': TextInput
@@ -10123,7 +10542,7 @@ var Fields = {
     'react-rsuite5': Group
   },
   'array': {
-    'react-rsuite5': ListArray
+    'react-rsuite5': ListArrayRSuite5
   },
   'two-columns': {
     'react-rsuite5': TwoColumns
@@ -10172,9 +10591,6 @@ var Fields = {
   },
   'input-text-i18n': {
     'react-rsuite5': InputTextI18N
-  },
-  'select-states': {
-    'react-rsuite5': SelectStates
   },
   'placeholder-image': {
     'react-rsuite5': PlaceholderImage

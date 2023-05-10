@@ -1,8 +1,14 @@
 import React from 'react';
-
 import { Form, Space, Button } from 'antd';
+import classNames from 'classnames';
 
 import './index.scss';
+
+const ANTD_ALIGN_MAPPING = {
+  left: 'start',
+  center: 'center',
+  right: 'end'
+};
 
 const buildColObject = (span, offset) => {
   if (span || offset) {
@@ -18,10 +24,9 @@ const buildColObject = (span, offset) => {
   return undefined;
 };
 
-
 const FormAntD = ({
   name,
-  values,
+  buttonsAlign,
   onReset = () => {},
   onSubmit = () => {},
   labelWrap,
@@ -30,6 +35,8 @@ const FormAntD = ({
   layout,
   disabled,
   size,
+  labelSubmit = 'Submit',
+  labelCancel = 'Cancel',
   readOnly,
   defaultValues,
   labelColSpan,
@@ -40,7 +47,9 @@ const FormAntD = ({
 }) => {
   return (
     <Form
-      className="lf-form lf-form-react-antd"
+      className={classNames('lf-form lf-form-react-antd', {
+        [buttonsAlign ? `lf-form-buttons-align-${buttonsAlign}` : undefined]: true
+      })}
       data-lf-form-name={name}
       layout={layout}
       labelAlign={labelAlign}
@@ -60,11 +69,10 @@ const FormAntD = ({
       autoComplete="off"
     >
       {children}
-      <div className="lf-buttons">
-        <Space wrap>
-          <Button type="primary" onClick={onSubmit}>Submit</Button>
-          <Button onClick={onReset}>Cancle</Button>
-        </Space>
+      <div className="lf-toolbar">
+                  <Button type="primary" onClick={onSubmit}>{labelSubmit}</Button>
+          <Button onClick={onReset}>{labelCancel}</Button>
+
       </div>
     </Form>
   )

@@ -316,6 +316,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 .lf-form-react {
   .lf-toolbar {
+    display: flex;
     margin-top: 15px;
     button:not(:first-child) {
       margin-left: 10px;

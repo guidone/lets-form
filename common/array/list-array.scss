@@ -1,0 +1,44 @@
+.lf-control-common-array {
+
+  .lf-control-common-array-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    margin-top: 5px;
+    position: relative;
+    border-left: 5px solid #dddddd;
+    padding-left: 10px;
+
+    .rs-form-group {
+      margin-bottom: 5px !important;
+    }
+
+    > .inner-form {
+      order: 0;
+      flex: 1 0 auto;
+      align-self: auto;
+      --lf-field-margin: 0px;
+
+      .rs-form-inline {
+        // remove the 300px default size for inline in array, too big
+        .rs-input, .rs-input-number {
+          //width: auto;
+        }
+      }
+    }
+
+    > .buttons {
+      flex: 0 0 auto;
+      align-self: flex-start;
+
+    }
+  }
+
+  .lf-control-common-array-item:not(:first-child) {
+    border-top: 1px solid #eeeeee;
+    padding-top: 10px;
+  }
+}

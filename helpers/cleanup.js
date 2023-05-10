@@ -19,7 +19,12 @@ const removeEmptyKeys = obj => {
 
 const removeUnusedLocalesFromI18n = (obj, locales) => {
   const keysToRemove = Object.keys(obj).filter(key => !locales.includes(key));
-  return !_.isEmpty(keysToRemove) ? _.omit(obj, keysToRemove) : obj;
+  const cleaned = !_.isEmpty(keysToRemove) ? _.omit(obj, keysToRemove) : obj;
+
+  if (Object.keys(cleaned).length !== 0) {
+    return cleaned;
+  }
+  return null;
 };
 
 const removeUnusedLocalesFromObj = (obj, locales) => {
@@ -44,8 +49,18 @@ const removeUnusedLocalesFromObj = (obj, locales) => {
  * @returns
  */
 const cleanUp = json => {
-  const emptyKeys = _.keys(json).filter(key => _.isEmpty(json[key]) && !(_.isBoolean(json[key]) || _.isNumber(json[key])));
-  const cleanedUp = _.omit(json, emptyKeys);
+  const cloned = { ...json };
+
+  // remove unused locales
+  if (cloned.labelSubmit && isI18n(cloned.labelSubmit)) {
+    cloned.labelSubmit = removeUnusedLocalesFromI18n(cloned.labelSubmit, json.locales);
+  }
+  if (cloned.labelCancel && isI18n(cloned.labelCancel)) {
+    cloned.labelCancel = removeUnusedLocalesFromI18n(cloned.labelCancel, json.locales);
+  }
+
+  const emptyKeys = _.keys(cloned).filter(key => _.isEmpty(cloned[key]) && !(_.isBoolean(cloned[key]) || _.isNumber(cloned[key])));
+  const cleanedUp = _.omit(cloned, emptyKeys);
 
   return {
     ...cleanedUp,

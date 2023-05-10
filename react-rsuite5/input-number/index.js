@@ -87,6 +87,7 @@ const InputNumberRSuite5 = I18N(
           {required && <RequiredIcon />}
         </Form.ControlLabel>}
         <Form.Control
+          name={name}
           accepter={InputNumber}
           value={currentValue}
           onChange={handleChange}

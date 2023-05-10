@@ -195,32 +195,79 @@ const ApiFactory = function(formName, framework, formFields, currenValues) {
         }
       );
     },
+
+    /**
+     * Change field property inside and array
+     * @param {*} arrayName
+     * @param {*} arrayFieldName
+     * @param {*} key
+     * @param {*} value
+     * @returns
+     */
+    arraySetValue: (arrayName, arrayFieldName, key, value) => {
+      if (!fieldExists(arrayName)) {
+        return;
+      }
+      fields = mapFields(
+        fields,
+        arrayField => {
+          if (arrayField.component === 'array' && arrayField.name === arrayName) {
+            const newFields = mapFields(
+              arrayField.fields,
+              field => {
+                if (field.name === arrayFieldName) {
+                  return {
+                    ...field,
+                    [key]: value
+                  };
+                }
+                return field;
+              }
+            );
+            return {
+              ...arrayField,
+              fields: newFields
+            };
+          }
+          return arrayField;
+        }
+      );
+    },
+
     values: Object.freeze({ ...currenValues })
   };
 };
 
-const applyTransformers = (formName, framework, fields, transformers, values, onJavascriptError) => {
-  if (_.isArray(transformers) && !_.isEmpty(transformers) && _.isFunction(transformers[0])) {
+const applyTransformers = async function*(formName, framework, fields, transformers, values, onJavascriptError) {
+
+  if (_.isArray(transformers) && !_.isEmpty(transformers)) {
 
     let newFields = fields;
     // apply all transformers
-    transformers
-      .filter(transformer => _.isFunction(transformer))
-      .forEach(transformer => {
-        const api = new ApiFactory(formName, framework, newFields, values);
-        try {
-          newFields = transformer(api);
-        } catch(e) {
-          console.error('[LetsForm] Error on transformer: ', e);
-          const error = new Error('Error executing transformer: ' + e.message, { cause: e });
-          error.errorType = 'runtime';
-          onJavascriptError(error);
-        }
-      });
+    const txs = transformers/*.filter(transformer => _.isFunction(transformer))*/
+    let idx;
+    for(idx = 0; idx < txs.length; idx++) {
 
-    return newFields;
+      const api = new ApiFactory(formName, framework, newFields, values);
+      try {
+        //newFields = await txs[idx](api);
+        //console.log('sto per chiamare', txs[idx])
+        for await (const f of txs[idx](api)) {
+          newFields = f;
+          yield f;
+        }
+      } catch(e) {
+        console.error('[LetsForm] Error on transformer: ', e);
+        const error = new Error('Error executing transformer: ' + e.message, { cause: e });
+        error.errorType = 'runtime';
+        onJavascriptError(error);
+      }
+    }
+
+    yield newFields;
+  } else {
+    yield fields;
   }
-  return fields;
 };
 
 export { applyTransformers };

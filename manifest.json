@@ -558,6 +558,11 @@
         "type": "array"
       },
       {
+        "name": "showImageOptions",
+        "type": "boolean",
+        "description": "Show image field for Select options to be displayed in the drop-down"
+      },
+      {
         "name": "filterKey",
         "type": "string"
       },
@@ -1003,7 +1008,70 @@
     "label": "List Array",
     "category": "advanced",
     "name": "array",
-    "common": [],
+    "defaultValues": {
+      "react-rsuite5": {
+        "layout": "vertical"
+      },
+      "react-antd": {
+        "layout": "vertical"
+      },
+      "react-bootstrap": {
+        "layout": "vertical"
+      },
+      "react-material-ui": {
+        "layout": "vertical"
+      },
+      "react": {
+        "layout": "vertical"
+      }
+    },
+    "common": [
+      {
+        "name": "name",
+        "type": "string",
+        "description": "The name of the field and the key of the JSON"
+      },
+      {
+        "name": "label",
+        "type": "string | i18n"
+      },
+      {
+        "name": "hint",
+        "type": "string | i18n"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean"
+      },
+      {
+        "name": "readOnly",
+        "type": "boolean"
+      },
+      {
+        "name": "hidden",
+        "type": "boolean"
+      },
+      {
+        "name": "fields",
+        "description": "Form schema for the array items"
+      },
+      {
+        "name": "layout",
+        "type": "string",
+        "options": [
+          "vertical",
+          "horizontal",
+          "inline"
+        ]
+      }
+    ],
+    "react-rsuite5": [
+      {
+        "name": "tooltip",
+        "type": "boolean",
+        "description": "Show hint as tooltip next to label"
+      }
+    ],
     "frameworks": [
       "react-rsuite5"
     ]
@@ -2757,491 +2825,6 @@
         "name": "tooltip",
         "type": "boolean",
         "description": "Show hint as tooltip next to label"
-      }
-    ],
-    "frameworks": [
-      "react-rsuite5"
-    ]
-  },
-  "select-states": {
-    "label": "Select States",
-    "category": "advanced",
-    "name": "select-states",
-    "defaultValues": {
-      "react": {
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react-rsuite5": {
-        "react-rsuite5": {
-          "cleanable": false,
-          "searchable": false
-        },
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react-antd": {
-        "react-antd": {
-          "bordered": true,
-          "listHeight": 256,
-          "virtual": true,
-          "showArrow": true
-        },
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      }
-    },
-    "description": "Show states/provinces for a country, ",
-    "common": [
-      {
-        "name": "name",
-        "type": "string",
-        "description": "The name of the field and the key of the JSON"
-      },
-      {
-        "name": "label",
-        "type": "string | i18n"
-      },
-      {
-        "name": "hint",
-        "type": "string | i18n"
-      },
-      {
-        "name": "placeholder",
-        "type": "string | i18n"
-      },
-      {
-        "name": "filterKey",
-        "type": "string"
-      },
-      {
-        "name": "filterValue",
-        "type": "string"
-      },
-      {
-        "name": "disabled",
-        "type": "boolean"
-      },
-      {
-        "name": "readOnly",
-        "type": "boolean"
-      },
-      {
-        "name": "hidden",
-        "type": "boolean"
-      },
-      {
-        "name": "country",
-        "type": "string",
-        "description": "Select country to display states/provinces",
-        "options": [
-          "AF",
-          "AL",
-          "DZ",
-          "AD",
-          "AO",
-          "AG",
-          "AR",
-          "AM",
-          "AU",
-          "AT",
-          "AZ",
-          "BS",
-          "BH",
-          "BD",
-          "BB",
-          "BY",
-          "BE",
-          "BZ",
-          "BJ",
-          "BT",
-          "BO",
-          "BA",
-          "BW",
-          "BR",
-          "BN",
-          "BG",
-          "BF",
-          "BI",
-          "KH",
-          "CM",
-          "CA",
-          "CV",
-          "CF",
-          "TD",
-          "CL",
-          "CN",
-          "CO",
-          "KM",
-          "CG",
-          "CD",
-          "CR",
-          "CI",
-          "HR",
-          "CU",
-          "CY",
-          "CZ",
-          "DK",
-          "DJ",
-          "DM",
-          "DO",
-          "EC",
-          "EG",
-          "SV",
-          "GQ",
-          "ER",
-          "EE",
-          "ET",
-          "FJ",
-          "FI",
-          "FR",
-          "GA",
-          "GM",
-          "GE",
-          "DE",
-          "GH",
-          "GR",
-          "GD",
-          "GT",
-          "GN",
-          "GW",
-          "GY",
-          "HT",
-          "HN",
-          "HU",
-          "IS",
-          "IN",
-          "ID",
-          "IR",
-          "IQ",
-          "IE",
-          "IL",
-          "IT",
-          "JM",
-          "JP",
-          "JO",
-          "KZ",
-          "KE",
-          "KI",
-          "KP",
-          "KR",
-          "KW",
-          "KG",
-          "LA",
-          "LV",
-          "LB",
-          "LS",
-          "LR",
-          "LY",
-          "LI",
-          "LT",
-          "LU",
-          "MK",
-          "MG",
-          "MW",
-          "MY",
-          "MV",
-          "ML",
-          "MT",
-          "MH",
-          "MR",
-          "MU",
-          "MX",
-          "FM",
-          "MA",
-          "MD",
-          "MC",
-          "MN",
-          "ME",
-          "MZ",
-          "MM",
-          "NA",
-          "NR",
-          "NP",
-          "NL",
-          "NZ",
-          "NI",
-          "NE",
-          "NG",
-          "NO",
-          "OM",
-          "PK",
-          "PW",
-          "PA",
-          "PG",
-          "PY",
-          "PE",
-          "PH",
-          "PL",
-          "PT",
-          "QA",
-          "RO",
-          "RU",
-          "RW",
-          "KN",
-          "LC",
-          "VC",
-          "WS",
-          "SM",
-          "ST",
-          "SA",
-          "SN",
-          "RS",
-          "SC",
-          "SL",
-          "SG",
-          "SK",
-          "SI",
-          "SB",
-          "SO",
-          "ZA",
-          "SS",
-          "ES",
-          "LK",
-          "SD",
-          "SR",
-          "SZ",
-          "SE",
-          "CH",
-          "SY",
-          "TJ",
-          "TZ",
-          "TH",
-          "TL",
-          "TG",
-          "TO",
-          "TT",
-          "TN",
-          "TR",
-          "TM",
-          "TV",
-          "UG",
-          "UA",
-          "AE",
-          "GB",
-          "US",
-          "UY",
-          "UZ",
-          "VU",
-          "VE",
-          "VN",
-          "YE",
-          "ZM",
-          "ZW"
-        ]
-      }
-    ],
-    "react": [
-      {
-        "name": "fullWidth",
-        "type": "boolean"
-      },
-      {
-        "name": "width",
-        "type": "number",
-        "description": "Size of the field in pixel"
-      }
-    ],
-    "react-rsuite5": [
-      {
-        "name": "placement",
-        "type": "string",
-        "options": [
-          "topStart",
-          "topEnd",
-          "leftStart",
-          "rightStart",
-          "leftEnd",
-          "rightEnd",
-          "bottomStart",
-          "bottomEnd",
-          "auto",
-          "autoVerticalStart",
-          "autoVerticalEnd",
-          "autoHorizontalStart",
-          "autoHorizontalEnd"
-        ]
-      },
-      {
-        "name": "size",
-        "type": "string",
-        "options": [
-          "lg",
-          "md",
-          "sm",
-          "xs"
-        ]
-      },
-      {
-        "name": "block",
-        "type": "boolean",
-        "description": "Only in fluid layout"
-      },
-      {
-        "name": "searchable",
-        "type": "boolean"
-      },
-      {
-        "name": "cleanable",
-        "type": "boolean"
-      },
-      {
-        "name": "tooltip",
-        "type": "boolean",
-        "description": "Show hint as tooltip next to label"
-      },
-      {
-        "name": "appearance",
-        "type": "string",
-        "options": [
-          "default",
-          "subtle"
-        ]
-      }
-    ],
-    "react-material-ui": [
-      {
-        "name": "autoWidth",
-        "type": "boolean",
-        "description": "If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."
-      },
-      {
-        "name": "size",
-        "type": "string",
-        "options": [
-          "small",
-          "medium"
-        ]
-      },
-      {
-        "name": "fullWidth",
-        "type": "boolean"
-      },
-      {
-        "name": "width",
-        "type": "number",
-        "description": "Size of the field in pixel"
-      },
-      {
-        "name": "floatingLabel",
-        "type": "boolean",
-        "description": "Show floating label for the control"
-      },
-      {
-        "name": "variant",
-        "type": "string",
-        "options": [
-          "outlined",
-          "filled",
-          "standard"
-        ]
-      }
-    ],
-    "react-bootstrap": [
-      {
-        "name": "size",
-        "type": "string",
-        "options": [
-          "lg",
-          "sm"
-        ]
-      },
-      {
-        "name": "floatingLabel",
-        "type": "boolean",
-        "description": "Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"
-      }
-    ],
-    "react-antd": [
-      {
-        "name": "tooltip",
-        "type": "boolean"
-      },
-      {
-        "name": "size",
-        "type": "string",
-        "options": [
-          "small",
-          "default",
-          "large"
-        ]
-      },
-      {
-        "name": "allowClear",
-        "type": "boolean"
-      },
-      {
-        "name": "bordered",
-        "type": "boolean"
-      },
-      {
-        "name": "placement",
-        "type": "string",
-        "options": [
-          "bottomLeft",
-          "bottomRight",
-          "topLeft",
-          "topRight"
-        ]
-      },
-      {
-        "name": "width",
-        "type": "number"
-      },
-      {
-        "name": "showSearch",
-        "type": "boolean",
-        "description": "Whether select is searchable"
-      },
-      {
-        "name": "showArrow",
-        "type": "boolean",
-        "description": "Whether to show the drop-down arrow"
-      },
-      {
-        "name": "virtual",
-        "type": "boolean"
-      },
-      {
-        "name": "listHeight",
-        "type": "number",
-        "description": "Config popup height"
       }
     ],
     "frameworks": [
