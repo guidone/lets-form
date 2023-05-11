@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 
-import { I18N, ReactGenericInput } from '../../components';
+import { I18N } from '../../components';
+import { ReactGenericInput } from '../../components/react-generic-input';
 
 import './input-text.scss';
 

@@ -1,7 +1,8 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
 
-import { I18N, RSuiteGenericDate } from '../../components';
+import { I18N } from '../../components';
+import { RSuiteGenericDate } from '../../components/rsuite-generic-date';
 import { isValidDate } from '../../helpers';
 
 const SelectDatetime = I18N(

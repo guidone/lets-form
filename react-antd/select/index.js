@@ -55,6 +55,7 @@ const SelectAntd = I18N(
         <Select
           placeholder={placeholder}
           readOnly={readOnly}
+          disabled={disabled}
           onChange={onChange}
           onBlur={onBlur}
           value={value}
@@ -78,7 +79,7 @@ const SelectAntd = I18N(
                 label={option.label}>
 
                 {option.image && showImageOptions && (
-                  <Space className="lf-control-select-option-antd">
+                  <Space className="lf-control-select-option-antd" align="center">
                     <img src={option.image} alt={option.label}/>
                     {option.label}
                   </Space>

@@ -94,7 +94,6 @@ const ListArray = ({
               locale={lfLocale}
               disabled={disabled}
               readOnly={readOnly}
-              framework="react-rsuite5"
               defaultValues={item}
               onlyFields={true}
               onChange={value => {

@@ -216,7 +216,7 @@ var IconCheck = function IconCheck(_ref) {
 
 /***/ }),
 
-/***/ 722:
+/***/ 7556:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -224,12 +224,11 @@ var IconCheck = function IconCheck(_ref) {
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   "mb": () => (/* reexport */ I18N),
-  "y3": () => (/* reexport */ RSuiteGenericDate),
-  "T_": () => (/* reexport */ required_icon_RequiredIcon),
+  "T_": () => (/* reexport */ RequiredIcon),
   "qf": () => (/* reexport */ ValidationErrors)
 });
 
-// UNUSED EXPORTS: IfNotPlaintext, Plaintext, ReactGenericCheckbox, ReactGenericInput
+// UNUSED EXPORTS: IfNotPlaintext, Plaintext
 
 // EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(1609);
@@ -341,7 +340,7 @@ var icons = __webpack_require__(8211);
 ;// CONCATENATED MODULE: ./components/required-icon/index.js
 
 
-var required_icon_RequiredIcon = function RequiredIcon() {
+var RequiredIcon = function RequiredIcon() {
   return /*#__PURE__*/external_react_default().createElement(icons/* Asterisk */.dn, {
     color: "#ff6633",
     width: 12,
@@ -404,7 +403,7 @@ const no_namespaceObject = {};
 
 
 
-var plaintext_Plaintext = function Plaintext(_ref) {
+var Plaintext = function Plaintext(_ref) {
   var value = _ref.value,
     component = _ref.component,
     options = _ref.options,
@@ -453,7 +452,7 @@ var plaintext_Plaintext = function Plaintext(_ref) {
       return /*#__PURE__*/React.createElement("span", null, value);
   }
 };
-var plaintext_IfNotPlaintext = function IfNotPlaintext(_ref2) {
+var IfNotPlaintext = function IfNotPlaintext(_ref2) {
   var plaintext = _ref2.plaintext,
     value = _ref2.value,
     component = _ref2.component,
@@ -461,7 +460,7 @@ var plaintext_IfNotPlaintext = function IfNotPlaintext(_ref2) {
     children = _ref2.children,
     locale = _ref2.locale;
   if (plaintext) {
-    return /*#__PURE__*/React.createElement(plaintext_Plaintext, {
+    return /*#__PURE__*/React.createElement(Plaintext, {
       value: value,
       component: component,
       options: options,
@@ -472,194 +471,14 @@ var plaintext_IfNotPlaintext = function IfNotPlaintext(_ref2) {
   }
 };
 
-;// CONCATENATED MODULE: ./components/react-generic-input/index.js
-
-var _excluded = (/* unused pure expression or super */ null && (["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "plaintext", "required", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component"]));
-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-
-
-var ReactGenericInput = function ReactGenericInput(_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    lfLocale = _ref.lfLocale,
-    hint = _ref.hint,
-    value = _ref.value,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    error = _ref.error,
-    className = _ref.className,
-    disabled = _ref.disabled,
-    readOnly = _ref.readOnly,
-    plaintext = _ref.plaintext,
-    required = _ref.required,
-    size = _ref.size,
-    width = _ref.width,
-    fullWidth = _ref.fullWidth,
-    placeholder = _ref.placeholder,
-    autocomplete = _ref.autocomplete,
-    inputType = _ref.inputType,
-    inputMode = _ref.inputMode,
-    component = _ref.component,
-    rest = _objectWithoutProperties(_ref, _excluded);
-  var hasError = error && _isString(error);
-  return /*#__PURE__*/React.createElement("div", {
-    className: classNames('lf-form-react-control-group', className),
-    "data-lf-field-name": name
-  }, /*#__PURE__*/React.createElement("label", {
-    for: name
-  }, label, required && /*#__PURE__*/React.createElement(RequiredIcon, null)), /*#__PURE__*/React.createElement(IfNotPlaintext, {
-    value: value,
-    component: component,
-    plaintext: plaintext
-  }, /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("input", _extends({
-    type: inputType,
-    lang: lfLocale,
-    id: name,
-    defaultValue: value,
-    onChange: onChange,
-    onBlur: onBlur,
-    placeholder: placeholder,
-    style: makeWidthStyle(fullWidth, width),
-    autoComplete: autocomplete,
-    inputMode: inputMode,
-    disabled: disabled,
-    readOnly: readOnly
-  }, passRest(rest))), hint && !hasError && /*#__PURE__*/React.createElement("div", {
-    className: "lf-form-react-message"
-  }, hint), hasError && /*#__PURE__*/React.createElement("div", {
-    className: "lf-form-react-error-message"
-  }, error))));
-};
-
-// EXTERNAL MODULE: external "rsuite"
-var external_rsuite_ = __webpack_require__(1186);
-// EXTERNAL MODULE: external "rsuite/locales"
-var locales_ = __webpack_require__(977);
-;// CONCATENATED MODULE: ./components/rsuite-generic-date/index.js
-
-var rsuite_generic_date_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"];
-function rsuite_generic_date_extends() { rsuite_generic_date_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return rsuite_generic_date_extends.apply(this, arguments); }
-function rsuite_generic_date_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = rsuite_generic_date_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function rsuite_generic_date_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-
-var RSuiteGenericDate = function RSuiteGenericDate(_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    placeholder = _ref.placeholder,
-    plaintext = _ref.plaintext,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    error = _ref.error,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    appearance = _ref.appearance,
-    format = _ref.format,
-    lfLocale = _ref.lfLocale,
-    rest = rsuite_generic_date_objectWithoutProperties(_ref, rsuite_generic_date_excluded);
-  var localeCode = lfLocale && isString_default()(lfLocale) ? lfLocale.replace('-', '') : undefined;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    "data-lf-field-name": name,
-    className: "lf-control-date"
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.CustomProvider, {
-    locale: localeCode && locales_[localeCode] ? locales_[localeCode] : undefined
-  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, rsuite_generic_date_extends({
-    accepter: external_rsuite_.DatePicker,
-    appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
-    name: name,
-    format: format || 'yyyy-MM-dd',
-    defaultValue: value,
-    onChange: onChange,
-    readOnly: readOnly,
-    plaintext: plaintext,
-    onBlur: onBlur,
-    errorMessage: isString_default()(error) ? error : undefined,
-    disabled: disabled,
-    placeholder: placeholder
-  }, rest)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint)));
-};
-
-;// CONCATENATED MODULE: ./components/react-generic-checkbox/index.js
-
-var react_generic_checkbox_excluded = (/* unused pure expression or super */ null && (["name", "label", "lfLocale", "className", "inputType", "hint", "plaintext", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"]));
-function react_generic_checkbox_extends() { react_generic_checkbox_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_generic_checkbox_extends.apply(this, arguments); }
-function react_generic_checkbox_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_generic_checkbox_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function react_generic_checkbox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-
-var ReactGenericCheckbox = function ReactGenericCheckbox(_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    lfLocale = _ref.lfLocale,
-    className = _ref.className,
-    inputType = _ref.inputType,
-    hint = _ref.hint,
-    plaintext = _ref.plaintext,
-    value = _ref.value,
-    defaultValue = _ref.defaultValue,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    error = _ref.error,
-    disabled = _ref.disabled,
-    readOnly = _ref.readOnly,
-    required = _ref.required,
-    rest = react_generic_checkbox_objectWithoutProperties(_ref, react_generic_checkbox_excluded);
-  var hasError = error && _isString(error);
-  return /*#__PURE__*/React.createElement("div", {
-    className: classNames('lf-form-react-control-group', className),
-    "data-lf-field-name": name
-  }, !plaintext && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("label", {
-    for: name,
-    className: "lf-form-react-checkbox"
-  }, /*#__PURE__*/React.createElement("input", react_generic_checkbox_extends({
-    type: inputType,
-    id: name,
-    onChange: onChange,
-    onBlur: onBlur,
-    required: error != null,
-    disabled: disabled,
-    readOnly: readOnly,
-    defaultChecked: value
-  }, passRest(rest))), " ", label, " ", required && /*#__PURE__*/React.createElement(RequiredIcon, null)), hint && !hasError && /*#__PURE__*/React.createElement("div", {
-    className: "lf-form-react-form-message"
-  }, hint), hasError && /*#__PURE__*/React.createElement("div", {
-    className: "lf-form-react-error-message"
-  }, error)), plaintext && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("label", {
-    for: name
-  }, label), /*#__PURE__*/React.createElement(Plaintext, {
-    value: value,
-    component: "toggle",
-    locale: lfLocale
-  })));
-};
-
 ;// CONCATENATED MODULE: ./components/index.js
 
 
 
 
-
-
-
+//export * from './react-generic-input';
+//export * from './rsuite-generic-date';
+//export * from './react-generic-checkbox';
 
 /***/ }),
 
@@ -715,7 +534,7 @@ var FormContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createConte
 /* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(7536);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4184);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(722);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7556);
 /* harmony import */ var _costants__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(8064);
 /* harmony import */ var _assets_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(8211);
 /* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(6160);
@@ -8399,8 +8218,8 @@ var FormRsuite5 = function FormRsuite5(_ref) {
 // EXTERNAL MODULE: ./node_modules/lodash/isString.js
 var isString = __webpack_require__(7037);
 var isString_default = /*#__PURE__*/__webpack_require__.n(isString);
-// EXTERNAL MODULE: ./components/index.js + 11 modules
-var components = __webpack_require__(722);
+// EXTERNAL MODULE: ./components/index.js + 8 modules
+var components = __webpack_require__(7556);
 // EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(1609);
 var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
@@ -9078,7 +8897,6 @@ var ListArray = function ListArray(_ref) {
       locale: lfLocale,
       disabled: disabled,
       readOnly: readOnly,
-      framework: "react-rsuite5",
       defaultValues: item,
       onlyFields: true,
       onChange: function onChange(value) {
@@ -9591,6 +9409,64 @@ var InputNumberRSuite5 = (0,components/* I18N */.mb)(function (_ref) {
 // EXTERNAL MODULE: ./node_modules/lodash/isDate.js
 var isDate = __webpack_require__(7960);
 var isDate_default = /*#__PURE__*/__webpack_require__.n(isDate);
+// EXTERNAL MODULE: external "rsuite/locales"
+var locales_ = __webpack_require__(977);
+;// CONCATENATED MODULE: ./components/rsuite-generic-date/index.js
+
+var rsuite_generic_date_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"];
+function rsuite_generic_date_extends() { rsuite_generic_date_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return rsuite_generic_date_extends.apply(this, arguments); }
+function rsuite_generic_date_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = rsuite_generic_date_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function rsuite_generic_date_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+var RSuiteGenericDate = function RSuiteGenericDate(_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    hint = _ref.hint,
+    value = _ref.value,
+    placeholder = _ref.placeholder,
+    plaintext = _ref.plaintext,
+    _ref$tooltip = _ref.tooltip,
+    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+    _ref$disabled = _ref.disabled,
+    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    _ref$readOnly = _ref.readOnly,
+    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+    _ref$required = _ref.required,
+    required = _ref$required === void 0 ? false : _ref$required,
+    error = _ref.error,
+    onChange = _ref.onChange,
+    onBlur = _ref.onBlur,
+    appearance = _ref.appearance,
+    format = _ref.format,
+    lfLocale = _ref.lfLocale,
+    rest = rsuite_generic_date_objectWithoutProperties(_ref, rsuite_generic_date_excluded);
+  var localeCode = lfLocale && isString_default()(lfLocale) ? lfLocale.replace('-', '') : undefined;
+  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
+    "data-lf-field-name": name,
+    className: "lf-control-date"
+  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
+    tooltip: true
+  }, hint), required && /*#__PURE__*/external_react_default().createElement(components/* RequiredIcon */.T_, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.CustomProvider, {
+    locale: localeCode && locales_[localeCode] ? locales_[localeCode] : undefined
+  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, rsuite_generic_date_extends({
+    accepter: external_rsuite_.DatePicker,
+    appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
+    name: name,
+    format: format || 'yyyy-MM-dd',
+    defaultValue: value,
+    onChange: onChange,
+    readOnly: readOnly,
+    plaintext: plaintext,
+    onBlur: onBlur,
+    errorMessage: isString_default()(error) ? error : undefined,
+    disabled: disabled,
+    placeholder: placeholder
+  }, rest)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint)));
+};
+
 ;// CONCATENATED MODULE: ./react-rsuite5/date/index.js
 
 
@@ -9598,6 +9474,7 @@ var date_excluded = ["onChange", "value"];
 function date_extends() { date_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return date_extends.apply(this, arguments); }
 function date_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = date_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function date_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -9620,7 +9497,7 @@ var SelectDate = (0,components/* I18N */.mb)(function (_ref) {
   var handleChange = (0,external_react_.useCallback)(function (d) {
     onChange(d.toISOString().split('T')[0]);
   }, [onChange]);
-  return /*#__PURE__*/external_react_default().createElement(components/* RSuiteGenericDate */.y3, date_extends({
+  return /*#__PURE__*/external_react_default().createElement(RSuiteGenericDate, date_extends({
     value: currentValue,
     onChange: handleChange
   }, rest));
@@ -9633,6 +9510,7 @@ var datetime_excluded = ["onChange", "value"];
 function datetime_extends() { datetime_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return datetime_extends.apply(this, arguments); }
 function datetime_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = datetime_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function datetime_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -9655,7 +9533,7 @@ var SelectDatetime = (0,components/* I18N */.mb)(function (_ref) {
   var handleChange = (0,external_react_.useCallback)(function (d) {
     onChange(d.toISOString());
   }, [onChange]);
-  return /*#__PURE__*/external_react_default().createElement(components/* RSuiteGenericDate */.y3, datetime_extends({
+  return /*#__PURE__*/external_react_default().createElement(RSuiteGenericDate, datetime_extends({
     value: currentValue,
     onChange: handleChange
   }, rest));

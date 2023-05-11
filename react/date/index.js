@@ -1,10 +1,8 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
 
-import { I18N, ReactGenericInput } from '../../components';
-
-//const dateOr
-
+import { I18N } from '../../components';
+import { ReactGenericInput } from '../../components/react-generic-input'
 
 const DateInput = I18N(
   ({ onChange, value, ...rest}) => {
