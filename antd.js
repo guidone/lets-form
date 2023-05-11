@@ -2940,6 +2940,29 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .lf-toolbar{margin
 
 /***/ }),
 
+/***/ 5201:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .lf-control-group .ant-form-item:last-child{margin-bottom:0px}", "",{"version":3,"sources":["webpack://./react-antd/group/group.scss"],"names":[],"mappings":"AAEI,gEACE,iBAAA","sourcesContent":[".lf-form-react-antd {\n  .lf-control-group {\n    .ant-form-item:last-child {\n      margin-bottom: 0px;\n    }\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ 3877:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -2980,6 +3003,52 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .lf-control-input-
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-select-option-antd img{width:20px;max-width:20px;max-height:20px;margin-top:-2px}", "",{"version":3,"sources":["webpack://./react-antd/select/select.scss"],"names":[],"mappings":"AAEI,mCACE,UAAA,CACA,cAAA,CACA,eAAA,CAEA,eAAA","sourcesContent":["\n  .lf-control-select-option-antd {\n    img {\n      width: 20px;\n      max-width: 20px;\n      max-height: 20px;\n      //margin-right: 6px;\n      margin-top: -2px;\n    }\n  }\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 3730:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .lf-control-three-columns .ant-form-item:last-child{margin-bottom:0px}", "",{"version":3,"sources":["webpack://./react-antd/three-columns/three-columns.scss"],"names":[],"mappings":"AAEI,wEACE,iBAAA","sourcesContent":[".lf-form-react-antd {\n  .lf-control-three-columns {\n    .ant-form-item:last-child {\n      margin-bottom: 0px;\n    }\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 3339:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .lf-control-two-columns .ant-form-item:last-child{margin-bottom:0px}", "",{"version":3,"sources":["webpack://./react-antd/two-columns/two-columns.scss"],"names":[],"mappings":"AAEI,sEACE,iBAAA","sourcesContent":[".lf-form-react-antd {\n  .lf-control-two-columns {\n    .ant-form-item:last-child {\n      margin-bottom: 0px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -13753,11 +13822,107 @@ var Multiselect = (0,components/* I18N */.mb)(function (_ref) {
   }, omit_default()(rest, 'lfFramework', 'lfComponent'))));
 }, ['label', 'hint', 'placeholder']);
 
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-antd/three-columns/three-columns.scss
+var cjs_js_react_antd_three_columns_three_columns = __webpack_require__(3730);
+;// CONCATENATED MODULE: ./react-antd/three-columns/three-columns.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var three_columns_three_columns_options = {};
+
+three_columns_three_columns_options.styleTagTransform = (styleTagTransform_default());
+three_columns_three_columns_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      three_columns_three_columns_options.insert = insertBySelector_default().bind(null, "head");
+    
+three_columns_three_columns_options.domAPI = (styleDomAPI_default());
+three_columns_three_columns_options.insertStyleElement = (insertStyleElement_default());
+
+var three_columns_three_columns_update = injectStylesIntoStyleTag_default()(cjs_js_react_antd_three_columns_three_columns/* default */.Z, three_columns_three_columns_options);
+
+
+
+
+       /* harmony default export */ const react_antd_three_columns_three_columns = (cjs_js_react_antd_three_columns_three_columns/* default */.Z && cjs_js_react_antd_three_columns_three_columns/* default.locals */.Z.locals ? cjs_js_react_antd_three_columns_three_columns/* default.locals */.Z.locals : undefined);
+
 ;// CONCATENATED MODULE: ./react-antd/three-columns/index.js
+
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-antd/two-columns/two-columns.scss
+var cjs_js_react_antd_two_columns_two_columns = __webpack_require__(3339);
+;// CONCATENATED MODULE: ./react-antd/two-columns/two-columns.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var two_columns_two_columns_options = {};
+
+two_columns_two_columns_options.styleTagTransform = (styleTagTransform_default());
+two_columns_two_columns_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      two_columns_two_columns_options.insert = insertBySelector_default().bind(null, "head");
+    
+two_columns_two_columns_options.domAPI = (styleDomAPI_default());
+two_columns_two_columns_options.insertStyleElement = (insertStyleElement_default());
+
+var two_columns_two_columns_update = injectStylesIntoStyleTag_default()(cjs_js_react_antd_two_columns_two_columns/* default */.Z, two_columns_two_columns_options);
+
+
+
+
+       /* harmony default export */ const react_antd_two_columns_two_columns = (cjs_js_react_antd_two_columns_two_columns/* default */.Z && cjs_js_react_antd_two_columns_two_columns/* default.locals */.Z.locals ? cjs_js_react_antd_two_columns_two_columns/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-antd/two-columns/index.js
 
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-antd/group/group.scss
+var cjs_js_react_antd_group_group = __webpack_require__(5201);
+;// CONCATENATED MODULE: ./react-antd/group/group.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var group_group_options = {};
+
+group_group_options.styleTagTransform = (styleTagTransform_default());
+group_group_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      group_group_options.insert = insertBySelector_default().bind(null, "head");
+    
+group_group_options.domAPI = (styleDomAPI_default());
+group_group_options.insertStyleElement = (insertStyleElement_default());
+
+var group_group_update = injectStylesIntoStyleTag_default()(cjs_js_react_antd_group_group/* default */.Z, group_group_options);
+
+
+
+
+       /* harmony default export */ const react_antd_group_group = (cjs_js_react_antd_group_group/* default */.Z && cjs_js_react_antd_group_group/* default.locals */.Z.locals ? cjs_js_react_antd_group_group/* default.locals */.Z.locals : undefined);
+
 ;// CONCATENATED MODULE: ./react-antd/group/index.js
+
 
 ;// CONCATENATED MODULE: ./react-antd/slider/index.js
 function slider_typeof(obj) { "@babel/helpers - typeof"; return slider_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, slider_typeof(obj); }
