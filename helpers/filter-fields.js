@@ -28,6 +28,14 @@ const filterFields = (
             fields: newFields
           };
         }
+      } else if (field.component === 'array') {
+        const newFields = filterFields(field.fields, predicate);
+        if (newFields !== field.fields) {
+          newField = {
+            ...newField,
+            fields: newFields
+          };
+        }
       } else if (field.component === 'two-columns') {
         const newLeftFields = filterFields(field.leftFields, predicate);
         if (newLeftFields !== field.leftFields) {

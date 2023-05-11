@@ -166,7 +166,8 @@ const collectTransformers = (form, onJavascriptError) => {
       }
       return accumulator;
     },
-    []
+    [],
+    { array: false } // don't include array
   );
 
   // compile transformer of the form
@@ -205,15 +206,16 @@ const collectTransformers = (form, onJavascriptError) => {
       }
       return acc;
     },
-    transformers
+    transformers,
+    { array: false } // don't include array
   );
 
   return transformers;
 };
 
-const AsyncGeneratorFunction = async function* () {}.constructor;
-
-//const yieldReplacer = /((setValue|hide|show|enable|disable|show|hide|arraySetValue)\(.*?\)[;]{0,1})/;
+// Use eval to get the contructor since RCA polyfill this and returns a normal function constructor
+// eslint-disable-next-line no-eval
+const AsyncGeneratorFunction = eval('(() => async function* () {}.constructor)()');
 
 const makeTransformer = (str, fieldList) => {
   if (_.isEmpty(str)) {
@@ -239,8 +241,8 @@ const makeTransformer = (str, fieldList) => {
     );
     return tx;
   } catch(e) {
-    console.error(`LetsForm] Invalid JavaScript code for rules`, e);
-    console.error(`LetsForm] Transformer: `, str);
+    console.error(`[LetsForm] Invalid JavaScript code for rules`, e);
+    console.error(`[LetsForm] Transformer: `, yieldedStr);
     throw e;
   }
 };
@@ -343,11 +345,64 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   onJavascriptError,
                   Components
                 })}
-                {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="fields" />}
+                {BottomView && <BottomView context="group" key={`bottom_view_${field.name}`} field={field} target="fields" />}
               </>
             </Component>
           );
-          return GroupWrapper ? <GroupWrapper key={`wrapper_${field.name}`} field={field} level={level} index={index}>{component}</GroupWrapper> : component;
+          return GroupWrapper ?
+            <GroupWrapper
+              key={`wrapper_${field.name}`}
+              field={field}
+              level={level}
+              index={index}
+              className="group"
+            >{component}</GroupWrapper> : component;
+        } else if (field.component === 'array' && GroupWrapper) {
+          const component = (
+            <Component
+              key={field.name}
+              lfComponent={field.component}
+              lfFramework={framework}
+              lfLocale={locale}
+              name={field.name}
+              label={field.label}
+              hint={field.hint}
+              disabled={field.disabled}
+              {...additionalFields}
+            >
+              <>
+                {renderFields({
+                  Wrapper,
+                  GroupWrapper,
+                  BottomView,
+                  onChange,
+                  fields: field.fields,
+                  control,
+                  framework,
+                  getValues,
+                  disabled,
+                  readOnly,
+                  plaintext,
+                  errors,
+                  showErrors,
+                  level: level + 1,
+                  locale,
+                  onJavascriptError,
+                  Components
+                })}
+                {BottomView && <BottomView context="array" key={`bottom_view_${field.name}`} field={field} target="fields" />}
+              </>
+            </Component>
+          );
+
+          return (
+            <GroupWrapper
+              key={`wrapper_${field.name}`}
+              field={field}
+              level={level}
+              index={index}
+              className="array"
+            >{component}</GroupWrapper>);
         } else if (field.component === 'two-columns') {
           const component = (
             <Component
@@ -381,7 +436,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       onJavascriptError,
                       Components
                     })}
-                    {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="leftFields" />}
+                    {BottomView && <BottomView context="two-columns" key={`bottom_view_${field.name}`} field={field} target="leftFields" />}
                   </>
                 )
               } else if (column === 'right') {
@@ -406,14 +461,21 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       onJavascriptError,
                       Components
                     })}
-                    {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="rightFields" />}
+                    {BottomView && <BottomView context="two-columns" key={`bottom_view_${field.name}`} field={field} target="rightFields" />}
                   </>
                 )
               }
             }}
             </Component>
           );
-          return GroupWrapper ? <GroupWrapper key={`wrapper_${field.name}`} level={level} field={field} index={index}>{component}</GroupWrapper> : component;
+          return GroupWrapper ?
+            <GroupWrapper
+              key={`wrapper_${field.name}`}
+              className="two-columns"
+              level={level}
+              field={field}
+              index={index}
+            >{component}</GroupWrapper> : component;
         } else if (field.component === 'three-columns') {
           const component = (
             <Component
@@ -447,7 +509,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       onJavascriptError,
                       Components
                     })}
-                    {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="leftFields" />}
+                    {BottomView && <BottomView context="three-columns" key={`bottom_view_${field.name}`} field={field} target="leftFields" />}
                   </>
                 )
               } else if (column === 'center') {
@@ -472,7 +534,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       onJavascriptError,
                       Components
                     })}
-                    {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="centerFields" />}
+                    {BottomView && <BottomView context="three-columns" key={`bottom_view_${field.name}`} field={field} target="centerFields" />}
                   </>
                 )
               } else if (column === 'right') {
@@ -497,14 +559,21 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       onJavascriptError,
                       Components
                     })}
-                    {BottomView && <BottomView key={`bottom_view_${field.name}`} field={field} target="rightFields" />}
+                    {BottomView && <BottomView context="three-columns" key={`bottom_view_${field.name}`} field={field} target="rightFields" />}
                   </>
                 )
               }
             }}
             </Component>
           );
-          return GroupWrapper ? <GroupWrapper key={`wrapper_${field.name}`} field={field} level={level} index={index}>{component}</GroupWrapper> : component;
+          return GroupWrapper ?
+            <GroupWrapper
+              key={`wrapper_${field.name}`}
+              className="three-columns"
+              field={field}
+              level={level}
+              index={index}
+            >{component}</GroupWrapper> : component;
         }
 
         // generate the validation rule, takes into account react-hook-form

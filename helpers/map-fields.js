@@ -26,6 +26,14 @@ const mapFields = (
           fields: newFields
         };
       }
+    } else if (field.component === 'array') {
+      const newFields = mapFields(field.fields, predicate);
+      if (newFields !== field.fields) {
+        newField = {
+          ...newField,
+          fields: newFields
+        };
+      }
     } else if (field.component === 'two-columns') {
       const newLeftFields = mapFields(field.leftFields, predicate);
       if (newLeftFields !== field.leftFields) {

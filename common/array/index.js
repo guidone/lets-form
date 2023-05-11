@@ -1,16 +1,15 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
 
-import FormGenerator, { fillIds } from '../../react-rsuite5';
+import { fillIds } from '../../helpers';
+import { useFormContext } from '../../hooks';
 
 import { isEmptyItem } from './helpers/is-empty-item';
 import { ArrayItem } from './views/array-item';
-
-import { useFormContext } from '../../hooks';
-
 import './list-array.scss';
 
 const ListArray = ({
+  LetsFormComponent,
   value,
   onChange = () => {},
   onBlur = () => {},
@@ -19,7 +18,9 @@ const ListArray = ({
   fields,
   layout = 'vertical',
   maxHeight,
-  leftMargin = 0
+  lfLocale,
+  leftMargin = 0,
+  children
 }) => {
   const [items, setItems] = useState(
     _.isArray(value) && !_.isEmpty(value) ? fillIds(value) : [{ id: _.uniqueId() }]
@@ -64,6 +65,10 @@ const ListArray = ({
     [items, onChange]
   );
 
+  if (children) {
+    return <div style={{ padding: '0px 10px 1px 10px' }}>{children}</div>;
+  }
+
   return (
     <div
       className="lf-control-common-array"
@@ -84,8 +89,9 @@ const ListArray = ({
             onAdd={handleAdd}
             onRemove={handleRemove}
           >
-            <FormGenerator
+            <LetsFormComponent
               form={form}
+              locale={lfLocale}
               disabled={disabled}
               readOnly={readOnly}
               framework="react-rsuite5"

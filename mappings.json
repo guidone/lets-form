@@ -129,6 +129,8 @@
     "hint": null,
     "placeholder": null,
     "options": null,
+    "value": null,
+    "image": null,
     "showImageOptions": null,
     "filterKey": null,
     "filterValue": null,
@@ -237,7 +239,6 @@
     "disabled": null,
     "readOnly": null,
     "hidden": null,
-    "fields": null,
     "layout": null,
     "tooltip": [
       "react-rsuite5"
@@ -316,7 +317,11 @@
   },
   "slider": {
     "name": null,
-    "label": null,
+    "label": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-antd"
+    ],
     "hint": null,
     "disabled": null,
     "readOnly": null,
@@ -356,6 +361,11 @@
     ],
     "marks": [
       "react-rsuite5",
+      "react-antd"
+    ],
+    "value": [
+      "react-rsuite5",
+      "react-material-ui",
       "react-antd"
     ],
     "size": [
@@ -560,6 +570,7 @@
     "label": null,
     "hint": null,
     "options": null,
+    "value": null,
     "disabled": null,
     "readOnly": null,
     "hidden": null,
@@ -586,6 +597,7 @@
     "label": null,
     "hint": null,
     "options": null,
+    "value": null,
     "disabled": null,
     "readOnly": null,
     "hidden": null,
@@ -756,6 +768,7 @@
     ],
     "tooltip": [
       "react-rsuite5",
+      "react-antd",
       "react-antd"
     ],
     "precision": [
@@ -801,6 +814,7 @@
     "label": null,
     "hint": null,
     "options": null,
+    "value": null,
     "placeholder": null,
     "disabled": null,
     "readOnly": null,

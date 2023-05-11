@@ -11,6 +11,2844 @@
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ 2113:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "dn": () => (/* reexport */ Asterisk),
+  "_M": () => (/* reexport */ ChevronDown),
+  "Kh": () => (/* reexport */ ChevronUp),
+  "v3": () => (/* reexport */ Warning)
+});
+
+// UNUSED EXPORTS: CrossCirle, IconCheck, MinusCircle, PlusCircle
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(8156);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+;// CONCATENATED MODULE: ./assets/icons/plus-circle.js
+
+var PlusCircle = function PlusCircle(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 24 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 24 : _ref$height,
+    _ref$color = _ref.color,
+    color = _ref$color === void 0 ? '#000000' : _ref$color;
+  return /*#__PURE__*/React.createElement("svg", {
+    width: "".concat(width, "px"),
+    height: "".concat(height, "px"),
+    viewBox: "0 0 20 20",
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none"
+  }, /*#__PURE__*/React.createElement("path", {
+    fill: color,
+    fillRule: "evenodd",
+    d: "M10 3a7 7 0 100 14 7 7 0 000-14zm-9 7a9 9 0 1118 0 9 9 0 01-18 0zm14 .069a1 1 0 01-1 1h-2.931V14a1 1 0 11-2 0v-2.931H6a1 1 0 110-2h3.069V6a1 1 0 112 0v3.069H14a1 1 0 011 1z"
+  }));
+};
+;// CONCATENATED MODULE: ./assets/icons/minus-circle.js
+
+var MinusCircle = function MinusCircle(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 24 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 24 : _ref$height,
+    _ref$color = _ref.color,
+    color = _ref$color === void 0 ? '#000000' : _ref$color;
+  return /*#__PURE__*/React.createElement("svg", {
+    width: "".concat(width, "px"),
+    height: "".concat(height, "px"),
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/React.createElement("path", {
+    fill: color,
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12ZM12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM7 11C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11H7Z"
+  }));
+};
+;// CONCATENATED MODULE: ./assets/icons/chevron-down.js
+
+var ChevronDown = function ChevronDown(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 24 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 24 : _ref$height,
+    _ref$color = _ref.color,
+    color = _ref$color === void 0 ? '#000000' : _ref$color;
+  return /*#__PURE__*/external_react_default().createElement("svg", {
+    width: "".concat(width, "px"),
+    height: "".concat(height, "px"),
+    fill: color,
+    viewBox: "0 0 24 24",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/external_react_default().createElement("path", {
+    d: "M17,8H7a1,1,0,0,0-.768,1.641l5,6a1,1,0,0,0,1.536,0l5-6A1,1,0,0,0,17,8Zm-5,5.438L9.135,10h5.73Z"
+  }));
+};
+;// CONCATENATED MODULE: ./assets/icons/chevron-up.js
+
+var ChevronUp = function ChevronUp(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 24 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 24 : _ref$height,
+    _ref$color = _ref.color,
+    color = _ref$color === void 0 ? '#000000' : _ref$color;
+  return /*#__PURE__*/external_react_default().createElement("svg", {
+    width: "".concat(width, "px"),
+    height: "".concat(height, "px"),
+    viewBox: "0 0 24 24",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/external_react_default().createElement("path", {
+    fill: color,
+    d: "M12.768,8.359a1.035,1.035,0,0,0-1.536,0l-5,6A1,1,0,0,0,7,16H17a1,1,0,0,0,.768-1.641ZM9.135,14,12,10.563,14.865,14Z"
+  }));
+};
+;// CONCATENATED MODULE: ./assets/icons/asterisk.js
+
+var Asterisk = function Asterisk(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 24 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 24 : _ref$height,
+    _ref$color = _ref.color,
+    color = _ref$color === void 0 ? '#000000' : _ref$color,
+    style = _ref.style;
+  return /*#__PURE__*/external_react_default().createElement("svg", {
+    width: "".concat(width, "px"),
+    height: "".concat(height, "px"),
+    style: style,
+    version: "1.1",
+    id: "_x32_",
+    className: "lf-icon-asterisk",
+    viewBox: "0 0 512 512"
+  }, /*#__PURE__*/external_react_default().createElement("g", null, /*#__PURE__*/external_react_default().createElement("polygon", {
+    style: {
+      fill: color
+    },
+    className: "st0",
+    points: "501.539,169.221 453.886,86.7 303.669,173.449 303.669,0 208.365,0 208.365,173.479 58.114,86.73\r 10.461,169.261 160.674,255.99 10.501,342.71 58.154,425.231 208.365,338.482 208.365,512 303.669,512 303.669,338.542\r 453.846,425.271 501.499,342.74 351.267,255.99 \t"
+  })));
+};
+;// CONCATENATED MODULE: ./assets/icons/warning.js
+
+var Warning = function Warning(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 24 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 24 : _ref$height,
+    _ref$color = _ref.color,
+    color = _ref$color === void 0 ? '#000000' : _ref$color;
+  return /*#__PURE__*/external_react_default().createElement("svg", {
+    fill: color,
+    width: "".concat(width, "px"),
+    height: "".concat(height, "px"),
+    viewBox: "0 0 1920 1920",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/external_react_default().createElement("path", {
+    d: "M960 0c530.193 0 960 429.807 960 960s-429.807 960-960 960S0 1490.193 0 960 429.807 0 960 0Zm-9.838 1342.685c-84.47 0-153.19 68.721-153.19 153.19 0 84.47 68.72 153.192 153.19 153.192s153.19-68.721 153.19-153.191-68.72-153.19-153.19-153.19ZM1153.658 320H746.667l99.118 898.623h208.755L1153.658 320Z",
+    fillRule: "evenodd"
+  }));
+};
+;// CONCATENATED MODULE: ./assets/icons/cross-circle.js
+
+var CrossCirle = function CrossCirle(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? 24 : _ref$width,
+    _ref$height = _ref.height,
+    height = _ref$height === void 0 ? 24 : _ref$height,
+    _ref$color = _ref.color,
+    color = _ref$color === void 0 ? '#000000' : _ref$color;
+  return /*#__PURE__*/React.createElement("svg", {
+    width: "".concat(width, "px"),
+    height: "".concat(height, "px"),
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M16 8L8 16M8.00001 8L16 16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z",
+    stroke: color,
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }));
+};
+;// CONCATENATED MODULE: ./assets/icons/index.js
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ 8397:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "mb": () => (/* reexport */ I18N),
+  "W7": () => (/* reexport */ IfNotPlaintext),
+  "UM": () => (/* reexport */ Plaintext),
+  "hR": () => (/* reexport */ ReactGenericInput),
+  "T_": () => (/* reexport */ required_icon_RequiredIcon),
+  "qf": () => (/* reexport */ ValidationErrors)
+});
+
+// UNUSED EXPORTS: RSuiteGenericDate, ReactGenericCheckbox
+
+// EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
+var isEmpty = __webpack_require__(1609);
+var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
+// EXTERNAL MODULE: ./node_modules/lodash/isObject.js
+var isObject = __webpack_require__(3218);
+var isObject_default = /*#__PURE__*/__webpack_require__.n(isObject);
+// EXTERNAL MODULE: ./node_modules/lodash/isString.js
+var isString = __webpack_require__(7037);
+var isString_default = /*#__PURE__*/__webpack_require__.n(isString);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(8156);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+// EXTERNAL MODULE: ./node_modules/classnames/index.js
+var classnames = __webpack_require__(4184);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__(3379);
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI = __webpack_require__(7795);
+var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
+var insertBySelector = __webpack_require__(569);
+var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+var setAttributesWithoutAttributes = __webpack_require__(3565);
+var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement = __webpack_require__(9216);
+var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+var styleTagTransform = __webpack_require__(4589);
+var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/validation-errors/index.scss
+var validation_errors = __webpack_require__(7242);
+;// CONCATENATED MODULE: ./components/validation-errors/index.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (styleTagTransform_default());
+options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      options.insert = insertBySelector_default().bind(null, "head");
+    
+options.domAPI = (styleDomAPI_default());
+options.insertStyleElement = (insertStyleElement_default());
+
+var update = injectStylesIntoStyleTag_default()(validation_errors/* default */.Z, options);
+
+
+
+
+       /* harmony default export */ const components_validation_errors = (validation_errors/* default */.Z && validation_errors/* default.locals */.Z.locals ? validation_errors/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./components/validation-errors/index.js
+
+
+
+
+
+
+var tx = function tx(str, locale) {
+  if (isString_default()(str)) {
+    return str;
+  } else if (isObject_default()(str)) {
+    if (!isEmpty_default()(str[locale])) {
+      return str[locale];
+    } else if (!isEmpty_default()(str['en-US'])) {
+      return str['en-US'];
+    } else if (Object.keys(str).length !== 0) {
+      return str[Object.keys(str)[0]];
+    } else {
+      return '';
+    }
+  }
+};
+var ValidationErrors = function ValidationErrors(_ref) {
+  var _ref$errors = _ref.errors,
+    errors = _ref$errors === void 0 ? {} : _ref$errors,
+    className = _ref.className,
+    locale = _ref.locale;
+  var keys = Object.keys(errors);
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: classnames_default()('lf-validation-errors', className)
+  }, keys.map(function (fieldName) {
+    var label = fieldName;
+    if (errors[fieldName] && errors[fieldName].ref && errors[fieldName].ref.label) {
+      label = tx(errors[fieldName].ref.label, locale);
+    }
+    return /*#__PURE__*/external_react_default().createElement("div", {
+      key: fieldName
+    }, /*#__PURE__*/external_react_default().createElement("b", null, label, ":"), "\xA0", errors[fieldName].message ? errors[fieldName].message : 'This is required');
+  }));
+};
+
+// EXTERNAL MODULE: ./assets/icons/index.js + 7 modules
+var icons = __webpack_require__(2113);
+;// CONCATENATED MODULE: ./components/required-icon/index.js
+
+
+var required_icon_RequiredIcon = function RequiredIcon() {
+  return /*#__PURE__*/external_react_default().createElement(icons/* Asterisk */.dn, {
+    color: "#ff6633",
+    width: 12,
+    height: 12,
+    style: {
+      marginLeft: '3px'
+    }
+  });
+};
+
+// EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
+var isFunction = __webpack_require__(3560);
+var isFunction_default = /*#__PURE__*/__webpack_require__.n(isFunction);
+// EXTERNAL MODULE: ./helpers/index.js + 25 modules
+var helpers = __webpack_require__(3159);
+;// CONCATENATED MODULE: ./components/i18n/index.js
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+
+var I18N = function I18N(Component) {
+  var propNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+  var funcPropNames = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  return function (props) {
+    var lfLocale = props.lfLocale;
+    var newProps = Object.keys(props).reduce(function (acc, propName) {
+      // translate simpe field
+      if (propNames.includes(propName)) {
+        return _objectSpread(_objectSpread({}, acc), {}, _defineProperty({}, propName, (0,helpers/* i18n */.ag)(props[propName], lfLocale)));
+      } else if (isFunction_default()(funcPropNames[propName])) {
+        // pass the value trough the mapper
+        var translated = funcPropNames[propName](props[propName], function (string) {
+          return (0,helpers/* i18n */.ag)(string, lfLocale);
+        });
+        return _objectSpread(_objectSpread({}, acc), {}, _defineProperty({}, propName, translated));
+      }
+      return _objectSpread(_objectSpread({}, acc), {}, _defineProperty({}, propName, props[propName]));
+    }, {});
+    return /*#__PURE__*/external_react_default().createElement(Component, newProps);
+  };
+};
+// EXTERNAL MODULE: ./node_modules/lodash/isDate.js
+var isDate = __webpack_require__(7960);
+var isDate_default = /*#__PURE__*/__webpack_require__.n(isDate);
+;// CONCATENATED MODULE: ./components/plaintext/locales/yes.json
+const yes_namespaceObject = JSON.parse('{"en-US":"Yes","af-ZA":"Ja","ar":"نعم","bg-BG":"Да","ca-AD":"Sí","cs-CZ":"Ano","cy-GB":"Ie","da-DK":"Ja","de-AT":"Ja","de-CH":"Ja","de-DE":"Ja","el-GR":"Ναί","en-GB":"Yes","es-CL":"Sí","es-ES":"Sí","es-MX":"Sí","et-EE":"Jah","eu":"Bai","fa-IR":"آره","fi-FI":"Joo","fr-CA":"Oui","fr-FR":"Oui","he-IL":"כן","hi-IN":"हाँ","hr-HR":"Da","hu-HU":"Igen","id-ID":"Ya","is-IS":"Já","it-IT":"Si","ja-JP":"はい","km-KH":"បាត","ko-KR":"예","la":"Sic","lt-LT":"Taip","lv-LV":"Jā","mn-MN":"Мон","nb-NO":"Ja","nl-NL":"Ja","pl-PL":"Tak","pt-BR":"Sim","pt-PT":"Sim","ro-RO":"da","ru-RU":"Да","sk-SK":"Áno","sl-SI":"DA","sr-RS":"да","sv-SE":"Ja","th-TH":"ใช่","tr-TR":"Evet","uk-UA":"Так","vi-VN":"Đúng","zh-CN":"是的","zh-TW":"是的"}');
+;// CONCATENATED MODULE: ./components/plaintext/locales/no.json
+const no_namespaceObject = JSON.parse('{"en-US":"No","af-ZA":"Geen","ar":"لا","bg-BG":"Не","ca-AD":"No","cs-CZ":"Ne","cy-GB":"Na","da-DK":"Ingen","de-AT":"NEIN","de-CH":"NEIN","de-DE":"NEIN","el-GR":"Οχι","en-GB":"No","es-CL":"No","es-ES":"No","es-MX":"No","et-EE":"Mitte","eu":"Ez-","fa-IR":"هیچ","fi-FI":"Ei","fr-CA":"Non","fr-FR":"Non","he-IL":"לא","hi-IN":"नहीं","hr-HR":"Ne","hu-HU":"Nem","id-ID":"TIDAK","is-IS":"Nei","it-IT":"No","ja-JP":"いいえ","km-KH":"ដេលក្ផាន","ko-KR":"아니요","la":"Non","lt-LT":"Ne","lv-LV":"Nē","mn-MN":"-Гүй / -битгий","nb-NO":"Nei","nl-NL":"Nee","pl-PL":"NIE","pt-BR":"Não","pt-PT":"Não","ro-RO":"Nu","ru-RU":"Нет","sk-SK":"Nie","sl-SI":"Ne","sr-RS":"Не","sv-SE":"Nej","th-TH":"เลขที่","tr-TR":"HAYIR","uk-UA":"Немає","vi-VN":"KHÔNG","zh-CN":"不","zh-TW":"不"}');
+;// CONCATENATED MODULE: ./components/plaintext/locales/index.js
+
+
+
+;// CONCATENATED MODULE: ./components/plaintext/index.js
+
+
+
+
+
+var Plaintext = function Plaintext(_ref) {
+  var value = _ref.value,
+    component = _ref.component,
+    options = _ref.options,
+    locale = _ref.locale;
+  var d;
+  switch (component) {
+    case 'input-text':
+    case 'text-input':
+      return /*#__PURE__*/external_react_default().createElement("span", null, value);
+    case 'date':
+      if (isDate_default()(value)) {
+        d = value;
+      } else if (isString_default()(value) && (0,helpers/* isValidDate */.qb)(new Date(value))) {
+        d = new Date(value);
+      }
+      return /*#__PURE__*/external_react_default().createElement("span", null, d ? d.toLocaleDateString() : '');
+    case 'datetime':
+      if (isDate_default()(value)) {
+        d = value;
+      } else if (isString_default()(value) && (0,helpers/* isValidDate */.qb)(new Date(value))) {
+        d = new Date(value);
+      }
+      return /*#__PURE__*/external_react_default().createElement("span", null, d ? d.toLocaleDateString() + ' ' + d.toLocaleTimeString() : '');
+    case 'toggle':
+    case 'checkbox':
+      if (value === true || value === 1) {
+        return /*#__PURE__*/external_react_default().createElement("span", null, (0,helpers/* i18n */.ag)(yes_namespaceObject, locale));
+      } else if (value === false || value === 0) {
+        return /*#__PURE__*/external_react_default().createElement("span", null, (0,helpers/* i18n */.ag)(no_namespaceObject, locale));
+      }
+      return /*#__PURE__*/external_react_default().createElement("span", null, "-");
+    case 'select':
+      var found = (options !== null && options !== void 0 ? options : []).find(function (option) {
+        return option.value === value;
+      });
+      var label = '';
+      if (found) {
+        if ((0,helpers/* isI18n */.QK)(found.label)) {
+          label = (0,helpers/* i18n */.ag)(found.label, locale);
+        } else {
+          label = found.label;
+        }
+      }
+      return /*#__PURE__*/external_react_default().createElement("span", null, label);
+    default:
+      return /*#__PURE__*/external_react_default().createElement("span", null, value);
+  }
+};
+var IfNotPlaintext = function IfNotPlaintext(_ref2) {
+  var plaintext = _ref2.plaintext,
+    value = _ref2.value,
+    component = _ref2.component,
+    options = _ref2.options,
+    children = _ref2.children,
+    locale = _ref2.locale;
+  if (plaintext) {
+    return /*#__PURE__*/external_react_default().createElement(Plaintext, {
+      value: value,
+      component: component,
+      options: options,
+      locale: locale
+    });
+  } else {
+    return children;
+  }
+};
+
+;// CONCATENATED MODULE: ./components/react-generic-input/index.js
+
+var _excluded = ["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "plaintext", "required", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+
+var ReactGenericInput = function ReactGenericInput(_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    lfLocale = _ref.lfLocale,
+    hint = _ref.hint,
+    value = _ref.value,
+    onChange = _ref.onChange,
+    onBlur = _ref.onBlur,
+    error = _ref.error,
+    className = _ref.className,
+    disabled = _ref.disabled,
+    readOnly = _ref.readOnly,
+    plaintext = _ref.plaintext,
+    required = _ref.required,
+    size = _ref.size,
+    width = _ref.width,
+    fullWidth = _ref.fullWidth,
+    placeholder = _ref.placeholder,
+    autocomplete = _ref.autocomplete,
+    inputType = _ref.inputType,
+    inputMode = _ref.inputMode,
+    component = _ref.component,
+    rest = _objectWithoutProperties(_ref, _excluded);
+  var hasError = error && isString_default()(error);
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: classnames_default()('lf-form-react-control-group', className),
+    "data-lf-field-name": name
+  }, /*#__PURE__*/external_react_default().createElement("label", {
+    for: name
+  }, label, required && /*#__PURE__*/external_react_default().createElement(required_icon_RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(IfNotPlaintext, {
+    value: value,
+    component: component,
+    plaintext: plaintext
+  }, /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, /*#__PURE__*/external_react_default().createElement("input", _extends({
+    type: inputType,
+    lang: lfLocale,
+    id: name,
+    defaultValue: value,
+    onChange: onChange,
+    onBlur: onBlur,
+    placeholder: placeholder,
+    style: (0,helpers/* makeWidthStyle */.PZ)(fullWidth, width),
+    autoComplete: autocomplete,
+    inputMode: inputMode,
+    disabled: disabled,
+    readOnly: readOnly
+  }, (0,helpers/* passRest */.QF)(rest))), hint && !hasError && /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-form-react-message"
+  }, hint), hasError && /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-form-react-error-message"
+  }, error))));
+};
+
+// EXTERNAL MODULE: external "rsuite"
+var external_rsuite_ = __webpack_require__(1186);
+// EXTERNAL MODULE: external "rsuite/locales"
+var locales_ = __webpack_require__(977);
+;// CONCATENATED MODULE: ./components/rsuite-generic-date/index.js
+
+var rsuite_generic_date_excluded = (/* unused pure expression or super */ null && (["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"]));
+function rsuite_generic_date_extends() { rsuite_generic_date_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return rsuite_generic_date_extends.apply(this, arguments); }
+function rsuite_generic_date_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = rsuite_generic_date_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function rsuite_generic_date_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+var RSuiteGenericDate = function RSuiteGenericDate(_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    hint = _ref.hint,
+    value = _ref.value,
+    placeholder = _ref.placeholder,
+    plaintext = _ref.plaintext,
+    _ref$tooltip = _ref.tooltip,
+    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+    _ref$disabled = _ref.disabled,
+    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    _ref$readOnly = _ref.readOnly,
+    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+    _ref$required = _ref.required,
+    required = _ref$required === void 0 ? false : _ref$required,
+    error = _ref.error,
+    onChange = _ref.onChange,
+    onBlur = _ref.onBlur,
+    appearance = _ref.appearance,
+    format = _ref.format,
+    lfLocale = _ref.lfLocale,
+    rest = rsuite_generic_date_objectWithoutProperties(_ref, rsuite_generic_date_excluded);
+  var localeCode = lfLocale && _isString(lfLocale) ? lfLocale.replace('-', '') : undefined;
+  return /*#__PURE__*/React.createElement(Form.Group, {
+    "data-lf-field-name": name,
+    className: "lf-control-date"
+  }, label && /*#__PURE__*/React.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React.createElement(Form.HelpText, {
+    tooltip: true
+  }, hint), required && /*#__PURE__*/React.createElement(RequiredIcon, null)), /*#__PURE__*/React.createElement(CustomProvider, {
+    locale: localeCode && locales[localeCode] ? locales[localeCode] : undefined
+  }, /*#__PURE__*/React.createElement(Form.Control, rsuite_generic_date_extends({
+    accepter: DatePicker,
+    appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
+    name: name,
+    format: format || 'yyyy-MM-dd',
+    defaultValue: value,
+    onChange: onChange,
+    readOnly: readOnly,
+    plaintext: plaintext,
+    onBlur: onBlur,
+    errorMessage: _isString(error) ? error : undefined,
+    disabled: disabled,
+    placeholder: placeholder
+  }, rest)), hint && !tooltip && /*#__PURE__*/React.createElement(Form.HelpText, null, hint)));
+};
+
+// EXTERNAL MODULE: ./components/react-generic-checkbox/index.js
+var react_generic_checkbox = __webpack_require__(8407);
+;// CONCATENATED MODULE: ./components/index.js
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ 8407:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "H": () => (/* binding */ ReactGenericCheckbox)
+/* harmony export */ });
+/* harmony import */ var lodash_isString__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7037);
+/* harmony import */ var lodash_isString__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_isString__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8156);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4184);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8397);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3159);
+
+var _excluded = ["name", "label", "lfLocale", "className", "inputType", "hint", "plaintext", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+var ReactGenericCheckbox = function ReactGenericCheckbox(_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    lfLocale = _ref.lfLocale,
+    className = _ref.className,
+    inputType = _ref.inputType,
+    hint = _ref.hint,
+    plaintext = _ref.plaintext,
+    value = _ref.value,
+    defaultValue = _ref.defaultValue,
+    onChange = _ref.onChange,
+    onBlur = _ref.onBlur,
+    error = _ref.error,
+    disabled = _ref.disabled,
+    readOnly = _ref.readOnly,
+    required = _ref.required,
+    rest = _objectWithoutProperties(_ref, _excluded);
+  var hasError = error && lodash_isString__WEBPACK_IMPORTED_MODULE_0___default()(error);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('lf-form-react-control-group', className),
+    "data-lf-field-name": name
+  }, !plaintext && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("label", {
+    for: name,
+    className: "lf-form-react-checkbox"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("input", _extends({
+    type: inputType,
+    id: name,
+    onChange: onChange,
+    onBlur: onBlur,
+    required: error != null,
+    disabled: disabled,
+    readOnly: readOnly,
+    defaultChecked: value
+  }, (0,_helpers__WEBPACK_IMPORTED_MODULE_4__/* .passRest */ .QF)(rest))), " ", label, " ", required && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_components__WEBPACK_IMPORTED_MODULE_3__/* .RequiredIcon */ .T_, null)), hint && !hasError && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "lf-form-react-form-message"
+  }, hint), hasError && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "lf-form-react-error-message"
+  }, error)), plaintext && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("label", {
+    for: name
+  }, label), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_components__WEBPACK_IMPORTED_MODULE_3__/* .Plaintext */ .UM, {
+    value: value,
+    component: "toggle",
+    locale: lfLocale
+  })));
+};
+
+
+/***/ }),
+
+/***/ 8064:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MQ": () => (/* binding */ FRAMEWORKS),
+/* harmony export */   "fj": () => (/* binding */ FIELDS_KEY),
+/* harmony export */   "hZ": () => (/* binding */ FRAMEWORKS_LABELS)
+/* harmony export */ });
+var FRAMEWORKS = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd'];
+var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design'];
+var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
+
+/***/ }),
+
+/***/ 5137:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8156);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var FormContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FormContext);
+
+/***/ }),
+
+/***/ 7274:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "x": () => (/* binding */ GenerateGenerator)
+/* harmony export */ });
+/* harmony import */ var lodash_uniqueId__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3955);
+/* harmony import */ var lodash_uniqueId__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_uniqueId__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7557);
+/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_omit__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_trim__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2742);
+/* harmony import */ var lodash_trim__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_trim__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1609);
+/* harmony import */ var lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var lodash_isString__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7037);
+/* harmony import */ var lodash_isString__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_isString__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(8156);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(7536);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4184);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8397);
+/* harmony import */ var _costants__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(8064);
+/* harmony import */ var _assets_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(2113);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(3159);
+/* harmony import */ var _form_context__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(5137);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(4685);
+
+
+
+
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator.return && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, catch: function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _asyncIterator(iterable) { var method, async, sync, retry = 2; for ("undefined" != typeof Symbol && (async = Symbol.asyncIterator, sync = Symbol.iterator); retry--;) { if (async && null != (method = iterable[async])) return method.call(iterable); if (sync && null != (method = iterable[sync])) return new AsyncFromSyncIterator(method.call(iterable)); async = "@@asyncIterator", sync = "@@iterator"; } throw new TypeError("Object is not async iterable"); }
+function AsyncFromSyncIterator(s) { function AsyncFromSyncIteratorContinuation(r) { if (Object(r) !== r) return Promise.reject(new TypeError(r + " is not an object.")); var done = r.done; return Promise.resolve(r.value).then(function (value) { return { value: value, done: done }; }); } return AsyncFromSyncIterator = function AsyncFromSyncIterator(s) { this.s = s, this.n = s.next; }, AsyncFromSyncIterator.prototype = { s: null, n: null, next: function next() { return AsyncFromSyncIteratorContinuation(this.n.apply(this.s, arguments)); }, return: function _return(value) { var ret = this.s.return; return void 0 === ret ? Promise.resolve({ value: value, done: !0 }) : AsyncFromSyncIteratorContinuation(ret.apply(this.s, arguments)); }, throw: function _throw(value) { var thr = this.s.return; return void 0 === thr ? Promise.reject(value) : AsyncFromSyncIteratorContinuation(thr.apply(this.s, arguments)); } }, new AsyncFromSyncIterator(s); }
+/* eslint-disable no-new-func */
+
+
+
+
+
+
+
+//import PropTypes from 'prop-types';
+
+
+
+var DEBUG_RENDER = true;
+var enrichWithLabels = function enrichWithLabels(validationErrors, fields) {
+  var result = _objectSpread({}, validationErrors);
+  var collectLabels = (0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .reduceFields */ .f3)(fields, function (field, accumulator) {
+    return field.label ? _objectSpread(_objectSpread({}, accumulator), {}, _defineProperty({}, field.name, field.label)) : accumulator;
+  }, {});
+  Object.keys(result).forEach(function (key) {
+    if (result[key] && result[key].ref && collectLabels[result[key].ref.name]) {
+      result[key].ref.label = collectLabels[result[key].ref.name];
+    }
+  });
+  return result;
+};
+var errorToString = function errorToString(error) {
+  if (error) {
+    if (error.message) {
+      return error.message;
+    } else if (error.type === 'required') {
+      return 'This field is required';
+    } else if (error.type === 'minLength') {
+      return 'Text is too short';
+    } else if (error.type === 'maxLength') {
+      return 'Text is too long';
+    } else if (error.type === 'max') {
+      return 'Value is too big';
+    } else if (error.type === 'min') {
+      return 'Value is too small';
+    }
+    return 'Invalid value';
+  }
+  return undefined;
+};
+var translateValidation = function translateValidation(validation, locale, onJavascriptError) {
+  // if any validation object
+  if (validation != null) {
+    var errorMessage;
+    if (lodash_isString__WEBPACK_IMPORTED_MODULE_4___default()(validation.message)) {
+      errorMessage = validation.message;
+    } else if ((0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .isI18n */ .QK)(validation.message)) {
+      var _i18n;
+      errorMessage = (_i18n = (0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .i18n */ .ag)(validation.message, locale)) !== null && _i18n !== void 0 ? _i18n : 'Field is required';
+    } else {
+      errorMessage = 'Field is required';
+    }
+    var result = {};
+    if (validation.required) {
+      result.required = errorMessage;
+    }
+    // min / max validation
+    ['min', 'max', 'minLength', 'maxLength'].forEach(function (key) {
+      if (validation[key] != null) {
+        result[key] = {
+          value: validation[key],
+          message: errorMessage
+        };
+      }
+    });
+    // validation with regex
+    if (validation.pattern) {
+      result.pattern = {
+        value: new RegExp(validation.pattern),
+        message: errorMessage
+      };
+    }
+    if (!lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default()(lodash_trim__WEBPACK_IMPORTED_MODULE_2___default()(validation.validate))) {
+      try {
+        var validator = new Function('value', 'formValues', validation.validate);
+        // wrap the validator function, if returns strictly false then re-use
+        // the provided message, if it's a string return the string, but it will not i18n
+        result.validate = function (value, formValues) {
+          var v;
+          try {
+            v = validator(value, formValues);
+          } catch (e) {
+            console.error("[LetsForm] Error executing validate function: ", e);
+            var error = new Error('Error compiling validate function: ' + e.message, {
+              cause: e
+            });
+            error.sourceCode = validation.validate;
+            error.errorType = 'runtime';
+            onJavascriptError(error);
+          }
+          if (v === true) {
+            return true;
+          } else if (v === false) {
+            return errorMessage;
+          } else if (lodash_isString__WEBPACK_IMPORTED_MODULE_4___default()(v)) {
+            return v;
+          } else if ((0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .isI18n */ .QK)(v)) {
+            return (0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .i18n */ .ag)(v, locale);
+          }
+          return true;
+        };
+      } catch (e) {
+        console.error("[LetsForm] Invalid validate function: ", e);
+        var error = new Error('Error compiling validate function: ' + e.message, {
+          cause: e
+        });
+        error.sourceCode = validation.validate;
+        error.errorType = 'compile';
+        onJavascriptError(error);
+      }
+    } else {
+      result.validate = undefined;
+    }
+    return result;
+  }
+  return validation;
+};
+var MissingComponent = function MissingComponent(_ref) {
+  var lfComponent = _ref.lfComponent,
+    label = _ref.label,
+    lfFramework = _ref.lfFramework;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement("div", {
+    className: "lf-missing-component"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement("div", {
+    className: "icon"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(_assets_icons__WEBPACK_IMPORTED_MODULE_8__/* .Warning */ .v3, {
+    color: "#ff6633",
+    height: 16
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement("div", {
+    className: "message"
+  }, "The component ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement("span", {
+    className: "tag-component"
+  }, lfComponent), " (", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement("em", null, "\"", lodash_isString__WEBPACK_IMPORTED_MODULE_4___default()(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement("b", null, lfFramework), ")"));
+};
+var collectTransformers = function collectTransformers(form, onJavascriptError) {
+  var transformers = {};
+
+  // collect all fieldlist needed to compile the transformer
+  var fieldList = (0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .reduceFields */ .f3)(form.fields, function (field, accumulator) {
+    if (field.component !== 'group' && field.component !== 'two-columns' && field.component !== 'three-columns') {
+      return [].concat(_toConsumableArray(accumulator), [field.name]);
+    }
+    return accumulator;
+  }, [], {
+    array: false
+  } // don't include array
+  );
+
+  // compile transformer of the form
+  try {
+    if (!lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default()(form.transformer)) {
+      transformers.onRender = [makeTransformer(form.transformer, fieldList)];
+    }
+  } catch (e) {
+    var error = new Error('Error compiling main transformer: ' + e.message, {
+      cause: e
+    });
+    error.sourceCode = form.transformer;
+    error.errorType = 'compile';
+    onJavascriptError(error);
+  }
+
+  // collect transformers for each field and put it onChange
+  transformers = (0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .reduceFields */ .f3)(form.fields, function (field, acc) {
+    if (field.transformer) {
+      var transformer;
+      try {
+        transformer = makeTransformer(field.transformer, fieldList);
+      } catch (e) {
+        var _error = new Error('Error compiling transformer. ' + e.message, {
+          cause: e
+        });
+        _error.sourceCode = field.transformer;
+        _error.errorType = 'compile';
+        onJavascriptError(_error);
+      }
+      // push into the onChange list of txs
+      if (transformer != null) {
+        if (acc.onChange == null) {
+          acc.onChange = {};
+        }
+        acc.onChange[field.name] = [transformer];
+      }
+    }
+    return acc;
+  }, transformers, {
+    array: false
+  } // don't include array
+  );
+
+  return transformers;
+};
+
+// Use eval to get the contructor since RCA polyfill this and returns a normal function constructor
+// eslint-disable-next-line no-eval
+var AsyncGeneratorFunction = eval('(() => async function* () {}.constructor)()');
+var makeTransformer = function makeTransformer(str, fieldList) {
+  if (lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default()(str)) {
+    return null;
+  }
+  var yieldedStr = str.replaceAll(/((setValue|hide|show|enable|disable|show|hide|arraySetValue)\(.*?\)[;]{0,1})/g, '$& yield Promise.resolve(api.fields());\n');
+  try {
+    var spreadVars = '';
+    if (!lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default()(fieldList)) {
+      spreadVars = 'const { ' + fieldList.join(', ') + ' } = values;\n';
+    }
+    var tx = new AsyncGeneratorFunction('api', "const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue } = api;\n" + spreadVars + yieldedStr + '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
+    );
+
+    return tx;
+  } catch (e) {
+    console.error("[LetsForm] Invalid JavaScript code for rules", e);
+    console.error("[LetsForm] Transformer: ", yieldedStr);
+    throw e;
+  }
+};
+
+/**
+ * Merge additional components to the main library
+ * @param {*} main
+ * @param {*} additional
+ * @returns
+ */
+var mergeComponents = function mergeComponents(main, additional) {
+  // if not empty, then merge, overwriting is ok
+  if (!lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default()(additional) && Object.keys(additional).length !== 0) {
+    Object.keys(additional).forEach(function (componentName) {
+      if (main[componentName] == null) {
+        main[componentName] = additional[componentName];
+      } else {
+        main[componentName] = _objectSpread(_objectSpread({}, main[componentName]), additional[componentName]);
+      }
+    });
+  }
+  return main;
+};
+var GenerateGenerator = function GenerateGenerator(_ref2) {
+  var Forms = _ref2.Forms,
+    Fields = _ref2.Fields;
+  var renderFields = function renderFields(_ref3) {
+    var fields = _ref3.fields,
+      control = _ref3.control,
+      framework = _ref3.framework,
+      _onChange = _ref3.onChange,
+      getValues = _ref3.getValues,
+      Wrapper = _ref3.Wrapper,
+      GroupWrapper = _ref3.GroupWrapper,
+      BottomView = _ref3.BottomView,
+      debug = _ref3.debug,
+      disabled = _ref3.disabled,
+      readOnly = _ref3.readOnly,
+      plaintext = _ref3.plaintext,
+      errors = _ref3.errors,
+      showErrors = _ref3.showErrors,
+      _ref3$level = _ref3.level,
+      level = _ref3$level === void 0 ? 1 : _ref3$level,
+      locale = _ref3.locale,
+      onJavascriptError = _ref3.onJavascriptError,
+      Components = _ref3.Components;
+    var renderedFields = (fields || []).filter(function (field) {
+      return Wrapper || field.hidden !== true;
+    }).map(function (field, index) {
+      var Component;
+      if (Components[field.component] && Components[field.component][framework]) {
+        Component = Components[field.component][framework];
+      } else if (Components[field.component] && Components[field.component]['*']) {
+        Component = Components[field.component]['*'];
+      } else {
+        Component = MissingComponent;
+      }
+      // remove mandatory fields and platform specific fields
+      var additionalFields = lodash_omit__WEBPACK_IMPORTED_MODULE_1___default()(field, ['id', 'name', 'label', 'hint', 'disabled', 'readOnly', 'plaintext', 'size', 'placeholder', 'component'].concat(_toConsumableArray(_costants__WEBPACK_IMPORTED_MODULE_12__/* .FRAMEWORKS */ .MQ)));
+
+      // special case of group
+      if (field.component === 'group') {
+        var component = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(Component, _extends({
+          key: field.name,
+          lfComponent: field.component,
+          lfFramework: framework,
+          lfLocale: locale,
+          name: field.name,
+          label: field.label,
+          hint: field.hint,
+          disabled: field.disabled
+        }, additionalFields), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement((react__WEBPACK_IMPORTED_MODULE_5___default().Fragment), null, renderFields({
+          Wrapper: Wrapper,
+          GroupWrapper: GroupWrapper,
+          BottomView: BottomView,
+          onChange: _onChange,
+          fields: field.fields,
+          control: control,
+          framework: framework,
+          getValues: getValues,
+          disabled: disabled,
+          readOnly: readOnly,
+          plaintext: plaintext,
+          errors: errors,
+          showErrors: showErrors,
+          level: level + 1,
+          locale: locale,
+          onJavascriptError: onJavascriptError,
+          Components: Components
+        }), BottomView && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(BottomView, {
+          context: "group",
+          key: "bottom_view_".concat(field.name),
+          field: field,
+          target: "fields"
+        })));
+        return GroupWrapper ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
+          field: field,
+          level: level,
+          index: index,
+          className: "group"
+        }, component) : component;
+      } else if (field.component === 'array' && GroupWrapper) {
+        var _component = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(Component, _extends({
+          key: field.name,
+          lfComponent: field.component,
+          lfFramework: framework,
+          lfLocale: locale,
+          name: field.name,
+          label: field.label,
+          hint: field.hint,
+          disabled: field.disabled
+        }, additionalFields), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement((react__WEBPACK_IMPORTED_MODULE_5___default().Fragment), null, renderFields({
+          Wrapper: Wrapper,
+          GroupWrapper: GroupWrapper,
+          BottomView: BottomView,
+          onChange: _onChange,
+          fields: field.fields,
+          control: control,
+          framework: framework,
+          getValues: getValues,
+          disabled: disabled,
+          readOnly: readOnly,
+          plaintext: plaintext,
+          errors: errors,
+          showErrors: showErrors,
+          level: level + 1,
+          locale: locale,
+          onJavascriptError: onJavascriptError,
+          Components: Components
+        }), BottomView && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(BottomView, {
+          context: "array",
+          key: "bottom_view_".concat(field.name),
+          field: field,
+          target: "fields"
+        })));
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
+          field: field,
+          level: level,
+          index: index,
+          className: "array"
+        }, _component);
+      } else if (field.component === 'two-columns') {
+        var _component2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(Component, _extends({
+          key: field.name,
+          lfComponent: field.component,
+          lfFramework: framework,
+          lfLocale: locale,
+          name: field.name
+        }, additionalFields), function (column) {
+          if (column === 'left') {
+            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement((react__WEBPACK_IMPORTED_MODULE_5___default().Fragment), null, renderFields({
+              Wrapper: Wrapper,
+              GroupWrapper: GroupWrapper,
+              BottomView: BottomView,
+              onChange: _onChange,
+              fields: field.leftFields,
+              control: control,
+              framework: framework,
+              getValues: getValues,
+              disabled: disabled,
+              readOnly: readOnly,
+              plaintext: plaintext,
+              errors: errors,
+              showErrors: showErrors,
+              level: level + 1,
+              locale: locale,
+              onJavascriptError: onJavascriptError,
+              Components: Components
+            }), BottomView && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(BottomView, {
+              context: "two-columns",
+              key: "bottom_view_".concat(field.name),
+              field: field,
+              target: "leftFields"
+            }));
+          } else if (column === 'right') {
+            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement((react__WEBPACK_IMPORTED_MODULE_5___default().Fragment), null, renderFields({
+              Wrapper: Wrapper,
+              GroupWrapper: GroupWrapper,
+              BottomView: BottomView,
+              onChange: _onChange,
+              fields: field.rightFields,
+              control: control,
+              framework: framework,
+              getValues: getValues,
+              disabled: disabled,
+              readOnly: readOnly,
+              plaintext: plaintext,
+              errors: errors,
+              showErrors: showErrors,
+              level: level + 1,
+              locale: locale,
+              onJavascriptError: onJavascriptError,
+              Components: Components
+            }), BottomView && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(BottomView, {
+              context: "two-columns",
+              key: "bottom_view_".concat(field.name),
+              field: field,
+              target: "rightFields"
+            }));
+          }
+        });
+        return GroupWrapper ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
+          className: "two-columns",
+          level: level,
+          field: field,
+          index: index
+        }, _component2) : _component2;
+      } else if (field.component === 'three-columns') {
+        var _component3 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(Component, _extends({
+          key: "three-columns-".concat(field.name),
+          name: field.name,
+          lfComponent: field.component,
+          lfFramework: framework,
+          lfLocale: locale
+        }, additionalFields), function (column) {
+          if (column === 'left') {
+            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement((react__WEBPACK_IMPORTED_MODULE_5___default().Fragment), null, renderFields({
+              Wrapper: Wrapper,
+              GroupWrapper: GroupWrapper,
+              BottomView: BottomView,
+              onChange: _onChange,
+              fields: field.leftFields,
+              control: control,
+              framework: framework,
+              getValues: getValues,
+              disabled: disabled,
+              readOnly: readOnly,
+              plaintext: plaintext,
+              errors: errors,
+              showErrors: showErrors,
+              level: level + 1,
+              locale: locale,
+              onJavascriptError: onJavascriptError,
+              Components: Components
+            }), BottomView && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(BottomView, {
+              context: "three-columns",
+              key: "bottom_view_".concat(field.name),
+              field: field,
+              target: "leftFields"
+            }));
+          } else if (column === 'center') {
+            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement((react__WEBPACK_IMPORTED_MODULE_5___default().Fragment), null, renderFields({
+              Wrapper: Wrapper,
+              GroupWrapper: GroupWrapper,
+              BottomView: BottomView,
+              onChange: _onChange,
+              fields: field.centerFields,
+              control: control,
+              framework: framework,
+              getValues: getValues,
+              disabled: disabled,
+              readOnly: readOnly,
+              plaintext: plaintext,
+              errors: errors,
+              showErrors: showErrors,
+              level: level + 1,
+              locale: locale,
+              onJavascriptError: onJavascriptError,
+              Components: Components
+            }), BottomView && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(BottomView, {
+              context: "three-columns",
+              key: "bottom_view_".concat(field.name),
+              field: field,
+              target: "centerFields"
+            }));
+          } else if (column === 'right') {
+            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement((react__WEBPACK_IMPORTED_MODULE_5___default().Fragment), null, renderFields({
+              Wrapper: Wrapper,
+              GroupWrapper: GroupWrapper,
+              BottomView: BottomView,
+              onChange: _onChange,
+              fields: field.rightFields,
+              control: control,
+              framework: framework,
+              getValues: getValues,
+              disabled: disabled,
+              readOnly: readOnly,
+              plaintext: plaintext,
+              errors: errors,
+              showErrors: showErrors,
+              level: level + 1,
+              locale: locale,
+              onJavascriptError: onJavascriptError,
+              Components: Components
+            }), BottomView && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(BottomView, {
+              context: "three-columns",
+              key: "bottom_view_".concat(field.name),
+              field: field,
+              target: "rightFields"
+            }));
+          }
+        });
+        return GroupWrapper ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
+          className: "three-columns",
+          field: field,
+          level: level,
+          index: index
+        }, _component3) : _component3;
+      }
+
+      // generate the validation rule, takes into account react-hook-form
+      // validation format and i18n strings
+      var rules = translateValidation(_objectSpread({
+        required: field.required
+      }, field.validation), locale, onJavascriptError);
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(react_hook_form__WEBPACK_IMPORTED_MODULE_13__/* .Controller */ .Qr, {
+        key: "field_".concat(field.name),
+        name: field.name,
+        rules: rules,
+        control: control,
+        render: function render(_ref4) {
+          var fieldInfo = _ref4.field;
+          var component = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(Component
+          // not sure about this, not passing the ref
+          , _extends({
+            name: fieldInfo.name,
+            value: fieldInfo.value,
+            onBlur: fieldInfo.onBlur,
+            key: "field_".concat(field.name),
+            lfComponent: field.component,
+            lfFramework: framework,
+            lfLocale: locale,
+            label: field.label,
+            hint: field.hint,
+            disabled: disabled || field.disabled,
+            readOnly: readOnly || field.readOnly,
+            plaintext: plaintext,
+            size: field.size,
+            placeholder: field.placeholder,
+            error: errors && errors[field.name] ? showErrors === 'inline' ? errorToString(errors[field.name]) : true : undefined
+          }, additionalFields, field[framework], {
+            onChange: function onChange(value, opts) {
+              // TODO use callback
+              fieldInfo.onChange(value);
+              _onChange(_objectSpread(_objectSpread({}, getValues()), {}, _defineProperty({}, field.name, value)), field.name);
+            }
+          }));
+          return Wrapper ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(Wrapper, {
+            key: "wrapper_".concat(field.name),
+            field: field,
+            level: level,
+            index: index
+          }, component) : component;
+        }
+      });
+    });
+    return renderedFields;
+  };
+  var FormGenerator = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().memo(function (_ref5) {
+    var _form$name;
+    var framework = _ref5.framework,
+      form = _ref5.form,
+      _ref5$onChange = _ref5.onChange,
+      onChange = _ref5$onChange === void 0 ? function () {} : _ref5$onChange,
+      _ref5$onSubmit = _ref5.onSubmit,
+      onSubmit = _ref5$onSubmit === void 0 ? function () {} : _ref5$onSubmit,
+      _ref5$onReset = _ref5.onReset,
+      onReset = _ref5$onReset === void 0 ? function () {} : _ref5$onReset,
+      _ref5$onError = _ref5.onError,
+      onError = _ref5$onError === void 0 ? function () {} : _ref5$onError,
+      _ref5$onJavascriptErr = _ref5.onJavascriptError,
+      onJavascriptError = _ref5$onJavascriptErr === void 0 ? function () {} : _ref5$onJavascriptErr,
+      locale = _ref5.locale,
+      wrapper = _ref5.wrapper,
+      groupWrapper = _ref5.groupWrapper,
+      bottomView = _ref5.bottomView,
+      _ref5$defaultValues = _ref5.defaultValues,
+      defaultValues = _ref5$defaultValues === void 0 ? {} : _ref5$defaultValues,
+      _ref5$onlyFields = _ref5.onlyFields,
+      onlyFields = _ref5$onlyFields === void 0 ? false : _ref5$onlyFields,
+      _ref5$debug = _ref5.debug,
+      debug = _ref5$debug === void 0 ? false : _ref5$debug,
+      _ref5$disabled = _ref5.disabled,
+      disabled = _ref5$disabled === void 0 ? false : _ref5$disabled,
+      _ref5$readOnly = _ref5.readOnly,
+      readOnly = _ref5$readOnly === void 0 ? false : _ref5$readOnly,
+      _ref5$plaintext = _ref5.plaintext,
+      plaintext = _ref5$plaintext === void 0 ? false : _ref5$plaintext,
+      _ref5$hideToolbar = _ref5.hideToolbar,
+      hideToolbar = _ref5$hideToolbar === void 0 ? false : _ref5$hideToolbar,
+      children = _ref5.children,
+      components = _ref5.components,
+      className = _ref5.className;
+    if (debug) {
+      console.log("[LetsForm] Render form (".concat(form.name, ")"));
+    }
+    var showErrors = form.showErrors;
+    var _useState = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)((_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : lodash_uniqueId__WEBPACK_IMPORTED_MODULE_0___default()('form_')),
+      _useState2 = _slicedToArray(_useState, 2),
+      formName = _useState2[0],
+      setFormName = _useState2[1];
+    var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)(null),
+      _useState4 = _slicedToArray(_useState3, 2),
+      transformers = _useState4[0],
+      setTransformers = _useState4[1];
+    var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_13__/* .useForm */ .cI)({
+        defaultValues: defaultValues,
+        mode: form.validationMode
+      }),
+      handleSubmit = _useForm.handleSubmit,
+      errors = _useForm.formState.errors,
+      reset = _useForm.reset,
+      control = _useForm.control,
+      getValues = _useForm.getValues;
+    var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)(),
+      _useState6 = _slicedToArray(_useState5, 2),
+      validationErrors = _useState6[0],
+      setValidationErrors = _useState6[1];
+    // store form fields, apply immediately transformers (collected from all fields)
+    var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)(null),
+      _useState8 = _slicedToArray(_useState7, 2),
+      formFields = _useState8[0],
+      setFormFields = _useState8[1];
+
+    // update internal state if form changes
+    (0,react__WEBPACK_IMPORTED_MODULE_5__.useEffect)(function () {
+      var f = /*#__PURE__*/function () {
+        var _ref6 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+          var _form$name2;
+          var newTransformers, newFields, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _iterator, _step, newFormFields, onChangeFields, idx, _iteratorAbruptCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, _newFormFields;
+          return _regeneratorRuntime().wrap(function _callee$(_context) {
+            while (1) switch (_context.prev = _context.next) {
+              case 0:
+                newTransformers = collectTransformers(form, onJavascriptError); // initial fields values
+                newFields = form.fields; // apply onRender transformers
+                if (lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default()(newTransformers.onRender)) {
+                  _context.next = 32;
+                  break;
+                }
+                _iteratorAbruptCompletion = false;
+                _didIteratorError = false;
+                _context.prev = 5;
+                _iterator = _asyncIterator((0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .applyTransformers */ .Zr)(formName, framework, newFields, newTransformers.onRender, defaultValues, onJavascriptError));
+              case 7:
+                _context.next = 9;
+                return _iterator.next();
+              case 9:
+                if (!(_iteratorAbruptCompletion = !(_step = _context.sent).done)) {
+                  _context.next = 16;
+                  break;
+                }
+                newFormFields = _step.value;
+                newFields = newFormFields;
+                setFormFields(newFormFields);
+              case 13:
+                _iteratorAbruptCompletion = false;
+                _context.next = 7;
+                break;
+              case 16:
+                _context.next = 22;
+                break;
+              case 18:
+                _context.prev = 18;
+                _context.t0 = _context["catch"](5);
+                _didIteratorError = true;
+                _iteratorError = _context.t0;
+              case 22:
+                _context.prev = 22;
+                _context.prev = 23;
+                if (!(_iteratorAbruptCompletion && _iterator.return != null)) {
+                  _context.next = 27;
+                  break;
+                }
+                _context.next = 27;
+                return _iterator.return();
+              case 27:
+                _context.prev = 27;
+                if (!_didIteratorError) {
+                  _context.next = 30;
+                  break;
+                }
+                throw _iteratorError;
+              case 30:
+                return _context.finish(27);
+              case 31:
+                return _context.finish(22);
+              case 32:
+                // collect list of fields with an onChange transformer
+                onChangeFields = Object.keys(newTransformers.onChange || {}).filter(function (fieldName) {
+                  return !lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default()(newTransformers.onChange[fieldName]);
+                }); // execute all onChange transformers at the bootstrap of the form
+                idx = 0;
+              case 34:
+                if (!(idx < onChangeFields.length)) {
+                  _context.next = 67;
+                  break;
+                }
+                _iteratorAbruptCompletion2 = false;
+                _didIteratorError2 = false;
+                _context.prev = 37;
+                _iterator2 = _asyncIterator((0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .applyTransformers */ .Zr)(formName, framework, newFields, newTransformers.onChange[onChangeFields[idx]], defaultValues, onJavascriptError));
+              case 39:
+                _context.next = 41;
+                return _iterator2.next();
+              case 41:
+                if (!(_iteratorAbruptCompletion2 = !(_step2 = _context.sent).done)) {
+                  _context.next = 48;
+                  break;
+                }
+                _newFormFields = _step2.value;
+                newFields = _newFormFields;
+                setFormFields(_newFormFields);
+              case 45:
+                _iteratorAbruptCompletion2 = false;
+                _context.next = 39;
+                break;
+              case 48:
+                _context.next = 54;
+                break;
+              case 50:
+                _context.prev = 50;
+                _context.t1 = _context["catch"](37);
+                _didIteratorError2 = true;
+                _iteratorError2 = _context.t1;
+              case 54:
+                _context.prev = 54;
+                _context.prev = 55;
+                if (!(_iteratorAbruptCompletion2 && _iterator2.return != null)) {
+                  _context.next = 59;
+                  break;
+                }
+                _context.next = 59;
+                return _iterator2.return();
+              case 59:
+                _context.prev = 59;
+                if (!_didIteratorError2) {
+                  _context.next = 62;
+                  break;
+                }
+                throw _iteratorError2;
+              case 62:
+                return _context.finish(59);
+              case 63:
+                return _context.finish(54);
+              case 64:
+                idx++;
+                _context.next = 34;
+                break;
+              case 67:
+                // if transformed fields different than current one, then save
+                if (newFields !== formFields) {
+                  setFormFields(newFields);
+                }
+                setFormName((_form$name2 = form.name) !== null && _form$name2 !== void 0 ? _form$name2 : lodash_uniqueId__WEBPACK_IMPORTED_MODULE_0___default()('form_'));
+                setTransformers(newTransformers);
+              case 70:
+              case "end":
+                return _context.stop();
+            }
+          }, _callee, null, [[5, 18, 22, 32], [23,, 27, 31], [37, 50, 54, 64], [55,, 59, 63]]);
+        }));
+        return function f() {
+          return _ref6.apply(this, arguments);
+        };
+      }();
+      f();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [form, framework] // don't put defaultValues here
+    );
+
+    var onHandleSubmit = (0,react__WEBPACK_IMPORTED_MODULE_5__.useCallback)(function (data) {
+      setValidationErrors(null);
+      onSubmit(data);
+    }, [onSubmit]);
+    var onHandleError = (0,react__WEBPACK_IMPORTED_MODULE_5__.useCallback)(function (data) {
+      setValidationErrors(data);
+      onError(data);
+    }, [onError]);
+    var handleReset = (0,react__WEBPACK_IMPORTED_MODULE_5__.useCallback)(function () {
+      setValidationErrors(null);
+      reset(defaultValues);
+    }, [defaultValues, reset]);
+    var handleChange = (0,react__WEBPACK_IMPORTED_MODULE_5__.useCallback)( /*#__PURE__*/function () {
+      var _ref7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(values, fieldName) {
+        var _iteratorAbruptCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, f;
+        return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+          while (1) switch (_context2.prev = _context2.next) {
+            case 0:
+              if (!(transformers.onChange != null && !lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default()(transformers.onChange[fieldName]))) {
+                _context2.next = 29;
+                break;
+              }
+              // execute the async generator transformer
+              _iteratorAbruptCompletion3 = false;
+              _didIteratorError3 = false;
+              _context2.prev = 3;
+              _iterator3 = _asyncIterator((0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .applyTransformers */ .Zr)(formName, framework, formFields, transformers.onChange[fieldName], values, onJavascriptError));
+            case 5:
+              _context2.next = 7;
+              return _iterator3.next();
+            case 7:
+              if (!(_iteratorAbruptCompletion3 = !(_step3 = _context2.sent).done)) {
+                _context2.next = 13;
+                break;
+              }
+              f = _step3.value;
+              if (f !== formFields) {
+                setFormFields(f);
+              }
+            case 10:
+              _iteratorAbruptCompletion3 = false;
+              _context2.next = 5;
+              break;
+            case 13:
+              _context2.next = 19;
+              break;
+            case 15:
+              _context2.prev = 15;
+              _context2.t0 = _context2["catch"](3);
+              _didIteratorError3 = true;
+              _iteratorError3 = _context2.t0;
+            case 19:
+              _context2.prev = 19;
+              _context2.prev = 20;
+              if (!(_iteratorAbruptCompletion3 && _iterator3.return != null)) {
+                _context2.next = 24;
+                break;
+              }
+              _context2.next = 24;
+              return _iterator3.return();
+            case 24:
+              _context2.prev = 24;
+              if (!_didIteratorError3) {
+                _context2.next = 27;
+                break;
+              }
+              throw _iteratorError3;
+            case 27:
+              return _context2.finish(24);
+            case 28:
+              return _context2.finish(19);
+            case 29:
+              onChange(values);
+            case 30:
+            case "end":
+              return _context2.stop();
+          }
+        }, _callee2, null, [[3, 15, 19, 29], [20,, 24, 28]]);
+      }));
+      return function (_x2, _x3) {
+        return _ref7.apply(this, arguments);
+      };
+    }(), [onChange, formFields, formName, transformers, framework, onJavascriptError]);
+    if (debug) {
+      console.log('[LetsForm] Validation', errors);
+    }
+    var Form = Forms[framework];
+    var Wrapper = wrapper;
+    var GroupWrapper = groupWrapper;
+    var BottomView = bottomView;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(_form_context__WEBPACK_IMPORTED_MODULE_10__/* ["default"].Provider */ .Z.Provider, {
+      value: {
+        locales: form.locales,
+        locale: locale
+        // ..more
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement("div", {
+      className: classnames__WEBPACK_IMPORTED_MODULE_6___default()('lf-lets-form', className)
+    }, validationErrors && showErrors === 'groupedTop' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(_components__WEBPACK_IMPORTED_MODULE_7__/* .ValidationErrors */ .qf, {
+      className: "top",
+      locale: locale,
+      errors: enrichWithLabels(validationErrors, formFields)
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(Form, _extends({
+      onSubmit: handleSubmit(onHandleSubmit, onHandleError),
+      name: formName,
+      defaultValues: defaultValues,
+      onlyFields: onlyFields,
+      hideToolbar: hideToolbar,
+      onReset: handleReset,
+      disabled: disabled,
+      readOnly: readOnly,
+      plaintext: plaintext,
+      locale: locale
+    }, lodash_omit__WEBPACK_IMPORTED_MODULE_1___default()(form, 'id', 'fields', 'version'), {
+      labelSubmit: (0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .i18n */ .ag)(form.labelSubmit, locale) || 'Submit',
+      labelCancel: (0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .i18n */ .ag)(form.labelCancel, locale) || 'Cancel'
+    }), renderFields({
+      Wrapper: Wrapper,
+      GroupWrapper: GroupWrapper,
+      BottomView: BottomView,
+      onChange: handleChange,
+      fields: formFields,
+      // take from state
+      control: control,
+      framework: framework,
+      getValues: getValues,
+      debug: debug,
+      errors: errors,
+      disabled: disabled || form.disabled,
+      readOnly: readOnly || form.readOnly,
+      plaintext: plaintext || form.plaintext,
+      showErrors: showErrors,
+      locale: locale,
+      onJavascriptError: onJavascriptError,
+      Components: mergeComponents(Fields, components)
+    }), children, validationErrors && (showErrors === 'groupedBottom' || lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default()(showErrors)) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(_components__WEBPACK_IMPORTED_MODULE_7__/* .ValidationErrors */ .qf, {
+      className: "bottom",
+      locale: locale,
+      errors: enrichWithLabels(validationErrors, formFields)
+    }))));
+  }, function (prevProps, nextProps) {
+    if (DEBUG_RENDER) {
+      console.log("[LetsForm] Form generator ".concat(nextProps.form.name ? '(' + nextProps.form.name + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale));
+    }
+    var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale;
+    console.log('Is re-rendering?', !isEqual);
+    return isEqual;
+  });
+  FormGenerator.displayName = 'FormGenerator';
+  return FormGenerator;
+};
+
+
+/***/ }),
+
+/***/ 3159:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "xS": () => (/* reexport */ addField),
+  "eX": () => (/* reexport */ applyFormRules),
+  "Zr": () => (/* reexport */ applyTransformers),
+  "Lx": () => (/* reexport */ cleanUp),
+  "BI": () => (/* reexport */ collectNames),
+  "bc": () => (/* reexport */ createEmptyField),
+  "AK": () => (/* reexport */ deleteField),
+  "Mw": () => (/* reexport */ fillIds),
+  "qH": () => (/* reexport */ filterFields),
+  "MN": () => (/* reexport */ filterOptions),
+  "PI": () => (/* reexport */ findField),
+  "IP": () => (/* reexport */ getLocales),
+  "ag": () => (/* reexport */ i18n),
+  "Oc": () => (/* reexport */ isEmptyForm),
+  "QK": () => (/* reexport */ isI18n),
+  "CB": () => (/* reexport */ isUrl),
+  "qb": () => (/* reexport */ isValidDate),
+  "az": () => (/* reexport */ isValidDayjsFormat),
+  "PZ": () => (/* reexport */ makeWidthStyle),
+  "vn": () => (/* reexport */ mapFields),
+  "QF": () => (/* reexport */ passRest),
+  "f3": () => (/* reexport */ reduceFields),
+  "DN": () => (/* reexport */ replaceField),
+  "Dd": () => (/* reexport */ validateRulesDefinition)
+});
+
+;// CONCATENATED MODULE: ./helpers/map-fields.js
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+/**
+ * mapFields
+ * Return an array of fields with the only elements changed by the predicate, it takes a field as parameter
+ * and return the same field or a changed one. It recursively iterate over subfields for group, two-columns and
+ * three columns components
+ * @param {Array} fields
+ * @param {Function} predicate Take a field as paramenter and return a field object
+ * @returns
+ */
+var mapFields = function mapFields(fields) {
+  var predicate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (obj) {
+    return obj;
+  };
+  if (!fields) {
+    return fields;
+  }
+  // replace with predicated
+  var newFields = fields.map(function (field) {
+    var newField = predicate(field);
+    if (field.component === 'group') {
+      var _newFields = mapFields(field.fields, predicate);
+      if (_newFields !== field.fields) {
+        newField = _objectSpread(_objectSpread({}, newField), {}, {
+          fields: _newFields
+        });
+      }
+    } else if (field.component === 'array') {
+      var _newFields2 = mapFields(field.fields, predicate);
+      if (_newFields2 !== field.fields) {
+        newField = _objectSpread(_objectSpread({}, newField), {}, {
+          fields: _newFields2
+        });
+      }
+    } else if (field.component === 'two-columns') {
+      var newLeftFields = mapFields(field.leftFields, predicate);
+      if (newLeftFields !== field.leftFields) {
+        newField = _objectSpread(_objectSpread({}, newField), {}, {
+          leftFields: newLeftFields
+        });
+      }
+      var newRightFields = mapFields(field.rightFields, predicate);
+      if (newRightFields !== field.rightFields) {
+        newField = _objectSpread(_objectSpread({}, newField), {}, {
+          rightFields: newRightFields
+        });
+      }
+    } else if (field.component === 'three-columns') {
+      var _newLeftFields = mapFields(field.leftFields, predicate);
+      if (_newLeftFields !== field.leftFields) {
+        newField = _objectSpread(_objectSpread({}, newField), {}, {
+          leftFields: _newLeftFields
+        });
+      }
+      var newCenterFields = mapFields(field.centerFields, predicate);
+      if (newCenterFields !== field.centerFields) {
+        newField = _objectSpread(_objectSpread({}, newField), {}, {
+          centerFields: newCenterFields
+        });
+      }
+      var _newRightFields = mapFields(field.rightFields, predicate);
+      if (_newRightFields !== field.rightFields) {
+        newField = _objectSpread(_objectSpread({}, newField), {}, {
+          rightFields: _newRightFields
+        });
+      }
+    }
+    return newField;
+  });
+
+  // check if some element of the array is changed, keep instance consistency otherwise
+  var hasChanges = fields.some(function (field, idx) {
+    return field !== newFields[idx];
+  });
+  return hasChanges ? newFields : fields;
+};
+
+;// CONCATENATED MODULE: ./helpers/replace-field.js
+function replace_field_typeof(obj) { "@babel/helpers - typeof"; return replace_field_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, replace_field_typeof(obj); }
+function replace_field_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function replace_field_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? replace_field_ownKeys(Object(source), !0).forEach(function (key) { replace_field_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : replace_field_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function replace_field_defineProperty(obj, key, value) { key = replace_field_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function replace_field_toPropertyKey(arg) { var key = replace_field_toPrimitive(arg, "string"); return replace_field_typeof(key) === "symbol" ? key : String(key); }
+function replace_field_toPrimitive(input, hint) { if (replace_field_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (replace_field_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var replaceField = function replaceField(form, field) {
+  return replace_field_objectSpread(replace_field_objectSpread({}, form), {}, {
+    fields: mapFields(form.fields, function (currentField) {
+      if (currentField.id === field.id) {
+        return field;
+      }
+      return currentField;
+    })
+  });
+};
+
+;// CONCATENATED MODULE: ./helpers/filter-fields.js
+function filter_fields_typeof(obj) { "@babel/helpers - typeof"; return filter_fields_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, filter_fields_typeof(obj); }
+function filter_fields_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function filter_fields_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? filter_fields_ownKeys(Object(source), !0).forEach(function (key) { filter_fields_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : filter_fields_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function filter_fields_defineProperty(obj, key, value) { key = filter_fields_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function filter_fields_toPropertyKey(arg) { var key = filter_fields_toPrimitive(arg, "string"); return filter_fields_typeof(key) === "symbol" ? key : String(key); }
+function filter_fields_toPrimitive(input, hint) { if (filter_fields_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (filter_fields_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+/**
+ * filterFields
+ * Filter field calling recursively fields in group, two-columns, three columns
+ * @param {Array} fields
+ * @param {Function} predicate Take a field as paramenter and return a field object
+ * @returns
+ */
+var filterFields = function filterFields(fields) {
+  var predicate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (obj) {
+    return obj;
+  };
+  if (!fields) {
+    return fields;
+  }
+  // replace with predicated
+  var newFields = fields.map(function (field) {
+    if (!predicate(field)) {
+      return null;
+    }
+    var newField = field;
+    if (field.component === 'group') {
+      var _newFields = filterFields(field.fields, predicate);
+      if (_newFields !== field.fields) {
+        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
+          fields: _newFields
+        });
+      }
+    } else if (field.component === 'array') {
+      var _newFields2 = filterFields(field.fields, predicate);
+      if (_newFields2 !== field.fields) {
+        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
+          fields: _newFields2
+        });
+      }
+    } else if (field.component === 'two-columns') {
+      var newLeftFields = filterFields(field.leftFields, predicate);
+      if (newLeftFields !== field.leftFields) {
+        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
+          leftFields: newLeftFields
+        });
+      }
+      var newRightFields = filterFields(field.rightFields, predicate);
+      if (newRightFields !== field.rightFields) {
+        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
+          rightFields: newRightFields
+        });
+      }
+    } else if (field.component === 'three-columns') {
+      var _newLeftFields = filterFields(field.leftFields, predicate);
+      if (_newLeftFields !== field.leftFields) {
+        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
+          leftFields: _newLeftFields
+        });
+      }
+      var newCenterFields = filterFields(field.centerFields, predicate);
+      if (newCenterFields !== field.centerFields) {
+        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
+          centerFields: newCenterFields
+        });
+      }
+      var _newRightFields = filterFields(field.rightFields, predicate);
+      if (_newRightFields !== field.rightFields) {
+        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
+          rightFields: _newRightFields
+        });
+      }
+    }
+    return newField;
+  }).filter(Boolean);
+
+  // check if some element of the array is changed, keep instance consistency otherwise
+  var hasChanges = fields.length !== newFields.length || fields.some(function (field, idx) {
+    return field !== newFields[idx];
+  });
+  return hasChanges ? newFields : fields;
+};
+
+;// CONCATENATED MODULE: ./helpers/delete-field.js
+function delete_field_typeof(obj) { "@babel/helpers - typeof"; return delete_field_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, delete_field_typeof(obj); }
+function delete_field_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function delete_field_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? delete_field_ownKeys(Object(source), !0).forEach(function (key) { delete_field_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : delete_field_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function delete_field_defineProperty(obj, key, value) { key = delete_field_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function delete_field_toPropertyKey(arg) { var key = delete_field_toPrimitive(arg, "string"); return delete_field_typeof(key) === "symbol" ? key : String(key); }
+function delete_field_toPrimitive(input, hint) { if (delete_field_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (delete_field_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var deleteField = function deleteField(form, field) {
+  return delete_field_objectSpread(delete_field_objectSpread({}, form), {}, {
+    fields: filterFields(form.fields, function (currentField) {
+      return currentField.id !== field.id;
+    })
+  });
+};
+
+// EXTERNAL MODULE: ./node_modules/lodash/uniqueId.js
+var uniqueId = __webpack_require__(3955);
+var uniqueId_default = /*#__PURE__*/__webpack_require__.n(uniqueId);
+;// CONCATENATED MODULE: ./helpers/fill-ids.js
+
+function fill_ids_typeof(obj) { "@babel/helpers - typeof"; return fill_ids_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, fill_ids_typeof(obj); }
+function fill_ids_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function fill_ids_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? fill_ids_ownKeys(Object(source), !0).forEach(function (key) { fill_ids_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : fill_ids_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function fill_ids_defineProperty(obj, key, value) { key = fill_ids_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function fill_ids_toPropertyKey(arg) { var key = fill_ids_toPrimitive(arg, "string"); return fill_ids_typeof(key) === "symbol" ? key : String(key); }
+function fill_ids_toPrimitive(input, hint) { if (fill_ids_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (fill_ids_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var fillIds = function fillIds(fields) {
+  var namespace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+  return mapFields(fields, function (field) {
+    // if not id, then create it
+    if (!field.id) {
+      return fill_ids_objectSpread({
+        id: uniqueId_default()(namespace)
+      }, field);
+    }
+    // special case of array
+    //if (field.component === 'array') {
+    //  field.fields = fillIds(field.fields);
+    //}
+    return field;
+  });
+};
+
+// EXTERNAL MODULE: ./node_modules/lodash/isArray.js
+var isArray = __webpack_require__(1469);
+var isArray_default = /*#__PURE__*/__webpack_require__.n(isArray);
+// EXTERNAL MODULE: ./node_modules/lodash/omit.js
+var omit = __webpack_require__(7557);
+var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
+// EXTERNAL MODULE: ./node_modules/lodash/isNumber.js
+var isNumber = __webpack_require__(1763);
+var isNumber_default = /*#__PURE__*/__webpack_require__.n(isNumber);
+// EXTERNAL MODULE: ./node_modules/lodash/isBoolean.js
+var isBoolean = __webpack_require__(1584);
+var isBoolean_default = /*#__PURE__*/__webpack_require__.n(isBoolean);
+// EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
+var isEmpty = __webpack_require__(1609);
+var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
+// EXTERNAL MODULE: ./node_modules/lodash/keys.js
+var keys = __webpack_require__(3674);
+var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
+// EXTERNAL MODULE: ./costants.js
+var costants = __webpack_require__(8064);
+// EXTERNAL MODULE: ./node_modules/lodash/isObject.js
+var isObject = __webpack_require__(3218);
+var isObject_default = /*#__PURE__*/__webpack_require__.n(isObject);
+;// CONCATENATED MODULE: ./helpers/is-i18n.js
+
+var isI18n = function isI18n(obj) {
+  return isObject_default()(obj) && Object.keys(obj).every(function (key) {
+    return key.length === 2 || key.length === 5 && key[2] === '-';
+  });
+};
+;// CONCATENATED MODULE: ./helpers/cleanup.js
+
+
+
+
+
+
+function cleanup_typeof(obj) { "@babel/helpers - typeof"; return cleanup_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, cleanup_typeof(obj); }
+function cleanup_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function cleanup_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? cleanup_ownKeys(Object(source), !0).forEach(function (key) { cleanup_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : cleanup_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function cleanup_defineProperty(obj, key, value) { key = cleanup_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function cleanup_toPropertyKey(arg) { var key = cleanup_toPrimitive(arg, "string"); return cleanup_typeof(key) === "symbol" ? key : String(key); }
+function cleanup_toPrimitive(input, hint) { if (cleanup_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (cleanup_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+
+
+var collectEmptyKeys = function collectEmptyKeys(obj) {
+  return keys_default()(obj).filter(function (key) {
+    return isEmpty_default()(obj[key]) && !(isBoolean_default()(obj[key]) || isNumber_default()(obj[key]));
+  });
+};
+var removeEmptyKeys = function removeEmptyKeys(obj) {
+  // collect all empty keys
+  var emptyKeys = collectEmptyKeys(obj);
+  // clone and remove id and empty keys
+  return omit_default()(obj, emptyKeys);
+};
+var removeUnusedLocalesFromI18n = function removeUnusedLocalesFromI18n(obj, locales) {
+  var keysToRemove = Object.keys(obj).filter(function (key) {
+    return !locales.includes(key);
+  });
+  var cleaned = !isEmpty_default()(keysToRemove) ? omit_default()(obj, keysToRemove) : obj;
+  if (Object.keys(cleaned).length !== 0) {
+    return cleaned;
+  }
+  return null;
+};
+var removeUnusedLocalesFromObj = function removeUnusedLocalesFromObj(obj, locales) {
+  var cloned = cleanup_objectSpread({}, obj);
+  Object.keys(obj).filter(function (key) {
+    return key !== 'rules';
+  }) // don't apply to rules
+  .forEach(function (key) {
+    if (isArray_default()(cloned[key])) {
+      cloned[key] = cloned[key].map(function (item) {
+        return removeUnusedLocalesFromObj(item, locales);
+      });
+    } else if (isI18n(cloned[key])) {
+      cloned[key] = removeUnusedLocalesFromI18n(cloned[key], locales);
+    }
+  });
+  return cloned;
+};
+
+/**
+ * cleanUp
+ * Remove id from json file and all empty keys
+ * @param {*} json
+ * @returns
+ */
+var cleanUp = function cleanUp(json) {
+  var cloned = cleanup_objectSpread({}, json);
+
+  // remove unused locales
+  if (cloned.labelSubmit && isI18n(cloned.labelSubmit)) {
+    cloned.labelSubmit = removeUnusedLocalesFromI18n(cloned.labelSubmit, json.locales);
+  }
+  if (cloned.labelCancel && isI18n(cloned.labelCancel)) {
+    cloned.labelCancel = removeUnusedLocalesFromI18n(cloned.labelCancel, json.locales);
+  }
+  var emptyKeys = keys_default()(cloned).filter(function (key) {
+    return isEmpty_default()(cloned[key]) && !(isBoolean_default()(cloned[key]) || isNumber_default()(cloned[key]));
+  });
+  var cleanedUp = omit_default()(cloned, emptyKeys);
+  return cleanup_objectSpread(cleanup_objectSpread({}, cleanedUp), {}, {
+    fields: mapFields(json.fields, function (field) {
+      // clone and remove id
+      var cloned = omit_default()(field, 'id');
+      // clean all platform subkeys
+      costants/* FRAMEWORKS.forEach */.MQ.forEach(function (key) {
+        if (cloned[key]) {
+          cloned[key] = removeEmptyKeys(cloned[key]);
+          // remove if empty after cleaning
+          if (Object.keys(cloned[key]).length === 0) {
+            delete cloned[key];
+          }
+        }
+      });
+      // collect all empty keys
+      cloned = removeEmptyKeys(cloned);
+      // cycle all keys and check if it's an i18n object
+      if (isArray_default()(json.locales) && !isEmpty_default()(json.locales)) {
+        cloned = removeUnusedLocalesFromObj(cloned, json.locales);
+      }
+      return cloned;
+    })
+  });
+};
+
+;// CONCATENATED MODULE: ./helpers/add-field.js
+function add_field_typeof(obj) { "@babel/helpers - typeof"; return add_field_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, add_field_typeof(obj); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function add_field_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function add_field_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? add_field_ownKeys(Object(source), !0).forEach(function (key) { add_field_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : add_field_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function add_field_defineProperty(obj, key, value) { key = add_field_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function add_field_toPropertyKey(arg) { var key = add_field_toPrimitive(arg, "string"); return add_field_typeof(key) === "symbol" ? key : String(key); }
+function add_field_toPrimitive(input, hint) { if (add_field_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (add_field_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var addField = function addField(form, newField, id) {
+  var target = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'fields';
+  if (id != null) {
+    return add_field_objectSpread(add_field_objectSpread({}, form), {}, {
+      fields: mapFields(form.fields,
+      // if right field id, append to fields
+      function (field) {
+        if (field.id === id) {
+          return add_field_objectSpread(add_field_objectSpread({}, field), {}, add_field_defineProperty({}, target, [].concat(_toConsumableArray(field[target] || []), [newField])));
+        }
+        return field;
+      })
+    });
+  } else {
+    return add_field_objectSpread(add_field_objectSpread({}, form), {}, {
+      fields: [].concat(_toConsumableArray(form.fields), [newField])
+    });
+  }
+};
+
+// EXTERNAL MODULE: ./node_modules/lodash/clone.js
+var clone = __webpack_require__(6678);
+var clone_default = /*#__PURE__*/__webpack_require__.n(clone);
+;// CONCATENATED MODULE: ./helpers/reduce-fields.js
+
+
+
+function reduce_fields_typeof(obj) { "@babel/helpers - typeof"; return reduce_fields_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, reduce_fields_typeof(obj); }
+function reduce_fields_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function reduce_fields_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? reduce_fields_ownKeys(Object(source), !0).forEach(function (key) { reduce_fields_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : reduce_fields_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function reduce_fields_defineProperty(obj, key, value) { key = reduce_fields_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function reduce_fields_toPropertyKey(arg) { var key = reduce_fields_toPrimitive(arg, "string"); return reduce_fields_typeof(key) === "symbol" ? key : String(key); }
+function reduce_fields_toPrimitive(input, hint) { if (reduce_fields_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (reduce_fields_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var reduceFields = function reduceFields(fields, predicate) {
+  var accumulator = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  var opts = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+  var options = reduce_fields_objectSpread({
+    'group': true,
+    'array': true,
+    'two-columns': true,
+    'three-columns': true
+  }, opts);
+  if (isEmpty_default()(fields) || !isArray_default()(fields)) {
+    return accumulator;
+  }
+  var result = clone_default()(accumulator);
+  fields.forEach(function (field) {
+    result = predicate(field, result);
+    if (field.component === 'group' && options.group) {
+      result = reduceFields(field.fields, predicate, result);
+    } else if (field.component === 'array' && options.array) {
+      result = reduceFields(field.fields, predicate, result);
+    } else if (field.component === 'two-columns' && options['two-columns']) {
+      result = reduceFields(field.leftFields, predicate, result);
+      result = reduceFields(field.rightFields, predicate, result);
+    } else if (field.component === 'three-columns' && options['three-columns']) {
+      result = reduceFields(field.leftFields, predicate, result);
+      result = reduceFields(field.centerFields, predicate, result);
+      result = reduceFields(field.rightFields, predicate, result);
+    }
+  });
+  return result;
+};
+
+;// CONCATENATED MODULE: ./helpers/find-field.js
+
+
+
+function find_field_typeof(obj) { "@babel/helpers - typeof"; return find_field_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, find_field_typeof(obj); }
+function find_field_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function find_field_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? find_field_ownKeys(Object(source), !0).forEach(function (key) { find_field_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : find_field_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function find_field_defineProperty(obj, key, value) { key = find_field_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function find_field_toPropertyKey(arg) { var key = find_field_toPrimitive(arg, "string"); return find_field_typeof(key) === "symbol" ? key : String(key); }
+function find_field_toPrimitive(input, hint) { if (find_field_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (find_field_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var createEmptyField = function createEmptyField(Manifests, fields, component, framework) {
+  var countFields = reduceFields(fields, function (field, accumulator) {
+    return accumulator + 1;
+  }, 0);
+  var newId = uniqueId_default()("field_".concat(countFields + 1, "_"));
+  var newName = "field_".concat(countFields + 1);
+  var retries = 0;
+  var exists = fieldExists(fields, function (field) {
+    return field.name === newName || field.id === newId;
+  });
+  while (exists && retries < 100) {
+    newId = newId + '_1';
+    newName = newName + '_1';
+    // eslint-disable-next-line no-loop-func
+    exists = fieldExists(fields, function (field) {
+      return field.name === newName || field.id === newId;
+    });
+    ++retries;
+  }
+  var defaultValues = framework && Manifests[component] && Manifests[component].defaultValues && Manifests[component].defaultValues[framework] ? Manifests[component].defaultValues[framework] : {};
+  return find_field_objectSpread({
+    component: component,
+    label: "Field ".concat(countFields + 1),
+    name: newName,
+    id: newId
+  }, defaultValues);
+};
+var findField = function findField(fields, predicate) {
+  if (isEmpty_default()(fields) || !isArray_default()(fields)) {
+    return null;
+  }
+  var found = fields.find(predicate);
+  fields.forEach(function (field) {
+    if (!found) {
+      if (field.component === 'group') {
+        found = findField(field.fields, predicate);
+      } else if (field.component === 'two-columns') {
+        found = findField(field.leftFields, predicate) || findField(field.rightFields, predicate);
+      } else if (field.component === 'three-columns') {
+        found = findField(field.leftFields, predicate) || findField(field.centerFields, predicate) || findField(field.rightFields, predicate);
+      }
+    }
+  });
+  return found;
+};
+var fieldExists = function fieldExists(fields, predicate) {
+  return findField(fields, predicate) != null;
+};
+
+;// CONCATENATED MODULE: ./helpers/apply-form-rules.js
+
+
+
+function apply_form_rules_typeof(obj) { "@babel/helpers - typeof"; return apply_form_rules_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, apply_form_rules_typeof(obj); }
+function apply_form_rules_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function apply_form_rules_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? apply_form_rules_ownKeys(Object(source), !0).forEach(function (key) { apply_form_rules_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : apply_form_rules_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function apply_form_rules_defineProperty(obj, key, value) { key = apply_form_rules_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function apply_form_rules_toPropertyKey(arg) { var key = apply_form_rules_toPrimitive(arg, "string"); return apply_form_rules_typeof(key) === "symbol" ? key : String(key); }
+function apply_form_rules_toPrimitive(input, hint) { if (apply_form_rules_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (apply_form_rules_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var testCondition = function testCondition(condition) {
+  var values = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'checked' && !isEmpty_default()(condition === null || condition === void 0 ? void 0 : condition.field) && values[condition.field] === true) {
+    return true;
+  } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'unchecked' && !isEmpty_default()(condition === null || condition === void 0 ? void 0 : condition.field) && values[condition.field] === false) {
+    return true;
+  } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'eq' && !isEmpty_default()(condition === null || condition === void 0 ? void 0 : condition.field) && condition !== null && condition !== void 0 && condition.value &&
+  // could be anything
+  // eslint-disable-next-line eqeqeq
+  values[condition.field] == condition.value) {
+    return true;
+  } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'neq' && !isEmpty_default()(condition === null || condition === void 0 ? void 0 : condition.field) && condition !== null && condition !== void 0 && condition.value &&
+  // could be anything
+  // eslint-disable-next-line eqeqeq
+  values[condition.field] != condition.value) {
+    return true;
+  } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'not_empty' && !isEmpty_default()(condition === null || condition === void 0 ? void 0 : condition.field) &&
+  // eslint-disable-next-line eqeqeq
+  values[condition.field] != null && values[condition.field] !== '') {
+    return true;
+  } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'empty' && !isEmpty_default()(condition === null || condition === void 0 ? void 0 : condition.field) && (
+  // eslint-disable-next-line eqeqeq
+  values[condition.field] == null || values[condition.field] === '')) {
+    return true;
+  }
+  return false;
+};
+var testConditions = function testConditions(conditions, values) {
+  if (isArray_default()(conditions)) {
+    if (!isEmpty_default()(conditions)) {
+      return conditions.every(function (condition) {
+        return testCondition(condition, values);
+      });
+    }
+    return false;
+  }
+  return testCondition(conditions, values);
+};
+var PREDICATES = {
+  enable: function enable(names) {
+    return function (field) {
+      if (names.indexOf(field.name) !== -1) {
+        return apply_form_rules_objectSpread(apply_form_rules_objectSpread({}, field), {}, {
+          disabled: false
+        });
+      }
+      return field;
+    };
+  },
+  disable: function disable(names) {
+    return function (field) {
+      if (names.indexOf(field.name) !== -1) {
+        return apply_form_rules_objectSpread(apply_form_rules_objectSpread({}, field), {}, {
+          disabled: true
+        });
+      }
+      return field;
+    };
+  },
+  show: function show(names) {
+    return function (field) {
+      if (names.indexOf(field.name) !== -1) {
+        return apply_form_rules_objectSpread(apply_form_rules_objectSpread({}, field), {}, {
+          hidden: false
+        });
+      }
+      return field;
+    };
+  },
+  hide: function hide(names) {
+    return function (field) {
+      if (names.indexOf(field.name) !== -1) {
+        return apply_form_rules_objectSpread(apply_form_rules_objectSpread({}, field), {}, {
+          hidden: true
+        });
+      }
+      return field;
+    };
+  },
+  setValue: function setValue(names, object, condition, values) {
+    return function (field) {
+      if (names.indexOf(field.name) !== -1 && isObject_default()(object) && !isEmpty_default()(object.key) && !isEmpty_default()(object.value)) {
+        return apply_form_rules_objectSpread(apply_form_rules_objectSpread({}, field), {}, apply_form_rules_defineProperty({}, object.key, evaluateValue(object.value, {
+          values: values,
+          condition: condition
+        })));
+      }
+      return field;
+    };
+  }
+};
+
+// TODO implement more ${} tokens
+var evaluateValue = function evaluateValue(value, _ref) {
+  var values = _ref.values,
+    condition = _ref.condition;
+  // eslint-disable-next-line no-template-curly-in-string
+  if (value === '${VALUE}') {
+    return values[condition.field];
+    // eslint-disable-next-line no-template-curly-in-string
+  } else if (value === '${EMPTY}') {
+    return '';
+    // eslint-disable-next-line no-template-curly-in-string
+  } else if (value === '${NULL}') {
+    return null;
+    // eslint-disable-next-line no-template-curly-in-string
+  } else if (value === '${UNDEFINED}') {
+    return null;
+  } else {
+    return value;
+  }
+};
+var applyFormRules = function applyFormRules(fields, rules, values) {
+  if (!Array.isArray(rules) || rules.length === 0) {
+    return fields;
+  }
+  var newFields = fields;
+  rules.forEach(function (rule) {
+    // if test condition passes and exists a predicate, then execute it
+    if (testConditions(rule.condition, values)) {
+      // if there's a verb for it, then apply it
+      if (PREDICATES[rule.verb]) {
+        newFields = mapFields(newFields, PREDICATES[rule.verb](rule.names, rule.object, rule.condition, values));
+      }
+    }
+  });
+  return newFields;
+};
+
+;// CONCATENATED MODULE: ./helpers/validate-rules-definition.js
+function validate_rules_definition_typeof(obj) { "@babel/helpers - typeof"; return validate_rules_definition_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, validate_rules_definition_typeof(obj); }
+var validateRulesDefinition = function validateRulesDefinition(rules) {
+  if (Array.isArray(rules)) {
+    // empty is ok
+    if (rules.length === 0) {
+      return null;
+    }
+    var genericFormat = rules.every(function (rule) {
+      return validate_rules_definition_typeof(rule) === 'object' && rule.condition != null && rule.verb != null;
+    });
+    return genericFormat ? null : 'Every rule should be an object with these keys: condition, verb and optionally names';
+  }
+  return 'Rules object is not an array';
+};
+
+// EXTERNAL MODULE: ./node_modules/lodash/isString.js
+var isString = __webpack_require__(7037);
+var isString_default = /*#__PURE__*/__webpack_require__.n(isString);
+;// CONCATENATED MODULE: ./helpers/is-valid-dayjs-format.js
+
+
+var DAYJS_VALID_TOKENS = ['YY', 'YYYY', 'M', 'MM', 'MMM', 'MMMM', 'D', 'DD', 'Do', 'd', 'dd', 'ddd', 'dddd', 'A', 'a', 'H', 'HH', 'h', 'hh', 'm', 'mm', 's', 'ss'];
+var isValidDayjsFormat = function isValidDayjsFormat(str) {
+  if (isString_default()(str) && !isEmpty_default()(str)) {
+    var tokens = str.match(/([A-Za-z0-9]{1,})/gm);
+    var isValid = tokens.every(function (t) {
+      return DAYJS_VALID_TOKENS.includes(t);
+    });
+    if (!isValid) {
+      console.error(["MUI: The token \"".concat(str, "\" is not supported by the Date and Time Pickers."), 'Please try using another token or open an issue on https://github.com/mui/mui-x/issues/new/choose if you think it should be supported.'].join('\n'));
+    }
+    return isValid;
+  }
+  return false;
+};
+
+;// CONCATENATED MODULE: ./common/data/locales.json
+const locales_namespaceObject = JSON.parse('{"Q":{"af-ZA":["Afrikaans","Afrikaans"],"ar":["العربية","Arabic"],"bg-BG":["Български","Bulgarian"],"ca-AD":["Català","Catalan"],"cs-CZ":["Čeština","Czech"],"cy-GB":["Cymraeg","Welsh"],"da-DK":["Dansk","Danish"],"de-AT":["Deutsch (Österreich)","German (Austria)"],"de-CH":["Deutsch (Schweiz)","German (Switzerland)"],"de-DE":["Deutsch (Deutschland)","German (Germany)"],"el-GR":["Ελληνικά","Greek"],"en-GB":["English (UK)","English (UK)"],"en-US":["English (US)","English (US)"],"es-CL":["Español (Chile)","Spanish (Chile)"],"es-ES":["Español (España)","Spanish (Spain)"],"es-MX":["Español (México)","Spanish (Mexico)"],"et-EE":["Eesti keel","Estonian"],"eu":["Euskara","Basque"],"fa-IR":["فارسی","Persian"],"fi-FI":["Suomi","Finnish"],"fr-CA":["Français (Canada)","French (Canada)"],"fr-FR":["Français (France)","French (France)"],"he-IL":["עברית","Hebrew"],"hi-IN":["हिंदी","Hindi"],"hr-HR":["Hrvatski","Croatian"],"hu-HU":["Magyar","Hungarian"],"id-ID":["Bahasa Indonesia","Indonesian"],"is-IS":["Íslenska","Icelandic"],"it-IT":["Italiano","Italian"],"ja-JP":["日本語","Japanese"],"km-KH":["ភាសាខ្មែរ","Khmer"],"ko-KR":["한국어","Korean"],"la":["Latina","Latin"],"lt-LT":["Lietuvių kalba","Lithuanian"],"lv-LV":["Latviešu","Latvian"],"mn-MN":["Монгол","Mongolian"],"nb-NO":["Norsk bokmål","Norwegian (Bokmål)"],"nl-NL":["Nederlands","Dutch"],"nn-NO":["Norsk nynorsk","Norwegian (Nynorsk)"],"pl-PL":["Polski","Polish"],"pt-BR":["Português (Brasil)","Portuguese (Brazil)"],"pt-PT":["Português (Portugal)","Portuguese (Portugal)"],"ro-RO":["Română","Romanian"],"ru-RU":["Русский","Russian"],"sk-SK":["Slovenčina","Slovak"],"sl-SI":["Slovenščina","Slovenian"],"sr-RS":["Српски / Srpski","Serbian"],"sv-SE":["Svenska","Swedish"],"th-TH":["ไทย","Thai"],"tr-TR":["Türkçe","Turkish"],"uk-UA":["Українська","Ukrainian"],"vi-VN":["Tiếng Việt","Vietnamese"],"zh-CN":["中文 (中国大陆)","Chinese (PRC)"],"zh-TW":["中文 (台灣)","Chinese (Taiwan)"]}}');
+;// CONCATENATED MODULE: ./helpers/get-locales.js
+
+var LANGUAGES_OPTIONS = Object.keys(locales_namespaceObject.Q).map(function (lang) {
+  return {
+    code: lang,
+    name: locales_namespaceObject.Q[lang][1],
+    label: "".concat(locales_namespaceObject.Q[lang][1])
+  };
+});
+var getLocales = function getLocales() {
+  return LANGUAGES_OPTIONS;
+};
+;// CONCATENATED MODULE: ./helpers/i18n.js
+
+
+var i18n = function i18n(value, locale) {
+  if (isString_default()(value)) {
+    return value;
+  } else if (isObject_default()(value)) {
+    if (locale && value[locale]) {
+      return value[locale];
+    }
+    // if there's no dialect, then try with the first two letters
+    if (locale && value[locale.substr(0, 2)]) {
+      return value[locale.substr(0, 2)];
+    }
+    // if nothing found, defaults to english but with warning
+    if (value['en'] || value['en-UK'] || value['en-US']) {
+      if (!locale) {
+        console.warn("[LetsForm] missing locale for translation, defaulting to English: ", value);
+      } else {
+        console.warn("[LetsForm] missing translation for ".concat(locale, ", defaulting to English: "), value);
+      }
+      return value['en'] || value['en-UK'] || value['en-US'];
+    }
+    console.warn("[LetsForm] missing translation for ".concat(locale, ": "), value);
+    return '';
+  }
+  return value;
+};
+;// CONCATENATED MODULE: ./helpers/pass-rest.js
+
+var passRest = function passRest(props) {
+  return omit_default()(props, 'lfFramework', 'lfComponent', 'lfLocale', 'transformer');
+};
+;// CONCATENATED MODULE: ./helpers/filter-options.js
+
+
+var filterOptions = function filterOptions(options, filterValue) {
+  var filterKey = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'value';
+  if (isArray_default()(options) && !isEmpty_default()(filterKey) && !isEmpty_default()(filterValue)) {
+    return options.filter(function (item) {
+      return item[filterKey] === filterValue;
+    });
+  }
+  return options;
+};
+;// CONCATENATED MODULE: ./helpers/is-empty-form.js
+var isEmptyForm = function isEmptyForm(form) {
+  return !form || !Array.isArray(form.fields) || form.fields.length === 0;
+};
+;// CONCATENATED MODULE: ./mappings.json
+const mappings_namespaceObject = JSON.parse('{"text-input":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"variant":["react-material-ui"],"color":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"value":null,"image":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"layout":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-antd"],"step":["react-rsuite5","react-antd"],"max":["react-rsuite5","react-antd"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":["react-rsuite5","react-material-ui","react-antd"],"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"value":["react-rsuite5","react-material-ui","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"optionType":["react-antd"],"size":["react-antd"]},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react","react-bootstrap","react-antd"],"width":["react","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"value":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"width":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"maxWidth":null,"minHeight":null,"align":null,"marginTop":null,"marginBottom":null,"hidden":null},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
+;// CONCATENATED MODULE: ./helpers/apply-transformers.js
+
+
+
+
+function apply_transformers_typeof(obj) { "@babel/helpers - typeof"; return apply_transformers_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, apply_transformers_typeof(obj); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == apply_transformers_typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator.return && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, catch: function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+function apply_transformers_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function apply_transformers_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? apply_transformers_ownKeys(Object(source), !0).forEach(function (key) { apply_transformers_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : apply_transformers_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function apply_transformers_defineProperty(obj, key, value) { key = apply_transformers_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function apply_transformers_toPropertyKey(arg) { var key = apply_transformers_toPrimitive(arg, "string"); return apply_transformers_typeof(key) === "symbol" ? key : String(key); }
+function apply_transformers_toPrimitive(input, hint) { if (apply_transformers_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (apply_transformers_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _awaitAsyncGenerator(value) { return new _OverloadYield(value, 0); }
+function _wrapAsyncGenerator(fn) { return function () { return new _AsyncGenerator(fn.apply(this, arguments)); }; }
+function _AsyncGenerator(gen) { var front, back; function resume(key, arg) { try { var result = gen[key](arg), value = result.value, overloaded = value instanceof _OverloadYield; Promise.resolve(overloaded ? value.v : value).then(function (arg) { if (overloaded) { var nextKey = "return" === key ? "return" : "next"; if (!value.k || arg.done) return resume(nextKey, arg); arg = gen[nextKey](arg).value; } settle(result.done ? "return" : "normal", arg); }, function (err) { resume("throw", err); }); } catch (err) { settle("throw", err); } } function settle(type, value) { switch (type) { case "return": front.resolve({ value: value, done: !0 }); break; case "throw": front.reject(value); break; default: front.resolve({ value: value, done: !1 }); } (front = front.next) ? resume(front.key, front.arg) : back = null; } this._invoke = function (key, arg) { return new Promise(function (resolve, reject) { var request = { key: key, arg: arg, resolve: resolve, reject: reject, next: null }; back ? back = back.next = request : (front = back = request, resume(key, arg)); }); }, "function" != typeof gen.return && (this.return = void 0); }
+_AsyncGenerator.prototype["function" == typeof Symbol && Symbol.asyncIterator || "@@asyncIterator"] = function () { return this; }, _AsyncGenerator.prototype.next = function (arg) { return this._invoke("next", arg); }, _AsyncGenerator.prototype.throw = function (arg) { return this._invoke("throw", arg); }, _AsyncGenerator.prototype.return = function (arg) { return this._invoke("return", arg); };
+function _OverloadYield(value, kind) { this.v = value, this.k = kind; }
+function _asyncIterator(iterable) { var method, async, sync, retry = 2; for ("undefined" != typeof Symbol && (async = Symbol.asyncIterator, sync = Symbol.iterator); retry--;) { if (async && null != (method = iterable[async])) return method.call(iterable); if (sync && null != (method = iterable[sync])) return new AsyncFromSyncIterator(method.call(iterable)); async = "@@asyncIterator", sync = "@@iterator"; } throw new TypeError("Object is not async iterable"); }
+function AsyncFromSyncIterator(s) { function AsyncFromSyncIteratorContinuation(r) { if (Object(r) !== r) return Promise.reject(new TypeError(r + " is not an object.")); var done = r.done; return Promise.resolve(r.value).then(function (value) { return { value: value, done: done }; }); } return AsyncFromSyncIterator = function AsyncFromSyncIterator(s) { this.s = s, this.n = s.next; }, AsyncFromSyncIterator.prototype = { s: null, n: null, next: function next() { return AsyncFromSyncIteratorContinuation(this.n.apply(this.s, arguments)); }, return: function _return(value) { var ret = this.s.return; return void 0 === ret ? Promise.resolve({ value: value, done: !0 }) : AsyncFromSyncIteratorContinuation(ret.apply(this.s, arguments)); }, throw: function _throw(value) { var thr = this.s.return; return void 0 === thr ? Promise.reject(value) : AsyncFromSyncIteratorContinuation(thr.apply(this.s, arguments)); } }, new AsyncFromSyncIterator(s); }
+
+
+
+// cannot import manifest, need to stay in the other repo
+// this is going open source, while the manifests are ip
+
+
+var translateValidationKey = function translateValidationKey(str) {
+  if (str.startsWith('validation')) {
+    str = str.replace(/^validation/, '');
+    if (str.length !== 0) {
+      str = str[0].toLowerCase() + str.slice(1);
+    }
+    return str;
+  } else {
+    return str;
+  }
+};
+var ApiFactory = function ApiFactory(formName, framework, formFields, currenValues) {
+  var _fields = formFields;
+  var fieldExists = function fieldExists(name) {
+    if (findField(_fields, function (field) {
+      return field.name === name;
+    }) != null) {
+      return true;
+    } else {
+      throw new Error("Field \"".concat(name, "\" doesn't exist in the form"));
+    }
+  };
+  return {
+    fields: function fields() {
+      return _fields;
+    },
+    element: function element(name) {
+      if (!fieldExists(name)) {
+        return;
+      }
+      var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
+      if (form) {
+        return form.querySelector("[data-lf-field-name=".concat(name, "]"));
+      }
+      return null;
+    },
+    style: function style(name, prop, value) {
+      if (!fieldExists(name)) {
+        return;
+      }
+      // find the form, then the element, then apply the style
+      var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
+      if (form) {
+        var element = form.querySelector("[data-lf-field-name=".concat(name, "]"));
+        if (element) {
+          if (isString_default()(prop)) {
+            element.style[prop] = value;
+          } else if (isObject_default()(prop)) {
+            Object.keys(prop).forEach(function (key) {
+              return element.style[key] = prop[key];
+            });
+          }
+        }
+      }
+    },
+    css: function css(className, obj) {
+      // find the form
+      var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
+      if (form) {
+        var element = form.querySelector(className);
+        if (element && isObject_default()(obj)) {
+          Object.keys(obj).forEach(function (key) {
+            return element.style[key] = obj[key];
+          });
+        }
+      }
+    },
+    setValue: function setValue(name, key, value) {
+      if (!fieldExists(name)) {
+        return;
+      }
+      _fields = mapFields(_fields, function (field) {
+        if (field.name === name) {
+          // check if the field exists in the manifest mapping
+          // and if needs to be added in a framework sub set
+          if (mappings_namespaceObject[field.component] && mappings_namespaceObject[field.component][key] !== undefined) {
+            if (mappings_namespaceObject[field.component][key] === null) {
+              // key property exists but it's just common property to all frameworks
+              return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, apply_transformers_defineProperty({}, key, value));
+            } else if (mappings_namespaceObject[field.component][key] === 'validation') {
+              var _field$validation;
+              // handle special case of validation fields
+              return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
+                validation: apply_transformers_objectSpread(apply_transformers_objectSpread({}, (_field$validation = field.validation) !== null && _field$validation !== void 0 ? _field$validation : {}), {}, apply_transformers_defineProperty({}, translateValidationKey(key), value))
+              });
+              // handle special case of validation
+            } else if (isArray_default()(mappings_namespaceObject[field.component][key]) && mappings_namespaceObject[field.component][key].includes(framework)) {
+              var _field$framework;
+              // key property it's a framework specific key, belongs to one or more frameworks, so it must be
+              // set in the specific subset, use the current framework so set it
+              return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, apply_transformers_defineProperty({}, framework, apply_transformers_objectSpread(apply_transformers_objectSpread({}, (_field$framework = field[framework]) !== null && _field$framework !== void 0 ? _field$framework : {}), {}, apply_transformers_defineProperty({}, key, value))));
+            } else {
+              console.warning("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\" in framework \"").concat(framework, "\""));
+            }
+          } else {
+            console.error("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\""));
+          }
+        }
+        return field;
+      });
+    },
+    enable: function enable(name) {
+      if (!fieldExists(name)) {
+        return;
+      }
+      _fields = mapFields(_fields, function (field) {
+        if (field.name === name) {
+          return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
+            disabled: false
+          });
+        }
+        return field;
+      });
+    },
+    disable: function disable(name) {
+      if (!fieldExists(name)) {
+        return;
+      }
+      _fields = mapFields(_fields, function (field) {
+        if (field.name === name) {
+          return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
+            disabled: true
+          });
+        }
+        return field;
+      });
+    },
+    show: function show(name) {
+      if (!fieldExists(name)) {
+        return;
+      }
+      _fields = mapFields(_fields, function (field) {
+        if (field.name === name) {
+          return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
+            hidden: false
+          });
+        }
+        return field;
+      });
+    },
+    hide: function hide(name) {
+      if (!fieldExists(name)) {
+        return;
+      }
+      _fields = mapFields(_fields, function (field) {
+        if (field.name === name) {
+          return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
+            hidden: true
+          });
+        }
+        return field;
+      });
+    },
+    /**
+     * Change field property inside and array
+     * @param {*} arrayName
+     * @param {*} arrayFieldName
+     * @param {*} key
+     * @param {*} value
+     * @returns
+     */
+    arraySetValue: function arraySetValue(arrayName, arrayFieldName, key, value) {
+      if (!fieldExists(arrayName)) {
+        return;
+      }
+      _fields = mapFields(_fields, function (arrayField) {
+        if (arrayField.component === 'array' && arrayField.name === arrayName) {
+          var newFields = mapFields(arrayField.fields, function (field) {
+            if (field.name === arrayFieldName) {
+              return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, apply_transformers_defineProperty({}, key, value));
+            }
+            return field;
+          });
+          return apply_transformers_objectSpread(apply_transformers_objectSpread({}, arrayField), {}, {
+            fields: newFields
+          });
+        }
+        return arrayField;
+      });
+    },
+    values: Object.freeze(apply_transformers_objectSpread({}, currenValues))
+  };
+};
+var applyTransformers = /*#__PURE__*/function () {
+  var _ref = _wrapAsyncGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(formName, framework, fields, transformers, values, onJavascriptError) {
+    var newFields, txs, idx, api, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _iterator, _step, f, error;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          if (!(isArray_default()(transformers) && !isEmpty_default()(transformers))) {
+            _context.next = 52;
+            break;
+          }
+          newFields = fields; // apply all transformers
+          txs = transformers;
+          /*.filter(transformer => _.isFunction(transformer))*/
+          idx = 0;
+        case 4:
+          if (!(idx < txs.length)) {
+            _context.next = 48;
+            break;
+          }
+          api = new ApiFactory(formName, framework, newFields, values);
+          _context.prev = 6;
+          //newFields = await txs[idx](api);
+          //console.log('sto per chiamare', txs[idx])
+          _iteratorAbruptCompletion = false;
+          _didIteratorError = false;
+          _context.prev = 9;
+          _iterator = _asyncIterator(txs[idx](api));
+        case 11:
+          _context.next = 13;
+          return _awaitAsyncGenerator(_iterator.next());
+        case 13:
+          if (!(_iteratorAbruptCompletion = !(_step = _context.sent).done)) {
+            _context.next = 21;
+            break;
+          }
+          f = _step.value;
+          newFields = f;
+          _context.next = 18;
+          return f;
+        case 18:
+          _iteratorAbruptCompletion = false;
+          _context.next = 11;
+          break;
+        case 21:
+          _context.next = 27;
+          break;
+        case 23:
+          _context.prev = 23;
+          _context.t0 = _context["catch"](9);
+          _didIteratorError = true;
+          _iteratorError = _context.t0;
+        case 27:
+          _context.prev = 27;
+          _context.prev = 28;
+          if (!(_iteratorAbruptCompletion && _iterator.return != null)) {
+            _context.next = 32;
+            break;
+          }
+          _context.next = 32;
+          return _awaitAsyncGenerator(_iterator.return());
+        case 32:
+          _context.prev = 32;
+          if (!_didIteratorError) {
+            _context.next = 35;
+            break;
+          }
+          throw _iteratorError;
+        case 35:
+          return _context.finish(32);
+        case 36:
+          return _context.finish(27);
+        case 37:
+          _context.next = 45;
+          break;
+        case 39:
+          _context.prev = 39;
+          _context.t1 = _context["catch"](6);
+          console.error('[LetsForm] Error on transformer: ', _context.t1);
+          error = new Error('Error executing transformer: ' + _context.t1.message, {
+            cause: _context.t1
+          });
+          error.errorType = 'runtime';
+          onJavascriptError(error);
+        case 45:
+          idx++;
+          _context.next = 4;
+          break;
+        case 48:
+          _context.next = 50;
+          return newFields;
+        case 50:
+          _context.next = 54;
+          break;
+        case 52:
+          _context.next = 54;
+          return fields;
+        case 54:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee, null, [[6, 39], [9, 23, 27, 37], [28,, 32, 36]]);
+  }));
+  return function applyTransformers(_x, _x2, _x3, _x4, _x5, _x6) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+;// CONCATENATED MODULE: ./helpers/is-url.js
+
+var isUrl = function isUrl(url) {
+  return isString_default()(url) && url.match(/^http[s]{0,1}:\/\//);
+};
+;// CONCATENATED MODULE: ./helpers/make-width-style.js
+function make_width_style_typeof(obj) { "@babel/helpers - typeof"; return make_width_style_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, make_width_style_typeof(obj); }
+function make_width_style_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function make_width_style_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? make_width_style_ownKeys(Object(source), !0).forEach(function (key) { make_width_style_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : make_width_style_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function make_width_style_defineProperty(obj, key, value) { key = make_width_style_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function make_width_style_toPropertyKey(arg) { var key = make_width_style_toPrimitive(arg, "string"); return make_width_style_typeof(key) === "symbol" ? key : String(key); }
+function make_width_style_toPrimitive(input, hint) { if (make_width_style_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (make_width_style_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var makeWidthStyle = function makeWidthStyle(fullWidth, width) {
+  var style = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  if (fullWidth) {
+    return make_width_style_objectSpread(make_width_style_objectSpread({}, style), {}, {
+      width: '100%'
+    });
+  } else if (width) {
+    return make_width_style_objectSpread(make_width_style_objectSpread({}, style), {}, {
+      width: "".concat(parseInt(width, 10), "px")
+    });
+  }
+  return make_width_style_objectSpread(make_width_style_objectSpread({}, style), {}, {
+    width: 'auto'
+  });
+};
+;// CONCATENATED MODULE: ./helpers/collect-names.js
+
+
+function collect_names_toConsumableArray(arr) { return collect_names_arrayWithoutHoles(arr) || collect_names_iterableToArray(arr) || collect_names_unsupportedIterableToArray(arr) || collect_names_nonIterableSpread(); }
+function collect_names_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function collect_names_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return collect_names_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return collect_names_arrayLikeToArray(o, minLen); }
+function collect_names_iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function collect_names_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return collect_names_arrayLikeToArray(arr); }
+function collect_names_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+
+var collectNames = function collectNames(form) {
+  if (form && isArray_default()(form.fields) && !isEmpty_default()(form.fields)) {
+    return reduceFields(form.fields, function (field, accumulator) {
+      if (!accumulator.includes(field.name)) {
+        return [].concat(collect_names_toConsumableArray(accumulator), [field.name]);
+      }
+      return accumulator;
+    }, []);
+  }
+  return [];
+};
+;// CONCATENATED MODULE: ./helpers/is-valid-date.js
+var isValidDate = function isValidDate(d) {
+  return d instanceof Date && !isNaN(d);
+};
+;// CONCATENATED MODULE: ./helpers/index.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
 /***/ 4184:
 /***/ ((module, exports) => {
 
@@ -93,7 +2931,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-common-array .lf-control-common-array-item{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;align-items:stretch;margin-top:5px;position:relative;border-left:5px solid #ddd;padding-left:10px}.lf-control-common-array .lf-control-common-array-item .rs-form-group{margin-bottom:5px !important}.lf-control-common-array .lf-control-common-array-item>.inner-form{order:0;flex:1 0 auto;align-self:auto;--lf-field-margin: 0px}.lf-control-common-array .lf-control-common-array-item>.buttons{flex:0 0 auto;align-self:flex-start}.lf-control-common-array .lf-control-common-array-item:not(:first-child){border-top:1px solid #eee;padding-top:10px}", "",{"version":3,"sources":["webpack://./common/array/list-array.scss"],"names":[],"mappings":"AAEE,uDACE,YAAA,CACA,kBAAA,CACA,gBAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,cAAA,CACA,iBAAA,CACA,0BAAA,CACA,iBAAA,CAEA,sEACE,4BAAA,CAGF,mEACE,OAAA,CACA,aAAA,CACA,eAAA,CACA,sBAAA,CAUF,gEACE,aAAA,CACA,qBAAA,CAKJ,yEACE,yBAAA,CACA,gBAAA","sourcesContent":[".lf-control-common-array {\n\n  .lf-control-common-array-item {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n    margin-top: 5px;\n    position: relative;\n    border-left: 5px solid #dddddd;\n    padding-left: 10px;\n\n    .rs-form-group {\n      margin-bottom: 5px !important;\n    }\n\n    > .inner-form {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n      --lf-field-margin: 0px;\n\n      .rs-form-inline {\n        // remove the 300px default size for inline in array, too big\n        .rs-input, .rs-input-number {\n          //width: auto;\n        }\n      }\n    }\n\n    > .buttons {\n      flex: 0 0 auto;\n      align-self: flex-start;\n\n    }\n  }\n\n  .lf-control-common-array-item:not(:first-child) {\n    border-top: 1px solid #eeeeee;\n    padding-top: 10px;\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-common-array .lf-control-common-array-item{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;align-items:stretch;margin-top:5px;position:relative;border-left:5px solid #ddd;padding-left:10px;padding-top:5px}.lf-control-common-array .lf-control-common-array-item .rs-form-group{margin-bottom:5px !important}.lf-control-common-array .lf-control-common-array-item>.inner-form{order:0;flex:1 0 auto;align-self:auto;--lf-field-margin: 4px;--lf-field-column-margin: 10px}.lf-control-common-array .lf-control-common-array-item>.buttons{flex:0 0 auto;align-self:flex-start;margin-left:6px}.lf-icon-button{display:inline-block;min-height:16px;min-width:16px;padding:4px;border-radius:3px}.lf-icon-button.disabled{opacity:.6}.lf-icon-button:not(.disabled):hover{background-color:#eee}", "",{"version":3,"sources":["webpack://./common/array/list-array.scss"],"names":[],"mappings":"AAEE,uDACE,YAAA,CACA,kBAAA,CACA,gBAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,cAAA,CACA,iBAAA,CACA,0BAAA,CACA,iBAAA,CACA,eAAA,CAEA,sEACE,4BAAA,CAGF,mEACE,OAAA,CACA,aAAA,CACA,eAAA,CACA,sBAAA,CACA,8BAAA,CAGF,gEACE,aAAA,CACA,qBAAA,CACA,eAAA,CAMN,gBACE,oBAAA,CACA,eAAA,CACA,cAAA,CACA,WAAA,CACA,iBAAA,CAEA,yBACE,UAAA,CAGF,qCACE,qBAAA","sourcesContent":[".lf-control-common-array {\n\n  .lf-control-common-array-item {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n    margin-top: 5px;\n    position: relative;\n    border-left: 5px solid #dddddd;\n    padding-left: 10px;\n    padding-top: 5px;\n\n    .rs-form-group {\n      margin-bottom: 5px !important;\n    }\n\n    > .inner-form {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n      --lf-field-margin: 4px;\n      --lf-field-column-margin: 10px;\n    }\n\n    > .buttons {\n      flex: 0 0 auto;\n      align-self: flex-start;\n      margin-left: 6px;\n    }\n  }\n\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n\n  &.disabled {\n    opacity: 0.6;\n  }\n\n  &:not(.disabled):hover {\n    background-color: #eeeeee;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -278,259 +3116,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-validation-errors{border:1px solid
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form{--lf-field-margin: 24px;--lf-field-column-margin: 20px}.lf-form.lf-form-buttons-align-center .lf-toolbar{justify-content:center}.lf-form.lf-form-buttons-align-left .lf-toolbar{justify-content:flex-start}.lf-form.lf-form-buttons-align-right .lf-toolbar{justify-content:flex-end}.lf-icon-asterisk{margin-top:-3px;display:inline-block}.lf-missing-component{border:1px solid #bbb;background-color:#f6f6f6;padding:20px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-missing-component .icon{order:0;flex:0 0;align-self:auto;margin-top:2px}.lf-missing-component .tag-component{background-color:#673ab7;color:#fff;font-size:12px;padding:1px 4px 2px 4px;border-radius:3px;line-height:17px}.lf-missing-component .message{display:inline-block;margin-left:10px;order:0;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./generator/index.scss"],"names":[],"mappings":"AAAA,SACE,uBAAA,CACA,8BAAA,CAGE,kDACE,sBAAA,CAIF,gDACE,0BAAA,CAIF,iDACE,wBAAA,CAMN,kBACE,eAAA,CACA,oBAAA,CAGF,sBACE,qBAAA,CACA,wBAAA,CACA,YAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,4BACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,cAAA,CAGF,qCACE,wBAAA,CACA,UAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,gBAAA,CAGF,+BACE,oBAAA,CACA,gBAAA,CACA,OAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-form {\n  --lf-field-margin: 24px;\n  --lf-field-column-margin: 20px;\n\n  &.lf-form-buttons-align-center {\n    .lf-toolbar {\n      justify-content: center;\n    }\n  }\n  &.lf-form-buttons-align-left {\n    .lf-toolbar {\n      justify-content: flex-start;\n    }\n  }\n  &.lf-form-buttons-align-right {\n    .lf-toolbar {\n      justify-content: flex-end;\n    }\n  }\n\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n\n  .icon {\n    order: 0;\n    flex: 0 0;\n    align-self: auto;\n    margin-top: 2px;\n  }\n\n  .tag-component {\n    background-color: #673ab7;\n    color: #ffffff;\n    font-size: 12px;\n    padding: 1px 4px 2px 4px;\n    border-radius: 3px;\n    line-height: 17px;\n  }\n\n  .message {\n    display: inline-block;\n    margin-left: 10px;\n    order: 0;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 2561:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-button{min-height:20px}.lf-control-button .lf-icon{max-width:16px;max-height:16px}.lf-control-button .rs-btn-lg .lf-icon{max-width:20px;max-height:20px}.lf-control-button .rs-btn-xs .lf-icon{max-width:12px;max-height:12px}", "",{"version":3,"sources":["webpack://./react-rsuite5/button/button.scss"],"names":[],"mappings":"AAAA,mBACE,eAAA,CAEA,4BACE,cAAA,CACA,eAAA,CAIA,uCACE,cAAA,CACA,eAAA,CAKF,uCACE,cAAA,CACA,eAAA","sourcesContent":[".lf-control-button {\n  min-height: 20px;\n\n  .lf-icon {\n    max-width: 16px;\n    max-height: 16px;\n  }\n\n  .rs-btn-lg {\n    .lf-icon {\n      max-width: 20px;\n      max-height: 20px;\n    }\n  }\n\n  .rs-btn-xs {\n    .lf-icon {\n      max-width: 12px;\n      max-height: 12px;\n    }\n  }\n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 5964:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text{align-items:inherit;margin-top:-1px;display:inline-block;margin-left:5px}.lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text svg{margin-top:-2px}", "",{"version":3,"sources":["webpack://./react-rsuite5/checkbox/index.scss"],"names":[],"mappings":"AAEI,+DACE,mBAAA,CACA,eAAA,CACA,oBAAA,CACA,eAAA,CAEA,mEACE,eAAA","sourcesContent":[".lf-form-react-rsuite5 {\n  .lt-control-checkbox {\n    .rs-form-help-text {\n      align-items: inherit;\n      margin-top: -1px;\n      display: inline-block;\n      margin-left: 5px;\n\n      svg {\n        margin-top: -2px;\n      }\n    }\n  }\n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 7251:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-toolbar{margin-top:24px}.lf-form-react-rsuite5 .rs-form-control-label>.rs-form-help-text.rs-form-help-text-tooltip{margin-top:0px;margin-left:5px}.lf-form-react-rsuite5 .lf-full-width .rs-form-control-wrapper{width:100%}", "",{"version":3,"sources":["webpack://./react-rsuite5/form/index.scss"],"names":[],"mappings":"AAEE,mCACE,eAAA,CAIA,2FACE,cAAA,CACA,eAAA,CAKF,+DACE,UAAA","sourcesContent":[".lf-form-react-rsuite5 {\n\n  .lf-toolbar {\n    margin-top: 24px;\n  }\n  // makes tooltip inside labels with smaller margins\n  .rs-form-control-label {\n    > .rs-form-help-text.rs-form-help-text-tooltip {\n      margin-top: 0px;\n      margin-left: 5px;\n    }\n  }\n\n  .lf-full-width {\n    .rs-form-control-wrapper {\n      width: 100%;\n    }\n  }\n\n}\n"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 8710:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-control-input-number.rs-form-group .rs-input-group{width:auto}", "",{"version":3,"sources":["webpack://./react-rsuite5/input-number/index.scss"],"names":[],"mappings":"AAGK,8EACC,UAAA","sourcesContent":[".lf-form-react-rsuite5 {\n  // fix: RSuite puts a hardcoded with 300px for grouped input numbers\n  .lf-control-input-number.rs-form-group {\n     .rs-input-group {\n      width: auto;\n    }\n  }\n}\n"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 5679:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-input-tag .rs-picker-input{min-width:120px}", "",{"version":3,"sources":["webpack://./react-rsuite5/input-tag/index.scss"],"names":[],"mappings":"AACE,uCAEE,eAAA","sourcesContent":[".lf-control-input-tag {\n  .rs-picker-input {\n    // minimum width, otherwise if empty, the rightmost end is cut\n    min-width: 120px;\n  }\n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 8727:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-input-text-i18n-item-locale{font-size:.9em}.lf-input-text-i18n .rs-input-group-addon{padding:2px 4px !important}.lf-input-text-i18n .rs-input-group-addon .status{font-size:10px}.lf-input-text-i18n .rs-input-group-addon .btn-clear{display:inline-block;margin-left:5px;margin-top:-2px;color:#666;text-decoration:none}.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover{color:#1675e0}.lf-input-text-i18n .group-input-select{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-input-text-i18n .group-input-select .translation-control{order:0;flex:1 0 auto;align-self:auto;width:unset !important;z-index:1}.lf-input-text-i18n .group-input-select .translation-control .translated{color:#999}.lf-input-text-i18n .group-input-select .select-control{order:1;flex:0 0 auto;align-self:center;z-index:2;margin-left:5px}.lf-input-text-i18n .group-input-select.textarea .select-control{align-self:self-start}", "",{"version":3,"sources":["webpack://./react-rsuite5/input-text-i18n/index.scss"],"names":[],"mappings":"AAAA,gCACE,cAAA,CAIA,0CACE,0BAAA,CAEA,kDACE,cAAA,CAGF,qDACE,oBAAA,CACA,eAAA,CACA,eAAA,CACA,UAAA,CACA,oBAAA,CAEA,2DACE,aAAA,CAKN,wCACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,6DACE,OAAA,CACA,aAAA,CACA,eAAA,CACA,sBAAA,CACA,SAAA,CAEA,yEACE,UAAA,CAIJ,wDACE,OAAA,CACA,aAAA,CACA,iBAAA,CACA,SAAA,CACA,eAAA,CAIA,iEACE,qBAAA","sourcesContent":[".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n {\n  .rs-input-group-addon {\n    padding: 2px 4px !important;\n\n    .status {\n      font-size: 10px;\n    }\n\n    .btn-clear {\n      display: inline-block;\n      margin-left: 5px;\n      margin-top: -2px;\n      color: #666666;\n      text-decoration: none;\n\n      &:hover {\n        color: #1675e0;\n      }\n    }\n  }\n\n  .group-input-select {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: flex-start;\n\n    .translation-control {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n      width: unset !important;\n      z-index: 1;\n\n      .translated {\n        color: #999999;\n      }\n    }\n\n    .select-control {\n      order: 1;\n      flex: 0 0 auto;\n      align-self: center;\n      z-index: 2;\n      margin-left: 5px;\n    }\n\n    &.textarea {\n      .select-control {\n        align-self: self-start;\n      }\n    }\n  }\n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 3040:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-input-text .rs-form-control-wrapper>.rs-input,.lf-control-input-text .rs-form-control-wrapper>.rs-input-number{width:100%}.lf-control-input-text .lf-prefix-icon{max-height:16px}.lf-control-input-text.lf-size-lg .lf-prefix-icon{max-height:22px}.lf-control-input-text.lf-size-md .lf-prefix-icon{max-height:16px}.lf-control-input-text.lf-size-sm .lf-prefix-icon{max-height:10px}.lf-control-input-text.lf-size-xs .lf-prefix-icon{max-height:4px}", "",{"version":3,"sources":["webpack://./react-rsuite5/input-text/input-text.scss"],"names":[],"mappings":"AAEE,2HACE,UAAA,CAIF,uCACE,eAAA,CAIA,kDACE,eAAA,CAKF,kDACE,eAAA,CAKF,kDACE,eAAA,CAKF,kDACE,cAAA","sourcesContent":[".lf-control-input-text {\n\n  .rs-form-control-wrapper>.rs-input, .rs-form-control-wrapper>.rs-input-number {\n    width: 100%;\n  }\n\n  // this ensure the icon is centered vertically\n  .lf-prefix-icon {\n    max-height: 16px;\n  }\n\n  &.lf-size-lg {\n    .lf-prefix-icon {\n      max-height: 22px;\n    }\n  }\n\n  &.lf-size-md {\n    .lf-prefix-icon {\n      max-height: 16px;\n    }\n  }\n\n  &.lf-size-sm {\n    .lf-prefix-icon {\n      max-height: 10px;\n    }\n  }\n\n  &.lf-size-xs {\n    .lf-prefix-icon {\n      max-height: 4px;\n    }\n  }\n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 6237:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-multiselect-language .btn-add-all{padding-left:5px;font-size:12px}", "",{"version":3,"sources":["webpack://./react-rsuite5/multiselect-language/multiselect-language.scss"],"names":[],"mappings":"AACE,8CACE,gBAAA,CACA,cAAA","sourcesContent":[".lf-control-multiselect-language {\n  .btn-add-all {\n    padding-left: 5px;\n    font-size: 12px;\n  }\n}\n"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 8963:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-select-option-rsuite5 img{width:20px;max-width:20px;max-height:20px;margin-right:6px;margin-top:-4px}", "",{"version":3,"sources":["webpack://./react-rsuite5/select/select.scss"],"names":[],"mappings":"AAEI,sCACE,UAAA,CACA,cAAA,CACA,eAAA,CACA,gBAAA,CACA,eAAA","sourcesContent":["\n  .lf-control-select-option-rsuite5 {\n    img {\n      width: 20px;\n      max-width: 20px;\n      max-height: 20px;\n      margin-right: 6px;\n      margin-top: -4px;\n\n    }\n  }\n"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 9906:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-control-slider .rs-slider{margin-bottom:40px}", "",{"version":3,"sources":["webpack://./react-rsuite5/slider/index.scss"],"names":[],"mappings":"AAGI,qDACE,kBAAA","sourcesContent":[".lf-form-react-rsuite5 {\n  .lf-control-slider {\n    // give some bottom space to slider, otherwise attached to next label\n    .rs-slider {\n      margin-bottom: 40px;\n    }\n  }\n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 8078:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2664,6 +5249,54 @@ var microdown=function(){function l(n,e,r){return"<"+n+(r?" "+Object.keys(r).map
 
 /***/ }),
 
+/***/ 4685:
+/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3379);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(569);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9216);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4589);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(5861);
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
+
+
+
+
+       /* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
+
+
+/***/ }),
+
 /***/ 3379:
 /***/ ((module) => {
 
@@ -2941,165 +5574,18 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__1186__;
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__977__;
 
-/***/ })
+/***/ }),
 
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			id: moduleId,
-/******/ 			loaded: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Flag the module as loaded
-/******/ 		module.loaded = true;
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/node module decorator */
-/******/ 	(() => {
-/******/ 		__webpack_require__.nmd = (module) => {
-/******/ 			module.paths = [];
-/******/ 			if (!module.children) module.children = [];
-/******/ 			return module;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/nonce */
-/******/ 	(() => {
-/******/ 		__webpack_require__.nc = undefined;
-/******/ 	})();
-/******/ 	
-/************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
+/***/ 7536:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
 "use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "FIELDS_KEY": () => (/* reexport */ FIELDS_KEY),
-  "FRAMEWORKS": () => (/* reexport */ FRAMEWORKS),
-  "FRAMEWORKS_LABELS": () => (/* reexport */ FRAMEWORKS_LABELS),
-  "Fields": () => (/* binding */ react_Fields),
-  "Forms": () => (/* binding */ react_Forms),
-  "addField": () => (/* reexport */ addField),
-  "applyFormRules": () => (/* reexport */ applyFormRules),
-  "applyTransformers": () => (/* reexport */ applyTransformers),
-  "cleanUp": () => (/* reexport */ cleanUp),
-  "collectNames": () => (/* reexport */ collectNames),
-  "createEmptyField": () => (/* reexport */ createEmptyField),
-  "default": () => (/* binding */ react),
-  "deleteField": () => (/* reexport */ deleteField),
-  "fillIds": () => (/* reexport */ fillIds),
-  "filterFields": () => (/* reexport */ filterFields),
-  "filterOptions": () => (/* reexport */ filterOptions),
-  "findField": () => (/* reexport */ findField),
-  "getLocales": () => (/* reexport */ getLocales),
-  "i18n": () => (/* reexport */ i18n),
-  "isEmptyForm": () => (/* reexport */ isEmptyForm),
-  "isI18n": () => (/* reexport */ isI18n),
-  "isUrl": () => (/* reexport */ isUrl),
-  "isValidDate": () => (/* reexport */ isValidDate),
-  "isValidDayjsFormat": () => (/* reexport */ isValidDayjsFormat),
-  "makeWidthStyle": () => (/* reexport */ makeWidthStyle),
-  "mapFields": () => (/* reexport */ mapFields),
-  "passRest": () => (/* reexport */ passRest),
-  "reduceFields": () => (/* reexport */ reduceFields),
-  "replaceField": () => (/* reexport */ replaceField),
-  "validateRulesDefinition": () => (/* reexport */ validateRulesDefinition)
-});
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(8156);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-// EXTERNAL MODULE: ./node_modules/lodash/uniqueId.js
-var uniqueId = __webpack_require__(3955);
-var uniqueId_default = /*#__PURE__*/__webpack_require__.n(uniqueId);
-// EXTERNAL MODULE: ./node_modules/lodash/omit.js
-var omit = __webpack_require__(7557);
-var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
-// EXTERNAL MODULE: ./node_modules/lodash/trim.js
-var trim = __webpack_require__(2742);
-var trim_default = /*#__PURE__*/__webpack_require__.n(trim);
-// EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
-var isEmpty = __webpack_require__(1609);
-var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
-// EXTERNAL MODULE: ./node_modules/lodash/isString.js
-var isString = __webpack_require__(7037);
-var isString_default = /*#__PURE__*/__webpack_require__.n(isString);
-;// CONCATENATED MODULE: ./node_modules/react-hook-form/dist/index.esm.mjs
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Qr": () => (/* binding */ Controller),
+/* harmony export */   "cI": () => (/* binding */ useForm)
+/* harmony export */ });
+/* unused harmony exports FormProvider, appendErrors, get, set, useController, useFieldArray, useFormContext, useFormState, useWatch */
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8156);
 
 
 var isCheckBoxInput = (element) => element.type === 'checkbox';
@@ -3198,7 +5684,7 @@ const INPUT_VALIDATION_RULES = {
     validate: 'validate',
 };
 
-const HookFormContext = external_react_.createContext(null);
+const HookFormContext = react__WEBPACK_IMPORTED_MODULE_0__.createContext(null);
 /**
  * This custom hook allows you to access the form context. useFormContext is intended to be used in deeply nested structures, where it would become inconvenient to pass the context as a prop. To be used with {@link FormProvider}.
  *
@@ -3229,7 +5715,7 @@ const HookFormContext = external_react_.createContext(null);
  * }
  * ```
  */
-const useFormContext = () => external_react_.useContext(HookFormContext);
+const useFormContext = () => react__WEBPACK_IMPORTED_MODULE_0__.useContext(HookFormContext);
 /**
  * A provider component that propagates the `useForm` methods to all children components via [React Context](https://reactjs.org/docs/context.html) API. To be used with {@link useFormContext}.
  *
@@ -3307,9 +5793,9 @@ var shouldSubscribeByName = (name, signalName, exact) => exact && signalName
                 signalName.startsWith(currentName)));
 
 function useSubscribe(props) {
-    const _props = external_react_.useRef(props);
+    const _props = react__WEBPACK_IMPORTED_MODULE_0__.useRef(props);
     _props.current = props;
-    external_react_.useEffect(() => {
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
         const subscription = !props.disabled &&
             _props.current.subject &&
             _props.current.subject.subscribe({
@@ -3354,9 +5840,9 @@ function useSubscribe(props) {
 function useFormState(props) {
     const methods = useFormContext();
     const { control = methods.control, disabled, name, exact } = props || {};
-    const [formState, updateFormState] = external_react_.useState(control._formState);
-    const _mounted = external_react_.useRef(true);
-    const _localProxyFormState = external_react_.useRef({
+    const [formState, updateFormState] = react__WEBPACK_IMPORTED_MODULE_0__.useState(control._formState);
+    const _mounted = react__WEBPACK_IMPORTED_MODULE_0__.useRef(true);
+    const _localProxyFormState = react__WEBPACK_IMPORTED_MODULE_0__.useRef({
         isDirty: false,
         isLoading: false,
         dirtyFields: false,
@@ -3365,7 +5851,7 @@ function useFormState(props) {
         isValid: false,
         errors: false,
     });
-    const _name = external_react_.useRef(name);
+    const _name = react__WEBPACK_IMPORTED_MODULE_0__.useRef(name);
     _name.current = name;
     useSubscribe({
         disabled,
@@ -3378,7 +5864,7 @@ function useFormState(props) {
             }),
         subject: control._subjects.state,
     });
-    external_react_.useEffect(() => {
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
         _mounted.current = true;
         const isDirty = control._proxyFormState.isDirty && control._getDirty();
         if (isDirty !== control._formState.isDirty) {
@@ -3394,10 +5880,10 @@ function useFormState(props) {
     return getProxyFormState(formState, control, _localProxyFormState.current, false);
 }
 
-var index_esm_isString = (value) => typeof value === 'string';
+var isString = (value) => typeof value === 'string';
 
 var generateWatchOutput = (names, _names, formValues, isGlobal, defaultValue) => {
-    if (index_esm_isString(names)) {
+    if (isString(names)) {
         isGlobal && _names.watch.add(names);
         return get(formValues, names, defaultValue);
     }
@@ -3427,7 +5913,7 @@ var generateWatchOutput = (names, _names, formValues, isGlobal, defaultValue) =>
 function useWatch(props) {
     const methods = useFormContext();
     const { control = methods.control, name, defaultValue, disabled, exact, } = props || {};
-    const _name = external_react_.useRef(name);
+    const _name = react__WEBPACK_IMPORTED_MODULE_0__.useRef(name);
     _name.current = name;
     useSubscribe({
         disabled,
@@ -3438,8 +5924,8 @@ function useWatch(props) {
             }
         },
     });
-    const [value, updateValue] = external_react_.useState(control._getWatch(name, defaultValue));
-    external_react_.useEffect(() => control._removeUnmounted());
+    const [value, updateValue] = react__WEBPACK_IMPORTED_MODULE_0__.useState(control._getWatch(name, defaultValue));
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => control._removeUnmounted());
     return value;
 }
 
@@ -3508,11 +5994,11 @@ function useController(props) {
         control,
         name,
     });
-    const _registerProps = external_react_.useRef(control.register(name, {
+    const _registerProps = react__WEBPACK_IMPORTED_MODULE_0__.useRef(control.register(name, {
         ...props.rules,
         value,
     }));
-    external_react_.useEffect(() => {
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
         const _shouldUnregisterField = control._options.shouldUnregister || shouldUnregister;
         const updateMounted = (name, value) => {
             const field = get(control._fields, name);
@@ -3540,14 +6026,14 @@ function useController(props) {
         field: {
             name,
             value,
-            onChange: external_react_.useCallback((event) => _registerProps.current.onChange({
+            onChange: react__WEBPACK_IMPORTED_MODULE_0__.useCallback((event) => _registerProps.current.onChange({
                 target: {
                     value: getEventValue(event),
                     name: name,
                 },
                 type: EVENTS.CHANGE,
             }), [name]),
-            onBlur: external_react_.useCallback(() => _registerProps.current.onBlur({
+            onBlur: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(() => _registerProps.current.onBlur({
                 target: {
                     value: get(control._formValues, name),
                     name: name,
@@ -3713,7 +6199,7 @@ var isHTMLElement = (value) => {
         (owner && owner.defaultView ? owner.defaultView.HTMLElement : HTMLElement));
 };
 
-var isMessage = (value) => index_esm_isString(value);
+var isMessage = (value) => isString(value);
 
 var isRadioInput = (element) => element.type === 'radio';
 
@@ -3852,14 +6338,14 @@ var validateField = async (field, formValues, validateAllFieldCriteria, shouldUs
             const convertTimeToDate = (time) => new Date(new Date().toDateString() + ' ' + time);
             const isTime = ref.type == 'time';
             const isWeek = ref.type == 'week';
-            if (index_esm_isString(maxOutput.value) && inputValue) {
+            if (isString(maxOutput.value) && inputValue) {
                 exceedMax = isTime
                     ? convertTimeToDate(inputValue) > convertTimeToDate(maxOutput.value)
                     : isWeek
                         ? inputValue > maxOutput.value
                         : valueDate > new Date(maxOutput.value);
             }
-            if (index_esm_isString(minOutput.value) && inputValue) {
+            if (isString(minOutput.value) && inputValue) {
                 exceedMin = isTime
                     ? convertTimeToDate(inputValue) < convertTimeToDate(minOutput.value)
                     : isWeek
@@ -3877,7 +6363,7 @@ var validateField = async (field, formValues, validateAllFieldCriteria, shouldUs
     }
     if ((maxLength || minLength) &&
         !isEmpty &&
-        (index_esm_isString(inputValue) || (isFieldArray && Array.isArray(inputValue)))) {
+        (isString(inputValue) || (isFieldArray && Array.isArray(inputValue)))) {
         const maxLengthOutput = getValueAndMessage(maxLength);
         const minLengthOutput = getValueAndMessage(minLength);
         const exceedMax = !isNullOrUndefined(maxLengthOutput.value) &&
@@ -3892,7 +6378,7 @@ var validateField = async (field, formValues, validateAllFieldCriteria, shouldUs
             }
         }
     }
-    if (pattern && !isEmpty && index_esm_isString(inputValue)) {
+    if (pattern && !isEmpty && isString(inputValue)) {
         const { value: patternValue, message } = getValueAndMessage(pattern);
         if (isRegex(patternValue) && !inputValue.match(patternValue)) {
             error[name] = {
@@ -4381,7 +6867,7 @@ var getFieldValueAs = (value, { valueAsNumber, valueAsDate, setValueAs }) => isU
             : value
                 ? +value
                 : value
-        : valueAsDate && index_esm_isString(value)
+        : valueAsDate && isString(value)
             ? new Date(value)
             : setValueAs
                 ? setValueAs(value)
@@ -4752,7 +7238,7 @@ function createFormControl(props = {}, flushRootRender) {
             ? _formValues
             : isUndefined(defaultValue)
                 ? _defaultValues
-                : index_esm_isString(names)
+                : isString(names)
                     ? { [names]: defaultValue }
                     : defaultValue),
     }, isGlobal, defaultValue);
@@ -4940,7 +7426,7 @@ function createFormControl(props = {}, flushRootRender) {
             validationResult = isValid = await executeBuiltInValidation(_fields);
         }
         _subjects.state.next({
-            ...(!index_esm_isString(name) ||
+            ...(!isString(name) ||
                 (_proxyFormState.isValid && isValid !== _formState.isValid)
                 ? {}
                 : { name }),
@@ -4960,7 +7446,7 @@ function createFormControl(props = {}, flushRootRender) {
         };
         return isUndefined(fieldNames)
             ? values
-            : index_esm_isString(fieldNames)
+            : isString(fieldNames)
                 ? get(values, fieldNames)
                 : fieldNames.map((name) => get(values, name));
     };
@@ -5377,8 +7863,8 @@ function createFormControl(props = {}, flushRootRender) {
  * ```
  */
 function useForm(props = {}) {
-    const _formControl = external_react_.useRef();
-    const [formState, updateFormState] = external_react_.useState({
+    const _formControl = react__WEBPACK_IMPORTED_MODULE_0__.useRef();
+    const [formState, updateFormState] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
         isDirty: false,
         isValidating: false,
         isLoading: isFunction(props.defaultValues),
@@ -5410,12 +7896,12 @@ function useForm(props = {}) {
             }
         },
     });
-    external_react_.useEffect(() => {
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
         if (props.values && !deepEqual(props.values, control._defaultValues)) {
             control._reset(props.values, control._options.resetOptions);
         }
     }, [props.values, control]);
-    external_react_.useEffect(() => {
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
         if (!control._state.mount) {
             control._updateValid();
             control._state.mount = true;
@@ -5433,12 +7919,155 @@ function useForm(props = {}) {
 
 //# sourceMappingURL=index.esm.mjs.map
 
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "FIELDS_KEY": () => (/* reexport */ costants/* FIELDS_KEY */.fj),
+  "FRAMEWORKS": () => (/* reexport */ costants/* FRAMEWORKS */.MQ),
+  "FRAMEWORKS_LABELS": () => (/* reexport */ costants/* FRAMEWORKS_LABELS */.hZ),
+  "Fields": () => (/* binding */ Fields),
+  "Forms": () => (/* binding */ Forms),
+  "addField": () => (/* reexport */ helpers/* addField */.xS),
+  "applyFormRules": () => (/* reexport */ helpers/* applyFormRules */.eX),
+  "applyTransformers": () => (/* reexport */ helpers/* applyTransformers */.Zr),
+  "cleanUp": () => (/* reexport */ helpers/* cleanUp */.Lx),
+  "collectNames": () => (/* reexport */ helpers/* collectNames */.BI),
+  "createEmptyField": () => (/* reexport */ helpers/* createEmptyField */.bc),
+  "default": () => (/* binding */ react),
+  "deleteField": () => (/* reexport */ helpers/* deleteField */.AK),
+  "fillIds": () => (/* reexport */ helpers/* fillIds */.Mw),
+  "filterFields": () => (/* reexport */ helpers/* filterFields */.qH),
+  "filterOptions": () => (/* reexport */ helpers/* filterOptions */.MN),
+  "findField": () => (/* reexport */ helpers/* findField */.PI),
+  "getLocales": () => (/* reexport */ helpers/* getLocales */.IP),
+  "i18n": () => (/* reexport */ helpers/* i18n */.ag),
+  "isEmptyForm": () => (/* reexport */ helpers/* isEmptyForm */.Oc),
+  "isI18n": () => (/* reexport */ helpers/* isI18n */.QK),
+  "isUrl": () => (/* reexport */ helpers/* isUrl */.CB),
+  "isValidDate": () => (/* reexport */ helpers/* isValidDate */.qb),
+  "isValidDayjsFormat": () => (/* reexport */ helpers/* isValidDayjsFormat */.az),
+  "makeWidthStyle": () => (/* reexport */ helpers/* makeWidthStyle */.PZ),
+  "mapFields": () => (/* reexport */ helpers/* mapFields */.vn),
+  "passRest": () => (/* reexport */ helpers/* passRest */.QF),
+  "reduceFields": () => (/* reexport */ helpers/* reduceFields */.f3),
+  "replaceField": () => (/* reexport */ helpers/* replaceField */.DN),
+  "validateRulesDefinition": () => (/* reexport */ helpers/* validateRulesDefinition */.Dd)
+});
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(8156);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+// EXTERNAL MODULE: ./generator/index.js
+var generator = __webpack_require__(7274);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
 var classnames = __webpack_require__(4184);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
-// EXTERNAL MODULE: ./node_modules/lodash/isObject.js
-var lodash_isObject = __webpack_require__(3218);
-var isObject_default = /*#__PURE__*/__webpack_require__.n(lodash_isObject);
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(3379);
 var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
@@ -5457,9 +8086,9 @@ var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleE
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
 var styleTagTransform = __webpack_require__(4589);
 var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/validation-errors/index.scss
-var validation_errors = __webpack_require__(7242);
-;// CONCATENATED MODULE: ./components/validation-errors/index.scss
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react/form/index.scss
+var cjs_js_react_form = __webpack_require__(5693);
+;// CONCATENATED MODULE: ./react/form/index.scss
 
       
       
@@ -5481,2619 +8110,7 @@ options.setAttributes = (setAttributesWithoutAttributes_default());
 options.domAPI = (styleDomAPI_default());
 options.insertStyleElement = (insertStyleElement_default());
 
-var update = injectStylesIntoStyleTag_default()(validation_errors/* default */.Z, options);
-
-
-
-
-       /* harmony default export */ const components_validation_errors = (validation_errors/* default */.Z && validation_errors/* default.locals */.Z.locals ? validation_errors/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./components/validation-errors/index.js
-
-
-
-
-
-
-var tx = function tx(str, locale) {
-  if (isString_default()(str)) {
-    return str;
-  } else if (isObject_default()(str)) {
-    if (!isEmpty_default()(str[locale])) {
-      return str[locale];
-    } else if (!isEmpty_default()(str['en-US'])) {
-      return str['en-US'];
-    } else if (Object.keys(str).length !== 0) {
-      return str[Object.keys(str)[0]];
-    } else {
-      return '';
-    }
-  }
-};
-var ValidationErrors = function ValidationErrors(_ref) {
-  var _ref$errors = _ref.errors,
-    errors = _ref$errors === void 0 ? {} : _ref$errors,
-    className = _ref.className,
-    locale = _ref.locale;
-  var keys = Object.keys(errors);
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    className: classnames_default()('lf-validation-errors', className)
-  }, keys.map(function (fieldName) {
-    var label = fieldName;
-    if (errors[fieldName] && errors[fieldName].ref && errors[fieldName].ref.label) {
-      label = tx(errors[fieldName].ref.label, locale);
-    }
-    return /*#__PURE__*/external_react_default().createElement("div", {
-      key: fieldName
-    }, /*#__PURE__*/external_react_default().createElement("b", null, label, ":"), "\xA0", errors[fieldName].message ? errors[fieldName].message : 'This is required');
-  }));
-};
-
-;// CONCATENATED MODULE: ./assets/icons/plus-circle.js
-
-var PlusCircle = function PlusCircle(_ref) {
-  var _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 24 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height,
-    _ref$color = _ref.color,
-    color = _ref$color === void 0 ? '#000000' : _ref$color;
-  return /*#__PURE__*/external_react_default().createElement("svg", {
-    width: "".concat(width, "px"),
-    height: "".concat(height, "px"),
-    viewBox: "0 0 20 20",
-    xmlns: "http://www.w3.org/2000/svg",
-    fill: "none"
-  }, /*#__PURE__*/external_react_default().createElement("path", {
-    fill: color,
-    fillRule: "evenodd",
-    d: "M10 3a7 7 0 100 14 7 7 0 000-14zm-9 7a9 9 0 1118 0 9 9 0 01-18 0zm14 .069a1 1 0 01-1 1h-2.931V14a1 1 0 11-2 0v-2.931H6a1 1 0 110-2h3.069V6a1 1 0 112 0v3.069H14a1 1 0 011 1z"
-  }));
-};
-;// CONCATENATED MODULE: ./assets/icons/minus-circle.js
-
-var MinusCircle = function MinusCircle(_ref) {
-  var _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 24 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height,
-    _ref$color = _ref.color,
-    color = _ref$color === void 0 ? '#000000' : _ref$color;
-  return /*#__PURE__*/external_react_default().createElement("svg", {
-    width: "".concat(width, "px"),
-    height: "".concat(height, "px"),
-    viewBox: "0 0 24 24",
-    fill: "none",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/external_react_default().createElement("path", {
-    fill: color,
-    fillRule: "evenodd",
-    clipRule: "evenodd",
-    d: "M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12ZM12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM7 11C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11H7Z"
-  }));
-};
-;// CONCATENATED MODULE: ./assets/icons/chevron-down.js
-
-var ChevronDown = function ChevronDown(_ref) {
-  var _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 24 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height,
-    _ref$color = _ref.color,
-    color = _ref$color === void 0 ? '#000000' : _ref$color;
-  return /*#__PURE__*/external_react_default().createElement("svg", {
-    width: "".concat(width, "px"),
-    height: "".concat(height, "px"),
-    fill: color,
-    viewBox: "0 0 24 24",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/external_react_default().createElement("path", {
-    d: "M17,8H7a1,1,0,0,0-.768,1.641l5,6a1,1,0,0,0,1.536,0l5-6A1,1,0,0,0,17,8Zm-5,5.438L9.135,10h5.73Z"
-  }));
-};
-;// CONCATENATED MODULE: ./assets/icons/chevron-up.js
-
-var ChevronUp = function ChevronUp(_ref) {
-  var _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 24 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height,
-    _ref$color = _ref.color,
-    color = _ref$color === void 0 ? '#000000' : _ref$color;
-  return /*#__PURE__*/external_react_default().createElement("svg", {
-    width: "".concat(width, "px"),
-    height: "".concat(height, "px"),
-    viewBox: "0 0 24 24",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/external_react_default().createElement("path", {
-    fill: color,
-    d: "M12.768,8.359a1.035,1.035,0,0,0-1.536,0l-5,6A1,1,0,0,0,7,16H17a1,1,0,0,0,.768-1.641ZM9.135,14,12,10.563,14.865,14Z"
-  }));
-};
-;// CONCATENATED MODULE: ./assets/icons/asterisk.js
-
-var Asterisk = function Asterisk(_ref) {
-  var _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 24 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height,
-    _ref$color = _ref.color,
-    color = _ref$color === void 0 ? '#000000' : _ref$color,
-    style = _ref.style;
-  return /*#__PURE__*/external_react_default().createElement("svg", {
-    width: "".concat(width, "px"),
-    height: "".concat(height, "px"),
-    style: style,
-    version: "1.1",
-    id: "_x32_",
-    className: "lf-icon-asterisk",
-    viewBox: "0 0 512 512"
-  }, /*#__PURE__*/external_react_default().createElement("g", null, /*#__PURE__*/external_react_default().createElement("polygon", {
-    style: {
-      fill: color
-    },
-    className: "st0",
-    points: "501.539,169.221 453.886,86.7 303.669,173.449 303.669,0 208.365,0 208.365,173.479 58.114,86.73\r 10.461,169.261 160.674,255.99 10.501,342.71 58.154,425.231 208.365,338.482 208.365,512 303.669,512 303.669,338.542\r 453.846,425.271 501.499,342.74 351.267,255.99 \t"
-  })));
-};
-;// CONCATENATED MODULE: ./assets/icons/warning.js
-
-var Warning = function Warning(_ref) {
-  var _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 24 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height,
-    _ref$color = _ref.color,
-    color = _ref$color === void 0 ? '#000000' : _ref$color;
-  return /*#__PURE__*/external_react_default().createElement("svg", {
-    fill: color,
-    width: "".concat(width, "px"),
-    height: "".concat(height, "px"),
-    viewBox: "0 0 1920 1920",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/external_react_default().createElement("path", {
-    d: "M960 0c530.193 0 960 429.807 960 960s-429.807 960-960 960S0 1490.193 0 960 429.807 0 960 0Zm-9.838 1342.685c-84.47 0-153.19 68.721-153.19 153.19 0 84.47 68.72 153.192 153.19 153.192s153.19-68.721 153.19-153.191-68.72-153.19-153.19-153.19ZM1153.658 320H746.667l99.118 898.623h208.755L1153.658 320Z",
-    fillRule: "evenodd"
-  }));
-};
-;// CONCATENATED MODULE: ./assets/icons/cross-circle.js
-
-var CrossCirle = function CrossCirle(_ref) {
-  var _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 24 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height,
-    _ref$color = _ref.color,
-    color = _ref$color === void 0 ? '#000000' : _ref$color;
-  return /*#__PURE__*/external_react_default().createElement("svg", {
-    width: "".concat(width, "px"),
-    height: "".concat(height, "px"),
-    viewBox: "0 0 24 24",
-    fill: "none",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/external_react_default().createElement("path", {
-    d: "M16 8L8 16M8.00001 8L16 16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z",
-    stroke: color,
-    strokeWidth: "1.5",
-    strokeLinecap: "round",
-    strokeLinejoin: "round"
-  }));
-};
-;// CONCATENATED MODULE: ./assets/icons/check.js
-var IconCheck = function IconCheck(_ref) {
-  var _ref$width = _ref.width,
-    width = _ref$width === void 0 ? 24 : _ref$width,
-    _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height;
-  return /*#__PURE__*/React.createElement("svg", {
-    width: "".concat(width, "px"),
-    height: "".concat(height, "px"),
-    viewBox: "0 0 24 24",
-    fill: "none",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/React.createElement("g", {
-    id: "Interface / Check"
-  }, /*#__PURE__*/React.createElement("path", {
-    id: "Vector",
-    d: "M6 12L10.2426 16.2426L18.727 7.75732",
-    stroke: "#000000",
-    strokeWidth: "2",
-    strokeLinecap: "round",
-    strokeLinejoin: "round"
-  })));
-};
-;// CONCATENATED MODULE: ./assets/icons/index.js
-
-
-
-
-
-
-
-
-;// CONCATENATED MODULE: ./components/required-icon/index.js
-
-
-var RequiredIcon = function RequiredIcon() {
-  return /*#__PURE__*/external_react_default().createElement(Asterisk, {
-    color: "#ff6633",
-    width: 12,
-    height: 12,
-    style: {
-      marginLeft: '3px'
-    }
-  });
-};
-
-// EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
-var lodash_isFunction = __webpack_require__(3560);
-var isFunction_default = /*#__PURE__*/__webpack_require__.n(lodash_isFunction);
-;// CONCATENATED MODULE: ./helpers/map-fields.js
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-/**
- * mapFields
- * Return an array of fields with the only elements changed by the predicate, it takes a field as parameter
- * and return the same field or a changed one. It recursively iterate over subfields for group, two-columns and
- * three columns components
- * @param {Array} fields
- * @param {Function} predicate Take a field as paramenter and return a field object
- * @returns
- */
-var mapFields = function mapFields(fields) {
-  var predicate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (obj) {
-    return obj;
-  };
-  if (!fields) {
-    return fields;
-  }
-  // replace with predicated
-  var newFields = fields.map(function (field) {
-    var newField = predicate(field);
-    if (field.component === 'group') {
-      var _newFields = mapFields(field.fields, predicate);
-      if (_newFields !== field.fields) {
-        newField = _objectSpread(_objectSpread({}, newField), {}, {
-          fields: _newFields
-        });
-      }
-    } else if (field.component === 'two-columns') {
-      var newLeftFields = mapFields(field.leftFields, predicate);
-      if (newLeftFields !== field.leftFields) {
-        newField = _objectSpread(_objectSpread({}, newField), {}, {
-          leftFields: newLeftFields
-        });
-      }
-      var newRightFields = mapFields(field.rightFields, predicate);
-      if (newRightFields !== field.rightFields) {
-        newField = _objectSpread(_objectSpread({}, newField), {}, {
-          rightFields: newRightFields
-        });
-      }
-    } else if (field.component === 'three-columns') {
-      var _newLeftFields = mapFields(field.leftFields, predicate);
-      if (_newLeftFields !== field.leftFields) {
-        newField = _objectSpread(_objectSpread({}, newField), {}, {
-          leftFields: _newLeftFields
-        });
-      }
-      var newCenterFields = mapFields(field.centerFields, predicate);
-      if (newCenterFields !== field.centerFields) {
-        newField = _objectSpread(_objectSpread({}, newField), {}, {
-          centerFields: newCenterFields
-        });
-      }
-      var _newRightFields = mapFields(field.rightFields, predicate);
-      if (_newRightFields !== field.rightFields) {
-        newField = _objectSpread(_objectSpread({}, newField), {}, {
-          rightFields: _newRightFields
-        });
-      }
-    }
-    return newField;
-  });
-
-  // check if some element of the array is changed, keep instance consistency otherwise
-  var hasChanges = fields.some(function (field, idx) {
-    return field !== newFields[idx];
-  });
-  return hasChanges ? newFields : fields;
-};
-
-;// CONCATENATED MODULE: ./helpers/replace-field.js
-function replace_field_typeof(obj) { "@babel/helpers - typeof"; return replace_field_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, replace_field_typeof(obj); }
-function replace_field_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function replace_field_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? replace_field_ownKeys(Object(source), !0).forEach(function (key) { replace_field_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : replace_field_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function replace_field_defineProperty(obj, key, value) { key = replace_field_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function replace_field_toPropertyKey(arg) { var key = replace_field_toPrimitive(arg, "string"); return replace_field_typeof(key) === "symbol" ? key : String(key); }
-function replace_field_toPrimitive(input, hint) { if (replace_field_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (replace_field_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
-var replaceField = function replaceField(form, field) {
-  return replace_field_objectSpread(replace_field_objectSpread({}, form), {}, {
-    fields: mapFields(form.fields, function (currentField) {
-      if (currentField.id === field.id) {
-        return field;
-      }
-      return currentField;
-    })
-  });
-};
-
-;// CONCATENATED MODULE: ./helpers/filter-fields.js
-function filter_fields_typeof(obj) { "@babel/helpers - typeof"; return filter_fields_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, filter_fields_typeof(obj); }
-function filter_fields_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function filter_fields_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? filter_fields_ownKeys(Object(source), !0).forEach(function (key) { filter_fields_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : filter_fields_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function filter_fields_defineProperty(obj, key, value) { key = filter_fields_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function filter_fields_toPropertyKey(arg) { var key = filter_fields_toPrimitive(arg, "string"); return filter_fields_typeof(key) === "symbol" ? key : String(key); }
-function filter_fields_toPrimitive(input, hint) { if (filter_fields_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (filter_fields_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-/**
- * filterFields
- * Filter field calling recursively fields in group, two-columns, three columns
- * @param {Array} fields
- * @param {Function} predicate Take a field as paramenter and return a field object
- * @returns
- */
-var filterFields = function filterFields(fields) {
-  var predicate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (obj) {
-    return obj;
-  };
-  if (!fields) {
-    return fields;
-  }
-  // replace with predicated
-  var newFields = fields.map(function (field) {
-    if (!predicate(field)) {
-      return null;
-    }
-    var newField = field;
-    if (field.component === 'group') {
-      var _newFields = filterFields(field.fields, predicate);
-      if (_newFields !== field.fields) {
-        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
-          fields: _newFields
-        });
-      }
-    } else if (field.component === 'two-columns') {
-      var newLeftFields = filterFields(field.leftFields, predicate);
-      if (newLeftFields !== field.leftFields) {
-        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
-          leftFields: newLeftFields
-        });
-      }
-      var newRightFields = filterFields(field.rightFields, predicate);
-      if (newRightFields !== field.rightFields) {
-        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
-          rightFields: newRightFields
-        });
-      }
-    } else if (field.component === 'three-columns') {
-      var _newLeftFields = filterFields(field.leftFields, predicate);
-      if (_newLeftFields !== field.leftFields) {
-        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
-          leftFields: _newLeftFields
-        });
-      }
-      var newCenterFields = filterFields(field.centerFields, predicate);
-      if (newCenterFields !== field.centerFields) {
-        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
-          centerFields: newCenterFields
-        });
-      }
-      var _newRightFields = filterFields(field.rightFields, predicate);
-      if (_newRightFields !== field.rightFields) {
-        newField = filter_fields_objectSpread(filter_fields_objectSpread({}, newField), {}, {
-          rightFields: _newRightFields
-        });
-      }
-    }
-    return newField;
-  }).filter(Boolean);
-
-  // check if some element of the array is changed, keep instance consistency otherwise
-  var hasChanges = fields.length !== newFields.length || fields.some(function (field, idx) {
-    return field !== newFields[idx];
-  });
-  return hasChanges ? newFields : fields;
-};
-
-;// CONCATENATED MODULE: ./helpers/delete-field.js
-function delete_field_typeof(obj) { "@babel/helpers - typeof"; return delete_field_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, delete_field_typeof(obj); }
-function delete_field_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function delete_field_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? delete_field_ownKeys(Object(source), !0).forEach(function (key) { delete_field_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : delete_field_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function delete_field_defineProperty(obj, key, value) { key = delete_field_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function delete_field_toPropertyKey(arg) { var key = delete_field_toPrimitive(arg, "string"); return delete_field_typeof(key) === "symbol" ? key : String(key); }
-function delete_field_toPrimitive(input, hint) { if (delete_field_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (delete_field_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
-var deleteField = function deleteField(form, field) {
-  return delete_field_objectSpread(delete_field_objectSpread({}, form), {}, {
-    fields: filterFields(form.fields, function (currentField) {
-      return currentField.id !== field.id;
-    })
-  });
-};
-
-;// CONCATENATED MODULE: ./helpers/fill-ids.js
-
-function fill_ids_typeof(obj) { "@babel/helpers - typeof"; return fill_ids_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, fill_ids_typeof(obj); }
-function fill_ids_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function fill_ids_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? fill_ids_ownKeys(Object(source), !0).forEach(function (key) { fill_ids_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : fill_ids_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function fill_ids_defineProperty(obj, key, value) { key = fill_ids_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function fill_ids_toPropertyKey(arg) { var key = fill_ids_toPrimitive(arg, "string"); return fill_ids_typeof(key) === "symbol" ? key : String(key); }
-function fill_ids_toPrimitive(input, hint) { if (fill_ids_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (fill_ids_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
-var fillIds = function fillIds(fields) {
-  var namespace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-  return mapFields(fields, function (field) {
-    if (!field.id) {
-      return fill_ids_objectSpread({
-        id: uniqueId_default()(namespace)
-      }, field);
-    }
-    return field;
-  });
-};
-
-// EXTERNAL MODULE: ./node_modules/lodash/isArray.js
-var isArray = __webpack_require__(1469);
-var isArray_default = /*#__PURE__*/__webpack_require__.n(isArray);
-// EXTERNAL MODULE: ./node_modules/lodash/isNumber.js
-var isNumber = __webpack_require__(1763);
-var isNumber_default = /*#__PURE__*/__webpack_require__.n(isNumber);
-// EXTERNAL MODULE: ./node_modules/lodash/isBoolean.js
-var lodash_isBoolean = __webpack_require__(1584);
-var isBoolean_default = /*#__PURE__*/__webpack_require__.n(lodash_isBoolean);
-// EXTERNAL MODULE: ./node_modules/lodash/keys.js
-var keys = __webpack_require__(3674);
-var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
-;// CONCATENATED MODULE: ./costants.js
-var FRAMEWORKS = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd'];
-var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design'];
-var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
-;// CONCATENATED MODULE: ./helpers/is-i18n.js
-
-var isI18n = function isI18n(obj) {
-  return isObject_default()(obj) && Object.keys(obj).every(function (key) {
-    return key.length === 2 || key.length === 5 && key[2] === '-';
-  });
-};
-;// CONCATENATED MODULE: ./helpers/cleanup.js
-
-
-
-
-
-
-function cleanup_typeof(obj) { "@babel/helpers - typeof"; return cleanup_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, cleanup_typeof(obj); }
-function cleanup_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function cleanup_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? cleanup_ownKeys(Object(source), !0).forEach(function (key) { cleanup_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : cleanup_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function cleanup_defineProperty(obj, key, value) { key = cleanup_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function cleanup_toPropertyKey(arg) { var key = cleanup_toPrimitive(arg, "string"); return cleanup_typeof(key) === "symbol" ? key : String(key); }
-function cleanup_toPrimitive(input, hint) { if (cleanup_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (cleanup_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
-
-
-var collectEmptyKeys = function collectEmptyKeys(obj) {
-  return keys_default()(obj).filter(function (key) {
-    return isEmpty_default()(obj[key]) && !(isBoolean_default()(obj[key]) || isNumber_default()(obj[key]));
-  });
-};
-var removeEmptyKeys = function removeEmptyKeys(obj) {
-  // collect all empty keys
-  var emptyKeys = collectEmptyKeys(obj);
-  // clone and remove id and empty keys
-  return omit_default()(obj, emptyKeys);
-};
-var removeUnusedLocalesFromI18n = function removeUnusedLocalesFromI18n(obj, locales) {
-  var keysToRemove = Object.keys(obj).filter(function (key) {
-    return !locales.includes(key);
-  });
-  var cleaned = !isEmpty_default()(keysToRemove) ? omit_default()(obj, keysToRemove) : obj;
-  if (Object.keys(cleaned).length !== 0) {
-    return cleaned;
-  }
-  return null;
-};
-var removeUnusedLocalesFromObj = function removeUnusedLocalesFromObj(obj, locales) {
-  var cloned = cleanup_objectSpread({}, obj);
-  Object.keys(obj).filter(function (key) {
-    return key !== 'rules';
-  }) // don't apply to rules
-  .forEach(function (key) {
-    if (isArray_default()(cloned[key])) {
-      cloned[key] = cloned[key].map(function (item) {
-        return removeUnusedLocalesFromObj(item, locales);
-      });
-    } else if (isI18n(cloned[key])) {
-      cloned[key] = removeUnusedLocalesFromI18n(cloned[key], locales);
-    }
-  });
-  return cloned;
-};
-
-/**
- * cleanUp
- * Remove id from json file and all empty keys
- * @param {*} json
- * @returns
- */
-var cleanUp = function cleanUp(json) {
-  var cloned = cleanup_objectSpread({}, json);
-
-  // remove unused locales
-  if (cloned.labelSubmit && isI18n(cloned.labelSubmit)) {
-    cloned.labelSubmit = removeUnusedLocalesFromI18n(cloned.labelSubmit, json.locales);
-  }
-  if (cloned.labelCancel && isI18n(cloned.labelCancel)) {
-    cloned.labelCancel = removeUnusedLocalesFromI18n(cloned.labelCancel, json.locales);
-  }
-  var emptyKeys = keys_default()(cloned).filter(function (key) {
-    return isEmpty_default()(cloned[key]) && !(isBoolean_default()(cloned[key]) || isNumber_default()(cloned[key]));
-  });
-  var cleanedUp = omit_default()(cloned, emptyKeys);
-  return cleanup_objectSpread(cleanup_objectSpread({}, cleanedUp), {}, {
-    fields: mapFields(json.fields, function (field) {
-      // clone and remove id
-      var cloned = omit_default()(field, 'id');
-      // clean all platform subkeys
-      FRAMEWORKS.forEach(function (key) {
-        if (cloned[key]) {
-          cloned[key] = removeEmptyKeys(cloned[key]);
-          // remove if empty after cleaning
-          if (Object.keys(cloned[key]).length === 0) {
-            delete cloned[key];
-          }
-        }
-      });
-      // collect all empty keys
-      cloned = removeEmptyKeys(cloned);
-      // cycle all keys and check if it's an i18n object
-      if (isArray_default()(json.locales) && !isEmpty_default()(json.locales)) {
-        cloned = removeUnusedLocalesFromObj(cloned, json.locales);
-      }
-      return cloned;
-    })
-  });
-};
-
-;// CONCATENATED MODULE: ./helpers/add-field.js
-function add_field_typeof(obj) { "@babel/helpers - typeof"; return add_field_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, add_field_typeof(obj); }
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function add_field_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function add_field_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? add_field_ownKeys(Object(source), !0).forEach(function (key) { add_field_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : add_field_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function add_field_defineProperty(obj, key, value) { key = add_field_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function add_field_toPropertyKey(arg) { var key = add_field_toPrimitive(arg, "string"); return add_field_typeof(key) === "symbol" ? key : String(key); }
-function add_field_toPrimitive(input, hint) { if (add_field_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (add_field_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
-var addField = function addField(form, newField, id) {
-  var target = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'fields';
-  if (id != null) {
-    return add_field_objectSpread(add_field_objectSpread({}, form), {}, {
-      fields: mapFields(form.fields,
-      // if right field id, append to fields
-      function (field) {
-        if (field.id === id) {
-          return add_field_objectSpread(add_field_objectSpread({}, field), {}, add_field_defineProperty({}, target, [].concat(_toConsumableArray(field[target] || []), [newField])));
-        }
-        return field;
-      })
-    });
-  } else {
-    return add_field_objectSpread(add_field_objectSpread({}, form), {}, {
-      fields: [].concat(_toConsumableArray(form.fields), [newField])
-    });
-  }
-};
-
-// EXTERNAL MODULE: ./node_modules/lodash/clone.js
-var clone = __webpack_require__(6678);
-var clone_default = /*#__PURE__*/__webpack_require__.n(clone);
-;// CONCATENATED MODULE: ./helpers/reduce-fields.js
-
-
-
-var reduceFields = function reduceFields(fields, predicate) {
-  var accumulator = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-  if (isEmpty_default()(fields) || !isArray_default()(fields)) {
-    return accumulator;
-  }
-  var result = clone_default()(accumulator);
-  fields.forEach(function (field) {
-    result = predicate(field, result);
-    if (field.component === 'group') {
-      result = reduceFields(field.fields, predicate, result);
-    } else if (field.component === 'two-columns') {
-      result = reduceFields(field.leftFields, predicate, result);
-      result = reduceFields(field.rightFields, predicate, result);
-    } else if (field.component === 'three-columns') {
-      result = reduceFields(field.leftFields, predicate, result);
-      result = reduceFields(field.centerFields, predicate, result);
-      result = reduceFields(field.rightFields, predicate, result);
-    }
-  });
-  return result;
-};
-
-;// CONCATENATED MODULE: ./helpers/find-field.js
-
-
-
-function find_field_typeof(obj) { "@babel/helpers - typeof"; return find_field_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, find_field_typeof(obj); }
-function find_field_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function find_field_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? find_field_ownKeys(Object(source), !0).forEach(function (key) { find_field_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : find_field_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function find_field_defineProperty(obj, key, value) { key = find_field_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function find_field_toPropertyKey(arg) { var key = find_field_toPrimitive(arg, "string"); return find_field_typeof(key) === "symbol" ? key : String(key); }
-function find_field_toPrimitive(input, hint) { if (find_field_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (find_field_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
-var createEmptyField = function createEmptyField(Manifests, fields, component, framework) {
-  var countFields = reduceFields(fields, function (field, accumulator) {
-    return accumulator + 1;
-  }, 0);
-  var newId = uniqueId_default()("field_".concat(countFields + 1, "_"));
-  var newName = "field_".concat(countFields + 1);
-  var retries = 0;
-  var exists = fieldExists(fields, function (field) {
-    return field.name === newName || field.id === newId;
-  });
-  while (exists && retries < 100) {
-    newId = newId + '_1';
-    newName = newName + '_1';
-    // eslint-disable-next-line no-loop-func
-    exists = fieldExists(fields, function (field) {
-      return field.name === newName || field.id === newId;
-    });
-    ++retries;
-  }
-  var defaultValues = framework && Manifests[component] && Manifests[component].defaultValues && Manifests[component].defaultValues[framework] ? Manifests[component].defaultValues[framework] : {};
-  return find_field_objectSpread({
-    component: component,
-    label: "Field ".concat(countFields + 1),
-    name: newName,
-    id: newId
-  }, defaultValues);
-};
-var findField = function findField(fields, predicate) {
-  if (isEmpty_default()(fields) || !isArray_default()(fields)) {
-    return null;
-  }
-  var found = fields.find(predicate);
-  fields.forEach(function (field) {
-    if (!found) {
-      if (field.component === 'group') {
-        found = findField(field.fields, predicate);
-      } else if (field.component === 'two-columns') {
-        found = findField(field.leftFields, predicate) || findField(field.rightFields, predicate);
-      } else if (field.component === 'three-columns') {
-        found = findField(field.leftFields, predicate) || findField(field.centerFields, predicate) || findField(field.rightFields, predicate);
-      }
-    }
-  });
-  return found;
-};
-var fieldExists = function fieldExists(fields, predicate) {
-  return findField(fields, predicate) != null;
-};
-
-;// CONCATENATED MODULE: ./helpers/apply-form-rules.js
-
-
-
-function apply_form_rules_typeof(obj) { "@babel/helpers - typeof"; return apply_form_rules_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, apply_form_rules_typeof(obj); }
-function apply_form_rules_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function apply_form_rules_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? apply_form_rules_ownKeys(Object(source), !0).forEach(function (key) { apply_form_rules_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : apply_form_rules_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function apply_form_rules_defineProperty(obj, key, value) { key = apply_form_rules_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function apply_form_rules_toPropertyKey(arg) { var key = apply_form_rules_toPrimitive(arg, "string"); return apply_form_rules_typeof(key) === "symbol" ? key : String(key); }
-function apply_form_rules_toPrimitive(input, hint) { if (apply_form_rules_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (apply_form_rules_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
-var testCondition = function testCondition(condition) {
-  var values = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'checked' && !isEmpty_default()(condition === null || condition === void 0 ? void 0 : condition.field) && values[condition.field] === true) {
-    return true;
-  } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'unchecked' && !isEmpty_default()(condition === null || condition === void 0 ? void 0 : condition.field) && values[condition.field] === false) {
-    return true;
-  } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'eq' && !isEmpty_default()(condition === null || condition === void 0 ? void 0 : condition.field) && condition !== null && condition !== void 0 && condition.value &&
-  // could be anything
-  // eslint-disable-next-line eqeqeq
-  values[condition.field] == condition.value) {
-    return true;
-  } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'neq' && !isEmpty_default()(condition === null || condition === void 0 ? void 0 : condition.field) && condition !== null && condition !== void 0 && condition.value &&
-  // could be anything
-  // eslint-disable-next-line eqeqeq
-  values[condition.field] != condition.value) {
-    return true;
-  } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'not_empty' && !isEmpty_default()(condition === null || condition === void 0 ? void 0 : condition.field) &&
-  // eslint-disable-next-line eqeqeq
-  values[condition.field] != null && values[condition.field] !== '') {
-    return true;
-  } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'empty' && !isEmpty_default()(condition === null || condition === void 0 ? void 0 : condition.field) && (
-  // eslint-disable-next-line eqeqeq
-  values[condition.field] == null || values[condition.field] === '')) {
-    return true;
-  }
-  return false;
-};
-var testConditions = function testConditions(conditions, values) {
-  if (isArray_default()(conditions)) {
-    if (!isEmpty_default()(conditions)) {
-      return conditions.every(function (condition) {
-        return testCondition(condition, values);
-      });
-    }
-    return false;
-  }
-  return testCondition(conditions, values);
-};
-var PREDICATES = {
-  enable: function enable(names) {
-    return function (field) {
-      if (names.indexOf(field.name) !== -1) {
-        return apply_form_rules_objectSpread(apply_form_rules_objectSpread({}, field), {}, {
-          disabled: false
-        });
-      }
-      return field;
-    };
-  },
-  disable: function disable(names) {
-    return function (field) {
-      if (names.indexOf(field.name) !== -1) {
-        return apply_form_rules_objectSpread(apply_form_rules_objectSpread({}, field), {}, {
-          disabled: true
-        });
-      }
-      return field;
-    };
-  },
-  show: function show(names) {
-    return function (field) {
-      if (names.indexOf(field.name) !== -1) {
-        return apply_form_rules_objectSpread(apply_form_rules_objectSpread({}, field), {}, {
-          hidden: false
-        });
-      }
-      return field;
-    };
-  },
-  hide: function hide(names) {
-    return function (field) {
-      if (names.indexOf(field.name) !== -1) {
-        return apply_form_rules_objectSpread(apply_form_rules_objectSpread({}, field), {}, {
-          hidden: true
-        });
-      }
-      return field;
-    };
-  },
-  setValue: function setValue(names, object, condition, values) {
-    return function (field) {
-      if (names.indexOf(field.name) !== -1 && isObject_default()(object) && !isEmpty_default()(object.key) && !isEmpty_default()(object.value)) {
-        return apply_form_rules_objectSpread(apply_form_rules_objectSpread({}, field), {}, apply_form_rules_defineProperty({}, object.key, evaluateValue(object.value, {
-          values: values,
-          condition: condition
-        })));
-      }
-      return field;
-    };
-  }
-};
-
-// TODO implement more ${} tokens
-var evaluateValue = function evaluateValue(value, _ref) {
-  var values = _ref.values,
-    condition = _ref.condition;
-  // eslint-disable-next-line no-template-curly-in-string
-  if (value === '${VALUE}') {
-    return values[condition.field];
-    // eslint-disable-next-line no-template-curly-in-string
-  } else if (value === '${EMPTY}') {
-    return '';
-    // eslint-disable-next-line no-template-curly-in-string
-  } else if (value === '${NULL}') {
-    return null;
-    // eslint-disable-next-line no-template-curly-in-string
-  } else if (value === '${UNDEFINED}') {
-    return null;
-  } else {
-    return value;
-  }
-};
-var applyFormRules = function applyFormRules(fields, rules, values) {
-  if (!Array.isArray(rules) || rules.length === 0) {
-    return fields;
-  }
-  var newFields = fields;
-  rules.forEach(function (rule) {
-    // if test condition passes and exists a predicate, then execute it
-    if (testConditions(rule.condition, values)) {
-      // if there's a verb for it, then apply it
-      if (PREDICATES[rule.verb]) {
-        newFields = mapFields(newFields, PREDICATES[rule.verb](rule.names, rule.object, rule.condition, values));
-      }
-    }
-  });
-  return newFields;
-};
-
-;// CONCATENATED MODULE: ./helpers/validate-rules-definition.js
-function validate_rules_definition_typeof(obj) { "@babel/helpers - typeof"; return validate_rules_definition_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, validate_rules_definition_typeof(obj); }
-var validateRulesDefinition = function validateRulesDefinition(rules) {
-  if (Array.isArray(rules)) {
-    // empty is ok
-    if (rules.length === 0) {
-      return null;
-    }
-    var genericFormat = rules.every(function (rule) {
-      return validate_rules_definition_typeof(rule) === 'object' && rule.condition != null && rule.verb != null;
-    });
-    return genericFormat ? null : 'Every rule should be an object with these keys: condition, verb and optionally names';
-  }
-  return 'Rules object is not an array';
-};
-
-;// CONCATENATED MODULE: ./helpers/is-valid-dayjs-format.js
-
-
-var DAYJS_VALID_TOKENS = ['YY', 'YYYY', 'M', 'MM', 'MMM', 'MMMM', 'D', 'DD', 'Do', 'd', 'dd', 'ddd', 'dddd', 'A', 'a', 'H', 'HH', 'h', 'hh', 'm', 'mm', 's', 'ss'];
-var isValidDayjsFormat = function isValidDayjsFormat(str) {
-  if (isString_default()(str) && !isEmpty_default()(str)) {
-    var tokens = str.match(/([A-Za-z0-9]{1,})/gm);
-    var isValid = tokens.every(function (t) {
-      return DAYJS_VALID_TOKENS.includes(t);
-    });
-    if (!isValid) {
-      console.error(["MUI: The token \"".concat(str, "\" is not supported by the Date and Time Pickers."), 'Please try using another token or open an issue on https://github.com/mui/mui-x/issues/new/choose if you think it should be supported.'].join('\n'));
-    }
-    return isValid;
-  }
-  return false;
-};
-
-;// CONCATENATED MODULE: ./common/data/locales.json
-const locales_namespaceObject = JSON.parse('{"Q":{"af-ZA":["Afrikaans","Afrikaans"],"ar":["العربية","Arabic"],"bg-BG":["Български","Bulgarian"],"ca-AD":["Català","Catalan"],"cs-CZ":["Čeština","Czech"],"cy-GB":["Cymraeg","Welsh"],"da-DK":["Dansk","Danish"],"de-AT":["Deutsch (Österreich)","German (Austria)"],"de-CH":["Deutsch (Schweiz)","German (Switzerland)"],"de-DE":["Deutsch (Deutschland)","German (Germany)"],"el-GR":["Ελληνικά","Greek"],"en-GB":["English (UK)","English (UK)"],"en-US":["English (US)","English (US)"],"es-CL":["Español (Chile)","Spanish (Chile)"],"es-ES":["Español (España)","Spanish (Spain)"],"es-MX":["Español (México)","Spanish (Mexico)"],"et-EE":["Eesti keel","Estonian"],"eu":["Euskara","Basque"],"fa-IR":["فارسی","Persian"],"fi-FI":["Suomi","Finnish"],"fr-CA":["Français (Canada)","French (Canada)"],"fr-FR":["Français (France)","French (France)"],"he-IL":["עברית","Hebrew"],"hi-IN":["हिंदी","Hindi"],"hr-HR":["Hrvatski","Croatian"],"hu-HU":["Magyar","Hungarian"],"id-ID":["Bahasa Indonesia","Indonesian"],"is-IS":["Íslenska","Icelandic"],"it-IT":["Italiano","Italian"],"ja-JP":["日本語","Japanese"],"km-KH":["ភាសាខ្មែរ","Khmer"],"ko-KR":["한국어","Korean"],"la":["Latina","Latin"],"lt-LT":["Lietuvių kalba","Lithuanian"],"lv-LV":["Latviešu","Latvian"],"mn-MN":["Монгол","Mongolian"],"nb-NO":["Norsk bokmål","Norwegian (Bokmål)"],"nl-NL":["Nederlands","Dutch"],"nn-NO":["Norsk nynorsk","Norwegian (Nynorsk)"],"pl-PL":["Polski","Polish"],"pt-BR":["Português (Brasil)","Portuguese (Brazil)"],"pt-PT":["Português (Portugal)","Portuguese (Portugal)"],"ro-RO":["Română","Romanian"],"ru-RU":["Русский","Russian"],"sk-SK":["Slovenčina","Slovak"],"sl-SI":["Slovenščina","Slovenian"],"sr-RS":["Српски / Srpski","Serbian"],"sv-SE":["Svenska","Swedish"],"th-TH":["ไทย","Thai"],"tr-TR":["Türkçe","Turkish"],"uk-UA":["Українська","Ukrainian"],"vi-VN":["Tiếng Việt","Vietnamese"],"zh-CN":["中文 (中国大陆)","Chinese (PRC)"],"zh-TW":["中文 (台灣)","Chinese (Taiwan)"]}}');
-;// CONCATENATED MODULE: ./helpers/get-locales.js
-
-var LANGUAGES_OPTIONS = Object.keys(locales_namespaceObject.Q).map(function (lang) {
-  return {
-    code: lang,
-    name: locales_namespaceObject.Q[lang][1],
-    label: "".concat(locales_namespaceObject.Q[lang][1])
-  };
-});
-var getLocales = function getLocales() {
-  return LANGUAGES_OPTIONS;
-};
-;// CONCATENATED MODULE: ./helpers/i18n.js
-
-
-var i18n = function i18n(value, locale) {
-  if (isString_default()(value)) {
-    return value;
-  } else if (isObject_default()(value)) {
-    if (locale && value[locale]) {
-      return value[locale];
-    }
-    // if there's no dialect, then try with the first two letters
-    if (locale && value[locale.substr(0, 2)]) {
-      return value[locale.substr(0, 2)];
-    }
-    // if nothing found, defaults to english but with warning
-    if (value['en'] || value['en-UK'] || value['en-US']) {
-      if (!locale) {
-        console.warn("[LetsForm] missing locale for translation, defaulting to English: ", value);
-      } else {
-        console.warn("[LetsForm] missing translation for ".concat(locale, ", defaulting to English: "), value);
-      }
-      return value['en'] || value['en-UK'] || value['en-US'];
-    }
-    console.warn("[LetsForm] missing translation for ".concat(locale, ": "), value);
-    return '';
-  }
-  return value;
-};
-;// CONCATENATED MODULE: ./helpers/pass-rest.js
-
-var passRest = function passRest(props) {
-  return omit_default()(props, 'lfFramework', 'lfComponent', 'lfLocale', 'transformer');
-};
-;// CONCATENATED MODULE: ./helpers/filter-options.js
-
-
-var filterOptions = function filterOptions(options, filterValue) {
-  var filterKey = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'value';
-  if (isArray_default()(options) && !isEmpty_default()(filterKey) && !isEmpty_default()(filterValue)) {
-    return options.filter(function (item) {
-      return item[filterKey] === filterValue;
-    });
-  }
-  return options;
-};
-;// CONCATENATED MODULE: ./helpers/is-empty-form.js
-var isEmptyForm = function isEmptyForm(form) {
-  return !form || !Array.isArray(form.fields) || form.fields.length === 0;
-};
-;// CONCATENATED MODULE: ./mappings.json
-const mappings_namespaceObject = JSON.parse('{"text-input":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"variant":["react-material-ui"],"color":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"fields":null,"layout":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-antd"],"step":["react-rsuite5","react-antd"],"max":["react-rsuite5","react-antd"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"optionType":["react-antd"],"size":["react-antd"]},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react","react-bootstrap","react-antd"],"width":["react","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"width":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"maxWidth":null,"minHeight":null,"align":null,"marginTop":null,"marginBottom":null,"hidden":null},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
-;// CONCATENATED MODULE: ./helpers/apply-transformers.js
-
-
-
-
-function apply_transformers_typeof(obj) { "@babel/helpers - typeof"; return apply_transformers_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, apply_transformers_typeof(obj); }
-function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == apply_transformers_typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator.return && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, catch: function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
-function apply_transformers_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function apply_transformers_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? apply_transformers_ownKeys(Object(source), !0).forEach(function (key) { apply_transformers_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : apply_transformers_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function apply_transformers_defineProperty(obj, key, value) { key = apply_transformers_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function apply_transformers_toPropertyKey(arg) { var key = apply_transformers_toPrimitive(arg, "string"); return apply_transformers_typeof(key) === "symbol" ? key : String(key); }
-function apply_transformers_toPrimitive(input, hint) { if (apply_transformers_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (apply_transformers_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function _awaitAsyncGenerator(value) { return new _OverloadYield(value, 0); }
-function _wrapAsyncGenerator(fn) { return function () { return new _AsyncGenerator(fn.apply(this, arguments)); }; }
-function _AsyncGenerator(gen) { var front, back; function resume(key, arg) { try { var result = gen[key](arg), value = result.value, overloaded = value instanceof _OverloadYield; Promise.resolve(overloaded ? value.v : value).then(function (arg) { if (overloaded) { var nextKey = "return" === key ? "return" : "next"; if (!value.k || arg.done) return resume(nextKey, arg); arg = gen[nextKey](arg).value; } settle(result.done ? "return" : "normal", arg); }, function (err) { resume("throw", err); }); } catch (err) { settle("throw", err); } } function settle(type, value) { switch (type) { case "return": front.resolve({ value: value, done: !0 }); break; case "throw": front.reject(value); break; default: front.resolve({ value: value, done: !1 }); } (front = front.next) ? resume(front.key, front.arg) : back = null; } this._invoke = function (key, arg) { return new Promise(function (resolve, reject) { var request = { key: key, arg: arg, resolve: resolve, reject: reject, next: null }; back ? back = back.next = request : (front = back = request, resume(key, arg)); }); }, "function" != typeof gen.return && (this.return = void 0); }
-_AsyncGenerator.prototype["function" == typeof Symbol && Symbol.asyncIterator || "@@asyncIterator"] = function () { return this; }, _AsyncGenerator.prototype.next = function (arg) { return this._invoke("next", arg); }, _AsyncGenerator.prototype.throw = function (arg) { return this._invoke("throw", arg); }, _AsyncGenerator.prototype.return = function (arg) { return this._invoke("return", arg); };
-function _OverloadYield(value, kind) { this.v = value, this.k = kind; }
-function _asyncIterator(iterable) { var method, async, sync, retry = 2; for ("undefined" != typeof Symbol && (async = Symbol.asyncIterator, sync = Symbol.iterator); retry--;) { if (async && null != (method = iterable[async])) return method.call(iterable); if (sync && null != (method = iterable[sync])) return new AsyncFromSyncIterator(method.call(iterable)); async = "@@asyncIterator", sync = "@@iterator"; } throw new TypeError("Object is not async iterable"); }
-function AsyncFromSyncIterator(s) { function AsyncFromSyncIteratorContinuation(r) { if (Object(r) !== r) return Promise.reject(new TypeError(r + " is not an object.")); var done = r.done; return Promise.resolve(r.value).then(function (value) { return { value: value, done: done }; }); } return AsyncFromSyncIterator = function AsyncFromSyncIterator(s) { this.s = s, this.n = s.next; }, AsyncFromSyncIterator.prototype = { s: null, n: null, next: function next() { return AsyncFromSyncIteratorContinuation(this.n.apply(this.s, arguments)); }, return: function _return(value) { var ret = this.s.return; return void 0 === ret ? Promise.resolve({ value: value, done: !0 }) : AsyncFromSyncIteratorContinuation(ret.apply(this.s, arguments)); }, throw: function _throw(value) { var thr = this.s.return; return void 0 === thr ? Promise.reject(value) : AsyncFromSyncIteratorContinuation(thr.apply(this.s, arguments)); } }, new AsyncFromSyncIterator(s); }
-
-
-
-// cannot import manifest, need to stay in the other repo
-// this is going open source, while the manifests are ip
-
-
-var translateValidationKey = function translateValidationKey(str) {
-  if (str.startsWith('validation')) {
-    str = str.replace(/^validation/, '');
-    if (str.length !== 0) {
-      str = str[0].toLowerCase() + str.slice(1);
-    }
-    return str;
-  } else {
-    return str;
-  }
-};
-var ApiFactory = function ApiFactory(formName, framework, formFields, currenValues) {
-  var _fields = formFields;
-  var fieldExists = function fieldExists(name) {
-    if (findField(_fields, function (field) {
-      return field.name === name;
-    }) != null) {
-      return true;
-    } else {
-      throw new Error("Field \"".concat(name, "\" doesn't exist in the form"));
-    }
-  };
-  return {
-    fields: function fields() {
-      return _fields;
-    },
-    element: function element(name) {
-      if (!fieldExists(name)) {
-        return;
-      }
-      var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
-      if (form) {
-        return form.querySelector("[data-lf-field-name=".concat(name, "]"));
-      }
-      return null;
-    },
-    style: function style(name, prop, value) {
-      if (!fieldExists(name)) {
-        return;
-      }
-      // find the form, then the element, then apply the style
-      var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
-      if (form) {
-        var element = form.querySelector("[data-lf-field-name=".concat(name, "]"));
-        if (element) {
-          if (isString_default()(prop)) {
-            element.style[prop] = value;
-          } else if (isObject_default()(prop)) {
-            Object.keys(prop).forEach(function (key) {
-              return element.style[key] = prop[key];
-            });
-          }
-        }
-      }
-    },
-    css: function css(className, obj) {
-      // find the form
-      var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
-      if (form) {
-        var element = form.querySelector(className);
-        if (element && isObject_default()(obj)) {
-          Object.keys(obj).forEach(function (key) {
-            return element.style[key] = obj[key];
-          });
-        }
-      }
-    },
-    setValue: function setValue(name, key, value) {
-      if (!fieldExists(name)) {
-        return;
-      }
-      _fields = mapFields(_fields, function (field) {
-        if (field.name === name) {
-          // check if the field exists in the manifest mapping
-          // and if needs to be added in a framework sub set
-          if (mappings_namespaceObject[field.component] && mappings_namespaceObject[field.component][key] !== undefined) {
-            if (mappings_namespaceObject[field.component][key] === null) {
-              // key property exists but it's just common property to all frameworks
-              return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, apply_transformers_defineProperty({}, key, value));
-            } else if (mappings_namespaceObject[field.component][key] === 'validation') {
-              var _field$validation;
-              // handle special case of validation fields
-              return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
-                validation: apply_transformers_objectSpread(apply_transformers_objectSpread({}, (_field$validation = field.validation) !== null && _field$validation !== void 0 ? _field$validation : {}), {}, apply_transformers_defineProperty({}, translateValidationKey(key), value))
-              });
-              // handle special case of validation
-            } else if (isArray_default()(mappings_namespaceObject[field.component][key]) && mappings_namespaceObject[field.component][key].includes(framework)) {
-              var _field$framework;
-              // key property it's a framework specific key, belongs to one or more frameworks, so it must be
-              // set in the specific subset, use the current framework so set it
-              return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, apply_transformers_defineProperty({}, framework, apply_transformers_objectSpread(apply_transformers_objectSpread({}, (_field$framework = field[framework]) !== null && _field$framework !== void 0 ? _field$framework : {}), {}, apply_transformers_defineProperty({}, key, value))));
-            } else {
-              console.warning("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\" in framework \"").concat(framework, "\""));
-            }
-          } else {
-            console.error("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\""));
-          }
-        }
-        return field;
-      });
-    },
-    enable: function enable(name) {
-      if (!fieldExists(name)) {
-        return;
-      }
-      _fields = mapFields(_fields, function (field) {
-        if (field.name === name) {
-          return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
-            disabled: false
-          });
-        }
-        return field;
-      });
-    },
-    disable: function disable(name) {
-      if (!fieldExists(name)) {
-        return;
-      }
-      _fields = mapFields(_fields, function (field) {
-        if (field.name === name) {
-          return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
-            disabled: true
-          });
-        }
-        return field;
-      });
-    },
-    show: function show(name) {
-      if (!fieldExists(name)) {
-        return;
-      }
-      _fields = mapFields(_fields, function (field) {
-        if (field.name === name) {
-          return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
-            hidden: false
-          });
-        }
-        return field;
-      });
-    },
-    hide: function hide(name) {
-      if (!fieldExists(name)) {
-        return;
-      }
-      _fields = mapFields(_fields, function (field) {
-        if (field.name === name) {
-          return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, {
-            hidden: true
-          });
-        }
-        return field;
-      });
-    },
-    /**
-     * Change field property inside and array
-     * @param {*} arrayName
-     * @param {*} arrayFieldName
-     * @param {*} key
-     * @param {*} value
-     * @returns
-     */
-    arraySetValue: function arraySetValue(arrayName, arrayFieldName, key, value) {
-      if (!fieldExists(arrayName)) {
-        return;
-      }
-      _fields = mapFields(_fields, function (arrayField) {
-        if (arrayField.component === 'array' && arrayField.name === arrayName) {
-          var newFields = mapFields(arrayField.fields, function (field) {
-            if (field.name === arrayFieldName) {
-              return apply_transformers_objectSpread(apply_transformers_objectSpread({}, field), {}, apply_transformers_defineProperty({}, key, value));
-            }
-            return field;
-          });
-          return apply_transformers_objectSpread(apply_transformers_objectSpread({}, arrayField), {}, {
-            fields: newFields
-          });
-        }
-        return arrayField;
-      });
-    },
-    values: Object.freeze(apply_transformers_objectSpread({}, currenValues))
-  };
-};
-var applyTransformers = /*#__PURE__*/function () {
-  var _ref = _wrapAsyncGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(formName, framework, fields, transformers, values, onJavascriptError) {
-    var newFields, txs, idx, api, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _iterator, _step, f, error;
-    return _regeneratorRuntime().wrap(function _callee$(_context) {
-      while (1) switch (_context.prev = _context.next) {
-        case 0:
-          if (!(isArray_default()(transformers) && !isEmpty_default()(transformers))) {
-            _context.next = 52;
-            break;
-          }
-          newFields = fields; // apply all transformers
-          txs = transformers;
-          /*.filter(transformer => _.isFunction(transformer))*/
-          idx = 0;
-        case 4:
-          if (!(idx < txs.length)) {
-            _context.next = 48;
-            break;
-          }
-          api = new ApiFactory(formName, framework, newFields, values);
-          _context.prev = 6;
-          //newFields = await txs[idx](api);
-          //console.log('sto per chiamare', txs[idx])
-          _iteratorAbruptCompletion = false;
-          _didIteratorError = false;
-          _context.prev = 9;
-          _iterator = _asyncIterator(txs[idx](api));
-        case 11:
-          _context.next = 13;
-          return _awaitAsyncGenerator(_iterator.next());
-        case 13:
-          if (!(_iteratorAbruptCompletion = !(_step = _context.sent).done)) {
-            _context.next = 21;
-            break;
-          }
-          f = _step.value;
-          newFields = f;
-          _context.next = 18;
-          return f;
-        case 18:
-          _iteratorAbruptCompletion = false;
-          _context.next = 11;
-          break;
-        case 21:
-          _context.next = 27;
-          break;
-        case 23:
-          _context.prev = 23;
-          _context.t0 = _context["catch"](9);
-          _didIteratorError = true;
-          _iteratorError = _context.t0;
-        case 27:
-          _context.prev = 27;
-          _context.prev = 28;
-          if (!(_iteratorAbruptCompletion && _iterator.return != null)) {
-            _context.next = 32;
-            break;
-          }
-          _context.next = 32;
-          return _awaitAsyncGenerator(_iterator.return());
-        case 32:
-          _context.prev = 32;
-          if (!_didIteratorError) {
-            _context.next = 35;
-            break;
-          }
-          throw _iteratorError;
-        case 35:
-          return _context.finish(32);
-        case 36:
-          return _context.finish(27);
-        case 37:
-          _context.next = 45;
-          break;
-        case 39:
-          _context.prev = 39;
-          _context.t1 = _context["catch"](6);
-          console.error('[LetsForm] Error on transformer: ', _context.t1);
-          error = new Error('Error executing transformer: ' + _context.t1.message, {
-            cause: _context.t1
-          });
-          error.errorType = 'runtime';
-          onJavascriptError(error);
-        case 45:
-          idx++;
-          _context.next = 4;
-          break;
-        case 48:
-          _context.next = 50;
-          return newFields;
-        case 50:
-          _context.next = 54;
-          break;
-        case 52:
-          _context.next = 54;
-          return fields;
-        case 54:
-        case "end":
-          return _context.stop();
-      }
-    }, _callee, null, [[6, 39], [9, 23, 27, 37], [28,, 32, 36]]);
-  }));
-  return function applyTransformers(_x, _x2, _x3, _x4, _x5, _x6) {
-    return _ref.apply(this, arguments);
-  };
-}();
-
-;// CONCATENATED MODULE: ./helpers/is-url.js
-
-var isUrl = function isUrl(url) {
-  return isString_default()(url) && url.match(/^http[s]{0,1}:\/\//);
-};
-;// CONCATENATED MODULE: ./helpers/make-width-style.js
-function make_width_style_typeof(obj) { "@babel/helpers - typeof"; return make_width_style_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, make_width_style_typeof(obj); }
-function make_width_style_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function make_width_style_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? make_width_style_ownKeys(Object(source), !0).forEach(function (key) { make_width_style_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : make_width_style_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function make_width_style_defineProperty(obj, key, value) { key = make_width_style_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function make_width_style_toPropertyKey(arg) { var key = make_width_style_toPrimitive(arg, "string"); return make_width_style_typeof(key) === "symbol" ? key : String(key); }
-function make_width_style_toPrimitive(input, hint) { if (make_width_style_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (make_width_style_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-var makeWidthStyle = function makeWidthStyle(fullWidth, width) {
-  var style = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-  if (fullWidth) {
-    return make_width_style_objectSpread(make_width_style_objectSpread({}, style), {}, {
-      width: '100%'
-    });
-  } else if (width) {
-    return make_width_style_objectSpread(make_width_style_objectSpread({}, style), {}, {
-      width: "".concat(parseInt(width, 10), "px")
-    });
-  }
-  return make_width_style_objectSpread(make_width_style_objectSpread({}, style), {}, {
-    width: 'auto'
-  });
-};
-;// CONCATENATED MODULE: ./helpers/collect-names.js
-
-
-function collect_names_toConsumableArray(arr) { return collect_names_arrayWithoutHoles(arr) || collect_names_iterableToArray(arr) || collect_names_unsupportedIterableToArray(arr) || collect_names_nonIterableSpread(); }
-function collect_names_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function collect_names_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return collect_names_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return collect_names_arrayLikeToArray(o, minLen); }
-function collect_names_iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function collect_names_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return collect_names_arrayLikeToArray(arr); }
-function collect_names_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-
-var collectNames = function collectNames(form) {
-  if (form && isArray_default()(form.fields) && !isEmpty_default()(form.fields)) {
-    return reduceFields(form.fields, function (field, accumulator) {
-      if (!accumulator.includes(field.name)) {
-        return [].concat(collect_names_toConsumableArray(accumulator), [field.name]);
-      }
-      return accumulator;
-    }, []);
-  }
-  return [];
-};
-;// CONCATENATED MODULE: ./helpers/is-valid-date.js
-var isValidDate = function isValidDate(d) {
-  return d instanceof Date && !isNaN(d);
-};
-;// CONCATENATED MODULE: ./helpers/index.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-;// CONCATENATED MODULE: ./components/i18n/index.js
-
-function i18n_typeof(obj) { "@babel/helpers - typeof"; return i18n_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, i18n_typeof(obj); }
-function i18n_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function i18n_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? i18n_ownKeys(Object(source), !0).forEach(function (key) { i18n_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : i18n_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function i18n_defineProperty(obj, key, value) { key = i18n_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function i18n_toPropertyKey(arg) { var key = i18n_toPrimitive(arg, "string"); return i18n_typeof(key) === "symbol" ? key : String(key); }
-function i18n_toPrimitive(input, hint) { if (i18n_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (i18n_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
-
-var I18N = function I18N(Component) {
-  var propNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
-  var funcPropNames = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-  return function (props) {
-    var lfLocale = props.lfLocale;
-    var newProps = Object.keys(props).reduce(function (acc, propName) {
-      // translate simpe field
-      if (propNames.includes(propName)) {
-        return i18n_objectSpread(i18n_objectSpread({}, acc), {}, i18n_defineProperty({}, propName, i18n(props[propName], lfLocale)));
-      } else if (isFunction_default()(funcPropNames[propName])) {
-        // pass the value trough the mapper
-        var translated = funcPropNames[propName](props[propName], function (string) {
-          return i18n(string, lfLocale);
-        });
-        return i18n_objectSpread(i18n_objectSpread({}, acc), {}, i18n_defineProperty({}, propName, translated));
-      }
-      return i18n_objectSpread(i18n_objectSpread({}, acc), {}, i18n_defineProperty({}, propName, props[propName]));
-    }, {});
-    return /*#__PURE__*/external_react_default().createElement(Component, newProps);
-  };
-};
-// EXTERNAL MODULE: ./node_modules/lodash/isDate.js
-var isDate = __webpack_require__(7960);
-var isDate_default = /*#__PURE__*/__webpack_require__.n(isDate);
-;// CONCATENATED MODULE: ./components/plaintext/locales/yes.json
-const yes_namespaceObject = JSON.parse('{"en-US":"Yes","af-ZA":"Ja","ar":"نعم","bg-BG":"Да","ca-AD":"Sí","cs-CZ":"Ano","cy-GB":"Ie","da-DK":"Ja","de-AT":"Ja","de-CH":"Ja","de-DE":"Ja","el-GR":"Ναί","en-GB":"Yes","es-CL":"Sí","es-ES":"Sí","es-MX":"Sí","et-EE":"Jah","eu":"Bai","fa-IR":"آره","fi-FI":"Joo","fr-CA":"Oui","fr-FR":"Oui","he-IL":"כן","hi-IN":"हाँ","hr-HR":"Da","hu-HU":"Igen","id-ID":"Ya","is-IS":"Já","it-IT":"Si","ja-JP":"はい","km-KH":"បាត","ko-KR":"예","la":"Sic","lt-LT":"Taip","lv-LV":"Jā","mn-MN":"Мон","nb-NO":"Ja","nl-NL":"Ja","pl-PL":"Tak","pt-BR":"Sim","pt-PT":"Sim","ro-RO":"da","ru-RU":"Да","sk-SK":"Áno","sl-SI":"DA","sr-RS":"да","sv-SE":"Ja","th-TH":"ใช่","tr-TR":"Evet","uk-UA":"Так","vi-VN":"Đúng","zh-CN":"是的","zh-TW":"是的"}');
-;// CONCATENATED MODULE: ./components/plaintext/locales/no.json
-const no_namespaceObject = JSON.parse('{"en-US":"No","af-ZA":"Geen","ar":"لا","bg-BG":"Не","ca-AD":"No","cs-CZ":"Ne","cy-GB":"Na","da-DK":"Ingen","de-AT":"NEIN","de-CH":"NEIN","de-DE":"NEIN","el-GR":"Οχι","en-GB":"No","es-CL":"No","es-ES":"No","es-MX":"No","et-EE":"Mitte","eu":"Ez-","fa-IR":"هیچ","fi-FI":"Ei","fr-CA":"Non","fr-FR":"Non","he-IL":"לא","hi-IN":"नहीं","hr-HR":"Ne","hu-HU":"Nem","id-ID":"TIDAK","is-IS":"Nei","it-IT":"No","ja-JP":"いいえ","km-KH":"ដេលក្ផាន","ko-KR":"아니요","la":"Non","lt-LT":"Ne","lv-LV":"Nē","mn-MN":"-Гүй / -битгий","nb-NO":"Nei","nl-NL":"Nee","pl-PL":"NIE","pt-BR":"Não","pt-PT":"Não","ro-RO":"Nu","ru-RU":"Нет","sk-SK":"Nie","sl-SI":"Ne","sr-RS":"Не","sv-SE":"Nej","th-TH":"เลขที่","tr-TR":"HAYIR","uk-UA":"Немає","vi-VN":"KHÔNG","zh-CN":"不","zh-TW":"不"}');
-;// CONCATENATED MODULE: ./components/plaintext/locales/index.js
-
-
-
-;// CONCATENATED MODULE: ./components/plaintext/index.js
-
-
-
-
-
-var Plaintext = function Plaintext(_ref) {
-  var value = _ref.value,
-    component = _ref.component,
-    options = _ref.options,
-    locale = _ref.locale;
-  var d;
-  switch (component) {
-    case 'input-text':
-    case 'text-input':
-      return /*#__PURE__*/external_react_default().createElement("span", null, value);
-    case 'date':
-      if (isDate_default()(value)) {
-        d = value;
-      } else if (isString_default()(value) && isValidDate(new Date(value))) {
-        d = new Date(value);
-      }
-      return /*#__PURE__*/external_react_default().createElement("span", null, d ? d.toLocaleDateString() : '');
-    case 'datetime':
-      if (isDate_default()(value)) {
-        d = value;
-      } else if (isString_default()(value) && isValidDate(new Date(value))) {
-        d = new Date(value);
-      }
-      return /*#__PURE__*/external_react_default().createElement("span", null, d ? d.toLocaleDateString() + ' ' + d.toLocaleTimeString() : '');
-    case 'toggle':
-    case 'checkbox':
-      if (value === true || value === 1) {
-        return /*#__PURE__*/external_react_default().createElement("span", null, i18n(yes_namespaceObject, locale));
-      } else if (value === false || value === 0) {
-        return /*#__PURE__*/external_react_default().createElement("span", null, i18n(no_namespaceObject, locale));
-      }
-      return /*#__PURE__*/external_react_default().createElement("span", null, "-");
-    case 'select':
-      var found = (options !== null && options !== void 0 ? options : []).find(function (option) {
-        return option.value === value;
-      });
-      var label = '';
-      if (found) {
-        if (isI18n(found.label)) {
-          label = i18n(found.label, locale);
-        } else {
-          label = found.label;
-        }
-      }
-      return /*#__PURE__*/external_react_default().createElement("span", null, label);
-    default:
-      return /*#__PURE__*/external_react_default().createElement("span", null, value);
-  }
-};
-var IfNotPlaintext = function IfNotPlaintext(_ref2) {
-  var plaintext = _ref2.plaintext,
-    value = _ref2.value,
-    component = _ref2.component,
-    options = _ref2.options,
-    children = _ref2.children,
-    locale = _ref2.locale;
-  if (plaintext) {
-    return /*#__PURE__*/external_react_default().createElement(Plaintext, {
-      value: value,
-      component: component,
-      options: options,
-      locale: locale
-    });
-  } else {
-    return children;
-  }
-};
-
-;// CONCATENATED MODULE: ./components/react-generic-input/index.js
-
-var _excluded = ["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "plaintext", "required", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component"];
-function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-
-
-var ReactGenericInput = function ReactGenericInput(_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    lfLocale = _ref.lfLocale,
-    hint = _ref.hint,
-    value = _ref.value,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    error = _ref.error,
-    className = _ref.className,
-    disabled = _ref.disabled,
-    readOnly = _ref.readOnly,
-    plaintext = _ref.plaintext,
-    required = _ref.required,
-    size = _ref.size,
-    width = _ref.width,
-    fullWidth = _ref.fullWidth,
-    placeholder = _ref.placeholder,
-    autocomplete = _ref.autocomplete,
-    inputType = _ref.inputType,
-    inputMode = _ref.inputMode,
-    component = _ref.component,
-    rest = _objectWithoutProperties(_ref, _excluded);
-  var hasError = error && isString_default()(error);
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    className: classnames_default()('lf-form-react-control-group', className),
-    "data-lf-field-name": name
-  }, /*#__PURE__*/external_react_default().createElement("label", {
-    for: name
-  }, label, required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(IfNotPlaintext, {
-    value: value,
-    component: component,
-    plaintext: plaintext
-  }, /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, /*#__PURE__*/external_react_default().createElement("input", _extends({
-    type: inputType,
-    lang: lfLocale,
-    id: name,
-    defaultValue: value,
-    onChange: onChange,
-    onBlur: onBlur,
-    placeholder: placeholder,
-    style: makeWidthStyle(fullWidth, width),
-    autoComplete: autocomplete,
-    inputMode: inputMode,
-    disabled: disabled,
-    readOnly: readOnly
-  }, passRest(rest))), hint && !hasError && /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-form-react-message"
-  }, hint), hasError && /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-form-react-error-message"
-  }, error))));
-};
-
-// EXTERNAL MODULE: external "rsuite"
-var external_rsuite_ = __webpack_require__(1186);
-// EXTERNAL MODULE: external "rsuite/locales"
-var locales_ = __webpack_require__(977);
-;// CONCATENATED MODULE: ./components/rsuite-generic-date/index.js
-
-var rsuite_generic_date_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"];
-function rsuite_generic_date_extends() { rsuite_generic_date_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return rsuite_generic_date_extends.apply(this, arguments); }
-function rsuite_generic_date_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = rsuite_generic_date_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function rsuite_generic_date_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-
-var RSuiteGenericDate = function RSuiteGenericDate(_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    placeholder = _ref.placeholder,
-    plaintext = _ref.plaintext,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    error = _ref.error,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    appearance = _ref.appearance,
-    format = _ref.format,
-    lfLocale = _ref.lfLocale,
-    rest = rsuite_generic_date_objectWithoutProperties(_ref, rsuite_generic_date_excluded);
-  var localeCode = lfLocale && isString_default()(lfLocale) ? lfLocale.replace('-', '') : undefined;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    "data-lf-field-name": name,
-    className: "lf-control-date"
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.CustomProvider, {
-    locale: localeCode && locales_[localeCode] ? locales_[localeCode] : undefined
-  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, rsuite_generic_date_extends({
-    accepter: external_rsuite_.DatePicker,
-    appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
-    name: name,
-    format: format || 'yyyy-MM-dd',
-    defaultValue: value,
-    onChange: onChange,
-    readOnly: readOnly,
-    plaintext: plaintext,
-    onBlur: onBlur,
-    errorMessage: isString_default()(error) ? error : undefined,
-    disabled: disabled,
-    placeholder: placeholder
-  }, rest)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint)));
-};
-
-;// CONCATENATED MODULE: ./components/react-generic-checkbox/index.js
-
-var react_generic_checkbox_excluded = ["name", "label", "lfLocale", "className", "inputType", "hint", "plaintext", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"];
-function react_generic_checkbox_extends() { react_generic_checkbox_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_generic_checkbox_extends.apply(this, arguments); }
-function react_generic_checkbox_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_generic_checkbox_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function react_generic_checkbox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-
-var ReactGenericCheckbox = function ReactGenericCheckbox(_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    lfLocale = _ref.lfLocale,
-    className = _ref.className,
-    inputType = _ref.inputType,
-    hint = _ref.hint,
-    plaintext = _ref.plaintext,
-    value = _ref.value,
-    defaultValue = _ref.defaultValue,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    error = _ref.error,
-    disabled = _ref.disabled,
-    readOnly = _ref.readOnly,
-    required = _ref.required,
-    rest = react_generic_checkbox_objectWithoutProperties(_ref, react_generic_checkbox_excluded);
-  var hasError = error && isString_default()(error);
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    className: classnames_default()('lf-form-react-control-group', className),
-    "data-lf-field-name": name
-  }, !plaintext && /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, /*#__PURE__*/external_react_default().createElement("label", {
-    for: name,
-    className: "lf-form-react-checkbox"
-  }, /*#__PURE__*/external_react_default().createElement("input", react_generic_checkbox_extends({
-    type: inputType,
-    id: name,
-    onChange: onChange,
-    onBlur: onBlur,
-    required: error != null,
-    disabled: disabled,
-    readOnly: readOnly,
-    defaultChecked: value
-  }, passRest(rest))), " ", label, " ", required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), hint && !hasError && /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-form-react-form-message"
-  }, hint), hasError && /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-form-react-error-message"
-  }, error)), plaintext && /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, /*#__PURE__*/external_react_default().createElement("label", {
-    for: name
-  }, label), /*#__PURE__*/external_react_default().createElement(Plaintext, {
-    value: value,
-    component: "toggle",
-    locale: lfLocale
-  })));
-};
-
-;// CONCATENATED MODULE: ./components/index.js
-
-
-
-
-
-
-
-;// CONCATENATED MODULE: ./form-context/index.js
-
-var FormContext = /*#__PURE__*/(0,external_react_.createContext)();
-/* harmony default export */ const form_context = (FormContext);
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./generator/index.scss
-var cjs_js_generator = __webpack_require__(5861);
-;// CONCATENATED MODULE: ./generator/index.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var generator_options = {};
-
-generator_options.styleTagTransform = (styleTagTransform_default());
-generator_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      generator_options.insert = insertBySelector_default().bind(null, "head");
-    
-generator_options.domAPI = (styleDomAPI_default());
-generator_options.insertStyleElement = (insertStyleElement_default());
-
-var generator_update = injectStylesIntoStyleTag_default()(cjs_js_generator/* default */.Z, generator_options);
-
-
-
-
-       /* harmony default export */ const generator = (cjs_js_generator/* default */.Z && cjs_js_generator/* default.locals */.Z.locals ? cjs_js_generator/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./generator/index.js
-
-
-
-
-
-function generator_typeof(obj) { "@babel/helpers - typeof"; return generator_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, generator_typeof(obj); }
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || generator_unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-function generator_extends() { generator_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return generator_extends.apply(this, arguments); }
-function generator_regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ generator_regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == generator_typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator.return && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, catch: function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
-function generator_toConsumableArray(arr) { return generator_arrayWithoutHoles(arr) || generator_iterableToArray(arr) || generator_unsupportedIterableToArray(arr) || generator_nonIterableSpread(); }
-function generator_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function generator_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return generator_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return generator_arrayLikeToArray(o, minLen); }
-function generator_iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function generator_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return generator_arrayLikeToArray(arr); }
-function generator_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function generator_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function generator_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? generator_ownKeys(Object(source), !0).forEach(function (key) { generator_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : generator_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function generator_defineProperty(obj, key, value) { key = generator_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function generator_toPropertyKey(arg) { var key = generator_toPrimitive(arg, "string"); return generator_typeof(key) === "symbol" ? key : String(key); }
-function generator_toPrimitive(input, hint) { if (generator_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (generator_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function generator_asyncIterator(iterable) { var method, async, sync, retry = 2; for ("undefined" != typeof Symbol && (async = Symbol.asyncIterator, sync = Symbol.iterator); retry--;) { if (async && null != (method = iterable[async])) return method.call(iterable); if (sync && null != (method = iterable[sync])) return new generator_AsyncFromSyncIterator(method.call(iterable)); async = "@@asyncIterator", sync = "@@iterator"; } throw new TypeError("Object is not async iterable"); }
-function generator_AsyncFromSyncIterator(s) { function AsyncFromSyncIteratorContinuation(r) { if (Object(r) !== r) return Promise.reject(new TypeError(r + " is not an object.")); var done = r.done; return Promise.resolve(r.value).then(function (value) { return { value: value, done: done }; }); } return generator_AsyncFromSyncIterator = function AsyncFromSyncIterator(s) { this.s = s, this.n = s.next; }, generator_AsyncFromSyncIterator.prototype = { s: null, n: null, next: function next() { return AsyncFromSyncIteratorContinuation(this.n.apply(this.s, arguments)); }, return: function _return(value) { var ret = this.s.return; return void 0 === ret ? Promise.resolve({ value: value, done: !0 }) : AsyncFromSyncIteratorContinuation(ret.apply(this.s, arguments)); }, throw: function _throw(value) { var thr = this.s.return; return void 0 === thr ? Promise.reject(value) : AsyncFromSyncIteratorContinuation(thr.apply(this.s, arguments)); } }, new generator_AsyncFromSyncIterator(s); }
-function generator_awaitAsyncGenerator(value) { return new generator_OverloadYield(value, 0); }
-function generator_wrapAsyncGenerator(fn) { return function () { return new generator_AsyncGenerator(fn.apply(this, arguments)); }; }
-function generator_AsyncGenerator(gen) { var front, back; function resume(key, arg) { try { var result = gen[key](arg), value = result.value, overloaded = value instanceof generator_OverloadYield; Promise.resolve(overloaded ? value.v : value).then(function (arg) { if (overloaded) { var nextKey = "return" === key ? "return" : "next"; if (!value.k || arg.done) return resume(nextKey, arg); arg = gen[nextKey](arg).value; } settle(result.done ? "return" : "normal", arg); }, function (err) { resume("throw", err); }); } catch (err) { settle("throw", err); } } function settle(type, value) { switch (type) { case "return": front.resolve({ value: value, done: !0 }); break; case "throw": front.reject(value); break; default: front.resolve({ value: value, done: !1 }); } (front = front.next) ? resume(front.key, front.arg) : back = null; } this._invoke = function (key, arg) { return new Promise(function (resolve, reject) { var request = { key: key, arg: arg, resolve: resolve, reject: reject, next: null }; back ? back = back.next = request : (front = back = request, resume(key, arg)); }); }, "function" != typeof gen.return && (this.return = void 0); }
-generator_AsyncGenerator.prototype["function" == typeof Symbol && Symbol.asyncIterator || "@@asyncIterator"] = function () { return this; }, generator_AsyncGenerator.prototype.next = function (arg) { return this._invoke("next", arg); }, generator_AsyncGenerator.prototype.throw = function (arg) { return this._invoke("throw", arg); }, generator_AsyncGenerator.prototype.return = function (arg) { return this._invoke("return", arg); };
-function generator_OverloadYield(value, kind) { this.v = value, this.k = kind; }
-/* eslint-disable no-new-func */
-
-
-
-
-
-
-
-//import PropTypes from 'prop-types';
-
-
-
-var DEBUG_RENDER = true;
-var enrichWithLabels = function enrichWithLabels(validationErrors, fields) {
-  var result = generator_objectSpread({}, validationErrors);
-  var collectLabels = reduceFields(fields, function (field, accumulator) {
-    return field.label ? generator_objectSpread(generator_objectSpread({}, accumulator), {}, generator_defineProperty({}, field.name, field.label)) : accumulator;
-  }, {});
-  Object.keys(result).forEach(function (key) {
-    if (result[key] && result[key].ref && collectLabels[result[key].ref.name]) {
-      result[key].ref.label = collectLabels[result[key].ref.name];
-    }
-  });
-  return result;
-};
-var errorToString = function errorToString(error) {
-  if (error) {
-    if (error.message) {
-      return error.message;
-    } else if (error.type === 'required') {
-      return 'This field is required';
-    } else if (error.type === 'minLength') {
-      return 'Text is too short';
-    } else if (error.type === 'maxLength') {
-      return 'Text is too long';
-    } else if (error.type === 'max') {
-      return 'Value is too big';
-    } else if (error.type === 'min') {
-      return 'Value is too small';
-    }
-    return 'Invalid value';
-  }
-  return undefined;
-};
-var translateValidation = function translateValidation(validation, locale, onJavascriptError) {
-  // if any validation object
-  if (validation != null) {
-    var errorMessage;
-    if (isString_default()(validation.message)) {
-      errorMessage = validation.message;
-    } else if (isI18n(validation.message)) {
-      var _i18n;
-      errorMessage = (_i18n = i18n(validation.message, locale)) !== null && _i18n !== void 0 ? _i18n : 'Field is required';
-    } else {
-      errorMessage = 'Field is required';
-    }
-    var result = {};
-    if (validation.required) {
-      result.required = errorMessage;
-    }
-    // min / max validation
-    ['min', 'max', 'minLength', 'maxLength'].forEach(function (key) {
-      if (validation[key] != null) {
-        result[key] = {
-          value: validation[key],
-          message: errorMessage
-        };
-      }
-    });
-    // validation with regex
-    if (validation.pattern) {
-      result.pattern = {
-        value: new RegExp(validation.pattern),
-        message: errorMessage
-      };
-    }
-    if (!isEmpty_default()(trim_default()(validation.validate))) {
-      try {
-        var validator = new Function('value', 'formValues', validation.validate);
-        // wrap the validator function, if returns strictly false then re-use
-        // the provided message, if it's a string return the string, but it will not i18n
-        result.validate = function (value, formValues) {
-          var v;
-          try {
-            v = validator(value, formValues);
-          } catch (e) {
-            console.error("[LetsForm] Error executing validate function: ", e);
-            var error = new Error('Error compiling validate function: ' + e.message, {
-              cause: e
-            });
-            error.sourceCode = validation.validate;
-            error.errorType = 'runtime';
-            onJavascriptError(error);
-          }
-          if (v === true) {
-            return true;
-          } else if (v === false) {
-            return errorMessage;
-          } else if (isString_default()(v)) {
-            return v;
-          } else if (isI18n(v)) {
-            return i18n(v, locale);
-          }
-          return true;
-        };
-      } catch (e) {
-        console.error("[LetsForm] Invalid validate function: ", e);
-        var error = new Error('Error compiling validate function: ' + e.message, {
-          cause: e
-        });
-        error.sourceCode = validation.validate;
-        error.errorType = 'compile';
-        onJavascriptError(error);
-      }
-    } else {
-      result.validate = undefined;
-    }
-    return result;
-  }
-  return validation;
-};
-var MissingComponent = function MissingComponent(_ref2) {
-  var lfComponent = _ref2.lfComponent,
-    label = _ref2.label,
-    lfFramework = _ref2.lfFramework;
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-missing-component"
-  }, /*#__PURE__*/external_react_default().createElement("div", {
-    className: "icon"
-  }, /*#__PURE__*/external_react_default().createElement(Warning, {
-    color: "#ff6633",
-    height: 16
-  })), /*#__PURE__*/external_react_default().createElement("div", {
-    className: "message"
-  }, "The component ", /*#__PURE__*/external_react_default().createElement("span", {
-    className: "tag-component"
-  }, lfComponent), " (", /*#__PURE__*/external_react_default().createElement("em", null, "\"", isString_default()(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/external_react_default().createElement("b", null, lfFramework), ")"));
-};
-var collectTransformers = function collectTransformers(form, onJavascriptError) {
-  var transformers = {};
-
-  // collect all fieldlist needed to compile the transformer
-  var fieldList = reduceFields(form.fields, function (field, accumulator) {
-    if (field.component !== 'group' && field.component !== 'two-columns' && field.component !== 'three-columns') {
-      return [].concat(generator_toConsumableArray(accumulator), [field.name]);
-    }
-    return accumulator;
-  }, []);
-
-  // compile transformer of the form
-  try {
-    if (!isEmpty_default()(form.transformer)) {
-      transformers.onRender = [makeTransformer(form.transformer, fieldList)];
-    }
-  } catch (e) {
-    var error = new Error('Error compiling main transformer: ' + e.message, {
-      cause: e
-    });
-    error.sourceCode = form.transformer;
-    error.errorType = 'compile';
-    onJavascriptError(error);
-  }
-
-  // collect transformers for each field and put it onChange
-  transformers = reduceFields(form.fields, function (field, acc) {
-    if (field.transformer) {
-      var transformer;
-      try {
-        transformer = makeTransformer(field.transformer, fieldList);
-      } catch (e) {
-        var _error = new Error('Error compiling transformer. ' + e.message, {
-          cause: e
-        });
-        _error.sourceCode = field.transformer;
-        _error.errorType = 'compile';
-        onJavascriptError(_error);
-      }
-      // push into the onChange list of txs
-      if (transformer != null) {
-        if (acc.onChange == null) {
-          acc.onChange = {};
-        }
-        acc.onChange[field.name] = [transformer];
-      }
-    }
-    return acc;
-  }, transformers);
-  return transformers;
-};
-var AsyncGeneratorFunction = /*#__PURE__*/generator_wrapAsyncGenerator( /*#__PURE__*/generator_regeneratorRuntime().mark(function _callee() {
-  return generator_regeneratorRuntime().wrap(function _callee$(_context) {
-    while (1) switch (_context.prev = _context.next) {
-      case 0:
-      case "end":
-        return _context.stop();
-    }
-  }, _callee);
-})).constructor;
-
-//const yieldReplacer = /((setValue|hide|show|enable|disable|show|hide|arraySetValue)\(.*?\)[;]{0,1})/;
-
-var makeTransformer = function makeTransformer(str, fieldList) {
-  if (isEmpty_default()(str)) {
-    return null;
-  }
-  var yieldedStr = str.replaceAll(/((setValue|hide|show|enable|disable|show|hide|arraySetValue)\(.*?\)[;]{0,1})/g, '$& yield Promise.resolve(api.fields());\n');
-  try {
-    var spreadVars = '';
-    if (!isEmpty_default()(fieldList)) {
-      spreadVars = 'const { ' + fieldList.join(', ') + ' } = values;\n';
-    }
-    var tx = new AsyncGeneratorFunction('api', "const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue } = api;\n" + spreadVars + yieldedStr + '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
-    );
-
-    return tx;
-  } catch (e) {
-    console.error("LetsForm] Invalid JavaScript code for rules", e);
-    console.error("LetsForm] Transformer: ", str);
-    throw e;
-  }
-};
-
-/**
- * Merge additional components to the main library
- * @param {*} main
- * @param {*} additional
- * @returns
- */
-var mergeComponents = function mergeComponents(main, additional) {
-  // if not empty, then merge, overwriting is ok
-  if (!isEmpty_default()(additional) && Object.keys(additional).length !== 0) {
-    Object.keys(additional).forEach(function (componentName) {
-      if (main[componentName] == null) {
-        main[componentName] = additional[componentName];
-      } else {
-        main[componentName] = generator_objectSpread(generator_objectSpread({}, main[componentName]), additional[componentName]);
-      }
-    });
-  }
-  return main;
-};
-var GenerateGenerator = function GenerateGenerator(_ref3) {
-  var Forms = _ref3.Forms,
-    Fields = _ref3.Fields;
-  var renderFields = function renderFields(_ref4) {
-    var fields = _ref4.fields,
-      control = _ref4.control,
-      framework = _ref4.framework,
-      _onChange = _ref4.onChange,
-      getValues = _ref4.getValues,
-      Wrapper = _ref4.Wrapper,
-      GroupWrapper = _ref4.GroupWrapper,
-      BottomView = _ref4.BottomView,
-      debug = _ref4.debug,
-      disabled = _ref4.disabled,
-      readOnly = _ref4.readOnly,
-      plaintext = _ref4.plaintext,
-      errors = _ref4.errors,
-      showErrors = _ref4.showErrors,
-      _ref4$level = _ref4.level,
-      level = _ref4$level === void 0 ? 1 : _ref4$level,
-      locale = _ref4.locale,
-      onJavascriptError = _ref4.onJavascriptError,
-      Components = _ref4.Components;
-    var renderedFields = (fields || []).filter(function (field) {
-      return Wrapper || field.hidden !== true;
-    }).map(function (field, index) {
-      var Component;
-      if (Components[field.component] && Components[field.component][framework]) {
-        Component = Components[field.component][framework];
-      } else if (Components[field.component] && Components[field.component]['*']) {
-        Component = Components[field.component]['*'];
-      } else {
-        Component = MissingComponent;
-      }
-      // remove mandatory fields and platform specific fields
-      var additionalFields = omit_default()(field, ['id', 'name', 'label', 'hint', 'disabled', 'readOnly', 'plaintext', 'size', 'placeholder', 'component'].concat(generator_toConsumableArray(FRAMEWORKS)));
-
-      // special case of group
-      if (field.component === 'group') {
-        var component = /*#__PURE__*/external_react_default().createElement(Component, generator_extends({
-          key: field.name,
-          lfComponent: field.component,
-          lfFramework: framework,
-          lfLocale: locale,
-          name: field.name,
-          label: field.label,
-          hint: field.hint,
-          disabled: field.disabled
-        }, additionalFields), /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, renderFields({
-          Wrapper: Wrapper,
-          GroupWrapper: GroupWrapper,
-          BottomView: BottomView,
-          onChange: _onChange,
-          fields: field.fields,
-          control: control,
-          framework: framework,
-          getValues: getValues,
-          disabled: disabled,
-          readOnly: readOnly,
-          plaintext: plaintext,
-          errors: errors,
-          showErrors: showErrors,
-          level: level + 1,
-          locale: locale,
-          onJavascriptError: onJavascriptError,
-          Components: Components
-        }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
-          key: "bottom_view_".concat(field.name),
-          field: field,
-          target: "fields"
-        })));
-        return GroupWrapper ? /*#__PURE__*/external_react_default().createElement(GroupWrapper, {
-          key: "wrapper_".concat(field.name),
-          field: field,
-          level: level,
-          index: index
-        }, component) : component;
-      } else if (field.component === 'two-columns') {
-        var _component = /*#__PURE__*/external_react_default().createElement(Component, generator_extends({
-          key: field.name,
-          lfComponent: field.component,
-          lfFramework: framework,
-          lfLocale: locale,
-          name: field.name
-        }, additionalFields), function (column) {
-          if (column === 'left') {
-            return /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, renderFields({
-              Wrapper: Wrapper,
-              GroupWrapper: GroupWrapper,
-              BottomView: BottomView,
-              onChange: _onChange,
-              fields: field.leftFields,
-              control: control,
-              framework: framework,
-              getValues: getValues,
-              disabled: disabled,
-              readOnly: readOnly,
-              plaintext: plaintext,
-              errors: errors,
-              showErrors: showErrors,
-              level: level + 1,
-              locale: locale,
-              onJavascriptError: onJavascriptError,
-              Components: Components
-            }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
-              key: "bottom_view_".concat(field.name),
-              field: field,
-              target: "leftFields"
-            }));
-          } else if (column === 'right') {
-            return /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, renderFields({
-              Wrapper: Wrapper,
-              GroupWrapper: GroupWrapper,
-              BottomView: BottomView,
-              onChange: _onChange,
-              fields: field.rightFields,
-              control: control,
-              framework: framework,
-              getValues: getValues,
-              disabled: disabled,
-              readOnly: readOnly,
-              plaintext: plaintext,
-              errors: errors,
-              showErrors: showErrors,
-              level: level + 1,
-              locale: locale,
-              onJavascriptError: onJavascriptError,
-              Components: Components
-            }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
-              key: "bottom_view_".concat(field.name),
-              field: field,
-              target: "rightFields"
-            }));
-          }
-        });
-        return GroupWrapper ? /*#__PURE__*/external_react_default().createElement(GroupWrapper, {
-          key: "wrapper_".concat(field.name),
-          level: level,
-          field: field,
-          index: index
-        }, _component) : _component;
-      } else if (field.component === 'three-columns') {
-        var _component2 = /*#__PURE__*/external_react_default().createElement(Component, generator_extends({
-          key: "three-columns-".concat(field.name),
-          name: field.name,
-          lfComponent: field.component,
-          lfFramework: framework,
-          lfLocale: locale
-        }, additionalFields), function (column) {
-          if (column === 'left') {
-            return /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, renderFields({
-              Wrapper: Wrapper,
-              GroupWrapper: GroupWrapper,
-              BottomView: BottomView,
-              onChange: _onChange,
-              fields: field.leftFields,
-              control: control,
-              framework: framework,
-              getValues: getValues,
-              disabled: disabled,
-              readOnly: readOnly,
-              plaintext: plaintext,
-              errors: errors,
-              showErrors: showErrors,
-              level: level + 1,
-              locale: locale,
-              onJavascriptError: onJavascriptError,
-              Components: Components
-            }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
-              key: "bottom_view_".concat(field.name),
-              field: field,
-              target: "leftFields"
-            }));
-          } else if (column === 'center') {
-            return /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, renderFields({
-              Wrapper: Wrapper,
-              GroupWrapper: GroupWrapper,
-              BottomView: BottomView,
-              onChange: _onChange,
-              fields: field.centerFields,
-              control: control,
-              framework: framework,
-              getValues: getValues,
-              disabled: disabled,
-              readOnly: readOnly,
-              plaintext: plaintext,
-              errors: errors,
-              showErrors: showErrors,
-              level: level + 1,
-              locale: locale,
-              onJavascriptError: onJavascriptError,
-              Components: Components
-            }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
-              key: "bottom_view_".concat(field.name),
-              field: field,
-              target: "centerFields"
-            }));
-          } else if (column === 'right') {
-            return /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, renderFields({
-              Wrapper: Wrapper,
-              GroupWrapper: GroupWrapper,
-              BottomView: BottomView,
-              onChange: _onChange,
-              fields: field.rightFields,
-              control: control,
-              framework: framework,
-              getValues: getValues,
-              disabled: disabled,
-              readOnly: readOnly,
-              plaintext: plaintext,
-              errors: errors,
-              showErrors: showErrors,
-              level: level + 1,
-              locale: locale,
-              onJavascriptError: onJavascriptError,
-              Components: Components
-            }), BottomView && /*#__PURE__*/external_react_default().createElement(BottomView, {
-              key: "bottom_view_".concat(field.name),
-              field: field,
-              target: "rightFields"
-            }));
-          }
-        });
-        return GroupWrapper ? /*#__PURE__*/external_react_default().createElement(GroupWrapper, {
-          key: "wrapper_".concat(field.name),
-          field: field,
-          level: level,
-          index: index
-        }, _component2) : _component2;
-      }
-
-      // generate the validation rule, takes into account react-hook-form
-      // validation format and i18n strings
-      var rules = translateValidation(generator_objectSpread({
-        required: field.required
-      }, field.validation), locale, onJavascriptError);
-      return /*#__PURE__*/external_react_default().createElement(Controller, {
-        key: "field_".concat(field.name),
-        name: field.name,
-        rules: rules,
-        control: control,
-        render: function render(_ref5) {
-          var fieldInfo = _ref5.field;
-          var component = /*#__PURE__*/external_react_default().createElement(Component
-          // not sure about this, not passing the ref
-          , generator_extends({
-            name: fieldInfo.name,
-            value: fieldInfo.value,
-            onBlur: fieldInfo.onBlur,
-            key: "field_".concat(field.name),
-            lfComponent: field.component,
-            lfFramework: framework,
-            lfLocale: locale,
-            label: field.label,
-            hint: field.hint,
-            disabled: disabled || field.disabled,
-            readOnly: readOnly || field.readOnly,
-            plaintext: plaintext,
-            size: field.size,
-            placeholder: field.placeholder,
-            error: errors && errors[field.name] ? showErrors === 'inline' ? errorToString(errors[field.name]) : true : undefined
-          }, additionalFields, field[framework], {
-            onChange: function onChange(value, opts) {
-              // TODO use callback
-              fieldInfo.onChange(value);
-              _onChange(generator_objectSpread(generator_objectSpread({}, getValues()), {}, generator_defineProperty({}, field.name, value)), field.name);
-            }
-          }));
-          return Wrapper ? /*#__PURE__*/external_react_default().createElement(Wrapper, {
-            key: "wrapper_".concat(field.name),
-            field: field,
-            level: level,
-            index: index
-          }, component) : component;
-        }
-      });
-    });
-    return renderedFields;
-  };
-  var FormGenerator = /*#__PURE__*/external_react_default().memo(function (_ref6) {
-    var _form$name;
-    var framework = _ref6.framework,
-      form = _ref6.form,
-      _ref6$onChange = _ref6.onChange,
-      onChange = _ref6$onChange === void 0 ? function () {} : _ref6$onChange,
-      _ref6$onSubmit = _ref6.onSubmit,
-      onSubmit = _ref6$onSubmit === void 0 ? function () {} : _ref6$onSubmit,
-      _ref6$onReset = _ref6.onReset,
-      onReset = _ref6$onReset === void 0 ? function () {} : _ref6$onReset,
-      _ref6$onError = _ref6.onError,
-      onError = _ref6$onError === void 0 ? function () {} : _ref6$onError,
-      _ref6$onJavascriptErr = _ref6.onJavascriptError,
-      onJavascriptError = _ref6$onJavascriptErr === void 0 ? function () {} : _ref6$onJavascriptErr,
-      locale = _ref6.locale,
-      wrapper = _ref6.wrapper,
-      groupWrapper = _ref6.groupWrapper,
-      bottomView = _ref6.bottomView,
-      _ref6$defaultValues = _ref6.defaultValues,
-      defaultValues = _ref6$defaultValues === void 0 ? {} : _ref6$defaultValues,
-      _ref6$onlyFields = _ref6.onlyFields,
-      onlyFields = _ref6$onlyFields === void 0 ? false : _ref6$onlyFields,
-      _ref6$debug = _ref6.debug,
-      debug = _ref6$debug === void 0 ? false : _ref6$debug,
-      _ref6$disabled = _ref6.disabled,
-      disabled = _ref6$disabled === void 0 ? false : _ref6$disabled,
-      _ref6$readOnly = _ref6.readOnly,
-      readOnly = _ref6$readOnly === void 0 ? false : _ref6$readOnly,
-      _ref6$plaintext = _ref6.plaintext,
-      plaintext = _ref6$plaintext === void 0 ? false : _ref6$plaintext,
-      _ref6$hideToolbar = _ref6.hideToolbar,
-      hideToolbar = _ref6$hideToolbar === void 0 ? false : _ref6$hideToolbar,
-      children = _ref6.children,
-      components = _ref6.components,
-      className = _ref6.className;
-    if (debug) {
-      console.log("[LetsForm] Render form (".concat(form.name, ")"));
-    }
-    var showErrors = form.showErrors;
-    var _useState = (0,external_react_.useState)((_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : uniqueId_default()('form_')),
-      _useState2 = _slicedToArray(_useState, 2),
-      formName = _useState2[0],
-      setFormName = _useState2[1];
-    var _useState3 = (0,external_react_.useState)(null),
-      _useState4 = _slicedToArray(_useState3, 2),
-      transformers = _useState4[0],
-      setTransformers = _useState4[1];
-    var _useForm = useForm({
-        defaultValues: defaultValues,
-        mode: form.validationMode
-      }),
-      handleSubmit = _useForm.handleSubmit,
-      errors = _useForm.formState.errors,
-      reset = _useForm.reset,
-      control = _useForm.control,
-      getValues = _useForm.getValues;
-    var _useState5 = (0,external_react_.useState)(),
-      _useState6 = _slicedToArray(_useState5, 2),
-      validationErrors = _useState6[0],
-      setValidationErrors = _useState6[1];
-    // store form fields, apply immediately transformers (collected from all fields)
-    var _useState7 = (0,external_react_.useState)(null),
-      _useState8 = _slicedToArray(_useState7, 2),
-      formFields = _useState8[0],
-      setFormFields = _useState8[1];
-
-    // update internal state if form changes
-    (0,external_react_.useEffect)(function () {
-      var f = /*#__PURE__*/function () {
-        var _ref7 = _asyncToGenerator( /*#__PURE__*/generator_regeneratorRuntime().mark(function _callee2() {
-          var _form$name2;
-          var newTransformers, newFields, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _iterator, _step, newFormFields, onChangeFields, idx, _iteratorAbruptCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, _newFormFields;
-          return generator_regeneratorRuntime().wrap(function _callee2$(_context2) {
-            while (1) switch (_context2.prev = _context2.next) {
-              case 0:
-                newTransformers = collectTransformers(form, onJavascriptError); // initial fields values
-                newFields = form.fields; // apply onRender transformers
-                if (isEmpty_default()(newTransformers.onRender)) {
-                  _context2.next = 32;
-                  break;
-                }
-                _iteratorAbruptCompletion = false;
-                _didIteratorError = false;
-                _context2.prev = 5;
-                _iterator = generator_asyncIterator(applyTransformers(formName, framework, newFields, newTransformers.onRender, defaultValues, onJavascriptError));
-              case 7:
-                _context2.next = 9;
-                return _iterator.next();
-              case 9:
-                if (!(_iteratorAbruptCompletion = !(_step = _context2.sent).done)) {
-                  _context2.next = 16;
-                  break;
-                }
-                newFormFields = _step.value;
-                newFields = newFormFields;
-                setFormFields(newFormFields);
-              case 13:
-                _iteratorAbruptCompletion = false;
-                _context2.next = 7;
-                break;
-              case 16:
-                _context2.next = 22;
-                break;
-              case 18:
-                _context2.prev = 18;
-                _context2.t0 = _context2["catch"](5);
-                _didIteratorError = true;
-                _iteratorError = _context2.t0;
-              case 22:
-                _context2.prev = 22;
-                _context2.prev = 23;
-                if (!(_iteratorAbruptCompletion && _iterator.return != null)) {
-                  _context2.next = 27;
-                  break;
-                }
-                _context2.next = 27;
-                return _iterator.return();
-              case 27:
-                _context2.prev = 27;
-                if (!_didIteratorError) {
-                  _context2.next = 30;
-                  break;
-                }
-                throw _iteratorError;
-              case 30:
-                return _context2.finish(27);
-              case 31:
-                return _context2.finish(22);
-              case 32:
-                // collect list of fields with an onChange transformer
-                onChangeFields = Object.keys(newTransformers.onChange || {}).filter(function (fieldName) {
-                  return !isEmpty_default()(newTransformers.onChange[fieldName]);
-                }); // execute all onChange transformers at the bootstrap of the form
-                idx = 0;
-              case 34:
-                if (!(idx < onChangeFields.length)) {
-                  _context2.next = 67;
-                  break;
-                }
-                _iteratorAbruptCompletion2 = false;
-                _didIteratorError2 = false;
-                _context2.prev = 37;
-                _iterator2 = generator_asyncIterator(applyTransformers(formName, framework, newFields, newTransformers.onChange[onChangeFields[idx]], defaultValues, onJavascriptError));
-              case 39:
-                _context2.next = 41;
-                return _iterator2.next();
-              case 41:
-                if (!(_iteratorAbruptCompletion2 = !(_step2 = _context2.sent).done)) {
-                  _context2.next = 48;
-                  break;
-                }
-                _newFormFields = _step2.value;
-                newFields = _newFormFields;
-                setFormFields(_newFormFields);
-              case 45:
-                _iteratorAbruptCompletion2 = false;
-                _context2.next = 39;
-                break;
-              case 48:
-                _context2.next = 54;
-                break;
-              case 50:
-                _context2.prev = 50;
-                _context2.t1 = _context2["catch"](37);
-                _didIteratorError2 = true;
-                _iteratorError2 = _context2.t1;
-              case 54:
-                _context2.prev = 54;
-                _context2.prev = 55;
-                if (!(_iteratorAbruptCompletion2 && _iterator2.return != null)) {
-                  _context2.next = 59;
-                  break;
-                }
-                _context2.next = 59;
-                return _iterator2.return();
-              case 59:
-                _context2.prev = 59;
-                if (!_didIteratorError2) {
-                  _context2.next = 62;
-                  break;
-                }
-                throw _iteratorError2;
-              case 62:
-                return _context2.finish(59);
-              case 63:
-                return _context2.finish(54);
-              case 64:
-                idx++;
-                _context2.next = 34;
-                break;
-              case 67:
-                // if transformed fields different than current one, then save
-                if (newFields !== formFields) {
-                  setFormFields(newFields);
-                }
-                setFormName((_form$name2 = form.name) !== null && _form$name2 !== void 0 ? _form$name2 : uniqueId_default()('form_'));
-                setTransformers(newTransformers);
-              case 70:
-              case "end":
-                return _context2.stop();
-            }
-          }, _callee2, null, [[5, 18, 22, 32], [23,, 27, 31], [37, 50, 54, 64], [55,, 59, 63]]);
-        }));
-        return function f() {
-          return _ref7.apply(this, arguments);
-        };
-      }();
-      f();
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [form, framework] // don't put defaultValues here
-    );
-
-    var onHandleSubmit = (0,external_react_.useCallback)(function (data) {
-      setValidationErrors(null);
-      onSubmit(data);
-    }, [onSubmit]);
-    var onHandleError = (0,external_react_.useCallback)(function (data) {
-      setValidationErrors(data);
-      onError(data);
-    }, [onError]);
-    var handleReset = (0,external_react_.useCallback)(function () {
-      setValidationErrors(null);
-      reset(defaultValues);
-    }, [defaultValues, reset]);
-    var handleChange = (0,external_react_.useCallback)( /*#__PURE__*/function () {
-      var _ref8 = _asyncToGenerator( /*#__PURE__*/generator_regeneratorRuntime().mark(function _callee3(values, fieldName) {
-        var _iteratorAbruptCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, f;
-        return generator_regeneratorRuntime().wrap(function _callee3$(_context3) {
-          while (1) switch (_context3.prev = _context3.next) {
-            case 0:
-              if (!(transformers.onChange != null && !isEmpty_default()(transformers.onChange[fieldName]))) {
-                _context3.next = 29;
-                break;
-              }
-              // execute the async generator transformer
-              _iteratorAbruptCompletion3 = false;
-              _didIteratorError3 = false;
-              _context3.prev = 3;
-              _iterator3 = generator_asyncIterator(applyTransformers(formName, framework, formFields, transformers.onChange[fieldName], values, onJavascriptError));
-            case 5:
-              _context3.next = 7;
-              return _iterator3.next();
-            case 7:
-              if (!(_iteratorAbruptCompletion3 = !(_step3 = _context3.sent).done)) {
-                _context3.next = 13;
-                break;
-              }
-              f = _step3.value;
-              if (f !== formFields) {
-                setFormFields(f);
-              }
-            case 10:
-              _iteratorAbruptCompletion3 = false;
-              _context3.next = 5;
-              break;
-            case 13:
-              _context3.next = 19;
-              break;
-            case 15:
-              _context3.prev = 15;
-              _context3.t0 = _context3["catch"](3);
-              _didIteratorError3 = true;
-              _iteratorError3 = _context3.t0;
-            case 19:
-              _context3.prev = 19;
-              _context3.prev = 20;
-              if (!(_iteratorAbruptCompletion3 && _iterator3.return != null)) {
-                _context3.next = 24;
-                break;
-              }
-              _context3.next = 24;
-              return _iterator3.return();
-            case 24:
-              _context3.prev = 24;
-              if (!_didIteratorError3) {
-                _context3.next = 27;
-                break;
-              }
-              throw _iteratorError3;
-            case 27:
-              return _context3.finish(24);
-            case 28:
-              return _context3.finish(19);
-            case 29:
-              onChange(values);
-            case 30:
-            case "end":
-              return _context3.stop();
-          }
-        }, _callee3, null, [[3, 15, 19, 29], [20,, 24, 28]]);
-      }));
-      return function (_x2, _x3) {
-        return _ref8.apply(this, arguments);
-      };
-    }(), [onChange, formFields, formName, transformers, framework, onJavascriptError]);
-    if (debug) {
-      console.log('[LetsForm] Validation', errors);
-    }
-    var Form = Forms[framework];
-    var Wrapper = wrapper;
-    var GroupWrapper = groupWrapper;
-    var BottomView = bottomView;
-    return /*#__PURE__*/external_react_default().createElement(form_context.Provider, {
-      value: {
-        locales: form.locales,
-        locale: locale
-        // ..more
-      }
-    }, /*#__PURE__*/external_react_default().createElement("div", {
-      className: classnames_default()('lf-lets-form', className)
-    }, validationErrors && showErrors === 'groupedTop' && /*#__PURE__*/external_react_default().createElement(ValidationErrors, {
-      className: "top",
-      locale: locale,
-      errors: enrichWithLabels(validationErrors, formFields)
-    }), /*#__PURE__*/external_react_default().createElement(Form, generator_extends({
-      onSubmit: handleSubmit(onHandleSubmit, onHandleError),
-      name: formName,
-      defaultValues: defaultValues,
-      onlyFields: onlyFields,
-      hideToolbar: hideToolbar,
-      onReset: handleReset,
-      disabled: disabled,
-      readOnly: readOnly,
-      plaintext: plaintext,
-      locale: locale
-    }, omit_default()(form, 'id', 'fields', 'version'), {
-      labelSubmit: i18n(form.labelSubmit, locale) || 'Submit',
-      labelCancel: i18n(form.labelCancel, locale) || 'Cancel'
-    }), renderFields({
-      Wrapper: Wrapper,
-      GroupWrapper: GroupWrapper,
-      BottomView: BottomView,
-      onChange: handleChange,
-      fields: formFields,
-      // take from state
-      control: control,
-      framework: framework,
-      getValues: getValues,
-      debug: debug,
-      errors: errors,
-      disabled: disabled || form.disabled,
-      readOnly: readOnly || form.readOnly,
-      plaintext: plaintext || form.plaintext,
-      showErrors: showErrors,
-      locale: locale,
-      onJavascriptError: onJavascriptError,
-      Components: mergeComponents(Fields, components)
-    }), children, validationErrors && (showErrors === 'groupedBottom' || isEmpty_default()(showErrors)) && /*#__PURE__*/external_react_default().createElement(ValidationErrors, {
-      className: "bottom",
-      locale: locale,
-      errors: enrichWithLabels(validationErrors, formFields)
-    }))));
-  }, function (prevProps, nextProps) {
-    if (DEBUG_RENDER) {
-      console.log("[LetsForm] Form generator ".concat(nextProps.form.name ? '(' + nextProps.form.name + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale));
-    }
-    var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale;
-    console.log('Is re-rendering?', !isEqual);
-    return isEqual;
-  });
-  FormGenerator.displayName = 'FormGenerator';
-  return FormGenerator;
-};
-
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react/form/index.scss
-var cjs_js_react_form = __webpack_require__(5693);
-;// CONCATENATED MODULE: ./react/form/index.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var form_options = {};
-
-form_options.styleTagTransform = (styleTagTransform_default());
-form_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      form_options.insert = insertBySelector_default().bind(null, "head");
-    
-form_options.domAPI = (styleDomAPI_default());
-form_options.insertStyleElement = (insertStyleElement_default());
-
-var form_update = injectStylesIntoStyleTag_default()(cjs_js_react_form/* default */.Z, form_options);
+var update = injectStylesIntoStyleTag_default()(cjs_js_react_form/* default */.Z, options);
 
 
 
@@ -8101,10 +8118,10 @@ var form_update = injectStylesIntoStyleTag_default()(cjs_js_react_form/* default
        /* harmony default export */ const react_form = (cjs_js_react_form/* default */.Z && cjs_js_react_form/* default.locals */.Z.locals ? cjs_js_react_form/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react/form/index.js
-function form_typeof(obj) { "@babel/helpers - typeof"; return form_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, form_typeof(obj); }
-function form_defineProperty(obj, key, value) { key = form_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function form_toPropertyKey(arg) { var key = form_toPrimitive(arg, "string"); return form_typeof(key) === "symbol" ? key : String(key); }
-function form_toPrimitive(input, hint) { if (form_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (form_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 
 
@@ -8125,7 +8142,7 @@ var FormReact = function FormReact(_ref) {
   // TODO pure-form-aligned
   return /*#__PURE__*/external_react_default().createElement("form", {
     onSubmit: onSubmit,
-    className: classnames_default()('lf-form lf-form-react lf-form-react-stacked', form_defineProperty({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
+    className: classnames_default()('lf-form lf-form-react lf-form-react-stacked', _defineProperty({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
     "data-lf-form-name": name
   }, children, !hideToolbar && /*#__PURE__*/external_react_default().createElement("div", {
     className: "lf-toolbar"
@@ -8140,6 +8157,8 @@ var FormReact = function FormReact(_ref) {
   }, labelCancel)));
 };
 
+// EXTERNAL MODULE: ./components/index.js + 10 modules
+var components = __webpack_require__(8397);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react/input-text/input-text.scss
 var input_text = __webpack_require__(3050);
 ;// CONCATENATED MODULE: ./react/input-text/input-text.scss
@@ -8172,26 +8191,28 @@ var input_text_update = injectStylesIntoStyleTag_default()(input_text/* default 
        /* harmony default export */ const input_text_input_text = (input_text/* default */.Z && input_text/* default.locals */.Z.locals ? input_text/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react/input-text/index.js
-var input_text_excluded = ["onChange"];
-function input_text_extends() { input_text_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return input_text_extends.apply(this, arguments); }
-function input_text_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = input_text_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function input_text_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+var _excluded = ["onChange"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
-var TextInput = I18N(function (_ref) {
+var TextInput = (0,components/* I18N */.mb)(function (_ref) {
   var onChange = _ref.onChange,
-    rest = input_text_objectWithoutProperties(_ref, input_text_excluded);
+    rest = _objectWithoutProperties(_ref, _excluded);
   var handleChange = (0,external_react_.useCallback)(function (e) {
     return onChange(e.target.value);
   }, [onChange]);
-  return /*#__PURE__*/external_react_default().createElement(ReactGenericInput, input_text_extends({
+  return /*#__PURE__*/external_react_default().createElement(components/* ReactGenericInput */.hR, _extends({
     component: "input-text",
     className: "lf-control-input-text",
     onChange: handleChange
   }, rest));
 }, ['label', 'hint', 'placeholder']);
 
+// EXTERNAL MODULE: ./components/react-generic-checkbox/index.js
+var react_generic_checkbox = __webpack_require__(8407);
 ;// CONCATENATED MODULE: ./react/checkbox/index.js
 var checkbox_excluded = ["onChange"];
 function checkbox_extends() { checkbox_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return checkbox_extends.apply(this, arguments); }
@@ -8200,25 +8221,31 @@ function checkbox_objectWithoutPropertiesLoose(source, excluded) { if (source ==
 
 
 
-var Checkbox = I18N(function (_ref) {
+var Checkbox = (0,components/* I18N */.mb)(function (_ref) {
   var onChange = _ref.onChange,
     rest = checkbox_objectWithoutProperties(_ref, checkbox_excluded);
   var handleChange = (0,external_react_.useCallback)(function (e) {
     onChange(e.target.checked);
   }, [onChange]);
-  return /*#__PURE__*/external_react_default().createElement(ReactGenericCheckbox, checkbox_extends({
+  return /*#__PURE__*/external_react_default().createElement(react_generic_checkbox/* ReactGenericCheckbox */.H, checkbox_extends({
     inputType: "checkbox",
     className: "lf-control-checkbox",
     onChange: handleChange
   }, rest));
 }, ['hint', 'label']);
 
+// EXTERNAL MODULE: ./node_modules/lodash/isNumber.js
+var isNumber = __webpack_require__(1763);
+var isNumber_default = /*#__PURE__*/__webpack_require__.n(isNumber);
+// EXTERNAL MODULE: ./node_modules/lodash/isString.js
+var isString = __webpack_require__(7037);
+var isString_default = /*#__PURE__*/__webpack_require__.n(isString);
 ;// CONCATENATED MODULE: ./react/textarea/index.js
 
 
 
 
-var Textarea = I18N(function (_ref) {
+var Textarea = (0,components/* I18N */.mb)(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -8241,7 +8268,7 @@ var Textarea = I18N(function (_ref) {
     "data-lf-field-name": name
   }, /*#__PURE__*/external_react_default().createElement("label", {
     for: name
-  }, label, required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement("textarea", {
+  }, label, required && /*#__PURE__*/external_react_default().createElement(components/* RequiredIcon */.T_, null)), /*#__PURE__*/external_react_default().createElement("textarea", {
     type: "text",
     id: name,
     rows: rows,
@@ -8261,6 +8288,9 @@ var Textarea = I18N(function (_ref) {
   }, error));
 }, ['label', 'hint', 'placeholder']);
 
+// EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
+var isFunction = __webpack_require__(3560);
+var isFunction_default = /*#__PURE__*/__webpack_require__.n(isFunction);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/three-columns/three-columns.scss
 var three_columns = __webpack_require__(1861);
 ;// CONCATENATED MODULE: ./common/three-columns/three-columns.scss
@@ -8387,6 +8417,8 @@ var TwoColumns = function TwoColumns(_ref) {
 
 ;// CONCATENATED MODULE: ./react/two-columns/index.js
 
+// EXTERNAL MODULE: ./assets/icons/index.js + 7 modules
+var icons = __webpack_require__(2113);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/group/group.scss
 var group = __webpack_require__(88);
 ;// CONCATENATED MODULE: ./common/group/group.scss
@@ -8419,12 +8451,12 @@ var group_update = injectStylesIntoStyleTag_default()(group/* default */.Z, grou
        /* harmony default export */ const group_group = (group/* default */.Z && group/* default.locals */.Z.locals ? group/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/group/index.js
-function group_slicedToArray(arr, i) { return group_arrayWithHoles(arr) || group_iterableToArrayLimit(arr, i) || group_unsupportedIterableToArray(arr, i) || group_nonIterableRest(); }
-function group_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function group_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return group_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return group_arrayLikeToArray(o, minLen); }
-function group_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function group_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function group_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
 
@@ -8432,7 +8464,7 @@ function group_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var Group = I18N(function (_ref) {
+var Group = (0,components/* I18N */.mb)(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     _ref$disabled = _ref.disabled,
@@ -8446,7 +8478,7 @@ var Group = I18N(function (_ref) {
     align = _ref.align,
     children = _ref.children;
   var _useState = (0,external_react_.useState)(open),
-    _useState2 = group_slicedToArray(_useState, 2),
+    _useState2 = _slicedToArray(_useState, 2),
     isOpen = _useState2[0],
     setIsOpen = _useState2[1];
   var handleClick = (0,external_react_.useCallback)(function (event) {
@@ -8471,15 +8503,18 @@ var Group = I18N(function (_ref) {
     disabled: disabled,
     appearance: "link",
     onClick: handleClick
-  }, isOpen ? /*#__PURE__*/external_react_default().createElement(ChevronUp, {
+  }, isOpen ? /*#__PURE__*/external_react_default().createElement(icons/* ChevronUp */.Kh, {
     color: "#3498ff"
-  }) : /*#__PURE__*/external_react_default().createElement(ChevronDown, {
+  }) : /*#__PURE__*/external_react_default().createElement(icons/* ChevronDown */._M, {
     color: "#3498ff"
   })))), (isOpen || !collapsible) && /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, children));
 }, ['label']);
 
 ;// CONCATENATED MODULE: ./react/group/index.js
 
+// EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
+var isEmpty = __webpack_require__(1609);
+var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
 // EXTERNAL MODULE: ./node_modules/micro-down/dist/index.js
 var dist = __webpack_require__(7305);
 var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
@@ -8584,13 +8619,13 @@ var PlaceholderImage = function PlaceholderImage(_ref) {
     marginTop = _ref.marginTop,
     marginBottom = _ref.marginBottom,
     align = _ref.align;
-  return /*#__PURE__*/external_react_default().createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "lf-control-placeholder-image",
     "data-lf-field-name": name,
     style: {
       textAlign: align ? align : undefined
     }
-  }, url && /*#__PURE__*/external_react_default().createElement("img", {
+  }, url && /*#__PURE__*/React.createElement("img", {
     src: url,
     alt: label || name,
     style: {
@@ -8603,18 +8638,20 @@ var PlaceholderImage = function PlaceholderImage(_ref) {
   }));
 };
 
+// EXTERNAL MODULE: ./helpers/index.js + 25 modules
+var helpers = __webpack_require__(3159);
 ;// CONCATENATED MODULE: ./common/text-or-icon/index.js
 
 
 var TextOrIcon = function TextOrIcon(str) {
   if (isUrl(str)) {
-    return /*#__PURE__*/external_react_default().createElement("img", {
+    return /*#__PURE__*/React.createElement("img", {
       className: "lf-prefix-icon",
       src: str,
       alt: "icon"
     });
   } else {
-    return /*#__PURE__*/external_react_default().createElement("span", null, str);
+    return /*#__PURE__*/React.createElement("span", null, str);
   }
 };
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/divider/divider.scss
@@ -8686,2013 +8723,96 @@ var ReactView = function ReactView(_ref) {
   }, rest)));
 };
 
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/form/index.scss
-var cjs_js_react_rsuite5_form = __webpack_require__(7251);
-;// CONCATENATED MODULE: ./react-rsuite5/form/index.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var react_rsuite5_form_options = {};
-
-react_rsuite5_form_options.styleTagTransform = (styleTagTransform_default());
-react_rsuite5_form_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      react_rsuite5_form_options.insert = insertBySelector_default().bind(null, "head");
-    
-react_rsuite5_form_options.domAPI = (styleDomAPI_default());
-react_rsuite5_form_options.insertStyleElement = (insertStyleElement_default());
-
-var react_rsuite5_form_update = injectStylesIntoStyleTag_default()(cjs_js_react_rsuite5_form/* default */.Z, react_rsuite5_form_options);
+// EXTERNAL MODULE: ./node_modules/lodash/omit.js
+var omit = __webpack_require__(7557);
+// EXTERNAL MODULE: ./node_modules/lodash/uniqueId.js
+var uniqueId = __webpack_require__(3955);
+// EXTERNAL MODULE: ./node_modules/lodash/isArray.js
+var isArray = __webpack_require__(1469);
+// EXTERNAL MODULE: ./form-context/index.js
+var form_context = __webpack_require__(5137);
+;// CONCATENATED MODULE: ./hooks/index.js
 
 
+var hooks_useFormContext = function useFormContext() {
+  var context = useContext(FormContext);
 
+  // put here some defaults
 
-       /* harmony default export */ const react_rsuite5_form = (cjs_js_react_rsuite5_form/* default */.Z && cjs_js_react_rsuite5_form/* default.locals */.Z.locals ? cjs_js_react_rsuite5_form/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./react-rsuite5/form/index.js
-function react_rsuite5_form_typeof(obj) { "@babel/helpers - typeof"; return react_rsuite5_form_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, react_rsuite5_form_typeof(obj); }
-function react_rsuite5_form_defineProperty(obj, key, value) { key = react_rsuite5_form_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function react_rsuite5_form_toPropertyKey(arg) { var key = react_rsuite5_form_toPrimitive(arg, "string"); return react_rsuite5_form_typeof(key) === "symbol" ? key : String(key); }
-function react_rsuite5_form_toPrimitive(input, hint) { if (react_rsuite5_form_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (react_rsuite5_form_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
-
-
-
-var FormRsuite5 = function FormRsuite5(_ref) {
-  var children = _ref.children,
-    name = _ref.name,
-    layout = _ref.layout,
-    _ref$fluid = _ref.fluid,
-    fluid = _ref$fluid === void 0 ? false : _ref$fluid,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    buttonsAlign = _ref.buttonsAlign,
-    _ref$labelSubmit = _ref.labelSubmit,
-    labelSubmit = _ref$labelSubmit === void 0 ? 'Submit' : _ref$labelSubmit,
-    _ref$labelCancel = _ref.labelCancel,
-    labelCancel = _ref$labelCancel === void 0 ? 'Cancel' : _ref$labelCancel,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$onlyFields = _ref.onlyFields,
-    onlyFields = _ref$onlyFields === void 0 ? false : _ref$onlyFields,
-    _ref$plaintext = _ref.plaintext,
-    plaintext = _ref$plaintext === void 0 ? false : _ref$plaintext,
-    _ref$hideToolbar = _ref.hideToolbar,
-    hideToolbar = _ref$hideToolbar === void 0 ? false : _ref$hideToolbar,
-    _ref$onSubmit = _ref.onSubmit,
-    onSubmit = _ref$onSubmit === void 0 ? function () {} : _ref$onSubmit,
-    _ref$onReset = _ref.onReset,
-    onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset;
-  if (onlyFields) {
-    var _classNames;
-    // TODO check this
-    return /*#__PURE__*/external_react_default().createElement("div", {
-      className: classnames_default()('rs-form', (_classNames = {}, react_rsuite5_form_defineProperty(_classNames, "rs-form-".concat(layout), true), react_rsuite5_form_defineProperty(_classNames, 'rs-form-fluid', fluid), _classNames))
-    }, children);
-  }
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form, {
-    className: classnames_default()('lf-form lf-form-react-rsuite5', react_rsuite5_form_defineProperty({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
-    "data-lf-form-name": name,
-    layout: layout,
-    fluid: fluid,
-    readOnly: readOnly,
-    disabled: disabled,
-    plaintext: plaintext
-  }, /*#__PURE__*/external_react_default().createElement("div", null, children), !hideToolbar && /*#__PURE__*/external_react_default().createElement(external_rsuite_.ButtonToolbar, {
-    className: "lf-toolbar"
-  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Button, {
-    appearance: "primary",
-    onClick: onSubmit
-  }, labelSubmit), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Button, {
-    onClick: onReset
-  }, labelCancel)));
+  return context;
 };
-
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/input-text/input-text.scss
-var cjs_js_react_rsuite5_input_text_input_text = __webpack_require__(3040);
-;// CONCATENATED MODULE: ./react-rsuite5/input-text/input-text.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var input_text_input_text_options = {};
-
-input_text_input_text_options.styleTagTransform = (styleTagTransform_default());
-input_text_input_text_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      input_text_input_text_options.insert = insertBySelector_default().bind(null, "head");
-    
-input_text_input_text_options.domAPI = (styleDomAPI_default());
-input_text_input_text_options.insertStyleElement = (insertStyleElement_default());
-
-var input_text_input_text_update = injectStylesIntoStyleTag_default()(cjs_js_react_rsuite5_input_text_input_text/* default */.Z, input_text_input_text_options);
-
-
-
-
-       /* harmony default export */ const react_rsuite5_input_text_input_text = (cjs_js_react_rsuite5_input_text_input_text/* default */.Z && cjs_js_react_rsuite5_input_text_input_text/* default.locals */.Z.locals ? cjs_js_react_rsuite5_input_text_input_text/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./react-rsuite5/input-text/index.js
-function input_text_typeof(obj) { "@babel/helpers - typeof"; return input_text_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, input_text_typeof(obj); }
-
-var react_rsuite5_input_text_excluded = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside"];
-function input_text_defineProperty(obj, key, value) { key = input_text_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function input_text_toPropertyKey(arg) { var key = input_text_toPrimitive(arg, "string"); return input_text_typeof(key) === "symbol" ? key : String(key); }
-function input_text_toPrimitive(input, hint) { if (input_text_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (input_text_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function react_rsuite5_input_text_extends() { react_rsuite5_input_text_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_rsuite5_input_text_extends.apply(this, arguments); }
-function react_rsuite5_input_text_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_rsuite5_input_text_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function react_rsuite5_input_text_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-
-
-
-
-var input_text_TextInput = I18N(function (_ref) {
-  var _classNames;
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    size = _ref.size,
-    placeholder = _ref.placeholder,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    error = _ref.error,
-    prefix = _ref.prefix,
-    postfix = _ref.postfix,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    fullWidth = _ref.fullWidth,
-    width = _ref.width,
-    autocomplete = _ref.autocomplete,
-    inputMode = _ref.inputMode,
-    inputType = _ref.inputType,
-    _ref$inside = _ref.inside,
-    inside = _ref$inside === void 0 ? false : _ref$inside,
-    rest = react_rsuite5_input_text_objectWithoutProperties(_ref, react_rsuite5_input_text_excluded);
-  var inner = /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, react_rsuite5_input_text_extends({
-    name: name,
-    accepter: external_rsuite_.Input,
-    value: value,
-    onChange: onChange,
-    onBlur: onBlur,
-    disabled: disabled,
-    autoComplete: autocomplete,
-    inputMode: inputMode,
-    type: inputType,
-    size: size,
-    placeholder: placeholder,
-    readOnly: readOnly,
-    errorMessage: isString_default()(error) ? error : undefined
-  }, passRest(rest)));
-  var needsGroup = postfix || prefix;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    className: classnames_default()('lf-control-input-text', (_classNames = {}, input_text_defineProperty(_classNames, "lf-size-".concat(size), size != null), input_text_defineProperty(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
-    "data-lf-field-name": name,
-    style: makeWidthStyle(fullWidth, width)
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup, {
-    inside: inside
-  }, prefix && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup.Addon, null, TextOrIcon(prefix)), inner, postfix && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup.Addon, null, TextOrIcon(postfix))), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint', 'placeholder']);
-
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/toggle/index.scss
-var toggle = __webpack_require__(8078);
-;// CONCATENATED MODULE: ./react-rsuite5/toggle/index.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var toggle_options = {};
-
-toggle_options.styleTagTransform = (styleTagTransform_default());
-toggle_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      toggle_options.insert = insertBySelector_default().bind(null, "head");
-    
-toggle_options.domAPI = (styleDomAPI_default());
-toggle_options.insertStyleElement = (insertStyleElement_default());
-
-var toggle_update = injectStylesIntoStyleTag_default()(toggle/* default */.Z, toggle_options);
-
-
-
-
-       /* harmony default export */ const react_rsuite5_toggle = (toggle/* default */.Z && toggle/* default.locals */.Z.locals ? toggle/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./react-rsuite5/toggle/index.js
-
-
-
-
-
-var ToggleInput = I18N(function (_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    size = _ref.size,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    onChange = _ref.onChange,
-    checkedChildren = _ref.checkedChildren,
-    unCheckedChildren = _ref.unCheckedChildren,
-    error = _ref.error;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    controlId: name,
-    className: "lf-react-rsuite5-toggle"
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
-    name: name,
-    accepter: external_rsuite_.Toggle,
-    value: value,
-    onChange: onChange,
-    disabled: disabled,
-    unCheckedChildren: unCheckedChildren && unCheckedChildren !== '' ? unCheckedChildren : undefined,
-    checkedChildren: checkedChildren && checkedChildren !== '' ? checkedChildren : undefined,
-    errorMessage: isString_default()(error) ? error : undefined,
-    size: size
-  }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint', 'placeholder']);
-
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/select/select.scss
-var select_select = __webpack_require__(8963);
-;// CONCATENATED MODULE: ./react-rsuite5/select/select.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var select_options = {};
-
-select_options.styleTagTransform = (styleTagTransform_default());
-select_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      select_options.insert = insertBySelector_default().bind(null, "head");
-    
-select_options.domAPI = (styleDomAPI_default());
-select_options.insertStyleElement = (insertStyleElement_default());
-
-var select_update = injectStylesIntoStyleTag_default()(select_select/* default */.Z, select_options);
-
-
-
-
-       /* harmony default export */ const react_rsuite5_select_select = (select_select/* default */.Z && select_select/* default.locals */.Z.locals ? select_select/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./react-rsuite5/select/index.js
-function select_typeof(obj) { "@babel/helpers - typeof"; return select_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, select_typeof(obj); }
-
-var select_excluded = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions"];
-function select_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function select_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? select_ownKeys(Object(source), !0).forEach(function (key) { select_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : select_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function select_defineProperty(obj, key, value) { key = select_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function select_toPropertyKey(arg) { var key = select_toPrimitive(arg, "string"); return select_typeof(key) === "symbol" ? key : String(key); }
-function select_toPrimitive(input, hint) { if (select_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (select_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function select_extends() { select_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return select_extends.apply(this, arguments); }
-function select_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = select_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function select_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-
-
-var menuItem = function menuItem(value, item) {
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-control-select-option-rsuite5"
-  }, item.image && /*#__PURE__*/external_react_default().createElement("img", {
-    src: item.image,
-    alt: item.label
-  }), /*#__PURE__*/external_react_default().createElement("span", null, item.label));
-};
-var manuValue = function manuValue(value, item) {
-  return /*#__PURE__*/React.createElement("div", {
-    className: "lf-control-select-option-rsuite5"
-  }, item.image && /*#__PURE__*/React.createElement("img", {
-    src: item.image,
-    alt: item.label
-  }), /*#__PURE__*/React.createElement("span", null, item.label));
-};
-var Select = I18N(function (_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    size = _ref.size,
-    placeholder = _ref.placeholder,
-    options = _ref.options,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    error = _ref.error,
-    _ref$block = _ref.block,
-    block = _ref$block === void 0 ? false : _ref$block,
-    _ref$searchable = _ref.searchable,
-    searchable = _ref$searchable === void 0 ? false : _ref$searchable,
-    _ref$cleanable = _ref.cleanable,
-    cleanable = _ref$cleanable === void 0 ? false : _ref$cleanable,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    placement = _ref.placement,
-    appearance = _ref.appearance,
-    filterKey = _ref.filterKey,
-    filterValue = _ref.filterValue,
-    showImageOptions = _ref.showImageOptions,
-    rest = select_objectWithoutProperties(_ref, select_excluded);
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    controlId: name
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, select_extends({
-    accepter: external_rsuite_.SelectPicker,
-    appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
-    name: name,
-    value: value,
-    onChange: onChange,
-    readOnly: readOnly,
-    onBlur: onBlur,
-    placement: placement,
-    errorMessage: isString_default()(error) ? error : undefined,
-    disabled: disabled,
-    size: size,
-    placeholder: placeholder,
-    renderMenuItem: showImageOptions ? menuItem : undefined,
-    renderValue: showImageOptions ? menuItem : undefined,
-    data: filterOptions(options, filterValue, filterKey) || [],
-    block: block,
-    searchable: searchable,
-    cleanable: cleanable
-  }, passRest(rest))), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint', 'placeholder'], {
-  options: function options(value, i18n) {
-    return (value !== null && value !== void 0 ? value : []).map(function (value) {
-      return select_objectSpread(select_objectSpread({}, value), {}, {
-        label: i18n(value.label)
-      });
-    });
-  }
-});
-
-;// CONCATENATED MODULE: ./react-rsuite5/group/index.js
-
-;// CONCATENATED MODULE: ./react-rsuite5/array/index.js
-
-
-
-
-var ListArrayRSuite5 = function ListArrayRSuite5(props) {
-  // TODO fix spread here
-  var hint = props.hint,
-    required = props.required,
-    tooltip = props.tooltip,
-    name = props.name,
-    label = props.label;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    "data-lf-field-name": name,
-    className: "lf-control-array"
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(ListArray, props), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
-
-;// CONCATENATED MODULE: ./react-rsuite5/two-columns/index.js
-
-;// CONCATENATED MODULE: ./react-rsuite5/three-columns/index.js
-
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/input-number/index.scss
-var input_number = __webpack_require__(8710);
-;// CONCATENATED MODULE: ./react-rsuite5/input-number/index.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var input_number_options = {};
-
-input_number_options.styleTagTransform = (styleTagTransform_default());
-input_number_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      input_number_options.insert = insertBySelector_default().bind(null, "head");
-    
-input_number_options.domAPI = (styleDomAPI_default());
-input_number_options.insertStyleElement = (insertStyleElement_default());
-
-var input_number_update = injectStylesIntoStyleTag_default()(input_number/* default */.Z, input_number_options);
-
-
-
-
-       /* harmony default export */ const react_rsuite5_input_number = (input_number/* default */.Z && input_number/* default.locals */.Z.locals ? input_number/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./react-rsuite5/input-number/index.js
-function input_number_typeof(obj) { "@babel/helpers - typeof"; return input_number_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, input_number_typeof(obj); }
-
-function input_number_defineProperty(obj, key, value) { key = input_number_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function input_number_toPropertyKey(arg) { var key = input_number_toPrimitive(arg, "string"); return input_number_typeof(key) === "symbol" ? key : String(key); }
-function input_number_toPrimitive(input, hint) { if (input_number_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (input_number_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function input_number_slicedToArray(arr, i) { return input_number_arrayWithHoles(arr) || input_number_iterableToArrayLimit(arr, i) || input_number_unsupportedIterableToArray(arr, i) || input_number_nonIterableRest(); }
-function input_number_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function input_number_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return input_number_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return input_number_arrayLikeToArray(o, minLen); }
-function input_number_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function input_number_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function input_number_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
-
-
-
-
-
-
-var hasDecimals = function hasDecimals(f) {
-  return isString_default()(f) && (f.includes(',') || f.includes('.'));
-};
-var InputNumberRSuite5 = I18N(function (_ref) {
-  var _classNames;
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    size = _ref.size,
-    placeholder = _ref.placeholder,
-    min = _ref.min,
-    max = _ref.max,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    error = _ref.error,
-    prefix = _ref.prefix,
-    postfix = _ref.postfix,
-    width = _ref.width,
-    fullWidth = _ref.fullWidth,
-    _ref$onChange = _ref.onChange,
-    onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
-    _ref$step = _ref.step,
-    step = _ref$step === void 0 ? 1 : _ref$step,
-    onBlur = _ref.onBlur,
-    _ref$inside = _ref.inside,
-    inside = _ref$inside === void 0 ? false : _ref$inside,
-    allowClear = _ref.allowClear;
-  var _useState = (0,external_react_.useState)(value !== null && value !== void 0 ? value : null),
-    _useState2 = input_number_slicedToArray(_useState, 2),
-    currentValue = _useState2[0],
-    setCurrentValue = _useState2[1];
-  var handleChange = (0,external_react_.useCallback)(function (value) {
-    var parsed = value;
-    if (isString_default()(value)) {
-      if (value === '') {
-        // void if the user deleted all chars
-        parsed = null;
-      } else if (hasDecimals(value)) {
-        parsed = parseFloat(value);
-      } else {
-        parsed = parseInt(value, 10);
-      }
-    }
-    // set the original value again, otherwise never be able to
-    // input a float number i.e. "0.2"
-    setCurrentValue(value);
-    if (!isNaN(parsed)) {
-      onChange(parsed);
-    }
-  }, [onChange]);
-  var handleClear = (0,external_react_.useCallback)(function (e) {
-    e.preventDefault();
-    onChange(undefined);
-    setCurrentValue(null);
-  }, [onChange]);
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    "data-lf-field-name": name,
-    className: classnames_default()('lf-control-input-number', (_classNames = {}, input_number_defineProperty(_classNames, "lf-size-".concat(size), size != null), input_number_defineProperty(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
-    style: makeWidthStyle(fullWidth, width)
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
-    name: name,
-    accepter: external_rsuite_.InputNumber,
-    value: currentValue,
-    onChange: handleChange,
-    onClear: handleClear,
-    onBlur: onBlur,
-    disabled: disabled,
-    size: size,
-    min: min,
-    max: max,
-    step: step,
-    inside: inside,
-    prefix: prefix,
-    postfix: allowClear ? /*#__PURE__*/external_react_default().createElement("a", {
-      href: "#",
-      onClick: handleClear
-    }, /*#__PURE__*/external_react_default().createElement(CrossCirle, {
-      width: 16,
-      height: 16
-    })) : postfix,
-    placeholder: placeholder,
-    readOnly: readOnly,
-    errorMessage: isString_default()(error) ? error : undefined
-  }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint', 'placeholder']);
-
-;// CONCATENATED MODULE: ./react-rsuite5/date/index.js
-
-
-var date_excluded = ["onChange", "value"];
-function date_extends() { date_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return date_extends.apply(this, arguments); }
-function date_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = date_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function date_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-var SelectDate = I18N(function (_ref) {
-  var onChange = _ref.onChange,
-    value = _ref.value,
-    rest = date_objectWithoutProperties(_ref, date_excluded);
-  // also accepts string dates
-  var currentValue;
-  if (isDate_default()(value)) {
-    currentValue = value;
-  } else if (isString_default()(value)) {
-    var d = new Date(value);
-    if (isValidDate(d)) {
-      currentValue = d;
-    }
-  }
-
-  // send always date string in format yyyy-mm-dd
-  var handleChange = (0,external_react_.useCallback)(function (d) {
-    onChange(d.toISOString().split('T')[0]);
-  }, [onChange]);
-  return /*#__PURE__*/external_react_default().createElement(RSuiteGenericDate, date_extends({
-    value: currentValue,
-    onChange: handleChange
-  }, rest));
-}, ['label', 'hint', 'placeholder']);
-
-;// CONCATENATED MODULE: ./react-rsuite5/datetime/index.js
-
-
-var datetime_excluded = ["onChange", "value"];
-function datetime_extends() { datetime_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return datetime_extends.apply(this, arguments); }
-function datetime_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = datetime_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function datetime_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-var SelectDatetime = I18N(function (_ref) {
-  var onChange = _ref.onChange,
-    value = _ref.value,
-    rest = datetime_objectWithoutProperties(_ref, datetime_excluded);
-  // also accepts string dates
-  var currentValue;
-  if (isDate_default()(value)) {
-    currentValue = value;
-  } else if (isString_default()(value)) {
-    var d = new Date(value);
-    if (isValidDate(d)) {
-      currentValue = d;
-    }
-  }
-
-  // send always date string in iso format
-  var handleChange = (0,external_react_.useCallback)(function (d) {
-    onChange(d.toISOString());
-  }, [onChange]);
-  return /*#__PURE__*/external_react_default().createElement(RSuiteGenericDate, datetime_extends({
-    value: currentValue,
-    onChange: handleChange
-  }, rest));
-}, ['label', 'hint', 'placeholder']);
-
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/checkbox/index.scss
-var cjs_js_react_rsuite5_checkbox = __webpack_require__(5964);
-;// CONCATENATED MODULE: ./react-rsuite5/checkbox/index.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var checkbox_options = {};
-
-checkbox_options.styleTagTransform = (styleTagTransform_default());
-checkbox_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      checkbox_options.insert = insertBySelector_default().bind(null, "head");
-    
-checkbox_options.domAPI = (styleDomAPI_default());
-checkbox_options.insertStyleElement = (insertStyleElement_default());
-
-var checkbox_update = injectStylesIntoStyleTag_default()(cjs_js_react_rsuite5_checkbox/* default */.Z, checkbox_options);
-
-
-
-
-       /* harmony default export */ const react_rsuite5_checkbox = (cjs_js_react_rsuite5_checkbox/* default */.Z && cjs_js_react_rsuite5_checkbox/* default.locals */.Z.locals ? cjs_js_react_rsuite5_checkbox/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./react-rsuite5/checkbox/index.js
-
-var react_rsuite5_checkbox_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "indeterminate", "error", "onChange", "onBlur", "appearance", "locale", "format"];
-function react_rsuite5_checkbox_extends() { react_rsuite5_checkbox_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_rsuite5_checkbox_extends.apply(this, arguments); }
-function checkbox_slicedToArray(arr, i) { return checkbox_arrayWithHoles(arr) || checkbox_iterableToArrayLimit(arr, i) || checkbox_unsupportedIterableToArray(arr, i) || checkbox_nonIterableRest(); }
-function checkbox_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function checkbox_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return checkbox_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return checkbox_arrayLikeToArray(o, minLen); }
-function checkbox_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function checkbox_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function checkbox_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-function react_rsuite5_checkbox_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_rsuite5_checkbox_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function react_rsuite5_checkbox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-
-var CheckboxRSuite = I18N(function (_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    placeholder = _ref.placeholder,
-    plaintext = _ref.plaintext,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    indeterminate = _ref.indeterminate,
-    error = _ref.error,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    appearance = _ref.appearance,
-    locale = _ref.locale,
-    format = _ref.format,
-    rest = react_rsuite5_checkbox_objectWithoutProperties(_ref, react_rsuite5_checkbox_excluded);
-  var _useState = (0,external_react_.useState)(value !== null && value !== void 0 ? value : null),
-    _useState2 = checkbox_slicedToArray(_useState, 2),
-    isChecked = _useState2[0],
-    setIsChecked = _useState2[1];
-  var handleChange = (0,external_react_.useCallback)(function (valueType, checked) {
-    var newValue;
-    if (isChecked === true) {
-      newValue = false;
-    }
-    if (isChecked === false) {
-      if (indeterminate) {
-        newValue = null;
-      } else {
-        newValue = true;
-      }
-    } else if (isChecked === null) {
-      newValue = true;
-    }
-    onChange(newValue);
-    setIsChecked(newValue);
-  }, [onChange, indeterminate, isChecked]);
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    "data-lf-field-name": name,
-    className: "lt-control-checkbox"
-  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, react_rsuite5_checkbox_extends({
-    accepter: external_rsuite_.Checkbox,
-    indeterminate: indeterminate && isChecked === null,
-    name: name,
-    checked: isChecked,
-    onChange: handleChange,
-    readOnly: readOnly,
-    plaintext: plaintext,
-    onBlur: onBlur,
-    errorMessage: isString_default()(error) ? error : undefined,
-    disabled: disabled
-  }, rest), label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint']);
-
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/slider/index.scss
-var slider = __webpack_require__(9906);
-;// CONCATENATED MODULE: ./react-rsuite5/slider/index.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var slider_options = {};
-
-slider_options.styleTagTransform = (styleTagTransform_default());
-slider_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      slider_options.insert = insertBySelector_default().bind(null, "head");
-    
-slider_options.domAPI = (styleDomAPI_default());
-slider_options.insertStyleElement = (insertStyleElement_default());
-
-var slider_update = injectStylesIntoStyleTag_default()(slider/* default */.Z, slider_options);
-
-
-
-
-       /* harmony default export */ const react_rsuite5_slider = (slider/* default */.Z && slider/* default.locals */.Z.locals ? slider/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./react-rsuite5/slider/index.js
-function slider_typeof(obj) { "@babel/helpers - typeof"; return slider_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, slider_typeof(obj); }
-
-
-
-var slider_excluded = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks"];
-function slider_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function slider_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? slider_ownKeys(Object(source), !0).forEach(function (key) { slider_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : slider_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function slider_defineProperty(obj, key, value) { key = slider_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function slider_toPropertyKey(arg) { var key = slider_toPrimitive(arg, "string"); return slider_typeof(key) === "symbol" ? key : String(key); }
-function slider_toPrimitive(input, hint) { if (slider_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (slider_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function slider_extends() { slider_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return slider_extends.apply(this, arguments); }
-function slider_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = slider_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function slider_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-
-var validateMarks = function validateMarks(marks) {
-  return isArray_default()(marks) && marks.every(function (mark) {
-    return isObject_default()(mark) && mark.value && mark.label;
-  });
-};
-var SliderRsuite = I18N(function (_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    showTooltip = _ref.showTooltip,
-    error = _ref.error,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    _ref$marks = _ref.marks,
-    marks = _ref$marks === void 0 ? [] : _ref$marks,
-    rest = slider_objectWithoutProperties(_ref, slider_excluded);
-  var handleRenderMark = (0,external_react_.useCallback)(function (number) {
-    var found = marks.find(function (mark) {
-      return mark && mark.value === number;
-    });
-    return found ? found.label : undefined;
-  }, [marks]);
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    controlId: name,
-    className: "lf-control-slider"
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Slider, slider_extends({
-    accepter: external_rsuite_.Slider,
-    style: {
-      marginTop: '15px'
-    },
-    name: name,
-    value: value,
-    onChange: onChange,
-    readOnly: readOnly,
-    onBlur: onBlur,
-    renderMark: validateMarks(marks) ? handleRenderMark : undefined,
-    errorMessage: isString_default()(error) ? error : undefined,
-    disabled: disabled,
-    tooltip: showTooltip
-  }, rest)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint', 'placeholder'], {
-  marks: function marks(value, i18n) {
-    return (Array.isArray(value) ? value : []).map(function (value) {
-      return slider_objectSpread(slider_objectSpread({}, value), {}, {
-        label: i18n(value.label)
-      });
-    });
-  }
-});
-
-;// CONCATENATED MODULE: ./react-rsuite5/checkbox-group/index.js
-function checkbox_group_typeof(obj) { "@babel/helpers - typeof"; return checkbox_group_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, checkbox_group_typeof(obj); }
-var checkbox_group_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
-function checkbox_group_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function checkbox_group_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? checkbox_group_ownKeys(Object(source), !0).forEach(function (key) { checkbox_group_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : checkbox_group_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function checkbox_group_defineProperty(obj, key, value) { key = checkbox_group_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function checkbox_group_toPropertyKey(arg) { var key = checkbox_group_toPrimitive(arg, "string"); return checkbox_group_typeof(key) === "symbol" ? key : String(key); }
-function checkbox_group_toPrimitive(input, hint) { if (checkbox_group_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (checkbox_group_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function checkbox_group_extends() { checkbox_group_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return checkbox_group_extends.apply(this, arguments); }
-function checkbox_group_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = checkbox_group_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function checkbox_group_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-var CheckboxGroupRSuite = I18N(function (_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    placeholder = _ref.placeholder,
-    plaintext = _ref.plaintext,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    error = _ref.error,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    _ref$options = _ref.options,
-    options = _ref$options === void 0 ? [] : _ref$options,
-    rest = checkbox_group_objectWithoutProperties(_ref, checkbox_group_excluded);
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    "data-lf-field-name": name,
-    className: "lf-control-checkbox-group"
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.CheckboxGroup, checkbox_group_extends({
-    inline: true,
-    name: name,
-    value: value,
-    onChange: onChange
-  }, rest), (options !== null && options !== void 0 ? options : []).map(function (_ref2) {
-    var value = _ref2.value,
-      label = _ref2.label;
-    return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Checkbox, {
-      key: value,
-      value: value,
-      disabled: disabled,
-      readOnly: readOnly
-    }, label);
-  })), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint', 'placeholder'], {
-  options: function options(value, i18n) {
-    return (value !== null && value !== void 0 ? value : []).map(function (value) {
-      return checkbox_group_objectSpread(checkbox_group_objectSpread({}, value), {}, {
-        label: i18n(value.label)
-      });
-    });
-  }
-});
-
-;// CONCATENATED MODULE: ./react-rsuite5/radio-group/index.js
-function radio_group_typeof(obj) { "@babel/helpers - typeof"; return radio_group_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, radio_group_typeof(obj); }
-var radio_group_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
-function radio_group_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function radio_group_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? radio_group_ownKeys(Object(source), !0).forEach(function (key) { radio_group_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : radio_group_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function radio_group_defineProperty(obj, key, value) { key = radio_group_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function radio_group_toPropertyKey(arg) { var key = radio_group_toPrimitive(arg, "string"); return radio_group_typeof(key) === "symbol" ? key : String(key); }
-function radio_group_toPrimitive(input, hint) { if (radio_group_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (radio_group_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function radio_group_extends() { radio_group_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return radio_group_extends.apply(this, arguments); }
-function radio_group_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = radio_group_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function radio_group_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-var RadioGroupRSuite = I18N(function (_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    placeholder = _ref.placeholder,
-    plaintext = _ref.plaintext,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    error = _ref.error,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    _ref$options = _ref.options,
-    options = _ref$options === void 0 ? [] : _ref$options,
-    rest = radio_group_objectWithoutProperties(_ref, radio_group_excluded);
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    controlId: name
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.RadioGroup, radio_group_extends({
-    inline: true,
-    name: name,
-    value: value,
-    onChange: onChange
-  }, rest), (options !== null && options !== void 0 ? options : []).map(function (_ref2) {
-    var value = _ref2.value,
-      label = _ref2.label;
-    return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Radio, {
-      key: value,
-      value: value,
-      disabled: disabled,
-      readOnly: readOnly
-    }, label);
-  })), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint', 'placeholder'], {
-  options: function options(value, i18n) {
-    return (value !== null && value !== void 0 ? value : []).map(function (value) {
-      return radio_group_objectSpread(radio_group_objectSpread({}, value), {}, {
-        label: i18n(value.label)
-      });
-    });
-  }
-});
-
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/input-tag/index.scss
-var input_tag = __webpack_require__(5679);
-;// CONCATENATED MODULE: ./react-rsuite5/input-tag/index.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var input_tag_options = {};
-
-input_tag_options.styleTagTransform = (styleTagTransform_default());
-input_tag_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      input_tag_options.insert = insertBySelector_default().bind(null, "head");
-    
-input_tag_options.domAPI = (styleDomAPI_default());
-input_tag_options.insertStyleElement = (insertStyleElement_default());
-
-var input_tag_update = injectStylesIntoStyleTag_default()(input_tag/* default */.Z, input_tag_options);
-
-
-
-
-       /* harmony default export */ const react_rsuite5_input_tag = (input_tag/* default */.Z && input_tag/* default.locals */.Z.locals ? input_tag/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./react-rsuite5/input-tag/index.js
-
-
-
-
-
-var InputTag = I18N(function (_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    size = _ref.size,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    error = _ref.error,
-    trigger = _ref.trigger,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    "data-lf-field-name": name,
-    className: "lf-control-input-tag"
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
-    name: name,
-    accepter: external_rsuite_.TagInput,
-    value: value,
-    onChange: onChange,
-    onBlur: onBlur,
-    disabled: disabled,
-    size: size,
-    trigger: trigger,
-    readOnly: readOnly,
-    errorMessage: isString_default()(error) ? error : undefined
-  }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint', 'placeholder']);
-
-;// CONCATENATED MODULE: ./react-rsuite5/input-mask/index.js
-
-var input_mask_excluded = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside"];
-function input_mask_extends() { input_mask_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return input_mask_extends.apply(this, arguments); }
-function input_mask_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = input_mask_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function input_mask_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-/* eslint-disable no-template-curly-in-string */
-
-
-
-var prepareMask = function prepareMask(str) {
-  if (typeof str !== 'string' || str.length === 0) {
-    return [];
-  }
-  var matches = str.match(/\$\{[a-zA-Z0-9]\}|.{1,1}/gm);
-  return matches.map(function (token) {
-    if (token === '${d}') {
-      return /\d/;
-    } else if (token === '${D}') {
-      return /\D/;
-    } else if (token === '${a}') {
-      return /[a-zA-Z]/;
-    } else if (token === '${w}') {
-      return /[a-zA-Z0-9]/;
-    }
-    return token;
-  });
-};
-var InputMask = I18N(function (_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    size = _ref.size,
-    placeholder = _ref.placeholder,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    error = _ref.error,
-    prefix = _ref.prefix,
-    postfix = _ref.postfix,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    _ref$placeholderChar = _ref.placeholderChar,
-    placeholderChar = _ref$placeholderChar === void 0 ? '_' : _ref$placeholderChar,
-    _ref$mask = _ref.mask,
-    mask = _ref$mask === void 0 ? [] : _ref$mask,
-    _ref$inside = _ref.inside,
-    inside = _ref$inside === void 0 ? false : _ref$inside,
-    rest = input_mask_objectWithoutProperties(_ref, input_mask_excluded);
-  var parsedMask = prepareMask(mask);
-  var inner = /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, input_mask_extends({
-    name: name,
-    accepter: external_rsuite_.MaskedInput,
-    value: value,
-    onChange: onChange,
-    onBlur: onBlur,
-    disabled: disabled,
-    size: size,
-    placeholder: placeholder,
-    readOnly: readOnly,
-    placeholderChar: typeof placeholderChar === 'string' && placeholderChar.length > 0 ? placeholderChar[0] : '_',
-    errorMessage: isString_default()(error) ? error : undefined,
-    mask: parsedMask
-  }, rest));
-  var needsGroup = postfix || prefix;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    "data-lf-field-name": name,
-    className: "lf-control-input-mask"
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup, {
-    inside: inside
-  }, prefix && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup.Addon, null, prefix), inner, postfix && /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup.Addon, null, postfix)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint', 'placeholder']);
-
-;// CONCATENATED MODULE: ./react-rsuite5/textarea/index.js
-
-function textarea_extends() { textarea_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return textarea_extends.apply(this, arguments); }
-
-
-
-var ControlTextare = function ControlTextare(props) {
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Input, textarea_extends({
-    as: "textarea"
-  }, props));
-};
-var textarea_Textarea = I18N(function (_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    size = _ref.size,
-    placeholder = _ref.placeholder,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    error = _ref.error,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    _ref$rows = _ref.rows,
-    rows = _ref$rows === void 0 ? 10 : _ref$rows;
-  var inner = /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
-    name: name,
-    accepter: ControlTextare,
-    rows: rows,
-    value: value,
-    onChange: onChange,
-    onBlur: onBlur,
-    disabled: disabled,
-    placeholder: placeholder,
-    readOnly: readOnly,
-    errorMessage: isString_default()(error) ? error : undefined
-  });
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    controlId: name
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), inner, hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint', 'placeholder']);
-
-;// CONCATENATED MODULE: ./react-rsuite5/rate/index.js
-
-
-
-
-var RateRSuite = I18N(function (_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    size = _ref.size,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    error = _ref.error,
-    _ref$allowHalf = _ref.allowHalf,
-    allowHalf = _ref$allowHalf === void 0 ? false : _ref$allowHalf,
-    _ref$cleanable = _ref.cleanable,
-    cleanable = _ref$cleanable === void 0 ? true : _ref$cleanable,
-    max = _ref.max,
-    color = _ref.color,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    controlId: name,
-    className: "lets-form-input-tag"
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
-    name: name,
-    accepter: external_rsuite_.Rate,
-    value: value,
-    onChange: onChange,
-    onBlur: onBlur,
-    disabled: disabled,
-    size: size,
-    max: max,
-    color: color,
-    allowHalf: allowHalf,
-    cleanable: cleanable,
-    readOnly: readOnly,
-    errorMessage: isString_default()(error) ? error : undefined
-  }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint', 'placeholder']);
-
-;// CONCATENATED MODULE: ./react-rsuite5/placeholder/index.js
-
-
-
-
-var PlaceholderRSuite5 = I18N(function (_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    text = _ref.text,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    "data-lf-field-name": name,
-    className: "lf-control-placeholder"
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(Placeholder, {
-    text: text
-  }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint', 'text']);
-
-;// CONCATENATED MODULE: ./react-rsuite5/multiselect/index.js
-
-function multiselect_typeof(obj) { "@babel/helpers - typeof"; return multiselect_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, multiselect_typeof(obj); }
-function multiselect_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function multiselect_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? multiselect_ownKeys(Object(source), !0).forEach(function (key) { multiselect_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : multiselect_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function multiselect_defineProperty(obj, key, value) { key = multiselect_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function multiselect_toPropertyKey(arg) { var key = multiselect_toPrimitive(arg, "string"); return multiselect_typeof(key) === "symbol" ? key : String(key); }
-function multiselect_toPrimitive(input, hint) { if (multiselect_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (multiselect_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
-
-
-var Multiselect = I18N(function (_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    size = _ref.size,
-    placeholder = _ref.placeholder,
-    options = _ref.options,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    error = _ref.error,
-    _ref$block = _ref.block,
-    block = _ref$block === void 0 ? false : _ref$block,
-    _ref$searchable = _ref.searchable,
-    searchable = _ref$searchable === void 0 ? false : _ref$searchable,
-    _ref$cleanable = _ref.cleanable,
-    cleanable = _ref$cleanable === void 0 ? false : _ref$cleanable,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    placement = _ref.placement,
-    appearance = _ref.appearance;
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    "data-lf-field-name": name,
-    className: "lf-control-multiselect"
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
-    accepter: external_rsuite_.TagPicker,
-    appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
-    name: name,
-    value: value,
-    onChange: onChange,
-    readOnly: readOnly,
-    onBlur: onBlur,
-    placement: placement,
-    errorMessage: isString_default()(error) ? error : undefined,
-    disabled: disabled,
-    size: size,
-    placeholder: placeholder,
-    data: options || [],
-    block: block,
-    searchable: searchable,
-    cleanable: cleanable
-  }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint', 'placeholder'], {
-  options: function options(value, i18n) {
-    return (value !== null && value !== void 0 ? value : []).map(function (value) {
-      return multiselect_objectSpread(multiselect_objectSpread({}, value), {}, {
-        label: i18n(value.label)
-      });
-    });
-  }
-});
-
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/multiselect-language/multiselect-language.scss
-var multiselect_language = __webpack_require__(6237);
-;// CONCATENATED MODULE: ./react-rsuite5/multiselect-language/multiselect-language.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var multiselect_language_options = {};
-
-multiselect_language_options.styleTagTransform = (styleTagTransform_default());
-multiselect_language_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      multiselect_language_options.insert = insertBySelector_default().bind(null, "head");
-    
-multiselect_language_options.domAPI = (styleDomAPI_default());
-multiselect_language_options.insertStyleElement = (insertStyleElement_default());
-
-var multiselect_language_update = injectStylesIntoStyleTag_default()(multiselect_language/* default */.Z, multiselect_language_options);
-
-
-
-
-       /* harmony default export */ const multiselect_language_multiselect_language = (multiselect_language/* default */.Z && multiselect_language/* default.locals */.Z.locals ? multiselect_language/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./react-rsuite5/multiselect-language/index.js
-
-function multiselect_language_slicedToArray(arr, i) { return multiselect_language_arrayWithHoles(arr) || multiselect_language_iterableToArrayLimit(arr, i) || multiselect_language_unsupportedIterableToArray(arr, i) || multiselect_language_nonIterableRest(); }
-function multiselect_language_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function multiselect_language_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return multiselect_language_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return multiselect_language_arrayLikeToArray(o, minLen); }
-function multiselect_language_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function multiselect_language_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function multiselect_language_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
-
-
-
-
-var renderItem = function renderItem(label, item) {
-  return /*#__PURE__*/external_react_default().createElement("div", null, label, " ", /*#__PURE__*/external_react_default().createElement("b", null, item.value));
-};
-var ALL_LOCALES = Object.keys(locales_namespaceObject.Q);
-var multiselect_language_LANGUAGES_OPTIONS = Object.keys(locales_namespaceObject.Q).map(function (lang) {
-  return {
-    value: lang,
-    name: locales_namespaceObject.Q[lang][1],
-    label: "".concat(locales_namespaceObject.Q[lang][1])
-  };
-});
-var MultiselectLanguage = I18N(function (_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    hint = _ref.hint,
-    value = _ref.value,
-    size = _ref.size,
-    placeholder = _ref.placeholder,
-    _ref$tooltip = _ref.tooltip,
-    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    _ref$required = _ref.required,
-    required = _ref$required === void 0 ? false : _ref$required,
-    error = _ref.error,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    placement = _ref.placement,
-    appearance = _ref.appearance;
-  var _useState = (0,external_react_.useState)(value),
-    _useState2 = multiselect_language_slicedToArray(_useState, 2),
-    locales = _useState2[0],
-    setLocales = _useState2[1];
-  var handleAddAll = (0,external_react_.useCallback)(function (e) {
-    e.preventDefault();
-    setLocales(ALL_LOCALES);
-    onChange(ALL_LOCALES);
-  }, [onChange]);
-  var handleChange = (0,external_react_.useCallback)(function (value) {
-    setLocales(value);
-    onChange(value);
-  }, [onChange]);
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    "data-lf-field-name": name,
-    className: "lf-control-multiselect-language"
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
-    accepter: external_rsuite_.CheckPicker,
-    appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
-    name: name,
-    value: locales,
-    onChange: handleChange,
-    readOnly: readOnly,
-    onBlur: onBlur,
-    placement: placement,
-    errorMessage: isString_default()(error) ? error : undefined,
-    disabled: disabled,
-    size: size,
-    placeholder: placeholder,
-    data: multiselect_language_LANGUAGES_OPTIONS,
-    block: true
-    //renderValue={renderValue}
-    ,
-    renderMenuItem: renderItem,
-    searchable: true,
-    cleanable: true
-  }), !(Array.isArray(locales) && locales.length === ALL_LOCALES.length) && /*#__PURE__*/external_react_default().createElement("div", {
-    className: "btn-add-all"
-  }, /*#__PURE__*/external_react_default().createElement("a", {
-    href: "#",
-    onClick: handleAddAll
-  }, "add all locales")), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-}, ['label', 'hint', 'placeholder']);
-
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/input-text-i18n/index.scss
-var input_text_i18n = __webpack_require__(8727);
-;// CONCATENATED MODULE: ./react-rsuite5/input-text-i18n/index.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var input_text_i18n_options = {};
-
-input_text_i18n_options.styleTagTransform = (styleTagTransform_default());
-input_text_i18n_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      input_text_i18n_options.insert = insertBySelector_default().bind(null, "head");
-    
-input_text_i18n_options.domAPI = (styleDomAPI_default());
-input_text_i18n_options.insertStyleElement = (insertStyleElement_default());
-
-var input_text_i18n_update = injectStylesIntoStyleTag_default()(input_text_i18n/* default */.Z, input_text_i18n_options);
-
-
-
-
-       /* harmony default export */ const react_rsuite5_input_text_i18n = (input_text_i18n/* default */.Z && input_text_i18n/* default.locals */.Z.locals ? input_text_i18n/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./react-rsuite5/input-text-i18n/index.js
-function input_text_i18n_typeof(obj) { "@babel/helpers - typeof"; return input_text_i18n_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, input_text_i18n_typeof(obj); }
-
-
-
-
-var input_text_i18n_excluded = ["value"];
-function input_text_i18n_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function input_text_i18n_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? input_text_i18n_ownKeys(Object(source), !0).forEach(function (key) { input_text_i18n_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : input_text_i18n_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function input_text_i18n_defineProperty(obj, key, value) { key = input_text_i18n_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function input_text_i18n_toPropertyKey(arg) { var key = input_text_i18n_toPrimitive(arg, "string"); return input_text_i18n_typeof(key) === "symbol" ? key : String(key); }
-function input_text_i18n_toPrimitive(input, hint) { if (input_text_i18n_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (input_text_i18n_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function input_text_i18n_slicedToArray(arr, i) { return input_text_i18n_arrayWithHoles(arr) || input_text_i18n_iterableToArrayLimit(arr, i) || input_text_i18n_unsupportedIterableToArray(arr, i) || input_text_i18n_nonIterableRest(); }
-function input_text_i18n_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function input_text_i18n_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return input_text_i18n_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return input_text_i18n_arrayLikeToArray(o, minLen); }
-function input_text_i18n_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function input_text_i18n_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function input_text_i18n_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-function input_text_i18n_extends() { input_text_i18n_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return input_text_i18n_extends.apply(this, arguments); }
-function input_text_i18n_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = input_text_i18n_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function input_text_i18n_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/anchor-has-content */
-
-
-
-
-
-
-
-
-
-
-var input_text_i18n_LANGUAGES_OPTIONS = Object.keys(locales_namespaceObject.Q).map(function (lang) {
-  return {
-    value: lang,
-    name: locales_namespaceObject.Q[lang][1],
-    label: locales_namespaceObject.Q[lang][1]
-  };
-});
-var languageMenuItem = function languageMenuItem(label, item) {
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-input-text-i18n-item-locale"
-  }, item.label, " ", /*#__PURE__*/external_react_default().createElement("b", null, item.value), item.filled && /*#__PURE__*/external_react_default().createElement(IconCheck, {
-    width: 16,
-    height: 16
-  }));
-};
-var TextareaAccepter = function TextareaAccepter(_ref) {
-  var value = _ref.value,
-    props = input_text_i18n_objectWithoutProperties(_ref, input_text_i18n_excluded);
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Input, input_text_i18n_extends({
-    as: "textarea",
-    value: value
-  }, props));
-};
-var InputTextI18N = function InputTextI18N(props) {
-  var name = props.name,
-    label = props.label,
-    hint = props.hint,
-    value = props.value,
-    size = props.size,
-    placeholder = props.placeholder,
-    _props$tooltip = props.tooltip,
-    tooltip = _props$tooltip === void 0 ? false : _props$tooltip,
-    _props$disabled = props.disabled,
-    disabled = _props$disabled === void 0 ? false : _props$disabled,
-    _props$readOnly = props.readOnly,
-    readOnly = _props$readOnly === void 0 ? false : _props$readOnly,
-    _props$required = props.required,
-    required = _props$required === void 0 ? false : _props$required,
-    width = props.width,
-    error = props.error,
-    _onChange = props.onChange,
-    onBlur = props.onBlur,
-    defaultLocale = props.defaultLocale,
-    _props$textarea = props.textarea,
-    textarea = _props$textarea === void 0 ? false : _props$textarea,
-    rows = props.rows;
-  var _useContext = (0,external_react_.useContext)(form_context),
-    _useContext$locales = _useContext.locales,
-    locales = _useContext$locales === void 0 ? [] : _useContext$locales;
-  var preselectedLanguage = null;
-  if (isObject_default()(value)) {
-    // preselect a value in the drop down of the language only if there's a i18n object
-    // in value, otherwise is a simple string and by definition is not associated with any
-    // language
-    if (defaultLocale && locales.includes(defaultLocale)) {
-      preselectedLanguage = defaultLocale;
-    } else if (!isEmpty_default()(locales)) {
-      preselectedLanguage = locales[0];
-    }
-  }
-  var preselectedValue = null;
-  if (isObject_default()(value)) {
-    preselectedValue = preselectedLanguage ? value[preselectedLanguage] : null;
-  } else if (isString_default()(value)) {
-    preselectedValue = value;
-  }
-  var totalLocales = !isEmpty_default()(locales) ? locales.length : input_text_i18n_LANGUAGES_OPTIONS.length;
-  var _useState = (0,external_react_.useState)(preselectedLanguage),
-    _useState2 = input_text_i18n_slicedToArray(_useState, 2),
-    currentLanguage = _useState2[0],
-    setCurrentLanguage = _useState2[1];
-  var _useState3 = (0,external_react_.useState)(value),
-    _useState4 = input_text_i18n_slicedToArray(_useState3, 2),
-    currentValue = _useState4[0],
-    setCurrentValue = _useState4[1];
-  var _useState5 = (0,external_react_.useState)(preselectedValue),
-    _useState6 = input_text_i18n_slicedToArray(_useState5, 2),
-    translation = _useState6[0],
-    setTranslation = _useState6[1];
-  var handleChange = (0,external_react_.useCallback)(function (value) {
-    // update the UI
-    setTranslation(value);
-    if (isEmpty_default()(value)) {
-      // in case the user entered an empty value...
-      if (isObject_default()(currentValue) && currentLanguage) {
-        // if i18n object and a language is selected, then void the value for that language
-        var newCurrentValue = omit_default()(currentValue, currentLanguage);
-        setCurrentValue(newCurrentValue);
-        _onChange(newCurrentValue);
-      } else if (isString_default()(currentValue)) {
-        setCurrentValue(value);
-        _onChange(value);
-      }
-    } else {
-      // in case the user entered a non empty value...
-      if (currentLanguage) {
-        // if a current language is selected, then the typed text ends up
-        // in a i18n object
-        var _newCurrentValue = input_text_i18n_objectSpread(input_text_i18n_objectSpread({}, currentValue), {}, input_text_i18n_defineProperty({}, currentLanguage, value));
-        setCurrentValue(_newCurrentValue);
-        _onChange(_newCurrentValue);
-        //setTranslation(value);
-      } else if (isObject_default()(currentValue)) {
-        // language is not selected, but the current value is a i18n object, do nothing
-        // just update the UI, do nothing in the current value
-        //setTranslation(value);
-      } else {
-        // if language not selected and current value is not an object
-        // just set the current value as string
-        //setTranslation(value);
-        setCurrentValue(value);
-        _onChange(value);
-      }
-    }
-  }, [currentLanguage, currentValue, _onChange]);
-
-  // if no locales, then use plain input text
-  if (isEmpty_default()(locales)) {
-    return textarea ? /*#__PURE__*/external_react_default().createElement(textarea_Textarea, props) : /*#__PURE__*/external_react_default().createElement(input_text_TextInput, props);
-  }
-  // evaluate current translated locales
-  var translatedLocales = isObject_default()(currentValue) ? Object.keys(currentValue).filter(function (locale) {
-    return isEmpty_default()(locales) || locales.includes(locale);
-  }) : [];
-  var multiValuesAndNoLang = isObject_default()(currentValue) && Object.keys(currentValue).length !== 0 && !currentLanguage;
-  var languageData = input_text_i18n_LANGUAGES_OPTIONS.filter(function (item) {
-    return isEmpty_default()(locales) || locales.includes(item.value);
-  }).map(function (item) {
-    return input_text_i18n_objectSpread(input_text_i18n_objectSpread({}, item), {}, {
-      filled: currentValue && !isEmpty_default()(currentValue[item.value])
-    });
-  });
-  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
-    "data-lf-field-name": name,
-    className: "lf-input-text-i18n"
-  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
-    tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement("div", {
-    className: classnames_default()('group-input-select', {
-      'textarea': textarea
-    })
-  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup, {
-    className: "translation-control",
-    inside: true
-  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
-    name: name,
-    rows: rows,
-    style: width ? {
-      width: "".concat(width, "px")
-    } : undefined,
-    accepter: textarea ? TextareaAccepter : external_rsuite_.Input,
-    value: multiValuesAndNoLang ? '<multiple translations>' : translation,
-    readOnly: readOnly || multiValuesAndNoLang,
-    onChange: handleChange,
-    onBlur: onBlur,
-    disabled: disabled,
-    size: size,
-    placeholder: placeholder,
-    errorMessage: isString_default()(error) ? error : undefined
-  }), /*#__PURE__*/external_react_default().createElement(external_rsuite_.InputGroup.Addon, null, /*#__PURE__*/external_react_default().createElement("span", {
-    className: "status"
-  }, /*#__PURE__*/external_react_default().createElement("span", {
-    className: "translated"
-  }, translatedLocales.length), "\xA0/\xA0", /*#__PURE__*/external_react_default().createElement("span", null, totalLocales)))), /*#__PURE__*/external_react_default().createElement("div", {
-    className: "select-control"
-  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.SelectPicker, {
-    appearance: "subtle",
-    cleanable: false,
-    size: "xs",
-    readOnly: readOnly,
-    value: currentLanguage,
-    placement: "autoVerticalEnd",
-    placeholder: "no tx",
-    searchable: languageData.length > 20,
-    renderValue: function renderValue(value) {
-      return /*#__PURE__*/external_react_default().createElement("span", null, value);
-    },
-    renderMenuItem: languageMenuItem,
-    onChange: function onChange(value) {
-      if (isString_default()(currentValue) && !isEmpty_default()(currentValue)) {
-        // if currentValue is a string and not empty,
-        setCurrentLanguage(value);
-        var newValue = input_text_i18n_defineProperty({}, value, currentValue);
-        setCurrentValue(newValue);
-        _onChange(newValue);
-      } else if (isObject_default()(currentValue)) {
-        var _currentValue$value;
-        // it's already a i18n object, just switch the language
-        setCurrentLanguage(value);
-        setTranslation((_currentValue$value = currentValue[value]) !== null && _currentValue$value !== void 0 ? _currentValue$value : '');
-      } else {
-        setCurrentLanguage(value);
-      }
-    },
-    data: languageData
-  }))), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
-};
-
-;// CONCATENATED MODULE: ./react-rsuite5/placeholder-image/index.js
-
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/button/button.scss
-var button_button = __webpack_require__(2561);
-;// CONCATENATED MODULE: ./react-rsuite5/button/button.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var button_options = {};
-
-button_options.styleTagTransform = (styleTagTransform_default());
-button_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      button_options.insert = insertBySelector_default().bind(null, "head");
-    
-button_options.domAPI = (styleDomAPI_default());
-button_options.insertStyleElement = (insertStyleElement_default());
-
-var button_update = injectStylesIntoStyleTag_default()(button_button/* default */.Z, button_options);
-
-
-
-
-       /* harmony default export */ const react_rsuite5_button_button = (button_button/* default */.Z && button_button/* default.locals */.Z.locals ? button_button/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./react-rsuite5/button/index.js
-
-function button_slicedToArray(arr, i) { return button_arrayWithHoles(arr) || button_iterableToArrayLimit(arr, i) || button_unsupportedIterableToArray(arr, i) || button_nonIterableRest(); }
-function button_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function button_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return button_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return button_arrayLikeToArray(o, minLen); }
-function button_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function button_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function button_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-var BiStateButton = I18N(function (_ref) {
-  var name = _ref.name,
-    labelOn = _ref.labelOn,
-    labelOff = _ref.labelOff,
-    iconOn = _ref.iconOn,
-    size = _ref.size,
-    appearance = _ref.appearance,
-    iconOff = _ref.iconOff,
-    onChange = _ref.onChange,
-    onBlur = _ref.onBlur,
-    value = _ref.value,
-    buttonType = _ref.buttonType,
-    hint = _ref.hint,
-    initialValue = _ref.initialValue;
-  var _useState = (0,external_react_.useState)(value || initialValue),
-    _useState2 = button_slicedToArray(_useState, 2),
-    checked = _useState2[0],
-    setChecked = _useState2[1];
-  var handleClick = (0,external_react_.useCallback)(function () {
-    var newValue = !checked;
-    setChecked(!checked);
-    onChange(newValue);
-  }, [onChange, checked]);
-  var inner;
-  if (buttonType === 'icon') {
-    inner = /*#__PURE__*/external_react_default().createElement(external_rsuite_.IconButton, {
-      size: size,
-      onClick: handleClick,
-      appearance: appearance,
-      onBlur: onBlur,
-      icon: /*#__PURE__*/external_react_default().createElement("img", {
-        className: "lf-icon",
-        src: checked ? iconOn : iconOff,
-        alt: name
-      })
-    });
-  } else {
-    inner = /*#__PURE__*/external_react_default().createElement(external_rsuite_.Button, {
-      onClick: handleClick,
-      size: size,
-      onBlur: onBlur,
-      appearance: checked ? 'primary' : 'ghost'
-    }, checked ? labelOn : labelOff);
-  }
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-control-button",
-    "data-lf-field-name": name
-  }, !isEmpty_default()(hint) && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Whisper, {
-    placement: "top",
-    trigger: "hover",
-    speaker: /*#__PURE__*/external_react_default().createElement(external_rsuite_.Tooltip, null, hint)
-  }, inner), isEmpty_default()(hint) && inner);
-}, ['labelOn', 'labelOff', 'hint']);
-
-;// CONCATENATED MODULE: ./react-rsuite5/divider/index.js
-
-;// CONCATENATED MODULE: ./react-rsuite5/react-view/index.js
-
-;// CONCATENATED MODULE: ./react-rsuite5/index.js
-var react_rsuite5_excluded = ["framework", "children"];
-function react_rsuite5_extends() { react_rsuite5_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_rsuite5_extends.apply(this, arguments); }
-function react_rsuite5_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_rsuite5_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function react_rsuite5_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var Fields = {
-  'text-input': {
-    'react-rsuite5': input_text_TextInput
-  },
-  'toggle': {
-    'react-rsuite5': ToggleInput
-  },
-  'select': {
-    'react-rsuite5': Select
-  },
-  'group': {
-    'react-rsuite5': Group
-  },
-  'array': {
-    'react-rsuite5': ListArrayRSuite5
-  },
-  'two-columns': {
-    'react-rsuite5': TwoColumns
-  },
-  'three-columns': {
-    'react-rsuite5': ThreeColumns
-  },
-  'input-number': {
-    'react-rsuite5': InputNumberRSuite5
-  },
-  'date': {
-    'react-rsuite5': SelectDate
-  },
-  'checkbox': {
-    'react-rsuite5': CheckboxRSuite
-  },
-  'checkbox-group': {
-    'react-rsuite5': CheckboxGroupRSuite
-  },
-  'slider': {
-    'react-rsuite5': SliderRsuite
-  },
-  'radio-group': {
-    'react-rsuite5': RadioGroupRSuite
-  },
-  'input-tag': {
-    'react-rsuite5': InputTag
-  },
-  'input-mask': {
-    'react-rsuite5': InputMask
-  },
-  'textarea': {
-    'react-rsuite5': textarea_Textarea
-  },
-  'rate': {
-    'react-rsuite5': RateRSuite
-  },
-  'placeholder': {
-    'react-rsuite5': PlaceholderRSuite5
-  },
-  'multiselect': {
-    'react-rsuite5': Multiselect
-  },
-  'multiselect-language': {
-    'react-rsuite5': MultiselectLanguage
-  },
-  'input-text-i18n': {
-    'react-rsuite5': InputTextI18N
-  },
-  'placeholder-image': {
-    'react-rsuite5': PlaceholderImage
-  },
-  'button': {
-    'react-rsuite5': BiStateButton
-  },
-  'divider': {
-    'react-rsuite5': Divider
-  },
-  'react-view': {
-    'react-rsuite5': ReactView
-  },
-  'datetime': {
-    'react-rsuite5': SelectDatetime
-  }
-};
-var Forms = {
-  'react-rsuite5': FormRsuite5
-};
-var FormGenerator = GenerateGenerator({
-  Fields: Fields,
-  Forms: Forms
-});
-var LetsForm = function LetsForm(_ref) {
-  var framework = _ref.framework,
-    children = _ref.children,
-    rest = react_rsuite5_objectWithoutProperties(_ref, react_rsuite5_excluded);
-  return /*#__PURE__*/external_react_default().createElement(FormGenerator, react_rsuite5_extends({
-    framework: "react-rsuite5"
-  }, rest), children);
-};
-/* harmony default export */ const react_rsuite5 = (LetsForm);
-
-
-
 ;// CONCATENATED MODULE: ./common/array/helpers/is-empty-item.js
 
-var isEmptyItem = function isEmptyItem(obj) {
+var is_empty_item_isEmptyItem = function isEmptyItem(obj) {
   return Object.keys(obj).filter(function (key) {
     return key !== 'id';
   }).every(function (key) {
-    return isEmpty_default()(obj[key]);
+    return _isEmpty(obj[key]);
   });
 };
 ;// CONCATENATED MODULE: ./common/array/views/array-item.js
+/* eslint-disable jsx-a11y/anchor-is-valid */
 
-// TODO togliere
 
 
-var ArrayItem = function ArrayItem(_ref) {
-  var name = _ref.name,
-    children = _ref.children,
-    item = _ref.item,
-    disabled = _ref.disabled,
-    readOnly = _ref.readOnly,
-    _ref$onAdd = _ref.onAdd,
-    onAdd = _ref$onAdd === void 0 ? function () {} : _ref$onAdd,
-    _ref$onRemove = _ref.onRemove,
-    onRemove = _ref$onRemove === void 0 ? function () {} : _ref$onRemove,
-    _ref$disableAdd = _ref.disableAdd,
-    disableAdd = _ref$disableAdd === void 0 ? false : _ref$disableAdd,
-    _ref$showAdd = _ref.showAdd,
-    showAdd = _ref$showAdd === void 0 ? false : _ref$showAdd,
-    _ref$leftMargin = _ref.leftMargin,
-    leftMargin = _ref$leftMargin === void 0 ? 10 : _ref$leftMargin;
-  return /*#__PURE__*/external_react_default().createElement("div", {
+var IconButton = function IconButton(_ref) {
+  var _ref$disabled = _ref.disabled,
+    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    className = _ref.className,
+    Icon = _ref.icon,
+    onClick = _ref.onClick;
+  var handleClick = useCallback(function (e) {
+    e.preventDefault();
+    if (!disabled) {
+      onClick();
+    }
+  }, [disabled, onClick]);
+  return /*#__PURE__*/React.createElement("a", {
+    href: "#",
+    className: classNames('lf-icon-button', className, {
+      disabled: disabled
+    }),
+    onClick: handleClick
+  }, Icon);
+};
+var array_item_ArrayItem = function ArrayItem(_ref2) {
+  var name = _ref2.name,
+    children = _ref2.children,
+    item = _ref2.item,
+    disabled = _ref2.disabled,
+    readOnly = _ref2.readOnly,
+    _ref2$onAdd = _ref2.onAdd,
+    onAdd = _ref2$onAdd === void 0 ? function () {} : _ref2$onAdd,
+    _ref2$onRemove = _ref2.onRemove,
+    onRemove = _ref2$onRemove === void 0 ? function () {} : _ref2$onRemove,
+    _ref2$disableAdd = _ref2.disableAdd,
+    disableAdd = _ref2$disableAdd === void 0 ? false : _ref2$disableAdd,
+    _ref2$showAdd = _ref2.showAdd,
+    showAdd = _ref2$showAdd === void 0 ? false : _ref2$showAdd,
+    _ref2$leftMargin = _ref2.leftMargin,
+    leftMargin = _ref2$leftMargin === void 0 ? 10 : _ref2$leftMargin;
+  return /*#__PURE__*/React.createElement("div", {
     className: "lf-control-common-array-item"
-  }, /*#__PURE__*/external_react_default().createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     className: "inner-form"
-  }, children), /*#__PURE__*/external_react_default().createElement("div", {
+  }, children), /*#__PURE__*/React.createElement("div", {
     className: "buttons"
-  }, showAdd && /*#__PURE__*/external_react_default().createElement(external_rsuite_.IconButton, {
+  }, showAdd && /*#__PURE__*/React.createElement(IconButton, {
     disabled: disableAdd || disabled || readOnly,
     className: "arrow",
     appearance: "link",
-    icon: /*#__PURE__*/external_react_default().createElement(PlusCircle, {
+    icon: /*#__PURE__*/React.createElement(PlusCircle, {
       height: 16,
       width: 16,
       color: "#3498ff"
     }),
     size: "sm",
     onClick: onAdd
-  }), !showAdd && /*#__PURE__*/external_react_default().createElement(external_rsuite_.IconButton, {
+  }), !showAdd && /*#__PURE__*/React.createElement(IconButton, {
     className: "arrow",
     disabled: disabled || readOnly,
     appearance: "link",
-    icon: /*#__PURE__*/external_react_default().createElement(MinusCircle, {
+    icon: /*#__PURE__*/React.createElement(MinusCircle, {
       height: 16,
       width: 16,
       color: "#3498ff"
@@ -10704,16 +8824,6 @@ var ArrayItem = function ArrayItem(_ref) {
   })));
 };
 
-;// CONCATENATED MODULE: ./hooks/index.js
-
-
-var hooks_useFormContext = function useFormContext() {
-  var context = (0,external_react_.useContext)(form_context);
-
-  // put here some defaults
-
-  return context;
-};
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/array/list-array.scss
 var list_array = __webpack_require__(3010);
 ;// CONCATENATED MODULE: ./common/array/list-array.scss
@@ -10751,10 +8861,10 @@ var list_array_update = injectStylesIntoStyleTag_default()(list_array/* default 
 
 
 
-function array_toConsumableArray(arr) { return array_arrayWithoutHoles(arr) || array_iterableToArray(arr) || array_unsupportedIterableToArray(arr) || array_nonIterableSpread(); }
-function array_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function array_iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function array_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return array_arrayLikeToArray(arr); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || array_unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return array_arrayLikeToArray(arr); }
 function array_slicedToArray(arr, i) { return array_arrayWithHoles(arr) || array_iterableToArrayLimit(arr, i) || array_unsupportedIterableToArray(arr, i) || array_nonIterableRest(); }
 function array_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function array_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return array_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return array_arrayLikeToArray(o, minLen); }
@@ -10768,7 +8878,8 @@ function array_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ListArray = function ListArray(_ref) {
-  var value = _ref.value,
+  var LetsFormComponent = _ref.LetsFormComponent,
+    value = _ref.value,
     _ref$onChange = _ref.onChange,
     _onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
     _ref$onBlur = _ref.onBlur,
@@ -10781,15 +8892,17 @@ var ListArray = function ListArray(_ref) {
     _ref$layout = _ref.layout,
     layout = _ref$layout === void 0 ? 'vertical' : _ref$layout,
     maxHeight = _ref.maxHeight,
+    lfLocale = _ref.lfLocale,
     _ref$leftMargin = _ref.leftMargin,
-    leftMargin = _ref$leftMargin === void 0 ? 0 : _ref$leftMargin;
-  var _useState = (0,external_react_.useState)(isArray_default()(value) && !isEmpty_default()(value) ? fillIds(value) : [{
-      id: uniqueId_default()()
+    leftMargin = _ref$leftMargin === void 0 ? 0 : _ref$leftMargin,
+    children = _ref.children;
+  var _useState = useState(_isArray(value) && !_isEmpty(value) ? fillIds(value) : [{
+      id: _uniqueId()
     }]),
     _useState2 = array_slicedToArray(_useState, 2),
     items = _useState2[0],
     setItems = _useState2[1];
-  var _useFormContext = hooks_useFormContext(),
+  var _useFormContext = useFormContext(),
     locales = _useFormContext.locales;
   var form = {
     layout: layout,
@@ -10807,31 +8920,38 @@ var ListArray = function ListArray(_ref) {
     };
   }
   if (leftMargin != null) {
-    style.marginLeft = isNumber_default()(leftMargin) ? "".concat(leftMargin, "px") : leftMargin;
+    style.marginLeft = _isNumber(leftMargin) ? "".concat(leftMargin, "px") : leftMargin;
   }
-  var handleAdd = (0,external_react_.useCallback)(function () {
+  var handleAdd = useCallback(function () {
     setItems(function (items) {
-      return [].concat(array_toConsumableArray(items), [{
-        id: uniqueId_default()()
+      return [].concat(_toConsumableArray(items), [{
+        id: _uniqueId()
       }]);
     });
   }, []);
-  var handleRemove = (0,external_react_.useCallback)(function (item) {
+  var handleRemove = useCallback(function (item) {
     var newItems = items.filter(function (i) {
       return i.id !== item.id;
     });
     setItems(newItems);
     _onChange(newItems.map(function (i) {
-      return omit_default()(i, 'id');
+      return _omit(i, 'id');
     }));
   }, [items, _onChange]);
-  return /*#__PURE__*/external_react_default().createElement("div", {
+  if (children) {
+    return /*#__PURE__*/React.createElement("div", {
+      style: {
+        padding: '0px 10px 1px 10px'
+      }
+    }, children);
+  }
+  return /*#__PURE__*/React.createElement("div", {
     className: "lf-control-common-array",
     style: style
-  }, (isArray_default()(items) ? items : []).map(function (item, idx) {
+  }, (_isArray(items) ? items : []).map(function (item, idx) {
     var canAdd = idx === items.length - 1 && !isEmptyItem(item);
     var showAdd = idx === items.length - 1 || items.length === 1;
-    return /*#__PURE__*/external_react_default().createElement(ArrayItem, {
+    return /*#__PURE__*/React.createElement(ArrayItem, {
       key: item.id,
       item: item,
       disabled: disabled,
@@ -10840,8 +8960,9 @@ var ListArray = function ListArray(_ref) {
       showAdd: showAdd,
       onAdd: handleAdd,
       onRemove: handleRemove
-    }, /*#__PURE__*/external_react_default().createElement(react_rsuite5, {
+    }, /*#__PURE__*/React.createElement(LetsFormComponent, {
       form: form,
+      locale: lfLocale,
       disabled: disabled,
       readOnly: readOnly,
       framework: "react-rsuite5",
@@ -10854,7 +8975,7 @@ var ListArray = function ListArray(_ref) {
         });
         setItems(newItems);
         _onChange(newItems.map(function (i) {
-          return omit_default()(i, 'id');
+          return _omit(i, 'id');
         }));
       }
     }));
@@ -10879,7 +9000,7 @@ var ListArray = function ListArray(_ref) {
 
 
 
-var PlaceholderReact = I18N(function (_ref) {
+var PlaceholderReact = (0,components/* I18N */.mb)(function (_ref) {
   var name = _ref.name,
     label = _ref.label,
     hint = _ref.hint,
@@ -10897,27 +9018,27 @@ var PlaceholderReact = I18N(function (_ref) {
 }, ['label', 'hint', 'text']);
 
 ;// CONCATENATED MODULE: ./react/select/index.js
-function react_select_typeof(obj) { "@babel/helpers - typeof"; return react_select_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, react_select_typeof(obj); }
+function select_typeof(obj) { "@babel/helpers - typeof"; return select_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, select_typeof(obj); }
 
-var react_select_excluded = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "plaintext", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey"];
-function react_select_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function react_select_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? react_select_ownKeys(Object(source), !0).forEach(function (key) { react_select_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : react_select_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function react_select_defineProperty(obj, key, value) { key = react_select_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function react_select_toPropertyKey(arg) { var key = react_select_toPrimitive(arg, "string"); return react_select_typeof(key) === "symbol" ? key : String(key); }
-function react_select_toPrimitive(input, hint) { if (react_select_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (react_select_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function react_select_extends() { react_select_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_select_extends.apply(this, arguments); }
+var select_excluded = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "plaintext", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey"];
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { select_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function select_defineProperty(obj, key, value) { key = select_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function select_toPropertyKey(arg) { var key = select_toPrimitive(arg, "string"); return select_typeof(key) === "symbol" ? key : String(key); }
+function select_toPrimitive(input, hint) { if (select_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (select_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function select_extends() { select_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return select_extends.apply(this, arguments); }
 function select_toConsumableArray(arr) { return select_arrayWithoutHoles(arr) || select_iterableToArray(arr) || select_unsupportedIterableToArray(arr) || select_nonIterableSpread(); }
 function select_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function select_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return select_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return select_arrayLikeToArray(o, minLen); }
 function select_iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
 function select_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return select_arrayLikeToArray(arr); }
 function select_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function react_select_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_select_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function react_select_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+function select_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = select_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function select_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
-var select_Select = I18N(function (_ref) {
+var Select = (0,components/* I18N */.mb)(function (_ref) {
   var _filterOptions;
   var name = _ref.name,
     lfLocale = _ref.lfLocale,
@@ -10938,12 +9059,12 @@ var select_Select = I18N(function (_ref) {
     options = _ref.options,
     filterValue = _ref.filterValue,
     filterKey = _ref.filterKey,
-    rest = react_select_objectWithoutProperties(_ref, react_select_excluded);
+    rest = select_objectWithoutProperties(_ref, select_excluded);
   var hasError = error && isString_default()(error);
   var handleChange = (0,external_react_.useCallback)(function (e) {
     return onChange(e.target.value === '' ? null : e.target.value);
   }, [onChange]);
-  var opts = (_filterOptions = filterOptions(options, filterValue, filterKey)) !== null && _filterOptions !== void 0 ? _filterOptions : [];
+  var opts = (_filterOptions = (0,helpers/* filterOptions */.MN)(options, filterValue, filterKey)) !== null && _filterOptions !== void 0 ? _filterOptions : [];
   if (placeholder) {
     opts = [{
       value: '',
@@ -10955,22 +9076,22 @@ var select_Select = I18N(function (_ref) {
     "data-lf-field-name": name
   }, /*#__PURE__*/external_react_default().createElement("label", {
     for: name
-  }, label, required && /*#__PURE__*/external_react_default().createElement(RequiredIcon, null)), /*#__PURE__*/external_react_default().createElement(IfNotPlaintext, {
+  }, label, required && /*#__PURE__*/external_react_default().createElement(components/* RequiredIcon */.T_, null)), /*#__PURE__*/external_react_default().createElement(components/* IfNotPlaintext */.W7, {
     plaintext: plaintext,
     value: value,
     options: options,
     component: "select",
     locale: lfLocale
-  }, /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, /*#__PURE__*/external_react_default().createElement("select", react_select_extends({
+  }, /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, /*#__PURE__*/external_react_default().createElement("select", select_extends({
     id: name,
     value: value,
     onChange: handleChange,
     onBlur: onBlur,
     placeholder: placeholder,
-    style: makeWidthStyle(fullWidth, width),
+    style: (0,helpers/* makeWidthStyle */.PZ)(fullWidth, width),
     disabled: disabled,
     readOnly: readOnly
-  }, passRest(rest)), opts.map(function (option) {
+  }, (0,helpers/* passRest */.QF)(rest)), opts.map(function (option) {
     return /*#__PURE__*/external_react_default().createElement("option", {
       key: option.value,
       value: option.value
@@ -10983,28 +9104,31 @@ var select_Select = I18N(function (_ref) {
 }, ['label', 'hint', 'placeholder'], {
   options: function options(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).map(function (value) {
-      return react_select_objectSpread(react_select_objectSpread({}, value), {}, {
+      return _objectSpread(_objectSpread({}, value), {}, {
         label: i18n(value.label)
       });
     });
   }
 });
 
+// EXTERNAL MODULE: ./node_modules/lodash/isDate.js
+var isDate = __webpack_require__(7960);
+var isDate_default = /*#__PURE__*/__webpack_require__.n(isDate);
 ;// CONCATENATED MODULE: ./react/date/index.js
 
-var react_date_excluded = ["onChange", "value"];
-function react_date_extends() { react_date_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_date_extends.apply(this, arguments); }
-function react_date_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_date_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function react_date_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+var date_excluded = ["onChange", "value"];
+function date_extends() { date_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return date_extends.apply(this, arguments); }
+function date_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = date_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function date_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
 //const dateOr
 
-var DateInput = I18N(function (_ref) {
+var DateInput = (0,components/* I18N */.mb)(function (_ref) {
   var onChange = _ref.onChange,
     value = _ref.value,
-    rest = react_date_objectWithoutProperties(_ref, react_date_excluded);
+    rest = date_objectWithoutProperties(_ref, date_excluded);
   var handleChange = (0,external_react_.useCallback)(function (e) {
     return onChange(e.target.value);
   }, [onChange]);
@@ -11013,7 +9137,7 @@ var DateInput = I18N(function (_ref) {
     // only take 2023-11-12
     currentDate = value.toISOString().split('T')[0];
   }
-  return /*#__PURE__*/external_react_default().createElement(ReactGenericInput, react_date_extends({
+  return /*#__PURE__*/external_react_default().createElement(components/* ReactGenericInput */.hR, date_extends({
     inputType: "date",
     component: "date",
     className: "lf-control-date",
@@ -11024,16 +9148,16 @@ var DateInput = I18N(function (_ref) {
 
 ;// CONCATENATED MODULE: ./react/datetime/index.js
 
-var react_datetime_excluded = ["onChange", "value"];
-function react_datetime_extends() { react_datetime_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_datetime_extends.apply(this, arguments); }
-function react_datetime_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_datetime_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function react_datetime_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+var datetime_excluded = ["onChange", "value"];
+function datetime_extends() { datetime_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return datetime_extends.apply(this, arguments); }
+function datetime_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = datetime_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function datetime_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
-var DateTime = I18N(function (_ref) {
+var DateTime = (0,components/* I18N */.mb)(function (_ref) {
   var onChange = _ref.onChange,
     value = _ref.value,
-    rest = react_datetime_objectWithoutProperties(_ref, react_datetime_excluded);
+    rest = datetime_objectWithoutProperties(_ref, datetime_excluded);
   var handleChange = (0,external_react_.useCallback)(function (e) {
     onChange(e.target.value);
   }, [onChange]);
@@ -11045,7 +9169,7 @@ var DateTime = I18N(function (_ref) {
       currentDate = match[0];
     }
   }
-  return /*#__PURE__*/external_react_default().createElement(ReactGenericInput, react_datetime_extends({
+  return /*#__PURE__*/external_react_default().createElement(components/* ReactGenericInput */.hR, datetime_extends({
     inputType: "datetime-local",
     component: "datetime",
     className: "lf-control-datetime",
@@ -11054,6 +9178,8 @@ var DateTime = I18N(function (_ref) {
   }, rest));
 }, ['label', 'hint', 'placeholder']);
 
+// EXTERNAL MODULE: ./costants.js
+var costants = __webpack_require__(8064);
 ;// CONCATENATED MODULE: ./react/index.js
 var react_excluded = ["framework", "children"];
 function react_extends() { react_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_extends.apply(this, arguments); }
@@ -11075,7 +9201,7 @@ function react_objectWithoutPropertiesLoose(source, excluded) { if (source == nu
 
 //import { Toggle } from './toggle';
 
-var react_Fields = {
+var Fields = {
   'text-input': {
     'react': TextInput
   },
@@ -11104,7 +9230,7 @@ var react_Fields = {
     'react': PlaceholderReact
   },
   'select': {
-    'react': select_Select
+    'react': Select
   },
   'date': {
     'react': DateInput
@@ -11118,22 +9244,22 @@ var react_Fields = {
   }*/
 };
 
-var react_Forms = {
+var Forms = {
   'react': FormReact
 };
-var react_FormGenerator = GenerateGenerator({
-  Fields: react_Fields,
-  Forms: react_Forms
+var FormGenerator = (0,generator/* GenerateGenerator */.x)({
+  Fields: Fields,
+  Forms: Forms
 });
-var react_LetsForm = function LetsForm(_ref) {
+var LetsForm = function LetsForm(_ref) {
   var framework = _ref.framework,
     children = _ref.children,
     rest = react_objectWithoutProperties(_ref, react_excluded);
-  return /*#__PURE__*/external_react_default().createElement(react_FormGenerator, react_extends({
+  return /*#__PURE__*/external_react_default().createElement(FormGenerator, react_extends({
     framework: "react"
   }, rest), children);
 };
-/* harmony default export */ const react = (react_LetsForm);
+/* harmony default export */ const react = (LetsForm);
 
 
 

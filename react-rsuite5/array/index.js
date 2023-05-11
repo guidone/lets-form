@@ -3,19 +3,17 @@ import { Form } from 'rsuite';
 
 import { RequiredIcon } from '../../components';
 import { ListArray } from '../../common';
+import LetsForm from '../../react-rsuite5';
 
 
-const ListArrayRSuite5 = (props) => {
-  // TODO fix spread here
-  const {
-    hint,
-    required,
-    tooltip,
-    name,
-    label,
-  } = props;
-
-
+const ListArrayRSuite5 = ({
+  hint,
+  required,
+  tooltip,
+  name,
+  label,
+  ...rest
+}) => {
   return (
     <Form.Group
       data-lf-field-name={name}
@@ -28,7 +26,10 @@ const ListArrayRSuite5 = (props) => {
           {required && <RequiredIcon />}
         </Form.ControlLabel>
       )}
-      <ListArray {...props} />
+      <ListArray
+        LetsFormComponent={LetsForm}
+        {...rest}
+      />
       {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
     </Form.Group>
   );

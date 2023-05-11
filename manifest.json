@@ -558,6 +558,18 @@
         "type": "array"
       },
       {
+        "name": "value",
+        "type": "string"
+      },
+      {
+        "name": "label",
+        "type": "string | i18n"
+      },
+      {
+        "name": "image",
+        "type": "string"
+      },
+      {
         "name": "showImageOptions",
         "type": "boolean",
         "description": "Show image field for Select options to be displayed in the drop-down"
@@ -1052,10 +1064,6 @@
         "type": "boolean"
       },
       {
-        "name": "fields",
-        "description": "Form schema for the array items"
-      },
-      {
         "name": "layout",
         "type": "string",
         "options": [
@@ -1328,6 +1336,14 @@
         "name": "marks",
         "type": "array",
         "description": "Customize labels on the render ruler"
+      },
+      {
+        "name": "value",
+        "type": "number"
+      },
+      {
+        "name": "label",
+        "type": "string | i18n"
       }
     ],
     "react-material-ui": [
@@ -1390,6 +1406,14 @@
         "name": "customMarks",
         "type": "array",
         "description": "Customize labels on the render ruler"
+      },
+      {
+        "name": "value",
+        "type": "number"
+      },
+      {
+        "name": "label",
+        "type": "string"
       }
     ],
     "react-bootstrap": [
@@ -1463,6 +1487,14 @@
         "name": "marks",
         "type": "array",
         "description": "Customize labels on the render ruler"
+      },
+      {
+        "name": "value",
+        "type": "number"
+      },
+      {
+        "name": "label",
+        "type": "string | i18n"
       },
       {
         "name": "included",
@@ -1860,6 +1892,14 @@
         "type": "array"
       },
       {
+        "name": "value",
+        "type": "string"
+      },
+      {
+        "name": "label",
+        "type": "string | i18n"
+      },
+      {
         "name": "disabled",
         "type": "boolean"
       },
@@ -1919,6 +1959,14 @@
       {
         "name": "options",
         "type": "array"
+      },
+      {
+        "name": "value",
+        "type": "string"
+      },
+      {
+        "name": "label",
+        "type": "string | i18n"
       },
       {
         "name": "disabled",
@@ -2394,6 +2442,10 @@
       },
       {
         "name": "tooltip",
+        "type": "string"
+      },
+      {
+        "name": "tooltip",
         "type": "boolean"
       }
     ],
@@ -2517,6 +2569,14 @@
       {
         "name": "options",
         "type": "array"
+      },
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "value",
+        "type": "string"
       },
       {
         "name": "placeholder",

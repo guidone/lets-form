@@ -1,9 +1,37 @@
-import React, { useState } from 'react';
-import _ from 'lodash';
-// TODO togliere
-import { IconButton } from 'rsuite';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useCallback } from 'react';
+import classNames from 'classnames';
 
 import { PlusCircle, MinusCircle } from '../../../assets/icons';
+
+const IconButton = ({
+  disabled = false,
+  className,
+  icon: Icon,
+  onClick
+}) => {
+  const handleClick = useCallback(
+    e => {
+      e.preventDefault();
+      if (!disabled) {
+        onClick();
+      }
+    },
+    [disabled, onClick]
+  );
+
+  return (
+    <a
+      href="#"
+      className={classNames('lf-icon-button', className, {
+        disabled
+      })}
+      onClick={handleClick}
+    >
+      {Icon}
+    </a>
+  );
+}
 
 
 const ArrayItem = ({
