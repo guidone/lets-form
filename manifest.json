@@ -26,27 +26,33 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "placeholder",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Placeholder text, visibile when the field is empty"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       },
       {
         "name": "inputMode",
@@ -155,7 +161,8 @@
     "react": [
       {
         "name": "fullWidth",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Set the width of the container field to 100%"
       },
       {
         "name": "width",
@@ -167,6 +174,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "md",
@@ -176,7 +184,8 @@
       },
       {
         "name": "fullWidth",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Set the width of the container field to 100%"
       },
       {
         "name": "width",
@@ -185,7 +194,8 @@
       },
       {
         "name": "prefix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed heading text"
       },
       {
         "name": "inside",
@@ -194,7 +204,8 @@
       },
       {
         "name": "postfix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed trailing text"
       },
       {
         "name": "tooltip",
@@ -215,7 +226,8 @@
       },
       {
         "name": "fullWidth",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Set the width of the container field to 100%"
       },
       {
         "name": "width",
@@ -225,6 +237,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "small",
           "medium"
@@ -253,17 +266,20 @@
       },
       {
         "name": "prefix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed heading text"
       },
       {
         "name": "postfix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed trailing text"
       }
     ],
     "react-bootstrap": [
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "sm"
@@ -271,7 +287,8 @@
       },
       {
         "name": "fullWidth",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Set the width of the container field to 100%"
       },
       {
         "name": "width",
@@ -280,11 +297,13 @@
       },
       {
         "name": "prefix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed heading text"
       },
       {
         "name": "postfix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed trailing text"
       },
       {
         "name": "floatingLabel",
@@ -296,6 +315,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "small",
           "default",
@@ -304,7 +324,8 @@
       },
       {
         "name": "fullWidth",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Set the width of the container field to 100%"
       },
       {
         "name": "width",
@@ -313,11 +334,13 @@
       },
       {
         "name": "prefix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed heading text"
       },
       {
         "name": "postfix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed trailing text"
       },
       {
         "name": "showCount",
@@ -360,29 +383,35 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "md",
@@ -408,6 +437,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "small",
           "medium",
@@ -446,6 +476,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "default",
           "small"
@@ -543,31 +574,22 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "placeholder",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Placeholder text, visibile when the field is empty"
       },
       {
         "name": "options",
         "type": "array"
-      },
-      {
-        "name": "value",
-        "type": "string"
-      },
-      {
-        "name": "label",
-        "type": "string | i18n"
-      },
-      {
-        "name": "image",
-        "type": "string"
       },
       {
         "name": "showImageOptions",
@@ -584,21 +606,25 @@
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react": [
       {
         "name": "fullWidth",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Set the width of the container field to 100%"
       },
       {
         "name": "width",
@@ -629,6 +655,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "md",
@@ -672,6 +699,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "small",
           "medium"
@@ -679,7 +707,8 @@
       },
       {
         "name": "fullWidth",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Set the width of the container field to 100%"
       },
       {
         "name": "width",
@@ -705,6 +734,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "sm"
@@ -724,6 +754,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "small",
           "default",
@@ -792,11 +823,13 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       },
       {
         "name": "align",
@@ -901,7 +934,8 @@
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "frameworks": [
@@ -1005,7 +1039,8 @@
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "frameworks": [
@@ -1045,23 +1080,28 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       },
       {
         "name": "layout",
@@ -1107,33 +1147,40 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "placeholder",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Placeholder text, visibile when the field is empty"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "md",
@@ -1143,7 +1190,8 @@
       },
       {
         "name": "fullWidth",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Set the width of the container field to 100%"
       },
       {
         "name": "width",
@@ -1168,7 +1216,8 @@
       },
       {
         "name": "prefix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed heading text"
       },
       {
         "name": "inside",
@@ -1177,7 +1226,8 @@
       },
       {
         "name": "postfix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed trailing text"
       },
       {
         "name": "tooltip",
@@ -1215,6 +1265,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "small",
           "default",
@@ -1277,23 +1328,28 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
@@ -1336,20 +1392,13 @@
         "name": "marks",
         "type": "array",
         "description": "Customize labels on the render ruler"
-      },
-      {
-        "name": "value",
-        "type": "number"
-      },
-      {
-        "name": "label",
-        "type": "string | i18n"
       }
     ],
     "react-material-ui": [
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "small",
           "medium"
@@ -1381,7 +1430,8 @@
       },
       {
         "name": "fullWidth",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Set the width of the container field to 100%"
       },
       {
         "name": "width",
@@ -1406,14 +1456,6 @@
         "name": "customMarks",
         "type": "array",
         "description": "Customize labels on the render ruler"
-      },
-      {
-        "name": "value",
-        "type": "number"
-      },
-      {
-        "name": "label",
-        "type": "string"
       }
     ],
     "react-bootstrap": [
@@ -1489,14 +1531,6 @@
         "description": "Customize labels on the render ruler"
       },
       {
-        "name": "value",
-        "type": "number"
-      },
-      {
-        "name": "label",
-        "type": "string | i18n"
-      },
-      {
         "name": "included",
         "type": "boolean",
         "description": "Make effect when marks not null, true means containment and false means coordinative"
@@ -1529,27 +1563,33 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "placeholder",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Placeholder text, visibile when the field is empty"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
@@ -1594,6 +1634,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "md",
@@ -1637,7 +1678,8 @@
       },
       {
         "name": "fullWidth",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Set the width of the container field to 100%"
       },
       {
         "name": "disableFuture",
@@ -1680,6 +1722,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "sm"
@@ -1687,11 +1730,13 @@
       },
       {
         "name": "prefix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed heading text"
       },
       {
         "name": "postfix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed trailing text"
       },
       {
         "name": "floatingLabel",
@@ -1703,6 +1748,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "small",
           "default",
@@ -1797,23 +1843,28 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
@@ -1827,6 +1878,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "small",
           "medium",
@@ -1881,35 +1933,32 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "options",
         "type": "array"
       },
       {
-        "name": "value",
-        "type": "string"
-      },
-      {
-        "name": "label",
-        "type": "string | i18n"
-      },
-      {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
@@ -1950,35 +1999,32 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "options",
         "type": "array"
       },
       {
-        "name": "value",
-        "type": "string"
-      },
-      {
-        "name": "label",
-        "type": "string | i18n"
-      },
-      {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
@@ -2004,6 +2050,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "small",
           "default",
@@ -2038,23 +2085,28 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
@@ -2076,6 +2128,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "md",
@@ -2106,27 +2159,33 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "placeholder",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Placeholder text, visibile when the field is empty"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
@@ -2162,6 +2221,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "md",
@@ -2171,7 +2231,8 @@
       },
       {
         "name": "prefix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed heading text"
       },
       {
         "name": "inside",
@@ -2180,7 +2241,8 @@
       },
       {
         "name": "postfix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed trailing text"
       }
     ],
     "frameworks": [
@@ -2199,33 +2261,40 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "placeholder",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Placeholder text, visibile when the field is empty"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react": [
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "1",
           "3-4",
@@ -2260,6 +2329,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "sm"
@@ -2274,6 +2344,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "small",
           "default",
@@ -2329,23 +2400,28 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
@@ -2382,6 +2458,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "md",
@@ -2399,6 +2476,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "small",
           "medium",
@@ -2442,10 +2520,6 @@
       },
       {
         "name": "tooltip",
-        "type": "string"
-      },
-      {
-        "name": "tooltip",
         "type": "boolean"
       }
     ],
@@ -2468,11 +2542,13 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "text",
@@ -2481,7 +2557,8 @@
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
@@ -2560,39 +2637,37 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "options",
         "type": "array"
       },
       {
-        "name": "label",
-        "type": "string"
-      },
-      {
-        "name": "value",
-        "type": "string"
-      },
-      {
         "name": "placeholder",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Placeholder text, visibile when the field is empty"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
@@ -2618,6 +2693,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "md",
@@ -2653,6 +2729,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "small",
           "default",
@@ -2753,27 +2830,33 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "placeholder",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Placeholder text, visibile when the field is empty"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
@@ -2799,6 +2882,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "md",
@@ -2835,33 +2919,40 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "placeholder",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Placeholder text, visibile when the field is empty"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "md",
@@ -2899,8 +2990,7 @@
     "common": [
       {
         "name": "name",
-        "type": "string",
-        "description": null
+        "type": "string"
       },
       {
         "name": "url",
@@ -2933,7 +3023,8 @@
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "frameworks": [
@@ -2992,13 +3083,15 @@
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "md",
@@ -3044,7 +3137,8 @@
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "frameworks": [
@@ -3075,27 +3169,33 @@
       },
       {
         "name": "label",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Label of the field"
       },
       {
         "name": "hint",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "placeholder",
-        "type": "string | i18n"
+        "type": "string | i18n",
+        "description": "Placeholder text, visibile when the field is empty"
       },
       {
         "name": "disabled",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Disables and greys out the field"
       },
       {
         "name": "readOnly",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Put the field in read only mode"
       },
       {
         "name": "hidden",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Hides the field from the form"
       }
     ],
     "react-rsuite5": [
@@ -3140,6 +3240,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "md",
@@ -3183,7 +3284,8 @@
       },
       {
         "name": "fullWidth",
-        "type": "boolean"
+        "type": "boolean",
+        "description": "Set the width of the container field to 100%"
       },
       {
         "name": "disableFuture",
@@ -3226,6 +3328,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "lg",
           "sm"
@@ -3233,11 +3336,13 @@
       },
       {
         "name": "prefix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed heading text"
       },
       {
         "name": "postfix",
-        "type": "string"
+        "type": "string",
+        "description": "Fixed trailing text"
       },
       {
         "name": "floatingLabel",
@@ -3249,6 +3354,7 @@
       {
         "name": "size",
         "type": "string",
+        "description": "Size of the field",
         "options": [
           "small",
           "default",

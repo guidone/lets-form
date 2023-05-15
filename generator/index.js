@@ -221,10 +221,10 @@ const makeTransformer = (str, fieldList) => {
   if (_.isEmpty(str)) {
     return null;
   }
-
+  // yielding is manual
   const yieldedStr = str.replaceAll(
-    /((setValue|hide|show|enable|disable|show|hide|arraySetValue)\(.*?\)[;]{0,1})/g,
-    '$& yield Promise.resolve(api.fields());\n'
+    "yield();",
+    'yield Promise.resolve(api.fields());\n'
   );
 
   try {
@@ -753,17 +753,35 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const handleChange = useCallback(
       async (values, fieldName) => {
 
+        // execute main transformer
+        let newFields = formFields;
+        if (!_.isEmpty(transformers.onRender)) {
+          for await(const f of applyTransformers(
+            formName,
+            framework,
+            newFields,
+            transformers.onRender,
+            values,
+            onJavascriptError
+          )) {
+            newFields = f;
+            if (f !== formFields) {
+              setFormFields(f);
+            }
+          }
+        }
         // if the changed field has a transformer
         if (transformers.onChange != null && !_.isEmpty(transformers.onChange[fieldName])) {
           // execute the async generator transformer
           for await(const f of applyTransformers(
             formName,
             framework,
-            formFields,
+            newFields,
             transformers.onChange[fieldName],
             values,
             onJavascriptError
           )) {
+            newFields = f;
             if (f !== formFields) {
               setFormFields(f);
             }

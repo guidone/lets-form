@@ -20,16 +20,16 @@ const reduceFields = (
   fields.forEach(field => {
     result = predicate(field, result);
     if (field.component === 'group' && options.group) {
-      result = reduceFields(field.fields, predicate, result);
+      result = reduceFields(field.fields, predicate, result, opts);
     } else if (field.component === 'array' && options.array) {
-      result = reduceFields(field.fields, predicate, result);
+      result = reduceFields(field.fields, predicate, result, opts);
     } else if (field.component === 'two-columns' && options['two-columns']) {
-      result = reduceFields(field.leftFields, predicate, result);
-      result = reduceFields(field.rightFields, predicate, result);
+      result = reduceFields(field.leftFields, predicate, result, opts);
+      result = reduceFields(field.rightFields, predicate, result, opts);
     } else if (field.component === 'three-columns' && options['three-columns']) {
-      result = reduceFields(field.leftFields, predicate, result);
-      result = reduceFields(field.centerFields, predicate, result);
-      result = reduceFields(field.rightFields, predicate, result);
+      result = reduceFields(field.leftFields, predicate, result, opts);
+      result = reduceFields(field.centerFields, predicate, result, opts);
+      result = reduceFields(field.rightFields, predicate, result, opts);
     }
   });
 

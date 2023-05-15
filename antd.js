@@ -449,9 +449,8 @@ var IfNotPlaintext = function IfNotPlaintext(_ref2) {
 
 
 
-//export * from './react-generic-input';
-//export * from './rsuite-generic-date';
-//export * from './react-generic-checkbox';
+// WARNING: do not import framework specific component here or it will
+// include UI library into a wrong package (i.e., rsuite into lets-form/antd)
 
 /***/ }),
 
@@ -744,7 +743,8 @@ var makeTransformer = function makeTransformer(str, fieldList) {
   if (lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default()(str)) {
     return null;
   }
-  var yieldedStr = str.replaceAll(/((setValue|hide|show|enable|disable|show|hide|arraySetValue)\(.*?\)[;]{0,1})/g, '$& yield Promise.resolve(api.fields());\n');
+  // yielding is manual
+  var yieldedStr = str.replaceAll("yield();", 'yield Promise.resolve(api.fields());\n');
   try {
     var spreadVars = '';
     if (!lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default()(fieldList)) {
@@ -1336,70 +1336,127 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
     }, [defaultValues, reset]);
     var handleChange = (0,react__WEBPACK_IMPORTED_MODULE_5__.useCallback)( /*#__PURE__*/function () {
       var _ref7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(values, fieldName) {
-        var _iteratorAbruptCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, f;
+        var newFields, _iteratorAbruptCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, f, _iteratorAbruptCompletion4, _didIteratorError4, _iteratorError4, _iterator4, _step4, _f;
         return _regeneratorRuntime().wrap(function _callee2$(_context2) {
           while (1) switch (_context2.prev = _context2.next) {
             case 0:
-              if (!(transformers.onChange != null && !lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default()(transformers.onChange[fieldName]))) {
-                _context2.next = 29;
+              // execute main transformer
+              newFields = formFields;
+              if (lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default()(transformers.onRender)) {
+                _context2.next = 31;
                 break;
               }
-              // execute the async generator transformer
               _iteratorAbruptCompletion3 = false;
               _didIteratorError3 = false;
-              _context2.prev = 3;
-              _iterator3 = _asyncIterator((0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .applyTransformers */ .Zr)(formName, framework, formFields, transformers.onChange[fieldName], values, onJavascriptError));
-            case 5:
-              _context2.next = 7;
+              _context2.prev = 4;
+              _iterator3 = _asyncIterator((0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .applyTransformers */ .Zr)(formName, framework, newFields, transformers.onRender, values, onJavascriptError));
+            case 6:
+              _context2.next = 8;
               return _iterator3.next();
-            case 7:
+            case 8:
               if (!(_iteratorAbruptCompletion3 = !(_step3 = _context2.sent).done)) {
-                _context2.next = 13;
+                _context2.next = 15;
                 break;
               }
               f = _step3.value;
+              newFields = f;
               if (f !== formFields) {
                 setFormFields(f);
               }
-            case 10:
+            case 12:
               _iteratorAbruptCompletion3 = false;
-              _context2.next = 5;
-              break;
-            case 13:
-              _context2.next = 19;
+              _context2.next = 6;
               break;
             case 15:
-              _context2.prev = 15;
-              _context2.t0 = _context2["catch"](3);
+              _context2.next = 21;
+              break;
+            case 17:
+              _context2.prev = 17;
+              _context2.t0 = _context2["catch"](4);
               _didIteratorError3 = true;
               _iteratorError3 = _context2.t0;
-            case 19:
-              _context2.prev = 19;
-              _context2.prev = 20;
+            case 21:
+              _context2.prev = 21;
+              _context2.prev = 22;
               if (!(_iteratorAbruptCompletion3 && _iterator3.return != null)) {
-                _context2.next = 24;
+                _context2.next = 26;
                 break;
               }
-              _context2.next = 24;
+              _context2.next = 26;
               return _iterator3.return();
-            case 24:
-              _context2.prev = 24;
+            case 26:
+              _context2.prev = 26;
               if (!_didIteratorError3) {
-                _context2.next = 27;
+                _context2.next = 29;
                 break;
               }
               throw _iteratorError3;
-            case 27:
-              return _context2.finish(24);
-            case 28:
-              return _context2.finish(19);
             case 29:
-              onChange(values);
+              return _context2.finish(26);
             case 30:
+              return _context2.finish(21);
+            case 31:
+              if (!(transformers.onChange != null && !lodash_isEmpty__WEBPACK_IMPORTED_MODULE_3___default()(transformers.onChange[fieldName]))) {
+                _context2.next = 61;
+                break;
+              }
+              // execute the async generator transformer
+              _iteratorAbruptCompletion4 = false;
+              _didIteratorError4 = false;
+              _context2.prev = 34;
+              _iterator4 = _asyncIterator((0,_helpers__WEBPACK_IMPORTED_MODULE_9__/* .applyTransformers */ .Zr)(formName, framework, newFields, transformers.onChange[fieldName], values, onJavascriptError));
+            case 36:
+              _context2.next = 38;
+              return _iterator4.next();
+            case 38:
+              if (!(_iteratorAbruptCompletion4 = !(_step4 = _context2.sent).done)) {
+                _context2.next = 45;
+                break;
+              }
+              _f = _step4.value;
+              newFields = _f;
+              if (_f !== formFields) {
+                setFormFields(_f);
+              }
+            case 42:
+              _iteratorAbruptCompletion4 = false;
+              _context2.next = 36;
+              break;
+            case 45:
+              _context2.next = 51;
+              break;
+            case 47:
+              _context2.prev = 47;
+              _context2.t1 = _context2["catch"](34);
+              _didIteratorError4 = true;
+              _iteratorError4 = _context2.t1;
+            case 51:
+              _context2.prev = 51;
+              _context2.prev = 52;
+              if (!(_iteratorAbruptCompletion4 && _iterator4.return != null)) {
+                _context2.next = 56;
+                break;
+              }
+              _context2.next = 56;
+              return _iterator4.return();
+            case 56:
+              _context2.prev = 56;
+              if (!_didIteratorError4) {
+                _context2.next = 59;
+                break;
+              }
+              throw _iteratorError4;
+            case 59:
+              return _context2.finish(56);
+            case 60:
+              return _context2.finish(51);
+            case 61:
+              onChange(values);
+            case 62:
             case "end":
               return _context2.stop();
           }
-        }, _callee2, null, [[3, 15, 19, 29], [20,, 24, 28]]);
+        }, _callee2, null, [[4, 17, 21, 31], [22,, 26, 30], [34, 47, 51, 61], [52,, 56, 60]]);
       }));
       return function (_x2, _x3) {
         return _ref7.apply(this, arguments);
@@ -1933,16 +1990,16 @@ var reduceFields = function reduceFields(fields, predicate) {
   fields.forEach(function (field) {
     result = predicate(field, result);
     if (field.component === 'group' && options.group) {
-      result = reduceFields(field.fields, predicate, result);
+      result = reduceFields(field.fields, predicate, result, opts);
     } else if (field.component === 'array' && options.array) {
-      result = reduceFields(field.fields, predicate, result);
+      result = reduceFields(field.fields, predicate, result, opts);
     } else if (field.component === 'two-columns' && options['two-columns']) {
-      result = reduceFields(field.leftFields, predicate, result);
-      result = reduceFields(field.rightFields, predicate, result);
+      result = reduceFields(field.leftFields, predicate, result, opts);
+      result = reduceFields(field.rightFields, predicate, result, opts);
     } else if (field.component === 'three-columns' && options['three-columns']) {
-      result = reduceFields(field.leftFields, predicate, result);
-      result = reduceFields(field.centerFields, predicate, result);
-      result = reduceFields(field.rightFields, predicate, result);
+      result = reduceFields(field.leftFields, predicate, result, opts);
+      result = reduceFields(field.centerFields, predicate, result, opts);
+      result = reduceFields(field.rightFields, predicate, result, opts);
     }
   });
   return result;
@@ -3002,7 +3059,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .lf-control-input-
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-select-option-antd img{width:20px;max-width:20px;max-height:20px;margin-top:-2px}", "",{"version":3,"sources":["webpack://./react-antd/select/select.scss"],"names":[],"mappings":"AAEI,mCACE,UAAA,CACA,cAAA,CACA,eAAA,CAEA,eAAA","sourcesContent":["\n  .lf-control-select-option-antd {\n    img {\n      width: 20px;\n      max-width: 20px;\n      max-height: 20px;\n      //margin-right: 6px;\n      margin-top: -2px;\n    }\n  }\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-select-option-antd img{width:20px;max-width:20px;max-height:20px;vertical-align:middle;margin-top:-2px}", "",{"version":3,"sources":["webpack://./react-antd/select/select.scss"],"names":[],"mappings":"AAEI,mCACE,UAAA,CACA,cAAA,CACA,eAAA,CACA,qBAAA,CACA,eAAA","sourcesContent":["\n  .lf-control-select-option-antd {\n    img {\n      width: 20px;\n      max-width: 20px;\n      max-height: 20px;\n      vertical-align: middle;\n      margin-top: -2px;\n    }\n  }\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

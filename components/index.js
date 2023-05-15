@@ -2,6 +2,5 @@ export * from './validation-errors';
 export * from './required-icon';
 export * from './i18n';
 export * from './plaintext';
-//export * from './react-generic-input';
-//export * from './rsuite-generic-date';
-//export * from './react-generic-checkbox';
+// WARNING: do not import framework specific component here or it will
+// include UI library into a wrong package (i.e., rsuite into lets-form/antd)
