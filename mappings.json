@@ -1,5 +1,5 @@
 {
-  "text-input": {
+  "input-text": {
     "name": null,
     "label": null,
     "hint": null,
@@ -462,7 +462,8 @@
       "react-antd"
     ],
     "fullWidth": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-bootstrap"
     ],
     "disableFuture": [
       "react-material-ui"
@@ -491,6 +492,9 @@
     "minDate": [
       "react-material-ui"
     ],
+    "views": [
+      "react-material-ui"
+    ],
     "prefix": [
       "react-bootstrap"
     ],
@@ -501,6 +505,7 @@
       "react-bootstrap"
     ],
     "width": [
+      "react-bootstrap",
       "react-antd"
     ],
     "bordered": [
@@ -958,7 +963,8 @@
     "hint": null,
     "hidden": null,
     "size": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ],
     "appearance": [
       "react-rsuite5"
@@ -1017,7 +1023,8 @@
       "react-antd"
     ],
     "fullWidth": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-bootstrap"
     ],
     "disableFuture": [
       "react-material-ui"
@@ -1046,6 +1053,9 @@
     "minDate": [
       "react-material-ui"
     ],
+    "views": [
+      "react-material-ui"
+    ],
     "prefix": [
       "react-bootstrap"
     ],
@@ -1056,6 +1066,7 @@
       "react-bootstrap"
     ],
     "width": [
+      "react-bootstrap",
       "react-antd"
     ],
     "bordered": [
@@ -1067,19 +1078,10 @@
     "tooltip": [
       "react-antd"
     ],
-    "showTime": [
-      "react-antd"
-    ],
     "showNow": [
       "react-antd"
     ],
     "showToday": [
-      "react-antd"
-    ],
-    "picker": [
-      "react-antd"
-    ],
-    "mode": [
       "react-antd"
     ],
     "validationMinLength": "validation",

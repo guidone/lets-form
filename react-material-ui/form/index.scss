@@ -14,4 +14,17 @@
   .lf-toolbar {
     margin-top: 15px; // TODO perhaps use form margins
   }
+
+  [class^=lf-control]:not(:last-child) {
+    margin-bottom: var(--lf-field-margin);
+  }
 }
+
+/*.lf-form-react-material-ui {
+  &.lf-form-react-material-ui-plaintext {
+    [class^=lf-control]:not(:last-child) {
+      margin-bottom: var(--lf-field-margin);
+    }
+  }
+
+}*/

@@ -14,11 +14,12 @@ import { ReactView } from './react-view';
 import { Placeholder } from './placeholder';
 import { Select } from './select';
 import { DateInput } from './date';
+import { ListArray } from './array';
 //import { Toggle } from './toggle';
 import { DateTime } from './datetime';
 
 const Fields = {
-  'text-input': {
+  'input-text': {
     'react': TextInput
   },
   'checkbox': {
@@ -53,6 +54,9 @@ const Fields = {
   },
   'datetime': {
     'react': DateTime
+  },
+  'array': {
+    'react': ListArray
   }
   // Removed, doesn't work
   /*'toggle': {

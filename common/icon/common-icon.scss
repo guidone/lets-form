@@ -1,0 +1,21 @@
+.lf-common-icon {
+  img {
+    max-width: 32px;
+    max-height: 32px;
+  }
+
+  &.small {
+    img {
+      max-width: 24px;
+      max-height: 24px;
+
+    }
+  }
+
+  &.large {
+    img {
+      max-width: 40px;
+      max-height: 40px;
+    }
+  }
+}

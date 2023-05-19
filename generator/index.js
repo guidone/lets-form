@@ -870,6 +870,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper)
         + ' form=' + (prevProps.form === nextProps.form)
         + ' locale=' + (prevProps.locale === nextProps.locale)
+        + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext)
       );
     }
 
@@ -877,7 +878,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       && prevProps.onChange === nextProps.onChange
       && prevProps.wrapper === nextProps.wrapper
       && prevProps.form === nextProps.form
-      && prevProps.locale === nextProps.locale;
+      && prevProps.locale === nextProps.locale
+      && prevProps.plaintext === nextProps.plaintext;
     console.log('Is re-rendering?', !isEqual);
     return isEqual;
   });

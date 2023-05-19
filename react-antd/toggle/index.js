@@ -31,7 +31,7 @@ const Toggle = I18N(
     ...rest
   }) => {
     const handleChange = useCallback(
-      e => onChange(e.target.checked),
+      checked => onChange(checked),
       [onChange]
     );
 

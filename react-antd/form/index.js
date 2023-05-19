@@ -1,14 +1,8 @@
 import React from 'react';
-import { Form, Space, Button } from 'antd';
+import { Form, Button } from 'antd';
 import classNames from 'classnames';
 
 import './index.scss';
-
-const ANTD_ALIGN_MAPPING = {
-  left: 'start',
-  center: 'center',
-  right: 'end'
-};
 
 const buildColObject = (span, offset) => {
   if (span || offset) {
@@ -35,9 +29,12 @@ const FormAntD = ({
   layout,
   disabled,
   size,
+  hideToolbar = false,
+  onlyFields = false,
   labelSubmit = 'Submit',
   labelCancel = 'Cancel',
   readOnly,
+  plaintext,
   defaultValues,
   labelColSpan,
   labelColOffset,
@@ -48,6 +45,7 @@ const FormAntD = ({
   return (
     <Form
       className={classNames('lf-form lf-form-react-antd', {
+        'lf-form-react-antd-plaintext': plaintext,
         [buttonsAlign ? `lf-form-buttons-align-${buttonsAlign}` : undefined]: true
       })}
       data-lf-form-name={name}
@@ -60,23 +58,18 @@ const FormAntD = ({
       labelCol={buildColObject(labelColSpan, labelColOffset)}
       wrapperCol={buildColObject(wrapperColSpan, wrapperColOffset)}
       size={size}
-
-
-      //style={{ maxWidth: 600 }}
       initialValues={defaultValues}
-      //onFinish={onFinish}
-      //onFinishFailed={onFinishFailed}
       autoComplete="off"
     >
       {children}
-      <div className="lf-toolbar">
-                  <Button type="primary" onClick={onSubmit}>{labelSubmit}</Button>
+      {!hideToolbar && !onlyFields && !plaintext && (
+        <div className="lf-toolbar">
+          <Button type="primary" onClick={onSubmit}>{labelSubmit}</Button>
           <Button onClick={onReset}>{labelCancel}</Button>
-
       </div>
+      )}
     </Form>
-  )
-
+  );
 };
 
 export { FormAntD as Form };

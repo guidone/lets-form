@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
 import Form from 'react-bootstrap/Form';
 
-import { RequiredIcon, I18N } from '../../components';
+import { RequiredIcon, I18N, IfNotPlaintext } from '../../components';
 
 const CheckboxGroupBootstrap = I18N(
   ({
@@ -40,41 +40,46 @@ const CheckboxGroupBootstrap = I18N(
 
     return (
       <Form.Group
-        className="lf-control-checkbox-group mb-3"
+        className="lf-control-checkbox-group"
         data-lf-field-name={name}
       >
         <Form.Label>
           {label}
           {required && <RequiredIcon />}
         </Form.Label>
-        <div>
-          {(options ?? []).map(({ value, label}, idx) => (
-            <Form.Check
-              type="checkbox"
-              key={value}
-              reverse={reverse}
-              inline={inline}
-            >
-              <Form.Check.Input
-                disabled={disabled}
-                value={value}
-                name={name}
-                isInvalid={error != null}
-                checked={values.includes(value)}
-                onChange={handleChange}
-                {...(_.omit(rest, 'lfFramework', 'lfComponent'))}
-              />
-              {label && <Form.Check.Label>{label}</Form.Check.Label>}
-              {_.isString(error) && !_.isEmpty(error) && (idx === (options.length -1)) && (
-                <Form.Control.Feedback type="invalid">{error}</Form.Control.Feedback>
-              )}
-            </Form.Check>
-          ))}
-        </div>
-        {hint && <Form.Text>{hint}</Form.Text>}
-        {_.isString(error) && !_.isEmpty(error) && (
-          <Form.Control.Feedback type="invalid">{error}</Form.Control.Feedback>
-        )}
+        <IfNotPlaintext component="checkbox-group" plaintext={plaintext} options={options} value={value}>
+          <>
+            <div>
+              {(options ?? []).map(({ value, label}, idx) => (
+                <Form.Check
+                  type="checkbox"
+                  key={value}
+                  reverse={reverse}
+                  inline={inline}
+                >
+                  <Form.Check.Input
+                    disabled={disabled}
+                    value={value}
+                    name={name}
+                    isInvalid={error != null}
+                    checked={values.includes(value)}
+                    onChange={handleChange}
+                    {...(_.omit(rest, 'lfFramework', 'lfComponent'))}
+                  />
+                  {label && <Form.Check.Label>{label}</Form.Check.Label>}
+                  {_.isString(error) && !_.isEmpty(error) && (idx === (options.length -1)) && (
+                    <Form.Control.Feedback type="invalid">{error}</Form.Control.Feedback>
+                  )}
+                </Form.Check>
+              ))}
+            </div>
+            {hint && <Form.Text>{hint}</Form.Text>}
+            {_.isString(error) && !_.isEmpty(error) && (
+              <Form.Control.Feedback type="invalid">{error}</Form.Control.Feedback>
+            )}
+          </>
+        </IfNotPlaintext>
+
       </Form.Group>
     );
   },

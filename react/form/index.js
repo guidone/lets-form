@@ -8,6 +8,8 @@ const FormReact = ({
   children,
   buttonsAlign,
   hideToolbar = false,
+  onlyFields = false,
+  plaintext,
   labelSubmit = 'Submit',
   labelCancel = 'Cancel',
   onSubmit = () => {},
@@ -24,7 +26,7 @@ const FormReact = ({
       data-lf-form-name={name}
     >
       {children}
-      {!hideToolbar && (
+      {!hideToolbar && !onlyFields && !plaintext && (
         <div className="lf-toolbar">
           <button
             type="submit"

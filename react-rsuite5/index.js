@@ -31,7 +31,7 @@ import { Divider } from './divider';
 import { ReactView } from './react-view';
 
 const Fields = {
-  'text-input': {
+  'input-text': {
     'react-rsuite5': TextInput
   },
   'toggle': {

@@ -1,20 +1,37 @@
 {
-  "text-input": {
+  "input-text": {
     "label": "Text Input",
     "category": "general",
     "documentation": "https://github.com/guidone/lets-form/wiki/Input-text",
-    "name": "text-input",
+    "name": "input-text",
     "description": "Basic input text",
     "defaultValues": {
+      "react": {
+        "react": {
+          "fullWidth": true
+        }
+      },
+      "react-bootstrap": {
+        "react-bootstrap": {
+          "fullWidth": true
+        }
+      },
+      "react-rsuite5": {
+        "react-rsuite5": {
+          "fullWidth": true
+        }
+      },
       "react-material-ui": {
         "react-material-ui": {
           "variant": "standard",
-          "floatingLabel": true
+          "floatingLabel": true,
+          "fullWidth": true
         }
       },
       "react-antd": {
         "react-antd": {
-          "bordered": true
+          "bordered": true,
+          "fullWidth": true
         }
       }
     },
@@ -1121,7 +1138,11 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-material-ui",
+      "react",
+      "react-bootstrap",
+      "react-antd"
     ]
   },
   "input-number": {
@@ -1553,6 +1574,14 @@
           "bordered": true,
           "picker": "date"
         }
+      },
+      "react-material-ui": {
+        "react-material-ui": {
+          "views": [
+            "day",
+            "year"
+          ]
+        }
       }
     },
     "common": [
@@ -1716,6 +1745,15 @@
       {
         "name": "minDate",
         "type": "date"
+      },
+      {
+        "name": "views",
+        "type": "[string]",
+        "options": [
+          "day",
+          "month",
+          "year"
+        ]
       }
     ],
     "react-bootstrap": [
@@ -1742,6 +1780,16 @@
         "name": "floatingLabel",
         "type": "boolean",
         "description": "Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the container field to 100%"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Size of the field in pixel"
       }
     ],
     "react-antd": [
@@ -1925,6 +1973,94 @@
     "label": "Checkbox Group",
     "category": "general",
     "name": "checkbox-group",
+    "defaultValues": {
+      "react-rsuite5": {
+        "inline": true,
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react-bootstrap": {
+        "inline": true,
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react": {
+        "inline": true,
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react-antd": {
+        "optionType": "default",
+        "inline": true,
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react-material-ui": {
+        "inline": true,
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      }
+    },
     "common": [
       {
         "name": "name",
@@ -1991,6 +2127,94 @@
     "label": "Radio Group",
     "category": "general",
     "name": "radio-group",
+    "defaultValues": {
+      "react-rsuite5": {
+        "inline": true,
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react-bootstrap": {
+        "inline": true,
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react": {
+        "inline": true,
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react-antd": {
+        "optionType": "default",
+        "inline": true,
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react-material-ui": {
+        "inline": true,
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      }
+    },
     "common": [
       {
         "name": "name",
@@ -2900,88 +3124,6 @@
       "react-rsuite5"
     ]
   },
-  "input-text-i18n": {
-    "label": "Text Input i18n",
-    "category": "advanced",
-    "name": "input-text-i18n",
-    "description": "Input text in different languages",
-    "defaultValues": {
-      "react-rsuite5": {
-        "textarea": false,
-        "rows": 3
-      }
-    },
-    "common": [
-      {
-        "name": "name",
-        "type": "string",
-        "description": "The name of the field and the key of the JSON"
-      },
-      {
-        "name": "label",
-        "type": "string | i18n",
-        "description": "Label of the field"
-      },
-      {
-        "name": "hint",
-        "type": "string | i18n",
-        "description": "Help text for the field (generally shown below the input box)"
-      },
-      {
-        "name": "placeholder",
-        "type": "string | i18n",
-        "description": "Placeholder text, visibile when the field is empty"
-      },
-      {
-        "name": "disabled",
-        "type": "boolean",
-        "description": "Disables and greys out the field"
-      },
-      {
-        "name": "readOnly",
-        "type": "boolean",
-        "description": "Put the field in read only mode"
-      },
-      {
-        "name": "hidden",
-        "type": "boolean",
-        "description": "Hides the field from the form"
-      }
-    ],
-    "react-rsuite5": [
-      {
-        "name": "size",
-        "type": "string",
-        "description": "Size of the field",
-        "options": [
-          "lg",
-          "md",
-          "sm",
-          "xs"
-        ]
-      },
-      {
-        "name": "width",
-        "type": "number"
-      },
-      {
-        "name": "textarea",
-        "type": "boolean"
-      },
-      {
-        "name": "rows",
-        "type": "number"
-      },
-      {
-        "name": "tooltip",
-        "type": "boolean",
-        "description": "Show hint as tooltip next to label"
-      }
-    ],
-    "frameworks": [
-      "react-rsuite5"
-    ]
-  },
   "placeholder-image": {
     "label": "Placeholder Image",
     "category": "layout",
@@ -3038,6 +3180,33 @@
     "label": "Button",
     "category": "layout",
     "name": "button",
+    "defaultValues": {
+      "react-rsuite5": {
+        "labelOn": "on",
+        "labelOff": "off",
+        "buttonType": "plain"
+      },
+      "react": {
+        "labelOn": "on",
+        "labelOff": "off",
+        "buttonType": "plain"
+      },
+      "react-bootstrap": {
+        "labelOn": "on",
+        "labelOff": "off",
+        "buttonType": "plain"
+      },
+      "react-material-ui": {
+        "labelOn": "on",
+        "labelOff": "off",
+        "buttonType": "plain"
+      },
+      "react-antd": {
+        "labelOn": "on",
+        "labelOff": "off",
+        "buttonType": "plain"
+      }
+    },
     "common": [
       {
         "name": "name",
@@ -3111,8 +3280,21 @@
         ]
       }
     ],
+    "react-antd": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "small",
+          "default",
+          "large"
+        ]
+      }
+    ],
     "frameworks": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ]
   },
   "divider": {
@@ -3158,6 +3340,16 @@
         "react-antd": {
           "bordered": true,
           "picker": "date"
+        }
+      },
+      "react-material-ui": {
+        "react-material-ui": {
+          "views": [
+            "year",
+            "day",
+            "hours",
+            "minutes"
+          ]
         }
       }
     },
@@ -3322,6 +3514,18 @@
       {
         "name": "minDate",
         "type": "date"
+      },
+      {
+        "name": "views",
+        "type": "[string]",
+        "options": [
+          "hours",
+          "minutes",
+          "seconds",
+          "day",
+          "month",
+          "year"
+        ]
       }
     ],
     "react-bootstrap": [
@@ -3348,6 +3552,16 @@
         "name": "floatingLabel",
         "type": "boolean",
         "description": "Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the container field to 100%"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Size of the field in pixel"
       }
     ],
     "react-antd": [
@@ -3378,10 +3592,6 @@
         "type": "boolean"
       },
       {
-        "name": "showTime",
-        "type": "boolean"
-      },
-      {
         "name": "showNow",
         "type": "boolean",
         "description": "Show now button"
@@ -3405,33 +3615,14 @@
         "name": "format",
         "type": "string",
         "description": "Date format, i.e. DD/MM/YYYY"
-      },
-      {
-        "name": "picker",
-        "type": "string",
-        "options": [
-          "date",
-          "week",
-          "month",
-          "quarter",
-          "year"
-        ]
-      },
-      {
-        "name": "mode",
-        "type": "string",
-        "options": [
-          "time",
-          "date",
-          "month",
-          "year",
-          "decade"
-        ]
       }
     ],
     "frameworks": [
       "react-rsuite5",
-      "react"
+      "react-material-ui",
+      "react",
+      "react-bootstrap",
+      "react-antd"
     ]
   }
 }

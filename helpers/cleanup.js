@@ -18,25 +18,42 @@ const removeEmptyKeys = obj => {
 }
 
 const removeUnusedLocalesFromI18n = (obj, locales) => {
-  const keysToRemove = Object.keys(obj).filter(key => !locales.includes(key));
-  const cleaned = !_.isEmpty(keysToRemove) ? _.omit(obj, keysToRemove) : obj;
+  if (_.isArray(locales) && !_.isEmpty(locales)) {
+    const keysToRemove = Object.keys(obj).filter(key => !locales.includes(key));
+    const cleaned = !_.isEmpty(keysToRemove) ? _.omit(obj, keysToRemove) : obj;
 
-  if (Object.keys(cleaned).length !== 0) {
-    return cleaned;
+    if (Object.keys(cleaned).length !== 0) {
+      return cleaned;
+    }
+    return null;
+  } else {
+
+    // no locales specified, so try to extract english dialect or the first available key
+    if (obj['en-US']) {
+      return obj['en-US'];
+    } else if (obj['en-GB']) {
+      return obj['en-GB'];
+    } else if (Object.keys(obj).length !== 0) {
+      return obj[Object.keys(obj)[0]];
+    }
+    return null;
   }
-  return null;
 };
 
 const removeUnusedLocalesFromObj = (obj, locales) => {
   let cloned = { ...obj };
   Object.keys(obj)
-    .filter(key => key !== 'rules') // don't apply to rules
     .forEach(key => {
       if (_.isArray(cloned[key])) {
         cloned[key] = cloned[key]
           .map(item => removeUnusedLocalesFromObj(item, locales));
       } else if (isI18n(cloned[key])) {
         cloned[key] = removeUnusedLocalesFromI18n(cloned[key], locales);
+      } else if (key === 'validation' && isI18n(cloned.validation.message)) {
+        cloned.validation = {
+          ...cloned.validation,
+          message: removeUnusedLocalesFromI18n(cloned.validation.message, locales)
+        }
       }
     });
   return cloned;
@@ -82,9 +99,7 @@ const cleanUp = json => {
         // collect all empty keys
         cloned = removeEmptyKeys(cloned);
         // cycle all keys and check if it's an i18n object
-        if (_.isArray(json.locales) && !_.isEmpty(json.locales)) {
-          cloned = removeUnusedLocalesFromObj(cloned, json.locales);
-        }
+        cloned = removeUnusedLocalesFromObj(cloned, json.locales);
         return cloned;
       }
     )

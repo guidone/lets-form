@@ -12,6 +12,8 @@ const FormBootstrap = ({
   buttonsAlign,
   onReset,
   hideToolbar = false,
+  onlyFields = false,
+  plaintext,
   labelSubmit = 'Submit',
   labelCancel = 'Cancel',
 }) => {
@@ -27,7 +29,7 @@ const FormBootstrap = ({
       <div>
         {children}
       </div>
-      {!hideToolbar && (
+      {!hideToolbar && !onlyFields && !plaintext && (
         <div className="lf-toolbar">
           <Button
             variant="primary"

@@ -34,7 +34,7 @@ const Slider = I18N(
 
     return (
       <Form.Group
-        className="lf-control-input-text mb-3"
+        className="lf-control-input-text"
         data-lf-field-name={name}
       >
         <Form.Label>

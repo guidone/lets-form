@@ -6,7 +6,8 @@ import { Form } from './form';
 import { TextInput } from './input-text';
 import { Toggle } from './toggle';
 import { Checkbox } from './checkbox';
-import { Date } from './date';
+import { AntdDate } from './date';
+import { Datetime } from './datetime';
 import { Select } from './select';
 import { RadioGroup } from './radio-group';
 import { Rate } from './rate';
@@ -21,9 +22,11 @@ import { Group } from './group';
 import { Slider } from './slider';
 import { Divider } from './divider';
 import { ReactView } from './react-view';
+import { ListArray } from './array';
+import { Button } from './button';
 
 const Fields = {
-  'text-input': {
+  'input-text': {
     'react-antd': TextInput
   },
   'toggle': {
@@ -33,7 +36,7 @@ const Fields = {
     'react-antd': Checkbox
   },
   'date': {
-    'react-antd': Date
+    'react-antd': AntdDate
   },
   'select': {
     'react-antd': Select
@@ -76,6 +79,15 @@ const Fields = {
   },
   'react-view': {
     'react-antd': ReactView
+  },
+  'datetime': {
+    'react-antd': Datetime
+  },
+  'array': {
+    'react-antd': ListArray
+  },
+  'button': {
+    'react-antd': Button
   }
 };
 

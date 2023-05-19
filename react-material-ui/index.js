@@ -11,15 +11,17 @@ import { Placeholder } from './placeholder';
 import { PlaceholderImage } from './placeholder-image';
 import { Checkbox } from './checkbox';
 import { Rate } from './rate';
-import { Date } from './date';
+import { MuiDate } from './date';
 import { ThreeColumns } from './three-columns';
 import { TwoColumns } from './two-columns';
 import { Group } from './group';
 import { Divider } from './divider';
 import { ReactView } from './react-view';
+import { MuiDateTime } from './datetime';
+import { ListArray } from './array';
 
 const Fields = {
-  'text-input': {
+  'input-text': {
     'react-material-ui': TextInput
   },
   'select': {
@@ -41,7 +43,7 @@ const Fields = {
     'react-material-ui': Rate
   },
   'date': {
-    'react-material-ui': Date
+    'react-material-ui': MuiDate
   },
   'three-columns': {
     'react-material-ui': ThreeColumns
@@ -60,6 +62,12 @@ const Fields = {
   },
   'react-view': {
     'react-material-ui': ReactView
+  },
+  'datetime': {
+    'react-material-ui': MuiDateTime
+  },
+  'array': {
+    'react-material-ui': ListArray
   }
 };
 

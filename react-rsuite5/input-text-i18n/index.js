@@ -13,6 +13,7 @@ import { Textarea } from '../textarea';
 import LOCALES from '../../common/data/locales.json';
 
 import './index.scss';
+import { isI18n } from '../../helpers';
 
 const LANGUAGES_OPTIONS = Object.keys(LOCALES['language-names'])
   .map(lang => ({
@@ -38,6 +39,20 @@ const TextareaAccepter = ({ value, ...props }) => {
       {...props}
     />
   );
+};
+
+const defaultOrEnglish = (obj) => {
+  if (isI18n(obj)) {
+    if (obj['en-US']) {
+      return obj['en-US'];
+    } else if (obj['en-GB']) {
+      return obj['en-GB'];
+    } else if (Object.keys(obj).length !== 0) {
+      return obj[Object.keys(obj)[0]];
+    }
+    return '';
+  }
+  return obj;
 };
 
 const InputTextI18N = (props) => {
@@ -128,9 +143,16 @@ const InputTextI18N = (props) => {
     [currentLanguage, currentValue, onChange]
   );
 
-  // if no locales, then use plain input text
+  // if no locales, then use plain input text, since it's possible the the value is still
+  // a 18n (in case the user switched from a multi language form to a single language form
+  // then put some defaults)
   if (_.isEmpty(locales)) {
-    return textarea ? <Textarea {...props} /> : <TextInput {...props} />;
+    const newProps = {
+      ...props,
+      value: defaultOrEnglish(value)
+    }
+
+    return textarea ? <Textarea {...newProps} /> : <TextInput {...newProps} />;
   }
   // evaluate current translated locales
   const translatedLocales = _.isObject(currentValue) ?

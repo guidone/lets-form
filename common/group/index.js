@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import classNames from 'classnames';
 
 import { ChevronUp, ChevronDown } from '../../assets/icons';
@@ -26,6 +26,13 @@ const Group = I18N(
         setIsOpen(!isOpen);
       },
       [isOpen]
+    );
+    // if open changes, then change status
+    useEffect(
+      () => {
+        setIsOpen(open);
+      },
+      [open]
     );
 
     return (

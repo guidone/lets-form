@@ -12,6 +12,7 @@ import { RadioGroup } from './radio-group';
 import { Placeholder } from './placeholder';
 import { PlaceholderImage } from './placeholder-image';
 import { Date } from './date';
+import { DateTime } from './datetime';
 import { Textarea } from './textarea';
 import { Slider } from './slider';
 import { ThreeColumns } from './three-columns';
@@ -19,9 +20,10 @@ import { TwoColumns } from './two-columns';
 import { Group } from './group';
 import { Divider } from './divider';
 import { ReactView } from './react-view';
+import { ListArray } from './array';
 
 const Fields = {
-  'text-input': {
+  'input-text': {
     'react-bootstrap': TextInput
   },
   'select': {
@@ -68,6 +70,12 @@ const Fields = {
   },
   'react-view': {
     'react-bootstrap': ReactView
+  },
+  'datetime': {
+    'react-bootstrap': DateTime
+  },
+  'array': {
+    'react-bootstrap': ListArray
   }
 };
 

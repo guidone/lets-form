@@ -33,7 +33,7 @@ const Toggle = I18N(
 
     return (
       <Form.Group
-        className="lf-control-checkbox mb-3"
+        className="lf-control-checkbox"
         data-lf-field-name={name}
       >
         <Form.Check type="switch">

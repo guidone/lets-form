@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { Form, TagPicker } from 'rsuite';
 
 import { RequiredIcon, I18N } from '../../components';
+import { makeWidthStyle, passRest } from '../../helpers';
 
 const Multiselect = I18N(
   ({
@@ -24,10 +25,17 @@ const Multiselect = I18N(
     onChange,
     onBlur,
     placement,
-    appearance
+    appearance,
+    fullWidth,
+    width,
+    ...rest
   }) => {
     return (
-      <Form.Group data-lf-field-name={name} className="lf-control-multiselect">
+      <Form.Group
+        data-lf-field-name={name}
+        className="lf-control-multiselect"
+        style={makeWidthStyle(fullWidth, width)}
+      >
         {label && (
           <Form.ControlLabel>
             {label}
@@ -50,8 +58,10 @@ const Multiselect = I18N(
           placeholder={placeholder}
           data={options || []}
           block={block}
+          style={makeWidthStyle(fullWidth, width)}
           searchable={searchable}
           cleanable={cleanable}
+          {...passRest(rest)}
         />
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>

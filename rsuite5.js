@@ -216,7 +216,7 @@ var IconCheck = function IconCheck(_ref) {
 
 /***/ }),
 
-/***/ 7556:
+/***/ 8489:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -224,11 +224,12 @@ var IconCheck = function IconCheck(_ref) {
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   "mb": () => (/* reexport */ I18N),
+  "W7": () => (/* reexport */ IfNotPlaintext),
   "T_": () => (/* reexport */ RequiredIcon),
   "qf": () => (/* reexport */ ValidationErrors)
 });
 
-// UNUSED EXPORTS: IfNotPlaintext, Plaintext
+// UNUSED EXPORTS: Plaintext
 
 // EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(1609);
@@ -387,19 +388,34 @@ var I18N = function I18N(Component) {
     return /*#__PURE__*/external_react_default().createElement(Component, newProps);
   };
 };
+// EXTERNAL MODULE: ./node_modules/lodash/isArray.js
+var isArray = __webpack_require__(1469);
+var isArray_default = /*#__PURE__*/__webpack_require__.n(isArray);
 // EXTERNAL MODULE: ./node_modules/lodash/isDate.js
 var isDate = __webpack_require__(7960);
+var isDate_default = /*#__PURE__*/__webpack_require__.n(isDate);
 ;// CONCATENATED MODULE: ./components/plaintext/locales/yes.json
-const yes_namespaceObject = {};
+const yes_namespaceObject = JSON.parse('{"en-US":"Yes","af-ZA":"Ja","ar":"نعم","bg-BG":"Да","ca-AD":"Sí","cs-CZ":"Ano","cy-GB":"Ie","da-DK":"Ja","de-AT":"Ja","de-CH":"Ja","de-DE":"Ja","el-GR":"Ναί","en-GB":"Yes","es-CL":"Sí","es-ES":"Sí","es-MX":"Sí","et-EE":"Jah","eu":"Bai","fa-IR":"آره","fi-FI":"Joo","fr-CA":"Oui","fr-FR":"Oui","he-IL":"כן","hi-IN":"हाँ","hr-HR":"Da","hu-HU":"Igen","id-ID":"Ya","is-IS":"Já","it-IT":"Si","ja-JP":"はい","km-KH":"បាត","ko-KR":"예","la":"Sic","lt-LT":"Taip","lv-LV":"Jā","mn-MN":"Мон","nb-NO":"Ja","nl-NL":"Ja","pl-PL":"Tak","pt-BR":"Sim","pt-PT":"Sim","ro-RO":"da","ru-RU":"Да","sk-SK":"Áno","sl-SI":"DA","sr-RS":"да","sv-SE":"Ja","th-TH":"ใช่","tr-TR":"Evet","uk-UA":"Так","vi-VN":"Đúng","zh-CN":"是的","zh-TW":"是的"}');
 ;// CONCATENATED MODULE: ./components/plaintext/locales/no.json
-const no_namespaceObject = {};
+const no_namespaceObject = JSON.parse('{"en-US":"No","af-ZA":"Geen","ar":"لا","bg-BG":"Не","ca-AD":"No","cs-CZ":"Ne","cy-GB":"Na","da-DK":"Ingen","de-AT":"NEIN","de-CH":"NEIN","de-DE":"NEIN","el-GR":"Οχι","en-GB":"No","es-CL":"No","es-ES":"No","es-MX":"No","et-EE":"Mitte","eu":"Ez-","fa-IR":"هیچ","fi-FI":"Ei","fr-CA":"Non","fr-FR":"Non","he-IL":"לא","hi-IN":"नहीं","hr-HR":"Ne","hu-HU":"Nem","id-ID":"TIDAK","is-IS":"Nei","it-IT":"No","ja-JP":"いいえ","km-KH":"ដេលក្ផាន","ko-KR":"아니요","la":"Non","lt-LT":"Ne","lv-LV":"Nē","mn-MN":"-Гүй / -битгий","nb-NO":"Nei","nl-NL":"Nee","pl-PL":"NIE","pt-BR":"Não","pt-PT":"Não","ro-RO":"Nu","ru-RU":"Нет","sk-SK":"Nie","sl-SI":"Ne","sr-RS":"Не","sv-SE":"Nej","th-TH":"เลขที่","tr-TR":"HAYIR","uk-UA":"Немає","vi-VN":"KHÔNG","zh-CN":"不","zh-TW":"不"}');
+;// CONCATENATED MODULE: ./components/plaintext/locales/element.json
+const element_namespaceObject = JSON.parse('{"en-US":"element","af-ZA":"element","ar":"عنصر","bg-BG":"Елемент","ca-AD":"element","cs-CZ":"živel","cy-GB":"elfen","da-DK":"element","de-AT":"element","de-CH":"element","de-DE":"element","el-GR":"στοιχείο","en-GB":"element","es-CL":"elemento","es-ES":"elemento","es-MX":"elemento","et-EE":"element","eu":"osagai","fa-IR":"عنصر","fi-FI":"elementti","fr-CA":"élément","fr-FR":"élément","he-IL":"אֵלֵמֶנט","hi-IN":"तत्व","hr-HR":"element","hu-HU":"elem","id-ID":"elemen","is-IS":"Element","it-IT":"elemento","ja-JP":"エレメント","km-KH":"ធាតុ","ko-KR":"요소","la":"elementum","lt-LT":"elementas","lv-LV":"elements","mn-MN":"бүрэлдэхүүн","nb-NO":"element","nl-NL":"element","pl-PL":"element","pt-BR":"elemento","pt-PT":"elemento","ro-RO":"element","ru-RU":"элемент","sk-SK":"element","sl-SI":"element","sr-RS":"елемент","sv-SE":"element","th-TH":"องค์ประกอบ","tr-TR":"eleman","uk-UA":"елемент","vi-VN":"yếu tố","zh-CN":"元素","zh-TW":"元素"}');
+;// CONCATENATED MODULE: ./components/plaintext/locales/elements.json
+const elements_namespaceObject = JSON.parse('{"en-US":"elements","af-ZA":"elemente","ar":"عناصر","bg-BG":"елементи","ca-AD":"elements","cs-CZ":"Prvky","cy-GB":"elfennau","da-DK":"elementer","de-AT":"elemente","de-CH":"elemente","de-DE":"elemente","el-GR":"στοιχεία","en-GB":"elements","es-CL":"elementos","es-ES":"elementos","es-MX":"elementos","et-EE":"elemendid","eu":"elementuak","fa-IR":"عناصر","fi-FI":"elementit","fr-CA":"éléments","fr-FR":"éléments","he-IL":"אלמנטים","hi-IN":"तत्वों","hr-HR":"elementi","hu-HU":"elemek","id-ID":"elemen","is-IS":"þættir","it-IT":"elementi","ja-JP":"要素","km-KH":"ធាតុ","ko-KR":"강요","la":"elementa","lt-LT":"elementai","lv-LV":"elementi","mn-MN":"Элэглэлт","nb-NO":"elementer","nl-NL":"elementen","pl-PL":"elementy","pt-BR":"elementos","pt-PT":"elementos","ro-RO":"elemente","ru-RU":"элементы","sk-SK":"prvky","sl-SI":"elementi","sr-RS":"елементи","sv-SE":"element","th-TH":"องค์ประกอบ","tr-TR":"elementler","uk-UA":"елементи","vi-VN":"các yếu tố","zh-CN":"元素","zh-TW":"元素"}');
+;// CONCATENATED MODULE: ./components/plaintext/locales/no-elements.json
+const no_elements_namespaceObject = JSON.parse('{"en-US":"No elements","af-ZA":"Geen elemente nie","ar":"لا عناصر","bg-BG":"Без елементи","ca-AD":"Sense elements","cs-CZ":"Žádné prvky","cy-GB":"Dim Elfennau","da-DK":"Ingen elementer","de-AT":"Keine Elemente","de-CH":"Keine Elemente","de-DE":"Keine Elemente","el-GR":"Χωρίς στοιχεία","en-GB":"No elements","es-CL":"Sin elementos","es-ES":"Sin elementos","es-MX":"Sin elementos","et-EE":"Elemente pole","eu":"Elementurik ez","fa-IR":"بدون عنصر","fi-FI":"Ei elementtejä","fr-CA":"Pas d\'éléments","fr-FR":"Pas d\'éléments","he-IL":"אין אלמנטים","hi-IN":"कोई तत्व नहीं","hr-HR":"Nema elemenata","hu-HU":"Nincs elem","id-ID":"tidak ada elemen","is-IS":"Engir þættir","it-IT":"Nessun elemento","ja-JP":"要素はありません","km-KH":"គ្មានធាតុ","ko-KR":"요소가 없습니다","la":"Nulla elementa","lt-LT":"Jokių elementų","lv-LV":"Nav elementu","mn-MN":"элемент байхгүй","nb-NO":"Ingen elementer","nl-NL":"Geen elementen","pl-PL":"bez elementów","pt-BR":"Sem elementos","pt-PT":"Sem elementos","ro-RO":"Fără elemente","ru-RU":"Нет элементов","sk-SK":"Žiadne prvky","sl-SI":"Brez elementov","sr-RS":"Нема елемената","sv-SE":"Inga element","th-TH":"ไม่มีองค์ประกอบ","tr-TR":"Element Yok","uk-UA":"немає елементів","vi-VN":"Không có yếu tố","zh-CN":"没有元素","zh-TW":"没有元素"}');
 ;// CONCATENATED MODULE: ./components/plaintext/locales/index.js
+
+
+
 
 
 
 ;// CONCATENATED MODULE: ./components/plaintext/index.js
 
 
+
+function plaintext_typeof(obj) { "@babel/helpers - typeof"; return plaintext_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, plaintext_typeof(obj); }
 
 
 
@@ -408,48 +424,61 @@ var Plaintext = function Plaintext(_ref) {
     component = _ref.component,
     options = _ref.options,
     locale = _ref.locale;
+  console.log('allora cazzone', value);
   var d;
   switch (component) {
     case 'input-text':
-    case 'text-input':
-      return /*#__PURE__*/React.createElement("span", null, value);
+      return /*#__PURE__*/external_react_default().createElement("div", null, value);
     case 'date':
-      if (_isDate(value)) {
+      if (isDate_default()(value)) {
         d = value;
-      } else if (_isString(value) && isValidDate(new Date(value))) {
+      } else if (isString_default()(value) && (0,helpers/* isValidDate */.qb)(new Date(value))) {
         d = new Date(value);
       }
-      return /*#__PURE__*/React.createElement("span", null, d ? d.toLocaleDateString() : '');
+      return /*#__PURE__*/external_react_default().createElement("div", null, d ? d.toLocaleDateString() : '');
     case 'datetime':
-      if (_isDate(value)) {
+      if (isDate_default()(value)) {
         d = value;
-      } else if (_isString(value) && isValidDate(new Date(value))) {
+      } else if (isString_default()(value) && (0,helpers/* isValidDate */.qb)(new Date(value))) {
         d = new Date(value);
       }
-      return /*#__PURE__*/React.createElement("span", null, d ? d.toLocaleDateString() + ' ' + d.toLocaleTimeString() : '');
+      return /*#__PURE__*/external_react_default().createElement("div", null, d ? d.toLocaleDateString() + ' ' + d.toLocaleTimeString() : '');
     case 'toggle':
     case 'checkbox':
       if (value === true || value === 1) {
-        return /*#__PURE__*/React.createElement("span", null, i18n(YesLabel, locale));
+        return /*#__PURE__*/external_react_default().createElement("div", null, (0,helpers/* i18n */.ag)(yes_namespaceObject, locale));
       } else if (value === false || value === 0) {
-        return /*#__PURE__*/React.createElement("span", null, i18n(NoLabel, locale));
+        return /*#__PURE__*/external_react_default().createElement("div", null, (0,helpers/* i18n */.ag)(no_namespaceObject, locale));
       }
-      return /*#__PURE__*/React.createElement("span", null, "-");
+      return /*#__PURE__*/external_react_default().createElement("div", null, "-");
+    case 'radio-group':
     case 'select':
       var found = (options !== null && options !== void 0 ? options : []).find(function (option) {
         return option.value === value;
       });
       var label = '';
       if (found) {
-        if (isI18n(found.label)) {
-          label = i18n(found.label, locale);
+        if ((0,helpers/* isI18n */.QK)(found.label)) {
+          label = (0,helpers/* i18n */.ag)(found.label, locale);
         } else {
           label = found.label;
         }
       }
-      return /*#__PURE__*/React.createElement("span", null, label);
+      return /*#__PURE__*/external_react_default().createElement("div", null, label);
+    case 'checkbox-group':
+      var selectedOptions = (options !== null && options !== void 0 ? options : []).filter(function (option) {
+        return (value !== null && value !== void 0 ? value : []).includes(option.value);
+      });
+      var founds = selectedOptions.map(function (option) {
+        return option.label;
+      });
+      return /*#__PURE__*/external_react_default().createElement("div", null, founds.join(', '));
+    case 'array':
+      return /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, isArray_default()(value) && /*#__PURE__*/external_react_default().createElement("div", null, /*#__PURE__*/external_react_default().createElement("span", {
+        className: "count"
+      }, value.length), ' ', value.length > 1 ? (0,helpers/* i18n */.ag)(elements_namespaceObject, locale) : (0,helpers/* i18n */.ag)(element_namespaceObject, locale)), !isArray_default()(value) && /*#__PURE__*/external_react_default().createElement("div", null, (0,helpers/* i18n */.ag)(no_elements_namespaceObject, locale)));
     default:
-      return /*#__PURE__*/React.createElement("span", null, value);
+      return /*#__PURE__*/external_react_default().createElement("div", null, plaintext_typeof(value) !== 'object' ? value : '');
   }
 };
 var IfNotPlaintext = function IfNotPlaintext(_ref2) {
@@ -460,7 +489,7 @@ var IfNotPlaintext = function IfNotPlaintext(_ref2) {
     children = _ref2.children,
     locale = _ref2.locale;
   if (plaintext) {
-    return /*#__PURE__*/React.createElement(Plaintext, {
+    return /*#__PURE__*/external_react_default().createElement(Plaintext, {
       value: value,
       component: component,
       options: options,
@@ -533,7 +562,7 @@ var FormContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createConte
 /* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(7536);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4184);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7556);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8489);
 /* harmony import */ var _costants__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(8064);
 /* harmony import */ var _assets_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(8211);
 /* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(6160);
@@ -1548,9 +1577,9 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
     }))));
   }, function (prevProps, nextProps) {
     if (DEBUG_RENDER) {
-      console.log("[LetsForm] Form generator ".concat(nextProps.form.name ? '(' + nextProps.form.name + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale));
+      console.log("[LetsForm] Form generator ".concat(nextProps.form.name ? '(' + nextProps.form.name + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale) + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext));
     }
-    var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale;
+    var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale && prevProps.plaintext === nextProps.plaintext;
     console.log('Is re-rendering?', !isEqual);
     return isEqual;
   });
@@ -1883,27 +1912,40 @@ var removeEmptyKeys = function removeEmptyKeys(obj) {
   return omit_default()(obj, emptyKeys);
 };
 var removeUnusedLocalesFromI18n = function removeUnusedLocalesFromI18n(obj, locales) {
-  var keysToRemove = Object.keys(obj).filter(function (key) {
-    return !locales.includes(key);
-  });
-  var cleaned = !isEmpty_default()(keysToRemove) ? omit_default()(obj, keysToRemove) : obj;
-  if (Object.keys(cleaned).length !== 0) {
-    return cleaned;
+  if (isArray_default()(locales) && !isEmpty_default()(locales)) {
+    var keysToRemove = Object.keys(obj).filter(function (key) {
+      return !locales.includes(key);
+    });
+    var cleaned = !isEmpty_default()(keysToRemove) ? omit_default()(obj, keysToRemove) : obj;
+    if (Object.keys(cleaned).length !== 0) {
+      return cleaned;
+    }
+    return null;
+  } else {
+    // no locales specified, so try to extract english dialect or the first available key
+    if (obj['en-US']) {
+      return obj['en-US'];
+    } else if (obj['en-GB']) {
+      return obj['en-GB'];
+    } else if (Object.keys(obj).length !== 0) {
+      return obj[Object.keys(obj)[0]];
+    }
+    return null;
   }
-  return null;
 };
 var removeUnusedLocalesFromObj = function removeUnusedLocalesFromObj(obj, locales) {
   var cloned = cleanup_objectSpread({}, obj);
-  Object.keys(obj).filter(function (key) {
-    return key !== 'rules';
-  }) // don't apply to rules
-  .forEach(function (key) {
+  Object.keys(obj).forEach(function (key) {
     if (isArray_default()(cloned[key])) {
       cloned[key] = cloned[key].map(function (item) {
         return removeUnusedLocalesFromObj(item, locales);
       });
     } else if (isI18n(cloned[key])) {
       cloned[key] = removeUnusedLocalesFromI18n(cloned[key], locales);
+    } else if (key === 'validation' && isI18n(cloned.validation.message)) {
+      cloned.validation = cleanup_objectSpread(cleanup_objectSpread({}, cloned.validation), {}, {
+        message: removeUnusedLocalesFromI18n(cloned.validation.message, locales)
+      });
     }
   });
   return cloned;
@@ -1946,9 +1988,7 @@ var cleanUp = function cleanUp(json) {
       // collect all empty keys
       cloned = removeEmptyKeys(cloned);
       // cycle all keys and check if it's an i18n object
-      if (isArray_default()(json.locales) && !isEmpty_default()(json.locales)) {
-        cloned = removeUnusedLocalesFromObj(cloned, json.locales);
-      }
+      cloned = removeUnusedLocalesFromObj(cloned, json.locales);
       return cloned;
     })
   });
@@ -2288,14 +2328,25 @@ var getLocales = function getLocales() {
 
 var i18n = function i18n(value, locale) {
   if (isString_default()(value)) {
+    // if string, then return it
     return value;
   } else if (isObject_default()(value)) {
+    var language = (locale || 'en-US').substr(0, 2);
+    // if exact match of the locale
     if (locale && value[locale]) {
       return value[locale];
     }
     // if there's no dialect, then try with the first two letters
-    if (locale && value[locale.substr(0, 2)]) {
-      return value[locale.substr(0, 2)];
+    if (locale && value[language]) {
+      return value[language];
+    }
+    // then try with another dialect, i.e. there are translations for fr-FR and
+    // the locale is fr-CA, try first with any fr-FR if present
+    var firstDialect = Object.keys(value).find(function (locale) {
+      return locale.startsWith(language);
+    });
+    if (firstDialect) {
+      return value[firstDialect];
     }
     // if nothing found, defaults to english but with warning
     if (value['en'] || value['en-UK'] || value['en-US']) {
@@ -2333,7 +2384,7 @@ var isEmptyForm = function isEmptyForm(form) {
   return !form || !Array.isArray(form.fields) || form.fields.length === 0;
 };
 ;// CONCATENATED MODULE: ./mappings.json
-const mappings_namespaceObject = JSON.parse('{"text-input":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"variant":["react-material-ui"],"color":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"value":null,"image":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"layout":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-antd"],"step":["react-rsuite5","react-antd"],"max":["react-rsuite5","react-antd"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":["react-rsuite5","react-material-ui","react-antd"],"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"value":["react-rsuite5","react-material-ui","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"optionType":["react-antd"],"size":["react-antd"]},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react","react-bootstrap","react-antd"],"width":["react","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"value":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"width":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"maxWidth":null,"minHeight":null,"align":null,"marginTop":null,"marginBottom":null,"hidden":null},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
+const mappings_namespaceObject = JSON.parse('{"input-text":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"variant":["react-material-ui"],"color":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"value":null,"image":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"layout":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-antd"],"step":["react-rsuite5","react-antd"],"max":["react-rsuite5","react-antd"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":["react-rsuite5","react-material-ui","react-antd"],"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"value":["react-rsuite5","react-material-ui","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"optionType":["react-antd"],"size":["react-antd"]},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react","react-bootstrap","react-antd"],"width":["react","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"value":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"width":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"maxWidth":null,"minHeight":null,"align":null,"marginTop":null,"marginBottom":null,"hidden":null},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
 ;// CONCATENATED MODULE: ./helpers/apply-transformers.js
 
 
@@ -2863,6 +2914,29 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-group{margin-bottom:var(--
 
 /***/ }),
 
+/***/ 6159:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-common-icon img{max-width:32px;max-height:32px}.lf-common-icon.small img{max-width:24px;max-height:24px}.lf-common-icon.large img{max-width:40px;max-height:40px}", "",{"version":3,"sources":["webpack://./common/icon/common-icon.scss"],"names":[],"mappings":"AACE,oBACE,cAAA,CACA,eAAA,CAIA,0BACE,cAAA,CACA,eAAA,CAMF,0BACE,cAAA,CACA,eAAA","sourcesContent":[".lf-common-icon {\n  img {\n    max-width: 32px;\n    max-height: 32px;\n  }\n\n  &.small {\n    img {\n      max-width: 24px;\n      max-height: 24px;\n\n    }\n  }\n\n  &.large {\n    img {\n      max-width: 40px;\n      max-height: 40px;\n    }\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ 2558:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -2925,7 +2999,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-placeholder ol,.lf-control
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-three-columns{margin-bottom:var(--lf-field-margin);display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-control-three-columns .left{flex:1 0;align-self:auto;margin-right:var(--lf-field-column-margin)}.lf-control-three-columns .center{margin-right:var(--lf-field-column-margin);flex:1 0;align-self:auto}.lf-control-three-columns .right{flex:1 0;align-self:auto}.lf-control-three-columns .left:empty{display:none}.lf-control-three-columns.layout-0-1-0 .left{flex:0 0}.lf-control-three-columns.layout-0-1-0 .center{flex:1 0}.lf-control-three-columns.layout-0-1-0 .right{flex:0 0}.lf-control-three-columns.layout-1-0-0 .left{flex:1 0}.lf-control-three-columns.layout-1-0-0 .center{flex:0 0}.lf-control-three-columns.layout-1-0-0 .right{flex:0 0}.lf-control-three-columns.layout-1-1-1 .left{flex:1 0}.lf-control-three-columns.layout-1-1-1 .center{flex:1 0}.lf-control-three-columns.layout-1-1-1 .right{flex:1 0}.lf-control-three-columns.layout-1-1-2 .left{flex:1 0}.lf-control-three-columns.layout-1-1-2 .center{flex:1 0}.lf-control-three-columns.layout-1-1-2 .right{flex:2 0}.lf-control-three-columns.layout-1-2-1 .left{flex:1 0}.lf-control-three-columns.layout-1-2-1 .center{flex:2 0}.lf-control-three-columns.layout-1-2-1 .right{flex:1 0}.lf-control-three-columns.layout-2-1-1 .left{flex:2 0}.lf-control-three-columns.layout-2-1-1 .center{flex:1 0}.lf-control-three-columns.layout-2-1-1 .right{flex:1 0}.lf-control-three-columns.layout-1-1-3 .left{flex:1 0}.lf-control-three-columns.layout-1-1-3 .center{flex:1 0}.lf-control-three-columns.layout-1-1-3 .right{flex:3 0}.lf-control-three-columns.layout-1-3-1 .left{flex:1 0}.lf-control-three-columns.layout-1-3-1 .center{flex:3 0}.lf-control-three-columns.layout-1-3-1 .right{flex:1 0}.lf-control-three-columns.layout-3-1-1 .left{flex:3 0}.lf-control-three-columns.layout-3-1-1 .center{flex:1 0}.lf-control-three-columns.layout-3-1-1 .right{flex:1 0}.lf-form-react-rsuite5 .lf-three-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,0BACE,oCAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAUA,gCACE,QAAA,CACA,eAAA,CACA,0CAAA,CAGF,kCACE,0CAAA,CACA,QAAA,CACA,eAAA,CAGF,iCACE,QAAA,CACA,eAAA,CAGF,sCACE,YAAA,CAIA,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAQJ,yCACE,oCAAA","sourcesContent":[".lf-control-three-columns {\n  margin-bottom: var(--lf-field-margin);\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: var(--lf-field-column-margin);\n  }\n\n  .center {\n    margin-right: var(--lf-field-column-margin);\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .left:empty {\n    display: none;\n  }\n\n  &.layout-0-1-0 {\n    .left {\n      flex: 0 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-0-0 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 0 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-1-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-2-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-2-1-1 {\n    .left {\n      flex: 2 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-3-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1-1 {\n    .left {\n      flex: 3 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n\n}\n\n.lf-form-react-rsuite5 {\n  .lf-three-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-three-columns{margin-bottom:var(--lf-field-margin);display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:20px}.lf-control-three-columns .left{flex:1 0;align-self:auto;margin-right:var(--lf-field-column-margin)}.lf-control-three-columns .center{margin-right:var(--lf-field-column-margin);flex:1 0;align-self:auto}.lf-control-three-columns .right{flex:1 0;align-self:auto}.lf-control-three-columns .left:empty{display:none}.lf-control-three-columns.layout-0-1-0 .left{flex:0 0}.lf-control-three-columns.layout-0-1-0 .center{flex:1 0}.lf-control-three-columns.layout-0-1-0 .right{flex:0 0}.lf-control-three-columns.layout-1-0-0 .left{flex:1 0}.lf-control-three-columns.layout-1-0-0 .center{flex:0 0}.lf-control-three-columns.layout-1-0-0 .right{flex:0 0}.lf-control-three-columns.layout-1-1-1 .left{flex:1 0}.lf-control-three-columns.layout-1-1-1 .center{flex:1 0}.lf-control-three-columns.layout-1-1-1 .right{flex:1 0}.lf-control-three-columns.layout-1-1-2 .left{flex:1 0}.lf-control-three-columns.layout-1-1-2 .center{flex:1 0}.lf-control-three-columns.layout-1-1-2 .right{flex:2 0}.lf-control-three-columns.layout-1-2-1 .left{flex:1 0}.lf-control-three-columns.layout-1-2-1 .center{flex:2 0}.lf-control-three-columns.layout-1-2-1 .right{flex:1 0}.lf-control-three-columns.layout-2-1-1 .left{flex:2 0}.lf-control-three-columns.layout-2-1-1 .center{flex:1 0}.lf-control-three-columns.layout-2-1-1 .right{flex:1 0}.lf-control-three-columns.layout-1-1-3 .left{flex:1 0}.lf-control-three-columns.layout-1-1-3 .center{flex:1 0}.lf-control-three-columns.layout-1-1-3 .right{flex:3 0}.lf-control-three-columns.layout-1-3-1 .left{flex:1 0}.lf-control-three-columns.layout-1-3-1 .center{flex:3 0}.lf-control-three-columns.layout-1-3-1 .right{flex:1 0}.lf-control-three-columns.layout-3-1-1 .left{flex:3 0}.lf-control-three-columns.layout-3-1-1 .center{flex:1 0}.lf-control-three-columns.layout-3-1-1 .right{flex:1 0}.lf-form-react-rsuite5 .lf-three-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,0BACE,oCAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAUA,gCACE,QAAA,CACA,eAAA,CACA,0CAAA,CAGF,kCACE,0CAAA,CACA,QAAA,CACA,eAAA,CAGF,iCACE,QAAA,CACA,eAAA,CAGF,sCACE,YAAA,CAIA,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAQJ,yCACE,oCAAA","sourcesContent":[".lf-control-three-columns {\n  margin-bottom: var(--lf-field-margin);\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: var(--lf-field-column-margin);\n  }\n\n  .center {\n    margin-right: var(--lf-field-column-margin);\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .left:empty {\n    display: none;\n  }\n\n  &.layout-0-1-0 {\n    .left {\n      flex: 0 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-0-0 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 0 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-1-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-2-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-2-1-1 {\n    .left {\n      flex: 2 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-3-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1-1 {\n    .left {\n      flex: 3 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n\n}\n\n.lf-form-react-rsuite5 {\n  .lf-three-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2948,7 +3022,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-three-columns{margin-botto
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-two-columns{margin-bottom:var(--lf-field-margin);display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:40px}.lf-control-two-columns .left{flex:1 0;align-self:auto;margin-right:var(--lf-field-column-margin)}.lf-control-two-columns .right{flex:1 0;align-self:auto}.lf-control-two-columns.layout-1-2 .left{flex:1 0}.lf-control-two-columns.layout-1-2 .right{flex:2 0}.lf-control-two-columns.layout-1-3 .left{flex:1 0}.lf-control-two-columns.layout-1-3 .right{flex:3 0}.lf-control-two-columns.layout-1-4 .left{flex:1 0}.lf-control-two-columns.layout-1-4 .right{flex:4 0}.lf-control-two-columns.layout-1-5 .left{flex:1 0}.lf-control-two-columns.layout-1-5 .right{flex:4 0}.lf-control-two-columns.layout-2-1 .left{flex:2 0}.lf-control-two-columns.layout-2-1 .right{flex:1 0}.lf-control-two-columns.layout-3-1 .left{flex:3 0}.lf-control-two-columns.layout-3-1 .right{flex:1 0}.lf-control-two-columns.layout-4-1 .left{flex:4 0}.lf-control-two-columns.layout-4-1 .right{flex:1 0}.lf-control-two-columns.layout-5-1 .left{flex:4 0}.lf-control-two-columns.layout-5-1 .right{flex:1 0}.lf-control-two-columns.layout-3-2 .left{flex:3 0}.lf-control-two-columns.layout-3-2 .right{flex:2 0}.lf-control-two-columns.layout-2-3 .left{flex:2 0}.lf-control-two-columns.layout-2-3 .right{flex:3 0}.lf-control-two-columns.layout-0-1 .left{flex:0 0 auto}.lf-control-two-columns.layout-0-1 .right{flex:1 0}.lf-control-two-columns.layout-1-0 .left{flex:1 0}.lf-control-two-columns.layout-1-0 .right{flex:0 0 auto}.lf-form-react-rsuite5 .lf-two-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,wBACE,oCAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAEA,8BACE,QAAA,CACA,eAAA,CACA,0CAAA,CAGF,+BACE,QAAA,CACA,eAAA,CAIA,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,aAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,aAAA,CAMJ,uCACE,oCAAA","sourcesContent":[".lf-control-two-columns {\n  margin-bottom: var(--lf-field-margin);\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 40px;\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: var(--lf-field-column-margin);\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-0-1 {\n    .left {\n      flex: 0 0 auto;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-0 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0 auto;\n    }\n  }\n}\n\n.lf-form-react-rsuite5 {\n  .lf-two-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-two-columns{margin-bottom:var(--lf-field-margin);display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:20px}.lf-control-two-columns .left{flex:1 0;align-self:auto;margin-right:var(--lf-field-column-margin)}.lf-control-two-columns .right{flex:1 0;align-self:auto}.lf-control-two-columns.layout-1-2 .left{flex:1 0}.lf-control-two-columns.layout-1-2 .right{flex:2 0}.lf-control-two-columns.layout-1-3 .left{flex:1 0}.lf-control-two-columns.layout-1-3 .right{flex:3 0}.lf-control-two-columns.layout-1-4 .left{flex:1 0}.lf-control-two-columns.layout-1-4 .right{flex:4 0}.lf-control-two-columns.layout-1-5 .left{flex:1 0}.lf-control-two-columns.layout-1-5 .right{flex:4 0}.lf-control-two-columns.layout-2-1 .left{flex:2 0}.lf-control-two-columns.layout-2-1 .right{flex:1 0}.lf-control-two-columns.layout-3-1 .left{flex:3 0}.lf-control-two-columns.layout-3-1 .right{flex:1 0}.lf-control-two-columns.layout-4-1 .left{flex:4 0}.lf-control-two-columns.layout-4-1 .right{flex:1 0}.lf-control-two-columns.layout-5-1 .left{flex:4 0}.lf-control-two-columns.layout-5-1 .right{flex:1 0}.lf-control-two-columns.layout-3-2 .left{flex:3 0}.lf-control-two-columns.layout-3-2 .right{flex:2 0}.lf-control-two-columns.layout-2-3 .left{flex:2 0}.lf-control-two-columns.layout-2-3 .right{flex:3 0}.lf-control-two-columns.layout-0-1 .left{flex:0 0 auto}.lf-control-two-columns.layout-0-1 .right{flex:1 0}.lf-control-two-columns.layout-1-0 .left{flex:1 0}.lf-control-two-columns.layout-1-0 .right{flex:0 0 auto}.lf-form-react-rsuite5 .lf-two-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,wBACE,oCAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAEA,8BACE,QAAA,CACA,eAAA,CACA,0CAAA,CAGF,+BACE,QAAA,CACA,eAAA,CAIA,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,aAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,aAAA,CAMJ,uCACE,oCAAA","sourcesContent":[".lf-control-two-columns {\n  margin-bottom: var(--lf-field-margin);\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: var(--lf-field-column-margin);\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-0-1 {\n    .left {\n      flex: 0 0 auto;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-0 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0 auto;\n    }\n  }\n}\n\n.lf-form-react-rsuite5 {\n  .lf-two-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8275,8 +8349,8 @@ var FormRsuite5 = function FormRsuite5(_ref) {
 // EXTERNAL MODULE: ./node_modules/lodash/isString.js
 var isString = __webpack_require__(7037);
 var isString_default = /*#__PURE__*/__webpack_require__.n(isString);
-// EXTERNAL MODULE: ./components/index.js + 8 modules
-var components = __webpack_require__(7556);
+// EXTERNAL MODULE: ./components/index.js + 11 modules
+var components = __webpack_require__(8489);
 // EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(1609);
 var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
@@ -8528,6 +8602,10 @@ var Group = (0,components/* I18N */.mb)(function (_ref) {
     event.preventDefault();
     setIsOpen(!isOpen);
   }, [isOpen]);
+  // if open changes, then change status
+  (0,external_react_.useEffect)(function () {
+    setIsOpen(open);
+  }, [open]);
   return /*#__PURE__*/external_react_default().createElement("div", {
     "data-lf-field-name": name,
     className: classnames_default()('lf-control-group', {
@@ -8731,12 +8809,11 @@ var useFormContext = function useFormContext() {
   return context;
 };
 ;// CONCATENATED MODULE: ./common/array/helpers/is-empty-item.js
-
 var isEmptyItem = function isEmptyItem(obj) {
   return Object.keys(obj).filter(function (key) {
     return key !== 'id';
   }).every(function (key) {
-    return isEmpty_default()(obj[key]);
+    return obj[key] === null || obj[key] === undefined || obj[key] === '';
   });
 };
 ;// CONCATENATED MODULE: ./common/array/views/array-item.js
@@ -8970,7 +9047,69 @@ var ListArray = function ListArray(_ref) {
   }));
 };
 
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/icon/common-icon.scss
+var common_icon = __webpack_require__(6159);
+;// CONCATENATED MODULE: ./common/icon/common-icon.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var common_icon_options = {};
+
+common_icon_options.styleTagTransform = (styleTagTransform_default());
+common_icon_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      common_icon_options.insert = insertBySelector_default().bind(null, "head");
+    
+common_icon_options.domAPI = (styleDomAPI_default());
+common_icon_options.insertStyleElement = (insertStyleElement_default());
+
+var common_icon_update = injectStylesIntoStyleTag_default()(common_icon/* default */.Z, common_icon_options);
+
+
+
+
+       /* harmony default export */ const icon_common_icon = (common_icon/* default */.Z && common_icon/* default.locals */.Z.locals ? common_icon/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./common/icon/index.js
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
+
+
+var COMMON_ICON_SIZES = (/* unused pure expression or super */ null && (['large', 'small']));
+var CommonIcon = function CommonIcon(_ref) {
+  var src = _ref.src,
+    className = _ref.className,
+    alt = _ref.alt,
+    _onClick = _ref.onClick,
+    size = _ref.size;
+  return /*#__PURE__*/React.createElement("div", {
+    className: classNames('lf-common-icon', className, {
+      small: size === 'small',
+      large: size === 'large'
+      //[size]: COMMON_ICON_SIZES.includes(size)
+    })
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "#",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      _onClick();
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: src,
+    alt: alt
+  })));
+};
+
 ;// CONCATENATED MODULE: ./common/index.js
+
 
 
 
@@ -9287,10 +9426,11 @@ var Select = (0,components/* I18N */.mb)(function (_ref) {
 ;// CONCATENATED MODULE: ./react-rsuite5/group/index.js
 
 ;// CONCATENATED MODULE: ./react-rsuite5/array/index.js
-var array_excluded = ["hint", "required", "tooltip", "name", "label"];
+var array_excluded = ["hint", "required", "tooltip", "name", "label", "plaintext"];
 function array_extends() { array_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return array_extends.apply(this, arguments); }
 function array_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = array_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function array_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -9302,15 +9442,21 @@ var ListArrayRSuite5 = function ListArrayRSuite5(_ref) {
     tooltip = _ref.tooltip,
     name = _ref.name,
     label = _ref.label,
+    plaintext = _ref.plaintext,
     rest = array_objectWithoutProperties(_ref, array_excluded);
   return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
     "data-lf-field-name": name,
     className: "lf-control-array"
   }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
     tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(components/* RequiredIcon */.T_, null)), /*#__PURE__*/external_react_default().createElement(ListArray, array_extends({
+  }, hint), required && /*#__PURE__*/external_react_default().createElement(components/* RequiredIcon */.T_, null)), /*#__PURE__*/external_react_default().createElement(components/* IfNotPlaintext */.W7, {
+    component: "array",
+    value: rest.value,
+    locale: rest.lfLocale,
+    plaintext: plaintext
+  }, /*#__PURE__*/external_react_default().createElement(ListArray, array_extends({
     LetsFormComponent: react_rsuite5
-  }, rest)), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
+  }, rest))), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 };
 
 ;// CONCATENATED MODULE: ./react-rsuite5/two-columns/index.js
@@ -10228,13 +10374,18 @@ var PlaceholderRSuite5 = (0,components/* I18N */.mb)(function (_ref) {
 }, ['label', 'hint', 'text']);
 
 ;// CONCATENATED MODULE: ./react-rsuite5/multiselect/index.js
-
 function multiselect_typeof(obj) { "@babel/helpers - typeof"; return multiselect_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, multiselect_typeof(obj); }
+
+var multiselect_excluded = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "width"];
 function multiselect_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function multiselect_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? multiselect_ownKeys(Object(source), !0).forEach(function (key) { multiselect_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : multiselect_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 function multiselect_defineProperty(obj, key, value) { key = multiselect_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function multiselect_toPropertyKey(arg) { var key = multiselect_toPrimitive(arg, "string"); return multiselect_typeof(key) === "symbol" ? key : String(key); }
 function multiselect_toPrimitive(input, hint) { if (multiselect_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (multiselect_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function multiselect_extends() { multiselect_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return multiselect_extends.apply(this, arguments); }
+function multiselect_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = multiselect_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function multiselect_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -10264,13 +10415,17 @@ var Multiselect = (0,components/* I18N */.mb)(function (_ref) {
     onChange = _ref.onChange,
     onBlur = _ref.onBlur,
     placement = _ref.placement,
-    appearance = _ref.appearance;
+    appearance = _ref.appearance,
+    fullWidth = _ref.fullWidth,
+    width = _ref.width,
+    rest = multiselect_objectWithoutProperties(_ref, multiselect_excluded);
   return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
     "data-lf-field-name": name,
-    className: "lf-control-multiselect"
+    className: "lf-control-multiselect",
+    style: (0,helpers/* makeWidthStyle */.PZ)(fullWidth, width)
   }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
     tooltip: true
-  }, hint), required && /*#__PURE__*/external_react_default().createElement(components/* RequiredIcon */.T_, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, {
+  }, hint), required && /*#__PURE__*/external_react_default().createElement(components/* RequiredIcon */.T_, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Control, multiselect_extends({
     accepter: external_rsuite_.TagPicker,
     appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
     name: name,
@@ -10285,9 +10440,10 @@ var Multiselect = (0,components/* I18N */.mb)(function (_ref) {
     placeholder: placeholder,
     data: options || [],
     block: block,
+    style: (0,helpers/* makeWidthStyle */.PZ)(fullWidth, width),
     searchable: searchable,
     cleanable: cleanable
-  }), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
+  }, (0,helpers/* passRest */.QF)(rest))), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 }, ['label', 'hint', 'placeholder'], {
   options: function options(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).map(function (value) {
@@ -10486,6 +10642,7 @@ function input_text_i18n_objectWithoutPropertiesLoose(source, excluded) { if (so
 
 
 
+
 var input_text_i18n_LANGUAGES_OPTIONS = Object.keys(locales/* language-names */.Q).map(function (lang) {
   return {
     value: lang,
@@ -10508,6 +10665,19 @@ var TextareaAccepter = function TextareaAccepter(_ref) {
     as: "textarea",
     value: value
   }, props));
+};
+var defaultOrEnglish = function defaultOrEnglish(obj) {
+  if ((0,helpers/* isI18n */.QK)(obj)) {
+    if (obj['en-US']) {
+      return obj['en-US'];
+    } else if (obj['en-GB']) {
+      return obj['en-GB'];
+    } else if (Object.keys(obj).length !== 0) {
+      return obj[Object.keys(obj)[0]];
+    }
+    return '';
+  }
+  return obj;
 };
 var InputTextI18N = function InputTextI18N(props) {
   var name = props.name,
@@ -10602,9 +10772,14 @@ var InputTextI18N = function InputTextI18N(props) {
     }
   }, [currentLanguage, currentValue, _onChange]);
 
-  // if no locales, then use plain input text
+  // if no locales, then use plain input text, since it's possible the the value is still
+  // a 18n (in case the user switched from a multi language form to a single language form
+  // then put some defaults)
   if (isEmpty_default()(locales)) {
-    return textarea ? /*#__PURE__*/external_react_default().createElement(Textarea, props) : /*#__PURE__*/external_react_default().createElement(TextInput, props);
+    var newProps = input_text_i18n_objectSpread(input_text_i18n_objectSpread({}, props), {}, {
+      value: defaultOrEnglish(value)
+    });
+    return textarea ? /*#__PURE__*/external_react_default().createElement(Textarea, newProps) : /*#__PURE__*/external_react_default().createElement(TextInput, newProps);
   }
   // evaluate current translated locales
   var translatedLocales = isObject_default()(currentValue) ? Object.keys(currentValue).filter(function (locale) {
@@ -10824,7 +10999,7 @@ function react_rsuite5_objectWithoutPropertiesLoose(source, excluded) { if (sour
 
 
 var Fields = {
-  'text-input': {
+  'input-text': {
     'react-rsuite5': TextInput
   },
   'toggle': {

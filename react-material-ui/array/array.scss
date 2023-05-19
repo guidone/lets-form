@@ -1,0 +1,7 @@
+.lf-form.lf-form-react-material-ui {
+  .lf-control-common-array {
+    [class^=lf-control]:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

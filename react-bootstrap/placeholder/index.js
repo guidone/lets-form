@@ -14,7 +14,7 @@ const PlaceholderBootstrap = I18N(
   }) => {
     return (
       <Form.Group
-        className="lf-control-placeholder mb-3"
+        className="lf-control-placeholder"
         data-lf-field-name={name}
       >
         <Form.Label>

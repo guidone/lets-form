@@ -6,6 +6,7 @@ import { FormControl, InputLabel, FormHelperText, InputAdornment } from '@mui/ma
 import { passRest } from '../../helpers';
 import { I18N } from '../../components';
 import { TextOrIcon } from '../../common';
+import { MuiIfNotPlaintext } from '../../components/mui-plaintext';
 
 // DOC: https://mui.com/material-ui/api/input/
 
@@ -33,6 +34,7 @@ const TextInput = I18N(
     width,
     prefix,
     postfix,
+    plaintext,
     disableUnderline,
     ...rest
   }) => {
@@ -48,41 +50,42 @@ const TextInput = I18N(
         data-lf-field-name={name}
         className="lf-control-input-text"
       >
-        <FormControl
-          required={required}
-          error={error != null}
-          sx={{ mt: 2 }}
-          variant={variant ?? undefined}
-          fullWidth={fullWidth}
-        >
-          {label && !floatingLabel && (
-            <InputLabel id={`mui_input_text_${name}`}>{label}</InputLabel>
-          )}
-          <TextField
-            size={size}
-            placeholder={placeholder}
-            value={value}
-            color={color}
-            required={floatingLabel ? required : undefined}
-            style={_.isNumber(width) && !fullWidth ? { width: `${parseInt(width, 10)}px` } : undefined}
-            onChange={handleChange}
-            type={inputType}
-            InputProps={{
-              startAdornment: prefix ? <InputAdornment position="start">{TextOrIcon(prefix)}</InputAdornment> : undefined,
-              endAdornment: postfix ? <InputAdornment position="end">{TextOrIcon(postfix)}</InputAdornment>: undefined,
-              disableUnderline,
-              readOnly,
-              autoComplete: autocomplete
-            }}
+        <MuiIfNotPlaintext component="input-text" label={label} plaintext={plaintext} value={value}>
+          <FormControl
+            required={required}
+            error={error != null}
             variant={variant ?? undefined}
-            onBlur={onBlur}
-            disabled={disabled}
-            label={floatingLabel ? label : undefined}
-            {...passRest(rest)}
-          />
-          {hint && !error && <FormHelperText>{hint}</FormHelperText>}
-          {error && <FormHelperText>{error}</FormHelperText>}
-        </FormControl>
+            fullWidth={fullWidth}
+          >
+            {label && !floatingLabel && (
+              <InputLabel id={`mui_input_text_${name}`}>{label}</InputLabel>
+            )}
+            <TextField
+              size={size}
+              placeholder={placeholder}
+              value={value}
+              color={color}
+              required={floatingLabel ? required : undefined}
+              style={_.isNumber(width) && !fullWidth ? { width: `${parseInt(width, 10)}px` } : undefined}
+              onChange={handleChange}
+              type={inputType}
+              InputProps={{
+                startAdornment: prefix ? <InputAdornment position="start">{TextOrIcon(prefix)}</InputAdornment> : undefined,
+                endAdornment: postfix ? <InputAdornment position="end">{TextOrIcon(postfix)}</InputAdornment>: undefined,
+                disableUnderline,
+                readOnly,
+                autoComplete: autocomplete
+              }}
+              variant={variant ?? undefined}
+              onBlur={onBlur}
+              disabled={disabled}
+              label={floatingLabel ? label : undefined}
+              {...passRest(rest)}
+            />
+            {hint && !error && <FormHelperText>{hint}</FormHelperText>}
+            {error && <FormHelperText>{error}</FormHelperText>}
+          </FormControl>
+        </MuiIfNotPlaintext>
       </div>
     );
   },

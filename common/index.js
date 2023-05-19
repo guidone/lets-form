@@ -7,3 +7,4 @@ export * from './text-or-icon';
 export * from './divider';
 export * from './react-view';
 export * from './array';
+export * from './icon';

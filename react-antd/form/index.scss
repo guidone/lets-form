@@ -8,4 +8,11 @@
     }
   }
 
+  // reduce margin in plaintext mode
+  &.lf-form-react-antd-plaintext {
+    .ant-col.ant-form-item-label {
+      padding-bottom: 0px;
+    }
+  }
+
 }

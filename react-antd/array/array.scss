@@ -1,0 +1,20 @@
+.lf-form-react-antd {
+
+  .lf-control-common-array-item {
+    .ant-form-item {
+      margin-bottom: 0px !important;
+    }
+  }
+
+  .lf-control-common-array-item {
+    padding-bottom: 5px;
+  }
+
+  .lf-control-two-columns:last-child {
+    margin-bottom: 0px;
+  }
+
+  .lf-control-three-columns:last-child {
+    margin-bottom: 0px;
+  }
+}
