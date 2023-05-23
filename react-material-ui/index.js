@@ -19,6 +19,9 @@ import { Divider } from './divider';
 import { ReactView } from './react-view';
 import { MuiDateTime } from './datetime';
 import { ListArray } from './array';
+import { Textarea } from './textarea';
+import { Multiselect } from './multiselect';
+import { InputNumber } from './input-number';
 
 const Fields = {
   'input-text': {
@@ -68,6 +71,15 @@ const Fields = {
   },
   'array': {
     'react-material-ui': ListArray
+  },
+  'textarea': {
+    'react-material-ui': Textarea
+  },
+  'multiselect': {
+    'react-material-ui': Multiselect
+  },
+  'input-number': {
+    'react-material-ui': InputNumber
   }
 };
 

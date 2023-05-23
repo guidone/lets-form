@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react';
-import _ from 'lodash';
 import { Form, Switch } from 'antd';
 
 import { I18N } from '../../components';
+import { passRest } from '../../helpers';
 
 const Toggle = I18N(
   ({
@@ -20,6 +20,7 @@ const Toggle = I18N(
     maxLength,
     error,
     prefix,
+    lfLocale,
     postfix,
     allowClear,
     bordered,
@@ -56,11 +57,12 @@ const Toggle = I18N(
           size={size}
           checkedChildren={checkedChildren}
           unCheckedChildren={unCheckedChildren}
+          {...passRest(rest)}
         />
       </Form.Item>
-    )
+    );
   },
-  ['label', 'hint']
+  ['label', 'hint', 'checkedChildren', 'unCheckedChildren']
 );
 
 export { Toggle };

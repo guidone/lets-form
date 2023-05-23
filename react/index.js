@@ -17,6 +17,7 @@ import { DateInput } from './date';
 import { ListArray } from './array';
 //import { Toggle } from './toggle';
 import { DateTime } from './datetime';
+import { PlaceholderImage } from './placeholder-image';
 
 const Fields = {
   'input-text': {
@@ -57,6 +58,9 @@ const Fields = {
   },
   'array': {
     'react': ListArray
+  },
+  'placeholder-image': {
+    'react': PlaceholderImage
   }
   // Removed, doesn't work
   /*'toggle': {

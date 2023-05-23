@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { Form, InputNumber } from 'antd';
 
 import { I18N } from '../../components';
+import { passRest, makeWidthStyle } from '../../helpers';
 
 const InputNumberAntd = I18N(
   ({
@@ -26,6 +27,7 @@ const InputNumberAntd = I18N(
     onChange,
     onBlur,
     width,
+    fullWidth,
     showControl,
     min,
     max,
@@ -60,8 +62,8 @@ const InputNumberAntd = I18N(
           min={min}
           max={max}
           step={step}
-          style={_.isNumber(width) ? { width: `${width}px` } : undefined}
-          {...(_.omit(rest, 'lfFramework', 'lfComponent'))}
+          style={makeWidthStyle(fullWidth, width)}
+          {...passRest(rest)}
         />
       </Form.Item>
     )

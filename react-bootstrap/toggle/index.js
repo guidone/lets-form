@@ -11,7 +11,7 @@ const Toggle = I18N(
     hint,
     value,
     placeholder,
-    plaintext,
+    lfLocale,
     tooltip = false,
     disabled = false,
     readOnly = false,

@@ -240,12 +240,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
   font-size: 0.875em;
 }
 
-
-.lf-form-react-control-group:not(:first-child) {
-  margin-top: 15px;
-}
-
-
 .lf-form-react-primary-button {
   appearance: button;
   background-color: #1652F0;
@@ -317,7 +311,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .lf-form-react {
   .lf-toolbar {
     display: flex;
-    margin-top: 15px;
     button:not(:first-child) {
       margin-left: 10px;
     }

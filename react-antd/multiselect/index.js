@@ -74,7 +74,10 @@ const Multiselect = I18N(
       </Form.Item>
     )
   },
-  ['label', 'hint', 'placeholder']
+  ['label', 'hint', 'placeholder'],
+  {
+    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
+  }
 );
 
 export { Multiselect };

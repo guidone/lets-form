@@ -42,7 +42,6 @@ const FormRsuite5 = ({
       fluid={fluid}
       readOnly={readOnly}
       disabled={disabled}
-      plaintext={plaintext}
     >
       <div>
         {children}

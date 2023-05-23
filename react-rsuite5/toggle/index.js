@@ -4,8 +4,6 @@ import { Form, Toggle } from 'rsuite';
 
 import { RequiredIcon, I18N } from '../../components';
 
-import './index.scss';
-
 const ToggleInput = I18N(
   ({
     name,
@@ -21,9 +19,8 @@ const ToggleInput = I18N(
     unCheckedChildren,
     error
   }) => {
-
     return (
-      <Form.Group controlId={name} className="lf-react-rsuite5-toggle">
+      <Form.Group controlId={name} className="lf-control-toggle">
         {label && (
           <Form.ControlLabel>
             {label}
@@ -42,12 +39,12 @@ const ToggleInput = I18N(
           errorMessage={_.isString(error) ? error : undefined }
           size={size}
         >
-          </Form.Control>
-          {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
+        </Form.Control>
+        {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>
     );
   },
-  ['label', 'hint', 'placeholder']
+  ['label', 'hint', 'checkedChildren', 'unCheckedChildren']
 );
 
 export { ToggleInput };

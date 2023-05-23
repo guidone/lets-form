@@ -13,6 +13,7 @@ import { reduceFields, applyTransformers, isI18n, i18n } from '../helpers';
 import FormContext from '../form-context';
 
 import './index.scss';
+import { PlaintextForm } from '../components/plaintext-form';
 
 const DEBUG_RENDER = true;
 
@@ -802,6 +803,17 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const GroupWrapper = groupWrapper;
     const BottomView = bottomView;
 
+    if (plaintext) {
+      return (
+        <PlaintextForm
+          form={form}
+          locale={locale}
+          framework={framework}
+          currentValues={getValues()}
+        />
+      );
+    }
+
     return (
       <FormContext.Provider value={{
         locales: form.locales,
@@ -885,6 +897,21 @@ const GenerateGenerator = ({ Forms, Fields }) => {
   });
 
   FormGenerator.displayName = 'FormGenerator';
+
+  /*const FormGeneratorWrapper = ({ children, ...rest }) => {
+    if (rest.plaintext) {
+      return (
+        <PlaintextForm
+          form={rest.form}
+          locale={rest.locale}
+          framework={rest.framework}
+        />
+      );
+    } else {
+      return <FormGenerator {...rest}>{children}</FormGenerator>
+    }
+  };*/
+
 
   return FormGenerator;
 };

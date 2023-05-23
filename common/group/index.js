@@ -63,7 +63,7 @@ const Group = I18N(
           )}
           </span>
         </div>
-        {(isOpen || !collapsible) && <>{children}</>}
+        {(isOpen || !collapsible) && <div>{children}</div>}
       </div>
     );
   },

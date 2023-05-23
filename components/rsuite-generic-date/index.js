@@ -11,7 +11,6 @@ const RSuiteGenericDate = ({
   hint,
   value,
   placeholder,
-  plaintext,
   tooltip = false,
   disabled = false,
   readOnly = false,
@@ -45,7 +44,6 @@ const RSuiteGenericDate = ({
           defaultValue={value}
           onChange={onChange}
           readOnly={readOnly}
-          plaintext={plaintext}
           onBlur={onBlur}
           errorMessage={_.isString(error) ? error : undefined }
           disabled={disabled}

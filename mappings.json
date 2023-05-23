@@ -46,17 +46,17 @@
       "react-rsuite5",
       "react-antd"
     ],
+    "variant": [
+      "react-material-ui"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
     "floatingLabel": [
       "react-material-ui",
       "react-bootstrap"
     ],
     "disableUnderline": [
-      "react-material-ui"
-    ],
-    "variant": [
-      "react-material-ui"
-    ],
-    "color": [
       "react-material-ui"
     ],
     "showCount": [
@@ -261,13 +261,17 @@
     "hidden": null,
     "size": [
       "react-rsuite5",
+      "react-material-ui",
       "react-antd"
     ],
     "fullWidth": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-material-ui",
+      "react-antd"
     ],
     "width": [
       "react-rsuite5",
+      "react-material-ui",
       "react-antd"
     ],
     "allowClear": [
@@ -286,17 +290,31 @@
       "react-antd"
     ],
     "prefix": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-material-ui"
     ],
     "inside": [
       "react-rsuite5"
     ],
     "postfix": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-material-ui"
     ],
     "tooltip": [
       "react-rsuite5",
       "react-antd"
+    ],
+    "variant": [
+      "react-material-ui"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
+    "floatingLabel": [
+      "react-material-ui"
+    ],
+    "disableUnderline": [
+      "react-material-ui"
     ],
     "showControls": [
       "react-antd"
@@ -550,6 +568,9 @@
     "indeterminate": [
       "react-rsuite5"
     ],
+    "tooltip": [
+      "react-rsuite5"
+    ],
     "size": [
       "react-material-ui"
     ],
@@ -704,11 +725,13 @@
     "hidden": null,
     "size": [
       "react",
+      "react-material-ui",
       "react-bootstrap",
       "react-antd"
     ],
     "width": [
       "react",
+      "react-material-ui",
       "react-antd"
     ],
     "rows": [
@@ -719,6 +742,24 @@
     "tooltip": [
       "react-rsuite5",
       "react-antd"
+    ],
+    "fullWidth": [
+      "react-material-ui"
+    ],
+    "variant": [
+      "react-material-ui"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
+    "floatingLabel": [
+      "react-material-ui"
+    ],
+    "disableUnderline": [
+      "react-material-ui"
+    ],
+    "maxRows": [
+      "react-material-ui"
     ],
     "showCount": [
       "react-antd"
@@ -830,7 +871,11 @@
     ],
     "size": [
       "react-rsuite5",
+      "react-material-ui",
       "react-antd"
+    ],
+    "multiselectMode": [
+      "react-rsuite5"
     ],
     "block": [
       "react-rsuite5"
@@ -848,8 +893,21 @@
     "preventOverflow": [
       "react-rsuite5"
     ],
+    "autoWidth": [
+      "react-material-ui"
+    ],
+    "fullWidth": [
+      "react-material-ui"
+    ],
     "width": [
+      "react-material-ui",
       "react-antd"
+    ],
+    "floatingLabel": [
+      "react-material-ui"
+    ],
+    "variant": [
+      "react-material-ui"
     ],
     "listHeight": [
       "react-antd"
@@ -945,12 +1003,36 @@
   "placeholder-image": {
     "name": null,
     "url": null,
-    "maxWidth": null,
-    "minHeight": null,
     "align": null,
-    "marginTop": null,
-    "marginBottom": null,
-    "hidden": null
+    "hidden": null,
+    "maxWidth": [
+      "react",
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "minHeight": [
+      "react",
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "marginTop": [
+      "react",
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "marginBottom": [
+      "react",
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ]
   },
   "button": {
     "name": null,

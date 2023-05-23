@@ -17,7 +17,6 @@ const Textarea = I18N(
     size,
     disabled = false,
     readOnly = false,
-    plaintext = false,
     error,
     required,
     rows,
@@ -45,7 +44,6 @@ const Textarea = I18N(
           as="textarea"
           rows={rows}
           value={value}
-          plaintext={plaintext}
           onChange={handleChange}
           size={size}
           placeholder={placeholder}

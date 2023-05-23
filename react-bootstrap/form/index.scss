@@ -1,6 +1,5 @@
 .lf-form-react-bootstrap {
   .lf-toolbar {
-    margin-top: 15px;
     display: flex;
 
     button:not(:first-child) {
@@ -8,18 +7,4 @@
     }
   }
 
-  [class^=lf-control] {
-    margin-bottom: var(--lf-field-margin);
-  }
-
-  .lf-control-common-array-item {
-    [class^=lf-control]:not(:last-child) {
-      margin-bottom: 10px;
-    }
-    [class^=lf-control]:last-child {
-      margin-bottom: 0px;
-    }
-
-    padding-bottom: 5px;
-  }
 }

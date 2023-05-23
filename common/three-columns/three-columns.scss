@@ -1,5 +1,4 @@
 .lf-control-three-columns {
-  margin-bottom: var(--lf-field-margin);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -146,10 +145,4 @@
   }
 
 
-}
-
-.lf-form-react-rsuite5 {
-  .lf-three-columns {
-    margin-bottom: var(--lf-field-margin);
-  }
 }

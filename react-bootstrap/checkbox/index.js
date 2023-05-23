@@ -11,7 +11,6 @@ const Checkbox = I18N(
     hint,
     value,
     placeholder,
-    plaintext,
     tooltip = false,
     disabled = false,
     readOnly = false,

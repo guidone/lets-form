@@ -27,7 +27,7 @@ const Textarea = I18N(
 
     return (
       <div
-        className="lf-form-react-control-group lf-control-textarea"
+        className="lf-control-textarea lf-form-react-control-group"
         data-lf-field-name={name}
       >
         <label for={name}>

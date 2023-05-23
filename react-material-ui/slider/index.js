@@ -67,7 +67,12 @@ const SliderMui = I18N(
       </div>
     );
   },
-  ['label', 'hint']
+  ['label', 'hint'],
+  {
+    customMarks: (value, i18n) => {
+      return (Array.isArray(value) ? value : []).map(value => ({ ...value, label: i18n(value.label) }))
+    }
+  }
 );
 
 export { SliderMui as Slider };

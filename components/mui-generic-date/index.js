@@ -8,7 +8,6 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 
 import { isValidDayjsFormat, passRest } from '../../helpers';
-import { MuiIfNotPlaintext } from '../mui-plaintext';
 
 // DOC: https://mui.com/x/api/date-pickers/date-picker/
 //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -42,7 +41,6 @@ const MuiGenericDate = ({
   lfLocale,
   datetime = false,
   views,
-  plaintext,
   component,
   ...rest
 }) => {
@@ -64,40 +62,38 @@ const MuiGenericDate = ({
         dateAdapter={AdapterDayjs}
         adapterLocale={localeCode ?? undefined}
       >
-        <MuiIfNotPlaintext value={value} component={component} plaintext={plaintext} label={label}>
-          <FormControl
+        <FormControl
+          required={required}
+          error={error != null}
+          fullWidth={fullWidth}
+        >
+          <Component
+            placeholder={placeholder}
+            readOnly={readOnly}
             required={required}
-            error={error != null}
-            fullWidth={fullWidth}
-          >
-            <Component
-              placeholder={placeholder}
-              readOnly={readOnly}
-              required={required}
-              style={_.isNumber(width) && !fullWidth ? { width: `${parseInt(width, 10)}px` } : undefined}
-              onChange={onChange}
-              defaultValue={defaultValue}
-              variant={variant ?? undefined}
-              onBlur={onBlur}
-              disabled={disabled}
-              label={label}
-              views={!_.isEmpty(views) ? views : ['day', 'year']}
-              disableFuture={disableFuture}
-              disableHighlightToday={disableHighlightToday}
-              disableOpenPicker={disableOpenPicker}
-              disablePast={disablePast}
-              displayWeekNumber={displayWeekNumber}
-              format={isValidDayjsFormat(format) ? format : undefined}
-              maxDate={maxDate && dayjs(maxDate)}
-              minDate={minDate && dayjs(minDate)}
-              reduceAnimations={reduceAnimations}
-              showDaysOutsideCurrentMonth={showDaysOutsideCurrentMonth}
-              {...passRest(rest)}
-            />
-            {hint && !error && <FormHelperText>{hint}</FormHelperText>}
-            {error && <FormHelperText>{error}</FormHelperText>}
-          </FormControl>
-        </MuiIfNotPlaintext>
+            style={_.isNumber(width) && !fullWidth ? { width: `${parseInt(width, 10)}px` } : undefined}
+            onChange={onChange}
+            defaultValue={defaultValue}
+            variant={variant ?? undefined}
+            onBlur={onBlur}
+            disabled={disabled}
+            label={label}
+            views={!_.isEmpty(views) ? views : ['day', 'year']}
+            disableFuture={disableFuture}
+            disableHighlightToday={disableHighlightToday}
+            disableOpenPicker={disableOpenPicker}
+            disablePast={disablePast}
+            displayWeekNumber={displayWeekNumber}
+            format={isValidDayjsFormat(format) ? format : undefined}
+            maxDate={maxDate && dayjs(maxDate)}
+            minDate={minDate && dayjs(minDate)}
+            reduceAnimations={reduceAnimations}
+            showDaysOutsideCurrentMonth={showDaysOutsideCurrentMonth}
+            {...passRest(rest)}
+          />
+          {hint && !error && <FormHelperText>{hint}</FormHelperText>}
+          {error && <FormHelperText>{error}</FormHelperText>}
+        </FormControl>
       </LocalizationProvider>
     </div>
   );

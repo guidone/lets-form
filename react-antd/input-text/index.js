@@ -3,12 +3,11 @@ import _ from 'lodash';
 import { Form, Input } from 'antd';
 import classNames from 'classnames';
 
-import { I18N, Plaintext } from '../../components';
+import { I18N } from '../../components';
 import { passRest, makeWidthStyle } from '../../helpers';
 import { TextOrIcon } from '../../common';
 
 import './input-text.scss';
-
 
 const TextInput = I18N(
   ({
@@ -21,7 +20,6 @@ const TextInput = I18N(
     showCount,
     tooltip = false,
     disabled = false,
-    plaintext,
     readOnly = false,
     required = false,
     maxLength,
@@ -56,8 +54,7 @@ const TextInput = I18N(
         hasFeedback={error != null}
         validateStatus={error ? 'error': undefined}
       >
-        {!plaintext && (
-          <Input
+        <Input
           placeholder={placeholder}
           readOnly={readOnly}
           autocomplete={autocomplete}
@@ -77,10 +74,6 @@ const TextInput = I18N(
           style={makeWidthStyle(fullWidth, width)}
           {...passRest(rest)}
         />
-        )}
-        {plaintext && (
-          <Plaintext component="input-text" value={value} plaintext={plaintext}/>
-        )}
       </Form.Item>
     )
   },

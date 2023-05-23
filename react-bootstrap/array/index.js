@@ -13,7 +13,6 @@ const ListArrayBootstrap = ({
   tooltip,
   name,
   label,
-  plaintext,
   error,
   ...rest
 }) => {
@@ -28,18 +27,14 @@ const ListArrayBootstrap = ({
           {required && <RequiredIcon />}
         </Form.Label>
       )}
-      <IfNotPlaintext component="array" value={rest.value} locale={rest.lfLocale} plaintext={plaintext}>
-        <>
-          <ListArray
-            LetsFormComponent={LetsForm}
-            {...rest}
-          />
-          {hint && !error && <Form.Text>{hint}</Form.Text>}
-          {_.isString(error) && !_.isEmpty(error) && (
-            <Form.Control.Feedback type="invalid">{error}</Form.Control.Feedback>
-          )}
-        </>
-      </IfNotPlaintext>
+      <ListArray
+        LetsFormComponent={LetsForm}
+        {...rest}
+      />
+      {hint && !error && <Form.Text>{hint}</Form.Text>}
+      {_.isString(error) && !_.isEmpty(error) && (
+        <Form.Control.Feedback type="invalid">{error}</Form.Control.Feedback>
+      )}
     </Form.Group>
   );
 };

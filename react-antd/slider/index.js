@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import _ from 'lodash';
 import { Form, Slider } from 'antd';
 
@@ -79,7 +79,7 @@ const SliderAnt = I18N(
   },
   ['label', 'hint'],
   {
-    marks: (value, i18n) => value.map(value => ({ ...value, label: i18n(value.label) }))
+    marks: (value, i18n) => (value || []).map(value => ({ ...value, label: i18n(value.label) }))
   }
 );
 

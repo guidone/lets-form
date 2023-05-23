@@ -21,7 +21,6 @@ const Select = I18N(
     error,
     onChange,
     onBlur,
-    plaintext,
     floatingLabel = false,
     filterKey,
     filterValue,
@@ -39,7 +38,6 @@ const Select = I18N(
       <Form.Select
         name={name}
         value={value}
-        plaintext={plaintext}
         onChange={handleChange}
         size={size}
         placeholder={placeholder}
@@ -61,6 +59,7 @@ const Select = I18N(
         className="lf-control-input-text"
         data-lf-field-name={name}
       >
+
         {!floatingLabel && (
           <Form.Label>
             {label}

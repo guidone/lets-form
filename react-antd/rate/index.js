@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { Form, Rate } from 'antd';
 import _ from 'lodash';
 
@@ -31,11 +31,6 @@ const RateAntd = I18N(
     tooltips,
     ...rest
   }) => {
-    const handleChange = useCallback(
-      e => onChange(e.target.value),
-      [onChange]
-    );
-
     const mappedTooltips = (tooltips ?? [])
       .map(item => {
         if (_.isString(item)) {
@@ -46,25 +41,6 @@ const RateAntd = I18N(
         return null;
       })
       .filter(Boolean);
-
-    /*
-      placeholder={placeholder}
-          readOnly={readOnly}
-          onChange={handleChange}
-          onBlur={onBlur}
-          value={value}
-          size={size}
-          prefix={prefix}
-          suffix={postfix}
-          allowClear={allowClear}
-          bordered={bordered}
-          disabled={disabled}
-          showCount={showCount}
-          maxLength={maxLength}
-          style={_.isNumber(width) ? { width: `${width}px` } : undefined}
-          {...(_.omit(rest, 'lfFramework', 'lfComponent'))}
-
-    */
 
     return (
       <Form.Item

@@ -16,7 +16,6 @@ const Slider = I18N(
     onBlur,
     disabled = false,
     readOnly = false,
-    //plaintext = false,
     error,
     required,
     placeholder,

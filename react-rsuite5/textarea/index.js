@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, InputGroup } from 'rsuite';
+import { Form, Input } from 'rsuite';
 import _ from 'lodash';
 
 import { RequiredIcon, I18N } from '../../components';
@@ -29,6 +29,7 @@ const Textarea = I18N(
         accepter={ControlTextare}
         rows={rows}
         value={value}
+        size={size}
         onChange={onChange}
         onBlur={onBlur}
         disabled={disabled}

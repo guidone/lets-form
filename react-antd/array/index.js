@@ -3,7 +3,6 @@ import { Form } from 'antd';
 
 import { ListArray } from '../../common';
 import LetsForm from '../../react-antd';
-import { IfNotPlaintext } from '../../components';
 
 import './array.scss';
 
@@ -14,7 +13,6 @@ const ListArrayAntd = ({
   name,
   label,
   error,
-  plaintext,
   ...rest
 }) => {
 
@@ -30,13 +28,10 @@ const ListArrayAntd = ({
       hasFeedback={error != null}
       validateStatus={error ? 'error': undefined}
     >
-      <IfNotPlaintext component="array" value={rest.value} locale={rest.lfLocale} plaintext={plaintext}>
-        <ListArray
-          LetsFormComponent={LetsForm}
-          {...rest}
-        />
-      </IfNotPlaintext>
-
+      <ListArray
+        LetsFormComponent={LetsForm}
+        {...rest}
+      />
     </Form.Item>
   );
 };

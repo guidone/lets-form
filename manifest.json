@@ -2,7 +2,6 @@
   "input-text": {
     "label": "Text Input",
     "category": "general",
-    "documentation": "https://github.com/guidone/lets-form/wiki/Input-text",
     "name": "input-text",
     "description": "Basic input text",
     "defaultValues": {
@@ -179,12 +178,12 @@
       {
         "name": "fullWidth",
         "type": "boolean",
-        "description": "Set the width of the container field to 100%"
+        "description": "Set the width of the field to 100% of the enclosing container"
       },
       {
         "name": "width",
         "type": "number",
-        "description": "Size of the field in pixel"
+        "description": "Set the width (in pixel) of the field"
       }
     ],
     "react-rsuite5": [
@@ -202,12 +201,12 @@
       {
         "name": "fullWidth",
         "type": "boolean",
-        "description": "Set the width of the container field to 100%"
+        "description": "Set the width of the field to 100% of the enclosing container"
       },
       {
         "name": "width",
         "type": "number",
-        "description": "Size of the field in pixel"
+        "description": "Set the width (in pixel) of the field"
       },
       {
         "name": "prefix",
@@ -232,24 +231,14 @@
     ],
     "react-material-ui": [
       {
-        "name": "floatingLabel",
-        "type": "boolean",
-        "description": "Show floating label for the control"
-      },
-      {
-        "name": "disableUnderline",
-        "type": "boolean",
-        "description": "Disable underline in \"filled\" and \"standard\" variant"
-      },
-      {
         "name": "fullWidth",
         "type": "boolean",
-        "description": "Set the width of the container field to 100%"
+        "description": "Set the width of the field to 100% of the enclosing container"
       },
       {
         "name": "width",
         "type": "number",
-        "description": "Size of the field in pixel"
+        "description": "Set the width (in pixel) of the field"
       },
       {
         "name": "size",
@@ -282,6 +271,16 @@
         ]
       },
       {
+        "name": "floatingLabel",
+        "type": "boolean",
+        "description": "Show floating label for the control"
+      },
+      {
+        "name": "disableUnderline",
+        "type": "boolean",
+        "description": "Disable underline in \"filled\" and \"standard\" variant"
+      },
+      {
         "name": "prefix",
         "type": "string",
         "description": "Fixed heading text"
@@ -305,12 +304,12 @@
       {
         "name": "fullWidth",
         "type": "boolean",
-        "description": "Set the width of the container field to 100%"
+        "description": "Set the width of the field to 100% of the enclosing container"
       },
       {
         "name": "width",
         "type": "number",
-        "description": "Size of the field in pixel"
+        "description": "Set the width (in pixel) of the field"
       },
       {
         "name": "prefix",
@@ -342,12 +341,12 @@
       {
         "name": "fullWidth",
         "type": "boolean",
-        "description": "Set the width of the container field to 100%"
+        "description": "Set the width of the field to 100% of the enclosing container"
       },
       {
         "name": "width",
         "type": "number",
-        "description": "Size of the field in pixel"
+        "description": "Set the width (in pixel) of the field"
       },
       {
         "name": "prefix",
@@ -438,11 +437,11 @@
       },
       {
         "name": "checkedChildren",
-        "type": "string"
+        "type": "string | i18n"
       },
       {
         "name": "unCheckedChildren",
-        "type": "string"
+        "type": "string | i18n"
       },
       {
         "name": "tooltip",
@@ -505,11 +504,11 @@
       },
       {
         "name": "checkedChildren",
-        "type": "string"
+        "type": "string | i18n"
       },
       {
         "name": "unCheckedChildren",
-        "type": "string"
+        "type": "string | i18n"
       }
     ],
     "frameworks": [
@@ -522,6 +521,7 @@
   "select": {
     "label": "Select",
     "category": "general",
+    "description": "Select / Combo box",
     "name": "select",
     "defaultValues": {
       "react": {
@@ -567,6 +567,41 @@
           "virtual": true,
           "showArrow": true
         },
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react-material-ui": {
+        "react-material-ui": {
+          "fullWidth": true
+        },
+        "options": [
+          {
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "two",
+            "label": "Two"
+          },
+          {
+            "value": "three",
+            "label": "Three"
+          }
+        ]
+      },
+      "react-bootstrap": {
         "options": [
           {
             "value": "one",
@@ -641,12 +676,12 @@
       {
         "name": "fullWidth",
         "type": "boolean",
-        "description": "Set the width of the container field to 100%"
+        "description": "Set the width of the field to 100% of the enclosing container"
       },
       {
         "name": "width",
         "type": "number",
-        "description": "Size of the field in pixel"
+        "description": "Set the width (in pixel) of the field"
       }
     ],
     "react-rsuite5": [
@@ -709,11 +744,6 @@
     ],
     "react-material-ui": [
       {
-        "name": "autoWidth",
-        "type": "boolean",
-        "description": "If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."
-      },
-      {
         "name": "size",
         "type": "string",
         "description": "Size of the field",
@@ -723,14 +753,19 @@
         ]
       },
       {
+        "name": "autoWidth",
+        "type": "boolean",
+        "description": "If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."
+      },
+      {
         "name": "fullWidth",
         "type": "boolean",
-        "description": "Set the width of the container field to 100%"
+        "description": "Set the width of the field to 100% of the enclosing container"
       },
       {
         "name": "width",
         "type": "number",
-        "description": "Size of the field in pixel"
+        "description": "Set the width (in pixel) of the field"
       },
       {
         "name": "floatingLabel",
@@ -1149,7 +1184,7 @@
     "label": "Input number",
     "category": "general",
     "name": "input-number",
-    "description": "Basic input number",
+    "description": "Basic input number field, returns a numeric value",
     "defaultValues": {
       "react-antd": {
         "react-antd": {
@@ -1158,6 +1193,12 @@
           "bordered": true
         },
         "step": 1
+      },
+      "react-material-ui": {
+        "react-material-ui": {
+          "variant": "standard",
+          "floatingLabel": true
+        }
       }
     },
     "common": [
@@ -1212,12 +1253,12 @@
       {
         "name": "fullWidth",
         "type": "boolean",
-        "description": "Set the width of the container field to 100%"
+        "description": "Set the width of the field to 100% of the enclosing container"
       },
       {
         "name": "width",
         "type": "number",
-        "description": "Size of the field in pixel"
+        "description": "Set the width (in pixel) of the field"
       },
       {
         "name": "allowClear",
@@ -1256,6 +1297,68 @@
         "description": "Show hint as tooltip next to label"
       }
     ],
+    "react-material-ui": [
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "small",
+          "medium"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "outlined",
+          "filled",
+          "standard"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "error",
+          "info",
+          "primary",
+          "secondary",
+          "success",
+          "warning"
+        ]
+      },
+      {
+        "name": "floatingLabel",
+        "type": "boolean",
+        "description": "Show floating label for the control"
+      },
+      {
+        "name": "disableUnderline",
+        "type": "boolean",
+        "description": "Disable underline in \"filled\" and \"standard\" variant"
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "description": "Fixed heading text"
+      },
+      {
+        "name": "postfix",
+        "type": "string",
+        "description": "Fixed trailing text"
+      }
+    ],
     "react-antd": [
       {
         "name": "min",
@@ -1280,8 +1383,8 @@
         "description": "Set value as string to support high precision decimals. Will return string value by onChange"
       },
       {
-        "name": "width",
-        "type": "number"
+        "name": "bordered",
+        "type": "boolean"
       },
       {
         "name": "size",
@@ -1294,16 +1397,23 @@
         ]
       },
       {
-        "name": "bordered",
+        "name": "tooltip",
         "type": "boolean"
       },
       {
-        "name": "tooltip",
-        "type": "boolean"
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
       }
     ],
     "frameworks": [
       "react-rsuite5",
+      "react-material-ui",
       "react-antd"
     ]
   },
@@ -1452,12 +1562,12 @@
       {
         "name": "fullWidth",
         "type": "boolean",
-        "description": "Set the width of the container field to 100%"
+        "description": "Set the width of the field to 100% of the enclosing container"
       },
       {
         "name": "width",
         "type": "number",
-        "description": "Size of the field in pixel"
+        "description": "Set the width (in pixel) of the field"
       },
       {
         "name": "valueLabelDisplay",
@@ -1567,6 +1677,7 @@
   "date": {
     "label": "Date",
     "category": "general",
+    "description": "Date field, returns a string in ISO-8601 format (i.e., 1972-10-01)",
     "name": "date",
     "defaultValues": {
       "react-antd": {
@@ -1784,12 +1895,12 @@
       {
         "name": "fullWidth",
         "type": "boolean",
-        "description": "Set the width of the container field to 100%"
+        "description": "Set the width of the field to 100% of the enclosing container"
       },
       {
         "name": "width",
         "type": "number",
-        "description": "Size of the field in pixel"
+        "description": "Set the width (in pixel) of the field"
       }
     ],
     "react-antd": [
@@ -1920,6 +2031,11 @@
         "name": "indeterminate",
         "type": "boolean",
         "description": "Status can be indeterminate (null), cycle values trough false, inderminate, true"
+      },
+      {
+        "name": "tooltip",
+        "type": "boolean",
+        "description": "Show hint as tooltip next to label"
       }
     ],
     "react-material-ui": [
@@ -2549,6 +2665,62 @@
         "description": "Show hint as tooltip next to label"
       }
     ],
+    "react-material-ui": [
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "small",
+          "medium"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "outlined",
+          "filled",
+          "standard"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "error",
+          "info",
+          "primary",
+          "secondary",
+          "success",
+          "warning"
+        ]
+      },
+      {
+        "name": "floatingLabel",
+        "type": "boolean",
+        "description": "Show floating label for the control"
+      },
+      {
+        "name": "disableUnderline",
+        "type": "boolean",
+        "description": "Disable underline in \"filled\" and \"standard\" variant"
+      },
+      {
+        "name": "maxRows",
+        "type": "number"
+      }
+    ],
     "react-bootstrap": [
       {
         "name": "size",
@@ -2606,6 +2778,7 @@
     ],
     "frameworks": [
       "react-rsuite5",
+      "react-material-ui",
       "react",
       "react-bootstrap",
       "react-antd"
@@ -2835,7 +3008,8 @@
       },
       "react-rsuite5": {
         "react-rsuite5": {
-          "block": true
+          "block": true,
+          "multiselectMode": "plain"
         },
         "options": [
           {
@@ -2926,6 +3100,15 @@
         ]
       },
       {
+        "name": "multiselectMode",
+        "type": "string",
+        "description": "Show the selected values as tag element or plain string",
+        "options": [
+          "tag",
+          "plain"
+        ]
+      },
+      {
         "name": "block",
         "type": "boolean",
         "description": "Only in fluid layout"
@@ -2947,6 +3130,46 @@
         "name": "preventOverflow",
         "type": "boolean",
         "description": "Prevent floating element overflow"
+      }
+    ],
+    "react-material-ui": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "small",
+          "medium"
+        ]
+      },
+      {
+        "name": "autoWidth",
+        "type": "boolean",
+        "description": "If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "floatingLabel",
+        "type": "boolean",
+        "description": "Show floating label for the control"
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "outlined",
+          "filled",
+          "standard"
+        ]
       }
     ],
     "react-antd": [
@@ -3023,6 +3246,7 @@
     ],
     "frameworks": [
       "react-rsuite5",
+      "react-material-ui",
       "react-antd"
     ]
   },
@@ -3139,14 +3363,6 @@
         "type": "string"
       },
       {
-        "name": "maxWidth",
-        "type": "number"
-      },
-      {
-        "name": "minHeight",
-        "type": "number"
-      },
-      {
         "name": "align",
         "type": "string",
         "options": [
@@ -3156,22 +3372,105 @@
         ]
       },
       {
+        "name": "hidden",
+        "type": "boolean",
+        "description": "Hides the field from the form"
+      }
+    ],
+    "react": [
+      {
+        "name": "maxWidth",
+        "type": "number"
+      },
+      {
+        "name": "minHeight",
+        "type": "number"
+      },
+      {
         "name": "marginTop",
         "type": "number"
       },
       {
         "name": "marginBottom",
         "type": "number"
+      }
+    ],
+    "react-rsuite5": [
+      {
+        "name": "maxWidth",
+        "type": "number"
       },
       {
-        "name": "hidden",
-        "type": "boolean",
-        "description": "Hides the field from the form"
+        "name": "minHeight",
+        "type": "number"
+      },
+      {
+        "name": "marginTop",
+        "type": "number"
+      },
+      {
+        "name": "marginBottom",
+        "type": "number"
+      }
+    ],
+    "react-material-ui": [
+      {
+        "name": "maxWidth",
+        "type": "number"
+      },
+      {
+        "name": "minHeight",
+        "type": "number"
+      },
+      {
+        "name": "marginTop",
+        "type": "number"
+      },
+      {
+        "name": "marginBottom",
+        "type": "number"
+      }
+    ],
+    "react-bootstrap": [
+      {
+        "name": "maxWidth",
+        "type": "number"
+      },
+      {
+        "name": "minHeight",
+        "type": "number"
+      },
+      {
+        "name": "marginTop",
+        "type": "number"
+      },
+      {
+        "name": "marginBottom",
+        "type": "number"
+      }
+    ],
+    "react-antd": [
+      {
+        "name": "maxWidth",
+        "type": "number"
+      },
+      {
+        "name": "minHeight",
+        "type": "number"
+      },
+      {
+        "name": "marginTop",
+        "type": "number"
+      },
+      {
+        "name": "marginBottom",
+        "type": "number"
       }
     ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
+      "react",
       "react-bootstrap",
       "react-antd"
     ]
@@ -3556,12 +3855,12 @@
       {
         "name": "fullWidth",
         "type": "boolean",
-        "description": "Set the width of the container field to 100%"
+        "description": "Set the width of the field to 100% of the enclosing container"
       },
       {
         "name": "width",
         "type": "number",
-        "description": "Size of the field in pixel"
+        "description": "Set the width (in pixel) of the field"
       }
     ],
     "react-antd": [

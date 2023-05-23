@@ -6,9 +6,13 @@ import { isValidDate, i18n, isI18n } from '../../helpers';
 import { NoLabel, YesLabel, NoElementsLabel, ElementLabel, ElementsLabel } from './locales';
 
 const Plaintext = ({ value, component, options, locale }) => {
-  console.log('allora cazzone', value)
+  console.log('giuda porco', value)
   let d;
   switch(component) {
+    case 'input-number':
+    case 'rate':
+    case 'slider':
+      return <div>{value}</div>
     case 'input-text':
       return <div>{value}</div>;
     case 'date':
@@ -46,8 +50,9 @@ const Plaintext = ({ value, component, options, locale }) => {
       }
       return <div>{label}</div>;
     case 'checkbox-group':
+    case 'multiselect':
       const selectedOptions = (options ?? []).filter(option => (value ?? []).includes(option.value));
-      const founds = selectedOptions.map(option => option.label);
+      const founds = selectedOptions.map(option => isI18n(option.label) ? i18n(option.label, locale) : option.label);
       return <div>{founds.join(', ')}</div>;
     case 'array':
       return (
@@ -66,6 +71,12 @@ const Plaintext = ({ value, component, options, locale }) => {
           )}
         </>
       );
+    case 'textarea':
+      return <div
+          dangerouslySetInnerHTML={{
+            __html: (value || '').replaceAll('\n', '<br/>')
+          }}
+      />;
     default:
       return <div>{typeof value !== 'object' ? value : ''}</div>;
   }

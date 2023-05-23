@@ -1,4 +1,5 @@
 .lf-control-common-array {
+  margin-top: 0px !important;
 
   .lf-control-common-array-item {
     display: flex;
@@ -7,15 +8,16 @@
     justify-content: flex-start;
     align-content: stretch;
     align-items: stretch;
-    margin-top: 5px;
     position: relative;
     border-left: 5px solid #dddddd;
     padding-left: 10px;
     padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px !important;
 
-    .rs-form-group {
+    /*.rs-form-group {
       margin-bottom: 5px !important;
-    }
+    }*/
 
     > .inner-form {
       order: 0;

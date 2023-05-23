@@ -193,6 +193,991 @@ var CrossCirle = function CrossCirle(_ref) {
 
 /***/ }),
 
+/***/ 8727:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "Z": () => (/* binding */ Group)
+});
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(8156);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+// EXTERNAL MODULE: ./node_modules/classnames/index.js
+var classnames = __webpack_require__(4184);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+// EXTERNAL MODULE: ./assets/icons/index.js + 7 modules
+var icons = __webpack_require__(2113);
+// EXTERNAL MODULE: ./components/index.js + 3 modules
+var components = __webpack_require__(4173);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__(3379);
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI = __webpack_require__(7795);
+var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
+var insertBySelector = __webpack_require__(569);
+var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+var setAttributesWithoutAttributes = __webpack_require__(3565);
+var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement = __webpack_require__(9216);
+var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+var styleTagTransform = __webpack_require__(4589);
+var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/group/group.scss
+var group = __webpack_require__(88);
+;// CONCATENATED MODULE: ./common/group/group.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (styleTagTransform_default());
+options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      options.insert = insertBySelector_default().bind(null, "head");
+    
+options.domAPI = (styleDomAPI_default());
+options.insertStyleElement = (insertStyleElement_default());
+
+var update = injectStylesIntoStyleTag_default()(group/* default */.Z, options);
+
+
+
+
+       /* harmony default export */ const group_group = (group/* default */.Z && group/* default.locals */.Z.locals ? group/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./common/group/index.js
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/anchor-has-content */
+
+
+
+
+
+var Group = (0,components/* I18N */.mb)(function (_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    _ref$disabled = _ref.disabled,
+    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    _ref$open = _ref.open,
+    open = _ref$open === void 0 ? true : _ref$open,
+    _ref$collapsible = _ref.collapsible,
+    collapsible = _ref$collapsible === void 0 ? true : _ref$collapsible,
+    _ref$bottomBorder = _ref.bottomBorder,
+    bottomBorder = _ref$bottomBorder === void 0 ? false : _ref$bottomBorder,
+    align = _ref.align,
+    children = _ref.children;
+  var _useState = (0,external_react_.useState)(open),
+    _useState2 = _slicedToArray(_useState, 2),
+    isOpen = _useState2[0],
+    setIsOpen = _useState2[1];
+  var handleClick = (0,external_react_.useCallback)(function (event) {
+    event.preventDefault();
+    setIsOpen(!isOpen);
+  }, [isOpen]);
+  // if open changes, then change status
+  (0,external_react_.useEffect)(function () {
+    setIsOpen(open);
+  }, [open]);
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    "data-lf-field-name": name,
+    className: classnames_default()('lf-control-group', {
+      'bottom-border': bottomBorder,
+      'open': isOpen,
+      'close': !isOpen
+    })
+  }, /*#__PURE__*/external_react_default().createElement("div", {
+    role: "separator",
+    className: classnames_default()('header', align)
+  }, /*#__PURE__*/external_react_default().createElement("span", {
+    className: "inner-text"
+  }, label, collapsible && /*#__PURE__*/external_react_default().createElement("a", {
+    href: "#",
+    className: "lf-btn-collapse",
+    disabled: disabled,
+    appearance: "link",
+    onClick: handleClick
+  }, isOpen ? /*#__PURE__*/external_react_default().createElement(icons/* ChevronUp */.Kh, {
+    color: "#3498ff"
+  }) : /*#__PURE__*/external_react_default().createElement(icons/* ChevronDown */._M, {
+    color: "#3498ff"
+  })))), (isOpen || !collapsible) && /*#__PURE__*/external_react_default().createElement("div", null, children));
+}, ['label']);
+
+
+/***/ }),
+
+/***/ 6542:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "iz": () => (/* reexport */ Divider),
+  "ZA": () => (/* reexport */ group/* Group */.Z),
+  "v0": () => (/* reexport */ ListArray),
+  "Vm": () => (/* reexport */ Placeholder),
+  "$z": () => (/* reexport */ three_columns/* ThreeColumns */.$),
+  "VZ": () => (/* reexport */ two_columns/* TwoColumns */.V)
+});
+
+// UNUSED EXPORTS: CommonIcon, PlaceholderImage, ReactView, TextOrIcon
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(8156);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+// EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
+var isEmpty = __webpack_require__(1609);
+var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
+// EXTERNAL MODULE: ./node_modules/micro-down/dist/index.js
+var dist = __webpack_require__(7305);
+var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__(3379);
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI = __webpack_require__(7795);
+var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
+var insertBySelector = __webpack_require__(569);
+var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+var setAttributesWithoutAttributes = __webpack_require__(3565);
+var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement = __webpack_require__(9216);
+var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+var styleTagTransform = __webpack_require__(4589);
+var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/placeholder/placeholder.scss
+var placeholder = __webpack_require__(860);
+;// CONCATENATED MODULE: ./common/placeholder/placeholder.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (styleTagTransform_default());
+options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      options.insert = insertBySelector_default().bind(null, "head");
+    
+options.domAPI = (styleDomAPI_default());
+options.insertStyleElement = (insertStyleElement_default());
+
+var update = injectStylesIntoStyleTag_default()(placeholder/* default */.Z, options);
+
+
+
+
+       /* harmony default export */ const placeholder_placeholder = (placeholder/* default */.Z && placeholder/* default.locals */.Z.locals ? placeholder/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./common/placeholder/index.js
+
+
+
+
+var Placeholder = function Placeholder(_ref) {
+  var text = _ref.text,
+    name = _ref.name;
+  if (!isEmpty_default()(text)) {
+    return /*#__PURE__*/external_react_default().createElement("div", {
+      className: "lf-control-placeholder",
+      "data-lf-field-name": name,
+      dangerouslySetInnerHTML: {
+        __html: dist_default().parse(text)
+      }
+    });
+  } else {
+    return /*#__PURE__*/external_react_default().createElement("div", null);
+  }
+};
+
+// EXTERNAL MODULE: ./common/three-columns/index.js + 1 modules
+var three_columns = __webpack_require__(7645);
+// EXTERNAL MODULE: ./common/two-columns/index.js + 1 modules
+var two_columns = __webpack_require__(963);
+// EXTERNAL MODULE: ./common/group/index.js + 1 modules
+var group = __webpack_require__(8727);
+// EXTERNAL MODULE: ./common/placeholder-image/index.js + 1 modules
+var placeholder_image = __webpack_require__(8587);
+// EXTERNAL MODULE: ./helpers/index.js + 25 modules
+var helpers = __webpack_require__(3159);
+;// CONCATENATED MODULE: ./common/text-or-icon/index.js
+
+
+var TextOrIcon = function TextOrIcon(str) {
+  if (isUrl(str)) {
+    return /*#__PURE__*/React.createElement("img", {
+      className: "lf-prefix-icon",
+      src: str,
+      alt: "icon"
+    });
+  } else {
+    return /*#__PURE__*/React.createElement("span", null, str);
+  }
+};
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/divider/divider.scss
+var divider = __webpack_require__(1760);
+;// CONCATENATED MODULE: ./common/divider/divider.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var divider_options = {};
+
+divider_options.styleTagTransform = (styleTagTransform_default());
+divider_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      divider_options.insert = insertBySelector_default().bind(null, "head");
+    
+divider_options.domAPI = (styleDomAPI_default());
+divider_options.insertStyleElement = (insertStyleElement_default());
+
+var divider_update = injectStylesIntoStyleTag_default()(divider/* default */.Z, divider_options);
+
+
+
+
+       /* harmony default export */ const divider_divider = (divider/* default */.Z && divider/* default.locals */.Z.locals ? divider/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./common/divider/index.js
+
+
+var Divider = function Divider(_ref) {
+  var name = _ref.name,
+    size = _ref.size,
+    color = _ref.color;
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-control-divider",
+    "data-lf-field-name": name
+  }, /*#__PURE__*/external_react_default().createElement("div", {
+    className: "bar",
+    style: {
+      height: "".concat(size, "px"),
+      backgroundColor: color
+    }
+  }, "&npsb;"));
+};
+
+// EXTERNAL MODULE: ./common/react-view/index.js
+var react_view = __webpack_require__(8169);
+// EXTERNAL MODULE: ./node_modules/lodash/omit.js
+var omit = __webpack_require__(7557);
+var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
+// EXTERNAL MODULE: ./node_modules/lodash/isNumber.js
+var isNumber = __webpack_require__(1763);
+var isNumber_default = /*#__PURE__*/__webpack_require__.n(isNumber);
+// EXTERNAL MODULE: ./node_modules/lodash/uniqueId.js
+var uniqueId = __webpack_require__(3955);
+var uniqueId_default = /*#__PURE__*/__webpack_require__.n(uniqueId);
+// EXTERNAL MODULE: ./node_modules/lodash/isArray.js
+var isArray = __webpack_require__(1469);
+var isArray_default = /*#__PURE__*/__webpack_require__.n(isArray);
+// EXTERNAL MODULE: ./form-context/index.js
+var form_context = __webpack_require__(5137);
+;// CONCATENATED MODULE: ./hooks/index.js
+
+
+var useFormContext = function useFormContext() {
+  var context = (0,external_react_.useContext)(form_context/* default */.Z);
+
+  // put here some defaults
+
+  return context;
+};
+;// CONCATENATED MODULE: ./common/array/helpers/is-empty-item.js
+var isEmptyItem = function isEmptyItem(obj) {
+  return Object.keys(obj).filter(function (key) {
+    return key !== 'id';
+  }).every(function (key) {
+    return obj[key] === null || obj[key] === undefined || obj[key] === '';
+  });
+};
+// EXTERNAL MODULE: ./node_modules/classnames/index.js
+var classnames = __webpack_require__(4184);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+// EXTERNAL MODULE: ./assets/icons/index.js + 7 modules
+var icons = __webpack_require__(2113);
+;// CONCATENATED MODULE: ./common/array/views/array-item.js
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
+
+
+var IconButton = function IconButton(_ref) {
+  var _ref$disabled = _ref.disabled,
+    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    className = _ref.className,
+    Icon = _ref.icon,
+    onClick = _ref.onClick;
+  var handleClick = (0,external_react_.useCallback)(function (e) {
+    e.preventDefault();
+    if (!disabled) {
+      onClick();
+    }
+  }, [disabled, onClick]);
+  return /*#__PURE__*/external_react_default().createElement("a", {
+    href: "#",
+    className: classnames_default()('lf-icon-button', className, {
+      disabled: disabled
+    }),
+    onClick: handleClick
+  }, Icon);
+};
+var ArrayItem = function ArrayItem(_ref2) {
+  var name = _ref2.name,
+    children = _ref2.children,
+    item = _ref2.item,
+    disabled = _ref2.disabled,
+    readOnly = _ref2.readOnly,
+    _ref2$onAdd = _ref2.onAdd,
+    onAdd = _ref2$onAdd === void 0 ? function () {} : _ref2$onAdd,
+    _ref2$onRemove = _ref2.onRemove,
+    onRemove = _ref2$onRemove === void 0 ? function () {} : _ref2$onRemove,
+    _ref2$disableAdd = _ref2.disableAdd,
+    disableAdd = _ref2$disableAdd === void 0 ? false : _ref2$disableAdd,
+    _ref2$showAdd = _ref2.showAdd,
+    showAdd = _ref2$showAdd === void 0 ? false : _ref2$showAdd,
+    _ref2$leftMargin = _ref2.leftMargin,
+    leftMargin = _ref2$leftMargin === void 0 ? 10 : _ref2$leftMargin;
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-control-common-array-item"
+  }, /*#__PURE__*/external_react_default().createElement("div", {
+    className: "inner-form"
+  }, children), /*#__PURE__*/external_react_default().createElement("div", {
+    className: "buttons"
+  }, showAdd && /*#__PURE__*/external_react_default().createElement(IconButton, {
+    disabled: disableAdd || disabled || readOnly,
+    className: "arrow",
+    appearance: "link",
+    icon: /*#__PURE__*/external_react_default().createElement(icons/* PlusCircle */.FU, {
+      height: 16,
+      width: 16,
+      color: "#3498ff"
+    }),
+    size: "sm",
+    onClick: onAdd
+  }), !showAdd && /*#__PURE__*/external_react_default().createElement(IconButton, {
+    className: "arrow",
+    disabled: disabled || readOnly,
+    appearance: "link",
+    icon: /*#__PURE__*/external_react_default().createElement(icons/* MinusCircle */.Sg, {
+      height: 16,
+      width: 16,
+      color: "#3498ff"
+    }),
+    size: "sm",
+    onClick: function onClick(event) {
+      onRemove(item);
+    }
+  })));
+};
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/array/list-array.scss
+var list_array = __webpack_require__(3010);
+;// CONCATENATED MODULE: ./common/array/list-array.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var list_array_options = {};
+
+list_array_options.styleTagTransform = (styleTagTransform_default());
+list_array_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      list_array_options.insert = insertBySelector_default().bind(null, "head");
+    
+list_array_options.domAPI = (styleDomAPI_default());
+list_array_options.insertStyleElement = (insertStyleElement_default());
+
+var list_array_update = injectStylesIntoStyleTag_default()(list_array/* default */.Z, list_array_options);
+
+
+
+
+       /* harmony default export */ const array_list_array = (list_array/* default */.Z && list_array/* default.locals */.Z.locals ? list_array/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./common/array/index.js
+
+
+
+
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var ListArray = function ListArray(_ref) {
+  var LetsFormComponent = _ref.LetsFormComponent,
+    value = _ref.value,
+    _ref$onChange = _ref.onChange,
+    _onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
+    _ref$onBlur = _ref.onBlur,
+    onBlur = _ref$onBlur === void 0 ? function () {} : _ref$onBlur,
+    _ref$disabled = _ref.disabled,
+    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    _ref$readOnly = _ref.readOnly,
+    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+    fields = _ref.fields,
+    _ref$layout = _ref.layout,
+    layout = _ref$layout === void 0 ? 'vertical' : _ref$layout,
+    maxHeight = _ref.maxHeight,
+    lfLocale = _ref.lfLocale,
+    _ref$leftMargin = _ref.leftMargin,
+    leftMargin = _ref$leftMargin === void 0 ? 0 : _ref$leftMargin,
+    children = _ref.children;
+  var _useState = (0,external_react_.useState)(isArray_default()(value) && !isEmpty_default()(value) ? (0,helpers/* fillIds */.Mw)(value) : [{
+      id: uniqueId_default()()
+    }]),
+    _useState2 = _slicedToArray(_useState, 2),
+    items = _useState2[0],
+    setItems = _useState2[1];
+  var _useFormContext = useFormContext(),
+    locales = _useFormContext.locales;
+  var form = {
+    layout: layout,
+    fluid: true,
+    locales: locales,
+    // copy the locales from the main form
+    fields: fields
+  };
+  var style = {};
+  if (maxHeight) {
+    //style.maxHeigth = _.isNumber(maxHeigth) ? `${maxHeigth}px` : maxHeigth;
+    style = {
+      maxHeight: "".concat(maxHeight, "px"),
+      overflowY: 'scroll'
+    };
+  }
+  if (leftMargin != null) {
+    style.marginLeft = isNumber_default()(leftMargin) ? "".concat(leftMargin, "px") : leftMargin;
+  }
+  var handleAdd = (0,external_react_.useCallback)(function () {
+    setItems(function (items) {
+      return [].concat(_toConsumableArray(items), [{
+        id: uniqueId_default()()
+      }]);
+    });
+  }, []);
+  var handleRemove = (0,external_react_.useCallback)(function (item) {
+    var newItems = items.filter(function (i) {
+      return i.id !== item.id;
+    });
+    setItems(newItems);
+    _onChange(newItems.map(function (i) {
+      return omit_default()(i, 'id');
+    }));
+  }, [items, _onChange]);
+  if (children) {
+    return /*#__PURE__*/external_react_default().createElement("div", {
+      style: {
+        padding: '0px 10px 1px 10px'
+      }
+    }, children);
+  }
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-control-common-array",
+    style: style
+  }, (isArray_default()(items) ? items : []).map(function (item, idx) {
+    var canAdd = idx === items.length - 1 && !isEmptyItem(item);
+    var showAdd = idx === items.length - 1 || items.length === 1;
+    return /*#__PURE__*/external_react_default().createElement(ArrayItem, {
+      key: item.id,
+      item: item,
+      disabled: disabled,
+      readOnly: readOnly,
+      disableAdd: !canAdd,
+      showAdd: showAdd,
+      onAdd: handleAdd,
+      onRemove: handleRemove
+    }, /*#__PURE__*/external_react_default().createElement(LetsFormComponent, {
+      form: form,
+      locale: lfLocale,
+      disabled: disabled,
+      readOnly: readOnly,
+      defaultValues: item,
+      onlyFields: true,
+      onChange: function onChange(value) {
+        console.log('changed item', value);
+        var newItems = items.map(function (i) {
+          return i.id === value.id ? value : i;
+        });
+        setItems(newItems);
+        _onChange(newItems.map(function (i) {
+          return omit_default()(i, 'id');
+        }));
+      }
+    }));
+  }));
+};
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/icon/common-icon.scss
+var common_icon = __webpack_require__(6159);
+;// CONCATENATED MODULE: ./common/icon/common-icon.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var common_icon_options = {};
+
+common_icon_options.styleTagTransform = (styleTagTransform_default());
+common_icon_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      common_icon_options.insert = insertBySelector_default().bind(null, "head");
+    
+common_icon_options.domAPI = (styleDomAPI_default());
+common_icon_options.insertStyleElement = (insertStyleElement_default());
+
+var common_icon_update = injectStylesIntoStyleTag_default()(common_icon/* default */.Z, common_icon_options);
+
+
+
+
+       /* harmony default export */ const icon_common_icon = (common_icon/* default */.Z && common_icon/* default.locals */.Z.locals ? common_icon/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./common/icon/index.js
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
+
+
+var COMMON_ICON_SIZES = (/* unused pure expression or super */ null && (['large', 'small']));
+var CommonIcon = function CommonIcon(_ref) {
+  var src = _ref.src,
+    className = _ref.className,
+    alt = _ref.alt,
+    _onClick = _ref.onClick,
+    size = _ref.size;
+  return /*#__PURE__*/React.createElement("div", {
+    className: classNames('lf-common-icon', className, {
+      small: size === 'small',
+      large: size === 'large'
+      //[size]: COMMON_ICON_SIZES.includes(size)
+    })
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "#",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      _onClick();
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: src,
+    alt: alt
+  })));
+};
+
+;// CONCATENATED MODULE: ./common/index.js
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ 8587:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "N": () => (/* binding */ PlaceholderImage)
+});
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(8156);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__(3379);
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI = __webpack_require__(7795);
+var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
+var insertBySelector = __webpack_require__(569);
+var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+var setAttributesWithoutAttributes = __webpack_require__(3565);
+var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement = __webpack_require__(9216);
+var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+var styleTagTransform = __webpack_require__(4589);
+var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/placeholder-image/placeholder-image.scss
+var placeholder_image = __webpack_require__(2558);
+;// CONCATENATED MODULE: ./common/placeholder-image/placeholder-image.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (styleTagTransform_default());
+options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      options.insert = insertBySelector_default().bind(null, "head");
+    
+options.domAPI = (styleDomAPI_default());
+options.insertStyleElement = (insertStyleElement_default());
+
+var update = injectStylesIntoStyleTag_default()(placeholder_image/* default */.Z, options);
+
+
+
+
+       /* harmony default export */ const placeholder_image_placeholder_image = (placeholder_image/* default */.Z && placeholder_image/* default.locals */.Z.locals ? placeholder_image/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./common/placeholder-image/index.js
+
+
+
+// add maxHeight
+// generalize for all components
+// cleanup
+// spostare in layout
+
+var PlaceholderImage = function PlaceholderImage(_ref) {
+  var url = _ref.url,
+    label = _ref.label,
+    name = _ref.name,
+    maxWidth = _ref.maxWidth,
+    minHeight = _ref.minHeight,
+    marginTop = _ref.marginTop,
+    marginBottom = _ref.marginBottom,
+    align = _ref.align;
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-control-placeholder-image",
+    "data-lf-field-name": name,
+    style: {
+      textAlign: align ? align : undefined
+    }
+  }, url && /*#__PURE__*/external_react_default().createElement("img", {
+    src: url,
+    alt: label || name,
+    style: {
+      marginTop: marginTop ? marginTop : undefined,
+      marginBottom: marginBottom ? marginBottom : undefined,
+      maxWidth: maxWidth ? maxWidth : undefined,
+      minHeight: minHeight ? minHeight : undefined,
+      textAlign: align ? align : undefined
+    }
+  }));
+};
+
+
+/***/ }),
+
+/***/ 8169:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Y": () => (/* binding */ ReactView)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8156);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["name", "view"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+var ReactView = function ReactView(_ref) {
+  var name = _ref.name,
+    view = _ref.view,
+    rest = _objectWithoutProperties(_ref, _excluded);
+  var View = view;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "lf-control-react-view",
+    "data-lf-field-name": name
+  }, View && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(View, _extends({
+    name: name
+  }, rest)));
+};
+
+
+/***/ }),
+
+/***/ 7645:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "$": () => (/* binding */ ThreeColumns)
+});
+
+// EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
+var isFunction = __webpack_require__(3560);
+var isFunction_default = /*#__PURE__*/__webpack_require__.n(isFunction);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(8156);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+// EXTERNAL MODULE: ./node_modules/classnames/index.js
+var classnames = __webpack_require__(4184);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__(3379);
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI = __webpack_require__(7795);
+var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
+var insertBySelector = __webpack_require__(569);
+var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+var setAttributesWithoutAttributes = __webpack_require__(3565);
+var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement = __webpack_require__(9216);
+var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+var styleTagTransform = __webpack_require__(4589);
+var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/three-columns/three-columns.scss
+var three_columns = __webpack_require__(1861);
+;// CONCATENATED MODULE: ./common/three-columns/three-columns.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (styleTagTransform_default());
+options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      options.insert = insertBySelector_default().bind(null, "head");
+    
+options.domAPI = (styleDomAPI_default());
+options.insertStyleElement = (insertStyleElement_default());
+
+var update = injectStylesIntoStyleTag_default()(three_columns/* default */.Z, options);
+
+
+
+
+       /* harmony default export */ const three_columns_three_columns = (three_columns/* default */.Z && three_columns/* default.locals */.Z.locals ? three_columns/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./common/three-columns/index.js
+
+
+
+
+var ThreeColumns = function ThreeColumns(_ref) {
+  var name = _ref.name,
+    layout = _ref.layout,
+    children = _ref.children,
+    leftAlignment = _ref.leftAlignment,
+    centerAlignment = _ref.centerAlignment,
+    rightAlignment = _ref.rightAlignment;
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    "data-lf-field-name": name,
+    className: classnames_default()('lf-control-three-columns', layout)
+  }, /*#__PURE__*/external_react_default().createElement("div", {
+    className: "left",
+    style: {
+      alignSelf: leftAlignment ? leftAlignment : undefined
+    }
+  }, isFunction_default()(children) && children('left')), /*#__PURE__*/external_react_default().createElement("div", {
+    className: "center",
+    style: {
+      alignSelf: centerAlignment ? centerAlignment : undefined
+    }
+  }, isFunction_default()(children) && children('center')), /*#__PURE__*/external_react_default().createElement("div", {
+    className: "right",
+    style: {
+      alignSelf: rightAlignment ? rightAlignment : undefined
+    }
+  }, isFunction_default()(children) && children('right')));
+};
+
+
+/***/ }),
+
+/***/ 963:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "V": () => (/* binding */ TwoColumns)
+});
+
+// EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
+var isFunction = __webpack_require__(3560);
+var isFunction_default = /*#__PURE__*/__webpack_require__.n(isFunction);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(8156);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+// EXTERNAL MODULE: ./node_modules/classnames/index.js
+var classnames = __webpack_require__(4184);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__(3379);
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI = __webpack_require__(7795);
+var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
+var insertBySelector = __webpack_require__(569);
+var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+var setAttributesWithoutAttributes = __webpack_require__(3565);
+var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement = __webpack_require__(9216);
+var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+var styleTagTransform = __webpack_require__(4589);
+var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/two-columns/two-columns.scss
+var two_columns = __webpack_require__(5318);
+;// CONCATENATED MODULE: ./common/two-columns/two-columns.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (styleTagTransform_default());
+options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      options.insert = insertBySelector_default().bind(null, "head");
+    
+options.domAPI = (styleDomAPI_default());
+options.insertStyleElement = (insertStyleElement_default());
+
+var update = injectStylesIntoStyleTag_default()(two_columns/* default */.Z, options);
+
+
+
+
+       /* harmony default export */ const two_columns_two_columns = (two_columns/* default */.Z && two_columns/* default.locals */.Z.locals ? two_columns/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./common/two-columns/index.js
+
+
+
+
+var TwoColumns = function TwoColumns(_ref) {
+  var name = _ref.name,
+    children = _ref.children,
+    layout = _ref.layout,
+    leftAlignment = _ref.leftAlignment,
+    rightAlignment = _ref.rightAlignment;
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: classnames_default()('lf-control-two-columns', layout),
+    "data-lf-field-name": name
+  }, /*#__PURE__*/external_react_default().createElement("div", {
+    className: "left",
+    style: {
+      alignSelf: leftAlignment ? leftAlignment : undefined
+    }
+  }, isFunction_default()(children) && children('left')), /*#__PURE__*/external_react_default().createElement("div", {
+    className: "right",
+    style: {
+      alignSelf: rightAlignment ? rightAlignment : undefined
+    }
+  }, isFunction_default()(children) && children('right')));
+};
+
+
+/***/ }),
+
 /***/ 4173:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -201,11 +1186,11 @@ var CrossCirle = function CrossCirle(_ref) {
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   "mb": () => (/* reexport */ I18N),
-  "W7": () => (/* reexport */ plaintext/* IfNotPlaintext */.W),
-  "UM": () => (/* reexport */ plaintext/* Plaintext */.U),
   "T_": () => (/* reexport */ required_icon/* RequiredIcon */.T),
   "qf": () => (/* reexport */ ValidationErrors)
 });
+
+// UNUSED EXPORTS: IfNotPlaintext, Plaintext
 
 // EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
 var isEmpty = __webpack_require__(1609);
@@ -362,6 +1347,156 @@ var plaintext = __webpack_require__(7808);
 
 /***/ }),
 
+/***/ 6089:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "Q": () => (/* binding */ PlaintextForm)
+});
+
+// EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
+var isEmpty = __webpack_require__(1609);
+var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
+// EXTERNAL MODULE: ./node_modules/lodash/pick.js
+var pick = __webpack_require__(8718);
+var pick_default = /*#__PURE__*/__webpack_require__.n(pick);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(8156);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+// EXTERNAL MODULE: ./components/plaintext/index.js + 6 modules
+var plaintext = __webpack_require__(7808);
+// EXTERNAL MODULE: ./common/index.js + 12 modules
+var common = __webpack_require__(6542);
+// EXTERNAL MODULE: ./helpers/index.js + 25 modules
+var helpers = __webpack_require__(3159);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__(3379);
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI = __webpack_require__(7795);
+var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
+var insertBySelector = __webpack_require__(569);
+var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+var setAttributesWithoutAttributes = __webpack_require__(3565);
+var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement = __webpack_require__(9216);
+var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+var styleTagTransform = __webpack_require__(4589);
+var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./components/plaintext-form/plaintext-form.scss
+var plaintext_form = __webpack_require__(51);
+;// CONCATENATED MODULE: ./components/plaintext-form/plaintext-form.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (styleTagTransform_default());
+options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      options.insert = insertBySelector_default().bind(null, "head");
+    
+options.domAPI = (styleDomAPI_default());
+options.insertStyleElement = (insertStyleElement_default());
+
+var update = injectStylesIntoStyleTag_default()(plaintext_form/* default */.Z, options);
+
+
+
+
+       /* harmony default export */ const plaintext_form_plaintext_form = (plaintext_form/* default */.Z && plaintext_form/* default.locals */.Z.locals ? plaintext_form/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./components/plaintext-form/index.js
+
+
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+
+
+var PlaintextLabel = function PlaintextLabel(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-plaintext-field-label"
+  }, children);
+};
+var renderFields = function renderFields(fields, locale, framework) {
+  var currentValues = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+  return fields.map(function (field) {
+    if (field.component === 'group') {
+      return /*#__PURE__*/external_react_default().createElement(common/* Group */.ZA, _extends({
+        key: field.name,
+        collapsible: false,
+        label: field.label
+      }, pick_default()(field, ['bottomBorder', 'align'])), renderFields(field.fields, locale, framework, currentValues));
+    } else if (field.component === 'two-columns') {
+      return /*#__PURE__*/external_react_default().createElement(common/* TwoColumns */.VZ, _extends({
+        key: field.name
+      }, pick_default()(field, ['layout', 'leftAlignment', 'rightAlignment'])), function (column) {
+        if (column === 'left') {
+          return renderFields(field.leftFields, locale, framework, currentValues);
+        } else if (column === 'right') {
+          return renderFields(field.rightFields, locale, framework, currentValues);
+        }
+      });
+    } else if (field.component === 'three-columns') {
+      return /*#__PURE__*/external_react_default().createElement(common/* ThreeColumns */.$z, _extends({
+        key: field.name
+      }, pick_default()(field, ['layout', 'leftAlignment', 'centerAlignment', 'rightAlignment'])), function (column) {
+        if (column === 'left') {
+          return renderFields(field.leftFields, locale, framework, currentValues);
+        } else if (column === 'center') {
+          return renderFields(field.centerFields, locale, framework, currentValues);
+        } else if (column === 'right') {
+          return renderFields(field.rightFields, locale, framework, currentValues);
+        }
+      });
+    }
+    return /*#__PURE__*/external_react_default().createElement("div", {
+      key: field.name,
+      className: "lf-plaintext-field lf-control-".concat(field.component)
+    }, /*#__PURE__*/external_react_default().createElement(PlaintextLabel, null, (0,helpers/* isI18n */.QK)(field.label) ? (0,helpers/* i18n */.ag)(field.label, locale) : field.label), /*#__PURE__*/external_react_default().createElement(plaintext/* Plaintext */.U, {
+      component: field.component,
+      locale: locale,
+      value: currentValues[field.name],
+      options: field.options
+    }));
+  });
+};
+var PlaintextForm = function PlaintextForm(_ref2) {
+  var form = _ref2.form,
+    locale = _ref2.locale,
+    framework = _ref2.framework,
+    currentValues = _ref2.currentValues;
+  var fields = form.fields;
+  if (isEmpty_default()(fields)) {
+    return /*#__PURE__*/external_react_default().createElement("span", null);
+  }
+  console.log('plaintext--->', currentValues);
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-form lf-form-plaintext"
+  }, renderFields(fields, locale, framework, currentValues));
+};
+
+
+/***/ }),
+
 /***/ 7808:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -369,9 +1504,10 @@ var plaintext = __webpack_require__(7808);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "W": () => (/* binding */ IfNotPlaintext),
   "U": () => (/* binding */ Plaintext)
 });
+
+// UNUSED EXPORTS: IfNotPlaintext
 
 // EXTERNAL MODULE: ./node_modules/lodash/isArray.js
 var isArray = __webpack_require__(1469);
@@ -417,9 +1553,13 @@ var Plaintext = function Plaintext(_ref) {
     component = _ref.component,
     options = _ref.options,
     locale = _ref.locale;
-  console.log('allora cazzone', value);
+  console.log('giuda porco', value);
   var d;
   switch (component) {
+    case 'input-number':
+    case 'rate':
+    case 'slider':
+      return /*#__PURE__*/external_react_default().createElement("div", null, value);
     case 'input-text':
       return /*#__PURE__*/external_react_default().createElement("div", null, value);
     case 'date':
@@ -459,17 +1599,24 @@ var Plaintext = function Plaintext(_ref) {
       }
       return /*#__PURE__*/external_react_default().createElement("div", null, label);
     case 'checkbox-group':
+    case 'multiselect':
       var selectedOptions = (options !== null && options !== void 0 ? options : []).filter(function (option) {
         return (value !== null && value !== void 0 ? value : []).includes(option.value);
       });
       var founds = selectedOptions.map(function (option) {
-        return option.label;
+        return (0,helpers/* isI18n */.QK)(option.label) ? (0,helpers/* i18n */.ag)(option.label, locale) : option.label;
       });
       return /*#__PURE__*/external_react_default().createElement("div", null, founds.join(', '));
     case 'array':
       return /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, isArray_default()(value) && /*#__PURE__*/external_react_default().createElement("div", null, /*#__PURE__*/external_react_default().createElement("span", {
         className: "count"
       }, value.length), ' ', value.length > 1 ? (0,helpers/* i18n */.ag)(elements_namespaceObject, locale) : (0,helpers/* i18n */.ag)(element_namespaceObject, locale)), !isArray_default()(value) && /*#__PURE__*/external_react_default().createElement("div", null, (0,helpers/* i18n */.ag)(no_elements_namespaceObject, locale)));
+    case 'textarea':
+      return /*#__PURE__*/external_react_default().createElement("div", {
+        dangerouslySetInnerHTML: {
+          __html: (value || '').replaceAll('\n', '<br/>')
+        }
+      });
     default:
       return /*#__PURE__*/external_react_default().createElement("div", null, _typeof(value) !== 'object' ? value : '');
   }
@@ -482,7 +1629,7 @@ var IfNotPlaintext = function IfNotPlaintext(_ref2) {
     children = _ref2.children,
     locale = _ref2.locale;
   if (plaintext) {
-    return /*#__PURE__*/external_react_default().createElement(Plaintext, {
+    return /*#__PURE__*/React.createElement(Plaintext, {
       value: value,
       component: component,
       options: options,
@@ -571,15 +1718,16 @@ var FormContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createConte
 /* harmony import */ var lodash_isString__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_isString__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(8156);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(7536);
+/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(7536);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4184);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(4173);
-/* harmony import */ var _costants__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(8064);
+/* harmony import */ var _costants__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(8064);
 /* harmony import */ var _assets_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(2113);
 /* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(3159);
 /* harmony import */ var _form_context__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(5137);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(4685);
+/* harmony import */ var _components_plaintext_form__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(6089);
 
 
 
@@ -616,6 +1764,7 @@ function AsyncFromSyncIterator(s) { function AsyncFromSyncIteratorContinuation(r
 
 
 //import PropTypes from 'prop-types';
+
 
 
 
@@ -883,7 +2032,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
         Component = MissingComponent;
       }
       // remove mandatory fields and platform specific fields
-      var additionalFields = lodash_omit__WEBPACK_IMPORTED_MODULE_1___default()(field, ['id', 'name', 'label', 'hint', 'disabled', 'readOnly', 'plaintext', 'size', 'placeholder', 'component'].concat(_toConsumableArray(_costants__WEBPACK_IMPORTED_MODULE_12__/* .FRAMEWORKS */ .MQ)));
+      var additionalFields = lodash_omit__WEBPACK_IMPORTED_MODULE_1___default()(field, ['id', 'name', 'label', 'hint', 'disabled', 'readOnly', 'plaintext', 'size', 'placeholder', 'component'].concat(_toConsumableArray(_costants__WEBPACK_IMPORTED_MODULE_13__/* .FRAMEWORKS */ .MQ)));
 
       // special case of group
       if (field.component === 'group') {
@@ -1134,7 +2283,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       var rules = translateValidation(_objectSpread({
         required: field.required
       }, field.validation), locale, onJavascriptError);
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(react_hook_form__WEBPACK_IMPORTED_MODULE_13__/* .Controller */ .Qr, {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(react_hook_form__WEBPACK_IMPORTED_MODULE_14__/* .Controller */ .Qr, {
         key: "field_".concat(field.name),
         name: field.name,
         rules: rules,
@@ -1224,7 +2373,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
       _useState4 = _slicedToArray(_useState3, 2),
       transformers = _useState4[0],
       setTransformers = _useState4[1];
-    var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_13__/* .useForm */ .cI)({
+    var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_14__/* .useForm */ .cI)({
         defaultValues: defaultValues,
         mode: form.validationMode
       }),
@@ -1537,6 +2686,14 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
     var Wrapper = wrapper;
     var GroupWrapper = groupWrapper;
     var BottomView = bottomView;
+    if (plaintext) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(_components_plaintext_form__WEBPACK_IMPORTED_MODULE_12__/* .PlaintextForm */ .Q, {
+        form: form,
+        locale: locale,
+        framework: framework,
+        currentValues: getValues()
+      });
+    }
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default().createElement(_form_context__WEBPACK_IMPORTED_MODULE_10__/* ["default"].Provider */ .Z.Provider, {
       value: {
         locales: form.locales,
@@ -1596,6 +2753,21 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
     return isEqual;
   });
   FormGenerator.displayName = 'FormGenerator';
+
+  /*const FormGeneratorWrapper = ({ children, ...rest }) => {
+    if (rest.plaintext) {
+      return (
+        <PlaintextForm
+          form={rest.form}
+          locale={rest.locale}
+          framework={rest.framework}
+        />
+      );
+    } else {
+      return <FormGenerator {...rest}>{children}</FormGenerator>
+    }
+  };*/
+
   return FormGenerator;
 };
 
@@ -2396,7 +3568,7 @@ var isEmptyForm = function isEmptyForm(form) {
   return !form || !Array.isArray(form.fields) || form.fields.length === 0;
 };
 ;// CONCATENATED MODULE: ./mappings.json
-const mappings_namespaceObject = JSON.parse('{"input-text":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"variant":["react-material-ui"],"color":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"value":null,"image":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"layout":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-antd"],"step":["react-rsuite5","react-antd"],"max":["react-rsuite5","react-antd"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":["react-rsuite5","react-material-ui","react-antd"],"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"value":["react-rsuite5","react-material-ui","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"optionType":["react-antd"],"size":["react-antd"]},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react","react-bootstrap","react-antd"],"width":["react","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"value":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"width":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"maxWidth":null,"minHeight":null,"align":null,"marginTop":null,"marginBottom":null,"hidden":null},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
+const mappings_namespaceObject = JSON.parse('{"input-text":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"value":null,"image":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"listHeight":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"layout":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"fullWidth":["react-rsuite5","react-material-ui","react-antd"],"width":["react-rsuite5","react-material-ui","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-antd"],"step":["react-rsuite5","react-antd"],"max":["react-rsuite5","react-antd"],"prefix":["react-rsuite5","react-material-ui"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui"],"disableUnderline":["react-material-ui"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":["react-rsuite5","react-material-ui","react-antd"],"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"value":["react-rsuite5","react-material-ui","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"optionType":["react-antd"],"size":["react-antd"]},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-material-ui","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui"],"disableUnderline":["react-material-ui"],"maxRows":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"value":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-antd"],"multiselectMode":["react-rsuite5"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui"],"variant":["react-material-ui"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"align":null,"hidden":null,"maxWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"minHeight":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginTop":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginBottom":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
 ;// CONCATENATED MODULE: ./helpers/apply-transformers.js
 
 
@@ -2873,7 +4045,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-common-array .lf-control-common-array-item{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;align-items:stretch;margin-top:5px;position:relative;border-left:5px solid #ddd;padding-left:10px;padding-top:5px}.lf-control-common-array .lf-control-common-array-item .rs-form-group{margin-bottom:5px !important}.lf-control-common-array .lf-control-common-array-item>.inner-form{order:0;flex:1 0 auto;align-self:auto;--lf-field-margin: 4px;--lf-field-column-margin: 10px}.lf-control-common-array .lf-control-common-array-item>.buttons{flex:0 0 auto;align-self:flex-start;margin-left:6px}.lf-icon-button{display:inline-block;min-height:16px;min-width:16px;padding:4px;border-radius:3px}.lf-icon-button.disabled{opacity:.6}.lf-icon-button:not(.disabled):hover{background-color:#eee}", "",{"version":3,"sources":["webpack://./common/array/list-array.scss"],"names":[],"mappings":"AAEE,uDACE,YAAA,CACA,kBAAA,CACA,gBAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,cAAA,CACA,iBAAA,CACA,0BAAA,CACA,iBAAA,CACA,eAAA,CAEA,sEACE,4BAAA,CAGF,mEACE,OAAA,CACA,aAAA,CACA,eAAA,CACA,sBAAA,CACA,8BAAA,CAGF,gEACE,aAAA,CACA,qBAAA,CACA,eAAA,CAMN,gBACE,oBAAA,CACA,eAAA,CACA,cAAA,CACA,WAAA,CACA,iBAAA,CAEA,yBACE,UAAA,CAGF,qCACE,qBAAA","sourcesContent":[".lf-control-common-array {\n\n  .lf-control-common-array-item {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n    margin-top: 5px;\n    position: relative;\n    border-left: 5px solid #dddddd;\n    padding-left: 10px;\n    padding-top: 5px;\n\n    .rs-form-group {\n      margin-bottom: 5px !important;\n    }\n\n    > .inner-form {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n      --lf-field-margin: 4px;\n      --lf-field-column-margin: 10px;\n    }\n\n    > .buttons {\n      flex: 0 0 auto;\n      align-self: flex-start;\n      margin-left: 6px;\n    }\n  }\n\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n\n  &.disabled {\n    opacity: 0.6;\n  }\n\n  &:not(.disabled):hover {\n    background-color: #eeeeee;\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-common-array{margin-top:0px !important}.lf-control-common-array .lf-control-common-array-item{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;align-items:stretch;position:relative;border-left:5px solid #ddd;padding-left:10px;padding-top:5px;padding-bottom:5px;margin-top:5px !important}.lf-control-common-array .lf-control-common-array-item>.inner-form{order:0;flex:1 0 auto;align-self:auto;--lf-field-margin: 4px;--lf-field-column-margin: 10px}.lf-control-common-array .lf-control-common-array-item>.buttons{flex:0 0 auto;align-self:flex-start;margin-left:6px}.lf-icon-button{display:inline-block;min-height:16px;min-width:16px;padding:4px;border-radius:3px}.lf-icon-button.disabled{opacity:.6}.lf-icon-button:not(.disabled):hover{background-color:#eee}", "",{"version":3,"sources":["webpack://./common/array/list-array.scss"],"names":[],"mappings":"AAAA,yBACE,yBAAA,CAEA,uDACE,YAAA,CACA,kBAAA,CACA,gBAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,iBAAA,CACA,0BAAA,CACA,iBAAA,CACA,eAAA,CACA,kBAAA,CACA,yBAAA,CAMA,mEACE,OAAA,CACA,aAAA,CACA,eAAA,CACA,sBAAA,CACA,8BAAA,CAGF,gEACE,aAAA,CACA,qBAAA,CACA,eAAA,CAMN,gBACE,oBAAA,CACA,eAAA,CACA,cAAA,CACA,WAAA,CACA,iBAAA,CAEA,yBACE,UAAA,CAGF,qCACE,qBAAA","sourcesContent":[".lf-control-common-array {\n  margin-top: 0px !important;\n\n  .lf-control-common-array-item {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n    position: relative;\n    border-left: 5px solid #dddddd;\n    padding-left: 10px;\n    padding-top: 5px;\n    padding-bottom: 5px;\n    margin-top: 5px !important;\n\n    /*.rs-form-group {\n      margin-bottom: 5px !important;\n    }*/\n\n    > .inner-form {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n      --lf-field-margin: 4px;\n      --lf-field-column-margin: 10px;\n    }\n\n    > .buttons {\n      flex: 0 0 auto;\n      align-self: flex-start;\n      margin-left: 6px;\n    }\n  }\n\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n\n  &.disabled {\n    opacity: 0.6;\n  }\n\n  &:not(.disabled):hover {\n    background-color: #eeeeee;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2896,7 +4068,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-common-array .lf-control-c
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-divider{min-height:15px;font-size:1px;display:flex;margin-bottom:var(--lf-field-margin)}.lf-control-divider .bar{width:100%;margin-top:5px;margin-bottom:5px}", "",{"version":3,"sources":["webpack://./common/divider/divider.scss"],"names":[],"mappings":"AAAA,oBACE,eAAA,CACA,aAAA,CACA,YAAA,CACA,oCAAA,CAEA,yBACE,UAAA,CACA,cAAA,CACA,iBAAA","sourcesContent":[".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n  margin-bottom: var(--lf-field-margin);\n\n  .bar {\n    width: 100%;\n    margin-top: 5px;\n    margin-bottom: 5px;\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-divider{min-height:15px;font-size:1px;display:flex}.lf-control-divider .bar{width:100%;margin-top:5px;margin-bottom:5px}", "",{"version":3,"sources":["webpack://./common/divider/divider.scss"],"names":[],"mappings":"AAAA,oBACE,eAAA,CACA,aAAA,CACA,YAAA,CAGA,yBACE,UAAA,CACA,cAAA,CACA,iBAAA","sourcesContent":[".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n\n\n  .bar {\n    width: 100%;\n    margin-top: 5px;\n    margin-bottom: 5px;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -2919,7 +4091,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-divider{min-height:15px;fo
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-group{margin-bottom:var(--lf-field-margin)}.lf-control-group.bottom-border.open{border-bottom:1px solid #e5e5ea;padding-bottom:15px}.lf-control-group .header{align-items:center;background:rgba(0,0,0,0);display:flex;margin:15px 0px;height:1px;flex-direction:row}.lf-control-group .header .inner-text{flex:0 0 auto;padding:0 12px;display:inline-block}.lf-control-group .header:before{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header:after{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header.left:before{flex:0 0 10px}.lf-control-group .header.right:after{flex:0 0 10px}", "",{"version":3,"sources":["webpack://./common/group/group.scss"],"names":[],"mappings":"AAAA,kBACE,oCAAA,CAEA,qCACE,+BAAA,CACA,mBAAA,CAGF,0BACE,kBAAA,CACA,wBAAA,CACA,YAAA,CACA,eAAA,CACA,UAAA,CACA,kBAAA,CAEA,sCACE,aAAA,CACA,cAAA,CACA,oBAAA,CAGF,iCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAGF,gCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAIA,sCACE,aAAA,CAKF,sCACE,aAAA","sourcesContent":[".lf-control-group {\n  margin-bottom: var(--lf-field-margin);\n\n  &.bottom-border.open {\n    border-bottom: 1px solid #e5e5ea;\n    padding-bottom: 15px;\n  }\n\n  .header {\n    align-items: center;\n    background: transparent;\n    display: flex;\n    margin: 15px 0px;\n    height: 1px;\n    flex-direction: row;\n\n    .inner-text {\n      flex: 0 0 auto;\n      padding: 0 12px;\n      display: inline-block;\n    }\n\n    &:before {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &:after {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &.left {\n      &:before {\n        flex: 0 0 10px;\n      }\n    }\n\n    &.right {\n      &:after {\n        flex: 0 0 10px;\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-group.bottom-border.open{border-bottom:1px solid #e5e5ea;padding-bottom:15px}.lf-control-group .header{align-items:center;background:rgba(0,0,0,0);display:flex;margin:15px 0px;height:1px;flex-direction:row}.lf-control-group .header .inner-text{flex:0 0 auto;padding:0 12px;display:inline-block}.lf-control-group .header:before{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header:after{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header.left:before{flex:0 0 10px}.lf-control-group .header.right:after{flex:0 0 10px}", "",{"version":3,"sources":["webpack://./common/group/group.scss"],"names":[],"mappings":"AAEE,qCACE,+BAAA,CACA,mBAAA,CAGF,0BACE,kBAAA,CACA,wBAAA,CACA,YAAA,CACA,eAAA,CACA,UAAA,CACA,kBAAA,CAEA,sCACE,aAAA,CACA,cAAA,CACA,oBAAA,CAGF,iCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAGF,gCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAIA,sCACE,aAAA,CAKF,sCACE,aAAA","sourcesContent":[".lf-control-group {\n\n  &.bottom-border.open {\n    border-bottom: 1px solid #e5e5ea;\n    padding-bottom: 15px;\n  }\n\n  .header {\n    align-items: center;\n    background: transparent;\n    display: flex;\n    margin: 15px 0px;\n    height: 1px;\n    flex-direction: row;\n\n    .inner-text {\n      flex: 0 0 auto;\n      padding: 0 12px;\n      display: inline-block;\n    }\n\n    &:before {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &:after {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &.left {\n      &:before {\n        flex: 0 0 10px;\n      }\n    }\n\n    &.right {\n      &:after {\n        flex: 0 0 10px;\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3011,7 +4183,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-placeholder ol,.lf-control
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-three-columns{margin-bottom:var(--lf-field-margin);display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:20px}.lf-control-three-columns .left{flex:1 0;align-self:auto;margin-right:var(--lf-field-column-margin)}.lf-control-three-columns .center{margin-right:var(--lf-field-column-margin);flex:1 0;align-self:auto}.lf-control-three-columns .right{flex:1 0;align-self:auto}.lf-control-three-columns .left:empty{display:none}.lf-control-three-columns.layout-0-1-0 .left{flex:0 0}.lf-control-three-columns.layout-0-1-0 .center{flex:1 0}.lf-control-three-columns.layout-0-1-0 .right{flex:0 0}.lf-control-three-columns.layout-1-0-0 .left{flex:1 0}.lf-control-three-columns.layout-1-0-0 .center{flex:0 0}.lf-control-three-columns.layout-1-0-0 .right{flex:0 0}.lf-control-three-columns.layout-1-1-1 .left{flex:1 0}.lf-control-three-columns.layout-1-1-1 .center{flex:1 0}.lf-control-three-columns.layout-1-1-1 .right{flex:1 0}.lf-control-three-columns.layout-1-1-2 .left{flex:1 0}.lf-control-three-columns.layout-1-1-2 .center{flex:1 0}.lf-control-three-columns.layout-1-1-2 .right{flex:2 0}.lf-control-three-columns.layout-1-2-1 .left{flex:1 0}.lf-control-three-columns.layout-1-2-1 .center{flex:2 0}.lf-control-three-columns.layout-1-2-1 .right{flex:1 0}.lf-control-three-columns.layout-2-1-1 .left{flex:2 0}.lf-control-three-columns.layout-2-1-1 .center{flex:1 0}.lf-control-three-columns.layout-2-1-1 .right{flex:1 0}.lf-control-three-columns.layout-1-1-3 .left{flex:1 0}.lf-control-three-columns.layout-1-1-3 .center{flex:1 0}.lf-control-three-columns.layout-1-1-3 .right{flex:3 0}.lf-control-three-columns.layout-1-3-1 .left{flex:1 0}.lf-control-three-columns.layout-1-3-1 .center{flex:3 0}.lf-control-three-columns.layout-1-3-1 .right{flex:1 0}.lf-control-three-columns.layout-3-1-1 .left{flex:3 0}.lf-control-three-columns.layout-3-1-1 .center{flex:1 0}.lf-control-three-columns.layout-3-1-1 .right{flex:1 0}.lf-form-react-rsuite5 .lf-three-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,0BACE,oCAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAUA,gCACE,QAAA,CACA,eAAA,CACA,0CAAA,CAGF,kCACE,0CAAA,CACA,QAAA,CACA,eAAA,CAGF,iCACE,QAAA,CACA,eAAA,CAGF,sCACE,YAAA,CAIA,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAQJ,yCACE,oCAAA","sourcesContent":[".lf-control-three-columns {\n  margin-bottom: var(--lf-field-margin);\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: var(--lf-field-column-margin);\n  }\n\n  .center {\n    margin-right: var(--lf-field-column-margin);\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .left:empty {\n    display: none;\n  }\n\n  &.layout-0-1-0 {\n    .left {\n      flex: 0 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-0-0 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 0 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-1-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-2-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-2-1-1 {\n    .left {\n      flex: 2 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-3-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1-1 {\n    .left {\n      flex: 3 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n\n}\n\n.lf-form-react-rsuite5 {\n  .lf-three-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-three-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:20px}.lf-control-three-columns .left{flex:1 0;align-self:auto;margin-right:var(--lf-field-column-margin)}.lf-control-three-columns .center{margin-right:var(--lf-field-column-margin);flex:1 0;align-self:auto}.lf-control-three-columns .right{flex:1 0;align-self:auto}.lf-control-three-columns .left:empty{display:none}.lf-control-three-columns.layout-0-1-0 .left{flex:0 0}.lf-control-three-columns.layout-0-1-0 .center{flex:1 0}.lf-control-three-columns.layout-0-1-0 .right{flex:0 0}.lf-control-three-columns.layout-1-0-0 .left{flex:1 0}.lf-control-three-columns.layout-1-0-0 .center{flex:0 0}.lf-control-three-columns.layout-1-0-0 .right{flex:0 0}.lf-control-three-columns.layout-1-1-1 .left{flex:1 0}.lf-control-three-columns.layout-1-1-1 .center{flex:1 0}.lf-control-three-columns.layout-1-1-1 .right{flex:1 0}.lf-control-three-columns.layout-1-1-2 .left{flex:1 0}.lf-control-three-columns.layout-1-1-2 .center{flex:1 0}.lf-control-three-columns.layout-1-1-2 .right{flex:2 0}.lf-control-three-columns.layout-1-2-1 .left{flex:1 0}.lf-control-three-columns.layout-1-2-1 .center{flex:2 0}.lf-control-three-columns.layout-1-2-1 .right{flex:1 0}.lf-control-three-columns.layout-2-1-1 .left{flex:2 0}.lf-control-three-columns.layout-2-1-1 .center{flex:1 0}.lf-control-three-columns.layout-2-1-1 .right{flex:1 0}.lf-control-three-columns.layout-1-1-3 .left{flex:1 0}.lf-control-three-columns.layout-1-1-3 .center{flex:1 0}.lf-control-three-columns.layout-1-1-3 .right{flex:3 0}.lf-control-three-columns.layout-1-3-1 .left{flex:1 0}.lf-control-three-columns.layout-1-3-1 .center{flex:3 0}.lf-control-three-columns.layout-1-3-1 .right{flex:1 0}.lf-control-three-columns.layout-3-1-1 .left{flex:3 0}.lf-control-three-columns.layout-3-1-1 .center{flex:1 0}.lf-control-three-columns.layout-3-1-1 .right{flex:1 0}", "",{"version":3,"sources":["webpack://./common/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,0BACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAUA,gCACE,QAAA,CACA,eAAA,CACA,0CAAA,CAGF,kCACE,0CAAA,CACA,QAAA,CACA,eAAA,CAGF,iCACE,QAAA,CACA,eAAA,CAGF,sCACE,YAAA,CAIA,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA","sourcesContent":[".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: var(--lf-field-column-margin);\n  }\n\n  .center {\n    margin-right: var(--lf-field-column-margin);\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .left:empty {\n    display: none;\n  }\n\n  &.layout-0-1-0 {\n    .left {\n      flex: 0 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-0-0 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 0 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-1-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-2-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-2-1-1 {\n    .left {\n      flex: 2 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-3-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1-1 {\n    .left {\n      flex: 3 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3034,7 +4206,30 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-three-columns{margin-botto
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-two-columns{margin-bottom:var(--lf-field-margin);display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:20px}.lf-control-two-columns .left{flex:1 0;align-self:auto;margin-right:var(--lf-field-column-margin)}.lf-control-two-columns .right{flex:1 0;align-self:auto}.lf-control-two-columns.layout-1-2 .left{flex:1 0}.lf-control-two-columns.layout-1-2 .right{flex:2 0}.lf-control-two-columns.layout-1-3 .left{flex:1 0}.lf-control-two-columns.layout-1-3 .right{flex:3 0}.lf-control-two-columns.layout-1-4 .left{flex:1 0}.lf-control-two-columns.layout-1-4 .right{flex:4 0}.lf-control-two-columns.layout-1-5 .left{flex:1 0}.lf-control-two-columns.layout-1-5 .right{flex:4 0}.lf-control-two-columns.layout-2-1 .left{flex:2 0}.lf-control-two-columns.layout-2-1 .right{flex:1 0}.lf-control-two-columns.layout-3-1 .left{flex:3 0}.lf-control-two-columns.layout-3-1 .right{flex:1 0}.lf-control-two-columns.layout-4-1 .left{flex:4 0}.lf-control-two-columns.layout-4-1 .right{flex:1 0}.lf-control-two-columns.layout-5-1 .left{flex:4 0}.lf-control-two-columns.layout-5-1 .right{flex:1 0}.lf-control-two-columns.layout-3-2 .left{flex:3 0}.lf-control-two-columns.layout-3-2 .right{flex:2 0}.lf-control-two-columns.layout-2-3 .left{flex:2 0}.lf-control-two-columns.layout-2-3 .right{flex:3 0}.lf-control-two-columns.layout-0-1 .left{flex:0 0 auto}.lf-control-two-columns.layout-0-1 .right{flex:1 0}.lf-control-two-columns.layout-1-0 .left{flex:1 0}.lf-control-two-columns.layout-1-0 .right{flex:0 0 auto}.lf-form-react-rsuite5 .lf-two-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,wBACE,oCAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAEA,8BACE,QAAA,CACA,eAAA,CACA,0CAAA,CAGF,+BACE,QAAA,CACA,eAAA,CAIA,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,aAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,aAAA,CAMJ,uCACE,oCAAA","sourcesContent":[".lf-control-two-columns {\n  margin-bottom: var(--lf-field-margin);\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: var(--lf-field-column-margin);\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-0-1 {\n    .left {\n      flex: 0 0 auto;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-0 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0 auto;\n    }\n  }\n}\n\n.lf-form-react-rsuite5 {\n  .lf-two-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-two-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:20px}.lf-control-two-columns .left{flex:1 0;align-self:auto;margin-right:var(--lf-field-column-margin)}.lf-control-two-columns .right{flex:1 0;align-self:auto}.lf-control-two-columns.layout-1-2 .left{flex:1 0}.lf-control-two-columns.layout-1-2 .right{flex:2 0}.lf-control-two-columns.layout-1-3 .left{flex:1 0}.lf-control-two-columns.layout-1-3 .right{flex:3 0}.lf-control-two-columns.layout-1-4 .left{flex:1 0}.lf-control-two-columns.layout-1-4 .right{flex:4 0}.lf-control-two-columns.layout-1-5 .left{flex:1 0}.lf-control-two-columns.layout-1-5 .right{flex:4 0}.lf-control-two-columns.layout-2-1 .left{flex:2 0}.lf-control-two-columns.layout-2-1 .right{flex:1 0}.lf-control-two-columns.layout-3-1 .left{flex:3 0}.lf-control-two-columns.layout-3-1 .right{flex:1 0}.lf-control-two-columns.layout-4-1 .left{flex:4 0}.lf-control-two-columns.layout-4-1 .right{flex:1 0}.lf-control-two-columns.layout-5-1 .left{flex:4 0}.lf-control-two-columns.layout-5-1 .right{flex:1 0}.lf-control-two-columns.layout-3-2 .left{flex:3 0}.lf-control-two-columns.layout-3-2 .right{flex:2 0}.lf-control-two-columns.layout-2-3 .left{flex:2 0}.lf-control-two-columns.layout-2-3 .right{flex:3 0}.lf-control-two-columns.layout-0-1 .left{flex:0 0 auto}.lf-control-two-columns.layout-0-1 .right{flex:1 0}.lf-control-two-columns.layout-1-0 .left{flex:1 0}.lf-control-two-columns.layout-1-0 .right{flex:0 0 auto}.lf-form-react-rsuite5 .lf-two-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,wBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAEA,8BACE,QAAA,CACA,eAAA,CACA,0CAAA,CAGF,+BACE,QAAA,CACA,eAAA,CAIA,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,aAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,aAAA,CAMJ,uCACE,oCAAA","sourcesContent":[".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: var(--lf-field-column-margin);\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-0-1 {\n    .left {\n      flex: 0 0 auto;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-0 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0 auto;\n    }\n  }\n}\n\n.lf-form-react-rsuite5 {\n  .lf-two-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 51:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-plaintext{font-size:var(--lf-font-size)}.lf-form-plaintext .lf-plaintext-field-label{font-weight:600;color:#333}", "",{"version":3,"sources":["webpack://./components/plaintext-form/plaintext-form.scss"],"names":[],"mappings":"AAAA,mBACE,6BAAA,CAEA,6CACE,eAAA,CACA,UAAA","sourcesContent":[".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n\n  .lf-plaintext-field-label {\n    font-weight: 600;\n    color: #333333;\n  }\n\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3080,7 +4275,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-validation-errors{border:1px solid
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-form{--lf-field-margin: 24px;--lf-field-column-margin: 20px}.lf-form.lf-form-buttons-align-center .lf-toolbar{justify-content:center}.lf-form.lf-form-buttons-align-left .lf-toolbar{justify-content:flex-start}.lf-form.lf-form-buttons-align-right .lf-toolbar{justify-content:flex-end}.lf-icon-asterisk{margin-top:-3px;display:inline-block}.lf-missing-component{border:1px solid #bbb;background-color:#f6f6f6;padding:20px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-missing-component .icon{order:0;flex:0 0;align-self:auto;margin-top:2px}.lf-missing-component .tag-component{background-color:#673ab7;color:#fff;font-size:12px;padding:1px 4px 2px 4px;border-radius:3px;line-height:17px}.lf-missing-component .message{display:inline-block;margin-left:10px;order:0;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./generator/index.scss"],"names":[],"mappings":"AAAA,SACE,uBAAA,CACA,8BAAA,CAGE,kDACE,sBAAA,CAIF,gDACE,0BAAA,CAIF,iDACE,wBAAA,CAMN,kBACE,eAAA,CACA,oBAAA,CAGF,sBACE,qBAAA,CACA,wBAAA,CACA,YAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,4BACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,cAAA,CAGF,qCACE,wBAAA,CACA,UAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,gBAAA,CAGF,+BACE,oBAAA,CACA,gBAAA,CACA,OAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-form {\n  --lf-field-margin: 24px;\n  --lf-field-column-margin: 20px;\n\n  &.lf-form-buttons-align-center {\n    .lf-toolbar {\n      justify-content: center;\n    }\n  }\n  &.lf-form-buttons-align-left {\n    .lf-toolbar {\n      justify-content: flex-start;\n    }\n  }\n  &.lf-form-buttons-align-right {\n    .lf-toolbar {\n      justify-content: flex-end;\n    }\n  }\n\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n\n  .icon {\n    order: 0;\n    flex: 0 0;\n    align-self: auto;\n    margin-top: 2px;\n  }\n\n  .tag-component {\n    background-color: #673ab7;\n    color: #ffffff;\n    font-size: 12px;\n    padding: 1px 4px 2px 4px;\n    border-radius: 3px;\n    line-height: 17px;\n  }\n\n  .message {\n    display: inline-block;\n    margin-left: 10px;\n    order: 0;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form{--lf-field-margin: 16px;--lf-field-column-margin: 16px;--lf-font-size: 15px}.lf-form.lf-form-buttons-align-center .lf-toolbar{justify-content:center}.lf-form.lf-form-buttons-align-left .lf-toolbar{justify-content:flex-start}.lf-form.lf-form-buttons-align-right .lf-toolbar{justify-content:flex-end}.lf-form .lf-toolbar{margin-top:var(--lf-field-margin)}.lf-form [class*=lf-control]:not(:first-child){margin-top:var(--lf-field-margin);margin-bottom:0px}.lf-form .lf-control-common-array .lf-control-common-array-item{--lf-field-margin: 15px}.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]{margin-bottom:0px}.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child){margin-top:10px}.lf-icon-asterisk{margin-top:-3px;display:inline-block}.lf-missing-component{border:1px solid #bbb;background-color:#f6f6f6;padding:20px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-missing-component .icon{order:0;flex:0 0;align-self:auto;margin-top:2px}.lf-missing-component .tag-component{background-color:#673ab7;color:#fff;font-size:12px;padding:1px 4px 2px 4px;border-radius:3px;line-height:17px}.lf-missing-component .message{display:inline-block;margin-left:10px;order:0;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./generator/index.scss"],"names":[],"mappings":"AAAA,SACE,uBAAA,CACA,8BAAA,CACA,oBAAA,CAGE,kDACE,sBAAA,CAIF,gDACE,0BAAA,CAIF,iDACE,wBAAA,CAIJ,qBACE,iCAAA,CAIF,+CACE,iCAAA,CACA,iBAAA,CAKA,gEACE,uBAAA,CAEA,oFACE,iBAAA,CAGF,sGAEE,eAAA,CAoBR,kBACE,eAAA,CACA,oBAAA,CAGF,sBACE,qBAAA,CACA,wBAAA,CACA,YAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,4BACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,cAAA,CAGF,qCACE,wBAAA,CACA,UAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,gBAAA,CAGF,+BACE,oBAAA,CACA,gBAAA,CACA,OAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n\n  &.lf-form-buttons-align-center {\n    .lf-toolbar {\n      justify-content: center;\n    }\n  }\n  &.lf-form-buttons-align-left {\n    .lf-toolbar {\n      justify-content: flex-start;\n    }\n  }\n  &.lf-form-buttons-align-right {\n    .lf-toolbar {\n      justify-content: flex-end;\n    }\n  }\n\n  .lf-toolbar {\n    margin-top: var(--lf-field-margin);\n  }\n\n  // as a general rule, components have a top margin, unless they are the first of their container\n  [class*=lf-control]:not(:first-child) {\n    margin-top: var(--lf-field-margin);\n    margin-bottom: 0px;\n  }\n\n  .lf-control-common-array {\n\n    .lf-control-common-array-item {\n      --lf-field-margin: 15px;\n\n      [class^=lf-control] {\n        margin-bottom: 0px;\n      }\n\n      [class^=lf-control]:not(:first-child) {\n        //margin-top: var(--lf-field-margin);\n        margin-top: 10px;\n      }\n    }\n  }\n\n\n  // TODO fix spacing inside array\n  /*.lf-control-common-array-item {\n    [class^=lf-control]:not(:last-child) {\n      margin-bottom: 10px;\n    }\n    [class^=lf-control]:last-child {\n      margin-bottom: 0px;\n    }\n\n    padding-bottom: 5px;\n  }*/\n\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n\n  .icon {\n    order: 0;\n    flex: 0 0;\n    align-self: auto;\n    margin-top: 2px;\n  }\n\n  .tag-component {\n    background-color: #673ab7;\n    color: #ffffff;\n    font-size: 12px;\n    padding: 1px 4px 2px 4px;\n    border-radius: 3px;\n    line-height: 17px;\n  }\n\n  .message {\n    display: inline-block;\n    margin-left: 10px;\n    order: 0;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3126,7 +4321,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react .lf-control-common-arra
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react input[type=text],.lf-form-react input[type=password],.lf-form-react input[type=email],.lf-form-react input[type=url],.lf-form-react input[type=date],.lf-form-react input[type=month],.lf-form-react input[type=time],.lf-form-react input[type=datetime],.lf-form-react input[type=datetime-local],.lf-form-react input[type=week],.lf-form-react input[type=number],.lf-form-react input[type=search],.lf-form-react input[type=tel],.lf-form-react input[type=color],.lf-form-react select,.lf-form-react textarea{padding:.5em .6em;display:inline-block;border:1px solid #ccc;border-radius:4px;vertical-align:middle;box-sizing:border-box}.lf-form-react input:not([type]){padding:.5em .6em;display:inline-block;border:1px solid #ccc;border-radius:4px;box-sizing:border-box}.lf-form-react input[type=color]{padding:.2em .5em}.lf-form-react input[type=text]:focus,.lf-form-react input[type=password]:focus,.lf-form-react input[type=email]:focus,.lf-form-react input[type=url]:focus,.lf-form-react input[type=date]:focus,.lf-form-react input[type=month]:focus,.lf-form-react input[type=time]:focus,.lf-form-react input[type=datetime]:focus,.lf-form-react input[type=datetime-local]:focus,.lf-form-react input[type=week]:focus,.lf-form-react input[type=number]:focus,.lf-form-react input[type=search]:focus,.lf-form-react input[type=tel]:focus,.lf-form-react input[type=color]:focus,.lf-form-react select:focus,.lf-form-react textarea:focus{outline:0;border-color:#129fea}.lf-form-react input:not([type]):focus{outline:0;border-color:#129fea}.lf-form-react input[type=file]:focus,.lf-form-react input[type=radio]:focus,.lf-form-react input[type=checkbox]:focus{outline:thin solid #129fea;outline:1px auto #129fea}.lf-form-react .lf-form-react-checkbox,.lf-form-react .lf-form-react-radio{display:block}.lf-form-react input[type=text][disabled],.lf-form-react input[type=password][disabled],.lf-form-react input[type=email][disabled],.lf-form-react input[type=url][disabled],.lf-form-react input[type=date][disabled],.lf-form-react input[type=month][disabled],.lf-form-react input[type=time][disabled],.lf-form-react input[type=datetime][disabled],.lf-form-react input[type=datetime-local][disabled],.lf-form-react input[type=week][disabled],.lf-form-react input[type=number][disabled],.lf-form-react input[type=search][disabled],.lf-form-react input[type=tel][disabled],.lf-form-react input[type=color][disabled],.lf-form-react select[disabled],.lf-form-react textarea[disabled]{cursor:not-allowed;background-color:#eaeded;color:#cad2d3}.lf-form-react input[readonly],.lf-form-react select[readonly],.lf-form-react textarea[readonly]{background-color:#eee;color:#777;border-color:#ccc}.lf-form-react input:focus:invalid,.lf-form-react textarea:focus:invalid,.lf-form-react select:focus:invalid{color:#b94a48;border-color:#e9322d}.lf-form-react input[type=file]:focus:invalid:focus,.lf-form-react input[type=radio]:focus:invalid:focus,.lf-form-react input[type=checkbox]:focus:invalid:focus{outline-color:#e9322d}.lf-form-react select{height:2.25em;border:1px solid #ccc;background-color:#fff}.lf-form-react select[multiple]{height:auto}.lf-form-react label{margin:3px 0px}.lf-form-react fieldset{margin:0;padding:.35em 0 .75em;border:0}.lf-form-react legend{display:block;width:100%;padding:.3em 0;color:#333;border-bottom:1px solid #e5e5e5}.lf-form-react-stacked input[type=text],.lf-form-react-stacked input[type=password],.lf-form-react-stacked input[type=email],.lf-form-react-stacked input[type=url],.lf-form-react-stacked input[type=date],.lf-form-react-stacked input[type=month],.lf-form-react-stacked input[type=time],.lf-form-react-stacked input[type=datetime],.lf-form-react-stacked input[type=datetime-local],.lf-form-react-stacked input[type=week],.lf-form-react-stacked input[type=number],.lf-form-react-stacked input[type=search],.lf-form-react-stacked input[type=tel],.lf-form-react-stacked input[type=color],.lf-form-react-stacked input[type=file],.lf-form-react-stacked select,.lf-form-react-stacked label,.lf-form-react-stacked textarea{display:block}.pure-form-aligned input,.pure-form-aligned textarea,.pure-form-aligned select,.pure-form-message-inline{display:inline-block;vertical-align:middle}.pure-form-aligned textarea{vertical-align:top}.pure-form-aligned .pure-control-group{margin-bottom:.5em}.pure-form-aligned .pure-control-group label{text-align:right;display:inline-block;vertical-align:middle;width:10em;margin:0 1em 0 0}.pure-form-aligned .pure-controls{margin:1.5em 0 0 11em}.lf-form-react .lf-form-react-input-1{width:100%}.lf-form-react .lf-form-react-input-3-4{width:75%}.lf-form-react .lf-form-react-input-2-3{width:66%}.lf-form-react .lf-form-react-input-1-2{width:50%}.lf-form-react .lf-form-react-input-1-3{width:33%}.lf-form-react .lf-form-react-input-1-4{width:25%}.lf-form-react-message{display:block;color:#666;font-size:.875em}.lf-form-react-error-message{color:#f30;display:block;font-size:.875em}.lf-form-react-control-group:not(:first-child){margin-top:15px}.lf-form-react-primary-button{appearance:button;background-color:#1652f0;border:1px solid #1652f0;border-radius:4px;box-sizing:border-box;color:#fff;cursor:pointer;font-size:14px;line-height:1.15;overflow:visible;padding:8px 16px;position:relative;text-align:center;text-transform:none;transition:all 80ms ease-in-out;user-select:none;-webkit-user-select:none;touch-action:manipulation;width:fit-content}.lf-form-react-primary-button:focus{outline:0}.lf-form-react-primary-button:hover{background-color:#0a46e4;border-color:#0a46e4}.lf-form-react-primary-button:active{background-color:#0039d7;border-color:#0039d7}.lf-form-react-secondary-button{appearance:button;background-color:#999;border:1px solid #999;border-radius:4px;box-sizing:border-box;color:#fff;cursor:pointer;font-size:14px;line-height:1.15;overflow:visible;padding:8px 16px;position:relative;text-align:center;text-transform:none;transition:all 80ms ease-in-out;user-select:none;-webkit-user-select:none;touch-action:manipulation;width:fit-content}.lf-form-react-secondary-button:focus{outline:0}.lf-form-react-secondary-button:hover{background-color:#888;border-color:#888}.lf-form-react-secondary-button:active{background-color:#888;border-color:#888}.lf-form-react .lf-toolbar{display:flex;margin-top:15px}.lf-form-react .lf-toolbar button:not(:first-child){margin-left:10px}", "",{"version":3,"sources":["webpack://./react/form/index.scss"],"names":[],"mappings":"AAEA,qgBAgBI,iBAAA,CACA,oBAAA,CACA,qBAAA,CACA,iBAAA,CACA,qBAAA,CACA,qBAAA,CAOJ,iCACI,iBAAA,CACA,oBAAA,CACA,qBAAA,CACA,iBAAA,CACA,qBAAA,CAMJ,iCACI,iBAAA,CAIJ,qmBAgBI,SAAA,CACA,oBAAA,CAOJ,uCACI,SAAA,CACA,oBAAA,CAGJ,uHAGI,0BAAA,CACA,wBAAA,CAEJ,2EAGI,aAAA,CAGJ,qqBAgBI,kBAAA,CACA,wBAAA,CACA,aAAA,CAGJ,iGAGI,qBAAA,CACA,UAAA,CACA,iBAAA,CAGJ,6GAGI,aAAA,CACA,oBAAA,CAEJ,iKAGI,qBAAA,CAEJ,sBAEI,aAAA,CACA,qBAAA,CACA,qBAAA,CAEJ,gCACI,WAAA,CAEJ,qBAEI,cAAA,CAEJ,wBACI,QAAA,CACA,qBAAA,CACA,QAAA,CAEJ,sBACI,aAAA,CACA,UAAA,CACA,cAAA,CAGA,UAAA,CACA,+BAAA,CAGJ,0sBAkBI,aAAA,CAWJ,yGAII,oBAAA,CACA,qBAAA,CAEJ,4BACI,kBAAA,CAIJ,uCACI,kBAAA,CAEJ,6CACI,gBAAA,CACA,oBAAA,CACA,qBAAA,CACA,UAAA,CACA,gBAAA,CAEJ,kCACI,qBAAA,CAKJ,sCACI,UAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAGJ,uBACI,aAAA,CACA,UAAA,CACA,gBAAA,CAEJ,6BACE,UAAA,CACA,aAAA,CACA,gBAAA,CAIF,+CACE,eAAA,CAIF,8BACE,iBAAA,CACA,wBAAA,CACA,wBAAA,CACA,iBAAA,CACA,qBAAA,CACA,UAAA,CACA,cAAA,CACA,cAAA,CACA,gBAAA,CACA,gBAAA,CACA,gBAAA,CACA,iBAAA,CACA,iBAAA,CACA,mBAAA,CACA,+BAAA,CACA,gBAAA,CACA,wBAAA,CACA,yBAAA,CACA,iBAAA,CAEA,oCACE,SAAA,CAEF,oCACE,wBAAA,CACA,oBAAA,CAEF,qCACE,wBAAA,CACA,oBAAA,CAIJ,gCACE,iBAAA,CACA,qBAAA,CACA,qBAAA,CACA,iBAAA,CACA,qBAAA,CACA,UAAA,CACA,cAAA,CACA,cAAA,CACA,gBAAA,CACA,gBAAA,CACA,gBAAA,CACA,iBAAA,CACA,iBAAA,CACA,mBAAA,CACA,+BAAA,CACA,gBAAA,CACA,wBAAA,CACA,yBAAA,CACA,iBAAA,CAEA,sCACE,SAAA,CAEF,sCACE,qBAAA,CACA,iBAAA,CAEF,uCACE,qBAAA,CACA,iBAAA,CAKF,2BACE,YAAA,CACA,eAAA,CACA,oDACE,gBAAA","sourcesContent":["\n\n.lf-form-react input[type=\"text\"],\n.lf-form-react input[type=\"password\"],\n.lf-form-react input[type=\"email\"],\n.lf-form-react input[type=\"url\"],\n.lf-form-react input[type=\"date\"],\n.lf-form-react input[type=\"month\"],\n.lf-form-react input[type=\"time\"],\n.lf-form-react input[type=\"datetime\"],\n.lf-form-react input[type=\"datetime-local\"],\n.lf-form-react input[type=\"week\"],\n.lf-form-react input[type=\"number\"],\n.lf-form-react input[type=\"search\"],\n.lf-form-react input[type=\"tel\"],\n.lf-form-react input[type=\"color\"],\n.lf-form-react select,\n.lf-form-react textarea {\n    padding: 0.5em 0.6em;\n    display: inline-block;\n    border: 1px solid #ccc;\n    border-radius: 4px;\n    vertical-align: middle;\n    box-sizing: border-box;\n}\n\n/*\nNeed to separate out the :not() selector from the rest of the CSS 2.1 selectors\nsince IE8 won't execute CSS that contains a CSS3 selector.\n*/\n.lf-form-react input:not([type]) {\n    padding: 0.5em 0.6em;\n    display: inline-block;\n    border: 1px solid #ccc;\n    border-radius: 4px;\n    box-sizing: border-box;\n}\n\n\n/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */\n/* May be able to remove this tweak as color inputs become more standardized across browsers. */\n.lf-form-react input[type=\"color\"] {\n    padding: 0.2em 0.5em;\n}\n\n\n.lf-form-react input[type=\"text\"]:focus,\n.lf-form-react input[type=\"password\"]:focus,\n.lf-form-react input[type=\"email\"]:focus,\n.lf-form-react input[type=\"url\"]:focus,\n.lf-form-react input[type=\"date\"]:focus,\n.lf-form-react input[type=\"month\"]:focus,\n.lf-form-react input[type=\"time\"]:focus,\n.lf-form-react input[type=\"datetime\"]:focus,\n.lf-form-react input[type=\"datetime-local\"]:focus,\n.lf-form-react input[type=\"week\"]:focus,\n.lf-form-react input[type=\"number\"]:focus,\n.lf-form-react input[type=\"search\"]:focus,\n.lf-form-react input[type=\"tel\"]:focus,\n.lf-form-react input[type=\"color\"]:focus,\n.lf-form-react select:focus,\n.lf-form-react textarea:focus {\n    outline: 0;\n    border-color: #129FEA;\n}\n\n/*\nNeed to separate out the :not() selector from the rest of the CSS 2.1 selectors\nsince IE8 won't execute CSS that contains a CSS3 selector.\n*/\n.lf-form-react input:not([type]):focus {\n    outline: 0;\n    border-color: #129FEA;\n}\n\n.lf-form-react input[type=\"file\"]:focus,\n.lf-form-react input[type=\"radio\"]:focus,\n.lf-form-react input[type=\"checkbox\"]:focus {\n    outline: thin solid #129FEA;\n    outline: 1px auto #129FEA;\n}\n.lf-form-react .lf-form-react-checkbox,\n.lf-form-react .lf-form-react-radio {\n    //margin: 0.5em 0;\n    display: block;\n}\n\n.lf-form-react input[type=\"text\"][disabled],\n.lf-form-react input[type=\"password\"][disabled],\n.lf-form-react input[type=\"email\"][disabled],\n.lf-form-react input[type=\"url\"][disabled],\n.lf-form-react input[type=\"date\"][disabled],\n.lf-form-react input[type=\"month\"][disabled],\n.lf-form-react input[type=\"time\"][disabled],\n.lf-form-react input[type=\"datetime\"][disabled],\n.lf-form-react input[type=\"datetime-local\"][disabled],\n.lf-form-react input[type=\"week\"][disabled],\n.lf-form-react input[type=\"number\"][disabled],\n.lf-form-react input[type=\"search\"][disabled],\n.lf-form-react input[type=\"tel\"][disabled],\n.lf-form-react input[type=\"color\"][disabled],\n.lf-form-react select[disabled],\n.lf-form-react textarea[disabled] {\n    cursor: not-allowed;\n    background-color: #eaeded;\n    color: #cad2d3;\n}\n\n.lf-form-react input[readonly],\n.lf-form-react select[readonly],\n.lf-form-react textarea[readonly] {\n    background-color: #eee; /* menu hover bg color */\n    color: #777; /* menu text color */\n    border-color: #ccc;\n}\n\n.lf-form-react input:focus:invalid,\n.lf-form-react textarea:focus:invalid,\n.lf-form-react select:focus:invalid {\n    color: #b94a48;\n    border-color: #e9322d;\n}\n.lf-form-react input[type=\"file\"]:focus:invalid:focus,\n.lf-form-react input[type=\"radio\"]:focus:invalid:focus,\n.lf-form-react input[type=\"checkbox\"]:focus:invalid:focus {\n    outline-color: #e9322d;\n}\n.lf-form-react select {\n    /* Normalizes the height; padding is not sufficient. */\n    height: 2.25em;\n    border: 1px solid #ccc;\n    background-color: white;\n}\n.lf-form-react select[multiple] {\n    height: auto;\n}\n.lf-form-react label {\n    //margin: 0.5em 0 0.2em;\n    margin: 3px 0px;\n}\n.lf-form-react fieldset {\n    margin: 0;\n    padding: 0.35em 0 0.75em;\n    border: 0;\n}\n.lf-form-react legend {\n    display: block;\n    width: 100%;\n    padding: 0.3em 0;\n    //margin-bottom: 0.3em;\n    //margin\n    color: #333;\n    border-bottom: 1px solid #e5e5e5;\n}\n\n.lf-form-react-stacked input[type=\"text\"],\n.lf-form-react-stacked input[type=\"password\"],\n.lf-form-react-stacked input[type=\"email\"],\n.lf-form-react-stacked input[type=\"url\"],\n.lf-form-react-stacked input[type=\"date\"],\n.lf-form-react-stacked input[type=\"month\"],\n.lf-form-react-stacked input[type=\"time\"],\n.lf-form-react-stacked input[type=\"datetime\"],\n.lf-form-react-stacked input[type=\"datetime-local\"],\n.lf-form-react-stacked input[type=\"week\"],\n.lf-form-react-stacked input[type=\"number\"],\n.lf-form-react-stacked input[type=\"search\"],\n.lf-form-react-stacked input[type=\"tel\"],\n.lf-form-react-stacked input[type=\"color\"],\n.lf-form-react-stacked input[type=\"file\"],\n.lf-form-react-stacked select,\n.lf-form-react-stacked label,\n.lf-form-react-stacked textarea {\n    display: block;\n    //margin: 3px 0;\n}\n\n\n\n\n\n\n\n\n.pure-form-aligned input,\n.pure-form-aligned textarea,\n.pure-form-aligned select,\n.pure-form-message-inline {\n    display: inline-block;\n    vertical-align: middle;\n}\n.pure-form-aligned textarea {\n    vertical-align: top;\n}\n\n/* Aligned Forms */\n.pure-form-aligned .pure-control-group {\n    margin-bottom: 0.5em;\n}\n.pure-form-aligned .pure-control-group label {\n    text-align: right;\n    display: inline-block;\n    vertical-align: middle;\n    width: 10em;\n    margin: 0 1em 0 0;\n}\n.pure-form-aligned .pure-controls {\n    margin: 1.5em 0 0 11em;\n}\n\n\n\n.lf-form-react .lf-form-react-input-1 {\n    width: 100%;\n}\n.lf-form-react .lf-form-react-input-3-4 {\n    width: 75%;\n}\n.lf-form-react .lf-form-react-input-2-3 {\n    width: 66%;\n}\n.lf-form-react .lf-form-react-input-1-2 {\n    width: 50%;\n}\n.lf-form-react .lf-form-react-input-1-3 {\n    width: 33%;\n}\n.lf-form-react .lf-form-react-input-1-4 {\n    width: 25%;\n}\n\n.lf-form-react-message {\n    display: block;\n    color: #666;\n    font-size: 0.875em;\n}\n.lf-form-react-error-message {\n  color: #FF3300;\n  display: block;\n  font-size: 0.875em;\n}\n\n\n.lf-form-react-control-group:not(:first-child) {\n  margin-top: 15px;\n}\n\n\n.lf-form-react-primary-button {\n  appearance: button;\n  background-color: #1652F0;\n  border: 1px solid #1652F0;\n  border-radius: 4px;\n  box-sizing: border-box;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.15;\n  overflow: visible;\n  padding: 8px 16px;\n  position: relative;\n  text-align: center;\n  text-transform: none;\n  transition: all 80ms ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  width: fit-content;\n\n  &:focus {\n    outline: 0;\n  }\n  &:hover {\n    background-color: #0A46E4;\n    border-color: #0A46E4;\n  }\n  &:active {\n    background-color: #0039D7;\n    border-color: #0039D7;\n  }\n}\n\n.lf-form-react-secondary-button {\n  appearance: button;\n  background-color: #999999;\n  border: 1px solid #999999;\n  border-radius: 4px;\n  box-sizing: border-box;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.15;\n  overflow: visible;\n  padding: 8px 16px;\n  position: relative;\n  text-align: center;\n  text-transform: none;\n  transition: all 80ms ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  width: fit-content;\n\n  &:focus {\n    outline: 0;\n  }\n  &:hover {\n    background-color: #888888;\n    border-color: #888888;\n  }\n  &:active {\n    background-color: #888888;\n    border-color: #888888;\n  }\n}\n\n.lf-form-react {\n  .lf-toolbar {\n    display: flex;\n    margin-top: 15px;\n    button:not(:first-child) {\n      margin-left: 10px;\n    }\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react input[type=text],.lf-form-react input[type=password],.lf-form-react input[type=email],.lf-form-react input[type=url],.lf-form-react input[type=date],.lf-form-react input[type=month],.lf-form-react input[type=time],.lf-form-react input[type=datetime],.lf-form-react input[type=datetime-local],.lf-form-react input[type=week],.lf-form-react input[type=number],.lf-form-react input[type=search],.lf-form-react input[type=tel],.lf-form-react input[type=color],.lf-form-react select,.lf-form-react textarea{padding:.5em .6em;display:inline-block;border:1px solid #ccc;border-radius:4px;vertical-align:middle;box-sizing:border-box}.lf-form-react input:not([type]){padding:.5em .6em;display:inline-block;border:1px solid #ccc;border-radius:4px;box-sizing:border-box}.lf-form-react input[type=color]{padding:.2em .5em}.lf-form-react input[type=text]:focus,.lf-form-react input[type=password]:focus,.lf-form-react input[type=email]:focus,.lf-form-react input[type=url]:focus,.lf-form-react input[type=date]:focus,.lf-form-react input[type=month]:focus,.lf-form-react input[type=time]:focus,.lf-form-react input[type=datetime]:focus,.lf-form-react input[type=datetime-local]:focus,.lf-form-react input[type=week]:focus,.lf-form-react input[type=number]:focus,.lf-form-react input[type=search]:focus,.lf-form-react input[type=tel]:focus,.lf-form-react input[type=color]:focus,.lf-form-react select:focus,.lf-form-react textarea:focus{outline:0;border-color:#129fea}.lf-form-react input:not([type]):focus{outline:0;border-color:#129fea}.lf-form-react input[type=file]:focus,.lf-form-react input[type=radio]:focus,.lf-form-react input[type=checkbox]:focus{outline:thin solid #129fea;outline:1px auto #129fea}.lf-form-react .lf-form-react-checkbox,.lf-form-react .lf-form-react-radio{display:block}.lf-form-react input[type=text][disabled],.lf-form-react input[type=password][disabled],.lf-form-react input[type=email][disabled],.lf-form-react input[type=url][disabled],.lf-form-react input[type=date][disabled],.lf-form-react input[type=month][disabled],.lf-form-react input[type=time][disabled],.lf-form-react input[type=datetime][disabled],.lf-form-react input[type=datetime-local][disabled],.lf-form-react input[type=week][disabled],.lf-form-react input[type=number][disabled],.lf-form-react input[type=search][disabled],.lf-form-react input[type=tel][disabled],.lf-form-react input[type=color][disabled],.lf-form-react select[disabled],.lf-form-react textarea[disabled]{cursor:not-allowed;background-color:#eaeded;color:#cad2d3}.lf-form-react input[readonly],.lf-form-react select[readonly],.lf-form-react textarea[readonly]{background-color:#eee;color:#777;border-color:#ccc}.lf-form-react input:focus:invalid,.lf-form-react textarea:focus:invalid,.lf-form-react select:focus:invalid{color:#b94a48;border-color:#e9322d}.lf-form-react input[type=file]:focus:invalid:focus,.lf-form-react input[type=radio]:focus:invalid:focus,.lf-form-react input[type=checkbox]:focus:invalid:focus{outline-color:#e9322d}.lf-form-react select{height:2.25em;border:1px solid #ccc;background-color:#fff}.lf-form-react select[multiple]{height:auto}.lf-form-react label{margin:3px 0px}.lf-form-react fieldset{margin:0;padding:.35em 0 .75em;border:0}.lf-form-react legend{display:block;width:100%;padding:.3em 0;color:#333;border-bottom:1px solid #e5e5e5}.lf-form-react-stacked input[type=text],.lf-form-react-stacked input[type=password],.lf-form-react-stacked input[type=email],.lf-form-react-stacked input[type=url],.lf-form-react-stacked input[type=date],.lf-form-react-stacked input[type=month],.lf-form-react-stacked input[type=time],.lf-form-react-stacked input[type=datetime],.lf-form-react-stacked input[type=datetime-local],.lf-form-react-stacked input[type=week],.lf-form-react-stacked input[type=number],.lf-form-react-stacked input[type=search],.lf-form-react-stacked input[type=tel],.lf-form-react-stacked input[type=color],.lf-form-react-stacked input[type=file],.lf-form-react-stacked select,.lf-form-react-stacked label,.lf-form-react-stacked textarea{display:block}.pure-form-aligned input,.pure-form-aligned textarea,.pure-form-aligned select,.pure-form-message-inline{display:inline-block;vertical-align:middle}.pure-form-aligned textarea{vertical-align:top}.pure-form-aligned .pure-control-group{margin-bottom:.5em}.pure-form-aligned .pure-control-group label{text-align:right;display:inline-block;vertical-align:middle;width:10em;margin:0 1em 0 0}.pure-form-aligned .pure-controls{margin:1.5em 0 0 11em}.lf-form-react .lf-form-react-input-1{width:100%}.lf-form-react .lf-form-react-input-3-4{width:75%}.lf-form-react .lf-form-react-input-2-3{width:66%}.lf-form-react .lf-form-react-input-1-2{width:50%}.lf-form-react .lf-form-react-input-1-3{width:33%}.lf-form-react .lf-form-react-input-1-4{width:25%}.lf-form-react-message{display:block;color:#666;font-size:.875em}.lf-form-react-error-message{color:#f30;display:block;font-size:.875em}.lf-form-react-primary-button{appearance:button;background-color:#1652f0;border:1px solid #1652f0;border-radius:4px;box-sizing:border-box;color:#fff;cursor:pointer;font-size:14px;line-height:1.15;overflow:visible;padding:8px 16px;position:relative;text-align:center;text-transform:none;transition:all 80ms ease-in-out;user-select:none;-webkit-user-select:none;touch-action:manipulation;width:fit-content}.lf-form-react-primary-button:focus{outline:0}.lf-form-react-primary-button:hover{background-color:#0a46e4;border-color:#0a46e4}.lf-form-react-primary-button:active{background-color:#0039d7;border-color:#0039d7}.lf-form-react-secondary-button{appearance:button;background-color:#999;border:1px solid #999;border-radius:4px;box-sizing:border-box;color:#fff;cursor:pointer;font-size:14px;line-height:1.15;overflow:visible;padding:8px 16px;position:relative;text-align:center;text-transform:none;transition:all 80ms ease-in-out;user-select:none;-webkit-user-select:none;touch-action:manipulation;width:fit-content}.lf-form-react-secondary-button:focus{outline:0}.lf-form-react-secondary-button:hover{background-color:#888;border-color:#888}.lf-form-react-secondary-button:active{background-color:#888;border-color:#888}.lf-form-react .lf-toolbar{display:flex}.lf-form-react .lf-toolbar button:not(:first-child){margin-left:10px}", "",{"version":3,"sources":["webpack://./react/form/index.scss"],"names":[],"mappings":"AAEA,qgBAgBI,iBAAA,CACA,oBAAA,CACA,qBAAA,CACA,iBAAA,CACA,qBAAA,CACA,qBAAA,CAOJ,iCACI,iBAAA,CACA,oBAAA,CACA,qBAAA,CACA,iBAAA,CACA,qBAAA,CAMJ,iCACI,iBAAA,CAIJ,qmBAgBI,SAAA,CACA,oBAAA,CAOJ,uCACI,SAAA,CACA,oBAAA,CAGJ,uHAGI,0BAAA,CACA,wBAAA,CAEJ,2EAGI,aAAA,CAGJ,qqBAgBI,kBAAA,CACA,wBAAA,CACA,aAAA,CAGJ,iGAGI,qBAAA,CACA,UAAA,CACA,iBAAA,CAGJ,6GAGI,aAAA,CACA,oBAAA,CAEJ,iKAGI,qBAAA,CAEJ,sBAEI,aAAA,CACA,qBAAA,CACA,qBAAA,CAEJ,gCACI,WAAA,CAEJ,qBAEI,cAAA,CAEJ,wBACI,QAAA,CACA,qBAAA,CACA,QAAA,CAEJ,sBACI,aAAA,CACA,UAAA,CACA,cAAA,CAGA,UAAA,CACA,+BAAA,CAGJ,0sBAkBI,aAAA,CAWJ,yGAII,oBAAA,CACA,qBAAA,CAEJ,4BACI,kBAAA,CAIJ,uCACI,kBAAA,CAEJ,6CACI,gBAAA,CACA,oBAAA,CACA,qBAAA,CACA,UAAA,CACA,gBAAA,CAEJ,kCACI,qBAAA,CAKJ,sCACI,UAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAEJ,wCACI,SAAA,CAGJ,uBACI,aAAA,CACA,UAAA,CACA,gBAAA,CAEJ,6BACE,UAAA,CACA,aAAA,CACA,gBAAA,CAGF,8BACE,iBAAA,CACA,wBAAA,CACA,wBAAA,CACA,iBAAA,CACA,qBAAA,CACA,UAAA,CACA,cAAA,CACA,cAAA,CACA,gBAAA,CACA,gBAAA,CACA,gBAAA,CACA,iBAAA,CACA,iBAAA,CACA,mBAAA,CACA,+BAAA,CACA,gBAAA,CACA,wBAAA,CACA,yBAAA,CACA,iBAAA,CAEA,oCACE,SAAA,CAEF,oCACE,wBAAA,CACA,oBAAA,CAEF,qCACE,wBAAA,CACA,oBAAA,CAIJ,gCACE,iBAAA,CACA,qBAAA,CACA,qBAAA,CACA,iBAAA,CACA,qBAAA,CACA,UAAA,CACA,cAAA,CACA,cAAA,CACA,gBAAA,CACA,gBAAA,CACA,gBAAA,CACA,iBAAA,CACA,iBAAA,CACA,mBAAA,CACA,+BAAA,CACA,gBAAA,CACA,wBAAA,CACA,yBAAA,CACA,iBAAA,CAEA,sCACE,SAAA,CAEF,sCACE,qBAAA,CACA,iBAAA,CAEF,uCACE,qBAAA,CACA,iBAAA,CAKF,2BACE,YAAA,CACA,oDACE,gBAAA","sourcesContent":["\n\n.lf-form-react input[type=\"text\"],\n.lf-form-react input[type=\"password\"],\n.lf-form-react input[type=\"email\"],\n.lf-form-react input[type=\"url\"],\n.lf-form-react input[type=\"date\"],\n.lf-form-react input[type=\"month\"],\n.lf-form-react input[type=\"time\"],\n.lf-form-react input[type=\"datetime\"],\n.lf-form-react input[type=\"datetime-local\"],\n.lf-form-react input[type=\"week\"],\n.lf-form-react input[type=\"number\"],\n.lf-form-react input[type=\"search\"],\n.lf-form-react input[type=\"tel\"],\n.lf-form-react input[type=\"color\"],\n.lf-form-react select,\n.lf-form-react textarea {\n    padding: 0.5em 0.6em;\n    display: inline-block;\n    border: 1px solid #ccc;\n    border-radius: 4px;\n    vertical-align: middle;\n    box-sizing: border-box;\n}\n\n/*\nNeed to separate out the :not() selector from the rest of the CSS 2.1 selectors\nsince IE8 won't execute CSS that contains a CSS3 selector.\n*/\n.lf-form-react input:not([type]) {\n    padding: 0.5em 0.6em;\n    display: inline-block;\n    border: 1px solid #ccc;\n    border-radius: 4px;\n    box-sizing: border-box;\n}\n\n\n/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */\n/* May be able to remove this tweak as color inputs become more standardized across browsers. */\n.lf-form-react input[type=\"color\"] {\n    padding: 0.2em 0.5em;\n}\n\n\n.lf-form-react input[type=\"text\"]:focus,\n.lf-form-react input[type=\"password\"]:focus,\n.lf-form-react input[type=\"email\"]:focus,\n.lf-form-react input[type=\"url\"]:focus,\n.lf-form-react input[type=\"date\"]:focus,\n.lf-form-react input[type=\"month\"]:focus,\n.lf-form-react input[type=\"time\"]:focus,\n.lf-form-react input[type=\"datetime\"]:focus,\n.lf-form-react input[type=\"datetime-local\"]:focus,\n.lf-form-react input[type=\"week\"]:focus,\n.lf-form-react input[type=\"number\"]:focus,\n.lf-form-react input[type=\"search\"]:focus,\n.lf-form-react input[type=\"tel\"]:focus,\n.lf-form-react input[type=\"color\"]:focus,\n.lf-form-react select:focus,\n.lf-form-react textarea:focus {\n    outline: 0;\n    border-color: #129FEA;\n}\n\n/*\nNeed to separate out the :not() selector from the rest of the CSS 2.1 selectors\nsince IE8 won't execute CSS that contains a CSS3 selector.\n*/\n.lf-form-react input:not([type]):focus {\n    outline: 0;\n    border-color: #129FEA;\n}\n\n.lf-form-react input[type=\"file\"]:focus,\n.lf-form-react input[type=\"radio\"]:focus,\n.lf-form-react input[type=\"checkbox\"]:focus {\n    outline: thin solid #129FEA;\n    outline: 1px auto #129FEA;\n}\n.lf-form-react .lf-form-react-checkbox,\n.lf-form-react .lf-form-react-radio {\n    //margin: 0.5em 0;\n    display: block;\n}\n\n.lf-form-react input[type=\"text\"][disabled],\n.lf-form-react input[type=\"password\"][disabled],\n.lf-form-react input[type=\"email\"][disabled],\n.lf-form-react input[type=\"url\"][disabled],\n.lf-form-react input[type=\"date\"][disabled],\n.lf-form-react input[type=\"month\"][disabled],\n.lf-form-react input[type=\"time\"][disabled],\n.lf-form-react input[type=\"datetime\"][disabled],\n.lf-form-react input[type=\"datetime-local\"][disabled],\n.lf-form-react input[type=\"week\"][disabled],\n.lf-form-react input[type=\"number\"][disabled],\n.lf-form-react input[type=\"search\"][disabled],\n.lf-form-react input[type=\"tel\"][disabled],\n.lf-form-react input[type=\"color\"][disabled],\n.lf-form-react select[disabled],\n.lf-form-react textarea[disabled] {\n    cursor: not-allowed;\n    background-color: #eaeded;\n    color: #cad2d3;\n}\n\n.lf-form-react input[readonly],\n.lf-form-react select[readonly],\n.lf-form-react textarea[readonly] {\n    background-color: #eee; /* menu hover bg color */\n    color: #777; /* menu text color */\n    border-color: #ccc;\n}\n\n.lf-form-react input:focus:invalid,\n.lf-form-react textarea:focus:invalid,\n.lf-form-react select:focus:invalid {\n    color: #b94a48;\n    border-color: #e9322d;\n}\n.lf-form-react input[type=\"file\"]:focus:invalid:focus,\n.lf-form-react input[type=\"radio\"]:focus:invalid:focus,\n.lf-form-react input[type=\"checkbox\"]:focus:invalid:focus {\n    outline-color: #e9322d;\n}\n.lf-form-react select {\n    /* Normalizes the height; padding is not sufficient. */\n    height: 2.25em;\n    border: 1px solid #ccc;\n    background-color: white;\n}\n.lf-form-react select[multiple] {\n    height: auto;\n}\n.lf-form-react label {\n    //margin: 0.5em 0 0.2em;\n    margin: 3px 0px;\n}\n.lf-form-react fieldset {\n    margin: 0;\n    padding: 0.35em 0 0.75em;\n    border: 0;\n}\n.lf-form-react legend {\n    display: block;\n    width: 100%;\n    padding: 0.3em 0;\n    //margin-bottom: 0.3em;\n    //margin\n    color: #333;\n    border-bottom: 1px solid #e5e5e5;\n}\n\n.lf-form-react-stacked input[type=\"text\"],\n.lf-form-react-stacked input[type=\"password\"],\n.lf-form-react-stacked input[type=\"email\"],\n.lf-form-react-stacked input[type=\"url\"],\n.lf-form-react-stacked input[type=\"date\"],\n.lf-form-react-stacked input[type=\"month\"],\n.lf-form-react-stacked input[type=\"time\"],\n.lf-form-react-stacked input[type=\"datetime\"],\n.lf-form-react-stacked input[type=\"datetime-local\"],\n.lf-form-react-stacked input[type=\"week\"],\n.lf-form-react-stacked input[type=\"number\"],\n.lf-form-react-stacked input[type=\"search\"],\n.lf-form-react-stacked input[type=\"tel\"],\n.lf-form-react-stacked input[type=\"color\"],\n.lf-form-react-stacked input[type=\"file\"],\n.lf-form-react-stacked select,\n.lf-form-react-stacked label,\n.lf-form-react-stacked textarea {\n    display: block;\n    //margin: 3px 0;\n}\n\n\n\n\n\n\n\n\n.pure-form-aligned input,\n.pure-form-aligned textarea,\n.pure-form-aligned select,\n.pure-form-message-inline {\n    display: inline-block;\n    vertical-align: middle;\n}\n.pure-form-aligned textarea {\n    vertical-align: top;\n}\n\n/* Aligned Forms */\n.pure-form-aligned .pure-control-group {\n    margin-bottom: 0.5em;\n}\n.pure-form-aligned .pure-control-group label {\n    text-align: right;\n    display: inline-block;\n    vertical-align: middle;\n    width: 10em;\n    margin: 0 1em 0 0;\n}\n.pure-form-aligned .pure-controls {\n    margin: 1.5em 0 0 11em;\n}\n\n\n\n.lf-form-react .lf-form-react-input-1 {\n    width: 100%;\n}\n.lf-form-react .lf-form-react-input-3-4 {\n    width: 75%;\n}\n.lf-form-react .lf-form-react-input-2-3 {\n    width: 66%;\n}\n.lf-form-react .lf-form-react-input-1-2 {\n    width: 50%;\n}\n.lf-form-react .lf-form-react-input-1-3 {\n    width: 33%;\n}\n.lf-form-react .lf-form-react-input-1-4 {\n    width: 25%;\n}\n\n.lf-form-react-message {\n    display: block;\n    color: #666;\n    font-size: 0.875em;\n}\n.lf-form-react-error-message {\n  color: #FF3300;\n  display: block;\n  font-size: 0.875em;\n}\n\n.lf-form-react-primary-button {\n  appearance: button;\n  background-color: #1652F0;\n  border: 1px solid #1652F0;\n  border-radius: 4px;\n  box-sizing: border-box;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.15;\n  overflow: visible;\n  padding: 8px 16px;\n  position: relative;\n  text-align: center;\n  text-transform: none;\n  transition: all 80ms ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  width: fit-content;\n\n  &:focus {\n    outline: 0;\n  }\n  &:hover {\n    background-color: #0A46E4;\n    border-color: #0A46E4;\n  }\n  &:active {\n    background-color: #0039D7;\n    border-color: #0039D7;\n  }\n}\n\n.lf-form-react-secondary-button {\n  appearance: button;\n  background-color: #999999;\n  border: 1px solid #999999;\n  border-radius: 4px;\n  box-sizing: border-box;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.15;\n  overflow: visible;\n  padding: 8px 16px;\n  position: relative;\n  text-align: center;\n  text-transform: none;\n  transition: all 80ms ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  width: fit-content;\n\n  &:focus {\n    outline: 0;\n  }\n  &:hover {\n    background-color: #888888;\n    border-color: #888888;\n  }\n  &:active {\n    background-color: #888888;\n    border-color: #888888;\n  }\n}\n\n.lf-form-react {\n  .lf-toolbar {\n    display: flex;\n    button:not(:first-child) {\n      margin-left: 10px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3426,6 +4621,37 @@ module.exports = identity;
 
 /***/ }),
 
+/***/ 7786:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var castPath = __webpack_require__(1811),
+    toKey = __webpack_require__(327);
+
+/**
+ * The base implementation of `_.get` without support for default values.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path of the property to get.
+ * @returns {*} Returns the resolved value.
+ */
+function baseGet(object, path) {
+  path = castPath(path, object);
+
+  var index = 0,
+      length = path.length;
+
+  while (object != null && index < length) {
+    object = object[toKey(path[index++])];
+  }
+  return (index && index == length) ? object : undefined;
+}
+
+module.exports = baseGet;
+
+
+/***/ }),
+
 /***/ 4239:
 /***/ ((module) => {
 
@@ -3451,6 +4677,26 @@ function objectToString(value) {
 }
 
 module.exports = objectToString;
+
+
+/***/ }),
+
+/***/ 13:
+/***/ ((module) => {
+
+/**
+ * The base implementation of `_.hasIn` without support for deep paths.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {Array|string} key The key to check.
+ * @returns {boolean} Returns `true` if `key` exists, else `false`.
+ */
+function baseHasIn(object, key) {
+  return object != null && key in Object(object);
+}
+
+module.exports = baseHasIn;
 
 
 /***/ }),
@@ -3519,6 +4765,127 @@ var overArg = __webpack_require__(5569);
 var nativeKeys = overArg(Object.keys, Object);
 
 module.exports = nativeKeys;
+
+
+/***/ }),
+
+/***/ 5970:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var basePickBy = __webpack_require__(3012),
+    hasIn = __webpack_require__(9095);
+
+/**
+ * The base implementation of `_.pick` without support for individual
+ * property identifiers.
+ *
+ * @private
+ * @param {Object} object The source object.
+ * @param {string[]} paths The property paths to pick.
+ * @returns {Object} Returns the new object.
+ */
+function basePick(object, paths) {
+  return basePickBy(object, paths, function(value, path) {
+    return hasIn(object, path);
+  });
+}
+
+module.exports = basePick;
+
+
+/***/ }),
+
+/***/ 3012:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseGet = __webpack_require__(7786),
+    baseSet = __webpack_require__(611),
+    castPath = __webpack_require__(1811);
+
+/**
+ * The base implementation of  `_.pickBy` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The source object.
+ * @param {string[]} paths The property paths to pick.
+ * @param {Function} predicate The function invoked per property.
+ * @returns {Object} Returns the new object.
+ */
+function basePickBy(object, paths, predicate) {
+  var index = -1,
+      length = paths.length,
+      result = {};
+
+  while (++index < length) {
+    var path = paths[index],
+        value = baseGet(object, path);
+
+    if (predicate(value, path)) {
+      baseSet(result, castPath(path, object), value);
+    }
+  }
+  return result;
+}
+
+module.exports = basePickBy;
+
+
+/***/ }),
+
+/***/ 611:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var assignValue = __webpack_require__(4865),
+    castPath = __webpack_require__(1811),
+    isIndex = __webpack_require__(5776),
+    isObject = __webpack_require__(3218),
+    toKey = __webpack_require__(327);
+
+/**
+ * The base implementation of `_.set`.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {Array|string} path The path of the property to set.
+ * @param {*} value The value to set.
+ * @param {Function} [customizer] The function to customize path creation.
+ * @returns {Object} Returns `object`.
+ */
+function baseSet(object, path, value, customizer) {
+  if (!isObject(object)) {
+    return object;
+  }
+  path = castPath(path, object);
+
+  var index = -1,
+      length = path.length,
+      lastIndex = length - 1,
+      nested = object;
+
+  while (nested != null && ++index < length) {
+    var key = toKey(path[index]),
+        newValue = value;
+
+    if (key === '__proto__' || key === 'constructor' || key === 'prototype') {
+      return object;
+    }
+
+    if (index != lastIndex) {
+      var objValue = nested[key];
+      newValue = customizer ? customizer(objValue, key, nested) : undefined;
+      if (newValue === undefined) {
+        newValue = isObject(objValue)
+          ? objValue
+          : (isIndex(path[index + 1]) ? [] : {});
+      }
+    }
+    assignValue(nested, key, newValue);
+    nested = nested[key];
+  }
+  return object;
+}
+
+module.exports = baseSet;
 
 
 /***/ }),
@@ -4024,6 +5391,52 @@ module.exports = objectToString;
 
 /***/ }),
 
+/***/ 222:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var castPath = __webpack_require__(1811),
+    isArguments = __webpack_require__(5694),
+    isArray = __webpack_require__(1469),
+    isIndex = __webpack_require__(5776),
+    isLength = __webpack_require__(1780),
+    toKey = __webpack_require__(327);
+
+/**
+ * Checks if `path` exists on `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @param {Function} hasFunc The function to check properties.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ */
+function hasPath(object, path, hasFunc) {
+  path = castPath(path, object);
+
+  var index = -1,
+      length = path.length,
+      result = false;
+
+  while (++index < length) {
+    var key = toKey(path[index]);
+    if (!(result = object != null && hasFunc(object, key))) {
+      break;
+    }
+    object = object[key];
+  }
+  if (result || ++index != length) {
+    return result;
+  }
+  length = object == null ? 0 : object.length;
+  return !!length && isLength(length) && isIndex(key, length) &&
+    (isArray(object) || isArguments(object));
+}
+
+module.exports = hasPath;
+
+
+/***/ }),
+
 /***/ 2689:
 /***/ ((module) => {
 
@@ -4045,6 +5458,38 @@ function stubFalse() {
 }
 
 module.exports = stubFalse;
+
+
+/***/ }),
+
+/***/ 5776:
+/***/ ((module) => {
+
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER = 9007199254740991;
+
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */
+function isIndex(value, length) {
+  var type = typeof value;
+  length = length == null ? MAX_SAFE_INTEGER : length;
+
+  return !!length &&
+    (type == 'number' ||
+      (type != 'symbol' && reIsUint.test(value))) &&
+        (value > -1 && value % 1 == 0 && value < length);
+}
+
+module.exports = isIndex;
 
 
 /***/ }),
@@ -4135,29 +5580,24 @@ module.exports = overArg;
 /***/ }),
 
 /***/ 292:
-/***/ ((module) => {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseGet = __webpack_require__(7786),
+    baseSlice = __webpack_require__(4259);
 
 /**
- * This method returns the first argument it receives.
+ * Gets the parent value at `path` of `object`.
  *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Util
- * @param {*} value Any value.
- * @returns {*} Returns `value`.
- * @example
- *
- * var object = { 'a': 1 };
- *
- * console.log(_.identity(object) === object);
- * // => true
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array} path The path to get the parent value of.
+ * @returns {*} Returns the parent value.
  */
-function identity(value) {
-  return value;
+function parent(object, path) {
+  return path.length < 2 ? object : baseGet(object, baseSlice(path, 0, -1));
 }
 
-module.exports = identity;
+module.exports = parent;
 
 
 /***/ }),
@@ -4359,6 +5799,47 @@ function eq(value, other) {
 }
 
 module.exports = eq;
+
+
+/***/ }),
+
+/***/ 9095:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseHasIn = __webpack_require__(13),
+    hasPath = __webpack_require__(222);
+
+/**
+ * Checks if `path` is a direct or inherited property of `object`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ * @example
+ *
+ * var object = _.create({ 'a': _.create({ 'b': 2 }) });
+ *
+ * _.hasIn(object, 'a');
+ * // => true
+ *
+ * _.hasIn(object, 'a.b');
+ * // => true
+ *
+ * _.hasIn(object, ['a', 'b']);
+ * // => true
+ *
+ * _.hasIn(object, 'b');
+ * // => false
+ */
+function hasIn(object, path) {
+  return object != null && hasPath(object, path, baseHasIn);
+}
+
+module.exports = hasIn;
 
 
 /***/ }),
@@ -5101,6 +6582,38 @@ var omit = flatRest(function(object, paths) {
 });
 
 module.exports = omit;
+
+
+/***/ }),
+
+/***/ 8718:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var basePick = __webpack_require__(5970),
+    flatRest = __webpack_require__(9021);
+
+/**
+ * Creates an object composed of the picked `object` properties.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The source object.
+ * @param {...(string|string[])} [paths] The property paths to pick.
+ * @returns {Object} Returns the new object.
+ * @example
+ *
+ * var object = { 'a': 1, 'b': '2', 'c': 3 };
+ *
+ * _.pick(object, ['a', 'c']);
+ * // => { 'a': 1, 'c': 3 }
+ */
+var pick = flatRest(function(object, paths) {
+  return object == null ? {} : basePick(object, paths);
+});
+
+module.exports = pick;
 
 
 /***/ }),
@@ -8141,15 +9654,12 @@ var isString_default = /*#__PURE__*/__webpack_require__.n(isString);
 var required_icon = __webpack_require__(2340);
 // EXTERNAL MODULE: ./helpers/index.js + 25 modules
 var helpers = __webpack_require__(3159);
-// EXTERNAL MODULE: ./components/plaintext/index.js + 6 modules
-var components_plaintext = __webpack_require__(7808);
 ;// CONCATENATED MODULE: ./components/react-generic-input/index.js
 
-var _excluded = ["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "plaintext", "required", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component"];
+var _excluded = ["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 
 
 
@@ -8166,7 +9676,6 @@ var ReactGenericInput = function ReactGenericInput(_ref) {
     className = _ref.className,
     disabled = _ref.disabled,
     readOnly = _ref.readOnly,
-    plaintext = _ref.plaintext,
     required = _ref.required,
     size = _ref.size,
     width = _ref.width,
@@ -8179,15 +9688,11 @@ var ReactGenericInput = function ReactGenericInput(_ref) {
     rest = _objectWithoutProperties(_ref, _excluded);
   var hasError = error && isString_default()(error);
   return /*#__PURE__*/external_react_default().createElement("div", {
-    className: classnames_default()('lf-form-react-control-group', className),
+    className: classnames_default()(className, 'lf-form-react-control-group'),
     "data-lf-field-name": name
   }, /*#__PURE__*/external_react_default().createElement("label", {
     for: name
-  }, label, required && /*#__PURE__*/external_react_default().createElement(required_icon/* RequiredIcon */.T, null)), /*#__PURE__*/external_react_default().createElement(components_plaintext/* IfNotPlaintext */.W, {
-    value: value,
-    component: component,
-    plaintext: plaintext
-  }, /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, /*#__PURE__*/external_react_default().createElement("input", _extends({
+  }, label, required && /*#__PURE__*/external_react_default().createElement(required_icon/* RequiredIcon */.T, null)), /*#__PURE__*/external_react_default().createElement("input", _extends({
     type: inputType,
     lang: lfLocale,
     id: name,
@@ -8204,7 +9709,7 @@ var ReactGenericInput = function ReactGenericInput(_ref) {
     className: "lf-form-react-message"
   }, hint), hasError && /*#__PURE__*/external_react_default().createElement("div", {
     className: "lf-form-react-error-message"
-  }, error))));
+  }, error));
 };
 
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react/input-text/input-text.scss
@@ -8262,7 +9767,7 @@ var TextInput = (0,components/* I18N */.mb)(function (_ref) {
 
 ;// CONCATENATED MODULE: ./components/react-generic-checkbox/index.js
 
-var react_generic_checkbox_excluded = ["name", "label", "lfLocale", "className", "inputType", "hint", "plaintext", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"];
+var react_generic_checkbox_excluded = ["name", "label", "lfLocale", "className", "inputType", "hint", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"];
 function react_generic_checkbox_extends() { react_generic_checkbox_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_generic_checkbox_extends.apply(this, arguments); }
 function react_generic_checkbox_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_generic_checkbox_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function react_generic_checkbox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -8277,7 +9782,6 @@ var ReactGenericCheckbox = function ReactGenericCheckbox(_ref) {
     className = _ref.className,
     inputType = _ref.inputType,
     hint = _ref.hint,
-    plaintext = _ref.plaintext,
     value = _ref.value,
     defaultValue = _ref.defaultValue,
     onChange = _ref.onChange,
@@ -8289,9 +9793,9 @@ var ReactGenericCheckbox = function ReactGenericCheckbox(_ref) {
     rest = react_generic_checkbox_objectWithoutProperties(_ref, react_generic_checkbox_excluded);
   var hasError = error && isString_default()(error);
   return /*#__PURE__*/external_react_default().createElement("div", {
-    className: classnames_default()('lf-form-react-control-group', className),
+    className: classnames_default()(className, 'lf-form-react-control-group'),
     "data-lf-field-name": name
-  }, !plaintext && /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, /*#__PURE__*/external_react_default().createElement("label", {
+  }, /*#__PURE__*/external_react_default().createElement("label", {
     for: name,
     className: "lf-form-react-checkbox"
   }, /*#__PURE__*/external_react_default().createElement("input", react_generic_checkbox_extends({
@@ -8307,13 +9811,7 @@ var ReactGenericCheckbox = function ReactGenericCheckbox(_ref) {
     className: "lf-form-react-form-message"
   }, hint), hasError && /*#__PURE__*/external_react_default().createElement("div", {
     className: "lf-form-react-error-message"
-  }, error)), plaintext && /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, /*#__PURE__*/external_react_default().createElement("label", {
-    for: name
-  }, label), /*#__PURE__*/external_react_default().createElement(components/* Plaintext */.UM, {
-    value: value,
-    component: "toggle",
-    locale: lfLocale
-  })));
+  }, error));
 };
 
 ;// CONCATENATED MODULE: ./react/checkbox/index.js
@@ -8364,7 +9862,7 @@ var Textarea = (0,components/* I18N */.mb)(function (_ref) {
     return onChange(e.target.value);
   }, [onChange]);
   return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-form-react-control-group lf-control-textarea",
+    className: "lf-control-textarea lf-form-react-control-group",
     "data-lf-field-name": name
   }, /*#__PURE__*/external_react_default().createElement("label", {
     for: name
@@ -8388,777 +9886,24 @@ var Textarea = (0,components/* I18N */.mb)(function (_ref) {
   }, error));
 }, ['label', 'hint', 'placeholder']);
 
-// EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
-var isFunction = __webpack_require__(3560);
-var isFunction_default = /*#__PURE__*/__webpack_require__.n(isFunction);
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/three-columns/three-columns.scss
-var three_columns = __webpack_require__(1861);
-;// CONCATENATED MODULE: ./common/three-columns/three-columns.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var three_columns_options = {};
-
-three_columns_options.styleTagTransform = (styleTagTransform_default());
-three_columns_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      three_columns_options.insert = insertBySelector_default().bind(null, "head");
-    
-three_columns_options.domAPI = (styleDomAPI_default());
-three_columns_options.insertStyleElement = (insertStyleElement_default());
-
-var three_columns_update = injectStylesIntoStyleTag_default()(three_columns/* default */.Z, three_columns_options);
-
-
-
-
-       /* harmony default export */ const three_columns_three_columns = (three_columns/* default */.Z && three_columns/* default.locals */.Z.locals ? three_columns/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./common/three-columns/index.js
-
-
-
-
-var ThreeColumns = function ThreeColumns(_ref) {
-  var name = _ref.name,
-    layout = _ref.layout,
-    children = _ref.children,
-    leftAlignment = _ref.leftAlignment,
-    centerAlignment = _ref.centerAlignment,
-    rightAlignment = _ref.rightAlignment;
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    "data-lf-field-name": name,
-    className: classnames_default()('lf-control-three-columns', layout)
-  }, /*#__PURE__*/external_react_default().createElement("div", {
-    className: "left",
-    style: {
-      alignSelf: leftAlignment ? leftAlignment : undefined
-    }
-  }, isFunction_default()(children) && children('left')), /*#__PURE__*/external_react_default().createElement("div", {
-    className: "center",
-    style: {
-      alignSelf: centerAlignment ? centerAlignment : undefined
-    }
-  }, isFunction_default()(children) && children('center')), /*#__PURE__*/external_react_default().createElement("div", {
-    className: "right",
-    style: {
-      alignSelf: rightAlignment ? rightAlignment : undefined
-    }
-  }, isFunction_default()(children) && children('right')));
-};
-
+// EXTERNAL MODULE: ./common/three-columns/index.js + 1 modules
+var three_columns = __webpack_require__(7645);
 ;// CONCATENATED MODULE: ./react/three-columns/index.js
 
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/two-columns/two-columns.scss
-var two_columns = __webpack_require__(5318);
-;// CONCATENATED MODULE: ./common/two-columns/two-columns.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var two_columns_options = {};
-
-two_columns_options.styleTagTransform = (styleTagTransform_default());
-two_columns_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      two_columns_options.insert = insertBySelector_default().bind(null, "head");
-    
-two_columns_options.domAPI = (styleDomAPI_default());
-two_columns_options.insertStyleElement = (insertStyleElement_default());
-
-var two_columns_update = injectStylesIntoStyleTag_default()(two_columns/* default */.Z, two_columns_options);
-
-
-
-
-       /* harmony default export */ const two_columns_two_columns = (two_columns/* default */.Z && two_columns/* default.locals */.Z.locals ? two_columns/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./common/two-columns/index.js
-
-
-
-
-var TwoColumns = function TwoColumns(_ref) {
-  var name = _ref.name,
-    children = _ref.children,
-    layout = _ref.layout,
-    leftAlignment = _ref.leftAlignment,
-    rightAlignment = _ref.rightAlignment;
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    className: classnames_default()('lf-control-two-columns', layout),
-    "data-lf-field-name": name
-  }, /*#__PURE__*/external_react_default().createElement("div", {
-    className: "left",
-    style: {
-      alignSelf: leftAlignment ? leftAlignment : undefined
-    }
-  }, isFunction_default()(children) && children('left')), /*#__PURE__*/external_react_default().createElement("div", {
-    className: "right",
-    style: {
-      alignSelf: rightAlignment ? rightAlignment : undefined
-    }
-  }, isFunction_default()(children) && children('right')));
-};
-
+// EXTERNAL MODULE: ./common/two-columns/index.js + 1 modules
+var two_columns = __webpack_require__(963);
 ;// CONCATENATED MODULE: ./react/two-columns/index.js
 
-// EXTERNAL MODULE: ./assets/icons/index.js + 7 modules
-var icons = __webpack_require__(2113);
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/group/group.scss
-var group = __webpack_require__(88);
-;// CONCATENATED MODULE: ./common/group/group.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var group_options = {};
-
-group_options.styleTagTransform = (styleTagTransform_default());
-group_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      group_options.insert = insertBySelector_default().bind(null, "head");
-    
-group_options.domAPI = (styleDomAPI_default());
-group_options.insertStyleElement = (insertStyleElement_default());
-
-var group_update = injectStylesIntoStyleTag_default()(group/* default */.Z, group_options);
-
-
-
-
-       /* harmony default export */ const group_group = (group/* default */.Z && group/* default.locals */.Z.locals ? group/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./common/group/index.js
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/anchor-has-content */
-
-
-
-
-
-var Group = (0,components/* I18N */.mb)(function (_ref) {
-  var name = _ref.name,
-    label = _ref.label,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$open = _ref.open,
-    open = _ref$open === void 0 ? true : _ref$open,
-    _ref$collapsible = _ref.collapsible,
-    collapsible = _ref$collapsible === void 0 ? true : _ref$collapsible,
-    _ref$bottomBorder = _ref.bottomBorder,
-    bottomBorder = _ref$bottomBorder === void 0 ? false : _ref$bottomBorder,
-    align = _ref.align,
-    children = _ref.children;
-  var _useState = (0,external_react_.useState)(open),
-    _useState2 = _slicedToArray(_useState, 2),
-    isOpen = _useState2[0],
-    setIsOpen = _useState2[1];
-  var handleClick = (0,external_react_.useCallback)(function (event) {
-    event.preventDefault();
-    setIsOpen(!isOpen);
-  }, [isOpen]);
-  // if open changes, then change status
-  (0,external_react_.useEffect)(function () {
-    setIsOpen(open);
-  }, [open]);
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    "data-lf-field-name": name,
-    className: classnames_default()('lf-control-group', {
-      'bottom-border': bottomBorder,
-      'open': isOpen,
-      'close': !isOpen
-    })
-  }, /*#__PURE__*/external_react_default().createElement("div", {
-    role: "separator",
-    className: classnames_default()('header', align)
-  }, /*#__PURE__*/external_react_default().createElement("span", {
-    className: "inner-text"
-  }, label, collapsible && /*#__PURE__*/external_react_default().createElement("a", {
-    href: "#",
-    className: "lf-btn-collapse",
-    disabled: disabled,
-    appearance: "link",
-    onClick: handleClick
-  }, isOpen ? /*#__PURE__*/external_react_default().createElement(icons/* ChevronUp */.Kh, {
-    color: "#3498ff"
-  }) : /*#__PURE__*/external_react_default().createElement(icons/* ChevronDown */._M, {
-    color: "#3498ff"
-  })))), (isOpen || !collapsible) && /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, children));
-}, ['label']);
-
+// EXTERNAL MODULE: ./common/group/index.js + 1 modules
+var group = __webpack_require__(8727);
 ;// CONCATENATED MODULE: ./react/group/index.js
 
-// EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
-var isEmpty = __webpack_require__(1609);
-var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
-// EXTERNAL MODULE: ./node_modules/micro-down/dist/index.js
-var dist = __webpack_require__(7305);
-var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/placeholder/placeholder.scss
-var placeholder = __webpack_require__(860);
-;// CONCATENATED MODULE: ./common/placeholder/placeholder.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var placeholder_options = {};
-
-placeholder_options.styleTagTransform = (styleTagTransform_default());
-placeholder_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      placeholder_options.insert = insertBySelector_default().bind(null, "head");
-    
-placeholder_options.domAPI = (styleDomAPI_default());
-placeholder_options.insertStyleElement = (insertStyleElement_default());
-
-var placeholder_update = injectStylesIntoStyleTag_default()(placeholder/* default */.Z, placeholder_options);
-
-
-
-
-       /* harmony default export */ const placeholder_placeholder = (placeholder/* default */.Z && placeholder/* default.locals */.Z.locals ? placeholder/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./common/placeholder/index.js
-
-
-
-
-var Placeholder = function Placeholder(_ref) {
-  var text = _ref.text,
-    name = _ref.name;
-  if (!isEmpty_default()(text)) {
-    return /*#__PURE__*/external_react_default().createElement("div", {
-      className: "lf-control-placeholder",
-      "data-lf-field-name": name,
-      dangerouslySetInnerHTML: {
-        __html: dist_default().parse(text)
-      }
-    });
-  } else {
-    return /*#__PURE__*/external_react_default().createElement("div", null);
-  }
-};
-
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/placeholder-image/placeholder-image.scss
-var placeholder_image = __webpack_require__(2558);
-;// CONCATENATED MODULE: ./common/placeholder-image/placeholder-image.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var placeholder_image_options = {};
-
-placeholder_image_options.styleTagTransform = (styleTagTransform_default());
-placeholder_image_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      placeholder_image_options.insert = insertBySelector_default().bind(null, "head");
-    
-placeholder_image_options.domAPI = (styleDomAPI_default());
-placeholder_image_options.insertStyleElement = (insertStyleElement_default());
-
-var placeholder_image_update = injectStylesIntoStyleTag_default()(placeholder_image/* default */.Z, placeholder_image_options);
-
-
-
-
-       /* harmony default export */ const placeholder_image_placeholder_image = (placeholder_image/* default */.Z && placeholder_image/* default.locals */.Z.locals ? placeholder_image/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./common/placeholder-image/index.js
-
-
-
-// add maxHeight
-// generalize for all components
-// cleanup
-// spostare in layout
-
-var PlaceholderImage = function PlaceholderImage(_ref) {
-  var url = _ref.url,
-    label = _ref.label,
-    name = _ref.name,
-    maxWidth = _ref.maxWidth,
-    minHeight = _ref.minHeight,
-    marginTop = _ref.marginTop,
-    marginBottom = _ref.marginBottom,
-    align = _ref.align;
-  return /*#__PURE__*/React.createElement("div", {
-    className: "lf-control-placeholder-image",
-    "data-lf-field-name": name,
-    style: {
-      textAlign: align ? align : undefined
-    }
-  }, url && /*#__PURE__*/React.createElement("img", {
-    src: url,
-    alt: label || name,
-    style: {
-      marginTop: marginTop ? marginTop : undefined,
-      marginBottom: marginBottom ? marginBottom : undefined,
-      maxWidth: maxWidth ? maxWidth : undefined,
-      minHeight: minHeight ? minHeight : undefined,
-      textAlign: align ? align : undefined
-    }
-  }));
-};
-
-;// CONCATENATED MODULE: ./common/text-or-icon/index.js
-
-
-var TextOrIcon = function TextOrIcon(str) {
-  if (isUrl(str)) {
-    return /*#__PURE__*/React.createElement("img", {
-      className: "lf-prefix-icon",
-      src: str,
-      alt: "icon"
-    });
-  } else {
-    return /*#__PURE__*/React.createElement("span", null, str);
-  }
-};
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/divider/divider.scss
-var divider = __webpack_require__(1760);
-;// CONCATENATED MODULE: ./common/divider/divider.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var divider_options = {};
-
-divider_options.styleTagTransform = (styleTagTransform_default());
-divider_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      divider_options.insert = insertBySelector_default().bind(null, "head");
-    
-divider_options.domAPI = (styleDomAPI_default());
-divider_options.insertStyleElement = (insertStyleElement_default());
-
-var divider_update = injectStylesIntoStyleTag_default()(divider/* default */.Z, divider_options);
-
-
-
-
-       /* harmony default export */ const divider_divider = (divider/* default */.Z && divider/* default.locals */.Z.locals ? divider/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./common/divider/index.js
-
-
-var Divider = function Divider(_ref) {
-  var name = _ref.name,
-    size = _ref.size,
-    color = _ref.color;
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-control-divider",
-    "data-lf-field-name": name
-  }, /*#__PURE__*/external_react_default().createElement("div", {
-    className: "bar",
-    style: {
-      height: "".concat(size, "px"),
-      backgroundColor: color
-    }
-  }, "&npsb;"));
-};
-
-;// CONCATENATED MODULE: ./common/react-view/index.js
-var react_view_excluded = ["name", "view"];
-function react_view_extends() { react_view_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_view_extends.apply(this, arguments); }
-function react_view_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_view_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-function react_view_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-var ReactView = function ReactView(_ref) {
-  var name = _ref.name,
-    view = _ref.view,
-    rest = react_view_objectWithoutProperties(_ref, react_view_excluded);
-  var View = view;
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-control-react-view",
-    "data-lf-field-name": name
-  }, View && /*#__PURE__*/external_react_default().createElement(View, react_view_extends({
-    name: name
-  }, rest)));
-};
-
-// EXTERNAL MODULE: ./node_modules/lodash/omit.js
-var omit = __webpack_require__(7557);
-var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
-// EXTERNAL MODULE: ./node_modules/lodash/uniqueId.js
-var uniqueId = __webpack_require__(3955);
-var uniqueId_default = /*#__PURE__*/__webpack_require__.n(uniqueId);
-// EXTERNAL MODULE: ./node_modules/lodash/isArray.js
-var isArray = __webpack_require__(1469);
-var isArray_default = /*#__PURE__*/__webpack_require__.n(isArray);
-// EXTERNAL MODULE: ./form-context/index.js
-var form_context = __webpack_require__(5137);
-;// CONCATENATED MODULE: ./hooks/index.js
-
-
-var useFormContext = function useFormContext() {
-  var context = (0,external_react_.useContext)(form_context/* default */.Z);
-
-  // put here some defaults
-
-  return context;
-};
-;// CONCATENATED MODULE: ./common/array/helpers/is-empty-item.js
-var isEmptyItem = function isEmptyItem(obj) {
-  return Object.keys(obj).filter(function (key) {
-    return key !== 'id';
-  }).every(function (key) {
-    return obj[key] === null || obj[key] === undefined || obj[key] === '';
-  });
-};
-;// CONCATENATED MODULE: ./common/array/views/array-item.js
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
-
-
-var IconButton = function IconButton(_ref) {
-  var _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    className = _ref.className,
-    Icon = _ref.icon,
-    onClick = _ref.onClick;
-  var handleClick = (0,external_react_.useCallback)(function (e) {
-    e.preventDefault();
-    if (!disabled) {
-      onClick();
-    }
-  }, [disabled, onClick]);
-  return /*#__PURE__*/external_react_default().createElement("a", {
-    href: "#",
-    className: classnames_default()('lf-icon-button', className, {
-      disabled: disabled
-    }),
-    onClick: handleClick
-  }, Icon);
-};
-var ArrayItem = function ArrayItem(_ref2) {
-  var name = _ref2.name,
-    children = _ref2.children,
-    item = _ref2.item,
-    disabled = _ref2.disabled,
-    readOnly = _ref2.readOnly,
-    _ref2$onAdd = _ref2.onAdd,
-    onAdd = _ref2$onAdd === void 0 ? function () {} : _ref2$onAdd,
-    _ref2$onRemove = _ref2.onRemove,
-    onRemove = _ref2$onRemove === void 0 ? function () {} : _ref2$onRemove,
-    _ref2$disableAdd = _ref2.disableAdd,
-    disableAdd = _ref2$disableAdd === void 0 ? false : _ref2$disableAdd,
-    _ref2$showAdd = _ref2.showAdd,
-    showAdd = _ref2$showAdd === void 0 ? false : _ref2$showAdd,
-    _ref2$leftMargin = _ref2.leftMargin,
-    leftMargin = _ref2$leftMargin === void 0 ? 10 : _ref2$leftMargin;
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-control-common-array-item"
-  }, /*#__PURE__*/external_react_default().createElement("div", {
-    className: "inner-form"
-  }, children), /*#__PURE__*/external_react_default().createElement("div", {
-    className: "buttons"
-  }, showAdd && /*#__PURE__*/external_react_default().createElement(IconButton, {
-    disabled: disableAdd || disabled || readOnly,
-    className: "arrow",
-    appearance: "link",
-    icon: /*#__PURE__*/external_react_default().createElement(icons/* PlusCircle */.FU, {
-      height: 16,
-      width: 16,
-      color: "#3498ff"
-    }),
-    size: "sm",
-    onClick: onAdd
-  }), !showAdd && /*#__PURE__*/external_react_default().createElement(IconButton, {
-    className: "arrow",
-    disabled: disabled || readOnly,
-    appearance: "link",
-    icon: /*#__PURE__*/external_react_default().createElement(icons/* MinusCircle */.Sg, {
-      height: 16,
-      width: 16,
-      color: "#3498ff"
-    }),
-    size: "sm",
-    onClick: function onClick(event) {
-      onRemove(item);
-    }
-  })));
-};
-
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/array/list-array.scss
-var list_array = __webpack_require__(3010);
-;// CONCATENATED MODULE: ./common/array/list-array.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var list_array_options = {};
-
-list_array_options.styleTagTransform = (styleTagTransform_default());
-list_array_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      list_array_options.insert = insertBySelector_default().bind(null, "head");
-    
-list_array_options.domAPI = (styleDomAPI_default());
-list_array_options.insertStyleElement = (insertStyleElement_default());
-
-var list_array_update = injectStylesIntoStyleTag_default()(list_array/* default */.Z, list_array_options);
-
-
-
-
-       /* harmony default export */ const array_list_array = (list_array/* default */.Z && list_array/* default.locals */.Z.locals ? list_array/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./common/array/index.js
-
-
-
-
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || array_unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return array_arrayLikeToArray(arr); }
-function array_slicedToArray(arr, i) { return array_arrayWithHoles(arr) || array_iterableToArrayLimit(arr, i) || array_unsupportedIterableToArray(arr, i) || array_nonIterableRest(); }
-function array_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function array_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return array_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return array_arrayLikeToArray(o, minLen); }
-function array_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function array_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function array_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-var ListArray = function ListArray(_ref) {
-  var LetsFormComponent = _ref.LetsFormComponent,
-    value = _ref.value,
-    _ref$onChange = _ref.onChange,
-    _onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
-    _ref$onBlur = _ref.onBlur,
-    onBlur = _ref$onBlur === void 0 ? function () {} : _ref$onBlur,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    fields = _ref.fields,
-    _ref$layout = _ref.layout,
-    layout = _ref$layout === void 0 ? 'vertical' : _ref$layout,
-    maxHeight = _ref.maxHeight,
-    lfLocale = _ref.lfLocale,
-    _ref$leftMargin = _ref.leftMargin,
-    leftMargin = _ref$leftMargin === void 0 ? 0 : _ref$leftMargin,
-    children = _ref.children;
-  var _useState = (0,external_react_.useState)(isArray_default()(value) && !isEmpty_default()(value) ? (0,helpers/* fillIds */.Mw)(value) : [{
-      id: uniqueId_default()()
-    }]),
-    _useState2 = array_slicedToArray(_useState, 2),
-    items = _useState2[0],
-    setItems = _useState2[1];
-  var _useFormContext = useFormContext(),
-    locales = _useFormContext.locales;
-  var form = {
-    layout: layout,
-    fluid: true,
-    locales: locales,
-    // copy the locales from the main form
-    fields: fields
-  };
-  var style = {};
-  if (maxHeight) {
-    //style.maxHeigth = _.isNumber(maxHeigth) ? `${maxHeigth}px` : maxHeigth;
-    style = {
-      maxHeight: "".concat(maxHeight, "px"),
-      overflowY: 'scroll'
-    };
-  }
-  if (leftMargin != null) {
-    style.marginLeft = isNumber_default()(leftMargin) ? "".concat(leftMargin, "px") : leftMargin;
-  }
-  var handleAdd = (0,external_react_.useCallback)(function () {
-    setItems(function (items) {
-      return [].concat(_toConsumableArray(items), [{
-        id: uniqueId_default()()
-      }]);
-    });
-  }, []);
-  var handleRemove = (0,external_react_.useCallback)(function (item) {
-    var newItems = items.filter(function (i) {
-      return i.id !== item.id;
-    });
-    setItems(newItems);
-    _onChange(newItems.map(function (i) {
-      return omit_default()(i, 'id');
-    }));
-  }, [items, _onChange]);
-  if (children) {
-    return /*#__PURE__*/external_react_default().createElement("div", {
-      style: {
-        padding: '0px 10px 1px 10px'
-      }
-    }, children);
-  }
-  return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-control-common-array",
-    style: style
-  }, (isArray_default()(items) ? items : []).map(function (item, idx) {
-    var canAdd = idx === items.length - 1 && !isEmptyItem(item);
-    var showAdd = idx === items.length - 1 || items.length === 1;
-    return /*#__PURE__*/external_react_default().createElement(ArrayItem, {
-      key: item.id,
-      item: item,
-      disabled: disabled,
-      readOnly: readOnly,
-      disableAdd: !canAdd,
-      showAdd: showAdd,
-      onAdd: handleAdd,
-      onRemove: handleRemove
-    }, /*#__PURE__*/external_react_default().createElement(LetsFormComponent, {
-      form: form,
-      locale: lfLocale,
-      disabled: disabled,
-      readOnly: readOnly,
-      defaultValues: item,
-      onlyFields: true,
-      onChange: function onChange(value) {
-        console.log('changed item', value);
-        var newItems = items.map(function (i) {
-          return i.id === value.id ? value : i;
-        });
-        setItems(newItems);
-        _onChange(newItems.map(function (i) {
-          return omit_default()(i, 'id');
-        }));
-      }
-    }));
-  }));
-};
-
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./common/icon/common-icon.scss
-var common_icon = __webpack_require__(6159);
-;// CONCATENATED MODULE: ./common/icon/common-icon.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var common_icon_options = {};
-
-common_icon_options.styleTagTransform = (styleTagTransform_default());
-common_icon_options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      common_icon_options.insert = insertBySelector_default().bind(null, "head");
-    
-common_icon_options.domAPI = (styleDomAPI_default());
-common_icon_options.insertStyleElement = (insertStyleElement_default());
-
-var common_icon_update = injectStylesIntoStyleTag_default()(common_icon/* default */.Z, common_icon_options);
-
-
-
-
-       /* harmony default export */ const icon_common_icon = (common_icon/* default */.Z && common_icon/* default.locals */.Z.locals ? common_icon/* default.locals */.Z.locals : undefined);
-
-;// CONCATENATED MODULE: ./common/icon/index.js
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
-
-
-var COMMON_ICON_SIZES = (/* unused pure expression or super */ null && (['large', 'small']));
-var CommonIcon = function CommonIcon(_ref) {
-  var src = _ref.src,
-    className = _ref.className,
-    alt = _ref.alt,
-    _onClick = _ref.onClick,
-    size = _ref.size;
-  return /*#__PURE__*/React.createElement("div", {
-    className: classNames('lf-common-icon', className, {
-      small: size === 'small',
-      large: size === 'large'
-      //[size]: COMMON_ICON_SIZES.includes(size)
-    })
-  }, /*#__PURE__*/React.createElement("a", {
-    href: "#",
-    onClick: function onClick(e) {
-      e.preventDefault();
-      _onClick();
-    }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: src,
-    alt: alt
-  })));
-};
-
-;// CONCATENATED MODULE: ./common/index.js
-
-
-
-
-
-
-
-
-
-
+// EXTERNAL MODULE: ./common/index.js + 12 modules
+var common = __webpack_require__(6542);
 ;// CONCATENATED MODULE: ./react/divider/index.js
 
+// EXTERNAL MODULE: ./common/react-view/index.js
+var react_view = __webpack_require__(8169);
 ;// CONCATENATED MODULE: ./react/react-view/index.js
 
 ;// CONCATENATED MODULE: ./react/placeholder/index.js
@@ -9175,7 +9920,7 @@ var PlaceholderReact = (0,components/* I18N */.mb)(function (_ref) {
     "data-lf-field-name": name
   }, /*#__PURE__*/external_react_default().createElement("label", {
     for: name
-  }, label), /*#__PURE__*/external_react_default().createElement(Placeholder, {
+  }, label), /*#__PURE__*/external_react_default().createElement(common/* Placeholder */.Vm, {
     text: text
   }), hint && /*#__PURE__*/external_react_default().createElement("div", {
     className: "lf-form-react-message"
@@ -9185,19 +9930,19 @@ var PlaceholderReact = (0,components/* I18N */.mb)(function (_ref) {
 ;// CONCATENATED MODULE: ./react/select/index.js
 function select_typeof(obj) { "@babel/helpers - typeof"; return select_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, select_typeof(obj); }
 
-var select_excluded = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "plaintext", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey"];
+var select_excluded = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey"];
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { select_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 function select_defineProperty(obj, key, value) { key = select_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function select_toPropertyKey(arg) { var key = select_toPrimitive(arg, "string"); return select_typeof(key) === "symbol" ? key : String(key); }
 function select_toPrimitive(input, hint) { if (select_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (select_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function select_extends() { select_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return select_extends.apply(this, arguments); }
-function select_toConsumableArray(arr) { return select_arrayWithoutHoles(arr) || select_iterableToArray(arr) || select_unsupportedIterableToArray(arr) || select_nonIterableSpread(); }
-function select_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function select_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return select_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return select_arrayLikeToArray(o, minLen); }
-function select_iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function select_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return select_arrayLikeToArray(arr); }
-function select_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function select_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = select_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function select_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
@@ -9216,7 +9961,6 @@ var Select = (0,components/* I18N */.mb)(function (_ref) {
     disabled = _ref.disabled,
     placeholder = _ref.placeholder,
     readOnly = _ref.readOnly,
-    plaintext = _ref.plaintext,
     required = _ref.required,
     size = _ref.size,
     width = _ref.width,
@@ -9234,20 +9978,14 @@ var Select = (0,components/* I18N */.mb)(function (_ref) {
     opts = [{
       value: '',
       label: placeholder
-    }].concat(select_toConsumableArray(opts));
+    }].concat(_toConsumableArray(opts));
   }
   return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-form-react-control-group lf-control-input-text",
+    className: "lf-control-select lf-form-react-control-group",
     "data-lf-field-name": name
   }, /*#__PURE__*/external_react_default().createElement("label", {
     for: name
-  }, label, required && /*#__PURE__*/external_react_default().createElement(components/* RequiredIcon */.T_, null)), /*#__PURE__*/external_react_default().createElement(components/* IfNotPlaintext */.W7, {
-    plaintext: plaintext,
-    value: value,
-    options: options,
-    component: "select",
-    locale: lfLocale
-  }, /*#__PURE__*/external_react_default().createElement((external_react_default()).Fragment, null, /*#__PURE__*/external_react_default().createElement("select", select_extends({
+  }, label, required && /*#__PURE__*/external_react_default().createElement(components/* RequiredIcon */.T_, null)), /*#__PURE__*/external_react_default().createElement("select", select_extends({
     id: name,
     value: value,
     onChange: handleChange,
@@ -9265,7 +10003,7 @@ var Select = (0,components/* I18N */.mb)(function (_ref) {
     className: "lf-form-react-message"
   }, hint), hasError && /*#__PURE__*/external_react_default().createElement("div", {
     className: "lf-form-react-error-message"
-  }, error))));
+  }, error));
 }, ['label', 'hint', 'placeholder'], {
   options: function options(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).map(function (value) {
@@ -9342,11 +10080,10 @@ var array_update = injectStylesIntoStyleTag_default()(array/* default */.Z, arra
 
 ;// CONCATENATED MODULE: ./react/array/index.js
 
-var array_excluded = ["hint", "required", "tooltip", "name", "label", "error", "plaintext"];
+var array_excluded = ["hint", "required", "tooltip", "name", "label", "error"];
 function array_extends() { array_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return array_extends.apply(this, arguments); }
 function array_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = array_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function array_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 
 
 
@@ -9359,22 +10096,16 @@ var ListArrayReact = function ListArrayReact(_ref) {
     name = _ref.name,
     label = _ref.label,
     error = _ref.error,
-    plaintext = _ref.plaintext,
     rest = array_objectWithoutProperties(_ref, array_excluded);
   var hasError = error && isString_default()(error);
   return /*#__PURE__*/external_react_default().createElement("div", {
-    className: "lf-form-react-control-group lf-control-array",
+    className: "lf-control-array lf-form-react-control-group",
     "data-lf-field-name": name
   }, /*#__PURE__*/external_react_default().createElement("label", {
     for: name
-  }, label, required && /*#__PURE__*/external_react_default().createElement(components/* RequiredIcon */.T_, null)), /*#__PURE__*/external_react_default().createElement(components/* IfNotPlaintext */.W7, {
-    component: "array",
-    value: rest.value,
-    locale: rest.lfLocale,
-    plaintext: plaintext
-  }, /*#__PURE__*/external_react_default().createElement(ListArray, array_extends({
+  }, label, required && /*#__PURE__*/external_react_default().createElement(components/* RequiredIcon */.T_, null)), /*#__PURE__*/external_react_default().createElement(common/* ListArray */.v0, array_extends({
     LetsFormComponent: react
-  }, rest))), hint && !hasError && /*#__PURE__*/external_react_default().createElement("div", {
+  }, rest)), hint && !hasError && /*#__PURE__*/external_react_default().createElement("div", {
     className: "lf-form-react-message"
   }, hint), hasError && /*#__PURE__*/external_react_default().createElement("div", {
     className: "lf-form-react-error-message"
@@ -9414,6 +10145,10 @@ var DateTime = (0,components/* I18N */.mb)(function (_ref) {
   }, rest));
 }, ['label', 'hint', 'placeholder']);
 
+// EXTERNAL MODULE: ./common/placeholder-image/index.js + 1 modules
+var placeholder_image = __webpack_require__(8587);
+;// CONCATENATED MODULE: ./react/placeholder-image/index.js
+
 // EXTERNAL MODULE: ./costants.js
 var costants = __webpack_require__(8064);
 ;// CONCATENATED MODULE: ./react/index.js
@@ -9438,6 +10173,7 @@ function react_objectWithoutPropertiesLoose(source, excluded) { if (source == nu
 
 //import { Toggle } from './toggle';
 
+
 var Fields = {
   'input-text': {
     'react': TextInput
@@ -9449,19 +10185,19 @@ var Fields = {
     'react': Textarea
   },
   'three-columns': {
-    'react': ThreeColumns
+    'react': three_columns/* ThreeColumns */.$
   },
   'two-columns': {
-    'react': TwoColumns
+    'react': two_columns/* TwoColumns */.V
   },
   'group': {
-    'react': Group
+    'react': group/* Group */.Z
   },
   'divider': {
-    'react': Divider
+    'react': common/* Divider */.iz
   },
   'react-view': {
-    'react': ReactView
+    'react': react_view/* ReactView */.Y
   },
   'placeholder': {
     'react': PlaceholderReact
@@ -9477,6 +10213,9 @@ var Fields = {
   },
   'array': {
     'react': ListArrayReact
+  },
+  'placeholder-image': {
+    'react': placeholder_image/* PlaceholderImage */.N
   }
   // Removed, doesn't work
   /*'toggle': {

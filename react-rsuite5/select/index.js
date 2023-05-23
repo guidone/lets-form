@@ -16,15 +16,14 @@ const menuItem = (value, item) => {
   )
 };
 
-const manuValue = (value, item) => {
+/*const manuValue = (value, item) => {
   return (
     <div className="lf-control-select-option-rsuite5">
       {item.image && <img src={item.image} alt={item.label} />}
       <span>{item.label}</span>
     </div>
   )
-};
-
+};*/
 
 const Select = I18N(
   ({
@@ -34,6 +33,7 @@ const Select = I18N(
     value,
     size,
     placeholder,
+    lfLocale,
     options,
     tooltip = false,
     disabled = false,
@@ -53,7 +53,10 @@ const Select = I18N(
     ...rest
   }) => {
     return (
-      <Form.Group controlId={name}>
+      <Form.Group
+        className="lf-control-select"
+        controlId={name}
+      >
         {label && (
           <Form.ControlLabel>
             {label}

@@ -23,6 +23,7 @@ const SelectAntd = I18N(
     maxLength,
     error,
     prefix,
+    lfLocale,
     postfix,
     allowClear,
     bordered,
@@ -73,18 +74,15 @@ const SelectAntd = I18N(
           {(filterOptions(options, filterValue, filterKey) || [])
             .map(option => (
               <Select.Option
-
                 key={option.value}
                 value={option.value}
                 label={option.label}>
-
                 {option.image && showImageOptions && (
                   <Space className="lf-control-select-option-antd" align="center">
                     <img src={option.image} alt={option.label}/>
                     {option.label}
                   </Space>
                 )}
-
               </Select.Option>
             ))
           }

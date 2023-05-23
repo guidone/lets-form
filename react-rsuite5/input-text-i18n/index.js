@@ -68,6 +68,7 @@ const InputTextI18N = (props) => {
     readOnly = false,
     required = false,
     width,
+    fullWidth,
     error,
     onChange,
     onBlur,

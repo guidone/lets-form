@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { Form, TagPicker } from 'rsuite';
+import { Form, TagPicker, CheckPicker } from 'rsuite';
 
 import { RequiredIcon, I18N } from '../../components';
 import { makeWidthStyle, passRest } from '../../helpers';
@@ -27,9 +27,12 @@ const Multiselect = I18N(
     placement,
     appearance,
     fullWidth,
+    multiselectMode,
     width,
     ...rest
   }) => {
+    const Component = multiselectMode === 'tag' ? TagPicker : CheckPicker;
+
     return (
       <Form.Group
         data-lf-field-name={name}
@@ -44,7 +47,7 @@ const Multiselect = I18N(
           </Form.ControlLabel>
         )}
         <Form.Control
-          accepter={TagPicker}
+          accepter={Component}
           appearance={appearance ?? undefined}
           name={name}
           value={value}

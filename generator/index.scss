@@ -1,6 +1,7 @@
 .lf-form {
-  --lf-field-margin: 24px;
-  --lf-field-column-margin: 20px;
+  --lf-field-margin: 16px;
+  --lf-field-column-margin: 16px;
+  --lf-font-size: 15px;
 
   &.lf-form-buttons-align-center {
     .lf-toolbar {
@@ -17,6 +18,45 @@
       justify-content: flex-end;
     }
   }
+
+  .lf-toolbar {
+    margin-top: var(--lf-field-margin);
+  }
+
+  // as a general rule, components have a top margin, unless they are the first of their container
+  [class*=lf-control]:not(:first-child) {
+    margin-top: var(--lf-field-margin);
+    margin-bottom: 0px;
+  }
+
+  .lf-control-common-array {
+
+    .lf-control-common-array-item {
+      --lf-field-margin: 15px;
+
+      [class^=lf-control] {
+        margin-bottom: 0px;
+      }
+
+      [class^=lf-control]:not(:first-child) {
+        //margin-top: var(--lf-field-margin);
+        margin-top: 10px;
+      }
+    }
+  }
+
+
+  // TODO fix spacing inside array
+  /*.lf-control-common-array-item {
+    [class^=lf-control]:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    [class^=lf-control]:last-child {
+      margin-bottom: 0px;
+    }
+
+    padding-bottom: 5px;
+  }*/
 
 }
 

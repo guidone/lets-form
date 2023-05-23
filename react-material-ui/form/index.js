@@ -2,8 +2,6 @@ import React from 'react';
 import { Button, Stack } from '@mui/material';
 import classNames from 'classnames';
 
-import './index.scss';
-
 const FormMaterialUI = ({
   name,
   buttonsAlign,

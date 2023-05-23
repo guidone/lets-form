@@ -5,7 +5,7 @@
   "main": "dist/lets-form.min.js",
   "module": "dist/lets-form.min.js",
   "scripts": {
-    "prebuild": "./scripts/copy-all-files.sh",
+    "prebuild": "./scripts/copy-all-files.sh && npm run build:clear",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build-rsuite5 && npm run build-antd && npm run build-bootstrap && npm run build-react && echo \"\n\nAll done.\"",
     "build:webpack": "webpack --mode production --progress",
@@ -14,7 +14,8 @@
     "build-antd": "npm run build:webpack -- --env framework=\"antd\"",
     "build-react": "npm run build:webpack -- --env framework=\"react\"",
     "build-material-ui": "npm run build:webpack -- --env framework=\"material-ui\"",
-    "build-helpers": "npm run build:webpack -- --env framework=\"helpers\""
+    "build-helpers": "npm run build:webpack -- --env framework=\"helpers\"",
+    "build:clear": "node ./scripts/clear-builds.js"
   },
   "author": "Guido Bellomo",
   "license": "ISC",
