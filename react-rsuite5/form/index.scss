@@ -1,6 +1,6 @@
 .lf-form-react-rsuite5 {
 
-  .lf-toolbar {
+  .lf-buttons {
     margin-top: 24px;
   }
   // makes tooltip inside labels with smaller margins
@@ -9,6 +9,11 @@
       margin-top: 0px;
       margin-left: 5px;
     }
+  }
+
+  // remove the margin bottom, rule is that elements has a margin-top
+  &.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {
+    margin-bottom: 0px;
   }
 
   .lf-full-width {

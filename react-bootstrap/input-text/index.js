@@ -1,13 +1,6 @@
 import React, { useCallback } from 'react';
-import _ from 'lodash';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
-import { RequiredIcon ,I18N } from '../../components';
-import { passRest, makeWidthStyle } from '../../helpers';
-import { TextOrIcon } from '../../common';
-
+import { I18N } from '../../components';
 import { BootstrapGenericInput } from '../../components/bootstrap-generic-input';
 
 // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props

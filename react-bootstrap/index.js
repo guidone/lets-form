@@ -21,6 +21,7 @@ import { Group } from './group';
 import { Divider } from './divider';
 import { ReactView } from './react-view';
 import { ListArray } from './array';
+import { InputNumber } from './input-number';
 
 const Fields = {
   'input-text': {
@@ -76,6 +77,9 @@ const Fields = {
   },
   'array': {
     'react-bootstrap': ListArray
+  },
+  'input-number': {
+    'react-bootstrap': InputNumber
   }
 };
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 import { Form, InputNumber } from 'antd';
 
 import { I18N } from '../../components';

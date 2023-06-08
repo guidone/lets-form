@@ -13,9 +13,12 @@ const FormBootstrap = ({
   onReset,
   hideToolbar = false,
   onlyFields = false,
+  disabled = false,
+  disabledSubmit = false,
   plaintext,
   labelSubmit = 'Submit',
   labelCancel = 'Cancel',
+  custom
 }) => {
 
   return (
@@ -30,15 +33,18 @@ const FormBootstrap = ({
         {children}
       </div>
       {!hideToolbar && !onlyFields && !plaintext && (
-        <div className="lf-toolbar">
+        <div className="lf-buttons">
           <Button
             variant="primary"
             onClick={onSubmit}
+            disabled={disabled || disabledSubmit}
           >{labelSubmit}</Button>
           <Button
             variant="secondary"
             onClick={onReset}
+            disabled={disabled}
           >{labelCancel}</Button>
+          {custom}
         </div>
       )}
     </Form>

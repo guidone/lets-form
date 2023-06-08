@@ -4,8 +4,8 @@ import _ from 'lodash';
 import { Form, CheckPicker } from 'rsuite';
 
 import { RequiredIcon, I18N } from '../../components';
-
 import LOCALES from '../../common/data/locales.json';
+import { passRest } from '../../helpers';
 
 import './multiselect-language.scss';
 
@@ -13,7 +13,9 @@ const renderItem = (label, item) => (
   <div>
     {label} <b>{item.value}</b>
   </div>
-)
+);
+
+
 
 const ALL_LOCALES = Object.keys(LOCALES['language-names']);
 const LANGUAGES_OPTIONS = Object.keys(LOCALES['language-names'])
@@ -39,7 +41,8 @@ const MultiselectLanguage = I18N(
     onChange,
     onBlur,
     placement,
-    appearance
+    appearance,
+    ...rest
   }) => {
     const [locales, setLocales] = useState(value);
     const handleAddAll = useCallback(
@@ -59,7 +62,10 @@ const MultiselectLanguage = I18N(
     );
 
     return (
-      <Form.Group data-lf-field-name={name} className="lf-control-multiselect-language">
+      <Form.Group
+        data-lf-field-name={name}
+        className="lf-control-multiselect-language"
+      >
         {label && (
           <Form.ControlLabel>
             {label}
@@ -82,10 +88,10 @@ const MultiselectLanguage = I18N(
           placeholder={placeholder}
           data={LANGUAGES_OPTIONS}
           block
-          //renderValue={renderValue}
           renderMenuItem={renderItem}
           searchable
           cleanable
+          {...passRest(rest)}
         />
         {!(Array.isArray(locales) && locales.length === ALL_LOCALES.length) && (
           <div className="btn-add-all">

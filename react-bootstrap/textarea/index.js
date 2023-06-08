@@ -3,6 +3,7 @@ import _ from 'lodash';
 import Form from 'react-bootstrap/Form';
 
 import { RequiredIcon, I18N } from '../../components';
+import { passRest, makeWidthStyle } from '../../helpers';
 
 // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -20,7 +21,10 @@ const Textarea = I18N(
     error,
     required,
     rows,
-    placeholder
+    placeholder,
+    width,
+    fullWidth,
+    ...rest
   }) => {
 
     const handleChange = useCallback(
@@ -51,6 +55,8 @@ const Textarea = I18N(
           disabled={disabled}
           readOnly={readOnly}
           isInvalid={error != null}
+          style={makeWidthStyle(fullWidth, width)}
+          {...passRest(rest)}
         />
         {hint && !error && <Form.Text>{hint}</Form.Text>}
         {_.isString(error) && !_.isEmpty(error) && (

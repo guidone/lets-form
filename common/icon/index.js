@@ -4,8 +4,6 @@ import classNames from 'classnames';
 
 import './common-icon.scss';
 
-const COMMON_ICON_SIZES = ['large', 'small'];
-
 const CommonIcon = ({ src, className, alt, onClick, size }) => {
 
   return (

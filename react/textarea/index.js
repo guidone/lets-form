@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import _ from 'lodash';
 
 import { RequiredIcon, I18N } from '../../components';
+import { passRest, makeWidthStyle } from '../../helpers';
 
 const Textarea = I18N(
   ({
@@ -17,7 +18,9 @@ const Textarea = I18N(
     required,
     size,
     rows,
-    width
+    width,
+    fullWidth,
+    ...rest
   }) => {
     const hasError = error && _.isString(error);
     const handleChange = useCallback(
@@ -41,10 +44,11 @@ const Textarea = I18N(
           onChange={handleChange}
           onBlur={onBlur}
           className={size && `lf-form-react-input-${size}`}
-          style={(!size || size === 'custom') && _.isNumber(width) ? { width: `${width}px`} : undefined}
+          style={makeWidthStyle(fullWidth, width)}
           required={error != null}
           disabled={disabled}
           readOnly={readOnly}
+          {...passRest(rest)}
         >{value}</textarea>
         {hint && !hasError && <div className="lf-form-react-message">{hint}</div>}
         {hasError && <div className="lf-form-react-error-message">{error}</div>}

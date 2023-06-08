@@ -4,22 +4,22 @@
   --lf-font-size: 15px;
 
   &.lf-form-buttons-align-center {
-    .lf-toolbar {
+    .lf-buttons {
       justify-content: center;
     }
   }
   &.lf-form-buttons-align-left {
-    .lf-toolbar {
+    .lf-buttons {
       justify-content: flex-start;
     }
   }
   &.lf-form-buttons-align-right {
-    .lf-toolbar {
+    .lf-buttons {
       justify-content: flex-end;
     }
   }
 
-  .lf-toolbar {
+  .lf-buttons {
     margin-top: var(--lf-field-margin);
   }
 

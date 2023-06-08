@@ -262,16 +262,19 @@
     "size": [
       "react-rsuite5",
       "react-material-ui",
+      "react-bootstrap",
       "react-antd"
     ],
     "fullWidth": [
       "react-rsuite5",
       "react-material-ui",
+      "react-bootstrap",
       "react-antd"
     ],
     "width": [
       "react-rsuite5",
       "react-material-ui",
+      "react-bootstrap",
       "react-antd"
     ],
     "allowClear": [
@@ -279,26 +282,31 @@
     ],
     "min": [
       "react-rsuite5",
+      "react-bootstrap",
       "react-antd"
     ],
     "step": [
       "react-rsuite5",
+      "react-bootstrap",
       "react-antd"
     ],
     "max": [
       "react-rsuite5",
+      "react-bootstrap",
       "react-antd"
     ],
     "prefix": [
       "react-rsuite5",
-      "react-material-ui"
+      "react-material-ui",
+      "react-bootstrap"
     ],
     "inside": [
       "react-rsuite5"
     ],
     "postfix": [
       "react-rsuite5",
-      "react-material-ui"
+      "react-material-ui",
+      "react-bootstrap"
     ],
     "tooltip": [
       "react-rsuite5",
@@ -311,7 +319,8 @@
       "react-material-ui"
     ],
     "floatingLabel": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-bootstrap"
     ],
     "disableUnderline": [
       "react-material-ui"
@@ -607,6 +616,15 @@
     "tooltip": [
       "react-rsuite5"
     ],
+    "size": [
+      "react-material-ui"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
+    "labelPlacement": [
+      "react-material-ui"
+    ],
     "reverse": [
       "react-bootstrap"
     ],
@@ -635,12 +653,29 @@
       "react-rsuite5",
       "react-antd"
     ],
+    "size": [
+      "react-material-ui",
+      "react-antd"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
+    "labelPlacement": [
+      "react-material-ui"
+    ],
+    "row": [
+      "react-material-ui"
+    ],
     "optionType": [
       "react-antd"
     ],
-    "size": [
-      "react-antd"
-    ]
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
   },
   "input-tag": {
     "name": null,
@@ -723,15 +758,18 @@
     "disabled": null,
     "readOnly": null,
     "hidden": null,
-    "size": [
+    "fullWidth": [
       "react",
+      "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
       "react-antd"
     ],
     "width": [
       "react",
+      "react-rsuite5",
       "react-material-ui",
+      "react-bootstrap",
       "react-antd"
     ],
     "rows": [
@@ -739,12 +777,15 @@
       "react-rsuite5",
       "react-bootstrap"
     ],
+    "size": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
     "tooltip": [
       "react-rsuite5",
       "react-antd"
-    ],
-    "fullWidth": [
-      "react-material-ui"
     ],
     "variant": [
       "react-material-ui"
@@ -1012,7 +1053,7 @@
       "react-bootstrap",
       "react-antd"
     ],
-    "minHeight": [
+    "maxHeight": [
       "react",
       "react-rsuite5",
       "react-material-ui",

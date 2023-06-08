@@ -20,3 +20,4 @@ export * from './is-url';
 export * from './make-width-style';
 export * from './collect-names';
 export * from './is-valid-date';
+export * from './form-helper';

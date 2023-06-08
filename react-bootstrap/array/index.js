@@ -5,7 +5,6 @@ import _ from 'lodash';
 import { RequiredIcon } from '../../components';
 import { ListArray } from '../../common';
 import LetsForm from '../../react-bootstrap';
-import { IfNotPlaintext } from '../../components';
 
 const ListArrayBootstrap = ({
   hint,

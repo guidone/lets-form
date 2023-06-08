@@ -9,11 +9,14 @@ const FormReact = ({
   buttonsAlign,
   hideToolbar = false,
   onlyFields = false,
+  disabled = false,
+  disabledSubmit = false,
   plaintext,
   labelSubmit = 'Submit',
   labelCancel = 'Cancel',
   onSubmit = () => {},
-  onReset = () => {}
+  onReset = () => {},
+  custom
 }) => {
 
   // TODO pure-form-aligned
@@ -27,17 +30,20 @@ const FormReact = ({
     >
       {children}
       {!hideToolbar && !onlyFields && !plaintext && (
-        <div className="lf-toolbar">
+        <div className="lf-buttons">
           <button
             type="submit"
             onClick={onSubmit}
+            disabled={disabled || disabledSubmit}
             className="lf-form-react-primary-button"
           >{labelSubmit}</button>
           <button
             type="button"
+            disabled={disabled}
             className="lf-form-react-secondary-button"
             onClick={onReset}
           >{labelCancel}</button>
+          {custom}
         </div>
       )}
     </form>

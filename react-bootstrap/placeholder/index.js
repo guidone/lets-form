@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 import Form from 'react-bootstrap/Form';
 
 import { Placeholder } from '../../common';

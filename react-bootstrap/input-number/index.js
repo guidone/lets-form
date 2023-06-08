@@ -2,15 +2,17 @@ import React, { useCallback } from 'react';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
-import { MuiGenericInput } from '../../components/mui-generic-input';
-
-// DOC: https://mui.com/material-ui/api/input/
+import { BootstrapGenericInput } from '../../components/bootstrap-generic-input';
 
 const hasDecimals = f => _.isString(f) && (f.includes(',') || f.includes('.'));
 
-const InputNumber = I18N(
-  ({ onChange, ...rest }) => {
+// DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
+const InputNumber = I18N(
+  ({
+    onChange,
+    ...rest
+  }) => {
     const handleChange = useCallback(
       e => {
         const value = e.target.value;
@@ -33,11 +35,12 @@ const InputNumber = I18N(
     );
 
     return (
-      <MuiGenericInput
+      <BootstrapGenericInput
         className="lf-control-input-number"
         component="input-number"
         onChange={handleChange}
         inputType="number"
+        step="5"
         {...rest}
       />
     );

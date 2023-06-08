@@ -653,6 +653,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     readOnly = false,
     plaintext = false,
     hideToolbar = false,
+    custom,
     children,
     components,
     className
@@ -664,7 +665,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [formName, setFormName] = useState(form.name ?? _.uniqueId('form_'))
     const [transformers, setTransformers] = useState(null);
 
-    const { handleSubmit, formState: { errors }, reset, control, getValues } = useForm({
+    const { handleSubmit, formState: { errors, isValid }, reset, control, getValues } = useForm({
       defaultValues,
       mode: form.validationMode
     });
@@ -747,8 +748,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       () => {
         setValidationErrors(null);
         reset(defaultValues);
+        onReset();
       },
-      [defaultValues, reset]
+      [defaultValues, reset, onReset]
     );
 
     const handleChange = useCallback(
@@ -813,6 +815,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         />
       );
     }
+    // get errors from state or from hook, perhaps state is not needed
+    let formErrors = !_.isEmpty(errors) ? errors : validationErrors;
 
     return (
       <FormContext.Provider value={{
@@ -821,11 +825,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         // ..more
       }}>
         <div className={classNames('lf-lets-form', className)}>
-          {validationErrors && showErrors === 'groupedTop' && (
+          {formErrors && showErrors === 'groupedTop' && (
             <ValidationErrors
               className="top"
               locale={locale}
-              errors={enrichWithLabels(validationErrors, formFields)}
+              errors={enrichWithLabels(formErrors, formFields)}
             />
           )}
           <Form
@@ -836,12 +840,14 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             hideToolbar={hideToolbar}
             onReset={handleReset}
             disabled={disabled}
+            disabledSubmit={form.disableSubmitOnError && !isValid}
             readOnly={readOnly}
             plaintext={plaintext}
             locale={locale}
             {..._.omit(form, 'id', 'fields', 'version')}
             labelSubmit={i18n(form.labelSubmit, locale) || 'Submit'}
             labelCancel={i18n(form.labelCancel, locale) || 'Cancel'}
+            custom={custom}
           >
             {renderFields({
               Wrapper,
@@ -863,11 +869,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               Components: mergeComponents(Fields, components)
             })}
             {children}
-            {validationErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (
+            {formErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (
               <ValidationErrors
                 className="bottom"
                 locale={locale}
-                errors={enrichWithLabels(validationErrors, formFields)}
+                errors={enrichWithLabels(formErrors, formFields)}
               />
             )}
           </Form>
@@ -883,6 +889,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         + ' form=' + (prevProps.form === nextProps.form)
         + ' locale=' + (prevProps.locale === nextProps.locale)
         + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext)
+        + ' disabled=' + (prevProps.disabled === nextProps.disabled)
       );
     }
 
@@ -891,28 +898,13 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       && prevProps.wrapper === nextProps.wrapper
       && prevProps.form === nextProps.form
       && prevProps.locale === nextProps.locale
-      && prevProps.plaintext === nextProps.plaintext;
+      && prevProps.plaintext === nextProps.plaintext
+      && prevProps.disabled === nextProps.disabled;
     console.log('Is re-rendering?', !isEqual);
     return isEqual;
   });
 
   FormGenerator.displayName = 'FormGenerator';
-
-  /*const FormGeneratorWrapper = ({ children, ...rest }) => {
-    if (rest.plaintext) {
-      return (
-        <PlaintextForm
-          form={rest.form}
-          locale={rest.locale}
-          framework={rest.framework}
-        />
-      );
-    } else {
-      return <FormGenerator {...rest}>{children}</FormGenerator>
-    }
-  };*/
-
-
   return FormGenerator;
 };
 

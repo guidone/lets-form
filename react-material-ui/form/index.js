@@ -8,11 +8,14 @@ const FormMaterialUI = ({
   children,
   labelSubmit = 'Submit',
   labelCancel = 'Cancel',
+  disabled = false,
+  disabledSubmit = false,
   plaintext,
   onlyFields = false,
   hideToolbar = false,
   onSubmit = () => {},
-  onReset = () => {}
+  onReset = () => {},
+  custom
 }) => {
 
   return (
@@ -26,9 +29,18 @@ const FormMaterialUI = ({
     >
       {children}
       {!onlyFields && !hideToolbar && !plaintext && (
-        <Stack spacing={2} direction="row" className="lf-toolbar">
-          <Button onClick={onSubmit} variant="contained">{labelSubmit}</Button>
-          <Button onClick={onReset} variant="outlined">{labelCancel}</Button>
+        <Stack spacing={2} direction="row" className="lf-buttons">
+          <Button
+            onClick={onSubmit}
+            variant="contained"
+            disabled={disabled || disabledSubmit}
+          >{labelSubmit}</Button>
+          <Button
+            onClick={onReset}
+            variant="outlined"
+            disabled={disabled}
+          >{labelCancel}</Button>
+          {custom}
         </Stack>
       )}
     </form>

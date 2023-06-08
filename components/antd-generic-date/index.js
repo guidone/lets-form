@@ -136,7 +136,6 @@ import 'dayjs/locale/vi';
 import 'dayjs/locale/zh';
 import 'dayjs/locale/zh';
 
-import { I18N } from '../../components';
 import { useFormContext } from '../../hooks';
 
 const ANTD_LOCALES_MAPPING = {

@@ -2,17 +2,12 @@ import React from 'react';
 
 import './placeholder-image.scss';
 
-// add maxHeight
-// generalize for all components
-// cleanup
-// spostare in layout
-
 const PlaceholderImage = ({
   url,
   label,
   name,
   maxWidth,
-  minHeight,
+  maxHeight,
   marginTop,
   marginBottom,
   align
@@ -33,7 +28,7 @@ const PlaceholderImage = ({
             marginTop: marginTop ? marginTop : undefined,
             marginBottom: marginBottom ? marginBottom : undefined,
             maxWidth: maxWidth ? maxWidth : undefined,
-            minHeight: minHeight ? minHeight : undefined,
+            maxHeight: maxHeight ? maxHeight : undefined,
             textAlign: align ? align : undefined
           }}
         />

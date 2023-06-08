@@ -1,39 +1,9 @@
 {
   "input-text": {
-    "label": "Text Input",
+    "label": "Input Text",
     "category": "general",
     "name": "input-text",
     "description": "Basic input text",
-    "defaultValues": {
-      "react": {
-        "react": {
-          "fullWidth": true
-        }
-      },
-      "react-bootstrap": {
-        "react-bootstrap": {
-          "fullWidth": true
-        }
-      },
-      "react-rsuite5": {
-        "react-rsuite5": {
-          "fullWidth": true
-        }
-      },
-      "react-material-ui": {
-        "react-material-ui": {
-          "variant": "standard",
-          "floatingLabel": true,
-          "fullWidth": true
-        }
-      },
-      "react-antd": {
-        "react-antd": {
-          "bordered": true,
-          "fullWidth": true
-        }
-      }
-    },
     "common": [
       {
         "name": "name",
@@ -523,101 +493,6 @@
     "category": "general",
     "description": "Select / Combo box",
     "name": "select",
-    "defaultValues": {
-      "react": {
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react-rsuite5": {
-        "react-rsuite5": {
-          "cleanable": false,
-          "searchable": false
-        },
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react-antd": {
-        "react-antd": {
-          "bordered": true,
-          "listHeight": 256,
-          "virtual": true,
-          "showArrow": true
-        },
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react-material-ui": {
-        "react-material-ui": {
-          "fullWidth": true
-        },
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react-bootstrap": {
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      }
-    },
     "common": [
       {
         "name": "name",
@@ -1107,23 +982,6 @@
     "label": "List Array",
     "category": "advanced",
     "name": "array",
-    "defaultValues": {
-      "react-rsuite5": {
-        "layout": "vertical"
-      },
-      "react-antd": {
-        "layout": "vertical"
-      },
-      "react-bootstrap": {
-        "layout": "vertical"
-      },
-      "react-material-ui": {
-        "layout": "vertical"
-      },
-      "react": {
-        "layout": "vertical"
-      }
-    },
     "common": [
       {
         "name": "name",
@@ -1185,22 +1043,6 @@
     "category": "general",
     "name": "input-number",
     "description": "Basic input number field, returns a numeric value",
-    "defaultValues": {
-      "react-antd": {
-        "react-antd": {
-          "showControls": true,
-          "stringMode": false,
-          "bordered": true
-        },
-        "step": 1
-      },
-      "react-material-ui": {
-        "react-material-ui": {
-          "variant": "standard",
-          "floatingLabel": true
-        }
-      }
-    },
     "common": [
       {
         "name": "name",
@@ -1359,6 +1201,54 @@
         "description": "Fixed trailing text"
       }
     ],
+    "react-bootstrap": [
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "lg",
+          "sm"
+        ]
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "description": "Fixed heading text"
+      },
+      {
+        "name": "postfix",
+        "type": "string",
+        "description": "Fixed trailing text"
+      },
+      {
+        "name": "floatingLabel",
+        "type": "boolean",
+        "description": "Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"
+      },
+      {
+        "name": "min",
+        "type": "number"
+      },
+      {
+        "name": "step",
+        "type": "number"
+      },
+      {
+        "name": "max",
+        "type": "number"
+      }
+    ],
     "react-antd": [
       {
         "name": "min",
@@ -1414,6 +1304,7 @@
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
+      "react-bootstrap",
       "react-antd"
     ]
   },
@@ -1421,36 +1312,6 @@
     "label": "Slider",
     "category": "general",
     "name": "slider",
-    "defaultValues": {
-      "react-material-ui": {
-        "min": 0,
-        "max": 100,
-        "step": 10,
-        "fullWidth": true
-      },
-      "react-rsuite5": {
-        "react-rsuite5": {
-          "progress": true,
-          "graduated": false
-        },
-        "min": 0,
-        "max": 100,
-        "step": 10
-      },
-      "react-bootstrap": {
-        "min": 0,
-        "max": 100,
-        "step": 10
-      },
-      "react-antd": {
-        "min": 0,
-        "max": 100,
-        "step": 10,
-        "react-antd": {
-          "tooltipOpen": null
-        }
-      }
-    },
     "common": [
       {
         "name": "name",
@@ -1679,22 +1540,6 @@
     "category": "general",
     "description": "Date field, returns a string in ISO-8601 format (i.e., 1972-10-01)",
     "name": "date",
-    "defaultValues": {
-      "react-antd": {
-        "react-antd": {
-          "bordered": true,
-          "picker": "date"
-        }
-      },
-      "react-material-ui": {
-        "react-material-ui": {
-          "views": [
-            "day",
-            "year"
-          ]
-        }
-      }
-    },
     "common": [
       {
         "name": "name",
@@ -2089,94 +1934,6 @@
     "label": "Checkbox Group",
     "category": "general",
     "name": "checkbox-group",
-    "defaultValues": {
-      "react-rsuite5": {
-        "inline": true,
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react-bootstrap": {
-        "inline": true,
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react": {
-        "inline": true,
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react-antd": {
-        "optionType": "default",
-        "inline": true,
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react-material-ui": {
-        "inline": true,
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      }
-    },
     "common": [
       {
         "name": "name",
@@ -2222,6 +1979,40 @@
         "name": "tooltip",
         "type": "boolean",
         "description": "Show hint as tooltip next to label"
+      }
+    ],
+    "react-material-ui": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "small",
+          "medium",
+          "large"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "error",
+          "info",
+          "primary",
+          "secondary",
+          "success",
+          "warning"
+        ]
+      },
+      {
+        "name": "labelPlacement",
+        "type": "string",
+        "options": [
+          "top",
+          "start",
+          "bottom",
+          "end"
+        ]
       }
     ],
     "react-bootstrap": [
@@ -2236,101 +2027,15 @@
     ],
     "frameworks": [
       "react-rsuite5",
-      "react-bootstrap"
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
     ]
   },
   "radio-group": {
     "label": "Radio Group",
     "category": "general",
     "name": "radio-group",
-    "defaultValues": {
-      "react-rsuite5": {
-        "inline": true,
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react-bootstrap": {
-        "inline": true,
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react": {
-        "inline": true,
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react-antd": {
-        "optionType": "default",
-        "inline": true,
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react-material-ui": {
-        "inline": true,
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      }
-    },
     "common": [
       {
         "name": "name",
@@ -2376,6 +2081,44 @@
         "name": "tooltip",
         "type": "boolean",
         "description": "Show hint as tooltip next to label"
+      }
+    ],
+    "react-material-ui": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "small",
+          "medium",
+          "large"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "error",
+          "info",
+          "primary",
+          "secondary",
+          "success",
+          "warning"
+        ]
+      },
+      {
+        "name": "labelPlacement",
+        "type": "string",
+        "options": [
+          "top",
+          "start",
+          "bottom",
+          "end"
+        ]
+      },
+      {
+        "name": "row",
+        "type": "boolean"
       }
     ],
     "react-antd": [
@@ -2408,6 +2151,7 @@
     ],
     "frameworks": [
       "react-rsuite5",
+      "react-material-ui",
       "react-bootstrap",
       "react-antd"
     ]
@@ -2632,22 +2376,14 @@
     ],
     "react": [
       {
-        "name": "size",
-        "type": "string",
-        "description": "Size of the field",
-        "options": [
-          "1",
-          "3-4",
-          "2-3",
-          "1-2",
-          "1-3",
-          "1-4",
-          "custom"
-        ]
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
       },
       {
         "name": "width",
-        "type": "number"
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
       },
       {
         "name": "rows",
@@ -2655,6 +2391,27 @@
       }
     ],
     "react-rsuite5": [
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "lg",
+          "md",
+          "sm",
+          "xs"
+        ]
+      },
       {
         "name": "rows",
         "type": "number"
@@ -2723,6 +2480,16 @@
     ],
     "react-bootstrap": [
       {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
         "name": "size",
         "type": "string",
         "description": "Size of the field",
@@ -2738,6 +2505,16 @@
     ],
     "react-antd": [
       {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
         "name": "size",
         "type": "string",
         "description": "Size of the field",
@@ -2746,10 +2523,6 @@
           "default",
           "large"
         ]
-      },
-      {
-        "name": "width",
-        "type": "number"
       },
       {
         "name": "showCount",
@@ -2983,50 +2756,6 @@
     "label": "MultiSelect",
     "category": "general",
     "name": "multiselect",
-    "defaultValues": {
-      "react-antd": {
-        "react-antd": {
-          "bordered": true,
-          "listHeight": 256,
-          "virtual": true,
-          "showArrow": true
-        },
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      },
-      "react-rsuite5": {
-        "react-rsuite5": {
-          "block": true,
-          "multiselectMode": "plain"
-        },
-        "options": [
-          {
-            "value": "one",
-            "label": "One"
-          },
-          {
-            "value": "two",
-            "label": "Two"
-          },
-          {
-            "value": "three",
-            "label": "Three"
-          }
-        ]
-      }
-    },
     "common": [
       {
         "name": "name",
@@ -3255,21 +2984,6 @@
     "category": "advanced",
     "description": "Select one or more locales, returns an array (i.e. it-IT, en-GB, ...)",
     "name": "multiselect-language",
-    "defaultValues": {
-      "react-antd": {
-        "react-antd": {
-          "bordered": true,
-          "listHeight": 256,
-          "virtual": true,
-          "showArrow": true
-        }
-      },
-      "react-rsuite5": {
-        "react-rsuite5": {
-          "block": true
-        }
-      }
-    },
     "common": [
       {
         "name": "name",
@@ -3383,7 +3097,7 @@
         "type": "number"
       },
       {
-        "name": "minHeight",
+        "name": "maxHeight",
         "type": "number"
       },
       {
@@ -3401,7 +3115,7 @@
         "type": "number"
       },
       {
-        "name": "minHeight",
+        "name": "maxHeight",
         "type": "number"
       },
       {
@@ -3419,7 +3133,7 @@
         "type": "number"
       },
       {
-        "name": "minHeight",
+        "name": "maxHeight",
         "type": "number"
       },
       {
@@ -3437,7 +3151,7 @@
         "type": "number"
       },
       {
-        "name": "minHeight",
+        "name": "maxHeight",
         "type": "number"
       },
       {
@@ -3455,7 +3169,7 @@
         "type": "number"
       },
       {
-        "name": "minHeight",
+        "name": "maxHeight",
         "type": "number"
       },
       {
@@ -3479,33 +3193,6 @@
     "label": "Button",
     "category": "layout",
     "name": "button",
-    "defaultValues": {
-      "react-rsuite5": {
-        "labelOn": "on",
-        "labelOff": "off",
-        "buttonType": "plain"
-      },
-      "react": {
-        "labelOn": "on",
-        "labelOff": "off",
-        "buttonType": "plain"
-      },
-      "react-bootstrap": {
-        "labelOn": "on",
-        "labelOff": "off",
-        "buttonType": "plain"
-      },
-      "react-material-ui": {
-        "labelOn": "on",
-        "labelOff": "off",
-        "buttonType": "plain"
-      },
-      "react-antd": {
-        "labelOn": "on",
-        "labelOff": "off",
-        "buttonType": "plain"
-      }
-    },
     "common": [
       {
         "name": "name",
@@ -3634,24 +3321,6 @@
     "label": "Date Time",
     "category": "general",
     "name": "datetime",
-    "defaultValues": {
-      "react-antd": {
-        "react-antd": {
-          "bordered": true,
-          "picker": "date"
-        }
-      },
-      "react-material-ui": {
-        "react-material-ui": {
-          "views": [
-            "year",
-            "day",
-            "hours",
-            "minutes"
-          ]
-        }
-      }
-    },
     "common": [
       {
         "name": "name",

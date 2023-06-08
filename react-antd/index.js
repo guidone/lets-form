@@ -24,6 +24,7 @@ import { Divider } from './divider';
 import { ReactView } from './react-view';
 import { ListArray } from './array';
 import { Button } from './button';
+import { CheckboxGroup } from './checkbox-group';
 
 const Fields = {
   'input-text': {
@@ -88,6 +89,9 @@ const Fields = {
   },
   'button': {
     'react-antd': Button
+  },
+  'checkbox-group': {
+    'react-antd': CheckboxGroup
   }
 };
 

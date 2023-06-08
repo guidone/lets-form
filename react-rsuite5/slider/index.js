@@ -47,8 +47,7 @@ const SliderRsuite = I18N(
           </Form.ControlLabel>
         )}
         <Slider
-          accepter={Slider}
-          style={{ marginTop: '15px' }}
+          style={{ marginTop: '15px', marginBottom: '8px' }}
           name={name}
           value={value}
           onChange={onChange}

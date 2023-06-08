@@ -10,15 +10,16 @@ const FormRsuite5 = ({
   layout,
   fluid = false,
   disabled = false,
+  disabledSubmit = false,
   buttonsAlign,
   labelSubmit = 'Submit',
   labelCancel = 'Cancel',
   readOnly = false,
   onlyFields = false,
-  plaintext = false,
   hideToolbar = false,
   onSubmit = () => {},
-  onReset = () => {}
+  onReset = () => {},
+  custom
 }) => {
   if (onlyFields) {
     // TODO check this
@@ -47,14 +48,17 @@ const FormRsuite5 = ({
         {children}
       </div>
       {!hideToolbar && (
-        <ButtonToolbar className="lf-toolbar">
+        <ButtonToolbar className="lf-buttons">
           <Button
             appearance="primary"
             onClick={onSubmit}
+            disabled={disabled || disabledSubmit}
           >{labelSubmit}</Button>
           <Button
             onClick={onReset}
+            disabled={disabled}
           >{labelCancel}</Button>
+          {custom}
         </ButtonToolbar>
       )}
     </Form>

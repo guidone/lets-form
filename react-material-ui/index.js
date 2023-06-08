@@ -22,6 +22,8 @@ import { ListArray } from './array';
 import { Textarea } from './textarea';
 import { Multiselect } from './multiselect';
 import { InputNumber } from './input-number';
+import { RadioGroup } from './radio-group';
+import { CheckboxGroup } from './checkbox-group';
 
 const Fields = {
   'input-text': {
@@ -80,6 +82,12 @@ const Fields = {
   },
   'input-number': {
     'react-material-ui': InputNumber
+  },
+  'radio-group': {
+    'react-material-ui': RadioGroup
+  },
+  'checkbox-group': {
+    'react-material-ui': CheckboxGroup
   }
 };
 

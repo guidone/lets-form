@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { Form, Input } from 'antd';
 
 import { I18N } from '../../components';
+import { makeWidthStyle, passRest } from '../../helpers';
 
 const TextareaAntd = I18N(
   ({
@@ -24,6 +25,7 @@ const TextareaAntd = I18N(
     onChange,
     onBlur,
     width,
+    fullWidth,
     ...rest
   }) => {
     const handleChange = useCallback(
@@ -55,8 +57,8 @@ const TextareaAntd = I18N(
           showCount={showCount}
           maxLength={maxLength}
           bordered={bordered}
-          style={_.isNumber(width) ? { width: `${width}px` } : undefined}
-          {...(_.omit(rest, 'lfFramework', 'lfComponent'))}
+          style={makeWidthStyle(fullWidth, width)}
+          {...passRest(rest)}
         />
       </Form.Item>
     )

@@ -1,5 +1,11 @@
 .lf-control-group {
 
+  .separator {
+    svg {
+      display: inline-block;
+    }
+  }
+
   &.bottom-border.open {
     border-bottom: 1px solid #e5e5ea;
     padding-bottom: 15px;

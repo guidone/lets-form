@@ -27,7 +27,8 @@ const FormAntD = ({
   labelAlign,
   requiredMark,
   layout,
-  disabled,
+  disabled = false,
+  disabledSubmit = false,
   size,
   hideToolbar = false,
   onlyFields = false,
@@ -40,7 +41,8 @@ const FormAntD = ({
   labelColOffset,
   wrapperColSpan,
   wrapperColOffset,
-  children
+  children,
+  custom
 }) => {
   return (
     <Form
@@ -63,9 +65,17 @@ const FormAntD = ({
     >
       {children}
       {!hideToolbar && !onlyFields && !plaintext && (
-        <div className="lf-toolbar">
-          <Button type="primary" onClick={onSubmit}>{labelSubmit}</Button>
-          <Button onClick={onReset}>{labelCancel}</Button>
+        <div className="lf-buttons">
+          <Button
+            type="primary"
+            onClick={onSubmit}
+            disabled={disabled || disabledSubmit}
+          >{labelSubmit}</Button>
+          <Button
+            onClick={onReset}
+            disabled={disabled}
+          >{labelCancel}</Button>
+          {custom}
       </div>
       )}
     </Form>
