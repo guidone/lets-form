@@ -2,6 +2,7 @@ import React, { useCallback, useMemo } from 'react';
 
 import { I18N } from '../../components';
 import { MuiGenericSelect } from '../../components/mui-select';
+import { i18nOptions } from '../../helpers';
 
 const Multiselect = I18N(
   ({
@@ -44,7 +45,7 @@ const Multiselect = I18N(
   },
   ['label', 'hint', 'placeholder'],
   {
-    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
+    options: i18nOptions
   }
 );
 

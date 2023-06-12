@@ -42,7 +42,7 @@ const removeUnusedLocalesFromI18n = (obj, locales) => {
 
 const removeUnusedLocalesFromObj = (obj, locales) => {
   let cloned = { ...obj };
-  Object.keys(obj)
+  Object.keys(obj || {})
     .forEach(key => {
       if (_.isArray(cloned[key])) {
         cloned[key] = cloned[key]

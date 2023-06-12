@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import _ from 'lodash';
 
 import { I18N, RequiredIcon } from '../../components';
-import { makeWidthStyle, passRest, filterOptions } from '../../helpers';
+import { makeWidthStyle, passRest, filterOptions, i18nOptions } from '../../helpers';
 
 const Select = I18N(
   ({
@@ -72,7 +72,7 @@ const Select = I18N(
   },
   ['label', 'hint', 'placeholder'],
   {
-    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
+    options: i18nOptions
   }
 );
 

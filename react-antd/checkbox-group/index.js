@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { Form, Checkbox } from 'antd';
 
 import { I18N } from '../../components';
-import { passRest } from '../../helpers';
+import { i18nOptions, passRest } from '../../helpers';
 
 const CheckboxGroupRSuite = I18N(
   ({
@@ -48,7 +48,7 @@ const CheckboxGroupRSuite = I18N(
   },
   ['label', 'hint', 'placeholder'],
   {
-    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
+    options: i18nOptions
   }
 );
 

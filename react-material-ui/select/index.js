@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 
 import { I18N } from '../../components';
 import { MuiGenericSelect } from '../../components/mui-select';
+import { i18nOptions } from '../../helpers';
 
 const MuiSelect = I18N(
   ({
@@ -26,7 +27,7 @@ const MuiSelect = I18N(
   },
   ['label', 'hint', 'placeholder'],
   {
-    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
+    options: i18nOptions
   }
 );
 

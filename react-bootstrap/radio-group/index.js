@@ -3,6 +3,7 @@ import _ from 'lodash';
 import Form from 'react-bootstrap/Form';
 
 import { RequiredIcon, I18N } from '../../components';
+import { i18nOptions } from '../../helpers';
 
 const RadioGroupBootstrap = I18N(
   ({
@@ -80,7 +81,7 @@ const RadioGroupBootstrap = I18N(
   },
   ['label', 'hint'],
   {
-    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
+    options: i18nOptions
   }
 );
 

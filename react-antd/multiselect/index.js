@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { Form, Select } from 'antd';
 
 import { I18N } from '../../components';
+import { i18nOptions } from '../../helpers';
 
 const Multiselect = I18N(
   ({
@@ -76,7 +77,7 @@ const Multiselect = I18N(
   },
   ['label', 'hint', 'placeholder'],
   {
-    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
+    options: i18nOptions
   }
 );
 

@@ -21,3 +21,4 @@ export * from './make-width-style';
 export * from './collect-names';
 export * from './is-valid-date';
 export * from './form-helper';
+export * from './i18n-options';

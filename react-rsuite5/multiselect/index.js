@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { Form, TagPicker, CheckPicker } from 'rsuite';
 
 import { RequiredIcon, I18N } from '../../components';
-import { makeWidthStyle, passRest } from '../../helpers';
+import { i18nOptions, makeWidthStyle, passRest } from '../../helpers';
 
 const Multiselect = I18N(
   ({
@@ -72,7 +72,7 @@ const Multiselect = I18N(
   },
   ['label', 'hint', 'placeholder'],
   {
-    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
+    options: i18nOptions
   }
 );
 

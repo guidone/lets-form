@@ -4,7 +4,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 
 import { RequiredIcon, I18N } from '../../components';
-import { passRest, filterOptions } from '../../helpers';
+import { passRest, filterOptions, i18nOptions } from '../../helpers';
 
 const Select = I18N(
   ({
@@ -81,7 +81,7 @@ const Select = I18N(
   },
   ['label', 'hint', 'placeholder'],
   {
-    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
+    options: i18nOptions
   }
 );
 

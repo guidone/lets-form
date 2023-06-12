@@ -457,8 +457,8 @@ var two_columns = __webpack_require__(963);
 var group = __webpack_require__(8727);
 // EXTERNAL MODULE: ./common/placeholder-image/index.js + 1 modules
 var placeholder_image = __webpack_require__(8587);
-// EXTERNAL MODULE: ./helpers/index.js + 25 modules
-var helpers = __webpack_require__(3937);
+// EXTERNAL MODULE: ./helpers/index.js + 26 modules
+var helpers = __webpack_require__(954);
 ;// CONCATENATED MODULE: ./common/text-or-icon/index.js
 
 
@@ -1333,8 +1333,8 @@ var RequiredIcon = function RequiredIcon() {
 // EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
 var isFunction = __webpack_require__(3560);
 var isFunction_default = /*#__PURE__*/__webpack_require__.n(isFunction);
-// EXTERNAL MODULE: ./helpers/index.js + 25 modules
-var helpers = __webpack_require__(3937);
+// EXTERNAL MODULE: ./helpers/index.js + 26 modules
+var helpers = __webpack_require__(954);
 ;// CONCATENATED MODULE: ./components/i18n/index.js
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -1401,8 +1401,8 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 var plaintext = __webpack_require__(7808);
 // EXTERNAL MODULE: ./common/index.js + 12 modules
 var common = __webpack_require__(6542);
-// EXTERNAL MODULE: ./helpers/index.js + 25 modules
-var helpers = __webpack_require__(3937);
+// EXTERNAL MODULE: ./helpers/index.js + 26 modules
+var helpers = __webpack_require__(954);
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(3379);
 var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
@@ -1552,8 +1552,8 @@ var isDate_default = /*#__PURE__*/__webpack_require__.n(isDate);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(8156);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-// EXTERNAL MODULE: ./helpers/index.js + 25 modules
-var helpers = __webpack_require__(3937);
+// EXTERNAL MODULE: ./helpers/index.js + 26 modules
+var helpers = __webpack_require__(954);
 ;// CONCATENATED MODULE: ./components/plaintext/locales/yes.json
 const yes_namespaceObject = JSON.parse('{"en-US":"Yes","af-ZA":"Ja","ar":"نعم","bg-BG":"Да","ca-AD":"Sí","cs-CZ":"Ano","cy-GB":"Ie","da-DK":"Ja","de-AT":"Ja","de-CH":"Ja","de-DE":"Ja","el-GR":"Ναί","en-GB":"Yes","es-CL":"Sí","es-ES":"Sí","es-MX":"Sí","et-EE":"Jah","eu":"Bai","fa-IR":"آره","fi-FI":"Joo","fr-CA":"Oui","fr-FR":"Oui","he-IL":"כן","hi-IN":"हाँ","hr-HR":"Da","hu-HU":"Igen","id-ID":"Ya","is-IS":"Já","it-IT":"Si","ja-JP":"はい","km-KH":"បាត","ko-KR":"예","la":"Sic","lt-LT":"Taip","lv-LV":"Jā","mn-MN":"Мон","nb-NO":"Ja","nl-NL":"Ja","pl-PL":"Tak","pt-BR":"Sim","pt-PT":"Sim","ro-RO":"da","ru-RU":"Да","sk-SK":"Áno","sl-SI":"DA","sr-RS":"да","sv-SE":"Ja","th-TH":"ใช่","tr-TR":"Evet","uk-UA":"Так","vi-VN":"Đúng","zh-CN":"是的","zh-TW":"是的"}');
 ;// CONCATENATED MODULE: ./components/plaintext/locales/no.json
@@ -1729,7 +1729,7 @@ var FormContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createConte
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(5593);
 /* harmony import */ var _costants__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(8064);
 /* harmony import */ var _assets_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(8211);
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(3937);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(954);
 /* harmony import */ var _form_context__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(5137);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(4685);
 /* harmony import */ var _components_plaintext_form__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(6089);
@@ -2772,7 +2772,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
 
 /***/ }),
 
-/***/ 3937:
+/***/ 954:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2793,6 +2793,7 @@ __webpack_require__.d(__webpack_exports__, {
   "qs": () => (/* reexport */ formHelper),
   "IP": () => (/* reexport */ getLocales),
   "ag": () => (/* reexport */ i18n),
+  "Lo": () => (/* reexport */ i18nOptions),
   "Oc": () => (/* reexport */ isEmptyForm),
   "QK": () => (/* reexport */ isI18n),
   "CB": () => (/* reexport */ isUrl),
@@ -3118,7 +3119,7 @@ var removeUnusedLocalesFromI18n = function removeUnusedLocalesFromI18n(obj, loca
 };
 var removeUnusedLocalesFromObj = function removeUnusedLocalesFromObj(obj, locales) {
   var cloned = cleanup_objectSpread({}, obj);
-  Object.keys(obj).forEach(function (key) {
+  Object.keys(obj || {}).forEach(function (key) {
     if (isArray_default()(cloned[key])) {
       cloned[key] = cloned[key].map(function (item) {
         return removeUnusedLocalesFromObj(item, locales);
@@ -4020,7 +4021,24 @@ var formHelper = function formHelper(_form2) {
   return obj;
 };
 
+;// CONCATENATED MODULE: ./helpers/i18n-options.js
+function i18n_options_typeof(obj) { "@babel/helpers - typeof"; return i18n_options_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, i18n_options_typeof(obj); }
+function i18n_options_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function i18n_options_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? i18n_options_ownKeys(Object(source), !0).forEach(function (key) { i18n_options_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : i18n_options_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function i18n_options_defineProperty(obj, key, value) { key = i18n_options_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function i18n_options_toPropertyKey(arg) { var key = i18n_options_toPrimitive(arg, "string"); return i18n_options_typeof(key) === "symbol" ? key : String(key); }
+function i18n_options_toPrimitive(input, hint) { if (i18n_options_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (i18n_options_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var i18nOptions = function i18nOptions(value, i18n) {
+  return (value !== null && value !== void 0 ? value : []).filter(function (value) {
+    return value != null;
+  }).map(function (value) {
+    return i18n_options_objectSpread(i18n_options_objectSpread({}, value), {}, {
+      label: i18n(value.label)
+    });
+  });
+};
 ;// CONCATENATED MODULE: ./helpers/index.js
+
 
 
 
@@ -9802,6 +9820,7 @@ __webpack_require__.d(__webpack_exports__, {
   "formHelper": () => (/* reexport */ helpers/* formHelper */.qs),
   "getLocales": () => (/* reexport */ helpers/* getLocales */.IP),
   "i18n": () => (/* reexport */ helpers/* i18n */.ag),
+  "i18nOptions": () => (/* reexport */ helpers/* i18nOptions */.Lo),
   "isEmptyForm": () => (/* reexport */ helpers/* isEmptyForm */.Oc),
   "isI18n": () => (/* reexport */ helpers/* isI18n */.QK),
   "isUrl": () => (/* reexport */ helpers/* isUrl */.CB),
@@ -9942,8 +9961,8 @@ var isString_default = /*#__PURE__*/__webpack_require__.n(isString);
 var components = __webpack_require__(5593);
 // EXTERNAL MODULE: ./common/index.js + 12 modules
 var common = __webpack_require__(6542);
-// EXTERNAL MODULE: ./helpers/index.js + 25 modules
-var helpers = __webpack_require__(3937);
+// EXTERNAL MODULE: ./helpers/index.js + 26 modules
+var helpers = __webpack_require__(954);
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/input-text/input-text.scss
 var input_text = __webpack_require__(3040);
 ;// CONCATENATED MODULE: ./react-rsuite5/input-text/input-text.scss
@@ -10119,14 +10138,8 @@ var select_update = injectStylesIntoStyleTag_default()(select_select/* default *
        /* harmony default export */ const react_rsuite5_select_select = (select_select/* default */.Z && select_select/* default.locals */.Z.locals ? select_select/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-rsuite5/select/index.js
-function select_typeof(obj) { "@babel/helpers - typeof"; return select_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, select_typeof(obj); }
 
 var select_excluded = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions"];
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { select_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function select_defineProperty(obj, key, value) { key = select_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function select_toPropertyKey(arg) { var key = select_toPrimitive(arg, "string"); return select_typeof(key) === "symbol" ? key : String(key); }
-function select_toPrimitive(input, hint) { if (select_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (select_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function select_extends() { select_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return select_extends.apply(this, arguments); }
 function select_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = select_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function select_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -10211,13 +10224,7 @@ var Select = (0,components/* I18N */.mb)(function (_ref) {
     cleanable: cleanable
   }, (0,helpers/* passRest */.QF)(rest))), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 }, ['label', 'hint', 'placeholder'], {
-  options: function options(value, i18n) {
-    return (value !== null && value !== void 0 ? value : []).map(function (value) {
-      return _objectSpread(_objectSpread({}, value), {}, {
-        label: i18n(value.label)
-      });
-    });
-  }
+  options: helpers/* i18nOptions */.Lo
 });
 
 // EXTERNAL MODULE: ./common/group/index.js + 1 modules
@@ -10691,8 +10698,8 @@ function slider_typeof(obj) { "@babel/helpers - typeof"; return slider_typeof = 
 
 
 var slider_excluded = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks"];
-function slider_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function slider_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? slider_ownKeys(Object(source), !0).forEach(function (key) { slider_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : slider_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { slider_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 function slider_defineProperty(obj, key, value) { key = slider_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function slider_toPropertyKey(arg) { var key = slider_toPrimitive(arg, "string"); return slider_typeof(key) === "symbol" ? key : String(key); }
 function slider_toPrimitive(input, hint) { if (slider_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (slider_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
@@ -10757,7 +10764,7 @@ var SliderRsuite = (0,components/* I18N */.mb)(function (_ref) {
 }, ['label', 'hint', 'placeholder'], {
   marks: function marks(value, i18n) {
     return (Array.isArray(value) ? value : []).map(function (value) {
-      return slider_objectSpread(slider_objectSpread({}, value), {}, {
+      return _objectSpread(_objectSpread({}, value), {}, {
         label: i18n(value.label)
       });
     });
@@ -10765,16 +10772,11 @@ var SliderRsuite = (0,components/* I18N */.mb)(function (_ref) {
 });
 
 ;// CONCATENATED MODULE: ./react-rsuite5/checkbox-group/index.js
-function checkbox_group_typeof(obj) { "@babel/helpers - typeof"; return checkbox_group_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, checkbox_group_typeof(obj); }
 var checkbox_group_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
-function checkbox_group_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function checkbox_group_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? checkbox_group_ownKeys(Object(source), !0).forEach(function (key) { checkbox_group_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : checkbox_group_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function checkbox_group_defineProperty(obj, key, value) { key = checkbox_group_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function checkbox_group_toPropertyKey(arg) { var key = checkbox_group_toPrimitive(arg, "string"); return checkbox_group_typeof(key) === "symbol" ? key : String(key); }
-function checkbox_group_toPrimitive(input, hint) { if (checkbox_group_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (checkbox_group_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function checkbox_group_extends() { checkbox_group_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return checkbox_group_extends.apply(this, arguments); }
 function checkbox_group_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = checkbox_group_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function checkbox_group_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -10820,26 +10822,15 @@ var CheckboxGroupRSuite = (0,components/* I18N */.mb)(function (_ref) {
     }, label);
   })), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 }, ['label', 'hint', 'placeholder'], {
-  options: function options(value, i18n) {
-    return (value !== null && value !== void 0 ? value : []).map(function (value) {
-      return checkbox_group_objectSpread(checkbox_group_objectSpread({}, value), {}, {
-        label: i18n(value.label)
-      });
-    });
-  }
+  options: helpers/* i18nOptions */.Lo
 });
 
 ;// CONCATENATED MODULE: ./react-rsuite5/radio-group/index.js
-function radio_group_typeof(obj) { "@babel/helpers - typeof"; return radio_group_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, radio_group_typeof(obj); }
 var radio_group_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
-function radio_group_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function radio_group_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? radio_group_ownKeys(Object(source), !0).forEach(function (key) { radio_group_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : radio_group_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function radio_group_defineProperty(obj, key, value) { key = radio_group_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function radio_group_toPropertyKey(arg) { var key = radio_group_toPrimitive(arg, "string"); return radio_group_typeof(key) === "symbol" ? key : String(key); }
-function radio_group_toPrimitive(input, hint) { if (radio_group_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (radio_group_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function radio_group_extends() { radio_group_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return radio_group_extends.apply(this, arguments); }
 function radio_group_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = radio_group_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function radio_group_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -10884,13 +10875,7 @@ var RadioGroupRSuite = (0,components/* I18N */.mb)(function (_ref) {
     }, label);
   })), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 }, ['label', 'hint', 'placeholder'], {
-  options: function options(value, i18n) {
-    return (value !== null && value !== void 0 ? value : []).map(function (value) {
-      return radio_group_objectSpread(radio_group_objectSpread({}, value), {}, {
-        label: i18n(value.label)
-      });
-    });
-  }
+  options: helpers/* i18nOptions */.Lo
 });
 
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/input-tag/index.scss
@@ -11190,14 +11175,8 @@ var PlaceholderRSuite5 = (0,components/* I18N */.mb)(function (_ref) {
 }, ['label', 'hint', 'text']);
 
 ;// CONCATENATED MODULE: ./react-rsuite5/multiselect/index.js
-function multiselect_typeof(obj) { "@babel/helpers - typeof"; return multiselect_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, multiselect_typeof(obj); }
 
 var multiselect_excluded = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width"];
-function multiselect_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function multiselect_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? multiselect_ownKeys(Object(source), !0).forEach(function (key) { multiselect_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : multiselect_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function multiselect_defineProperty(obj, key, value) { key = multiselect_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function multiselect_toPropertyKey(arg) { var key = multiselect_toPrimitive(arg, "string"); return multiselect_typeof(key) === "symbol" ? key : String(key); }
-function multiselect_toPrimitive(input, hint) { if (multiselect_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (multiselect_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function multiselect_extends() { multiselect_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return multiselect_extends.apply(this, arguments); }
 function multiselect_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = multiselect_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function multiselect_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -11263,13 +11242,7 @@ var Multiselect = (0,components/* I18N */.mb)(function (_ref) {
     cleanable: cleanable
   }, (0,helpers/* passRest */.QF)(rest))), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
 }, ['label', 'hint', 'placeholder'], {
-  options: function options(value, i18n) {
-    return (value !== null && value !== void 0 ? value : []).map(function (value) {
-      return multiselect_objectSpread(multiselect_objectSpread({}, value), {}, {
-        label: i18n(value.label)
-      });
-    });
-  }
+  options: helpers/* i18nOptions */.Lo
 });
 
 // EXTERNAL MODULE: ./common/data/locales.json

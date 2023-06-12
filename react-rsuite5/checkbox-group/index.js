@@ -2,6 +2,7 @@ import React from 'react';
 import { Form, Checkbox, CheckboxGroup } from 'rsuite';
 
 import { I18N } from '../../components';
+import { i18nOptions } from '../../helpers';
 
 const CheckboxGroupRSuite = I18N(
   ({
@@ -51,7 +52,7 @@ const CheckboxGroupRSuite = I18N(
   },
   ['label', 'hint', 'placeholder'],
   {
-    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
+    options: i18nOptions
   }
 );
 

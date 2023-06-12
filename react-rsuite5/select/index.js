@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import { Form, SelectPicker } from 'rsuite';
 
-import { passRest, filterOptions } from '../../helpers';
+import { passRest, filterOptions, i18nOptions } from '../../helpers';
 import { RequiredIcon, I18N } from '../../components';
 
 import './select.scss';
@@ -91,7 +91,7 @@ const Select = I18N(
   },
   ['label', 'hint', 'placeholder'],
   {
-    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
+    options: i18nOptions
   }
 );
 

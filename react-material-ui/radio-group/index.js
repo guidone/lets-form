@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { Radio, FormLabel, FormControl, RadioGroup, FormHelperText, FormControlLabel } from '@mui/material';
 
 import { I18N } from '../../components';
-import { passRest } from '../../helpers';
+import { i18nOptions, passRest } from '../../helpers';
 
 // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -71,7 +71,7 @@ const RadioGroupMUI = I18N(
   },
   ['label', 'hint'],
   {
-    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
+    options: i18nOptions
   }
 );
 

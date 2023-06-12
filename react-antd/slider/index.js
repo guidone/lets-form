@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { Form, Slider } from 'antd';
 
 import { I18N } from '../../components';
-import { passRest } from '../../helpers';
+import { i18nOptions, passRest } from '../../helpers';
 
 const SliderAnt = I18N(
   ({
@@ -79,7 +79,7 @@ const SliderAnt = I18N(
   },
   ['label', 'hint'],
   {
-    marks: (value, i18n) => (value || []).map(value => ({ ...value, label: i18n(value.label) }))
+    marks: i18nOptions
   }
 );
 

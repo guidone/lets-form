@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { Form, Select, Space } from 'antd';
 
 import { I18N } from '../../components';
-import { passRest, filterOptions } from '../../helpers';
+import { passRest, filterOptions, i18nOptions } from '../../helpers';
 
 import './select.scss';
 
@@ -92,7 +92,7 @@ const SelectAntd = I18N(
   },
   ['label', 'hint', 'placeholder'],
   {
-    options: (value, i18n) => (value ?? []).map(value => ({ ...value, label: i18n(value.label) }))
+    options: i18nOptions
   }
 );
 

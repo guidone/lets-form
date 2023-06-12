@@ -433,8 +433,8 @@ var two_columns = __webpack_require__(963);
 var group = __webpack_require__(8727);
 // EXTERNAL MODULE: ./common/placeholder-image/index.js + 1 modules
 var placeholder_image = __webpack_require__(8587);
-// EXTERNAL MODULE: ./helpers/index.js + 26 modules
-var helpers = __webpack_require__(607);
+// EXTERNAL MODULE: ./helpers/index.js + 27 modules
+var helpers = __webpack_require__(366);
 ;// CONCATENATED MODULE: ./common/text-or-icon/index.js
 
 
@@ -1295,8 +1295,8 @@ var required_icon = __webpack_require__(2340);
 // EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
 var isFunction = __webpack_require__(3560);
 var isFunction_default = /*#__PURE__*/__webpack_require__.n(isFunction);
-// EXTERNAL MODULE: ./helpers/index.js + 26 modules
-var helpers = __webpack_require__(607);
+// EXTERNAL MODULE: ./helpers/index.js + 27 modules
+var helpers = __webpack_require__(366);
 ;// CONCATENATED MODULE: ./components/i18n/index.js
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -1363,8 +1363,8 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 var plaintext = __webpack_require__(7808);
 // EXTERNAL MODULE: ./common/index.js + 12 modules
 var common = __webpack_require__(6542);
-// EXTERNAL MODULE: ./helpers/index.js + 26 modules
-var helpers = __webpack_require__(607);
+// EXTERNAL MODULE: ./helpers/index.js + 27 modules
+var helpers = __webpack_require__(366);
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(3379);
 var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
@@ -1514,8 +1514,8 @@ var isDate_default = /*#__PURE__*/__webpack_require__.n(isDate);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(8156);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-// EXTERNAL MODULE: ./helpers/index.js + 26 modules
-var helpers = __webpack_require__(607);
+// EXTERNAL MODULE: ./helpers/index.js + 27 modules
+var helpers = __webpack_require__(366);
 ;// CONCATENATED MODULE: ./components/plaintext/locales/yes.json
 const yes_namespaceObject = JSON.parse('{"en-US":"Yes","af-ZA":"Ja","ar":"نعم","bg-BG":"Да","ca-AD":"Sí","cs-CZ":"Ano","cy-GB":"Ie","da-DK":"Ja","de-AT":"Ja","de-CH":"Ja","de-DE":"Ja","el-GR":"Ναί","en-GB":"Yes","es-CL":"Sí","es-ES":"Sí","es-MX":"Sí","et-EE":"Jah","eu":"Bai","fa-IR":"آره","fi-FI":"Joo","fr-CA":"Oui","fr-FR":"Oui","he-IL":"כן","hi-IN":"हाँ","hr-HR":"Da","hu-HU":"Igen","id-ID":"Ya","is-IS":"Já","it-IT":"Si","ja-JP":"はい","km-KH":"បាត","ko-KR":"예","la":"Sic","lt-LT":"Taip","lv-LV":"Jā","mn-MN":"Мон","nb-NO":"Ja","nl-NL":"Ja","pl-PL":"Tak","pt-BR":"Sim","pt-PT":"Sim","ro-RO":"da","ru-RU":"Да","sk-SK":"Áno","sl-SI":"DA","sr-RS":"да","sv-SE":"Ja","th-TH":"ใช่","tr-TR":"Evet","uk-UA":"Так","vi-VN":"Đúng","zh-CN":"是的","zh-TW":"是的"}');
 ;// CONCATENATED MODULE: ./components/plaintext/locales/no.json
@@ -1717,7 +1717,7 @@ var FormContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createConte
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(4173);
 /* harmony import */ var _costants__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(8064);
 /* harmony import */ var _assets_icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(2113);
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(607);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(366);
 /* harmony import */ var _form_context__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(5137);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(4685);
 /* harmony import */ var _components_plaintext_form__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(6089);
@@ -2760,7 +2760,7 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
 
 /***/ }),
 
-/***/ 607:
+/***/ 366:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2781,6 +2781,7 @@ __webpack_require__.d(__webpack_exports__, {
   "qs": () => (/* reexport */ formHelper),
   "IP": () => (/* reexport */ getLocales),
   "ag": () => (/* reexport */ i18n),
+  "Lo": () => (/* reexport */ i18nOptions),
   "Oc": () => (/* reexport */ isEmptyForm),
   "QK": () => (/* reexport */ isI18n),
   "CB": () => (/* reexport */ isUrl),
@@ -3106,7 +3107,7 @@ var removeUnusedLocalesFromI18n = function removeUnusedLocalesFromI18n(obj, loca
 };
 var removeUnusedLocalesFromObj = function removeUnusedLocalesFromObj(obj, locales) {
   var cloned = cleanup_objectSpread({}, obj);
-  Object.keys(obj).forEach(function (key) {
+  Object.keys(obj || {}).forEach(function (key) {
     if (isArray_default()(cloned[key])) {
       cloned[key] = cloned[key].map(function (item) {
         return removeUnusedLocalesFromObj(item, locales);
@@ -4008,7 +4009,24 @@ var formHelper = function formHelper(_form2) {
   return obj;
 };
 
+;// CONCATENATED MODULE: ./helpers/i18n-options.js
+function i18n_options_typeof(obj) { "@babel/helpers - typeof"; return i18n_options_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, i18n_options_typeof(obj); }
+function i18n_options_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function i18n_options_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? i18n_options_ownKeys(Object(source), !0).forEach(function (key) { i18n_options_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : i18n_options_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function i18n_options_defineProperty(obj, key, value) { key = i18n_options_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function i18n_options_toPropertyKey(arg) { var key = i18n_options_toPrimitive(arg, "string"); return i18n_options_typeof(key) === "symbol" ? key : String(key); }
+function i18n_options_toPrimitive(input, hint) { if (i18n_options_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (i18n_options_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var i18nOptions = function i18nOptions(value, i18n) {
+  return (value !== null && value !== void 0 ? value : []).filter(function (value) {
+    return value != null;
+  }).map(function (value) {
+    return i18n_options_objectSpread(i18n_options_objectSpread({}, value), {}, {
+      label: i18n(value.label)
+    });
+  });
+};
 ;// CONCATENATED MODULE: ./helpers/index.js
+
 
 
 
@@ -5121,27 +5139,50 @@ module.exports = baseUnset;
 /***/ 1811:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var isArray = __webpack_require__(1469),
-    isKey = __webpack_require__(5403),
-    stringToPath = __webpack_require__(5514),
-    toString = __webpack_require__(9833);
+var isArray = __webpack_require__(1469);
 
 /**
- * Casts `value` to a path array if it's not one.
+ * Casts `value` as an array if it's not one.
  *
- * @private
+ * @static
+ * @memberOf _
+ * @since 4.4.0
+ * @category Lang
  * @param {*} value The value to inspect.
- * @param {Object} [object] The object to query keys on.
- * @returns {Array} Returns the cast property path array.
+ * @returns {Array} Returns the cast array.
+ * @example
+ *
+ * _.castArray(1);
+ * // => [1]
+ *
+ * _.castArray({ 'a': 1 });
+ * // => [{ 'a': 1 }]
+ *
+ * _.castArray('abc');
+ * // => ['abc']
+ *
+ * _.castArray(null);
+ * // => [null]
+ *
+ * _.castArray(undefined);
+ * // => [undefined]
+ *
+ * _.castArray();
+ * // => []
+ *
+ * var array = [1, 2, 3];
+ * console.log(_.castArray(array) === array);
+ * // => true
  */
-function castPath(value, object) {
-  if (isArray(value)) {
-    return value;
+function castArray() {
+  if (!arguments.length) {
+    return [];
   }
-  return isKey(value, object) ? [value] : stringToPath(toString(value));
+  var value = arguments[0];
+  return isArray(value) ? value : [value];
 }
 
-module.exports = castPath;
+module.exports = castArray;
 
 
 /***/ }),
@@ -5543,42 +5584,6 @@ module.exports = isIndex;
 
 /***/ }),
 
-/***/ 5403:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var isArray = __webpack_require__(1469),
-    isSymbol = __webpack_require__(3448);
-
-/** Used to match property names within property paths. */
-var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
-    reIsPlainProp = /^\w*$/;
-
-/**
- * Checks if `value` is a property name and not a property path.
- *
- * @private
- * @param {*} value The value to check.
- * @param {Object} [object] The object to query keys on.
- * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
- */
-function isKey(value, object) {
-  if (isArray(value)) {
-    return false;
-  }
-  var type = typeof value;
-  if (type == 'number' || type == 'symbol' || type == 'boolean' ||
-      value == null || isSymbol(value)) {
-    return true;
-  }
-  return reIsPlainProp.test(value) || !reIsDeepProp.test(value) ||
-    (object != null && value in Object(object));
-}
-
-module.exports = isKey;
-
-
-/***/ }),
-
 /***/ 5726:
 /***/ ((module) => {
 
@@ -5600,34 +5605,6 @@ function stubFalse() {
 }
 
 module.exports = stubFalse;
-
-
-/***/ }),
-
-/***/ 4523:
-/***/ ((module) => {
-
-/**
- * This method returns the first argument it receives.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Util
- * @param {*} value Any value.
- * @returns {*} Returns `value`.
- * @example
- *
- * var object = { 'a': 1 };
- *
- * console.log(_.identity(object) === object);
- * // => true
- */
-function identity(value) {
-  return value;
-}
-
-module.exports = identity;
 
 
 /***/ }),
@@ -5752,40 +5729,6 @@ function stringToArray(string) {
 }
 
 module.exports = stringToArray;
-
-
-/***/ }),
-
-/***/ 5514:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var memoizeCapped = __webpack_require__(4523);
-
-/** Used to match property names within property paths. */
-var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
-
-/** Used to match backslashes in property paths. */
-var reEscapeChar = /\\(\\)?/g;
-
-/**
- * Converts `string` to a property path array.
- *
- * @private
- * @param {string} string The string to convert.
- * @returns {Array} Returns the property path array.
- */
-var stringToPath = memoizeCapped(function(string) {
-  var result = [];
-  if (string.charCodeAt(0) === 46 /* . */) {
-    result.push('');
-  }
-  string.replace(rePropName, function(match, number, quote, subString) {
-    result.push(quote ? subString.replace(reEscapeChar, '$1') : (number || match));
-  });
-  return result;
-});
-
-module.exports = stringToPath;
 
 
 /***/ }),
@@ -9680,6 +9623,7 @@ __webpack_require__.d(__webpack_exports__, {
   "formHelper": () => (/* reexport */ helpers/* formHelper */.qs),
   "getLocales": () => (/* reexport */ helpers/* getLocales */.IP),
   "i18n": () => (/* reexport */ helpers/* i18n */.ag),
+  "i18nOptions": () => (/* reexport */ helpers/* i18nOptions */.Lo),
   "isEmptyForm": () => (/* reexport */ helpers/* isEmptyForm */.Oc),
   "isI18n": () => (/* reexport */ helpers/* isI18n */.QK),
   "isUrl": () => (/* reexport */ helpers/* isUrl */.CB),
@@ -9807,8 +9751,8 @@ var isString = __webpack_require__(7037);
 var isString_default = /*#__PURE__*/__webpack_require__.n(isString);
 // EXTERNAL MODULE: ./components/required-icon/index.js
 var required_icon = __webpack_require__(2340);
-// EXTERNAL MODULE: ./helpers/index.js + 26 modules
-var helpers = __webpack_require__(607);
+// EXTERNAL MODULE: ./helpers/index.js + 27 modules
+var helpers = __webpack_require__(366);
 ;// CONCATENATED MODULE: ./components/react-generic-input/index.js
 
 var _excluded = ["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component"];
@@ -10084,14 +10028,8 @@ var PlaceholderReact = (0,components/* I18N */.mb)(function (_ref) {
 }, ['label', 'hint', 'text']);
 
 ;// CONCATENATED MODULE: ./react/select/index.js
-function select_typeof(obj) { "@babel/helpers - typeof"; return select_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, select_typeof(obj); }
 
 var select_excluded = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey"];
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { select_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function select_defineProperty(obj, key, value) { key = select_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function select_toPropertyKey(arg) { var key = select_toPrimitive(arg, "string"); return select_typeof(key) === "symbol" ? key : String(key); }
-function select_toPrimitive(input, hint) { if (select_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (select_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function select_extends() { select_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return select_extends.apply(this, arguments); }
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -10161,13 +10099,7 @@ var Select = (0,components/* I18N */.mb)(function (_ref) {
     className: "lf-form-react-error-message"
   }, error));
 }, ['label', 'hint', 'placeholder'], {
-  options: function options(value, i18n) {
-    return (value !== null && value !== void 0 ? value : []).map(function (value) {
-      return _objectSpread(_objectSpread({}, value), {}, {
-        label: i18n(value.label)
-      });
-    });
-  }
+  options: helpers/* i18nOptions */.Lo
 });
 
 // EXTERNAL MODULE: ./node_modules/lodash/isDate.js
