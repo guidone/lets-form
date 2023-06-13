@@ -1,5 +1,4 @@
 import React, { useCallback } from 'react';
-import _ from 'lodash';
 import { Form, Input } from 'antd';
 
 import { I18N } from '../../components';

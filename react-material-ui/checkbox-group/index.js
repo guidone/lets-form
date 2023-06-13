@@ -67,6 +67,7 @@ const CheckboxGroup = I18N(
                   checked={currentValue.includes(option.value)}
                   onChange={handleChange}
                   name={option.value}
+                  {...passRest(rest)}
                 />
               }
               label={option.label}
