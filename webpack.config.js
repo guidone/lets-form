@@ -20,6 +20,16 @@ if (process.env.ANALYZE === 'true') {
 }
 
 
+function externalMaterialUI (_, module, callback) {
+  var isMaterialUIComponent = /^@mui\/([^/]+)$/;
+  var match = isMaterialUIComponent.exec(module);
+  if (match !== null) {
+      var component = match[1];
+      return callback(null, `window["material-ui"].${component}`);
+  }
+  callback();
+}
+
 module.exports = module.exports = (env = {}) => {
   let library = 'lets-form';
   let entryPoint = path.join(__dirname, 'index.js');
@@ -85,10 +95,13 @@ module.exports = module.exports = (env = {}) => {
         'react-dom': 'umd react-dom',
         'prop-types': 'umd prop-types',
         '@mui/material': 'umd @mui/material',
+        '@mui/styled-engine': 'umd @mui/styled-engine',
+        '@mui/x-date-pickers':'umd @mui/x-date-pickers',
         'react-bootstrap': 'umd react-bootstrap',
         'antd': 'umd antd',
         'dayjs': 'umd dayjs'
-      }
+      },
+      externalMaterialUI
     ],
     optimization: {
       minimize: false
