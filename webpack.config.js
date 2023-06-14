@@ -100,7 +100,9 @@ module.exports = module.exports = (env = {}) => {
         'react-bootstrap': 'umd react-bootstrap',
         'antd': 'umd antd',
         'dayjs': 'umd dayjs'
-      }
+      },
+      /@material-ui\/core\/.*/,
+      /^@mui/
     ],
     optimization: {
       minimize: false
