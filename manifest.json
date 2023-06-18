@@ -675,10 +675,6 @@
     ],
     "react-antd": [
       {
-        "name": "tooltip",
-        "type": "boolean"
-      },
-      {
         "name": "size",
         "type": "string",
         "description": "Size of the field",
@@ -687,6 +683,26 @@
           "default",
           "large"
         ]
+      },
+      {
+        "name": "popupMatchSelectWidth",
+        "type": "boolean",
+        "description": "Determine whether the popup menu and the select input are the same width"
+      },
+      {
+        "name": "listHeight",
+        "type": "number",
+        "description": "Config popup height"
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
       },
       {
         "name": "allowClear",
@@ -707,10 +723,6 @@
         ]
       },
       {
-        "name": "width",
-        "type": "number"
-      },
-      {
         "name": "showSearch",
         "type": "boolean",
         "description": "Whether select is searchable"
@@ -725,9 +737,8 @@
         "type": "boolean"
       },
       {
-        "name": "listHeight",
-        "type": "number",
-        "description": "Config popup height"
+        "name": "tooltip",
+        "type": "boolean"
       }
     ],
     "frameworks": [
@@ -2298,9 +2309,14 @@
         "description": "The placeholder character represents the fillable spot in the mask"
       },
       {
-        "name": "tooltip",
+        "name": "fullWidth",
         "type": "boolean",
-        "description": "Show hint as tooltip next to label"
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
       },
       {
         "name": "size",
@@ -2312,6 +2328,11 @@
           "sm",
           "xs"
         ]
+      },
+      {
+        "name": "tooltip",
+        "type": "boolean",
+        "description": "Show hint as tooltip next to label"
       },
       {
         "name": "prefix",

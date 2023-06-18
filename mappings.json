@@ -139,7 +139,8 @@
     "hidden": null,
     "fullWidth": [
       "react",
-      "react-material-ui"
+      "react-material-ui",
+      "react-antd"
     ],
     "width": [
       "react",
@@ -182,6 +183,12 @@
     "variant": [
       "react-material-ui"
     ],
+    "popupMatchSelectWidth": [
+      "react-antd"
+    ],
+    "listHeight": [
+      "react-antd"
+    ],
     "allowClear": [
       "react-antd"
     ],
@@ -195,9 +202,6 @@
       "react-antd"
     ],
     "virtual": [
-      "react-antd"
-    ],
-    "listHeight": [
       "react-antd"
     ],
     "validationMinLength": "validation",
@@ -727,10 +731,16 @@
     "placeholderChar": [
       "react-rsuite5"
     ],
-    "tooltip": [
+    "fullWidth": [
+      "react-rsuite5"
+    ],
+    "width": [
       "react-rsuite5"
     ],
     "size": [
+      "react-rsuite5"
+    ],
+    "tooltip": [
       "react-rsuite5"
     ],
     "prefix": [

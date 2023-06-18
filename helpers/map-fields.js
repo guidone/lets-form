@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 /**
  * mapFields
  * Return an array of fields with the only elements changed by the predicate, it takes a field as parameter
@@ -11,12 +13,19 @@ const mapFields = (
   fields,
   predicate = (obj) => obj
 ) => {
+  let needsFlatten = false;
+
   if (!fields) {
     return fields;
   }
   // replace with predicated
-  const newFields = fields.map(field => {
+  let newFields = fields.map(field => {
     let newField = predicate(field);
+    // if returns an array, means the mapping is replacing with two fields
+    // and it will need to be flattened later
+    if (Array.isArray(newField)) {
+      needsFlatten = true;
+    }
 
     if (field.component === 'group') {
       const newFields = mapFields(field.fields, predicate);
@@ -76,9 +85,15 @@ const mapFields = (
     return newField;
   });
 
-  // check if some element of the array is changed, keep instance consistency otherwise
-  const hasChanges = fields.some((field, idx) => field !== newFields[idx]);
-
+  let hasChanges;
+  if (needsFlatten) {    
+    // if needs to be flattened, for sure is changed
+    newFields = _.flatten(newFields);
+    hasChanges = true;
+  } else {
+    // check if some element of the array is changed, keep instance consistency otherwise
+    hasChanges = fields.some((field, idx) => field !== newFields[idx]);
+  }
   return hasChanges ? newFields : fields;
 };
 

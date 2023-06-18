@@ -1,9 +1,8 @@
 import React from 'react';
-import _ from 'lodash';
 import { Form, Select, Space } from 'antd';
 
 import { I18N } from '../../components';
-import { passRest, filterOptions, i18nOptions } from '../../helpers';
+import { passRest, filterOptions, i18nOptions, makeWidthStyle } from '../../helpers';
 
 import './select.scss';
 
@@ -30,6 +29,8 @@ const SelectAntd = I18N(
     onChange,
     onBlur,
     width,
+    fullWidth,
+    popupMatchSelectWidth,
     showSearch,
     placement,
     showArrow,
@@ -68,7 +69,8 @@ const SelectAntd = I18N(
           virtual={virtual}
           showSearch={showSearch}
           allowClear={allowClear}
-          style={_.isNumber(width) ? { width: `${width}px` } : undefined}
+          popupMatchSelectWidth={popupMatchSelectWidth}
+          style={makeWidthStyle(fullWidth, width)}
           {...passRest(rest)}
         >
           {(filterOptions(options, filterValue, filterKey) || [])

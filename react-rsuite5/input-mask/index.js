@@ -4,6 +4,7 @@ import { Form, MaskedInput, InputGroup } from 'rsuite';
 import _ from 'lodash';
 
 import { RequiredIcon, I18N } from '../../components';
+import { passRest, makeWidthStyle } from '../../helpers';
 
 const prepareMask = str => {
   if (typeof str !== 'string' || str.length === 0) {
@@ -48,6 +49,8 @@ const InputMask = I18N(
     placeholderChar = '_',
     mask = [],
     inside = false,
+    fullWidth,
+    width,
     ...rest
   }) => {
     const parsedMask = prepareMask(mask);
@@ -67,14 +70,18 @@ const InputMask = I18N(
         placeholderChar={typeof placeholderChar === 'string' && placeholderChar.length > 0 ? placeholderChar[0] : '_'}
         errorMessage={_.isString(error) ? error : undefined }
         mask={parsedMask}
-        {...rest}
+        {...passRest(rest)}
       />
     );
 
     const needsGroup = postfix || prefix;
 
     return (
-      <Form.Group data-lf-field-name={name} className="lf-control-input-mask">
+      <Form.Group 
+        data-lf-field-name={name} 
+        className="lf-control-input-mask"
+        style={makeWidthStyle(fullWidth, width)}
+      >
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
