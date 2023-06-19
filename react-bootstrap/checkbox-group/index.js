@@ -57,6 +57,7 @@ const CheckboxGroupBootstrap = I18N(
             >
               <Form.Check.Input
                 disabled={disabled}
+                id={`${name}_${value}`}
                 value={value}
                 name={name}
                 isInvalid={error != null}
@@ -64,7 +65,7 @@ const CheckboxGroupBootstrap = I18N(
                 onChange={handleChange}
                 {...(_.omit(rest, 'lfFramework', 'lfComponent'))}
               />
-              {label && <Form.Check.Label>{label}</Form.Check.Label>}
+              {label && <Form.Check.Label htmlFor={`${name}_${value}`}>{label}</Form.Check.Label>}
               {_.isString(error) && !_.isEmpty(error) && (idx === (options.length -1)) && (
                 <Form.Control.Feedback type="invalid">{error}</Form.Control.Feedback>
               )}

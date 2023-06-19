@@ -60,12 +60,13 @@ const RadioGroupBootstrap = I18N(
                 type="radio"
                 value={value}
                 name={name}
+                id={`${name}_${value}`}
                 isInvalid={error != null}
                 checked={values.includes(value)}
                 onChange={handleChange}
                 {...(_.omit(rest, 'lfFramework', 'lfComponent'))}
               />
-              {label && <Form.Check.Label>{label}</Form.Check.Label>}
+              {label && <Form.Check.Label htmlFor={`${name}_${value}`}>{label}</Form.Check.Label>}
               {_.isString(error) && !_.isEmpty(error) && (idx === (options.length -1)) && (
                 <Form.Control.Feedback type="invalid">{error}</Form.Control.Feedback>
               )}

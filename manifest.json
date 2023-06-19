@@ -2132,6 +2132,16 @@
         "type": "boolean"
       }
     ],
+    "react-bootstrap": [
+      {
+        "name": "inline",
+        "type": "boolean"
+      },
+      {
+        "name": "reverse",
+        "type": "boolean"
+      }
+    ],
     "react-antd": [
       {
         "name": "optionType",
