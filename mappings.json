@@ -1228,5 +1228,29 @@
     "validationPattern": "validation",
     "validationMessage": "validation",
     "required": null
+  },
+  "tabs": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "tabs": null,
+    "value": null,
+    "hidden": null,
+    "appearance": [
+      "react-rsuite5"
+    ],
+    "reversed": [
+      "react-rsuite5"
+    ],
+    "justified": [
+      "react-rsuite5"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
   }
 }

@@ -80,6 +80,20 @@ const mapFields = (
           rightFields: newRightFields
         };
       }
+    } else if (field.component === 'tabs' && _.isObject(field.fields) && !_.isArray(field.fields)) {
+      const subkeys = Object.keys(field.fields);
+      subkeys.forEach(subkey => {
+        const newFields = mapFields(field.fields[subkey], predicate);
+        if (newFields !== field.fields[subkey]) {
+          newField = {
+            ...newField,
+            fields: {
+              ...newField.fields,
+              [subkey]: newFields
+            }
+          };
+        }
+      });
     }
 
     return newField;

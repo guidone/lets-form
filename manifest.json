@@ -3623,5 +3623,59 @@
       "react-bootstrap",
       "react-antd"
     ]
+  },
+  "tabs": {
+    "label": "Tabs",
+    "category": "layout",
+    "description": "Tabs component for multi tabs form",
+    "name": "tabs",
+    "common": [
+      {
+        "name": "name",
+        "type": "string",
+        "description": "The name of the field and the key of the JSON"
+      },
+      {
+        "name": "label",
+        "type": "string | i18n",
+        "description": "Label of the field"
+      },
+      {
+        "name": "hint",
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
+      },
+      {
+        "name": "tabs",
+        "type": "array"
+      },
+      {
+        "name": "hidden",
+        "type": "boolean",
+        "description": "Hides the field from the form"
+      }
+    ],
+    "react-rsuite5": [
+      {
+        "name": "appearance",
+        "type": "string",
+        "options": [
+          "default",
+          "tabs",
+          "subtle"
+        ]
+      },
+      {
+        "name": "reversed",
+        "type": "boolean"
+      },
+      {
+        "name": "justified",
+        "type": "boolean"
+      }
+    ],
+    "frameworks": [
+      "react-rsuite5"
+    ]
   }
 }

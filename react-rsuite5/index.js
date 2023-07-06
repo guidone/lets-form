@@ -29,6 +29,7 @@ import { PlaceholderImage } from './placeholder-image';
 import { Button } from './button';
 import { Divider } from './divider';
 import { ReactView } from './react-view';
+import { Tabs } from './tabs';
 
 const Fields = {
   'input-text': {
@@ -108,6 +109,9 @@ const Fields = {
   },
   'datetime': {
     'react-rsuite5': SelectDatetime
+  },
+  'tabs': {
+    'react-rsuite5': Tabs
   }
 };
 

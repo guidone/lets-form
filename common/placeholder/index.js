@@ -1,6 +1,6 @@
 import React from 'react';
 import isEmpty from 'lodash/isEmpty';
-import markdown from 'micro-down';
+import markdown from '../../libs/micro-down';
 
 import './placeholder.scss';
 

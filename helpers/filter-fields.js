@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 /**
  * filterFields
  * Filter field calling recursively fields in group, two-columns, three columns
@@ -73,8 +75,23 @@ const filterFields = (
             rightFields: newRightFields
           };
         }
+      } else if (field.component === 'tabs' && _.isObject(field.fields) && !_.isArray(field.fields)) {      
+        const subkeys = Object.keys(field.fields);
+        // scan all keys of fields and reapply, if different instance, create a new instance
+        // of new field
+        subkeys.forEach(subkey => {
+          const newFields = filterFields(field.fields[subkey], predicate);
+          if (newFields !== field.fields[subkey]) {
+            newField = {
+              ...newField,
+              fields: {
+                ...newField.fields,
+                [subkey]: newFields
+              }
+            };
+          }
+        });
       }
-
       return newField;
     })
     .filter(Boolean);

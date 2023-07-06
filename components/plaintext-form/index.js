@@ -14,7 +14,8 @@ const PlaintextLabel = ({ children }) => (
 
 const renderFields = (fields, locale, framework, currentValues = {}) => {
 
-  return fields.map(field => {
+  console.log('---renderFields', fields, locale, framework, currentValues)
+  return (fields || []).map(field => {
     if (field.component === 'group') {
       return (
         <Group
@@ -60,6 +61,15 @@ const renderFields = (fields, locale, framework, currentValues = {}) => {
           }}
         </ThreeColumns>
       );
+    } else if (field.component === 'tabs') {
+      const subkeys = Object.keys(field.fields);
+
+      const fields = subkeys
+        .map(subkey => renderFields(field.fields[subkey], locale, framework, currentValues))
+
+      return (
+        <>{fields}</>
+      );
     }
 
     return (
@@ -95,7 +105,6 @@ const PlaintextForm = ({
 
   return (
     <div className="lf-form lf-form-plaintext">
-
       {renderFields(fields, locale, framework, currentValues)}
     </div>
   );

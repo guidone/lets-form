@@ -8,7 +8,7 @@ import { ValidationErrors } from '../components';
 import { FRAMEWORKS } from '../costants';
 import { Warning  } from '../assets/icons';
 import { reduceFields, applyTransformers, isI18n, i18n } from '../helpers';
-//import PropTypes from 'prop-types';
+import { useStylesheet } from '../hooks';
 
 import FormContext from '../form-context';
 
@@ -248,6 +248,9 @@ const makeTransformer = (str, fieldList) => {
   }
 };
 
+
+
+
 /**
  * Merge additional components to the main library
  * @param {*} main
@@ -358,6 +361,82 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               index={index}
               className="group"
             >{component}</GroupWrapper> : component;
+        } else if (field.component === 'tabs') {    
+          return (
+            <Controller
+              key={`field_${field.name}`}
+              name={field.name}
+              control={control}
+              render={({ field: fieldInfo }) => {
+                const values = getValues();
+                const component = (
+                  <Component
+                    key={field.name}
+                    lfComponent={field.component}
+                    lfFramework={framework}
+                    lfLocale={locale}
+                    name={field.name}
+                    label={field.label}
+                    hint={field.hint}
+                    disabled={field.disabled}
+                    value={values[field.name] ?? undefined}
+                    onChange={(value, opts) => {
+                      // TODO use callback
+                      fieldInfo.onChange(value);
+                      onChange({ ...getValues(), [field.name]: value }, field.name);
+                    }}
+                    {...additionalFields}
+                    {...field[framework]}
+                  >
+                    {tab => {
+                      return (
+                      <>
+                        {renderFields({
+                          Wrapper,
+                          GroupWrapper,
+                          BottomView,
+                          onChange,
+                          fields: field.fields && _.isArray(field.fields[tab]) ? field.fields[tab] : [],                    
+                          control,
+                          framework,
+                          getValues,
+                          disabled,
+                          readOnly,
+                          plaintext,
+                          errors,
+                          showErrors,
+                          level: level + 1,
+                          locale,
+                          onJavascriptError,
+                          Components
+                        })}
+                        {BottomView && (
+                          <BottomView 
+                            context="tabs" 
+                            key={`bottom_view_${field.name}`} 
+                            field={field} 
+                            target="fields" 
+                            subtarget={tab} 
+                          />
+                        )}
+                      </>
+                    );}}              
+                  </Component>
+                );
+                return GroupWrapper ?
+                  <GroupWrapper
+                    key={`wrapper_${field.name}`}
+                    field={field}
+                    level={level}
+                    index={index}
+                    className="tabs"
+                  >{component}</GroupWrapper> : component;
+
+
+              }}
+            />
+          );
+
         } else if (field.component === 'array' && GroupWrapper) {
           const component = (
             <Component
@@ -658,11 +737,24 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     components,
     className
   }) => {
-    if (debug) {
-      console.log(`[LetsForm] Render form (${form.name})`);
-    }
+/*
+
+`
+{{form}} [data-lf-field-name=rating_group] {
+  margin-top: 4px;
+  margin-right: 38px;
+}
+
+{{form}} [data-lf-field-name=groupPasswords] {
+  --lf-field-column-margin: '2px';
+}
+    `
+
+*/
+
     const { showErrors } = form;
-    const [formName, setFormName] = useState(form.name ?? _.uniqueId('form_'))
+    const [formName, setFormName] = useState(form.name ?? _.uniqueId('form_'));
+    useStylesheet(formName, form.css)
     const [transformers, setTransformers] = useState(null);
 
     const { handleSubmit, formState: { errors, isValid }, reset, control, getValues } = useForm({
@@ -714,13 +806,13 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             }
           }
 
+          setFormName(form.name ?? _.uniqueId('form_'));
+          setTransformers(newTransformers);
+
           // if transformed fields different than current one, then save
           if (newFields !== formFields) {
             setFormFields(newFields);
           }
-
-          setFormName(form.name ?? _.uniqueId('form_'));
-          setTransformers(newTransformers);
         }
         f();
       },
@@ -817,6 +909,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     }
     // get errors from state or from hook, perhaps state is not needed
     let formErrors = !_.isEmpty(errors) ? errors : validationErrors;
+
+    if (debug) {
+      console.log(`[LetsForm] Render form (${form.name})`);
+    }
 
     return (
       <FormContext.Provider value={{

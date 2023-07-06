@@ -6,37 +6,36 @@ import { isValidDate, i18n, isI18n } from '../../helpers';
 import { NoLabel, YesLabel, NoElementsLabel, ElementLabel, ElementsLabel } from './locales';
 
 const Plaintext = ({ value, component, options, locale }) => {
-  console.log('giuda porco', value)
   let d;
   switch(component) {
     case 'input-number':
     case 'rate':
     case 'slider':
-      return <div>{value}</div>
+      return <div className="plaintext-value">{value}</div>
     case 'input-text':
-      return <div>{value}</div>;
+      return <div className="plaintext-value">{value}</div>;
     case 'date':
       if (_.isDate(value)) {
         d = value;
       } else if (_.isString(value) && isValidDate(new Date(value))) {
         d = new Date(value);
       }
-      return <div>{d ? d.toLocaleDateString() : ''}</div>;
+      return <div className="plaintext-value">{d ? d.toLocaleDateString() : ''}</div>;
     case 'datetime':
       if (_.isDate(value)) {
         d = value;
       } else if (_.isString(value) && isValidDate(new Date(value))) {
         d = new Date(value);
       }
-      return <div>{d ? d.toLocaleDateString() + ' ' + d.toLocaleTimeString() : ''}</div>;
+      return <div className="plaintext-value">{d ? d.toLocaleDateString() + ' ' + d.toLocaleTimeString() : ''}</div>;
     case 'toggle':
     case 'checkbox':
       if (value === true || value === 1) {
-        return <div>{i18n(YesLabel, locale)}</div>;
+        return <div className="plaintext-value">{i18n(YesLabel, locale)}</div>;
       } else if (value === false || value === 0) {
-        return <div>{i18n(NoLabel, locale)}</div>;
+        return <div className="plaintext-value">{i18n(NoLabel, locale)}</div>;
       }
-      return <div>-</div>;
+      return <div className="plaintext-value"></div>;
     case 'radio-group':
     case 'select':
       const found = (options ?? []).find(option => option.value === value);
@@ -48,7 +47,7 @@ const Plaintext = ({ value, component, options, locale }) => {
           label = found.label;
         }
       }
-      return <div>{label}</div>;
+      return <div className="plaintext-value">{label}</div>;
     case 'checkbox-group':
     case 'multiselect':
       const selectedOptions = (options ?? []).filter(option => (value ?? []).includes(option.value));
@@ -58,14 +57,14 @@ const Plaintext = ({ value, component, options, locale }) => {
       return (
         <>
           {_.isArray(value) && (
-            <div>
+            <div className="plaintext-value">
               <span className="count">{value.length}</span>
               {' '}
               {value.length > 1 ? i18n(ElementsLabel, locale) : i18n(ElementLabel, locale)}
             </div>
           )}
           {!_.isArray(value) && (
-            <div>
+            <div className="plaintext-value">
               {i18n(NoElementsLabel, locale)}
             </div>
           )}
@@ -73,12 +72,16 @@ const Plaintext = ({ value, component, options, locale }) => {
       );
     case 'textarea':
       return <div
+          className="plaintext-value"
           dangerouslySetInnerHTML={{
             __html: (value || '').replaceAll('\n', '<br/>')
           }}
       />;
+    case 'placeholder':
+    case 'placeholder-image':
+      return <></>;
     default:
-      return <div>{typeof value !== 'object' ? value : ''}</div>;
+      return <div className="plaintext-value">{typeof value !== 'object' ? value : ''}</div>;
   }
 };
 
