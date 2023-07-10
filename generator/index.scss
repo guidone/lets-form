@@ -1,3 +1,25 @@
+.lf-lets-form{
+
+  .label-test-buttons {
+    float: right;
+    background-color: #cccccc;
+    color: #555555;
+    font-size: 10px;
+    padding: 1px 3px;
+    margin-top: -16px;
+    border-top-left-radius: 3px;
+    text-transform: uppercase;
+  }
+
+  &.lf-lets-form-edit-mode {
+    .lf-buttons {
+      padding: 10px;
+      background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);
+      background-size: 56.57px 56.57px;
+    }
+  }
+}
+
 .lf-form {
   --lf-field-margin: 16px;
   --lf-field-column-margin: 16px;

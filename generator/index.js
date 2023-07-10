@@ -730,28 +730,16 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     debug = false,
     disabled = false,
     readOnly = false,
+    // show the form in plaintext mode
     plaintext = false,
+    // hide submit and cancel buttons
     hideToolbar = false,
     custom,
     children,
     components,
-    className
+    className,
+    demo = false
   }) => {
-/*
-
-`
-{{form}} [data-lf-field-name=rating_group] {
-  margin-top: 4px;
-  margin-right: 38px;
-}
-
-{{form}} [data-lf-field-name=groupPasswords] {
-  --lf-field-column-margin: '2px';
-}
-    `
-
-*/
-
     const { showErrors } = form;
     const [formName, setFormName] = useState(form.name ?? _.uniqueId('form_'));
     useStylesheet(formName, form.css)
@@ -920,7 +908,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         locale: locale
         // ..more
       }}>
-        <div className={classNames('lf-lets-form', className)}>
+        <div 
+          className={classNames('lf-lets-form', { 'lf-lets-form-edit-mode': demo }, className)}
+        >
           {formErrors && showErrors === 'groupedTop' && (
             <ValidationErrors
               className="top"
@@ -972,7 +962,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 errors={enrichWithLabels(formErrors, formFields)}
               />
             )}
+            
           </Form>
+          {demo && (
+            <div className="label-test-buttons">Test buttons</div>
+          )}
         </div>
       </FormContext.Provider>
     );
