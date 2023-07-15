@@ -1,23 +1,24 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
-import { Nav } from 'rsuite';
+import { Tabs, Tab } from 'react-bootstrap';
+
 
 import { i18nOptions, passRest } from '../../helpers';
 import { I18N } from '../../components';
 
 import './tabs.scss';
 
-const Tabs = I18N(
+const TabsReactBootstrap = I18N(
   ({
     name,
     value,
     tabs,
     onChange,
-    children,
-    appearance,
-    reversed,
-    justified,
-    pullRight,
+    children,    
+    variant,
+    transition,
+    fill,
+    justify,
     ...rest
   }) => {
     let defaultKey = value;
@@ -39,27 +40,23 @@ const Tabs = I18N(
         className="lf-control-tabs"
         data-lf-field-name={name}
       >
-        <Nav 
-          appearance={appearance}
-          reversed={reversed}
-          justified={justified}
-          pullRight={pullRight}
-          activeKey={active}
+        <Tabs
+          activeKey={active}           
           onSelect={handleKey}
+          variant={variant || 'tabs'}
+          transition={transition === false ? false : undefined}
+          fill={fill}
+          justify={justify}
           {...passRest(rest)}
         >
           {(tabs || []).map(tab => (
-            <Nav.Item 
+            <Tab 
               key={tab.value}
               eventKey={tab.value}
-            >{tab.label}</Nav.Item>
+              title={tab.label}
+            >{children(active)}</Tab>
           ))}
-        </Nav>
-        {_.isFunction(children) && (
-          <div className="tab-fields">
-            {children(active)}
-          </div>
-        )}
+        </Tabs>
       </div>
     );
   },
@@ -69,4 +66,4 @@ const Tabs = I18N(
   }
 );
 
-export { Tabs };
+export { TabsReactBootstrap as Tabs };

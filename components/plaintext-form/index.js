@@ -14,7 +14,6 @@ const PlaintextLabel = ({ children }) => (
 
 const renderFields = (fields, locale, framework, currentValues = {}) => {
 
-  console.log('---renderFields', fields, locale, framework, currentValues)
   return (fields || []).map(field => {
     if (field.component === 'group') {
       return (

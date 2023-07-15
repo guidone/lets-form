@@ -26,7 +26,6 @@ const addField = (
         field => {
           if (field.id === id) {
             if (subtarget != null) {
-              console.log('aggiungo nello strano modo')
               return {
                 ...field,
                 [target]: {

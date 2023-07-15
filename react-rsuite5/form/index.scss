@@ -12,9 +12,9 @@
   }
 
   // remove the margin bottom, rule is that elements has a margin-top
-  &.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {
-    margin-bottom: 0px;
-  }
+  //&.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {
+  //  margin-bottom: 0px;
+  //}
 
   .lf-full-width {
     .rs-form-control-wrapper {

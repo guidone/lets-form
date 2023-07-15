@@ -1459,7 +1459,6 @@ var PlaintextLabel = function PlaintextLabel(_ref) {
 };
 var renderFields = function renderFields(fields, locale, framework) {
   var currentValues = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
-  console.log('---renderFields', fields, locale, framework, currentValues);
   return (fields || []).map(function (field) {
     if (field.component === 'group') {
       return /*#__PURE__*/external_react_default().createElement(common/* Group */.ZA, _extends({
@@ -1626,6 +1625,7 @@ var Plaintext = function Plaintext(_ref) {
         className: "plaintext-value"
       });
     case 'radio-group':
+    case 'radio-tile':
     case 'select':
       var found = (options !== null && options !== void 0 ? options : []).find(function (option) {
         return option.value === value;
@@ -2991,7 +2991,9 @@ var mapFields = function mapFields(fields) {
         });
       }
     } else if (field.component === 'tabs' && isObject_default()(field.fields) && !isArray_default()(field.fields)) {
-      var subkeys = Object.keys(field.fields);
+      // also pass the component itself to the predicate
+      newField = predicate(field);
+      var subkeys = Object.keys(newField.fields);
       subkeys.forEach(function (subkey) {
         var newFields = mapFields(field.fields[subkey], predicate);
         if (newFields !== field.fields[subkey]) {
@@ -3179,6 +3181,9 @@ var fillIds = function fillIds(fields) {
   });
 };
 
+// EXTERNAL MODULE: ./node_modules/lodash/pick.js
+var pick = __webpack_require__(8718);
+var pick_default = /*#__PURE__*/__webpack_require__.n(pick);
 // EXTERNAL MODULE: ./node_modules/lodash/omit.js
 var omit = __webpack_require__(7557);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
@@ -3204,6 +3209,7 @@ var isI18n = function isI18n(obj) {
   });
 };
 ;// CONCATENATED MODULE: ./helpers/cleanup.js
+
 
 
 
@@ -3269,6 +3275,16 @@ var removeUnusedLocalesFromObj = function removeUnusedLocalesFromObj(obj, locale
   });
   return cloned;
 };
+var removeUnusedTabs = function removeUnusedTabs(obj) {
+  if (obj.component === 'tabs') {
+    return cleanup_objectSpread(cleanup_objectSpread({}, obj), {}, {
+      fields: pick_default()(obj.fields, (obj.tabs || []).map(function (tab) {
+        return tab.value;
+      }))
+    });
+  }
+  return obj;
+};
 
 /**
  * cleanUp
@@ -3290,7 +3306,7 @@ var cleanUp = function cleanUp(json) {
     return isEmpty_default()(cloned[key]) && !(isBoolean_default()(cloned[key]) || isNumber_default()(cloned[key]));
   });
   var cleanedUp = omit_default()(cloned, emptyKeys);
-  return cleanup_objectSpread(cleanup_objectSpread({}, cleanedUp), {}, {
+  var newForm = cleanup_objectSpread(cleanup_objectSpread({}, cleanedUp), {}, {
     fields: mapFields(json.fields, function (field) {
       // clone and remove id
       var cloned = omit_default()(field, 'id');
@@ -3308,9 +3324,12 @@ var cleanUp = function cleanUp(json) {
       cloned = removeEmptyKeys(cloned);
       // cycle all keys and check if it's an i18n object
       cloned = removeUnusedLocalesFromObj(cloned, json.locales);
+      // remove unused tabl
+      cloned = removeUnusedTabs(cloned);
       return cloned;
     })
   });
+  return newForm;
 };
 
 ;// CONCATENATED MODULE: ./helpers/add-field.js
@@ -3348,7 +3367,6 @@ var addField = function addField(form, newField, id) {
       function (field) {
         if (field.id === id) {
           if (subtarget != null) {
-            console.log('aggiungo nello strano modo');
             return add_field_objectSpread(add_field_objectSpread({}, field), {}, add_field_defineProperty({}, target, add_field_objectSpread(add_field_objectSpread({}, field[target] || []), {}, add_field_defineProperty({}, subtarget, [].concat(_toConsumableArray(field[target] && field[target][subtarget] ? field[target][subtarget] : []), [newField])))));
           } else {
             // old way
@@ -3738,7 +3756,7 @@ var isEmptyForm = function isEmptyForm(form) {
   return !form || !Array.isArray(form.fields) || form.fields.length === 0;
 };
 ;// CONCATENATED MODULE: ./mappings.json
-const mappings_namespaceObject = JSON.parse('{"input-text":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"value":null,"image":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui","react-antd"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"popupMatchSelectWidth":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"layout":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"fullWidth":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-bootstrap","react-antd"],"step":["react-rsuite5","react-bootstrap","react-antd"],"max":["react-rsuite5","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":["react-rsuite5","react-material-ui","react-antd"],"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"value":["react-rsuite5","react-material-ui","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"size":["react-material-ui","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"row":["react-material-ui"],"reverse":["react-bootstrap"],"optionType":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui"],"disableUnderline":["react-material-ui"],"maxRows":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"value":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-antd"],"multiselectMode":["react-rsuite5"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui"],"variant":["react-material-ui"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"align":null,"hidden":null,"maxWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"maxHeight":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginTop":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginBottom":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"tabs":{"name":null,"label":null,"hint":null,"tabs":null,"value":null,"hidden":null,"appearance":["react-rsuite5"],"reversed":["react-rsuite5"],"justified":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
+const mappings_namespaceObject = JSON.parse('{"input-text":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"value":null,"image":null,"icon":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui","react-antd"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"popupMatchSelectWidth":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"layout":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"fullWidth":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-bootstrap","react-antd"],"step":["react-rsuite5","react-bootstrap","react-antd"],"max":["react-rsuite5","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":["react-rsuite5","react-material-ui","react-antd"],"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"value":["react-rsuite5","react-material-ui","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"size":["react-material-ui","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"row":["react-material-ui"],"reverse":["react-bootstrap"],"optionType":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui"],"disableUnderline":["react-material-ui"],"maxRows":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"value":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-antd"],"multiselectMode":["react-rsuite5"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui"],"variant":["react-material-ui"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"align":null,"hidden":null,"maxWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"maxHeight":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginTop":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginBottom":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"button":{"name":null,"initialValue":null,"buttonType":null,"labelOn":null,"labelOff":null,"iconOn":null,"iconOff":null,"hint":null,"hidden":null,"size":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"tabs":{"name":null,"label":null,"hint":null,"tabs":null,"value":null,"hidden":null,"appearance":["react-rsuite5"],"reversed":["react-rsuite5"],"justified":["react-rsuite5"],"indicatorColor":["react-material-ui"],"textColor":["react-material-ui"],"centered":["react-material-ui","react-antd"],"fullWidth":["react-material-ui"],"variant":["react-bootstrap"],"transition":["react-bootstrap"],"fill":["react-bootstrap"],"justify":["react-bootstrap"],"size":["react-antd"],"tabType":["react-antd"],"animated":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-tile":{"name":null,"label":null,"hint":null,"options":null,"value":null,"description":null,"icon":null,"disabled":null,"hidden":null,"inline":["react-rsuite5"],"iconWidth":["react-rsuite5"],"iconHeight":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
 ;// CONCATENATED MODULE: ./helpers/apply-transformers.js
 
 
@@ -4264,7 +4282,7 @@ var useStylesheet = function useStylesheet(id, css) {
       var head = document.head;
       var style = document.createElement("style");
       style.id = "letsform-sheet-".concat(id);
-      style.innerHTML = css.replaceAll('.lf-current-form', ".lf-lets-form .lf-form[data-lf-form-name=".concat(id, "]"));
+      style.innerHTML = css.replaceAll('.lf-current-form', ".lf-lets-form [data-lf-form-name=".concat(id, "]"));
       head.appendChild(style);
     }
     return function () {
@@ -4846,7 +4864,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lt-control-che
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-buttons{margin-top:24px}.lf-form-react-rsuite5 .rs-form-control-label>.rs-form-help-text.rs-form-help-text-tooltip{margin-top:0px;margin-left:5px}.lf-form-react-rsuite5.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child){margin-bottom:0px}.lf-form-react-rsuite5 .lf-full-width .rs-form-control-wrapper{width:100%}", "",{"version":3,"sources":["webpack://./react-rsuite5/form/index.scss"],"names":[],"mappings":"AAEE,mCACE,eAAA,CAIA,2FACE,cAAA,CACA,eAAA,CAKJ,oFACE,iBAAA,CAIA,+DACE,UAAA","sourcesContent":[".lf-form-react-rsuite5 {\n\n  .lf-buttons {\n    margin-top: 24px;\n  }\n  // makes tooltip inside labels with smaller margins\n  .rs-form-control-label {\n    > .rs-form-help-text.rs-form-help-text-tooltip {\n      margin-top: 0px;\n      margin-left: 5px;\n    }\n  }\n\n  // remove the margin bottom, rule is that elements has a margin-top\n  &.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {\n    margin-bottom: 0px;\n  }\n\n  .lf-full-width {\n    .rs-form-control-wrapper {\n      width: 100%;\n    }\n  }\n\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-buttons{margin-top:24px}.lf-form-react-rsuite5 .rs-form-control-label>.rs-form-help-text.rs-form-help-text-tooltip{margin-top:0px;margin-left:5px}.lf-form-react-rsuite5 .lf-full-width .rs-form-control-wrapper{width:100%}", "",{"version":3,"sources":["webpack://./react-rsuite5/form/index.scss"],"names":[],"mappings":"AAEE,mCACE,eAAA,CAIA,2FACE,cAAA,CACA,eAAA,CAUF,+DACE,UAAA","sourcesContent":[".lf-form-react-rsuite5 {\n\n  .lf-buttons {\n    margin-top: 24px;\n  }\n  // makes tooltip inside labels with smaller margins\n  .rs-form-control-label {\n    > .rs-form-help-text.rs-form-help-text-tooltip {\n      margin-top: 0px;\n      margin-left: 5px;\n    }\n  }\n\n  // remove the margin bottom, rule is that elements has a margin-top\n  //&.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {\n  //  margin-bottom: 0px;\n  //}\n\n  .lf-full-width {\n    .rs-form-control-wrapper {\n      width: 100%;\n    }\n  }\n\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5030,7 +5048,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-control-sli
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-tabs .tab-fields{margin-top:10px}", "",{"version":3,"sources":["webpack://./react-rsuite5/tabs/tabs.scss"],"names":[],"mappings":"AACE,6BACE,eAAA","sourcesContent":[".lf-control-tabs {\n  .tab-fields {\n    margin-top: 10px;\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-control-tabs .tab-fields{margin-top:10px}", "",{"version":3,"sources":["webpack://./react-rsuite5/tabs/tabs.scss"],"names":[],"mappings":"AAEI,oDACE,eAAA","sourcesContent":[".lf-form-react-rsuite5 {\n  .lf-control-tabs {\n    .tab-fields {\n      margin-top: 10px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5835,50 +5853,27 @@ module.exports = baseUnset;
 /***/ 1811:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var isArray = __webpack_require__(1469);
+var isArray = __webpack_require__(1469),
+    isKey = __webpack_require__(5403),
+    stringToPath = __webpack_require__(5514),
+    toString = __webpack_require__(9833);
 
 /**
- * Casts `value` as an array if it's not one.
+ * Casts `value` to a path array if it's not one.
  *
- * @static
- * @memberOf _
- * @since 4.4.0
- * @category Lang
+ * @private
  * @param {*} value The value to inspect.
- * @returns {Array} Returns the cast array.
- * @example
- *
- * _.castArray(1);
- * // => [1]
- *
- * _.castArray({ 'a': 1 });
- * // => [{ 'a': 1 }]
- *
- * _.castArray('abc');
- * // => ['abc']
- *
- * _.castArray(null);
- * // => [null]
- *
- * _.castArray(undefined);
- * // => [undefined]
- *
- * _.castArray();
- * // => []
- *
- * var array = [1, 2, 3];
- * console.log(_.castArray(array) === array);
- * // => true
+ * @param {Object} [object] The object to query keys on.
+ * @returns {Array} Returns the cast property path array.
  */
-function castArray() {
-  if (!arguments.length) {
-    return [];
+function castPath(value, object) {
+  if (isArray(value)) {
+    return value;
   }
-  var value = arguments[0];
-  return isArray(value) ? value : [value];
+  return isKey(value, object) ? [value] : stringToPath(toString(value));
 }
 
-module.exports = castArray;
+module.exports = castPath;
 
 
 /***/ }),
@@ -6302,6 +6297,42 @@ module.exports = isIndex;
 
 /***/ }),
 
+/***/ 5403:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var isArray = __webpack_require__(1469),
+    isSymbol = __webpack_require__(3448);
+
+/** Used to match property names within property paths. */
+var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+    reIsPlainProp = /^\w*$/;
+
+/**
+ * Checks if `value` is a property name and not a property path.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+ */
+function isKey(value, object) {
+  if (isArray(value)) {
+    return false;
+  }
+  var type = typeof value;
+  if (type == 'number' || type == 'symbol' || type == 'boolean' ||
+      value == null || isSymbol(value)) {
+    return true;
+  }
+  return reIsPlainProp.test(value) || !reIsDeepProp.test(value) ||
+    (object != null && value in Object(object));
+}
+
+module.exports = isKey;
+
+
+/***/ }),
+
 /***/ 5726:
 /***/ ((module) => {
 
@@ -6323,6 +6354,34 @@ function stubFalse() {
 }
 
 module.exports = stubFalse;
+
+
+/***/ }),
+
+/***/ 4523:
+/***/ ((module) => {
+
+/**
+ * This method returns the first argument it receives.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Util
+ * @param {*} value Any value.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ *
+ * console.log(_.identity(object) === object);
+ * // => true
+ */
+function identity(value) {
+  return value;
+}
+
+module.exports = identity;
 
 
 /***/ }),
@@ -6518,6 +6577,40 @@ function stringToArray(string) {
 }
 
 module.exports = stringToArray;
+
+
+/***/ }),
+
+/***/ 5514:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var memoizeCapped = __webpack_require__(4523);
+
+/** Used to match property names within property paths. */
+var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+
+/** Used to match backslashes in property paths. */
+var reEscapeChar = /\\(\\)?/g;
+
+/**
+ * Converts `string` to a property path array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the property path array.
+ */
+var stringToPath = memoizeCapped(function(string) {
+  var result = [];
+  if (string.charCodeAt(0) === 46 /* . */) {
+    result.push('');
+  }
+  string.replace(rePropName, function(match, number, quote, subString) {
+    result.push(quote ? subString.replace(reEscapeChar, '$1') : (number || match));
+  });
+  return result;
+});
+
+module.exports = stringToPath;
 
 
 /***/ }),
@@ -12239,7 +12332,7 @@ var InputTextI18N = function InputTextI18N(props) {
   });
   return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
     "data-lf-field-name": name,
-    className: "lf-input-text-i18n"
+    className: "lf-control-input-text-i18n lf-input-text-i18n"
   }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
     tooltip: true
   }, hint), required && /*#__PURE__*/external_react_default().createElement(components/* RequiredIcon */.T_, null)), /*#__PURE__*/external_react_default().createElement("div", {
@@ -12447,12 +12540,16 @@ var tabs_update = injectStylesIntoStyleTag_default()(tabs/* default */.Z, tabs_o
 ;// CONCATENATED MODULE: ./react-rsuite5/tabs/index.js
 
 
+var tabs_excluded = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight"];
+function tabs_extends() { tabs_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return tabs_extends.apply(this, arguments); }
 function tabs_slicedToArray(arr, i) { return tabs_arrayWithHoles(arr) || tabs_iterableToArrayLimit(arr, i) || tabs_unsupportedIterableToArray(arr, i) || tabs_nonIterableRest(); }
 function tabs_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function tabs_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return tabs_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return tabs_arrayLikeToArray(o, minLen); }
 function tabs_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function tabs_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function tabs_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function tabs_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = tabs_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function tabs_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
@@ -12467,7 +12564,8 @@ var Tabs = (0,components/* I18N */.mb)(function (_ref) {
     appearance = _ref.appearance,
     reversed = _ref.reversed,
     justified = _ref.justified,
-    pullRight = _ref.pullRight;
+    pullRight = _ref.pullRight,
+    rest = tabs_objectWithoutProperties(_ref, tabs_excluded);
   var defaultKey = value;
   if (!defaultKey && !isEmpty_default()(tabs)) {
     defaultKey = tabs[0].value;
@@ -12482,15 +12580,15 @@ var Tabs = (0,components/* I18N */.mb)(function (_ref) {
   }, [onChange]);
   return /*#__PURE__*/external_react_default().createElement("div", {
     className: "lf-control-tabs",
-    controlId: name
-  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Nav, {
+    "data-lf-field-name": name
+  }, /*#__PURE__*/external_react_default().createElement(external_rsuite_.Nav, tabs_extends({
     appearance: appearance,
     reversed: reversed,
     justified: justified,
     pullRight: pullRight,
     activeKey: active,
     onSelect: handleKey
-  }, (tabs || []).map(function (tab) {
+  }, (0,helpers/* passRest */.QF)(rest)), (tabs || []).map(function (tab) {
     return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Nav.Item, {
       key: tab.value,
       eventKey: tab.value
@@ -12502,6 +12600,82 @@ var Tabs = (0,components/* I18N */.mb)(function (_ref) {
   tabs: helpers/* i18nOptions */.Lo
 });
 
+;// CONCATENATED MODULE: ./react-rsuite5/radio-tile/index.js
+function radio_tile_typeof(obj) { "@babel/helpers - typeof"; return radio_tile_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, radio_tile_typeof(obj); }
+var radio_tile_excluded = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options"];
+function radio_tile_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function radio_tile_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? radio_tile_ownKeys(Object(source), !0).forEach(function (key) { radio_tile_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : radio_tile_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function radio_tile_defineProperty(obj, key, value) { key = radio_tile_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function radio_tile_toPropertyKey(arg) { var key = radio_tile_toPrimitive(arg, "string"); return radio_tile_typeof(key) === "symbol" ? key : String(key); }
+function radio_tile_toPrimitive(input, hint) { if (radio_tile_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (radio_tile_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function radio_tile_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = radio_tile_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function radio_tile_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+/* eslint-disable jsx-a11y/alt-text */
+
+
+
+
+
+var RadioTileRSuite = (0,components/* I18N */.mb)(function (_ref) {
+  var name = _ref.name,
+    label = _ref.label,
+    hint = _ref.hint,
+    value = _ref.value,
+    placeholder = _ref.placeholder,
+    plaintext = _ref.plaintext,
+    _ref$inline = _ref.inline,
+    inline = _ref$inline === void 0 ? true : _ref$inline,
+    _ref$iconWidth = _ref.iconWidth,
+    iconWidth = _ref$iconWidth === void 0 ? 24 : _ref$iconWidth,
+    _ref$iconHeight = _ref.iconHeight,
+    iconHeight = _ref$iconHeight === void 0 ? 24 : _ref$iconHeight,
+    _ref$tooltip = _ref.tooltip,
+    tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+    _ref$disabled = _ref.disabled,
+    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+    _ref$required = _ref.required,
+    required = _ref$required === void 0 ? false : _ref$required,
+    error = _ref.error,
+    onChange = _ref.onChange,
+    onBlur = _ref.onBlur,
+    _ref$options = _ref.options,
+    options = _ref$options === void 0 ? [] : _ref$options,
+    rest = radio_tile_objectWithoutProperties(_ref, radio_tile_excluded);
+  return /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.Group, {
+    className: classnames_default()('lf-control-input-text'),
+    "data-lf-field-name": name
+  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
+    tooltip: true
+  }, hint), required && /*#__PURE__*/external_react_default().createElement(components/* RequiredIcon */.T_, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.RadioTileGroup, {
+    value: value,
+    onChange: onChange,
+    inline: inline,
+    disabled: disabled
+  }, (options || []).map(function (option) {
+    return /*#__PURE__*/external_react_default().createElement(external_rsuite_.RadioTile, {
+      key: option.value,
+      label: option.label,
+      value: option.value,
+      icon: option.icon && /*#__PURE__*/external_react_default().createElement("img", {
+        src: option.icon,
+        width: iconWidth,
+        height: iconHeight
+      })
+    }, option.description);
+  })), hint && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
+}, ['label', 'hint'], {
+  options: function options(value, i18n) {
+    return (value !== null && value !== void 0 ? value : []).filter(function (value) {
+      return value != null;
+    }).map(function (value) {
+      return radio_tile_objectSpread(radio_tile_objectSpread({}, value), {}, {
+        label: i18n(value.label),
+        description: i18n(value.description)
+      });
+    });
+  }
+});
+
 // EXTERNAL MODULE: ./costants.js
 var costants = __webpack_require__(8064);
 ;// CONCATENATED MODULE: ./react-rsuite5/index.js
@@ -12509,6 +12683,7 @@ var react_rsuite5_excluded = ["framework", "children"];
 function react_rsuite5_extends() { react_rsuite5_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_rsuite5_extends.apply(this, arguments); }
 function react_rsuite5_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_rsuite5_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function react_rsuite5_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -12620,6 +12795,9 @@ var Fields = {
   },
   'tabs': {
     'react-rsuite5': Tabs
+  },
+  'radio-tile': {
+    'react-rsuite5': RadioTileRSuite
   }
 };
 var Forms = {

@@ -24,6 +24,7 @@ import { Multiselect } from './multiselect';
 import { InputNumber } from './input-number';
 import { RadioGroup } from './radio-group';
 import { CheckboxGroup } from './checkbox-group';
+import { Tabs } from './tabs';
 
 const Fields = {
   'input-text': {
@@ -88,6 +89,9 @@ const Fields = {
   },
   'checkbox-group': {
     'react-material-ui': CheckboxGroup
+  },
+  'tabs': {
+    'react-material-ui': Tabs
   }
 };
 

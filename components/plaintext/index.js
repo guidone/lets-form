@@ -37,6 +37,7 @@ const Plaintext = ({ value, component, options, locale }) => {
       }
       return <div className="plaintext-value"></div>;
     case 'radio-group':
+    case 'radio-tile':
     case 'select':
       const found = (options ?? []).find(option => option.value === value);
       let label = '';

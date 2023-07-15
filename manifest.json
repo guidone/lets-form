@@ -3627,7 +3627,7 @@
   "tabs": {
     "label": "Tabs",
     "category": "layout",
-    "description": "Tabs component for multi tabs form",
+    "description": "Layout component for tabs",
     "name": "tabs",
     "common": [
       {
@@ -3672,6 +3672,152 @@
       {
         "name": "justified",
         "type": "boolean"
+      }
+    ],
+    "react-material-ui": [
+      {
+        "name": "indicatorColor",
+        "type": "string",
+        "options": [
+          "primary",
+          "secondary"
+        ]
+      },
+      {
+        "name": "textColor",
+        "type": "string",
+        "options": [
+          "primary",
+          "secondary",
+          "inherit"
+        ]
+      },
+      {
+        "name": "centered",
+        "type": "boolean",
+        "description": "If true, the tabs are centered. This prop is intended for large views"
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Will make the tabs grow to use all the available space"
+      }
+    ],
+    "react-bootstrap": [
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "tabs",
+          "pills",
+          "underline"
+        ]
+      },
+      {
+        "name": "transition",
+        "type": "boolean",
+        "description": "Sets a default animation strategy for all children"
+      },
+      {
+        "name": "fill",
+        "type": "boolean",
+        "description": "Have all Tabss proportionately fill all available width"
+      },
+      {
+        "name": "justify",
+        "type": "boolean",
+        "description": "Have all Tabs evenly fill all available width"
+      }
+    ],
+    "react-antd": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "small",
+          "middle",
+          "large"
+        ]
+      },
+      {
+        "name": "tabType",
+        "type": "string",
+        "options": [
+          "line",
+          "card"
+        ]
+      },
+      {
+        "name": "animated",
+        "type": "boolean"
+      },
+      {
+        "name": "centered",
+        "type": "boolean"
+      }
+    ],
+    "frameworks": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ]
+  },
+  "radio-tile": {
+    "label": "Radio Tile",
+    "description": "Radio control with card, description and icon",
+    "category": "general",
+    "name": "radio-tile",
+    "common": [
+      {
+        "name": "name",
+        "type": "string",
+        "description": "The name of the field and the key of the JSON"
+      },
+      {
+        "name": "label",
+        "type": "string | i18n",
+        "description": "Label of the field"
+      },
+      {
+        "name": "hint",
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
+      },
+      {
+        "name": "options",
+        "type": "array"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "description": "Disables and greys out the field"
+      },
+      {
+        "name": "hidden",
+        "type": "boolean",
+        "description": "Hides the field from the form"
+      }
+    ],
+    "react-rsuite5": [
+      {
+        "name": "inline",
+        "type": "boolean",
+        "description": "Use inline layout"
+      },
+      {
+        "name": "iconWidth",
+        "type": "number"
+      },
+      {
+        "name": "iconHeight",
+        "type": "number"
+      },
+      {
+        "name": "tooltip",
+        "type": "boolean",
+        "description": "Show hint as tooltip next to label"
       }
     ],
     "frameworks": [

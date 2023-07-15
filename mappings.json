@@ -131,6 +131,7 @@
     "options": null,
     "value": null,
     "image": null,
+    "icon": null,
     "showImageOptions": null,
     "filterKey": null,
     "filterValue": null,
@@ -1243,6 +1244,70 @@
       "react-rsuite5"
     ],
     "justified": [
+      "react-rsuite5"
+    ],
+    "indicatorColor": [
+      "react-material-ui"
+    ],
+    "textColor": [
+      "react-material-ui"
+    ],
+    "centered": [
+      "react-material-ui",
+      "react-antd"
+    ],
+    "fullWidth": [
+      "react-material-ui"
+    ],
+    "variant": [
+      "react-bootstrap"
+    ],
+    "transition": [
+      "react-bootstrap"
+    ],
+    "fill": [
+      "react-bootstrap"
+    ],
+    "justify": [
+      "react-bootstrap"
+    ],
+    "size": [
+      "react-antd"
+    ],
+    "tabType": [
+      "react-antd"
+    ],
+    "animated": [
+      "react-antd"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "radio-tile": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "options": null,
+    "value": null,
+    "description": null,
+    "icon": null,
+    "disabled": null,
+    "hidden": null,
+    "inline": [
+      "react-rsuite5"
+    ],
+    "iconWidth": [
+      "react-rsuite5"
+    ],
+    "iconHeight": [
+      "react-rsuite5"
+    ],
+    "tooltip": [
       "react-rsuite5"
     ],
     "validationMinLength": "validation",

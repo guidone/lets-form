@@ -57,7 +57,17 @@ const removeUnusedLocalesFromObj = (obj, locales) => {
       }
     });
   return cloned;
-}
+};
+
+const removeUnusedTabs = obj => {
+  if (obj.component === 'tabs') {
+    return {
+      ...obj,
+      fields: _.pick(obj.fields, (obj.tabs || []).map(tab => tab.value))
+    };
+  }
+  return obj;
+};
 
 /**
  * cleanUp
@@ -79,7 +89,7 @@ const cleanUp = json => {
   const emptyKeys = _.keys(cloned).filter(key => _.isEmpty(cloned[key]) && !(_.isBoolean(cloned[key]) || _.isNumber(cloned[key])));
   const cleanedUp = _.omit(cloned, emptyKeys);
 
-  return {
+  const newForm =  {
     ...cleanedUp,
     fields: mapFields(
       json.fields,
@@ -100,10 +110,15 @@ const cleanUp = json => {
         cloned = removeEmptyKeys(cloned);
         // cycle all keys and check if it's an i18n object
         cloned = removeUnusedLocalesFromObj(cloned, json.locales);
+        // remove unused tabl
+        cloned = removeUnusedTabs(cloned);
+
         return cloned;
       }
     )
   };
+
+  return newForm;
 };
 
 export { cleanUp }

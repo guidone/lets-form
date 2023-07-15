@@ -30,6 +30,7 @@ import { Button } from './button';
 import { Divider } from './divider';
 import { ReactView } from './react-view';
 import { Tabs } from './tabs';
+import { RadioTile } from './radio-tile';
 
 const Fields = {
   'input-text': {
@@ -112,6 +113,9 @@ const Fields = {
   },
   'tabs': {
     'react-rsuite5': Tabs
+  },
+  'radio-tile': {
+    'react-rsuite5': RadioTile
   }
 };
 

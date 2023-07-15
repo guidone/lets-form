@@ -1,23 +1,23 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
-import { Nav } from 'rsuite';
+import { Tabs } from 'antd';
 
 import { i18nOptions, passRest } from '../../helpers';
 import { I18N } from '../../components';
 
 import './tabs.scss';
 
-const Tabs = I18N(
+const TabsAntd = I18N(
   ({
     name,
     value,
     tabs,
     onChange,
     children,
-    appearance,
-    reversed,
-    justified,
-    pullRight,
+    animated,
+    centered,
+    size,
+    tabType,
     ...rest
   }) => {
     let defaultKey = value;
@@ -39,22 +39,19 @@ const Tabs = I18N(
         className="lf-control-tabs"
         data-lf-field-name={name}
       >
-        <Nav 
-          appearance={appearance}
-          reversed={reversed}
-          justified={justified}
-          pullRight={pullRight}
+        <Tabs 
+          animated={animated}
+          centered={centered}
+          size={size}
+          type={tabType}
           activeKey={active}
-          onSelect={handleKey}
+          items={(tabs || []).map(tab => ({
+            key: tab.value,
+            label: tab.label
+          }))} 
+          onChange={handleKey} 
           {...passRest(rest)}
-        >
-          {(tabs || []).map(tab => (
-            <Nav.Item 
-              key={tab.value}
-              eventKey={tab.value}
-            >{tab.label}</Nav.Item>
-          ))}
-        </Nav>
+        />
         {_.isFunction(children) && (
           <div className="tab-fields">
             {children(active)}
@@ -69,4 +66,4 @@ const Tabs = I18N(
   }
 );
 
-export { Tabs };
+export { TabsAntd as Tabs };

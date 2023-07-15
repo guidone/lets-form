@@ -15,9 +15,11 @@ const PlaceholderReact = I18N(
         className="lf-form-react-control-group lf-control-placeholder"
         data-lf-field-name={name}
       >
-        <label for={name}>
-          {label}
-        </label>
+        {label && (
+          <label for={name}>
+            {label}
+          </label>
+        )}
         <Placeholder text={text} />
         {hint && <div className="lf-form-react-message">{hint}</div>}
       </div>

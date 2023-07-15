@@ -81,7 +81,9 @@ const mapFields = (
         };
       }
     } else if (field.component === 'tabs' && _.isObject(field.fields) && !_.isArray(field.fields)) {
-      const subkeys = Object.keys(field.fields);
+      // also pass the component itself to the predicate
+      newField = predicate(field);
+      const subkeys = Object.keys(newField.fields);
       subkeys.forEach(subkey => {
         const newFields = mapFields(field.fields[subkey], predicate);
         if (newFields !== field.fields[subkey]) {

@@ -20,7 +20,7 @@ export const useStylesheet = (id, css) => {
         style.id = `letsform-sheet-${id}`;
         style.innerHTML = css.replaceAll(
           '.lf-current-form', 
-          `.lf-lets-form .lf-form[data-lf-form-name=${id}]`
+          `.lf-lets-form [data-lf-form-name=${id}]`
         );
         head.appendChild(style);
       }

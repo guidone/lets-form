@@ -22,6 +22,7 @@ import { Divider } from './divider';
 import { ReactView } from './react-view';
 import { ListArray } from './array';
 import { InputNumber } from './input-number';
+import { Tabs } from './tabs';
 
 const Fields = {
   'input-text': {
@@ -80,6 +81,9 @@ const Fields = {
   },
   'input-number': {
     'react-bootstrap': InputNumber
+  },
+  'tabs': {
+    'react-bootstrap': Tabs
   }
 };
 

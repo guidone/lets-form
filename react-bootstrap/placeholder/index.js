@@ -16,9 +16,11 @@ const PlaceholderBootstrap = I18N(
         className="lf-control-placeholder"
         data-lf-field-name={name}
       >
-        <Form.Label>
-          {label}
-        </Form.Label>
+        {label && (
+          <Form.Label>
+            {label}
+          </Form.Label>
+        )}
         <Placeholder text={text} />
         {hint && <Form.Text>{hint}</Form.Text>}
       </Form.Group>

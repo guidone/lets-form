@@ -25,6 +25,7 @@ import { ReactView } from './react-view';
 import { ListArray } from './array';
 import { Button } from './button';
 import { CheckboxGroup } from './checkbox-group';
+import { Tabs } from './tabs';
 
 const Fields = {
   'input-text': {
@@ -92,6 +93,9 @@ const Fields = {
   },
   'checkbox-group': {
     'react-antd': CheckboxGroup
+  },
+  'tabs': {
+    'react-antd': Tabs
   }
 };
 
