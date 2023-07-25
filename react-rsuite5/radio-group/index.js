@@ -20,6 +20,7 @@ const RadioGroupRSuite = I18N(
     onChange,
     onBlur,
     options = [],
+    appearance,
     ...rest
   }) => {
     return (
@@ -33,6 +34,7 @@ const RadioGroupRSuite = I18N(
           name={name}
           value={value}
           onChange={onChange}
+          appearance={appearance}
           {...rest}
         >
           {(options ?? []).map(({ value, label}) => (

@@ -25,6 +25,7 @@ import { InputNumber } from './input-number';
 import { RadioGroup } from './radio-group';
 import { CheckboxGroup } from './checkbox-group';
 import { Tabs } from './tabs';
+import { Button } from './button';
 
 const Fields = {
   'input-text': {
@@ -92,6 +93,9 @@ const Fields = {
   },
   'tabs': {
     'react-material-ui': Tabs
+  },
+  'button': {
+    'react-material-ui': Button
   }
 };
 

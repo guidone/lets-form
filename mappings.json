@@ -131,7 +131,6 @@
     "options": null,
     "value": null,
     "image": null,
-    "icon": null,
     "showImageOptions": null,
     "filterKey": null,
     "filterValue": null,
@@ -655,6 +654,9 @@
       "react-bootstrap",
       "react-antd"
     ],
+    "appearance": [
+      "react-rsuite5"
+    ],
     "tooltip": [
       "react-rsuite5",
       "react-antd"
@@ -1092,20 +1094,43 @@
   },
   "button": {
     "name": null,
-    "initialValue": null,
     "buttonType": null,
+    "placeholderOn": null,
     "labelOn": null,
-    "labelOff": null,
     "iconOn": null,
+    "placeholderOff": null,
+    "labelOff": null,
     "iconOff": null,
+    "initialValue": null,
+    "placeholder": null,
+    "labelLink": null,
+    "iconLink": null,
+    "href": null,
     "hint": null,
+    "fullWidth": null,
+    "width": null,
     "hidden": null,
     "size": [
       "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
       "react-antd"
     ],
     "appearance": [
       "react-rsuite5"
+    ],
+    "tooltip": [
+      "react-rsuite5"
+    ],
+    "variant": [
+      "react-material-ui",
+      "react-bootstrap"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
+    "type": [
+      "react-antd"
     ]
   },
   "divider": {

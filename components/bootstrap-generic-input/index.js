@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
-import { Plaintext, RequiredIcon } from '../../components';
+import { RequiredIcon } from '../../components';
 import { passRest, makeWidthStyle } from '../../helpers';
 import { TextOrIcon } from '../../common';
 
@@ -77,35 +77,23 @@ const BootstrapGenericInput = ({
       className={className}
       data-lf-field-name={name}
     >
-      {!plaintext && (
-        <>
-          {useFloatingLabels && (
-            <FloatingLabel
-              label={label}
-            >
-              {innerGroup}
-            </FloatingLabel>
-          )}
-          {!useFloatingLabels && (
-            <Form.Label>
-              {label}
-              {required && <RequiredIcon />}
-            </Form.Label>
-          )}
-          {!useFloatingLabels && innerGroup}
-          {hint && !error && <Form.Text>{hint}</Form.Text>}
-          {_.isString(error) && !_.isEmpty(error) && (
-            <Form.Control.Feedback type="invalid">{error}</Form.Control.Feedback>
-          )}
-        </>
+      {useFloatingLabels && (
+        <FloatingLabel
+          label={label}
+        >
+          {innerGroup}
+        </FloatingLabel>
       )}
-      {plaintext && (
-        <>
-          <Form.Label>{label}</Form.Label>
-          <div>
-            <Plaintext value={value} component={component} locale={lfLocale}/>
-          </div>
-        </>
+      {!useFloatingLabels && (
+        <Form.Label>
+          {label}
+          {required && <RequiredIcon />}
+        </Form.Label>
+      )}
+      {!useFloatingLabels && innerGroup}
+      {hint && !error && <Form.Text>{hint}</Form.Text>}
+      {_.isString(error) && !_.isEmpty(error) && (
+        <Form.Control.Feedback type="invalid">{error}</Form.Control.Feedback>
       )}
     </Form.Group>
   );

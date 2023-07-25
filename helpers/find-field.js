@@ -23,18 +23,27 @@ const createEmptyField = (Manifests, fields, component, framework) => {
     ++retries;
   }
 
-  let defaultValues = framework && Manifests[component] && Manifests[component].defaultValues && Manifests[component].defaultValues[framework] ?
-    Manifests[component].defaultValues[framework] : {}
-
-
-
-  return {
+  let newField = {
     component,
     label: `Field ${countFields + 1}`,
     name: newName,
-    id: newId,
-    ...defaultValues
-  };
+    id: newId
+  }
+
+  // if component has default values
+  if (Manifests[component] && Manifests[component].defaultValues) {
+    // apply all defaults for all platforms
+    Object.keys(Manifests[component].defaultValues)
+      .forEach(framework => {
+        newField = { ...newField, ...Manifests[component].defaultValues[framework] };
+      });
+    // be sure to apply the current framework as last one (in case it includes non framework specific values)
+    if (Manifests[component].defaultValues[framework]) {
+      newField = { ...newField, ...Manifests[component].defaultValues[framework] };
+    }
+  }
+
+  return newField;
 };
 
 

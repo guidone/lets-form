@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import { Button, Tooltip } from 'antd';
+import { Button, Form } from 'react-bootstrap';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
@@ -8,14 +8,16 @@ import { MakeButton } from '../../common';
 
 import './button.scss';
 
-const AntdButton = ({ label, icon, hint, tooltip, ...rest }) => {
+const BootstrapButton = ({ label, icon, hint, ...rest }) => {
   let inner;
   if (!_.isEmpty(label) && !_.isEmpty(icon)) {
     inner = (
       <Button
-        icon={<img className="lf-icon" src={icon} />}
         {...rest}
-      >{label}</Button>
+      >
+        <img className="lf-icon" src={icon} />
+        {label}
+      </Button>
     ) 
   } else if (!_.isEmpty(label) && _.isEmpty(icon)) {
     inner = (
@@ -26,9 +28,10 @@ const AntdButton = ({ label, icon, hint, tooltip, ...rest }) => {
   } else if (_.isEmpty(label) && !_.isEmpty(icon)) {
     inner = (
       <Button
-        icon={<img className="lf-icon" src={icon} />}
         {...rest}
-      />
+      >
+        <img className="lf-icon" src={icon} />
+      </Button>
     );
   } else {
     inner = <></>;
@@ -36,20 +39,18 @@ const AntdButton = ({ label, icon, hint, tooltip, ...rest }) => {
 
   return (
     <>
-      {!_.isEmpty(hint) && (
-        <Tooltip
-          title={hint}
-        >
-          {inner}
-        </Tooltip>
-      )}
-      {_.isEmpty(hint) && inner}    
+      {inner}
+      {hint && <div><Form.Text>{hint}</Form.Text></div>}    
     </>
   );
 };
 
 const BiStateButton = I18N(
-  MakeButton(AntdButton, { type: 'primary' }, { type: undefined }),
+  MakeButton(
+    BootstrapButton, 
+    props => ({ variant: props.variant || 'primary' }), 
+    props => ({ variant: 'outline-' + (props.variant || 'primary') })
+  ),
   ['labelOn', 'labelOff', 'labelLink', 'hint']
 );
 

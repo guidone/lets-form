@@ -2089,6 +2089,15 @@
         "type": "boolean"
       },
       {
+        "name": "appearance",
+        "type": "string",
+        "description": "Show as default radio control or stacked buttons",
+        "options": [
+          "default",
+          "picker"
+        ]
+      },
+      {
         "name": "tooltip",
         "type": "boolean",
         "description": "Show hint as tooltip next to label"
@@ -3223,6 +3232,7 @@
   "button": {
     "label": "Button",
     "category": "layout",
+    "description": "Icon button, can be used as toggle button or just a link button",
     "name": "button",
     "common": [
       {
@@ -3231,41 +3241,60 @@
         "description": "The name of the field and the key of the JSON"
       },
       {
-        "name": "initialValue",
-        "type": "boolean"
-      },
-      {
         "name": "buttonType",
         "type": "string",
+        "description": "Type of button: toggle 2-states button or link button",
         "options": [
-          "plain",
-          "icon"
+          "toggle",
+          "link"
         ]
       },
       {
         "name": "labelOn",
-        "type": "string | i18n",
-        "description": "Label for ON status"
-      },
-      {
-        "name": "labelOff",
-        "type": "string | i18n",
-        "description": "Label for OFF status"
+        "type": "string | i18n"
       },
       {
         "name": "iconOn",
-        "type": "string",
-        "description": "Icon for ON status"
+        "type": "string"
+      },
+      {
+        "name": "labelOff",
+        "type": "string | i18n"
       },
       {
         "name": "iconOff",
-        "type": "string",
-        "description": "Icon for OFF status"
+        "type": "string"
+      },
+      {
+        "name": "initialValue",
+        "type": "boolean"
+      },
+      {
+        "name": "labelLink",
+        "type": "string | i18n"
+      },
+      {
+        "name": "iconLink",
+        "type": "string"
+      },
+      {
+        "name": "href",
+        "type": "string"
       },
       {
         "name": "hint",
         "type": "string | i18n",
         "description": "Show hint in a tooltip"
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
       },
       {
         "name": "hidden",
@@ -3288,12 +3317,77 @@
       {
         "name": "appearance",
         "type": "string",
+        "description": "Only available for link-type buttons",
         "options": [
           "default",
           "primary",
           "subtle",
           "link",
           "ghost"
+        ]
+      },
+      {
+        "name": "tooltip",
+        "type": "boolean",
+        "description": "Show hint as tooltip next to label"
+      }
+    ],
+    "react-material-ui": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "small",
+          "medium",
+          "large"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "outlined",
+          "filled",
+          "standard"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "error",
+          "info",
+          "primary",
+          "secondary",
+          "success",
+          "warning"
+        ]
+      }
+    ],
+    "react-bootstrap": [
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "primary",
+          "secondary",
+          "success",
+          "warning",
+          "danger",
+          "info",
+          "light",
+          "dark",
+          "link"
+        ]
+      },
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "lg",
+          "sm"
         ]
       }
     ],
@@ -3307,10 +3401,24 @@
           "default",
           "large"
         ]
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "description": "Only available for link-type buttons",
+        "options": [
+          "primary",
+          "default",
+          "dashed",
+          "text",
+          "link"
+        ]
       }
     ],
     "frameworks": [
       "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
       "react-antd"
     ]
   },

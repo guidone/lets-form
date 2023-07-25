@@ -48,7 +48,7 @@
   // as a general rule, components have a top margin, unless they are the first of their container
   [class*=lf-control]:not(:first-child) {
     margin-top: var(--lf-field-margin);
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
   }
 
   .lf-control-common-array {

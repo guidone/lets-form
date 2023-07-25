@@ -23,6 +23,7 @@ import { ReactView } from './react-view';
 import { ListArray } from './array';
 import { InputNumber } from './input-number';
 import { Tabs } from './tabs';
+import { Button } from './button';
 
 const Fields = {
   'input-text': {
@@ -84,6 +85,9 @@ const Fields = {
   },
   'tabs': {
     'react-bootstrap': Tabs
+  },
+  'button': {
+    'react-bootstrap': Button
   }
 };
 

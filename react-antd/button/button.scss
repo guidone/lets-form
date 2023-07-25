@@ -1,22 +1,32 @@
-.lf-control-button {
-  min-height: 20px;
-
-  .lf-icon {
-    max-width: 16px;
-    max-height: 16px;
-  }
-
-  .rs-btn-lg {
-    .lf-icon {
-      max-width: 20px;
-      max-height: 20px;
+.lf-form-react-antd {
+  .lf-control-button {
+    min-height: 20px;
+    
+    .ant-btn {
+      min-width: 32px;
     }
-  }
 
-  .rs-btn-xs {
     .lf-icon {
-      max-width: 12px;
-      max-height: 12px;
+      max-width: 16px;
+      max-height: 16px;
+      margin-top: -2px;
+      
+    }
+
+    .ant-btn-lg {
+      min-width: 40px;
+      .lf-icon {
+        max-width: 20px;
+        max-height: 20px;
+      }
+    }
+
+    .ant-btn-sm {
+      min-width: 24px;
+      .lf-icon {
+        max-width: 14px;
+        max-height: 14px;
+      }
     }
   }
 }
