@@ -738,6 +738,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     children,
     components,
     className,
+    hideCancel, 
+    hideSubmit,
     demo = false
   }) => {
     const { showErrors } = form;
@@ -933,6 +935,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             {..._.omit(form, 'id', 'fields', 'version')}
             labelSubmit={i18n(form.labelSubmit, locale) || 'Submit'}
             labelCancel={i18n(form.labelCancel, locale) || 'Cancel'}
+            hideCancel={hideCancel}
+            hideSubmit={hideSubmit}
             custom={custom}
           >
             {renderFields({

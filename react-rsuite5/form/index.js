@@ -14,6 +14,8 @@ const FormRsuite5 = ({
   buttonsAlign,
   labelSubmit = 'Submit',
   labelCancel = 'Cancel',
+  hideCancel = false,
+  hideSumbut = false,
   readOnly = false,
   onlyFields = false,
   hideToolbar = false,
@@ -49,15 +51,19 @@ const FormRsuite5 = ({
       </div>
       {!hideToolbar && (
         <ButtonToolbar className="lf-buttons">
-          <Button
-            appearance="primary"
-            onClick={onSubmit}
-            disabled={disabled || disabledSubmit}
-          >{labelSubmit}</Button>
-          <Button
-            onClick={onReset}
-            disabled={disabled}
-          >{labelCancel}</Button>
+          {!hideSumbut && (
+            <Button
+              appearance="primary"
+              onClick={onSubmit}
+              disabled={disabled || disabledSubmit}
+            >{labelSubmit}</Button>
+          )}
+          {!hideCancel && (
+            <Button
+              onClick={onReset}
+              disabled={disabled}
+            >{labelCancel}</Button>
+          )}
           {custom}
         </ButtonToolbar>
       )}

@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { Form } from 'rsuite';
 import { RadioTile, RadioTileGroup } from 'rsuite';
-import classNames from 'classnames';
 
 import { I18N, RequiredIcon } from '../../components';
 
@@ -24,13 +23,24 @@ const RadioTileRSuite = I18N(
     onChange,
     onBlur,
     options = [],
+    initalOption,
     ...rest
   }) => {
+    const initialValue = initalOption || (options || [])
+      .reduce((current, option) => current || option?.value, null);
+    const [currentValue, setCurrentValue] = useState(initialValue);
+
+    const handleChange = useCallback(
+      value => {
+        setCurrentValue(value);
+        onChange(value);
+      },
+      [onChange]
+    );
+
     return (
       <Form.Group
-        className={classNames(
-          'lf-control-input-text'
-        )}
+        className="lf-control-input-text"
         data-lf-field-name={name}
       >
         {label && (
@@ -41,8 +51,8 @@ const RadioTileRSuite = I18N(
           </Form.ControlLabel>
         )}
         <RadioTileGroup 
-          value={value}
-          onChange={onChange}
+          value={currentValue}
+          onChange={handleChange}
           inline={inline}
           disabled={disabled}
         >

@@ -1321,6 +1321,7 @@
     "value": null,
     "description": null,
     "icon": null,
+    "initalOption": null,
     "disabled": null,
     "hidden": null,
     "inline": [

@@ -991,7 +991,7 @@
   },
   "array": {
     "label": "List Array",
-    "category": "advanced",
+    "category": "general",
     "name": "array",
     "common": [
       {
@@ -3896,6 +3896,10 @@
       {
         "name": "options",
         "type": "array"
+      },
+      {
+        "name": "initalOption",
+        "type": "string"
       },
       {
         "name": "disabled",
