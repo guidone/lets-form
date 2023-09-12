@@ -5131,7 +5131,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-input-text-i18n-item-locale{font-s
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-input-text .rs-form-control-wrapper>.rs-input,.lf-control-input-text .rs-form-control-wrapper>.rs-input-number{width:100%}.lf-control-input-text .lf-prefix-icon{max-height:16px}.lf-control-input-text.lf-size-lg .lf-prefix-icon{max-height:22px}.lf-control-input-text.lf-size-md .lf-prefix-icon{max-height:16px}.lf-control-input-text.lf-size-sm .lf-prefix-icon{max-height:10px}.lf-control-input-text.lf-size-xs .lf-prefix-icon{max-height:4px}", "",{"version":3,"sources":["webpack://./react-rsuite5/input-text/input-text.scss"],"names":[],"mappings":"AAEE,2HACE,UAAA,CAIF,uCACE,eAAA,CAIA,kDACE,eAAA,CAKF,kDACE,eAAA,CAKF,kDACE,eAAA,CAKF,kDACE,cAAA","sourcesContent":[".lf-control-input-text {\n\n  .rs-form-control-wrapper>.rs-input, .rs-form-control-wrapper>.rs-input-number {\n    width: 100%;\n  }\n\n  // this ensure the icon is centered vertically\n  .lf-prefix-icon {\n    max-height: 16px;\n  }\n\n  &.lf-size-lg {\n    .lf-prefix-icon {\n      max-height: 22px;\n    }\n  }\n\n  &.lf-size-md {\n    .lf-prefix-icon {\n      max-height: 16px;\n    }\n  }\n\n  &.lf-size-sm {\n    .lf-prefix-icon {\n      max-height: 10px;\n    }\n  }\n\n  &.lf-size-xs {\n    .lf-prefix-icon {\n      max-height: 4px;\n    }\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-input-text .rs-form-control-wrapper>.rs-input,.lf-control-input-text .rs-form-control-wrapper>.rs-input-number{width:100%}.lf-control-input-text.lf-full-width .rs-input-group{width:100%}.lf-control-input-text .lf-prefix-icon{max-height:16px}.lf-control-input-text.lf-size-lg .lf-prefix-icon{max-height:22px}.lf-control-input-text.lf-size-md .lf-prefix-icon{max-height:16px}.lf-control-input-text.lf-size-sm .lf-prefix-icon{max-height:10px}.lf-control-input-text.lf-size-xs .lf-prefix-icon{max-height:4px}", "",{"version":3,"sources":["webpack://./react-rsuite5/input-text/input-text.scss"],"names":[],"mappings":"AAEE,2HACE,UAAA,CAIA,qDACE,UAAA,CAKJ,uCACE,eAAA,CAIA,kDACE,eAAA,CAKF,kDACE,eAAA,CAKF,kDACE,eAAA,CAKF,kDACE,cAAA","sourcesContent":[".lf-control-input-text {\n\n  .rs-form-control-wrapper>.rs-input, .rs-form-control-wrapper>.rs-input-number {\n    width: 100%;\n  }\n\n  &.lf-full-width {\n    .rs-input-group {\n      width: 100%;\n    }\n  }\n\n  // this ensure the icon is centered vertically\n  .lf-prefix-icon {\n    max-height: 16px;\n  }\n\n  &.lf-size-lg {\n    .lf-prefix-icon {\n      max-height: 22px;\n    }\n  }\n\n  &.lf-size-md {\n    .lf-prefix-icon {\n      max-height: 16px;\n    }\n  }\n\n  &.lf-size-sm {\n    .lf-prefix-icon {\n      max-height: 10px;\n    }\n  }\n\n  &.lf-size-xs {\n    .lf-prefix-icon {\n      max-height: 4px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5377,34 +5377,6 @@ var root = __webpack_require__(5639);
 var Symbol = root.Symbol;
 
 module.exports = Symbol;
-
-
-/***/ }),
-
-/***/ 6874:
-/***/ ((module) => {
-
-/**
- * A faster alternative to `Function#apply`, this function invokes `func`
- * with the `this` binding of `thisArg` and the arguments of `args`.
- *
- * @private
- * @param {Function} func The function to invoke.
- * @param {*} thisArg The `this` binding of `func`.
- * @param {Array} args The arguments to invoke `func` with.
- * @returns {*} Returns the result of `func`.
- */
-function apply(func, thisArg, args) {
-  switch (args.length) {
-    case 0: return func.call(thisArg);
-    case 1: return func.call(thisArg, args[0]);
-    case 2: return func.call(thisArg, args[0], args[1]);
-    case 3: return func.call(thisArg, args[0], args[1], args[2]);
-  }
-  return func.apply(thisArg, args);
-}
-
-module.exports = apply;
 
 
 /***/ }),
@@ -6243,24 +6215,29 @@ module.exports = defineProperty;
 /***/ }),
 
 /***/ 9021:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var flatten = __webpack_require__(5564),
-    overRest = __webpack_require__(5357),
-    setToString = __webpack_require__(61);
+/***/ ((module) => {
 
 /**
- * A specialized version of `baseRest` which flattens the rest array.
+ * This method returns the first argument it receives.
  *
- * @private
- * @param {Function} func The function to apply a rest parameter to.
- * @returns {Function} Returns the new function.
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Util
+ * @param {*} value Any value.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ *
+ * console.log(_.identity(object) === object);
+ * // => true
  */
-function flatRest(func) {
-  return setToString(overRest(func, undefined, flatten), func + '');
+function identity(value) {
+  return value;
 }
 
-module.exports = flatRest;
+module.exports = identity;
 
 
 /***/ }),
@@ -6644,49 +6621,6 @@ module.exports = overArg;
 
 /***/ }),
 
-/***/ 5357:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var apply = __webpack_require__(6874);
-
-/* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeMax = Math.max;
-
-/**
- * A specialized version of `baseRest` which transforms the rest array.
- *
- * @private
- * @param {Function} func The function to apply a rest parameter to.
- * @param {number} [start=func.length-1] The start position of the rest parameter.
- * @param {Function} transform The rest array transform.
- * @returns {Function} Returns the new function.
- */
-function overRest(func, start, transform) {
-  start = nativeMax(start === undefined ? (func.length - 1) : start, 0);
-  return function() {
-    var args = arguments,
-        index = -1,
-        length = nativeMax(args.length - start, 0),
-        array = Array(length);
-
-    while (++index < length) {
-      array[index] = args[start + index];
-    }
-    index = -1;
-    var otherArgs = Array(start + 1);
-    while (++index < start) {
-      otherArgs[index] = args[index];
-    }
-    otherArgs[start] = transform(array);
-    return apply(func, this, otherArgs);
-  };
-}
-
-module.exports = overRest;
-
-
-/***/ }),
-
 /***/ 292:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -6722,34 +6656,6 @@ var freeSelf = typeof self == 'object' && self && self.Object === Object && self
 var root = freeGlobal || freeSelf || Function('return this')();
 
 module.exports = root;
-
-
-/***/ }),
-
-/***/ 61:
-/***/ ((module) => {
-
-/**
- * This method returns the first argument it receives.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Util
- * @param {*} value Any value.
- * @returns {*} Returns `value`.
- * @example
- *
- * var object = { 'a': 1 };
- *
- * console.log(_.identity(object) === object);
- * // => true
- */
-function identity(value) {
-  return value;
-}
-
-module.exports = identity;
 
 
 /***/ }),
