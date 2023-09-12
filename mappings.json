@@ -244,6 +244,7 @@
     "readOnly": null,
     "hidden": null,
     "layout": null,
+    "arrayType": null,
     "tooltip": [
       "react-rsuite5"
     ],
@@ -1334,6 +1335,65 @@
       "react-rsuite5"
     ],
     "tooltip": [
+      "react-rsuite5"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "upload": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "disabled": null,
+    "hidden": null,
+    "accept": [
+      "react-rsuite5"
+    ],
+    "acceptedFile": [
+      "react-rsuite5"
+    ],
+    "listType": [
+      "react-rsuite5"
+    ],
+    "maxPreviewFileSize": [
+      "react-rsuite5"
+    ],
+    "tooltip": [
+      "react-rsuite5"
+    ],
+    "fileListVisible": [
+      "react-rsuite5"
+    ],
+    "disabledFileItem": [
+      "react-rsuite5"
+    ],
+    "multiple": [
+      "react-rsuite5"
+    ],
+    "removable": [
+      "react-rsuite5"
+    ],
+    "draggable": [
+      "react-rsuite5"
+    ],
+    "uploadButtonLabel": [
+      "react-rsuite5"
+    ],
+    "uploadButtonAppearance": [
+      "react-rsuite5"
+    ],
+    "uploadButtonSize": [
+      "react-rsuite5"
+    ],
+    "draggableText": [
+      "react-rsuite5"
+    ],
+    "draggableHeight": [
       "react-rsuite5"
     ],
     "validationMinLength": "validation",

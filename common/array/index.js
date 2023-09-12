@@ -1,12 +1,65 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
 
-import { fillIds } from '../../helpers';
+import { fillIds, collectNames } from '../../helpers';
 import { useFormContext } from '../../hooks';
 
 import { isEmptyItem } from './helpers/is-empty-item';
 import { ArrayItem } from './views/array-item';
 import './list-array.scss';
+
+
+ const flatArrayOfString = a => {
+  const canBeFlat = a.every(obj => Object.keys(obj).length === 1);
+  if (!canBeFlat) {
+    throw new Error(`Cannot be flattened`);
+  }  
+  return a.map(obj => obj[Object.keys(obj)[0]]);
+}
+
+const formatArray = (a, arrayType = 'arrayOfObject') => {
+  const cleaned = a.map(i => _.omit(i, 'id'));
+
+  try {
+    const flattened = flatArrayOfString(cleaned);
+    if (arrayType === 'arrayOfString') {
+      return flattened;
+    } else if (arrayType === 'commaSeparated') {
+      return flattened.join(',');
+    }
+  } catch(e) {
+    // do nothing, return as is
+  }
+  return cleaned;
+};
+
+
+const makeDefaultValue = (defaultValue, arrayType, form) => {
+  if (arrayType === 'arrayOfString') {
+    const isArrayOfString = _.isArray(defaultValue) && defaultValue.every(s => _.isString(s));
+    const names = collectNames(form);
+    // if it's an array of string
+    if (isArrayOfString && names.length === 1) {
+      return defaultValue.map(s => ({
+        id: _.uniqueId(),
+        [names[0]]: s
+      }));
+    }
+    return [{ id: _.uniqueId() }]; 
+  } else if (arrayType === 'commaSeparated') {
+    const names = collectNames(form);
+    if (names.length === 1 && _.isString(defaultValue) && !_.isEmpty(defaultValue)) {
+      return defaultValue.split(',').map(s => ({
+        id: _.uniqueId(),
+        [names[0]]: s
+      }));
+    }
+    return [{ id: _.uniqueId() }];
+  } else {
+    return _.isArray(defaultValue) && !_.isEmpty(defaultValue) ? fillIds(defaultValue) : [{ id: _.uniqueId() }]
+  } 
+};
+
 
 const ListArray = ({
   LetsFormComponent,
@@ -20,19 +73,17 @@ const ListArray = ({
   maxHeight,
   lfLocale,
   leftMargin = 0,
-  children
+  children,
+  arrayType = 'arrayOfObject'
 }) => {
-  const [items, setItems] = useState(
-    _.isArray(value) && !_.isEmpty(value) ? fillIds(value) : [{ id: _.uniqueId() }]
-  );
   const { locales } = useFormContext();
-
   const form = {
     layout,
     fluid: true,
     locales, // copy the locales from the main form
     fields
   };
+  const [items, setItems] = useState(makeDefaultValue(value, arrayType, form));
 
   let style = {};
   if (maxHeight) {
@@ -60,9 +111,9 @@ const ListArray = ({
     (item) => {
       const newItems = items.filter(i => i.id !== item.id);
       setItems(newItems);
-      onChange(newItems.map(i => _.omit(i, 'id')));
+      onChange(formatArray(newItems, arrayType));
     },
-    [items, onChange]
+    [items, onChange, arrayType]
   );
 
   if (children) {
@@ -97,10 +148,9 @@ const ListArray = ({
               defaultValues={item}
               onlyFields={true}
               onChange={value => {
-                console.log('changed item', value)
                 const newItems = items.map(i => i.id === value.id ? value : i);
                 setItems(newItems);
-                onChange(newItems.map(i => _.omit(i, 'id')));
+                onChange(formatArray(newItems, arrayType));
               }}
             />
           </ArrayItem>

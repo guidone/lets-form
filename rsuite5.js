@@ -526,18 +526,21 @@ var Divider = function Divider(_ref) {
 
 // EXTERNAL MODULE: ./common/react-view/index.js
 var react_view = __webpack_require__(8169);
-// EXTERNAL MODULE: ./node_modules/lodash/omit.js
-var omit = __webpack_require__(7557);
-var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 // EXTERNAL MODULE: ./node_modules/lodash/isNumber.js
 var isNumber = __webpack_require__(1763);
 var isNumber_default = /*#__PURE__*/__webpack_require__.n(isNumber);
 // EXTERNAL MODULE: ./node_modules/lodash/uniqueId.js
 var uniqueId = __webpack_require__(3955);
 var uniqueId_default = /*#__PURE__*/__webpack_require__.n(uniqueId);
+// EXTERNAL MODULE: ./node_modules/lodash/isString.js
+var isString = __webpack_require__(7037);
+var isString_default = /*#__PURE__*/__webpack_require__.n(isString);
 // EXTERNAL MODULE: ./node_modules/lodash/isArray.js
 var isArray = __webpack_require__(1469);
 var isArray_default = /*#__PURE__*/__webpack_require__.n(isArray);
+// EXTERNAL MODULE: ./node_modules/lodash/omit.js
+var omit = __webpack_require__(7557);
+var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 // EXTERNAL MODULE: ./hooks/index.js
 var hooks = __webpack_require__(5490);
 ;// CONCATENATED MODULE: ./common/array/helpers/is-empty-item.js
@@ -664,6 +667,8 @@ var list_array_update = injectStylesIntoStyleTag_default()(list_array/* default 
 
 
 
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
@@ -674,37 +679,99 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 
 
 
 
 
-var ListArray = function ListArray(_ref) {
-  var LetsFormComponent = _ref.LetsFormComponent,
-    value = _ref.value,
-    _ref$onChange = _ref.onChange,
-    _onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
-    _ref$onBlur = _ref.onBlur,
-    onBlur = _ref$onBlur === void 0 ? function () {} : _ref$onBlur,
-    _ref$disabled = _ref.disabled,
-    disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-    _ref$readOnly = _ref.readOnly,
-    readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-    fields = _ref.fields,
-    _ref$layout = _ref.layout,
-    layout = _ref$layout === void 0 ? 'vertical' : _ref$layout,
-    maxHeight = _ref.maxHeight,
-    lfLocale = _ref.lfLocale,
-    _ref$leftMargin = _ref.leftMargin,
-    leftMargin = _ref$leftMargin === void 0 ? 0 : _ref$leftMargin,
-    children = _ref.children;
-  var _useState = (0,external_react_.useState)(isArray_default()(value) && !isEmpty_default()(value) ? (0,helpers/* fillIds */.Mw)(value) : [{
+var flatArrayOfString = function flatArrayOfString(a) {
+  var canBeFlat = a.every(function (obj) {
+    return Object.keys(obj).length === 1;
+  });
+  if (!canBeFlat) {
+    throw new Error("Cannot be flattened");
+  }
+  return a.map(function (obj) {
+    return obj[Object.keys(obj)[0]];
+  });
+};
+var formatArray = function formatArray(a) {
+  var arrayType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'arrayOfObject';
+  var cleaned = a.map(function (i) {
+    return omit_default()(i, 'id');
+  });
+  try {
+    var flattened = flatArrayOfString(cleaned);
+    if (arrayType === 'arrayOfString') {
+      return flattened;
+    } else if (arrayType === 'commaSeparated') {
+      return flattened.join(',');
+    }
+  } catch (e) {
+    // do nothing, return as is
+  }
+  return cleaned;
+};
+var makeDefaultValue = function makeDefaultValue(defaultValue, arrayType, form) {
+  if (arrayType === 'arrayOfString') {
+    var isArrayOfString = isArray_default()(defaultValue) && defaultValue.every(function (s) {
+      return isString_default()(s);
+    });
+    var names = (0,helpers/* collectNames */.BI)(form);
+    // if it's an array of string
+    if (isArrayOfString && names.length === 1) {
+      return defaultValue.map(function (s) {
+        return _defineProperty({
+          id: uniqueId_default()()
+        }, names[0], s);
+      });
+    }
+    return [{
       id: uniqueId_default()()
-    }]),
-    _useState2 = _slicedToArray(_useState, 2),
-    items = _useState2[0],
-    setItems = _useState2[1];
+    }];
+  } else if (arrayType === 'commaSeparated') {
+    var _names = (0,helpers/* collectNames */.BI)(form);
+    if (_names.length === 1 && isString_default()(defaultValue) && !isEmpty_default()(defaultValue)) {
+      return defaultValue.split(',').map(function (s) {
+        return _defineProperty({
+          id: uniqueId_default()()
+        }, _names[0], s);
+      });
+    }
+    return [{
+      id: uniqueId_default()()
+    }];
+  } else {
+    return isArray_default()(defaultValue) && !isEmpty_default()(defaultValue) ? (0,helpers/* fillIds */.Mw)(defaultValue) : [{
+      id: uniqueId_default()()
+    }];
+  }
+};
+var ListArray = function ListArray(_ref3) {
+  var LetsFormComponent = _ref3.LetsFormComponent,
+    value = _ref3.value,
+    _ref3$onChange = _ref3.onChange,
+    _onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
+    _ref3$onBlur = _ref3.onBlur,
+    onBlur = _ref3$onBlur === void 0 ? function () {} : _ref3$onBlur,
+    _ref3$disabled = _ref3.disabled,
+    disabled = _ref3$disabled === void 0 ? false : _ref3$disabled,
+    _ref3$readOnly = _ref3.readOnly,
+    readOnly = _ref3$readOnly === void 0 ? false : _ref3$readOnly,
+    fields = _ref3.fields,
+    _ref3$layout = _ref3.layout,
+    layout = _ref3$layout === void 0 ? 'vertical' : _ref3$layout,
+    maxHeight = _ref3.maxHeight,
+    lfLocale = _ref3.lfLocale,
+    _ref3$leftMargin = _ref3.leftMargin,
+    leftMargin = _ref3$leftMargin === void 0 ? 0 : _ref3$leftMargin,
+    children = _ref3.children,
+    _ref3$arrayType = _ref3.arrayType,
+    arrayType = _ref3$arrayType === void 0 ? 'arrayOfObject' : _ref3$arrayType;
   var _useFormContext = (0,hooks/* useFormContext */.G)(),
     locales = _useFormContext.locales;
   var form = {
@@ -714,6 +781,10 @@ var ListArray = function ListArray(_ref) {
     // copy the locales from the main form
     fields: fields
   };
+  var _useState = (0,external_react_.useState)(makeDefaultValue(value, arrayType, form)),
+    _useState2 = _slicedToArray(_useState, 2),
+    items = _useState2[0],
+    setItems = _useState2[1];
   var style = {};
   if (maxHeight) {
     //style.maxHeigth = _.isNumber(maxHeigth) ? `${maxHeigth}px` : maxHeigth;
@@ -737,10 +808,8 @@ var ListArray = function ListArray(_ref) {
       return i.id !== item.id;
     });
     setItems(newItems);
-    _onChange(newItems.map(function (i) {
-      return omit_default()(i, 'id');
-    }));
-  }, [items, _onChange]);
+    _onChange(formatArray(newItems, arrayType));
+  }, [items, _onChange, arrayType]);
   if (children) {
     return /*#__PURE__*/external_react_default().createElement("div", {
       style: {
@@ -771,14 +840,11 @@ var ListArray = function ListArray(_ref) {
       defaultValues: item,
       onlyFields: true,
       onChange: function onChange(value) {
-        console.log('changed item', value);
         var newItems = items.map(function (i) {
           return i.id === value.id ? value : i;
         });
         setItems(newItems);
-        _onChange(newItems.map(function (i) {
-          return omit_default()(i, 'id');
-        }));
+        _onChange(formatArray(newItems, arrayType));
       }
     }));
   }));
@@ -3865,7 +3931,7 @@ var isEmptyForm = function isEmptyForm(form) {
   return !form || !Array.isArray(form.fields) || form.fields.length === 0;
 };
 ;// CONCATENATED MODULE: ./mappings.json
-const mappings_namespaceObject = JSON.parse('{"input-text":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"value":null,"image":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui","react-antd"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"popupMatchSelectWidth":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"layout":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"fullWidth":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-bootstrap","react-antd"],"step":["react-rsuite5","react-bootstrap","react-antd"],"max":["react-rsuite5","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":["react-rsuite5","react-material-ui","react-antd"],"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"value":["react-rsuite5","react-material-ui","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"size":["react-material-ui","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"row":["react-material-ui"],"reverse":["react-bootstrap"],"optionType":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui"],"disableUnderline":["react-material-ui"],"maxRows":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"value":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-antd"],"multiselectMode":["react-rsuite5"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui"],"variant":["react-material-ui"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"align":null,"hidden":null,"maxWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"maxHeight":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginTop":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginBottom":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"button":{"name":null,"buttonType":null,"placeholderOn":null,"labelOn":null,"iconOn":null,"placeholderOff":null,"labelOff":null,"iconOff":null,"initialValue":null,"placeholder":null,"labelLink":null,"iconLink":null,"href":null,"hint":null,"fullWidth":null,"width":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"tooltip":["react-rsuite5"],"variant":["react-material-ui","react-bootstrap"],"color":["react-material-ui"],"type":["react-antd"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"tabs":{"name":null,"label":null,"hint":null,"tabs":null,"value":null,"hidden":null,"appearance":["react-rsuite5"],"reversed":["react-rsuite5"],"justified":["react-rsuite5"],"indicatorColor":["react-material-ui"],"textColor":["react-material-ui"],"centered":["react-material-ui","react-antd"],"fullWidth":["react-material-ui"],"variant":["react-bootstrap"],"transition":["react-bootstrap"],"fill":["react-bootstrap"],"justify":["react-bootstrap"],"size":["react-antd"],"tabType":["react-antd"],"animated":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-tile":{"name":null,"label":null,"hint":null,"options":null,"value":null,"description":null,"icon":null,"initalOption":null,"disabled":null,"hidden":null,"inline":["react-rsuite5"],"iconWidth":["react-rsuite5"],"iconHeight":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
+const mappings_namespaceObject = JSON.parse('{"input-text":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"value":null,"image":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui","react-antd"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"popupMatchSelectWidth":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"layout":null,"arrayType":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"fullWidth":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-bootstrap","react-antd"],"step":["react-rsuite5","react-bootstrap","react-antd"],"max":["react-rsuite5","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":["react-rsuite5","react-material-ui","react-antd"],"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"value":["react-rsuite5","react-material-ui","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"size":["react-material-ui","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"row":["react-material-ui"],"reverse":["react-bootstrap"],"optionType":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui"],"disableUnderline":["react-material-ui"],"maxRows":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"value":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-antd"],"multiselectMode":["react-rsuite5"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui"],"variant":["react-material-ui"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"align":null,"hidden":null,"maxWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"maxHeight":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginTop":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginBottom":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"button":{"name":null,"buttonType":null,"placeholderOn":null,"labelOn":null,"iconOn":null,"placeholderOff":null,"labelOff":null,"iconOff":null,"initialValue":null,"placeholder":null,"labelLink":null,"iconLink":null,"href":null,"hint":null,"fullWidth":null,"width":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"tooltip":["react-rsuite5"],"variant":["react-material-ui","react-bootstrap"],"color":["react-material-ui"],"type":["react-antd"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"tabs":{"name":null,"label":null,"hint":null,"tabs":null,"value":null,"hidden":null,"appearance":["react-rsuite5"],"reversed":["react-rsuite5"],"justified":["react-rsuite5"],"indicatorColor":["react-material-ui"],"textColor":["react-material-ui"],"centered":["react-material-ui","react-antd"],"fullWidth":["react-material-ui"],"variant":["react-bootstrap"],"transition":["react-bootstrap"],"fill":["react-bootstrap"],"justify":["react-bootstrap"],"size":["react-antd"],"tabType":["react-antd"],"animated":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-tile":{"name":null,"label":null,"hint":null,"options":null,"value":null,"description":null,"icon":null,"initalOption":null,"disabled":null,"hidden":null,"inline":["react-rsuite5"],"iconWidth":["react-rsuite5"],"iconHeight":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"upload":{"name":null,"label":null,"hint":null,"disabled":null,"hidden":null,"accept":["react-rsuite5"],"acceptedFile":["react-rsuite5"],"listType":["react-rsuite5"],"maxPreviewFileSize":["react-rsuite5"],"tooltip":["react-rsuite5"],"fileListVisible":["react-rsuite5"],"disabledFileItem":["react-rsuite5"],"multiple":["react-rsuite5"],"removable":["react-rsuite5"],"draggable":["react-rsuite5"],"uploadButtonLabel":["react-rsuite5"],"uploadButtonAppearance":["react-rsuite5"],"uploadButtonSize":["react-rsuite5"],"draggableText":["react-rsuite5"],"draggableHeight":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
 ;// CONCATENATED MODULE: ./helpers/apply-transformers.js
 
 
@@ -4674,7 +4740,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-common-array{margin-top:0px !important}.lf-control-common-array .lf-control-common-array-item{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;align-items:stretch;position:relative;border-left:5px solid #ddd;padding-left:10px;padding-top:5px;padding-bottom:5px;margin-top:5px !important}.lf-control-common-array .lf-control-common-array-item>.inner-form{order:0;flex:1 0 auto;align-self:auto;--lf-field-margin: 4px;--lf-field-column-margin: 10px}.lf-control-common-array .lf-control-common-array-item>.buttons{flex:0 0 auto;align-self:flex-start;margin-left:6px}.lf-icon-button{display:inline-block;min-height:16px;min-width:16px;padding:4px;border-radius:3px}.lf-icon-button.disabled{opacity:.6}.lf-icon-button:not(.disabled):hover{background-color:#eee}", "",{"version":3,"sources":["webpack://./common/array/list-array.scss"],"names":[],"mappings":"AAAA,yBACE,yBAAA,CAEA,uDACE,YAAA,CACA,kBAAA,CACA,gBAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,iBAAA,CACA,0BAAA,CACA,iBAAA,CACA,eAAA,CACA,kBAAA,CACA,yBAAA,CAMA,mEACE,OAAA,CACA,aAAA,CACA,eAAA,CACA,sBAAA,CACA,8BAAA,CAGF,gEACE,aAAA,CACA,qBAAA,CACA,eAAA,CAMN,gBACE,oBAAA,CACA,eAAA,CACA,cAAA,CACA,WAAA,CACA,iBAAA,CAEA,yBACE,UAAA,CAGF,qCACE,qBAAA","sourcesContent":[".lf-control-common-array {\n  margin-top: 0px !important;\n\n  .lf-control-common-array-item {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n    position: relative;\n    border-left: 5px solid #dddddd;\n    padding-left: 10px;\n    padding-top: 5px;\n    padding-bottom: 5px;\n    margin-top: 5px !important;\n\n    /*.rs-form-group {\n      margin-bottom: 5px !important;\n    }*/\n\n    > .inner-form {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n      --lf-field-margin: 4px;\n      --lf-field-column-margin: 10px;\n    }\n\n    > .buttons {\n      flex: 0 0 auto;\n      align-self: flex-start;\n      margin-left: 6px;\n    }\n  }\n\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n\n  &.disabled {\n    opacity: 0.6;\n  }\n\n  &:not(.disabled):hover {\n    background-color: #eeeeee;\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-common-array{margin-top:0px !important}.lf-control-common-array .lf-control-common-array-item{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;align-items:stretch;position:relative;border-left:5px solid #ddd;padding-left:10px;padding-top:5px;padding-bottom:5px;margin-top:5px !important}.lf-control-common-array .lf-control-common-array-item>.inner-form{order:0;flex:1 0 auto;align-self:auto;--lf-field-margin: 4px;--lf-field-column-margin: 10px}.lf-control-common-array .lf-control-common-array-item>.buttons{flex:0 0 auto;align-self:center;margin-left:6px}.lf-icon-button{display:inline-block;min-height:16px;min-width:16px;padding:4px;border-radius:3px}.lf-icon-button.disabled{opacity:.6}.lf-icon-button:not(.disabled):hover{background-color:#eee}", "",{"version":3,"sources":["webpack://./common/array/list-array.scss"],"names":[],"mappings":"AAAA,yBACE,yBAAA,CAEA,uDACE,YAAA,CACA,kBAAA,CACA,gBAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,iBAAA,CACA,0BAAA,CACA,iBAAA,CACA,eAAA,CACA,kBAAA,CACA,yBAAA,CAMA,mEACE,OAAA,CACA,aAAA,CACA,eAAA,CACA,sBAAA,CACA,8BAAA,CAGF,gEACE,aAAA,CACA,iBAAA,CACA,eAAA,CAMN,gBACE,oBAAA,CACA,eAAA,CACA,cAAA,CACA,WAAA,CACA,iBAAA,CAEA,yBACE,UAAA,CAGF,qCACE,qBAAA","sourcesContent":[".lf-control-common-array {\n  margin-top: 0px !important;\n\n  .lf-control-common-array-item {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n    position: relative;\n    border-left: 5px solid #dddddd;\n    padding-left: 10px;\n    padding-top: 5px;\n    padding-bottom: 5px;\n    margin-top: 5px !important;\n\n    /*.rs-form-group {\n      margin-bottom: 5px !important;\n    }*/\n\n    > .inner-form {\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n      --lf-field-margin: 4px;\n      --lf-field-column-margin: 10px;\n    }\n\n    > .buttons {\n      flex: 0 0 auto;\n      align-self: center;\n      margin-left: 6px;\n    }\n  }\n\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n\n  &.disabled {\n    opacity: 0.6;\n  }\n\n  &:not(.disabled):hover {\n    background-color: #eeeeee;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5158,6 +5224,29 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-control-sli
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-rsuite5 .lf-control-tabs .tab-fields{margin-top:10px}", "",{"version":3,"sources":["webpack://./react-rsuite5/tabs/tabs.scss"],"names":[],"mappings":"AAEI,oDACE,eAAA","sourcesContent":[".lf-form-react-rsuite5 {\n  .lf-control-tabs {\n    .tab-fields {\n      margin-top: 10px;\n    }\n  }\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 8509:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-upload .upload-layout{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:center}.lf-control-upload .upload-layout .upload{order:0;flex:0 0 auto;align-self:auto}.lf-control-upload .upload-layout .hint{margin-left:var(--lf-field-column-margin);order:0;flex:1 0 auto;align-self:auto}", "",{"version":3,"sources":["webpack://./react-rsuite5/upload/upload.scss"],"names":[],"mappings":"AACE,kCACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,kBAAA,CAEA,0CACE,OAAA,CACA,aAAA,CACA,eAAA,CAGF,wCACE,yCAAA,CACA,OAAA,CACA,aAAA,CACA,eAAA","sourcesContent":[".lf-control-upload {\n  .upload-layout {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: center;\n\n    .upload {\n      order: 0;\n      flex: 0 0 auto;\n      align-self: auto;\n    }\n\n    .hint {\n      margin-left: var(--lf-field-column-margin);\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12792,6 +12881,159 @@ var RadioTileRSuite = (0,components/* I18N */.mb)(function (_ref) {
   }
 });
 
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-rsuite5/upload/upload.scss
+var upload = __webpack_require__(8509);
+;// CONCATENATED MODULE: ./react-rsuite5/upload/upload.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var upload_options = {};
+
+upload_options.styleTagTransform = (styleTagTransform_default());
+upload_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      upload_options.insert = insertBySelector_default().bind(null, "head");
+    
+upload_options.domAPI = (styleDomAPI_default());
+upload_options.insertStyleElement = (insertStyleElement_default());
+
+var upload_update = injectStylesIntoStyleTag_default()(upload/* default */.Z, upload_options);
+
+
+
+
+       /* harmony default export */ const upload_upload = (upload/* default */.Z && upload/* default.locals */.Z.locals ? upload/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./react-rsuite5/upload/index.js
+
+
+var upload_excluded = ["superDisabled", "disabled", "hint"],
+  _excluded2 = ["name", "label", "hint", "tooltip", "required", "onChange", "multiple", "removable", "disabledFileItem", "fileListVisible", "draggable", "disabled", "accept", "defaultValue", "listType", "uploadButtonLabel", "uploadButtonAppearance", "uploadButtonSize", "draggableText", "draggableHeight", "value"];
+function upload_slicedToArray(arr, i) { return upload_arrayWithHoles(arr) || upload_iterableToArrayLimit(arr, i) || upload_unsupportedIterableToArray(arr, i) || upload_nonIterableRest(); }
+function upload_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function upload_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return upload_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return upload_arrayLikeToArray(o, minLen); }
+function upload_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function upload_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function upload_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function upload_extends() { upload_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return upload_extends.apply(this, arguments); }
+function upload_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = upload_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function upload_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+
+var makeDefaultValue = function makeDefaultValue(defaultValue) {
+  if (isArray_default()(defaultValue)) {
+    return defaultValue;
+  } else if (defaultValue != null) {
+    return [defaultValue];
+  }
+  return [];
+};
+
+// shield props component or the uploaded will replace the disabled prop
+var ShieldedButton = function ShieldedButton(_ref) {
+  var superDisabled = _ref.superDisabled,
+    disabled = _ref.disabled,
+    hint = _ref.hint,
+    rest = upload_objectWithoutProperties(_ref, upload_excluded);
+  var inner = /*#__PURE__*/external_react_default().createElement(external_rsuite_.Button, upload_extends({}, rest, {
+    disabled: superDisabled
+  }));
+  if (hint) {
+    return /*#__PURE__*/external_react_default().createElement("div", {
+      className: "upload-layout"
+    }, /*#__PURE__*/external_react_default().createElement("div", {
+      className: "upload"
+    }, inner), /*#__PURE__*/external_react_default().createElement("div", {
+      className: "hint"
+    }, hint));
+  }
+  return inner;
+};
+var Upload = (0,components/* I18N */.mb)(function (_ref2) {
+  var name = _ref2.name,
+    label = _ref2.label,
+    hint = _ref2.hint,
+    tooltip = _ref2.tooltip,
+    required = _ref2.required,
+    onChange = _ref2.onChange,
+    multiple = _ref2.multiple,
+    removable = _ref2.removable,
+    disabledFileItem = _ref2.disabledFileItem,
+    fileListVisible = _ref2.fileListVisible,
+    draggable = _ref2.draggable,
+    disabled = _ref2.disabled,
+    accept = _ref2.accept,
+    defaultValue = _ref2.defaultValue,
+    listType = _ref2.listType,
+    uploadButtonLabel = _ref2.uploadButtonLabel,
+    uploadButtonAppearance = _ref2.uploadButtonAppearance,
+    uploadButtonSize = _ref2.uploadButtonSize,
+    draggableText = _ref2.draggableText,
+    _ref2$draggableHeight = _ref2.draggableHeight,
+    draggableHeight = _ref2$draggableHeight === void 0 ? 200 : _ref2$draggableHeight,
+    value = _ref2.value,
+    rest = upload_objectWithoutProperties(_ref2, _excluded2);
+  var _useState = (0,external_react_.useState)(makeDefaultValue(value)),
+    _useState2 = upload_slicedToArray(_useState, 2),
+    currentValue = _useState2[0],
+    setCurrentValue = _useState2[1];
+  var handleChange = (0,external_react_.useCallback)(function (fileList) {
+    setCurrentValue(fileList);
+    if (multiple) {
+      onChange(fileList);
+    } else {
+      onChange(!isEmpty_default()(fileList) ? fileList[0] : null);
+    }
+  }, [multiple, onChange]);
+  var inner;
+  if (draggable) {
+    inner = /*#__PURE__*/external_react_default().createElement("div", {
+      style: {
+        height: draggableHeight,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }
+    }, /*#__PURE__*/external_react_default().createElement("span", null, draggableText || 'Click or Drag files to this area to upload'));
+  } else {
+    inner = /*#__PURE__*/external_react_default().createElement(ShieldedButton, {
+      appearance: uploadButtonAppearance,
+      size: uploadButtonSize,
+      superDisabled: disabled || !multiple && !isEmpty_default()(value),
+      hint: !tooltip && hint
+    }, uploadButtonLabel || 'Upload');
+  }
+  return /*#__PURE__*/external_react_default().createElement("div", {
+    className: "lf-control-upload",
+    "data-lf-field-name": name
+  }, label && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, {
+    tooltip: true
+  }, hint), required && /*#__PURE__*/external_react_default().createElement(components/* RequiredIcon */.T_, null)), /*#__PURE__*/external_react_default().createElement(external_rsuite_.Uploader, upload_extends({
+    autoUpload: false,
+    accept: accept,
+    multiple: multiple,
+    removable: removable,
+    draggable: draggable,
+    disabled: disabled,
+    fileListVisible: fileListVisible,
+    disabledFileItem: disabledFileItem,
+    fileList: currentValue,
+    listType: listType,
+    onChange: handleChange
+  }, (0,helpers/* passRest */.QF)(rest)), inner), hint && draggable && !tooltip && /*#__PURE__*/external_react_default().createElement(external_rsuite_.Form.HelpText, null, hint));
+}, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
+
 // EXTERNAL MODULE: ./costants.js
 var costants = __webpack_require__(8064);
 ;// CONCATENATED MODULE: ./react-rsuite5/index.js
@@ -12799,6 +13041,7 @@ var react_rsuite5_excluded = ["framework", "children"];
 function react_rsuite5_extends() { react_rsuite5_extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return react_rsuite5_extends.apply(this, arguments); }
 function react_rsuite5_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = react_rsuite5_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function react_rsuite5_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -12914,6 +13157,9 @@ var Fields = {
   },
   'radio-tile': {
     'react-rsuite5': RadioTileRSuite
+  },
+  'upload': {
+    'react-rsuite5': Upload
   }
 };
 var Forms = {

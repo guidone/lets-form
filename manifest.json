@@ -1032,6 +1032,16 @@
           "horizontal",
           "inline"
         ]
+      },
+      {
+        "name": "arrayType",
+        "type": "string",
+        "description": "Defines the result of the list component, \"arrayOfString\" and \"commaSeparated\" only applies if list field has only one field",
+        "options": [
+          "arrayOfObject",
+          "arrayOfString",
+          "commaSeparated"
+        ]
       }
     ],
     "react-rsuite5": [
@@ -3930,6 +3940,122 @@
         "name": "tooltip",
         "type": "boolean",
         "description": "Show hint as tooltip next to label"
+      }
+    ],
+    "frameworks": [
+      "react-rsuite5"
+    ]
+  },
+  "upload": {
+    "label": "Upload",
+    "category": "general",
+    "name": "upload",
+    "description": "Upload file control, returns an array of json with file info and blob",
+    "common": [
+      {
+        "name": "name",
+        "type": "string",
+        "description": "The name of the field and the key of the JSON"
+      },
+      {
+        "name": "label",
+        "type": "string | i18n",
+        "description": "Label of the field"
+      },
+      {
+        "name": "hint",
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "description": "Disables and greys out the field"
+      },
+      {
+        "name": "hidden",
+        "type": "boolean",
+        "description": "Hides the field from the form"
+      }
+    ],
+    "react-rsuite5": [
+      {
+        "name": "accept",
+        "type": "array",
+        "description": "Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "
+      },
+      {
+        "name": "listType",
+        "type": "string",
+        "options": [
+          "text",
+          "picture-text",
+          "picture"
+        ]
+      },
+      {
+        "name": "maxPreviewFileSize",
+        "type": "number",
+        "description": "Set the maximum limit for preview files"
+      },
+      {
+        "name": "tooltip",
+        "type": "boolean",
+        "description": "Show hint as tooltip next to label"
+      },
+      {
+        "name": "fileListVisible",
+        "type": "boolean"
+      },
+      {
+        "name": "disabledFileItem",
+        "type": "boolean"
+      },
+      {
+        "name": "multiple",
+        "type": "boolean",
+        "description": "Allow selecting multiple files"
+      },
+      {
+        "name": "removable",
+        "type": "boolean"
+      },
+      {
+        "name": "draggable",
+        "type": "boolean"
+      },
+      {
+        "name": "uploadButtonLabel",
+        "type": "string | i18n"
+      },
+      {
+        "name": "uploadButtonAppearance",
+        "type": "string",
+        "options": [
+          "default",
+          "primary",
+          "subtle",
+          "link",
+          "ghost"
+        ]
+      },
+      {
+        "name": "uploadButtonSize",
+        "type": "string",
+        "options": [
+          "lg",
+          "md",
+          "sm",
+          "xs"
+        ]
+      },
+      {
+        "name": "draggableText",
+        "type": "string | i18n"
+      },
+      {
+        "name": "draggableHeight",
+        "type": "number"
       }
     ],
     "frameworks": [

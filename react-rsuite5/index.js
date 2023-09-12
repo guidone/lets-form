@@ -31,6 +31,7 @@ import { Divider } from './divider';
 import { ReactView } from './react-view';
 import { Tabs } from './tabs';
 import { RadioTile } from './radio-tile';
+import { Upload } from './upload';
 
 const Fields = {
   'input-text': {
@@ -116,6 +117,9 @@ const Fields = {
   },
   'radio-tile': {
     'react-rsuite5': RadioTile
+  },
+  'upload': {
+    'react-rsuite5': Upload
   }
 };
 
