@@ -26,6 +26,7 @@ import { ListArray } from './array';
 import { Button } from './button';
 import { CheckboxGroup } from './checkbox-group';
 import { Tabs } from './tabs';
+import { Upload } from './upload';
 
 const Fields = {
   'input-text': {
@@ -96,6 +97,9 @@ const Fields = {
   },
   'tabs': {
     'react-antd': Tabs
+  },
+  'upload': {
+    'react-antd': Upload
   }
 };
 

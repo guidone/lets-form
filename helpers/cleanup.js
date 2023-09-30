@@ -75,7 +75,7 @@ const removeUnusedTabs = obj => {
  * @param {*} json
  * @returns
  */
-const cleanUp = json => {
+const cleanUp = (json, framework) => {
   const cloned = { ...json };
 
   // remove unused locales
@@ -106,6 +106,12 @@ const cleanUp = json => {
             }
           }
         });
+        // remove all other frameworks if one is specified
+        if (framework) {
+          FRAMEWORKS
+            .filter(s => s !== framework)  
+            .forEach(framework => delete cloned[framework]);
+        }
         // collect all empty keys
         cloned = removeEmptyKeys(cloned);
         // cycle all keys and check if it's an i18n object

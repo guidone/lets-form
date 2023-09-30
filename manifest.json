@@ -4058,8 +4058,80 @@
         "type": "number"
       }
     ],
+    "react-antd": [
+      {
+        "name": "accept",
+        "type": "array",
+        "description": "Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "
+      },
+      {
+        "name": "multiple",
+        "type": "boolean",
+        "description": "Allow selecting multiple files"
+      },
+      {
+        "name": "listType",
+        "type": "string",
+        "description": "Built-in stylesheets, support for four types: text, picture, picture-card or picture-circle",
+        "options": [
+          "text",
+          "picture",
+          "picture-card",
+          "picture-circle"
+        ]
+      },
+      {
+        "name": "maxCount",
+        "type": "number"
+      },
+      {
+        "name": "showUploadList",
+        "type": "boolean"
+      },
+      {
+        "name": "uploadButtonLabel",
+        "type": "string | i18n"
+      },
+      {
+        "name": "uploadButtonAppearance",
+        "type": "string",
+        "options": [
+          "primary",
+          "default",
+          "dashed",
+          "text",
+          "link"
+        ]
+      },
+      {
+        "name": "uploadButtonSize",
+        "type": "string",
+        "options": [
+          "small",
+          "default",
+          "large"
+        ]
+      },
+      {
+        "name": "draggable",
+        "type": "boolean"
+      },
+      {
+        "name": "draggableText",
+        "type": "string | i18n"
+      },
+      {
+        "name": "draggableHeight",
+        "type": "number"
+      },
+      {
+        "name": "tooltip",
+        "type": "boolean"
+      }
+    ],
     "frameworks": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ]
   }
 }

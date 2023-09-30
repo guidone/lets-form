@@ -1352,19 +1352,23 @@
     "disabled": null,
     "hidden": null,
     "accept": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ],
     "acceptedFile": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ],
     "listType": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ],
     "maxPreviewFileSize": [
       "react-rsuite5"
     ],
     "tooltip": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ],
     "fileListVisible": [
       "react-rsuite5"
@@ -1373,28 +1377,41 @@
       "react-rsuite5"
     ],
     "multiple": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ],
     "removable": [
       "react-rsuite5"
     ],
     "draggable": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ],
     "uploadButtonLabel": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ],
     "uploadButtonAppearance": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ],
     "uploadButtonSize": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ],
     "draggableText": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ],
     "draggableHeight": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "maxCount": [
+      "react-antd"
+    ],
+    "showUploadList": [
+      "react-antd"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",
