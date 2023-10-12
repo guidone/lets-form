@@ -17,3 +17,4 @@ cp -avR ../form-builder/src/components/lets-form/react-rsuite5/* ./react-rsuite5
 cp -avR ../form-builder/src/components/lets-form/form-context/* ./form-context
 cp -avR ../form-builder/src/components/lets-form/hooks/* ./hooks
 cp -avR ../form-builder/src/components/lets-form/libs/* ./libs
+cp ../form-builder/CHANGELOG-LETSFORM.md ./CHANGELOG.md

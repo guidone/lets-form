@@ -24,7 +24,11 @@ const RadioGroupRSuite = I18N(
     ...rest
   }) => {
     return (
-      <Form.Group controlId={name}>
+      <Form.Group 
+        controlId={name}
+        className="lf-control-radio-group"
+        data-lf-field-name={name}
+      >
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
@@ -34,7 +38,7 @@ const RadioGroupRSuite = I18N(
           name={name}
           value={value}
           onChange={onChange}
-          appearance={appearance}
+          appearance={appearance}          
           {...rest}
         >
           {(options ?? []).map(({ value, label}) => (

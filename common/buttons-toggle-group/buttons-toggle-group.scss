@@ -1,0 +1,11 @@
+.lf-control-button-toggle-group {
+  .lf-control-button {
+    display: inline-block;
+       
+    margin-top: 0px !important; 
+  
+    &:not(:first-child) {
+      margin-left: var(--lf-field-button-margin);
+    }
+  }
+}

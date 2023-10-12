@@ -287,6 +287,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     Wrapper,
     GroupWrapper,
     BottomView,
+    PlaceholderWrapper,
     debug,
     disabled,
     readOnly,
@@ -296,7 +297,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     level = 1,
     locale,
     onJavascriptError,
-    Components
+    Components,
+    prependView
   }) => {
     const renderedFields = (fields || [])
       .filter(field => Wrapper || field.hidden !== true)
@@ -333,6 +335,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 {renderFields({
                   Wrapper,
                   GroupWrapper,
+                  PlaceholderWrapper,
                   BottomView,
                   onChange,
                   fields: field.fields,
@@ -347,7 +350,15 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   level: level + 1,
                   locale,
                   onJavascriptError,
-                  Components
+                  Components,
+                  prependView: PlaceholderWrapper && (         
+                    <PlaceholderWrapper 
+                      key={`wrapper_top_field`} 
+                      parentField={field} 
+                      parentFieldTarget="fields"
+                      nextField={field.fields && field.fields.length ? field.fields[0] : null}
+                    />
+                  )                
                 })}
                 {BottomView && <BottomView context="group" key={`bottom_view_${field.name}`} field={field} target="fields" />}
               </>
@@ -394,6 +405,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                         {renderFields({
                           Wrapper,
                           GroupWrapper,
+                          PlaceholderWrapper,
                           BottomView,
                           onChange,
                           fields: field.fields && _.isArray(field.fields[tab]) ? field.fields[tab] : [],                    
@@ -408,7 +420,16 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                           level: level + 1,
                           locale,
                           onJavascriptError,
-                          Components
+                          Components,
+                          prependView: PlaceholderWrapper && (         
+                            <PlaceholderWrapper 
+                              key={`wrapper_top_field`} 
+                              parentField={field} 
+                              parentFieldTarget="fields"
+                              parentFieldSubTarget={tab}
+                              nextField={field.fields && field.fields.length ? field.fields[0] : null}
+                            />
+                          )
                         })}
                         {BottomView && (
                           <BottomView 
@@ -431,8 +452,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                     index={index}
                     className="tabs"
                   >{component}</GroupWrapper> : component;
-
-
               }}
             />
           );
@@ -454,6 +473,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 {renderFields({
                   Wrapper,
                   GroupWrapper,
+                  PlaceholderWrapper,
                   BottomView,
                   onChange,
                   fields: field.fields,
@@ -468,7 +488,15 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   level: level + 1,
                   locale,
                   onJavascriptError,
-                  Components
+                  Components,
+                  prependView: PlaceholderWrapper && (         
+                    <PlaceholderWrapper 
+                      key={`wrapper_top_field`} 
+                      parentField={field} 
+                      parentFieldTarget="fields"
+                      nextField={field.fields && field.fields.length ? field.fields[0] : null}
+                    />
+                  )
                 })}
                 {BottomView && <BottomView context="array" key={`bottom_view_${field.name}`} field={field} target="fields" />}
               </>
@@ -500,6 +528,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                     {renderFields({
                       Wrapper,
                       GroupWrapper,
+                      PlaceholderWrapper,
                       BottomView,
                       onChange,
                       fields: field.leftFields,
@@ -514,7 +543,15 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       level: level + 1,
                       locale,
                       onJavascriptError,
-                      Components
+                      Components,
+                      prependView: PlaceholderWrapper && (         
+                        <PlaceholderWrapper 
+                          key={`wrapper_top_field`} 
+                          parentField={field} 
+                          parentFieldTarget="leftFields"
+                          nextField={field.leftFields && field.leftFields.length ? field.leftFields[0] : null}
+                        />
+                      )
                     })}
                     {BottomView && <BottomView context="two-columns" key={`bottom_view_${field.name}`} field={field} target="leftFields" />}
                   </>
@@ -525,6 +562,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                     {renderFields({
                       Wrapper,
                       GroupWrapper,
+                      PlaceholderWrapper,
                       BottomView,
                       onChange,
                       fields: field.rightFields,
@@ -539,7 +577,15 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       level: level + 1,
                       locale,
                       onJavascriptError,
-                      Components
+                      Components,
+                      prependView: PlaceholderWrapper && (         
+                        <PlaceholderWrapper 
+                          key={`wrapper_top_field`} 
+                          parentField={field} 
+                          parentFieldTarget="rightFields"
+                          nextField={field.rightFields && field.rightFields.length ? field.rightFields[0] : null}
+                        />
+                      )
                     })}
                     {BottomView && <BottomView context="two-columns" key={`bottom_view_${field.name}`} field={field} target="rightFields" />}
                   </>
@@ -573,6 +619,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                     {renderFields({
                       Wrapper,
                       GroupWrapper,
+                      PlaceholderWrapper,
                       BottomView,
                       onChange,
                       fields: field.leftFields,
@@ -587,7 +634,15 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       level: level + 1,
                       locale,
                       onJavascriptError,
-                      Components
+                      Components,
+                      prependView: PlaceholderWrapper && (         
+                        <PlaceholderWrapper 
+                          key={`wrapper_top_field`} 
+                          parentField={field} 
+                          parentFieldTarget="leftFields"
+                          nextField={field.leftFields && field.leftFields.length ? field.leftFields[0] : null}
+                        />
+                      )
                     })}
                     {BottomView && <BottomView context="three-columns" key={`bottom_view_${field.name}`} field={field} target="leftFields" />}
                   </>
@@ -598,6 +653,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                     {renderFields({
                       Wrapper,
                       GroupWrapper,
+                      PlaceholderWrapper,
                       BottomView,
                       onChange,
                       fields: field.centerFields,
@@ -612,7 +668,15 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       level: level + 1,
                       locale,
                       onJavascriptError,
-                      Components
+                      Components,
+                      prependView: PlaceholderWrapper && (         
+                        <PlaceholderWrapper 
+                          key={`wrapper_top_field`} 
+                          parentField={field} 
+                          parentFieldTarget="centerFields"
+                          nextField={field.centerFields && field.centerFields.length ? field.centerFields[0] : null}
+                        />
+                      )
                     })}
                     {BottomView && <BottomView context="three-columns" key={`bottom_view_${field.name}`} field={field} target="centerFields" />}
                   </>
@@ -623,6 +687,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                     {renderFields({
                       Wrapper,
                       GroupWrapper,
+                      PlaceholderWrapper,
                       BottomView,
                       onChange,
                       fields: field.rightFields,
@@ -637,7 +702,15 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       level: level + 1,
                       locale,
                       onJavascriptError,
-                      Components
+                      Components,
+                      prependView: PlaceholderWrapper && (         
+                        <PlaceholderWrapper 
+                          key={`wrapper_top_field`} 
+                          parentField={field} 
+                          parentFieldTarget="rightFields"
+                          nextField={field.rightFields && field.rightFields.length ? field.rightFields[0] : null}
+                        />
+                      )
                     })}
                     {BottomView && <BottomView context="three-columns" key={`bottom_view_${field.name}`} field={field} target="rightFields" />}
                   </>
@@ -710,7 +783,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         );
       });
 
-    return renderedFields;
+    //console.log('prependView', prependView)
+    //return renderedFields;
+    return prependView ? [prependView, ...renderedFields] : renderedFields;
   }
 
   const FormGenerator = React.memo(({
@@ -724,6 +799,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     locale,
     wrapper,
     groupWrapper,
+    placeholderWrapper,
     bottomView,
     defaultValues = {},
     onlyFields = false,
@@ -886,6 +962,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const Wrapper = wrapper;
     const GroupWrapper = groupWrapper;
     const BottomView = bottomView;
+    const PlaceholderWrapper = placeholderWrapper;
 
     if (plaintext) {
       return (
@@ -942,6 +1019,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             {renderFields({
               Wrapper,
               GroupWrapper,
+              PlaceholderWrapper,
               BottomView,
               onChange: handleChange,
               fields: formFields, // take from state

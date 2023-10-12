@@ -56,7 +56,7 @@ const findField = (fields, predicate) => {
 
   fields.forEach(field => {
     if (!found) {
-      if (field.component === 'group') {
+      if (field.component === 'group' || field.component === 'array') {
         found = findField(field.fields, predicate);
       } else if (field.component === 'two-columns') {
         found = findField(field.leftFields, predicate)
@@ -82,6 +82,8 @@ const findField = (fields, predicate) => {
   return found;
 };
 
+const getFieldById = (fields, id) =>  findField(fields, field => field.id === id);
+
 const fieldExists = (fields, predicate) => findField(fields, predicate) != null;
 
-export { findField, createEmptyField, reduceFields };
+export { findField, createEmptyField, reduceFields, getFieldById };

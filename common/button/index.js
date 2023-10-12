@@ -33,9 +33,9 @@ const GenericButton = ({
     () => {
       const newValue = !checked;
       setChecked(!checked);
-      onChange(newValue);
+      onChange(newValue, name);
     },
-    [onChange, checked]
+    [onChange, checked, name]
   );
 
   let inner;

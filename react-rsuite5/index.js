@@ -32,6 +32,7 @@ import { ReactView } from './react-view';
 import { Tabs } from './tabs';
 import { RadioTile } from './radio-tile';
 import { Upload } from './upload';
+import { ButtonsToggleGroup } from './buttons-toggle-group';
 
 const Fields = {
   'input-text': {
@@ -120,6 +121,9 @@ const Fields = {
   },
   'upload': {
     'react-rsuite5': Upload
+  },
+  'buttons-toggle-group': {
+    'react-rsuite5': ButtonsToggleGroup
   }
 };
 

@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { Form, DatePicker } from 'antd';
 import dayjs from 'dayjs';
 
-import { passRest } from '../../helpers';
+import { passRest, makeWidthStyle } from '../../helpers';
 import { IfNotPlaintext } from '../../components';
 
 import localeArabic from 'antd/es/date-picker/locale/ar_EG';
@@ -225,6 +225,7 @@ const AntdGenericDate = ({
   bordered,
   onChange,
   onBlur,
+  fullWidth,
   width,
   placement,
   format,
@@ -275,7 +276,7 @@ const AntdGenericDate = ({
           picker={picker}
           mode={mode}
           locale={ANTD_LOCALES_MAPPING[lfLocale]}
-          style={_.isNumber(width) ? { width: `${width}px` } : undefined}
+          style={makeWidthStyle(fullWidth, width)}
           {...passRest(rest)}
         />
       </IfNotPlaintext>

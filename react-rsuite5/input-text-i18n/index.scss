@@ -26,14 +26,13 @@
   .group-input-select {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: flex-start;
     align-content: stretch;
     align-items: flex-start;
 
     .translation-control {
       order: 0;
-      flex: 1 0 auto;
+      flex: 1 0;
       align-self: auto;
       width: unset !important;
       z-index: 1;
@@ -45,7 +44,7 @@
 
     .select-control {
       order: 1;
-      flex: 0 0 auto;
+      flex: 0 0;
       align-self: center;
       z-index: 2;
       margin-left: 5px;

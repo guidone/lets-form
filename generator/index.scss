@@ -24,6 +24,10 @@
   --lf-field-margin: 16px;
   --lf-field-column-margin: 16px;
   --lf-font-size: 15px;
+  --lf-field-button-margin: 10px;
+  --lf-highligh-color: #ff6633;
+  --lf-hover-color: #FF9F85;
+  --lf-drop-highlight-color: #3498ff;
 
   &.lf-form-buttons-align-center {
     .lf-buttons {
@@ -66,20 +70,6 @@
       }
     }
   }
-
-
-  // TODO fix spacing inside array
-  /*.lf-control-common-array-item {
-    [class^=lf-control]:not(:last-child) {
-      margin-bottom: 10px;
-    }
-    [class^=lf-control]:last-child {
-      margin-bottom: 0px;
-    }
-
-    padding-bottom: 5px;
-  }*/
-
 }
 
 .lf-icon-asterisk {

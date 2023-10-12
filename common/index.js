@@ -9,3 +9,4 @@ export * from './react-view';
 export * from './array';
 export * from './icon';
 export * from './button';
+export * from './buttons-toggle-group';

@@ -1781,8 +1781,14 @@
         ]
       },
       {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
         "name": "width",
-        "type": "number"
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
       },
       {
         "name": "bordered",
@@ -3693,8 +3699,14 @@
         ]
       },
       {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
         "name": "width",
-        "type": "number"
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
       },
       {
         "name": "bordered",
@@ -4127,6 +4139,82 @@
       {
         "name": "tooltip",
         "type": "boolean"
+      }
+    ],
+    "frameworks": [
+      "react-rsuite5",
+      "react-antd"
+    ]
+  },
+  "buttons-toggle-group": {
+    "label": "Toggle Buttons",
+    "category": "layout",
+    "description": "List of toggle buttons, works like a radio group, returns an array of string",
+    "name": "buttons-toggle-group",
+    "common": [
+      {
+        "name": "name",
+        "type": "string",
+        "description": "The name of the field and the key of the JSON"
+      },
+      {
+        "name": "label",
+        "type": "string | i18n",
+        "description": "Label of the field"
+      },
+      {
+        "name": "hint",
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
+      },
+      {
+        "name": "options",
+        "type": "array"
+      },
+      {
+        "name": "multiple",
+        "type": "boolean",
+        "description": "Allow to select multiple values"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "description": "Disables and greys out the field"
+      },
+      {
+        "name": "readOnly",
+        "type": "boolean",
+        "description": "Put the field in read only mode"
+      },
+      {
+        "name": "hidden",
+        "type": "boolean",
+        "description": "Hides the field from the form"
+      }
+    ],
+    "react-rsuite5": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "lg",
+          "md",
+          "sm",
+          "xs"
+        ]
+      }
+    ],
+    "react-antd": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "small",
+          "default",
+          "large"
+        ]
       }
     ],
     "frameworks": [

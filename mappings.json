@@ -495,7 +495,8 @@
     ],
     "fullWidth": [
       "react-material-ui",
-      "react-bootstrap"
+      "react-bootstrap",
+      "react-antd"
     ],
     "disableFuture": [
       "react-material-ui"
@@ -1188,7 +1189,8 @@
     ],
     "fullWidth": [
       "react-material-ui",
-      "react-bootstrap"
+      "react-bootstrap",
+      "react-antd"
     ],
     "disableFuture": [
       "react-material-ui"
@@ -1411,6 +1413,28 @@
       "react-antd"
     ],
     "showUploadList": [
+      "react-antd"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "buttons-toggle-group": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "options": null,
+    "value": null,
+    "multiple": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "size": [
+      "react-rsuite5",
       "react-antd"
     ],
     "validationMinLength": "validation",
