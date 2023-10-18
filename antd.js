@@ -665,6 +665,24 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 
 
 
+
+/**
+ * Check if object is empty or all the keys are empty
+ * @param {*} obj 
+ * @returns 
+ */
+var isEmptyObject = function isEmptyObject(obj) {
+  return isEmpty_default()(obj) || Object.keys(obj).every(function (key) {
+    return isEmpty_default()(obj[key]);
+  });
+};
+
+/**
+ * flatArrayOfString
+ * If an array of object can be flattned (one keuy), then return a flat array, otherwise raise expection
+ * @param {*} a 
+ * @returns 
+ */
 var flatArrayOfString = function flatArrayOfString(a) {
   var canBeFlat = a.every(function (obj) {
     return Object.keys(obj).length === 1;
@@ -680,7 +698,10 @@ var formatArray = function formatArray(a) {
   var arrayType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'arrayOfObject';
   var cleaned = a.map(function (i) {
     return omit_default()(i, 'id');
+  }).filter(function (i) {
+    return !isEmptyObject(i);
   });
+  console.log('cleaned', cleaned);
   try {
     var flattened = flatArrayOfString(cleaned);
     if (arrayType === 'arrayOfString') {
@@ -733,8 +754,6 @@ var ListArray = function ListArray(_ref3) {
     value = _ref3.value,
     _ref3$onChange = _ref3.onChange,
     _onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
-    _ref3$onBlur = _ref3.onBlur,
-    onBlur = _ref3$onBlur === void 0 ? function () {} : _ref3$onBlur,
     _ref3$disabled = _ref3.disabled,
     disabled = _ref3$disabled === void 0 ? false : _ref3$disabled,
     _ref3$readOnly = _ref3.readOnly,
@@ -16439,7 +16458,8 @@ function array_objectWithoutPropertiesLoose(source, excluded) { if (source == nu
 
 
 
-var ListArrayAntd = function ListArrayAntd(_ref) {
+
+var ListArrayAntd = (0,components/* I18N */.mb)(function (_ref) {
   var hint = _ref.hint,
     required = _ref.required,
     tooltip = _ref.tooltip,
@@ -16460,7 +16480,7 @@ var ListArrayAntd = function ListArrayAntd(_ref) {
   }, /*#__PURE__*/external_react_default().createElement(common/* ListArray */.v0, array_extends({
     LetsFormComponent: react_antd
   }, rest)));
-};
+}, ['label', 'hint']);
 
 // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./react-antd/button/button.scss
 var button_button = __webpack_require__(754);

@@ -8,7 +8,21 @@ import { isEmptyItem } from './helpers/is-empty-item';
 import { ArrayItem } from './views/array-item';
 import './list-array.scss';
 
+/**
+ * Check if object is empty or all the keys are empty
+ * @param {*} obj 
+ * @returns 
+ */
+const isEmptyObject = obj => {
+  return _.isEmpty(obj) || Object.keys(obj).every(key => _.isEmpty(obj[key]));
+};
 
+/**
+ * flatArrayOfString
+ * If an array of object can be flattned (one keuy), then return a flat array, otherwise raise expection
+ * @param {*} a 
+ * @returns 
+ */
  const flatArrayOfString = a => {
   const canBeFlat = a.every(obj => Object.keys(obj).length === 1);
   if (!canBeFlat) {
@@ -18,7 +32,11 @@ import './list-array.scss';
 }
 
 const formatArray = (a, arrayType = 'arrayOfObject') => {
-  const cleaned = a.map(i => _.omit(i, 'id'));
+  const cleaned = a
+    .map(i => _.omit(i, 'id'))
+    .filter(i => !isEmptyObject(i));
+
+  console.log('cleaned', cleaned)
 
   try {
     const flattened = flatArrayOfString(cleaned);
@@ -65,7 +83,6 @@ const ListArray = ({
   LetsFormComponent,
   value,
   onChange = () => {},
-  onBlur = () => {},
   disabled = false,
   readOnly = false,
   fields,

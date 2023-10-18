@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.4.14
+- fix array i18n support
+
 ## v0.4.12
 - - added Buttons Toggle for RSuite
 
