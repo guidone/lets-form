@@ -1,9 +1,7 @@
 <p align="center">
   <img width="300" src="https://raw.githubusercontent.com/guidone/lets-form/main/scripts/assets/logo-ext%403x.png">
   <br/>
-  <b>
-    LetsForm</b> it's a JSON form generator to create React forms <br/>
-    with frameworks like Material UI / Bootstrap / AntDesign / RSuite
+   Create React forms with simple JSON form schemas, supports Material UI / Bootstrap / AntDesign / RSuite
 </p>
 <p align="center">
   <a href="https://letsform.dev">Documentation</a>
@@ -12,7 +10,7 @@
 </p>
 
 # About LetsForm
-**LetsForm** is an open source tool to generate React forms from simple JSON schemas and using native UI components of Material UI, AntD, RSuite, ReactBootstrap or just React
+**LetsForm** is an open source tool to generate React forms with simple JSON schemas using native UI components: Material UI, AntD, RSuite, ReactBootstrap or just React
 
 * [multi-language](https://letsform.dev/lets-form-designer/automatic-translations) (i18n) support
 * [validation](https://letsform.dev/advanced/validation) with i18n and scripting support 
@@ -29,12 +27,12 @@ Install LetsForm
 npm i lets-form -D
 ```
 
-then try a simple JSON form with just one text field (or use the [LetsForm Designer](https://designer.letsform.dev) to create one), for example using RSuite components
+then try a simple JSON form schema with just one text field (or use the [LetsForm Designer](https://designer.letsform.dev) to create one), for example using **RSuite** components
 
 ```js
 import React from 'react';
 import 'rsuite/dist/rsuite.min.css';
-import LetsForm from 'lets-form/rsuite5;
+import LetsForm from 'lets-form/rsuite5';
 
 // copied and pasted from LetsForm Designer
 const MY_FORM = {
