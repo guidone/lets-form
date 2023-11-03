@@ -23,3 +23,4 @@ export * from './is-valid-date';
 export * from './form-helper';
 export * from './i18n-options';
 export * from './is-children-of';
+export * from './validate-form';
