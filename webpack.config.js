@@ -72,6 +72,13 @@ module.exports = module.exports = (env = {}) => {
     outputFile = 'material-ui.js';
     entryPointName = 'lets-form-material-ui';
     outputPath = null;
+  } else if (env.framework === 'helpers') {
+    console.log('Building for helpers');
+    library = 'lets-form-helpers';
+    entryPoint = path.join(__dirname, 'helpers/index.js');
+    outputFile = 'helpers.js';
+    entryPointName = 'lets-form-helpers';
+    outputPath = null;
   } else {
     console.log('Building for ALL frameworks');
   }
