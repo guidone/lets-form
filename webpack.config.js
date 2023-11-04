@@ -36,6 +36,7 @@ module.exports = module.exports = (env = {}) => {
   let outputFile = 'lets-form.min.js';
   let entryPointName = 'lets-form';
   let outputPath = 'dist';
+  let target = 'umd';
 
   if (env.framework === 'antd') {
     console.log('Building for Ant Design framework');
@@ -76,9 +77,10 @@ module.exports = module.exports = (env = {}) => {
     console.log('Building for helpers');
     library = 'lets-form-helpers';
     entryPoint = path.join(__dirname, 'helpers/index-export.js');
-    outputFile = 'helpers.js';
+    outputFile = 'utils.js';
     entryPointName = 'lets-form-helpers';
     outputPath = null;
+    target = 'commonjs';
   } else {
     console.log('Building for ALL frameworks');
   }
@@ -92,7 +94,7 @@ module.exports = module.exports = (env = {}) => {
       path: outputPath ? path.join(__dirname, outputPath) : __dirname,
       library: library,
       filename: outputFile,
-      libraryTarget: 'umd',
+      libraryTarget: target,
     },
     externals: [
       {

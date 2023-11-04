@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.4.15
+- add validate json helper
+
 ## v0.4.14
 - fix array i18n support
 
