@@ -1,4 +1,14 @@
-/******/ (() => { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["lets-form/utils"] = factory();
+	else
+		root["lets-form/utils"] = factory();
+})(this, () => {
+return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 8668:
@@ -4197,7 +4207,8 @@ var validateJSONForm = function validateJSONForm(json) {
 
 })();
 
-exports["lets-form-helpers"] = __webpack_exports__;
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
-//# sourceMappingURL=lets-form-helpers.min.js.map
+});
+//# sourceMappingURL=lets-form/utils.min.js.map
