@@ -75,7 +75,7 @@ module.exports = module.exports = (env = {}) => {
   } else if (env.framework === 'helpers') {
     console.log('Building for helpers');
     library = 'lets-form-helpers';
-    entryPoint = path.join(__dirname, 'helpers/index.js');
+    entryPoint = path.join(__dirname, 'helpers/index-export.js');
     outputFile = 'helpers.js';
     entryPointName = 'lets-form-helpers';
     outputPath = null;
