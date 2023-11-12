@@ -107,7 +107,7 @@ const mapFields = (
           rightFields: newRightFields
         };
       }
-    } else if (field.component === 'tabs' && _.isObject(field.fields) && !_.isArray(field.fields)) {      
+    } else if ((field.component === 'tabs' || field.component === 'steps') && _.isObject(field.fields) && !_.isArray(field.fields)) {      
       // Problem here: the new field can be an array because the map field, can return an array with 
       // additional field to be put somewhere in the mapping, of those only the one of type "tab" need to be
       // mapped, the other one must be left untouched since they where added by the helper method

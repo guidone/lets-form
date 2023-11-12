@@ -30,7 +30,7 @@ const reduceFields = (
       result = reduceFields(field.leftFields, predicate, result, opts);
       result = reduceFields(field.centerFields, predicate, result, opts);
       result = reduceFields(field.rightFields, predicate, result, opts);
-    } else if (field.component === 'tabs' && _.isObject(field.fields) && !_.isArray(field.fields)) {
+    } else if ((field.component === 'tabs' || field.component === 'steps') && _.isObject(field.fields) && !_.isArray(field.fields)) {
       const subkeys = Object.keys(field.fields);
       subkeys.forEach(subkey => {
         result = reduceFields(field.fields[subkey], predicate, result, opts);

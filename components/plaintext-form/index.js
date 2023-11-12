@@ -60,7 +60,7 @@ const renderFields = (fields, locale, framework, currentValues = {}) => {
           }}
         </ThreeColumns>
       );
-    } else if (field.component === 'tabs') {
+    } else if (field.component === 'tabs' || field.component === 'steps') {
       const subkeys = Object.keys(field.fields);
 
       const fields = subkeys

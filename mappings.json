@@ -1444,5 +1444,25 @@
     "validationPattern": "validation",
     "validationMessage": "validation",
     "required": null
+  },
+  "steps": {
+    "name": null,
+    "hidden": null,
+    "steps": null,
+    "value": null,
+    "label": null,
+    "labelNext": null,
+    "labelPrevious": null,
+    "align": null,
+    "small": [
+      "react-rsuite5"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
   }
 }

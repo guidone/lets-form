@@ -456,6 +456,90 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             />
           );
 
+        } else if (field.component === 'steps') {    
+          return (
+            <Controller
+              key={`field_${field.name}`}
+              name={field.name}
+              control={control}
+              render={({ field: fieldInfo }) => {
+                const values = getValues();
+                const component = (
+                  <Component
+                    key={field.name}
+                    lfComponent={field.component}
+                    lfFramework={framework}
+                    lfLocale={locale}
+                    name={field.name}
+                    label={field.label}
+                    hint={field.hint}
+                    disabled={field.disabled}
+                    value={values[field.name] ?? undefined}
+                    onChange={(value, opts) => {
+                      // TODO use callback
+                      fieldInfo.onChange(value);
+                      onChange({ ...getValues(), [field.name]: value }, field.name);
+                    }}
+                    {...additionalFields}
+                    {...field[framework]}
+                  >
+                    {step => {
+                      return (
+                      <>
+                        {renderFields({
+                          Wrapper,
+                          GroupWrapper,
+                          PlaceholderWrapper,
+                          BottomView,
+                          onChange,
+                          fields: field.fields && _.isArray(field.fields[step]) ? field.fields[step] : [],                    
+                          control,
+                          framework,
+                          getValues,
+                          disabled,
+                          readOnly,
+                          plaintext,
+                          errors,
+                          showErrors,
+                          level: level + 1,
+                          locale,
+                          onJavascriptError,
+                          Components,
+                          prependView: PlaceholderWrapper && (         
+                            <PlaceholderWrapper 
+                              key={`wrapper_top_field`} 
+                              parentField={field} 
+                              parentFieldTarget="fields"
+                              parentFieldSubTarget={step}
+                              nextField={field.fields && field.fields.length ? field.fields[0] : null}
+                            />
+                          )
+                        })}
+                        {BottomView && (
+                          <BottomView 
+                            context="tabs" 
+                            key={`bottom_view_${field.name}`} 
+                            field={field} 
+                            target="fields" 
+                            subtarget={step} 
+                          />
+                        )}
+                      </>
+                    );}}              
+                  </Component>
+                );
+                return GroupWrapper ?
+                  <GroupWrapper
+                    key={`wrapper_${field.name}`}
+                    field={field}
+                    level={level}
+                    index={index}
+                    className="tabs"
+                  >{component}</GroupWrapper> : component;
+              }}
+            />
+          );
+
         } else if (field.component === 'array' && GroupWrapper) {
           const component = (
             <Component

@@ -4221,5 +4221,53 @@
       "react-rsuite5",
       "react-antd"
     ]
+  },
+  "steps": {
+    "label": "Steps",
+    "category": "layout",
+    "description": "Split the form in multiple steps",
+    "name": "steps",
+    "common": [
+      {
+        "name": "name",
+        "type": "string",
+        "description": "The name of the field and the key of the JSON"
+      },
+      {
+        "name": "hidden",
+        "type": "boolean",
+        "description": "Hides the field from the form"
+      },
+      {
+        "name": "steps",
+        "type": "array"
+      },
+      {
+        "name": "labelNext",
+        "type": "string | i18n"
+      },
+      {
+        "name": "labelPrevious",
+        "type": "string | i18n"
+      },
+      {
+        "name": "align",
+        "type": "string",
+        "options": [
+          "left",
+          "center",
+          "right"
+        ]
+      }
+    ],
+    "react-rsuite5": [
+      {
+        "name": "small",
+        "type": "boolean"
+      }
+    ],
+    "frameworks": [
+      "react-rsuite5"
+    ]
   }
 }

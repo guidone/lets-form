@@ -33,6 +33,7 @@ import { Tabs } from './tabs';
 import { RadioTile } from './radio-tile';
 import { Upload } from './upload';
 import { ButtonsToggleGroup } from './buttons-toggle-group';
+import { Steps } from './steps';
 
 const Fields = {
   'input-text': {
@@ -124,6 +125,9 @@ const Fields = {
   },
   'buttons-toggle-group': {
     'react-rsuite5': ButtonsToggleGroup
+  },
+  'steps': {
+    'react-rsuite5': Steps
   }
 };
 
