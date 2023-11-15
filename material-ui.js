@@ -7,22 +7,22 @@
 		exports["lets-form-material-ui"] = factory(require("react"), require("@mui/material"), require("dayjs"), require("@mui/x-date-pickers/AdapterDayjs"), require("@mui/x-date-pickers/LocalizationProvider"), require("@mui/x-date-pickers/DatePicker"), require("@mui/x-date-pickers/DateTimePicker"));
 	else
 		root["lets-form-material-ui"] = factory(root["react"], root["@mui/material"], root["dayjs"], root["@mui/x-date-pickers/AdapterDayjs"], root["@mui/x-date-pickers/LocalizationProvider"], root["@mui/x-date-pickers/DatePicker"], root["@mui/x-date-pickers/DateTimePicker"]);
-})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__901__, __WEBPACK_EXTERNAL_MODULE__5760__, __WEBPACK_EXTERNAL_MODULE__3905__, __WEBPACK_EXTERNAL_MODULE__9750__, __WEBPACK_EXTERNAL_MODULE__6147__, __WEBPACK_EXTERNAL_MODULE__5891__) => {
-return /******/ (() => { // webpackBootstrap
+})(self, function(__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__901__, __WEBPACK_EXTERNAL_MODULE__5760__, __WEBPACK_EXTERNAL_MODULE__3905__, __WEBPACK_EXTERNAL_MODULE__9750__, __WEBPACK_EXTERNAL_MODULE__6147__, __WEBPACK_EXTERNAL_MODULE__5891__) {
+return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 2113:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "_M": () => (/* reexport */ ChevronDown),
-  "Kh": () => (/* reexport */ ChevronUp),
-  "Sg": () => (/* reexport */ MinusCircle),
-  "FU": () => (/* reexport */ PlusCircle),
-  "v3": () => (/* reexport */ Warning)
+  "_M": function() { return /* reexport */ ChevronDown; },
+  "Kh": function() { return /* reexport */ ChevronUp; },
+  "Sg": function() { return /* reexport */ MinusCircle; },
+  "FU": function() { return /* reexport */ PlusCircle; },
+  "v3": function() { return /* reexport */ Warning; }
 });
 
 // UNUSED EXPORTS: Asterisk, CrossCirle, IconCheck
@@ -193,13 +193,13 @@ var CrossCirle = function CrossCirle(_ref) {
 /***/ }),
 
 /***/ 8727:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ Group)
+  "Z": function() { return /* binding */ Group; }
 });
 
 // EXTERNAL MODULE: external "react"
@@ -259,7 +259,7 @@ var update = injectStylesIntoStyleTag_default()(group/* default */.Z, options);
 
 
 
-       /* harmony default export */ const group_group = (group/* default */.Z && group/* default.locals */.Z.locals ? group/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var group_group = (group/* default */.Z && group/* default.locals */.Z.locals ? group/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/group/index.js
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -329,20 +329,20 @@ var Group = (0,components/* I18N */.mb)(function (_ref) {
 /***/ }),
 
 /***/ 1782:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "iz": () => (/* reexport */ Divider),
-  "ZA": () => (/* reexport */ group/* Group */.Z),
-  "v0": () => (/* reexport */ ListArray),
-  "ah": () => (/* reexport */ MakeButton),
-  "Vm": () => (/* reexport */ Placeholder),
-  "GX": () => (/* reexport */ TextOrIcon),
-  "$z": () => (/* reexport */ three_columns/* ThreeColumns */.$),
-  "VZ": () => (/* reexport */ two_columns/* TwoColumns */.V)
+  "iz": function() { return /* reexport */ Divider; },
+  "ZA": function() { return /* reexport */ group/* Group */.Z; },
+  "v0": function() { return /* reexport */ ListArray; },
+  "ah": function() { return /* reexport */ MakeButton; },
+  "Vm": function() { return /* reexport */ Placeholder; },
+  "GX": function() { return /* reexport */ TextOrIcon; },
+  "$z": function() { return /* reexport */ three_columns/* ThreeColumns */.$; },
+  "VZ": function() { return /* reexport */ two_columns/* TwoColumns */.V; }
 });
 
 // UNUSED EXPORTS: ButtonsToggleGroup, CommonIcon, PlaceholderImage, ReactView
@@ -403,7 +403,7 @@ var update = injectStylesIntoStyleTag_default()(placeholder/* default */.Z, opti
 
 
 
-       /* harmony default export */ const placeholder_placeholder = (placeholder/* default */.Z && placeholder/* default.locals */.Z.locals ? placeholder/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var placeholder_placeholder = (placeholder/* default */.Z && placeholder/* default.locals */.Z.locals ? placeholder/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/placeholder/index.js
 
@@ -479,7 +479,7 @@ var divider_update = injectStylesIntoStyleTag_default()(divider/* default */.Z, 
 
 
 
-       /* harmony default export */ const divider_divider = (divider/* default */.Z && divider/* default.locals */.Z.locals ? divider/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var divider_divider = (divider/* default */.Z && divider/* default.locals */.Z.locals ? divider/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/divider/index.js
 
@@ -635,7 +635,7 @@ var list_array_update = injectStylesIntoStyleTag_default()(list_array/* default 
 
 
 
-       /* harmony default export */ const array_list_array = (list_array/* default */.Z && list_array/* default.locals */.Z.locals ? list_array/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var array_list_array = (list_array/* default */.Z && list_array/* default.locals */.Z.locals ? list_array/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/array/index.js
 
@@ -874,7 +874,7 @@ var common_icon_update = injectStylesIntoStyleTag_default()(common_icon/* defaul
 
 
 
-       /* harmony default export */ const icon_common_icon = (common_icon/* default */.Z && common_icon/* default.locals */.Z.locals ? common_icon/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var icon_common_icon = (common_icon/* default */.Z && common_icon/* default.locals */.Z.locals ? common_icon/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/icon/index.js
 /* eslint-disable jsx-a11y/anchor-is-valid */
@@ -1023,7 +1023,7 @@ var buttons_toggle_group_update = injectStylesIntoStyleTag_default()(buttons_tog
 
 
 
-       /* harmony default export */ const buttons_toggle_group_buttons_toggle_group = (buttons_toggle_group/* default */.Z && buttons_toggle_group/* default.locals */.Z.locals ? buttons_toggle_group/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var buttons_toggle_group_buttons_toggle_group = (buttons_toggle_group/* default */.Z && buttons_toggle_group/* default.locals */.Z.locals ? buttons_toggle_group/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/buttons-toggle-group/index.js
 
@@ -1105,13 +1105,13 @@ var ButtonsToggleGroup = function ButtonsToggleGroup(_ref2) {
 /***/ }),
 
 /***/ 8587:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "N": () => (/* binding */ PlaceholderImage)
+  "N": function() { return /* binding */ PlaceholderImage; }
 });
 
 // EXTERNAL MODULE: external "react"
@@ -1164,7 +1164,7 @@ var update = injectStylesIntoStyleTag_default()(placeholder_image/* default */.Z
 
 
 
-       /* harmony default export */ const placeholder_image_placeholder_image = (placeholder_image/* default */.Z && placeholder_image/* default.locals */.Z.locals ? placeholder_image/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var placeholder_image_placeholder_image = (placeholder_image/* default */.Z && placeholder_image/* default.locals */.Z.locals ? placeholder_image/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/placeholder-image/index.js
 
@@ -1201,11 +1201,11 @@ var PlaceholderImage = function PlaceholderImage(_ref) {
 /***/ }),
 
 /***/ 8169:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Y": () => (/* binding */ ReactView)
+/* harmony export */   "Y": function() { return /* binding */ ReactView; }
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8156);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -1231,13 +1231,13 @@ var ReactView = function ReactView(_ref) {
 /***/ }),
 
 /***/ 7645:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "$": () => (/* binding */ ThreeColumns)
+  "$": function() { return /* binding */ ThreeColumns; }
 });
 
 // EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
@@ -1296,7 +1296,7 @@ var update = injectStylesIntoStyleTag_default()(three_columns/* default */.Z, op
 
 
 
-       /* harmony default export */ const three_columns_three_columns = (three_columns/* default */.Z && three_columns/* default.locals */.Z.locals ? three_columns/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var three_columns_three_columns = (three_columns/* default */.Z && three_columns/* default.locals */.Z.locals ? three_columns/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/three-columns/index.js
 
@@ -1335,13 +1335,13 @@ var ThreeColumns = function ThreeColumns(_ref) {
 /***/ }),
 
 /***/ 963:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "V": () => (/* binding */ TwoColumns)
+  "V": function() { return /* binding */ TwoColumns; }
 });
 
 // EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
@@ -1400,7 +1400,7 @@ var update = injectStylesIntoStyleTag_default()(two_columns/* default */.Z, opti
 
 
 
-       /* harmony default export */ const two_columns_two_columns = (two_columns/* default */.Z && two_columns/* default.locals */.Z.locals ? two_columns/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var two_columns_two_columns = (two_columns/* default */.Z && two_columns/* default.locals */.Z.locals ? two_columns/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/two-columns/index.js
 
@@ -1433,14 +1433,14 @@ var TwoColumns = function TwoColumns(_ref) {
 /***/ }),
 
 /***/ 5593:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "mb": () => (/* reexport */ I18N),
-  "qf": () => (/* reexport */ ValidationErrors)
+  "mb": function() { return /* reexport */ I18N; },
+  "qf": function() { return /* reexport */ ValidationErrors; }
 });
 
 // UNUSED EXPORTS: IfNotPlaintext, Plaintext, RequiredIcon
@@ -1507,7 +1507,7 @@ var update = injectStylesIntoStyleTag_default()(validation_errors/* default */.Z
 
 
 
-       /* harmony default export */ const components_validation_errors = (validation_errors/* default */.Z && validation_errors/* default.locals */.Z.locals ? validation_errors/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var components_validation_errors = (validation_errors/* default */.Z && validation_errors/* default.locals */.Z.locals ? validation_errors/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./components/validation-errors/index.js
 
@@ -1615,13 +1615,13 @@ var plaintext = __webpack_require__(7808);
 /***/ }),
 
 /***/ 6089:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Q": () => (/* binding */ PlaintextForm)
+  "Q": function() { return /* binding */ PlaintextForm; }
 });
 
 // EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
@@ -1686,7 +1686,7 @@ var update = injectStylesIntoStyleTag_default()(plaintext_form/* default */.Z, o
 
 
 
-       /* harmony default export */ const plaintext_form_plaintext_form = (plaintext_form/* default */.Z && plaintext_form/* default.locals */.Z.locals ? plaintext_form/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var plaintext_form_plaintext_form = (plaintext_form/* default */.Z && plaintext_form/* default.locals */.Z.locals ? plaintext_form/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./components/plaintext-form/index.js
 
@@ -1771,13 +1771,13 @@ var PlaintextForm = function PlaintextForm(_ref2) {
 /***/ }),
 
 /***/ 7808:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "U": () => (/* binding */ Plaintext)
+  "U": function() { return /* binding */ Plaintext; }
 });
 
 // UNUSED EXPORTS: IfNotPlaintext
@@ -1797,15 +1797,15 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 // EXTERNAL MODULE: ./helpers/index.js + 30 modules
 var helpers = __webpack_require__(8145);
 ;// CONCATENATED MODULE: ./components/plaintext/locales/yes.json
-const yes_namespaceObject = JSON.parse('{"en-US":"Yes","af-ZA":"Ja","ar":"نعم","bg-BG":"Да","ca-AD":"Sí","cs-CZ":"Ano","cy-GB":"Ie","da-DK":"Ja","de-AT":"Ja","de-CH":"Ja","de-DE":"Ja","el-GR":"Ναί","en-GB":"Yes","es-CL":"Sí","es-ES":"Sí","es-MX":"Sí","et-EE":"Jah","eu":"Bai","fa-IR":"آره","fi-FI":"Joo","fr-CA":"Oui","fr-FR":"Oui","he-IL":"כן","hi-IN":"हाँ","hr-HR":"Da","hu-HU":"Igen","id-ID":"Ya","is-IS":"Já","it-IT":"Si","ja-JP":"はい","km-KH":"បាត","ko-KR":"예","la":"Sic","lt-LT":"Taip","lv-LV":"Jā","mn-MN":"Мон","nb-NO":"Ja","nl-NL":"Ja","pl-PL":"Tak","pt-BR":"Sim","pt-PT":"Sim","ro-RO":"da","ru-RU":"Да","sk-SK":"Áno","sl-SI":"DA","sr-RS":"да","sv-SE":"Ja","th-TH":"ใช่","tr-TR":"Evet","uk-UA":"Так","vi-VN":"Đúng","zh-CN":"是的","zh-TW":"是的"}');
+var yes_namespaceObject = JSON.parse('{"en-US":"Yes","af-ZA":"Ja","ar":"نعم","bg-BG":"Да","ca-AD":"Sí","cs-CZ":"Ano","cy-GB":"Ie","da-DK":"Ja","de-AT":"Ja","de-CH":"Ja","de-DE":"Ja","el-GR":"Ναί","en-GB":"Yes","es-CL":"Sí","es-ES":"Sí","es-MX":"Sí","et-EE":"Jah","eu":"Bai","fa-IR":"آره","fi-FI":"Joo","fr-CA":"Oui","fr-FR":"Oui","he-IL":"כן","hi-IN":"हाँ","hr-HR":"Da","hu-HU":"Igen","id-ID":"Ya","is-IS":"Já","it-IT":"Si","ja-JP":"はい","km-KH":"បាត","ko-KR":"예","la":"Sic","lt-LT":"Taip","lv-LV":"Jā","mn-MN":"Мон","nb-NO":"Ja","nl-NL":"Ja","pl-PL":"Tak","pt-BR":"Sim","pt-PT":"Sim","ro-RO":"da","ru-RU":"Да","sk-SK":"Áno","sl-SI":"DA","sr-RS":"да","sv-SE":"Ja","th-TH":"ใช่","tr-TR":"Evet","uk-UA":"Так","vi-VN":"Đúng","zh-CN":"是的","zh-TW":"是的"}');
 ;// CONCATENATED MODULE: ./components/plaintext/locales/no.json
-const no_namespaceObject = JSON.parse('{"en-US":"No","af-ZA":"Geen","ar":"لا","bg-BG":"Не","ca-AD":"No","cs-CZ":"Ne","cy-GB":"Na","da-DK":"Ingen","de-AT":"NEIN","de-CH":"NEIN","de-DE":"NEIN","el-GR":"Οχι","en-GB":"No","es-CL":"No","es-ES":"No","es-MX":"No","et-EE":"Mitte","eu":"Ez-","fa-IR":"هیچ","fi-FI":"Ei","fr-CA":"Non","fr-FR":"Non","he-IL":"לא","hi-IN":"नहीं","hr-HR":"Ne","hu-HU":"Nem","id-ID":"TIDAK","is-IS":"Nei","it-IT":"No","ja-JP":"いいえ","km-KH":"ដេលក្ផាន","ko-KR":"아니요","la":"Non","lt-LT":"Ne","lv-LV":"Nē","mn-MN":"-Гүй / -битгий","nb-NO":"Nei","nl-NL":"Nee","pl-PL":"NIE","pt-BR":"Não","pt-PT":"Não","ro-RO":"Nu","ru-RU":"Нет","sk-SK":"Nie","sl-SI":"Ne","sr-RS":"Не","sv-SE":"Nej","th-TH":"เลขที่","tr-TR":"HAYIR","uk-UA":"Немає","vi-VN":"KHÔNG","zh-CN":"不","zh-TW":"不"}');
+var no_namespaceObject = JSON.parse('{"en-US":"No","af-ZA":"Geen","ar":"لا","bg-BG":"Не","ca-AD":"No","cs-CZ":"Ne","cy-GB":"Na","da-DK":"Ingen","de-AT":"NEIN","de-CH":"NEIN","de-DE":"NEIN","el-GR":"Οχι","en-GB":"No","es-CL":"No","es-ES":"No","es-MX":"No","et-EE":"Mitte","eu":"Ez-","fa-IR":"هیچ","fi-FI":"Ei","fr-CA":"Non","fr-FR":"Non","he-IL":"לא","hi-IN":"नहीं","hr-HR":"Ne","hu-HU":"Nem","id-ID":"TIDAK","is-IS":"Nei","it-IT":"No","ja-JP":"いいえ","km-KH":"ដេលក្ផាន","ko-KR":"아니요","la":"Non","lt-LT":"Ne","lv-LV":"Nē","mn-MN":"-Гүй / -битгий","nb-NO":"Nei","nl-NL":"Nee","pl-PL":"NIE","pt-BR":"Não","pt-PT":"Não","ro-RO":"Nu","ru-RU":"Нет","sk-SK":"Nie","sl-SI":"Ne","sr-RS":"Не","sv-SE":"Nej","th-TH":"เลขที่","tr-TR":"HAYIR","uk-UA":"Немає","vi-VN":"KHÔNG","zh-CN":"不","zh-TW":"不"}');
 ;// CONCATENATED MODULE: ./components/plaintext/locales/element.json
-const element_namespaceObject = JSON.parse('{"en-US":"element","af-ZA":"element","ar":"عنصر","bg-BG":"Елемент","ca-AD":"element","cs-CZ":"živel","cy-GB":"elfen","da-DK":"element","de-AT":"element","de-CH":"element","de-DE":"element","el-GR":"στοιχείο","en-GB":"element","es-CL":"elemento","es-ES":"elemento","es-MX":"elemento","et-EE":"element","eu":"osagai","fa-IR":"عنصر","fi-FI":"elementti","fr-CA":"élément","fr-FR":"élément","he-IL":"אֵלֵמֶנט","hi-IN":"तत्व","hr-HR":"element","hu-HU":"elem","id-ID":"elemen","is-IS":"Element","it-IT":"elemento","ja-JP":"エレメント","km-KH":"ធាតុ","ko-KR":"요소","la":"elementum","lt-LT":"elementas","lv-LV":"elements","mn-MN":"бүрэлдэхүүн","nb-NO":"element","nl-NL":"element","pl-PL":"element","pt-BR":"elemento","pt-PT":"elemento","ro-RO":"element","ru-RU":"элемент","sk-SK":"element","sl-SI":"element","sr-RS":"елемент","sv-SE":"element","th-TH":"องค์ประกอบ","tr-TR":"eleman","uk-UA":"елемент","vi-VN":"yếu tố","zh-CN":"元素","zh-TW":"元素"}');
+var element_namespaceObject = JSON.parse('{"en-US":"element","af-ZA":"element","ar":"عنصر","bg-BG":"Елемент","ca-AD":"element","cs-CZ":"živel","cy-GB":"elfen","da-DK":"element","de-AT":"element","de-CH":"element","de-DE":"element","el-GR":"στοιχείο","en-GB":"element","es-CL":"elemento","es-ES":"elemento","es-MX":"elemento","et-EE":"element","eu":"osagai","fa-IR":"عنصر","fi-FI":"elementti","fr-CA":"élément","fr-FR":"élément","he-IL":"אֵלֵמֶנט","hi-IN":"तत्व","hr-HR":"element","hu-HU":"elem","id-ID":"elemen","is-IS":"Element","it-IT":"elemento","ja-JP":"エレメント","km-KH":"ធាតុ","ko-KR":"요소","la":"elementum","lt-LT":"elementas","lv-LV":"elements","mn-MN":"бүрэлдэхүүн","nb-NO":"element","nl-NL":"element","pl-PL":"element","pt-BR":"elemento","pt-PT":"elemento","ro-RO":"element","ru-RU":"элемент","sk-SK":"element","sl-SI":"element","sr-RS":"елемент","sv-SE":"element","th-TH":"องค์ประกอบ","tr-TR":"eleman","uk-UA":"елемент","vi-VN":"yếu tố","zh-CN":"元素","zh-TW":"元素"}');
 ;// CONCATENATED MODULE: ./components/plaintext/locales/elements.json
-const elements_namespaceObject = JSON.parse('{"en-US":"elements","af-ZA":"elemente","ar":"عناصر","bg-BG":"елементи","ca-AD":"elements","cs-CZ":"Prvky","cy-GB":"elfennau","da-DK":"elementer","de-AT":"elemente","de-CH":"elemente","de-DE":"elemente","el-GR":"στοιχεία","en-GB":"elements","es-CL":"elementos","es-ES":"elementos","es-MX":"elementos","et-EE":"elemendid","eu":"elementuak","fa-IR":"عناصر","fi-FI":"elementit","fr-CA":"éléments","fr-FR":"éléments","he-IL":"אלמנטים","hi-IN":"तत्वों","hr-HR":"elementi","hu-HU":"elemek","id-ID":"elemen","is-IS":"þættir","it-IT":"elementi","ja-JP":"要素","km-KH":"ធាតុ","ko-KR":"강요","la":"elementa","lt-LT":"elementai","lv-LV":"elementi","mn-MN":"Элэглэлт","nb-NO":"elementer","nl-NL":"elementen","pl-PL":"elementy","pt-BR":"elementos","pt-PT":"elementos","ro-RO":"elemente","ru-RU":"элементы","sk-SK":"prvky","sl-SI":"elementi","sr-RS":"елементи","sv-SE":"element","th-TH":"องค์ประกอบ","tr-TR":"elementler","uk-UA":"елементи","vi-VN":"các yếu tố","zh-CN":"元素","zh-TW":"元素"}');
+var elements_namespaceObject = JSON.parse('{"en-US":"elements","af-ZA":"elemente","ar":"عناصر","bg-BG":"елементи","ca-AD":"elements","cs-CZ":"Prvky","cy-GB":"elfennau","da-DK":"elementer","de-AT":"elemente","de-CH":"elemente","de-DE":"elemente","el-GR":"στοιχεία","en-GB":"elements","es-CL":"elementos","es-ES":"elementos","es-MX":"elementos","et-EE":"elemendid","eu":"elementuak","fa-IR":"عناصر","fi-FI":"elementit","fr-CA":"éléments","fr-FR":"éléments","he-IL":"אלמנטים","hi-IN":"तत्वों","hr-HR":"elementi","hu-HU":"elemek","id-ID":"elemen","is-IS":"þættir","it-IT":"elementi","ja-JP":"要素","km-KH":"ធាតុ","ko-KR":"강요","la":"elementa","lt-LT":"elementai","lv-LV":"elementi","mn-MN":"Элэглэлт","nb-NO":"elementer","nl-NL":"elementen","pl-PL":"elementy","pt-BR":"elementos","pt-PT":"elementos","ro-RO":"elemente","ru-RU":"элементы","sk-SK":"prvky","sl-SI":"elementi","sr-RS":"елементи","sv-SE":"element","th-TH":"องค์ประกอบ","tr-TR":"elementler","uk-UA":"елементи","vi-VN":"các yếu tố","zh-CN":"元素","zh-TW":"元素"}');
 ;// CONCATENATED MODULE: ./components/plaintext/locales/no-elements.json
-const no_elements_namespaceObject = JSON.parse('{"en-US":"No elements","af-ZA":"Geen elemente nie","ar":"لا عناصر","bg-BG":"Без елементи","ca-AD":"Sense elements","cs-CZ":"Žádné prvky","cy-GB":"Dim Elfennau","da-DK":"Ingen elementer","de-AT":"Keine Elemente","de-CH":"Keine Elemente","de-DE":"Keine Elemente","el-GR":"Χωρίς στοιχεία","en-GB":"No elements","es-CL":"Sin elementos","es-ES":"Sin elementos","es-MX":"Sin elementos","et-EE":"Elemente pole","eu":"Elementurik ez","fa-IR":"بدون عنصر","fi-FI":"Ei elementtejä","fr-CA":"Pas d\'éléments","fr-FR":"Pas d\'éléments","he-IL":"אין אלמנטים","hi-IN":"कोई तत्व नहीं","hr-HR":"Nema elemenata","hu-HU":"Nincs elem","id-ID":"tidak ada elemen","is-IS":"Engir þættir","it-IT":"Nessun elemento","ja-JP":"要素はありません","km-KH":"គ្មានធាតុ","ko-KR":"요소가 없습니다","la":"Nulla elementa","lt-LT":"Jokių elementų","lv-LV":"Nav elementu","mn-MN":"элемент байхгүй","nb-NO":"Ingen elementer","nl-NL":"Geen elementen","pl-PL":"bez elementów","pt-BR":"Sem elementos","pt-PT":"Sem elementos","ro-RO":"Fără elemente","ru-RU":"Нет элементов","sk-SK":"Žiadne prvky","sl-SI":"Brez elementov","sr-RS":"Нема елемената","sv-SE":"Inga element","th-TH":"ไม่มีองค์ประกอบ","tr-TR":"Element Yok","uk-UA":"немає елементів","vi-VN":"Không có yếu tố","zh-CN":"没有元素","zh-TW":"没有元素"}');
+var no_elements_namespaceObject = JSON.parse('{"en-US":"No elements","af-ZA":"Geen elemente nie","ar":"لا عناصر","bg-BG":"Без елементи","ca-AD":"Sense elements","cs-CZ":"Žádné prvky","cy-GB":"Dim Elfennau","da-DK":"Ingen elementer","de-AT":"Keine Elemente","de-CH":"Keine Elemente","de-DE":"Keine Elemente","el-GR":"Χωρίς στοιχεία","en-GB":"No elements","es-CL":"Sin elementos","es-ES":"Sin elementos","es-MX":"Sin elementos","et-EE":"Elemente pole","eu":"Elementurik ez","fa-IR":"بدون عنصر","fi-FI":"Ei elementtejä","fr-CA":"Pas d\'éléments","fr-FR":"Pas d\'éléments","he-IL":"אין אלמנטים","hi-IN":"कोई तत्व नहीं","hr-HR":"Nema elemenata","hu-HU":"Nincs elem","id-ID":"tidak ada elemen","is-IS":"Engir þættir","it-IT":"Nessun elemento","ja-JP":"要素はありません","km-KH":"គ្មានធាតុ","ko-KR":"요소가 없습니다","la":"Nulla elementa","lt-LT":"Jokių elementų","lv-LV":"Nav elementu","mn-MN":"элемент байхгүй","nb-NO":"Ingen elementer","nl-NL":"Geen elementen","pl-PL":"bez elementów","pt-BR":"Sem elementos","pt-PT":"Sem elementos","ro-RO":"Fără elemente","ru-RU":"Нет элементов","sk-SK":"Žiadne prvky","sl-SI":"Brez elementov","sr-RS":"Нема елемената","sv-SE":"Inga element","th-TH":"ไม่มีองค์ประกอบ","tr-TR":"Element Yok","uk-UA":"немає елементів","vi-VN":"Không có yếu tố","zh-CN":"没有元素","zh-TW":"没有元素"}');
 ;// CONCATENATED MODULE: ./components/plaintext/locales/index.js
 
 
@@ -1943,13 +1943,13 @@ var IfNotPlaintext = function IfNotPlaintext(_ref2) {
 /***/ }),
 
 /***/ 8064:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MQ": () => (/* binding */ FRAMEWORKS),
-/* harmony export */   "fj": () => (/* binding */ FIELDS_KEY),
-/* harmony export */   "hZ": () => (/* binding */ FRAMEWORKS_LABELS)
+/* harmony export */   "MQ": function() { return /* binding */ FRAMEWORKS; },
+/* harmony export */   "fj": function() { return /* binding */ FIELDS_KEY; },
+/* harmony export */   "hZ": function() { return /* binding */ FRAMEWORKS_LABELS; }
 /* harmony export */ });
 var FRAMEWORKS = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd'];
 var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design'];
@@ -1958,26 +1958,23 @@ var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
 /***/ }),
 
 /***/ 5137:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8156);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 var FormContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)();
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FormContext);
+/* harmony default export */ __webpack_exports__["Z"] = (FormContext);
 
 /***/ }),
 
 /***/ 7274:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "x": () => (/* binding */ GenerateGenerator)
+/* harmony export */   "x": function() { return /* binding */ GenerateGenerator; }
 /* harmony export */ });
 /* harmony import */ var lodash_uniqueId__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3955);
 /* harmony import */ var lodash_uniqueId__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_uniqueId__WEBPACK_IMPORTED_MODULE_0__);
@@ -3267,42 +3264,42 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
 /***/ }),
 
 /***/ 8145:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "xS": () => (/* reexport */ addField),
-  "eX": () => (/* reexport */ applyFormRules),
-  "Zr": () => (/* reexport */ applyTransformers),
-  "Lx": () => (/* reexport */ cleanUp),
-  "FN": () => (/* reexport */ collectIds),
-  "BI": () => (/* reexport */ collectNames),
-  "bc": () => (/* reexport */ createEmptyField),
-  "AK": () => (/* reexport */ deleteField),
-  "Mw": () => (/* reexport */ fillIds),
-  "qH": () => (/* reexport */ filterFields),
-  "MN": () => (/* reexport */ filterOptions),
-  "PI": () => (/* reexport */ findField),
-  "qs": () => (/* reexport */ formHelper),
-  "rc": () => (/* reexport */ getFieldById),
-  "IP": () => (/* reexport */ getLocales),
-  "ag": () => (/* reexport */ i18n),
-  "Lo": () => (/* reexport */ i18nOptions),
-  "c_": () => (/* reexport */ isChildrenOf),
-  "Oc": () => (/* reexport */ isEmptyForm),
-  "QK": () => (/* reexport */ isI18n),
-  "CB": () => (/* reexport */ isUrl),
-  "qb": () => (/* reexport */ isValidDate),
-  "az": () => (/* reexport */ isValidDayjsFormat),
-  "PZ": () => (/* reexport */ makeWidthStyle),
-  "vn": () => (/* reexport */ mapFields),
-  "QF": () => (/* reexport */ passRest),
-  "f3": () => (/* reexport */ reduceFields),
-  "DN": () => (/* reexport */ replaceField),
-  "nK": () => (/* reexport */ validateJSONForm),
-  "Dd": () => (/* reexport */ validateRulesDefinition)
+  "xS": function() { return /* reexport */ addField; },
+  "eX": function() { return /* reexport */ applyFormRules; },
+  "Zr": function() { return /* reexport */ applyTransformers; },
+  "Lx": function() { return /* reexport */ cleanUp; },
+  "FN": function() { return /* reexport */ collectIds; },
+  "BI": function() { return /* reexport */ collectNames; },
+  "bc": function() { return /* reexport */ createEmptyField; },
+  "AK": function() { return /* reexport */ deleteField; },
+  "Mw": function() { return /* reexport */ fillIds; },
+  "qH": function() { return /* reexport */ filterFields; },
+  "MN": function() { return /* reexport */ filterOptions; },
+  "PI": function() { return /* reexport */ findField; },
+  "qs": function() { return /* reexport */ formHelper; },
+  "rc": function() { return /* reexport */ getFieldById; },
+  "IP": function() { return /* reexport */ getLocales; },
+  "ag": function() { return /* reexport */ i18n; },
+  "Lo": function() { return /* reexport */ i18nOptions; },
+  "c_": function() { return /* reexport */ isChildrenOf; },
+  "Oc": function() { return /* reexport */ isEmptyForm; },
+  "QK": function() { return /* reexport */ isI18n; },
+  "CB": function() { return /* reexport */ isUrl; },
+  "qb": function() { return /* reexport */ isValidDate; },
+  "az": function() { return /* reexport */ isValidDayjsFormat; },
+  "PZ": function() { return /* reexport */ makeWidthStyle; },
+  "vn": function() { return /* reexport */ mapFields; },
+  "QF": function() { return /* reexport */ passRest; },
+  "f3": function() { return /* reexport */ reduceFields; },
+  "DN": function() { return /* reexport */ replaceField; },
+  "nK": function() { return /* reexport */ validateJSONForm; },
+  "Dd": function() { return /* reexport */ validateRulesDefinition; }
 });
 
 // EXTERNAL MODULE: ./node_modules/lodash/flatten.js
@@ -4140,7 +4137,7 @@ var isValidDayjsFormat = function isValidDayjsFormat(str) {
 };
 
 ;// CONCATENATED MODULE: ./common/data/locales.json
-const locales_namespaceObject = JSON.parse('{"Q":{"af-ZA":["Afrikaans","Afrikaans"],"ar":["العربية","Arabic"],"bg-BG":["Български","Bulgarian"],"ca-AD":["Català","Catalan"],"cs-CZ":["Čeština","Czech"],"cy-GB":["Cymraeg","Welsh"],"da-DK":["Dansk","Danish"],"de-AT":["Deutsch (Österreich)","German (Austria)"],"de-CH":["Deutsch (Schweiz)","German (Switzerland)"],"de-DE":["Deutsch (Deutschland)","German (Germany)"],"el-GR":["Ελληνικά","Greek"],"en-GB":["English (UK)","English (UK)"],"en-US":["English (US)","English (US)"],"es-CL":["Español (Chile)","Spanish (Chile)"],"es-ES":["Español (España)","Spanish (Spain)"],"es-MX":["Español (México)","Spanish (Mexico)"],"et-EE":["Eesti keel","Estonian"],"eu":["Euskara","Basque"],"fa-IR":["فارسی","Persian"],"fi-FI":["Suomi","Finnish"],"fr-CA":["Français (Canada)","French (Canada)"],"fr-FR":["Français (France)","French (France)"],"he-IL":["עברית","Hebrew"],"hi-IN":["हिंदी","Hindi"],"hr-HR":["Hrvatski","Croatian"],"hu-HU":["Magyar","Hungarian"],"id-ID":["Bahasa Indonesia","Indonesian"],"is-IS":["Íslenska","Icelandic"],"it-IT":["Italiano","Italian"],"ja-JP":["日本語","Japanese"],"km-KH":["ភាសាខ្មែរ","Khmer"],"ko-KR":["한국어","Korean"],"la":["Latina","Latin"],"lt-LT":["Lietuvių kalba","Lithuanian"],"lv-LV":["Latviešu","Latvian"],"mn-MN":["Монгол","Mongolian"],"nb-NO":["Norsk bokmål","Norwegian (Bokmål)"],"nl-NL":["Nederlands","Dutch"],"nn-NO":["Norsk nynorsk","Norwegian (Nynorsk)"],"pl-PL":["Polski","Polish"],"pt-BR":["Português (Brasil)","Portuguese (Brazil)"],"pt-PT":["Português (Portugal)","Portuguese (Portugal)"],"ro-RO":["Română","Romanian"],"ru-RU":["Русский","Russian"],"sk-SK":["Slovenčina","Slovak"],"sl-SI":["Slovenščina","Slovenian"],"sr-RS":["Српски / Srpski","Serbian"],"sv-SE":["Svenska","Swedish"],"th-TH":["ไทย","Thai"],"tr-TR":["Türkçe","Turkish"],"uk-UA":["Українська","Ukrainian"],"vi-VN":["Tiếng Việt","Vietnamese"],"zh-CN":["中文 (中国大陆)","Chinese (PRC)"],"zh-TW":["中文 (台灣)","Chinese (Taiwan)"]}}');
+var locales_namespaceObject = JSON.parse('{"Q":{"af-ZA":["Afrikaans","Afrikaans"],"ar":["العربية","Arabic"],"bg-BG":["Български","Bulgarian"],"ca-AD":["Català","Catalan"],"cs-CZ":["Čeština","Czech"],"cy-GB":["Cymraeg","Welsh"],"da-DK":["Dansk","Danish"],"de-AT":["Deutsch (Österreich)","German (Austria)"],"de-CH":["Deutsch (Schweiz)","German (Switzerland)"],"de-DE":["Deutsch (Deutschland)","German (Germany)"],"el-GR":["Ελληνικά","Greek"],"en-GB":["English (UK)","English (UK)"],"en-US":["English (US)","English (US)"],"es-CL":["Español (Chile)","Spanish (Chile)"],"es-ES":["Español (España)","Spanish (Spain)"],"es-MX":["Español (México)","Spanish (Mexico)"],"et-EE":["Eesti keel","Estonian"],"eu":["Euskara","Basque"],"fa-IR":["فارسی","Persian"],"fi-FI":["Suomi","Finnish"],"fr-CA":["Français (Canada)","French (Canada)"],"fr-FR":["Français (France)","French (France)"],"he-IL":["עברית","Hebrew"],"hi-IN":["हिंदी","Hindi"],"hr-HR":["Hrvatski","Croatian"],"hu-HU":["Magyar","Hungarian"],"id-ID":["Bahasa Indonesia","Indonesian"],"is-IS":["Íslenska","Icelandic"],"it-IT":["Italiano","Italian"],"ja-JP":["日本語","Japanese"],"km-KH":["ភាសាខ្មែរ","Khmer"],"ko-KR":["한국어","Korean"],"la":["Latina","Latin"],"lt-LT":["Lietuvių kalba","Lithuanian"],"lv-LV":["Latviešu","Latvian"],"mn-MN":["Монгол","Mongolian"],"nb-NO":["Norsk bokmål","Norwegian (Bokmål)"],"nl-NL":["Nederlands","Dutch"],"nn-NO":["Norsk nynorsk","Norwegian (Nynorsk)"],"pl-PL":["Polski","Polish"],"pt-BR":["Português (Brasil)","Portuguese (Brazil)"],"pt-PT":["Português (Portugal)","Portuguese (Portugal)"],"ro-RO":["Română","Romanian"],"ru-RU":["Русский","Russian"],"sk-SK":["Slovenčina","Slovak"],"sl-SI":["Slovenščina","Slovenian"],"sr-RS":["Српски / Srpski","Serbian"],"sv-SE":["Svenska","Swedish"],"th-TH":["ไทย","Thai"],"tr-TR":["Türkçe","Turkish"],"uk-UA":["Українська","Ukrainian"],"vi-VN":["Tiếng Việt","Vietnamese"],"zh-CN":["中文 (中国大陆)","Chinese (PRC)"],"zh-TW":["中文 (台灣)","Chinese (Taiwan)"]}}');
 ;// CONCATENATED MODULE: ./helpers/get-locales.js
 
 var LANGUAGES_OPTIONS = Object.keys(locales_namespaceObject.Q).map(function (lang) {
@@ -4214,7 +4211,7 @@ var isEmptyForm = function isEmptyForm(form) {
   return !form || !Array.isArray(form.fields) || form.fields.length === 0;
 };
 ;// CONCATENATED MODULE: ./mappings.json
-const mappings_namespaceObject = JSON.parse('{"input-text":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"submitOnEnter":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"value":null,"image":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui","react-antd"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"popupMatchSelectWidth":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"layout":null,"arrayType":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"fullWidth":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-bootstrap","react-antd"],"step":["react-rsuite5","react-bootstrap","react-antd"],"max":["react-rsuite5","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":["react-rsuite5","react-material-ui","react-antd"],"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"value":["react-rsuite5","react-material-ui","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap","react-antd"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"size":["react-material-ui","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"row":["react-material-ui"],"reverse":["react-bootstrap"],"optionType":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui"],"disableUnderline":["react-material-ui"],"maxRows":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"value":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-antd"],"multiselectMode":["react-rsuite5"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui"],"variant":["react-material-ui"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"align":null,"hidden":null,"maxWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"maxHeight":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginTop":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginBottom":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"button":{"name":null,"buttonType":null,"placeholderOn":null,"labelOn":null,"iconOn":null,"placeholderOff":null,"labelOff":null,"iconOff":null,"initialValue":null,"placeholder":null,"labelLink":null,"iconLink":null,"href":null,"hint":null,"fullWidth":null,"width":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"tooltip":["react-rsuite5"],"variant":["react-material-ui","react-bootstrap"],"color":["react-material-ui"],"type":["react-antd"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap","react-antd"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"tabs":{"name":null,"label":null,"hint":null,"tabs":null,"value":null,"hidden":null,"appearance":["react-rsuite5"],"reversed":["react-rsuite5"],"justified":["react-rsuite5"],"indicatorColor":["react-material-ui"],"textColor":["react-material-ui"],"centered":["react-material-ui","react-antd"],"fullWidth":["react-material-ui"],"variant":["react-bootstrap"],"transition":["react-bootstrap"],"fill":["react-bootstrap"],"justify":["react-bootstrap"],"size":["react-antd"],"tabType":["react-antd"],"animated":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-tile":{"name":null,"label":null,"hint":null,"options":null,"value":null,"description":null,"icon":null,"initalOption":null,"disabled":null,"hidden":null,"inline":["react-rsuite5"],"iconWidth":["react-rsuite5"],"iconHeight":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"upload":{"name":null,"label":null,"hint":null,"disabled":null,"hidden":null,"accept":["react-rsuite5","react-antd"],"acceptedFile":["react-rsuite5","react-antd"],"listType":["react-rsuite5","react-antd"],"maxPreviewFileSize":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"fileListVisible":["react-rsuite5"],"disabledFileItem":["react-rsuite5"],"multiple":["react-rsuite5","react-antd"],"removable":["react-rsuite5"],"draggable":["react-rsuite5","react-antd"],"uploadButtonLabel":["react-rsuite5","react-antd"],"uploadButtonAppearance":["react-rsuite5","react-antd"],"uploadButtonSize":["react-rsuite5","react-antd"],"draggableText":["react-rsuite5","react-antd"],"draggableHeight":["react-rsuite5","react-antd"],"maxCount":["react-antd"],"showUploadList":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"buttons-toggle-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"multiple":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"steps":{"name":null,"hidden":null,"steps":null,"value":null,"label":null,"description":null,"labelNext":null,"labelPrevious":null,"align":null,"small":["react-rsuite5"],"status":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
+var mappings_namespaceObject = JSON.parse('{"input-text":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"submitOnEnter":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"value":null,"image":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui","react-antd"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"popupMatchSelectWidth":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"layout":null,"arrayType":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"fullWidth":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-bootstrap","react-antd"],"step":["react-rsuite5","react-bootstrap","react-antd"],"max":["react-rsuite5","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":["react-rsuite5","react-material-ui","react-antd"],"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"value":["react-rsuite5","react-material-ui","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap","react-antd"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"size":["react-material-ui","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"row":["react-material-ui"],"reverse":["react-bootstrap"],"optionType":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui"],"disableUnderline":["react-material-ui"],"maxRows":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"value":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-antd"],"multiselectMode":["react-rsuite5"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui"],"variant":["react-material-ui"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"align":null,"hidden":null,"maxWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"maxHeight":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginTop":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginBottom":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"button":{"name":null,"buttonType":null,"placeholderOn":null,"labelOn":null,"iconOn":null,"placeholderOff":null,"labelOff":null,"iconOff":null,"initialValue":null,"placeholder":null,"labelLink":null,"iconLink":null,"href":null,"hint":null,"fullWidth":null,"width":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"tooltip":["react-rsuite5"],"variant":["react-material-ui","react-bootstrap"],"color":["react-material-ui"],"type":["react-antd"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap","react-antd"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"tabs":{"name":null,"label":null,"hint":null,"tabs":null,"value":null,"hidden":null,"appearance":["react-rsuite5"],"reversed":["react-rsuite5"],"justified":["react-rsuite5"],"indicatorColor":["react-material-ui"],"textColor":["react-material-ui"],"centered":["react-material-ui","react-antd"],"fullWidth":["react-material-ui"],"variant":["react-bootstrap"],"transition":["react-bootstrap"],"fill":["react-bootstrap"],"justify":["react-bootstrap"],"size":["react-antd"],"tabType":["react-antd"],"animated":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-tile":{"name":null,"label":null,"hint":null,"options":null,"value":null,"description":null,"icon":null,"initalOption":null,"disabled":null,"hidden":null,"inline":["react-rsuite5"],"iconWidth":["react-rsuite5"],"iconHeight":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"upload":{"name":null,"label":null,"hint":null,"disabled":null,"hidden":null,"accept":["react-rsuite5","react-antd"],"acceptedFile":["react-rsuite5","react-antd"],"listType":["react-rsuite5","react-antd"],"maxPreviewFileSize":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"fileListVisible":["react-rsuite5"],"disabledFileItem":["react-rsuite5"],"multiple":["react-rsuite5","react-antd"],"removable":["react-rsuite5"],"draggable":["react-rsuite5","react-antd"],"uploadButtonLabel":["react-rsuite5","react-antd"],"uploadButtonAppearance":["react-rsuite5","react-antd"],"uploadButtonSize":["react-rsuite5","react-antd"],"draggableText":["react-rsuite5","react-antd"],"draggableHeight":["react-rsuite5","react-antd"],"maxCount":["react-antd"],"showUploadList":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"buttons-toggle-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"multiple":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"steps":{"name":null,"hidden":null,"steps":null,"value":null,"label":null,"description":null,"labelNext":null,"labelPrevious":null,"align":null,"small":["react-rsuite5"],"status":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
 ;// CONCATENATED MODULE: ./helpers/apply-transformers.js
 
 
@@ -4738,7 +4735,7 @@ var isChildrenOf = function isChildrenOf(fieldId, parentFieldId, fields) {
 var uniq = __webpack_require__(4908);
 var uniq_default = /*#__PURE__*/__webpack_require__.n(uniq);
 ;// CONCATENATED MODULE: ./manifest.json
-const manifest_namespaceObject = JSON.parse('{"input-text":{"label":"Input Text","category":"general","name":"input-text","description":"Basic input text","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"submitOnEnter","type":"boolean","description":"Trigger onSubmit / onError if the user hits Enter key"},{"name":"inputMode","type":"string","options":["none","text","decimal","numeric","tel","search","email","url"]},{"name":"autocomplete","type":"string","options":["off","on","name","honorific-prefix","given-name","additional-name","family-name","honorific-suffix","nickname","email","username","new-password","current-password","one-time-code","organization-title","organization","street-address","address-line1","address-line2","address-line3","address-level4","address-level3","address-level2","address-level1","country","country-name","postal-code","cc-name","cc-given-name","cc-additional-name","cc-family-name","cc-number","cc-exp","cc-exp-month","cc-exp-year","cc-csc","cc-type","transaction-currency","transaction-amount","language","bday","bday-day","bday-month","bday-year","sex","tel","tel-country-code","tel-national","tel-area-code","tel-local","tel-extension","impp","url","photo"]},{"name":"inputType","type":"string","description":"Set the HTML 5 input type, some framework may have specific components for some of these type","options":["button","checkbox","color","date","datetime-local","email","file","hidden","image","month","number","password","radio","range","reset","search","submit","tel","text","time","url","week"]}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"showCount","type":"boolean"},{"name":"maxLength","type":"number"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"bordered","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"toggle":{"label":"Toggle","category":"general","name":"toggle","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"checkedChildren","type":"string | i18n"},{"name":"unCheckedChildren","type":"string | i18n"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"disableRipple","type":"boolean","description":"Disable CSS ripple effect"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["default","small"]},{"name":"tooltip","type":"boolean"},{"name":"checkedChildren","type":"string | i18n"},{"name":"unCheckedChildren","type":"string | i18n"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"select":{"label":"Select","category":"general","description":"Select / Combo box","name":"select","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"options","type":"array"},{"name":"showImageOptions","type":"boolean","description":"Show image field for Select options to be displayed in the drop-down"},{"name":"filterKey","type":"string"},{"name":"filterValue","type":"string"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"searchable","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"appearance","type":"string","options":["default","subtle"]}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"autoWidth","type":"boolean","description":"If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"variant","type":"string","options":["outlined","filled","standard"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"popupMatchSelectWidth","type":"boolean","description":"Determine whether the popup menu and the select input are the same width"},{"name":"listHeight","type":"number","description":"Config popup height"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"allowClear","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"showSearch","type":"boolean","description":"Whether select is searchable"},{"name":"showArrow","type":"boolean","description":"Whether to show the drop-down arrow"},{"name":"virtual","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"group":{"label":"Group","category":"layout","name":"group","description":"Visually Group a set of fields, can be collapsed","common":[{"name":"name","type":"string"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"align","type":"string","options":["left","center","right"]},{"name":"collapsible","type":"boolean"},{"name":"open","type":"boolean"},{"name":"bottomBorder","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"two-columns":{"label":"Two Columns","category":"layout","name":"two-columns","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"layout","type":"string","options":["layout-1-1","layout-1-2","layout-1-3","layout-1-4","layout-2-1","layout-3-1","layout-4-1","layout-2-3","layout-3-2","layout-0-1","layout-1-0"]},{"name":"leftAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"rightAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"three-columns":{"label":"Three Columns","category":"layout","name":"three-columns","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"layout","type":"string","options":["layout-0-1-0","layout-1-0-0","layout-1-1-1","layout-1-1-2","layout-1-2-1","layout-2-1-1","layout-1-1-3","layout-1-3-1","layout-3-1-1"]},{"name":"leftAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"centerAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"rightAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"array":{"label":"List Array","category":"general","name":"array","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"layout","type":"string","options":["vertical","horizontal","inline"]},{"name":"arrayType","type":"string","description":"Defines the result of the list component, \\"arrayOfString\\" and \\"commaSeparated\\" only applies if list field has only one field","options":["arrayOfObject","arrayOfString","commaSeparated"]}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"input-number":{"label":"Input number","category":"general","name":"input-number","description":"Basic input number field, returns a numeric value","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"allowClear","type":"boolean"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"react-bootstrap":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"}],"react-antd":[{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"showControls","type":"boolean","description":"Whether to show +- controls, or set custom arrows icon"},{"name":"stringMode","type":"boolean","description":"Set value as string to support high precision decimals. Will return string value by onChange"},{"name":"bordered","type":"boolean"},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"tooltip","type":"boolean"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"slider":{"label":"Slider","category":"general","name":"slider","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"vertical","type":"boolean"},{"name":"progress","type":"boolean","description":"Show sliding progress bar"},{"name":"showTooltip","type":"boolean","description":"Whether to show Tooltip when sliding"},{"name":"graduated","type":"boolean"},{"name":"marks","type":"array","description":"Customize labels on the render ruler"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"valueLabelDisplay","type":"string","description":"How to show the value of the label","options":["auto","on","off"]},{"name":"showMarks","type":"boolean"},{"name":"customMarks","type":"array","description":"Customize labels on the render ruler"}],"react-bootstrap":[{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"}],"react-antd":[{"name":"keyboard","type":"boolean","description":"Support using keyboard to move handlers"},{"name":"dots","type":"boolean","description":"Whether the thumb can drag over tick only"},{"name":"reverse","type":"boolean","description":"Reverse the component"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"tooltipOpen","type":"boolean","description":"Tooltip behaviour, checked always open, unchecked always close"},{"name":"tooltipPlacement","type":"string","options":["top","left","right","bottom","topLeft","topRight","bottomLeft","bottomRight","topLeft","topRight","leftTop","leftBottom","rightTop","rightBottom"]},{"name":"marks","type":"array","description":"Customize labels on the render ruler"},{"name":"included","type":"boolean","description":"Make effect when marks not null, true means containment and false means coordinative"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"date":{"label":"Date","category":"general","description":"Date field, returns a string in ISO-8601 format (i.e., 1972-10-01)","name":"date","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"format","type":"string","description":"Check https://date-fns.org library for available formats"},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"cleanable","type":"boolean"},{"name":"editable","type":"boolean","description":"Rendered as an input, the date can be entered via the keyboard"},{"name":"oneTap","type":"boolean","description":"One click to complete the selection date"},{"name":"showMeridian","type":"boolean","description":"Display hours in 12 format"},{"name":"showWeekNumbers","type":"boolean"},{"name":"isoWeek","type":"boolean","description":"ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","options":["default","subtle"]},{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]}],"react-material-ui":[{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"fullWidth","type":"boolean","description":"Set the width of the container field to 100%"},{"name":"disableFuture","type":"boolean"},{"name":"disableHighlightToday","type":"boolean"},{"name":"disableOpenPicker","type":"boolean"},{"name":"disablePast","type":"boolean"},{"name":"displayWeekNumber","type":"boolean"},{"name":"reduceAnimations","type":"boolean"},{"name":"showDaysOutsideCurrentMonth","type":"boolean"},{"name":"maxDate","type":"date"},{"name":"minDate","type":"date"},{"name":"views","type":"[string]","options":["day","month","year"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"bordered","type":"boolean"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"showTime","type":"boolean"},{"name":"showNow","type":"boolean","description":"Show now button"},{"name":"showToday","type":"boolean","description":"Show today button"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"picker","type":"string","options":["date","week","month","quarter","year"]},{"name":"mode","type":"string","options":["time","date","month","year","decade"]}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"checkbox":{"label":"Checkbox","category":"general","name":"checkbox","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"indeterminate","type":"boolean","description":"Status can be indeterminate (null), cycle values trough false, inderminate, true"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"disableRipple","type":"boolean","description":"Disable CSS ripple effect"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"checkbox-group":{"label":"Checkbox Group","category":"general","name":"checkbox-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]}],"react-bootstrap":[{"name":"inline","type":"boolean"},{"name":"reverse","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"radio-group":{"label":"Radio Group","category":"general","name":"radio-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean"},{"name":"appearance","type":"string","description":"Show as default radio control or stacked buttons","options":["default","picker"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"row","type":"boolean"}],"react-bootstrap":[{"name":"inline","type":"boolean"},{"name":"reverse","type":"boolean"}],"react-antd":[{"name":"optionType","type":"string","options":["default","button"]},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"inline","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"input-tag":{"label":"Tag Input","category":"general","name":"input-tag","description":"Input tags, create tags, returns an array of string","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"trigger","type":"[string]","description":"Set the trigger for creating tags","options":["Enter","Space","Comma"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"input-mask":{"label":"Input Mask","category":"general","name":"input-mask","description":"Masked input text","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"mask","type":"string","description":"Use ${d} - digits, ${D} - any non digits, ${a} - any non alpha chars, ${w} - any word chars "},{"name":"guide","type":"boolean"},{"name":"keepCharPositions","type":"boolean","description":"When true, adding or deleting characters will not affect the position of existing characters"},{"name":"showMask","type":"boolean","description":"When the input value is empty, the mask is displayed as a placeholder instead of a regular placeholder"},{"name":"placeholderChar","type":"string","description":"The placeholder character represents the fillable spot in the mask"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"frameworks":["react-rsuite5"]},"textarea":{"label":"Textarea","category":"general","name":"textarea","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"rows","type":"number"}],"react-rsuite5":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"rows","type":"number"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"maxRows","type":"number"}],"react-bootstrap":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"rows","type":"number"}],"react-antd":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"showCount","type":"boolean"},{"name":"maxLength","type":"number"},{"name":"allowClear","type":"boolean"},{"name":"autoSize","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"rate":{"label":"Rate","category":"general","name":"rate","description":"Five stars rating field","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"allowHalf","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"vertical","type":"boolean","description":"Vertical direction when half selected"},{"name":"max","type":"number"},{"name":"color","type":"string","options":["red","orange","yellow","green","cyan","blue","violet"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"precision","type":"string","description":"The minimum increment value change allowed","options":[0.1,0.2,0.5,1]},{"name":"max","type":"number"}],"react-antd":[{"name":"count","type":"number"},{"name":"allowHalf","type":"boolean","description":"Allow half votes"},{"name":"allowClear","type":"boolean"},{"name":"tooltips","type":"array","description":"Customize tooltip for each value"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-antd"]},"placeholder":{"label":"Placeholder","category":"layout","name":"placeholder","description":"Generic placeholder for an image inside the form, supports basic parameters like width, height and margin","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"text","type":"string | i18n","description":"Supports markdown (i.e., **bold**, _italics_)"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-antd":[{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"multiselect":{"label":"MultiSelect","category":"general","name":"multiselect","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"multiselectMode","type":"string","description":"Show the selected values as tag element or plain string","options":["tag","plain"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"searchable","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"preventOverflow","type":"boolean","description":"Prevent floating element overflow"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"autoWidth","type":"boolean","description":"If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"variant","type":"string","options":["outlined","filled","standard"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"width","type":"number"},{"name":"listHeight","type":"number","description":"Config popup height"},{"name":"allowClear","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"showSearch","type":"boolean","description":"Whether select is searchable"},{"name":"showArrow","type":"boolean","description":"Whether to show the drop-down arrow"},{"name":"virtual","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"maxTagCount","type":"number","description":"Maximum number of selectable elements"},{"name":"maxTagPlaceholder","type":"string","description":"Placeholder to show when max number of element is reached"},{"name":"maxTagTextLength","type":"number","description":"Maximum length of text tags"}],"frameworks":["react-rsuite5","react-material-ui","react-antd"]},"multiselect-language":{"label":"Locales","category":"advanced","description":"Select one or more locales, returns an array (i.e. it-IT, en-GB, ...)","name":"multiselect-language","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"placeholder-image":{"label":"Placeholder Image","category":"layout","name":"placeholder-image","description":"Image placeholder","common":[{"name":"name","type":"string"},{"name":"url","type":"string"},{"name":"align","type":"string","options":["left","center","right"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-rsuite5":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-material-ui":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-bootstrap":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-antd":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"button":{"label":"Button","category":"layout","description":"Icon button, can be used as toggle button or just a link button","name":"button","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"buttonType","type":"string","description":"Type of button: toggle 2-states button or link button","options":["toggle","link"]},{"name":"labelOn","type":"string | i18n"},{"name":"iconOn","type":"string"},{"name":"labelOff","type":"string | i18n"},{"name":"iconOff","type":"string"},{"name":"initialValue","type":"boolean"},{"name":"labelLink","type":"string | i18n"},{"name":"iconLink","type":"string"},{"name":"href","type":"string"},{"name":"hint","type":"string | i18n","description":"Show hint in a tooltip"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","description":"Only available for link-type buttons","options":["default","primary","subtle","link","ghost"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]}],"react-bootstrap":[{"name":"variant","type":"string","options":["primary","secondary","success","warning","danger","info","light","dark","link"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"type","type":"string","description":"Only available for link-type buttons","options":["primary","default","dashed","text","link"]}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"divider":{"label":"Divider","category":"layout","description":"Layout divider, customizable with size and color","name":"divider","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"size","type":"number","description":"Thickness of the divider"},{"name":"color","type":"string"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"datetime":{"label":"Date Time","category":"general","name":"datetime","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"format","type":"string","description":"Check https://date-fns.org library for available formats"},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"cleanable","type":"boolean"},{"name":"editable","type":"boolean","description":"Rendered as an input, the date can be entered via the keyboard"},{"name":"oneTap","type":"boolean","description":"One click to complete the selection date"},{"name":"showMeridian","type":"boolean","description":"Display hours in 12 format"},{"name":"showWeekNumbers","type":"boolean"},{"name":"isoWeek","type":"boolean","description":"ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","options":["default","subtle"]},{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]}],"react-material-ui":[{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"fullWidth","type":"boolean","description":"Set the width of the container field to 100%"},{"name":"disableFuture","type":"boolean"},{"name":"disableHighlightToday","type":"boolean"},{"name":"disableOpenPicker","type":"boolean"},{"name":"disablePast","type":"boolean"},{"name":"displayWeekNumber","type":"boolean"},{"name":"reduceAnimations","type":"boolean"},{"name":"showDaysOutsideCurrentMonth","type":"boolean"},{"name":"maxDate","type":"date"},{"name":"minDate","type":"date"},{"name":"views","type":"[string]","options":["hours","minutes","seconds","day","month","year"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"bordered","type":"boolean"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"showNow","type":"boolean","description":"Show now button"},{"name":"showToday","type":"boolean","description":"Show today button"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"tabs":{"label":"Tabs","category":"layout","description":"Layout component for tabs","name":"tabs","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"tabs","type":"array"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"appearance","type":"string","options":["default","tabs","subtle"]},{"name":"reversed","type":"boolean"},{"name":"justified","type":"boolean"}],"react-material-ui":[{"name":"indicatorColor","type":"string","options":["primary","secondary"]},{"name":"textColor","type":"string","options":["primary","secondary","inherit"]},{"name":"centered","type":"boolean","description":"If true, the tabs are centered. This prop is intended for large views"},{"name":"fullWidth","type":"boolean","description":"Will make the tabs grow to use all the available space"}],"react-bootstrap":[{"name":"variant","type":"string","options":["tabs","pills","underline"]},{"name":"transition","type":"boolean","description":"Sets a default animation strategy for all children"},{"name":"fill","type":"boolean","description":"Have all Tabss proportionately fill all available width"},{"name":"justify","type":"boolean","description":"Have all Tabs evenly fill all available width"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","middle","large"]},{"name":"tabType","type":"string","options":["line","card"]},{"name":"animated","type":"boolean"},{"name":"centered","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"radio-tile":{"label":"Radio Tile","description":"Radio control with card, description and icon","category":"general","name":"radio-tile","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"initalOption","type":"string"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean","description":"Use inline layout"},{"name":"iconWidth","type":"number"},{"name":"iconHeight","type":"number"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"upload":{"label":"Upload","category":"general","name":"upload","description":"Upload file control, returns an array of json with file info and blob","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"accept","type":"array","description":"Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "},{"name":"listType","type":"string","options":["text","picture-text","picture"]},{"name":"maxPreviewFileSize","type":"number","description":"Set the maximum limit for preview files"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"fileListVisible","type":"boolean"},{"name":"disabledFileItem","type":"boolean"},{"name":"multiple","type":"boolean","description":"Allow selecting multiple files"},{"name":"removable","type":"boolean"},{"name":"draggable","type":"boolean"},{"name":"uploadButtonLabel","type":"string | i18n"},{"name":"uploadButtonAppearance","type":"string","options":["default","primary","subtle","link","ghost"]},{"name":"uploadButtonSize","type":"string","options":["lg","md","sm","xs"]},{"name":"draggableText","type":"string | i18n"},{"name":"draggableHeight","type":"number"}],"react-antd":[{"name":"accept","type":"array","description":"Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "},{"name":"multiple","type":"boolean","description":"Allow selecting multiple files"},{"name":"listType","type":"string","description":"Built-in stylesheets, support for four types: text, picture, picture-card or picture-circle","options":["text","picture","picture-card","picture-circle"]},{"name":"maxCount","type":"number"},{"name":"showUploadList","type":"boolean"},{"name":"uploadButtonLabel","type":"string | i18n"},{"name":"uploadButtonAppearance","type":"string","options":["primary","default","dashed","text","link"]},{"name":"uploadButtonSize","type":"string","options":["small","default","large"]},{"name":"draggable","type":"boolean"},{"name":"draggableText","type":"string | i18n"},{"name":"draggableHeight","type":"number"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-antd"]},"buttons-toggle-group":{"label":"Toggle Buttons","category":"layout","description":"List of toggle buttons, works like a radio group, returns an array of string","name":"buttons-toggle-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"multiple","type":"boolean","description":"Allow to select multiple values"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]}],"frameworks":["react-rsuite5","react-antd"]},"steps":{"label":"Steps","category":"layout","description":"Split the form in multiple steps","name":"steps","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"steps","type":"array"},{"name":"labelNext","type":"string | i18n"},{"name":"labelPrevious","type":"string | i18n"},{"name":"align","type":"string","options":["left","center","right"]}],"react-rsuite5":[{"name":"small","type":"boolean"},{"name":"status","type":"string","options":["finish","wait","process","error"]}],"frameworks":["react-rsuite5"]}}');
+var manifest_namespaceObject = JSON.parse('{"input-text":{"label":"Input Text","category":"general","name":"input-text","description":"Basic input text","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"submitOnEnter","type":"boolean","description":"Trigger onSubmit / onError if the user hits Enter key"},{"name":"inputMode","type":"string","options":["none","text","decimal","numeric","tel","search","email","url"]},{"name":"autocomplete","type":"string","options":["off","on","name","honorific-prefix","given-name","additional-name","family-name","honorific-suffix","nickname","email","username","new-password","current-password","one-time-code","organization-title","organization","street-address","address-line1","address-line2","address-line3","address-level4","address-level3","address-level2","address-level1","country","country-name","postal-code","cc-name","cc-given-name","cc-additional-name","cc-family-name","cc-number","cc-exp","cc-exp-month","cc-exp-year","cc-csc","cc-type","transaction-currency","transaction-amount","language","bday","bday-day","bday-month","bday-year","sex","tel","tel-country-code","tel-national","tel-area-code","tel-local","tel-extension","impp","url","photo"]},{"name":"inputType","type":"string","description":"Set the HTML 5 input type, some framework may have specific components for some of these type","options":["button","checkbox","color","date","datetime-local","email","file","hidden","image","month","number","password","radio","range","reset","search","submit","tel","text","time","url","week"]}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"showCount","type":"boolean"},{"name":"maxLength","type":"number"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"bordered","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"toggle":{"label":"Toggle","category":"general","name":"toggle","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"checkedChildren","type":"string | i18n"},{"name":"unCheckedChildren","type":"string | i18n"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"disableRipple","type":"boolean","description":"Disable CSS ripple effect"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["default","small"]},{"name":"tooltip","type":"boolean"},{"name":"checkedChildren","type":"string | i18n"},{"name":"unCheckedChildren","type":"string | i18n"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"select":{"label":"Select","category":"general","description":"Select / Combo box","name":"select","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"options","type":"array"},{"name":"showImageOptions","type":"boolean","description":"Show image field for Select options to be displayed in the drop-down"},{"name":"filterKey","type":"string"},{"name":"filterValue","type":"string"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"searchable","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"appearance","type":"string","options":["default","subtle"]}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"autoWidth","type":"boolean","description":"If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"variant","type":"string","options":["outlined","filled","standard"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"popupMatchSelectWidth","type":"boolean","description":"Determine whether the popup menu and the select input are the same width"},{"name":"listHeight","type":"number","description":"Config popup height"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"allowClear","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"showSearch","type":"boolean","description":"Whether select is searchable"},{"name":"showArrow","type":"boolean","description":"Whether to show the drop-down arrow"},{"name":"virtual","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"group":{"label":"Group","category":"layout","name":"group","description":"Visually Group a set of fields, can be collapsed","common":[{"name":"name","type":"string"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"align","type":"string","options":["left","center","right"]},{"name":"collapsible","type":"boolean"},{"name":"open","type":"boolean"},{"name":"bottomBorder","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"two-columns":{"label":"Two Columns","category":"layout","name":"two-columns","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"layout","type":"string","options":["layout-1-1","layout-1-2","layout-1-3","layout-1-4","layout-2-1","layout-3-1","layout-4-1","layout-2-3","layout-3-2","layout-0-1","layout-1-0"]},{"name":"leftAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"rightAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"three-columns":{"label":"Three Columns","category":"layout","name":"three-columns","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"layout","type":"string","options":["layout-0-1-0","layout-1-0-0","layout-1-1-1","layout-1-1-2","layout-1-2-1","layout-2-1-1","layout-1-1-3","layout-1-3-1","layout-3-1-1"]},{"name":"leftAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"centerAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"rightAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"array":{"label":"List Array","category":"general","name":"array","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"layout","type":"string","options":["vertical","horizontal","inline"]},{"name":"arrayType","type":"string","description":"Defines the result of the list component, \\"arrayOfString\\" and \\"commaSeparated\\" only applies if list field has only one field","options":["arrayOfObject","arrayOfString","commaSeparated"]}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"input-number":{"label":"Input number","category":"general","name":"input-number","description":"Basic input number field, returns a numeric value","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"allowClear","type":"boolean"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"react-bootstrap":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"}],"react-antd":[{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"showControls","type":"boolean","description":"Whether to show +- controls, or set custom arrows icon"},{"name":"stringMode","type":"boolean","description":"Set value as string to support high precision decimals. Will return string value by onChange"},{"name":"bordered","type":"boolean"},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"tooltip","type":"boolean"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"slider":{"label":"Slider","category":"general","name":"slider","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"vertical","type":"boolean"},{"name":"progress","type":"boolean","description":"Show sliding progress bar"},{"name":"showTooltip","type":"boolean","description":"Whether to show Tooltip when sliding"},{"name":"graduated","type":"boolean"},{"name":"marks","type":"array","description":"Customize labels on the render ruler"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"valueLabelDisplay","type":"string","description":"How to show the value of the label","options":["auto","on","off"]},{"name":"showMarks","type":"boolean"},{"name":"customMarks","type":"array","description":"Customize labels on the render ruler"}],"react-bootstrap":[{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"}],"react-antd":[{"name":"keyboard","type":"boolean","description":"Support using keyboard to move handlers"},{"name":"dots","type":"boolean","description":"Whether the thumb can drag over tick only"},{"name":"reverse","type":"boolean","description":"Reverse the component"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"tooltipOpen","type":"boolean","description":"Tooltip behaviour, checked always open, unchecked always close"},{"name":"tooltipPlacement","type":"string","options":["top","left","right","bottom","topLeft","topRight","bottomLeft","bottomRight","topLeft","topRight","leftTop","leftBottom","rightTop","rightBottom"]},{"name":"marks","type":"array","description":"Customize labels on the render ruler"},{"name":"included","type":"boolean","description":"Make effect when marks not null, true means containment and false means coordinative"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"date":{"label":"Date","category":"general","description":"Date field, returns a string in ISO-8601 format (i.e., 1972-10-01)","name":"date","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"format","type":"string","description":"Check https://date-fns.org library for available formats"},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"cleanable","type":"boolean"},{"name":"editable","type":"boolean","description":"Rendered as an input, the date can be entered via the keyboard"},{"name":"oneTap","type":"boolean","description":"One click to complete the selection date"},{"name":"showMeridian","type":"boolean","description":"Display hours in 12 format"},{"name":"showWeekNumbers","type":"boolean"},{"name":"isoWeek","type":"boolean","description":"ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","options":["default","subtle"]},{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]}],"react-material-ui":[{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"fullWidth","type":"boolean","description":"Set the width of the container field to 100%"},{"name":"disableFuture","type":"boolean"},{"name":"disableHighlightToday","type":"boolean"},{"name":"disableOpenPicker","type":"boolean"},{"name":"disablePast","type":"boolean"},{"name":"displayWeekNumber","type":"boolean"},{"name":"reduceAnimations","type":"boolean"},{"name":"showDaysOutsideCurrentMonth","type":"boolean"},{"name":"maxDate","type":"date"},{"name":"minDate","type":"date"},{"name":"views","type":"[string]","options":["day","month","year"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"bordered","type":"boolean"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"showTime","type":"boolean"},{"name":"showNow","type":"boolean","description":"Show now button"},{"name":"showToday","type":"boolean","description":"Show today button"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"picker","type":"string","options":["date","week","month","quarter","year"]},{"name":"mode","type":"string","options":["time","date","month","year","decade"]}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"checkbox":{"label":"Checkbox","category":"general","name":"checkbox","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"indeterminate","type":"boolean","description":"Status can be indeterminate (null), cycle values trough false, inderminate, true"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"disableRipple","type":"boolean","description":"Disable CSS ripple effect"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"checkbox-group":{"label":"Checkbox Group","category":"general","name":"checkbox-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]}],"react-bootstrap":[{"name":"inline","type":"boolean"},{"name":"reverse","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"radio-group":{"label":"Radio Group","category":"general","name":"radio-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean"},{"name":"appearance","type":"string","description":"Show as default radio control or stacked buttons","options":["default","picker"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"row","type":"boolean"}],"react-bootstrap":[{"name":"inline","type":"boolean"},{"name":"reverse","type":"boolean"}],"react-antd":[{"name":"optionType","type":"string","options":["default","button"]},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"inline","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"input-tag":{"label":"Tag Input","category":"general","name":"input-tag","description":"Input tags, create tags, returns an array of string","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"trigger","type":"[string]","description":"Set the trigger for creating tags","options":["Enter","Space","Comma"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"input-mask":{"label":"Input Mask","category":"general","name":"input-mask","description":"Masked input text","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"mask","type":"string","description":"Use ${d} - digits, ${D} - any non digits, ${a} - any non alpha chars, ${w} - any word chars "},{"name":"guide","type":"boolean"},{"name":"keepCharPositions","type":"boolean","description":"When true, adding or deleting characters will not affect the position of existing characters"},{"name":"showMask","type":"boolean","description":"When the input value is empty, the mask is displayed as a placeholder instead of a regular placeholder"},{"name":"placeholderChar","type":"string","description":"The placeholder character represents the fillable spot in the mask"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"frameworks":["react-rsuite5"]},"textarea":{"label":"Textarea","category":"general","name":"textarea","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"rows","type":"number"}],"react-rsuite5":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"rows","type":"number"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"maxRows","type":"number"}],"react-bootstrap":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"rows","type":"number"}],"react-antd":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"showCount","type":"boolean"},{"name":"maxLength","type":"number"},{"name":"allowClear","type":"boolean"},{"name":"autoSize","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"rate":{"label":"Rate","category":"general","name":"rate","description":"Five stars rating field","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"allowHalf","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"vertical","type":"boolean","description":"Vertical direction when half selected"},{"name":"max","type":"number"},{"name":"color","type":"string","options":["red","orange","yellow","green","cyan","blue","violet"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"precision","type":"string","description":"The minimum increment value change allowed","options":[0.1,0.2,0.5,1]},{"name":"max","type":"number"}],"react-antd":[{"name":"count","type":"number"},{"name":"allowHalf","type":"boolean","description":"Allow half votes"},{"name":"allowClear","type":"boolean"},{"name":"tooltips","type":"array","description":"Customize tooltip for each value"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-antd"]},"placeholder":{"label":"Placeholder","category":"layout","name":"placeholder","description":"Generic placeholder for an image inside the form, supports basic parameters like width, height and margin","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"text","type":"string | i18n","description":"Supports markdown (i.e., **bold**, _italics_)"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-antd":[{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"multiselect":{"label":"MultiSelect","category":"general","name":"multiselect","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"multiselectMode","type":"string","description":"Show the selected values as tag element or plain string","options":["tag","plain"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"searchable","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"preventOverflow","type":"boolean","description":"Prevent floating element overflow"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"autoWidth","type":"boolean","description":"If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"variant","type":"string","options":["outlined","filled","standard"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"width","type":"number"},{"name":"listHeight","type":"number","description":"Config popup height"},{"name":"allowClear","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"showSearch","type":"boolean","description":"Whether select is searchable"},{"name":"showArrow","type":"boolean","description":"Whether to show the drop-down arrow"},{"name":"virtual","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"maxTagCount","type":"number","description":"Maximum number of selectable elements"},{"name":"maxTagPlaceholder","type":"string","description":"Placeholder to show when max number of element is reached"},{"name":"maxTagTextLength","type":"number","description":"Maximum length of text tags"}],"frameworks":["react-rsuite5","react-material-ui","react-antd"]},"multiselect-language":{"label":"Locales","category":"advanced","description":"Select one or more locales, returns an array (i.e. it-IT, en-GB, ...)","name":"multiselect-language","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"placeholder-image":{"label":"Placeholder Image","category":"layout","name":"placeholder-image","description":"Image placeholder","common":[{"name":"name","type":"string"},{"name":"url","type":"string"},{"name":"align","type":"string","options":["left","center","right"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-rsuite5":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-material-ui":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-bootstrap":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-antd":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"button":{"label":"Button","category":"layout","description":"Icon button, can be used as toggle button or just a link button","name":"button","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"buttonType","type":"string","description":"Type of button: toggle 2-states button or link button","options":["toggle","link"]},{"name":"labelOn","type":"string | i18n"},{"name":"iconOn","type":"string"},{"name":"labelOff","type":"string | i18n"},{"name":"iconOff","type":"string"},{"name":"initialValue","type":"boolean"},{"name":"labelLink","type":"string | i18n"},{"name":"iconLink","type":"string"},{"name":"href","type":"string"},{"name":"hint","type":"string | i18n","description":"Show hint in a tooltip"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","description":"Only available for link-type buttons","options":["default","primary","subtle","link","ghost"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]}],"react-bootstrap":[{"name":"variant","type":"string","options":["primary","secondary","success","warning","danger","info","light","dark","link"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"type","type":"string","description":"Only available for link-type buttons","options":["primary","default","dashed","text","link"]}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"divider":{"label":"Divider","category":"layout","description":"Layout divider, customizable with size and color","name":"divider","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"size","type":"number","description":"Thickness of the divider"},{"name":"color","type":"string"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"datetime":{"label":"Date Time","category":"general","name":"datetime","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"format","type":"string","description":"Check https://date-fns.org library for available formats"},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"cleanable","type":"boolean"},{"name":"editable","type":"boolean","description":"Rendered as an input, the date can be entered via the keyboard"},{"name":"oneTap","type":"boolean","description":"One click to complete the selection date"},{"name":"showMeridian","type":"boolean","description":"Display hours in 12 format"},{"name":"showWeekNumbers","type":"boolean"},{"name":"isoWeek","type":"boolean","description":"ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","options":["default","subtle"]},{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]}],"react-material-ui":[{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"fullWidth","type":"boolean","description":"Set the width of the container field to 100%"},{"name":"disableFuture","type":"boolean"},{"name":"disableHighlightToday","type":"boolean"},{"name":"disableOpenPicker","type":"boolean"},{"name":"disablePast","type":"boolean"},{"name":"displayWeekNumber","type":"boolean"},{"name":"reduceAnimations","type":"boolean"},{"name":"showDaysOutsideCurrentMonth","type":"boolean"},{"name":"maxDate","type":"date"},{"name":"minDate","type":"date"},{"name":"views","type":"[string]","options":["hours","minutes","seconds","day","month","year"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"bordered","type":"boolean"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"showNow","type":"boolean","description":"Show now button"},{"name":"showToday","type":"boolean","description":"Show today button"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"tabs":{"label":"Tabs","category":"layout","description":"Layout component for tabs","name":"tabs","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"tabs","type":"array"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"appearance","type":"string","options":["default","tabs","subtle"]},{"name":"reversed","type":"boolean"},{"name":"justified","type":"boolean"}],"react-material-ui":[{"name":"indicatorColor","type":"string","options":["primary","secondary"]},{"name":"textColor","type":"string","options":["primary","secondary","inherit"]},{"name":"centered","type":"boolean","description":"If true, the tabs are centered. This prop is intended for large views"},{"name":"fullWidth","type":"boolean","description":"Will make the tabs grow to use all the available space"}],"react-bootstrap":[{"name":"variant","type":"string","options":["tabs","pills","underline"]},{"name":"transition","type":"boolean","description":"Sets a default animation strategy for all children"},{"name":"fill","type":"boolean","description":"Have all Tabss proportionately fill all available width"},{"name":"justify","type":"boolean","description":"Have all Tabs evenly fill all available width"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","middle","large"]},{"name":"tabType","type":"string","options":["line","card"]},{"name":"animated","type":"boolean"},{"name":"centered","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"radio-tile":{"label":"Radio Tile","description":"Radio control with card, description and icon","category":"general","name":"radio-tile","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"initalOption","type":"string"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean","description":"Use inline layout"},{"name":"iconWidth","type":"number"},{"name":"iconHeight","type":"number"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"upload":{"label":"Upload","category":"general","name":"upload","description":"Upload file control, returns an array of json with file info and blob","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"accept","type":"array","description":"Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "},{"name":"listType","type":"string","options":["text","picture-text","picture"]},{"name":"maxPreviewFileSize","type":"number","description":"Set the maximum limit for preview files"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"fileListVisible","type":"boolean"},{"name":"disabledFileItem","type":"boolean"},{"name":"multiple","type":"boolean","description":"Allow selecting multiple files"},{"name":"removable","type":"boolean"},{"name":"draggable","type":"boolean"},{"name":"uploadButtonLabel","type":"string | i18n"},{"name":"uploadButtonAppearance","type":"string","options":["default","primary","subtle","link","ghost"]},{"name":"uploadButtonSize","type":"string","options":["lg","md","sm","xs"]},{"name":"draggableText","type":"string | i18n"},{"name":"draggableHeight","type":"number"}],"react-antd":[{"name":"accept","type":"array","description":"Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "},{"name":"multiple","type":"boolean","description":"Allow selecting multiple files"},{"name":"listType","type":"string","description":"Built-in stylesheets, support for four types: text, picture, picture-card or picture-circle","options":["text","picture","picture-card","picture-circle"]},{"name":"maxCount","type":"number"},{"name":"showUploadList","type":"boolean"},{"name":"uploadButtonLabel","type":"string | i18n"},{"name":"uploadButtonAppearance","type":"string","options":["primary","default","dashed","text","link"]},{"name":"uploadButtonSize","type":"string","options":["small","default","large"]},{"name":"draggable","type":"boolean"},{"name":"draggableText","type":"string | i18n"},{"name":"draggableHeight","type":"number"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-antd"]},"buttons-toggle-group":{"label":"Toggle Buttons","category":"layout","description":"List of toggle buttons, works like a radio group, returns an array of string","name":"buttons-toggle-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"multiple","type":"boolean","description":"Allow to select multiple values"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]}],"frameworks":["react-rsuite5","react-antd"]},"steps":{"label":"Steps","category":"layout","description":"Split the form in multiple steps","name":"steps","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"steps","type":"array"},{"name":"labelNext","type":"string | i18n"},{"name":"labelPrevious","type":"string | i18n"},{"name":"align","type":"string","options":["left","center","right"]}],"react-rsuite5":[{"name":"small","type":"boolean"},{"name":"status","type":"string","options":["finish","wait","process","error"]}],"frameworks":["react-rsuite5"]}}');
 ;// CONCATENATED MODULE: ./helpers/validate-form.js
 
 
@@ -4828,12 +4825,12 @@ var validateJSONForm = function validateJSONForm(json) {
 /***/ }),
 
 /***/ 5490:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "G": () => (/* binding */ useFormContext),
-/* harmony export */   "R": () => (/* binding */ useStylesheet)
+/* harmony export */   "G": function() { return /* binding */ useFormContext; },
+/* harmony export */   "R": function() { return /* binding */ useStylesheet; }
 /* harmony export */ });
 /* harmony import */ var lodash_isEmpty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1609);
 /* harmony import */ var lodash_isEmpty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_isEmpty__WEBPACK_IMPORTED_MODULE_0__);
@@ -4871,7 +4868,7 @@ var useStylesheet = function useStylesheet(id, css) {
 /***/ }),
 
 /***/ 9300:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /* eslint-disable no-loop-func */
 var microdown = function () {
@@ -5058,7 +5055,7 @@ if (true) {
 /***/ }),
 
 /***/ 4184:
-/***/ ((module, exports) => {
+/***/ (function(module, exports) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	Copyright (c) 2018 Jed Watson.
@@ -5124,12 +5121,9 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 /***/ }),
 
 /***/ 3010:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5141,18 +5135,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-common-array{margin-top:0px !important}.lf-control-common-array .lf-control-common-array-item{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;align-items:stretch;position:relative;border-left:5px solid #ddd;padding-left:10px;padding-top:5px;padding-bottom:5px;margin-top:5px !important}.lf-control-common-array .lf-control-common-array-item>.inner-form{order:0;flex:1 0;align-self:auto;--lf-field-margin: 4px;--lf-field-column-margin: 10px}.lf-control-common-array .lf-control-common-array-item>.buttons{flex:0 0 auto;align-self:center;margin-left:6px}.lf-icon-button{display:inline-block;min-height:16px;min-width:16px;padding:4px;border-radius:3px}.lf-icon-button.disabled{opacity:.6}.lf-icon-button:not(.disabled):hover{background-color:#eee}", "",{"version":3,"sources":["webpack://./common/array/list-array.scss"],"names":[],"mappings":"AAAA,yBACE,yBAAA,CAEA,uDACE,YAAA,CACA,kBAAA,CACA,gBAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,iBAAA,CACA,0BAAA,CACA,iBAAA,CACA,eAAA,CACA,kBAAA,CACA,yBAAA,CAMA,mEACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,sBAAA,CACA,8BAAA,CAGF,gEACE,aAAA,CACA,iBAAA,CACA,eAAA,CAMN,gBACE,oBAAA,CACA,eAAA,CACA,cAAA,CACA,WAAA,CACA,iBAAA,CAEA,yBACE,UAAA,CAGF,qCACE,qBAAA","sourcesContent":[".lf-control-common-array {\n  margin-top: 0px !important;\n\n  .lf-control-common-array-item {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n    position: relative;\n    border-left: 5px solid #dddddd;\n    padding-left: 10px;\n    padding-top: 5px;\n    padding-bottom: 5px;\n    margin-top: 5px !important;\n\n    /*.rs-form-group {\n      margin-bottom: 5px !important;\n    }*/\n\n    > .inner-form {\n      order: 0;\n      flex: 1 0;\n      align-self: auto;\n      --lf-field-margin: 4px;\n      --lf-field-column-margin: 10px;\n    }\n\n    > .buttons {\n      flex: 0 0 auto;\n      align-self: center;\n      margin-left: 6px;\n    }\n  }\n\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n\n  &.disabled {\n    opacity: 0.6;\n  }\n\n  &:not(.disabled):hover {\n    background-color: #eeeeee;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 5883:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5164,18 +5155,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-button-toggle-group .lf-control-button{display:inline-block;margin-top:0px !important}.lf-control-button-toggle-group .lf-control-button:not(:first-child){margin-left:var(--lf-field-button-margin)}", "",{"version":3,"sources":["webpack://./common/buttons-toggle-group/buttons-toggle-group.scss"],"names":[],"mappings":"AACE,mDACE,oBAAA,CAEA,yBAAA,CAEA,qEACE,yCAAA","sourcesContent":[".lf-control-button-toggle-group {\n  .lf-control-button {\n    display: inline-block;\n       \n    margin-top: 0px !important; \n  \n    &:not(:first-child) {\n      margin-left: var(--lf-field-button-margin);\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 1760:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5187,18 +5175,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-divider{min-height:15px;font-size:1px;display:flex}.lf-control-divider .bar{width:100%;margin-top:5px;margin-bottom:5px}", "",{"version":3,"sources":["webpack://./common/divider/divider.scss"],"names":[],"mappings":"AAAA,oBACE,eAAA,CACA,aAAA,CACA,YAAA,CAGA,yBACE,UAAA,CACA,cAAA,CACA,iBAAA","sourcesContent":[".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n\n\n  .bar {\n    width: 100%;\n    margin-top: 5px;\n    margin-bottom: 5px;\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 88:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5210,18 +5195,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-group .header svg{display:inline-block}.lf-control-group.bottom-border.open{border-bottom:1px solid #e5e5ea;padding-bottom:15px}.lf-control-group .header{align-items:center;background:rgba(0,0,0,0);display:flex;margin:15px 0px;height:1px;flex-direction:row}.lf-control-group .header .inner-text{flex:0 0 auto;padding:0 12px;display:inline-block}.lf-control-group .header:before{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header:after{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header.left:before{flex:0 0 10px}.lf-control-group .header.right:after{flex:0 0 10px}", "",{"version":3,"sources":["webpack://./common/group/group.scss"],"names":[],"mappings":"AAGI,8BACE,oBAAA,CAIJ,qCACE,+BAAA,CACA,mBAAA,CAGF,0BACE,kBAAA,CACA,wBAAA,CACA,YAAA,CACA,eAAA,CACA,UAAA,CACA,kBAAA,CAEA,sCACE,aAAA,CACA,cAAA,CACA,oBAAA,CAGF,iCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAGF,gCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAIA,sCACE,aAAA,CAKF,sCACE,aAAA","sourcesContent":[".lf-control-group {\n\n  .header {\n    svg {\n      display: inline-block;\n    }\n  }\n\n  &.bottom-border.open {\n    border-bottom: 1px solid #e5e5ea;\n    padding-bottom: 15px;\n  }\n\n  .header {\n    align-items: center;\n    background: transparent;\n    display: flex;\n    margin: 15px 0px;\n    height: 1px;\n    flex-direction: row;\n\n    .inner-text {\n      flex: 0 0 auto;\n      padding: 0 12px;\n      display: inline-block;\n    }\n\n    &:before {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &:after {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &.left {\n      &:before {\n        flex: 0 0 10px;\n      }\n    }\n\n    &.right {\n      &:after {\n        flex: 0 0 10px;\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 6159:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5233,18 +5215,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-common-icon img{max-width:32px;max-height:32px}.lf-common-icon.small img{max-width:24px;max-height:24px}.lf-common-icon.large img{max-width:40px;max-height:40px}", "",{"version":3,"sources":["webpack://./common/icon/common-icon.scss"],"names":[],"mappings":"AACE,oBACE,cAAA,CACA,eAAA,CAIA,0BACE,cAAA,CACA,eAAA,CAMF,0BACE,cAAA,CACA,eAAA","sourcesContent":[".lf-common-icon {\n  img {\n    max-width: 32px;\n    max-height: 32px;\n  }\n\n  &.small {\n    img {\n      max-width: 24px;\n      max-height: 24px;\n\n    }\n  }\n\n  &.large {\n    img {\n      max-width: 40px;\n      max-height: 40px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 2558:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5256,18 +5235,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-placeholder-image{min-height:20px}", "",{"version":3,"sources":["webpack://./common/placeholder-image/placeholder-image.scss"],"names":[],"mappings":"AAAA,8BACE,eAAA","sourcesContent":[".lf-control-placeholder-image {\n  min-height: 20px;\n\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 860:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5279,18 +5255,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-placeholder ol,.lf-control-placeholder ul{padding-left:1rem}.lf-form .lf-control-placeholder:not(:first-child){margin-top:var(--lf-field-margin-top)}", "",{"version":3,"sources":["webpack://./common/placeholder/placeholder.scss"],"names":[],"mappings":"AACE,sDACE,iBAAA,CAIJ,mDACE,qCAAA","sourcesContent":[".lf-control-placeholder {\n  ol, ul {\n    padding-left: 1rem;\n  }\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 1861:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5302,18 +5275,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-three-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:20px}.lf-control-three-columns .left{flex:1 0;align-self:auto;margin-right:var(--lf-field-column-margin)}.lf-control-three-columns .center{margin-right:var(--lf-field-column-margin);flex:1 0;align-self:auto}.lf-control-three-columns .right{flex:1 0;align-self:auto}.lf-control-three-columns .left:empty{display:none}.lf-control-three-columns.layout-0-1-0 .left{flex:0 0}.lf-control-three-columns.layout-0-1-0 .center{flex:1 0}.lf-control-three-columns.layout-0-1-0 .right{flex:0 0}.lf-control-three-columns.layout-1-0-0 .left{flex:1 0}.lf-control-three-columns.layout-1-0-0 .center{flex:0 0}.lf-control-three-columns.layout-1-0-0 .right{flex:0 0}.lf-control-three-columns.layout-1-1-1 .left{flex:1 0}.lf-control-three-columns.layout-1-1-1 .center{flex:1 0}.lf-control-three-columns.layout-1-1-1 .right{flex:1 0}.lf-control-three-columns.layout-1-1-2 .left{flex:1 0}.lf-control-three-columns.layout-1-1-2 .center{flex:1 0}.lf-control-three-columns.layout-1-1-2 .right{flex:2 0}.lf-control-three-columns.layout-1-2-1 .left{flex:1 0}.lf-control-three-columns.layout-1-2-1 .center{flex:2 0}.lf-control-three-columns.layout-1-2-1 .right{flex:1 0}.lf-control-three-columns.layout-2-1-1 .left{flex:2 0}.lf-control-three-columns.layout-2-1-1 .center{flex:1 0}.lf-control-three-columns.layout-2-1-1 .right{flex:1 0}.lf-control-three-columns.layout-1-1-3 .left{flex:1 0}.lf-control-three-columns.layout-1-1-3 .center{flex:1 0}.lf-control-three-columns.layout-1-1-3 .right{flex:3 0}.lf-control-three-columns.layout-1-3-1 .left{flex:1 0}.lf-control-three-columns.layout-1-3-1 .center{flex:3 0}.lf-control-three-columns.layout-1-3-1 .right{flex:1 0}.lf-control-three-columns.layout-3-1-1 .left{flex:3 0}.lf-control-three-columns.layout-3-1-1 .center{flex:1 0}.lf-control-three-columns.layout-3-1-1 .right{flex:1 0}", "",{"version":3,"sources":["webpack://./common/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,0BACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAUA,gCACE,QAAA,CACA,eAAA,CACA,0CAAA,CAGF,kCACE,0CAAA,CACA,QAAA,CACA,eAAA,CAGF,iCACE,QAAA,CACA,eAAA,CAGF,sCACE,YAAA,CAIA,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA","sourcesContent":[".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: var(--lf-field-column-margin);\n  }\n\n  .center {\n    margin-right: var(--lf-field-column-margin);\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .left:empty {\n    display: none;\n  }\n\n  &.layout-0-1-0 {\n    .left {\n      flex: 0 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-0-0 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 0 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-1-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-2-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-2-1-1 {\n    .left {\n      flex: 2 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-3-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1-1 {\n    .left {\n      flex: 3 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n\n}\n"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 5318:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5325,18 +5295,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-two-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:20px}.lf-control-two-columns .left{flex:1 0;align-self:auto;margin-right:var(--lf-field-column-margin)}.lf-control-two-columns .right{flex:1 0;align-self:auto}.lf-control-two-columns.layout-1-2 .left{flex:1 0}.lf-control-two-columns.layout-1-2 .right{flex:2 0}.lf-control-two-columns.layout-1-3 .left{flex:1 0}.lf-control-two-columns.layout-1-3 .right{flex:3 0}.lf-control-two-columns.layout-1-4 .left{flex:1 0}.lf-control-two-columns.layout-1-4 .right{flex:4 0}.lf-control-two-columns.layout-1-5 .left{flex:1 0}.lf-control-two-columns.layout-1-5 .right{flex:4 0}.lf-control-two-columns.layout-2-1 .left{flex:2 0}.lf-control-two-columns.layout-2-1 .right{flex:1 0}.lf-control-two-columns.layout-3-1 .left{flex:3 0}.lf-control-two-columns.layout-3-1 .right{flex:1 0}.lf-control-two-columns.layout-4-1 .left{flex:4 0}.lf-control-two-columns.layout-4-1 .right{flex:1 0}.lf-control-two-columns.layout-5-1 .left{flex:4 0}.lf-control-two-columns.layout-5-1 .right{flex:1 0}.lf-control-two-columns.layout-3-2 .left{flex:3 0}.lf-control-two-columns.layout-3-2 .right{flex:2 0}.lf-control-two-columns.layout-2-3 .left{flex:2 0}.lf-control-two-columns.layout-2-3 .right{flex:3 0}.lf-control-two-columns.layout-0-1 .left{flex:0 0 auto}.lf-control-two-columns.layout-0-1 .right{flex:1 0}.lf-control-two-columns.layout-1-0 .left{flex:1 0}.lf-control-two-columns.layout-1-0 .right{flex:0 0 auto}.lf-form-react-rsuite5 .lf-two-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,wBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAEA,8BACE,QAAA,CACA,eAAA,CACA,0CAAA,CAGF,+BACE,QAAA,CACA,eAAA,CAIA,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,aAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,aAAA,CAMJ,uCACE,oCAAA","sourcesContent":[".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: var(--lf-field-column-margin);\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-0-1 {\n    .left {\n      flex: 0 0 auto;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-0 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0 auto;\n    }\n  }\n}\n\n.lf-form-react-rsuite5 {\n  .lf-two-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 7394:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5348,18 +5315,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-react-material-ui-label{color:rgba(0,0,0,.6);font-family:\"Roboto\",\"Helvetica\",\"Arial\",sans-serif;font-weight:400;font-size:1rem;line-height:1.4375em;letter-spacing:.00938em;padding:0;position:relative;display:block;transform-origin:top left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;transform:none;position:inherit;margin-top:0px}", "",{"version":3,"sources":["webpack://./components/mui-label/mui-label.scss"],"names":[],"mappings":"AAAA,4BACE,oBAAA,CACA,mDAAA,CACA,eAAA,CACA,cAAA,CACA,oBAAA,CACA,uBAAA,CACA,SAAA,CACA,iBAAA,CACA,aAAA,CACA,yBAAA,CACA,kBAAA,CACA,eAAA,CACA,sBAAA,CACA,cAAA,CACA,cAAA,CACA,gBAAA,CACA,cAAA","sourcesContent":[".lf-react-material-ui-label {\n  color: rgba(0, 0, 0, 0.6);\n  font-family: \"Roboto\",\"Helvetica\",\"Arial\",sans-serif;\n  font-weight: 400;\n  font-size: 1rem;\n  line-height: 1.4375em;\n  letter-spacing: 0.00938em;\n  padding: 0;\n  position: relative;\n  display: block;\n  transform-origin: top left;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  max-width: 100%;\n  transform: none;\n  position: inherit;\n  margin-top: 0px ;\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 51:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5371,18 +5335,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-plaintext{font-size:var(--lf-font-size)}.lf-form-plaintext .lf-plaintext-field-label{font-weight:600;color:#333}.lf-form-plaintext .plaintext-value:empty::before{content:\"-\"}", "",{"version":3,"sources":["webpack://./components/plaintext-form/plaintext-form.scss"],"names":[],"mappings":"AAAA,mBACE,6BAAA,CAEA,6CACE,eAAA,CACA,UAAA,CAGF,kDACE,WAAA","sourcesContent":[".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n\n  .lf-plaintext-field-label {\n    font-weight: 600;\n    color: #333333;\n  }\n\n  .plaintext-value:empty::before {\n    content: \"-\";\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 7242:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5394,18 +5355,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-validation-errors{border:1px solid #eebdd2;background-color:#ffddd2;padding:15px;color:#000}.lf-validation-errors.bottom{margin-top:15px}.lf-validation-errors.top{margin-bottom:15px}", "",{"version":3,"sources":["webpack://./components/validation-errors/index.scss"],"names":[],"mappings":"AAAA,sBACE,wBAAA,CACA,wBAAA,CACA,YAAA,CACA,UAAA,CAEA,6BACE,eAAA,CAGF,0BACE,kBAAA","sourcesContent":[".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n\n  &.bottom {\n    margin-top: 15px;\n  }\n\n  &.top {\n    margin-bottom: 15px;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 5861:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5417,18 +5375,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-lets-form .label-test-buttons{float:right;background-color:#ccc;color:#555;font-size:10px;padding:1px 3px;margin-top:-16px;border-top-left-radius:3px;text-transform:uppercase}.lf-lets-form.lf-lets-form-edit-mode .lf-buttons{padding:10px;background-image:linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);background-size:56.57px 56.57px}.lf-form{--lf-field-margin: 16px;--lf-field-column-margin: 16px;--lf-font-size: 15px;--lf-field-button-margin: 10px;--lf-highligh-color: #ff6633;--lf-hover-color: #FF9F85;--lf-drop-highlight-color: #3498ff;--lf-field-margin-top: 5px}.lf-form.lf-form-buttons-align-center .lf-buttons{justify-content:center}.lf-form.lf-form-buttons-align-left .lf-buttons{justify-content:flex-start}.lf-form.lf-form-buttons-align-right .lf-buttons{justify-content:flex-end}.lf-form .lf-buttons{margin-top:var(--lf-field-margin)}.lf-form [class*=lf-control]:not(:first-child){margin-top:var(--lf-field-margin);margin-bottom:0px !important}.lf-form .lf-control-common-array .lf-control-common-array-item{--lf-field-margin: 15px}.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]{margin-bottom:0px}.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child){margin-top:10px}.lf-icon-asterisk{margin-top:-3px;display:inline-block}.lf-missing-component{border:1px solid #bbb;background-color:#f6f6f6;padding:20px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-missing-component .icon{order:0;flex:0 0;align-self:auto;margin-top:2px}.lf-missing-component .tag-component{background-color:#673ab7;color:#fff;font-size:12px;padding:1px 4px 2px 4px;border-radius:3px;line-height:17px}.lf-missing-component .message{display:inline-block;margin-left:10px;order:0;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./generator/index.scss"],"names":[],"mappings":"AAEE,kCACE,WAAA,CACA,qBAAA,CACA,UAAA,CACA,cAAA,CACA,eAAA,CACA,gBAAA,CACA,0BAAA,CACA,wBAAA,CAIA,iDACE,YAAA,CACA,mIAAA,CACA,+BAAA,CAKN,SACE,uBAAA,CACA,8BAAA,CACA,oBAAA,CACA,8BAAA,CACA,4BAAA,CACA,yBAAA,CACA,kCAAA,CACA,0BAAA,CAGE,kDACE,sBAAA,CAIF,gDACE,0BAAA,CAIF,iDACE,wBAAA,CAIJ,qBACE,iCAAA,CAIF,+CACE,iCAAA,CACA,4BAAA,CAKA,gEACE,uBAAA,CAEA,oFACE,iBAAA,CAGF,sGAEE,eAAA,CAMR,kBACE,eAAA,CACA,oBAAA,CAGF,sBACE,qBAAA,CACA,wBAAA,CACA,YAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,4BACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,cAAA,CAGF,qCACE,wBAAA,CACA,UAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,gBAAA,CAGF,+BACE,oBAAA,CACA,gBAAA,CACA,OAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-lets-form{\n\n  .label-test-buttons {\n    float: right;\n    background-color: #cccccc;\n    color: #555555;\n    font-size: 10px;\n    padding: 1px 3px;\n    margin-top: -16px;\n    border-top-left-radius: 3px;\n    text-transform: uppercase;\n  }\n\n  &.lf-lets-form-edit-mode {\n    .lf-buttons {\n      padding: 10px;\n      background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n      background-size: 56.57px 56.57px;\n    }\n  }\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n\n  &.lf-form-buttons-align-center {\n    .lf-buttons {\n      justify-content: center;\n    }\n  }\n  &.lf-form-buttons-align-left {\n    .lf-buttons {\n      justify-content: flex-start;\n    }\n  }\n  &.lf-form-buttons-align-right {\n    .lf-buttons {\n      justify-content: flex-end;\n    }\n  }\n\n  .lf-buttons {\n    margin-top: var(--lf-field-margin);\n  }\n\n  // as a general rule, components have a top margin, unless they are the first of their container\n  [class*=lf-control]:not(:first-child) {\n    margin-top: var(--lf-field-margin);\n    margin-bottom: 0px !important;\n  }\n\n  .lf-control-common-array {\n\n    .lf-control-common-array-item {\n      --lf-field-margin: 15px;\n\n      [class^=lf-control] {\n        margin-bottom: 0px;\n      }\n\n      [class^=lf-control]:not(:first-child) {\n        //margin-top: var(--lf-field-margin);\n        margin-top: 10px;\n      }\n    }\n  }\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n\n  .icon {\n    order: 0;\n    flex: 0 0;\n    align-self: auto;\n    margin-top: 2px;\n  }\n\n  .tag-component {\n    background-color: #673ab7;\n    color: #ffffff;\n    font-size: 12px;\n    padding: 1px 4px 2px 4px;\n    border-radius: 3px;\n    line-height: 17px;\n  }\n\n  .message {\n    display: inline-block;\n    margin-left: 10px;\n    order: 0;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 6217:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5440,18 +5395,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form.lf-form-react-material-ui .lf-control-common-array [class^=lf-control]:not(:last-child){margin-bottom:10px}", "",{"version":3,"sources":["webpack://./react-material-ui/array/array.scss"],"names":[],"mappings":"AAEI,iGACE,kBAAA","sourcesContent":[".lf-form.lf-form-react-material-ui {\n  .lf-control-common-array {\n    [class^=lf-control]:not(:last-child) {\n      margin-bottom: 10px;\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 3316:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5463,18 +5415,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-material-ui .lf-control-button{min-height:20px}.lf-form-react-material-ui .lf-control-button .lf-icon{max-width:20px;max-height:20px}.lf-form-react-material-ui .lf-control-button .MuiButton-sizeLarge .lf-icon{max-width:22px;max-height:22px}.lf-form-react-material-ui .lf-control-button .MuiButton-sizeSmall .lf-icon{max-width:18px;max-height:18px}.lf-form-react-material-ui .lf-control-button .only-icon{min-width:inherit}.lf-form-react-material-ui .lf-control-button .only-icon .MuiButton-startIcon{margin-right:0px !important}", "",{"version":3,"sources":["webpack://./react-material-ui/button/button.scss"],"names":[],"mappings":"AACE,8CACE,eAAA,CAEA,uDACE,cAAA,CACA,eAAA,CAIA,4EACE,cAAA,CACA,eAAA,CAKF,4EACE,cAAA,CACA,eAAA,CAIJ,yDAEE,iBAAA,CAEA,8EACE,2BAAA","sourcesContent":[".lf-form-react-material-ui {\n  .lf-control-button {\n    min-height: 20px;\n\n    .lf-icon {\n      max-width: 20px;\n      max-height: 20px;\n    }\n\n    .MuiButton-sizeLarge {\n      .lf-icon {\n        max-width: 22px;\n        max-height: 22px;\n      }\n    }\n\n    .MuiButton-sizeSmall {\n      .lf-icon {\n        max-width: 18px;\n        max-height: 18px;\n      }\n    }\n\n    .only-icon {\n      // remove it if only icon\n      min-width: inherit;\n      \n      .MuiButton-startIcon {\n        margin-right: 0px !important;\n      }\n\n    }\n\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 6367:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5486,13 +5435,13 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-material-ui .lf-control-tabs .tab-fields{padding-top:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./react-material-ui/tabs/tabs.scss"],"names":[],"mappings":"AAEI,wDACE,kCAAA","sourcesContent":[".lf-form-react-material-ui {\n  .lf-control-tabs {\n    .tab-fields {\n      padding-top: var(--lf-field-margin);\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 3645:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 
@@ -5584,7 +5533,7 @@ module.exports = function (cssWithMappingToString) {
 /***/ }),
 
 /***/ 7537:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 
@@ -5607,7 +5556,7 @@ module.exports = function (item) {
 /***/ }),
 
 /***/ 8668:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isArray = __webpack_require__(1469);
 
@@ -5658,7 +5607,7 @@ module.exports = castArray;
 /***/ }),
 
 /***/ 2705:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var root = __webpack_require__(5639);
 
@@ -5671,7 +5620,7 @@ module.exports = Symbol;
 /***/ }),
 
 /***/ 6874:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * A faster alternative to `Function#apply`, this function invokes `func`
@@ -5699,7 +5648,7 @@ module.exports = apply;
 /***/ }),
 
 /***/ 7443:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseIndexOf = __webpack_require__(2118);
 
@@ -5723,7 +5672,7 @@ module.exports = arrayIncludes;
 /***/ }),
 
 /***/ 1196:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This function is like `arrayIncludes` except that it accepts a comparator.
@@ -5752,7 +5701,7 @@ module.exports = arrayIncludesWith;
 /***/ }),
 
 /***/ 9932:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * A specialized version of `_.map` for arrays without support for iteratee
@@ -5780,7 +5729,7 @@ module.exports = arrayMap;
 /***/ }),
 
 /***/ 2488:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Appends the elements of `values` to `array`.
@@ -5807,7 +5756,7 @@ module.exports = arrayPush;
 /***/ }),
 
 /***/ 4286:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Converts an ASCII `string` to an array.
@@ -5826,7 +5775,7 @@ module.exports = asciiToArray;
 /***/ }),
 
 /***/ 4865:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseAssignValue = __webpack_require__(9465),
     eq = __webpack_require__(7813);
@@ -5861,7 +5810,7 @@ module.exports = assignValue;
 /***/ }),
 
 /***/ 9465:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var defineProperty = __webpack_require__(8777);
 
@@ -5893,7 +5842,7 @@ module.exports = baseAssignValue;
 /***/ }),
 
 /***/ 5990:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns the first argument it receives.
@@ -5921,7 +5870,7 @@ module.exports = identity;
 /***/ }),
 
 /***/ 1078:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var arrayPush = __webpack_require__(2488),
     isFlattenable = __webpack_require__(7285);
@@ -5966,7 +5915,7 @@ module.exports = baseFlatten;
 /***/ }),
 
 /***/ 7786:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var castPath = __webpack_require__(1811),
     toKey = __webpack_require__(327);
@@ -5997,7 +5946,7 @@ module.exports = baseGet;
 /***/ }),
 
 /***/ 4239:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -6026,7 +5975,7 @@ module.exports = objectToString;
 /***/ }),
 
 /***/ 13:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * The base implementation of `_.hasIn` without support for deep paths.
@@ -6046,7 +5995,7 @@ module.exports = baseHasIn;
 /***/ }),
 
 /***/ 2118:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * A specialized version of `_.indexOf` which performs strict equality
@@ -6076,7 +6025,7 @@ module.exports = strictIndexOf;
 /***/ }),
 
 /***/ 1761:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     isObjectLike = __webpack_require__(7005);
@@ -6101,7 +6050,7 @@ module.exports = baseIsDate;
 /***/ }),
 
 /***/ 280:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var overArg = __webpack_require__(5569);
 
@@ -6114,7 +6063,7 @@ module.exports = nativeKeys;
 /***/ }),
 
 /***/ 5970:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var basePickBy = __webpack_require__(3012),
     hasIn = __webpack_require__(9095);
@@ -6140,7 +6089,7 @@ module.exports = basePick;
 /***/ }),
 
 /***/ 3012:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(7786),
     baseSet = __webpack_require__(611),
@@ -6177,7 +6126,7 @@ module.exports = basePickBy;
 /***/ }),
 
 /***/ 611:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var assignValue = __webpack_require__(4865),
     castPath = __webpack_require__(1811),
@@ -6235,7 +6184,7 @@ module.exports = baseSet;
 /***/ }),
 
 /***/ 4259:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * The base implementation of `_.slice` without an iteratee call guard.
@@ -6273,7 +6222,7 @@ module.exports = baseSlice;
 /***/ }),
 
 /***/ 531:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(2705),
     arrayMap = __webpack_require__(9932),
@@ -6317,7 +6266,7 @@ module.exports = baseToString;
 /***/ }),
 
 /***/ 7561:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var trimmedEndIndex = __webpack_require__(7990);
 
@@ -6343,7 +6292,7 @@ module.exports = baseTrim;
 /***/ }),
 
 /***/ 7518:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * The base implementation of `_.unary` without support for storing metadata.
@@ -6364,7 +6313,7 @@ module.exports = baseUnary;
 /***/ }),
 
 /***/ 5652:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var SetCache = __webpack_require__(8668),
     arrayIncludes = __webpack_require__(7443),
@@ -6443,7 +6392,7 @@ module.exports = baseUniq;
 /***/ }),
 
 /***/ 7406:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var castPath = __webpack_require__(1811),
     last = __webpack_require__(928),
@@ -6470,7 +6419,7 @@ module.exports = baseUnset;
 /***/ }),
 
 /***/ 4757:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseIndexOf = __webpack_require__(2118);
 
@@ -6494,7 +6443,7 @@ module.exports = arrayIncludes;
 /***/ }),
 
 /***/ 1811:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isArray = __webpack_require__(1469),
     isKey = __webpack_require__(5403),
@@ -6522,7 +6471,7 @@ module.exports = castPath;
 /***/ }),
 
 /***/ 180:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseSlice = __webpack_require__(4259);
 
@@ -6547,7 +6496,7 @@ module.exports = castSlice;
 /***/ }),
 
 /***/ 5512:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseIndexOf = __webpack_require__(2118);
 
@@ -6573,7 +6522,7 @@ module.exports = charsEndIndex;
 /***/ }),
 
 /***/ 9817:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseIndexOf = __webpack_require__(2118);
 
@@ -6600,7 +6549,7 @@ module.exports = charsStartIndex;
 /***/ }),
 
 /***/ 8363:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var assignValue = __webpack_require__(4865),
     baseAssignValue = __webpack_require__(9465);
@@ -6647,7 +6596,7 @@ module.exports = copyObject;
 /***/ }),
 
 /***/ 3593:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `undefined`.
@@ -6671,7 +6620,7 @@ module.exports = noop;
 /***/ }),
 
 /***/ 696:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isPlainObject = __webpack_require__(8630);
 
@@ -6694,7 +6643,7 @@ module.exports = customOmitClone;
 /***/ }),
 
 /***/ 8777:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var getNative = __webpack_require__(852);
 
@@ -6712,7 +6661,7 @@ module.exports = defineProperty;
 /***/ }),
 
 /***/ 9021:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var flatten = __webpack_require__(5564),
     overRest = __webpack_require__(5357),
@@ -6735,7 +6684,7 @@ module.exports = flatRest;
 /***/ }),
 
 /***/ 1957:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 /** Detect free variable `global` from Node.js. */
 var freeGlobal = typeof __webpack_require__.g == 'object' && __webpack_require__.g && __webpack_require__.g.Object === Object && __webpack_require__.g;
@@ -6746,7 +6695,7 @@ module.exports = freeGlobal;
 /***/ }),
 
 /***/ 6904:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This function is like
@@ -6773,7 +6722,7 @@ module.exports = nativeKeysIn;
 /***/ }),
 
 /***/ 852:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Gets the value at `key` of `object`.
@@ -6793,7 +6742,7 @@ module.exports = getValue;
 /***/ }),
 
 /***/ 5924:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var overArg = __webpack_require__(5569);
 
@@ -6806,7 +6755,7 @@ module.exports = getPrototype;
 /***/ }),
 
 /***/ 4160:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -6835,7 +6784,7 @@ module.exports = objectToString;
 /***/ }),
 
 /***/ 222:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var castPath = __webpack_require__(1811),
     isArguments = __webpack_require__(5694),
@@ -6881,7 +6830,7 @@ module.exports = hasPath;
 /***/ }),
 
 /***/ 2689:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -6906,7 +6855,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 7285:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(2705),
     isArguments = __webpack_require__(5694),
@@ -6933,7 +6882,7 @@ module.exports = isFlattenable;
 /***/ }),
 
 /***/ 5776:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
@@ -6965,7 +6914,7 @@ module.exports = isIndex;
 /***/ }),
 
 /***/ 5403:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isArray = __webpack_require__(1469),
     isSymbol = __webpack_require__(3448);
@@ -7001,7 +6950,7 @@ module.exports = isKey;
 /***/ }),
 
 /***/ 5726:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -7026,7 +6975,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 4523:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns the first argument it receives.
@@ -7054,7 +7003,7 @@ module.exports = identity;
 /***/ }),
 
 /***/ 1167:
-/***/ ((module, exports, __webpack_require__) => {
+/***/ (function(module, exports, __webpack_require__) {
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 var freeGlobal = __webpack_require__(1957);
@@ -7092,7 +7041,7 @@ module.exports = nodeUtil;
 /***/ }),
 
 /***/ 5569:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Creates a unary function that invokes `func` with its argument transformed.
@@ -7114,7 +7063,7 @@ module.exports = overArg;
 /***/ }),
 
 /***/ 5357:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var apply = __webpack_require__(6874);
 
@@ -7157,7 +7106,7 @@ module.exports = overRest;
 /***/ }),
 
 /***/ 292:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(7786),
     baseSlice = __webpack_require__(4259);
@@ -7180,7 +7129,7 @@ module.exports = parent;
 /***/ }),
 
 /***/ 5639:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var freeGlobal = __webpack_require__(1957);
 
@@ -7196,7 +7145,7 @@ module.exports = root;
 /***/ }),
 
 /***/ 1814:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns a new empty array.
@@ -7226,7 +7175,7 @@ module.exports = stubArray;
 /***/ }),
 
 /***/ 61:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns the first argument it receives.
@@ -7254,7 +7203,7 @@ module.exports = identity;
 /***/ }),
 
 /***/ 3140:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var asciiToArray = __webpack_require__(4286),
     hasUnicode = __webpack_require__(2689),
@@ -7279,7 +7228,7 @@ module.exports = stringToArray;
 /***/ }),
 
 /***/ 5514:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var memoizeCapped = __webpack_require__(4523);
 
@@ -7313,7 +7262,7 @@ module.exports = stringToPath;
 /***/ }),
 
 /***/ 327:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isSymbol = __webpack_require__(3448);
 
@@ -7341,7 +7290,7 @@ module.exports = toKey;
 /***/ }),
 
 /***/ 7990:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used to match a single whitespace character. */
 var reWhitespace = /\s/;
@@ -7367,7 +7316,7 @@ module.exports = trimmedEndIndex;
 /***/ }),
 
 /***/ 676:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Converts an ASCII `string` to an array.
@@ -7386,7 +7335,7 @@ module.exports = asciiToArray;
 /***/ }),
 
 /***/ 6678:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseClone = __webpack_require__(5990);
 
@@ -7429,7 +7378,7 @@ module.exports = clone;
 /***/ }),
 
 /***/ 7813:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Performs a
@@ -7473,7 +7422,7 @@ module.exports = eq;
 /***/ }),
 
 /***/ 5564:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseFlatten = __webpack_require__(1078);
 
@@ -7502,7 +7451,7 @@ module.exports = flatten;
 /***/ }),
 
 /***/ 9095:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseHasIn = __webpack_require__(13),
     hasPath = __webpack_require__(222);
@@ -7543,7 +7492,7 @@ module.exports = hasIn;
 /***/ }),
 
 /***/ 5694:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -7568,7 +7517,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 1469:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Checks if `value` is classified as an `Array` object.
@@ -7601,7 +7550,7 @@ module.exports = isArray;
 /***/ }),
 
 /***/ 8612:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isFunction = __webpack_require__(3560),
     isLength = __webpack_require__(1780);
@@ -7641,7 +7590,7 @@ module.exports = isArrayLike;
 /***/ }),
 
 /***/ 1584:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     isObjectLike = __webpack_require__(7005);
@@ -7677,7 +7626,7 @@ module.exports = isBoolean;
 /***/ }),
 
 /***/ 4144:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -7702,7 +7651,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 7960:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseIsDate = __webpack_require__(1761),
     baseUnary = __webpack_require__(7518),
@@ -7736,7 +7685,7 @@ module.exports = isDate;
 /***/ }),
 
 /***/ 1609:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseKeys = __webpack_require__(280),
     getTag = __webpack_require__(4160),
@@ -7820,7 +7769,7 @@ module.exports = isEmpty;
 /***/ }),
 
 /***/ 3560:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     isObject = __webpack_require__(3218);
@@ -7864,7 +7813,7 @@ module.exports = isFunction;
 /***/ }),
 
 /***/ 1780:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
@@ -7906,7 +7855,7 @@ module.exports = isLength;
 /***/ }),
 
 /***/ 1763:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     isObjectLike = __webpack_require__(7005);
@@ -7951,7 +7900,7 @@ module.exports = isNumber;
 /***/ }),
 
 /***/ 3218:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Checks if `value` is the
@@ -7989,7 +7938,7 @@ module.exports = isObject;
 /***/ }),
 
 /***/ 7005:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
@@ -8025,7 +7974,7 @@ module.exports = isObjectLike;
 /***/ }),
 
 /***/ 8630:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     getPrototype = __webpack_require__(5924),
@@ -8094,7 +8043,7 @@ module.exports = isPlainObject;
 /***/ }),
 
 /***/ 7037:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     isArray = __webpack_require__(1469),
@@ -8131,7 +8080,7 @@ module.exports = isString;
 /***/ }),
 
 /***/ 3448:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -8156,7 +8105,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 6719:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -8181,7 +8130,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 3674:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var overArg = __webpack_require__(5569);
 
@@ -8194,7 +8143,7 @@ module.exports = nativeKeys;
 /***/ }),
 
 /***/ 928:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Gets the last element of `array`.
@@ -8221,7 +8170,7 @@ module.exports = last;
 /***/ }),
 
 /***/ 7557:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(9932),
     baseClone = __webpack_require__(5990),
@@ -8285,7 +8234,7 @@ module.exports = omit;
 /***/ }),
 
 /***/ 8718:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var basePick = __webpack_require__(5970),
     flatRest = __webpack_require__(9021);
@@ -8317,7 +8266,7 @@ module.exports = pick;
 /***/ }),
 
 /***/ 9833:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseToString = __webpack_require__(531);
 
@@ -8352,7 +8301,7 @@ module.exports = toString;
 /***/ }),
 
 /***/ 2742:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseToString = __webpack_require__(531),
     baseTrim = __webpack_require__(7561),
@@ -8406,7 +8355,7 @@ module.exports = trim;
 /***/ }),
 
 /***/ 4908:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseUniq = __webpack_require__(5652);
 
@@ -8438,7 +8387,7 @@ module.exports = uniq;
 /***/ }),
 
 /***/ 3955:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var toString = __webpack_require__(9833);
 
@@ -8473,7 +8422,7 @@ module.exports = uniqueId;
 /***/ }),
 
 /***/ 4685:
-/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3379);
@@ -8521,7 +8470,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /***/ }),
 
 /***/ 3379:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 
@@ -8612,7 +8561,7 @@ module.exports = function (list, options) {
 /***/ }),
 
 /***/ 569:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 
@@ -8653,7 +8602,7 @@ module.exports = insertBySelector;
 /***/ }),
 
 /***/ 9216:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 
@@ -8670,7 +8619,7 @@ module.exports = insertStyleElement;
 /***/ }),
 
 /***/ 3565:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
@@ -8687,7 +8636,7 @@ module.exports = setAttributesWithoutAttributes;
 /***/ }),
 
 /***/ 7795:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 
@@ -8755,7 +8704,7 @@ module.exports = domAPI;
 /***/ }),
 
 /***/ 4589:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 
@@ -8776,7 +8725,7 @@ module.exports = styleTagTransform;
 /***/ }),
 
 /***/ 901:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__901__;
@@ -8784,7 +8733,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__901__;
 /***/ }),
 
 /***/ 3905:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__3905__;
@@ -8792,7 +8741,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__3905__;
 /***/ }),
 
 /***/ 6147:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__6147__;
@@ -8800,7 +8749,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__6147__;
 /***/ }),
 
 /***/ 5891:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__5891__;
@@ -8808,7 +8757,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__5891__;
 /***/ }),
 
 /***/ 9750:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__9750__;
@@ -8816,7 +8765,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__9750__;
 /***/ }),
 
 /***/ 5760:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__5760__;
@@ -8824,7 +8773,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__5760__;
 /***/ }),
 
 /***/ 8156:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__8156__;
@@ -8832,12 +8781,12 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__8156__;
 /***/ }),
 
 /***/ 7536:
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Qr": () => (/* binding */ Controller),
-/* harmony export */   "cI": () => (/* binding */ useForm)
+/* harmony export */   "Qr": function() { return /* binding */ Controller; },
+/* harmony export */   "cI": function() { return /* binding */ useForm; }
 /* harmony export */ });
 /* unused harmony exports FormProvider, appendErrors, get, set, useController, useFieldArray, useFormContext, useFormState, useWatch */
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8156);
@@ -11208,31 +11157,31 @@ function useForm(props = {}) {
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
+/******/ 		__webpack_require__.n = function(module) {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 		__webpack_require__.d = function(exports, definition) {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		__webpack_require__.g = (function() {
 /******/ 			if (typeof globalThis === 'object') return globalThis;
 /******/ 			try {
@@ -11241,84 +11190,84 @@ function useForm(props = {}) {
 /******/ 				if (typeof window === 'object') return window;
 /******/ 			}
 /******/ 		})();
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
+/******/ 		__webpack_require__.r = function(exports) {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/node module decorator */
-/******/ 	(() => {
-/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 	!function() {
+/******/ 		__webpack_require__.nmd = function(module) {
 /******/ 			module.paths = [];
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		__webpack_require__.nc = undefined;
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
+!function() {
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "FIELDS_KEY": () => (/* reexport */ costants/* FIELDS_KEY */.fj),
-  "FRAMEWORKS": () => (/* reexport */ costants/* FRAMEWORKS */.MQ),
-  "FRAMEWORKS_LABELS": () => (/* reexport */ costants/* FRAMEWORKS_LABELS */.hZ),
-  "Fields": () => (/* binding */ Fields),
-  "Forms": () => (/* binding */ Forms),
-  "addField": () => (/* reexport */ helpers/* addField */.xS),
-  "applyFormRules": () => (/* reexport */ helpers/* applyFormRules */.eX),
-  "applyTransformers": () => (/* reexport */ helpers/* applyTransformers */.Zr),
-  "cleanUp": () => (/* reexport */ helpers/* cleanUp */.Lx),
-  "collectIds": () => (/* reexport */ helpers/* collectIds */.FN),
-  "collectNames": () => (/* reexport */ helpers/* collectNames */.BI),
-  "createEmptyField": () => (/* reexport */ helpers/* createEmptyField */.bc),
-  "default": () => (/* binding */ react_material_ui),
-  "deleteField": () => (/* reexport */ helpers/* deleteField */.AK),
-  "fillIds": () => (/* reexport */ helpers/* fillIds */.Mw),
-  "filterFields": () => (/* reexport */ helpers/* filterFields */.qH),
-  "filterOptions": () => (/* reexport */ helpers/* filterOptions */.MN),
-  "findField": () => (/* reexport */ helpers/* findField */.PI),
-  "formHelper": () => (/* reexport */ helpers/* formHelper */.qs),
-  "getFieldById": () => (/* reexport */ helpers/* getFieldById */.rc),
-  "getLocales": () => (/* reexport */ helpers/* getLocales */.IP),
-  "i18n": () => (/* reexport */ helpers/* i18n */.ag),
-  "i18nOptions": () => (/* reexport */ helpers/* i18nOptions */.Lo),
-  "isChildrenOf": () => (/* reexport */ helpers/* isChildrenOf */.c_),
-  "isEmptyForm": () => (/* reexport */ helpers/* isEmptyForm */.Oc),
-  "isI18n": () => (/* reexport */ helpers/* isI18n */.QK),
-  "isUrl": () => (/* reexport */ helpers/* isUrl */.CB),
-  "isValidDate": () => (/* reexport */ helpers/* isValidDate */.qb),
-  "isValidDayjsFormat": () => (/* reexport */ helpers/* isValidDayjsFormat */.az),
-  "makeWidthStyle": () => (/* reexport */ helpers/* makeWidthStyle */.PZ),
-  "mapFields": () => (/* reexport */ helpers/* mapFields */.vn),
-  "passRest": () => (/* reexport */ helpers/* passRest */.QF),
-  "reduceFields": () => (/* reexport */ helpers/* reduceFields */.f3),
-  "replaceField": () => (/* reexport */ helpers/* replaceField */.DN),
-  "validateJSONForm": () => (/* reexport */ helpers/* validateJSONForm */.nK),
-  "validateRulesDefinition": () => (/* reexport */ helpers/* validateRulesDefinition */.Dd)
+  "FIELDS_KEY": function() { return /* reexport */ costants/* FIELDS_KEY */.fj; },
+  "FRAMEWORKS": function() { return /* reexport */ costants/* FRAMEWORKS */.MQ; },
+  "FRAMEWORKS_LABELS": function() { return /* reexport */ costants/* FRAMEWORKS_LABELS */.hZ; },
+  "Fields": function() { return /* binding */ Fields; },
+  "Forms": function() { return /* binding */ Forms; },
+  "addField": function() { return /* reexport */ helpers/* addField */.xS; },
+  "applyFormRules": function() { return /* reexport */ helpers/* applyFormRules */.eX; },
+  "applyTransformers": function() { return /* reexport */ helpers/* applyTransformers */.Zr; },
+  "cleanUp": function() { return /* reexport */ helpers/* cleanUp */.Lx; },
+  "collectIds": function() { return /* reexport */ helpers/* collectIds */.FN; },
+  "collectNames": function() { return /* reexport */ helpers/* collectNames */.BI; },
+  "createEmptyField": function() { return /* reexport */ helpers/* createEmptyField */.bc; },
+  "default": function() { return /* binding */ react_material_ui; },
+  "deleteField": function() { return /* reexport */ helpers/* deleteField */.AK; },
+  "fillIds": function() { return /* reexport */ helpers/* fillIds */.Mw; },
+  "filterFields": function() { return /* reexport */ helpers/* filterFields */.qH; },
+  "filterOptions": function() { return /* reexport */ helpers/* filterOptions */.MN; },
+  "findField": function() { return /* reexport */ helpers/* findField */.PI; },
+  "formHelper": function() { return /* reexport */ helpers/* formHelper */.qs; },
+  "getFieldById": function() { return /* reexport */ helpers/* getFieldById */.rc; },
+  "getLocales": function() { return /* reexport */ helpers/* getLocales */.IP; },
+  "i18n": function() { return /* reexport */ helpers/* i18n */.ag; },
+  "i18nOptions": function() { return /* reexport */ helpers/* i18nOptions */.Lo; },
+  "isChildrenOf": function() { return /* reexport */ helpers/* isChildrenOf */.c_; },
+  "isEmptyForm": function() { return /* reexport */ helpers/* isEmptyForm */.Oc; },
+  "isI18n": function() { return /* reexport */ helpers/* isI18n */.QK; },
+  "isUrl": function() { return /* reexport */ helpers/* isUrl */.CB; },
+  "isValidDate": function() { return /* reexport */ helpers/* isValidDate */.qb; },
+  "isValidDayjsFormat": function() { return /* reexport */ helpers/* isValidDayjsFormat */.az; },
+  "makeWidthStyle": function() { return /* reexport */ helpers/* makeWidthStyle */.PZ; },
+  "mapFields": function() { return /* reexport */ helpers/* mapFields */.vn; },
+  "passRest": function() { return /* reexport */ helpers/* passRest */.QF; },
+  "reduceFields": function() { return /* reexport */ helpers/* reduceFields */.f3; },
+  "replaceField": function() { return /* reexport */ helpers/* replaceField */.DN; },
+  "validateJSONForm": function() { return /* reexport */ helpers/* validateJSONForm */.nK; },
+  "validateRulesDefinition": function() { return /* reexport */ helpers/* validateRulesDefinition */.Dd; }
 });
 
 // EXTERNAL MODULE: external "react"
@@ -11438,7 +11387,7 @@ var update = injectStylesIntoStyleTag_default()(mui_label/* default */.Z, option
 
 
 
-       /* harmony default export */ const mui_label_mui_label = (mui_label/* default */.Z && mui_label/* default.locals */.Z.locals ? mui_label/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var mui_label_mui_label = (mui_label/* default */.Z && mui_label/* default.locals */.Z.locals ? mui_label/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./components/mui-label/index.js
 
@@ -12189,7 +12138,7 @@ var array_update = injectStylesIntoStyleTag_default()(array/* default */.Z, arra
 
 
 
-       /* harmony default export */ const array_array = (array/* default */.Z && array/* default.locals */.Z.locals ? array/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var array_array = (array/* default */.Z && array/* default.locals */.Z.locals ? array/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-material-ui/array/index.js
 
@@ -12525,7 +12474,7 @@ var tabs_update = injectStylesIntoStyleTag_default()(tabs/* default */.Z, tabs_o
 
 
 
-       /* harmony default export */ const tabs_tabs = (tabs/* default */.Z && tabs/* default.locals */.Z.locals ? tabs/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var tabs_tabs = (tabs/* default */.Z && tabs/* default.locals */.Z.locals ? tabs/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-material-ui/tabs/index.js
 
@@ -12625,7 +12574,7 @@ var button_update = injectStylesIntoStyleTag_default()(button_button/* default *
 
 
 
-       /* harmony default export */ const react_material_ui_button_button = (button_button/* default */.Z && button_button/* default.locals */.Z.locals ? button_button/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var react_material_ui_button_button = (button_button/* default */.Z && button_button/* default.locals */.Z.locals ? button_button/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-material-ui/button/index.js
 
@@ -12806,12 +12755,11 @@ var LetsForm = function LetsForm(_ref) {
     framework: "react-material-ui"
   }, rest), children);
 };
-/* harmony default export */ const react_material_ui = (LetsForm);
+/* harmony default export */ var react_material_ui = (LetsForm);
 
 
 
-})();
-
+}();
 /******/ 	return __webpack_exports__;
 /******/ })()
 ;

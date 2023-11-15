@@ -7,12 +7,12 @@
 		exports["lets-form/utils"] = factory();
 	else
 		root["lets-form/utils"] = factory();
-})(this, () => {
-return /******/ (() => { // webpackBootstrap
+})(this, function() {
+return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 8668:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isArray = __webpack_require__(1469);
 
@@ -63,7 +63,7 @@ module.exports = castArray;
 /***/ }),
 
 /***/ 6384:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var listCacheClear = __webpack_require__(7040),
     listCacheDelete = __webpack_require__(4125),
@@ -102,7 +102,7 @@ module.exports = ListCache;
 /***/ }),
 
 /***/ 2705:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var root = __webpack_require__(5639);
 
@@ -115,7 +115,7 @@ module.exports = Symbol;
 /***/ }),
 
 /***/ 6874:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * A faster alternative to `Function#apply`, this function invokes `func`
@@ -143,7 +143,7 @@ module.exports = apply;
 /***/ }),
 
 /***/ 7412:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * A specialized version of `_.forEach` for arrays without support for
@@ -172,7 +172,7 @@ module.exports = arrayEach;
 /***/ }),
 
 /***/ 7443:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseIndexOf = __webpack_require__(2118);
 
@@ -196,7 +196,7 @@ module.exports = arrayIncludes;
 /***/ }),
 
 /***/ 1196:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This function is like `arrayIncludes` except that it accepts a comparator.
@@ -225,7 +225,7 @@ module.exports = arrayIncludesWith;
 /***/ }),
 
 /***/ 9932:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * A specialized version of `_.map` for arrays without support for iteratee
@@ -253,7 +253,7 @@ module.exports = arrayMap;
 /***/ }),
 
 /***/ 2488:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Appends the elements of `values` to `array`.
@@ -280,7 +280,7 @@ module.exports = arrayPush;
 /***/ }),
 
 /***/ 4865:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseAssignValue = __webpack_require__(9465),
     eq = __webpack_require__(7813);
@@ -315,7 +315,7 @@ module.exports = assignValue;
 /***/ }),
 
 /***/ 8470:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var eq = __webpack_require__(7813);
 
@@ -343,7 +343,7 @@ module.exports = assocIndexOf;
 /***/ }),
 
 /***/ 4037:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(8363),
     keys = __webpack_require__(3674);
@@ -367,7 +367,7 @@ module.exports = baseAssign;
 /***/ }),
 
 /***/ 3886:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(8363),
     keysIn = __webpack_require__(1704);
@@ -391,7 +391,7 @@ module.exports = baseAssignIn;
 /***/ }),
 
 /***/ 9465:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var defineProperty = __webpack_require__(8777);
 
@@ -423,7 +423,7 @@ module.exports = baseAssignValue;
 /***/ }),
 
 /***/ 5990:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var Stack = __webpack_require__(6384),
     arrayEach = __webpack_require__(7412),
@@ -596,7 +596,7 @@ module.exports = baseClone;
 /***/ }),
 
 /***/ 3118:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isObject = __webpack_require__(3218);
 
@@ -633,7 +633,7 @@ module.exports = baseCreate;
 /***/ }),
 
 /***/ 1078:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var arrayPush = __webpack_require__(2488),
     isFlattenable = __webpack_require__(7285);
@@ -678,7 +678,7 @@ module.exports = baseFlatten;
 /***/ }),
 
 /***/ 7786:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var castPath = __webpack_require__(1811),
     toKey = __webpack_require__(327);
@@ -709,7 +709,7 @@ module.exports = baseGet;
 /***/ }),
 
 /***/ 4239:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -738,7 +738,7 @@ module.exports = objectToString;
 /***/ }),
 
 /***/ 13:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * The base implementation of `_.hasIn` without support for deep paths.
@@ -758,7 +758,7 @@ module.exports = baseHasIn;
 /***/ }),
 
 /***/ 2118:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * A specialized version of `_.indexOf` which performs strict equality
@@ -788,7 +788,7 @@ module.exports = strictIndexOf;
 /***/ }),
 
 /***/ 280:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var overArg = __webpack_require__(5569);
 
@@ -801,7 +801,7 @@ module.exports = nativeKeys;
 /***/ }),
 
 /***/ 5970:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var basePickBy = __webpack_require__(3012),
     hasIn = __webpack_require__(9095);
@@ -827,7 +827,7 @@ module.exports = basePick;
 /***/ }),
 
 /***/ 3012:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(7786),
     baseSet = __webpack_require__(611),
@@ -864,7 +864,7 @@ module.exports = basePickBy;
 /***/ }),
 
 /***/ 611:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var assignValue = __webpack_require__(4865),
     castPath = __webpack_require__(1811),
@@ -922,7 +922,7 @@ module.exports = baseSet;
 /***/ }),
 
 /***/ 4259:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * The base implementation of `_.slice` without an iteratee call guard.
@@ -960,7 +960,7 @@ module.exports = baseSlice;
 /***/ }),
 
 /***/ 531:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(2705),
     arrayMap = __webpack_require__(9932),
@@ -1004,7 +1004,7 @@ module.exports = baseToString;
 /***/ }),
 
 /***/ 5652:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var SetCache = __webpack_require__(8668),
     arrayIncludes = __webpack_require__(7443),
@@ -1083,7 +1083,7 @@ module.exports = baseUniq;
 /***/ }),
 
 /***/ 7406:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var castPath = __webpack_require__(1811),
     last = __webpack_require__(928),
@@ -1110,7 +1110,7 @@ module.exports = baseUnset;
 /***/ }),
 
 /***/ 4757:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseIndexOf = __webpack_require__(2118);
 
@@ -1134,7 +1134,7 @@ module.exports = arrayIncludes;
 /***/ }),
 
 /***/ 1811:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isArray = __webpack_require__(1469),
     isKey = __webpack_require__(5403),
@@ -1162,7 +1162,7 @@ module.exports = castPath;
 /***/ }),
 
 /***/ 4626:
-/***/ ((module, exports, __webpack_require__) => {
+/***/ (function(module, exports, __webpack_require__) {
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 var root = __webpack_require__(5639);
@@ -1205,7 +1205,7 @@ module.exports = cloneBuffer;
 /***/ }),
 
 /***/ 278:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Copies the values of `source` to `array`.
@@ -1232,7 +1232,7 @@ module.exports = copyArray;
 /***/ }),
 
 /***/ 8363:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var assignValue = __webpack_require__(4865),
     baseAssignValue = __webpack_require__(9465);
@@ -1279,7 +1279,7 @@ module.exports = copyObject;
 /***/ }),
 
 /***/ 8805:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(8363),
     getSymbols = __webpack_require__(9551);
@@ -1302,7 +1302,7 @@ module.exports = copySymbols;
 /***/ }),
 
 /***/ 1911:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(8363),
     getSymbolsIn = __webpack_require__(1442);
@@ -1325,7 +1325,7 @@ module.exports = copySymbolsIn;
 /***/ }),
 
 /***/ 3593:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `undefined`.
@@ -1349,7 +1349,7 @@ module.exports = noop;
 /***/ }),
 
 /***/ 696:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isPlainObject = __webpack_require__(8630);
 
@@ -1372,7 +1372,7 @@ module.exports = customOmitClone;
 /***/ }),
 
 /***/ 8777:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var getNative = __webpack_require__(852);
 
@@ -1390,7 +1390,7 @@ module.exports = defineProperty;
 /***/ }),
 
 /***/ 9021:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var flatten = __webpack_require__(5564),
     overRest = __webpack_require__(5357),
@@ -1413,7 +1413,7 @@ module.exports = flatRest;
 /***/ }),
 
 /***/ 1957:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 /** Detect free variable `global` from Node.js. */
 var freeGlobal = typeof __webpack_require__.g == 'object' && __webpack_require__.g && __webpack_require__.g.Object === Object && __webpack_require__.g;
@@ -1424,7 +1424,7 @@ module.exports = freeGlobal;
 /***/ }),
 
 /***/ 8234:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var overArg = __webpack_require__(5569);
 
@@ -1437,7 +1437,7 @@ module.exports = nativeKeys;
 /***/ }),
 
 /***/ 6904:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This function is like
@@ -1464,7 +1464,7 @@ module.exports = nativeKeysIn;
 /***/ }),
 
 /***/ 852:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Gets the value at `key` of `object`.
@@ -1484,7 +1484,7 @@ module.exports = getValue;
 /***/ }),
 
 /***/ 5924:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var overArg = __webpack_require__(5569);
 
@@ -1497,7 +1497,7 @@ module.exports = getPrototype;
 /***/ }),
 
 /***/ 9551:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns a new empty array.
@@ -1527,7 +1527,7 @@ module.exports = stubArray;
 /***/ }),
 
 /***/ 1442:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns a new empty array.
@@ -1557,7 +1557,7 @@ module.exports = stubArray;
 /***/ }),
 
 /***/ 4160:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -1586,7 +1586,7 @@ module.exports = objectToString;
 /***/ }),
 
 /***/ 222:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var castPath = __webpack_require__(1811),
     isArguments = __webpack_require__(5694),
@@ -1632,7 +1632,7 @@ module.exports = hasPath;
 /***/ }),
 
 /***/ 3824:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -1665,7 +1665,7 @@ module.exports = initCloneArray;
 /***/ }),
 
 /***/ 9148:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns the first argument it receives.
@@ -1693,7 +1693,7 @@ module.exports = identity;
 /***/ }),
 
 /***/ 8517:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseCreate = __webpack_require__(3118),
     getPrototype = __webpack_require__(5924),
@@ -1718,7 +1718,7 @@ module.exports = initCloneObject;
 /***/ }),
 
 /***/ 7285:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(2705),
     isArguments = __webpack_require__(5694),
@@ -1745,7 +1745,7 @@ module.exports = isFlattenable;
 /***/ }),
 
 /***/ 5776:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
@@ -1777,7 +1777,7 @@ module.exports = isIndex;
 /***/ }),
 
 /***/ 5403:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isArray = __webpack_require__(1469),
     isSymbol = __webpack_require__(3448);
@@ -1813,7 +1813,7 @@ module.exports = isKey;
 /***/ }),
 
 /***/ 5726:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -1838,7 +1838,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 7040:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Removes all key-value entries from the list cache.
@@ -1858,7 +1858,7 @@ module.exports = listCacheClear;
 /***/ }),
 
 /***/ 4125:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(8470);
 
@@ -1900,7 +1900,7 @@ module.exports = listCacheDelete;
 /***/ }),
 
 /***/ 2117:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(8470);
 
@@ -1926,7 +1926,7 @@ module.exports = listCacheGet;
 /***/ }),
 
 /***/ 7518:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(8470);
 
@@ -1949,7 +1949,7 @@ module.exports = listCacheHas;
 /***/ }),
 
 /***/ 4705:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(8470);
 
@@ -1982,7 +1982,7 @@ module.exports = listCacheSet;
 /***/ }),
 
 /***/ 4523:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns the first argument it receives.
@@ -2010,7 +2010,7 @@ module.exports = identity;
 /***/ }),
 
 /***/ 5569:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Creates a unary function that invokes `func` with its argument transformed.
@@ -2032,7 +2032,7 @@ module.exports = overArg;
 /***/ }),
 
 /***/ 5357:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var apply = __webpack_require__(6874);
 
@@ -2075,7 +2075,7 @@ module.exports = overRest;
 /***/ }),
 
 /***/ 292:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(7786),
     baseSlice = __webpack_require__(4259);
@@ -2098,7 +2098,7 @@ module.exports = parent;
 /***/ }),
 
 /***/ 5639:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var freeGlobal = __webpack_require__(1957);
 
@@ -2114,7 +2114,7 @@ module.exports = root;
 /***/ }),
 
 /***/ 1814:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns a new empty array.
@@ -2144,7 +2144,7 @@ module.exports = stubArray;
 /***/ }),
 
 /***/ 61:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns the first argument it receives.
@@ -2172,7 +2172,7 @@ module.exports = identity;
 /***/ }),
 
 /***/ 5514:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var memoizeCapped = __webpack_require__(4523);
 
@@ -2206,7 +2206,7 @@ module.exports = stringToPath;
 /***/ }),
 
 /***/ 327:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isSymbol = __webpack_require__(3448);
 
@@ -2234,7 +2234,7 @@ module.exports = toKey;
 /***/ }),
 
 /***/ 6678:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseClone = __webpack_require__(5990);
 
@@ -2277,7 +2277,7 @@ module.exports = clone;
 /***/ }),
 
 /***/ 7813:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Performs a
@@ -2321,7 +2321,7 @@ module.exports = eq;
 /***/ }),
 
 /***/ 5564:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseFlatten = __webpack_require__(1078);
 
@@ -2350,7 +2350,7 @@ module.exports = flatten;
 /***/ }),
 
 /***/ 9095:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseHasIn = __webpack_require__(13),
     hasPath = __webpack_require__(222);
@@ -2391,7 +2391,7 @@ module.exports = hasIn;
 /***/ }),
 
 /***/ 5694:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -2416,7 +2416,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 1469:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Checks if `value` is classified as an `Array` object.
@@ -2449,7 +2449,7 @@ module.exports = isArray;
 /***/ }),
 
 /***/ 8612:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isFunction = __webpack_require__(3560),
     isLength = __webpack_require__(1780);
@@ -2489,7 +2489,7 @@ module.exports = isArrayLike;
 /***/ }),
 
 /***/ 1584:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     isObjectLike = __webpack_require__(7005);
@@ -2525,7 +2525,7 @@ module.exports = isBoolean;
 /***/ }),
 
 /***/ 4144:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -2550,7 +2550,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 1609:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseKeys = __webpack_require__(280),
     getTag = __webpack_require__(4160),
@@ -2634,7 +2634,7 @@ module.exports = isEmpty;
 /***/ }),
 
 /***/ 3560:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     isObject = __webpack_require__(3218);
@@ -2678,7 +2678,7 @@ module.exports = isFunction;
 /***/ }),
 
 /***/ 1780:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
@@ -2720,7 +2720,7 @@ module.exports = isLength;
 /***/ }),
 
 /***/ 6688:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -2745,7 +2745,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 1763:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     isObjectLike = __webpack_require__(7005);
@@ -2790,7 +2790,7 @@ module.exports = isNumber;
 /***/ }),
 
 /***/ 3218:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Checks if `value` is the
@@ -2828,7 +2828,7 @@ module.exports = isObject;
 /***/ }),
 
 /***/ 7005:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
@@ -2864,7 +2864,7 @@ module.exports = isObjectLike;
 /***/ }),
 
 /***/ 8630:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     getPrototype = __webpack_require__(5924),
@@ -2933,7 +2933,7 @@ module.exports = isPlainObject;
 /***/ }),
 
 /***/ 2928:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -2958,7 +2958,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 3448:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -2983,7 +2983,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 6719:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -3008,7 +3008,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 3674:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var overArg = __webpack_require__(5569);
 
@@ -3021,7 +3021,7 @@ module.exports = nativeKeys;
 /***/ }),
 
 /***/ 1704:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This function is like
@@ -3048,7 +3048,7 @@ module.exports = nativeKeysIn;
 /***/ }),
 
 /***/ 928:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Gets the last element of `array`.
@@ -3075,7 +3075,7 @@ module.exports = last;
 /***/ }),
 
 /***/ 7557:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(9932),
     baseClone = __webpack_require__(5990),
@@ -3139,7 +3139,7 @@ module.exports = omit;
 /***/ }),
 
 /***/ 8718:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var basePick = __webpack_require__(5970),
     flatRest = __webpack_require__(9021);
@@ -3171,7 +3171,7 @@ module.exports = pick;
 /***/ }),
 
 /***/ 9833:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseToString = __webpack_require__(531);
 
@@ -3206,7 +3206,7 @@ module.exports = toString;
 /***/ }),
 
 /***/ 4908:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseUniq = __webpack_require__(5652);
 
@@ -3238,7 +3238,7 @@ module.exports = uniq;
 /***/ }),
 
 /***/ 3955:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var toString = __webpack_require__(9833);
 
@@ -3303,31 +3303,31 @@ module.exports = uniqueId;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
+/******/ 		__webpack_require__.n = function(module) {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 		__webpack_require__.d = function(exports, definition) {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		__webpack_require__.g = (function() {
 /******/ 			if (typeof globalThis === 'object') return globalThis;
 /******/ 			try {
@@ -3336,56 +3336,56 @@ module.exports = uniqueId;
 /******/ 				if (typeof window === 'object') return window;
 /******/ 			}
 /******/ 		})();
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
+/******/ 		__webpack_require__.r = function(exports) {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/node module decorator */
-/******/ 	(() => {
-/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 	!function() {
+/******/ 		__webpack_require__.nmd = function(module) {
 /******/ 			module.paths = [];
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
+!function() {
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "addField": () => (/* reexport */ addField),
-  "cleanUp": () => (/* reexport */ cleanUp),
-  "createEmptyField": () => (/* reexport */ createEmptyField),
-  "deleteField": () => (/* reexport */ deleteField),
-  "fillIds": () => (/* reexport */ fillIds),
-  "filterFields": () => (/* reexport */ filterFields),
-  "findField": () => (/* reexport */ findField),
-  "formHelper": () => (/* reexport */ formHelper),
-  "getFieldById": () => (/* reexport */ getFieldById),
-  "mapFields": () => (/* reexport */ mapFields),
-  "reduceFields": () => (/* reexport */ reduceFields),
-  "replaceField": () => (/* reexport */ replaceField),
-  "validateJSONForm": () => (/* reexport */ validateJSONForm)
+  "addField": function() { return /* reexport */ addField; },
+  "cleanUp": function() { return /* reexport */ cleanUp; },
+  "createEmptyField": function() { return /* reexport */ createEmptyField; },
+  "deleteField": function() { return /* reexport */ deleteField; },
+  "fillIds": function() { return /* reexport */ fillIds; },
+  "filterFields": function() { return /* reexport */ filterFields; },
+  "findField": function() { return /* reexport */ findField; },
+  "formHelper": function() { return /* reexport */ formHelper; },
+  "getFieldById": function() { return /* reexport */ getFieldById; },
+  "mapFields": function() { return /* reexport */ mapFields; },
+  "reduceFields": function() { return /* reexport */ reduceFields; },
+  "replaceField": function() { return /* reexport */ replaceField; },
+  "validateJSONForm": function() { return /* reexport */ validateJSONForm; }
 });
 
 // EXTERNAL MODULE: ./node_modules/lodash/flatten.js
@@ -4135,7 +4135,7 @@ var formHelper = function formHelper(_form2) {
 var uniq = __webpack_require__(4908);
 var uniq_default = /*#__PURE__*/__webpack_require__.n(uniq);
 ;// CONCATENATED MODULE: ./manifest.json
-const manifest_namespaceObject = JSON.parse('{"input-text":{"label":"Input Text","category":"general","name":"input-text","description":"Basic input text","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"submitOnEnter","type":"boolean","description":"Trigger onSubmit / onError if the user hits Enter key"},{"name":"inputMode","type":"string","options":["none","text","decimal","numeric","tel","search","email","url"]},{"name":"autocomplete","type":"string","options":["off","on","name","honorific-prefix","given-name","additional-name","family-name","honorific-suffix","nickname","email","username","new-password","current-password","one-time-code","organization-title","organization","street-address","address-line1","address-line2","address-line3","address-level4","address-level3","address-level2","address-level1","country","country-name","postal-code","cc-name","cc-given-name","cc-additional-name","cc-family-name","cc-number","cc-exp","cc-exp-month","cc-exp-year","cc-csc","cc-type","transaction-currency","transaction-amount","language","bday","bday-day","bday-month","bday-year","sex","tel","tel-country-code","tel-national","tel-area-code","tel-local","tel-extension","impp","url","photo"]},{"name":"inputType","type":"string","description":"Set the HTML 5 input type, some framework may have specific components for some of these type","options":["button","checkbox","color","date","datetime-local","email","file","hidden","image","month","number","password","radio","range","reset","search","submit","tel","text","time","url","week"]}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"showCount","type":"boolean"},{"name":"maxLength","type":"number"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"bordered","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"toggle":{"label":"Toggle","category":"general","name":"toggle","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"checkedChildren","type":"string | i18n"},{"name":"unCheckedChildren","type":"string | i18n"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"disableRipple","type":"boolean","description":"Disable CSS ripple effect"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["default","small"]},{"name":"tooltip","type":"boolean"},{"name":"checkedChildren","type":"string | i18n"},{"name":"unCheckedChildren","type":"string | i18n"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"select":{"label":"Select","category":"general","description":"Select / Combo box","name":"select","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"options","type":"array"},{"name":"showImageOptions","type":"boolean","description":"Show image field for Select options to be displayed in the drop-down"},{"name":"filterKey","type":"string"},{"name":"filterValue","type":"string"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"searchable","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"appearance","type":"string","options":["default","subtle"]}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"autoWidth","type":"boolean","description":"If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"variant","type":"string","options":["outlined","filled","standard"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"popupMatchSelectWidth","type":"boolean","description":"Determine whether the popup menu and the select input are the same width"},{"name":"listHeight","type":"number","description":"Config popup height"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"allowClear","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"showSearch","type":"boolean","description":"Whether select is searchable"},{"name":"showArrow","type":"boolean","description":"Whether to show the drop-down arrow"},{"name":"virtual","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"group":{"label":"Group","category":"layout","name":"group","description":"Visually Group a set of fields, can be collapsed","common":[{"name":"name","type":"string"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"align","type":"string","options":["left","center","right"]},{"name":"collapsible","type":"boolean"},{"name":"open","type":"boolean"},{"name":"bottomBorder","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"two-columns":{"label":"Two Columns","category":"layout","name":"two-columns","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"layout","type":"string","options":["layout-1-1","layout-1-2","layout-1-3","layout-1-4","layout-2-1","layout-3-1","layout-4-1","layout-2-3","layout-3-2","layout-0-1","layout-1-0"]},{"name":"leftAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"rightAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"three-columns":{"label":"Three Columns","category":"layout","name":"three-columns","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"layout","type":"string","options":["layout-0-1-0","layout-1-0-0","layout-1-1-1","layout-1-1-2","layout-1-2-1","layout-2-1-1","layout-1-1-3","layout-1-3-1","layout-3-1-1"]},{"name":"leftAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"centerAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"rightAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"array":{"label":"List Array","category":"general","name":"array","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"layout","type":"string","options":["vertical","horizontal","inline"]},{"name":"arrayType","type":"string","description":"Defines the result of the list component, \\"arrayOfString\\" and \\"commaSeparated\\" only applies if list field has only one field","options":["arrayOfObject","arrayOfString","commaSeparated"]}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"input-number":{"label":"Input number","category":"general","name":"input-number","description":"Basic input number field, returns a numeric value","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"allowClear","type":"boolean"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"react-bootstrap":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"}],"react-antd":[{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"showControls","type":"boolean","description":"Whether to show +- controls, or set custom arrows icon"},{"name":"stringMode","type":"boolean","description":"Set value as string to support high precision decimals. Will return string value by onChange"},{"name":"bordered","type":"boolean"},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"tooltip","type":"boolean"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"slider":{"label":"Slider","category":"general","name":"slider","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"vertical","type":"boolean"},{"name":"progress","type":"boolean","description":"Show sliding progress bar"},{"name":"showTooltip","type":"boolean","description":"Whether to show Tooltip when sliding"},{"name":"graduated","type":"boolean"},{"name":"marks","type":"array","description":"Customize labels on the render ruler"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"valueLabelDisplay","type":"string","description":"How to show the value of the label","options":["auto","on","off"]},{"name":"showMarks","type":"boolean"},{"name":"customMarks","type":"array","description":"Customize labels on the render ruler"}],"react-bootstrap":[{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"}],"react-antd":[{"name":"keyboard","type":"boolean","description":"Support using keyboard to move handlers"},{"name":"dots","type":"boolean","description":"Whether the thumb can drag over tick only"},{"name":"reverse","type":"boolean","description":"Reverse the component"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"tooltipOpen","type":"boolean","description":"Tooltip behaviour, checked always open, unchecked always close"},{"name":"tooltipPlacement","type":"string","options":["top","left","right","bottom","topLeft","topRight","bottomLeft","bottomRight","topLeft","topRight","leftTop","leftBottom","rightTop","rightBottom"]},{"name":"marks","type":"array","description":"Customize labels on the render ruler"},{"name":"included","type":"boolean","description":"Make effect when marks not null, true means containment and false means coordinative"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"date":{"label":"Date","category":"general","description":"Date field, returns a string in ISO-8601 format (i.e., 1972-10-01)","name":"date","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"format","type":"string","description":"Check https://date-fns.org library for available formats"},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"cleanable","type":"boolean"},{"name":"editable","type":"boolean","description":"Rendered as an input, the date can be entered via the keyboard"},{"name":"oneTap","type":"boolean","description":"One click to complete the selection date"},{"name":"showMeridian","type":"boolean","description":"Display hours in 12 format"},{"name":"showWeekNumbers","type":"boolean"},{"name":"isoWeek","type":"boolean","description":"ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","options":["default","subtle"]},{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]}],"react-material-ui":[{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"fullWidth","type":"boolean","description":"Set the width of the container field to 100%"},{"name":"disableFuture","type":"boolean"},{"name":"disableHighlightToday","type":"boolean"},{"name":"disableOpenPicker","type":"boolean"},{"name":"disablePast","type":"boolean"},{"name":"displayWeekNumber","type":"boolean"},{"name":"reduceAnimations","type":"boolean"},{"name":"showDaysOutsideCurrentMonth","type":"boolean"},{"name":"maxDate","type":"date"},{"name":"minDate","type":"date"},{"name":"views","type":"[string]","options":["day","month","year"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"bordered","type":"boolean"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"showTime","type":"boolean"},{"name":"showNow","type":"boolean","description":"Show now button"},{"name":"showToday","type":"boolean","description":"Show today button"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"picker","type":"string","options":["date","week","month","quarter","year"]},{"name":"mode","type":"string","options":["time","date","month","year","decade"]}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"checkbox":{"label":"Checkbox","category":"general","name":"checkbox","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"indeterminate","type":"boolean","description":"Status can be indeterminate (null), cycle values trough false, inderminate, true"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"disableRipple","type":"boolean","description":"Disable CSS ripple effect"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"checkbox-group":{"label":"Checkbox Group","category":"general","name":"checkbox-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]}],"react-bootstrap":[{"name":"inline","type":"boolean"},{"name":"reverse","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"radio-group":{"label":"Radio Group","category":"general","name":"radio-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean"},{"name":"appearance","type":"string","description":"Show as default radio control or stacked buttons","options":["default","picker"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"row","type":"boolean"}],"react-bootstrap":[{"name":"inline","type":"boolean"},{"name":"reverse","type":"boolean"}],"react-antd":[{"name":"optionType","type":"string","options":["default","button"]},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"inline","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"input-tag":{"label":"Tag Input","category":"general","name":"input-tag","description":"Input tags, create tags, returns an array of string","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"trigger","type":"[string]","description":"Set the trigger for creating tags","options":["Enter","Space","Comma"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"input-mask":{"label":"Input Mask","category":"general","name":"input-mask","description":"Masked input text","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"mask","type":"string","description":"Use ${d} - digits, ${D} - any non digits, ${a} - any non alpha chars, ${w} - any word chars "},{"name":"guide","type":"boolean"},{"name":"keepCharPositions","type":"boolean","description":"When true, adding or deleting characters will not affect the position of existing characters"},{"name":"showMask","type":"boolean","description":"When the input value is empty, the mask is displayed as a placeholder instead of a regular placeholder"},{"name":"placeholderChar","type":"string","description":"The placeholder character represents the fillable spot in the mask"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"frameworks":["react-rsuite5"]},"textarea":{"label":"Textarea","category":"general","name":"textarea","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"rows","type":"number"}],"react-rsuite5":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"rows","type":"number"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"maxRows","type":"number"}],"react-bootstrap":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"rows","type":"number"}],"react-antd":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"showCount","type":"boolean"},{"name":"maxLength","type":"number"},{"name":"allowClear","type":"boolean"},{"name":"autoSize","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"rate":{"label":"Rate","category":"general","name":"rate","description":"Five stars rating field","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"allowHalf","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"vertical","type":"boolean","description":"Vertical direction when half selected"},{"name":"max","type":"number"},{"name":"color","type":"string","options":["red","orange","yellow","green","cyan","blue","violet"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"precision","type":"string","description":"The minimum increment value change allowed","options":[0.1,0.2,0.5,1]},{"name":"max","type":"number"}],"react-antd":[{"name":"count","type":"number"},{"name":"allowHalf","type":"boolean","description":"Allow half votes"},{"name":"allowClear","type":"boolean"},{"name":"tooltips","type":"array","description":"Customize tooltip for each value"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-antd"]},"placeholder":{"label":"Placeholder","category":"layout","name":"placeholder","description":"Generic placeholder for an image inside the form, supports basic parameters like width, height and margin","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"text","type":"string | i18n","description":"Supports markdown (i.e., **bold**, _italics_)"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-antd":[{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"multiselect":{"label":"MultiSelect","category":"general","name":"multiselect","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"multiselectMode","type":"string","description":"Show the selected values as tag element or plain string","options":["tag","plain"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"searchable","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"preventOverflow","type":"boolean","description":"Prevent floating element overflow"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"autoWidth","type":"boolean","description":"If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"variant","type":"string","options":["outlined","filled","standard"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"width","type":"number"},{"name":"listHeight","type":"number","description":"Config popup height"},{"name":"allowClear","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"showSearch","type":"boolean","description":"Whether select is searchable"},{"name":"showArrow","type":"boolean","description":"Whether to show the drop-down arrow"},{"name":"virtual","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"maxTagCount","type":"number","description":"Maximum number of selectable elements"},{"name":"maxTagPlaceholder","type":"string","description":"Placeholder to show when max number of element is reached"},{"name":"maxTagTextLength","type":"number","description":"Maximum length of text tags"}],"frameworks":["react-rsuite5","react-material-ui","react-antd"]},"multiselect-language":{"label":"Locales","category":"advanced","description":"Select one or more locales, returns an array (i.e. it-IT, en-GB, ...)","name":"multiselect-language","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"placeholder-image":{"label":"Placeholder Image","category":"layout","name":"placeholder-image","description":"Image placeholder","common":[{"name":"name","type":"string"},{"name":"url","type":"string"},{"name":"align","type":"string","options":["left","center","right"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-rsuite5":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-material-ui":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-bootstrap":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-antd":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"button":{"label":"Button","category":"layout","description":"Icon button, can be used as toggle button or just a link button","name":"button","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"buttonType","type":"string","description":"Type of button: toggle 2-states button or link button","options":["toggle","link"]},{"name":"labelOn","type":"string | i18n"},{"name":"iconOn","type":"string"},{"name":"labelOff","type":"string | i18n"},{"name":"iconOff","type":"string"},{"name":"initialValue","type":"boolean"},{"name":"labelLink","type":"string | i18n"},{"name":"iconLink","type":"string"},{"name":"href","type":"string"},{"name":"hint","type":"string | i18n","description":"Show hint in a tooltip"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","description":"Only available for link-type buttons","options":["default","primary","subtle","link","ghost"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]}],"react-bootstrap":[{"name":"variant","type":"string","options":["primary","secondary","success","warning","danger","info","light","dark","link"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"type","type":"string","description":"Only available for link-type buttons","options":["primary","default","dashed","text","link"]}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"divider":{"label":"Divider","category":"layout","description":"Layout divider, customizable with size and color","name":"divider","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"size","type":"number","description":"Thickness of the divider"},{"name":"color","type":"string"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"datetime":{"label":"Date Time","category":"general","name":"datetime","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"format","type":"string","description":"Check https://date-fns.org library for available formats"},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"cleanable","type":"boolean"},{"name":"editable","type":"boolean","description":"Rendered as an input, the date can be entered via the keyboard"},{"name":"oneTap","type":"boolean","description":"One click to complete the selection date"},{"name":"showMeridian","type":"boolean","description":"Display hours in 12 format"},{"name":"showWeekNumbers","type":"boolean"},{"name":"isoWeek","type":"boolean","description":"ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","options":["default","subtle"]},{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]}],"react-material-ui":[{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"fullWidth","type":"boolean","description":"Set the width of the container field to 100%"},{"name":"disableFuture","type":"boolean"},{"name":"disableHighlightToday","type":"boolean"},{"name":"disableOpenPicker","type":"boolean"},{"name":"disablePast","type":"boolean"},{"name":"displayWeekNumber","type":"boolean"},{"name":"reduceAnimations","type":"boolean"},{"name":"showDaysOutsideCurrentMonth","type":"boolean"},{"name":"maxDate","type":"date"},{"name":"minDate","type":"date"},{"name":"views","type":"[string]","options":["hours","minutes","seconds","day","month","year"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"bordered","type":"boolean"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"showNow","type":"boolean","description":"Show now button"},{"name":"showToday","type":"boolean","description":"Show today button"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"tabs":{"label":"Tabs","category":"layout","description":"Layout component for tabs","name":"tabs","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"tabs","type":"array"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"appearance","type":"string","options":["default","tabs","subtle"]},{"name":"reversed","type":"boolean"},{"name":"justified","type":"boolean"}],"react-material-ui":[{"name":"indicatorColor","type":"string","options":["primary","secondary"]},{"name":"textColor","type":"string","options":["primary","secondary","inherit"]},{"name":"centered","type":"boolean","description":"If true, the tabs are centered. This prop is intended for large views"},{"name":"fullWidth","type":"boolean","description":"Will make the tabs grow to use all the available space"}],"react-bootstrap":[{"name":"variant","type":"string","options":["tabs","pills","underline"]},{"name":"transition","type":"boolean","description":"Sets a default animation strategy for all children"},{"name":"fill","type":"boolean","description":"Have all Tabss proportionately fill all available width"},{"name":"justify","type":"boolean","description":"Have all Tabs evenly fill all available width"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","middle","large"]},{"name":"tabType","type":"string","options":["line","card"]},{"name":"animated","type":"boolean"},{"name":"centered","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"radio-tile":{"label":"Radio Tile","description":"Radio control with card, description and icon","category":"general","name":"radio-tile","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"initalOption","type":"string"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean","description":"Use inline layout"},{"name":"iconWidth","type":"number"},{"name":"iconHeight","type":"number"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"upload":{"label":"Upload","category":"general","name":"upload","description":"Upload file control, returns an array of json with file info and blob","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"accept","type":"array","description":"Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "},{"name":"listType","type":"string","options":["text","picture-text","picture"]},{"name":"maxPreviewFileSize","type":"number","description":"Set the maximum limit for preview files"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"fileListVisible","type":"boolean"},{"name":"disabledFileItem","type":"boolean"},{"name":"multiple","type":"boolean","description":"Allow selecting multiple files"},{"name":"removable","type":"boolean"},{"name":"draggable","type":"boolean"},{"name":"uploadButtonLabel","type":"string | i18n"},{"name":"uploadButtonAppearance","type":"string","options":["default","primary","subtle","link","ghost"]},{"name":"uploadButtonSize","type":"string","options":["lg","md","sm","xs"]},{"name":"draggableText","type":"string | i18n"},{"name":"draggableHeight","type":"number"}],"react-antd":[{"name":"accept","type":"array","description":"Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "},{"name":"multiple","type":"boolean","description":"Allow selecting multiple files"},{"name":"listType","type":"string","description":"Built-in stylesheets, support for four types: text, picture, picture-card or picture-circle","options":["text","picture","picture-card","picture-circle"]},{"name":"maxCount","type":"number"},{"name":"showUploadList","type":"boolean"},{"name":"uploadButtonLabel","type":"string | i18n"},{"name":"uploadButtonAppearance","type":"string","options":["primary","default","dashed","text","link"]},{"name":"uploadButtonSize","type":"string","options":["small","default","large"]},{"name":"draggable","type":"boolean"},{"name":"draggableText","type":"string | i18n"},{"name":"draggableHeight","type":"number"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-antd"]},"buttons-toggle-group":{"label":"Toggle Buttons","category":"layout","description":"List of toggle buttons, works like a radio group, returns an array of string","name":"buttons-toggle-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"multiple","type":"boolean","description":"Allow to select multiple values"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]}],"frameworks":["react-rsuite5","react-antd"]},"steps":{"label":"Steps","category":"layout","description":"Split the form in multiple steps","name":"steps","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"steps","type":"array"},{"name":"labelNext","type":"string | i18n"},{"name":"labelPrevious","type":"string | i18n"},{"name":"align","type":"string","options":["left","center","right"]}],"react-rsuite5":[{"name":"small","type":"boolean"},{"name":"status","type":"string","options":["finish","wait","process","error"]}],"frameworks":["react-rsuite5"]}}');
+var manifest_namespaceObject = JSON.parse('{"input-text":{"label":"Input Text","category":"general","name":"input-text","description":"Basic input text","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"submitOnEnter","type":"boolean","description":"Trigger onSubmit / onError if the user hits Enter key"},{"name":"inputMode","type":"string","options":["none","text","decimal","numeric","tel","search","email","url"]},{"name":"autocomplete","type":"string","options":["off","on","name","honorific-prefix","given-name","additional-name","family-name","honorific-suffix","nickname","email","username","new-password","current-password","one-time-code","organization-title","organization","street-address","address-line1","address-line2","address-line3","address-level4","address-level3","address-level2","address-level1","country","country-name","postal-code","cc-name","cc-given-name","cc-additional-name","cc-family-name","cc-number","cc-exp","cc-exp-month","cc-exp-year","cc-csc","cc-type","transaction-currency","transaction-amount","language","bday","bday-day","bday-month","bday-year","sex","tel","tel-country-code","tel-national","tel-area-code","tel-local","tel-extension","impp","url","photo"]},{"name":"inputType","type":"string","description":"Set the HTML 5 input type, some framework may have specific components for some of these type","options":["button","checkbox","color","date","datetime-local","email","file","hidden","image","month","number","password","radio","range","reset","search","submit","tel","text","time","url","week"]}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"showCount","type":"boolean"},{"name":"maxLength","type":"number"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"bordered","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"toggle":{"label":"Toggle","category":"general","name":"toggle","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"checkedChildren","type":"string | i18n"},{"name":"unCheckedChildren","type":"string | i18n"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"disableRipple","type":"boolean","description":"Disable CSS ripple effect"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["default","small"]},{"name":"tooltip","type":"boolean"},{"name":"checkedChildren","type":"string | i18n"},{"name":"unCheckedChildren","type":"string | i18n"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"select":{"label":"Select","category":"general","description":"Select / Combo box","name":"select","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"options","type":"array"},{"name":"showImageOptions","type":"boolean","description":"Show image field for Select options to be displayed in the drop-down"},{"name":"filterKey","type":"string"},{"name":"filterValue","type":"string"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"searchable","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"appearance","type":"string","options":["default","subtle"]}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"autoWidth","type":"boolean","description":"If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"variant","type":"string","options":["outlined","filled","standard"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"popupMatchSelectWidth","type":"boolean","description":"Determine whether the popup menu and the select input are the same width"},{"name":"listHeight","type":"number","description":"Config popup height"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"allowClear","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"showSearch","type":"boolean","description":"Whether select is searchable"},{"name":"showArrow","type":"boolean","description":"Whether to show the drop-down arrow"},{"name":"virtual","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"group":{"label":"Group","category":"layout","name":"group","description":"Visually Group a set of fields, can be collapsed","common":[{"name":"name","type":"string"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"align","type":"string","options":["left","center","right"]},{"name":"collapsible","type":"boolean"},{"name":"open","type":"boolean"},{"name":"bottomBorder","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"two-columns":{"label":"Two Columns","category":"layout","name":"two-columns","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"layout","type":"string","options":["layout-1-1","layout-1-2","layout-1-3","layout-1-4","layout-2-1","layout-3-1","layout-4-1","layout-2-3","layout-3-2","layout-0-1","layout-1-0"]},{"name":"leftAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"rightAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"three-columns":{"label":"Three Columns","category":"layout","name":"three-columns","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"layout","type":"string","options":["layout-0-1-0","layout-1-0-0","layout-1-1-1","layout-1-1-2","layout-1-2-1","layout-2-1-1","layout-1-1-3","layout-1-3-1","layout-3-1-1"]},{"name":"leftAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"centerAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"rightAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"array":{"label":"List Array","category":"general","name":"array","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"layout","type":"string","options":["vertical","horizontal","inline"]},{"name":"arrayType","type":"string","description":"Defines the result of the list component, \\"arrayOfString\\" and \\"commaSeparated\\" only applies if list field has only one field","options":["arrayOfObject","arrayOfString","commaSeparated"]}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"input-number":{"label":"Input number","category":"general","name":"input-number","description":"Basic input number field, returns a numeric value","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"allowClear","type":"boolean"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"react-bootstrap":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"}],"react-antd":[{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"showControls","type":"boolean","description":"Whether to show +- controls, or set custom arrows icon"},{"name":"stringMode","type":"boolean","description":"Set value as string to support high precision decimals. Will return string value by onChange"},{"name":"bordered","type":"boolean"},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"tooltip","type":"boolean"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"slider":{"label":"Slider","category":"general","name":"slider","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"vertical","type":"boolean"},{"name":"progress","type":"boolean","description":"Show sliding progress bar"},{"name":"showTooltip","type":"boolean","description":"Whether to show Tooltip when sliding"},{"name":"graduated","type":"boolean"},{"name":"marks","type":"array","description":"Customize labels on the render ruler"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"valueLabelDisplay","type":"string","description":"How to show the value of the label","options":["auto","on","off"]},{"name":"showMarks","type":"boolean"},{"name":"customMarks","type":"array","description":"Customize labels on the render ruler"}],"react-bootstrap":[{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"}],"react-antd":[{"name":"keyboard","type":"boolean","description":"Support using keyboard to move handlers"},{"name":"dots","type":"boolean","description":"Whether the thumb can drag over tick only"},{"name":"reverse","type":"boolean","description":"Reverse the component"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"tooltipOpen","type":"boolean","description":"Tooltip behaviour, checked always open, unchecked always close"},{"name":"tooltipPlacement","type":"string","options":["top","left","right","bottom","topLeft","topRight","bottomLeft","bottomRight","topLeft","topRight","leftTop","leftBottom","rightTop","rightBottom"]},{"name":"marks","type":"array","description":"Customize labels on the render ruler"},{"name":"included","type":"boolean","description":"Make effect when marks not null, true means containment and false means coordinative"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"date":{"label":"Date","category":"general","description":"Date field, returns a string in ISO-8601 format (i.e., 1972-10-01)","name":"date","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"format","type":"string","description":"Check https://date-fns.org library for available formats"},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"cleanable","type":"boolean"},{"name":"editable","type":"boolean","description":"Rendered as an input, the date can be entered via the keyboard"},{"name":"oneTap","type":"boolean","description":"One click to complete the selection date"},{"name":"showMeridian","type":"boolean","description":"Display hours in 12 format"},{"name":"showWeekNumbers","type":"boolean"},{"name":"isoWeek","type":"boolean","description":"ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","options":["default","subtle"]},{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]}],"react-material-ui":[{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"fullWidth","type":"boolean","description":"Set the width of the container field to 100%"},{"name":"disableFuture","type":"boolean"},{"name":"disableHighlightToday","type":"boolean"},{"name":"disableOpenPicker","type":"boolean"},{"name":"disablePast","type":"boolean"},{"name":"displayWeekNumber","type":"boolean"},{"name":"reduceAnimations","type":"boolean"},{"name":"showDaysOutsideCurrentMonth","type":"boolean"},{"name":"maxDate","type":"date"},{"name":"minDate","type":"date"},{"name":"views","type":"[string]","options":["day","month","year"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"bordered","type":"boolean"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"showTime","type":"boolean"},{"name":"showNow","type":"boolean","description":"Show now button"},{"name":"showToday","type":"boolean","description":"Show today button"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"picker","type":"string","options":["date","week","month","quarter","year"]},{"name":"mode","type":"string","options":["time","date","month","year","decade"]}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"checkbox":{"label":"Checkbox","category":"general","name":"checkbox","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"indeterminate","type":"boolean","description":"Status can be indeterminate (null), cycle values trough false, inderminate, true"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"disableRipple","type":"boolean","description":"Disable CSS ripple effect"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"checkbox-group":{"label":"Checkbox Group","category":"general","name":"checkbox-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]}],"react-bootstrap":[{"name":"inline","type":"boolean"},{"name":"reverse","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"radio-group":{"label":"Radio Group","category":"general","name":"radio-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean"},{"name":"appearance","type":"string","description":"Show as default radio control or stacked buttons","options":["default","picker"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"row","type":"boolean"}],"react-bootstrap":[{"name":"inline","type":"boolean"},{"name":"reverse","type":"boolean"}],"react-antd":[{"name":"optionType","type":"string","options":["default","button"]},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"inline","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"input-tag":{"label":"Tag Input","category":"general","name":"input-tag","description":"Input tags, create tags, returns an array of string","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"trigger","type":"[string]","description":"Set the trigger for creating tags","options":["Enter","Space","Comma"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"input-mask":{"label":"Input Mask","category":"general","name":"input-mask","description":"Masked input text","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"mask","type":"string","description":"Use ${d} - digits, ${D} - any non digits, ${a} - any non alpha chars, ${w} - any word chars "},{"name":"guide","type":"boolean"},{"name":"keepCharPositions","type":"boolean","description":"When true, adding or deleting characters will not affect the position of existing characters"},{"name":"showMask","type":"boolean","description":"When the input value is empty, the mask is displayed as a placeholder instead of a regular placeholder"},{"name":"placeholderChar","type":"string","description":"The placeholder character represents the fillable spot in the mask"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"frameworks":["react-rsuite5"]},"textarea":{"label":"Textarea","category":"general","name":"textarea","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"rows","type":"number"}],"react-rsuite5":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"rows","type":"number"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"maxRows","type":"number"}],"react-bootstrap":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"rows","type":"number"}],"react-antd":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"showCount","type":"boolean"},{"name":"maxLength","type":"number"},{"name":"allowClear","type":"boolean"},{"name":"autoSize","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"rate":{"label":"Rate","category":"general","name":"rate","description":"Five stars rating field","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"allowHalf","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"vertical","type":"boolean","description":"Vertical direction when half selected"},{"name":"max","type":"number"},{"name":"color","type":"string","options":["red","orange","yellow","green","cyan","blue","violet"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"precision","type":"string","description":"The minimum increment value change allowed","options":[0.1,0.2,0.5,1]},{"name":"max","type":"number"}],"react-antd":[{"name":"count","type":"number"},{"name":"allowHalf","type":"boolean","description":"Allow half votes"},{"name":"allowClear","type":"boolean"},{"name":"tooltips","type":"array","description":"Customize tooltip for each value"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-antd"]},"placeholder":{"label":"Placeholder","category":"layout","name":"placeholder","description":"Generic placeholder for an image inside the form, supports basic parameters like width, height and margin","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"text","type":"string | i18n","description":"Supports markdown (i.e., **bold**, _italics_)"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-antd":[{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"multiselect":{"label":"MultiSelect","category":"general","name":"multiselect","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"multiselectMode","type":"string","description":"Show the selected values as tag element or plain string","options":["tag","plain"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"searchable","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"preventOverflow","type":"boolean","description":"Prevent floating element overflow"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"autoWidth","type":"boolean","description":"If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"variant","type":"string","options":["outlined","filled","standard"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"width","type":"number"},{"name":"listHeight","type":"number","description":"Config popup height"},{"name":"allowClear","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"showSearch","type":"boolean","description":"Whether select is searchable"},{"name":"showArrow","type":"boolean","description":"Whether to show the drop-down arrow"},{"name":"virtual","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"maxTagCount","type":"number","description":"Maximum number of selectable elements"},{"name":"maxTagPlaceholder","type":"string","description":"Placeholder to show when max number of element is reached"},{"name":"maxTagTextLength","type":"number","description":"Maximum length of text tags"}],"frameworks":["react-rsuite5","react-material-ui","react-antd"]},"multiselect-language":{"label":"Locales","category":"advanced","description":"Select one or more locales, returns an array (i.e. it-IT, en-GB, ...)","name":"multiselect-language","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"placeholder-image":{"label":"Placeholder Image","category":"layout","name":"placeholder-image","description":"Image placeholder","common":[{"name":"name","type":"string"},{"name":"url","type":"string"},{"name":"align","type":"string","options":["left","center","right"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-rsuite5":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-material-ui":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-bootstrap":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-antd":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"button":{"label":"Button","category":"layout","description":"Icon button, can be used as toggle button or just a link button","name":"button","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"buttonType","type":"string","description":"Type of button: toggle 2-states button or link button","options":["toggle","link"]},{"name":"labelOn","type":"string | i18n"},{"name":"iconOn","type":"string"},{"name":"labelOff","type":"string | i18n"},{"name":"iconOff","type":"string"},{"name":"initialValue","type":"boolean"},{"name":"labelLink","type":"string | i18n"},{"name":"iconLink","type":"string"},{"name":"href","type":"string"},{"name":"hint","type":"string | i18n","description":"Show hint in a tooltip"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","description":"Only available for link-type buttons","options":["default","primary","subtle","link","ghost"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]}],"react-bootstrap":[{"name":"variant","type":"string","options":["primary","secondary","success","warning","danger","info","light","dark","link"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"type","type":"string","description":"Only available for link-type buttons","options":["primary","default","dashed","text","link"]}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"divider":{"label":"Divider","category":"layout","description":"Layout divider, customizable with size and color","name":"divider","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"size","type":"number","description":"Thickness of the divider"},{"name":"color","type":"string"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"datetime":{"label":"Date Time","category":"general","name":"datetime","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"format","type":"string","description":"Check https://date-fns.org library for available formats"},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"cleanable","type":"boolean"},{"name":"editable","type":"boolean","description":"Rendered as an input, the date can be entered via the keyboard"},{"name":"oneTap","type":"boolean","description":"One click to complete the selection date"},{"name":"showMeridian","type":"boolean","description":"Display hours in 12 format"},{"name":"showWeekNumbers","type":"boolean"},{"name":"isoWeek","type":"boolean","description":"ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","options":["default","subtle"]},{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]}],"react-material-ui":[{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"fullWidth","type":"boolean","description":"Set the width of the container field to 100%"},{"name":"disableFuture","type":"boolean"},{"name":"disableHighlightToday","type":"boolean"},{"name":"disableOpenPicker","type":"boolean"},{"name":"disablePast","type":"boolean"},{"name":"displayWeekNumber","type":"boolean"},{"name":"reduceAnimations","type":"boolean"},{"name":"showDaysOutsideCurrentMonth","type":"boolean"},{"name":"maxDate","type":"date"},{"name":"minDate","type":"date"},{"name":"views","type":"[string]","options":["hours","minutes","seconds","day","month","year"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"bordered","type":"boolean"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"showNow","type":"boolean","description":"Show now button"},{"name":"showToday","type":"boolean","description":"Show today button"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"tabs":{"label":"Tabs","category":"layout","description":"Layout component for tabs","name":"tabs","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"tabs","type":"array"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"appearance","type":"string","options":["default","tabs","subtle"]},{"name":"reversed","type":"boolean"},{"name":"justified","type":"boolean"}],"react-material-ui":[{"name":"indicatorColor","type":"string","options":["primary","secondary"]},{"name":"textColor","type":"string","options":["primary","secondary","inherit"]},{"name":"centered","type":"boolean","description":"If true, the tabs are centered. This prop is intended for large views"},{"name":"fullWidth","type":"boolean","description":"Will make the tabs grow to use all the available space"}],"react-bootstrap":[{"name":"variant","type":"string","options":["tabs","pills","underline"]},{"name":"transition","type":"boolean","description":"Sets a default animation strategy for all children"},{"name":"fill","type":"boolean","description":"Have all Tabss proportionately fill all available width"},{"name":"justify","type":"boolean","description":"Have all Tabs evenly fill all available width"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","middle","large"]},{"name":"tabType","type":"string","options":["line","card"]},{"name":"animated","type":"boolean"},{"name":"centered","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"radio-tile":{"label":"Radio Tile","description":"Radio control with card, description and icon","category":"general","name":"radio-tile","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"initalOption","type":"string"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean","description":"Use inline layout"},{"name":"iconWidth","type":"number"},{"name":"iconHeight","type":"number"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"upload":{"label":"Upload","category":"general","name":"upload","description":"Upload file control, returns an array of json with file info and blob","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"accept","type":"array","description":"Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "},{"name":"listType","type":"string","options":["text","picture-text","picture"]},{"name":"maxPreviewFileSize","type":"number","description":"Set the maximum limit for preview files"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"fileListVisible","type":"boolean"},{"name":"disabledFileItem","type":"boolean"},{"name":"multiple","type":"boolean","description":"Allow selecting multiple files"},{"name":"removable","type":"boolean"},{"name":"draggable","type":"boolean"},{"name":"uploadButtonLabel","type":"string | i18n"},{"name":"uploadButtonAppearance","type":"string","options":["default","primary","subtle","link","ghost"]},{"name":"uploadButtonSize","type":"string","options":["lg","md","sm","xs"]},{"name":"draggableText","type":"string | i18n"},{"name":"draggableHeight","type":"number"}],"react-antd":[{"name":"accept","type":"array","description":"Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "},{"name":"multiple","type":"boolean","description":"Allow selecting multiple files"},{"name":"listType","type":"string","description":"Built-in stylesheets, support for four types: text, picture, picture-card or picture-circle","options":["text","picture","picture-card","picture-circle"]},{"name":"maxCount","type":"number"},{"name":"showUploadList","type":"boolean"},{"name":"uploadButtonLabel","type":"string | i18n"},{"name":"uploadButtonAppearance","type":"string","options":["primary","default","dashed","text","link"]},{"name":"uploadButtonSize","type":"string","options":["small","default","large"]},{"name":"draggable","type":"boolean"},{"name":"draggableText","type":"string | i18n"},{"name":"draggableHeight","type":"number"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-antd"]},"buttons-toggle-group":{"label":"Toggle Buttons","category":"layout","description":"List of toggle buttons, works like a radio group, returns an array of string","name":"buttons-toggle-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"multiple","type":"boolean","description":"Allow to select multiple values"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]}],"frameworks":["react-rsuite5","react-antd"]},"steps":{"label":"Steps","category":"layout","description":"Split the form in multiple steps","name":"steps","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"steps","type":"array"},{"name":"labelNext","type":"string | i18n"},{"name":"labelPrevious","type":"string | i18n"},{"name":"align","type":"string","options":["left","center","right"]}],"react-rsuite5":[{"name":"small","type":"boolean"},{"name":"status","type":"string","options":["finish","wait","process","error"]}],"frameworks":["react-rsuite5"]}}');
 ;// CONCATENATED MODULE: ./helpers/validate-form.js
 
 
@@ -4205,8 +4205,7 @@ var validateJSONForm = function validateJSONForm(json) {
 
 
 
-})();
-
+}();
 /******/ 	return __webpack_exports__;
 /******/ })()
 ;

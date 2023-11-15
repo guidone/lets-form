@@ -7,22 +7,22 @@
 		exports["lets-form-antd"] = factory(require("react"), require("antd"), require("dayjs"));
 	else
 		root["lets-form-antd"] = factory(root["react"], root["antd"], root["dayjs"]);
-})(self, (__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__2721__, __WEBPACK_EXTERNAL_MODULE__5760__) => {
-return /******/ (() => { // webpackBootstrap
+})(self, function(__WEBPACK_EXTERNAL_MODULE__8156__, __WEBPACK_EXTERNAL_MODULE__2721__, __WEBPACK_EXTERNAL_MODULE__5760__) {
+return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 2113:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "_M": () => (/* reexport */ ChevronDown),
-  "Kh": () => (/* reexport */ ChevronUp),
-  "Sg": () => (/* reexport */ MinusCircle),
-  "FU": () => (/* reexport */ PlusCircle),
-  "v3": () => (/* reexport */ Warning)
+  "_M": function() { return /* reexport */ ChevronDown; },
+  "Kh": function() { return /* reexport */ ChevronUp; },
+  "Sg": function() { return /* reexport */ MinusCircle; },
+  "FU": function() { return /* reexport */ PlusCircle; },
+  "v3": function() { return /* reexport */ Warning; }
 });
 
 // UNUSED EXPORTS: Asterisk, CrossCirle, IconCheck
@@ -193,13 +193,13 @@ var CrossCirle = function CrossCirle(_ref) {
 /***/ }),
 
 /***/ 8727:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ Group)
+  "Z": function() { return /* binding */ Group; }
 });
 
 // EXTERNAL MODULE: external "react"
@@ -259,7 +259,7 @@ var update = injectStylesIntoStyleTag_default()(group/* default */.Z, options);
 
 
 
-       /* harmony default export */ const group_group = (group/* default */.Z && group/* default.locals */.Z.locals ? group/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var group_group = (group/* default */.Z && group/* default.locals */.Z.locals ? group/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/group/index.js
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -329,21 +329,21 @@ var Group = (0,components/* I18N */.mb)(function (_ref) {
 /***/ }),
 
 /***/ 1782:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Vr": () => (/* reexport */ ButtonsToggleGroup),
-  "iz": () => (/* reexport */ Divider),
-  "ZA": () => (/* reexport */ group/* Group */.Z),
-  "v0": () => (/* reexport */ ListArray),
-  "ah": () => (/* reexport */ MakeButton),
-  "Vm": () => (/* reexport */ Placeholder),
-  "GX": () => (/* reexport */ TextOrIcon),
-  "$z": () => (/* reexport */ three_columns/* ThreeColumns */.$),
-  "VZ": () => (/* reexport */ two_columns/* TwoColumns */.V)
+  "Vr": function() { return /* reexport */ ButtonsToggleGroup; },
+  "iz": function() { return /* reexport */ Divider; },
+  "ZA": function() { return /* reexport */ group/* Group */.Z; },
+  "v0": function() { return /* reexport */ ListArray; },
+  "ah": function() { return /* reexport */ MakeButton; },
+  "Vm": function() { return /* reexport */ Placeholder; },
+  "GX": function() { return /* reexport */ TextOrIcon; },
+  "$z": function() { return /* reexport */ three_columns/* ThreeColumns */.$; },
+  "VZ": function() { return /* reexport */ two_columns/* TwoColumns */.V; }
 });
 
 // UNUSED EXPORTS: CommonIcon, PlaceholderImage, ReactView
@@ -404,7 +404,7 @@ var update = injectStylesIntoStyleTag_default()(placeholder/* default */.Z, opti
 
 
 
-       /* harmony default export */ const placeholder_placeholder = (placeholder/* default */.Z && placeholder/* default.locals */.Z.locals ? placeholder/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var placeholder_placeholder = (placeholder/* default */.Z && placeholder/* default.locals */.Z.locals ? placeholder/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/placeholder/index.js
 
@@ -480,7 +480,7 @@ var divider_update = injectStylesIntoStyleTag_default()(divider/* default */.Z, 
 
 
 
-       /* harmony default export */ const divider_divider = (divider/* default */.Z && divider/* default.locals */.Z.locals ? divider/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var divider_divider = (divider/* default */.Z && divider/* default.locals */.Z.locals ? divider/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/divider/index.js
 
@@ -636,7 +636,7 @@ var list_array_update = injectStylesIntoStyleTag_default()(list_array/* default 
 
 
 
-       /* harmony default export */ const array_list_array = (list_array/* default */.Z && list_array/* default.locals */.Z.locals ? list_array/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var array_list_array = (list_array/* default */.Z && list_array/* default.locals */.Z.locals ? list_array/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/array/index.js
 
@@ -875,7 +875,7 @@ var common_icon_update = injectStylesIntoStyleTag_default()(common_icon/* defaul
 
 
 
-       /* harmony default export */ const icon_common_icon = (common_icon/* default */.Z && common_icon/* default.locals */.Z.locals ? common_icon/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var icon_common_icon = (common_icon/* default */.Z && common_icon/* default.locals */.Z.locals ? common_icon/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/icon/index.js
 /* eslint-disable jsx-a11y/anchor-is-valid */
@@ -1024,7 +1024,7 @@ var buttons_toggle_group_update = injectStylesIntoStyleTag_default()(buttons_tog
 
 
 
-       /* harmony default export */ const buttons_toggle_group_buttons_toggle_group = (buttons_toggle_group/* default */.Z && buttons_toggle_group/* default.locals */.Z.locals ? buttons_toggle_group/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var buttons_toggle_group_buttons_toggle_group = (buttons_toggle_group/* default */.Z && buttons_toggle_group/* default.locals */.Z.locals ? buttons_toggle_group/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/buttons-toggle-group/index.js
 
@@ -1106,13 +1106,13 @@ var ButtonsToggleGroup = function ButtonsToggleGroup(_ref2) {
 /***/ }),
 
 /***/ 8587:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "N": () => (/* binding */ PlaceholderImage)
+  "N": function() { return /* binding */ PlaceholderImage; }
 });
 
 // EXTERNAL MODULE: external "react"
@@ -1165,7 +1165,7 @@ var update = injectStylesIntoStyleTag_default()(placeholder_image/* default */.Z
 
 
 
-       /* harmony default export */ const placeholder_image_placeholder_image = (placeholder_image/* default */.Z && placeholder_image/* default.locals */.Z.locals ? placeholder_image/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var placeholder_image_placeholder_image = (placeholder_image/* default */.Z && placeholder_image/* default.locals */.Z.locals ? placeholder_image/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/placeholder-image/index.js
 
@@ -1202,11 +1202,11 @@ var PlaceholderImage = function PlaceholderImage(_ref) {
 /***/ }),
 
 /***/ 8169:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Y": () => (/* binding */ ReactView)
+/* harmony export */   "Y": function() { return /* binding */ ReactView; }
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8156);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -1232,13 +1232,13 @@ var ReactView = function ReactView(_ref) {
 /***/ }),
 
 /***/ 7645:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "$": () => (/* binding */ ThreeColumns)
+  "$": function() { return /* binding */ ThreeColumns; }
 });
 
 // EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
@@ -1297,7 +1297,7 @@ var update = injectStylesIntoStyleTag_default()(three_columns/* default */.Z, op
 
 
 
-       /* harmony default export */ const three_columns_three_columns = (three_columns/* default */.Z && three_columns/* default.locals */.Z.locals ? three_columns/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var three_columns_three_columns = (three_columns/* default */.Z && three_columns/* default.locals */.Z.locals ? three_columns/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/three-columns/index.js
 
@@ -1336,13 +1336,13 @@ var ThreeColumns = function ThreeColumns(_ref) {
 /***/ }),
 
 /***/ 963:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "V": () => (/* binding */ TwoColumns)
+  "V": function() { return /* binding */ TwoColumns; }
 });
 
 // EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
@@ -1401,7 +1401,7 @@ var update = injectStylesIntoStyleTag_default()(two_columns/* default */.Z, opti
 
 
 
-       /* harmony default export */ const two_columns_two_columns = (two_columns/* default */.Z && two_columns/* default.locals */.Z.locals ? two_columns/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var two_columns_two_columns = (two_columns/* default */.Z && two_columns/* default.locals */.Z.locals ? two_columns/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./common/two-columns/index.js
 
@@ -1434,15 +1434,15 @@ var TwoColumns = function TwoColumns(_ref) {
 /***/ }),
 
 /***/ 5593:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "mb": () => (/* reexport */ I18N),
-  "W7": () => (/* reexport */ plaintext/* IfNotPlaintext */.W),
-  "qf": () => (/* reexport */ ValidationErrors)
+  "mb": function() { return /* reexport */ I18N; },
+  "W7": function() { return /* reexport */ plaintext/* IfNotPlaintext */.W; },
+  "qf": function() { return /* reexport */ ValidationErrors; }
 });
 
 // UNUSED EXPORTS: Plaintext, RequiredIcon
@@ -1509,7 +1509,7 @@ var update = injectStylesIntoStyleTag_default()(validation_errors/* default */.Z
 
 
 
-       /* harmony default export */ const components_validation_errors = (validation_errors/* default */.Z && validation_errors/* default.locals */.Z.locals ? validation_errors/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var components_validation_errors = (validation_errors/* default */.Z && validation_errors/* default.locals */.Z.locals ? validation_errors/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./components/validation-errors/index.js
 
@@ -1617,13 +1617,13 @@ var plaintext = __webpack_require__(7808);
 /***/ }),
 
 /***/ 6089:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Q": () => (/* binding */ PlaintextForm)
+  "Q": function() { return /* binding */ PlaintextForm; }
 });
 
 // EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
@@ -1688,7 +1688,7 @@ var update = injectStylesIntoStyleTag_default()(plaintext_form/* default */.Z, o
 
 
 
-       /* harmony default export */ const plaintext_form_plaintext_form = (plaintext_form/* default */.Z && plaintext_form/* default.locals */.Z.locals ? plaintext_form/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var plaintext_form_plaintext_form = (plaintext_form/* default */.Z && plaintext_form/* default.locals */.Z.locals ? plaintext_form/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./components/plaintext-form/index.js
 
@@ -1773,14 +1773,14 @@ var PlaintextForm = function PlaintextForm(_ref2) {
 /***/ }),
 
 /***/ 7808:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "W": () => (/* binding */ IfNotPlaintext),
-  "U": () => (/* binding */ Plaintext)
+  "W": function() { return /* binding */ IfNotPlaintext; },
+  "U": function() { return /* binding */ Plaintext; }
 });
 
 // EXTERNAL MODULE: ./node_modules/lodash/isArray.js
@@ -1798,15 +1798,15 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 // EXTERNAL MODULE: ./helpers/index.js + 30 modules
 var helpers = __webpack_require__(8145);
 ;// CONCATENATED MODULE: ./components/plaintext/locales/yes.json
-const yes_namespaceObject = JSON.parse('{"en-US":"Yes","af-ZA":"Ja","ar":"نعم","bg-BG":"Да","ca-AD":"Sí","cs-CZ":"Ano","cy-GB":"Ie","da-DK":"Ja","de-AT":"Ja","de-CH":"Ja","de-DE":"Ja","el-GR":"Ναί","en-GB":"Yes","es-CL":"Sí","es-ES":"Sí","es-MX":"Sí","et-EE":"Jah","eu":"Bai","fa-IR":"آره","fi-FI":"Joo","fr-CA":"Oui","fr-FR":"Oui","he-IL":"כן","hi-IN":"हाँ","hr-HR":"Da","hu-HU":"Igen","id-ID":"Ya","is-IS":"Já","it-IT":"Si","ja-JP":"はい","km-KH":"បាត","ko-KR":"예","la":"Sic","lt-LT":"Taip","lv-LV":"Jā","mn-MN":"Мон","nb-NO":"Ja","nl-NL":"Ja","pl-PL":"Tak","pt-BR":"Sim","pt-PT":"Sim","ro-RO":"da","ru-RU":"Да","sk-SK":"Áno","sl-SI":"DA","sr-RS":"да","sv-SE":"Ja","th-TH":"ใช่","tr-TR":"Evet","uk-UA":"Так","vi-VN":"Đúng","zh-CN":"是的","zh-TW":"是的"}');
+var yes_namespaceObject = JSON.parse('{"en-US":"Yes","af-ZA":"Ja","ar":"نعم","bg-BG":"Да","ca-AD":"Sí","cs-CZ":"Ano","cy-GB":"Ie","da-DK":"Ja","de-AT":"Ja","de-CH":"Ja","de-DE":"Ja","el-GR":"Ναί","en-GB":"Yes","es-CL":"Sí","es-ES":"Sí","es-MX":"Sí","et-EE":"Jah","eu":"Bai","fa-IR":"آره","fi-FI":"Joo","fr-CA":"Oui","fr-FR":"Oui","he-IL":"כן","hi-IN":"हाँ","hr-HR":"Da","hu-HU":"Igen","id-ID":"Ya","is-IS":"Já","it-IT":"Si","ja-JP":"はい","km-KH":"បាត","ko-KR":"예","la":"Sic","lt-LT":"Taip","lv-LV":"Jā","mn-MN":"Мон","nb-NO":"Ja","nl-NL":"Ja","pl-PL":"Tak","pt-BR":"Sim","pt-PT":"Sim","ro-RO":"da","ru-RU":"Да","sk-SK":"Áno","sl-SI":"DA","sr-RS":"да","sv-SE":"Ja","th-TH":"ใช่","tr-TR":"Evet","uk-UA":"Так","vi-VN":"Đúng","zh-CN":"是的","zh-TW":"是的"}');
 ;// CONCATENATED MODULE: ./components/plaintext/locales/no.json
-const no_namespaceObject = JSON.parse('{"en-US":"No","af-ZA":"Geen","ar":"لا","bg-BG":"Не","ca-AD":"No","cs-CZ":"Ne","cy-GB":"Na","da-DK":"Ingen","de-AT":"NEIN","de-CH":"NEIN","de-DE":"NEIN","el-GR":"Οχι","en-GB":"No","es-CL":"No","es-ES":"No","es-MX":"No","et-EE":"Mitte","eu":"Ez-","fa-IR":"هیچ","fi-FI":"Ei","fr-CA":"Non","fr-FR":"Non","he-IL":"לא","hi-IN":"नहीं","hr-HR":"Ne","hu-HU":"Nem","id-ID":"TIDAK","is-IS":"Nei","it-IT":"No","ja-JP":"いいえ","km-KH":"ដេលក្ផាន","ko-KR":"아니요","la":"Non","lt-LT":"Ne","lv-LV":"Nē","mn-MN":"-Гүй / -битгий","nb-NO":"Nei","nl-NL":"Nee","pl-PL":"NIE","pt-BR":"Não","pt-PT":"Não","ro-RO":"Nu","ru-RU":"Нет","sk-SK":"Nie","sl-SI":"Ne","sr-RS":"Не","sv-SE":"Nej","th-TH":"เลขที่","tr-TR":"HAYIR","uk-UA":"Немає","vi-VN":"KHÔNG","zh-CN":"不","zh-TW":"不"}');
+var no_namespaceObject = JSON.parse('{"en-US":"No","af-ZA":"Geen","ar":"لا","bg-BG":"Не","ca-AD":"No","cs-CZ":"Ne","cy-GB":"Na","da-DK":"Ingen","de-AT":"NEIN","de-CH":"NEIN","de-DE":"NEIN","el-GR":"Οχι","en-GB":"No","es-CL":"No","es-ES":"No","es-MX":"No","et-EE":"Mitte","eu":"Ez-","fa-IR":"هیچ","fi-FI":"Ei","fr-CA":"Non","fr-FR":"Non","he-IL":"לא","hi-IN":"नहीं","hr-HR":"Ne","hu-HU":"Nem","id-ID":"TIDAK","is-IS":"Nei","it-IT":"No","ja-JP":"いいえ","km-KH":"ដេលក្ផាន","ko-KR":"아니요","la":"Non","lt-LT":"Ne","lv-LV":"Nē","mn-MN":"-Гүй / -битгий","nb-NO":"Nei","nl-NL":"Nee","pl-PL":"NIE","pt-BR":"Não","pt-PT":"Não","ro-RO":"Nu","ru-RU":"Нет","sk-SK":"Nie","sl-SI":"Ne","sr-RS":"Не","sv-SE":"Nej","th-TH":"เลขที่","tr-TR":"HAYIR","uk-UA":"Немає","vi-VN":"KHÔNG","zh-CN":"不","zh-TW":"不"}');
 ;// CONCATENATED MODULE: ./components/plaintext/locales/element.json
-const element_namespaceObject = JSON.parse('{"en-US":"element","af-ZA":"element","ar":"عنصر","bg-BG":"Елемент","ca-AD":"element","cs-CZ":"živel","cy-GB":"elfen","da-DK":"element","de-AT":"element","de-CH":"element","de-DE":"element","el-GR":"στοιχείο","en-GB":"element","es-CL":"elemento","es-ES":"elemento","es-MX":"elemento","et-EE":"element","eu":"osagai","fa-IR":"عنصر","fi-FI":"elementti","fr-CA":"élément","fr-FR":"élément","he-IL":"אֵלֵמֶנט","hi-IN":"तत्व","hr-HR":"element","hu-HU":"elem","id-ID":"elemen","is-IS":"Element","it-IT":"elemento","ja-JP":"エレメント","km-KH":"ធាតុ","ko-KR":"요소","la":"elementum","lt-LT":"elementas","lv-LV":"elements","mn-MN":"бүрэлдэхүүн","nb-NO":"element","nl-NL":"element","pl-PL":"element","pt-BR":"elemento","pt-PT":"elemento","ro-RO":"element","ru-RU":"элемент","sk-SK":"element","sl-SI":"element","sr-RS":"елемент","sv-SE":"element","th-TH":"องค์ประกอบ","tr-TR":"eleman","uk-UA":"елемент","vi-VN":"yếu tố","zh-CN":"元素","zh-TW":"元素"}');
+var element_namespaceObject = JSON.parse('{"en-US":"element","af-ZA":"element","ar":"عنصر","bg-BG":"Елемент","ca-AD":"element","cs-CZ":"živel","cy-GB":"elfen","da-DK":"element","de-AT":"element","de-CH":"element","de-DE":"element","el-GR":"στοιχείο","en-GB":"element","es-CL":"elemento","es-ES":"elemento","es-MX":"elemento","et-EE":"element","eu":"osagai","fa-IR":"عنصر","fi-FI":"elementti","fr-CA":"élément","fr-FR":"élément","he-IL":"אֵלֵמֶנט","hi-IN":"तत्व","hr-HR":"element","hu-HU":"elem","id-ID":"elemen","is-IS":"Element","it-IT":"elemento","ja-JP":"エレメント","km-KH":"ធាតុ","ko-KR":"요소","la":"elementum","lt-LT":"elementas","lv-LV":"elements","mn-MN":"бүрэлдэхүүн","nb-NO":"element","nl-NL":"element","pl-PL":"element","pt-BR":"elemento","pt-PT":"elemento","ro-RO":"element","ru-RU":"элемент","sk-SK":"element","sl-SI":"element","sr-RS":"елемент","sv-SE":"element","th-TH":"องค์ประกอบ","tr-TR":"eleman","uk-UA":"елемент","vi-VN":"yếu tố","zh-CN":"元素","zh-TW":"元素"}');
 ;// CONCATENATED MODULE: ./components/plaintext/locales/elements.json
-const elements_namespaceObject = JSON.parse('{"en-US":"elements","af-ZA":"elemente","ar":"عناصر","bg-BG":"елементи","ca-AD":"elements","cs-CZ":"Prvky","cy-GB":"elfennau","da-DK":"elementer","de-AT":"elemente","de-CH":"elemente","de-DE":"elemente","el-GR":"στοιχεία","en-GB":"elements","es-CL":"elementos","es-ES":"elementos","es-MX":"elementos","et-EE":"elemendid","eu":"elementuak","fa-IR":"عناصر","fi-FI":"elementit","fr-CA":"éléments","fr-FR":"éléments","he-IL":"אלמנטים","hi-IN":"तत्वों","hr-HR":"elementi","hu-HU":"elemek","id-ID":"elemen","is-IS":"þættir","it-IT":"elementi","ja-JP":"要素","km-KH":"ធាតុ","ko-KR":"강요","la":"elementa","lt-LT":"elementai","lv-LV":"elementi","mn-MN":"Элэглэлт","nb-NO":"elementer","nl-NL":"elementen","pl-PL":"elementy","pt-BR":"elementos","pt-PT":"elementos","ro-RO":"elemente","ru-RU":"элементы","sk-SK":"prvky","sl-SI":"elementi","sr-RS":"елементи","sv-SE":"element","th-TH":"องค์ประกอบ","tr-TR":"elementler","uk-UA":"елементи","vi-VN":"các yếu tố","zh-CN":"元素","zh-TW":"元素"}');
+var elements_namespaceObject = JSON.parse('{"en-US":"elements","af-ZA":"elemente","ar":"عناصر","bg-BG":"елементи","ca-AD":"elements","cs-CZ":"Prvky","cy-GB":"elfennau","da-DK":"elementer","de-AT":"elemente","de-CH":"elemente","de-DE":"elemente","el-GR":"στοιχεία","en-GB":"elements","es-CL":"elementos","es-ES":"elementos","es-MX":"elementos","et-EE":"elemendid","eu":"elementuak","fa-IR":"عناصر","fi-FI":"elementit","fr-CA":"éléments","fr-FR":"éléments","he-IL":"אלמנטים","hi-IN":"तत्वों","hr-HR":"elementi","hu-HU":"elemek","id-ID":"elemen","is-IS":"þættir","it-IT":"elementi","ja-JP":"要素","km-KH":"ធាតុ","ko-KR":"강요","la":"elementa","lt-LT":"elementai","lv-LV":"elementi","mn-MN":"Элэглэлт","nb-NO":"elementer","nl-NL":"elementen","pl-PL":"elementy","pt-BR":"elementos","pt-PT":"elementos","ro-RO":"elemente","ru-RU":"элементы","sk-SK":"prvky","sl-SI":"elementi","sr-RS":"елементи","sv-SE":"element","th-TH":"องค์ประกอบ","tr-TR":"elementler","uk-UA":"елементи","vi-VN":"các yếu tố","zh-CN":"元素","zh-TW":"元素"}');
 ;// CONCATENATED MODULE: ./components/plaintext/locales/no-elements.json
-const no_elements_namespaceObject = JSON.parse('{"en-US":"No elements","af-ZA":"Geen elemente nie","ar":"لا عناصر","bg-BG":"Без елементи","ca-AD":"Sense elements","cs-CZ":"Žádné prvky","cy-GB":"Dim Elfennau","da-DK":"Ingen elementer","de-AT":"Keine Elemente","de-CH":"Keine Elemente","de-DE":"Keine Elemente","el-GR":"Χωρίς στοιχεία","en-GB":"No elements","es-CL":"Sin elementos","es-ES":"Sin elementos","es-MX":"Sin elementos","et-EE":"Elemente pole","eu":"Elementurik ez","fa-IR":"بدون عنصر","fi-FI":"Ei elementtejä","fr-CA":"Pas d\'éléments","fr-FR":"Pas d\'éléments","he-IL":"אין אלמנטים","hi-IN":"कोई तत्व नहीं","hr-HR":"Nema elemenata","hu-HU":"Nincs elem","id-ID":"tidak ada elemen","is-IS":"Engir þættir","it-IT":"Nessun elemento","ja-JP":"要素はありません","km-KH":"គ្មានធាតុ","ko-KR":"요소가 없습니다","la":"Nulla elementa","lt-LT":"Jokių elementų","lv-LV":"Nav elementu","mn-MN":"элемент байхгүй","nb-NO":"Ingen elementer","nl-NL":"Geen elementen","pl-PL":"bez elementów","pt-BR":"Sem elementos","pt-PT":"Sem elementos","ro-RO":"Fără elemente","ru-RU":"Нет элементов","sk-SK":"Žiadne prvky","sl-SI":"Brez elementov","sr-RS":"Нема елемената","sv-SE":"Inga element","th-TH":"ไม่มีองค์ประกอบ","tr-TR":"Element Yok","uk-UA":"немає елементів","vi-VN":"Không có yếu tố","zh-CN":"没有元素","zh-TW":"没有元素"}');
+var no_elements_namespaceObject = JSON.parse('{"en-US":"No elements","af-ZA":"Geen elemente nie","ar":"لا عناصر","bg-BG":"Без елементи","ca-AD":"Sense elements","cs-CZ":"Žádné prvky","cy-GB":"Dim Elfennau","da-DK":"Ingen elementer","de-AT":"Keine Elemente","de-CH":"Keine Elemente","de-DE":"Keine Elemente","el-GR":"Χωρίς στοιχεία","en-GB":"No elements","es-CL":"Sin elementos","es-ES":"Sin elementos","es-MX":"Sin elementos","et-EE":"Elemente pole","eu":"Elementurik ez","fa-IR":"بدون عنصر","fi-FI":"Ei elementtejä","fr-CA":"Pas d\'éléments","fr-FR":"Pas d\'éléments","he-IL":"אין אלמנטים","hi-IN":"कोई तत्व नहीं","hr-HR":"Nema elemenata","hu-HU":"Nincs elem","id-ID":"tidak ada elemen","is-IS":"Engir þættir","it-IT":"Nessun elemento","ja-JP":"要素はありません","km-KH":"គ្មានធាតុ","ko-KR":"요소가 없습니다","la":"Nulla elementa","lt-LT":"Jokių elementų","lv-LV":"Nav elementu","mn-MN":"элемент байхгүй","nb-NO":"Ingen elementer","nl-NL":"Geen elementen","pl-PL":"bez elementów","pt-BR":"Sem elementos","pt-PT":"Sem elementos","ro-RO":"Fără elemente","ru-RU":"Нет элементов","sk-SK":"Žiadne prvky","sl-SI":"Brez elementov","sr-RS":"Нема елемената","sv-SE":"Inga element","th-TH":"ไม่มีองค์ประกอบ","tr-TR":"Element Yok","uk-UA":"немає елементів","vi-VN":"Không có yếu tố","zh-CN":"没有元素","zh-TW":"没有元素"}');
 ;// CONCATENATED MODULE: ./components/plaintext/locales/index.js
 
 
@@ -1944,13 +1944,13 @@ var IfNotPlaintext = function IfNotPlaintext(_ref2) {
 /***/ }),
 
 /***/ 8064:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MQ": () => (/* binding */ FRAMEWORKS),
-/* harmony export */   "fj": () => (/* binding */ FIELDS_KEY),
-/* harmony export */   "hZ": () => (/* binding */ FRAMEWORKS_LABELS)
+/* harmony export */   "MQ": function() { return /* binding */ FRAMEWORKS; },
+/* harmony export */   "fj": function() { return /* binding */ FIELDS_KEY; },
+/* harmony export */   "hZ": function() { return /* binding */ FRAMEWORKS_LABELS; }
 /* harmony export */ });
 var FRAMEWORKS = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd'];
 var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design'];
@@ -1959,26 +1959,23 @@ var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
 /***/ }),
 
 /***/ 5137:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8156);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 var FormContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)();
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FormContext);
+/* harmony default export */ __webpack_exports__["Z"] = (FormContext);
 
 /***/ }),
 
 /***/ 7274:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "x": () => (/* binding */ GenerateGenerator)
+/* harmony export */   "x": function() { return /* binding */ GenerateGenerator; }
 /* harmony export */ });
 /* harmony import */ var lodash_uniqueId__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3955);
 /* harmony import */ var lodash_uniqueId__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_uniqueId__WEBPACK_IMPORTED_MODULE_0__);
@@ -3268,42 +3265,42 @@ var GenerateGenerator = function GenerateGenerator(_ref2) {
 /***/ }),
 
 /***/ 8145:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "xS": () => (/* reexport */ addField),
-  "eX": () => (/* reexport */ applyFormRules),
-  "Zr": () => (/* reexport */ applyTransformers),
-  "Lx": () => (/* reexport */ cleanUp),
-  "FN": () => (/* reexport */ collectIds),
-  "BI": () => (/* reexport */ collectNames),
-  "bc": () => (/* reexport */ createEmptyField),
-  "AK": () => (/* reexport */ deleteField),
-  "Mw": () => (/* reexport */ fillIds),
-  "qH": () => (/* reexport */ filterFields),
-  "MN": () => (/* reexport */ filterOptions),
-  "PI": () => (/* reexport */ findField),
-  "qs": () => (/* reexport */ formHelper),
-  "rc": () => (/* reexport */ getFieldById),
-  "IP": () => (/* reexport */ getLocales),
-  "ag": () => (/* reexport */ i18n),
-  "Lo": () => (/* reexport */ i18nOptions),
-  "c_": () => (/* reexport */ isChildrenOf),
-  "Oc": () => (/* reexport */ isEmptyForm),
-  "QK": () => (/* reexport */ isI18n),
-  "CB": () => (/* reexport */ isUrl),
-  "qb": () => (/* reexport */ isValidDate),
-  "az": () => (/* reexport */ isValidDayjsFormat),
-  "PZ": () => (/* reexport */ makeWidthStyle),
-  "vn": () => (/* reexport */ mapFields),
-  "QF": () => (/* reexport */ passRest),
-  "f3": () => (/* reexport */ reduceFields),
-  "DN": () => (/* reexport */ replaceField),
-  "nK": () => (/* reexport */ validateJSONForm),
-  "Dd": () => (/* reexport */ validateRulesDefinition)
+  "xS": function() { return /* reexport */ addField; },
+  "eX": function() { return /* reexport */ applyFormRules; },
+  "Zr": function() { return /* reexport */ applyTransformers; },
+  "Lx": function() { return /* reexport */ cleanUp; },
+  "FN": function() { return /* reexport */ collectIds; },
+  "BI": function() { return /* reexport */ collectNames; },
+  "bc": function() { return /* reexport */ createEmptyField; },
+  "AK": function() { return /* reexport */ deleteField; },
+  "Mw": function() { return /* reexport */ fillIds; },
+  "qH": function() { return /* reexport */ filterFields; },
+  "MN": function() { return /* reexport */ filterOptions; },
+  "PI": function() { return /* reexport */ findField; },
+  "qs": function() { return /* reexport */ formHelper; },
+  "rc": function() { return /* reexport */ getFieldById; },
+  "IP": function() { return /* reexport */ getLocales; },
+  "ag": function() { return /* reexport */ i18n; },
+  "Lo": function() { return /* reexport */ i18nOptions; },
+  "c_": function() { return /* reexport */ isChildrenOf; },
+  "Oc": function() { return /* reexport */ isEmptyForm; },
+  "QK": function() { return /* reexport */ isI18n; },
+  "CB": function() { return /* reexport */ isUrl; },
+  "qb": function() { return /* reexport */ isValidDate; },
+  "az": function() { return /* reexport */ isValidDayjsFormat; },
+  "PZ": function() { return /* reexport */ makeWidthStyle; },
+  "vn": function() { return /* reexport */ mapFields; },
+  "QF": function() { return /* reexport */ passRest; },
+  "f3": function() { return /* reexport */ reduceFields; },
+  "DN": function() { return /* reexport */ replaceField; },
+  "nK": function() { return /* reexport */ validateJSONForm; },
+  "Dd": function() { return /* reexport */ validateRulesDefinition; }
 });
 
 // EXTERNAL MODULE: ./node_modules/lodash/flatten.js
@@ -4141,7 +4138,7 @@ var isValidDayjsFormat = function isValidDayjsFormat(str) {
 };
 
 ;// CONCATENATED MODULE: ./common/data/locales.json
-const locales_namespaceObject = JSON.parse('{"Q":{"af-ZA":["Afrikaans","Afrikaans"],"ar":["العربية","Arabic"],"bg-BG":["Български","Bulgarian"],"ca-AD":["Català","Catalan"],"cs-CZ":["Čeština","Czech"],"cy-GB":["Cymraeg","Welsh"],"da-DK":["Dansk","Danish"],"de-AT":["Deutsch (Österreich)","German (Austria)"],"de-CH":["Deutsch (Schweiz)","German (Switzerland)"],"de-DE":["Deutsch (Deutschland)","German (Germany)"],"el-GR":["Ελληνικά","Greek"],"en-GB":["English (UK)","English (UK)"],"en-US":["English (US)","English (US)"],"es-CL":["Español (Chile)","Spanish (Chile)"],"es-ES":["Español (España)","Spanish (Spain)"],"es-MX":["Español (México)","Spanish (Mexico)"],"et-EE":["Eesti keel","Estonian"],"eu":["Euskara","Basque"],"fa-IR":["فارسی","Persian"],"fi-FI":["Suomi","Finnish"],"fr-CA":["Français (Canada)","French (Canada)"],"fr-FR":["Français (France)","French (France)"],"he-IL":["עברית","Hebrew"],"hi-IN":["हिंदी","Hindi"],"hr-HR":["Hrvatski","Croatian"],"hu-HU":["Magyar","Hungarian"],"id-ID":["Bahasa Indonesia","Indonesian"],"is-IS":["Íslenska","Icelandic"],"it-IT":["Italiano","Italian"],"ja-JP":["日本語","Japanese"],"km-KH":["ភាសាខ្មែរ","Khmer"],"ko-KR":["한국어","Korean"],"la":["Latina","Latin"],"lt-LT":["Lietuvių kalba","Lithuanian"],"lv-LV":["Latviešu","Latvian"],"mn-MN":["Монгол","Mongolian"],"nb-NO":["Norsk bokmål","Norwegian (Bokmål)"],"nl-NL":["Nederlands","Dutch"],"nn-NO":["Norsk nynorsk","Norwegian (Nynorsk)"],"pl-PL":["Polski","Polish"],"pt-BR":["Português (Brasil)","Portuguese (Brazil)"],"pt-PT":["Português (Portugal)","Portuguese (Portugal)"],"ro-RO":["Română","Romanian"],"ru-RU":["Русский","Russian"],"sk-SK":["Slovenčina","Slovak"],"sl-SI":["Slovenščina","Slovenian"],"sr-RS":["Српски / Srpski","Serbian"],"sv-SE":["Svenska","Swedish"],"th-TH":["ไทย","Thai"],"tr-TR":["Türkçe","Turkish"],"uk-UA":["Українська","Ukrainian"],"vi-VN":["Tiếng Việt","Vietnamese"],"zh-CN":["中文 (中国大陆)","Chinese (PRC)"],"zh-TW":["中文 (台灣)","Chinese (Taiwan)"]}}');
+var locales_namespaceObject = JSON.parse('{"Q":{"af-ZA":["Afrikaans","Afrikaans"],"ar":["العربية","Arabic"],"bg-BG":["Български","Bulgarian"],"ca-AD":["Català","Catalan"],"cs-CZ":["Čeština","Czech"],"cy-GB":["Cymraeg","Welsh"],"da-DK":["Dansk","Danish"],"de-AT":["Deutsch (Österreich)","German (Austria)"],"de-CH":["Deutsch (Schweiz)","German (Switzerland)"],"de-DE":["Deutsch (Deutschland)","German (Germany)"],"el-GR":["Ελληνικά","Greek"],"en-GB":["English (UK)","English (UK)"],"en-US":["English (US)","English (US)"],"es-CL":["Español (Chile)","Spanish (Chile)"],"es-ES":["Español (España)","Spanish (Spain)"],"es-MX":["Español (México)","Spanish (Mexico)"],"et-EE":["Eesti keel","Estonian"],"eu":["Euskara","Basque"],"fa-IR":["فارسی","Persian"],"fi-FI":["Suomi","Finnish"],"fr-CA":["Français (Canada)","French (Canada)"],"fr-FR":["Français (France)","French (France)"],"he-IL":["עברית","Hebrew"],"hi-IN":["हिंदी","Hindi"],"hr-HR":["Hrvatski","Croatian"],"hu-HU":["Magyar","Hungarian"],"id-ID":["Bahasa Indonesia","Indonesian"],"is-IS":["Íslenska","Icelandic"],"it-IT":["Italiano","Italian"],"ja-JP":["日本語","Japanese"],"km-KH":["ភាសាខ្មែរ","Khmer"],"ko-KR":["한국어","Korean"],"la":["Latina","Latin"],"lt-LT":["Lietuvių kalba","Lithuanian"],"lv-LV":["Latviešu","Latvian"],"mn-MN":["Монгол","Mongolian"],"nb-NO":["Norsk bokmål","Norwegian (Bokmål)"],"nl-NL":["Nederlands","Dutch"],"nn-NO":["Norsk nynorsk","Norwegian (Nynorsk)"],"pl-PL":["Polski","Polish"],"pt-BR":["Português (Brasil)","Portuguese (Brazil)"],"pt-PT":["Português (Portugal)","Portuguese (Portugal)"],"ro-RO":["Română","Romanian"],"ru-RU":["Русский","Russian"],"sk-SK":["Slovenčina","Slovak"],"sl-SI":["Slovenščina","Slovenian"],"sr-RS":["Српски / Srpski","Serbian"],"sv-SE":["Svenska","Swedish"],"th-TH":["ไทย","Thai"],"tr-TR":["Türkçe","Turkish"],"uk-UA":["Українська","Ukrainian"],"vi-VN":["Tiếng Việt","Vietnamese"],"zh-CN":["中文 (中国大陆)","Chinese (PRC)"],"zh-TW":["中文 (台灣)","Chinese (Taiwan)"]}}');
 ;// CONCATENATED MODULE: ./helpers/get-locales.js
 
 var LANGUAGES_OPTIONS = Object.keys(locales_namespaceObject.Q).map(function (lang) {
@@ -4215,7 +4212,7 @@ var isEmptyForm = function isEmptyForm(form) {
   return !form || !Array.isArray(form.fields) || form.fields.length === 0;
 };
 ;// CONCATENATED MODULE: ./mappings.json
-const mappings_namespaceObject = JSON.parse('{"input-text":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"submitOnEnter":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"value":null,"image":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui","react-antd"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"popupMatchSelectWidth":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"layout":null,"arrayType":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"fullWidth":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-bootstrap","react-antd"],"step":["react-rsuite5","react-bootstrap","react-antd"],"max":["react-rsuite5","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":["react-rsuite5","react-material-ui","react-antd"],"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"value":["react-rsuite5","react-material-ui","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap","react-antd"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"size":["react-material-ui","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"row":["react-material-ui"],"reverse":["react-bootstrap"],"optionType":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui"],"disableUnderline":["react-material-ui"],"maxRows":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"value":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-antd"],"multiselectMode":["react-rsuite5"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui"],"variant":["react-material-ui"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"align":null,"hidden":null,"maxWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"maxHeight":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginTop":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginBottom":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"button":{"name":null,"buttonType":null,"placeholderOn":null,"labelOn":null,"iconOn":null,"placeholderOff":null,"labelOff":null,"iconOff":null,"initialValue":null,"placeholder":null,"labelLink":null,"iconLink":null,"href":null,"hint":null,"fullWidth":null,"width":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"tooltip":["react-rsuite5"],"variant":["react-material-ui","react-bootstrap"],"color":["react-material-ui"],"type":["react-antd"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap","react-antd"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"tabs":{"name":null,"label":null,"hint":null,"tabs":null,"value":null,"hidden":null,"appearance":["react-rsuite5"],"reversed":["react-rsuite5"],"justified":["react-rsuite5"],"indicatorColor":["react-material-ui"],"textColor":["react-material-ui"],"centered":["react-material-ui","react-antd"],"fullWidth":["react-material-ui"],"variant":["react-bootstrap"],"transition":["react-bootstrap"],"fill":["react-bootstrap"],"justify":["react-bootstrap"],"size":["react-antd"],"tabType":["react-antd"],"animated":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-tile":{"name":null,"label":null,"hint":null,"options":null,"value":null,"description":null,"icon":null,"initalOption":null,"disabled":null,"hidden":null,"inline":["react-rsuite5"],"iconWidth":["react-rsuite5"],"iconHeight":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"upload":{"name":null,"label":null,"hint":null,"disabled":null,"hidden":null,"accept":["react-rsuite5","react-antd"],"acceptedFile":["react-rsuite5","react-antd"],"listType":["react-rsuite5","react-antd"],"maxPreviewFileSize":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"fileListVisible":["react-rsuite5"],"disabledFileItem":["react-rsuite5"],"multiple":["react-rsuite5","react-antd"],"removable":["react-rsuite5"],"draggable":["react-rsuite5","react-antd"],"uploadButtonLabel":["react-rsuite5","react-antd"],"uploadButtonAppearance":["react-rsuite5","react-antd"],"uploadButtonSize":["react-rsuite5","react-antd"],"draggableText":["react-rsuite5","react-antd"],"draggableHeight":["react-rsuite5","react-antd"],"maxCount":["react-antd"],"showUploadList":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"buttons-toggle-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"multiple":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"steps":{"name":null,"hidden":null,"steps":null,"value":null,"label":null,"description":null,"labelNext":null,"labelPrevious":null,"align":null,"small":["react-rsuite5"],"status":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
+var mappings_namespaceObject = JSON.parse('{"input-text":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"submitOnEnter":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"inputMode":null,"autocomplete":null,"inputType":null,"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"toggle":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-antd"],"checkedChildren":["react-rsuite5","react-antd"],"unCheckedChildren":["react-rsuite5","react-antd"],"tooltip":["react-rsuite5","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"select":{"name":null,"label":null,"hint":null,"placeholder":null,"options":null,"value":null,"image":null,"showImageOptions":null,"filterKey":null,"filterValue":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-material-ui","react-antd"],"width":["react","react-material-ui","react-antd"],"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"appearance":["react-rsuite5"],"autoWidth":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"variant":["react-material-ui"],"popupMatchSelectWidth":["react-antd"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"group":{"name":null,"label":null,"hidden":null,"align":null,"collapsible":null,"open":null,"bottomBorder":null},"two-columns":{"name":null,"layout":null,"leftAlignment":null,"rightAlignment":null,"hidden":null},"three-columns":{"name":null,"layout":null,"leftAlignment":null,"centerAlignment":null,"rightAlignment":null,"hidden":null},"array":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"layout":null,"arrayType":null,"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-number":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"fullWidth":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"allowClear":["react-rsuite5"],"min":["react-rsuite5","react-bootstrap","react-antd"],"step":["react-rsuite5","react-bootstrap","react-antd"],"max":["react-rsuite5","react-bootstrap","react-antd"],"prefix":["react-rsuite5","react-material-ui","react-bootstrap"],"inside":["react-rsuite5"],"postfix":["react-rsuite5","react-material-ui","react-bootstrap"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui","react-bootstrap"],"disableUnderline":["react-material-ui"],"showControls":["react-antd"],"stringMode":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"slider":{"name":null,"label":["react-rsuite5","react-material-ui","react-antd"],"hint":null,"disabled":null,"readOnly":null,"hidden":null,"tooltip":["react-rsuite5"],"min":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"step":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"max":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"vertical":["react-rsuite5"],"progress":["react-rsuite5"],"showTooltip":["react-rsuite5"],"graduated":["react-rsuite5"],"marks":["react-rsuite5","react-antd"],"value":["react-rsuite5","react-material-ui","react-antd"],"size":["react-material-ui"],"color":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui"],"valueLabelDisplay":["react-material-ui"],"showMarks":["react-material-ui"],"customMarks":["react-material-ui"],"keyboard":["react-antd"],"dots":["react-antd"],"reverse":["react-antd"],"tooltipOpen":["react-antd"],"tooltipPlacement":["react-antd"],"included":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"date":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap","react-antd"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showTime":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"picker":["react-antd"],"mode":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"indeterminate":["react-rsuite5"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"disableRipple":["react-material-ui"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"checkbox-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap"],"tooltip":["react-rsuite5"],"size":["react-material-ui"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"reverse":["react-bootstrap"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"disabled":null,"readOnly":null,"hidden":null,"inline":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"size":["react-material-ui","react-antd"],"color":["react-material-ui"],"labelPlacement":["react-material-ui"],"row":["react-material-ui"],"reverse":["react-bootstrap"],"optionType":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-tag":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"trigger":["react-rsuite5"],"block":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-mask":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"mask":["react-rsuite5"],"guide":["react-rsuite5"],"keepCharPositions":["react-rsuite5"],"showMask":["react-rsuite5"],"placeholderChar":["react-rsuite5"],"fullWidth":["react-rsuite5"],"width":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"prefix":["react-rsuite5"],"inside":["react-rsuite5"],"postfix":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"textarea":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"fullWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"width":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"rows":["react","react-rsuite5","react-bootstrap"],"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"tooltip":["react-rsuite5","react-antd"],"variant":["react-material-ui"],"color":["react-material-ui"],"floatingLabel":["react-material-ui"],"disableUnderline":["react-material-ui"],"maxRows":["react-material-ui"],"showCount":["react-antd"],"maxLength":["react-antd"],"allowClear":["react-antd"],"autoSize":["react-antd"],"bordered":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"rate":{"name":null,"label":null,"hint":null,"disabled":null,"readOnly":null,"hidden":null,"allowHalf":["react-rsuite5","react-antd"],"cleanable":["react-rsuite5"],"vertical":["react-rsuite5"],"max":["react-rsuite5","react-material-ui"],"color":["react-rsuite5"],"size":["react-rsuite5","react-material-ui"],"tooltip":["react-rsuite5","react-antd","react-antd"],"precision":["react-material-ui"],"count":["react-antd"],"allowClear":["react-antd"],"tooltips":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder":{"name":null,"label":null,"hint":null,"text":null,"hidden":null,"tooltip":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect":{"name":null,"label":null,"hint":null,"options":null,"value":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5","react-antd"],"size":["react-rsuite5","react-material-ui","react-antd"],"multiselectMode":["react-rsuite5"],"block":["react-rsuite5"],"searchable":["react-rsuite5"],"cleanable":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"preventOverflow":["react-rsuite5"],"autoWidth":["react-material-ui"],"fullWidth":["react-material-ui"],"width":["react-material-ui","react-antd"],"floatingLabel":["react-material-ui"],"variant":["react-material-ui"],"listHeight":["react-antd"],"allowClear":["react-antd"],"bordered":["react-antd"],"showSearch":["react-antd"],"showArrow":["react-antd"],"virtual":["react-antd"],"maxTagCount":["react-antd"],"maxTagPlaceholder":["react-antd"],"maxTagTextLength":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"multiselect-language":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"placement":["react-rsuite5"],"size":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"input-text-i18n":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5"],"width":["react-rsuite5"],"textarea":["react-rsuite5"],"rows":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"placeholder-image":{"name":null,"url":null,"align":null,"hidden":null,"maxWidth":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"maxHeight":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginTop":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"marginBottom":["react","react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"button":{"name":null,"buttonType":null,"placeholderOn":null,"labelOn":null,"iconOn":null,"placeholderOff":null,"labelOff":null,"iconOff":null,"initialValue":null,"placeholder":null,"labelLink":null,"iconLink":null,"href":null,"hint":null,"fullWidth":null,"width":null,"hidden":null,"size":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"tooltip":["react-rsuite5"],"variant":["react-material-ui","react-bootstrap"],"color":["react-material-ui"],"type":["react-antd"]},"divider":{"name":null,"size":null,"color":null,"hidden":null},"datetime":{"name":null,"label":null,"hint":null,"placeholder":null,"disabled":null,"readOnly":null,"hidden":null,"format":["react-rsuite5","react-material-ui","react-antd"],"block":["react-rsuite5"],"cleanable":["react-rsuite5"],"editable":["react-rsuite5"],"oneTap":["react-rsuite5"],"showMeridian":["react-rsuite5"],"showWeekNumbers":["react-rsuite5"],"isoWeek":["react-rsuite5"],"size":["react-rsuite5","react-bootstrap","react-antd"],"appearance":["react-rsuite5"],"placement":["react-rsuite5","react-antd"],"fullWidth":["react-material-ui","react-bootstrap","react-antd"],"disableFuture":["react-material-ui"],"disableHighlightToday":["react-material-ui"],"disableOpenPicker":["react-material-ui"],"disablePast":["react-material-ui"],"displayWeekNumber":["react-material-ui"],"reduceAnimations":["react-material-ui"],"showDaysOutsideCurrentMonth":["react-material-ui"],"maxDate":["react-material-ui"],"minDate":["react-material-ui"],"views":["react-material-ui"],"prefix":["react-bootstrap"],"postfix":["react-bootstrap"],"floatingLabel":["react-bootstrap"],"width":["react-bootstrap","react-antd"],"bordered":["react-antd"],"allowClear":["react-antd"],"tooltip":["react-antd"],"showNow":["react-antd"],"showToday":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"tabs":{"name":null,"label":null,"hint":null,"tabs":null,"value":null,"hidden":null,"appearance":["react-rsuite5"],"reversed":["react-rsuite5"],"justified":["react-rsuite5"],"indicatorColor":["react-material-ui"],"textColor":["react-material-ui"],"centered":["react-material-ui","react-antd"],"fullWidth":["react-material-ui"],"variant":["react-bootstrap"],"transition":["react-bootstrap"],"fill":["react-bootstrap"],"justify":["react-bootstrap"],"size":["react-antd"],"tabType":["react-antd"],"animated":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"radio-tile":{"name":null,"label":null,"hint":null,"options":null,"value":null,"description":null,"icon":null,"initalOption":null,"disabled":null,"hidden":null,"inline":["react-rsuite5"],"iconWidth":["react-rsuite5"],"iconHeight":["react-rsuite5"],"tooltip":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"upload":{"name":null,"label":null,"hint":null,"disabled":null,"hidden":null,"accept":["react-rsuite5","react-antd"],"acceptedFile":["react-rsuite5","react-antd"],"listType":["react-rsuite5","react-antd"],"maxPreviewFileSize":["react-rsuite5"],"tooltip":["react-rsuite5","react-antd"],"fileListVisible":["react-rsuite5"],"disabledFileItem":["react-rsuite5"],"multiple":["react-rsuite5","react-antd"],"removable":["react-rsuite5"],"draggable":["react-rsuite5","react-antd"],"uploadButtonLabel":["react-rsuite5","react-antd"],"uploadButtonAppearance":["react-rsuite5","react-antd"],"uploadButtonSize":["react-rsuite5","react-antd"],"draggableText":["react-rsuite5","react-antd"],"draggableHeight":["react-rsuite5","react-antd"],"maxCount":["react-antd"],"showUploadList":["react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"buttons-toggle-group":{"name":null,"label":null,"hint":null,"options":null,"value":null,"multiple":null,"disabled":null,"readOnly":null,"hidden":null,"size":["react-rsuite5","react-antd"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null},"steps":{"name":null,"hidden":null,"steps":null,"value":null,"label":null,"description":null,"labelNext":null,"labelPrevious":null,"align":null,"small":["react-rsuite5"],"status":["react-rsuite5"],"validationMinLength":"validation","validationMin":"validation","validationMaxLength":"validation","validationMax":"validation","validationPattern":"validation","validationMessage":"validation","required":null}}');
 ;// CONCATENATED MODULE: ./helpers/apply-transformers.js
 
 
@@ -4739,7 +4736,7 @@ var isChildrenOf = function isChildrenOf(fieldId, parentFieldId, fields) {
 var uniq = __webpack_require__(4908);
 var uniq_default = /*#__PURE__*/__webpack_require__.n(uniq);
 ;// CONCATENATED MODULE: ./manifest.json
-const manifest_namespaceObject = JSON.parse('{"input-text":{"label":"Input Text","category":"general","name":"input-text","description":"Basic input text","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"submitOnEnter","type":"boolean","description":"Trigger onSubmit / onError if the user hits Enter key"},{"name":"inputMode","type":"string","options":["none","text","decimal","numeric","tel","search","email","url"]},{"name":"autocomplete","type":"string","options":["off","on","name","honorific-prefix","given-name","additional-name","family-name","honorific-suffix","nickname","email","username","new-password","current-password","one-time-code","organization-title","organization","street-address","address-line1","address-line2","address-line3","address-level4","address-level3","address-level2","address-level1","country","country-name","postal-code","cc-name","cc-given-name","cc-additional-name","cc-family-name","cc-number","cc-exp","cc-exp-month","cc-exp-year","cc-csc","cc-type","transaction-currency","transaction-amount","language","bday","bday-day","bday-month","bday-year","sex","tel","tel-country-code","tel-national","tel-area-code","tel-local","tel-extension","impp","url","photo"]},{"name":"inputType","type":"string","description":"Set the HTML 5 input type, some framework may have specific components for some of these type","options":["button","checkbox","color","date","datetime-local","email","file","hidden","image","month","number","password","radio","range","reset","search","submit","tel","text","time","url","week"]}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"showCount","type":"boolean"},{"name":"maxLength","type":"number"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"bordered","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"toggle":{"label":"Toggle","category":"general","name":"toggle","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"checkedChildren","type":"string | i18n"},{"name":"unCheckedChildren","type":"string | i18n"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"disableRipple","type":"boolean","description":"Disable CSS ripple effect"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["default","small"]},{"name":"tooltip","type":"boolean"},{"name":"checkedChildren","type":"string | i18n"},{"name":"unCheckedChildren","type":"string | i18n"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"select":{"label":"Select","category":"general","description":"Select / Combo box","name":"select","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"options","type":"array"},{"name":"showImageOptions","type":"boolean","description":"Show image field for Select options to be displayed in the drop-down"},{"name":"filterKey","type":"string"},{"name":"filterValue","type":"string"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"searchable","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"appearance","type":"string","options":["default","subtle"]}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"autoWidth","type":"boolean","description":"If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"variant","type":"string","options":["outlined","filled","standard"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"popupMatchSelectWidth","type":"boolean","description":"Determine whether the popup menu and the select input are the same width"},{"name":"listHeight","type":"number","description":"Config popup height"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"allowClear","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"showSearch","type":"boolean","description":"Whether select is searchable"},{"name":"showArrow","type":"boolean","description":"Whether to show the drop-down arrow"},{"name":"virtual","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"group":{"label":"Group","category":"layout","name":"group","description":"Visually Group a set of fields, can be collapsed","common":[{"name":"name","type":"string"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"align","type":"string","options":["left","center","right"]},{"name":"collapsible","type":"boolean"},{"name":"open","type":"boolean"},{"name":"bottomBorder","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"two-columns":{"label":"Two Columns","category":"layout","name":"two-columns","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"layout","type":"string","options":["layout-1-1","layout-1-2","layout-1-3","layout-1-4","layout-2-1","layout-3-1","layout-4-1","layout-2-3","layout-3-2","layout-0-1","layout-1-0"]},{"name":"leftAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"rightAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"three-columns":{"label":"Three Columns","category":"layout","name":"three-columns","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"layout","type":"string","options":["layout-0-1-0","layout-1-0-0","layout-1-1-1","layout-1-1-2","layout-1-2-1","layout-2-1-1","layout-1-1-3","layout-1-3-1","layout-3-1-1"]},{"name":"leftAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"centerAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"rightAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"array":{"label":"List Array","category":"general","name":"array","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"layout","type":"string","options":["vertical","horizontal","inline"]},{"name":"arrayType","type":"string","description":"Defines the result of the list component, \\"arrayOfString\\" and \\"commaSeparated\\" only applies if list field has only one field","options":["arrayOfObject","arrayOfString","commaSeparated"]}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"input-number":{"label":"Input number","category":"general","name":"input-number","description":"Basic input number field, returns a numeric value","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"allowClear","type":"boolean"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"react-bootstrap":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"}],"react-antd":[{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"showControls","type":"boolean","description":"Whether to show +- controls, or set custom arrows icon"},{"name":"stringMode","type":"boolean","description":"Set value as string to support high precision decimals. Will return string value by onChange"},{"name":"bordered","type":"boolean"},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"tooltip","type":"boolean"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"slider":{"label":"Slider","category":"general","name":"slider","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"vertical","type":"boolean"},{"name":"progress","type":"boolean","description":"Show sliding progress bar"},{"name":"showTooltip","type":"boolean","description":"Whether to show Tooltip when sliding"},{"name":"graduated","type":"boolean"},{"name":"marks","type":"array","description":"Customize labels on the render ruler"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"valueLabelDisplay","type":"string","description":"How to show the value of the label","options":["auto","on","off"]},{"name":"showMarks","type":"boolean"},{"name":"customMarks","type":"array","description":"Customize labels on the render ruler"}],"react-bootstrap":[{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"}],"react-antd":[{"name":"keyboard","type":"boolean","description":"Support using keyboard to move handlers"},{"name":"dots","type":"boolean","description":"Whether the thumb can drag over tick only"},{"name":"reverse","type":"boolean","description":"Reverse the component"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"tooltipOpen","type":"boolean","description":"Tooltip behaviour, checked always open, unchecked always close"},{"name":"tooltipPlacement","type":"string","options":["top","left","right","bottom","topLeft","topRight","bottomLeft","bottomRight","topLeft","topRight","leftTop","leftBottom","rightTop","rightBottom"]},{"name":"marks","type":"array","description":"Customize labels on the render ruler"},{"name":"included","type":"boolean","description":"Make effect when marks not null, true means containment and false means coordinative"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"date":{"label":"Date","category":"general","description":"Date field, returns a string in ISO-8601 format (i.e., 1972-10-01)","name":"date","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"format","type":"string","description":"Check https://date-fns.org library for available formats"},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"cleanable","type":"boolean"},{"name":"editable","type":"boolean","description":"Rendered as an input, the date can be entered via the keyboard"},{"name":"oneTap","type":"boolean","description":"One click to complete the selection date"},{"name":"showMeridian","type":"boolean","description":"Display hours in 12 format"},{"name":"showWeekNumbers","type":"boolean"},{"name":"isoWeek","type":"boolean","description":"ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","options":["default","subtle"]},{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]}],"react-material-ui":[{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"fullWidth","type":"boolean","description":"Set the width of the container field to 100%"},{"name":"disableFuture","type":"boolean"},{"name":"disableHighlightToday","type":"boolean"},{"name":"disableOpenPicker","type":"boolean"},{"name":"disablePast","type":"boolean"},{"name":"displayWeekNumber","type":"boolean"},{"name":"reduceAnimations","type":"boolean"},{"name":"showDaysOutsideCurrentMonth","type":"boolean"},{"name":"maxDate","type":"date"},{"name":"minDate","type":"date"},{"name":"views","type":"[string]","options":["day","month","year"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"bordered","type":"boolean"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"showTime","type":"boolean"},{"name":"showNow","type":"boolean","description":"Show now button"},{"name":"showToday","type":"boolean","description":"Show today button"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"picker","type":"string","options":["date","week","month","quarter","year"]},{"name":"mode","type":"string","options":["time","date","month","year","decade"]}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"checkbox":{"label":"Checkbox","category":"general","name":"checkbox","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"indeterminate","type":"boolean","description":"Status can be indeterminate (null), cycle values trough false, inderminate, true"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"disableRipple","type":"boolean","description":"Disable CSS ripple effect"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"checkbox-group":{"label":"Checkbox Group","category":"general","name":"checkbox-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]}],"react-bootstrap":[{"name":"inline","type":"boolean"},{"name":"reverse","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"radio-group":{"label":"Radio Group","category":"general","name":"radio-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean"},{"name":"appearance","type":"string","description":"Show as default radio control or stacked buttons","options":["default","picker"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"row","type":"boolean"}],"react-bootstrap":[{"name":"inline","type":"boolean"},{"name":"reverse","type":"boolean"}],"react-antd":[{"name":"optionType","type":"string","options":["default","button"]},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"inline","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"input-tag":{"label":"Tag Input","category":"general","name":"input-tag","description":"Input tags, create tags, returns an array of string","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"trigger","type":"[string]","description":"Set the trigger for creating tags","options":["Enter","Space","Comma"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"input-mask":{"label":"Input Mask","category":"general","name":"input-mask","description":"Masked input text","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"mask","type":"string","description":"Use ${d} - digits, ${D} - any non digits, ${a} - any non alpha chars, ${w} - any word chars "},{"name":"guide","type":"boolean"},{"name":"keepCharPositions","type":"boolean","description":"When true, adding or deleting characters will not affect the position of existing characters"},{"name":"showMask","type":"boolean","description":"When the input value is empty, the mask is displayed as a placeholder instead of a regular placeholder"},{"name":"placeholderChar","type":"string","description":"The placeholder character represents the fillable spot in the mask"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"frameworks":["react-rsuite5"]},"textarea":{"label":"Textarea","category":"general","name":"textarea","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"rows","type":"number"}],"react-rsuite5":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"rows","type":"number"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"maxRows","type":"number"}],"react-bootstrap":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"rows","type":"number"}],"react-antd":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"showCount","type":"boolean"},{"name":"maxLength","type":"number"},{"name":"allowClear","type":"boolean"},{"name":"autoSize","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"rate":{"label":"Rate","category":"general","name":"rate","description":"Five stars rating field","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"allowHalf","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"vertical","type":"boolean","description":"Vertical direction when half selected"},{"name":"max","type":"number"},{"name":"color","type":"string","options":["red","orange","yellow","green","cyan","blue","violet"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"precision","type":"string","description":"The minimum increment value change allowed","options":[0.1,0.2,0.5,1]},{"name":"max","type":"number"}],"react-antd":[{"name":"count","type":"number"},{"name":"allowHalf","type":"boolean","description":"Allow half votes"},{"name":"allowClear","type":"boolean"},{"name":"tooltips","type":"array","description":"Customize tooltip for each value"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-antd"]},"placeholder":{"label":"Placeholder","category":"layout","name":"placeholder","description":"Generic placeholder for an image inside the form, supports basic parameters like width, height and margin","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"text","type":"string | i18n","description":"Supports markdown (i.e., **bold**, _italics_)"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-antd":[{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"multiselect":{"label":"MultiSelect","category":"general","name":"multiselect","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"multiselectMode","type":"string","description":"Show the selected values as tag element or plain string","options":["tag","plain"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"searchable","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"preventOverflow","type":"boolean","description":"Prevent floating element overflow"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"autoWidth","type":"boolean","description":"If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"variant","type":"string","options":["outlined","filled","standard"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"width","type":"number"},{"name":"listHeight","type":"number","description":"Config popup height"},{"name":"allowClear","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"showSearch","type":"boolean","description":"Whether select is searchable"},{"name":"showArrow","type":"boolean","description":"Whether to show the drop-down arrow"},{"name":"virtual","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"maxTagCount","type":"number","description":"Maximum number of selectable elements"},{"name":"maxTagPlaceholder","type":"string","description":"Placeholder to show when max number of element is reached"},{"name":"maxTagTextLength","type":"number","description":"Maximum length of text tags"}],"frameworks":["react-rsuite5","react-material-ui","react-antd"]},"multiselect-language":{"label":"Locales","category":"advanced","description":"Select one or more locales, returns an array (i.e. it-IT, en-GB, ...)","name":"multiselect-language","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"placeholder-image":{"label":"Placeholder Image","category":"layout","name":"placeholder-image","description":"Image placeholder","common":[{"name":"name","type":"string"},{"name":"url","type":"string"},{"name":"align","type":"string","options":["left","center","right"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-rsuite5":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-material-ui":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-bootstrap":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-antd":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"button":{"label":"Button","category":"layout","description":"Icon button, can be used as toggle button or just a link button","name":"button","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"buttonType","type":"string","description":"Type of button: toggle 2-states button or link button","options":["toggle","link"]},{"name":"labelOn","type":"string | i18n"},{"name":"iconOn","type":"string"},{"name":"labelOff","type":"string | i18n"},{"name":"iconOff","type":"string"},{"name":"initialValue","type":"boolean"},{"name":"labelLink","type":"string | i18n"},{"name":"iconLink","type":"string"},{"name":"href","type":"string"},{"name":"hint","type":"string | i18n","description":"Show hint in a tooltip"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","description":"Only available for link-type buttons","options":["default","primary","subtle","link","ghost"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]}],"react-bootstrap":[{"name":"variant","type":"string","options":["primary","secondary","success","warning","danger","info","light","dark","link"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"type","type":"string","description":"Only available for link-type buttons","options":["primary","default","dashed","text","link"]}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"divider":{"label":"Divider","category":"layout","description":"Layout divider, customizable with size and color","name":"divider","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"size","type":"number","description":"Thickness of the divider"},{"name":"color","type":"string"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"datetime":{"label":"Date Time","category":"general","name":"datetime","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"format","type":"string","description":"Check https://date-fns.org library for available formats"},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"cleanable","type":"boolean"},{"name":"editable","type":"boolean","description":"Rendered as an input, the date can be entered via the keyboard"},{"name":"oneTap","type":"boolean","description":"One click to complete the selection date"},{"name":"showMeridian","type":"boolean","description":"Display hours in 12 format"},{"name":"showWeekNumbers","type":"boolean"},{"name":"isoWeek","type":"boolean","description":"ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","options":["default","subtle"]},{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]}],"react-material-ui":[{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"fullWidth","type":"boolean","description":"Set the width of the container field to 100%"},{"name":"disableFuture","type":"boolean"},{"name":"disableHighlightToday","type":"boolean"},{"name":"disableOpenPicker","type":"boolean"},{"name":"disablePast","type":"boolean"},{"name":"displayWeekNumber","type":"boolean"},{"name":"reduceAnimations","type":"boolean"},{"name":"showDaysOutsideCurrentMonth","type":"boolean"},{"name":"maxDate","type":"date"},{"name":"minDate","type":"date"},{"name":"views","type":"[string]","options":["hours","minutes","seconds","day","month","year"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"bordered","type":"boolean"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"showNow","type":"boolean","description":"Show now button"},{"name":"showToday","type":"boolean","description":"Show today button"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"tabs":{"label":"Tabs","category":"layout","description":"Layout component for tabs","name":"tabs","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"tabs","type":"array"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"appearance","type":"string","options":["default","tabs","subtle"]},{"name":"reversed","type":"boolean"},{"name":"justified","type":"boolean"}],"react-material-ui":[{"name":"indicatorColor","type":"string","options":["primary","secondary"]},{"name":"textColor","type":"string","options":["primary","secondary","inherit"]},{"name":"centered","type":"boolean","description":"If true, the tabs are centered. This prop is intended for large views"},{"name":"fullWidth","type":"boolean","description":"Will make the tabs grow to use all the available space"}],"react-bootstrap":[{"name":"variant","type":"string","options":["tabs","pills","underline"]},{"name":"transition","type":"boolean","description":"Sets a default animation strategy for all children"},{"name":"fill","type":"boolean","description":"Have all Tabss proportionately fill all available width"},{"name":"justify","type":"boolean","description":"Have all Tabs evenly fill all available width"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","middle","large"]},{"name":"tabType","type":"string","options":["line","card"]},{"name":"animated","type":"boolean"},{"name":"centered","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"radio-tile":{"label":"Radio Tile","description":"Radio control with card, description and icon","category":"general","name":"radio-tile","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"initalOption","type":"string"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean","description":"Use inline layout"},{"name":"iconWidth","type":"number"},{"name":"iconHeight","type":"number"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"upload":{"label":"Upload","category":"general","name":"upload","description":"Upload file control, returns an array of json with file info and blob","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"accept","type":"array","description":"Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "},{"name":"listType","type":"string","options":["text","picture-text","picture"]},{"name":"maxPreviewFileSize","type":"number","description":"Set the maximum limit for preview files"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"fileListVisible","type":"boolean"},{"name":"disabledFileItem","type":"boolean"},{"name":"multiple","type":"boolean","description":"Allow selecting multiple files"},{"name":"removable","type":"boolean"},{"name":"draggable","type":"boolean"},{"name":"uploadButtonLabel","type":"string | i18n"},{"name":"uploadButtonAppearance","type":"string","options":["default","primary","subtle","link","ghost"]},{"name":"uploadButtonSize","type":"string","options":["lg","md","sm","xs"]},{"name":"draggableText","type":"string | i18n"},{"name":"draggableHeight","type":"number"}],"react-antd":[{"name":"accept","type":"array","description":"Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "},{"name":"multiple","type":"boolean","description":"Allow selecting multiple files"},{"name":"listType","type":"string","description":"Built-in stylesheets, support for four types: text, picture, picture-card or picture-circle","options":["text","picture","picture-card","picture-circle"]},{"name":"maxCount","type":"number"},{"name":"showUploadList","type":"boolean"},{"name":"uploadButtonLabel","type":"string | i18n"},{"name":"uploadButtonAppearance","type":"string","options":["primary","default","dashed","text","link"]},{"name":"uploadButtonSize","type":"string","options":["small","default","large"]},{"name":"draggable","type":"boolean"},{"name":"draggableText","type":"string | i18n"},{"name":"draggableHeight","type":"number"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-antd"]},"buttons-toggle-group":{"label":"Toggle Buttons","category":"layout","description":"List of toggle buttons, works like a radio group, returns an array of string","name":"buttons-toggle-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"multiple","type":"boolean","description":"Allow to select multiple values"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]}],"frameworks":["react-rsuite5","react-antd"]},"steps":{"label":"Steps","category":"layout","description":"Split the form in multiple steps","name":"steps","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"steps","type":"array"},{"name":"labelNext","type":"string | i18n"},{"name":"labelPrevious","type":"string | i18n"},{"name":"align","type":"string","options":["left","center","right"]}],"react-rsuite5":[{"name":"small","type":"boolean"},{"name":"status","type":"string","options":["finish","wait","process","error"]}],"frameworks":["react-rsuite5"]}}');
+var manifest_namespaceObject = JSON.parse('{"input-text":{"label":"Input Text","category":"general","name":"input-text","description":"Basic input text","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"submitOnEnter","type":"boolean","description":"Trigger onSubmit / onError if the user hits Enter key"},{"name":"inputMode","type":"string","options":["none","text","decimal","numeric","tel","search","email","url"]},{"name":"autocomplete","type":"string","options":["off","on","name","honorific-prefix","given-name","additional-name","family-name","honorific-suffix","nickname","email","username","new-password","current-password","one-time-code","organization-title","organization","street-address","address-line1","address-line2","address-line3","address-level4","address-level3","address-level2","address-level1","country","country-name","postal-code","cc-name","cc-given-name","cc-additional-name","cc-family-name","cc-number","cc-exp","cc-exp-month","cc-exp-year","cc-csc","cc-type","transaction-currency","transaction-amount","language","bday","bday-day","bday-month","bday-year","sex","tel","tel-country-code","tel-national","tel-area-code","tel-local","tel-extension","impp","url","photo"]},{"name":"inputType","type":"string","description":"Set the HTML 5 input type, some framework may have specific components for some of these type","options":["button","checkbox","color","date","datetime-local","email","file","hidden","image","month","number","password","radio","range","reset","search","submit","tel","text","time","url","week"]}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"showCount","type":"boolean"},{"name":"maxLength","type":"number"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"bordered","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"toggle":{"label":"Toggle","category":"general","name":"toggle","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"checkedChildren","type":"string | i18n"},{"name":"unCheckedChildren","type":"string | i18n"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"disableRipple","type":"boolean","description":"Disable CSS ripple effect"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["default","small"]},{"name":"tooltip","type":"boolean"},{"name":"checkedChildren","type":"string | i18n"},{"name":"unCheckedChildren","type":"string | i18n"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"select":{"label":"Select","category":"general","description":"Select / Combo box","name":"select","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"options","type":"array"},{"name":"showImageOptions","type":"boolean","description":"Show image field for Select options to be displayed in the drop-down"},{"name":"filterKey","type":"string"},{"name":"filterValue","type":"string"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"searchable","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"appearance","type":"string","options":["default","subtle"]}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"autoWidth","type":"boolean","description":"If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"variant","type":"string","options":["outlined","filled","standard"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"popupMatchSelectWidth","type":"boolean","description":"Determine whether the popup menu and the select input are the same width"},{"name":"listHeight","type":"number","description":"Config popup height"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"allowClear","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"showSearch","type":"boolean","description":"Whether select is searchable"},{"name":"showArrow","type":"boolean","description":"Whether to show the drop-down arrow"},{"name":"virtual","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"group":{"label":"Group","category":"layout","name":"group","description":"Visually Group a set of fields, can be collapsed","common":[{"name":"name","type":"string"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"align","type":"string","options":["left","center","right"]},{"name":"collapsible","type":"boolean"},{"name":"open","type":"boolean"},{"name":"bottomBorder","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"two-columns":{"label":"Two Columns","category":"layout","name":"two-columns","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"layout","type":"string","options":["layout-1-1","layout-1-2","layout-1-3","layout-1-4","layout-2-1","layout-3-1","layout-4-1","layout-2-3","layout-3-2","layout-0-1","layout-1-0"]},{"name":"leftAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"rightAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"three-columns":{"label":"Three Columns","category":"layout","name":"three-columns","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"layout","type":"string","options":["layout-0-1-0","layout-1-0-0","layout-1-1-1","layout-1-1-2","layout-1-2-1","layout-2-1-1","layout-1-1-3","layout-1-3-1","layout-3-1-1"]},{"name":"leftAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"centerAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"rightAlignment","type":"string","description":"Flex \\"align-self\\" attribute for the column","options":["auto","baseline","center","end","flex-end","flex-start","inherit","initial","normal","revert","self-end","self-start","start","stretch","unset"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"array":{"label":"List Array","category":"general","name":"array","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"layout","type":"string","options":["vertical","horizontal","inline"]},{"name":"arrayType","type":"string","description":"Defines the result of the list component, \\"arrayOfString\\" and \\"commaSeparated\\" only applies if list field has only one field","options":["arrayOfObject","arrayOfString","commaSeparated"]}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"input-number":{"label":"Input number","category":"general","name":"input-number","description":"Basic input number field, returns a numeric value","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"allowClear","type":"boolean"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"react-bootstrap":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"}],"react-antd":[{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"showControls","type":"boolean","description":"Whether to show +- controls, or set custom arrows icon"},{"name":"stringMode","type":"boolean","description":"Set value as string to support high precision decimals. Will return string value by onChange"},{"name":"bordered","type":"boolean"},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"tooltip","type":"boolean"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"slider":{"label":"Slider","category":"general","name":"slider","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"vertical","type":"boolean"},{"name":"progress","type":"boolean","description":"Show sliding progress bar"},{"name":"showTooltip","type":"boolean","description":"Whether to show Tooltip when sliding"},{"name":"graduated","type":"boolean"},{"name":"marks","type":"array","description":"Customize labels on the render ruler"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"valueLabelDisplay","type":"string","description":"How to show the value of the label","options":["auto","on","off"]},{"name":"showMarks","type":"boolean"},{"name":"customMarks","type":"array","description":"Customize labels on the render ruler"}],"react-bootstrap":[{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"}],"react-antd":[{"name":"keyboard","type":"boolean","description":"Support using keyboard to move handlers"},{"name":"dots","type":"boolean","description":"Whether the thumb can drag over tick only"},{"name":"reverse","type":"boolean","description":"Reverse the component"},{"name":"min","type":"number"},{"name":"step","type":"number"},{"name":"max","type":"number"},{"name":"tooltipOpen","type":"boolean","description":"Tooltip behaviour, checked always open, unchecked always close"},{"name":"tooltipPlacement","type":"string","options":["top","left","right","bottom","topLeft","topRight","bottomLeft","bottomRight","topLeft","topRight","leftTop","leftBottom","rightTop","rightBottom"]},{"name":"marks","type":"array","description":"Customize labels on the render ruler"},{"name":"included","type":"boolean","description":"Make effect when marks not null, true means containment and false means coordinative"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"date":{"label":"Date","category":"general","description":"Date field, returns a string in ISO-8601 format (i.e., 1972-10-01)","name":"date","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"format","type":"string","description":"Check https://date-fns.org library for available formats"},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"cleanable","type":"boolean"},{"name":"editable","type":"boolean","description":"Rendered as an input, the date can be entered via the keyboard"},{"name":"oneTap","type":"boolean","description":"One click to complete the selection date"},{"name":"showMeridian","type":"boolean","description":"Display hours in 12 format"},{"name":"showWeekNumbers","type":"boolean"},{"name":"isoWeek","type":"boolean","description":"ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","options":["default","subtle"]},{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]}],"react-material-ui":[{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"fullWidth","type":"boolean","description":"Set the width of the container field to 100%"},{"name":"disableFuture","type":"boolean"},{"name":"disableHighlightToday","type":"boolean"},{"name":"disableOpenPicker","type":"boolean"},{"name":"disablePast","type":"boolean"},{"name":"displayWeekNumber","type":"boolean"},{"name":"reduceAnimations","type":"boolean"},{"name":"showDaysOutsideCurrentMonth","type":"boolean"},{"name":"maxDate","type":"date"},{"name":"minDate","type":"date"},{"name":"views","type":"[string]","options":["day","month","year"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"bordered","type":"boolean"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"showTime","type":"boolean"},{"name":"showNow","type":"boolean","description":"Show now button"},{"name":"showToday","type":"boolean","description":"Show today button"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"picker","type":"string","options":["date","week","month","quarter","year"]},{"name":"mode","type":"string","options":["time","date","month","year","decade"]}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"checkbox":{"label":"Checkbox","category":"general","name":"checkbox","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"indeterminate","type":"boolean","description":"Status can be indeterminate (null), cycle values trough false, inderminate, true"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"disableRipple","type":"boolean","description":"Disable CSS ripple effect"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"checkbox-group":{"label":"Checkbox Group","category":"general","name":"checkbox-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]}],"react-bootstrap":[{"name":"inline","type":"boolean"},{"name":"reverse","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"radio-group":{"label":"Radio Group","category":"general","name":"radio-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean"},{"name":"appearance","type":"string","description":"Show as default radio control or stacked buttons","options":["default","picker"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"labelPlacement","type":"string","options":["top","start","bottom","end"]},{"name":"row","type":"boolean"}],"react-bootstrap":[{"name":"inline","type":"boolean"},{"name":"reverse","type":"boolean"}],"react-antd":[{"name":"optionType","type":"string","options":["default","button"]},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"inline","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"input-tag":{"label":"Tag Input","category":"general","name":"input-tag","description":"Input tags, create tags, returns an array of string","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"trigger","type":"[string]","description":"Set the trigger for creating tags","options":["Enter","Space","Comma"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"input-mask":{"label":"Input Mask","category":"general","name":"input-mask","description":"Masked input text","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"mask","type":"string","description":"Use ${d} - digits, ${D} - any non digits, ${a} - any non alpha chars, ${w} - any word chars "},{"name":"guide","type":"boolean"},{"name":"keepCharPositions","type":"boolean","description":"When true, adding or deleting characters will not affect the position of existing characters"},{"name":"showMask","type":"boolean","description":"When the input value is empty, the mask is displayed as a placeholder instead of a regular placeholder"},{"name":"placeholderChar","type":"string","description":"The placeholder character represents the fillable spot in the mask"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"inside","type":"boolean","description":"Show prefix and postfix inside the input box"},{"name":"postfix","type":"string","description":"Fixed trailing text"}],"frameworks":["react-rsuite5"]},"textarea":{"label":"Textarea","category":"general","name":"textarea","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"rows","type":"number"}],"react-rsuite5":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"rows","type":"number"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"disableUnderline","type":"boolean","description":"Disable underline in \\"filled\\" and \\"standard\\" variant"},{"name":"maxRows","type":"number"}],"react-bootstrap":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"rows","type":"number"}],"react-antd":[{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"showCount","type":"boolean"},{"name":"maxLength","type":"number"},{"name":"allowClear","type":"boolean"},{"name":"autoSize","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"rate":{"label":"Rate","category":"general","name":"rate","description":"Five stars rating field","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"allowHalf","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"vertical","type":"boolean","description":"Vertical direction when half selected"},{"name":"max","type":"number"},{"name":"color","type":"string","options":["red","orange","yellow","green","cyan","blue","violet"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"precision","type":"string","description":"The minimum increment value change allowed","options":[0.1,0.2,0.5,1]},{"name":"max","type":"number"}],"react-antd":[{"name":"count","type":"number"},{"name":"allowHalf","type":"boolean","description":"Allow half votes"},{"name":"allowClear","type":"boolean"},{"name":"tooltips","type":"array","description":"Customize tooltip for each value"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-antd"]},"placeholder":{"label":"Placeholder","category":"layout","name":"placeholder","description":"Generic placeholder for an image inside the form, supports basic parameters like width, height and margin","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"text","type":"string | i18n","description":"Supports markdown (i.e., **bold**, _italics_)"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-antd":[{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"multiselect":{"label":"MultiSelect","category":"general","name":"multiselect","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"multiselectMode","type":"string","description":"Show the selected values as tag element or plain string","options":["tag","plain"]},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"searchable","type":"boolean"},{"name":"cleanable","type":"boolean"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"preventOverflow","type":"boolean","description":"Prevent floating element overflow"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium"]},{"name":"autoWidth","type":"boolean","description":"If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"floatingLabel","type":"boolean","description":"Show floating label for the control"},{"name":"variant","type":"string","options":["outlined","filled","standard"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"width","type":"number"},{"name":"listHeight","type":"number","description":"Config popup height"},{"name":"allowClear","type":"boolean"},{"name":"bordered","type":"boolean"},{"name":"showSearch","type":"boolean","description":"Whether select is searchable"},{"name":"showArrow","type":"boolean","description":"Whether to show the drop-down arrow"},{"name":"virtual","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"maxTagCount","type":"number","description":"Maximum number of selectable elements"},{"name":"maxTagPlaceholder","type":"string","description":"Placeholder to show when max number of element is reached"},{"name":"maxTagTextLength","type":"number","description":"Maximum length of text tags"}],"frameworks":["react-rsuite5","react-material-ui","react-antd"]},"multiselect-language":{"label":"Locales","category":"advanced","description":"Select one or more locales, returns an array (i.e. it-IT, en-GB, ...)","name":"multiselect-language","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"placeholder-image":{"label":"Placeholder Image","category":"layout","name":"placeholder-image","description":"Image placeholder","common":[{"name":"name","type":"string"},{"name":"url","type":"string"},{"name":"align","type":"string","options":["left","center","right"]},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-rsuite5":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-material-ui":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-bootstrap":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"react-antd":[{"name":"maxWidth","type":"number"},{"name":"maxHeight","type":"number"},{"name":"marginTop","type":"number"},{"name":"marginBottom","type":"number"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"button":{"label":"Button","category":"layout","description":"Icon button, can be used as toggle button or just a link button","name":"button","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"buttonType","type":"string","description":"Type of button: toggle 2-states button or link button","options":["toggle","link"]},{"name":"labelOn","type":"string | i18n"},{"name":"iconOn","type":"string"},{"name":"labelOff","type":"string | i18n"},{"name":"iconOff","type":"string"},{"name":"initialValue","type":"boolean"},{"name":"labelLink","type":"string | i18n"},{"name":"iconLink","type":"string"},{"name":"href","type":"string"},{"name":"hint","type":"string | i18n","description":"Show hint in a tooltip"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","description":"Only available for link-type buttons","options":["default","primary","subtle","link","ghost"]},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"react-material-ui":[{"name":"size","type":"string","description":"Size of the field","options":["small","medium","large"]},{"name":"variant","type":"string","options":["outlined","filled","standard"]},{"name":"color","type":"string","options":["error","info","primary","secondary","success","warning"]}],"react-bootstrap":[{"name":"variant","type":"string","options":["primary","secondary","success","warning","danger","info","light","dark","link"]},{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"type","type":"string","description":"Only available for link-type buttons","options":["primary","default","dashed","text","link"]}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"divider":{"label":"Divider","category":"layout","description":"Layout divider, customizable with size and color","name":"divider","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"size","type":"number","description":"Thickness of the divider"},{"name":"color","type":"string"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"datetime":{"label":"Date Time","category":"general","name":"datetime","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"placeholder","type":"string | i18n","description":"Placeholder text, visibile when the field is empty"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"format","type":"string","description":"Check https://date-fns.org library for available formats"},{"name":"block","type":"boolean","description":"Only in fluid layout"},{"name":"cleanable","type":"boolean"},{"name":"editable","type":"boolean","description":"Rendered as an input, the date can be entered via the keyboard"},{"name":"oneTap","type":"boolean","description":"One click to complete the selection date"},{"name":"showMeridian","type":"boolean","description":"Display hours in 12 format"},{"name":"showWeekNumbers","type":"boolean"},{"name":"isoWeek","type":"boolean","description":"ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"},{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]},{"name":"appearance","type":"string","options":["default","subtle"]},{"name":"placement","type":"string","options":["topStart","topEnd","leftStart","rightStart","leftEnd","rightEnd","bottomStart","bottomEnd","auto","autoVerticalStart","autoVerticalEnd","autoHorizontalStart","autoHorizontalEnd"]}],"react-material-ui":[{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"},{"name":"fullWidth","type":"boolean","description":"Set the width of the container field to 100%"},{"name":"disableFuture","type":"boolean"},{"name":"disableHighlightToday","type":"boolean"},{"name":"disableOpenPicker","type":"boolean"},{"name":"disablePast","type":"boolean"},{"name":"displayWeekNumber","type":"boolean"},{"name":"reduceAnimations","type":"boolean"},{"name":"showDaysOutsideCurrentMonth","type":"boolean"},{"name":"maxDate","type":"date"},{"name":"minDate","type":"date"},{"name":"views","type":"[string]","options":["hours","minutes","seconds","day","month","year"]}],"react-bootstrap":[{"name":"size","type":"string","description":"Size of the field","options":["lg","sm"]},{"name":"prefix","type":"string","description":"Fixed heading text"},{"name":"postfix","type":"string","description":"Fixed trailing text"},{"name":"floatingLabel","type":"boolean","description":"Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]},{"name":"fullWidth","type":"boolean","description":"Set the width of the field to 100% of the enclosing container"},{"name":"width","type":"number","description":"Set the width (in pixel) of the field"},{"name":"bordered","type":"boolean"},{"name":"allowClear","type":"boolean"},{"name":"tooltip","type":"boolean"},{"name":"showNow","type":"boolean","description":"Show now button"},{"name":"showToday","type":"boolean","description":"Show today button"},{"name":"placement","type":"string","options":["bottomLeft","bottomRight","topLeft","topRight"]},{"name":"format","type":"string","description":"Date format, i.e. DD/MM/YYYY"}],"frameworks":["react-rsuite5","react-material-ui","react","react-bootstrap","react-antd"]},"tabs":{"label":"Tabs","category":"layout","description":"Layout component for tabs","name":"tabs","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"tabs","type":"array"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"appearance","type":"string","options":["default","tabs","subtle"]},{"name":"reversed","type":"boolean"},{"name":"justified","type":"boolean"}],"react-material-ui":[{"name":"indicatorColor","type":"string","options":["primary","secondary"]},{"name":"textColor","type":"string","options":["primary","secondary","inherit"]},{"name":"centered","type":"boolean","description":"If true, the tabs are centered. This prop is intended for large views"},{"name":"fullWidth","type":"boolean","description":"Will make the tabs grow to use all the available space"}],"react-bootstrap":[{"name":"variant","type":"string","options":["tabs","pills","underline"]},{"name":"transition","type":"boolean","description":"Sets a default animation strategy for all children"},{"name":"fill","type":"boolean","description":"Have all Tabss proportionately fill all available width"},{"name":"justify","type":"boolean","description":"Have all Tabs evenly fill all available width"}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","middle","large"]},{"name":"tabType","type":"string","options":["line","card"]},{"name":"animated","type":"boolean"},{"name":"centered","type":"boolean"}],"frameworks":["react-rsuite5","react-material-ui","react-bootstrap","react-antd"]},"radio-tile":{"label":"Radio Tile","description":"Radio control with card, description and icon","category":"general","name":"radio-tile","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"initalOption","type":"string"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"inline","type":"boolean","description":"Use inline layout"},{"name":"iconWidth","type":"number"},{"name":"iconHeight","type":"number"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"}],"frameworks":["react-rsuite5"]},"upload":{"label":"Upload","category":"general","name":"upload","description":"Upload file control, returns an array of json with file info and blob","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"accept","type":"array","description":"Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "},{"name":"listType","type":"string","options":["text","picture-text","picture"]},{"name":"maxPreviewFileSize","type":"number","description":"Set the maximum limit for preview files"},{"name":"tooltip","type":"boolean","description":"Show hint as tooltip next to label"},{"name":"fileListVisible","type":"boolean"},{"name":"disabledFileItem","type":"boolean"},{"name":"multiple","type":"boolean","description":"Allow selecting multiple files"},{"name":"removable","type":"boolean"},{"name":"draggable","type":"boolean"},{"name":"uploadButtonLabel","type":"string | i18n"},{"name":"uploadButtonAppearance","type":"string","options":["default","primary","subtle","link","ghost"]},{"name":"uploadButtonSize","type":"string","options":["lg","md","sm","xs"]},{"name":"draggableText","type":"string | i18n"},{"name":"draggableHeight","type":"number"}],"react-antd":[{"name":"accept","type":"array","description":"Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "},{"name":"multiple","type":"boolean","description":"Allow selecting multiple files"},{"name":"listType","type":"string","description":"Built-in stylesheets, support for four types: text, picture, picture-card or picture-circle","options":["text","picture","picture-card","picture-circle"]},{"name":"maxCount","type":"number"},{"name":"showUploadList","type":"boolean"},{"name":"uploadButtonLabel","type":"string | i18n"},{"name":"uploadButtonAppearance","type":"string","options":["primary","default","dashed","text","link"]},{"name":"uploadButtonSize","type":"string","options":["small","default","large"]},{"name":"draggable","type":"boolean"},{"name":"draggableText","type":"string | i18n"},{"name":"draggableHeight","type":"number"},{"name":"tooltip","type":"boolean"}],"frameworks":["react-rsuite5","react-antd"]},"buttons-toggle-group":{"label":"Toggle Buttons","category":"layout","description":"List of toggle buttons, works like a radio group, returns an array of string","name":"buttons-toggle-group","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"label","type":"string | i18n","description":"Label of the field"},{"name":"hint","type":"string | i18n","description":"Help text for the field (generally shown below the input box)"},{"name":"options","type":"array"},{"name":"multiple","type":"boolean","description":"Allow to select multiple values"},{"name":"disabled","type":"boolean","description":"Disables and greys out the field"},{"name":"readOnly","type":"boolean","description":"Put the field in read only mode"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"}],"react-rsuite5":[{"name":"size","type":"string","description":"Size of the field","options":["lg","md","sm","xs"]}],"react-antd":[{"name":"size","type":"string","description":"Size of the field","options":["small","default","large"]}],"frameworks":["react-rsuite5","react-antd"]},"steps":{"label":"Steps","category":"layout","description":"Split the form in multiple steps","name":"steps","common":[{"name":"name","type":"string","description":"The name of the field and the key of the JSON"},{"name":"hidden","type":"boolean","description":"Hides the field from the form"},{"name":"steps","type":"array"},{"name":"labelNext","type":"string | i18n"},{"name":"labelPrevious","type":"string | i18n"},{"name":"align","type":"string","options":["left","center","right"]}],"react-rsuite5":[{"name":"small","type":"boolean"},{"name":"status","type":"string","options":["finish","wait","process","error"]}],"frameworks":["react-rsuite5"]}}');
 ;// CONCATENATED MODULE: ./helpers/validate-form.js
 
 
@@ -4829,12 +4826,12 @@ var validateJSONForm = function validateJSONForm(json) {
 /***/ }),
 
 /***/ 5490:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "G": () => (/* binding */ useFormContext),
-/* harmony export */   "R": () => (/* binding */ useStylesheet)
+/* harmony export */   "G": function() { return /* binding */ useFormContext; },
+/* harmony export */   "R": function() { return /* binding */ useStylesheet; }
 /* harmony export */ });
 /* harmony import */ var lodash_isEmpty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1609);
 /* harmony import */ var lodash_isEmpty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_isEmpty__WEBPACK_IMPORTED_MODULE_0__);
@@ -4872,7 +4869,7 @@ var useStylesheet = function useStylesheet(id, css) {
 /***/ }),
 
 /***/ 9300:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /* eslint-disable no-loop-func */
 var microdown = function () {
@@ -5059,7 +5056,7 @@ if (true) {
 /***/ }),
 
 /***/ 4184:
-/***/ ((module, exports) => {
+/***/ (function(module, exports) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	Copyright (c) 2018 Jed Watson.
@@ -5125,12 +5122,9 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 /***/ }),
 
 /***/ 3010:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5142,18 +5136,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-common-array{margin-top:0px !important}.lf-control-common-array .lf-control-common-array-item{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-content:stretch;align-items:stretch;position:relative;border-left:5px solid #ddd;padding-left:10px;padding-top:5px;padding-bottom:5px;margin-top:5px !important}.lf-control-common-array .lf-control-common-array-item>.inner-form{order:0;flex:1 0;align-self:auto;--lf-field-margin: 4px;--lf-field-column-margin: 10px}.lf-control-common-array .lf-control-common-array-item>.buttons{flex:0 0 auto;align-self:center;margin-left:6px}.lf-icon-button{display:inline-block;min-height:16px;min-width:16px;padding:4px;border-radius:3px}.lf-icon-button.disabled{opacity:.6}.lf-icon-button:not(.disabled):hover{background-color:#eee}", "",{"version":3,"sources":["webpack://./common/array/list-array.scss"],"names":[],"mappings":"AAAA,yBACE,yBAAA,CAEA,uDACE,YAAA,CACA,kBAAA,CACA,gBAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,iBAAA,CACA,0BAAA,CACA,iBAAA,CACA,eAAA,CACA,kBAAA,CACA,yBAAA,CAMA,mEACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,sBAAA,CACA,8BAAA,CAGF,gEACE,aAAA,CACA,iBAAA,CACA,eAAA,CAMN,gBACE,oBAAA,CACA,eAAA,CACA,cAAA,CACA,WAAA,CACA,iBAAA,CAEA,yBACE,UAAA,CAGF,qCACE,qBAAA","sourcesContent":[".lf-control-common-array {\n  margin-top: 0px !important;\n\n  .lf-control-common-array-item {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: stretch;\n    position: relative;\n    border-left: 5px solid #dddddd;\n    padding-left: 10px;\n    padding-top: 5px;\n    padding-bottom: 5px;\n    margin-top: 5px !important;\n\n    /*.rs-form-group {\n      margin-bottom: 5px !important;\n    }*/\n\n    > .inner-form {\n      order: 0;\n      flex: 1 0;\n      align-self: auto;\n      --lf-field-margin: 4px;\n      --lf-field-column-margin: 10px;\n    }\n\n    > .buttons {\n      flex: 0 0 auto;\n      align-self: center;\n      margin-left: 6px;\n    }\n  }\n\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n\n  &.disabled {\n    opacity: 0.6;\n  }\n\n  &:not(.disabled):hover {\n    background-color: #eeeeee;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 5883:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5165,18 +5156,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-button-toggle-group .lf-control-button{display:inline-block;margin-top:0px !important}.lf-control-button-toggle-group .lf-control-button:not(:first-child){margin-left:var(--lf-field-button-margin)}", "",{"version":3,"sources":["webpack://./common/buttons-toggle-group/buttons-toggle-group.scss"],"names":[],"mappings":"AACE,mDACE,oBAAA,CAEA,yBAAA,CAEA,qEACE,yCAAA","sourcesContent":[".lf-control-button-toggle-group {\n  .lf-control-button {\n    display: inline-block;\n       \n    margin-top: 0px !important; \n  \n    &:not(:first-child) {\n      margin-left: var(--lf-field-button-margin);\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 1760:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5188,18 +5176,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-divider{min-height:15px;font-size:1px;display:flex}.lf-control-divider .bar{width:100%;margin-top:5px;margin-bottom:5px}", "",{"version":3,"sources":["webpack://./common/divider/divider.scss"],"names":[],"mappings":"AAAA,oBACE,eAAA,CACA,aAAA,CACA,YAAA,CAGA,yBACE,UAAA,CACA,cAAA,CACA,iBAAA","sourcesContent":[".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n\n\n  .bar {\n    width: 100%;\n    margin-top: 5px;\n    margin-bottom: 5px;\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 88:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5211,18 +5196,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-group .header svg{display:inline-block}.lf-control-group.bottom-border.open{border-bottom:1px solid #e5e5ea;padding-bottom:15px}.lf-control-group .header{align-items:center;background:rgba(0,0,0,0);display:flex;margin:15px 0px;height:1px;flex-direction:row}.lf-control-group .header .inner-text{flex:0 0 auto;padding:0 12px;display:inline-block}.lf-control-group .header:before{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header:after{border-top:1px solid #e5e5ea;content:\"\";flex:1 0}.lf-control-group .header.left:before{flex:0 0 10px}.lf-control-group .header.right:after{flex:0 0 10px}", "",{"version":3,"sources":["webpack://./common/group/group.scss"],"names":[],"mappings":"AAGI,8BACE,oBAAA,CAIJ,qCACE,+BAAA,CACA,mBAAA,CAGF,0BACE,kBAAA,CACA,wBAAA,CACA,YAAA,CACA,eAAA,CACA,UAAA,CACA,kBAAA,CAEA,sCACE,aAAA,CACA,cAAA,CACA,oBAAA,CAGF,iCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAGF,gCACE,4BAAA,CACA,UAAA,CACA,QAAA,CAIA,sCACE,aAAA,CAKF,sCACE,aAAA","sourcesContent":[".lf-control-group {\n\n  .header {\n    svg {\n      display: inline-block;\n    }\n  }\n\n  &.bottom-border.open {\n    border-bottom: 1px solid #e5e5ea;\n    padding-bottom: 15px;\n  }\n\n  .header {\n    align-items: center;\n    background: transparent;\n    display: flex;\n    margin: 15px 0px;\n    height: 1px;\n    flex-direction: row;\n\n    .inner-text {\n      flex: 0 0 auto;\n      padding: 0 12px;\n      display: inline-block;\n    }\n\n    &:before {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &:after {\n      border-top: 1px solid #e5e5ea;\n      content: \"\";\n      flex: 1 0;\n    }\n\n    &.left {\n      &:before {\n        flex: 0 0 10px;\n      }\n    }\n\n    &.right {\n      &:after {\n        flex: 0 0 10px;\n      }\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 6159:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5234,18 +5216,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-common-icon img{max-width:32px;max-height:32px}.lf-common-icon.small img{max-width:24px;max-height:24px}.lf-common-icon.large img{max-width:40px;max-height:40px}", "",{"version":3,"sources":["webpack://./common/icon/common-icon.scss"],"names":[],"mappings":"AACE,oBACE,cAAA,CACA,eAAA,CAIA,0BACE,cAAA,CACA,eAAA,CAMF,0BACE,cAAA,CACA,eAAA","sourcesContent":[".lf-common-icon {\n  img {\n    max-width: 32px;\n    max-height: 32px;\n  }\n\n  &.small {\n    img {\n      max-width: 24px;\n      max-height: 24px;\n\n    }\n  }\n\n  &.large {\n    img {\n      max-width: 40px;\n      max-height: 40px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 2558:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5257,18 +5236,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-placeholder-image{min-height:20px}", "",{"version":3,"sources":["webpack://./common/placeholder-image/placeholder-image.scss"],"names":[],"mappings":"AAAA,8BACE,eAAA","sourcesContent":[".lf-control-placeholder-image {\n  min-height: 20px;\n\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 860:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5280,18 +5256,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-placeholder ol,.lf-control-placeholder ul{padding-left:1rem}.lf-form .lf-control-placeholder:not(:first-child){margin-top:var(--lf-field-margin-top)}", "",{"version":3,"sources":["webpack://./common/placeholder/placeholder.scss"],"names":[],"mappings":"AACE,sDACE,iBAAA,CAIJ,mDACE,qCAAA","sourcesContent":[".lf-control-placeholder {\n  ol, ul {\n    padding-left: 1rem;\n  }\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 1861:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5303,18 +5276,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-three-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:20px}.lf-control-three-columns .left{flex:1 0;align-self:auto;margin-right:var(--lf-field-column-margin)}.lf-control-three-columns .center{margin-right:var(--lf-field-column-margin);flex:1 0;align-self:auto}.lf-control-three-columns .right{flex:1 0;align-self:auto}.lf-control-three-columns .left:empty{display:none}.lf-control-three-columns.layout-0-1-0 .left{flex:0 0}.lf-control-three-columns.layout-0-1-0 .center{flex:1 0}.lf-control-three-columns.layout-0-1-0 .right{flex:0 0}.lf-control-three-columns.layout-1-0-0 .left{flex:1 0}.lf-control-three-columns.layout-1-0-0 .center{flex:0 0}.lf-control-three-columns.layout-1-0-0 .right{flex:0 0}.lf-control-three-columns.layout-1-1-1 .left{flex:1 0}.lf-control-three-columns.layout-1-1-1 .center{flex:1 0}.lf-control-three-columns.layout-1-1-1 .right{flex:1 0}.lf-control-three-columns.layout-1-1-2 .left{flex:1 0}.lf-control-three-columns.layout-1-1-2 .center{flex:1 0}.lf-control-three-columns.layout-1-1-2 .right{flex:2 0}.lf-control-three-columns.layout-1-2-1 .left{flex:1 0}.lf-control-three-columns.layout-1-2-1 .center{flex:2 0}.lf-control-three-columns.layout-1-2-1 .right{flex:1 0}.lf-control-three-columns.layout-2-1-1 .left{flex:2 0}.lf-control-three-columns.layout-2-1-1 .center{flex:1 0}.lf-control-three-columns.layout-2-1-1 .right{flex:1 0}.lf-control-three-columns.layout-1-1-3 .left{flex:1 0}.lf-control-three-columns.layout-1-1-3 .center{flex:1 0}.lf-control-three-columns.layout-1-1-3 .right{flex:3 0}.lf-control-three-columns.layout-1-3-1 .left{flex:1 0}.lf-control-three-columns.layout-1-3-1 .center{flex:3 0}.lf-control-three-columns.layout-1-3-1 .right{flex:1 0}.lf-control-three-columns.layout-3-1-1 .left{flex:3 0}.lf-control-three-columns.layout-3-1-1 .center{flex:1 0}.lf-control-three-columns.layout-3-1-1 .right{flex:1 0}", "",{"version":3,"sources":["webpack://./common/three-columns/three-columns.scss"],"names":[],"mappings":"AAAA,0BACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAUA,gCACE,QAAA,CACA,eAAA,CACA,0CAAA,CAGF,kCACE,0CAAA,CACA,QAAA,CACA,eAAA,CAGF,iCACE,QAAA,CACA,eAAA,CAGF,sCACE,YAAA,CAIA,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA,CAKF,6CACE,QAAA,CAEF,+CACE,QAAA,CAEF,8CACE,QAAA","sourcesContent":[".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: var(--lf-field-column-margin);\n  }\n\n  .center {\n    margin-right: var(--lf-field-column-margin);\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  .left:empty {\n    display: none;\n  }\n\n  &.layout-0-1-0 {\n    .left {\n      flex: 0 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-0-0 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 0 0;\n    }\n    .right {\n      flex: 0 0;\n    }\n  }\n\n  &.layout-1-1-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-2-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-2-1-1 {\n    .left {\n      flex: 2 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-3-1 {\n    .left {\n      flex: 1 0;\n    }\n    .center {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1-1 {\n    .left {\n      flex: 3 0;\n    }\n    .center {\n      flex: 1 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n\n}\n"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 5318:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5326,18 +5296,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-two-columns{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:stretch;min-height:20px}.lf-control-two-columns .left{flex:1 0;align-self:auto;margin-right:var(--lf-field-column-margin)}.lf-control-two-columns .right{flex:1 0;align-self:auto}.lf-control-two-columns.layout-1-2 .left{flex:1 0}.lf-control-two-columns.layout-1-2 .right{flex:2 0}.lf-control-two-columns.layout-1-3 .left{flex:1 0}.lf-control-two-columns.layout-1-3 .right{flex:3 0}.lf-control-two-columns.layout-1-4 .left{flex:1 0}.lf-control-two-columns.layout-1-4 .right{flex:4 0}.lf-control-two-columns.layout-1-5 .left{flex:1 0}.lf-control-two-columns.layout-1-5 .right{flex:4 0}.lf-control-two-columns.layout-2-1 .left{flex:2 0}.lf-control-two-columns.layout-2-1 .right{flex:1 0}.lf-control-two-columns.layout-3-1 .left{flex:3 0}.lf-control-two-columns.layout-3-1 .right{flex:1 0}.lf-control-two-columns.layout-4-1 .left{flex:4 0}.lf-control-two-columns.layout-4-1 .right{flex:1 0}.lf-control-two-columns.layout-5-1 .left{flex:4 0}.lf-control-two-columns.layout-5-1 .right{flex:1 0}.lf-control-two-columns.layout-3-2 .left{flex:3 0}.lf-control-two-columns.layout-3-2 .right{flex:2 0}.lf-control-two-columns.layout-2-3 .left{flex:2 0}.lf-control-two-columns.layout-2-3 .right{flex:3 0}.lf-control-two-columns.layout-0-1 .left{flex:0 0 auto}.lf-control-two-columns.layout-0-1 .right{flex:1 0}.lf-control-two-columns.layout-1-0 .left{flex:1 0}.lf-control-two-columns.layout-1-0 .right{flex:0 0 auto}.lf-form-react-rsuite5 .lf-two-columns{margin-bottom:var(--lf-field-margin)}", "",{"version":3,"sources":["webpack://./common/two-columns/two-columns.scss"],"names":[],"mappings":"AAAA,wBACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,mBAAA,CACA,eAAA,CAEA,8BACE,QAAA,CACA,eAAA,CACA,0CAAA,CAGF,+BACE,QAAA,CACA,eAAA,CAIA,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,QAAA,CAKF,yCACE,aAAA,CAEF,0CACE,QAAA,CAKF,yCACE,QAAA,CAEF,0CACE,aAAA,CAMJ,uCACE,oCAAA","sourcesContent":[".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n\n  .left {\n    flex: 1 0;\n    align-self: auto;\n    margin-right: var(--lf-field-column-margin);\n  }\n\n  .right {\n    flex: 1 0;\n    align-self: auto;\n  }\n\n  &.layout-1-2 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-1-3 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-1-4 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-1-5 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 4 0;\n    }\n  }\n\n  &.layout-2-1 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-1 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-4-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-5-1 {\n    .left {\n      flex: 4 0;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-3-2 {\n    .left {\n      flex: 3 0;\n    }\n    .right {\n      flex: 2 0;\n    }\n  }\n\n  &.layout-2-3 {\n    .left {\n      flex: 2 0;\n    }\n    .right {\n      flex: 3 0;\n    }\n  }\n\n  &.layout-0-1 {\n    .left {\n      flex: 0 0 auto;\n    }\n    .right {\n      flex: 1 0;\n    }\n  }\n\n  &.layout-1-0 {\n    .left {\n      flex: 1 0;\n    }\n    .right {\n      flex: 0 0 auto;\n    }\n  }\n}\n\n.lf-form-react-rsuite5 {\n  .lf-two-columns {\n    margin-bottom: var(--lf-field-margin);\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 51:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5349,18 +5316,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-plaintext{font-size:var(--lf-font-size)}.lf-form-plaintext .lf-plaintext-field-label{font-weight:600;color:#333}.lf-form-plaintext .plaintext-value:empty::before{content:\"-\"}", "",{"version":3,"sources":["webpack://./components/plaintext-form/plaintext-form.scss"],"names":[],"mappings":"AAAA,mBACE,6BAAA,CAEA,6CACE,eAAA,CACA,UAAA,CAGF,kDACE,WAAA","sourcesContent":[".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n\n  .lf-plaintext-field-label {\n    font-weight: 600;\n    color: #333333;\n  }\n\n  .plaintext-value:empty::before {\n    content: \"-\";\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 7242:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5372,18 +5336,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-validation-errors{border:1px solid #eebdd2;background-color:#ffddd2;padding:15px;color:#000}.lf-validation-errors.bottom{margin-top:15px}.lf-validation-errors.top{margin-bottom:15px}", "",{"version":3,"sources":["webpack://./components/validation-errors/index.scss"],"names":[],"mappings":"AAAA,sBACE,wBAAA,CACA,wBAAA,CACA,YAAA,CACA,UAAA,CAEA,6BACE,eAAA,CAGF,0BACE,kBAAA","sourcesContent":[".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n\n  &.bottom {\n    margin-top: 15px;\n  }\n\n  &.top {\n    margin-bottom: 15px;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 5861:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5395,18 +5356,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-lets-form .label-test-buttons{float:right;background-color:#ccc;color:#555;font-size:10px;padding:1px 3px;margin-top:-16px;border-top-left-radius:3px;text-transform:uppercase}.lf-lets-form.lf-lets-form-edit-mode .lf-buttons{padding:10px;background-image:linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);background-size:56.57px 56.57px}.lf-form{--lf-field-margin: 16px;--lf-field-column-margin: 16px;--lf-font-size: 15px;--lf-field-button-margin: 10px;--lf-highligh-color: #ff6633;--lf-hover-color: #FF9F85;--lf-drop-highlight-color: #3498ff;--lf-field-margin-top: 5px}.lf-form.lf-form-buttons-align-center .lf-buttons{justify-content:center}.lf-form.lf-form-buttons-align-left .lf-buttons{justify-content:flex-start}.lf-form.lf-form-buttons-align-right .lf-buttons{justify-content:flex-end}.lf-form .lf-buttons{margin-top:var(--lf-field-margin)}.lf-form [class*=lf-control]:not(:first-child){margin-top:var(--lf-field-margin);margin-bottom:0px !important}.lf-form .lf-control-common-array .lf-control-common-array-item{--lf-field-margin: 15px}.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]{margin-bottom:0px}.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child){margin-top:10px}.lf-icon-asterisk{margin-top:-3px;display:inline-block}.lf-missing-component{border:1px solid #bbb;background-color:#f6f6f6;padding:20px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:flex-start}.lf-missing-component .icon{order:0;flex:0 0;align-self:auto;margin-top:2px}.lf-missing-component .tag-component{background-color:#673ab7;color:#fff;font-size:12px;padding:1px 4px 2px 4px;border-radius:3px;line-height:17px}.lf-missing-component .message{display:inline-block;margin-left:10px;order:0;flex:1 0;align-self:auto}", "",{"version":3,"sources":["webpack://./generator/index.scss"],"names":[],"mappings":"AAEE,kCACE,WAAA,CACA,qBAAA,CACA,UAAA,CACA,cAAA,CACA,eAAA,CACA,gBAAA,CACA,0BAAA,CACA,wBAAA,CAIA,iDACE,YAAA,CACA,mIAAA,CACA,+BAAA,CAKN,SACE,uBAAA,CACA,8BAAA,CACA,oBAAA,CACA,8BAAA,CACA,4BAAA,CACA,yBAAA,CACA,kCAAA,CACA,0BAAA,CAGE,kDACE,sBAAA,CAIF,gDACE,0BAAA,CAIF,iDACE,wBAAA,CAIJ,qBACE,iCAAA,CAIF,+CACE,iCAAA,CACA,4BAAA,CAKA,gEACE,uBAAA,CAEA,oFACE,iBAAA,CAGF,sGAEE,eAAA,CAMR,kBACE,eAAA,CACA,oBAAA,CAGF,sBACE,qBAAA,CACA,wBAAA,CACA,YAAA,CACA,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,sBAAA,CAEA,4BACE,OAAA,CACA,QAAA,CACA,eAAA,CACA,cAAA,CAGF,qCACE,wBAAA,CACA,UAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,gBAAA,CAGF,+BACE,oBAAA,CACA,gBAAA,CACA,OAAA,CACA,QAAA,CACA,eAAA","sourcesContent":[".lf-lets-form{\n\n  .label-test-buttons {\n    float: right;\n    background-color: #cccccc;\n    color: #555555;\n    font-size: 10px;\n    padding: 1px 3px;\n    margin-top: -16px;\n    border-top-left-radius: 3px;\n    text-transform: uppercase;\n  }\n\n  &.lf-lets-form-edit-mode {\n    .lf-buttons {\n      padding: 10px;\n      background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n      background-size: 56.57px 56.57px;\n    }\n  }\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n\n  &.lf-form-buttons-align-center {\n    .lf-buttons {\n      justify-content: center;\n    }\n  }\n  &.lf-form-buttons-align-left {\n    .lf-buttons {\n      justify-content: flex-start;\n    }\n  }\n  &.lf-form-buttons-align-right {\n    .lf-buttons {\n      justify-content: flex-end;\n    }\n  }\n\n  .lf-buttons {\n    margin-top: var(--lf-field-margin);\n  }\n\n  // as a general rule, components have a top margin, unless they are the first of their container\n  [class*=lf-control]:not(:first-child) {\n    margin-top: var(--lf-field-margin);\n    margin-bottom: 0px !important;\n  }\n\n  .lf-control-common-array {\n\n    .lf-control-common-array-item {\n      --lf-field-margin: 15px;\n\n      [class^=lf-control] {\n        margin-bottom: 0px;\n      }\n\n      [class^=lf-control]:not(:first-child) {\n        //margin-top: var(--lf-field-margin);\n        margin-top: 10px;\n      }\n    }\n  }\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n\n  .icon {\n    order: 0;\n    flex: 0 0;\n    align-self: auto;\n    margin-top: 2px;\n  }\n\n  .tag-component {\n    background-color: #673ab7;\n    color: #ffffff;\n    font-size: 12px;\n    padding: 1px 4px 2px 4px;\n    border-radius: 3px;\n    line-height: 17px;\n  }\n\n  .message {\n    display: inline-block;\n    margin-left: 10px;\n    order: 0;\n    flex: 1 0;\n    align-self: auto;\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 9597:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5418,18 +5376,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .lf-control-common-array-item .ant-form-item{margin-bottom:0px !important}.lf-form-react-antd .lf-control-common-array-item{padding-bottom:5px}.lf-form-react-antd .lf-control-two-columns:last-child{margin-bottom:0px}.lf-form-react-antd .lf-control-three-columns:last-child{margin-bottom:0px}", "",{"version":3,"sources":["webpack://./react-antd/array/array.scss"],"names":[],"mappings":"AAGI,iEACE,4BAAA,CAIJ,kDACE,kBAAA,CAGF,uDACE,iBAAA,CAGF,yDACE,iBAAA","sourcesContent":[".lf-form-react-antd {\n\n  .lf-control-common-array-item {\n    .ant-form-item {\n      margin-bottom: 0px !important;\n    }\n  }\n\n  .lf-control-common-array-item {\n    padding-bottom: 5px;\n  }\n\n  .lf-control-two-columns:last-child {\n    margin-bottom: 0px;\n  }\n\n  .lf-control-three-columns:last-child {\n    margin-bottom: 0px;\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 754:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5441,18 +5396,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .lf-control-button{min-height:20px}.lf-form-react-antd .lf-control-button .ant-btn{min-width:32px}.lf-form-react-antd .lf-control-button .lf-icon{max-width:16px;max-height:16px;margin-top:-2px}.lf-form-react-antd .lf-control-button .ant-btn-lg{min-width:40px}.lf-form-react-antd .lf-control-button .ant-btn-lg .lf-icon{max-width:20px;max-height:20px}.lf-form-react-antd .lf-control-button .ant-btn-sm{min-width:24px}.lf-form-react-antd .lf-control-button .ant-btn-sm .lf-icon{max-width:14px;max-height:14px}", "",{"version":3,"sources":["webpack://./react-antd/button/button.scss"],"names":[],"mappings":"AACE,uCACE,eAAA,CAEA,gDACE,cAAA,CAGF,gDACE,cAAA,CACA,eAAA,CACA,eAAA,CAIF,mDACE,cAAA,CACA,4DACE,cAAA,CACA,eAAA,CAIJ,mDACE,cAAA,CACA,4DACE,cAAA,CACA,eAAA","sourcesContent":[".lf-form-react-antd {\n  .lf-control-button {\n    min-height: 20px;\n    \n    .ant-btn {\n      min-width: 32px;\n    }\n\n    .lf-icon {\n      max-width: 16px;\n      max-height: 16px;\n      margin-top: -2px;\n      \n    }\n\n    .ant-btn-lg {\n      min-width: 40px;\n      .lf-icon {\n        max-width: 20px;\n        max-height: 20px;\n      }\n    }\n\n    .ant-btn-sm {\n      min-width: 24px;\n      .lf-icon {\n        max-width: 14px;\n        max-height: 14px;\n      }\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 2191:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5464,18 +5416,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .ant-form-item{margin-bottom:0px}.lf-form-react-antd .lf-buttons{margin-top:25px;display:flex}.lf-form-react-antd .lf-buttons button:not(:first-child){margin-left:10px}.lf-form-react-antd.lf-form-react-antd-plaintext .ant-col.ant-form-item-label{padding-bottom:0px}", "",{"version":3,"sources":["webpack://./react-antd/form/index.scss"],"names":[],"mappings":"AAEE,mCACE,iBAAA,CAGF,gCACE,eAAA,CACA,YAAA,CAEA,yDACE,gBAAA,CAMF,8EACE,kBAAA","sourcesContent":[".lf-form-react-antd {\n\n  .ant-form-item {\n    margin-bottom: 0px;\n  }\n  \n  .lf-buttons {\n    margin-top: 25px;\n    display: flex;\n\n    button:not(:first-child) {\n      margin-left: 10px;\n    }\n  }\n\n  // reduce margin in plaintext mode\n  &.lf-form-react-antd-plaintext {\n    .ant-col.ant-form-item-label {\n      padding-bottom: 0px;\n    }\n  }\n\n}\n"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 5201:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5487,18 +5436,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .lf-control-group .ant-form-item:last-child{margin-bottom:0px}", "",{"version":3,"sources":["webpack://./react-antd/group/group.scss"],"names":[],"mappings":"AAEI,gEACE,iBAAA","sourcesContent":[".lf-form-react-antd {\n  .lf-control-group {\n    .ant-form-item:last-child {\n      margin-bottom: 0px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 3877:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5510,18 +5456,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .lf-control-input-text .lf-prefix-icon{max-height:16px}.lf-form-react-antd .lf-control-input-text.lf-size-small .lf-prefix-icon{max-height:12px}.lf-form-react-antd .lf-control-input-text.lf-size-large .lf-prefix-icon{max-height:18px}.lf-form-react-antd .lf-control-input-text input[type=color]{min-width:60px}", "",{"version":3,"sources":["webpack://./react-antd/input-text/input-text.scss"],"names":[],"mappings":"AAGI,2DACE,eAAA,CAIA,yEACE,eAAA,CAKF,yEACE,eAAA,CAIJ,6DACE,cAAA","sourcesContent":[".lf-form-react-antd {\n  .lf-control-input-text {\n\n    .lf-prefix-icon {\n      max-height: 16px;\n    }\n\n    &.lf-size-small {\n      .lf-prefix-icon {\n        max-height: 12px;\n      }\n    }\n\n    &.lf-size-large {\n      .lf-prefix-icon {\n        max-height: 18px;\n      }\n    }\n\n    input[type=\"color\"] {\n      min-width: 60px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 4016:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5533,18 +5476,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-select-option-antd img{width:20px;max-width:20px;max-height:20px;vertical-align:middle;margin-top:-2px}", "",{"version":3,"sources":["webpack://./react-antd/select/select.scss"],"names":[],"mappings":"AAEI,mCACE,UAAA,CACA,cAAA,CACA,eAAA,CACA,qBAAA,CACA,eAAA","sourcesContent":["\n  .lf-control-select-option-antd {\n    img {\n      width: 20px;\n      max-width: 20px;\n      max-height: 20px;\n      vertical-align: middle;\n      margin-top: -2px;\n    }\n  }\n"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 2480:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5556,18 +5496,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .lf-control-tabs .tab-fields{margin-top:0px}", "",{"version":3,"sources":["webpack://./react-antd/tabs/tabs.scss"],"names":[],"mappings":"AAEI,iDACE,cAAA","sourcesContent":[".lf-form-react-antd {\n  .lf-control-tabs {\n    .tab-fields {\n      margin-top: 0px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 3730:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5579,18 +5516,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .lf-control-three-columns .ant-form-item:last-child{margin-bottom:0px}", "",{"version":3,"sources":["webpack://./react-antd/three-columns/three-columns.scss"],"names":[],"mappings":"AAEI,wEACE,iBAAA","sourcesContent":[".lf-form-react-antd {\n  .lf-control-three-columns {\n    .ant-form-item:last-child {\n      margin-bottom: 0px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 3339:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5602,18 +5536,15 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-form-react-antd .lf-control-two-columns .ant-form-item:last-child{margin-bottom:0px}", "",{"version":3,"sources":["webpack://./react-antd/two-columns/two-columns.scss"],"names":[],"mappings":"AAEI,sEACE,iBAAA","sourcesContent":[".lf-form-react-antd {\n  .lf-control-two-columns {\n    .ant-form-item:last-child {\n      margin-bottom: 0px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 7017:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
@@ -5625,13 +5556,13 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".lf-control-upload .upload-layout{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-content:stretch;align-items:center}.lf-control-upload .upload-layout .upload{order:0;flex:0 0 auto;align-self:auto}.lf-control-upload .upload-layout .hint{margin-left:var(--lf-field-column-margin);order:0;flex:1 0 auto;align-self:auto}", "",{"version":3,"sources":["webpack://./react-antd/upload/upload.scss"],"names":[],"mappings":"AACE,kCACE,YAAA,CACA,kBAAA,CACA,cAAA,CACA,0BAAA,CACA,qBAAA,CACA,kBAAA,CAEA,0CACE,OAAA,CACA,aAAA,CACA,eAAA,CAGF,wCACE,yCAAA,CACA,OAAA,CACA,aAAA,CACA,eAAA","sourcesContent":[".lf-control-upload {\n  .upload-layout {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: flex-start;\n    align-content: stretch;\n    align-items: center;\n\n    .upload {\n      order: 0;\n      flex: 0 0 auto;\n      align-self: auto;\n    }\n\n    .hint {\n      margin-left: var(--lf-field-column-margin);\n      order: 0;\n      flex: 1 0 auto;\n      align-self: auto;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+/* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
 /***/ 3645:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 
@@ -5723,7 +5654,7 @@ module.exports = function (cssWithMappingToString) {
 /***/ }),
 
 /***/ 7537:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 
@@ -6138,7 +6069,7 @@ module.exports = function (item) {
 /***/ }),
 
 /***/ 8668:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isArray = __webpack_require__(1469);
 
@@ -6189,7 +6120,7 @@ module.exports = castArray;
 /***/ }),
 
 /***/ 2705:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var root = __webpack_require__(5639);
 
@@ -6202,7 +6133,7 @@ module.exports = Symbol;
 /***/ }),
 
 /***/ 6874:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * A faster alternative to `Function#apply`, this function invokes `func`
@@ -6230,7 +6161,7 @@ module.exports = apply;
 /***/ }),
 
 /***/ 7443:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseIndexOf = __webpack_require__(2118);
 
@@ -6254,7 +6185,7 @@ module.exports = arrayIncludes;
 /***/ }),
 
 /***/ 1196:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This function is like `arrayIncludes` except that it accepts a comparator.
@@ -6283,7 +6214,7 @@ module.exports = arrayIncludesWith;
 /***/ }),
 
 /***/ 9932:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * A specialized version of `_.map` for arrays without support for iteratee
@@ -6311,7 +6242,7 @@ module.exports = arrayMap;
 /***/ }),
 
 /***/ 2488:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Appends the elements of `values` to `array`.
@@ -6338,7 +6269,7 @@ module.exports = arrayPush;
 /***/ }),
 
 /***/ 4286:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Converts an ASCII `string` to an array.
@@ -6357,7 +6288,7 @@ module.exports = asciiToArray;
 /***/ }),
 
 /***/ 4865:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseAssignValue = __webpack_require__(9465),
     eq = __webpack_require__(7813);
@@ -6392,7 +6323,7 @@ module.exports = assignValue;
 /***/ }),
 
 /***/ 9465:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var defineProperty = __webpack_require__(8777);
 
@@ -6424,7 +6355,7 @@ module.exports = baseAssignValue;
 /***/ }),
 
 /***/ 5990:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns the first argument it receives.
@@ -6452,7 +6383,7 @@ module.exports = identity;
 /***/ }),
 
 /***/ 1078:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var arrayPush = __webpack_require__(2488),
     isFlattenable = __webpack_require__(7285);
@@ -6497,7 +6428,7 @@ module.exports = baseFlatten;
 /***/ }),
 
 /***/ 7786:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var castPath = __webpack_require__(1811),
     toKey = __webpack_require__(327);
@@ -6528,7 +6459,7 @@ module.exports = baseGet;
 /***/ }),
 
 /***/ 4239:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -6557,7 +6488,7 @@ module.exports = objectToString;
 /***/ }),
 
 /***/ 13:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * The base implementation of `_.hasIn` without support for deep paths.
@@ -6577,7 +6508,7 @@ module.exports = baseHasIn;
 /***/ }),
 
 /***/ 2118:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * A specialized version of `_.indexOf` which performs strict equality
@@ -6607,7 +6538,7 @@ module.exports = strictIndexOf;
 /***/ }),
 
 /***/ 1761:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     isObjectLike = __webpack_require__(7005);
@@ -6632,7 +6563,7 @@ module.exports = baseIsDate;
 /***/ }),
 
 /***/ 280:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var overArg = __webpack_require__(5569);
 
@@ -6645,7 +6576,7 @@ module.exports = nativeKeys;
 /***/ }),
 
 /***/ 5970:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var basePickBy = __webpack_require__(3012),
     hasIn = __webpack_require__(9095);
@@ -6671,7 +6602,7 @@ module.exports = basePick;
 /***/ }),
 
 /***/ 3012:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(7786),
     baseSet = __webpack_require__(611),
@@ -6708,7 +6639,7 @@ module.exports = basePickBy;
 /***/ }),
 
 /***/ 611:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var assignValue = __webpack_require__(4865),
     castPath = __webpack_require__(1811),
@@ -6766,7 +6697,7 @@ module.exports = baseSet;
 /***/ }),
 
 /***/ 4259:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * The base implementation of `_.slice` without an iteratee call guard.
@@ -6804,7 +6735,7 @@ module.exports = baseSlice;
 /***/ }),
 
 /***/ 531:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(2705),
     arrayMap = __webpack_require__(9932),
@@ -6848,7 +6779,7 @@ module.exports = baseToString;
 /***/ }),
 
 /***/ 7561:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var trimmedEndIndex = __webpack_require__(7990);
 
@@ -6874,7 +6805,7 @@ module.exports = baseTrim;
 /***/ }),
 
 /***/ 7518:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * The base implementation of `_.unary` without support for storing metadata.
@@ -6895,7 +6826,7 @@ module.exports = baseUnary;
 /***/ }),
 
 /***/ 5652:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var SetCache = __webpack_require__(8668),
     arrayIncludes = __webpack_require__(7443),
@@ -6974,7 +6905,7 @@ module.exports = baseUniq;
 /***/ }),
 
 /***/ 7406:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var castPath = __webpack_require__(1811),
     last = __webpack_require__(928),
@@ -7001,7 +6932,7 @@ module.exports = baseUnset;
 /***/ }),
 
 /***/ 4757:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseIndexOf = __webpack_require__(2118);
 
@@ -7025,7 +6956,7 @@ module.exports = arrayIncludes;
 /***/ }),
 
 /***/ 1811:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isArray = __webpack_require__(1469),
     isKey = __webpack_require__(5403),
@@ -7053,7 +6984,7 @@ module.exports = castPath;
 /***/ }),
 
 /***/ 180:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseSlice = __webpack_require__(4259);
 
@@ -7078,7 +7009,7 @@ module.exports = castSlice;
 /***/ }),
 
 /***/ 5512:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseIndexOf = __webpack_require__(2118);
 
@@ -7104,7 +7035,7 @@ module.exports = charsEndIndex;
 /***/ }),
 
 /***/ 9817:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseIndexOf = __webpack_require__(2118);
 
@@ -7131,7 +7062,7 @@ module.exports = charsStartIndex;
 /***/ }),
 
 /***/ 8363:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var assignValue = __webpack_require__(4865),
     baseAssignValue = __webpack_require__(9465);
@@ -7178,7 +7109,7 @@ module.exports = copyObject;
 /***/ }),
 
 /***/ 3593:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `undefined`.
@@ -7202,7 +7133,7 @@ module.exports = noop;
 /***/ }),
 
 /***/ 696:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isPlainObject = __webpack_require__(8630);
 
@@ -7225,7 +7156,7 @@ module.exports = customOmitClone;
 /***/ }),
 
 /***/ 8777:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var getNative = __webpack_require__(852);
 
@@ -7243,7 +7174,7 @@ module.exports = defineProperty;
 /***/ }),
 
 /***/ 9021:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var flatten = __webpack_require__(5564),
     overRest = __webpack_require__(5357),
@@ -7266,7 +7197,7 @@ module.exports = flatRest;
 /***/ }),
 
 /***/ 1957:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 /** Detect free variable `global` from Node.js. */
 var freeGlobal = typeof __webpack_require__.g == 'object' && __webpack_require__.g && __webpack_require__.g.Object === Object && __webpack_require__.g;
@@ -7277,7 +7208,7 @@ module.exports = freeGlobal;
 /***/ }),
 
 /***/ 6904:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This function is like
@@ -7304,7 +7235,7 @@ module.exports = nativeKeysIn;
 /***/ }),
 
 /***/ 852:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Gets the value at `key` of `object`.
@@ -7324,7 +7255,7 @@ module.exports = getValue;
 /***/ }),
 
 /***/ 5924:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var overArg = __webpack_require__(5569);
 
@@ -7337,7 +7268,7 @@ module.exports = getPrototype;
 /***/ }),
 
 /***/ 4160:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -7366,7 +7297,7 @@ module.exports = objectToString;
 /***/ }),
 
 /***/ 222:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var castPath = __webpack_require__(1811),
     isArguments = __webpack_require__(5694),
@@ -7412,7 +7343,7 @@ module.exports = hasPath;
 /***/ }),
 
 /***/ 2689:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -7437,7 +7368,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 7285:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(2705),
     isArguments = __webpack_require__(5694),
@@ -7464,7 +7395,7 @@ module.exports = isFlattenable;
 /***/ }),
 
 /***/ 5776:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
@@ -7496,7 +7427,7 @@ module.exports = isIndex;
 /***/ }),
 
 /***/ 5403:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isArray = __webpack_require__(1469),
     isSymbol = __webpack_require__(3448);
@@ -7532,7 +7463,7 @@ module.exports = isKey;
 /***/ }),
 
 /***/ 5726:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -7557,7 +7488,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 4523:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns the first argument it receives.
@@ -7585,7 +7516,7 @@ module.exports = identity;
 /***/ }),
 
 /***/ 1167:
-/***/ ((module, exports, __webpack_require__) => {
+/***/ (function(module, exports, __webpack_require__) {
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 var freeGlobal = __webpack_require__(1957);
@@ -7623,7 +7554,7 @@ module.exports = nodeUtil;
 /***/ }),
 
 /***/ 5569:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Creates a unary function that invokes `func` with its argument transformed.
@@ -7645,7 +7576,7 @@ module.exports = overArg;
 /***/ }),
 
 /***/ 5357:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var apply = __webpack_require__(6874);
 
@@ -7688,7 +7619,7 @@ module.exports = overRest;
 /***/ }),
 
 /***/ 292:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(7786),
     baseSlice = __webpack_require__(4259);
@@ -7711,7 +7642,7 @@ module.exports = parent;
 /***/ }),
 
 /***/ 5639:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var freeGlobal = __webpack_require__(1957);
 
@@ -7727,7 +7658,7 @@ module.exports = root;
 /***/ }),
 
 /***/ 1814:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns a new empty array.
@@ -7757,7 +7688,7 @@ module.exports = stubArray;
 /***/ }),
 
 /***/ 61:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns the first argument it receives.
@@ -7785,7 +7716,7 @@ module.exports = identity;
 /***/ }),
 
 /***/ 3140:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var asciiToArray = __webpack_require__(4286),
     hasUnicode = __webpack_require__(2689),
@@ -7810,7 +7741,7 @@ module.exports = stringToArray;
 /***/ }),
 
 /***/ 5514:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var memoizeCapped = __webpack_require__(4523);
 
@@ -7844,7 +7775,7 @@ module.exports = stringToPath;
 /***/ }),
 
 /***/ 327:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isSymbol = __webpack_require__(3448);
 
@@ -7872,7 +7803,7 @@ module.exports = toKey;
 /***/ }),
 
 /***/ 7990:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used to match a single whitespace character. */
 var reWhitespace = /\s/;
@@ -7898,7 +7829,7 @@ module.exports = trimmedEndIndex;
 /***/ }),
 
 /***/ 676:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Converts an ASCII `string` to an array.
@@ -7917,7 +7848,7 @@ module.exports = asciiToArray;
 /***/ }),
 
 /***/ 6678:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseClone = __webpack_require__(5990);
 
@@ -7960,7 +7891,7 @@ module.exports = clone;
 /***/ }),
 
 /***/ 7813:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Performs a
@@ -8004,7 +7935,7 @@ module.exports = eq;
 /***/ }),
 
 /***/ 5564:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseFlatten = __webpack_require__(1078);
 
@@ -8033,7 +7964,7 @@ module.exports = flatten;
 /***/ }),
 
 /***/ 9095:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseHasIn = __webpack_require__(13),
     hasPath = __webpack_require__(222);
@@ -8074,7 +8005,7 @@ module.exports = hasIn;
 /***/ }),
 
 /***/ 5694:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -8099,7 +8030,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 1469:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Checks if `value` is classified as an `Array` object.
@@ -8132,7 +8063,7 @@ module.exports = isArray;
 /***/ }),
 
 /***/ 8612:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var isFunction = __webpack_require__(3560),
     isLength = __webpack_require__(1780);
@@ -8172,7 +8103,7 @@ module.exports = isArrayLike;
 /***/ }),
 
 /***/ 1584:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     isObjectLike = __webpack_require__(7005);
@@ -8208,7 +8139,7 @@ module.exports = isBoolean;
 /***/ }),
 
 /***/ 4144:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -8233,7 +8164,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 7960:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseIsDate = __webpack_require__(1761),
     baseUnary = __webpack_require__(7518),
@@ -8267,7 +8198,7 @@ module.exports = isDate;
 /***/ }),
 
 /***/ 1609:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseKeys = __webpack_require__(280),
     getTag = __webpack_require__(4160),
@@ -8351,7 +8282,7 @@ module.exports = isEmpty;
 /***/ }),
 
 /***/ 3560:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     isObject = __webpack_require__(3218);
@@ -8395,7 +8326,7 @@ module.exports = isFunction;
 /***/ }),
 
 /***/ 1780:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
@@ -8437,7 +8368,7 @@ module.exports = isLength;
 /***/ }),
 
 /***/ 1763:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     isObjectLike = __webpack_require__(7005);
@@ -8482,7 +8413,7 @@ module.exports = isNumber;
 /***/ }),
 
 /***/ 3218:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Checks if `value` is the
@@ -8520,7 +8451,7 @@ module.exports = isObject;
 /***/ }),
 
 /***/ 7005:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
@@ -8556,7 +8487,7 @@ module.exports = isObjectLike;
 /***/ }),
 
 /***/ 8630:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     getPrototype = __webpack_require__(5924),
@@ -8625,7 +8556,7 @@ module.exports = isPlainObject;
 /***/ }),
 
 /***/ 7037:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(4239),
     isArray = __webpack_require__(1469),
@@ -8662,7 +8593,7 @@ module.exports = isString;
 /***/ }),
 
 /***/ 3448:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -8687,7 +8618,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 6719:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * This method returns `false`.
@@ -8712,7 +8643,7 @@ module.exports = stubFalse;
 /***/ }),
 
 /***/ 3674:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var overArg = __webpack_require__(5569);
 
@@ -8725,7 +8656,7 @@ module.exports = nativeKeys;
 /***/ }),
 
 /***/ 928:
-/***/ ((module) => {
+/***/ (function(module) {
 
 /**
  * Gets the last element of `array`.
@@ -8752,7 +8683,7 @@ module.exports = last;
 /***/ }),
 
 /***/ 7557:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(9932),
     baseClone = __webpack_require__(5990),
@@ -8816,7 +8747,7 @@ module.exports = omit;
 /***/ }),
 
 /***/ 8718:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var basePick = __webpack_require__(5970),
     flatRest = __webpack_require__(9021);
@@ -8848,7 +8779,7 @@ module.exports = pick;
 /***/ }),
 
 /***/ 9833:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseToString = __webpack_require__(531);
 
@@ -8883,7 +8814,7 @@ module.exports = toString;
 /***/ }),
 
 /***/ 2742:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseToString = __webpack_require__(531),
     baseTrim = __webpack_require__(7561),
@@ -8937,7 +8868,7 @@ module.exports = trim;
 /***/ }),
 
 /***/ 4908:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var baseUniq = __webpack_require__(5652);
 
@@ -8969,7 +8900,7 @@ module.exports = uniq;
 /***/ }),
 
 /***/ 3955:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 var toString = __webpack_require__(9833);
 
@@ -9004,7 +8935,7 @@ module.exports = uniqueId;
 /***/ }),
 
 /***/ 4685:
-/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3379);
@@ -9052,7 +8983,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /***/ }),
 
 /***/ 3379:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 
@@ -9143,7 +9074,7 @@ module.exports = function (list, options) {
 /***/ }),
 
 /***/ 569:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 
@@ -9184,7 +9115,7 @@ module.exports = insertBySelector;
 /***/ }),
 
 /***/ 9216:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 
@@ -9201,7 +9132,7 @@ module.exports = insertStyleElement;
 /***/ }),
 
 /***/ 3565:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
 
@@ -9218,7 +9149,7 @@ module.exports = setAttributesWithoutAttributes;
 /***/ }),
 
 /***/ 7795:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 
@@ -9286,7 +9217,7 @@ module.exports = domAPI;
 /***/ }),
 
 /***/ 4589:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 
@@ -9307,7 +9238,7 @@ module.exports = styleTagTransform;
 /***/ }),
 
 /***/ 2721:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__2721__;
@@ -9315,7 +9246,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__2721__;
 /***/ }),
 
 /***/ 5760:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__5760__;
@@ -9323,7 +9254,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__5760__;
 /***/ }),
 
 /***/ 8156:
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__8156__;
@@ -9331,12 +9262,12 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__8156__;
 /***/ }),
 
 /***/ 7536:
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Qr": () => (/* binding */ Controller),
-/* harmony export */   "cI": () => (/* binding */ useForm)
+/* harmony export */   "Qr": function() { return /* binding */ Controller; },
+/* harmony export */   "cI": function() { return /* binding */ useForm; }
 /* harmony export */ });
 /* unused harmony exports FormProvider, appendErrors, get, set, useController, useFieldArray, useFormContext, useFormState, useWatch */
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8156);
@@ -11707,31 +11638,31 @@ function useForm(props = {}) {
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
+/******/ 		__webpack_require__.n = function(module) {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 		__webpack_require__.d = function(exports, definition) {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		__webpack_require__.g = (function() {
 /******/ 			if (typeof globalThis === 'object') return globalThis;
 /******/ 			try {
@@ -11740,84 +11671,84 @@ function useForm(props = {}) {
 /******/ 				if (typeof window === 'object') return window;
 /******/ 			}
 /******/ 		})();
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
+/******/ 		__webpack_require__.r = function(exports) {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/node module decorator */
-/******/ 	(() => {
-/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 	!function() {
+/******/ 		__webpack_require__.nmd = function(module) {
 /******/ 			module.paths = [];
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		__webpack_require__.nc = undefined;
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
+!function() {
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "FIELDS_KEY": () => (/* reexport */ costants/* FIELDS_KEY */.fj),
-  "FRAMEWORKS": () => (/* reexport */ costants/* FRAMEWORKS */.MQ),
-  "FRAMEWORKS_LABELS": () => (/* reexport */ costants/* FRAMEWORKS_LABELS */.hZ),
-  "Fields": () => (/* binding */ Fields),
-  "Forms": () => (/* binding */ Forms),
-  "addField": () => (/* reexport */ helpers/* addField */.xS),
-  "applyFormRules": () => (/* reexport */ helpers/* applyFormRules */.eX),
-  "applyTransformers": () => (/* reexport */ helpers/* applyTransformers */.Zr),
-  "cleanUp": () => (/* reexport */ helpers/* cleanUp */.Lx),
-  "collectIds": () => (/* reexport */ helpers/* collectIds */.FN),
-  "collectNames": () => (/* reexport */ helpers/* collectNames */.BI),
-  "createEmptyField": () => (/* reexport */ helpers/* createEmptyField */.bc),
-  "default": () => (/* binding */ react_antd),
-  "deleteField": () => (/* reexport */ helpers/* deleteField */.AK),
-  "fillIds": () => (/* reexport */ helpers/* fillIds */.Mw),
-  "filterFields": () => (/* reexport */ helpers/* filterFields */.qH),
-  "filterOptions": () => (/* reexport */ helpers/* filterOptions */.MN),
-  "findField": () => (/* reexport */ helpers/* findField */.PI),
-  "formHelper": () => (/* reexport */ helpers/* formHelper */.qs),
-  "getFieldById": () => (/* reexport */ helpers/* getFieldById */.rc),
-  "getLocales": () => (/* reexport */ helpers/* getLocales */.IP),
-  "i18n": () => (/* reexport */ helpers/* i18n */.ag),
-  "i18nOptions": () => (/* reexport */ helpers/* i18nOptions */.Lo),
-  "isChildrenOf": () => (/* reexport */ helpers/* isChildrenOf */.c_),
-  "isEmptyForm": () => (/* reexport */ helpers/* isEmptyForm */.Oc),
-  "isI18n": () => (/* reexport */ helpers/* isI18n */.QK),
-  "isUrl": () => (/* reexport */ helpers/* isUrl */.CB),
-  "isValidDate": () => (/* reexport */ helpers/* isValidDate */.qb),
-  "isValidDayjsFormat": () => (/* reexport */ helpers/* isValidDayjsFormat */.az),
-  "makeWidthStyle": () => (/* reexport */ helpers/* makeWidthStyle */.PZ),
-  "mapFields": () => (/* reexport */ helpers/* mapFields */.vn),
-  "passRest": () => (/* reexport */ helpers/* passRest */.QF),
-  "reduceFields": () => (/* reexport */ helpers/* reduceFields */.f3),
-  "replaceField": () => (/* reexport */ helpers/* replaceField */.DN),
-  "validateJSONForm": () => (/* reexport */ helpers/* validateJSONForm */.nK),
-  "validateRulesDefinition": () => (/* reexport */ helpers/* validateRulesDefinition */.Dd)
+  "FIELDS_KEY": function() { return /* reexport */ costants/* FIELDS_KEY */.fj; },
+  "FRAMEWORKS": function() { return /* reexport */ costants/* FRAMEWORKS */.MQ; },
+  "FRAMEWORKS_LABELS": function() { return /* reexport */ costants/* FRAMEWORKS_LABELS */.hZ; },
+  "Fields": function() { return /* binding */ Fields; },
+  "Forms": function() { return /* binding */ Forms; },
+  "addField": function() { return /* reexport */ helpers/* addField */.xS; },
+  "applyFormRules": function() { return /* reexport */ helpers/* applyFormRules */.eX; },
+  "applyTransformers": function() { return /* reexport */ helpers/* applyTransformers */.Zr; },
+  "cleanUp": function() { return /* reexport */ helpers/* cleanUp */.Lx; },
+  "collectIds": function() { return /* reexport */ helpers/* collectIds */.FN; },
+  "collectNames": function() { return /* reexport */ helpers/* collectNames */.BI; },
+  "createEmptyField": function() { return /* reexport */ helpers/* createEmptyField */.bc; },
+  "default": function() { return /* binding */ react_antd; },
+  "deleteField": function() { return /* reexport */ helpers/* deleteField */.AK; },
+  "fillIds": function() { return /* reexport */ helpers/* fillIds */.Mw; },
+  "filterFields": function() { return /* reexport */ helpers/* filterFields */.qH; },
+  "filterOptions": function() { return /* reexport */ helpers/* filterOptions */.MN; },
+  "findField": function() { return /* reexport */ helpers/* findField */.PI; },
+  "formHelper": function() { return /* reexport */ helpers/* formHelper */.qs; },
+  "getFieldById": function() { return /* reexport */ helpers/* getFieldById */.rc; },
+  "getLocales": function() { return /* reexport */ helpers/* getLocales */.IP; },
+  "i18n": function() { return /* reexport */ helpers/* i18n */.ag; },
+  "i18nOptions": function() { return /* reexport */ helpers/* i18nOptions */.Lo; },
+  "isChildrenOf": function() { return /* reexport */ helpers/* isChildrenOf */.c_; },
+  "isEmptyForm": function() { return /* reexport */ helpers/* isEmptyForm */.Oc; },
+  "isI18n": function() { return /* reexport */ helpers/* isI18n */.QK; },
+  "isUrl": function() { return /* reexport */ helpers/* isUrl */.CB; },
+  "isValidDate": function() { return /* reexport */ helpers/* isValidDate */.qb; },
+  "isValidDayjsFormat": function() { return /* reexport */ helpers/* isValidDayjsFormat */.az; },
+  "makeWidthStyle": function() { return /* reexport */ helpers/* makeWidthStyle */.PZ; },
+  "mapFields": function() { return /* reexport */ helpers/* mapFields */.vn; },
+  "passRest": function() { return /* reexport */ helpers/* passRest */.QF; },
+  "reduceFields": function() { return /* reexport */ helpers/* reduceFields */.f3; },
+  "replaceField": function() { return /* reexport */ helpers/* replaceField */.DN; },
+  "validateJSONForm": function() { return /* reexport */ helpers/* validateJSONForm */.nK; },
+  "validateRulesDefinition": function() { return /* reexport */ helpers/* validateRulesDefinition */.Dd; }
 });
 
 // EXTERNAL MODULE: external "react"
@@ -11877,7 +11808,7 @@ var update = injectStylesIntoStyleTag_default()(cjs_js_react_antd_form/* default
 
 
 
-       /* harmony default export */ const react_antd_form = (cjs_js_react_antd_form/* default */.Z && cjs_js_react_antd_form/* default.locals */.Z.locals ? cjs_js_react_antd_form/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var react_antd_form = (cjs_js_react_antd_form/* default */.Z && cjs_js_react_antd_form/* default.locals */.Z.locals ? cjs_js_react_antd_form/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-antd/form/index.js
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -11997,7 +11928,7 @@ var input_text_update = injectStylesIntoStyleTag_default()(input_text/* default 
 
 
 
-       /* harmony default export */ const input_text_input_text = (input_text/* default */.Z && input_text/* default.locals */.Z.locals ? input_text/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var input_text_input_text = (input_text/* default */.Z && input_text/* default.locals */.Z.locals ? input_text/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-antd/input-text/index.js
 var _excluded = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "fullWidth", "width", "inputType", "inputMode", "autocomplete", "lfOnEnter"];
@@ -12238,12 +12169,12 @@ var locale = {
   previousCentury: 'القرن السابق',
   nextCentury: 'القرن التالى'
 };
-/* harmony default export */ const ar_EG = (locale);
+/* harmony default export */ var ar_EG = (locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/ar_EG.js
 const ar_EG_locale = {
   placeholder: 'اختيار الوقت'
 };
-/* harmony default export */ const locale_ar_EG = (ar_EG_locale);
+/* harmony default export */ var locale_ar_EG = (ar_EG_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/ar_EG.js
 
 
@@ -12261,7 +12192,7 @@ const locale_ar_EG_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_ar_EG = (locale_ar_EG_locale);
+/* harmony default export */ var date_picker_locale_ar_EG = (locale_ar_EG_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/az_AZ.js
 var az_AZ_locale = {
   locale: 'az_AZ',
@@ -12292,12 +12223,12 @@ var az_AZ_locale = {
   previousCentury: 'Sonuncu əsr',
   nextCentury: 'Növbəti əsr'
 };
-/* harmony default export */ const az_AZ = (az_AZ_locale);
+/* harmony default export */ var az_AZ = (az_AZ_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/az_AZ.js
 const locale_az_AZ_locale = {
   placeholder: 'Vaxtı seç'
 };
-/* harmony default export */ const locale_az_AZ = (locale_az_AZ_locale);
+/* harmony default export */ var locale_az_AZ = (locale_az_AZ_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/az_AZ.js
 
 
@@ -12308,7 +12239,7 @@ const date_picker_locale_az_AZ_locale = {
   }, az_AZ),
   timePickerLocale: Object.assign({}, locale_az_AZ)
 };
-/* harmony default export */ const date_picker_locale_az_AZ = (date_picker_locale_az_AZ_locale);
+/* harmony default export */ var date_picker_locale_az_AZ = (date_picker_locale_az_AZ_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/bg_BG.js
 var bg_BG_locale = {
   locale: 'bg_BG',
@@ -12338,12 +12269,12 @@ var bg_BG_locale = {
   previousCentury: 'Последен век',
   nextCentury: 'Следващ век'
 };
-/* harmony default export */ const bg_BG = (bg_BG_locale);
+/* harmony default export */ var bg_BG = (bg_BG_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/bg_BG.js
 const locale_bg_BG_locale = {
   placeholder: 'Избор на час'
 };
-/* harmony default export */ const locale_bg_BG = (locale_bg_BG_locale);
+/* harmony default export */ var locale_bg_BG = (locale_bg_BG_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/bg_BG.js
 
 
@@ -12357,7 +12288,7 @@ const date_picker_locale_bg_BG_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_bg_BG = (date_picker_locale_bg_BG_locale);
+/* harmony default export */ var date_picker_locale_bg_BG = (date_picker_locale_bg_BG_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/bn_BD.js
 var bn_BD_locale = {
   locale: 'bn_BD',
@@ -12388,13 +12319,13 @@ var bn_BD_locale = {
   previousCentury: 'গত শতাব্দী',
   nextCentury: 'পরের শতাব্দী'
 };
-/* harmony default export */ const bn_BD = (bn_BD_locale);
+/* harmony default export */ var bn_BD = (bn_BD_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/bn_BD.js
 const locale_bn_BD_locale = {
   placeholder: 'সময় নির্বাচন',
   rangePlaceholder: ['সময় শুরু', 'শেষ সময়']
 };
-/* harmony default export */ const locale_bn_BD = (locale_bn_BD_locale);
+/* harmony default export */ var locale_bn_BD = (locale_bn_BD_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/bn_BD.js
 
 
@@ -12415,7 +12346,7 @@ const date_picker_locale_bn_BD_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_bn_BD = (date_picker_locale_bn_BD_locale);
+/* harmony default export */ var date_picker_locale_bn_BD = (date_picker_locale_bn_BD_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/by_BY.js
 var by_BY_locale = {
   locale: 'by_BY',
@@ -12446,13 +12377,13 @@ var by_BY_locale = {
   previousCentury: 'Папярэдні век',
   nextCentury: 'Наступны век'
 };
-/* harmony default export */ const by_BY = (by_BY_locale);
+/* harmony default export */ var by_BY = (by_BY_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/by_BY.js
 const locale_by_BY_locale = {
   placeholder: 'Выберыце час',
   rangePlaceholder: ['Час пачатку', 'Час заканчэння']
 };
-/* harmony default export */ const locale_by_BY = (locale_by_BY_locale);
+/* harmony default export */ var locale_by_BY = (locale_by_BY_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/by_BY.js
 
 
@@ -12471,7 +12402,7 @@ const date_picker_locale_by_BY_locale = {
   }, by_BY),
   timePickerLocale: Object.assign({}, locale_by_BY)
 };
-/* harmony default export */ const date_picker_locale_by_BY = (date_picker_locale_by_BY_locale);
+/* harmony default export */ var date_picker_locale_by_BY = (date_picker_locale_by_BY_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/ca_ES.js
 var ca_ES_locale = {
   locale: 'ca_ES',
@@ -12501,12 +12432,12 @@ var ca_ES_locale = {
   previousCentury: 'Segle anterior',
   nextCentury: 'Segle següent'
 };
-/* harmony default export */ const ca_ES = (ca_ES_locale);
+/* harmony default export */ var ca_ES = (ca_ES_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/ca_ES.js
 const locale_ca_ES_locale = {
   placeholder: 'Seleccionar hora'
 };
-/* harmony default export */ const locale_ca_ES = (locale_ca_ES_locale);
+/* harmony default export */ var locale_ca_ES = (locale_ca_ES_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/ca_ES.js
 
 
@@ -12520,7 +12451,7 @@ const date_picker_locale_ca_ES_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_ca_ES = (date_picker_locale_ca_ES_locale);
+/* harmony default export */ var date_picker_locale_ca_ES = (date_picker_locale_ca_ES_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/cs_CZ.js
 var cs_CZ_locale = {
   locale: 'cs_CZ',
@@ -12550,12 +12481,12 @@ var cs_CZ_locale = {
   previousCentury: 'Předchozí století',
   nextCentury: 'Následující století'
 };
-/* harmony default export */ const cs_CZ = (cs_CZ_locale);
+/* harmony default export */ var cs_CZ = (cs_CZ_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/cs_CZ.js
 const locale_cs_CZ_locale = {
   placeholder: 'Vybrat čas'
 };
-/* harmony default export */ const locale_cs_CZ = (locale_cs_CZ_locale);
+/* harmony default export */ var locale_cs_CZ = (locale_cs_CZ_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/cs_CZ.js
 
 
@@ -12569,7 +12500,7 @@ const date_picker_locale_cs_CZ_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_cs_CZ = (date_picker_locale_cs_CZ_locale);
+/* harmony default export */ var date_picker_locale_cs_CZ = (date_picker_locale_cs_CZ_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/da_DK.js
 var da_DK_locale = {
   locale: 'da_DK',
@@ -12599,13 +12530,13 @@ var da_DK_locale = {
   previousCentury: 'Forrige århundrede',
   nextCentury: 'Næste århundrede'
 };
-/* harmony default export */ const da_DK = (da_DK_locale);
+/* harmony default export */ var da_DK = (da_DK_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/da_DK.js
 const locale_da_DK_locale = {
   placeholder: 'Vælg tid',
   rangePlaceholder: ['Starttidspunkt', 'Sluttidspunkt']
 };
-/* harmony default export */ const locale_da_DK = (locale_da_DK_locale);
+/* harmony default export */ var locale_da_DK = (locale_da_DK_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/da_DK.js
 
 
@@ -12619,7 +12550,7 @@ const date_picker_locale_da_DK_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_da_DK = (date_picker_locale_da_DK_locale);
+/* harmony default export */ var date_picker_locale_da_DK = (date_picker_locale_da_DK_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/de_DE.js
 var de_DE_locale = {
   locale: 'de_DE',
@@ -12649,12 +12580,12 @@ var de_DE_locale = {
   previousCentury: 'Vorheriges Jahrhundert',
   nextCentury: 'Nächstes Jahrhundert'
 };
-/* harmony default export */ const de_DE = (de_DE_locale);
+/* harmony default export */ var de_DE = (de_DE_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/de_DE.js
 const locale_de_DE_locale = {
   placeholder: 'Zeit auswählen'
 };
-/* harmony default export */ const locale_de_DE = (locale_de_DE_locale);
+/* harmony default export */ var locale_de_DE = (locale_de_DE_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/de_DE.js
 
 
@@ -12668,7 +12599,7 @@ const date_picker_locale_de_DE_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/issues/424
-/* harmony default export */ const date_picker_locale_de_DE = (date_picker_locale_de_DE_locale);
+/* harmony default export */ var date_picker_locale_de_DE = (date_picker_locale_de_DE_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/el_GR.js
 var el_GR_locale = {
   locale: 'el_GR',
@@ -12698,12 +12629,12 @@ var el_GR_locale = {
   previousCentury: 'Προηγούμενος αιώνας',
   nextCentury: 'Επόμενος αιώνας'
 };
-/* harmony default export */ const el_GR = (el_GR_locale);
+/* harmony default export */ var el_GR = (el_GR_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/el_GR.js
 const locale_el_GR_locale = {
   placeholder: 'Επιλέξτε ώρα'
 };
-/* harmony default export */ const locale_el_GR = (locale_el_GR_locale);
+/* harmony default export */ var locale_el_GR = (locale_el_GR_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/el_GR.js
 
 
@@ -12717,7 +12648,7 @@ const date_picker_locale_el_GR_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/issues/424
-/* harmony default export */ const date_picker_locale_el_GR = (date_picker_locale_el_GR_locale);
+/* harmony default export */ var date_picker_locale_el_GR = (date_picker_locale_el_GR_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/en_GB.js
 var en_GB_locale = {
   locale: 'en_GB',
@@ -12747,12 +12678,12 @@ var en_GB_locale = {
   previousCentury: 'Last century',
   nextCentury: 'Next century'
 };
-/* harmony default export */ const en_GB = (en_GB_locale);
+/* harmony default export */ var en_GB = (en_GB_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/en_GB.js
 const locale_en_GB_locale = {
   placeholder: 'Select time'
 };
-/* harmony default export */ const locale_en_GB = (locale_en_GB_locale);
+/* harmony default export */ var locale_en_GB = (locale_en_GB_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/en_GB.js
 
 
@@ -12774,7 +12705,7 @@ const date_picker_locale_en_GB_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_en_GB = (date_picker_locale_en_GB_locale);
+/* harmony default export */ var date_picker_locale_en_GB = (date_picker_locale_en_GB_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/en_US.js
 var en_US_locale = {
   locale: 'en_US',
@@ -12805,13 +12736,13 @@ var en_US_locale = {
   previousCentury: 'Last century',
   nextCentury: 'Next century'
 };
-/* harmony default export */ const en_US = (en_US_locale);
+/* harmony default export */ var en_US = (en_US_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/en_US.js
 const locale_en_US_locale = {
   placeholder: 'Select time',
   rangePlaceholder: ['Start time', 'End time']
 };
-/* harmony default export */ const locale_en_US = (locale_en_US_locale);
+/* harmony default export */ var locale_en_US = (locale_en_US_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/en_US.js
 
 
@@ -12833,7 +12764,7 @@ const date_picker_locale_en_US_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_en_US = (date_picker_locale_en_US_locale);
+/* harmony default export */ var date_picker_locale_en_US = (date_picker_locale_en_US_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/es_ES.js
 var es_ES_locale = {
   locale: 'es_ES',
@@ -12863,12 +12794,12 @@ var es_ES_locale = {
   previousCentury: 'Siglo anterior',
   nextCentury: 'Siglo siguiente'
 };
-/* harmony default export */ const es_ES = (es_ES_locale);
+/* harmony default export */ var es_ES = (es_ES_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/es_ES.js
 const locale_es_ES_locale = {
   placeholder: 'Seleccionar hora'
 };
-/* harmony default export */ const locale_es_ES = (locale_es_ES_locale);
+/* harmony default export */ var locale_es_ES = (locale_es_ES_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/es_ES.js
 
 
@@ -12882,7 +12813,7 @@ const date_picker_locale_es_ES_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_es_ES = (date_picker_locale_es_ES_locale);
+/* harmony default export */ var date_picker_locale_es_ES = (date_picker_locale_es_ES_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/eu_ES.js
 var eu_ES_locale = {
   locale: 'eu_ES',
@@ -12913,12 +12844,12 @@ var eu_ES_locale = {
   previousCentury: 'Aurreko mendea',
   nextCentury: 'Urrengo mendea'
 };
-/* harmony default export */ const eu_ES = (eu_ES_locale);
+/* harmony default export */ var eu_ES = (eu_ES_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/eu_ES.js
 const locale_eu_ES_locale = {
   placeholder: 'Aukeratu ordua'
 };
-/* harmony default export */ const locale_eu_ES = (locale_eu_ES_locale);
+/* harmony default export */ var locale_eu_ES = (locale_eu_ES_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/eu_ES.js
 
 
@@ -12932,7 +12863,7 @@ const date_picker_locale_eu_ES_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_eu_ES = (date_picker_locale_eu_ES_locale);
+/* harmony default export */ var date_picker_locale_eu_ES = (date_picker_locale_eu_ES_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/et_EE.js
 var et_EE_locale = {
   locale: 'et_EE',
@@ -12962,12 +12893,12 @@ var et_EE_locale = {
   previousCentury: 'Eelmine sajand',
   nextCentury: 'Järgmine sajand'
 };
-/* harmony default export */ const et_EE = (et_EE_locale);
+/* harmony default export */ var et_EE = (et_EE_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/et_EE.js
 const locale_et_EE_locale = {
   placeholder: 'Vali aeg'
 };
-/* harmony default export */ const locale_et_EE = (locale_et_EE_locale);
+/* harmony default export */ var locale_et_EE = (locale_et_EE_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/et_EE.js
 
 
@@ -12981,7 +12912,7 @@ const date_picker_locale_et_EE_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_et_EE = (date_picker_locale_et_EE_locale);
+/* harmony default export */ var date_picker_locale_et_EE = (date_picker_locale_et_EE_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/fa_IR.js
 var fa_IR_locale = {
   locale: 'fa_IR',
@@ -13011,13 +12942,13 @@ var fa_IR_locale = {
   previousCentury: 'قرن قبل',
   nextCentury: 'قرن بعد'
 };
-/* harmony default export */ const fa_IR = (fa_IR_locale);
+/* harmony default export */ var fa_IR = (fa_IR_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/fa_IR.js
 const locale_fa_IR_locale = {
   placeholder: 'انتخاب زمان',
   rangePlaceholder: ['زمان شروع', 'زمان پایان']
 };
-/* harmony default export */ const locale_fa_IR = (locale_fa_IR_locale);
+/* harmony default export */ var locale_fa_IR = (locale_fa_IR_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/fa_IR.js
 
 
@@ -13039,7 +12970,7 @@ const date_picker_locale_fa_IR_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_fa_IR = (date_picker_locale_fa_IR_locale);
+/* harmony default export */ var date_picker_locale_fa_IR = (date_picker_locale_fa_IR_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/fi_FI.js
 var fi_FI_locale = {
   locale: 'fi_FI',
@@ -13069,12 +13000,12 @@ var fi_FI_locale = {
   previousCentury: 'Edellinen vuosisata',
   nextCentury: 'Seuraava vuosisata'
 };
-/* harmony default export */ const fi_FI = (fi_FI_locale);
+/* harmony default export */ var fi_FI = (fi_FI_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/fi_FI.js
 const locale_fi_FI_locale = {
   placeholder: 'Valitse aika'
 };
-/* harmony default export */ const locale_fi_FI = (locale_fi_FI_locale);
+/* harmony default export */ var locale_fi_FI = (locale_fi_FI_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/fi_FI.js
 
 
@@ -13088,7 +13019,7 @@ const date_picker_locale_fi_FI_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_fi_FI = (date_picker_locale_fi_FI_locale);
+/* harmony default export */ var date_picker_locale_fi_FI = (date_picker_locale_fi_FI_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/fr_BE.js
 var fr_BE_locale = {
   locale: 'fr_BE',
@@ -13118,13 +13049,13 @@ var fr_BE_locale = {
   previousCentury: 'Siècle précédent',
   nextCentury: 'Siècle suivant'
 };
-/* harmony default export */ const fr_BE = (fr_BE_locale);
+/* harmony default export */ var fr_BE = (fr_BE_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/fr_BE.js
 const locale_fr_BE_locale = {
   placeholder: "Sélectionner l'heure",
   rangePlaceholder: ['Heure de début', 'Heure de fin']
 };
-/* harmony default export */ const locale_fr_BE = (locale_fr_BE_locale);
+/* harmony default export */ var locale_fr_BE = (locale_fr_BE_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/fr_BE.js
 
 
@@ -13145,7 +13076,7 @@ const date_picker_locale_fr_BE_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/issues/424
-/* harmony default export */ const date_picker_locale_fr_BE = (date_picker_locale_fr_BE_locale);
+/* harmony default export */ var date_picker_locale_fr_BE = (date_picker_locale_fr_BE_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/fr_CA.js
 var fr_CA_locale = {
   locale: 'fr_CA',
@@ -13175,13 +13106,13 @@ var fr_CA_locale = {
   previousCentury: 'Siècle précédent',
   nextCentury: 'Siècle suivant'
 };
-/* harmony default export */ const fr_CA = (fr_CA_locale);
+/* harmony default export */ var fr_CA = (fr_CA_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/fr_CA.js
 const locale_fr_CA_locale = {
   placeholder: "Sélectionner l'heure",
   rangePlaceholder: ['Heure de début', 'Heure de fin']
 };
-/* harmony default export */ const locale_fr_CA = (locale_fr_CA_locale);
+/* harmony default export */ var locale_fr_CA = (locale_fr_CA_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/fr_CA.js
 
 
@@ -13202,7 +13133,7 @@ const date_picker_locale_fr_CA_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/issues/424
-/* harmony default export */ const date_picker_locale_fr_CA = (date_picker_locale_fr_CA_locale);
+/* harmony default export */ var date_picker_locale_fr_CA = (date_picker_locale_fr_CA_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/fr_FR.js
 var fr_FR_locale = {
   locale: 'fr_FR',
@@ -13232,13 +13163,13 @@ var fr_FR_locale = {
   previousCentury: 'Siècle précédent',
   nextCentury: 'Siècle suivant'
 };
-/* harmony default export */ const fr_FR = (fr_FR_locale);
+/* harmony default export */ var fr_FR = (fr_FR_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/fr_FR.js
 const locale_fr_FR_locale = {
   placeholder: "Sélectionner l'heure",
   rangePlaceholder: ['Heure de début', 'Heure de fin']
 };
-/* harmony default export */ const locale_fr_FR = (locale_fr_FR_locale);
+/* harmony default export */ var locale_fr_FR = (locale_fr_FR_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/fr_FR.js
 
 
@@ -13259,7 +13190,7 @@ const date_picker_locale_fr_FR_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/issues/424
-/* harmony default export */ const date_picker_locale_fr_FR = (date_picker_locale_fr_FR_locale);
+/* harmony default export */ var date_picker_locale_fr_FR = (date_picker_locale_fr_FR_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/ga_IE.js
 var ga_IE_locale = {
   locale: 'ga_IE',
@@ -13290,13 +13221,13 @@ var ga_IE_locale = {
   previousCentury: 'An chéid seo caite',
   nextCentury: 'An chéad aois eile'
 };
-/* harmony default export */ const ga_IE = (ga_IE_locale);
+/* harmony default export */ var ga_IE = (ga_IE_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/ga_IE.js
 const locale_ga_IE_locale = {
   placeholder: 'Roghnaigh am',
   rangePlaceholder: ['Am tosaigh', 'Am deiridh']
 };
-/* harmony default export */ const locale_ga_IE = (locale_ga_IE_locale);
+/* harmony default export */ var locale_ga_IE = (locale_ga_IE_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/ga_IE.js
 
 
@@ -13317,7 +13248,7 @@ const date_picker_locale_ga_IE_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_ga_IE = (date_picker_locale_ga_IE_locale);
+/* harmony default export */ var date_picker_locale_ga_IE = (date_picker_locale_ga_IE_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/gl_ES.js
 var gl_ES_locale = {
   locale: 'gl_ES',
@@ -13347,12 +13278,12 @@ var gl_ES_locale = {
   previousCentury: 'Século anterior',
   nextCentury: 'Século seguinte'
 };
-/* harmony default export */ const gl_ES = (gl_ES_locale);
+/* harmony default export */ var gl_ES = (gl_ES_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/gl_ES.js
 const locale_gl_ES_locale = {
   placeholder: 'Escolla hora'
 };
-/* harmony default export */ const locale_gl_ES = (locale_gl_ES_locale);
+/* harmony default export */ var locale_gl_ES = (locale_gl_ES_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/gl_ES.js
 
 
@@ -13366,7 +13297,7 @@ const date_picker_locale_gl_ES_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_gl_ES = (date_picker_locale_gl_ES_locale);
+/* harmony default export */ var date_picker_locale_gl_ES = (date_picker_locale_gl_ES_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/he_IL.js
 var he_IL_locale = {
   locale: 'he_IL',
@@ -13397,12 +13328,12 @@ var he_IL_locale = {
   previousCentury: 'המאה הקודמת',
   nextCentury: 'המאה הבאה'
 };
-/* harmony default export */ const he_IL = (he_IL_locale);
+/* harmony default export */ var he_IL = (he_IL_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/he_IL.js
 const locale_he_IL_locale = {
   placeholder: 'בחר שעה'
 };
-/* harmony default export */ const locale_he_IL = (locale_he_IL_locale);
+/* harmony default export */ var locale_he_IL = (locale_he_IL_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/he_IL.js
 
 
@@ -13416,7 +13347,7 @@ const date_picker_locale_he_IL_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_he_IL = (date_picker_locale_he_IL_locale);
+/* harmony default export */ var date_picker_locale_he_IL = (date_picker_locale_he_IL_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/hi_IN.js
 var hi_IN_locale = {
   locale: 'hi_IN',
@@ -13447,13 +13378,13 @@ var hi_IN_locale = {
   previousCentury: 'पीछ्ली शताब्दी',
   nextCentury: 'अगली सदी'
 };
-/* harmony default export */ const hi_IN = (hi_IN_locale);
+/* harmony default export */ var hi_IN = (hi_IN_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/hi_IN.js
 const locale_hi_IN_locale = {
   placeholder: 'समय का चयन करें',
   rangePlaceholder: ['आरंभिक समय', 'अंत समय']
 };
-/* harmony default export */ const locale_hi_IN = (locale_hi_IN_locale);
+/* harmony default export */ var locale_hi_IN = (locale_hi_IN_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/hi_IN.js
 
 
@@ -13474,7 +13405,7 @@ const date_picker_locale_hi_IN_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_hi_IN = (date_picker_locale_hi_IN_locale);
+/* harmony default export */ var date_picker_locale_hi_IN = (date_picker_locale_hi_IN_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/hr_HR.js
 var hr_HR_locale = {
   locale: 'hr_HR',
@@ -13505,13 +13436,13 @@ var hr_HR_locale = {
   previousCentury: 'Prošlo stoljeće',
   nextCentury: 'Sljedeće stoljeće'
 };
-/* harmony default export */ const hr_HR = (hr_HR_locale);
+/* harmony default export */ var hr_HR = (hr_HR_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/hr_HR.js
 const locale_hr_HR_locale = {
   placeholder: 'Odaberite vrijeme',
   rangePlaceholder: ['Vrijeme početka', 'Vrijeme završetka']
 };
-/* harmony default export */ const locale_hr_HR = (locale_hr_HR_locale);
+/* harmony default export */ var locale_hr_HR = (locale_hr_HR_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/hr_HR.js
 
 
@@ -13532,7 +13463,7 @@ const date_picker_locale_hr_HR_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_hr_HR = (date_picker_locale_hr_HR_locale);
+/* harmony default export */ var date_picker_locale_hr_HR = (date_picker_locale_hr_HR_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/hu_HU.js
 var hu_HU_locale = {
   locale: 'hu_HU',
@@ -13584,12 +13515,12 @@ var hu_HU_locale = {
   nextCentury: 'Jövő évszázad' // 'Next century',
 };
 
-/* harmony default export */ const hu_HU = (hu_HU_locale);
+/* harmony default export */ var hu_HU = (hu_HU_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/hu_HU.js
 const locale_hu_HU_locale = {
   placeholder: 'Válasszon időt'
 };
-/* harmony default export */ const locale_hu_HU = (locale_hu_HU_locale);
+/* harmony default export */ var locale_hu_HU = (locale_hu_HU_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/hu_HU.js
 
 
@@ -13603,7 +13534,7 @@ const date_picker_locale_hu_HU_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_hu_HU = (date_picker_locale_hu_HU_locale);
+/* harmony default export */ var date_picker_locale_hu_HU = (date_picker_locale_hu_HU_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/id_ID.js
 var id_ID_locale = {
   locale: 'id_ID',
@@ -13634,12 +13565,12 @@ var id_ID_locale = {
   previousCentury: 'Abad terakhir',
   nextCentury: 'Abad berikutnya'
 };
-/* harmony default export */ const id_ID = (id_ID_locale);
+/* harmony default export */ var id_ID = (id_ID_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/id_ID.js
 const locale_id_ID_locale = {
   placeholder: 'Pilih waktu'
 };
-/* harmony default export */ const locale_id_ID = (locale_id_ID_locale);
+/* harmony default export */ var locale_id_ID = (locale_id_ID_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/id_ID.js
 
 
@@ -13653,7 +13584,7 @@ const date_picker_locale_id_ID_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_id_ID = (date_picker_locale_id_ID_locale);
+/* harmony default export */ var date_picker_locale_id_ID = (date_picker_locale_id_ID_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/it_IT.js
 var it_IT_locale = {
   locale: 'it_IT',
@@ -13683,12 +13614,12 @@ var it_IT_locale = {
   previousCentury: 'Secolo precedente',
   nextCentury: 'Prossimo secolo'
 };
-/* harmony default export */ const it_IT = (it_IT_locale);
+/* harmony default export */ var it_IT = (it_IT_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/it_IT.js
 const locale_it_IT_locale = {
   placeholder: "Selezionare l'orario"
 };
-/* harmony default export */ const locale_it_IT = (locale_it_IT_locale);
+/* harmony default export */ var locale_it_IT = (locale_it_IT_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/it_IT.js
 
 
@@ -13702,7 +13633,7 @@ const date_picker_locale_it_IT_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/issues/424
-/* harmony default export */ const date_picker_locale_it_IT = (date_picker_locale_it_IT_locale);
+/* harmony default export */ var date_picker_locale_it_IT = (date_picker_locale_it_IT_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/is_IS.js
 var is_IS_locale = {
   locale: 'is_IS',
@@ -13732,12 +13663,12 @@ var is_IS_locale = {
   previousCentury: 'Fyrri öld',
   nextCentury: 'Næsta öld'
 };
-/* harmony default export */ const is_IS = (is_IS_locale);
+/* harmony default export */ var is_IS = (is_IS_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/is_IS.js
 const locale_is_IS_locale = {
   placeholder: 'Velja tíma'
 };
-/* harmony default export */ const locale_is_IS = (locale_is_IS_locale);
+/* harmony default export */ var locale_is_IS = (locale_is_IS_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/is_IS.js
 
 
@@ -13751,7 +13682,7 @@ const date_picker_locale_is_IS_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_is_IS = (date_picker_locale_is_IS_locale);
+/* harmony default export */ var date_picker_locale_is_IS = (date_picker_locale_is_IS_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/ja_JP.js
 var ja_JP_locale = {
   locale: 'ja_JP',
@@ -13781,13 +13712,13 @@ var ja_JP_locale = {
   previousCentury: '前の世紀',
   nextCentury: '次の世紀'
 };
-/* harmony default export */ const ja_JP = (ja_JP_locale);
+/* harmony default export */ var ja_JP = (ja_JP_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/ja_JP.js
 const locale_ja_JP_locale = {
   placeholder: '時間を選択',
   rangePlaceholder: ['開始時間', '終了時間']
 };
-/* harmony default export */ const locale_ja_JP = (locale_ja_JP_locale);
+/* harmony default export */ var locale_ja_JP = (locale_ja_JP_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/ja_JP.js
 
 
@@ -13801,7 +13732,7 @@ const date_picker_locale_ja_JP_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_ja_JP = (date_picker_locale_ja_JP_locale);
+/* harmony default export */ var date_picker_locale_ja_JP = (date_picker_locale_ja_JP_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/ka_GE.js
 var ka_GE_locale = {
   locale: 'ka_GE',
@@ -13832,13 +13763,13 @@ var ka_GE_locale = {
   previousCentury: 'გასული საუკუნე',
   nextCentury: 'მომდევნო საუკუნე'
 };
-/* harmony default export */ const ka_GE = (ka_GE_locale);
+/* harmony default export */ var ka_GE = (ka_GE_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/ka_GE.js
 const locale_ka_GE_locale = {
   placeholder: 'აირჩიეთ დრო',
   rangePlaceholder: ['საწყისი თარიღი', 'საბოლოო თარიღი']
 };
-/* harmony default export */ const locale_ka_GE = (locale_ka_GE_locale);
+/* harmony default export */ var locale_ka_GE = (locale_ka_GE_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/ka_GE.js
 
 
@@ -13856,7 +13787,7 @@ const date_picker_locale_ka_GE_locale = {
   }, ka_GE),
   timePickerLocale: Object.assign({}, locale_ka_GE)
 };
-/* harmony default export */ const date_picker_locale_ka_GE = (date_picker_locale_ka_GE_locale);
+/* harmony default export */ var date_picker_locale_ka_GE = (date_picker_locale_ka_GE_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/kmr_IQ.js
 var kmr_IQ_locale = {
   locale: 'ku',
@@ -13886,12 +13817,12 @@ var kmr_IQ_locale = {
   previousCentury: 'Sedsalen peş',
   nextCentury: 'Sedsalen paş'
 };
-/* harmony default export */ const kmr_IQ = (kmr_IQ_locale);
+/* harmony default export */ var kmr_IQ = (kmr_IQ_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/kmr_IQ.js
 const locale_kmr_IQ_locale = {
   placeholder: 'Demê hilbijêre'
 };
-/* harmony default export */ const locale_kmr_IQ = (locale_kmr_IQ_locale);
+/* harmony default export */ var locale_kmr_IQ = (locale_kmr_IQ_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/kmr_IQ.js
 
 
@@ -13905,7 +13836,7 @@ const date_picker_locale_kmr_IQ_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_kmr_IQ = (date_picker_locale_kmr_IQ_locale);
+/* harmony default export */ var date_picker_locale_kmr_IQ = (date_picker_locale_kmr_IQ_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/kn_IN.js
 var kn_IN_locale = {
   locale: 'kn_IN',
@@ -13936,12 +13867,12 @@ var kn_IN_locale = {
   previousCentury: 'ಕಳೆದ ಶತಮಾನ',
   nextCentury: 'ಮುಂದಿನ ಶತಮಾನ'
 };
-/* harmony default export */ const kn_IN = (kn_IN_locale);
+/* harmony default export */ var kn_IN = (kn_IN_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/kn_IN.js
 const locale_kn_IN_locale = {
   placeholder: 'ಸಮಯ ಆಯ್ಕೆಮಾಡಿ'
 };
-/* harmony default export */ const locale_kn_IN = (locale_kn_IN_locale);
+/* harmony default export */ var locale_kn_IN = (locale_kn_IN_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/kn_IN.js
 
 
@@ -13955,7 +13886,7 @@ const date_picker_locale_kn_IN_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_kn_IN = (date_picker_locale_kn_IN_locale);
+/* harmony default export */ var date_picker_locale_kn_IN = (date_picker_locale_kn_IN_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/kk_KZ.js
 var kk_KZ_locale = {
   locale: 'kk_KZ',
@@ -13985,13 +13916,13 @@ var kk_KZ_locale = {
   previousCentury: 'Алдыңғы ғасыр',
   nextCentury: 'Келесі ғасыр'
 };
-/* harmony default export */ const kk_KZ = (kk_KZ_locale);
+/* harmony default export */ var kk_KZ = (kk_KZ_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/kk_KZ.js
 const locale_kk_KZ_locale = {
   placeholder: 'Уақытты таңдаңыз',
   rangePlaceholder: ['Бастау уақыты', 'Аяқталу уақыты']
 };
-/* harmony default export */ const locale_kk_KZ = (locale_kk_KZ_locale);
+/* harmony default export */ var locale_kk_KZ = (locale_kk_KZ_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/kk_KZ.js
 
 
@@ -14012,7 +13943,7 @@ const date_picker_locale_kk_KZ_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_kk_KZ = (date_picker_locale_kk_KZ_locale);
+/* harmony default export */ var date_picker_locale_kk_KZ = (date_picker_locale_kk_KZ_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/km_KH.js
 var km_KH_locale = {
   locale: 'km',
@@ -14042,13 +13973,13 @@ var km_KH_locale = {
   previousCentury: 'សតវត្សចុងក្រោយ',
   nextCentury: 'សតវត្សរ៍បន្ទាប់'
 };
-/* harmony default export */ const km_KH = (km_KH_locale);
+/* harmony default export */ var km_KH = (km_KH_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/km_KH.js
 const locale_km_KH_locale = {
   placeholder: 'រើសម៉ោង',
   rangePlaceholder: ['ម៉ោងចប់ផ្ដើម', 'ម៉ោងបញ្ចប់']
 };
-/* harmony default export */ const locale_km_KH = (locale_km_KH_locale);
+/* harmony default export */ var locale_km_KH = (locale_km_KH_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/km_KH.js
 
 
@@ -14069,7 +14000,7 @@ const date_picker_locale_km_KH_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_km_KH = (date_picker_locale_km_KH_locale);
+/* harmony default export */ var date_picker_locale_km_KH = (date_picker_locale_km_KH_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/ko_KR.js
 var ko_KR_locale = {
   locale: 'ko_KR',
@@ -14099,13 +14030,13 @@ var ko_KR_locale = {
   previousCentury: '이전 세기',
   nextCentury: '다음 세기'
 };
-/* harmony default export */ const ko_KR = (ko_KR_locale);
+/* harmony default export */ var ko_KR = (ko_KR_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/ko_KR.js
 const locale_ko_KR_locale = {
   placeholder: '시간 선택',
   rangePlaceholder: ['시작 시간', '종료 시간']
 };
-/* harmony default export */ const locale_ko_KR = (locale_ko_KR_locale);
+/* harmony default export */ var locale_ko_KR = (locale_ko_KR_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/ko_KR.js
 
 
@@ -14119,7 +14050,7 @@ const date_picker_locale_ko_KR_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_ko_KR = (date_picker_locale_ko_KR_locale);
+/* harmony default export */ var date_picker_locale_ko_KR = (date_picker_locale_ko_KR_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/lt_LT.js
 var lt_LT_locale = {
   locale: 'lt_LT',
@@ -14149,13 +14080,13 @@ var lt_LT_locale = {
   previousCentury: 'Buvęs amžius',
   nextCentury: 'Sekantis amžius'
 };
-/* harmony default export */ const lt_LT = (lt_LT_locale);
+/* harmony default export */ var lt_LT = (lt_LT_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/lt_LT.js
 const locale_lt_LT_locale = {
   placeholder: 'Pasirinkite laiką',
   rangePlaceholder: ['Pradžios laikas', 'Pabaigos laikas']
 };
-/* harmony default export */ const locale_lt_LT = (locale_lt_LT_locale);
+/* harmony default export */ var locale_lt_LT = (locale_lt_LT_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/lt_LT.js
 
 
@@ -14176,7 +14107,7 @@ const date_picker_locale_lt_LT_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_lt_LT = (date_picker_locale_lt_LT_locale);
+/* harmony default export */ var date_picker_locale_lt_LT = (date_picker_locale_lt_LT_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/lv_LV.js
 var lv_LV_locale = {
   locale: 'lv_LV',
@@ -14206,12 +14137,12 @@ var lv_LV_locale = {
   previousCentury: 'Pagājušajā gadsimtā',
   nextCentury: 'Nākamajā gadsimtā'
 };
-/* harmony default export */ const lv_LV = (lv_LV_locale);
+/* harmony default export */ var lv_LV = (lv_LV_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/lv_LV.js
 const locale_lv_LV_locale = {
   placeholder: 'Izvēlieties laiku'
 };
-/* harmony default export */ const locale_lv_LV = (locale_lv_LV_locale);
+/* harmony default export */ var locale_lv_LV = (locale_lv_LV_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/lv_LV.js
 
 
@@ -14225,7 +14156,7 @@ const date_picker_locale_lv_LV_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_lv_LV = (date_picker_locale_lv_LV_locale);
+/* harmony default export */ var date_picker_locale_lv_LV = (date_picker_locale_lv_LV_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/mk_MK.js
 var mk_MK_locale = {
   locale: 'mk_MK',
@@ -14255,12 +14186,12 @@ var mk_MK_locale = {
   previousCentury: 'Претходен век',
   nextCentury: 'Нареден век'
 };
-/* harmony default export */ const mk_MK = (mk_MK_locale);
+/* harmony default export */ var mk_MK = (mk_MK_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/mk_MK.js
 const locale_mk_MK_locale = {
   placeholder: 'Избери време'
 };
-/* harmony default export */ const locale_mk_MK = (locale_mk_MK_locale);
+/* harmony default export */ var locale_mk_MK = (locale_mk_MK_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/mk_MK.js
 
 
@@ -14274,7 +14205,7 @@ const date_picker_locale_mk_MK_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_mk_MK = (date_picker_locale_mk_MK_locale);
+/* harmony default export */ var date_picker_locale_mk_MK = (date_picker_locale_mk_MK_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/ml_IN.js
 var ml_IN_locale = {
   locale: 'ml_IN',
@@ -14305,13 +14236,13 @@ var ml_IN_locale = {
   previousCentury: 'കഴിഞ്ഞ നൂറ്റാണ്ട്',
   nextCentury: 'അടുത്ത നൂറ്റാണ്ട്'
 };
-/* harmony default export */ const ml_IN = (ml_IN_locale);
+/* harmony default export */ var ml_IN = (ml_IN_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/ml_IN.js
 const locale_ml_IN_locale = {
   placeholder: 'സമയം തിരഞ്ഞെടുക്കുക',
   rangePlaceholder: ['ആരംഭ സമയം', 'അവസാന സമയം']
 };
-/* harmony default export */ const locale_ml_IN = (locale_ml_IN_locale);
+/* harmony default export */ var locale_ml_IN = (locale_ml_IN_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/ml_IN.js
 
 
@@ -14332,7 +14263,7 @@ const date_picker_locale_ml_IN_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_ml_IN = (date_picker_locale_ml_IN_locale);
+/* harmony default export */ var date_picker_locale_ml_IN = (date_picker_locale_ml_IN_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/mn_MN.js
 var mn_MN_locale = {
   locale: 'mn_MN',
@@ -14363,12 +14294,12 @@ var mn_MN_locale = {
   previousCentury: 'Өмнөх зуун',
   nextCentury: 'Дараа зуун'
 };
-/* harmony default export */ const mn_MN = (mn_MN_locale);
+/* harmony default export */ var mn_MN = (mn_MN_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/mn_MN.js
 const locale_mn_MN_locale = {
   placeholder: 'Цаг сонгох'
 };
-/* harmony default export */ const locale_mn_MN = (locale_mn_MN_locale);
+/* harmony default export */ var locale_mn_MN = (locale_mn_MN_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/mn_MN.js
 
 
@@ -14382,7 +14313,7 @@ const date_picker_locale_mn_MN_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_mn_MN = (date_picker_locale_mn_MN_locale);
+/* harmony default export */ var date_picker_locale_mn_MN = (date_picker_locale_mn_MN_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/ms_MY.js
 var ms_MY_locale = {
   locale: 'ms_MY',
@@ -14412,12 +14343,12 @@ var ms_MY_locale = {
   previousCentury: 'Abad lepas',
   nextCentury: 'Abad depan'
 };
-/* harmony default export */ const ms_MY = (ms_MY_locale);
+/* harmony default export */ var ms_MY = (ms_MY_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/ms_MY.js
 const locale_ms_MY_locale = {
   placeholder: 'Sila pilih masa'
 };
-/* harmony default export */ const locale_ms_MY = (locale_ms_MY_locale);
+/* harmony default export */ var locale_ms_MY = (locale_ms_MY_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/ms_MY.js
 
 
@@ -14431,7 +14362,7 @@ const date_picker_locale_ms_MY_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_ms_MY = (date_picker_locale_ms_MY_locale);
+/* harmony default export */ var date_picker_locale_ms_MY = (date_picker_locale_ms_MY_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/nb_NO.js
 var nb_NO_locale = {
   locale: 'nb_NO',
@@ -14462,13 +14393,13 @@ var nb_NO_locale = {
   previousCentury: 'Forrige århundre',
   nextCentury: 'Neste århundre'
 };
-/* harmony default export */ const nb_NO = (nb_NO_locale);
+/* harmony default export */ var nb_NO = (nb_NO_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/nb_NO.js
 const locale_nb_NO_locale = {
   placeholder: 'Velg tid',
   rangePlaceholder: ['Starttid', 'Sluttid']
 };
-/* harmony default export */ const locale_nb_NO = (locale_nb_NO_locale);
+/* harmony default export */ var locale_nb_NO = (locale_nb_NO_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/nb_NO.js
 
 
@@ -14489,7 +14420,7 @@ const date_picker_locale_nb_NO_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_nb_NO = (date_picker_locale_nb_NO_locale);
+/* harmony default export */ var date_picker_locale_nb_NO = (date_picker_locale_nb_NO_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/nl_BE.js
 var nl_BE_locale = {
   locale: 'nl_BE',
@@ -14519,13 +14450,13 @@ var nl_BE_locale = {
   previousCentury: 'Vorige eeuw',
   nextCentury: 'Volgende eeuw'
 };
-/* harmony default export */ const nl_BE = (nl_BE_locale);
+/* harmony default export */ var nl_BE = (nl_BE_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/nl_BE.js
 const locale_nl_BE_locale = {
   placeholder: 'Selecteer tijd',
   rangePlaceholder: ['Start tijd', 'Eind tijd']
 };
-/* harmony default export */ const locale_nl_BE = (locale_nl_BE_locale);
+/* harmony default export */ var locale_nl_BE = (locale_nl_BE_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/nl_BE.js
 
 
@@ -14546,7 +14477,7 @@ const date_picker_locale_nl_BE_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/issues/424
-/* harmony default export */ const date_picker_locale_nl_BE = (date_picker_locale_nl_BE_locale);
+/* harmony default export */ var date_picker_locale_nl_BE = (date_picker_locale_nl_BE_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/nl_NL.js
 var nl_NL_locale = {
   locale: 'nl_NL',
@@ -14576,13 +14507,13 @@ var nl_NL_locale = {
   previousCentury: 'Vorige eeuw',
   nextCentury: 'Volgende eeuw'
 };
-/* harmony default export */ const nl_NL = (nl_NL_locale);
+/* harmony default export */ var nl_NL = (nl_NL_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/nl_NL.js
 const locale_nl_NL_locale = {
   placeholder: 'Selecteer tijd',
   rangePlaceholder: ['Start tijd', 'Eind tijd']
 };
-/* harmony default export */ const locale_nl_NL = (locale_nl_NL_locale);
+/* harmony default export */ var locale_nl_NL = (locale_nl_NL_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/nl_NL.js
 
 
@@ -14603,7 +14534,7 @@ const date_picker_locale_nl_NL_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/issues/424
-/* harmony default export */ const date_picker_locale_nl_NL = (date_picker_locale_nl_NL_locale);
+/* harmony default export */ var date_picker_locale_nl_NL = (date_picker_locale_nl_NL_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/pl_PL.js
 var pl_PL_locale = {
   locale: 'pl_PL',
@@ -14633,12 +14564,12 @@ var pl_PL_locale = {
   previousCentury: 'Ostatni wiek',
   nextCentury: 'Następny wiek'
 };
-/* harmony default export */ const pl_PL = (pl_PL_locale);
+/* harmony default export */ var pl_PL = (pl_PL_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/pl_PL.js
 const locale_pl_PL_locale = {
   placeholder: 'Wybierz godzinę'
 };
-/* harmony default export */ const locale_pl_PL = (locale_pl_PL_locale);
+/* harmony default export */ var locale_pl_PL = (locale_pl_PL_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/pl_PL.js
 
 
@@ -14652,7 +14583,7 @@ const date_picker_locale_pl_PL_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_pl_PL = (date_picker_locale_pl_PL_locale);
+/* harmony default export */ var date_picker_locale_pl_PL = (date_picker_locale_pl_PL_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/pt_BR.js
 var pt_BR_locale = {
   locale: 'pt_BR',
@@ -14684,12 +14615,12 @@ var pt_BR_locale = {
   shortWeekDays: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
   shortMonths: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
 };
-/* harmony default export */ const pt_BR = (pt_BR_locale);
+/* harmony default export */ var pt_BR = (pt_BR_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/pt_BR.js
 const locale_pt_BR_locale = {
   placeholder: 'Hora'
 };
-/* harmony default export */ const locale_pt_BR = (locale_pt_BR_locale);
+/* harmony default export */ var locale_pt_BR = (locale_pt_BR_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/pt_BR.js
 
 
@@ -14703,7 +14634,7 @@ const date_picker_locale_pt_BR_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_pt_BR = (date_picker_locale_pt_BR_locale);
+/* harmony default export */ var date_picker_locale_pt_BR = (date_picker_locale_pt_BR_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/pt_PT.js
 var pt_PT_locale = {
   locale: 'pt_PT',
@@ -14735,12 +14666,12 @@ var pt_PT_locale = {
   shortWeekDays: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"],
   shortMonths: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
 };
-/* harmony default export */ const pt_PT = (pt_PT_locale);
+/* harmony default export */ var pt_PT = (pt_PT_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/pt_PT.js
 const locale_pt_PT_locale = {
   placeholder: 'Hora'
 };
-/* harmony default export */ const locale_pt_PT = (locale_pt_PT_locale);
+/* harmony default export */ var locale_pt_PT = (locale_pt_PT_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/pt_PT.js
 
 
@@ -14782,7 +14713,7 @@ const date_picker_locale_pt_PT_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_pt_PT = (date_picker_locale_pt_PT_locale);
+/* harmony default export */ var date_picker_locale_pt_PT = (date_picker_locale_pt_PT_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/ro_RO.js
 var ro_RO_locale = {
   locale: 'ro_RO',
@@ -14813,12 +14744,12 @@ var ro_RO_locale = {
   previousCentury: 'Secolul anterior',
   nextCentury: 'Secolul următor'
 };
-/* harmony default export */ const ro_RO = (ro_RO_locale);
+/* harmony default export */ var ro_RO = (ro_RO_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/ro_RO.js
 const locale_ro_RO_locale = {
   placeholder: 'Selectează ora'
 };
-/* harmony default export */ const locale_ro_RO = (locale_ro_RO_locale);
+/* harmony default export */ var locale_ro_RO = (locale_ro_RO_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/ro_RO.js
 
 
@@ -14832,7 +14763,7 @@ const date_picker_locale_ro_RO_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_ro_RO = (date_picker_locale_ro_RO_locale);
+/* harmony default export */ var date_picker_locale_ro_RO = (date_picker_locale_ro_RO_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/ru_RU.js
 var ru_RU_locale = {
   locale: 'ru_RU',
@@ -14862,13 +14793,13 @@ var ru_RU_locale = {
   previousCentury: 'Предыдущий век',
   nextCentury: 'Следующий век'
 };
-/* harmony default export */ const ru_RU = (ru_RU_locale);
+/* harmony default export */ var ru_RU = (ru_RU_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/ru_RU.js
 const locale_ru_RU_locale = {
   placeholder: 'Выберите время',
   rangePlaceholder: ['Время начала', 'Время окончания']
 };
-/* harmony default export */ const locale_ru_RU = (locale_ru_RU_locale);
+/* harmony default export */ var locale_ru_RU = (locale_ru_RU_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/ru_RU.js
 /** Created by Andrey Gayvoronsky on 13/04/16. */
 
@@ -14890,7 +14821,7 @@ const date_picker_locale_ru_RU_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_ru_RU = (date_picker_locale_ru_RU_locale);
+/* harmony default export */ var date_picker_locale_ru_RU = (date_picker_locale_ru_RU_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/si_LK.js
 var si_LK_locale = {
   locale: 'si_LK',
@@ -14921,13 +14852,13 @@ var si_LK_locale = {
   previousCentury: 'පසුගිය සියවස',
   nextCentury: 'ඊළඟ සියවස'
 };
-/* harmony default export */ const si_LK = (si_LK_locale);
+/* harmony default export */ var si_LK = (si_LK_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/si_LK.js
 const locale_si_LK_locale = {
   placeholder: 'වේලාව තෝරන්න',
   rangePlaceholder: ['ආරම්භක වේලාව', 'නිමවන වේලාව']
 };
-/* harmony default export */ const locale_si_LK = (locale_si_LK_locale);
+/* harmony default export */ var locale_si_LK = (locale_si_LK_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/si_LK.js
 
 
@@ -14949,7 +14880,7 @@ const date_picker_locale_si_LK_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_si_LK = (date_picker_locale_si_LK_locale);
+/* harmony default export */ var date_picker_locale_si_LK = (date_picker_locale_si_LK_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/sk_SK.js
 var sk_SK_locale = {
   locale: 'sk_SK',
@@ -14979,12 +14910,12 @@ var sk_SK_locale = {
   previousCentury: 'Predchádzajúce storočie',
   nextCentury: 'Nasledujúce storočie'
 };
-/* harmony default export */ const sk_SK = (sk_SK_locale);
+/* harmony default export */ var sk_SK = (sk_SK_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/sk_SK.js
 const locale_sk_SK_locale = {
   placeholder: 'Vybrať čas'
 };
-/* harmony default export */ const locale_sk_SK = (locale_sk_SK_locale);
+/* harmony default export */ var locale_sk_SK = (locale_sk_SK_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/sk_SK.js
 
 
@@ -14998,7 +14929,7 @@ const date_picker_locale_sk_SK_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_sk_SK = (date_picker_locale_sk_SK_locale);
+/* harmony default export */ var date_picker_locale_sk_SK = (date_picker_locale_sk_SK_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/sr_RS.js
 var sr_RS_locale = {
   locale: 'sr_RS',
@@ -15028,13 +14959,13 @@ var sr_RS_locale = {
   previousCentury: 'Prethodni vek',
   nextCentury: 'Sledeći vek'
 };
-/* harmony default export */ const sr_RS = (sr_RS_locale);
+/* harmony default export */ var sr_RS = (sr_RS_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/sr_RS.js
 const locale_sr_RS_locale = {
   placeholder: 'Izaberi vreme',
   rangePlaceholder: ['Vreme početka', 'Vreme završetka']
 };
-/* harmony default export */ const locale_sr_RS = (locale_sr_RS_locale);
+/* harmony default export */ var locale_sr_RS = (locale_sr_RS_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/sr_RS.js
 
 
@@ -15055,12 +14986,12 @@ const date_picker_locale_sr_RS_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_sr_RS = (date_picker_locale_sr_RS_locale);
+/* harmony default export */ var date_picker_locale_sr_RS = (date_picker_locale_sr_RS_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/sl_SI.js
 const sl_SI_locale = {
   placeholder: 'Izberite čas'
 };
-/* harmony default export */ const sl_SI = (sl_SI_locale);
+/* harmony default export */ var sl_SI = (sl_SI_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/sl_SI.js
 
 // Merge into a locale object
@@ -15100,7 +15031,7 @@ const locale_sl_SI_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const locale_sl_SI = (locale_sl_SI_locale);
+/* harmony default export */ var locale_sl_SI = (locale_sl_SI_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/sv_SE.js
 var sv_SE_locale = {
   locale: 'sv_SE',
@@ -15130,12 +15061,12 @@ var sv_SE_locale = {
   previousCentury: 'Föreg århundrade',
   nextCentury: 'Nästa århundrade'
 };
-/* harmony default export */ const sv_SE = (sv_SE_locale);
+/* harmony default export */ var sv_SE = (sv_SE_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/sv_SE.js
 const locale_sv_SE_locale = {
   placeholder: 'Välj tid'
 };
-/* harmony default export */ const locale_sv_SE = (locale_sv_SE_locale);
+/* harmony default export */ var locale_sv_SE = (locale_sv_SE_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/sv_SE.js
 
 
@@ -15156,7 +15087,7 @@ const date_picker_locale_sv_SE_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_sv_SE = (date_picker_locale_sv_SE_locale);
+/* harmony default export */ var date_picker_locale_sv_SE = (date_picker_locale_sv_SE_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/ta_IN.js
 var ta_IN_locale = {
   locale: 'ta_IN',
@@ -15187,12 +15118,12 @@ var ta_IN_locale = {
   previousCentury: 'முந்தைய நூற்றாண்டு',
   nextCentury: 'அடுத்த நூற்றாண்டு'
 };
-/* harmony default export */ const ta_IN = (ta_IN_locale);
+/* harmony default export */ var ta_IN = (ta_IN_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/ta_IN.js
 const locale_ta_IN_locale = {
   placeholder: 'நேரத்தைத் தேர்ந்தெடுக்கவும்'
 };
-/* harmony default export */ const locale_ta_IN = (locale_ta_IN_locale);
+/* harmony default export */ var locale_ta_IN = (locale_ta_IN_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/ta_IN.js
 // Tamil Locale added to rc-calendar
 
@@ -15214,7 +15145,7 @@ const date_picker_locale_ta_IN_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_ta_IN = (date_picker_locale_ta_IN_locale);
+/* harmony default export */ var date_picker_locale_ta_IN = (date_picker_locale_ta_IN_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/th_TH.js
 var th_TH_locale = {
   locale: 'th_TH',
@@ -15244,12 +15175,12 @@ var th_TH_locale = {
   previousCentury: 'ศตวรรษก่อนหน้า',
   nextCentury: 'ศตวรรษถัดไป'
 };
-/* harmony default export */ const th_TH = (th_TH_locale);
+/* harmony default export */ var th_TH = (th_TH_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/th_TH.js
 const locale_th_TH_locale = {
   placeholder: 'เลือกเวลา'
 };
-/* harmony default export */ const locale_th_TH = (locale_th_TH_locale);
+/* harmony default export */ var locale_th_TH = (locale_th_TH_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/th_TH.js
 
 
@@ -15270,7 +15201,7 @@ const date_picker_locale_th_TH_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_th_TH = (date_picker_locale_th_TH_locale);
+/* harmony default export */ var date_picker_locale_th_TH = (date_picker_locale_th_TH_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/tr_TR.js
 var tr_TR_locale = {
   locale: 'tr_TR',
@@ -15300,13 +15231,13 @@ var tr_TR_locale = {
   previousCentury: 'Önceki Yüzyıl',
   nextCentury: 'Sonraki Yüzyıl'
 };
-/* harmony default export */ const tr_TR = (tr_TR_locale);
+/* harmony default export */ var tr_TR = (tr_TR_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/tr_TR.js
 const locale_tr_TR_locale = {
   placeholder: 'Zaman seç',
   rangePlaceholder: ['Başlangıç zamanı', 'Bitiş zamanı']
 };
-/* harmony default export */ const locale_tr_TR = (locale_tr_TR_locale);
+/* harmony default export */ var locale_tr_TR = (locale_tr_TR_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/tr_TR.js
 
 
@@ -15327,7 +15258,7 @@ const date_picker_locale_tr_TR_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_tr_TR = (date_picker_locale_tr_TR_locale);
+/* harmony default export */ var date_picker_locale_tr_TR = (date_picker_locale_tr_TR_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/tk_TK.js
 var tk_TK_locale = {
   locale: 'tk_TK',
@@ -15357,13 +15288,13 @@ var tk_TK_locale = {
   previousCentury: 'Öňki asyr',
   nextCentury: 'Soňky asyr'
 };
-/* harmony default export */ const tk_TK = (tk_TK_locale);
+/* harmony default export */ var tk_TK = (tk_TK_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/tk_TK.js
 const locale_tk_TK_locale = {
   placeholder: 'Wagty saýlaň',
   rangePlaceholder: ['Başlanýan wagty', 'Gutarýan wagty']
 };
-/* harmony default export */ const locale_tk_TK = (locale_tk_TK_locale);
+/* harmony default export */ var locale_tk_TK = (locale_tk_TK_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/tk_TK.js
 
 
@@ -15382,7 +15313,7 @@ const date_picker_locale_tk_TK_locale = {
   }, tk_TK),
   timePickerLocale: Object.assign({}, locale_tk_TK)
 };
-/* harmony default export */ const date_picker_locale_tk_TK = (date_picker_locale_tk_TK_locale);
+/* harmony default export */ var date_picker_locale_tk_TK = (date_picker_locale_tk_TK_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/ur_PK.js
 var ur_PK_locale = {
   locale: 'ur_PK',
@@ -15413,13 +15344,13 @@ var ur_PK_locale = {
   previousCentury: 'پچھلی صدی',
   nextCentury: 'اگلی صدی'
 };
-/* harmony default export */ const ur_PK = (ur_PK_locale);
+/* harmony default export */ var ur_PK = (ur_PK_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/ur_PK.js
 const locale_ur_PK_locale = {
   placeholder: 'وقت منتخب کریں',
   rangePlaceholder: ['وقت منتخب کریں', 'آخر وقت']
 };
-/* harmony default export */ const locale_ur_PK = (locale_ur_PK_locale);
+/* harmony default export */ var locale_ur_PK = (locale_ur_PK_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/ur_PK.js
 
 
@@ -15440,7 +15371,7 @@ const date_picker_locale_ur_PK_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_ur_PK = (date_picker_locale_ur_PK_locale);
+/* harmony default export */ var date_picker_locale_ur_PK = (date_picker_locale_ur_PK_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/uk_UA.js
 var uk_UA_locale = {
   locale: 'uk_UA',
@@ -15470,12 +15401,12 @@ var uk_UA_locale = {
   previousCentury: 'Попереднє століття',
   nextCentury: 'Наступне століття'
 };
-/* harmony default export */ const uk_UA = (uk_UA_locale);
+/* harmony default export */ var uk_UA = (uk_UA_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/uk_UA.js
 const locale_uk_UA_locale = {
   placeholder: 'Оберіть час'
 };
-/* harmony default export */ const locale_uk_UA = (locale_uk_UA_locale);
+/* harmony default export */ var locale_uk_UA = (locale_uk_UA_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/uk_UA.js
 
 
@@ -15489,7 +15420,7 @@ const date_picker_locale_uk_UA_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_uk_UA = (date_picker_locale_uk_UA_locale);
+/* harmony default export */ var date_picker_locale_uk_UA = (date_picker_locale_uk_UA_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/vi_VN.js
 var vi_VN_locale = {
   locale: 'vi_VN',
@@ -15520,12 +15451,12 @@ var vi_VN_locale = {
   previousCentury: 'Thế kỷ trước',
   nextCentury: 'Thế kỷ sau'
 };
-/* harmony default export */ const vi_VN = (vi_VN_locale);
+/* harmony default export */ var vi_VN = (vi_VN_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/vi_VN.js
 const locale_vi_VN_locale = {
   placeholder: 'Chọn thời gian'
 };
-/* harmony default export */ const locale_vi_VN = (locale_vi_VN_locale);
+/* harmony default export */ var locale_vi_VN = (locale_vi_VN_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/vi_VN.js
 
 
@@ -15539,7 +15470,7 @@ const date_picker_locale_vi_VN_locale = {
 };
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_vi_VN = (date_picker_locale_vi_VN_locale);
+/* harmony default export */ var date_picker_locale_vi_VN = (date_picker_locale_vi_VN_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/zh_CN.js
 var zh_CN_locale = {
   locale: 'zh_CN',
@@ -15569,13 +15500,13 @@ var zh_CN_locale = {
   previousCentury: '上一世纪',
   nextCentury: '下一世纪'
 };
-/* harmony default export */ const zh_CN = (zh_CN_locale);
+/* harmony default export */ var zh_CN = (zh_CN_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/zh_CN.js
 const locale_zh_CN_locale = {
   placeholder: '请选择时间',
   rangePlaceholder: ['开始时间', '结束时间']
 };
-/* harmony default export */ const locale_zh_CN = (locale_zh_CN_locale);
+/* harmony default export */ var locale_zh_CN = (locale_zh_CN_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/zh_CN.js
 
 
@@ -15599,7 +15530,7 @@ const date_picker_locale_zh_CN_locale = {
 date_picker_locale_zh_CN_locale.lang.ok = '确定';
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_zh_CN = (date_picker_locale_zh_CN_locale);
+/* harmony default export */ var date_picker_locale_zh_CN = (date_picker_locale_zh_CN_locale);
 ;// CONCATENATED MODULE: ./node_modules/rc-picker/es/locale/zh_TW.js
 var zh_TW_locale = {
   locale: 'zh_TW',
@@ -15629,12 +15560,12 @@ var zh_TW_locale = {
   previousCentury: '上一世紀',
   nextCentury: '下一世紀'
 };
-/* harmony default export */ const zh_TW = (zh_TW_locale);
+/* harmony default export */ var zh_TW = (zh_TW_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/time-picker/locale/zh_TW.js
 const locale_zh_TW_locale = {
   placeholder: '請選擇時間'
 };
-/* harmony default export */ const locale_zh_TW = (locale_zh_TW_locale);
+/* harmony default export */ var locale_zh_TW = (locale_zh_TW_locale);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/date-picker/locale/zh_TW.js
 
 
@@ -15657,7 +15588,7 @@ const date_picker_locale_zh_TW_locale = {
 date_picker_locale_zh_TW_locale.lang.ok = '確 定';
 // All settings at:
 // https://github.com/ant-design/ant-design/blob/master/components/date-picker/locale/example.json
-/* harmony default export */ const date_picker_locale_zh_TW = (date_picker_locale_zh_TW_locale);
+/* harmony default export */ var date_picker_locale_zh_TW = (date_picker_locale_zh_TW_locale);
 // EXTERNAL MODULE: ./node_modules/dayjs/locale/ar.js
 var ar = __webpack_require__(3939);
 // EXTERNAL MODULE: ./node_modules/dayjs/locale/az.js
@@ -16163,7 +16094,7 @@ var select_update = injectStylesIntoStyleTag_default()(select_select/* default *
 
 
 
-       /* harmony default export */ const react_antd_select_select = (select_select/* default */.Z && select_select/* default.locals */.Z.locals ? select_select/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var react_antd_select_select = (select_select/* default */.Z && select_select/* default.locals */.Z.locals ? select_select/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-antd/select/index.js
 var select_excluded = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "lfLocale", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "fullWidth", "popupMatchSelectWidth", "showSearch", "placement", "showArrow", "listHeight", "virtual", "options", "filterKey", "filterValue", "showImageOptions"];
@@ -16692,7 +16623,7 @@ var three_columns_update = injectStylesIntoStyleTag_default()(three_columns/* de
 
 
 
-       /* harmony default export */ const three_columns_three_columns = (three_columns/* default */.Z && three_columns/* default.locals */.Z.locals ? three_columns/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var three_columns_three_columns = (three_columns/* default */.Z && three_columns/* default.locals */.Z.locals ? three_columns/* default.locals */.Z.locals : undefined);
 
 // EXTERNAL MODULE: ./common/three-columns/index.js + 1 modules
 var common_three_columns = __webpack_require__(7645);
@@ -16728,7 +16659,7 @@ var two_columns_update = injectStylesIntoStyleTag_default()(two_columns/* defaul
 
 
 
-       /* harmony default export */ const two_columns_two_columns = (two_columns/* default */.Z && two_columns/* default.locals */.Z.locals ? two_columns/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var two_columns_two_columns = (two_columns/* default */.Z && two_columns/* default.locals */.Z.locals ? two_columns/* default.locals */.Z.locals : undefined);
 
 // EXTERNAL MODULE: ./common/two-columns/index.js + 1 modules
 var common_two_columns = __webpack_require__(963);
@@ -16764,7 +16695,7 @@ var group_update = injectStylesIntoStyleTag_default()(group/* default */.Z, grou
 
 
 
-       /* harmony default export */ const group_group = (group/* default */.Z && group/* default.locals */.Z.locals ? group/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var group_group = (group/* default */.Z && group/* default.locals */.Z.locals ? group/* default.locals */.Z.locals : undefined);
 
 // EXTERNAL MODULE: ./common/group/index.js + 1 modules
 var common_group = __webpack_require__(8727);
@@ -16899,7 +16830,7 @@ var array_update = injectStylesIntoStyleTag_default()(array/* default */.Z, arra
 
 
 
-       /* harmony default export */ const array_array = (array/* default */.Z && array/* default.locals */.Z.locals ? array/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var array_array = (array/* default */.Z && array/* default.locals */.Z.locals ? array/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-antd/array/index.js
 var array_excluded = ["hint", "required", "tooltip", "name", "label", "error"];
@@ -16964,7 +16895,7 @@ var button_update = injectStylesIntoStyleTag_default()(button_button/* default *
 
 
 
-       /* harmony default export */ const react_antd_button_button = (button_button/* default */.Z && button_button/* default.locals */.Z.locals ? button_button/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var react_antd_button_button = (button_button/* default */.Z && button_button/* default.locals */.Z.locals ? button_button/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-antd/button/index.js
 
@@ -17098,7 +17029,7 @@ var tabs_update = injectStylesIntoStyleTag_default()(tabs/* default */.Z, tabs_o
 
 
 
-       /* harmony default export */ const tabs_tabs = (tabs/* default */.Z && tabs/* default.locals */.Z.locals ? tabs/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var tabs_tabs = (tabs/* default */.Z && tabs/* default.locals */.Z.locals ? tabs/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-antd/tabs/index.js
 
@@ -17193,7 +17124,7 @@ var upload_update = injectStylesIntoStyleTag_default()(upload/* default */.Z, up
 
 
 
-       /* harmony default export */ const upload_upload = (upload/* default */.Z && upload/* default.locals */.Z.locals ? upload/* default.locals */.Z.locals : undefined);
+       /* harmony default export */ var upload_upload = (upload/* default */.Z && upload/* default.locals */.Z.locals ? upload/* default.locals */.Z.locals : undefined);
 
 ;// CONCATENATED MODULE: ./react-antd/upload/index.js
 function upload_typeof(obj) { "@babel/helpers - typeof"; return upload_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, upload_typeof(obj); }
@@ -17533,12 +17464,11 @@ var LetsForm = function LetsForm(_ref) {
     framework: "react-antd"
   }, rest), children);
 };
-/* harmony default export */ const react_antd = (LetsForm);
+/* harmony default export */ var react_antd = (LetsForm);
 
 
 
-})();
-
+}();
 /******/ 	return __webpack_exports__;
 /******/ })()
 ;
