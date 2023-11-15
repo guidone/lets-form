@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import _ from 'lodash';
 import classNames from 'classnames';
 
@@ -18,6 +18,7 @@ const ReactGenericInput = ({
   disabled,
   readOnly,
   required,
+  submitOnEnter = false,
   size,
   width,
   fullWidth,
@@ -26,9 +27,11 @@ const ReactGenericInput = ({
   inputType,
   inputMode,
   component,
+  lfOnEnter = () => {},
   ...rest
 }) => {
   const hasError = error && _.isString(error);
+  const handleKeyUp = useCallback(e => e.keyCode === 13 && lfOnEnter(), [lfOnEnter]);
 
   return (
     <div
@@ -46,6 +49,7 @@ const ReactGenericInput = ({
           defaultValue={value}
           onChange={onChange}
           onBlur={onBlur}
+          onKeyUp={submitOnEnter ? handleKeyUp : undefined}
           placeholder={placeholder}
           style={makeWidthStyle(fullWidth, width)}
           autoComplete={autocomplete}

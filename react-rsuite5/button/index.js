@@ -5,6 +5,7 @@ import _ from 'lodash';
 
 import { I18N } from '../../components';
 import { MakeButton } from '../../common';
+import { passRest } from '../../helpers';
 
 import './button.scss';
 
@@ -14,20 +15,20 @@ const RSuiteButton = ({ label, icon, hint, tooltip, ...rest }) => {
     inner = (
       <Button
         startIcon={<img className="lf-icon" src={icon} />}
-        {...rest}
+        {...passRest(rest)}
       >{label}</Button>
     ) 
   } else if (!_.isEmpty(label) && _.isEmpty(icon)) {
     inner = (
       <Button
-        {...rest}
+        {...passRest(rest)}
       >{label}</Button>
     ) 
   } else if (_.isEmpty(label) && !_.isEmpty(icon)) {
     inner = (
       <IconButton
         icon={<img className="lf-icon" src={icon} />}
-        {...rest}
+        {...passRest(rest)}
       />
     );
   } else {

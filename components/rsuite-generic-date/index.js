@@ -4,6 +4,7 @@ import { Form, DatePicker, CustomProvider } from 'rsuite';
 import * as locales from 'rsuite/locales';
 
 import { RequiredIcon } from '../../components';
+import { passRest } from '../../helpers';
 
 const RSuiteGenericDate = ({
   name,
@@ -48,7 +49,7 @@ const RSuiteGenericDate = ({
           errorMessage={_.isString(error) ? error : undefined }
           disabled={disabled}
           placeholder={placeholder}
-          {...rest}
+          {...passRest(rest)}
         />
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </CustomProvider>

@@ -283,6 +283,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     control,
     framework,
     onChange,
+    onEnter,
     getValues,
     Wrapper,
     GroupWrapper,
@@ -338,6 +339,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   PlaceholderWrapper,
                   BottomView,
                   onChange,
+                  onEnter,
                   fields: field.fields,
                   control,
                   framework,
@@ -408,6 +410,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                           PlaceholderWrapper,
                           BottomView,
                           onChange,
+                          onEnter,
                           fields: field.fields && _.isArray(field.fields[tab]) ? field.fields[tab] : [],                    
                           control,
                           framework,
@@ -492,6 +495,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                           PlaceholderWrapper,
                           BottomView,
                           onChange,
+                          onEnter,
                           fields: field.fields && _.isArray(field.fields[step]) ? field.fields[step] : [],                    
                           control,
                           framework,
@@ -560,6 +564,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   PlaceholderWrapper,
                   BottomView,
                   onChange,
+                  onEnter,
                   fields: field.fields,
                   control,
                   framework,
@@ -615,6 +620,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       PlaceholderWrapper,
                       BottomView,
                       onChange,
+                      onEnter,
                       fields: field.leftFields,
                       control,
                       framework,
@@ -649,6 +655,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       PlaceholderWrapper,
                       BottomView,
                       onChange,
+                      onEnter,
                       fields: field.rightFields,
                       control,
                       framework,
@@ -706,6 +713,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       PlaceholderWrapper,
                       BottomView,
                       onChange,
+                      onEnter,
                       fields: field.leftFields,
                       control,
                       framework,
@@ -740,6 +748,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       PlaceholderWrapper,
                       BottomView,
                       onChange,
+                      onEnter,
                       fields: field.centerFields,
                       control,
                       framework,
@@ -774,6 +783,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       PlaceholderWrapper,
                       BottomView,
                       onChange,
+                      onEnter,
                       fields: field.rightFields,
                       control,
                       framework,
@@ -840,6 +850,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 lfComponent={field.component}
                 lfFramework={framework}
                 lfLocale={locale}
+                lfOnEnter={onEnter}
                 label={field.label}
                 hint={field.hint}
                 disabled={disabled || field.disabled}
@@ -879,6 +890,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     onSubmit = () => {},
     onReset = () => {},
     onError = () => {},
+    onEnter = () => {},
     onJavascriptError = () => {},
     locale,
     wrapper,
@@ -1038,6 +1050,14 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       [onChange, formFields, formName, transformers, framework, onJavascriptError]
     );
 
+    const handleEnter = useCallback(
+      () => {
+        handleSubmit(onHandleSubmit, onHandleError)();
+        onEnter();
+      },
+      [handleSubmit, onEnter, onHandleError, onHandleSubmit]
+    );
+
     if (debug) {
       console.log('[LetsForm] Validation', errors)
     }
@@ -1106,6 +1126,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               PlaceholderWrapper,
               BottomView,
               onChange: handleChange,
+              onEnter: handleEnter,
               fields: formFields, // take from state
               control,
               framework,

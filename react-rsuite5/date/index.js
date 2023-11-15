@@ -26,7 +26,9 @@ const SelectDate = I18N(
     // send always date string in format yyyy-mm-dd
     const handleChange = useCallback(
       d => {
-        onChange(d.toISOString().split('T')[0]);
+        if (d && d.toISOString) {
+          onChange(d.toISOString().split('T')[0]);
+        }
       },
       [onChange]
     );

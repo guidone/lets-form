@@ -41,6 +41,11 @@
         "description": "Hides the field from the form"
       },
       {
+        "name": "submitOnEnter",
+        "type": "boolean",
+        "description": "Trigger onSubmit / onError if the user hits Enter key"
+      },
+      {
         "name": "inputMode",
         "type": "string",
         "options": [
@@ -4264,6 +4269,16 @@
       {
         "name": "small",
         "type": "boolean"
+      },
+      {
+        "name": "status",
+        "type": "string",
+        "options": [
+          "finish",
+          "wait",
+          "process",
+          "error"
+        ]
       }
     ],
     "frameworks": [

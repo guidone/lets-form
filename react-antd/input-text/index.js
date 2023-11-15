@@ -21,6 +21,7 @@ const TextInput = I18N(
     disabled = false,
     readOnly = false,
     required = false,
+    submitOnEnter = false,
     maxLength,
     error,
     prefix,
@@ -34,12 +35,14 @@ const TextInput = I18N(
     inputType,
     inputMode,
     autocomplete,
+    lfOnEnter = () => {},
     ...rest
   }) => {
     const handleChange = useCallback(
       e => onChange(e.target.value),
       [onChange]
     );
+    const handleKeyUp = useCallback(e => e.keyCode === 13 && lfOnEnter(), [lfOnEnter]);
 
     return (
       <Form.Item
@@ -61,6 +64,7 @@ const TextInput = I18N(
           inputmode={inputMode}
           onChange={handleChange}
           onBlur={onBlur}
+          onKeyUp={submitOnEnter ? handleKeyUp : undefined}
           value={value}
           size={size}
           prefix={TextOrIcon(prefix)}

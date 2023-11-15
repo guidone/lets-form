@@ -6,6 +6,7 @@ import { passRest } from '../../helpers';
 import { I18N } from '../../components';
 
 import './steps.scss';
+import classNames from 'classnames';
 
 const i18nSteps = (value, i18n) => 
   (value ?? []).filter(value => value != null).map(value => ({ 
@@ -21,6 +22,8 @@ const Rsuite5Steps = I18N(
     value,
     steps,
     onChange = () => {},
+    align,
+    status,
     small,
     labelNext,
     labelPrevious,
@@ -31,11 +34,9 @@ const Rsuite5Steps = I18N(
     if (!defaultStep && !_.isEmpty(steps)) {
       defaultStepIdx = 0;
     }
+
     const [stepIdx, setStepIdx] = useState(defaultStepIdx);
-    
-
-    const step = !_.isEmpty(steps) ? steps[stepIdx].value : null;
-
+    const step = _.isArray(steps) && !_.isEmpty(steps) && stepIdx >= 0 ? steps[stepIdx].value : null;
 
     const handleNext = useCallback(
       () => {
@@ -55,22 +56,22 @@ const Rsuite5Steps = I18N(
       [onChange, stepIdx, steps]
     );
 
-
     return (
       <div
-      className="lf-control-steps"
-      data-lf-field-name={name}
+        className="lf-control-steps"
+        data-lf-field-name={name}
       >
         <Steps 
           current={stepIdx}
+          currentStatus={status}
           small={small}
           {...passRest(rest)}
         >
           {(steps || []).map(step => (
             <Steps.Item 
               key={`step_${step.value}`}
+              description={step.description || undefined}
               title={step.label} 
-              // description="Description" 
             />
           ))}      
         </Steps>
@@ -80,16 +81,18 @@ const Rsuite5Steps = I18N(
           </div>
         )}
 
-        <ButtonGroup>
-          <Button 
-            onClick={handlePrevious} 
-            disabled={_.isEmpty(steps) || stepIdx === 0}
-          >{labelPrevious || 'Previous'}</Button>
-          <Button 
-            onClick={handleNext} 
-            disabled={_.isEmpty(steps) || stepIdx === (steps.length - 1) }
-          >{labelNext || 'Next'}</Button>
-        </ButtonGroup>
+        <div className={classNames('lf-navigation-buttons', align)}>
+          <ButtonGroup>
+            <Button 
+              onClick={handlePrevious} 
+              disabled={_.isEmpty(steps) || stepIdx === 0}
+            >{labelPrevious || 'Previous'}</Button>
+            <Button 
+              onClick={handleNext} 
+              disabled={_.isEmpty(steps) || stepIdx === (steps.length - 1) }
+            >{labelNext || 'Next'}</Button>
+          </ButtonGroup>
+        </div>
       </div>
     );
   },

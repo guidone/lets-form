@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Form, Input, InputGroup } from 'rsuite';
 import _ from 'lodash';
 import classNames from 'classnames';
@@ -21,6 +21,7 @@ const TextInput = I18N(
     disabled = false,
     readOnly = false,
     required = false,
+    submitOnEnter = false,
     error,
     prefix,
     postfix,
@@ -32,8 +33,11 @@ const TextInput = I18N(
     inputMode,
     inputType,
     inside = false,
+    lfOnEnter = () => {},
     ...rest
   }) => {
+    const handleKeyUp = useCallback(e => e.keyCode === 13 && lfOnEnter(), [lfOnEnter]);
+
     const inner = (
       <Form.Control
         name={name}
@@ -41,6 +45,7 @@ const TextInput = I18N(
         value={value}
         onChange={onChange}
         onBlur={onBlur}
+        onKeyUp={submitOnEnter ? handleKeyUp : undefined}
         disabled={disabled}
         autoComplete={autocomplete}
         inputMode={inputMode}

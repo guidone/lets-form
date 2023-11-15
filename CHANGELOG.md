@@ -1,5 +1,11 @@
 # LetsForm Changelog
 
+## v0.4.21
+- submit on enter for text-field
+
+## v0.4.20
+- add steps component for RSuite
+
 ## v0.4.15
 - add validate json helper
 

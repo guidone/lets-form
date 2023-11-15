@@ -3,3 +3,7 @@
     padding-left: 1rem;
   }
 }
+
+.lf-form .lf-control-placeholder:not(:first-child) {
+  margin-top: var(--lf-field-margin-top);
+}

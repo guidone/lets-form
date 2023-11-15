@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import _ from 'lodash';
 import { TextField } from '@mui/material';
 import { FormControl, FormHelperText, InputAdornment } from '@mui/material';
@@ -24,6 +24,7 @@ const MuiGenericInput = ({
   disabled = false,
   readOnly = false,
   required,
+  submitOnEnter = false,
   fullWidth = false,
   variant,
   floatingLabel,
@@ -35,8 +36,11 @@ const MuiGenericInput = ({
   component,
   disableUnderline,
   className,
+  lfOnEnter = () => {},
   ...rest
 }) => {
+  const handleKeyUp = useCallback(e => e.keyCode === 13 && lfOnEnter(), [lfOnEnter]);
+
   return (
     <div
       data-lf-field-name={name}
@@ -59,6 +63,7 @@ const MuiGenericInput = ({
           required={floatingLabel ? required : undefined}
           style={_.isNumber(width) && !fullWidth ? { width: `${parseInt(width, 10)}px` } : undefined}
           onChange={onChange}
+          onKeyUp={submitOnEnter ? handleKeyUp : undefined}
           type={inputType}
           InputProps={{
             startAdornment: prefix ? <InputAdornment position="start">{TextOrIcon(prefix)}</InputAdornment> : undefined,

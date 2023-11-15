@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import _ from 'lodash';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -29,14 +29,17 @@ const BootstrapGenericInput = ({
   error,
   component,
   required,
+  submitOnEnter = false,
   prefix,
   postfix,
   placeholder,
   fullWidth,
   width,
   floatingLabel = false,
+  lfOnEnter = () => {},
   ...rest
 }) => {
+  const handleKeyUp = useCallback(e => e.keyCode === 13 && lfOnEnter(), [lfOnEnter]);
 
   const inner = (
     <Form.Control
@@ -47,6 +50,7 @@ const BootstrapGenericInput = ({
       value={value}
       plaintext={plaintext}
       onChange={onChange}
+      onKeyUp={submitOnEnter ? handleKeyUp : undefined}
       size={size}
       placeholder={placeholder}
       onBlur={onBlur}
