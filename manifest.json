@@ -355,11 +355,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "toggle": {
@@ -487,10 +483,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "select": {
@@ -747,11 +740,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "group": {
@@ -797,11 +786,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "two-columns": {
@@ -882,11 +867,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "three-columns": {
@@ -987,11 +968,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "array": {
@@ -1057,11 +1034,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "input-number": {
@@ -1328,10 +1301,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "slider": {
@@ -1555,10 +1525,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "date": {
@@ -1860,11 +1827,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "checkbox": {
@@ -1955,11 +1918,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "checkbox-group": {
@@ -2058,10 +2017,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "radio-group": {
@@ -2201,10 +2157,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "input-tag": {
@@ -2611,11 +2564,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "rate": {
@@ -2755,9 +2704,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "placeholder": {
@@ -2806,11 +2753,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "multiselect": {
@@ -3035,9 +2978,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "multiselect-language": {
@@ -3243,11 +3184,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "button": {
@@ -3437,10 +3374,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "divider": {
@@ -3470,11 +3404,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "datetime": {
@@ -3752,11 +3682,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "tabs": {
@@ -3893,10 +3819,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react-bootstrap",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "radio-tile": {
@@ -4147,8 +4070,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "buttons-toggle-group": {
@@ -4223,8 +4145,7 @@
       }
     ],
     "frameworks": [
-      "react-rsuite5",
-      "react-antd"
+      "react-rsuite5"
     ]
   },
   "steps": {

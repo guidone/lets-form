@@ -2,10 +2,10 @@
   "name": "lets-form",
   "version": "0.4.20",
   "description": "JSON to React form generator, supporting multiple frameworks (Bootstrap, Material UI, RSuite, etc)",
-  "main": "rsuite5.js",
-  "module": "rsuite5.js",
+  "main": "index.js",
+  "module": "index.js",
   "scripts": {
-    "prebuild": "npm run build:clear",
+    "prebuild": "npm run unstash && npm run build:clear",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build-rsuite5 && npm run build-antd && npm run build-bootstrap && npm run build-react && npm run build-material-ui && npm run build-helpers && echo \"\n\nAll done.\"",
     "build:webpack": "webpack --mode production --progress",
@@ -15,7 +15,9 @@
     "build-react": "npm run build:webpack -- --env framework=\"react\"",
     "build-material-ui": "npm run build:webpack -- --env framework=\"material-ui\"",
     "build-helpers": "npm run build:webpack -- --env framework=\"helpers\"",
-    "build:clear": "node ./scripts/clear-builds.js"
+    "build:clear": "node ./scripts/clear-builds.js",
+    "stash": "./scripts/stash-node-modules.sh",
+    "unstash": "./scripts/unstash-node-modules.sh"
   },
   "author": "Guido Bellomo",
   "license": "ISC",

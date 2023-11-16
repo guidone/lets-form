@@ -1,10 +1,10 @@
 import { GenerateGenerator } from './generator';
 
-import { Fields as FieldsReactRsuite5, Forms as FormsReactRsuite5 } from './react-rsuite5';
-import { Fields as FieldsReactMaterialUI, Forms as FormsReactMaterialUI } from './react-material-ui';
-import { Fields as FieldsReact, Forms as FormsReact } from './react';
-import { Fields as FieldsReactBootstrap, Forms as FormsReactBootstrap } from './react-bootstrap';
-import { Fields as FieldsReactAntD, Forms as FormsReactAndD } from './react-antd';
+import { Fields as FieldsReactRsuite5, Forms as FormsReactRsuite5 } from './react-rsuite5/index';
+import { Fields as FieldsReactMaterialUI, Forms as FormsReactMaterialUI } from './react-material-ui/index';
+import { Fields as FieldsReact, Forms as FormsReact } from './react/index';
+import { Fields as FieldsReactBootstrap, Forms as FormsReactBootstrap } from './react-bootstrap/index';
+import { Fields as FieldsReactAntD, Forms as FormsReactAndD } from './react-antd/index';
 
 import { mergeFields } from './helpers/merge-fields';
 

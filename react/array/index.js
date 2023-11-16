@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 
 import { ListArray } from '../../common';
-import LetsForm from '../../react';
+import LetsForm from '../../react/index';
 import { RequiredIcon, I18N } from '../../components';
 
 import './array.scss';
