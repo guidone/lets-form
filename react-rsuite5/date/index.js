@@ -3,7 +3,7 @@ import _ from 'lodash';
 
 import { I18N } from '../../components';
 import { RSuiteGenericDate } from '../../components/rsuite-generic-date';
-import { isValidDate } from '../../helpers';
+import { isValidDate, passRest } from '../../helpers';
 
 const SelectDate = I18N(
   ({
@@ -37,7 +37,7 @@ const SelectDate = I18N(
       <RSuiteGenericDate
         value={currentValue}
         onChange={handleChange}
-        {...rest}
+        {...passRest(rest)}
       />
     )
   },

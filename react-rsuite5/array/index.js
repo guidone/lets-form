@@ -4,6 +4,7 @@ import { Form } from 'rsuite';
 import { RequiredIcon, I18N } from '../../components';
 import { ListArray } from '../../common';
 import LetsForm from '../../react-rsuite5';
+import { passRest } from '../../helpers/pass-rest';
 
 const ListArrayRSuite5 = I18N(
   ({
@@ -28,7 +29,7 @@ const ListArrayRSuite5 = I18N(
         )}
         <ListArray
           LetsFormComponent={LetsForm}
-          {...rest}
+          {...passRest(rest)}
         />
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>

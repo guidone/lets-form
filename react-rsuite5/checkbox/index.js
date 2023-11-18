@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
 import { Form, Checkbox } from 'rsuite';
 import { I18N } from '../../components';
+import { passRest } from '../../helpers';
 
 import './index.scss';
 
@@ -60,7 +61,7 @@ const CheckboxRSuite = I18N(
           onBlur={onBlur}
           errorMessage={_.isString(error) ? error : undefined }
           disabled={disabled}
-          {...rest}
+          {...passRest(rest)}
         >
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}

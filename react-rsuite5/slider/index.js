@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { Form, Slider } from 'rsuite';
 
 import { RequiredIcon, I18N } from '../../components';
+import { passRest } from '../../helpers';
 
 import './index.scss';
 
@@ -57,7 +58,7 @@ const SliderRsuite = I18N(
           errorMessage={_.isString(error) ? error : undefined }
           disabled={disabled}
           tooltip={showTooltip}
-          {...rest}
+          {...passRest(rest)}
         />
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>

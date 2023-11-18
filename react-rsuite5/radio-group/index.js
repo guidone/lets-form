@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Radio, RadioGroup } from 'rsuite';
 
 import { I18N } from '../../components';
-import { i18nOptions } from '../../helpers';
+import { i18nOptions, passRest } from '../../helpers';
 
 const RadioGroupRSuite = I18N(
   ({
@@ -39,7 +39,7 @@ const RadioGroupRSuite = I18N(
           value={value}
           onChange={onChange}
           appearance={appearance}          
-          {...rest}
+          {...passRest(rest)}
         >
           {(options ?? []).map(({ value, label}) => (
             <Radio
