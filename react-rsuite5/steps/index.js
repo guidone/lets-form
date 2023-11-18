@@ -4,6 +4,7 @@ import { Steps, ButtonGroup, Button } from 'rsuite';
 
 import { passRest } from '../../helpers';
 import { I18N } from '../../components';
+import { GenericIcon } from '../../components/generic-icon';
 
 import './steps.scss';
 import classNames from 'classnames';
@@ -71,7 +72,8 @@ const Rsuite5Steps = I18N(
             <Steps.Item 
               key={`step_${step.value}`}
               description={step.description || undefined}
-              title={step.label} 
+              title={step.label}
+              icon={step.icon && <GenericIcon icon={step.icon} />} 
             />
           ))}      
         </Steps>

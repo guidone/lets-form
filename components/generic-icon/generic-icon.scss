@@ -1,0 +1,14 @@
+.lf-generic-icon {
+  max-width: 16px;
+  max-height: 16px;
+
+  &.lg {
+    max-width: 20px;
+    max-height: 20px;
+  }
+  
+  .xs {
+    max-width: 12px;
+    max-height: 12px;
+  }
+}
