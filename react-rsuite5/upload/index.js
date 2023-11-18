@@ -17,10 +17,11 @@ const makeDefaultValue = defaultValue => {
 };
 
 // shield props component or the uploaded will replace the disabled prop
-const ShieldedButton = ({ superDisabled, disabled, hint, ...rest }) => {
+const ShieldedButton = ({ superDisabled, superSize, disabled, hint, ...rest }) => {
   const inner = (
     <Button 
       {...rest}
+      size={superSize}
       disabled={superDisabled}
     />
   );
@@ -91,7 +92,7 @@ const Upload = I18N(
       inner = (
         <ShieldedButton
           appearance={uploadButtonAppearance}
-          size={uploadButtonSize}
+          superSize={uploadButtonSize}
           superDisabled={disabled || (!multiple && !_.isEmpty(value))}
           hint={!tooltip && hint}
         >
@@ -114,7 +115,8 @@ const Upload = I18N(
         )} 
         <Uploader
           autoUpload={false}
-          accept={accept}
+          action=""
+          accept={_.isArray(accept) ? accept.join(',') : accept}
           multiple={multiple}
           removable={removable}
           draggable={draggable}
