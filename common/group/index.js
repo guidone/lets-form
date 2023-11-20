@@ -15,7 +15,7 @@ const Group = I18N(
     disabled = false,
     open = true,
     collapsible = true,
-    bottomBorder = false,
+    border = 'top',
     align,
     children
   }) => {
@@ -38,8 +38,7 @@ const Group = I18N(
     return (
       <div
         data-lf-field-name={name}
-        className={classNames('lf-control-group', {
-          'bottom-border': bottomBorder,
+        className={classNames('lf-control-group', `lf-border-${border}`, {
           'open': isOpen,
           'close': !isOpen
         })}
@@ -63,7 +62,7 @@ const Group = I18N(
           )}
           </span>
         </div>
-        {(isOpen || !collapsible) && <div>{children}</div>}
+        {(isOpen || !collapsible) && <div className="lf-group-content">{children}</div>}
       </div>
     );
   },

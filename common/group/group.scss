@@ -6,16 +6,78 @@
     }
   }
 
-  &.bottom-border.open {
-    border-bottom: 1px solid #e5e5ea;
-    padding-bottom: 15px;
+  &.lf-border-boxed {
+    border-bottom: 1px solid var(--lf-border-color);
+    border-left: 1px solid var(--lf-border-color);
+    border-right: 1px solid var(--lf-border-color);
+
+    .header {
+      &:before {
+        border-top: 1px solid var(--lf-border-color);
+        content: "";
+        flex: 1 0;
+      }
+  
+      &:after {
+        border-top: 1px solid var(--lf-border-color);
+        content: "";
+        flex: 1 0;
+      }  
+    }
+
+    .lf-group-content {
+      padding-left: var(--lf-group-padding);
+      padding-right: var(--lf-group-padding);
+    }
+  }
+
+  &.lf-border-topBottom {
+    border-bottom: 1px solid var(--lf-border-color);
+
+    .header {
+      &:before {
+        border-top: 1px solid var(--lf-border-color);
+        content: "";
+        flex: 1 0;
+      }
+  
+      &:after {
+        border-top: 1px solid var(--lf-border-color);
+        content: "";
+        flex: 1 0;
+      }  
+    }
+  }
+
+  &.lf-border-top {
+    .header {
+      &:before {
+        border-top: 1px solid var(--lf-border-color);
+        content: "";
+        flex: 1 0;
+      }
+  
+      &:after {
+        border-top: 1px solid var(--lf-border-color);
+        content: "";
+        flex: 1 0;
+      }  
+    }
+  }
+
+  &.lf-border-bottom {
+    border-bottom: 1px solid var(--lf-border-color);
+  }
+
+  &.open {
+    padding-bottom: var(--lf-field-margin);
   }
 
   .header {
     align-items: center;
     background: transparent;
     display: flex;
-    margin: 15px 0px;
+    margin: var(--lf-field-margin) 0px;
     height: 1px;
     flex-direction: row;
 
@@ -23,18 +85,6 @@
       flex: 0 0 auto;
       padding: 0 12px;
       display: inline-block;
-    }
-
-    &:before {
-      border-top: 1px solid #e5e5ea;
-      content: "";
-      flex: 1 0;
-    }
-
-    &:after {
-      border-top: 1px solid #e5e5ea;
-      content: "";
-      flex: 1 0;
     }
 
     &.left {

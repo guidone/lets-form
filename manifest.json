@@ -792,6 +792,16 @@
         "type": "boolean"
       },
       {
+        "name": "border",
+        "type": "string",
+        "options": [
+          "top",
+          "bottom",
+          "topBottom",
+          "boxed"
+        ]
+      },
+      {
         "name": "bottomBorder",
         "type": "boolean"
       }
