@@ -800,10 +800,6 @@
           "topBottom",
           "boxed"
         ]
-      },
-      {
-        "name": "bottomBorder",
-        "type": "boolean"
       }
     ],
     "frameworks": [
