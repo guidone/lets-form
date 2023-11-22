@@ -45,6 +45,7 @@ module.exports = module.exports = (env = {}) => {
     outputFile = 'antd.js';
     entryPointName = 'lets-form-antd';
     outputPath = null;
+    globalObject = 'this';
   } else if (env.framework === 'rsuite5') {
     console.log('Building for RSuite5 framework');
     library = 'lets-form-rsuite5';
@@ -52,6 +53,7 @@ module.exports = module.exports = (env = {}) => {
     outputFile = 'rsuite5.js';
     entryPointName = 'lets-form-rsuite5';
     outputPath = null;
+    globalObject = 'this';
   } else if (env.framework === 'bootstrap') {
     console.log('Building for Bootstrap framework');
     library = 'lets-form-bootstrap';
@@ -59,6 +61,7 @@ module.exports = module.exports = (env = {}) => {
     outputFile = 'bootstrap.js';
     entryPointName = 'lets-form-bootstrap';
     outputPath = null;
+    globalObject = 'this';
   } else if (env.framework === 'react') {
     console.log('Building for React framework');
     library = 'lets-form-react';
@@ -66,6 +69,7 @@ module.exports = module.exports = (env = {}) => {
     outputFile = 'react.js';
     entryPointName = 'lets-form-react';
     outputPath = null;
+    globalObject = 'this';
   } else if (env.framework === 'material-ui') {
     console.log('Building for Material UI framework');
     library = 'lets-form-material-ui';
@@ -73,6 +77,7 @@ module.exports = module.exports = (env = {}) => {
     outputFile = 'material-ui.js';
     entryPointName = 'lets-form-material-ui';
     outputPath = null;
+    globalObject = 'this';
   } else if (env.framework === 'helpers') {
     console.log('Building for helpers');
     library = 'lets-form/utils';

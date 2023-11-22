@@ -1,3 +1,10 @@
+.lf-form {
+  // overrid the field rule
+  .lf-control-group:not(:first-child) {
+    margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));
+  }
+}
+
 .lf-control-group {
 
   .header {
@@ -69,17 +76,13 @@
     border-bottom: 1px solid var(--lf-border-color);
   }
 
-  &.open {
-    padding-bottom: var(--lf-field-margin);
-  }
-
   .header {
     align-items: center;
     background: transparent;
-    display: flex;
-    margin: var(--lf-field-margin) 0px;
+    display: flex;    
     height: 1px;
     flex-direction: row;
+    margin: var(--lf-group-header) 0px;
 
     .inner-text {
       flex: 0 0 auto;
