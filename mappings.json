@@ -247,10 +247,16 @@
     "layout": null,
     "arrayType": null,
     "align": [
-      "react-rsuite5"
+      "react",
+      "react-rsuite5",
+      "react-bootstrap",
+      "react-antd"
     ],
     "alignOffset": [
-      "react-rsuite5"
+      "react",
+      "react-rsuite5",
+      "react-bootstrap",
+      "react-antd"
     ],
     "tooltip": [
       "react-rsuite5"
