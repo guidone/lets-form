@@ -1,6 +1,6 @@
 {
   "name": "lets-form",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "JSON to React form generator, supporting multiple frameworks (Bootstrap, Material UI, RSuite, etc)",
   "main": "index.js",
   "module": "index.js",
