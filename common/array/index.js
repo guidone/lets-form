@@ -6,7 +6,9 @@ import { useFormContext } from '../../hooks';
 
 import { isEmptyItem } from './helpers/is-empty-item';
 import { ArrayItem } from './views/array-item';
+
 import './list-array.scss';
+import classNames from 'classnames';
 
 /**
  * Check if object is empty or all the keys are empty
@@ -91,7 +93,9 @@ const ListArray = ({
   lfLocale,
   leftMargin = 0,
   children,
-  arrayType = 'arrayOfObject'
+  arrayType = 'arrayOfObject',
+  align = 'top',
+  alignOffset = 0
 }) => {
   const { locales } = useFormContext();
   const form = {
@@ -139,7 +143,7 @@ const ListArray = ({
 
   return (
     <div
-      className="lf-control-common-array"
+      className={classNames('lf-control-common-array', align ? `lf-${align}` : undefined)}
       style={style}
     >
       {(_.isArray(items) ? items : []).map((item, idx) => {
@@ -156,6 +160,8 @@ const ListArray = ({
             showAdd={showAdd}
             onAdd={handleAdd}
             onRemove={handleRemove}
+            align={align}
+            alignOffset={alignOffset}
           >
             <LetsFormComponent
               form={form}

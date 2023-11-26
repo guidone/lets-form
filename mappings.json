@@ -246,6 +246,12 @@
     "hidden": null,
     "layout": null,
     "arrayType": null,
+    "align": [
+      "react-rsuite5"
+    ],
+    "alignOffset": [
+      "react-rsuite5"
+    ],
     "tooltip": [
       "react-rsuite5"
     ],

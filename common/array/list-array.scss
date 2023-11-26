@@ -1,6 +1,28 @@
 .lf-control-common-array {
   margin-top: 0px !important;
 
+  &.lf-center {
+    .lf-control-common-array-item {
+      .buttons {
+        align-self: center;
+      }
+    }   
+  }
+  &.lf-top {
+    .lf-control-common-array-item {
+      .buttons {
+        align-self: flex-start;
+      }
+    }   
+  }
+  &.lf-bottom {
+    .lf-control-common-array-item {
+      .buttons {
+        align-self: flex-end;
+      }
+    }   
+  } 
+
   .lf-control-common-array-item {
     display: flex;
     flex-direction: row;

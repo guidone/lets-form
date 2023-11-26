@@ -35,7 +35,6 @@ const IconButton = ({
 
 
 const ArrayItem = ({
-  name,
   children,
   item,
   disabled,
@@ -44,8 +43,20 @@ const ArrayItem = ({
   onRemove = () => {},
   disableAdd = false,
   showAdd = false,
-  leftMargin = 10
+  align,
+  alignOffset
 }) => {
+  const handleRemove = useCallback(
+    () => onRemove(item),
+    [item]
+  );
+  let style;
+  if ((align === 'top' || align === 'bottom') && _.isNumber(alignOffset) && alignOffset > 0) {
+    style = {
+      [`margin-${align}`]: `${alignOffset}px`
+    };
+  }
+
   return (
     <div
       className="lf-control-common-array-item"
@@ -53,7 +64,7 @@ const ArrayItem = ({
       <div className="inner-form">
         {children}
       </div>
-      <div className="buttons">
+      <div className="buttons" style={style}>
         {showAdd && (
           <IconButton
             disabled={disableAdd || disabled || readOnly}
@@ -71,9 +82,7 @@ const ArrayItem = ({
             appearance="link"
             icon={<MinusCircle height={16} width={16} color="#3498ff" />}
             size="sm"
-            onClick={event => {
-              onRemove(item);
-            }}
+            onClick={handleRemove}
           />
         )}
       </div>
