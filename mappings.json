@@ -244,23 +244,9 @@
     "disabled": null,
     "readOnly": null,
     "hidden": null,
-    "layout": null,
+    "align": null,
+    "alignOffset": null,
     "arrayType": null,
-    "align": [
-      "react",
-      "react-rsuite5",
-      "react-bootstrap",
-      "react-antd"
-    ],
-    "alignOffset": [
-      "react",
-      "react-rsuite5",
-      "react-bootstrap",
-      "react-antd"
-    ],
-    "tooltip": [
-      "react-rsuite5"
-    ],
     "validationMinLength": "validation",
     "validationMin": "validation",
     "validationMaxLength": "validation",

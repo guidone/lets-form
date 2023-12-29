@@ -1004,49 +1004,7 @@
     "label": "List Array",
     "category": "general",
     "name": "array",
-    "react-mui": [
-      {
-        "component": "two-columns",
-        "name": "two-columns-align-alignOffset",
-        "leftFields": [
-          {
-            "name": "align",
-            "component": "select",
-            "label": "Buttons alignment",
-            "options": [
-              {
-                "value": "top",
-                "label": "Top"
-              },
-              {
-                "value": "center",
-                "label": "Center"
-              },
-              {
-                "value": "bottom",
-                "label": "Bottom"
-              }
-            ],
-            "searchable": false,
-            "hint": "Vertical alignment of add / remove buttons",
-            "react-rsuite5": {
-              "tooltip": true
-            },
-            "transformer": "if (align === 'top' || align === 'bottom') {\n        enable('alignOffset');\n      } else {\n        disable('alignOffset');\n      }"
-          }
-        ],
-        "rightFields": [
-          {
-            "name": "alignOffset",
-            "component": "input-number",
-            "label": "Offset",
-            "step": 1,
-            "min": 0,
-            "max": 1024
-          }
-        ]
-      }
-    ],
+    "react-mui": [],
     "common": [
       {
         "name": "name",
@@ -1079,13 +1037,18 @@
         "description": "Hides the field from the form"
       },
       {
-        "name": "layout",
+        "name": "align",
         "type": "string",
+        "description": "Vertical alignment of add / remove buttons",
         "options": [
-          "vertical",
-          "horizontal",
-          "inline"
+          "top",
+          "center",
+          "bottom"
         ]
+      },
+      {
+        "name": "alignOffset",
+        "type": "number"
       },
       {
         "name": "arrayType",
@@ -1096,75 +1059,6 @@
           "arrayOfString",
           "commaSeparated"
         ]
-      }
-    ],
-    "react": [
-      {
-        "name": "align",
-        "type": "string",
-        "description": "Vertical alignment of add / remove buttons",
-        "options": [
-          "top",
-          "center",
-          "bottom"
-        ]
-      },
-      {
-        "name": "alignOffset",
-        "type": "number"
-      }
-    ],
-    "react-rsuite5": [
-      {
-        "name": "align",
-        "type": "string",
-        "description": "Vertical alignment of add / remove buttons",
-        "options": [
-          "top",
-          "center",
-          "bottom"
-        ]
-      },
-      {
-        "name": "alignOffset",
-        "type": "number"
-      },
-      {
-        "name": "tooltip",
-        "type": "boolean",
-        "description": "Show hint as tooltip next to label"
-      }
-    ],
-    "react-bootstrap": [
-      {
-        "name": "align",
-        "type": "string",
-        "description": "Vertical alignment of add / remove buttons",
-        "options": [
-          "top",
-          "center",
-          "bottom"
-        ]
-      },
-      {
-        "name": "alignOffset",
-        "type": "number"
-      }
-    ],
-    "react-antd": [
-      {
-        "name": "align",
-        "type": "string",
-        "description": "Vertical alignment of add / remove buttons",
-        "options": [
-          "top",
-          "center",
-          "bottom"
-        ]
-      },
-      {
-        "name": "alignOffset",
-        "type": "number"
       }
     ],
     "frameworks": [
