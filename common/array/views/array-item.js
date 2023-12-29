@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useCallback } from 'react';
 import classNames from 'classnames';
+import _ from 'lodash';
 
 import { PlusCircle, MinusCircle } from '../../../assets/icons';
 
