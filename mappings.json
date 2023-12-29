@@ -1447,19 +1447,51 @@
   "steps": {
     "name": null,
     "hidden": null,
-    "steps": null,
-    "value": null,
-    "label": null,
-    "description": null,
-    "icon": null,
     "labelNext": null,
     "labelPrevious": null,
     "align": null,
+    "steps": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "value": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "label": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "description": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "icon": [
+      "react-rsuite5",
+      "react-antd"
+    ],
     "small": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ],
     "status": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "subtitle": [
+      "react-antd"
+    ],
+    "stepsType": [
+      "react-antd"
+    ],
+    "percent": [
+      "react-antd"
+    ],
+    "clickable": [
+      "react-antd"
+    ],
+    "labelPlacement": [
+      "react-antd"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",

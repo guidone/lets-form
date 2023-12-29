@@ -28,6 +28,7 @@ import { CheckboxGroup } from './checkbox-group';
 import { Tabs } from './tabs';
 import { Upload } from './upload';
 import { ButtonsToggleGroup } from './buttons-toggle-group'; 
+import { Steps } from './steps';
 
 const Fields = {
   'input-text': {
@@ -104,6 +105,9 @@ const Fields = {
   },
   'buttons-toggle-group': {
     'react-antd': ButtonsToggleGroup
+  },
+  'steps': {
+    'react-antd': Steps
   }
 };
 

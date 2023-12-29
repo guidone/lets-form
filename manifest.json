@@ -4249,10 +4249,6 @@
         "description": "Hides the field from the form"
       },
       {
-        "name": "steps",
-        "type": "array"
-      },
-      {
         "name": "labelNext",
         "type": "string | i18n"
       },
@@ -4272,6 +4268,10 @@
     ],
     "react-rsuite5": [
       {
+        "name": "steps",
+        "type": "array"
+      },
+      {
         "name": "small",
         "type": "boolean"
       },
@@ -4286,8 +4286,57 @@
         ]
       }
     ],
+    "react-antd": [
+      {
+        "name": "steps",
+        "type": "array"
+      },
+      {
+        "name": "stepsType",
+        "type": "string",
+        "description": "Change the layout of the steps, some optoions not available for type \"inline\"",
+        "options": [
+          "default",
+          "navigation",
+          "inline"
+        ]
+      },
+      {
+        "name": "status",
+        "type": "string",
+        "options": [
+          "finish",
+          "wait",
+          "process",
+          "error"
+        ]
+      },
+      {
+        "name": "percent",
+        "type": "number",
+        "description": "Completion percentage of current step"
+      },
+      {
+        "name": "small",
+        "type": "boolean"
+      },
+      {
+        "name": "clickable",
+        "type": "boolean",
+        "description": "Make steps clickable"
+      },
+      {
+        "name": "labelPlacement",
+        "type": "string",
+        "options": [
+          "horizontal",
+          "vertical"
+        ]
+      }
+    ],
     "frameworks": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ]
   }
 }
