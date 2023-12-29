@@ -120,7 +120,7 @@ module.exports = module.exports = (env = {}) => {
       /^@mui/
     ],
     optimization: {
-      minimize: false
+      minimize: true
     },
     module: {
       rules: [
