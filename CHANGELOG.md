@@ -1,5 +1,9 @@
 # LetsForm Changelog
 
+## v0.5.3
+- fixed missed dependency in ArrayItem
+- WebPack minimize
+
 ## v0.5.2
 - added buttons alignment in array component
 - added icon steps component
