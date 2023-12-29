@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.5.4
+- AntD steps
+
 ## v0.5.3
 - fixed missed dependency in ArrayItem
 - WebPack minimize
