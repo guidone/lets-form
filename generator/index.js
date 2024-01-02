@@ -173,12 +173,12 @@ const collectTransformers = (form, onJavascriptError) => {
 
   // compile transformer of the form
   try {
-    if (!_.isEmpty(form.transformer)) {
-      transformers.onRender = [makeTransformer(form.transformer, fieldList)];
+    if (!_.isEmpty(form.transformer) || !_.isEmpty(form.script)) {
+      transformers.onRender = [makeTransformer(form.script || form.transformer, fieldList)];
     }
   } catch(e) {
-    const error = new Error('Error compiling main transformer: ' + e.message, { cause: e });
-    error.sourceCode = form.transformer;
+    const error = new Error('Error compiling main form script: ' + e.message, { cause: e });
+    error.sourceCode = form.script || form.transformer;
     error.errorType = 'compile';
     onJavascriptError(error);
   }
@@ -187,13 +187,14 @@ const collectTransformers = (form, onJavascriptError) => {
   transformers = reduceFields(
     form.fields,
     (field, acc) => {
-      if (field.transformer) {
+      
+      if (field.script || field.transformer) {
         let transformer;
         try {
-          transformer = makeTransformer(field.transformer, fieldList);
+          transformer = makeTransformer(field.script || field.transformer, fieldList);
         } catch(e) {
-          const error = new Error('Error compiling transformer. ' + e.message, { cause: e });
-          error.sourceCode = field.transformer;
+          const error = new Error('Error compiling script. ' + e.message, { cause: e });
+          error.sourceCode = field.script || field.transformer;
           error.errorType = 'compile';
           onJavascriptError(error);
         }
@@ -243,7 +244,7 @@ const makeTransformer = (str, fieldList) => {
     return tx;
   } catch(e) {
     console.error(`[LetsForm] Invalid JavaScript code for rules`, e);
-    console.error(`[LetsForm] Transformer: `, yieldedStr);
+    console.error(`[LetsForm] Script: `, yieldedStr);
     throw e;
   }
 };
