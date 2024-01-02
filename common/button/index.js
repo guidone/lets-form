@@ -1,4 +1,4 @@
-import React, { useCallback, useState} from 'react';
+import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
 
 import { passRest, makeWidthStyle } from '../../helpers';
@@ -7,6 +7,7 @@ const GenericButton = ({
   ButtonComponent,
   OnStateProps,
   OffStateProps,
+  LinkProps = {},
   name,
   labelOn,
   labelOff,
@@ -66,6 +67,7 @@ const GenericButton = ({
         target="_blank"
         style={makeWidthStyle(fullWidth, width)}
         {...passRest(_.omit(rest, 'label'))}
+        {...LinkProps}
       />
     );
   }
@@ -78,17 +80,18 @@ const GenericButton = ({
 };
 
 
-const MakeButton = (ButtonComponent, OnStateProps, OffStateProps) => {
+const MakeButton = (ButtonComponent, OnStateProps, OffStateProps, LinkProps) => {
   return props => {
     return (
-    <GenericButton
-      ButtonComponent={ButtonComponent} 
-      OnStateProps={_.isFunction(OnStateProps) ? OnStateProps(props) : OnStateProps}
-      OffStateProps={_.isFunction(OffStateProps) ? OffStateProps(props) : OffStateProps}
-      {...props}
-    />
-  );
-    }
+      <GenericButton
+        ButtonComponent={ButtonComponent} 
+        OnStateProps={_.isFunction(OnStateProps) ? OnStateProps(props) : OnStateProps}
+        OffStateProps={_.isFunction(OffStateProps) ? OffStateProps(props) : OffStateProps}
+        LinkProps={_.isFunction(LinkProps) ? LinkProps(props) : LinkProps}
+        {...props}
+      />
+    );
+  }
 };
 
 export { MakeButton };
