@@ -345,7 +345,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   control,
                   framework,
                   getValues,
-                  disabled,
+                  disabled: field.disabled ? true : disabled, // pass disabled status to inner components
                   readOnly,
                   plaintext,
                   errors,
@@ -416,7 +416,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                           control,
                           framework,
                           getValues,
-                          disabled,
+                          disabled: field.disabled ? true : disabled, // pass disabled status to inner components
                           readOnly,
                           plaintext,
                           errors,
@@ -501,7 +501,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                           control,
                           framework,
                           getValues,
-                          disabled,
+                          disabled: field.disabled ? true : disabled, // pass disabled status to inner components
                           readOnly,
                           plaintext,
                           errors,
@@ -570,7 +570,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   control,
                   framework,
                   getValues,
-                  disabled,
+                  disabled: field.disabled ? true : disabled, // pass disabled status to inner components
                   readOnly,
                   plaintext,
                   errors,
@@ -626,7 +626,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       control,
                       framework,
                       getValues,
-                      disabled,
+                      disabled: field.disabled ? true : disabled, // pass disabled status to inner components
                       readOnly,
                       plaintext,
                       errors,
@@ -661,7 +661,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       control,
                       framework,
                       getValues,
-                      disabled,
+                      disabled: field.disabled ? true : disabled, // pass disabled status to inner components
                       readOnly,
                       plaintext,
                       errors,
@@ -719,7 +719,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       control,
                       framework,
                       getValues,
-                      disabled,
+                      disabled: field.disabled ? true : disabled, // pass disabled status to inner components
                       readOnly,
                       plaintext,
                       errors,
@@ -754,7 +754,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       control,
                       framework,
                       getValues,
-                      disabled,
+                      disabled: field.disabled ? true : disabled, // pass disabled status to inner components
                       readOnly,
                       plaintext,
                       errors,
@@ -789,7 +789,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       control,
                       framework,
                       getValues,
-                      disabled,
+                      disabled: field.disabled ? true : disabled, // pass disabled status to inner components
                       readOnly,
                       plaintext,
                       errors,
