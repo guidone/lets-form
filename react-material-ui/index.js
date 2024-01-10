@@ -26,6 +26,7 @@ import { RadioGroup } from './radio-group';
 import { CheckboxGroup } from './checkbox-group';
 import { Tabs } from './tabs';
 import { Button } from './button';
+import { Upload } from './upload';
 
 const Fields = {
   'input-text': {
@@ -96,6 +97,9 @@ const Fields = {
   },
   'button': {
     'react-material-ui': Button
+  },
+  'upload': {
+    'react-material-ui': Upload
   }
 };
 

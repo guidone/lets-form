@@ -16,10 +16,11 @@
 * [validation](https://letsform.dev/advanced/validation) with i18n and scripting support 
 * read-only and disabled mode
 * scripting support for [dynamic forms](https://letsform.dev/advanced/transformers) 
-* over **30** [components](https://letsform.dev/components-matrix) available, including layout components like array, tabs, groups and columns
+* over **30** [components](https://letsform.dev/components-matrix) available, including layout components like array, tabs, steps, groups and columns
 * use [LetsForm designer](https://designer.letsform.dev) to visually create forms 
 * full set of [helpers](https://letsform.dev/advanced/helpers) to programmatically interact with JSON forms
 * standalone and open source component, no connections with third party servers
+
 # Getting started
 Install LetsForm
 

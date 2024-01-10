@@ -257,8 +257,8 @@ const applyTransformers = async function*(formName, framework, fields, transform
           yield f;
         }
       } catch(e) {
-        console.error('[LetsForm] Error on transformer: ', e);
-        const error = new Error('Error executing transformer: ' + e.message, { cause: e });
+        console.error('[LetsForm] Error in script: ', e);
+        const error = new Error('Error executing script: ' + e.message, { cause: e });
         error.errorType = 'runtime';
         onJavascriptError(error);
       }

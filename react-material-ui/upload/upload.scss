@@ -1,0 +1,80 @@
+.lf-control-upload {
+  
+  .lf-icon {
+    max-width: 20px;
+    max-height: 20px;
+  }
+
+  .MuiButton-sizeLarge {
+    .lf-icon {
+      max-width: 22px;
+      max-height: 22px;
+    }
+  }
+
+  .MuiButton-sizeSmall {
+    .lf-icon {
+      max-width: 18px;
+      max-height: 18px;
+    }
+  }
+  
+  .lf-upload-button-layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+
+    .lf-upload-button-left {
+      order: 0;
+      flex: 0 0 auto;
+      align-self: auto;
+    }
+
+    .lf-upload-button-right {
+      order: 0;
+      flex: 1 0 auto;
+      align-self: auto;
+      margin-left: var(--lf-field-margin);
+    }
+  }
+}
+
+
+.lf-form-react-material-ui {
+  .lf-control-button {
+    min-height: 20px;
+
+    .lf-icon {
+      max-width: 20px;
+      max-height: 20px;
+    }
+
+    .MuiButton-sizeLarge {
+      .lf-icon {
+        max-width: 22px;
+        max-height: 22px;
+      }
+    }
+
+    .MuiButton-sizeSmall {
+      .lf-icon {
+        max-width: 18px;
+        max-height: 18px;
+      }
+    }
+
+    .only-icon {
+      // remove it if only icon
+      min-width: inherit;
+      
+      .MuiButton-startIcon {
+        margin-right: 0px !important;
+      }
+
+    }
+
+  }
+}

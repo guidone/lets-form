@@ -1,5 +1,11 @@
 # LetsForm Changelog
 
+## v0.5.5
+- Button component for React
+- renamed property "transformer" to "script"
+- pass-through "disabled" property for group, columns, array, steps and tabs
+- added upload component for MUI
+
 ## v0.5.4
 - AntD steps
 

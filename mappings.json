@@ -1096,14 +1096,11 @@
   "button": {
     "name": null,
     "buttonType": null,
-    "placeholderOn": null,
     "labelOn": null,
     "iconOn": null,
-    "placeholderOff": null,
     "labelOff": null,
     "iconOff": null,
     "initialValue": null,
-    "placeholder": null,
     "labelLink": null,
     "iconLink": null,
     "href": null,
@@ -1352,14 +1349,8 @@
     "hint": null,
     "disabled": null,
     "hidden": null,
-    "accept": [
-      "react-rsuite5",
-      "react-antd"
-    ],
-    "acceptedFile": [
-      "react-rsuite5",
-      "react-antd"
-    ],
+    "accept": null,
+    "acceptedFile": null,
     "listType": [
       "react-rsuite5",
       "react-antd"
@@ -1390,6 +1381,7 @@
     ],
     "uploadButtonLabel": [
       "react-rsuite5",
+      "react-material-ui",
       "react-antd"
     ],
     "uploadButtonAppearance": [
@@ -1398,6 +1390,7 @@
     ],
     "uploadButtonSize": [
       "react-rsuite5",
+      "react-material-ui",
       "react-antd"
     ],
     "draggableText": [
@@ -1407,6 +1400,15 @@
     "draggableHeight": [
       "react-rsuite5",
       "react-antd"
+    ],
+    "uploadButtonVariant": [
+      "react-material-ui"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
+    "uploadButtonIcon": [
+      "react-material-ui"
     ],
     "maxCount": [
       "react-antd"

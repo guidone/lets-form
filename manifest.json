@@ -3999,14 +3999,14 @@
         "name": "hidden",
         "type": "boolean",
         "description": "Hides the field from the form"
-      }
-    ],
-    "react-rsuite5": [
+      },
       {
         "name": "accept",
         "type": "array",
         "description": "Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "
-      },
+      }
+    ],
+    "react-rsuite5": [
       {
         "name": "listType",
         "type": "string",
@@ -4081,12 +4081,47 @@
         "type": "number"
       }
     ],
-    "react-antd": [
+    "react-material-ui": [
       {
-        "name": "accept",
-        "type": "array",
-        "description": "Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "
+        "name": "uploadButtonLabel",
+        "type": "string | i18n"
       },
+      {
+        "name": "uploadButtonVariant",
+        "type": "string",
+        "options": [
+          "contained",
+          "outlined",
+          "text"
+        ]
+      },
+      {
+        "name": "uploadButtonSize",
+        "type": "string",
+        "options": [
+          "small",
+          "medium",
+          "large"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "error",
+          "info",
+          "primary",
+          "secondary",
+          "success",
+          "warning"
+        ]
+      },
+      {
+        "name": "uploadButtonIcon",
+        "type": "string"
+      }
+    ],
+    "react-antd": [
       {
         "name": "multiple",
         "type": "boolean",
@@ -4154,6 +4189,7 @@
     ],
     "frameworks": [
       "react-rsuite5",
+      "react-material-ui",
       "react-antd"
     ]
   },
