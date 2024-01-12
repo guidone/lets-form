@@ -40,41 +40,60 @@
       margin-left: var(--lf-field-margin);
     }
   }
-}
 
+  .lf-upload-file-list {
+    margin-top: 10px;
 
-.lf-form-react-material-ui {
-  .lf-control-button {
-    min-height: 20px;
+    .lf-upload-file-item {
+      padding: 4px 0px;
 
-    .lf-icon {
-      max-width: 20px;
-      max-height: 20px;
-    }
-
-    .MuiButton-sizeLarge {
-      .lf-icon {
-        max-width: 22px;
-        max-height: 22px;
+      &:hover {
+        background-color: #eeeeee;
       }
     }
+  }
 
-    .MuiButton-sizeSmall {
-      .lf-icon {
-        max-width: 18px;
-        max-height: 18px;
-      }
+  .lf-upload-file-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+
+    .lf-attachment-icon {
+      flex: 0 0;
+      align-self: auto;
+      margin-right: 5px;
     }
 
-    .only-icon {
-      // remove it if only icon
-      min-width: inherit;
-      
-      .MuiButton-startIcon {
-        margin-right: 0px !important;
-      }
-
+    .lf-clear-button {
+      flex: 0 0;
+      align-self: auto;
+      margin-left: 5px;
+      margin-right: 5px;
     }
 
+    .lf-name {
+      flex: 1 0;
+      align-self: auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .lf-size {
+      flex: 0 0 auto;
+      align-self: auto;
+      margin-left: 5px;
+      color: #888888;
+    }
+  }
+
+  .lf-upload-file-name {
+    
+    .lf-size {
+      color: #888888;
+    }
   }
 }

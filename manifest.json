@@ -4083,6 +4083,11 @@
     ],
     "react-material-ui": [
       {
+        "name": "multiple",
+        "type": "boolean",
+        "description": "Allow selecting multiple files"
+      },
+      {
         "name": "uploadButtonLabel",
         "type": "string | i18n"
       },

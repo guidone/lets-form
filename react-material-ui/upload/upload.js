@@ -5,8 +5,12 @@ import _ from 'lodash';
 
 import { I18N } from '../../components';
 import { MuiLabel } from '../../components/mui-label';
+import { CrossCirle } from '../../assets/icons/cross-circle';
+import { formatBytes } from '../../helpers/format-bytes';
 
 import './upload.scss';
+
+import { FileItem } from './file-item';
 
 const Upload = I18N(
   ({ 
@@ -20,7 +24,8 @@ const Upload = I18N(
     uploadButtonSize,
     uploadButtonIcon,
     color,
-    onChange
+    onChange,
+    multiple
   }) => {
     const [currentFile, setCurrentFile] = useState();
 
@@ -33,19 +38,45 @@ const Upload = I18N(
       [onChange]
     );
 
+    const handleRemove = useCallback(
+      (fileToRemove) => {
+        const newCurrentFile = currentFile
+          .filter(file => file !== fileToRemove);
+        setCurrentFile(newCurrentFile);
+        onChange(newCurrentFile); 
+      },
+      [currentFile, onChange]
+    );
+
     const handleChange = useCallback(
       e => {
         if (e.target.files && e.target.files.length > 0) {
-          setCurrentFile(e.target.files[0]);
-          onChange({
-            blobFile: e.target.files[0],
-            name: e.target.files[0].name
-          });
+          if (multiple) {
+            const newCurrentFile = currentFile ? [...currentFile] : [];
+            let idx;
+            
+            for(idx = 0; idx < e.target.files.length; idx++) {
+              console.log('.-', e.target.files[idx])
+              newCurrentFile.push({
+                blobFile: e.target.files[idx],
+                name: e.target.files[idx].name,
+                size: e.target.files[idx].size
+              })
+            }
+            setCurrentFile(newCurrentFile);
+            onChange(newCurrentFile);
+          } else {
+            setCurrentFile(e.target.files[0]);
+            onChange({
+              blobFile: e.target.files[0],
+              name: e.target.files[0].name
+            });
+          }
         } else {
           onChange(null);
         }
       },
-      [onChange]
+      [onChange, multiple, currentFile]
     );
 
     return (
@@ -71,6 +102,7 @@ const Upload = I18N(
                 type="file"
                 accept={accept}
                 onChange={handleChange}
+                multiple={multiple}
                 style={{
                   clip: 'rect(0 0 0 0)',
                   clipPath: 'inset(50%)',
@@ -86,21 +118,36 @@ const Upload = I18N(
             </Button>
           </div>
           <div className="lf-upload-button-right">
-            {currentFile && (
+            {!multiple && currentFile && (
               <div>
                 <span className="lf-upload-file-name">
                   {currentFile.name}
+                  &nbsp;
+                  <span className="lf-size">
+                    {formatBytes(currentFile.size)}
+                  </span>
                 </span>
                 &nbsp;
                 <a 
                   href="#"
                   onClick={handleClear}
-                >clear</a>
+                ><CrossCirle color="#666666" width={16} height={16}/></a>
               </div>
             )}
           </div>
         </div>
         {hint && !error && <FormHelperText>{hint}</FormHelperText>}
+        {multiple && currentFile && (
+          <div className="lf-upload-file-list">
+            {currentFile.map(file => (
+              <FileItem 
+                file={file}
+                key={file.name}
+                onRemove={handleRemove}
+              />
+            ))}
+          </div>  
+        )}        
       </div>
     );
   },
