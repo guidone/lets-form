@@ -31,8 +31,8 @@ const Toggle = I18N(
         onChange={handleChange}
         disabled={disabled}
         onBlur={onBlur}
-        color={color}
-        size={size}
+        color={color || undefined}
+        size={size || undefined}
         required={required}
         disableRipple={disableRipple}
       />
@@ -45,7 +45,7 @@ const Toggle = I18N(
       >
         {label && (
           <FormControlLabel
-            labelPlacement={labelPlacement ? labelPlacement : undefined}
+            labelPlacement={labelPlacement || undefined}
             disabled={disabled}
             label={label}
             control={switchCtrl}
