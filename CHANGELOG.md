@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.5.6
+- [6](https://github.com/guidone/lets-form/issues/6) LetsForm Designer > MUI Toggle > Crash when remove size prop
+
 ## v0.5.5
 - Button component for React
 - renamed property "transformer" to "script"
