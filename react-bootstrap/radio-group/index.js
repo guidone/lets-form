@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 
 import { RequiredIcon, I18N } from '../../components';
 import { i18nOptions } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const RadioGroupBootstrap = I18N(
   ({
@@ -86,4 +87,6 @@ const RadioGroupBootstrap = I18N(
   }
 );
 
-export { RadioGroupBootstrap as RadioGroup };
+lfLog('Loaded ReactBootrap.RadioGroup');
+
+export default RadioGroupBootstrap;

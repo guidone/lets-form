@@ -3,6 +3,7 @@ import _ from 'lodash';
 import Form from 'react-bootstrap/Form';
 
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 const Toggle = I18N(
   ({
@@ -54,5 +55,6 @@ const Toggle = I18N(
   },
   ['label', 'hint']
 );
+lfLog('Loaded ReactBootrap.Toggle');
 
-export { Toggle };
+export default Toggle;

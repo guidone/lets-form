@@ -3,6 +3,7 @@ import _ from 'lodash';
 
 import { I18N } from '../../components';
 import { BootstrapGenericInput } from '../../components/bootstrap-generic-input';
+import { lfLog } from '../../helpers/lf-log';
 
 // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -37,5 +38,6 @@ const Date = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded ReactBootrap.Date');
 
-export { Date };
+export default Date;

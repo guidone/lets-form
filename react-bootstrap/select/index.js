@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 
 import { RequiredIcon, I18N } from '../../components';
 import { passRest, filterOptions, i18nOptions } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const Select = I18N(
   ({
@@ -84,5 +85,6 @@ const Select = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded ReactBootrap.Select');
 
-export { Select };
+export default Select;

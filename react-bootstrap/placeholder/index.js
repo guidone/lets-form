@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 
 import { Placeholder } from '../../common';
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 const PlaceholderBootstrap = I18N(
   ({
@@ -28,5 +29,6 @@ const PlaceholderBootstrap = I18N(
   },
   ['label', 'hint', 'text']
 );
+lfLog('Loaded ReactBootrap.Placeholder');
 
-export { PlaceholderBootstrap as Placeholder };
+export default PlaceholderBootstrap;
