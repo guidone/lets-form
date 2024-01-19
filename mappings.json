@@ -263,19 +263,39 @@
     "disabled": null,
     "readOnly": null,
     "hidden": null,
-    "size": [
+    "min": [
+      "react",
       "react-rsuite5",
-      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "step": [
+      "react",
+      "react-rsuite5",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "max": [
+      "react",
+      "react-rsuite5",
       "react-bootstrap",
       "react-antd"
     ],
     "fullWidth": [
+      "react",
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
       "react-antd"
     ],
     "width": [
+      "react",
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "size": [
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
@@ -283,21 +303,6 @@
     ],
     "allowClear": [
       "react-rsuite5"
-    ],
-    "min": [
-      "react-rsuite5",
-      "react-bootstrap",
-      "react-antd"
-    ],
-    "step": [
-      "react-rsuite5",
-      "react-bootstrap",
-      "react-antd"
-    ],
-    "max": [
-      "react-rsuite5",
-      "react-bootstrap",
-      "react-antd"
     ],
     "prefix": [
       "react-rsuite5",

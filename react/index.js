@@ -4,6 +4,7 @@ import { GenerateGenerator } from '../generator';
 
 import { FormReact } from './form';
 import { TextInput } from './input-text';
+import { InputNumber } from './input-number';
 import { Checkbox } from './checkbox';
 import { Textarea } from './textarea';
 import { ThreeColumns } from './three-columns';
@@ -23,6 +24,9 @@ import { Button } from './button';
 const Fields = {
   'input-text': {
     'react': TextInput
+  },
+  'input-number': {
+    'react': InputNumber
   },
   'checkbox': {
     'react': Checkbox

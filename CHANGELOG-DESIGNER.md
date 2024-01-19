@@ -3,6 +3,7 @@
 ## v0.7.11
 - fix MUI upload font styles
 - changelog 
+- added React Input Number component
 
 ## v0.7.10
 - [LF-8](https://github.com/guidone/lets-form/issues/8) Form > MUI Upload > Multiple = true > Error when select file

@@ -1111,6 +1111,30 @@
         "description": "Hides the field from the form"
       }
     ],
+    "react": [
+      {
+        "name": "min",
+        "type": "number"
+      },
+      {
+        "name": "step",
+        "type": "number"
+      },
+      {
+        "name": "max",
+        "type": "number"
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      }
+    ],
     "react-rsuite5": [
       {
         "name": "size",
@@ -1335,6 +1359,7 @@
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
+      "react",
       "react-bootstrap",
       "react-antd"
     ]
