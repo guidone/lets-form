@@ -26,8 +26,7 @@ const RadioTileRSuite = I18N(
     initalOption,
     ...rest
   }) => {
-    const initialValue = initalOption || (options || [])
-      .reduce((current, option) => current || option?.value, null);
+    const initialValue = value || initalOption; 
     const [currentValue, setCurrentValue] = useState(initialValue);
 
     const handleChange = useCallback(

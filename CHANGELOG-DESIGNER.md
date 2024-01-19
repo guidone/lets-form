@@ -1,10 +1,14 @@
 # LetsForm Designer Changelog
 
+## v0.7.11
+- fix MUI upload font styles
+- changelog 
+
 ## v0.7.10
-- [8](https://github.com/guidone/lets-form/issues/8) Form > MUI Upload > Multiple = true > Error when select file
+- [LF-8](https://github.com/guidone/lets-form/issues/8) Form > MUI Upload > Multiple = true > Error when select file
 
 ## v0.7.9
-- [6](https://github.com/guidone/lets-form/issues/6) LetsForm Designer > MUI Toggle > Crash when remove size prop
+- [LF-6](https://github.com/guidone/lets-form/issues/6) LetsForm Designer > MUI Toggle > Crash when remove size pro
 - added error boundary on LetsForm with link to GH issues
 
 ## v0.7.8
