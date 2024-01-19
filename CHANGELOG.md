@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.5.7
+- [8](https://github.com/guidone/lets-form/issues/8) Form > MUI Upload > Multiple = true > Error when select file
+
 ## v0.5.6
 - [6](https://github.com/guidone/lets-form/issues/6) LetsForm Designer > MUI Toggle > Crash when remove size prop
 
