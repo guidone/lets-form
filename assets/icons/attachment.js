@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const IconAttachment = ({ width = 24, height = 24, color = '#000000' }) => (
   <svg width={`${width}px`} height={`${height}px`} viewBox="-8 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
