@@ -43,6 +43,7 @@
 
   .lf-upload-file-list {
     margin-top: 10px;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
 
     .lf-upload-file-item {
       padding: 4px 0px;
@@ -72,6 +73,7 @@
       align-self: auto;
       margin-left: 5px;
       margin-right: 5px;
+      font-size: 1px; // or breaks aligment
     }
 
     .lf-name {
