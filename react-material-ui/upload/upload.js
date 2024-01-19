@@ -25,9 +25,12 @@ const Upload = I18N(
     uploadButtonIcon,
     color,
     onChange,
-    multiple
+    multiple,
+    value
   }) => {
-    const [currentFile, setCurrentFile] = useState();
+    const [currentFile, setCurrentFile] = useState(
+      (multiple && _.isArray(value)) || (!multiple && _.isObject(value)) ? value : undefined
+    );
 
     const handleClear = useCallback(
       e => {
