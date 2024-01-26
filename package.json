@@ -1,6 +1,6 @@
 {
   "name": "lets-form",
-  "version": "0.5.7",
+  "version": "0.6.0-beta",
   "description": "JSON to React form generator, supporting multiple frameworks (Bootstrap, Material UI, RSuite, etc)",
   "main": "index.js",
   "module": "index.js",
@@ -32,9 +32,10 @@
     "lodash-webpack-plugin": "^0.11.6",
     "react-bootstrap": "^2.7.2"
   },
+  "exports": {
+    "./react-bootstrap/": "./dist/react-bootstrap/"
+  },
   "devDependencies": {
-    "webpack-bundle-analyzer": "^4.8.0",
-    "@babel/plugin-syntax-jsx": "^7.18.6",
     "@babel/cli": "^7.7.0",
     "@babel/core": "^7.7.2",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
@@ -43,6 +44,7 @@
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
     "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-jsx": "^7.18.6",
     "@babel/plugin-transform-proto-to-assign": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/polyfill": "^7.0.0",
@@ -65,6 +67,7 @@
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.2",
     "webpack": "^5.76.2",
-    "webpack-cli": "^5.0.1"
+    "webpack-bundle-analyzer": "^4.8.0",
+    "webpack-cli": "^5.1.4"
   }
 }

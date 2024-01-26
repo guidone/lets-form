@@ -58,9 +58,9 @@ module.exports = module.exports = (env = {}) => {
     console.log('Building for Bootstrap framework');
     library = 'lets-form-bootstrap';
     entryPoint = path.join(__dirname, 'react-bootstrap/index.js');
-    outputFile = 'bootstrap.js';
+    outputFile = 'index.js';
     entryPointName = 'lets-form-bootstrap';
-    outputPath = null;
+    outputPath = 'dist/react-bootstrap';
     globalObject = 'this';
   } else if (env.framework === 'react') {
     console.log('Building for React framework');
