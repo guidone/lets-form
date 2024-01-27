@@ -1,8 +1,11 @@
 import React from 'react';
-import { Form, Select, Space } from 'antd';
+import Form from 'antd/lib/form';
+import Select from 'antd/lib/select';
+import Space from 'antd/lib/space';
 
 import { I18N } from '../../components';
 import { passRest, filterOptions, i18nOptions, makeWidthStyle } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 import './select.scss';
 
@@ -97,5 +100,6 @@ const SelectAntd = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded AntD.Select');
 
-export { SelectAntd as Select };
+export default SelectAntd;

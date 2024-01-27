@@ -1,9 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
-import { Form, Select } from 'antd';
+import Form from 'antd/lib/form';
+import Select from 'antd/lib/select';
 
 import { I18N } from '../../components';
 import { i18nOptions } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const Multiselect = I18N(
   ({
@@ -80,5 +82,6 @@ const Multiselect = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded AntD.MultiSelect');
 
-export { Multiselect };
+export default Multiselect;

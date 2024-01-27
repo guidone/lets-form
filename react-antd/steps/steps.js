@@ -1,10 +1,12 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
-import { Steps, Button } from 'antd';
+import Button from 'antd/lib/button';
+import Steps from 'antd/lib/steps';
 
 import { passRest } from '../../helpers';
 import { I18N } from '../../components';
 import { GenericIcon } from '../../components/generic-icon';
+import { lfLog } from '../../helpers/lf-log';
 
 import './steps.scss';
 import classNames from 'classnames';
@@ -119,5 +121,6 @@ const AntdSteps = I18N(
     tabs: i18nSteps
   }
 );
+lfLog('Loaded AntD.Steps');
 
-export { AntdSteps as Steps };
+export default AntdSteps;

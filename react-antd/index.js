@@ -1,118 +1,90 @@
-import React from 'react';
+import React, { lazy } from 'react';
 
 import { GenerateGenerator } from '../generator';
 
-import { Form } from './form';
-import { TextInput } from './input-text';
-import { Toggle } from './toggle';
-import { Checkbox } from './checkbox';
-import { AntdDate } from './date';
-import { Datetime } from './datetime';
-import { Select } from './select';
-import { RadioGroup } from './radio-group';
-import { Rate } from './rate';
-import { Placeholder } from './placeholder';
-import { PlaceholderImage } from './placeholder-image';
-import { InputNumber } from './input-number';
-import { Textarea } from './textarea';
-import { Multiselect } from './multiselect';
-import { ThreeColumns } from './three-columns';
-import { TwoColumns } from './two-columns';
-import { Group } from './group';
-import { Slider } from './slider';
-import { Divider } from './divider';
-import { ReactView } from './react-view';
-import { ListArray } from './array';
-import { Button } from './button';
-import { CheckboxGroup } from './checkbox-group';
-import { Tabs } from './tabs';
-import { Upload } from './upload';
-import { ButtonsToggleGroup } from './buttons-toggle-group'; 
-import { Steps } from './steps';
-
 const Fields = {
   'input-text': {
-    'react-antd': TextInput
+    'react-antd': lazy(() => import('./input-text'))
   },
   'toggle': {
-    'react-antd': Toggle
+    'react-antd': lazy(() => import('./toggle'))
   },
   'checkbox': {
-    'react-antd': Checkbox
+    'react-antd': lazy(() => import('./checkbox'))
   },
   'date': {
-    'react-antd': AntdDate
+    'react-antd': lazy(() => import('./date'))
   },
   'select': {
-    'react-antd': Select
+    'react-antd': lazy(() => import('./select'))
   },
   'radio-group': {
-    'react-antd': RadioGroup
+    'react-antd': lazy(() => import('./radio-group'))
   },
   'rate': {
-    'react-antd': Rate
+    'react-antd': lazy(() => import('./rate'))
   },
   'placeholder': {
-    'react-antd': Placeholder
+    'react-antd': lazy(() => import('./placeholder'))
   },
   'placeholder-image': {
-    'react-antd': PlaceholderImage
+    'react-antd': lazy(() => import('./placeholder-image'))
   },
   'input-number': {
-    'react-antd': InputNumber
+    'react-antd': lazy(() => import('./input-number'))
   },
   'textarea': {
-    'react-antd': Textarea
+    'react-antd': lazy(() => import('./textarea'))
   },
   'multiselect': {
-    'react-antd': Multiselect
+    'react-antd': lazy(() => import('./multiselect'))
   },
   'three-columns': {
-    'react-antd': ThreeColumns
+    'react-antd': lazy(() => import('./three-columns'))
   },
   'two-columns': {
-    'react-antd': TwoColumns
+    'react-antd': lazy(() => import('./two-columns'))
   },
   'group': {
-    'react-antd': Group
+    'react-antd': lazy(() => import('./group'))
   },
   'slider': {
-    'react-antd': Slider
+    'react-antd': lazy(() => import('./slider'))
   },
   'divider': {
-    'react-antd': Divider
+    'react-antd': lazy(() => import('./divider'))
   },
   'react-view': {
-    'react-antd': ReactView
+    'react-antd': lazy(() => import('./react-view'))
   },
   'datetime': {
-    'react-antd': Datetime
+    'react-antd': lazy(() => import('./datetime'))
   },
   'array': {
-    'react-antd': ListArray
+    'react-antd': lazy(() => import('./array'))
   },
   'button': {
-    'react-antd': Button
+    'react-antd': lazy(() => import('./button'))
   },
   'checkbox-group': {
-    'react-antd': CheckboxGroup
+    'react-antd': lazy(() => import('./checkbox-group'))
   },
   'tabs': {
-    'react-antd': Tabs
+    'react-antd': lazy(() => import('./tabs'))
   },
   'upload': {
-    'react-antd': Upload
+    'react-antd': lazy(() => import('./upload'))
   },
   'buttons-toggle-group': {
-    'react-antd': ButtonsToggleGroup
+    'react-antd': lazy(() => import('./buttons-toggle-group'))
   },
   'steps': {
-    'react-antd': Steps
+    'react-antd': lazy(() => import('./steps'))
   }
 };
 
 const Forms = {
-  'react-antd': Form
+  'react-antd': lazy(() => import('./form'))
 };
 
 const FormGenerator = GenerateGenerator({ Fields, Forms });

@@ -1,8 +1,10 @@
 import React from 'react';
-import { Form, Rate } from 'antd';
+import Form from 'antd/lib/form';
+import Rate from 'antd/lib/rate';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 const RateAntd = I18N(
   ({
@@ -70,5 +72,6 @@ const RateAntd = I18N(
   },
   ['label', 'hint']
 );
+lfLog('Loaded AntD.Rate');
 
-export { RateAntd as Rate };
+export default RateAntd;

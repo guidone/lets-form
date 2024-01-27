@@ -1,9 +1,12 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
-import { Form, Radio, Space } from 'antd';
+import Form from 'antd/lib/form';
+import Radio from 'antd/lib/radio';
+import Space from 'antd/lib/space';
 
 import { I18N } from '../../components';
 import { i18nOptions } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const RadioGroup = I18N(
   ({
@@ -97,5 +100,6 @@ const RadioGroup = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded AntD.RadioGroup');
 
-export { RadioGroup };
+export default RadioGroup;

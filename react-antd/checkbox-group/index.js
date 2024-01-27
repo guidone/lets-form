@@ -1,9 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Form, Checkbox } from 'antd';
+import Form from 'antd/lib/form';
+import Checkbox from 'antd/lib/checkbox';
 
 import { I18N } from '../../components';
 import { i18nOptions, passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const CheckboxGroupRSuite = I18N(
   ({
@@ -51,5 +53,6 @@ const CheckboxGroupRSuite = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded AntD.CheckboxGroup');
 
-export { CheckboxGroupRSuite as CheckboxGroup };
+export default CheckboxGroupRSuite;

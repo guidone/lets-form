@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import { Button, Tooltip } from 'antd';
+import Button from 'antd/lib/button';
+import Tooltip from 'antd/lib/tooltip';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
 import { MakeButton } from '../../common';
+import { lfLog } from '../../helpers/lf-log';
 
 import './button.scss';
 
@@ -53,4 +55,4 @@ const BiStateButton = I18N(
   ['labelOn', 'labelOff', 'labelLink', 'hint']
 );
 
-export { BiStateButton as Button };
+export default BiStateButton;

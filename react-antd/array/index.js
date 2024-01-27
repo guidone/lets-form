@@ -1,9 +1,10 @@
 import React from 'react';
-import { Form } from 'antd';
+import Form from 'antd/lib/form';
 
 import { ListArray } from '../../common';
 import LetsForm from '../../react-antd';
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 import './array.scss';
 
@@ -17,7 +18,6 @@ const ListArrayAntd = I18N(
     error,
     ...rest
   }) => {
-
     return (
       <Form.Item
         className="lf-control-array"
@@ -39,5 +39,6 @@ const ListArrayAntd = I18N(
   },
   ['label', 'hint']
 );
+lfLog('Loaded AntD.ListArray');
 
-export { ListArrayAntd as ListArray };
+export default ListArrayAntd;

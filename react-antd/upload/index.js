@@ -1,10 +1,13 @@
 
 import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
-import { Button, Form, Upload } from 'antd';
+import Button from 'antd/lib/button';
+import Form from 'antd/lib/form';
+import Upload from 'antd/lib/upload';
 
 import { passRest } from '../../helpers';
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 import './upload.scss';
 
@@ -181,5 +184,6 @@ const AntDUpload = I18N(
   },
   ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']
 );
+lfLog('Loaded AnttD.Upload');
 
-export { AntDUpload as Upload };
+export default AntDUpload;

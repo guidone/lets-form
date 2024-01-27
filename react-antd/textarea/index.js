@@ -1,8 +1,10 @@
 import React, { useCallback } from 'react';
-import { Form, Input } from 'antd';
+import Form from 'antd/lib/form';
+import Input from 'antd/lib/input';
 
 import { I18N } from '../../components';
 import { makeWidthStyle, passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const TextareaAntd = I18N(
   ({
@@ -64,5 +66,6 @@ const TextareaAntd = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded AntD.Textarea');
 
-export { TextareaAntd as Textarea };
+export default TextareaAntd;

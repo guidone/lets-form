@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { I18N } from '../../components';
 import { AntdGenericDate } from '../../components/antd-generic-date';
 import { isValidDate } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const AntdDate = I18N(
   ({
@@ -42,5 +43,6 @@ const AntdDate = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded AntD.Date');
 
-export { AntdDate };
+export default AntdDate;

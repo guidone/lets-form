@@ -1,5 +1,6 @@
 import React from 'react';
-import { Form, DatePicker } from 'antd';
+import Form from 'antd/lib/form';
+import DatePicker from 'antd/lib/date-picker';
 import dayjs from 'dayjs';
 
 import { passRest, makeWidthStyle } from '../../helpers';
