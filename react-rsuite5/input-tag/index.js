@@ -1,8 +1,10 @@
 import React from 'react';
-import { Form, TagInput } from 'rsuite';
+import Form from 'rsuite/Form';
+import TagInput from 'rsuite/TagInput';
 import _ from 'lodash';
 
 import { RequiredIcon, I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 import './index.scss';
 
@@ -47,5 +49,6 @@ const InputTag = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded RSuite5.InputTag');
 
-export { InputTag };
+export default InputTag;

@@ -1,19 +1,23 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { useState, useContext, useCallback } from 'react';
-import { Form, Input, InputGroup, SelectPicker } from 'rsuite';
+import Form from 'rsuite/Form';
+import Input from 'rsuite/Input';
+import InputGroup from 'rsuite/InputGroup';
+import SelectPicker from 'rsuite/SelectPicker';
 import _ from 'lodash';
 import classNames from 'classnames';
 
 import { IconCheck } from '../../assets/icons';
 import { RequiredIcon } from '../../components';
 import FormContext from '../../form-context';
-import { TextInput } from '../input-text';
-import { Textarea } from '../textarea';
+import TextInput from '../input-text';
+import Textarea from '../textarea';
 import LOCALES from '../../common/data/locales.json';
+import { isI18n } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 import './index.scss';
-import { isI18n } from '../../helpers';
 
 const LANGUAGES_OPTIONS = Object.keys(LOCALES['language-names'])
   .map(lang => ({
@@ -235,5 +239,6 @@ const InputTextI18N = (props) => {
     </Form.Group>
   );
 };
+lfLog('Loaded RSuite.InputTextI18N');
 
-export { InputTextI18N };
+export default InputTextI18N;

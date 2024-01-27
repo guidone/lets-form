@@ -33,7 +33,8 @@
     "react-hook-form": "^7.43.7"
   },
   "exports": {
-    "./react-bootstrap/": "./dist/react-bootstrap/"
+    "./react-bootstrap/": "./dist/react-bootstrap/",
+    "./react-rsuite5/": "./dist/react-rsuite5/"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",

@@ -1,13 +1,13 @@
 import React from 'react';
 
 import _ from 'lodash';
-import { Form } from 'rsuite';
+import Form from 'rsuite/Form';
 
 import { I18N, RequiredIcon } from '../../components';
 import { i18nOptions } from '../../helpers';
-
-import { Button } from '../button';
+import Button from '../button';
 import { ButtonsToggleGroup } from '../../common';
+import { lfLog } from '../../helpers/lf-log';
 
 const RSuiteButtonsToggleGroup = I18N(
   ({
@@ -50,5 +50,6 @@ const RSuiteButtonsToggleGroup = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded RSuite5.ButtonsToggleGroup');
 
-export { RSuiteButtonsToggleGroup as ButtonsToggleGroup };
+export default RSuiteButtonsToggleGroup;

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Form } from 'rsuite';
+import Form from 'rsuite/Form';
 
 import { RequiredIcon, I18N } from '../../components';
 import { Placeholder } from '../../common';
+import { lfLog } from '../../helpers/lf-log';
 
 const PlaceholderRSuite5 = I18N(
   ({
@@ -27,5 +28,6 @@ const PlaceholderRSuite5 = I18N(
   },
   ['label', 'hint', 'text']
 );
+lfLog('Loaded RSuite5.Placeholder');
 
-export { PlaceholderRSuite5 as Placeholder };
+export default PlaceholderRSuite5;

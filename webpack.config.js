@@ -52,7 +52,7 @@ module.exports = module.exports = (env = {}) => {
     entryPoint = path.join(__dirname, 'react-rsuite5/index.js');
     outputFile = 'rsuite5.js';
     entryPointName = 'lets-form-rsuite5';
-    outputPath = null;
+    outputPath = 'dist/react-rsuite5';
     globalObject = 'this';
   } else if (env.framework === 'bootstrap') {
     console.log('Building for Bootstrap framework');

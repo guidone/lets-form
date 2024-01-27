@@ -1,10 +1,13 @@
 /* eslint-disable no-template-curly-in-string */
 import React from 'react';
-import { Form, MaskedInput, InputGroup } from 'rsuite';
+import Form from 'rsuite/Form';
+import MaskedInput from 'rsuite/MaskedInput';
+import InputGroup from 'rsuite/InputGroup';
 import _ from 'lodash';
 
 import { RequiredIcon, I18N } from '../../components';
 import { passRest, makeWidthStyle } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const prepareMask = str => {
   if (typeof str !== 'string' || str.length === 0) {
@@ -27,7 +30,7 @@ const prepareMask = str => {
 
       return token;
     });
-}
+};
 
 const InputMask = I18N(
   ({
@@ -101,5 +104,6 @@ const InputMask = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded RSuite5.InputMask');
 
-export { InputMask };
+export default InputMask;

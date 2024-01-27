@@ -1,12 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useCallback, useState } from 'react';
-import { Form, InputNumber } from 'rsuite';
+import Form from 'rsuite/Form';
+import InputNumber from 'rsuite/InputNumber';
 import _ from 'lodash';
 import classNames from 'classnames';
 
 import { RequiredIcon, I18N } from '../../components';
 import { CrossCirle } from '../../assets/icons';
 import { makeWidthStyle } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 import './index.scss';
 
@@ -116,5 +118,6 @@ const InputNumberRSuite5 = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded RSuite.InputNumber');
 
-export { InputNumberRSuite5 as InputNumber };
+export default InputNumberRSuite5;
