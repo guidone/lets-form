@@ -1,6 +1,6 @@
 {
   "name": "lets-form",
-  "version": "0.6.0-beta-4",
+  "version": "0.6.0-beta-5",
   "description": "JSON to React form generator, supporting multiple frameworks (Bootstrap, Material UI, RSuite, etc)",
   "main": "index.js",
   "module": "index.js",
@@ -36,7 +36,8 @@
     "./react-bootstrap/": "./dist/react-bootstrap/",
     "./react-rsuite5/": "./dist/react-rsuite5/",
     "./react-antd/": "./dist/react-antd/",
-    "./react-material-ui/": "./dist/react-material-ui/"
+    "./react-material-ui/": "./dist/react-material-ui/",
+    "./react/": "./dist/react/"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
