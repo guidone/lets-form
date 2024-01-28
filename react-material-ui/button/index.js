@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import { Button, FormHelperText } from '@mui/material';
+import Button from '@mui/material/Button';
+import FormHelperText from '@mui/material/FormHelperText';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
 import { MakeButton } from '../../common';
+import { lfLog } from '../../helpers/lf-log';
 
 import './button.scss';
 
@@ -57,4 +59,6 @@ const BiStateButton = I18N(
   ['labelOn', 'labelOff', 'labelLink', 'hint']
 );
 
-export { BiStateButton as Button };
+lfLog('Loaded MUI.Button');
+
+export default BiStateButton;

@@ -1,6 +1,9 @@
 import React from 'react';
-import { Button, Stack } from '@mui/material';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 import classNames from 'classnames';
+
+import { lfLog } from '../../helpers/lf-log';
 
 const FormMaterialUI = ({
   name,
@@ -46,5 +49,6 @@ const FormMaterialUI = ({
     </form>
   );
 };
+lfLog('Loaded MUI.Form');
 
-export { FormMaterialUI };
+export default FormMaterialUI;

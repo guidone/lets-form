@@ -1,7 +1,13 @@
 import React from 'react';
 import _ from 'lodash';
 import { MuiLabel } from '../mui-label';
-import { InputLabel, MenuItem, FormControl, Select, FormHelperText, Checkbox, ListItemText } from '@mui/material';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import FormHelperText from '@mui/material/FormHelperText';
+import Checkbox from '@mui/material/Checkbox';
+import ListItemText from '@mui/material/ListItemText';
 
 import { passRest, filterOptions } from '../../helpers';
 

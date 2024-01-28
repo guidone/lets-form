@@ -1,7 +1,12 @@
 import React, { useCallback } from 'react';
-import { Rating, FormControl, FormControlLabel, FormLabel, FormHelperText } from '@mui/material';
+import Rating from '@mui/material/Rating';
+import FormControl from '@mui/material/FormControl';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormLabel from '@mui/material/FormLabel';
+import FormHelperText from '@mui/material/FormHelperText';
 
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 // DOC: https://mui.com/material-ui/api/rating/
 
@@ -77,5 +82,6 @@ const Rate = I18N(
   },
   ['label', 'hint']
 );
+lfLog('Loaded MUI.Rate');
 
-export { Rate };
+export default Rate;

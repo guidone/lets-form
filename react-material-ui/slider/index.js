@@ -1,9 +1,14 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
-import { Slider, FormHelperText, FormControl, FormLabel } from '@mui/material';
+import Slider from '@mui/material/Slider';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 
 import { I18N } from '../../components';
-  // DOCS: https://mui.com/material-ui/api/slider/
+import { lfLog } from '../../helpers/lf-log';
+
+// DOCS: https://mui.com/material-ui/api/slider/
 
 const SliderMui = I18N(
   ({
@@ -74,5 +79,6 @@ const SliderMui = I18N(
     }
   }
 );
+lfLog('Loaded MUI.Slider');
 
-export { SliderMui as Slider };
+export default SliderMui;

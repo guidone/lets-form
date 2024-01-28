@@ -1,8 +1,14 @@
 import React, { useCallback } from 'react';
-import { Radio, FormLabel, FormControl, RadioGroup, FormHelperText, FormControlLabel } from '@mui/material';
+import Radio from '@mui/material/Radio';
+import FormLabel from '@mui/material/FormLabel';
+import FormControl from '@mui/material/FormControl';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 import { I18N } from '../../components';
 import { i18nOptions, passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -74,5 +80,6 @@ const RadioGroupMUI = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded MUI.RadioGroup');
 
-export { RadioGroupMUI as RadioGroup };
+export default RadioGroupMUI;

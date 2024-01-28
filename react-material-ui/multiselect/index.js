@@ -3,6 +3,7 @@ import React, { useCallback, useMemo } from 'react';
 import { I18N } from '../../components';
 import { MuiGenericSelect } from '../../components/mui-select';
 import { i18nOptions } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const Multiselect = I18N(
   ({
@@ -48,5 +49,6 @@ const Multiselect = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded MUI.Multiselect');
 
-export { Multiselect };
+export default Multiselect;

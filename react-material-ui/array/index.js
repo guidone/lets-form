@@ -1,11 +1,13 @@
 import React from 'react';
 import _ from 'lodash';
-import { FormControl, FormHelperText } from '@mui/material';
+import FormControl from '@mui/material/FormControl';
+import FormHelperText from '@mui/material/FormHelperText';
 
 import { ListArray } from '../../common';
 import LetsForm from '../../react-material-ui';
 import { MuiLabel } from '../../components/mui-label';
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 import './array.scss';
 
@@ -41,5 +43,6 @@ const ListArrayMui = I18N(
   },
   ['label', 'hint']
 );
+lfLog('Loaded MUI.Array');
 
-export { ListArrayMui as ListArray };
+export default ListArrayMui;

@@ -1,7 +1,9 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
-import { TextField } from '@mui/material';
-import { FormControl, FormHelperText, InputAdornment } from '@mui/material';
+import TextField from '@mui/material/TextField';
+import FormControl from '@mui/material/FormControl';
+import FormHelperText from '@mui/material/FormHelperText';
+import InputAdornment from '@mui/material/InputAdornment';
 
 import { passRest } from '../../helpers';
 import { TextOrIcon } from '../../common';

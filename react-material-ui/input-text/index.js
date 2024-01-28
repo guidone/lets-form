@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 
 import { I18N } from '../../components';
 import { MuiGenericInput } from '../../components/mui-generic-input';
-
+import { lfLog } from '../../helpers/lf-log';
 // DOC: https://mui.com/material-ui/api/input/
 
 const TextInput = I18N(
@@ -26,5 +26,6 @@ const TextInput = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded MUI.InputText');
 
-export { TextInput };
+export default TextInput;
