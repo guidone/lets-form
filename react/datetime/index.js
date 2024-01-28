@@ -3,6 +3,7 @@ import _ from 'lodash';
 
 import { I18N } from '../../components';
 import { ReactGenericInput } from '../../components/react-generic-input';
+import { lfLog } from '../../helpers/lf-log';
 
 const DateTime = I18N(
   ({ onChange, value, ...rest}) => {
@@ -36,5 +37,6 @@ const DateTime = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded React.DateTime');
 
-export { DateTime };
+export default DateTime;

@@ -3,6 +3,7 @@ import _ from 'lodash';
 
 import { I18N } from '../../components';
 import { ReactGenericInput } from '../../components/react-generic-input';
+import { lfLog } from '../../helpers/lf-log';
 
 const hasDecimals = f => _.isString(f) && (f.includes(',') || f.includes('.'));
 
@@ -50,5 +51,6 @@ const InputNumber = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded React.InputNumber');
 
-export { InputNumber };
+export default InputNumber;

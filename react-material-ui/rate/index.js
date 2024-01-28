@@ -56,7 +56,7 @@ const Rate = I18N(
         data-lf-field-name={name}
       >
         <FormControl
-          required
+          required={required}
           error={error != null}
           sx={{ mt: 2 }}
           variant="standard"

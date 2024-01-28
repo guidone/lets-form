@@ -2,7 +2,8 @@ import React, { useCallback } from 'react';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
-import { ReactGenericInput } from '../../components/react-generic-input'
+import { ReactGenericInput } from '../../components/react-generic-input';
+import { lfLog } from '../../helpers/lf-log';
 
 const DateInput = I18N(
   ({ onChange, value, ...rest}) => {
@@ -31,5 +32,6 @@ const DateInput = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded React.Date');
 
-export { DateInput };
+export default DateInput;

@@ -3,6 +3,7 @@ import _ from 'lodash';
 
 import { I18N, RequiredIcon } from '../../components';
 import { makeWidthStyle, passRest, filterOptions, i18nOptions } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const Select = I18N(
   ({
@@ -75,5 +76,6 @@ const Select = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded React.Select');
 
-export { Select };
+export default Select;

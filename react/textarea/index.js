@@ -3,6 +3,7 @@ import _ from 'lodash';
 
 import { RequiredIcon, I18N } from '../../components';
 import { passRest, makeWidthStyle } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const Textarea = I18N(
   ({
@@ -57,5 +58,6 @@ const Textarea = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded React.Textarea');
 
-export { Textarea };
+export default Textarea;

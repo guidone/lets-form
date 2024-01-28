@@ -4,6 +4,7 @@ import _ from 'lodash';
 
 import { I18N } from '../../components';
 import { MakeButton } from '../../common';
+import { lfLog } from '../../helpers/lf-log';
 
 import './button.scss';
 
@@ -56,5 +57,6 @@ const BiStateButton = I18N(
   ),
   ['labelOn', 'labelOff', 'labelLink', 'hint']
 );
+lfLog('Loaded React.Button');
 
-export { BiStateButton as Button };
+export default BiStateButton;
