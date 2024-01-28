@@ -44,7 +44,7 @@ module.exports = module.exports = (env = {}) => {
     entryPoint = path.join(__dirname, 'react-antd/index.js');
     outputFile = 'antd.js';
     entryPointName = 'lets-form-antd';
-    outputPath = null;
+    outputPath = 'dist/react-antd';
     globalObject = 'this';
   } else if (env.framework === 'rsuite5') {
     console.log('Building for RSuite5 framework');
@@ -68,7 +68,7 @@ module.exports = module.exports = (env = {}) => {
     entryPoint = path.join(__dirname, 'react/index.js');
     outputFile = 'react.js';
     entryPointName = 'lets-form-react';
-    outputPath = null;
+    outputPath = 'dist/react';
     globalObject = 'this';
   } else if (env.framework === 'material-ui') {
     console.log('Building for Material UI framework');
@@ -76,7 +76,7 @@ module.exports = module.exports = (env = {}) => {
     entryPoint = path.join(__dirname, 'react-material-ui/index.js');
     outputFile = 'material-ui.js';
     entryPointName = 'lets-form-material-ui';
-    outputPath = null;
+    outputPath = 'dist/react-material-ui';
     globalObject = 'this';
   } else if (env.framework === 'helpers') {
     console.log('Building for helpers');
@@ -84,7 +84,7 @@ module.exports = module.exports = (env = {}) => {
     entryPoint = path.join(__dirname, 'helpers/index-export.js');
     outputFile = 'utils.js';
     entryPointName = 'lets-form/utils';
-    outputPath = null;
+    outputPath = 'dist/utils';
     globalObject = 'this';
   } else {
     console.log('Building for ALL frameworks');
