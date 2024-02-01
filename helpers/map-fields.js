@@ -46,88 +46,90 @@ const mapFields = (
     return fields;
   }
   // replace with predicated
-  let newFields = fields.map(field => {
-    let newField = predicate(field);
-    // if returns an array, means the mapping is replacing with two fields
-    // and it will need to be flattened later
-    if (Array.isArray(newField)) {
-      needsFlatten = true;
-    }
+  let newFields = fields
+    .filter(Boolean)
+    .map(field => {
+      let newField = predicate(field);
+      // if returns an array, means the mapping is replacing with two fields
+      // and it will need to be flattened later
+      if (Array.isArray(newField)) {
+        needsFlatten = true;
+      }
 
-    if (field.component === 'group') {
-      const newFields = mapFields(field.fields, predicate);
-      if (newFields !== field.fields) {
-        newField = {
-          ...newField,
-          fields: newFields
-        };
+      if (field.component === 'group') {
+        const newFields = mapFields(field.fields, predicate);
+        if (newFields !== field.fields) {
+          newField = {
+            ...newField,
+            fields: newFields
+          };
+        }
+      } else if (field.component === 'array') {
+        const newFields = mapFields(field.fields, predicate);
+        if (newFields !== field.fields) {
+          newField = {
+            ...newField,
+            fields: newFields
+          };
+        }
+      } else if (field.component === 'two-columns') {
+        const newLeftFields = mapFields(field.leftFields, predicate);
+        if (newLeftFields !== field.leftFields) {
+          newField = {
+            ...newField,
+            leftFields: newLeftFields
+          };
+        }
+        const newRightFields = mapFields(field.rightFields, predicate);
+        if (newRightFields !== field.rightFields) {
+          newField = {
+            ...newField,
+            rightFields: newRightFields
+          };
+        }
+      } else if (field.component === 'three-columns') {
+        const newLeftFields = mapFields(field.leftFields, predicate);
+        if (newLeftFields !== field.leftFields) {
+          newField = {
+            ...newField,
+            leftFields: newLeftFields
+          };
+        }
+        const newCenterFields = mapFields(field.centerFields, predicate);
+        if (newCenterFields !== field.centerFields) {
+          newField = {
+            ...newField,
+            centerFields: newCenterFields
+          };
+        }
+        const newRightFields = mapFields(field.rightFields, predicate);
+        if (newRightFields !== field.rightFields) {
+          newField = {
+            ...newField,
+            rightFields: newRightFields
+          };
+        }
+      } else if ((field.component === 'tabs' || field.component === 'steps') && _.isObject(field.fields) && !_.isArray(field.fields)) {      
+        // Problem here: the new field can be an array because the map field, can return an array with 
+        // additional field to be put somewhere in the mapping, of those only the one of type "tab" need to be
+        // mapped, the other one must be left untouched since they where added by the helper method
+        if (_.isArray(newField)) {
+          // if an array is returned, then it's already changed, we don't need to worry too much about
+          // referential integrity
+          // here only process the original field
+          newField = newField.map(fieldToProcess => {
+            if (fieldToProcess === field) {
+              return processFieldsHash(fieldToProcess, predicate);
+            }
+            return fieldToProcess;
+          });
+        } else {
+          newField = processFieldsHash(newField, predicate);
+        }
       }
-    } else if (field.component === 'array') {
-      const newFields = mapFields(field.fields, predicate);
-      if (newFields !== field.fields) {
-        newField = {
-          ...newField,
-          fields: newFields
-        };
-      }
-    } else if (field.component === 'two-columns') {
-      const newLeftFields = mapFields(field.leftFields, predicate);
-      if (newLeftFields !== field.leftFields) {
-        newField = {
-          ...newField,
-          leftFields: newLeftFields
-        };
-      }
-      const newRightFields = mapFields(field.rightFields, predicate);
-      if (newRightFields !== field.rightFields) {
-        newField = {
-          ...newField,
-          rightFields: newRightFields
-        };
-      }
-    } else if (field.component === 'three-columns') {
-      const newLeftFields = mapFields(field.leftFields, predicate);
-      if (newLeftFields !== field.leftFields) {
-        newField = {
-          ...newField,
-          leftFields: newLeftFields
-        };
-      }
-      const newCenterFields = mapFields(field.centerFields, predicate);
-      if (newCenterFields !== field.centerFields) {
-        newField = {
-          ...newField,
-          centerFields: newCenterFields
-        };
-      }
-      const newRightFields = mapFields(field.rightFields, predicate);
-      if (newRightFields !== field.rightFields) {
-        newField = {
-          ...newField,
-          rightFields: newRightFields
-        };
-      }
-    } else if ((field.component === 'tabs' || field.component === 'steps') && _.isObject(field.fields) && !_.isArray(field.fields)) {      
-      // Problem here: the new field can be an array because the map field, can return an array with 
-      // additional field to be put somewhere in the mapping, of those only the one of type "tab" need to be
-      // mapped, the other one must be left untouched since they where added by the helper method
-      if (_.isArray(newField)) {
-        // if an array is returned, then it's already changed, we don't need to worry too much about
-        // referential integrity
-        // here only process the original field
-        newField = newField.map(fieldToProcess => {
-          if (fieldToProcess === field) {
-            return processFieldsHash(fieldToProcess, predicate);
-          }
-          return fieldToProcess;
-        });
-      } else {
-        newField = processFieldsHash(newField, predicate);
-      }
-    }
 
-    return newField;
-  });
+      return newField;
+    });
 
   let hasChanges;
   if (needsFlatten) {    

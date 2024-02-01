@@ -18,6 +18,9 @@ const reduceFields = (
   }
   let result = _.clone(accumulator);
   fields.forEach(field => {
+    if (!field) {
+      return;
+    }
     result = predicate(field, result);
     if (field.component === 'group' && options.group) {
       result = reduceFields(field.fields, predicate, result, opts);
