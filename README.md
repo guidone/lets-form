@@ -33,7 +33,7 @@ then try a simple JSON form schema with just one text field (or use the [LetsFor
 ```js
 import React from 'react';
 import 'rsuite/dist/rsuite.min.css';
-import LetsForm from 'lets-form/rsuite5';
+import LetsForm from 'lets-form/react-rsuite5';
 
 // copied and pasted from LetsForm Designer
 const MY_FORM = {

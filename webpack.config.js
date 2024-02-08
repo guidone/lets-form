@@ -42,7 +42,7 @@ module.exports = module.exports = (env = {}) => {
     console.log('Building for Ant Design framework');
     library = 'lets-form-antd';
     entryPoint = path.join(__dirname, 'react-antd/index.js');
-    outputFile = 'antd.js';
+    outputFile = 'index.js';
     entryPointName = 'lets-form-antd';
     outputPath = 'dist/react-antd';
     globalObject = 'this';
@@ -50,7 +50,7 @@ module.exports = module.exports = (env = {}) => {
     console.log('Building for RSuite5 framework');
     library = 'lets-form-rsuite5';
     entryPoint = path.join(__dirname, 'react-rsuite5/index.js');
-    outputFile = 'rsuite5.js';
+    outputFile = 'index.js';
     entryPointName = 'lets-form-rsuite5';
     outputPath = 'dist/react-rsuite5';
     globalObject = 'this';
@@ -66,7 +66,7 @@ module.exports = module.exports = (env = {}) => {
     console.log('Building for React framework');
     library = 'lets-form-react';
     entryPoint = path.join(__dirname, 'react/index.js');
-    outputFile = 'react.js';
+    outputFile = 'index.js';
     entryPointName = 'lets-form-react';
     outputPath = 'dist/react';
     globalObject = 'this';
@@ -74,7 +74,7 @@ module.exports = module.exports = (env = {}) => {
     console.log('Building for Material UI framework');
     library = 'lets-form-material-ui';
     entryPoint = path.join(__dirname, 'react-material-ui/index.js');
-    outputFile = 'material-ui.js';
+    outputFile = 'index.js';
     entryPointName = 'lets-form-material-ui';
     outputPath = 'dist/react-material-ui';
     globalObject = 'this';
@@ -82,7 +82,7 @@ module.exports = module.exports = (env = {}) => {
     console.log('Building for helpers');
     library = 'lets-form/utils';
     entryPoint = path.join(__dirname, 'helpers/index-export.js');
-    outputFile = 'utils.js';
+    outputFile = 'index.js';
     entryPointName = 'lets-form/utils';
     outputPath = 'dist/utils';
     globalObject = 'this';
