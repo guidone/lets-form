@@ -96,9 +96,11 @@ module.exports = module.exports = (env = {}) => {
       [entryPointName]: entryPoint
     },
     output: {
+      clean: true,
       path: outputPath ? path.join(__dirname, outputPath) : __dirname,
       library: library,
       filename: outputFile,
+      chunkFilename: '[name]-[id]-[contenthash].js',
       libraryTarget: 'umd',
       globalObject
     },
