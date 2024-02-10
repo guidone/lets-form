@@ -907,6 +907,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     plaintext = false,
     // hide submit and cancel buttons
     hideToolbar = false,
+    // React view to show while loading chunks
+    loader: Loader,
     custom,
     children,
     components,
@@ -1102,7 +1104,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               errors={enrichWithLabels(formErrors, formFields)}
             />
           )}
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={Loader ? <Loader /> : <div>Loading...</div>}>
             <Form
               onSubmit={handleSubmit(onHandleSubmit, onHandleError)}
               name={formName}
