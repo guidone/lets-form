@@ -1,9 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
-import { Form, Slider } from 'antd';
+import Form from 'antd/lib/form';
+import Slider from 'antd/lib/slider';
 
 import { I18N } from '../../components';
 import { i18nOptions, passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const SliderAnt = I18N(
   ({
@@ -82,5 +84,6 @@ const SliderAnt = I18N(
     marks: i18nOptions
   }
 );
+lfLog('Loaded AntD.Slider');
 
-export { SliderAnt as Slider };
+export default SliderAnt;

@@ -1,8 +1,11 @@
 import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
-import { Form, Checkbox } from 'rsuite';
+import Form from 'rsuite/Form';
+import Checkbox from 'rsuite/Checkbox';
+
 import { I18N } from '../../components';
 import { passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 import './index.scss';
 
@@ -72,5 +75,6 @@ const CheckboxRSuite = I18N(
   },
   ['label', 'hint']
 );
+lfLog('Loaded RSuite5.Checkbox');
 
-export { CheckboxRSuite as Checkbox };
+export default CheckboxRSuite;

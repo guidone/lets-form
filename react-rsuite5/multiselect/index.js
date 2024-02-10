@@ -1,9 +1,12 @@
 import React from 'react';
 import _ from 'lodash';
-import { Form, TagPicker, CheckPicker } from 'rsuite';
+import Form from 'rsuite/Form';
+import TagPicker from 'rsuite/TagPicker';
+import CheckPicker from 'rsuite/CheckPicker';
 
 import { RequiredIcon, I18N } from '../../components';
 import { i18nOptions, makeWidthStyle, passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const Multiselect = I18N(
   ({
@@ -75,5 +78,6 @@ const Multiselect = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded RSuite5.Multiselect');
 
-export { Multiselect };
+export default Multiselect;

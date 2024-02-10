@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 
 import { RequiredIcon, I18N } from '../../components';
 import { i18nOptions } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const CheckboxGroupBootstrap = I18N(
   ({
@@ -84,5 +85,6 @@ const CheckboxGroupBootstrap = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded ReactBootrap.CheckboxGroup');
 
-export { CheckboxGroupBootstrap as CheckboxGroup };
+export default CheckboxGroupBootstrap;

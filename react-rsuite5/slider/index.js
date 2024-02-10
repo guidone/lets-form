@@ -1,9 +1,11 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
-import { Form, Slider } from 'rsuite';
+import Form from 'rsuite/Form';
+import Slider from 'rsuite/Slider';
 
 import { RequiredIcon, I18N } from '../../components';
 import { passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 import './index.scss';
 
@@ -71,5 +73,6 @@ const SliderRsuite = I18N(
     }
   }
 );
+lfLog('Loaded RSuite5.Slider');
 
-export { SliderRsuite as Slider };
+export default SliderRsuite;

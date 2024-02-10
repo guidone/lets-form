@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useCallback } from 'react';
-import { Form } from 'rsuite';
-import { RadioTile, RadioTileGroup } from 'rsuite';
+import Form from 'rsuite/Form';
+import RadioTile from 'rsuite/RadioTile';
+import RadioTileGroup from 'rsuite/RadioTileGroup';
 
 import { I18N, RequiredIcon } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 const RadioTileRSuite = I18N(
   ({
@@ -81,5 +83,6 @@ const RadioTileRSuite = I18N(
         }))
   }
 );
+lfLog('Loaded RSuite.RadioTile');
 
-export { RadioTileRSuite as RadioTile };
+export default RadioTileRSuite;

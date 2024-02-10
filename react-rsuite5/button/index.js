@@ -1,11 +1,16 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import { Button, IconButton, Whisper, Tooltip, Form } from 'rsuite';
+import Button from 'rsuite/Button';
+import IconButton from 'rsuite/IconButton';
+import Whisper from 'rsuite/Whisper';
+import Tooltip from 'rsuite/Tooltip';
+import Form from 'rsuite/Form';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
 import { MakeButton } from '../../common';
 import { passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 import './button.scss';
 
@@ -57,5 +62,6 @@ const BiStateButton = I18N(
   MakeButton(RSuiteButton, { appearance: 'primary' }, { appearance: 'ghost' }),
   ['labelOn', 'labelOff', 'labelLink', 'hint']
 );
+lfLog('Loaded RSuite5.Button');
 
-export { BiStateButton as Button };
+export default BiStateButton;

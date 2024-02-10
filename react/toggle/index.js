@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 
 import { ReactGenericCheckbox } from '../../components/react-generic-checkbox';
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 const Toggle = I18N(
   ({ onChange, value, ...rest }) => {
@@ -30,5 +31,6 @@ const Toggle = I18N(
   },
   ['hint', 'label']
 );
+lfLog('Loaded React.Toggle');
 
-export { Toggle };
+export default Toggle;

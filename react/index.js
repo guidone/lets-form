@@ -1,74 +1,55 @@
-import React from 'react';
+import React, { lazy } from 'react';
 
 import { GenerateGenerator } from '../generator';
 
-import { FormReact } from './form';
-import { TextInput } from './input-text';
-import { InputNumber } from './input-number';
-import { Checkbox } from './checkbox';
-import { Textarea } from './textarea';
-import { ThreeColumns } from './three-columns';
-import { TwoColumns } from './two-columns';
-import { Group } from './group';
-import { Divider } from './divider';
-import { ReactView } from './react-view';
-import { Placeholder } from './placeholder';
-import { Select } from './select';
-import { DateInput } from './date';
-import { ListArray } from './array';
-//import { Toggle } from './toggle';
-import { DateTime } from './datetime';
-import { PlaceholderImage } from './placeholder-image';
-import { Button } from './button';
-
 const Fields = {
   'input-text': {
-    'react': TextInput
+    'react': lazy(() => import('./input-text'))
   },
   'input-number': {
-    'react': InputNumber
+    'react': lazy(() => import('./input-number'))
   },
   'checkbox': {
-    'react': Checkbox
+    'react': lazy(() => import('./checkbox'))
   },
   'textarea': {
-    'react': Textarea
+    'react': lazy(() => import('./textarea'))
   },
   'three-columns': {
-    'react': ThreeColumns
+    'react': lazy(() => import('./three-columns'))
   },
   'two-columns': {
-    'react': TwoColumns
+    'react': lazy(() => import('./two-columns'))
   },
   'group': {
-    'react': Group
+    'react': lazy(() => import('./group'))
   },
   'divider': {
-    'react': Divider
+    'react': lazy(() => import('./divider'))
   },
   'react-view': {
-    'react': ReactView
+    'react': lazy(() => import('./react-view'))
   },
   'placeholder': {
-    'react': Placeholder
+    'react': lazy(() => import('./placeholder'))
   },
   'select': {
-    'react': Select
+    'react': lazy(() => import('./select'))
   },
   'date': {
-    'react': DateInput
+    'react': lazy(() => import('./date'))
   },
   'datetime': {
-    'react': DateTime
+    'react': lazy(() => import('./datetime'))
   },
   'array': {
-    'react': ListArray
+    'react': lazy(() => import('./array'))
   },
   'placeholder-image': {
-    'react': PlaceholderImage
+    'react': lazy(() => import('./placeholder-image'))
   },
   'button': {
-    'react': Button
+    'react': lazy(() => import('./button'))
   }
   // Removed, doesn't work
   /*'toggle': {
@@ -77,7 +58,7 @@ const Fields = {
 };
 
 const Forms = {
-  'react': FormReact
+  'react': lazy(() => import('./form'))
 };
 
 const FormGenerator = GenerateGenerator({ Fields, Forms });

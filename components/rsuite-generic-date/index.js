@@ -1,6 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
-import { Form, DatePicker, CustomProvider } from 'rsuite';
+import Form from 'rsuite/Form';
+import DatePicker from 'rsuite/DatePicker';
+import CustomProvider from 'rsuite/CustomProvider';
 import * as locales from 'rsuite/locales';
 
 import { RequiredIcon } from '../../components';

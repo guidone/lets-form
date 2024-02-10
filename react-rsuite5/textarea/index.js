@@ -1,10 +1,12 @@
 import React from 'react';
-import { Form, Input } from 'rsuite';
+import Form from 'rsuite/Form';
+import Input from 'rsuite/Input';
 import _ from 'lodash';
 import classNames from 'classnames';
 
 import { RequiredIcon, I18N } from '../../components';
 import { makeWidthStyle, passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const ControlTextare = (props) => <Input as="textarea" {...props} />
 
@@ -69,5 +71,6 @@ const Textarea = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded RSuite5.Textarea');
 
-export { Textarea };
+export default Textarea;

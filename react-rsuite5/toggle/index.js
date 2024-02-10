@@ -1,8 +1,10 @@
 import React from 'react';
 import _ from 'lodash';
-import { Form, Toggle } from 'rsuite';
+import Form from 'rsuite/Form';
+import Toggle from 'rsuite/Toggle';
 
 import { RequiredIcon, I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 const ToggleInput = I18N(
   ({
@@ -46,5 +48,6 @@ const ToggleInput = I18N(
   },
   ['label', 'hint', 'checkedChildren', 'unCheckedChildren']
 );
+lfLog('Loaded RSuite5.ToggleInput');
 
-export { ToggleInput };
+export default ToggleInput;

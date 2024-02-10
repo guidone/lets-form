@@ -1,9 +1,10 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
-import { Tabs } from 'antd';
+import Tabs from 'antd/lib/tabs';
 
 import { i18nOptions, passRest } from '../../helpers';
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 import './tabs.scss';
 
@@ -65,5 +66,6 @@ const TabsAntd = I18N(
     tabs: i18nOptions
   }
 );
+lfLog('Loaded AntD.Tabs');
 
-export { TabsAntd as Tabs };
+export default TabsAntd;

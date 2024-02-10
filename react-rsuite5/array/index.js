@@ -1,10 +1,11 @@
 import React from 'react';
-import { Form } from 'rsuite';
+import Form from 'rsuite/Form';
 
 import { RequiredIcon, I18N } from '../../components';
 import { ListArray } from '../../common';
 import LetsForm from '../../react-rsuite5';
 import { passRest } from '../../helpers/pass-rest';
+import { lfLog } from '../../helpers/lf-log';
 
 const ListArrayRSuite5 = I18N(
   ({
@@ -37,5 +38,6 @@ const ListArrayRSuite5 = I18N(
   },
   ['label', 'hint']
 );
+lfLog('Loaded RSuite5.ListArray');
 
-export { ListArrayRSuite5 as ListArray };
+export default ListArrayRSuite5;

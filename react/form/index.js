@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import { lfLog } from '../../helpers/lf-log';
+
 import './index.scss';
 
 const FormReact = ({
@@ -49,5 +51,6 @@ const FormReact = ({
     </form>
   );
 };
+lfLog('Loaded React.Form');
 
-export { FormReact };
+export default FormReact;

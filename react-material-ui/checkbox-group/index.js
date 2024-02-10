@@ -1,9 +1,15 @@
 import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
-import { FormLabel, Checkbox, FormControl, FormGroup, FormHelperText, FormControlLabel } from '@mui/material';
+import FormLabel from '@mui/material/FormLabel';
+import Checkbox from '@mui/material/Checkbox';
+import FormControl from '@mui/material/FormControl';
+import FormGroup from '@mui/material/FormGroup';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 import { I18N } from '../../components';
 import { i18nOptions, passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -84,5 +90,6 @@ const CheckboxGroup = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded MUI.CheckboxGroup');
 
-export { CheckboxGroup };
+export default CheckboxGroup;

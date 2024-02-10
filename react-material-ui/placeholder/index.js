@@ -1,10 +1,11 @@
 import React from 'react';
-import { FormControl, FormHelperText } from '@mui/material';
+import FormControl from '@mui/material/FormControl';
+import FormHelperText from '@mui/material/FormHelperText';
 
 import { MuiLabel } from '../../components/mui-label';
 import { Placeholder } from '../../common';
 import { I18N } from '../../components';
-
+import { lfLog } from '../../helpers/lf-log';
 
 const PlaceholderMUI = I18N(
   ({
@@ -28,5 +29,6 @@ const PlaceholderMUI = I18N(
   },
   ['label', 'hint', 'text']
 );
+lfLog('Loaded MUI.Placeholder');
 
-export { PlaceholderMUI as Placeholder };
+export default PlaceholderMUI;

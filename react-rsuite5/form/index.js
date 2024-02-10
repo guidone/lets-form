@@ -1,6 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Form, ButtonToolbar, Button } from 'rsuite';
+import Form from 'rsuite/Form';
+import ButtonToolbar from 'rsuite/ButtonToolbar';
+import Button from 'rsuite/Button'
+
+import { lfLog } from '../../helpers/lf-log';
 
 import './index.scss';
 
@@ -71,4 +75,6 @@ const FormRsuite5 = ({
   );
 };
 
-export { FormRsuite5 }
+lfLog('Loaded RSuite5.Form');
+
+export default FormRsuite5;

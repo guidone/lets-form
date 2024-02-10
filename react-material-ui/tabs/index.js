@@ -1,9 +1,12 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
-import { Tabs, Tab,  Box } from '@mui/material';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
 
 import { i18nOptions, passRest } from '../../helpers';
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 import './tabs.scss';
 
@@ -67,5 +70,6 @@ const TabsMui = I18N(
     tabs: i18nOptions
   }
 );
+lfLog('Loaded MUI.Tabs');
 
-export { TabsMui as Tabs };
+export default TabsMui;

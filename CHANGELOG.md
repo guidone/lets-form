@@ -9,6 +9,7 @@
 
 ## v0.5.6
 - [LF-6](https://github.com/guidone/lets-form/issues/6) LetsForm Designer > MUI Toggle > Crash when remove size prop
+- fixed Upload component in MUI not reading "value" prop
 
 ## v0.5.5
 - Button component for React

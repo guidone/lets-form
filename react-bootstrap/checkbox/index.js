@@ -3,6 +3,7 @@ import _ from 'lodash';
 import Form from 'react-bootstrap/Form';
 
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 const Checkbox = I18N(
   ({
@@ -54,6 +55,7 @@ const Checkbox = I18N(
     );
   },
   ['label', 'hint']
-);;
+);
+lfLog('Loaded ReactBootrap.Checkbox');
 
-export { Checkbox };
+export default Checkbox;

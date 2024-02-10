@@ -3,6 +3,7 @@ import _ from 'lodash';
 
 import { I18N } from '../../components';
 import { MuiGenericInput } from '../../components/mui-generic-input';
+import { lfLog } from '../../helpers/lf-log';
 
 // DOC: https://mui.com/material-ui/api/input/
 
@@ -44,5 +45,6 @@ const InputNumber = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded MUI.InputNumber');
 
-export { InputNumber };
+export default InputNumber;

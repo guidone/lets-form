@@ -1,7 +1,10 @@
 import React, { useCallback } from 'react';
-import { Switch, FormGroup, FormControlLabel } from '@mui/material';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormGroup from '@mui/material/FormGroup';
+import Switch from '@mui/material/Switch';
 
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 const Toggle = I18N(
   ({
@@ -57,5 +60,6 @@ const Toggle = I18N(
   },
   ['label', 'hint']
 );
+lfLog('Loaded MUI.Toggle');
 
-export { Toggle };
+export default Toggle;

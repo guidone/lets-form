@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { ListArray } from '../../common';
 import LetsForm from '../../react/index';
 import { RequiredIcon, I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 import './array.scss';
 
@@ -39,5 +40,6 @@ const ListArrayReact = I18N(
   },
   ['label', 'hint']
 );
+lfLog('Loaded React.Array');
 
-export { ListArrayReact as ListArray };
+export default ListArrayReact;

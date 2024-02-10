@@ -1,9 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
-import { Form, SelectPicker } from 'rsuite';
+import Form from 'rsuite/Form';
+import SelectPicker from 'rsuite/SelectPicker';
 
 import { passRest, filterOptions, i18nOptions } from '../../helpers';
 import { RequiredIcon, I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 import './select.scss';
 
@@ -94,5 +96,6 @@ const Select = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded RSuite5.Select');
 
-export { Select };
+export default Select;

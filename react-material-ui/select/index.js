@@ -3,6 +3,7 @@ import React, { useCallback } from 'react';
 import { I18N } from '../../components';
 import { MuiGenericSelect } from '../../components/mui-select';
 import { i18nOptions } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const MuiSelect = I18N(
   ({
@@ -30,5 +31,6 @@ const MuiSelect = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded MUI.Select');
 
-export { MuiSelect as Select };
+export default MuiSelect;

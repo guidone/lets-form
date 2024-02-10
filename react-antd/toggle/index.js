@@ -1,8 +1,10 @@
 import React, { useCallback } from 'react';
-import { Form, Switch } from 'antd';
+import Form from 'antd/lib/form';
+import Switch from 'antd/lib/switch';
 
 import { I18N } from '../../components';
 import { passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const Toggle = I18N(
   ({
@@ -64,5 +66,6 @@ const Toggle = I18N(
   },
   ['label', 'hint', 'checkedChildren', 'unCheckedChildren']
 );
+lfLog('Loaded AntD.Toggle');
 
-export { Toggle };
+export default Toggle;

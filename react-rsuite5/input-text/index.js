@@ -1,11 +1,14 @@
 import React, { useCallback } from 'react';
-import { Form, Input, InputGroup } from 'rsuite';
+import Form from 'rsuite/Form';
+import Input from 'rsuite/Input';
+import InputGroup from 'rsuite/InputGroup';
 import _ from 'lodash';
 import classNames from 'classnames';
 
 import { RequiredIcon, I18N } from '../../components';
 import { TextOrIcon } from '../../common';
 import { passRest, makeWidthStyle } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 import './input-text.scss';
 
@@ -89,5 +92,6 @@ const TextInput = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded RSuite.InputText');
 
-export { TextInput };
+export default TextInput;

@@ -1,7 +1,10 @@
 import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
-import { Uploader, Button, Form } from 'rsuite';
+import Uploader from 'rsuite/Uploader';
+import Button from 'rsuite/Button';
+import Form from 'rsuite/Form';
 
+import { lfLog } from '../../helpers/lf-log';
 import { RequiredIcon, I18N } from '../../components';
 import { passRest } from '../../helpers';
 
@@ -40,7 +43,6 @@ const ShieldedButton = ({ superDisabled, superSize, disabled, hint, ...rest }) =
   }
   return inner;
 };
-
 
 const Upload = I18N(
   ({
@@ -136,5 +138,6 @@ const Upload = I18N(
   },
   ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']
 );
+lfLog('Loaded RSuite.Upload');
 
-export { Upload };
+export default Upload;

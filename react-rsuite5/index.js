@@ -1,138 +1,105 @@
-import React from 'react';
+import React, { lazy } from 'react';
 
 import { GenerateGenerator } from '../generator';
 
-import { FormRsuite5 } from './form';
-import { TextInput } from './input-text';
-import { ToggleInput } from './toggle';
-import { Select } from './select';
-import { Group } from './group';
-import { ListArray } from './array';
-import { TwoColumns } from './two-columns';
-import { ThreeColumns } from './three-columns';
-import { InputNumber } from './input-number';
-import { SelectDate } from './date';
-import { SelectDatetime } from './datetime';
-import { Checkbox } from './checkbox';
-import { Slider } from './slider';
-import { CheckboxGroup } from './checkbox-group';
-import { RadioGroup } from './radio-group';
-import { InputTag } from './input-tag';
-import { InputMask } from './input-mask';
-import { Textarea } from './textarea';
-import { Rate } from './rate';
-import { Placeholder } from './placeholder';
-import { Multiselect } from './multiselect';
-import { MultiselectLanguage } from './multiselect-language';
-import { InputTextI18N } from './input-text-i18n';
-import { PlaceholderImage } from './placeholder-image';
-import { Button } from './button';
-import { Divider } from './divider';
-import { ReactView } from './react-view';
-import { Tabs } from './tabs';
-import { RadioTile } from './radio-tile';
-import { Upload } from './upload';
-import { ButtonsToggleGroup } from './buttons-toggle-group';
-import { Steps } from './steps';
-
 const Fields = {
   'input-text': {
-    'react-rsuite5': TextInput
+    'react-rsuite5': lazy(() => import('./input-text'))
   },
   'toggle': {
-    'react-rsuite5': ToggleInput
+    'react-rsuite5': lazy(() => import('./toggle'))
   },
   'select': {
-    'react-rsuite5': Select
+    'react-rsuite5': lazy(() => import('./select'))
   },
   'group': {
-    'react-rsuite5': Group
+    'react-rsuite5': lazy(() => import('./group'))
   },
   'array': {
-    'react-rsuite5': ListArray
+    'react-rsuite5': lazy(() => import('./array'))
   },
   'two-columns': {
-    'react-rsuite5': TwoColumns
+    'react-rsuite5': lazy(() => import('./two-columns'))
   },
   'three-columns': {
-    'react-rsuite5': ThreeColumns
+    'react-rsuite5': lazy(() => import('./three-columns'))
   },
   'input-number': {
-    'react-rsuite5': InputNumber
+    'react-rsuite5': lazy(() => import('./input-number'))
   },
   'date': {
-    'react-rsuite5': SelectDate
+    'react-rsuite5': lazy(() => import('./date'))
   },
   'checkbox': {
-    'react-rsuite5': Checkbox
+    'react-rsuite5': lazy(() => import('./checkbox'))
   },
   'checkbox-group': {
-    'react-rsuite5': CheckboxGroup
+    'react-rsuite5': lazy(() => import('./checkbox-group'))
   },
   'slider': {
-    'react-rsuite5': Slider
+    'react-rsuite5': lazy(() => import('./slider'))
   },
   'radio-group': {
-    'react-rsuite5': RadioGroup
+    'react-rsuite5': lazy(() => import('./radio-group'))
   },
   'input-tag': {
-    'react-rsuite5': InputTag
+    'react-rsuite5': lazy(() => import('./input-tag'))
   },
   'input-mask': {
-    'react-rsuite5': InputMask
+    'react-rsuite5': lazy(() => import('./input-mask'))
   },
   'textarea': {
-    'react-rsuite5': Textarea
+    'react-rsuite5': lazy(() => import('./textarea'))
   },
   'rate': {
-    'react-rsuite5': Rate
+    'react-rsuite5': lazy(() => import('./rate'))
   },
   'placeholder': {
-    'react-rsuite5': Placeholder
+    'react-rsuite5': lazy(() => import('./placeholder'))
   },
   'multiselect': {
-    'react-rsuite5': Multiselect
+    'react-rsuite5': lazy(() => import('./multiselect'))
   },
   'multiselect-language': {
-    'react-rsuite5': MultiselectLanguage
+    'react-rsuite5': lazy(() => import('./multiselect-language'))
   },
   'input-text-i18n': {
-    'react-rsuite5': InputTextI18N
+    'react-rsuite5': lazy(() => import('./input-text-i18n'))
   },
   'placeholder-image': {
-    'react-rsuite5': PlaceholderImage
+    'react-rsuite5': lazy(() => import('./placeholder-image'))
   },
   'button': {
-    'react-rsuite5': Button
+    'react-rsuite5': lazy(() => import('./button'))
   },
   'divider': {
-    'react-rsuite5': Divider
+    'react-rsuite5': lazy(() => import('../common/divider'))
   },
   'react-view': {
-    'react-rsuite5': ReactView
+    'react-rsuite5': lazy(() => import('./react-view'))
   },
   'datetime': {
-    'react-rsuite5': SelectDatetime
+    'react-rsuite5': lazy(() => import('./datetime'))
   },
   'tabs': {
-    'react-rsuite5': Tabs
+    'react-rsuite5': lazy(() => import('./tabs'))
   },
   'radio-tile': {
-    'react-rsuite5': RadioTile
+    'react-rsuite5': lazy(() => import('./radio-tile'))
   },
   'upload': {
-    'react-rsuite5': Upload
+    'react-rsuite5': lazy(() => import('./upload'))
   },
   'buttons-toggle-group': {
-    'react-rsuite5': ButtonsToggleGroup
+    'react-rsuite5': lazy(() => import('./buttons-toggle-group'))
   },
   'steps': {
-    'react-rsuite5': Steps
+    'react-rsuite5': lazy(() => import('./steps'))
   }
 };
 
 const Forms = {
-  'react-rsuite5': FormRsuite5
+  'react-rsuite5': lazy(() => import('./form'))
 };
 
 const FormGenerator = GenerateGenerator({ Fields, Forms });

@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { I18N } from '../../components';
 import { RSuiteGenericDate } from '../../components/rsuite-generic-date';
 import { isValidDate, passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const SelectDate = I18N(
   ({
@@ -43,5 +44,6 @@ const SelectDate = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded RSuite5.SelectDate');
 
-export { SelectDate };
+export default SelectDate;

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Placeholder } from '../../common';
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 const PlaceholderReact = I18N(
   ({
@@ -27,5 +28,6 @@ const PlaceholderReact = I18N(
   },
   ['label', 'hint', 'text']
 );
+lfLog('Loaded React.Placeholder');
 
-export { PlaceholderReact as Placeholder };
+export default PlaceholderReact;

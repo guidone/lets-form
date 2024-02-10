@@ -5,6 +5,7 @@ import { Tabs, Tab } from 'react-bootstrap';
 
 import { i18nOptions, passRest } from '../../helpers';
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 import './tabs.scss';
 
@@ -65,5 +66,6 @@ const TabsReactBootstrap = I18N(
     tabs: i18nOptions
   }
 );
+lfLog('Loaded ReactBootrap.Tabs');
 
-export { TabsReactBootstrap as Tabs };
+export default TabsReactBootstrap;

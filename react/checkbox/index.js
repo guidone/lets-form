@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 
 import { ReactGenericCheckbox } from '../../components/react-generic-checkbox';
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 const Checkbox = I18N(
   ({ onChange, ...rest }) => {
@@ -24,5 +25,6 @@ const Checkbox = I18N(
   },
   ['hint', 'label']
 );
+lfLog('Loaded React.Checkbox');
 
-export { Checkbox };
+export default Checkbox;

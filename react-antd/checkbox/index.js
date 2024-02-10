@@ -1,7 +1,9 @@
 import React, { useCallback } from 'react';
-import { Form, Checkbox } from 'antd';
+import Form from 'antd/lib/form';
+import Checkbox from 'antd/lib/checkbox';
 
-import { I18N } from '../../components'
+import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 const CheckboxAntd = I18N(
   ({
@@ -57,5 +59,6 @@ const CheckboxAntd = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded AntD.Checkbox');
 
-export { CheckboxAntd as Checkbox };
+export default CheckboxAntd;

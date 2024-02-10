@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 
 import { RequiredIcon, I18N } from '../../components';
 import { passRest, makeWidthStyle } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -67,5 +68,6 @@ const Textarea = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded ReactBootrap.Textarea');
 
-export { Textarea };
+export default Textarea;

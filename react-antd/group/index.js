@@ -1,3 +1,8 @@
+import { Group } from '../../common/group';
+import { lfLog } from '../../helpers/lf-log';
+
 import './group.scss';
 
-export * from '../../common/group';
+lfLog('Loaded AntD.Group');
+
+export default Group;

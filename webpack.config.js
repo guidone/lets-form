@@ -1,17 +1,28 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
+const fs = require('fs');
 const webpack = require('webpack');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { consola } = require('consola');
 
+// get the latest version
+let currentVersion;
+try {
+  const packageFile = fs.readFileSync(__dirname + '/package.json', 'utf-8');
+  const packageJson = JSON.parse(packageFile);
+  currentVersion = packageJson.version;
+} catch (e) {
+  consola.error('Error reading package version', e);
+  process.exit(1);
+}
 
-const __DEV__ = process.env.NODE_ENV === 'development';
-const filename = __DEV__ ? '[name].js' : '[name].min.js';
+//const __DEV__ = process.env.NODE_ENV === 'development';
 
 const plugins = [
   new LodashModuleReplacementPlugin(),
   new webpack.SourceMapDevToolPlugin({
-    filename: `${filename}.map`
+    filename: '[name]-[chunkhash].map'
   })
 ];
 
@@ -20,7 +31,7 @@ if (process.env.ANALYZE === 'true') {
 }
 
 
-function externalMaterialUI (_, module, callback) {
+/*function externalMaterialUI (_, module, callback) {
   var isMaterialUIComponent = /^@mui\/([^/]+)$/;
   var match = isMaterialUIComponent.exec(module);
   if (match !== null) {
@@ -28,7 +39,7 @@ function externalMaterialUI (_, module, callback) {
       return callback(null, `window["material-ui"].${component}`);
   }
   callback();
-}
+}*/
 
 module.exports = module.exports = (env = {}) => {
   let library = 'lets-form';
@@ -37,54 +48,59 @@ module.exports = module.exports = (env = {}) => {
   let entryPointName = 'lets-form';
   let outputPath = 'dist';
   let globalObject = undefined;
+  const BASE_PUBLIC_PATH = 'https://unpkg.com/lets-form';
+
+  consola.box(`Framework ${env.framework}`);
+  consola.start(`Building version ${currentVersion}`);
+  console.log('');
 
   if (env.framework === 'antd') {
     console.log('Building for Ant Design framework');
     library = 'lets-form-antd';
     entryPoint = path.join(__dirname, 'react-antd/index.js');
-    outputFile = 'antd.js';
+    outputFile = 'index.js';
     entryPointName = 'lets-form-antd';
-    outputPath = null;
+    outputPath = 'dist/react-antd';
     globalObject = 'this';
   } else if (env.framework === 'rsuite5') {
-    console.log('Building for RSuite5 framework');
+    
     library = 'lets-form-rsuite5';
     entryPoint = path.join(__dirname, 'react-rsuite5/index.js');
-    outputFile = 'rsuite5.js';
+    outputFile = 'main.js';
     entryPointName = 'lets-form-rsuite5';
-    outputPath = null;
+    outputPath = 'dist/react-rsuite5';
     globalObject = 'this';
   } else if (env.framework === 'bootstrap') {
     console.log('Building for Bootstrap framework');
     library = 'lets-form-bootstrap';
     entryPoint = path.join(__dirname, 'react-bootstrap/index.js');
-    outputFile = 'bootstrap.js';
+    outputFile = 'main.js';
     entryPointName = 'lets-form-bootstrap';
-    outputPath = null;
+    outputPath = 'dist/react-bootstrap';
     globalObject = 'this';
   } else if (env.framework === 'react') {
     console.log('Building for React framework');
     library = 'lets-form-react';
     entryPoint = path.join(__dirname, 'react/index.js');
-    outputFile = 'react.js';
+    outputFile = 'main.js';
     entryPointName = 'lets-form-react';
-    outputPath = null;
+    outputPath = 'dist/react';
     globalObject = 'this';
   } else if (env.framework === 'material-ui') {
     console.log('Building for Material UI framework');
     library = 'lets-form-material-ui';
     entryPoint = path.join(__dirname, 'react-material-ui/index.js');
-    outputFile = 'material-ui.js';
+    outputFile = 'main.js';
     entryPointName = 'lets-form-material-ui';
-    outputPath = null;
+    outputPath = 'dist/react-material-ui';
     globalObject = 'this';
   } else if (env.framework === 'helpers') {
     console.log('Building for helpers');
     library = 'lets-form/utils';
     entryPoint = path.join(__dirname, 'helpers/index-export.js');
-    outputFile = 'utils.js';
+    outputFile = 'main.js';
     entryPointName = 'lets-form/utils';
-    outputPath = null;
+    outputPath = 'dist/utils';
     globalObject = 'this';
   } else {
     console.log('Building for ALL frameworks');
@@ -96,9 +112,13 @@ module.exports = module.exports = (env = {}) => {
       [entryPointName]: entryPoint
     },
     output: {
+      clean: true,
       path: outputPath ? path.join(__dirname, outputPath) : __dirname,
       library: library,
       filename: outputFile,
+      chunkFilename: '[name]-[chunkhash].js',
+      sourceMapFilename: 'main.map',
+      publicPath: `${BASE_PUBLIC_PATH}@${currentVersion}/${outputPath}/`,
       libraryTarget: 'umd',
       globalObject
     },

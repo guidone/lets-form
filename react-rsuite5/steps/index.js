@@ -1,10 +1,13 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
-import { Steps, ButtonGroup, Button } from 'rsuite';
+import Steps from 'rsuite/Steps';
+import ButtonGroup from 'rsuite/ButtonGroup';
+import Button from 'rsuite/Button';
 
 import { passRest } from '../../helpers';
 import { I18N } from '../../components';
 import { GenericIcon } from '../../components/generic-icon';
+import { lfLog } from '../../helpers/lf-log';
 
 import './steps.scss';
 import classNames from 'classnames';
@@ -103,5 +106,6 @@ const Rsuite5Steps = I18N(
     tabs: i18nSteps
   }
 );
+lfLog('Loaded Rsuite5.Steps');
 
-export { Rsuite5Steps as Steps };
+export default Rsuite5Steps;

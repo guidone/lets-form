@@ -1,8 +1,11 @@
 import React from 'react';
-import { Form, Radio, RadioGroup } from 'rsuite';
+import Form from 'rsuite/Form';
+import Radio from 'rsuite/Radio';
+import RadioGroup from 'rsuite/RadioGroup';
 
 import { I18N } from '../../components';
 import { i18nOptions, passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const RadioGroupRSuite = I18N(
   ({
@@ -61,5 +64,6 @@ const RadioGroupRSuite = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded RSuite.RadioGroup');
 
-export { RadioGroupRSuite as RadioGroup };
+export default RadioGroupRSuite

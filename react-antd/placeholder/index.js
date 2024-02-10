@@ -1,8 +1,9 @@
 import React from 'react';
-import { Form } from 'antd';
+import Form from 'antd/lib/form';
 
 import { Placeholder } from '../../common';
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 const PlaceholderAntd = I18N(
   ({
@@ -26,5 +27,6 @@ const PlaceholderAntd = I18N(
   },
   ['label', 'hint', 'text']
 );
+lfLog('Loaded AntD.Placeholder');
 
-export { PlaceholderAntd as Placeholder };
+export default PlaceholderAntd;

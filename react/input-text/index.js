@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 
 import { I18N } from '../../components';
 import { ReactGenericInput } from '../../components/react-generic-input';
+import { lfLog } from '../../helpers/lf-log';
 
 import './input-text.scss';
 
@@ -23,6 +24,6 @@ const TextInput = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded React.InputText');
 
-
-export { TextInput };
+export default TextInput;

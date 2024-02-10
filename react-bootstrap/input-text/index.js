@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 
 import { I18N } from '../../components';
 import { BootstrapGenericInput } from '../../components/bootstrap-generic-input';
+import { lfLog } from '../../helpers/lf-log';
 
 // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -28,5 +29,6 @@ const TextInput = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded ReactBootrap.Input');
 
-export { TextInput };
+export default TextInput;

@@ -1,8 +1,10 @@
 import React from 'react';
-import { Form, Rate } from 'rsuite';
+import Form from 'rsuite/Form';
+import Rate from 'rsuite/Rate';
 import _ from 'lodash';
 
 import { RequiredIcon, I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 const RateRSuite = I18N(
   ({
@@ -51,5 +53,6 @@ const RateRSuite = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded RSuite5.Rate');
 
-export { RateRSuite as Rate };
+export default RateRSuite;

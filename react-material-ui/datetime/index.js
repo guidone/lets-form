@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { isValidDate } from '../../helpers';
 import { I18N } from '../../components';
 import { MuiGenericDate } from '../../components/mui-generic-date';
+import { lfLog } from '../../helpers/lf-log';
 
 // DOC: https://mui.com/x/api/date-pickers/date-picker/
 //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -47,5 +48,6 @@ const MuiDateTime = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded MUI.DateTime');
 
-export { MuiDateTime };
+export default MuiDateTime;

@@ -1,5 +1,5 @@
 /* eslint-disable no-new-func */
-import React, { useCallback, useState, useEffect } from 'react';
+import React, { useCallback, useState, useEffect, Suspense } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -907,6 +907,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     plaintext = false,
     // hide submit and cancel buttons
     hideToolbar = false,
+    // React view to show while loading chunks
+    loader: Loader,
     custom,
     children,
     components,
@@ -1102,56 +1104,57 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               errors={enrichWithLabels(formErrors, formFields)}
             />
           )}
-          <Form
-            onSubmit={handleSubmit(onHandleSubmit, onHandleError)}
-            name={formName}
-            defaultValues={defaultValues}
-            onlyFields={onlyFields}
-            hideToolbar={hideToolbar}
-            onReset={handleReset}
-            disabled={disabled}
-            disabledSubmit={form.disableSubmitOnError && !isValid}
-            readOnly={readOnly}
-            plaintext={plaintext}
-            locale={locale}
-            {..._.omit(form, 'id', 'fields', 'version')}
-            labelSubmit={i18n(form.labelSubmit, locale) || 'Submit'}
-            labelCancel={i18n(form.labelCancel, locale) || 'Cancel'}
-            hideCancel={hideCancel}
-            hideSubmit={hideSubmit}
-            custom={custom}
-          >
-            {renderFields({
-              Wrapper,
-              GroupWrapper,
-              PlaceholderWrapper,
-              BottomView,
-              onChange: handleChange,
-              onEnter: handleEnter,
-              fields: formFields, // take from state
-              control,
-              framework,
-              getValues,
-              debug,
-              errors,
-              disabled: disabled || form.disabled,
-              readOnly: readOnly || form.readOnly,
-              plaintext: plaintext || form.plaintext,
-              showErrors,
-              locale,
-              onJavascriptError,
-              Components: mergeComponents(Fields, components)
-            })}
-            {children}
-            {formErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (
-              <ValidationErrors
-                className="bottom"
-                locale={locale}
-                errors={enrichWithLabels(formErrors, formFields)}
-              />
-            )}
-            
-          </Form>
+          <Suspense fallback={Loader ? <Loader /> : <div>Loading...</div>}>
+            <Form
+              onSubmit={handleSubmit(onHandleSubmit, onHandleError)}
+              name={formName}
+              defaultValues={defaultValues}
+              onlyFields={onlyFields}
+              hideToolbar={hideToolbar}
+              onReset={handleReset}
+              disabled={disabled}
+              disabledSubmit={form.disableSubmitOnError && !isValid}
+              readOnly={readOnly}
+              plaintext={plaintext}
+              locale={locale}
+              {..._.omit(form, 'id', 'fields', 'version')}
+              labelSubmit={i18n(form.labelSubmit, locale) || 'Submit'}
+              labelCancel={i18n(form.labelCancel, locale) || 'Cancel'}
+              hideCancel={hideCancel}
+              hideSubmit={hideSubmit}
+              custom={custom}
+            >
+              {renderFields({
+                Wrapper,
+                GroupWrapper,
+                PlaceholderWrapper,
+                BottomView,
+                onChange: handleChange,
+                onEnter: handleEnter,
+                fields: formFields, // take from state
+                control,
+                framework,
+                getValues,
+                debug,
+                errors,
+                disabled: disabled || form.disabled,
+                readOnly: readOnly || form.readOnly,
+                plaintext: plaintext || form.plaintext,
+                showErrors,
+                locale,
+                onJavascriptError,
+                Components: mergeComponents(Fields, components)
+              })}
+              {children}
+              {formErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (
+                <ValidationErrors
+                  className="bottom"
+                  locale={locale}
+                  errors={enrichWithLabels(formErrors, formFields)}
+                />
+              )}            
+            </Form>
+          </Suspense>
           {demo && (
             <div className="label-test-buttons">Test buttons</div>
           )}

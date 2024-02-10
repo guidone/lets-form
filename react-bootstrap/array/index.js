@@ -5,6 +5,7 @@ import _ from 'lodash';
 import { RequiredIcon, I18N } from '../../components';
 import { ListArray } from '../../common';
 import LetsForm from '../../react-bootstrap';
+import { lfLog } from '../../helpers/lf-log';
 
 const ListArrayBootstrap = I18N(
   ({
@@ -40,5 +41,6 @@ const ListArrayBootstrap = I18N(
   },
   ['label', 'hint']
 );
+lfLog('Loaded ReactBootrap.Array');
 
-export { ListArrayBootstrap as ListArray };
+export default ListArrayBootstrap;

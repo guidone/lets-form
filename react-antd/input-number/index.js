@@ -1,8 +1,10 @@
 import React from 'react';
-import { Form, InputNumber } from 'antd';
+import Form from 'antd/lib/form';
+import InputNumber from 'antd/lib/input-number';
 
 import { I18N } from '../../components';
 import { passRest, makeWidthStyle } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const InputNumberAntd = I18N(
   ({
@@ -69,5 +71,6 @@ const InputNumberAntd = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded AntD.InputNumber');
 
-export { InputNumberAntd as InputNumber };
+export default InputNumberAntd;

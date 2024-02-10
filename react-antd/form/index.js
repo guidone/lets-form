@@ -1,5 +1,6 @@
 import React from 'react';
-import { Form, Button } from 'antd';
+import Form from 'antd/lib/form'
+import Button from 'antd/lib/button';
 import classNames from 'classnames';
 
 import './index.scss';
@@ -82,4 +83,4 @@ const FormAntD = ({
   );
 };
 
-export { FormAntD as Form };
+export default FormAntD;

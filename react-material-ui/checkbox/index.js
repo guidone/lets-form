@@ -1,7 +1,10 @@
 import React, { useCallback } from 'react';
-import { Checkbox, FormGroup, FormControlLabel } from '@mui/material';
+import Checkbox from '@mui/material/Checkbox';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 import { I18N } from '../../components';
+import { lfLog } from '../../helpers/lf-log';
 
 // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -59,5 +62,6 @@ const CheckboxMUI = I18N(
   },
   ['label', 'hint']
 );
+lfLog('Loaded MUI.Checkbox');
 
-export { CheckboxMUI as Checkbox };
+export default CheckboxMUI;

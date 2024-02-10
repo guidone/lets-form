@@ -1,8 +1,11 @@
 import React from 'react';
-import { Form, Checkbox, CheckboxGroup } from 'rsuite';
+import Form from 'rsuite/Form';
+import Checkbox from 'rsuite/Checkbox';
+import CheckboxGroup from 'rsuite/CheckboxGroup';
 
 import { I18N } from '../../components';
 import { i18nOptions, passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 const CheckboxGroupRSuite = I18N(
   ({
@@ -55,5 +58,6 @@ const CheckboxGroupRSuite = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded RSuite.CheckboxGroup');
 
-export { CheckboxGroupRSuite as CheckboxGroup };
+export default CheckboxGroupRSuite;

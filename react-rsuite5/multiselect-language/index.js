@@ -1,11 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
-import { Form, CheckPicker } from 'rsuite';
+import Form from 'rsuite/Form';
+import CheckPicker from 'rsuite/CheckPicker';
 
 import { RequiredIcon, I18N } from '../../components';
 import LOCALES from '../../common/data/locales.json';
 import { passRest } from '../../helpers';
+import { lfLog } from '../../helpers/lf-log';
 
 import './multiselect-language.scss';
 
@@ -15,15 +17,13 @@ const renderItem = (label, item) => (
   </div>
 );
 
-
-
 const ALL_LOCALES = Object.keys(LOCALES['language-names']);
 const LANGUAGES_OPTIONS = Object.keys(LOCALES['language-names'])
   .map(lang => ({
     value: lang,
     name: LOCALES['language-names'][lang][1],
     label: `${LOCALES['language-names'][lang][1]}`
-  }))
+  }));
 
 const MultiselectLanguage = I18N(
   ({
@@ -108,4 +108,4 @@ const MultiselectLanguage = I18N(
   ['label', 'hint', 'placeholder']
 );
 
-export { MultiselectLanguage };
+export default MultiselectLanguage;

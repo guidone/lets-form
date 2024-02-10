@@ -1,111 +1,85 @@
-import React from 'react';
+import React, { lazy } from 'react';
 
-import { GenerateGenerator } from "../generator";
-
-import { FormMaterialUI } from './form';
-import { TextInput } from './input-text';
-import { Select } from './select';
-import { Toggle } from './toggle';
-import { Slider } from './slider';
-import { Placeholder } from './placeholder';
-import { PlaceholderImage } from './placeholder-image';
-import { Checkbox } from './checkbox';
-import { Rate } from './rate';
-import { MuiDate } from './date';
-import { ThreeColumns } from './three-columns';
-import { TwoColumns } from './two-columns';
-import { Group } from './group';
-import { Divider } from './divider';
-import { ReactView } from './react-view';
-import { MuiDateTime } from './datetime';
-import { ListArray } from './array';
-import { Textarea } from './textarea';
-import { Multiselect } from './multiselect';
-import { InputNumber } from './input-number';
-import { RadioGroup } from './radio-group';
-import { CheckboxGroup } from './checkbox-group';
-import { Tabs } from './tabs';
-import { Button } from './button';
-import { Upload } from './upload';
+import { GenerateGenerator } from '../generator';
 
 const Fields = {
   'input-text': {
-    'react-material-ui': TextInput
+    'react-material-ui': lazy(() => import('./input-text'))
   },
   'select': {
-    'react-material-ui': Select
+    'react-material-ui': lazy(() => import('./select'))
   },
   'toggle': {
-    'react-material-ui': Toggle
+    'react-material-ui': lazy(() => import('./toggle'))
   },
   'checkbox': {
-    'react-material-ui': Checkbox
+    'react-material-ui': lazy(() => import('./checkbox'))
   },
   'slider': {
-    'react-material-ui': Slider
+    'react-material-ui': lazy(() => import('./slider'))
   },
   'placeholder': {
-    'react-material-ui': Placeholder
+    'react-material-ui': lazy(() => import('./placeholder'))
   },
   'rate': {
-    'react-material-ui': Rate
+    'react-material-ui': lazy(() => import('./rate'))
   },
   'date': {
-    'react-material-ui': MuiDate
+    'react-material-ui': lazy(() => import('./date'))
   },
   'three-columns': {
-    'react-material-ui': ThreeColumns
+    'react-material-ui': lazy(() => import('./three-columns'))
   },
   'two-columns': {
-    'react-material-ui': TwoColumns
+    'react-material-ui': lazy(() => import('./two-columns'))
   },
   'group': {
-    'react-material-ui': Group
+    'react-material-ui': lazy(() => import('./group'))
   },
   'placeholder-image': {
-    'react-material-ui': PlaceholderImage
+    'react-material-ui': lazy(() => import('./placeholder-image'))
   },
   'divider': {
-    'react-material-ui': Divider
+    'react-material-ui': lazy(() => import('./divider'))
   },
   'react-view': {
-    'react-material-ui': ReactView
+    'react-material-ui': lazy(() => import('./react-view'))
   },
   'datetime': {
-    'react-material-ui': MuiDateTime
+    'react-material-ui': lazy(() => import('./datetime'))
   },
   'array': {
-    'react-material-ui': ListArray
+    'react-material-ui': lazy(() => import('./array'))
   },
   'textarea': {
-    'react-material-ui': Textarea
+    'react-material-ui': lazy(() => import('./textarea'))
   },
   'multiselect': {
-    'react-material-ui': Multiselect
+    'react-material-ui': lazy(() => import('./multiselect'))
   },
   'input-number': {
-    'react-material-ui': InputNumber
+    'react-material-ui': lazy(() => import('./input-number'))
   },
   'radio-group': {
-    'react-material-ui': RadioGroup
+    'react-material-ui': lazy(() => import('./radio-group'))
   },
   'checkbox-group': {
-    'react-material-ui': CheckboxGroup
+    'react-material-ui': lazy(() => import('./checkbox-group'))
   },
   'tabs': {
-    'react-material-ui': Tabs
+    'react-material-ui': lazy(() => import('./tabs'))
   },
   'button': {
-    'react-material-ui': Button
+    'react-material-ui': lazy(() => import('./button'))
   },
   'upload': {
-    'react-material-ui': Upload
+    'react-material-ui': lazy(() => import('./upload'))
   }
 };
 
 const Forms = {
-  'react-material-ui': FormMaterialUI
-}
+  'react-material-ui': lazy(() => import('./form'))
+};
 
 const FormGenerator = GenerateGenerator({ Fields, Forms });
 const LetsForm = ({ framework, children, ...rest}) => (

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Form } from 'antd';
+import Form from 'antd/lib/form';
 
 import { I18N } from '../../components';
 import { i18nOptions } from '../../helpers';
 
-import { Button } from '../button';
+import Button from '../button';
 import { ButtonsToggleGroup } from '../../common';
+import { lfLog } from '../../helpers/lf-log';
 
 const AntdButtonsToggleGroup = I18N(
   ({
@@ -52,5 +53,6 @@ const AntdButtonsToggleGroup = I18N(
     options: i18nOptions
   }
 );
+lfLog('Loaded AntD.ButtonsToggleGroup');
 
-export { AntdButtonsToggleGroup as ButtonsToggleGroup };
+export default AntdButtonsToggleGroup;

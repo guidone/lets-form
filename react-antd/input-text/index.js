@@ -1,10 +1,12 @@
 import React, { useCallback } from 'react';
-import { Form, Input } from 'antd';
+import Form from 'antd/lib/form';
+import Input from 'antd/lib/input';
 import classNames from 'classnames';
 
 import { I18N } from '../../components';
 import { passRest, makeWidthStyle } from '../../helpers';
 import { TextOrIcon } from '../../common';
+import { lfLog } from '../../helpers/lf-log';
 
 import './input-text.scss';
 
@@ -82,5 +84,6 @@ const TextInput = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded AntD.InputText');
 
-export { TextInput };
+export default TextInput;

@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import classNames from 'classnames';
 
+import { lfLog } from '../../helpers/lf-log';
+
 import './index.scss';
 
 const FormBootstrap = ({
@@ -50,5 +52,6 @@ const FormBootstrap = ({
     </Form>
   );
 };
+lfLog('Loaded ReactBootrap.Form');
 
-export { FormBootstrap };
+export default FormBootstrap;

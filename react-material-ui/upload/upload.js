@@ -1,12 +1,14 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useCallback, useState } from 'react';
-import { Button, FormHelperText } from '@mui/material';
+import Button from '@mui/material/Button';
+import FormHelperText from '@mui/material/FormHelperText';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
 import { MuiLabel } from '../../components/mui-label';
 import { CrossCirle } from '../../assets/icons/cross-circle';
 import { formatBytes } from '../../helpers/format-bytes';
+import { lfLog } from '../../helpers/lf-log';
 
 import './upload.scss';
 
@@ -156,5 +158,6 @@ const Upload = I18N(
   },
   ['labelOn', 'labelOff', 'labelLink', 'hint']
 );
+lfLog('Loaded MUI.Upload');
 
-export { Upload };
+export default Upload;
