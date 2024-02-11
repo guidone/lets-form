@@ -71,7 +71,7 @@ const removeUnusedTabs = obj => {
 
 /**
  * cleanUp
- * Remove id from json file and all empty keys
+ * Remove id from json file and all empty keys, all frameworks props not used, empty tabs
  * @param {*} json
  * @returns
  */
