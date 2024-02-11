@@ -9,272 +9,20 @@ import { FRAMEWORKS } from '../costants';
 import { Warning  } from '../assets/icons';
 import { reduceFields, applyTransformers, isI18n, i18n } from '../helpers';
 import { useStylesheet } from '../hooks';
+import { lfLog } from '../helpers/lf-log';
 
 import FormContext from '../form-context';
 
 import './index.scss';
 import { PlaintextForm } from '../components/plaintext-form';
 
+import { enrichWithLabels } from './helpers/enrich-with-labels';
+import { translateValidation } from './helpers/translate-validations';
+import { collectTransformers } from './helpers/collect-transformers';
+import { errorToString } from './helpers/error-to-string';
+import { mergeComponents } from './helpers/merge-components';
+
 const DEBUG_RENDER = true;
-
-const enrichWithLabels = (validationErrors, fields) => {
-  const result = { ...validationErrors };
-  const collectLabels = reduceFields(
-    fields,
-    (field, accumulator) => field.label ? { ...accumulator, [field.name]: field.label } : accumulator,
-    {}
-  );
-
-  Object
-    .keys(result)
-    .forEach(key => {
-      if (result[key] && result[key].ref && collectLabels[result[key].ref.name]) {
-        result[key].ref.label = collectLabels[result[key].ref.name];
-      }
-    });
-  return result;
-};
-
-
-
-const errorToString = error => {
-  if (error) {
-    if (error.message) {
-      return error.message;
-    } else if (error.type === 'required') {
-      return 'This field is required';
-    } else if (error.type === 'minLength') {
-      return 'Text is too short';
-    } else if (error.type === 'maxLength') {
-      return 'Text is too long';
-    } else if (error.type === 'max') {
-      return 'Value is too big';
-    } else if (error.type === 'min') {
-      return 'Value is too small';
-    }
-    return 'Invalid value';
-  }
-  return undefined;
-};
-
-
-
-const translateValidation = (validation, locale, onJavascriptError) => {
-  // if any validation object
-  if (validation != null) {
-    let errorMessage;
-    if (_.isString(validation.message)) {
-      errorMessage = validation.message;
-    } else if (isI18n(validation.message)) {
-      errorMessage = i18n(validation.message, locale) ?? 'Field is required';
-    } else {
-      errorMessage = 'Field is required';
-    }
-
-    let result = {};
-    if (validation.required) {
-      result.required = errorMessage
-    }
-    // min / max validation
-    ['min', 'max', 'minLength', 'maxLength'].forEach(key => {
-      if (validation[key] != null) {
-        result[key] = {
-          value: validation[key],
-          message: errorMessage
-        }
-      }
-    });
-    // validation with regex
-    if (validation.pattern) {
-      result.pattern = {
-        value: new RegExp(validation.pattern),
-        message: errorMessage
-      };
-    }
-
-
-    if (!_.isEmpty(_.trim(validation.validate))) {
-      try {
-        const validator = new Function(
-          'value',
-          'formValues',
-          validation.validate
-        );
-        // wrap the validator function, if returns strictly false then re-use
-        // the provided message, if it's a string return the string, but it will not i18n
-        result.validate = (value, formValues) => {
-          let v;
-          try {
-            v = validator(value, formValues);
-          } catch(e) {
-            console.error(`[LetsForm] Error executing validate function: `, e);
-            const error = new Error('Error compiling validate function: ' + e.message, { cause: e });
-            error.sourceCode = validation.validate;
-            error.errorType = 'runtime';
-            onJavascriptError(error);
-          }
-          if (v === true) {
-            return true;
-          } else if (v === false) {
-            return errorMessage;
-          } else if (_.isString(v)) {
-            return v;
-          } else if (isI18n(v)) {
-            return i18n(v, locale);
-          }
-          return true;
-        }
-      } catch(e) {
-        console.error(`[LetsForm] Invalid validate function: `, e);
-        const error = new Error('Error compiling validate function: ' + e.message, { cause: e });
-        error.sourceCode = validation.validate;
-        error.errorType = 'compile';
-        onJavascriptError(error);
-      }
-    } else {
-      result.validate = undefined;
-    }
-
-    return result;
-  }
-  return validation;
-}
-
-
-const MissingComponent = ({ lfComponent, label, lfFramework }) => {
-  return (
-    <div className="lf-missing-component">
-      <div className="icon">
-        <Warning color="#ff6633" height={16}/>
-      </div>
-      <div className="message">
-        The component <span className="tag-component">{lfComponent}</span> (<em>"{_.isString(label) ? label : 'unknown'}"</em>)
-        is not available for this framework (<b>{lfFramework}</b>)
-      </div>
-    </div>
-  );
-}
-
-const collectTransformers = (form, onJavascriptError) => {
-  let transformers = {};
-
-  // collect all fieldlist needed to compile the transformer
-  const fieldList = reduceFields(
-    form.fields,
-    (field, accumulator) => {
-      if (field.component !== 'group' && field.component !== 'two-columns' && field.component !== 'three-columns') {
-        return [...accumulator, field.name];
-      }
-      return accumulator;
-    },
-    [],
-    { array: false } // don't include array
-  );
-
-  // compile transformer of the form
-  try {
-    if (!_.isEmpty(form.transformer) || !_.isEmpty(form.script)) {
-      transformers.onRender = [makeTransformer(form.script || form.transformer, fieldList)];
-    }
-  } catch(e) {
-    const error = new Error('Error compiling main form script: ' + e.message, { cause: e });
-    error.sourceCode = form.script || form.transformer;
-    error.errorType = 'compile';
-    onJavascriptError(error);
-  }
-
-  // collect transformers for each field and put it onChange
-  transformers = reduceFields(
-    form.fields,
-    (field, acc) => {
-      
-      if (field.script || field.transformer) {
-        let transformer;
-        try {
-          transformer = makeTransformer(field.script || field.transformer, fieldList);
-        } catch(e) {
-          const error = new Error('Error compiling script. ' + e.message, { cause: e });
-          error.sourceCode = field.script || field.transformer;
-          error.errorType = 'compile';
-          onJavascriptError(error);
-        }
-        // push into the onChange list of txs
-        if (transformer != null) {
-          if (acc.onChange == null) {
-            acc.onChange = {};
-          }
-          acc.onChange[field.name] = [transformer];
-        }
-      }
-      return acc;
-    },
-    transformers,
-    { array: false } // don't include array
-  );
-
-  return transformers;
-};
-
-// Use eval to get the contructor since RCA polyfill this and returns a normal function constructor
-// eslint-disable-next-line no-eval
-const AsyncGeneratorFunction = eval('(() => async function* () {}.constructor)()');
-
-const makeTransformer = (str, fieldList) => {
-  if (_.isEmpty(str)) {
-    return null;
-  }
-  // yielding is manual
-  const yieldedStr = str.replaceAll(
-    "yield();",
-    'yield Promise.resolve(api.fields());\n'
-  );
-
-  try {
-    let spreadVars = '';
-    if (!_.isEmpty(fieldList)) {
-      spreadVars = 'const { ' + fieldList.join(', ') + ' } = values;\n';
-    }
-    const tx = new AsyncGeneratorFunction(
-      'api',
-      `const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue } = api;\n` +
-      spreadVars +
-      yieldedStr +
-      '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
-    );
-    return tx;
-  } catch(e) {
-    console.error(`[LetsForm] Invalid JavaScript code for rules`, e);
-    console.error(`[LetsForm] Script: `, yieldedStr);
-    throw e;
-  }
-};
-
-
-
-
-/**
- * Merge additional components to the main library
- * @param {*} main
- * @param {*} additional
- * @returns
- */
-const mergeComponents = (main, additional) => {
-  // if not empty, then merge, overwriting is ok
-  if (!_.isEmpty(additional) && Object.keys(additional).length !== 0) {
-    Object.keys(additional).forEach(componentName => {
-      if (main[componentName] == null) {
-        main[componentName] = additional[componentName];
-      } else {
-        main[componentName] = {
-          ...main[componentName],
-          ...additional[componentName]
-        };
-      }
-    });
-  }
-
-  return main;
-};
 
 
 const GenerateGenerator = ({ Forms, Fields }) => {
@@ -909,6 +657,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     hideToolbar = false,
     // React view to show while loading chunks
     loader: Loader,
+    // preload components, avoids showing loader while switching between
+    // un-rendered components, for example since they're in a hidden tab
+    prealoadComponents = true,
     custom,
     children,
     components,
@@ -921,6 +672,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [formName, setFormName] = useState(form.name ?? _.uniqueId('form_'));
     useStylesheet(formName, form.css)
     const [transformers, setTransformers] = useState(null);
+    const [preloading, setPreloading] = useState(prealoadComponents);
 
     const { handleSubmit, formState: { errors, isValid }, reset, control, getValues } = useForm({
       defaultValues,
@@ -929,6 +681,43 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [validationErrors, setValidationErrors] = useState();
     // store form fields, apply immediately transformers (collected from all fields)
     const [formFields, setFormFields] = useState(null);
+    const MergedComponents = mergeComponents(Fields, components);
+
+    // preload components of the form
+    useEffect(
+      () => {
+        if (prealoadComponents) {
+          const components = reduceFields(
+            form.fields,
+            (field, acc) => [...acc, field.component],
+            []
+          );
+          lfLog('Preloading components: ' + components.join(', '));
+
+          const loaders = components
+            .map(component => {
+              if (MergedComponents[component] 
+                && MergedComponents[component][framework]
+                && _.isFunction(MergedComponents[component][framework].preload)
+              ) {
+                return MergedComponents[component][framework].preload();
+              };
+            })
+            .filter(Boolean);
+          
+          // when everything is loaded
+          Promise
+            .all(loaders).then(() => {
+              setPreloading(false);
+            })
+            .catch(e => {
+              // TODO test with a failed preloading
+              console.log('error preloading')
+            })
+        }
+      },
+      []
+    );
 
     // update internal state if form changes
     useEffect(
@@ -1071,6 +860,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const BottomView = bottomView;
     const PlaceholderWrapper = placeholderWrapper;
 
+    if (preloading) {
+      return Loader ? <Loader /> : <div>Loading...</div>;
+    }
+
     if (plaintext) {
       return (
         <PlaintextForm
@@ -1143,7 +936,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 showErrors,
                 locale,
                 onJavascriptError,
-                Components: mergeComponents(Fields, components)
+                Components: MergedComponents
               })}
               {children}
               {formErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (

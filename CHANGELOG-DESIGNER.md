@@ -1,5 +1,10 @@
 # LetsForm Designer Changelog
 
+## v0.8.0
+- Split chunks for components of MUI, RSuite, AntD, ReactBootstrap and React
+- Fix: preview shows the right framework
+- LetsForm: added `loader` and `preloadComponents` params
+
 ## v0.7.11
 - fix MUI upload font styles
 - changelog 
