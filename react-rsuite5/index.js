@@ -1,6 +1,7 @@
-import React, { lazy } from 'react';
+import React from 'react';
 
 import { GenerateGenerator } from '../generator';
+import { lazyPreload as lazy } from '../helpers/lazy-preload';
 
 const Fields = {
   'input-text': {

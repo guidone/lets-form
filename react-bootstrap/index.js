@@ -1,75 +1,76 @@
 import React from 'react';
 
 import { GenerateGenerator } from '../generator';
+import { lazyPreload as lazy } from '../helpers/lazy-preload';
 
 const Fields = {
   'input-text': {
-    'react-bootstrap': React.lazy(() => import('./input-text'))
+    'react-bootstrap': lazy(() => import('./input-text'))
   },
   'select': {
-    'react-bootstrap': React.lazy(() => import('./select'))
+    'react-bootstrap': lazy(() => import('./select'))
   },
   'checkbox': {
-    'react-bootstrap': React.lazy(() => import('./checkbox'))
+    'react-bootstrap': lazy(() => import('./checkbox'))
   },
   'toggle': {
-    'react-bootstrap': React.lazy(() => import('./toggle'))
+    'react-bootstrap': lazy(() => import('./toggle'))
   },
   'checkbox-group': {
-    'react-bootstrap': React.lazy(() => import('./checkbox-group'))
+    'react-bootstrap': lazy(() => import('./checkbox-group'))
   },
   'placeholder': {
-    'react-bootstrap': React.lazy(() => import('./placeholder'))
+    'react-bootstrap': lazy(() => import('./placeholder'))
   },
   'placeholder-image': {
-    'react-bootstrap': React.lazy(() => import('./placeholder-image'))
+    'react-bootstrap': lazy(() => import('./placeholder-image'))
   },
   'date': {
-    'react-bootstrap': React.lazy(() => import('./date'))
+    'react-bootstrap': lazy(() => import('./date'))
   },
   'textarea': {
-    'react-bootstrap': React.lazy(() => import('./textarea'))
+    'react-bootstrap': lazy(() => import('./textarea'))
   },
   'slider': {
-    'react-bootstrap': React.lazy(() => import('./slider'))
+    'react-bootstrap': lazy(() => import('./slider'))
   },
   'three-columns': {
-    'react-bootstrap': React.lazy(() => import('./three-columns'))
+    'react-bootstrap': lazy(() => import('./three-columns'))
   },
   'two-columns': {
-    'react-bootstrap': React.lazy(() => import('./two-columns'))
+    'react-bootstrap': lazy(() => import('./two-columns'))
   },
   'group': {
-    'react-bootstrap': React.lazy(() => import('./group'))
+    'react-bootstrap': lazy(() => import('./group'))
   },
   'radio-group': {
-    'react-bootstrap': React.lazy(() => import('./radio-group'))
+    'react-bootstrap': lazy(() => import('./radio-group'))
   },
   'divider': {
-    'react-bootstrap': React.lazy(() => import('./divider'))
+    'react-bootstrap': lazy(() => import('./divider'))
   },
   'react-view': {
-    'react-bootstrap': React.lazy(() => import('./react-view'))
+    'react-bootstrap': lazy(() => import('./react-view'))
   },
   'datetime': {
-    'react-bootstrap': React.lazy(() => import('./datetime'))
+    'react-bootstrap': lazy(() => import('./datetime'))
   },
   'array': {
-    'react-bootstrap': React.lazy(() => import('./array'))
+    'react-bootstrap': lazy(() => import('./array'))
   },
   'input-number': {
-    'react-bootstrap': React.lazy(() => import('./input-number'))
+    'react-bootstrap': lazy(() => import('./input-number'))
   },
   'tabs': {
-    'react-bootstrap': React.lazy(() => import('./tabs'))
+    'react-bootstrap': lazy(() => import('./tabs'))
   },
   'button': {
-    'react-bootstrap': React.lazy(() => import('./button'))
+    'react-bootstrap': lazy(() => import('./button'))
   }
 };
 
 const Forms = {
-  'react-bootstrap': React.lazy(() => import('./form'))
+  'react-bootstrap': lazy(() => import('./form'))
 };
 
 const FormGenerator = GenerateGenerator({ Fields, Forms });

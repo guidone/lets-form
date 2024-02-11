@@ -9,7 +9,7 @@ import { FRAMEWORKS } from '../costants';
 import { Warning  } from '../assets/icons';
 import { reduceFields, applyTransformers, isI18n, i18n } from '../helpers';
 import { useStylesheet } from '../hooks';
-import { lfLog } from '../helpers/lf-log';
+import { lfLog, lfError } from '../helpers/lf-log';
 
 import FormContext from '../form-context';
 
@@ -693,7 +693,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             []
           );
           lfLog('Preloading components: ' + components.join(', '));
-
+          
           const loaders = components
             .map(component => {
               if (MergedComponents[component] 
@@ -711,9 +711,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               setPreloading(false);
             })
             .catch(e => {
-              // TODO test with a failed preloading
-              console.log('error preloading')
-            })
+              lfError('loading component', e);
+              throw e;
+            });
         }
       },
       []

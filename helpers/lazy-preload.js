@@ -1,6 +1,5 @@
 import { createElement, forwardRef, lazy, useRef } from 'react';
 
-
 export function lazyPreload(factory) {
   const ReactLazyComponent = lazy(factory);
   let PreloadedComponent;
@@ -33,4 +32,4 @@ export function lazyPreload(factory) {
   };
 
   return LazyWithPreload;
-}
+};
