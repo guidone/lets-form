@@ -1,5 +1,9 @@
 # LetsForm Designer Changelog
 
+## v0.7.14
+- Fixed broken Upload component in MUI
+- Fixed broken Button component in React
+
 ## v0.7.13
 - Fixex broken Columns components in MUI
 
