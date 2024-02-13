@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.7.13
+- Fixex broken Columns components in MUI
+
 ## v0.7.12
 - Split chunks for components of MUI, RSuite, AntD, ReactBootstrap and React: now components are loaded only if used
 from CDN
