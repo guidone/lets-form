@@ -1,6 +1,6 @@
 # LetsForm Designer Changelog
 
-## v0.8.0
+## v0.7.12
 - Split chunks for components of MUI, RSuite, AntD, ReactBootstrap and React: now components are loaded only if used
 from CDN
 - Fix: preview shows the right framework
