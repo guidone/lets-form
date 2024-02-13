@@ -1,0 +1,1 @@
+{"version":3,"file":"989-672cd6ef85ea454f71ba.js","mappings":"4IAGAA,E,QAAAA,GAAM,sBAEN,UAAeC,EAAK,C","sources":["webpack:///./react/group/index.js"],"sourcesContent":["import { Group } from '../../common/group';\nimport { lfLog } from '../../helpers/lf-log';\n\nlfLog('Loaded React.Group');\n\nexport default Group;\n"],"names":["lfLog","Group"],"sourceRoot":""}

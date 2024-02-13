@@ -1,2 +1,0 @@
-"use strict";(this.webpackChunklets_form_material_ui=this.webpackChunklets_form_material_ui||[]).push([[922],{8228:function(n,o,u){u.d(o,{n:function(){return r}});var r=function(n){return console.log("%cLF%c "+n,"background: #3498ff; color: #ffffff; padding: 2px; border-radius: 3px","")}},9922:function(n,o,u){u.r(o),u(963),(0,u(8228).n)("Loaded MUI.TwoColumns"),o.default=TwoColumns}}]);
-//# sourceMappingURL=922-120725c3ed6161b59a3a.map
