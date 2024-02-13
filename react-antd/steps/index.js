@@ -1,1 +1,3 @@
-export * from './steps';
+import AntdSteps from './steps';
+
+export default AntdSteps;
