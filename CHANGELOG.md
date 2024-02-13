@@ -1,5 +1,9 @@
 # LetsForm Changelog
 
+## v0.6.0
+- Split chunks for components of MUI, RSuite, AntD, ReactBootstrap and React
+- LetsForm: added `loader` and `preloadComponents` params
+
 ## v0.5.8
 - fix MUI upload font styles
 - added React Input Number component
