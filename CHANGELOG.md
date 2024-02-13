@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.6.1
+- Fixex broken Columns components in MUI
+
 ## v0.6.0
 - Split chunks for components of MUI, RSuite, AntD, ReactBootstrap and React
 - LetsForm: added `loader` and `preloadComponents` params
