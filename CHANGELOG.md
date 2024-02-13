@@ -3,6 +3,20 @@
 ## v0.6.0
 - Split chunks for components of MUI, RSuite, AntD, ReactBootstrap and React
 - LetsForm: added `loader` and `preloadComponents` params
+- LetsForm: **Breaking changes**** imports are changed for consistency with the UI frameworks names used in JSON schema
+
+```js
+// For React
+import LetsForm from 'lets-form/react'; // this is unchanged
+// For AntD
+import LetsForm from 'lets-form/react-antd'; // previously was 'lets-form/antd'
+// For RSuite5
+import LetsForm from 'lets-form/react-rsuite5'; // previously was 'lets-form/rsuite5'
+// For React Bootstrap
+import LetsForm from 'lets-form/react-bootstrap'; // previously was 'lets-form/bootstrap'
+// For Material UI
+import LetsForm from 'lets-form/react-material-ui'; // previously was 'lets-form/material-ui'
+```
 
 ## v0.5.8
 - fix MUI upload font styles
