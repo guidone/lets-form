@@ -359,7 +359,8 @@
       "react-material-ui",
       "react",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "toggle": {
