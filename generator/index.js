@@ -21,6 +21,7 @@ import { translateValidation } from './helpers/translate-validations';
 import { collectTransformers } from './helpers/collect-transformers';
 import { errorToString } from './helpers/error-to-string';
 import { mergeComponents } from './helpers/merge-components';
+import { MissingComponent } from './helpers/missing-component';
 
 const DEBUG_RENDER = true;
 
