@@ -801,7 +801,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const handleChange = useCallback(
       async (values, fieldName) => {
-
+        // exit if null
+        if (!transformers) {
+          return;
+        }
         // execute main transformer
         let newFields = formFields;
         if (!_.isEmpty(transformers.onRender)) {
