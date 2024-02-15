@@ -21,7 +21,6 @@ const FormReact = ({
   custom
 }) => {
 
-  // TODO pure-form-aligned
   return (
     <form
       onSubmit={onSubmit}

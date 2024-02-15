@@ -354,6 +354,60 @@
         "type": "boolean"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "default",
+          "filled",
+          "unstyled"
+        ]
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "description": "Fixed heading text"
+      },
+      {
+        "name": "postfix",
+        "type": "string",
+        "description": "Fixed trailing text"
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",

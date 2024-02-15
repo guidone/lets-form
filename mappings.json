@@ -13,26 +13,30 @@
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "width": [
       "react",
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "size": [
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "prefix": [
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "inside": [
       "react-rsuite5"
@@ -41,14 +45,16 @@
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "tooltip": [
       "react-rsuite5",
       "react-antd"
     ],
     "variant": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "color": [
       "react-material-ui"
@@ -71,6 +77,9 @@
     ],
     "bordered": [
       "react-antd"
+    ],
+    "radius": [
+      "react-mantine"
     ],
     "inputMode": null,
     "autocomplete": null,
