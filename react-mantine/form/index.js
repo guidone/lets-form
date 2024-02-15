@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Group } from '@mantine/core';
 import classNames from 'classnames';
 
-
+import './form.scss';
 
 // TODO remove this
 import { createTheme, MantineProvider } from '@mantine/core';

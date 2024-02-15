@@ -1,0 +1,14 @@
+.lf-form-react-mantine {
+  [class^="lf-control-"] {
+    div[data-position="right"] {
+      .lf-prefix-wrapper {
+        padding-right: 1em;
+      }
+    }
+    div[data-position="left"] {
+      .lf-prefix-wrapper {
+        padding-left: 1em;
+      }
+    }  
+  }
+}

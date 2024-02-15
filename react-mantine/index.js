@@ -6,6 +6,12 @@ import { lazyPreload as lazy } from '../helpers/lazy-preload';
 const Fields = {
   'input-text': {
     'react-mantine': lazy(() => import('./input-text'))
+  },
+  'textarea': {
+    'react-mantine': lazy(() => import('./textarea'))
+  },
+  'select': {
+    'react-mantine': lazy(() => import('./select'))
   }
 };
 

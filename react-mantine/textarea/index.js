@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { TextInput } from '@mantine/core';
+import { Textarea } from '@mantine/core';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
@@ -20,11 +20,11 @@ const InputText = I18N(
     readOnly = false,
     required = false,
     submitOnEnter = false,
-    pointer,
     error,
     prefix,
     postfix,
     onChange,
+    pointer,
     onBlur,
     fullWidth,
     width,
@@ -35,7 +35,9 @@ const InputText = I18N(
     lfOnEnter = () => {},
     radius,
     variant,
-    withErrorStyles,
+    autosize,
+    minRows,
+    maxRows,
     ...rest
   }) => {
     const handleKeyUp = useCallback(e => e.keyCode === 13 && lfOnEnter(), [lfOnEnter]);
@@ -44,9 +46,9 @@ const InputText = I18N(
       [onChange]
     );
 
-    return (      
-      <TextInput 
-        className="lf-control-input-text"
+    return (
+      <Textarea 
+        className="lf-control-textarea"
         data-lf-field-name={name}
         style={makeWidthStyle(fullWidth, width)}
         label={label} 
@@ -61,11 +63,13 @@ const InputText = I18N(
         disabled={disabled}
         type={inputType}
         inputMode={inputMode}
-        pointer={pointer}
         value={value}
         name={name}
+        pointer={pointer}
         size={size}
-        withErrorStyles={withErrorStyles}
+        autosize={autosize}
+        minRows={minRows}
+        maxRows={maxRows}
         autoComplete={autocomplete}
         radius={radius}
         variant={variant}

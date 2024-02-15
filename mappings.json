@@ -81,6 +81,12 @@
     "radius": [
       "react-mantine"
     ],
+    "pointer": [
+      "react-mantine"
+    ],
+    "withErrorStyles": [
+      "react-mantine"
+    ],
     "inputMode": null,
     "autocomplete": null,
     "inputType": null,
@@ -165,7 +171,8 @@
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "block": [
       "react-rsuite5"
@@ -191,7 +198,8 @@
       "react-bootstrap"
     ],
     "variant": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "popupMatchSelectWidth": [
       "react-antd"
@@ -213,6 +221,36 @@
     ],
     "virtual": [
       "react-antd"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "prefix": [
+      "react-mantine"
+    ],
+    "postfix": [
+      "react-mantine"
+    ],
+    "withCheckIcon": [
+      "react-mantine"
+    ],
+    "checkIconPosition": [
+      "react-mantine"
+    ],
+    "allowDeselect": [
+      "react-mantine"
+    ],
+    "clearable": [
+      "react-mantine"
+    ],
+    "defaultDropdownOpened": [
+      "react-mantine"
+    ],
+    "withScrollArea": [
+      "react-mantine"
+    ],
+    "pointer": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",
@@ -795,14 +833,16 @@
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "width": [
       "react",
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "rows": [
       "react",
@@ -813,14 +853,16 @@
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "tooltip": [
       "react-rsuite5",
       "react-antd"
     ],
     "variant": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "color": [
       "react-material-ui"
@@ -832,7 +874,8 @@
       "react-material-ui"
     ],
     "maxRows": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "showCount": [
       "react-antd"
@@ -848,6 +891,24 @@
     ],
     "bordered": [
       "react-antd"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "autosize": [
+      "react-mantine"
+    ],
+    "minRows": [
+      "react-mantine"
+    ],
+    "prefix": [
+      "react-mantine"
+    ],
+    "postfix": [
+      "react-mantine"
+    ],
+    "pointer": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",

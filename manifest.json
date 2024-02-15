@@ -406,6 +406,16 @@
         "name": "postfix",
         "type": "string",
         "description": "Fixed trailing text"
+      },
+      {
+        "name": "pointer",
+        "type": "boolean",
+        "description": "Determines whether the input should have cursor: pointer style, false by default"
+      },
+      {
+        "name": "withErrorStyles",
+        "type": "boolean",
+        "description": "Determines whether the input should have red border and red text color when the error prop is set, true by default"
       }
     ],
     "frameworks": [
@@ -801,12 +811,95 @@
         "type": "boolean"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "default",
+          "filled",
+          "unstyled"
+        ]
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "description": "Fixed heading text"
+      },
+      {
+        "name": "postfix",
+        "type": "string",
+        "description": "Fixed trailing text"
+      },
+      {
+        "name": "withCheckIcon",
+        "type": "boolean",
+        "description": "Determines whether check icon should be displayed near the selected option label, true by default"
+      },
+      {
+        "name": "checkIconPosition",
+        "type": "string",
+        "options": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "name": "allowDeselect",
+        "type": "boolean",
+        "description": "Determines whether it should be possible to deselect value by clicking on the selected option, true by default"
+      },
+      {
+        "name": "clearable",
+        "type": "boolean",
+        "description": "Determines whether the clear button should be displayed in the right section when the component has value, false by default"
+      },
+      {
+        "name": "defaultDropdownOpened",
+        "type": "boolean",
+        "description": "Uncontrolled dropdown initial opened state"
+      },
+      {
+        "name": "withScrollArea",
+        "type": "boolean",
+        "description": "Determines whether the options should be wrapped with scroll bars, true by default"
+      },
+      {
+        "name": "pointer",
+        "type": "boolean",
+        "description": "Determines whether the input should have cursor: pointer style, false by default"
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
       "react",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "group": {
@@ -2695,12 +2788,84 @@
         "type": "boolean"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "default",
+          "filled",
+          "unstyled"
+        ]
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "autosize",
+        "type": "boolean"
+      },
+      {
+        "name": "minRows",
+        "type": "number"
+      },
+      {
+        "name": "maxRows",
+        "type": "number"
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "description": "Fixed heading text"
+      },
+      {
+        "name": "postfix",
+        "type": "string",
+        "description": "Fixed trailing text"
+      },
+      {
+        "name": "pointer",
+        "type": "boolean",
+        "description": "Determines whether the input should have cursor: pointer style, false by default"
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
       "react",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "rate": {
