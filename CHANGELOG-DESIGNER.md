@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## next
+- Fixed CodeSandbox code generation
+
 ## v0.7.14
 - Fixed broken Upload component in MUI
 - Fixed broken Button component in React
