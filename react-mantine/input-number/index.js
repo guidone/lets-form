@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { TextInput } from '@mantine/core';
+import { NumberInput } from '@mantine/core';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
@@ -7,7 +7,7 @@ import { TextOrIcon } from '../../common';
 import { passRest, makeWidthStyle } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
 
-const InputText = I18N(
+const MantineNumberInput = I18N(
   ({
     name,
     label,
@@ -40,12 +40,15 @@ const InputText = I18N(
   }) => {
     const handleKeyUp = useCallback(e => e.keyCode === 13 && lfOnEnter(), [lfOnEnter]);
     const handleChange = useCallback(
-      (event) => onChange(event.currentTarget.value),
+      (event) => {
+        console.log('allora',event)
+        onChange(event)
+      },
       [onChange]
     );
 
     return (      
-      <TextInput 
+      <NumberInput 
         className="lf-control-input-text"
         data-lf-field-name={name}
         style={makeWidthStyle(fullWidth, width)}
@@ -55,7 +58,7 @@ const InputText = I18N(
         required={required}
         inputWrapperOrder={['label', 'input', 'description', 'error']}
         placeholder={placeholder}
-        onChange={handleChange}
+        onChange={onChange}
         onBlur={onBlur}
         onKeyUp={submitOnEnter ? handleKeyUp : undefined}
         disabled={disabled}
@@ -70,14 +73,14 @@ const InputText = I18N(
         radius={radius}
         variant={variant}
         readOnly={readOnly}
-        prefix={prefix}
-        suffix={postfix}
+        leftSection={prefix && <div className="lf-prefix-wrapper">{TextOrIcon(prefix)}</div>}
+        rightSection={prefix && <div className="lf-prefix-wrapper">{TextOrIcon(postfix)}</div>}
         {...passRest(rest)}
       />
     ); 
   },
   ['label', 'hint', 'placeholder']
 );
-lfLog('Loaded Mantine.InputText');
+lfLog('Loaded Mantine.InputNumber');
 
-export default InputText;
+export default MantineNumberInput;

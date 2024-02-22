@@ -314,39 +314,45 @@
       "react",
       "react-rsuite5",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "step": [
       "react",
       "react-rsuite5",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "max": [
       "react",
       "react-rsuite5",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "fullWidth": [
       "react",
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "width": [
       "react",
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "size": [
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "allowClear": [
       "react-rsuite5"
@@ -354,7 +360,8 @@
     "prefix": [
       "react-rsuite5",
       "react-material-ui",
-      "react-bootstrap"
+      "react-bootstrap",
+      "react-mantine"
     ],
     "inside": [
       "react-rsuite5"
@@ -362,14 +369,16 @@
     "postfix": [
       "react-rsuite5",
       "react-material-ui",
-      "react-bootstrap"
+      "react-bootstrap",
+      "react-mantine"
     ],
     "tooltip": [
       "react-rsuite5",
       "react-antd"
     ],
     "variant": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "color": [
       "react-material-ui"
@@ -389,6 +398,51 @@
     ],
     "bordered": [
       "react-antd"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "pointer": [
+      "react-mantine"
+    ],
+    "withErrorStyles": [
+      "react-mantine"
+    ],
+    "allowDecimal": [
+      "react-mantine"
+    ],
+    "allowLeadingZeros": [
+      "react-mantine"
+    ],
+    "allowNegative": [
+      "react-mantine"
+    ],
+    "clampBehavior": [
+      "react-mantine"
+    ],
+    "decimalScale": [
+      "react-mantine"
+    ],
+    "decimalSeparator": [
+      "react-mantine"
+    ],
+    "fixedDecimalScale": [
+      "react-mantine"
+    ],
+    "hideControls": [
+      "react-mantine"
+    ],
+    "startValue": [
+      "react-mantine"
+    ],
+    "thousandSeparator": [
+      "react-mantine"
+    ],
+    "thousandsGroupStyle": [
+      "react-mantine"
+    ],
+    "valueIsNumericString": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",

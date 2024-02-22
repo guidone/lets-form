@@ -7,6 +7,9 @@ const Fields = {
   'input-text': {
     'react-mantine': lazy(() => import('./input-text'))
   },
+  'input-number': {
+    'react-mantine': lazy(() => import('./input-number'))
+  },
   'textarea': {
     'react-mantine': lazy(() => import('./textarea'))
   },
