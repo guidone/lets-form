@@ -551,11 +551,74 @@
         "type": "string | i18n"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "labelPosition",
+        "type": "string",
+        "options": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "name": "offLabel",
+        "type": "string",
+        "description": "\tInner label when the Switch is in unchecked state"
+      },
+      {
+        "name": "onLabel",
+        "type": "string",
+        "description": "Inner label when the Switch is in checked state"
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "grey",
+          "red",
+          "pink",
+          "grape",
+          "violet",
+          "indigo",
+          "blue",
+          "cyan",
+          "teal",
+          "green",
+          "lime",
+          "yellow",
+          "orange"
+        ]
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "select": {

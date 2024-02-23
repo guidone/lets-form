@@ -18,6 +18,9 @@ const Fields = {
   },
   'checkbox': {
     'react-mantine': lazy(() => import('./checkbox'))
+  },
+  'toggle': {
+    'react-mantine': lazy(() => import('./toggle'))
   }
 };
 

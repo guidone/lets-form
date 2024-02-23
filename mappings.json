@@ -108,7 +108,8 @@
     "size": [
       "react-rsuite5",
       "react-material-ui",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "checkedChildren": [
       "react-rsuite5",
@@ -123,13 +124,26 @@
       "react-antd"
     ],
     "color": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "labelPlacement": [
       "react-material-ui"
     ],
     "disableRipple": [
       "react-material-ui"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "labelPosition": [
+      "react-mantine"
+    ],
+    "offLabel": [
+      "react-mantine"
+    ],
+    "onLabel": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",
