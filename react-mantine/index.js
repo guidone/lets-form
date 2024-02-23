@@ -21,6 +21,9 @@ const Fields = {
   },
   'toggle': {
     'react-mantine': lazy(() => import('./toggle'))
+  },
+  'array': {
+    'react-mantine': lazy(() => import('./array'))
   }
 };
 
