@@ -408,7 +408,10 @@
     "withErrorStyles": [
       "react-mantine"
     ],
-    "allowDecimal": [
+    "valueIsNumericString": [
+      "react-mantine"
+    ],
+    "hideControls": [
       "react-mantine"
     ],
     "allowLeadingZeros": [
@@ -420,7 +423,10 @@
     "clampBehavior": [
       "react-mantine"
     ],
-    "decimalScale": [
+    "startValue": [
+      "react-mantine"
+    ],
+    "allowDecimal": [
       "react-mantine"
     ],
     "decimalSeparator": [
@@ -429,19 +435,13 @@
     "fixedDecimalScale": [
       "react-mantine"
     ],
-    "hideControls": [
-      "react-mantine"
-    ],
-    "startValue": [
-      "react-mantine"
-    ],
-    "thousandSeparator": [
+    "decimalScale": [
       "react-mantine"
     ],
     "thousandsGroupStyle": [
       "react-mantine"
     ],
-    "valueIsNumericString": [
+    "thousandSeparator": [
       "react-mantine"
     ],
     "validationMinLength": "validation",
@@ -686,22 +686,37 @@
     "readOnly": null,
     "hidden": null,
     "indeterminate": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-mantine"
     ],
     "tooltip": [
       "react-rsuite5"
     ],
     "size": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "color": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "labelPlacement": [
       "react-material-ui"
     ],
     "disableRipple": [
       "react-material-ui"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "labelPosition": [
+      "react-mantine"
+    ],
+    "iconColor": [
+      "react-mantine"
+    ],
+    "autoContrast": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",

@@ -49,7 +49,7 @@ const MantineNumberInput = I18N(
 
     return (      
       <NumberInput 
-        className="lf-control-input-text"
+        className="lf-control-input-number"
         data-lf-field-name={name}
         style={makeWidthStyle(fullWidth, width)}
         label={label} 
@@ -74,7 +74,7 @@ const MantineNumberInput = I18N(
         variant={variant}
         readOnly={readOnly}
         leftSection={prefix && <div className="lf-prefix-wrapper">{TextOrIcon(prefix)}</div>}
-        rightSection={prefix && <div className="lf-prefix-wrapper">{TextOrIcon(postfix)}</div>}
+        rightSection={postfix && <div className="lf-postfix-wrapper">{TextOrIcon(postfix)}</div>}
         {...passRest(rest)}
       />
     ); 

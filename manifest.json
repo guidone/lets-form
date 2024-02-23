@@ -1580,7 +1580,12 @@
         "description": "Determines whether the input should have red border and red text color when the error prop is set, true by default"
       },
       {
-        "name": "allowDecimal",
+        "name": "valueIsNumericString",
+        "type": "boolean",
+        "description": "If value is passed as string representation of numbers (unformatted) and number is used in any format props like in prefix or suffix in numeric format and format prop in pattern format then this should be passed as true. false by default"
+      },
+      {
+        "name": "hideControls",
         "type": "boolean"
       },
       {
@@ -1602,9 +1607,13 @@
         ]
       },
       {
-        "name": "decimalScale",
+        "name": "startValue",
         "type": "number",
-        "description": "Limits the number of digits that can be entered after the decimal point"
+        "description": "Value set to the input when increment/decrement buttons are clicked or up/down arrows pressed if the input is empty, 0 by default"
+      },
+      {
+        "name": "allowDecimal",
+        "type": "boolean"
       },
       {
         "name": "decimalSeparator",
@@ -1617,18 +1626,9 @@
         "description": "If set, 0s are added after decimalSeparator to match given decimalScale. false by default"
       },
       {
-        "name": "hideControls",
-        "type": "boolean"
-      },
-      {
-        "name": "startValue",
+        "name": "decimalScale",
         "type": "number",
-        "description": "Value set to the input when increment/decrement buttons are clicked or up/down arrows pressed if the input is empty, 0 by default"
-      },
-      {
-        "name": "thousandSeparator",
-        "type": "string",
-        "description": "A character used to separate thousands"
+        "description": "Limits the number of digits that can be entered after the decimal point"
       },
       {
         "name": "thousandsGroupStyle",
@@ -1642,9 +1642,9 @@
         ]
       },
       {
-        "name": "valueIsNumericString",
-        "type": "boolean",
-        "description": "If value is passed as string representation of numbers (unformatted) and number is used in any format props like in prefix or suffix in numeric format and format prop in pattern format then this should be passed as true. false by default"
+        "name": "thousandSeparator",
+        "type": "string",
+        "description": "A character used to separate thousands"
       }
     ],
     "frameworks": [
@@ -2276,12 +2276,93 @@
         "description": "Disable CSS ripple effect"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "labelPosition",
+        "type": "string",
+        "options": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "grey",
+          "red",
+          "pink",
+          "grape",
+          "violet",
+          "indigo",
+          "blue",
+          "cyan",
+          "teal",
+          "green",
+          "lime",
+          "yellow",
+          "orange"
+        ]
+      },
+      {
+        "name": "iconColor",
+        "type": "string",
+        "options": [
+          "grey",
+          "red",
+          "pink",
+          "grape",
+          "violet",
+          "indigo",
+          "blue",
+          "cyan",
+          "teal",
+          "green",
+          "lime",
+          "yellow",
+          "orange"
+        ]
+      },
+      {
+        "name": "autoContrast",
+        "type": "boolean",
+        "description": "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
+      },
+      {
+        "name": "indeterminate",
+        "type": "boolean"
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
       "react",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "checkbox-group": {

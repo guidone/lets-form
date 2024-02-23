@@ -1,7 +1,7 @@
 .lf-form-react-mantine {
-  [class^="lf-control-"] {
+  .lf-control-input-number, .lf-control-input-text {
     div[data-position="right"] {
-      .lf-prefix-wrapper {
+      .lf-postfix-wrapper {
         padding-right: 1em;
       }
     }
