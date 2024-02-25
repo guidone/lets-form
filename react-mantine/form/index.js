@@ -4,14 +4,11 @@ import classNames from 'classnames';
 
 import './form.scss';
 
-// TODO remove this
-import { createTheme, MantineProvider } from '@mantine/core';
+
 
 import { lfLog } from '../../helpers/lf-log';
 
-const theme = createTheme({
-  /** Put your mantine theme override here */
-});
+
 
 const MantineForm = ({
   name,
@@ -29,8 +26,7 @@ const MantineForm = ({
   custom
 }) => {
   return (
-    <div>
-      <MantineProvider theme={theme}>
+    <div> 
       <form
         onSubmit={onSubmit}
         className={classNames('lf-form lf-form-react-mantine', {
@@ -57,7 +53,6 @@ const MantineForm = ({
           </Group>
         )}
       </form>    
-      </MantineProvider>
     </div>
   );
 };
