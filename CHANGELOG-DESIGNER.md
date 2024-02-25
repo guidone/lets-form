@@ -1,6 +1,6 @@
 # LetsForm Designer Changelog
 
-## Next Version
+## v0.8.0
 - Fixed CodeSandbox code generation
 - Improved vanilla code generation
 - Added support for Mantine: input-text, input-number, two-columns, three-columns, array, checkbox, checkbox-group, select, toggle, group

@@ -954,6 +954,11 @@
         "name": "pointer",
         "type": "boolean",
         "description": "Determines whether the input should have cursor: pointer style, false by default"
+      },
+      {
+        "name": "withErrorStyles",
+        "type": "boolean",
+        "description": "Determines whether the input should have red border and red text color when the error prop is set, true by default"
       }
     ],
     "frameworks": [
@@ -3226,6 +3231,11 @@
         "name": "pointer",
         "type": "boolean",
         "description": "Determines whether the input should have cursor: pointer style, false by default"
+      },
+      {
+        "name": "withErrorStyles",
+        "type": "boolean",
+        "description": "Determines whether the input should have red border and red text color when the error prop is set, true by default"
       }
     ],
     "frameworks": [
