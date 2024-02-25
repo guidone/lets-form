@@ -62,8 +62,7 @@ module.exports = module.exports = (env = {}) => {
     entryPointName = 'lets-form-antd';
     outputPath = 'dist/react-antd';
     globalObject = 'this';
-  } else if (env.framework === 'rsuite5') {
-    
+  } else if (env.framework === 'rsuite5') {    
     library = 'lets-form-rsuite5';
     entryPoint = path.join(__dirname, 'react-rsuite5/index.js');
     outputFile = 'main.js';
@@ -93,6 +92,14 @@ module.exports = module.exports = (env = {}) => {
     outputFile = 'main.js';
     entryPointName = 'lets-form-material-ui';
     outputPath = 'dist/react-material-ui';
+    globalObject = 'this';
+  } else if (env.framework === 'mantine') {
+    console.log('Building for Mantine framework');
+    library = 'lets-form-mantine';
+    entryPoint = path.join(__dirname, 'react-mantine/index.js');
+    outputFile = 'main.js';
+    entryPointName = 'lets-form-mantine';
+    outputPath = 'dist/react-mantine';
     globalObject = 'this';
   } else if (env.framework === 'helpers') {
     console.log('Building for helpers');
@@ -126,7 +133,7 @@ module.exports = module.exports = (env = {}) => {
       {
         'rsuite': 'umd rsuite',
         'rsuite/locales': 'umd rsuite/locales',
-        react: 'umd react',
+        'react': 'umd react',
         'react-dom': 'umd react-dom',
         'prop-types': 'umd prop-types',
         '@mui/material': 'umd @mui/material',
@@ -134,7 +141,8 @@ module.exports = module.exports = (env = {}) => {
         '@mui/x-date-pickers':'umd @mui/x-date-pickers',
         'react-bootstrap': 'umd react-bootstrap',
         'antd': 'umd antd',
-        'dayjs': 'umd dayjs'
+        'dayjs': 'umd dayjs',
+        '@mantine/core': 'umd @mantine/core'
       },
       /@material-ui\/core\/.*/,
       /^@mui/

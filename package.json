@@ -11,10 +11,11 @@
   "scripts": {
     "prebuild": "npm run unstash && npm run build:clear",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build-rsuite5 && npm run build-antd && npm run build-bootstrap && npm run build-react && npm run build-material-ui && npm run build-helpers && echo \"\n\nAll done.\"",
+    "build": "npm run build-rsuite5 && npm run build-antd && npm run build-bootstrap && npm run build-react && npm run build-material-ui && npm run build-mantine && npm run build-helpers && echo \"\n\nAll done.\"",
     "build:webpack": "webpack --mode production --progress",
     "build-rsuite5": "npm run build:webpack -- --env framework=\"rsuite5\"",
     "build-bootstrap": "npm run build:webpack -- --env framework=\"bootstrap\"",
+    "build-mantine": "npm run build:webpack -- --env framework=\"mantine\"",
     "build-antd": "npm run build:webpack -- --env framework=\"antd\"",
     "build-react": "npm run build:webpack -- --env framework=\"react\"",
     "build-material-ui": "npm run build:webpack -- --env framework=\"material-ui\"",
