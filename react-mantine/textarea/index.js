@@ -38,6 +38,7 @@ const MantineTextarea = I18N(
     autosize,
     minRows,
     maxRows,
+    withErrorStyles,
     ...rest
   }) => {
     const handleKeyUp = useCallback(e => e.keyCode === 13 && lfOnEnter(), [lfOnEnter]);
@@ -76,6 +77,7 @@ const MantineTextarea = I18N(
         readOnly={readOnly}
         leftSection={prefix && <div className="lf-prefix-wrapper">{TextOrIcon(prefix)}</div>}
         rightSection={prefix && <div className="lf-postfix-wrapper">{TextOrIcon(postfix)}</div>}
+        withErrorStyles={withErrorStyles}
         {...passRest(rest)}
       />
     ); 

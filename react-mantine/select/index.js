@@ -46,6 +46,7 @@ const MantineSelect = I18N(
     withCheckIcon,
     withScrollArea,
     checkIconPosition,
+    withErrorStyles,
     ...rest
   }) => {
     const handleKeyUp = useCallback(e => e.keyCode === 13 && lfOnEnter(), [lfOnEnter]);
@@ -83,6 +84,7 @@ const MantineSelect = I18N(
           withCheckIcon={withCheckIcon}
           withScrollArea={withScrollArea}
           checkIconPosition={checkIconPosition}
+          withErrorStyles={withErrorStyles}
           {...passRest(rest)}
         />
       </Input.Wrapper>
