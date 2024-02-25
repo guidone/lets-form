@@ -5,6 +5,7 @@ import { Fields as FieldsReactMaterialUI, Forms as FormsReactMaterialUI } from '
 import { Fields as FieldsReact, Forms as FormsReact } from './react/index';
 import { Fields as FieldsReactBootstrap, Forms as FormsReactBootstrap } from './react-bootstrap/index';
 import { Fields as FieldsReactAntD, Forms as FormsReactAndD } from './react-antd/index';
+import { Fields as FieldsReactMantine, Forms as FormsReactMantine } from './react-mantine/index';
 
 import { mergeFields } from './helpers/merge-fields';
 
@@ -13,7 +14,8 @@ const Fields = mergeFields(
   FieldsReactMaterialUI,
   FieldsReact,
   FieldsReactBootstrap,
-  FieldsReactAntD
+  FieldsReactAntD,
+  FieldsReactMantine
 );
 
 const Forms = {
@@ -21,7 +23,8 @@ const Forms = {
   ...FormsReactMaterialUI,
   ...FormsReact,
   ...FormsReactBootstrap,
-  ...FormsReactAndD
+  ...FormsReactAndD,
+  ...FormsReactMantine
 };
 
 const FormGenerator = GenerateGenerator({ Fields, Forms });

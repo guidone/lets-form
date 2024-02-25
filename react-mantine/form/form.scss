@@ -1,0 +1,14 @@
+.lf-form-react-mantine {
+  .lf-control-input-number, .lf-control-input-text {
+    div[data-position="right"] {
+      .lf-postfix-wrapper {
+        padding-right: 1em;
+      }
+    }
+    div[data-position="left"] {
+      .lf-prefix-wrapper {
+        padding-left: 1em;
+      }
+    }  
+  }
+}

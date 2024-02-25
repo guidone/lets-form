@@ -3,7 +3,8 @@ export const FRAMEWORKS = [
   'react-rsuite5',
   'react-material-ui',
   'react-bootstrap',
-  'react-antd'
+  'react-antd',
+  'react-mantine'
 ];
 
 export const FRAMEWORKS_LABELS = [
@@ -11,7 +12,8 @@ export const FRAMEWORKS_LABELS = [
   'React + RSuite5',
   'React + MaterialUI',
   'React + Bootstrap',
-  'React + Ant Design'
+  'React + Ant Design',
+  'React + Mantine'
 ];
 
 export const FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];

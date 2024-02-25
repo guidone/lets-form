@@ -38,8 +38,6 @@ const formatArray = (a, arrayType = 'arrayOfObject') => {
     .map(i => _.omit(i, 'id'))
     .filter(i => !isEmptyObject(i));
 
-  console.log('cleaned', cleaned)
-
   try {
     const flattened = flatArrayOfString(cleaned);
     if (arrayType === 'arrayOfString') {
