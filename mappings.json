@@ -757,16 +757,30 @@
       "react-rsuite5"
     ],
     "size": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "color": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "labelPlacement": [
       "react-material-ui"
     ],
     "reverse": [
       "react-bootstrap"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "labelPosition": [
+      "react-mantine"
+    ],
+    "iconColor": [
+      "react-mantine"
+    ],
+    "autoContrast": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",

@@ -24,6 +24,18 @@ const Fields = {
   },
   'array': {
     'react-mantine': lazy(() => import('./array'))
+  },
+  'checkbox-group': {
+    'react-mantine': lazy(() => import('./checkbox-group'))
+  },
+  'two-columns': {
+    'react-mantine': lazy(() => import('./two-columns'))
+  },
+  'three-columns': {
+    'react-mantine': lazy(() => import('./three-columns'))
+  },
+  'group': {
+    'react-mantine': lazy(() => import('./group'))
   }
 };
 

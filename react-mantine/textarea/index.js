@@ -7,7 +7,7 @@ import { TextOrIcon } from '../../common';
 import { passRest, makeWidthStyle } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
 
-const InputText = I18N(
+const MantineTextarea = I18N(
   ({
     name,
     label,
@@ -75,13 +75,13 @@ const InputText = I18N(
         variant={variant}
         readOnly={readOnly}
         leftSection={prefix && <div className="lf-prefix-wrapper">{TextOrIcon(prefix)}</div>}
-        rightSection={prefix && <div className="lf-prefix-wrapper">{TextOrIcon(postfix)}</div>}
+        rightSection={prefix && <div className="lf-postfix-wrapper">{TextOrIcon(postfix)}</div>}
         {...passRest(rest)}
       />
     ); 
   },
   ['label', 'hint', 'placeholder']
 );
-lfLog('Loaded Mantine.InputText');
+lfLog('Loaded Mantine.Textarea');
 
-export default InputText;
+export default MantineTextarea;

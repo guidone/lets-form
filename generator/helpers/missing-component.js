@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import { Warning } from '../../assets/icons';
 
 export const MissingComponent = ({ lfComponent, label, lfFramework }) => {
   return (
