@@ -1,7 +1,9 @@
 # LetsForm Designer Changelog
 
-## next
+## Next Version
 - Fixed CodeSandbox code generation
+- Improved vanilla code generation
+- Added support for Mantine: input-text, input-number, two-columns, three-columns, array, checkbox, checkbox-group, select, toggle, group
 
 ## v0.7.14
 - Fixed broken Upload component in MUI

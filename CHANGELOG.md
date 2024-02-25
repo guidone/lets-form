@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.7.0
+- Added support for Mantine: input-text, input-number, two-columns, three-columns, array, checkbox, checkbox-group, select, toggle, group
+
 ## v0.6.2
 - Fixed broken Upload component in MUI
 - Fixed broken Button component in React
