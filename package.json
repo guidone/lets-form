@@ -36,6 +36,8 @@
   "exports": {
     "./react-bootstrap": "./dist/react-bootstrap/main.js",
     "./react-bootstrap/": "./dist/react-bootstrap/",
+    "./react-mantine": "./dist/react-mantine/main.js",
+    "./react-mantine/": "./dist/react-mantine/",
     "./react-rsuite5": "./dist/react-rsuite5/main.js",
     "./react-rsuite5/": "./dist/react-rsuite5/",
     "./react-antd": "./dist/react-antd/main.js",
