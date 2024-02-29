@@ -4,11 +4,7 @@ import classNames from 'classnames';
 
 import './form.scss';
 
-
-
 import { lfLog } from '../../helpers/lf-log';
-
-
 
 const MantineForm = ({
   name,

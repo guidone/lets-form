@@ -142,7 +142,8 @@ module.exports = module.exports = (env = {}) => {
         'react-bootstrap': 'umd react-bootstrap',
         'antd': 'umd antd',
         'dayjs': 'umd dayjs',
-        '@mantine/core': 'umd @mantine/core'
+        '@mantine/core': 'umd @mantine/core',
+        '@mantine/hooks': 'umd @mantine/hooks'
       },
       /@material-ui\/core\/.*/,
       /^@mui/
