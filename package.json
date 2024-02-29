@@ -22,7 +22,8 @@
     "build-helpers": "npm run build:webpack -- --env framework=\"helpers\"",
     "build:clear": "node ./scripts/clear-builds.js",
     "stash": "./scripts/stash-node-modules.sh",
-    "unstash": "./scripts/unstash-node-modules.sh"
+    "unstash": "./scripts/unstash-node-modules.sh",
+    "postversion": "npm run build"
   },
   "author": "Guido Bellomo",
   "license": "ISC",
