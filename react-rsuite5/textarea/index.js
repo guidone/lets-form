@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import { RequiredIcon, I18N } from '../../components';
 import { makeWidthStyle, passRest } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 
 const ControlTextare = (props) => <Input as="textarea" {...props} />
 
@@ -31,21 +32,23 @@ const Textarea = I18N(
     ...rest
   }) => {
     const inner = (
-      <Form.Control
-        name={name}
-        accepter={ControlTextare}
-        rows={rows}
-        value={value}
-        size={size}
-        onChange={onChange}
-        onBlur={onBlur}
-        disabled={disabled}
-        placeholder={placeholder}
-        readOnly={readOnly}
-        errorMessage={_.isString(error) ? error : undefined }
-        style={makeWidthStyle(fullWidth, width)}
-        {...passRest(rest)}
-      />
+      <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+        <ControlTextare
+          name={name}
+
+          rows={rows}
+          value={value}
+          size={size}
+          onChange={onChange}
+          onBlur={onBlur}
+          disabled={disabled}
+          placeholder={placeholder}
+          readOnly={readOnly}
+          errorMessage={_.isString(error) ? error : undefined }
+          style={makeWidthStyle(fullWidth, width)}
+          {...passRest(rest)}
+        />
+      </RSuite5FieldControl>
     );
 
     return (

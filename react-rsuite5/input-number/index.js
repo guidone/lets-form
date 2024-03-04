@@ -9,6 +9,7 @@ import { RequiredIcon, I18N } from '../../components';
 import { CrossCirle } from '../../assets/icons';
 import { makeWidthStyle } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 
 import './index.scss';
 
@@ -88,30 +89,32 @@ const InputNumberRSuite5 = I18N(
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
           {required && <RequiredIcon />}
         </Form.ControlLabel>}
-        <Form.Control
-          name={name}
-          accepter={InputNumber}
-          value={currentValue}
-          onChange={handleChange}
-          onClear={handleClear}
-          onBlur={onBlur}
-          disabled={disabled}
-          size={size}
-          min={min}
-          max={max}
-          step={step}
-          inside={inside}
-          prefix={prefix}
-          postfix={allowClear ?
-            (<a href="#" onClick={handleClear}>
-              <CrossCirle width={16} height={16} />
-            </a>)
-            : postfix
-          }
-          placeholder={placeholder}
-          readOnly={readOnly}
-          errorMessage={_.isString(error) ? error : undefined }
-        />
+        <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+          <InputNumber
+            name={name}
+            accepter={InputNumber}
+            value={currentValue}
+            onChange={handleChange}
+            onClear={handleClear}
+            onBlur={onBlur}
+            disabled={disabled}
+            size={size}
+            min={min}
+            max={max}
+            step={step}
+            inside={inside}
+            prefix={prefix}
+            postfix={allowClear ?
+              (<a href="#" onClick={handleClear}>
+                <CrossCirle width={16} height={16} />
+              </a>)
+              : postfix
+            }
+            placeholder={placeholder}
+            readOnly={readOnly}
+            errorMessage={_.isString(error) ? error : undefined }
+          />
+        </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>
     );

@@ -5,6 +5,7 @@ import _ from 'lodash';
 
 import { RequiredIcon, I18N } from '../../components';
 import { lfLog } from '../../helpers/lf-log';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 
 import './index.scss';
 
@@ -31,18 +32,19 @@ const InputTag = I18N(
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
           {required && <RequiredIcon />}
         </Form.ControlLabel>}
-        <Form.Control
-          name={name}
-          accepter={TagInput}
-          value={value}
-          onChange={onChange}
-          onBlur={onBlur}
-          disabled={disabled}
-          size={size}
-          trigger={trigger}
-          readOnly={readOnly}
-          errorMessage={_.isString(error) ? error : undefined }
-        />
+        <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+          <TagInput
+            name={name}
+            value={value}
+            onChange={onChange}
+            onBlur={onBlur}
+            disabled={disabled}
+            size={size}
+            trigger={trigger}
+            readOnly={readOnly}
+            errorMessage={_.isString(error) ? error : undefined }
+          />
+        </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>
     );

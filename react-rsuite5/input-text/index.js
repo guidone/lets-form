@@ -6,6 +6,7 @@ import _ from 'lodash';
 import classNames from 'classnames';
 
 import { RequiredIcon, I18N } from '../../components';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 import { TextOrIcon } from '../../common';
 import { passRest, makeWidthStyle } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
@@ -42,23 +43,23 @@ const TextInput = I18N(
     const handleKeyUp = useCallback(e => e.keyCode === 13 && lfOnEnter(), [lfOnEnter]);
 
     const inner = (
-      <Form.Control
-        name={name}
-        accepter={Input}
-        value={value}
-        onChange={onChange}
-        onBlur={onBlur}
-        onKeyUp={submitOnEnter ? handleKeyUp : undefined}
-        disabled={disabled}
-        autoComplete={autocomplete}
-        inputMode={inputMode}
-        type={inputType}
-        size={size}
-        placeholder={placeholder}
-        readOnly={readOnly}
-        errorMessage={_.isString(error) ? error : undefined }
-        {...passRest(rest)}
-      />
+      <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+        <Input
+          accepter={Input}
+          value={value}
+          onChange={onChange}
+          onBlur={onBlur}
+          onKeyUp={submitOnEnter ? handleKeyUp : undefined}
+          disabled={disabled}
+          autoComplete={autocomplete}
+          inputMode={inputMode}
+          type={inputType}
+          size={size}
+          placeholder={placeholder}
+          readOnly={readOnly}
+          {...passRest(rest)}
+        />
+      </RSuite5FieldControl>
     );
 
     const needsGroup = postfix || prefix;

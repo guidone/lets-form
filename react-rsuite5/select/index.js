@@ -6,6 +6,7 @@ import SelectPicker from 'rsuite/SelectPicker';
 import { passRest, filterOptions, i18nOptions } from '../../helpers';
 import { RequiredIcon, I18N } from '../../components';
 import { lfLog } from '../../helpers/lf-log';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 
 import './select.scss';
 
@@ -66,27 +67,28 @@ const Select = I18N(
             {required && <RequiredIcon />}
           </Form.ControlLabel>
         )}
-        <Form.Control
-          accepter={SelectPicker}
-          appearance={appearance ?? undefined}
-          name={name}
-          value={value}
-          onChange={onChange}
-          readOnly={readOnly}
-          onBlur={onBlur}
-          placement={placement}
-          errorMessage={_.isString(error) ? error : undefined }
-          disabled={disabled}
-          size={size}
-          placeholder={placeholder}
-          renderMenuItem={showImageOptions ? menuItem : undefined}
-          renderValue={showImageOptions ? menuItem : undefined}
-          data={filterOptions(options, filterValue, filterKey) || []}
-          block={block}
-          searchable={searchable}
-          cleanable={cleanable}
-          {...passRest(rest)}
-        />
+        <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+          <SelectPicker
+            appearance={appearance ?? undefined}
+            name={name}
+            value={value}
+            onChange={onChange}
+            readOnly={readOnly}
+            onBlur={onBlur}
+            placement={placement}
+            errorMessage={_.isString(error) ? error : undefined }
+            disabled={disabled}
+            size={size}
+            placeholder={placeholder}
+            renderMenuItem={showImageOptions ? menuItem : undefined}
+            renderValue={showImageOptions ? menuItem : undefined}
+            data={filterOptions(options, filterValue, filterKey) || []}
+            block={block}
+            searchable={searchable}
+            cleanable={cleanable}
+            {...passRest(rest)}
+          />
+        </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>
     );

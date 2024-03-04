@@ -8,6 +8,7 @@ import { RequiredIcon, I18N } from '../../components';
 import LOCALES from '../../common/data/locales.json';
 import { passRest } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 
 import './multiselect-language.scss';
 
@@ -73,26 +74,27 @@ const MultiselectLanguage = I18N(
             {required && <RequiredIcon />}
           </Form.ControlLabel>
         )}
-        <Form.Control
-          accepter={CheckPicker}
-          appearance={appearance ?? undefined}
-          name={name}
-          value={locales}
-          onChange={handleChange}
-          readOnly={readOnly}
-          onBlur={onBlur}
-          placement={placement}
-          errorMessage={_.isString(error) ? error : undefined }
-          disabled={disabled}
-          size={size}
-          placeholder={placeholder}
-          data={LANGUAGES_OPTIONS}
-          block
-          renderMenuItem={renderItem}
-          searchable
-          cleanable
-          {...passRest(rest)}
-        />
+        <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+          <CheckPicker
+            appearance={appearance ?? undefined}
+            name={name}
+            value={locales}
+            onChange={handleChange}
+            readOnly={readOnly}
+            onBlur={onBlur}
+            placement={placement}
+            errorMessage={_.isString(error) ? error : undefined }
+            disabled={disabled}
+            size={size}
+            placeholder={placeholder}
+            data={LANGUAGES_OPTIONS}
+            block
+            renderMenuItem={renderItem}
+            searchable
+            cleanable
+            {...passRest(rest)}
+          />
+        </RSuite5FieldControl>
         {!(Array.isArray(locales) && locales.length === ALL_LOCALES.length) && (
           <div className="btn-add-all">
             <a
@@ -107,5 +109,6 @@ const MultiselectLanguage = I18N(
   },
   ['label', 'hint', 'placeholder']
 );
+lfLog('Loaded RSuite5.MultiselectLanguage');
 
 export default MultiselectLanguage;

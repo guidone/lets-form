@@ -7,6 +7,7 @@ import CheckPicker from 'rsuite/CheckPicker';
 import { RequiredIcon, I18N } from '../../components';
 import { i18nOptions, makeWidthStyle, passRest } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 
 const Multiselect = I18N(
   ({
@@ -49,26 +50,27 @@ const Multiselect = I18N(
             {required && <RequiredIcon />}
           </Form.ControlLabel>
         )}
-        <Form.Control
-          accepter={Component}
-          appearance={appearance ?? undefined}
-          name={name}
-          value={value}
-          onChange={onChange}
-          readOnly={readOnly}
-          onBlur={onBlur}
-          placement={placement}
-          errorMessage={_.isString(error) ? error : undefined }
-          disabled={disabled}
-          size={size}
-          placeholder={placeholder}
-          data={options || []}
-          block={block}
-          style={makeWidthStyle(fullWidth, width)}
-          searchable={searchable}
-          cleanable={cleanable}
-          {...passRest(rest)}
-        />
+        <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+          <Component
+            appearance={appearance ?? undefined}
+            name={name}
+            value={value}
+            onChange={onChange}
+            readOnly={readOnly}
+            onBlur={onBlur}
+            placement={placement}
+            errorMessage={_.isString(error) ? error : undefined }
+            disabled={disabled}
+            size={size}
+            placeholder={placeholder}
+            data={options || []}
+            block={block}
+            style={makeWidthStyle(fullWidth, width)}
+            searchable={searchable}
+            cleanable={cleanable}
+            {...passRest(rest)}
+          />
+        </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>
     );

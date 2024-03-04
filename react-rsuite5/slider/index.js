@@ -6,6 +6,7 @@ import Slider from 'rsuite/Slider';
 import { RequiredIcon, I18N } from '../../components';
 import { passRest } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 
 import './index.scss';
 
@@ -49,19 +50,21 @@ const SliderRsuite = I18N(
             {required && <RequiredIcon />}
           </Form.ControlLabel>
         )}
-        <Slider
-          style={{ marginTop: '15px', marginBottom: '8px' }}
-          name={name}
-          value={value}
-          onChange={onChange}
-          readOnly={readOnly}
-          onBlur={onBlur}
-          renderMark={validateMarks(marks) ? handleRenderMark : undefined}
-          errorMessage={_.isString(error) ? error : undefined }
-          disabled={disabled}
-          tooltip={showTooltip}
-          {...passRest(rest)}
-        />
+        <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+          <Slider
+            style={{ marginTop: '15px', marginBottom: '8px' }}
+            name={name}
+            value={value}
+            onChange={onChange}
+            readOnly={readOnly}
+            onBlur={onBlur}
+            renderMark={validateMarks(marks) ? handleRenderMark : undefined}
+            errorMessage={_.isString(error) ? error : undefined }
+            disabled={disabled}
+            tooltip={showTooltip}
+            {...passRest(rest)}
+          />
+        </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>
     );

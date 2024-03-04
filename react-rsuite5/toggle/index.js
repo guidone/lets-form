@@ -5,6 +5,7 @@ import Toggle from 'rsuite/Toggle';
 
 import { RequiredIcon, I18N } from '../../components';
 import { lfLog } from '../../helpers/lf-log';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 
 const ToggleInput = I18N(
   ({
@@ -30,18 +31,18 @@ const ToggleInput = I18N(
             {required && <RequiredIcon />}
           </Form.ControlLabel>
         )}
-        <Form.Control
-          name={name}
-          accepter={Toggle}
-          value={value}
-          onChange={onChange}
-          disabled={disabled}
-          unCheckedChildren={unCheckedChildren && unCheckedChildren !== '' ? unCheckedChildren : undefined}
-          checkedChildren={checkedChildren && checkedChildren !== '' ? checkedChildren : undefined}
-          errorMessage={_.isString(error) ? error : undefined }
-          size={size}
-        >
-        </Form.Control>
+        <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+          <Toggle
+            name={name}
+            value={value}
+            onChange={onChange}
+            disabled={disabled}
+            unCheckedChildren={unCheckedChildren && unCheckedChildren !== '' ? unCheckedChildren : undefined}
+            checkedChildren={checkedChildren && checkedChildren !== '' ? checkedChildren : undefined}
+            errorMessage={_.isString(error) ? error : undefined }
+            size={size}
+          />
+        </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>
     );

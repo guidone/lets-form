@@ -16,6 +16,7 @@ import Textarea from '../textarea';
 import LOCALES from '../../common/data/locales.json';
 import { isI18n } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 
 import './index.scss';
 
@@ -170,6 +171,7 @@ const InputTextI18N = (props) => {
     .filter(item => _.isEmpty(locales) || locales.includes(item.value))
     .map(item => ({ ...item, filled: currentValue && !_.isEmpty(currentValue[item.value]) }));
 
+  const InputComponent = textarea ? TextareaAccepter : Input;
   return (
     <Form.Group data-lf-field-name={name} className="lf-control-input-text-i18n lf-input-text-i18n">
       {label && <Form.ControlLabel>
@@ -179,20 +181,21 @@ const InputTextI18N = (props) => {
       </Form.ControlLabel>}
       <div className={classNames('group-input-select', { 'textarea': textarea })}>
         <InputGroup className="translation-control" inside>
-          <Form.Control
-            name={name}
-            rows={rows}
-            style={width ? { width: `${width}px` } : undefined}
-            accepter={textarea ? TextareaAccepter : Input}
-            value={multiValuesAndNoLang ? '<multiple translations>' : translation}
-            readOnly={readOnly || multiValuesAndNoLang}
-            onChange={handleChange}
-            onBlur={onBlur}
-            disabled={disabled}
-            size={size}
-            placeholder={placeholder}
-            errorMessage={_.isString(error) ? error : undefined }
-          />
+          <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+            <InputComponent
+              name={name}
+              rows={rows}
+              style={width ? { width: `${width}px` } : undefined}
+              value={multiValuesAndNoLang ? '<multiple translations>' : translation}
+              readOnly={readOnly || multiValuesAndNoLang}
+              onChange={handleChange}
+              onBlur={onBlur}
+              disabled={disabled}
+              size={size}
+              placeholder={placeholder}
+              errorMessage={_.isString(error) ? error : undefined }
+            />
+          </RSuite5FieldControl>
           <InputGroup.Addon>
             <span className="status">
               <span className="translated">{translatedLocales.length}</span>

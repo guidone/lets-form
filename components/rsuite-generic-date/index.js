@@ -7,6 +7,7 @@ import * as locales from 'rsuite/locales';
 
 import { RequiredIcon } from '../../components';
 import { passRest } from '../../helpers';
+import { RSuite5FieldControl } from '../rsuite-field-control';
 
 const RSuiteGenericDate = ({
   name,
@@ -39,20 +40,21 @@ const RSuiteGenericDate = ({
       <CustomProvider
         locale={localeCode && locales[localeCode] ? locales[localeCode] : undefined}
       >
-        <Form.Control
-          accepter={DatePicker}
-          appearance={appearance ?? undefined}
-          name={name}
-          format={format || 'yyyy-MM-dd'}
-          defaultValue={value}
-          onChange={onChange}
-          readOnly={readOnly}
-          onBlur={onBlur}
-          errorMessage={_.isString(error) ? error : undefined }
-          disabled={disabled}
-          placeholder={placeholder}
-          {...passRest(rest)}
-        />
+        <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+          <DatePicker
+            appearance={appearance ?? undefined}
+            name={name}
+            format={format || 'yyyy-MM-dd'}
+            defaultValue={value}
+            onChange={onChange}
+            readOnly={readOnly}
+            onBlur={onBlur}
+            errorMessage={_.isString(error) ? error : undefined }
+            disabled={disabled}
+            placeholder={placeholder}
+            {...passRest(rest)}
+          />
+        </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </CustomProvider>
     </Form.Group>
