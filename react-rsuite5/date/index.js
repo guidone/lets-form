@@ -12,7 +12,6 @@ const SelectDate = I18N(
     value,
     ...rest
   }) => {
-
     // also accepts string dates
     let currentValue;
     if (_.isDate(value)) {

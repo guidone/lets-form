@@ -34,7 +34,7 @@ const ToggleInput = I18N(
         <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
           <Toggle
             name={name}
-            value={value}
+            checked={value}
             onChange={onChange}
             disabled={disabled}
             unCheckedChildren={unCheckedChildren && unCheckedChildren !== '' ? unCheckedChildren : undefined}
