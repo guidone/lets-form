@@ -398,14 +398,20 @@
         "description": "Set the width (in pixel) of the field"
       },
       {
-        "name": "prefix",
-        "type": "string",
-        "description": "Fixed heading text"
+        "name": "leftSection",
+        "type": "string"
       },
       {
-        "name": "postfix",
-        "type": "string",
-        "description": "Fixed trailing text"
+        "name": "rightSection",
+        "type": "string"
+      },
+      {
+        "name": "leftSectionWidth",
+        "type": "number"
+      },
+      {
+        "name": "rightSectionWidth",
+        "type": "number"
       },
       {
         "name": "pointer",
@@ -908,14 +914,20 @@
         ]
       },
       {
-        "name": "prefix",
-        "type": "string",
-        "description": "Fixed heading text"
+        "name": "leftSection",
+        "type": "string"
       },
       {
-        "name": "postfix",
-        "type": "string",
-        "description": "Fixed trailing text"
+        "name": "rightSection",
+        "type": "string"
+      },
+      {
+        "name": "leftSectionWidth",
+        "type": "number"
+      },
+      {
+        "name": "rightSectionWidth",
+        "type": "number"
       },
       {
         "name": "withCheckIcon",
@@ -1632,14 +1644,20 @@
         "description": "Set the width (in pixel) of the field"
       },
       {
-        "name": "prefix",
-        "type": "string",
-        "description": "Fixed heading text"
+        "name": "leftSection",
+        "type": "string"
       },
       {
-        "name": "postfix",
-        "type": "string",
-        "description": "Fixed trailing text"
+        "name": "rightSection",
+        "type": "string"
+      },
+      {
+        "name": "leftSectionWidth",
+        "type": "number"
+      },
+      {
+        "name": "rightSectionWidth",
+        "type": "number"
       },
       {
         "name": "pointer",
@@ -1960,6 +1978,21 @@
     "category": "general",
     "description": "Date field, returns a string in ISO-8601 format (i.e., 1972-10-01)",
     "name": "date",
+    "dependencies": {
+      "react-mantine": {
+        "js": [
+          null
+        ],
+        "css": [],
+        "imports": [
+          null
+        ],
+        "packages": {
+          "@mantine/dates": "^7.6.1",
+          "dayjs": "^1.11.10"
+        }
+      }
+    },
     "common": [
       {
         "name": "name",
@@ -2115,11 +2148,11 @@
         "type": "boolean"
       },
       {
-        "name": "maxDate",
+        "name": "minDate",
         "type": "date"
       },
       {
-        "name": "minDate",
+        "name": "maxDate",
         "type": "date"
       },
       {
@@ -2253,12 +2286,197 @@
         ]
       }
     ],
+    "react-mantine": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "default",
+          "filled",
+          "unstyled"
+        ]
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "dateType",
+        "type": "string",
+        "options": [
+          "default",
+          "range",
+          "multiple"
+        ]
+      },
+      {
+        "name": "allowDeselect",
+        "type": "boolean",
+        "description": "Determines whether user can deselect the date by clicking on selected item, applicable only when type=\"default\""
+      },
+      {
+        "name": "clearable",
+        "type": "boolean",
+        "description": "Determines whether input value can be cleared, adds clear button to right section, false by default"
+      },
+      {
+        "name": "defaultLevel",
+        "type": "string",
+        "options": [
+          "decade",
+          "month",
+          "year"
+        ]
+      },
+      {
+        "name": "hasNextLevel",
+        "type": "boolean",
+        "description": "Determines whether next level button should be enabled, defaults to true"
+      },
+      {
+        "name": "maxLevel",
+        "type": "string",
+        "description": "Max level that user can go up to (decade, year, month), defaults to decade",
+        "options": [
+          "decade",
+          "month",
+          "year"
+        ]
+      },
+      {
+        "name": "leftSection",
+        "type": "string"
+      },
+      {
+        "name": "rightSection",
+        "type": "string"
+      },
+      {
+        "name": "leftSectionWidth",
+        "type": "number"
+      },
+      {
+        "name": "rightSectionWidth",
+        "type": "number"
+      },
+      {
+        "name": "hideWeekdays",
+        "type": "boolean",
+        "description": "Determines whether weekdays row should be hidden, defaults to false"
+      },
+      {
+        "name": "monthLabelFormat",
+        "type": "string",
+        "description": "dayjs label format to display month label or a function that returns month label based on month value, defaults to \"MMMM YYYY\""
+      },
+      {
+        "name": "numberOfColumns",
+        "type": "number",
+        "description": "Number of columns to render next to each other"
+      },
+      {
+        "name": "columnsToScroll",
+        "type": "number",
+        "description": "Number of columns to scroll when user clicks next/prev buttons, defaults to numberOfColumns"
+      },
+      {
+        "name": "dropdownType",
+        "type": "string",
+        "description": "Type of dropdown, defaults to popover",
+        "options": [
+          "modal",
+          "popover"
+        ]
+      },
+      {
+        "name": "firstDayOfWeek",
+        "type": "string",
+        "description": "number 0-6, 0 - Sunday, 6 - Saturday, defaults to 1 - Monday",
+        "options": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "name": "valueFormat",
+        "type": "string",
+        "description": "Dayjs format to display input value, \"MMMM D, YYYY\" by default"
+      },
+      {
+        "name": "hideOutsideDates",
+        "type": "boolean",
+        "description": "Determines whether outside dates should be hidden, defaults to false"
+      },
+      {
+        "name": "labelSeparator",
+        "type": "string",
+        "description": "Separator between range value"
+      },
+      {
+        "name": "minDate",
+        "type": "date"
+      },
+      {
+        "name": "maxDate",
+        "type": "date"
+      },
+      {
+        "name": "withCellSpacing",
+        "type": "boolean",
+        "description": "Determines whether controls should be separated by spacing, true by default"
+      },
+      {
+        "name": "pointer",
+        "type": "boolean",
+        "description": "Determines whether the input should have cursor: pointer style, false by default"
+      },
+      {
+        "name": "withErrorStyles",
+        "type": "boolean",
+        "description": "Determines whether the input should have red border and red text color when the error prop is set, true by default"
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
       "react",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "checkbox": {
@@ -2534,6 +2752,10 @@
     ],
     "react-mantine": [
       {
+        "name": "options",
+        "type": "array"
+      },
+      {
         "name": "size",
         "type": "string",
         "description": "Size of the field",
@@ -2752,11 +2974,92 @@
         "type": "boolean"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "options",
+        "type": "array"
+      },
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "labelPosition",
+        "type": "string",
+        "options": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "grey",
+          "red",
+          "pink",
+          "grape",
+          "violet",
+          "indigo",
+          "blue",
+          "cyan",
+          "teal",
+          "green",
+          "lime",
+          "yellow",
+          "orange"
+        ]
+      },
+      {
+        "name": "iconColor",
+        "type": "string",
+        "options": [
+          "grey",
+          "red",
+          "pink",
+          "grape",
+          "violet",
+          "indigo",
+          "blue",
+          "cyan",
+          "teal",
+          "green",
+          "lime",
+          "yellow",
+          "orange"
+        ]
+      },
+      {
+        "name": "autoContrast",
+        "type": "boolean",
+        "description": "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "input-tag": {
@@ -3218,14 +3521,20 @@
         "type": "number"
       },
       {
-        "name": "prefix",
-        "type": "string",
-        "description": "Fixed heading text"
+        "name": "leftSection",
+        "type": "string"
       },
       {
-        "name": "postfix",
-        "type": "string",
-        "description": "Fixed trailing text"
+        "name": "rightSection",
+        "type": "string"
+      },
+      {
+        "name": "leftSectionWidth",
+        "type": "number"
+      },
+      {
+        "name": "rightSectionWidth",
+        "type": "number"
       },
       {
         "name": "pointer",

@@ -1,5 +1,9 @@
 # LetsForm Designer Changelog
 
+## v0.8.1
+- Added versions management (restore, delete)
+- Added export to Create React App
+
 ## v0.8.0
 - Fixed CodeSandbox code generation
 - Improved vanilla code generation

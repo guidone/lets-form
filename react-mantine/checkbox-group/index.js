@@ -21,6 +21,11 @@ const CheckboxGroup = I18N(
     error,
     onChange,
     onBlur,
+    size,
+    radius,
+    color,
+    iconColor,
+    labelPosition,
     options = [],
     ...rest
   }) => {
@@ -45,17 +50,23 @@ const CheckboxGroup = I18N(
     return (
       <div data-lf-field-name={name} className="lf-control-checkbox-group">
         {label && <Input.Label required={required}>{label}</Input.Label>}
-        <Stack style={{ marginTop: 'var(--lf-field-margin-top)'}}>
-          {(options ?? []).map(({ value, label}) => (
+        <Stack gap="xs" style={{ marginTop: 'var(--lf-field-margin-top)', marginBottom: 'var(--lf-field-margin-top)'}}>
+          {(options ?? []).map(item => (
             <Checkbox
-              key={value}
-              value={value}
-              label={label}
+              key={item.value}
+              value={item.value}
+              label={item.label}
               disabled={disabled}
               readOnly={readOnly}
               onChange={handleChange}
-              checked={selected.includes(value)}
-              {...passRest(rest)}
+              checked={selected.includes(item.value)}
+              description={item.description}
+              size={size}
+              radius={radius}
+              color={color}
+              iconColor={iconColor}
+              labelPosition={labelPosition}
+              {...passRest(rest, ['description'])}
             >
               {label}
             </Checkbox>

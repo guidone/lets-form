@@ -28,6 +28,9 @@ const Fields = {
   'checkbox-group': {
     'react-mantine': lazy(() => import('./checkbox-group'))
   },
+  'radio-group': {
+    'react-mantine': lazy(() => import('./radio-group'))
+  },
   'two-columns': {
     'react-mantine': lazy(() => import('./two-columns'))
   },
@@ -36,6 +39,9 @@ const Fields = {
   },
   'group': {
     'react-mantine': lazy(() => import('./group'))
+  },
+  'date': {
+    'react-mantine': lazy(() => import('./date'))
   }
 };
 
