@@ -16,7 +16,6 @@ const SelectDate = I18N(
     // also accepts string dates
     let initialValue;
     if (rest.dateType === 'range') {
-      console.log('data----', value)
       initialValue = [null, null]
     } else {
       if (_.isDate(value)) {
@@ -30,14 +29,9 @@ const SelectDate = I18N(
     }
     const [currentValue, setCurrentValue] = useState(initialValue);
     
-    console.log(`current value ${rest.dateType}`, value, initialValue, currentValue)
-
     // send always date string in format yyyy-mm-dd
     const handleChange = useCallback(
       d => {
-
-        console.log('selected----', d)
-
         if (d && d.toISOString) {
           setCurrentValue(d);
           onChange(d.toISOString().split('T')[0]);
