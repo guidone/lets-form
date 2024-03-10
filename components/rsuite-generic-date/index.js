@@ -2,8 +2,6 @@ import React from 'react';
 import _ from 'lodash';
 import Form from 'rsuite/Form';
 import DatePicker from 'rsuite/DatePicker';
-import CustomProvider from 'rsuite/CustomProvider';
-import * as locales from 'rsuite/locales';
 
 import { RequiredIcon } from '../../components';
 import { passRest } from '../../helpers';
@@ -36,27 +34,23 @@ const RSuiteGenericDate = ({
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
           {required && <RequiredIcon />}
         </Form.ControlLabel>
-      )}
-      <CustomProvider
-        locale={localeCode && locales[localeCode] ? locales[localeCode] : undefined}
-      >
-        <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
-          <DatePicker
-            appearance={appearance ?? undefined}
-            name={name}
-            format={format || 'yyyy-MM-dd'}
-            defaultValue={value}
-            onChange={onChange}
-            readOnly={readOnly}
-            onBlur={onBlur}
-            errorMessage={_.isString(error) ? error : undefined }
-            disabled={disabled}
-            placeholder={placeholder}
-            {...passRest(rest)}
-          />
-        </RSuite5FieldControl>
-        {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
-      </CustomProvider>
+      )}      
+      <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+        <DatePicker
+          appearance={appearance ?? undefined}
+          name={name}
+          format={format || 'yyyy-MM-dd'}
+          defaultValue={value}
+          onChange={onChange}
+          readOnly={readOnly}
+          onBlur={onBlur}
+          errorMessage={_.isString(error) ? error : undefined }
+          disabled={disabled}
+          placeholder={placeholder}
+          {...passRest(rest)}
+        />
+      </RSuite5FieldControl>
+      {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
     </Form.Group>
   );
 };
