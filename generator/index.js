@@ -23,6 +23,7 @@ import { errorToString } from './helpers/error-to-string';
 import { mergeComponents } from './helpers/merge-components';
 import { MissingComponent } from './helpers/missing-component';
 
+
 const DEBUG_RENDER = true;
 
 
@@ -665,8 +666,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     children,
     components,
     className,
+    // hide cancel button
     hideCancel, 
+    // hide submit button
     hideSubmit,
+    // show demo flag
     demo = false
   }) => {
     const { showErrors } = form;
