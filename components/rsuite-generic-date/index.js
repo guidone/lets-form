@@ -25,7 +25,7 @@ const RSuiteGenericDate = ({
   lfLocale,
   ...rest
 }) => {
-  console.log('passing date rest', ...passRest(rest))
+  console.log('passing date rest', passRest(rest))
   return (
     <Form.Group data-lf-field-name={name} className="lf-control-date">
       {label && (
