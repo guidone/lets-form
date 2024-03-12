@@ -25,7 +25,6 @@ const RSuiteGenericDate = ({
   lfLocale,
   ...rest
 }) => {
-  const localeCode = lfLocale && _.isString(lfLocale) ? lfLocale.replace('-', '') : undefined;
   return (
     <Form.Group data-lf-field-name={name} className="lf-control-date">
       {label && (

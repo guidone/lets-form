@@ -1,7 +1,6 @@
 import React from 'react';
 import { DatePickerInput, DateTimePicker } from '@mantine/dates';
 import _ from 'lodash';
-import '@mantine/dates/styles.css';
 
 import { passRest, makeWidthStyle, isValidDate } from '../../helpers';
 

@@ -1979,18 +1979,36 @@
     "description": "Date field, returns a string in ISO-8601 format (i.e., 1972-10-01)",
     "name": "date",
     "dependencies": {
+      "react-material-ui": {
+        "imports": {},
+        "js": [
+          "import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';",
+          "import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';",
+          null
+        ],
+        "packages": {
+          "@mui/x-date-pickers": "6.19.6",
+          "dayjs": "1.11.10"
+        }
+      },
       "react-mantine": {
         "js": [
           null
         ],
         "css": [],
-        "imports": [
-          null
-        ],
+        "imports": {},
         "packages": {
           "@mantine/dates": "^7.6.1",
           "dayjs": "^1.11.10"
         }
+      },
+      "react-rsuite5": {
+        "js": [
+          null
+        ],
+        "css": [],
+        "imports": {},
+        "packages": {}
       }
     },
     "common": [
@@ -2320,6 +2338,35 @@
         ]
       },
       {
+        "name": "valueFormat",
+        "type": "string",
+        "description": "Dayjs format to display input value, \"MMMM D, YYYY\" by default. Check https://day.js.org/docs/en/display/format for reference"
+      },
+      {
+        "name": "firstDayOfWeek",
+        "type": "string",
+        "description": "number 0-6, 0 - Sunday, 6 - Saturday, defaults to 1 - Monday",
+        "options": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "name": "hideOutsideDates",
+        "type": "boolean",
+        "description": "Determines whether outside dates should be hidden, defaults to false"
+      },
+      {
+        "name": "labelSeparator",
+        "type": "string",
+        "description": "Separator between range value"
+      },
+      {
         "name": "fullWidth",
         "type": "boolean",
         "description": "Set the width of the field to 100% of the enclosing container"
@@ -2339,6 +2386,15 @@
         ]
       },
       {
+        "name": "dropdownType",
+        "type": "string",
+        "description": "Type of dropdown, defaults to popover",
+        "options": [
+          "modal",
+          "popover"
+        ]
+      },
+      {
         "name": "allowDeselect",
         "type": "boolean",
         "description": "Determines whether user can deselect the date by clicking on selected item, applicable only when type=\"default\""
@@ -2347,6 +2403,11 @@
         "name": "clearable",
         "type": "boolean",
         "description": "Determines whether input value can be cleared, adds clear button to right section, false by default"
+      },
+      {
+        "name": "hideWeekdays",
+        "type": "boolean",
+        "description": "Determines whether weekdays row should be hidden, defaults to false"
       },
       {
         "name": "defaultLevel",
@@ -2373,32 +2434,6 @@
         ]
       },
       {
-        "name": "leftSection",
-        "type": "string"
-      },
-      {
-        "name": "rightSection",
-        "type": "string"
-      },
-      {
-        "name": "leftSectionWidth",
-        "type": "number"
-      },
-      {
-        "name": "rightSectionWidth",
-        "type": "number"
-      },
-      {
-        "name": "hideWeekdays",
-        "type": "boolean",
-        "description": "Determines whether weekdays row should be hidden, defaults to false"
-      },
-      {
-        "name": "monthLabelFormat",
-        "type": "string",
-        "description": "dayjs label format to display month label or a function that returns month label based on month value, defaults to \"MMMM YYYY\""
-      },
-      {
         "name": "numberOfColumns",
         "type": "number",
         "description": "Number of columns to render next to each other"
@@ -2407,44 +2442,6 @@
         "name": "columnsToScroll",
         "type": "number",
         "description": "Number of columns to scroll when user clicks next/prev buttons, defaults to numberOfColumns"
-      },
-      {
-        "name": "dropdownType",
-        "type": "string",
-        "description": "Type of dropdown, defaults to popover",
-        "options": [
-          "modal",
-          "popover"
-        ]
-      },
-      {
-        "name": "firstDayOfWeek",
-        "type": "string",
-        "description": "number 0-6, 0 - Sunday, 6 - Saturday, defaults to 1 - Monday",
-        "options": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      },
-      {
-        "name": "valueFormat",
-        "type": "string",
-        "description": "Dayjs format to display input value, \"MMMM D, YYYY\" by default"
-      },
-      {
-        "name": "hideOutsideDates",
-        "type": "boolean",
-        "description": "Determines whether outside dates should be hidden, defaults to false"
-      },
-      {
-        "name": "labelSeparator",
-        "type": "string",
-        "description": "Separator between range value"
       },
       {
         "name": "minDate",
@@ -2468,6 +2465,22 @@
         "name": "withErrorStyles",
         "type": "boolean",
         "description": "Determines whether the input should have red border and red text color when the error prop is set, true by default"
+      },
+      {
+        "name": "leftSection",
+        "type": "string"
+      },
+      {
+        "name": "rightSection",
+        "type": "string"
+      },
+      {
+        "name": "leftSectionWidth",
+        "type": "number"
+      },
+      {
+        "name": "rightSectionWidth",
+        "type": "number"
       }
     ],
     "frameworks": [
@@ -4420,6 +4433,39 @@
     "label": "Date Time",
     "category": "general",
     "name": "datetime",
+    "dependencies": {
+      "react-material-ui": {
+        "imports": {},
+        "js": [
+          "import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';",
+          "import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';",
+          null
+        ],
+        "packages": {
+          "@mui/x-date-pickers": "6.19.6",
+          "dayjs": "1.11.10"
+        }
+      },
+      "react-mantine": {
+        "js": [
+          null
+        ],
+        "css": [],
+        "imports": {},
+        "packages": {
+          "@mantine/dates": "^7.6.1",
+          "dayjs": "^1.11.10"
+        }
+      },
+      "react-rsuite5": {
+        "js": [
+          null
+        ],
+        "css": [],
+        "imports": {},
+        "packages": {}
+      }
+    },
     "common": [
       {
         "name": "name",
@@ -4690,12 +4736,187 @@
         "description": "Date format, i.e. DD/MM/YYYY"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "default",
+          "filled",
+          "unstyled"
+        ]
+      },
+      {
+        "name": "valueFormat",
+        "type": "string",
+        "description": "Dayjs format to display input value, \"DD/MM/YYYY HH:mm\" by default. Check https://day.js.org/docs/en/display/format for reference"
+      },
+      {
+        "name": "firstDayOfWeek",
+        "type": "string",
+        "description": "number 0-6, 0 - Sunday, 6 - Saturday, defaults to 1 - Monday",
+        "options": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "name": "hideOutsideDates",
+        "type": "boolean",
+        "description": "Determines whether outside dates should be hidden, defaults to false"
+      },
+      {
+        "name": "labelSeparator",
+        "type": "string",
+        "description": "Separator between range value"
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "withSeconds",
+        "type": "boolean"
+      },
+      {
+        "name": "dropdownType",
+        "type": "string",
+        "description": "Type of dropdown, defaults to popover",
+        "options": [
+          "modal",
+          "popover"
+        ]
+      },
+      {
+        "name": "allowDeselect",
+        "type": "boolean",
+        "description": "Determines whether user can deselect the date by clicking on selected item, applicable only when type=\"default\""
+      },
+      {
+        "name": "clearable",
+        "type": "boolean",
+        "description": "Determines whether input value can be cleared, adds clear button to right section, false by default"
+      },
+      {
+        "name": "hideWeekdays",
+        "type": "boolean",
+        "description": "Determines whether weekdays row should be hidden, defaults to false"
+      },
+      {
+        "name": "defaultLevel",
+        "type": "string",
+        "options": [
+          "decade",
+          "month",
+          "year"
+        ]
+      },
+      {
+        "name": "hasNextLevel",
+        "type": "boolean",
+        "description": "Determines whether next level button should be enabled, defaults to true"
+      },
+      {
+        "name": "maxLevel",
+        "type": "string",
+        "description": "Max level that user can go up to (decade, year, month), defaults to decade",
+        "options": [
+          "decade",
+          "month",
+          "year"
+        ]
+      },
+      {
+        "name": "numberOfColumns",
+        "type": "number",
+        "description": "Number of columns to render next to each other"
+      },
+      {
+        "name": "columnsToScroll",
+        "type": "number",
+        "description": "Number of columns to scroll when user clicks next/prev buttons, defaults to numberOfColumns"
+      },
+      {
+        "name": "minDate",
+        "type": "date"
+      },
+      {
+        "name": "maxDate",
+        "type": "date"
+      },
+      {
+        "name": "withCellSpacing",
+        "type": "boolean",
+        "description": "Determines whether controls should be separated by spacing, true by default"
+      },
+      {
+        "name": "pointer",
+        "type": "boolean",
+        "description": "Determines whether the input should have cursor: pointer style, false by default"
+      },
+      {
+        "name": "withErrorStyles",
+        "type": "boolean",
+        "description": "Determines whether the input should have red border and red text color when the error prop is set, true by default"
+      },
+      {
+        "name": "leftSection",
+        "type": "string"
+      },
+      {
+        "name": "rightSection",
+        "type": "string"
+      },
+      {
+        "name": "leftSectionWidth",
+        "type": "number"
+      },
+      {
+        "name": "rightSectionWidth",
+        "type": "number"
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
       "react",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "tabs": {

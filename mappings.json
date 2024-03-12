@@ -724,13 +724,31 @@
     "variant": [
       "react-mantine"
     ],
+    "valueFormat": [
+      "react-mantine"
+    ],
+    "firstDayOfWeek": [
+      "react-mantine"
+    ],
+    "hideOutsideDates": [
+      "react-mantine"
+    ],
+    "labelSeparator": [
+      "react-mantine"
+    ],
     "dateType": [
+      "react-mantine"
+    ],
+    "dropdownType": [
       "react-mantine"
     ],
     "allowDeselect": [
       "react-mantine"
     ],
     "clearable": [
+      "react-mantine"
+    ],
+    "hideWeekdays": [
       "react-mantine"
     ],
     "defaultLevel": [
@@ -740,6 +758,21 @@
       "react-mantine"
     ],
     "maxLevel": [
+      "react-mantine"
+    ],
+    "numberOfColumns": [
+      "react-mantine"
+    ],
+    "columnsToScroll": [
+      "react-mantine"
+    ],
+    "withCellSpacing": [
+      "react-mantine"
+    ],
+    "pointer": [
+      "react-mantine"
+    ],
+    "withErrorStyles": [
       "react-mantine"
     ],
     "leftSection": [
@@ -752,42 +785,6 @@
       "react-mantine"
     ],
     "rightSectionWidth": [
-      "react-mantine"
-    ],
-    "hideWeekdays": [
-      "react-mantine"
-    ],
-    "monthLabelFormat": [
-      "react-mantine"
-    ],
-    "numberOfColumns": [
-      "react-mantine"
-    ],
-    "columnsToScroll": [
-      "react-mantine"
-    ],
-    "dropdownType": [
-      "react-mantine"
-    ],
-    "firstDayOfWeek": [
-      "react-mantine"
-    ],
-    "valueFormat": [
-      "react-mantine"
-    ],
-    "hideOutsideDates": [
-      "react-mantine"
-    ],
-    "labelSeparator": [
-      "react-mantine"
-    ],
-    "withCellSpacing": [
-      "react-mantine"
-    ],
-    "pointer": [
-      "react-mantine"
-    ],
-    "withErrorStyles": [
       "react-mantine"
     ],
     "validationMinLength": "validation",
@@ -1493,7 +1490,8 @@
     "size": [
       "react-rsuite5",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "appearance": [
       "react-rsuite5"
@@ -1505,7 +1503,8 @@
     "fullWidth": [
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "disableFuture": [
       "react-material-ui"
@@ -1529,10 +1528,12 @@
       "react-material-ui"
     ],
     "maxDate": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "minDate": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "views": [
       "react-material-ui"
@@ -1548,7 +1549,8 @@
     ],
     "width": [
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "bordered": [
       "react-antd"
@@ -1564,6 +1566,75 @@
     ],
     "showToday": [
       "react-antd"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "variant": [
+      "react-mantine"
+    ],
+    "valueFormat": [
+      "react-mantine"
+    ],
+    "firstDayOfWeek": [
+      "react-mantine"
+    ],
+    "hideOutsideDates": [
+      "react-mantine"
+    ],
+    "labelSeparator": [
+      "react-mantine"
+    ],
+    "withSeconds": [
+      "react-mantine"
+    ],
+    "dropdownType": [
+      "react-mantine"
+    ],
+    "allowDeselect": [
+      "react-mantine"
+    ],
+    "clearable": [
+      "react-mantine"
+    ],
+    "hideWeekdays": [
+      "react-mantine"
+    ],
+    "defaultLevel": [
+      "react-mantine"
+    ],
+    "hasNextLevel": [
+      "react-mantine"
+    ],
+    "maxLevel": [
+      "react-mantine"
+    ],
+    "numberOfColumns": [
+      "react-mantine"
+    ],
+    "columnsToScroll": [
+      "react-mantine"
+    ],
+    "withCellSpacing": [
+      "react-mantine"
+    ],
+    "pointer": [
+      "react-mantine"
+    ],
+    "withErrorStyles": [
+      "react-mantine"
+    ],
+    "leftSection": [
+      "react-mantine"
+    ],
+    "rightSection": [
+      "react-mantine"
+    ],
+    "leftSectionWidth": [
+      "react-mantine"
+    ],
+    "rightSectionWidth": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",
