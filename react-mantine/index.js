@@ -42,6 +42,9 @@ const Fields = {
   },
   'date': {
     'react-mantine': lazy(() => import('./date'))
+  },
+  'datetime': {
+    'react-mantine': lazy(() => import('./datetime'))
   }
 };
 

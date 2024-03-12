@@ -1,5 +1,5 @@
 import React from 'react';
-import { DatePickerInput } from '@mantine/dates';
+import { DatePickerInput, DateTimePicker } from '@mantine/dates';
 import _ from 'lodash';
 import '@mantine/dates/styles.css';
 
@@ -26,10 +26,12 @@ const MantineGenericDate = ({
   fullWidth,
   width,
   lfLocale,
+  withTime = false,
   ...rest
 }) => {
+  const Component = withTime ? DateTimePicker : DatePickerInput;
   return (      
-    <DatePickerInput 
+    <Component 
       className="lf-control-date"
       data-lf-field-name={name}
       style={makeWidthStyle(fullWidth, width)} 
