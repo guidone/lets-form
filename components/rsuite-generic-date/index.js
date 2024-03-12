@@ -25,6 +25,7 @@ const RSuiteGenericDate = ({
   lfLocale,
   ...rest
 }) => {
+  console.log('passing date rest', ...passRest(rest))
   return (
     <Form.Group data-lf-field-name={name} className="lf-control-date">
       {label && (
@@ -33,7 +34,20 @@ const RSuiteGenericDate = ({
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
           {required && <RequiredIcon />}
         </Form.ControlLabel>
-      )}      
+      )}
+      <DatePicker
+          appearance={appearance ?? undefined}
+          name={name}
+          format={format || 'yyyy-MM-dd'}
+          defaultValue={value}
+          onChange={onChange}
+          readOnly={readOnly}
+          onBlur={onBlur}
+          errorMessage={_.isString(error) ? error : undefined }
+          disabled={disabled}
+          placeholder={placeholder}
+          {...passRest(rest)}
+        />      
       <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
         <DatePicker
           appearance={appearance ?? undefined}
