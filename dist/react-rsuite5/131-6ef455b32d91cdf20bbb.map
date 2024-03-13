@@ -1,1 +1,0 @@
-{"version":3,"file":"131-6ef455b32d91cdf20bbb.js","mappings":"kJAIAA,E,QAAAA,GAAM,wBAEN,UAAeC,EAAK,C","sources":["webpack:///./react-rsuite5/group/index.js"],"sourcesContent":["import { Group } from '../../common/group';\n\nimport { lfLog } from '../../helpers/lf-log';\n\nlfLog('Loaded RSuite5.Group');\n\nexport default Group;\n"],"names":["lfLog","Group"],"sourceRoot":""}

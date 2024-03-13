@@ -1987,7 +1987,7 @@
           null
         ],
         "packages": {
-          "@mui/x-date-pickers": "6.19.6",
+          "@mui/x-date-pickers": "latest",
           "dayjs": "1.11.10"
         }
       },
@@ -4442,7 +4442,7 @@
           null
         ],
         "packages": {
-          "@mui/x-date-pickers": "6.19.6",
+          "@mui/x-date-pickers": "latest",
           "dayjs": "1.11.10"
         }
       },
