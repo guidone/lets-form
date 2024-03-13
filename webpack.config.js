@@ -58,7 +58,7 @@ module.exports = module.exports = (env = {}) => {
     console.log('Building for Ant Design framework');
     library = 'lets-form-antd';
     entryPoint = path.join(__dirname, 'react-antd/index.js');
-    outputFile = 'index.js';
+    outputFile = 'main.js';
     entryPointName = 'lets-form-antd';
     outputPath = 'dist/react-antd';
     globalObject = 'this';
