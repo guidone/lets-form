@@ -13,8 +13,6 @@ import { lfLog, lfError } from '../helpers/lf-log';
 
 import FormContext from '../form-context';
 
-import { DatePicker } from 'rsuite';
-
 import './index.scss';
 import { PlaintextForm } from '../components/plaintext-form';
 
@@ -624,7 +622,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 }}
               />;
 
-              return Wrapper ? <Wrapper key={`wrapper_${field.name}`} field={field} level={level} index={index}><DatePicker/>{component}</Wrapper> : component;
+              return Wrapper ? <Wrapper key={`wrapper_${field.name}`} field={field} level={level} index={index}>{component}</Wrapper> : component;
               }
             }
           />

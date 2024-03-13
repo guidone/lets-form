@@ -33,7 +33,7 @@ const RSuiteGenericDate = ({
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
           {required && <RequiredIcon />}
         </Form.ControlLabel>
-      )}
+      )}      
       <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
         <DatePicker
           appearance={appearance ?? undefined}
