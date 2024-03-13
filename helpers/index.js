@@ -24,3 +24,4 @@ export * from './form-helper';
 export * from './i18n-options';
 export * from './is-children-of';
 export * from './validate-form';
+export * from './form-has-components';
