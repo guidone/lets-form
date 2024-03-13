@@ -147,7 +147,8 @@ module.exports = module.exports = (env = {}) => {
       },
       /@material-ui\/core\/.*/,
       /^@mui/,
-      /^rsuite/
+      /^rsuite/,
+      /^antd/
     ],
     optimization: {
       minimize: true

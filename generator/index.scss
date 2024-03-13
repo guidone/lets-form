@@ -1,4 +1,4 @@
-.lf-lets-form{
+.lf-lets-form {
 
   .label-test-buttons {
     float: right;
@@ -18,6 +18,15 @@
       background-size: 56.57px 56.57px;
     }
   }
+}
+
+.lf-form-react-mantine {
+  font-family: var(--mantine-font-family);
+  font-size: var(--mantine-font-size-md);
+  line-height: var(--mantine-line-height);
+  background-color: var(--mantine-color-body);
+  color: var(--mantine-color-text);
+  -webkit-font-smoothing: var(--mantine-webkit-font-smoothing);
 }
 
 .lf-form {

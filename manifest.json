@@ -1995,7 +1995,9 @@
         "js": [
           null
         ],
-        "css": [],
+        "css": [
+          null
+        ],
         "imports": {},
         "packages": {
           "@mantine/dates": "^7.6.1",
@@ -4450,7 +4452,9 @@
         "js": [
           null
         ],
-        "css": [],
+        "css": [
+          null
+        ],
         "imports": {},
         "packages": {
           "@mantine/dates": "^7.6.1",
