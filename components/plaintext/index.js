@@ -86,26 +86,4 @@ const Plaintext = ({ value, component, options, locale }) => {
   }
 };
 
-const IfNotPlaintext = ({
-  plaintext,
-  value,
-  component,
-  options,
-  children,
-  locale
-}) => {
-  if (plaintext) {
-    return (
-      <Plaintext
-        value={value}
-        component={component}
-        options={options}
-        locale={locale}
-      />
-    );
-  } else {
-    return children;
-  }
-};
-
-export { Plaintext, IfNotPlaintext };
+export { Plaintext };
