@@ -146,7 +146,8 @@ module.exports = module.exports = (env = {}) => {
         '@mantine/hooks': 'umd @mantine/hooks'
       },
       /@material-ui\/core\/.*/,
-      /^@mui/
+      /^@mui/,
+      /^rsuite/
     ],
     optimization: {
       minimize: true
