@@ -54,14 +54,12 @@ const ArrayItem = ({
   let style;
   if ((align === 'top' || align === 'bottom') && _.isNumber(alignOffset) && alignOffset > 0) {
     style = {
-      [`margin-${align}`]: `${alignOffset}px`
+      [`margin${_.capitalize(align)}`]: `${alignOffset}px`
     };
   }
 
   return (
-    <div
-      className="lf-control-common-array-item"
-    >
+    <div className="lf-control-common-array-item">
       <div className="inner-form">
         {children}
       </div>
