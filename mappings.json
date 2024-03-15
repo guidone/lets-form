@@ -671,10 +671,12 @@
     ],
     "minDate": [
       "react-material-ui",
+      "react-antd",
       "react-mantine"
     ],
     "maxDate": [
       "react-material-ui",
+      "react-antd",
       "react-mantine"
     ],
     "views": [
@@ -694,6 +696,12 @@
       "react-antd",
       "react-mantine"
     ],
+    "picker": [
+      "react-antd"
+    ],
+    "mode": [
+      "react-antd"
+    ],
     "bordered": [
       "react-antd"
     ],
@@ -712,10 +720,13 @@
     "showToday": [
       "react-antd"
     ],
-    "picker": [
+    "preserveInvalidOnBlur": [
       "react-antd"
     ],
-    "mode": [
+    "inputReadOnly": [
+      "react-antd"
+    ],
+    "needConfirm": [
       "react-antd"
     ],
     "radius": [
@@ -1529,10 +1540,12 @@
     ],
     "maxDate": [
       "react-material-ui",
+      "react-antd",
       "react-mantine"
     ],
     "minDate": [
       "react-material-ui",
+      "react-antd",
       "react-mantine"
     ],
     "views": [
@@ -1552,6 +1565,12 @@
       "react-antd",
       "react-mantine"
     ],
+    "picker": [
+      "react-antd"
+    ],
+    "mode": [
+      "react-antd"
+    ],
     "bordered": [
       "react-antd"
     ],
@@ -1561,10 +1580,22 @@
     "tooltip": [
       "react-antd"
     ],
+    "showTime": [
+      "react-antd"
+    ],
     "showNow": [
       "react-antd"
     ],
     "showToday": [
+      "react-antd"
+    ],
+    "preserveInvalidOnBlur": [
+      "react-antd"
+    ],
+    "inputReadOnly": [
+      "react-antd"
+    ],
+    "needConfirm": [
       "react-antd"
     ],
     "radius": [

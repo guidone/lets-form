@@ -3,8 +3,8 @@ import _ from 'lodash';
 
 import { I18N } from '../../components';
 import { AntdGenericDate } from '../../components/antd-generic-date';
-import { isValidDate } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
+import { isValidDate } from '../../helpers/is-valid-date';
 
 const AntdDate = I18N(
   ({
@@ -27,7 +27,9 @@ const AntdDate = I18N(
     // send always date string in format yyyy-mm-dd
     const handleChange = useCallback(
       d => {
-        onChange(d.toISOString().split('T')[0]);
+        if (isValidDate(d)) {
+          onChange( d.toISOString().split('T')[0]);
+        }
       },
       [onChange]
     );

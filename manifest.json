@@ -2011,6 +2011,18 @@
         "css": [],
         "imports": {},
         "packages": {}
+      },
+      "react-antd": {
+        "js": [
+          null,
+          null,
+          null
+        ],
+        "css": [],
+        "imports": {},
+        "packages": {
+          "dayjs": "^1.11.10"
+        }
       }
     },
     "common": [
@@ -2223,6 +2235,43 @@
     ],
     "react-antd": [
       {
+        "name": "format",
+        "type": "string",
+        "description": "Dayjs format to display input value, \"MMMM D, YYYY\" by default. Check https://day.js.org/docs/en/display/format for reference"
+      },
+      {
+        "name": "picker",
+        "type": "string",
+        "options": [
+          "date",
+          "week",
+          "month",
+          "quarter",
+          "year"
+        ]
+      },
+      {
+        "name": "placement",
+        "type": "string",
+        "options": [
+          "bottomLeft",
+          "bottomRight",
+          "topLeft",
+          "topRight"
+        ]
+      },
+      {
+        "name": "mode",
+        "type": "string",
+        "options": [
+          "time",
+          "date",
+          "month",
+          "year",
+          "decade"
+        ]
+      },
+      {
         "name": "size",
         "type": "string",
         "description": "Size of the field",
@@ -2241,6 +2290,14 @@
         "name": "width",
         "type": "number",
         "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "minDate",
+        "type": "date"
+      },
+      {
+        "name": "maxDate",
+        "type": "date"
       },
       {
         "name": "bordered",
@@ -2269,41 +2326,19 @@
         "description": "Show today button"
       },
       {
-        "name": "placement",
-        "type": "string",
-        "options": [
-          "bottomLeft",
-          "bottomRight",
-          "topLeft",
-          "topRight"
-        ]
+        "name": "preserveInvalidOnBlur",
+        "type": "boolean",
+        "description": "Not clean input on blur even when the typing is invalidate"
       },
       {
-        "name": "format",
-        "type": "string",
-        "description": "Date format, i.e. DD/MM/YYYY"
+        "name": "inputReadOnly",
+        "type": "boolean",
+        "description": "Set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)"
       },
       {
-        "name": "picker",
-        "type": "string",
-        "options": [
-          "date",
-          "week",
-          "month",
-          "quarter",
-          "year"
-        ]
-      },
-      {
-        "name": "mode",
-        "type": "string",
-        "options": [
-          "time",
-          "date",
-          "month",
-          "year",
-          "decade"
-        ]
+        "name": "needConfirm",
+        "type": "boolean",
+        "description": "Need click confirm button to trigger value change. Default false when multiple"
       }
     ],
     "react-mantine": [
@@ -4468,6 +4503,18 @@
         "css": [],
         "imports": {},
         "packages": {}
+      },
+      "react-antd": {
+        "js": [
+          null,
+          null,
+          null
+        ],
+        "css": [],
+        "imports": {},
+        "packages": {
+          "dayjs": "^1.11.10"
+        }
       }
     },
     "common": [
@@ -4683,6 +4730,43 @@
     ],
     "react-antd": [
       {
+        "name": "format",
+        "type": "string",
+        "description": "Dayjs format to display input value, \"MMMM D, YYYY\" by default. Check https://day.js.org/docs/en/display/format for reference"
+      },
+      {
+        "name": "picker",
+        "type": "string",
+        "options": [
+          "date",
+          "week",
+          "month",
+          "quarter",
+          "year"
+        ]
+      },
+      {
+        "name": "placement",
+        "type": "string",
+        "options": [
+          "bottomLeft",
+          "bottomRight",
+          "topLeft",
+          "topRight"
+        ]
+      },
+      {
+        "name": "mode",
+        "type": "string",
+        "options": [
+          "time",
+          "date",
+          "month",
+          "year",
+          "decade"
+        ]
+      },
+      {
         "name": "size",
         "type": "string",
         "description": "Size of the field",
@@ -4703,6 +4787,14 @@
         "description": "Set the width (in pixel) of the field"
       },
       {
+        "name": "minDate",
+        "type": "date"
+      },
+      {
+        "name": "maxDate",
+        "type": "date"
+      },
+      {
         "name": "bordered",
         "type": "boolean"
       },
@@ -4712,6 +4804,10 @@
       },
       {
         "name": "tooltip",
+        "type": "boolean"
+      },
+      {
+        "name": "showTime",
         "type": "boolean"
       },
       {
@@ -4725,19 +4821,19 @@
         "description": "Show today button"
       },
       {
-        "name": "placement",
-        "type": "string",
-        "options": [
-          "bottomLeft",
-          "bottomRight",
-          "topLeft",
-          "topRight"
-        ]
+        "name": "preserveInvalidOnBlur",
+        "type": "boolean",
+        "description": "Not clean input on blur even when the typing is invalidate"
       },
       {
-        "name": "format",
-        "type": "string",
-        "description": "Date format, i.e. DD/MM/YYYY"
+        "name": "inputReadOnly",
+        "type": "boolean",
+        "description": "Set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)"
+      },
+      {
+        "name": "needConfirm",
+        "type": "boolean",
+        "description": "Need click confirm button to trigger value change. Default false when multiple"
       }
     ],
     "react-mantine": [

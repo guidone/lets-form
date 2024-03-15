@@ -1,10 +1,11 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { RSuiteGenericDate } from '../../components/rsuite-generic-date';
-import { isValidDate, passRest } from '../../helpers';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
+import { isValidDate } from '../../helpers/is-valid-date';
 
 const SelectDatetime = I18N(
   ({
@@ -27,7 +28,9 @@ const SelectDatetime = I18N(
     // send always date string in iso format
     const handleChange = useCallback(
       d => {
-        onChange(d.toISOString());
+        if (isValidDate(d)) {
+          onChange(d.toISOString());
+        }
       },
       [onChange]
     );

@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { I18N } from '../../components';
 import { BootstrapGenericInput } from '../../components/bootstrap-generic-input';
 import { lfLog } from '../../helpers/lf-log';
+import { isValidDate } from '../../helpers/is-valid-date';
 
 // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -20,7 +21,7 @@ const Date = I18N(
     );
 
     let currentDate = value;
-    if (_.isDate(value)) {
+    if (isValidDate(value)) {
       // only take 2023-11-12
       currentDate = value.toISOString().split('T')[0];
     }

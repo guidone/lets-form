@@ -1,10 +1,11 @@
 import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { MantineGenericDate } from '../../components/mantine-generic-date';
-import { isValidDate, passRest } from '../../helpers';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
+import { isValidDate } from '../../helpers/is-valid-date';
 
 const SelectDate = I18N(
   ({
@@ -32,7 +33,7 @@ const SelectDate = I18N(
     // send always date string in format yyyy-mm-dd
     const handleChange = useCallback(
       d => {
-        if (d && d.toISOString) {
+        if (isValidDate(d)) {
           setCurrentValue(d);
           onChange(d.toISOString().split('T')[0]);
         } else {
