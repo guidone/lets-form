@@ -1,7 +1,7 @@
 <p align="center">
   <img width="300" src="https://raw.githubusercontent.com/guidone/lets-form/main/scripts/assets/logo-ext%403x.png">
   <br/>
-   Create React forms with simple JSON form schemas, supports Material UI / Bootstrap / AntDesign / RSuite
+   Create React forms with simple JSON form schemas, supports Material UI / Bootstrap / AntDesign / RSuite / Mantine
 </p>
 <p align="center">
   <a href="https://letsform.dev">Documentation</a>
