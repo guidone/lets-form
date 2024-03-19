@@ -1,0 +1,2 @@
+"use strict";(this.webpackChunklets_form_antd=this.webpackChunklets_form_antd||[]).push([[887],{4887:function(e,t,l){l.r(t);var a=l(8156),n=l.n(a),o=l(5656),r=l.n(o),c=l(1782),i=l(9111),d=l(8228),h=(0,i.mb)((function(e){var t=e.name,l=e.hint,a=e.text,o=e.tooltip,i=e.label;return n().createElement(r().Item,{label:i,"data-lf-field-name":t,help:l&&!o?l:void 0,tooltip:o&&l,className:"lf-control-placeholder"},n().createElement(c.Vm,{text:a}))}),["label","hint","text"]);(0,d.n)("Loaded AntD.Placeholder"),t.default=h}}]);
+//# sourceMappingURL=887-fa5b66f81158c8ee2697.map
