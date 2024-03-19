@@ -2000,7 +2000,7 @@
         ],
         "imports": {},
         "packages": {
-          "@mantine/dates": "^7.6.1",
+          "@mantine/dates": "^7.6.2",
           "dayjs": "^1.11.10"
         }
       },
@@ -4492,7 +4492,7 @@
         ],
         "imports": {},
         "packages": {
-          "@mantine/dates": "^7.6.1",
+          "@mantine/dates": "^7.6.2",
           "dayjs": "^1.11.10"
         }
       },
