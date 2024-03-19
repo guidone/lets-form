@@ -131,8 +131,6 @@ module.exports = module.exports = (env = {}) => {
     },
     externals: [
       {
-        'rsuite': 'umd rsuite',
-        'rsuite/locales': 'umd rsuite/locales',
         'react': 'umd react',
         'react-dom': 'umd react-dom',
         'prop-types': 'umd prop-types',
@@ -140,15 +138,13 @@ module.exports = module.exports = (env = {}) => {
         '@mui/styled-engine': 'umd @mui/styled-engine',
         '@mui/x-date-pickers':'umd @mui/x-date-pickers',
         'react-bootstrap': 'umd react-bootstrap',
-        'antd': 'umd antd',
-        'dayjs': 'umd dayjs',
-        '@mantine/core': 'umd @mantine/core',
-        '@mantine/hooks': 'umd @mantine/hooks'
+        'dayjs': 'umd dayjs'
       },
       /@material-ui\/core\/.*/,
       /^@mui/,
       /^rsuite/,
-      /^antd/
+      /^antd/,
+      /^@mantine/
     ],
     optimization: {
       minimize: true
