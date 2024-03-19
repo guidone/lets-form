@@ -58,7 +58,7 @@ module.exports = module.exports = (env = {}) => {
     console.log('Building for Ant Design framework');
     library = 'lets-form-antd';
     entryPoint = path.join(__dirname, 'react-antd/index.js');
-    outputFile = 'index.js';
+    outputFile = 'main.js';
     entryPointName = 'lets-form-antd';
     outputPath = 'dist/react-antd';
     globalObject = 'this';
@@ -131,8 +131,6 @@ module.exports = module.exports = (env = {}) => {
     },
     externals: [
       {
-        'rsuite': 'umd rsuite',
-        'rsuite/locales': 'umd rsuite/locales',
         'react': 'umd react',
         'react-dom': 'umd react-dom',
         'prop-types': 'umd prop-types',
@@ -140,13 +138,13 @@ module.exports = module.exports = (env = {}) => {
         '@mui/styled-engine': 'umd @mui/styled-engine',
         '@mui/x-date-pickers':'umd @mui/x-date-pickers',
         'react-bootstrap': 'umd react-bootstrap',
-        'antd': 'umd antd',
-        'dayjs': 'umd dayjs',
-        '@mantine/core': 'umd @mantine/core',
-        '@mantine/hooks': 'umd @mantine/hooks'
+        'dayjs': 'umd dayjs'
       },
       /@material-ui\/core\/.*/,
-      /^@mui/
+      /^@mui/,
+      /^rsuite/,
+      /^antd/,
+      /^@mantine/
     ],
     optimization: {
       minimize: true

@@ -6,6 +6,7 @@ import InputGroup from 'rsuite/InputGroup';
 import _ from 'lodash';
 
 import { RequiredIcon, I18N } from '../../components';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 import { passRest, makeWidthStyle } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
 
@@ -59,22 +60,22 @@ const InputMask = I18N(
     const parsedMask = prepareMask(mask);
 
     const inner = (
-      <Form.Control
-        name={name}
-        accepter={MaskedInput}
-        value={value}
-
-        onChange={onChange}
-        onBlur={onBlur}
-        disabled={disabled}
-        size={size}
-        placeholder={placeholder}
-        readOnly={readOnly}
-        placeholderChar={typeof placeholderChar === 'string' && placeholderChar.length > 0 ? placeholderChar[0] : '_'}
-        errorMessage={_.isString(error) ? error : undefined }
-        mask={parsedMask}
-        {...passRest(rest)}
-      />
+      <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+        <MaskedInput
+          name={name}
+          value={value}
+          onChange={onChange}
+          onBlur={onBlur}
+          disabled={disabled}
+          size={size}
+          placeholder={placeholder}
+          readOnly={readOnly}
+          placeholderChar={typeof placeholderChar === 'string' && placeholderChar.length > 0 ? placeholderChar[0] : '_'}
+          errorMessage={_.isString(error) ? error : undefined }
+          mask={parsedMask}
+          {...passRest(rest)}
+        />
+      </RSuite5FieldControl>
     );
 
     const needsGroup = postfix || prefix;

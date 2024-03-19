@@ -35,8 +35,7 @@
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd",
-      "react-mantine"
+      "react-antd"
     ],
     "inside": [
       "react-rsuite5"
@@ -45,8 +44,7 @@
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd",
-      "react-mantine"
+      "react-antd"
     ],
     "tooltip": [
       "react-rsuite5",
@@ -79,6 +77,18 @@
       "react-antd"
     ],
     "radius": [
+      "react-mantine"
+    ],
+    "leftSection": [
+      "react-mantine"
+    ],
+    "rightSection": [
+      "react-mantine"
+    ],
+    "leftSectionWidth": [
+      "react-mantine"
+    ],
+    "rightSectionWidth": [
       "react-mantine"
     ],
     "pointer": [
@@ -239,10 +249,16 @@
     "radius": [
       "react-mantine"
     ],
-    "prefix": [
+    "leftSection": [
       "react-mantine"
     ],
-    "postfix": [
+    "rightSection": [
+      "react-mantine"
+    ],
+    "leftSectionWidth": [
+      "react-mantine"
+    ],
+    "rightSectionWidth": [
       "react-mantine"
     ],
     "withCheckIcon": [
@@ -377,8 +393,7 @@
     "prefix": [
       "react-rsuite5",
       "react-material-ui",
-      "react-bootstrap",
-      "react-mantine"
+      "react-bootstrap"
     ],
     "inside": [
       "react-rsuite5"
@@ -386,8 +401,7 @@
     "postfix": [
       "react-rsuite5",
       "react-material-ui",
-      "react-bootstrap",
-      "react-mantine"
+      "react-bootstrap"
     ],
     "tooltip": [
       "react-rsuite5",
@@ -417,6 +431,18 @@
       "react-antd"
     ],
     "radius": [
+      "react-mantine"
+    ],
+    "leftSection": [
+      "react-mantine"
+    ],
+    "rightSection": [
+      "react-mantine"
+    ],
+    "leftSectionWidth": [
+      "react-mantine"
+    ],
+    "rightSectionWidth": [
       "react-mantine"
     ],
     "pointer": [
@@ -606,7 +632,8 @@
     "size": [
       "react-rsuite5",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "appearance": [
       "react-rsuite5"
@@ -618,7 +645,8 @@
     "fullWidth": [
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "disableFuture": [
       "react-material-ui"
@@ -641,11 +669,15 @@
     "showDaysOutsideCurrentMonth": [
       "react-material-ui"
     ],
-    "maxDate": [
-      "react-material-ui"
-    ],
     "minDate": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-antd",
+      "react-mantine"
+    ],
+    "maxDate": [
+      "react-material-ui",
+      "react-antd",
+      "react-mantine"
     ],
     "views": [
       "react-material-ui"
@@ -661,6 +693,13 @@
     ],
     "width": [
       "react-bootstrap",
+      "react-antd",
+      "react-mantine"
+    ],
+    "picker": [
+      "react-antd"
+    ],
+    "mode": [
       "react-antd"
     ],
     "bordered": [
@@ -681,11 +720,83 @@
     "showToday": [
       "react-antd"
     ],
-    "picker": [
+    "preserveInvalidOnBlur": [
       "react-antd"
     ],
-    "mode": [
+    "inputReadOnly": [
       "react-antd"
+    ],
+    "needConfirm": [
+      "react-antd"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "variant": [
+      "react-mantine"
+    ],
+    "valueFormat": [
+      "react-mantine"
+    ],
+    "firstDayOfWeek": [
+      "react-mantine"
+    ],
+    "hideOutsideDates": [
+      "react-mantine"
+    ],
+    "labelSeparator": [
+      "react-mantine"
+    ],
+    "dateType": [
+      "react-mantine"
+    ],
+    "dropdownType": [
+      "react-mantine"
+    ],
+    "allowDeselect": [
+      "react-mantine"
+    ],
+    "clearable": [
+      "react-mantine"
+    ],
+    "hideWeekdays": [
+      "react-mantine"
+    ],
+    "defaultLevel": [
+      "react-mantine"
+    ],
+    "hasNextLevel": [
+      "react-mantine"
+    ],
+    "maxLevel": [
+      "react-mantine"
+    ],
+    "numberOfColumns": [
+      "react-mantine"
+    ],
+    "columnsToScroll": [
+      "react-mantine"
+    ],
+    "withCellSpacing": [
+      "react-mantine"
+    ],
+    "pointer": [
+      "react-mantine"
+    ],
+    "withErrorStyles": [
+      "react-mantine"
+    ],
+    "leftSection": [
+      "react-mantine"
+    ],
+    "rightSection": [
+      "react-mantine"
+    ],
+    "leftSectionWidth": [
+      "react-mantine"
+    ],
+    "rightSectionWidth": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",
@@ -745,10 +856,16 @@
   },
   "checkbox-group": {
     "name": null,
-    "label": null,
+    "label": [
+      "react-mantine"
+    ],
     "hint": null,
-    "options": null,
-    "value": null,
+    "options": [
+      "react-mantine"
+    ],
+    "value": [
+      "react-mantine"
+    ],
     "disabled": null,
     "readOnly": null,
     "hidden": null,
@@ -772,6 +889,9 @@
     ],
     "reverse": [
       "react-bootstrap"
+    ],
+    "description": [
+      "react-mantine"
     ],
     "radius": [
       "react-mantine"
@@ -795,10 +915,16 @@
   },
   "radio-group": {
     "name": null,
-    "label": null,
+    "label": [
+      "react-mantine"
+    ],
     "hint": null,
-    "options": null,
-    "value": null,
+    "options": [
+      "react-mantine"
+    ],
+    "value": [
+      "react-mantine"
+    ],
     "disabled": null,
     "readOnly": null,
     "hidden": null,
@@ -816,10 +942,12 @@
     ],
     "size": [
       "react-material-ui",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "color": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "labelPlacement": [
       "react-material-ui"
@@ -832,6 +960,21 @@
     ],
     "optionType": [
       "react-antd"
+    ],
+    "description": [
+      "react-mantine"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "labelPosition": [
+      "react-mantine"
+    ],
+    "iconColor": [
+      "react-mantine"
+    ],
+    "autoContrast": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",
@@ -1001,10 +1144,16 @@
     "minRows": [
       "react-mantine"
     ],
-    "prefix": [
+    "leftSection": [
       "react-mantine"
     ],
-    "postfix": [
+    "rightSection": [
+      "react-mantine"
+    ],
+    "leftSectionWidth": [
+      "react-mantine"
+    ],
+    "rightSectionWidth": [
       "react-mantine"
     ],
     "pointer": [
@@ -1352,7 +1501,8 @@
     "size": [
       "react-rsuite5",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "appearance": [
       "react-rsuite5"
@@ -1364,7 +1514,8 @@
     "fullWidth": [
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "disableFuture": [
       "react-material-ui"
@@ -1388,10 +1539,14 @@
       "react-material-ui"
     ],
     "maxDate": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-antd",
+      "react-mantine"
     ],
     "minDate": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-antd",
+      "react-mantine"
     ],
     "views": [
       "react-material-ui"
@@ -1407,6 +1562,13 @@
     ],
     "width": [
       "react-bootstrap",
+      "react-antd",
+      "react-mantine"
+    ],
+    "picker": [
+      "react-antd"
+    ],
+    "mode": [
       "react-antd"
     ],
     "bordered": [
@@ -1418,11 +1580,92 @@
     "tooltip": [
       "react-antd"
     ],
+    "showTime": [
+      "react-antd"
+    ],
     "showNow": [
       "react-antd"
     ],
     "showToday": [
       "react-antd"
+    ],
+    "preserveInvalidOnBlur": [
+      "react-antd"
+    ],
+    "inputReadOnly": [
+      "react-antd"
+    ],
+    "needConfirm": [
+      "react-antd"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "variant": [
+      "react-mantine"
+    ],
+    "valueFormat": [
+      "react-mantine"
+    ],
+    "firstDayOfWeek": [
+      "react-mantine"
+    ],
+    "hideOutsideDates": [
+      "react-mantine"
+    ],
+    "labelSeparator": [
+      "react-mantine"
+    ],
+    "withSeconds": [
+      "react-mantine"
+    ],
+    "dropdownType": [
+      "react-mantine"
+    ],
+    "allowDeselect": [
+      "react-mantine"
+    ],
+    "clearable": [
+      "react-mantine"
+    ],
+    "hideWeekdays": [
+      "react-mantine"
+    ],
+    "defaultLevel": [
+      "react-mantine"
+    ],
+    "hasNextLevel": [
+      "react-mantine"
+    ],
+    "maxLevel": [
+      "react-mantine"
+    ],
+    "numberOfColumns": [
+      "react-mantine"
+    ],
+    "columnsToScroll": [
+      "react-mantine"
+    ],
+    "withCellSpacing": [
+      "react-mantine"
+    ],
+    "pointer": [
+      "react-mantine"
+    ],
+    "withErrorStyles": [
+      "react-mantine"
+    ],
+    "leftSection": [
+      "react-mantine"
+    ],
+    "rightSection": [
+      "react-mantine"
+    ],
+    "leftSectionWidth": [
+      "react-mantine"
+    ],
+    "rightSectionWidth": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",

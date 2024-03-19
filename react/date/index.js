@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { I18N } from '../../components';
 import { ReactGenericInput } from '../../components/react-generic-input';
 import { lfLog } from '../../helpers/lf-log';
+import { isValidDate } from '../../helpers/is-valid-date';
 
 const DateInput = I18N(
   ({ onChange, value, ...rest}) => {
@@ -14,7 +15,7 @@ const DateInput = I18N(
     );
 
     let currentDate = value;
-    if (_.isDate(value)) {
+    if (isValidDate(value)) {
       // only take 2023-11-12
       currentDate = value.toISOString().split('T')[0];
     }

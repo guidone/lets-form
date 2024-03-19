@@ -10,6 +10,10 @@ import { ArrayItem } from './views/array-item';
 import './list-array.scss';
 import classNames from 'classnames';
 
+const randomId = function(length = 12) {
+  return Math.random().toString(36).substring(2, length+2);
+};
+
 /**
  * Check if object is empty or all the keys are empty
  * @param {*} obj 
@@ -59,22 +63,22 @@ const makeDefaultValue = (defaultValue, arrayType, form) => {
     // if it's an array of string
     if (isArrayOfString && names.length === 1) {
       return defaultValue.map(s => ({
-        id: _.uniqueId(),
+        id: randomId(),
         [names[0]]: s
       }));
     }
-    return [{ id: _.uniqueId() }]; 
+    return [{ id: randomId() }]; 
   } else if (arrayType === 'commaSeparated') {
     const names = collectNames(form);
     if (names.length === 1 && _.isString(defaultValue) && !_.isEmpty(defaultValue)) {
       return defaultValue.split(',').map(s => ({
-        id: _.uniqueId(),
+        id: randomId(),
         [names[0]]: s
       }));
     }
-    return [{ id: _.uniqueId() }];
+    return [{ id: randomId() }];
   } else {
-    return _.isArray(defaultValue) && !_.isEmpty(defaultValue) ? fillIds(defaultValue) : [{ id: _.uniqueId() }]
+    return _.isArray(defaultValue) && !_.isEmpty(defaultValue) ? fillIds(defaultValue) : [{ id: randomId() }]
   } 
 };
 
@@ -120,7 +124,7 @@ const ListArray = ({
     () => {
       setItems(items => [
         ...items,
-        { id: _.uniqueId() }
+        { id: randomId() }
       ]);
     },
     []

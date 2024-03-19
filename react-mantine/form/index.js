@@ -20,7 +20,7 @@ const MantineForm = ({
   onSubmit = () => {},
   onReset = () => {},
   custom
-}) => {
+} = {}) => {
   return (
     <div> 
       <form

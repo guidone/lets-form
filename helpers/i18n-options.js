@@ -1,3 +1,7 @@
 export const i18nOptions = (value, i18n) => 
-  (value ?? []).filter(value => value != null).map(value => ({ ...value, label: i18n(value.label) }));
+  (value ?? []).filter(value => value != null).map(value => ({ 
+    ...value, 
+    label: i18n(value.label),
+    description: i18n(value.description) 
+  }));
   

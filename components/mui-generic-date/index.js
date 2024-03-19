@@ -3,8 +3,6 @@ import _ from 'lodash';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import dayjs from 'dayjs';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 
@@ -59,43 +57,38 @@ const MuiGenericDate = ({
       data-lf-field-name={name}
       className={className}
     >
-      <LocalizationProvider
-        dateAdapter={AdapterDayjs}
-        adapterLocale={localeCode ?? undefined}
+      <FormControl
+        required={required}
+        error={error != null}
+        fullWidth={fullWidth}
       >
-        <FormControl
+        <Component
+          placeholder={placeholder}
+          readOnly={readOnly}
           required={required}
-          error={error != null}
-          fullWidth={fullWidth}
-        >
-          <Component
-            placeholder={placeholder}
-            readOnly={readOnly}
-            required={required}
-            style={_.isNumber(width) && !fullWidth ? { width: `${parseInt(width, 10)}px` } : undefined}
-            onChange={onChange}
-            defaultValue={defaultValue}
-            variant={variant ?? undefined}
-            onBlur={onBlur}
-            disabled={disabled}
-            label={label}
-            views={!_.isEmpty(views) ? views : ['day', 'year']}
-            disableFuture={disableFuture}
-            disableHighlightToday={disableHighlightToday}
-            disableOpenPicker={disableOpenPicker}
-            disablePast={disablePast}
-            displayWeekNumber={displayWeekNumber}
-            format={isValidDayjsFormat(format) ? format : undefined}
-            maxDate={maxDate && dayjs(maxDate)}
-            minDate={minDate && dayjs(minDate)}
-            reduceAnimations={reduceAnimations}
-            showDaysOutsideCurrentMonth={showDaysOutsideCurrentMonth}
-            {...passRest(rest)}
-          />
-          {hint && !error && <FormHelperText>{hint}</FormHelperText>}
-          {error && <FormHelperText>{error}</FormHelperText>}
-        </FormControl>
-      </LocalizationProvider>
+          style={_.isNumber(width) && !fullWidth ? { width: `${parseInt(width, 10)}px` } : undefined}
+          onChange={onChange}
+          defaultValue={defaultValue}
+          variant={variant ?? undefined}
+          onBlur={onBlur}
+          disabled={disabled}
+          label={label}
+          views={!_.isEmpty(views) ? views : ['day', 'year']}
+          disableFuture={disableFuture}
+          disableHighlightToday={disableHighlightToday}
+          disableOpenPicker={disableOpenPicker}
+          disablePast={disablePast}
+          displayWeekNumber={displayWeekNumber}
+          format={isValidDayjsFormat(format) ? format : undefined}
+          maxDate={maxDate && dayjs(maxDate)}
+          minDate={minDate && dayjs(minDate)}
+          reduceAnimations={reduceAnimations}
+          showDaysOutsideCurrentMonth={showDaysOutsideCurrentMonth}
+          {...passRest(rest)}
+        />
+        {hint && !error && <FormHelperText>{hint}</FormHelperText>}
+        {error && <FormHelperText>{error}</FormHelperText>}
+      </FormControl>
     </div>
   );
 };

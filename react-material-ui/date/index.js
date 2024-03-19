@@ -1,10 +1,11 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
 
-import { isValidDate } from '../../helpers';
-import { I18N } from '../../components';
+
+import { I18N } from '../../components/i18n';
 import { MuiGenericDate } from '../../components/mui-generic-date';
 import { lfLog } from '../../helpers/lf-log';
+import { isValidDate } from '../../helpers/is-valid-date';
 
 // DOC: https://mui.com/x/api/date-pickers/date-picker/
 //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -30,7 +31,9 @@ const MuiDate = I18N(
     // send always date string in format yyyy-mm-dd
     const handleChange = useCallback(
       d => {
-        onChange(d.toDate ? d.toDate().toISOString().split('T')[0] : undefined);
+        if (d.toDate && isValidDate(d.toDate())) {
+          onChange(d.toDate().toISOString().split('T')[0]);
+        }
       },
       [onChange]
     );

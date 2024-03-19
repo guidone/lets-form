@@ -5,6 +5,7 @@ import _ from 'lodash';
 
 import { RequiredIcon, I18N } from '../../components';
 import { lfLog } from '../../helpers/lf-log';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 
 const RateRSuite = I18N(
   ({
@@ -32,21 +33,22 @@ const RateRSuite = I18N(
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
           {required && <RequiredIcon />}
         </Form.ControlLabel>}
-        <Form.Control
-          name={name}
-          accepter={Rate}
-          value={value}
-          onChange={onChange}
-          onBlur={onBlur}
-          disabled={disabled}
-          size={size}
-          max={max}
-          color={color}
-          allowHalf={allowHalf}
-          cleanable={cleanable}
-          readOnly={readOnly}
-          errorMessage={_.isString(error) ? error : undefined }
-        />
+        <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+          <Rate
+            name={name}
+            value={value}
+            onChange={onChange}
+            onBlur={onBlur}
+            disabled={disabled}
+            size={size}
+            max={max}
+            color={color}
+            allowHalf={allowHalf}
+            cleanable={cleanable}
+            readOnly={readOnly}
+            errorMessage={_.isString(error) ? error : undefined }
+          />
+        </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>
     );

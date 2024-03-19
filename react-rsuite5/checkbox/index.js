@@ -4,6 +4,7 @@ import Form from 'rsuite/Form';
 import Checkbox from 'rsuite/Checkbox';
 
 import { I18N } from '../../components';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 import { passRest } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
 
@@ -53,22 +54,23 @@ const CheckboxRSuite = I18N(
 
     return (
       <Form.Group data-lf-field-name={name} className="lt-control-checkbox">
-        <Form.Control
-          accepter={Checkbox}
-          indeterminate={indeterminate && isChecked === null}
-          name={name}
-          checked={isChecked}
-          onChange={handleChange}
-          readOnly={readOnly}
-          plaintext={plaintext}
-          onBlur={onBlur}
-          errorMessage={_.isString(error) ? error : undefined }
-          disabled={disabled}
-          {...passRest(rest)}
-        >
-          {label}
-          {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
-        </Form.Control>
+        <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+          <Checkbox
+            indeterminate={indeterminate && isChecked === null}
+            name={name}
+            checked={isChecked}
+            onChange={handleChange}
+            readOnly={readOnly}
+            plaintext={plaintext}
+            onBlur={onBlur}
+            errorMessage={_.isString(error) ? error : undefined }
+            disabled={disabled}
+            {...passRest(rest)}
+          >
+            {label}
+            {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
+          </Checkbox>
+        </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>
     );

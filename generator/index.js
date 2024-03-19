@@ -6,7 +6,6 @@ import _ from 'lodash';
 
 import { ValidationErrors } from '../components';
 import { FRAMEWORKS } from '../costants';
-import { Warning  } from '../assets/icons';
 import { reduceFields, applyTransformers, isI18n, i18n } from '../helpers';
 import { useStylesheet } from '../hooks';
 import { lfLog, lfError } from '../helpers/lf-log';
@@ -24,7 +23,6 @@ import { mergeComponents } from './helpers/merge-components';
 import { MissingComponent } from './helpers/missing-component';
 
 const DEBUG_RENDER = true;
-
 
 const GenerateGenerator = ({ Forms, Fields }) => {
 
@@ -665,8 +663,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     children,
     components,
     className,
+    // hide cancel button
     hideCancel, 
+    // hide submit button
     hideSubmit,
+    // show demo flag
     demo = false
   }) => {
     const { showErrors } = form;
@@ -688,11 +689,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     useEffect(
       () => {
         if (prealoadComponents) {
-          const components = reduceFields(
+          const components = _.uniq(reduceFields(
             form.fields,
             (field, acc) => [...acc, field.component],
             []
-          );
+          ));
           lfLog('Preloading components: ' + components.join(', '));
           
           const loaders = components
@@ -706,9 +707,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             })
             .filter(Boolean);
           
-          // when everything is loaded
+          // when everything is loaded (including the form)
           Promise
-            .all(loaders).then(() => {
+            .all([...loaders, Forms[framework].preload()]).then(() => {
               setPreloading(false);
             })
             .catch(e => {
