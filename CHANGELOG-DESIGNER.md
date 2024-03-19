@@ -1,5 +1,13 @@
 # LetsForm Designer Changelog
 
+## v0.8.2
+- Added support for Mantine: date
+- Removed Providers components from LetsForm, need to be added outside it at application level
+- Removed RSuite Form.Control
+- Remove locales from all packages, added dependencies to load them dynamically
+- Improved code generation to include locales and providers if needed
+- Improved dependencies management for all components and frameworks
+
 ## v0.8.1
 - Added versions management (restore, delete)
 - Added export to Create React App

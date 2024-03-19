@@ -1,5 +1,11 @@
 # LetsForm Changelog
 
+## v0.7.3
+- Added support for Mantine: date
+- Removed Providers components from LetsForm, need to be added outside it at application level
+- Removed RSuite Form.Control
+- Remove locales from all packages, added dependencies to load them dynamically
+
 ## v0.7.0
 - Added support for Mantine: input-text, input-number, two-columns, three-columns, array, checkbox, checkbox-group, select, toggle, group
 
