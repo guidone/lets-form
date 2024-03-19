@@ -22,10 +22,15 @@ export function lazyPreload(factory) {
 
   LazyWithPreload.preload = () => {
     if (!factoryPromise) {
-      factoryPromise = factory().then((module) => {
-        PreloadedComponent = module.default;
-        return PreloadedComponent;
-      });
+      factoryPromise = factory().then(
+        (module) => {
+          PreloadedComponent = module.default;
+          return PreloadedComponent;
+        },
+        e => {
+          console.log('Error preloading', e)
+        }
+      );
     }
 
     return factoryPromise;
