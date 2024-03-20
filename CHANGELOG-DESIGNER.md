@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.8.3
+- Moved translate buttons
+
 ## v0.8.2
 - Added support for Mantine: date
 - Removed Providers components from LetsForm, need to be added outside it at application level
