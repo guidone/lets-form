@@ -1966,11 +1966,93 @@
         "description": "Make effect when marks not null, true means containment and false means coordinative"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "grey",
+          "red",
+          "pink",
+          "grape",
+          "violet",
+          "indigo",
+          "blue",
+          "cyan",
+          "teal",
+          "green",
+          "lime",
+          "yellow",
+          "orange"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "min",
+        "type": "number"
+      },
+      {
+        "name": "step",
+        "type": "number"
+      },
+      {
+        "name": "max",
+        "type": "number"
+      },
+      {
+        "name": "marks",
+        "type": "array",
+        "description": "Customize labels on the render ruler"
+      },
+      {
+        "name": "precision",
+        "type": "number",
+        "description": "Number of significant digits after the decimal point"
+      },
+      {
+        "name": "inverted",
+        "type": "boolean",
+        "description": "Determines whether track value representation should be inverted, false by default"
+      },
+      {
+        "name": "labelAlwaysOn",
+        "type": "boolean",
+        "description": "Determines whether the label should be visible when the slider is not being dragged or hovered, false by default"
+      },
+      {
+        "name": "showLabelOnHover",
+        "type": "boolean",
+        "description": "Determines whether the label should be displayed when the slider is hovered, true by default"
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "date": {
@@ -3740,6 +3822,54 @@
       {
         "name": "tooltip",
         "type": "boolean"
+      }
+    ],
+    "react-mantine": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "grey",
+          "red",
+          "pink",
+          "grape",
+          "violet",
+          "indigo",
+          "blue",
+          "cyan",
+          "teal",
+          "green",
+          "lime",
+          "yellow",
+          "orange"
+        ]
+      },
+      {
+        "name": "count",
+        "type": "number",
+        "description": "Number of controls, 5 by default"
+      },
+      {
+        "name": "fractions",
+        "type": "number",
+        "description": "Number of fractions each item can be divided into, 1 by default"
+      },
+      {
+        "name": "highlightSelectedOnly",
+        "type": "boolean",
+        "description": "If set, only the selected symbol changes to full symbol when selected, false by default"
       }
     ],
     "frameworks": [

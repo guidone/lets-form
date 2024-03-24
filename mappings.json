@@ -500,7 +500,8 @@
     "label": [
       "react-rsuite5",
       "react-material-ui",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "hint": null,
     "disabled": null,
@@ -513,19 +514,22 @@
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "step": [
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "max": [
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "vertical": [
       "react-rsuite5"
@@ -541,18 +545,22 @@
     ],
     "marks": [
       "react-rsuite5",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "value": [
       "react-rsuite5",
       "react-material-ui",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "size": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "color": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "fullWidth": [
       "react-material-ui"
@@ -586,6 +594,21 @@
     ],
     "included": [
       "react-antd"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "precision": [
+      "react-mantine"
+    ],
+    "inverted": [
+      "react-mantine"
+    ],
+    "labelAlwaysOn": [
+      "react-mantine"
+    ],
+    "showLabelOnHover": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",
@@ -1192,11 +1215,13 @@
       "react-material-ui"
     ],
     "color": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-mantine"
     ],
     "size": [
       "react-rsuite5",
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "tooltip": [
       "react-rsuite5",
@@ -1207,13 +1232,20 @@
       "react-material-ui"
     ],
     "count": [
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "allowClear": [
       "react-antd"
     ],
     "tooltips": [
       "react-antd"
+    ],
+    "fractions": [
+      "react-mantine"
+    ],
+    "highlightSelectedOnly": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",

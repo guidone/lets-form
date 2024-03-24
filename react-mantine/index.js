@@ -54,6 +54,9 @@ const Fields = {
   },
   'divider': {
     'react-mantine': lazy(() => import('./divider'))
+  },
+  'slider': {
+    'react-mantine': lazy(() => import('./slider'))
   }
 };
 
