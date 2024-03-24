@@ -3745,7 +3745,8 @@
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "placeholder": {
@@ -3798,7 +3799,8 @@
       "react-material-ui",
       "react",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "multiselect": {
@@ -4458,12 +4460,29 @@
         "description": "Hides the field from the form"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "label",
+        "type": "string | i18n",
+        "description": "Label of the field"
+      },
+      {
+        "name": "labelPosition",
+        "type": "string",
+        "options": [
+          "left",
+          "center",
+          "right"
+        ]
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
       "react",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "datetime": {

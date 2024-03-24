@@ -45,6 +45,15 @@ const Fields = {
   },
   'datetime': {
     'react-mantine': lazy(() => import('./datetime'))
+  },
+  'rate': {
+    'react-mantine': lazy(() => import('./rate'))
+  },
+  'placeholder': {
+    'react-mantine': lazy(() => import('./placeholder'))
+  },
+  'divider': {
+    'react-mantine': lazy(() => import('./divider'))
   }
 };
 

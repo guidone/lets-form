@@ -11,7 +11,6 @@ const InputText = I18N(
     name,
     hint,
     value,
-    size,
     fullWidth,
     width,
     submitOnEnter = false,

@@ -1462,7 +1462,13 @@
     "name": null,
     "size": null,
     "color": null,
-    "hidden": null
+    "hidden": null,
+    "label": [
+      "react-mantine"
+    ],
+    "labelPosition": [
+      "react-mantine"
+    ]
   },
   "datetime": {
     "name": null,
