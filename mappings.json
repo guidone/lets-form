@@ -1009,7 +1009,9 @@
   },
   "input-tag": {
     "name": null,
-    "label": null,
+    "label": [
+      "react-mantine"
+    ],
     "hint": null,
     "disabled": null,
     "readOnly": null,
@@ -1021,10 +1023,71 @@
       "react-rsuite5"
     ],
     "size": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-mantine"
     ],
     "tooltip": [
       "react-rsuite5"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "variant": [
+      "react-mantine"
+    ],
+    "data": [
+      "react-mantine"
+    ],
+    "value": [
+      "react-mantine"
+    ],
+    "leftSection": [
+      "react-mantine"
+    ],
+    "rightSection": [
+      "react-mantine"
+    ],
+    "leftSectionWidth": [
+      "react-mantine"
+    ],
+    "rightSectionWidth": [
+      "react-mantine"
+    ],
+    "maxTags": [
+      "react-mantine"
+    ],
+    "maxDropdownHeight": [
+      "react-mantine"
+    ],
+    "limit": [
+      "react-mantine"
+    ],
+    "allowDuplicates": [
+      "react-mantine"
+    ],
+    "clearable": [
+      "react-mantine"
+    ],
+    "defaultDropdownOpened": [
+      "react-mantine"
+    ],
+    "pointer": [
+      "react-mantine"
+    ],
+    "searchable": [
+      "react-mantine"
+    ],
+    "selectFirstOptionOnChange": [
+      "react-mantine"
+    ],
+    "withCheckIcon": [
+      "react-mantine"
+    ],
+    "withErrorStyles": [
+      "react-mantine"
+    ],
+    "withScrollArea": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",

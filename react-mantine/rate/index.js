@@ -2,7 +2,7 @@ import React from 'react';
 import { Rating, Input } from '@mantine/core';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { passRest } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
 

@@ -57,6 +57,9 @@ const Fields = {
   },
   'slider': {
     'react-mantine': lazy(() => import('./slider'))
+  },
+  'input-tag': {
+    'react-mantine': lazy(() => import('./input-tag'))
   }
 };
 

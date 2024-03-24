@@ -2,8 +2,8 @@ import React from 'react';
 import { Slider, Input } from '@mantine/core';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
-import { passRest } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
 
 const SliderMantine = I18N(
@@ -24,7 +24,7 @@ const SliderMantine = I18N(
   }) => {
     return (
       <Input.Wrapper
-        className="lf-control-rate"
+        className="lf-control-slider"
         data-lf-field-name={name}
         description={hint}
         error={_.isString(error) ? error : undefined }
