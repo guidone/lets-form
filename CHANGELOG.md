@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## 0.7.4
+- Mantine: divider, rating, slider, input tag
+
 ## v0.7.3
 - Added support for Mantine: date
 - Removed Providers components from LetsForm, need to be added outside it at application level

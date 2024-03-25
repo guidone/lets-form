@@ -1,5 +1,9 @@
 # LetsForm Designer Changelog
 
+## v0.8.4
+- Mantine: divider, rating, slider, input tag
+- fix framework resets
+
 ## v0.8.3
 - Moved translate buttons
 
@@ -50,7 +54,7 @@ import LetsForm from 'lets-form/react-material-ui'; // previously was 'lets-form
 
 ## v0.7.11
 - fix MUI upload font styles
-- changelog 
+- changelog
 - added React Input Number component
 
 ## v0.7.10
