@@ -1966,11 +1966,93 @@
         "description": "Make effect when marks not null, true means containment and false means coordinative"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "grey",
+          "red",
+          "pink",
+          "grape",
+          "violet",
+          "indigo",
+          "blue",
+          "cyan",
+          "teal",
+          "green",
+          "lime",
+          "yellow",
+          "orange"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "min",
+        "type": "number"
+      },
+      {
+        "name": "step",
+        "type": "number"
+      },
+      {
+        "name": "max",
+        "type": "number"
+      },
+      {
+        "name": "marks",
+        "type": "array",
+        "description": "Customize labels on the render ruler"
+      },
+      {
+        "name": "precision",
+        "type": "number",
+        "description": "Number of significant digits after the decimal point"
+      },
+      {
+        "name": "inverted",
+        "type": "boolean",
+        "description": "Determines whether track value representation should be inverted, false by default"
+      },
+      {
+        "name": "labelAlwaysOn",
+        "type": "boolean",
+        "description": "Determines whether the label should be visible when the slider is not being dragged or hovered, false by default"
+      },
+      {
+        "name": "showLabelOnHover",
+        "type": "boolean",
+        "description": "Determines whether the label should be displayed when the slider is hovered, true by default"
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "date": {
@@ -3182,8 +3264,121 @@
         "description": "Show hint as tooltip next to label"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "default",
+          "filled",
+          "unstyled"
+        ]
+      },
+      {
+        "name": "data",
+        "type": "array",
+        "description": "Data displayed in the dropdown"
+      },
+      {
+        "name": "leftSection",
+        "type": "string"
+      },
+      {
+        "name": "rightSection",
+        "type": "string"
+      },
+      {
+        "name": "leftSectionWidth",
+        "type": "number"
+      },
+      {
+        "name": "rightSectionWidth",
+        "type": "number"
+      },
+      {
+        "name": "maxTags",
+        "type": "number",
+        "description": "Maximum number of tags, Infinity by default"
+      },
+      {
+        "name": "maxDropdownHeight",
+        "type": "number",
+        "description": "Max-height of the dropdown, only applicable when withScrollArea prop is true, 250 by default"
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "description": "Maximum number of options displayed at a time, Infinity by default"
+      },
+      {
+        "name": "allowDuplicates",
+        "type": "boolean"
+      },
+      {
+        "name": "clearable",
+        "type": "boolean"
+      },
+      {
+        "name": "defaultDropdownOpened",
+        "type": "boolean"
+      },
+      {
+        "name": "pointer",
+        "type": "boolean",
+        "description": "Determines whether the input should have cursor: pointer style, false by default"
+      },
+      {
+        "name": "searchable",
+        "type": "boolean",
+        "description": "Determines whether the select should be searchable, false by default"
+      },
+      {
+        "name": "selectFirstOptionOnChange",
+        "type": "boolean",
+        "description": "Determines whether the first option should be selected when value changes, false by default"
+      },
+      {
+        "name": "withCheckIcon",
+        "type": "boolean",
+        "description": "Determines whether check icon should be displayed near the selected option label, true by default"
+      },
+      {
+        "name": "withErrorStyles",
+        "type": "boolean",
+        "description": "Determines whether the input should have red border and red text color when the error prop is set, true by default"
+      },
+      {
+        "name": "withScrollArea",
+        "type": "boolean",
+        "description": "Determines whether the options should be wrapped with ScrollArea.AutoSize, true by default"
+      }
+    ],
     "frameworks": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-mantine"
     ]
   },
   "input-mask": {
@@ -3742,10 +3937,59 @@
         "type": "boolean"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "grey",
+          "red",
+          "pink",
+          "grape",
+          "violet",
+          "indigo",
+          "blue",
+          "cyan",
+          "teal",
+          "green",
+          "lime",
+          "yellow",
+          "orange"
+        ]
+      },
+      {
+        "name": "count",
+        "type": "number",
+        "description": "Number of controls, 5 by default"
+      },
+      {
+        "name": "fractions",
+        "type": "number",
+        "description": "Number of fractions each item can be divided into, 1 by default"
+      },
+      {
+        "name": "highlightSelectedOnly",
+        "type": "boolean",
+        "description": "If set, only the selected symbol changes to full symbol when selected, false by default"
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "placeholder": {
@@ -3798,7 +4042,8 @@
       "react-material-ui",
       "react",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "multiselect": {
@@ -4458,12 +4703,29 @@
         "description": "Hides the field from the form"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "label",
+        "type": "string | i18n",
+        "description": "Label of the field"
+      },
+      {
+        "name": "labelPosition",
+        "type": "string",
+        "options": [
+          "left",
+          "center",
+          "right"
+        ]
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
       "react",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "datetime": {

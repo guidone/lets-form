@@ -23,7 +23,8 @@
     "build:clear": "node ./scripts/clear-builds.js",
     "stash": "./scripts/stash-node-modules.sh",
     "unstash": "./scripts/unstash-node-modules.sh",
-    "postversion": "npm run build"
+    "postversion": "npm run build",
+    "lint": "eslint ./react-mantine/**"
   },
   "author": "Guido Bellomo",
   "license": "ISC",
@@ -76,6 +77,7 @@
     "consola": "^3.2.3",
     "cross-env": "^6.0.3",
     "css-loader": "^6.7.3",
+    "eslint": "^8.57.0",
     "micro-down": "^1.6.2",
     "sass": "^1.59.3",
     "sass-loader": "^13.2.0",

@@ -500,7 +500,8 @@
     "label": [
       "react-rsuite5",
       "react-material-ui",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "hint": null,
     "disabled": null,
@@ -513,19 +514,22 @@
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "step": [
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "max": [
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "vertical": [
       "react-rsuite5"
@@ -541,18 +545,22 @@
     ],
     "marks": [
       "react-rsuite5",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "value": [
       "react-rsuite5",
       "react-material-ui",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "size": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "color": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "fullWidth": [
       "react-material-ui"
@@ -586,6 +594,21 @@
     ],
     "included": [
       "react-antd"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "precision": [
+      "react-mantine"
+    ],
+    "inverted": [
+      "react-mantine"
+    ],
+    "labelAlwaysOn": [
+      "react-mantine"
+    ],
+    "showLabelOnHover": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",
@@ -986,7 +1009,9 @@
   },
   "input-tag": {
     "name": null,
-    "label": null,
+    "label": [
+      "react-mantine"
+    ],
     "hint": null,
     "disabled": null,
     "readOnly": null,
@@ -998,10 +1023,71 @@
       "react-rsuite5"
     ],
     "size": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-mantine"
     ],
     "tooltip": [
       "react-rsuite5"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "variant": [
+      "react-mantine"
+    ],
+    "data": [
+      "react-mantine"
+    ],
+    "value": [
+      "react-mantine"
+    ],
+    "leftSection": [
+      "react-mantine"
+    ],
+    "rightSection": [
+      "react-mantine"
+    ],
+    "leftSectionWidth": [
+      "react-mantine"
+    ],
+    "rightSectionWidth": [
+      "react-mantine"
+    ],
+    "maxTags": [
+      "react-mantine"
+    ],
+    "maxDropdownHeight": [
+      "react-mantine"
+    ],
+    "limit": [
+      "react-mantine"
+    ],
+    "allowDuplicates": [
+      "react-mantine"
+    ],
+    "clearable": [
+      "react-mantine"
+    ],
+    "defaultDropdownOpened": [
+      "react-mantine"
+    ],
+    "pointer": [
+      "react-mantine"
+    ],
+    "searchable": [
+      "react-mantine"
+    ],
+    "selectFirstOptionOnChange": [
+      "react-mantine"
+    ],
+    "withCheckIcon": [
+      "react-mantine"
+    ],
+    "withErrorStyles": [
+      "react-mantine"
+    ],
+    "withScrollArea": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",
@@ -1192,11 +1278,13 @@
       "react-material-ui"
     ],
     "color": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-mantine"
     ],
     "size": [
       "react-rsuite5",
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "tooltip": [
       "react-rsuite5",
@@ -1207,13 +1295,20 @@
       "react-material-ui"
     ],
     "count": [
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "allowClear": [
       "react-antd"
     ],
     "tooltips": [
       "react-antd"
+    ],
+    "fractions": [
+      "react-mantine"
+    ],
+    "highlightSelectedOnly": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",
@@ -1462,7 +1557,13 @@
     "name": null,
     "size": null,
     "color": null,
-    "hidden": null
+    "hidden": null,
+    "label": [
+      "react-mantine"
+    ],
+    "labelPosition": [
+      "react-mantine"
+    ]
   },
   "datetime": {
     "name": null,
