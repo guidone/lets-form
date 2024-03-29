@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://raw.githubusercontent.com/guidone/lets-form/main/schema/rsuite5/form.json",
+  "$id": "https://raw.githubusercontent.com/guidone/lets-form/main/schemas/rsuite5/form.json",
   "type": "object",
   "properties": {
     "version": {
@@ -17,7 +17,7 @@
       "type": "string"
     },
     "fields": {
-      "$ref": "https://raw.githubusercontent.com/guidone/lets-form/main/schema/rsuite5/fields.json"
+      "$ref": "https://raw.githubusercontent.com/guidone/lets-form/main/schemas/rsuite5/fields.json"
     }
   }
 }
