@@ -71,6 +71,25 @@
             "hidden": {
               "type": "boolean"
             },
+            "field_5": {
+              "type": "string",
+              "enum": [
+                "one",
+                "two",
+                "three"
+              ]
+            },
+            "field_6": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "one",
+                  "two",
+                  "three"
+                ]
+              }
+            },
             "placement": {
               "type": "string",
               "enum": [
