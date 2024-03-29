@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://raw.githubusercontent.com/guidone/lets-form/main/schema/rsuite5/fields.json",
+  "type": "array",
+  "items": {
+    "required": [
+      "component"
+    ],
+    "type": "object",
+    "allOf": [
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "input-text"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "select"
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "options"
+          ],
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "options": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+
+
+}
