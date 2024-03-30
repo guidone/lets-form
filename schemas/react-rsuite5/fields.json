@@ -1,0 +1,253 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://raw.githubusercontent.com/guidone/lets-form/main/schemas/react-rsuite5/fields.json",
+  "type": "array",
+  "items": {
+    "required": [
+      "component"
+    ],
+    "type": "object",
+    "allOf": [
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "select"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "hint": {
+              "type": "string"
+            },
+            "placeholder": {
+              "type": "string"
+            },
+            "options": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "image": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "value": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "showImageOptions": {
+              "type": "boolean"
+            },
+            "filterKey": {
+              "type": "string"
+            },
+            "filterValue": {
+              "type": "string"
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "field_5": {
+              "type": "string",
+              "enum": [
+                "one",
+                "two",
+                "three"
+              ]
+            },
+            "field_6": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "one",
+                  "two",
+                  "three"
+                ]
+              }
+            },
+            "placement": {
+              "type": "string",
+              "enum": [
+                "topStart",
+                "topEnd",
+                "leftStart",
+                "rightStart",
+                "leftEnd",
+                "rightEnd",
+                "bottomStart",
+                "bottomEnd",
+                "auto",
+                "autoVerticalStart",
+                "autoVerticalEnd",
+                "autoHorizontalStart",
+                "autoHorizontalEnd"
+              ]
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "lg",
+                "md",
+                "sm",
+                "xs"
+              ]
+            },
+            "block": {
+              "type": "boolean"
+            },
+            "searchable": {
+              "type": "boolean"
+            },
+            "cleanable": {
+              "type": "boolean"
+            },
+            "tooltip": {
+              "type": "boolean"
+            },
+            "appearance": {
+              "type": "string",
+              "enum": [
+                "default",
+                "subtle"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "group"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "align": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            "collapsible": {
+              "type": "boolean"
+            },
+            "open": {
+              "type": "boolean"
+            },
+            "border": {
+              "type": "string",
+              "enum": [
+                "top",
+                "bottom",
+                "topBottom",
+                "boxed"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "input-text"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "hint": {
+              "type": "string"
+            },
+            "placeholder": {
+              "type": "string"
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "submitOnEnter": {
+              "type": "boolean"
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "lg",
+                "md",
+                "sm",
+                "xs"
+              ]
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "prefix": {
+              "type": "string"
+            },
+            "inside": {
+              "type": "boolean"
+            },
+            "postfix": {
+              "type": "string"
+            },
+            "tooltip": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

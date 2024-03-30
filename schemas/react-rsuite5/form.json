@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://raw.githubusercontent.com/guidone/lets-form/main/schemas/react-rsuite5/form.json",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "disabled": {
+      "type": "boolean"
+    },
+    "readOnly": {
+      "type": "boolean"
+    },
+    "plaintext": {
+      "type": "boolean"
+    },
+    "labelSubmit": {
+      "type": "string"
+    },
+    "labelCancel": {
+      "type": "string"
+    },
+    "buttonsAlign": {
+      "type": "string",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
+    },
+    "validationMode": {
+      "type": "string",
+      "enum": [
+        "all",
+        "onBlur",
+        "onChange",
+        "onTouched",
+        "onSubmit"
+      ]
+    },
+    "showErrors": {
+      "type": "string",
+      "enum": [
+        "none",
+        "inline",
+        "groupedTop",
+        "groupedBottom"
+      ]
+    },
+    "disableSubmitOnError": {
+      "type": "boolean"
+    },
+    "layout": {
+      "type": "string",
+      "enum": [
+        "inline",
+        "horizontal",
+        "vertical"
+      ]
+    },
+    "fluid": {
+      "type": "boolean"
+    },
+    "fields": {
+      "$ref": "https://raw.githubusercontent.com/guidone/lets-form/main/schemas/react-rsuite5/fields.json"
+    }
+  }
+}
