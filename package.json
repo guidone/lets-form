@@ -1,6 +1,6 @@
 {
   "name": "lets-form",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "JSON to React form generator, supporting multiple frameworks (Bootstrap, Material UI, RSuite, etc)",
   "main": "index.js",
   "module": "index.js",
@@ -50,7 +50,8 @@
     "./react/": "./dist/react/",
     "./utils": "./dist/utils/main.js",
     "./utils/": "./dist/utils/",
-    "./manifest.json": "./manifest.json"
+    "./manifest.json": "./manifest.json",
+    "./schemas/": "./schemas/"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
