@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://unpkg.com/lets-form@0.7.6-beta-2/schemas/react/fields.json",
+  "$id": "https://unpkg.com/lets-form@0.7.6-beta-3/schemas/react/fields.json",
   "type": "array",
   "items": {
     "required": [
@@ -22,13 +22,34 @@
               "type": "string"
             },
             "label": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "hint": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "placeholder": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "disabled": {
               "type": "boolean"
@@ -65,13 +86,34 @@
               "type": "string"
             },
             "label": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "hint": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "placeholder": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "options": {
               "type": "array",
@@ -82,7 +124,14 @@
                     "type": "string"
                   },
                   "label": {
-                    "type": "string"
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "$ref": "#/$defs/i18n"
+                      }
+                    ]
                   },
                   "image": {
                     "type": "string"
@@ -137,7 +186,14 @@
               "type": "string"
             },
             "label": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "hidden": {
               "type": "boolean"
@@ -350,10 +406,24 @@
               "type": "string"
             },
             "label": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "hint": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "disabled": {
               "type": "boolean"
@@ -400,13 +470,34 @@
               "type": "string"
             },
             "label": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "hint": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "placeholder": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "disabled": {
               "type": "boolean"
@@ -449,13 +540,34 @@
               "type": "string"
             },
             "label": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "hint": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "placeholder": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "disabled": {
               "type": "boolean"
@@ -483,10 +595,24 @@
               "type": "string"
             },
             "label": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "hint": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "disabled": {
               "type": "boolean"
@@ -514,13 +640,34 @@
               "type": "string"
             },
             "label": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "hint": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "placeholder": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "disabled": {
               "type": "boolean"
@@ -557,13 +704,34 @@
               "type": "string"
             },
             "label": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "hint": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "text": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "hidden": {
               "type": "boolean"
@@ -634,13 +802,27 @@
               ]
             },
             "labelOn": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "iconOn": {
               "type": "string"
             },
             "labelOff": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "iconOff": {
               "type": "string"
@@ -649,7 +831,14 @@
               "type": "boolean"
             },
             "labelLink": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "iconLink": {
               "type": "string"
@@ -658,7 +847,14 @@
               "type": "string"
             },
             "hint": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "fullWidth": {
               "type": "boolean"
@@ -711,13 +907,34 @@
               "type": "string"
             },
             "label": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "hint": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "placeholder": {
-              "type": "string"
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "disabled": {
               "type": "boolean"
@@ -732,5 +949,63 @@
         }
       }
     ]
+  },
+  "$defs": {
+    "i18n": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "propertyNames": {
+        "enum": [
+          "af-ZA",
+          "ar",
+          "bg-BG",
+          "ca-AD",
+          "cs-CZ",
+          "cy-GB",
+          "da-DK",
+          "de-DE",
+          "el-GR",
+          "en-US",
+          "es-ES",
+          "et-EE",
+          "eu",
+          "fa-IR",
+          "fi-FI",
+          "fr-FR",
+          "he-IL",
+          "hi-IN",
+          "hr-HR",
+          "hu-HU",
+          "id-ID",
+          "is-IS",
+          "it-IT",
+          "ja-JP",
+          "km-KH",
+          "ko-KR",
+          "la",
+          "lt-LT",
+          "lv-LV",
+          "mn-MN",
+          "nb-NO",
+          "nl-NL",
+          "nn-NO",
+          "pl-PL",
+          "pt-PT",
+          "ro-RO",
+          "ru-RU",
+          "sk-SK",
+          "sl-SI",
+          "sr-RS",
+          "sv-SE",
+          "th-TH",
+          "tr-TR",
+          "uk-UA",
+          "vi-VN",
+          "zh-CN"
+        ]
+      }
+    }
   }
 }
