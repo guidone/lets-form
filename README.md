@@ -32,10 +32,11 @@ then try a simple JSON form schema with just one text field (or use the [LetsFor
 
 ```js
 import React from 'react';
-import 'rsuite/dist/rsuite.min.css';
 import LetsForm from 'lets-form/react-rsuite5';
 // or /react-antd or /react-bootstrap or /react-material-ui or /react-mantine or /react
-// see https://letsform.dev/docs for more about specific framework
+// see https://letsform.dev/docs for more info about specific frameworks
+
+import 'rsuite/dist/rsuite.min.css';
 
 // copied and pasted from LetsForm Designer
 const MY_FORM = {
@@ -59,9 +60,9 @@ const MyView = () => {
     <LetsForm
       form={MY_FORM}
       // or onChange
-      onSubmit=(values => {
+      onSubmit={(values => {
         console.log('Submitting...', values);
-      })
+      }}
     />
   );
 }
