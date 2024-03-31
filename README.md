@@ -13,11 +13,11 @@
 **LetsForm** is an open source tool to generate React forms with simple JSON schemas using native UI components: Material UI, AntD, RSuite, ReactBootstrap or just React
 
 * [multi-language](https://letsform.dev/lets-form-designer/automatic-translations) (i18n) support
-* [validation](https://letsform.dev/advanced/validation) with i18n and scripting support 
+* [validation](https://letsform.dev/advanced/validation) with i18n and scripting support
 * read-only and disabled mode
-* scripting support for [dynamic forms](https://letsform.dev/advanced/transformers) 
+* scripting support for [dynamic forms](https://letsform.dev/advanced/transformers)
 * over **30** [components](https://letsform.dev/components-matrix) available, including layout components like array, tabs, steps, groups and columns
-* use [LetsForm designer](https://designer.letsform.dev) to visually create forms 
+* use [LetsForm designer](https://designer.letsform.dev) to visually create forms
 * full set of [helpers](https://letsform.dev/advanced/helpers) to programmatically interact with JSON forms
 * standalone and open source component, no connections with third party servers
 
@@ -34,9 +34,12 @@ then try a simple JSON form schema with just one text field (or use the [LetsFor
 import React from 'react';
 import 'rsuite/dist/rsuite.min.css';
 import LetsForm from 'lets-form/react-rsuite5';
+// or /react-antd or /react-bootstrap or /react-material-ui or /react-mantine or /react
+// see https://letsform.dev/docs for more about specific framework
 
 // copied and pasted from LetsForm Designer
 const MY_FORM = {
+  "$schema": "https://unpkg.com/lets-form/schemas/react-rsuite5/form.json",
   "version": 1,
   "layout": "vertical",
   "validationMode": "onSubmit",
