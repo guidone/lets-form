@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://unpkg.com/lets-form@0.7.6-beta-2/schemas/react-rsuite5/form.json",
+  "$id": "https://unpkg.com/lets-form@0.7.6-beta-2/schemas/react-antd/form.json",
   "type": "object",
   "properties": {
     "version": {
@@ -108,6 +108,26 @@
     "disableSubmitOnError": {
       "type": "boolean"
     },
+    "labelColSpan": {
+      "type": "integer"
+    },
+    "labelColOffset": {
+      "type": "integer"
+    },
+    "wrapperColSpan": {
+      "type": "integer"
+    },
+    "wrapperColOffset": {
+      "type": "integer"
+    },
+    "size": {
+      "type": "string",
+      "enum": [
+        "small",
+        "default",
+        "large"
+      ]
+    },
     "layout": {
       "type": "string",
       "enum": [
@@ -116,11 +136,21 @@
         "vertical"
       ]
     },
-    "fluid": {
+    "labelAlign": {
+      "type": "string",
+      "enum": [
+        "left",
+        "right"
+      ]
+    },
+    "labelWrap": {
+      "type": "boolean"
+    },
+    "requiredMark": {
       "type": "boolean"
     },
     "fields": {
-      "$ref": "https://unpkg.com/lets-form@0.7.6-beta-2/schemas/react-rsuite5/fields.json"
+      "$ref": "https://unpkg.com/lets-form@0.7.6-beta-2/schemas/react-antd/fields.json"
     }
   }
 }

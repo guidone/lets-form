@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://unpkg.com/lets-form@0.7.6-beta-2/schemas/react-rsuite5/fields.json",
+  "$id": "https://unpkg.com/lets-form@0.7.6-beta-2/schemas/react-antd/fields.json",
   "type": "array",
   "items": {
     "required": [
@@ -45,10 +45,9 @@
             "size": {
               "type": "string",
               "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
+                "small",
+                "default",
+                "large"
               ]
             },
             "fullWidth": {
@@ -60,13 +59,22 @@
             "prefix": {
               "type": "string"
             },
-            "inside": {
-              "type": "boolean"
-            },
             "postfix": {
               "type": "string"
             },
+            "showCount": {
+              "type": "boolean"
+            },
+            "maxLength": {
+              "type": "integer"
+            },
+            "allowClear": {
+              "type": "boolean"
+            },
             "tooltip": {
+              "type": "boolean"
+            },
+            "bordered": {
               "type": "boolean"
             }
           }
@@ -103,20 +111,18 @@
             "size": {
               "type": "string",
               "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
+                "default",
+                "small"
               ]
+            },
+            "tooltip": {
+              "type": "boolean"
             },
             "checkedChildren": {
               "type": "string"
             },
             "unCheckedChildren": {
               "type": "string"
-            },
-            "tooltip": {
-              "type": "boolean"
             }
           }
         }
@@ -184,51 +190,52 @@
             "hidden": {
               "type": "boolean"
             },
-            "placement": {
-              "type": "string",
-              "enum": [
-                "topStart",
-                "topEnd",
-                "leftStart",
-                "rightStart",
-                "leftEnd",
-                "rightEnd",
-                "bottomStart",
-                "bottomEnd",
-                "auto",
-                "autoVerticalStart",
-                "autoVerticalEnd",
-                "autoHorizontalStart",
-                "autoHorizontalEnd"
-              ]
-            },
             "size": {
               "type": "string",
               "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
+                "small",
+                "default",
+                "large"
               ]
             },
-            "block": {
+            "popupMatchSelectWidth": {
               "type": "boolean"
             },
-            "searchable": {
+            "listHeight": {
+              "type": "integer"
+            },
+            "fullWidth": {
               "type": "boolean"
             },
-            "cleanable": {
+            "width": {
+              "type": "integer"
+            },
+            "allowClear": {
+              "type": "boolean"
+            },
+            "bordered": {
+              "type": "boolean"
+            },
+            "placement": {
+              "type": "string",
+              "enum": [
+                "bottomLeft",
+                "bottomRight",
+                "topLeft",
+                "topRight"
+              ]
+            },
+            "showSearch": {
+              "type": "boolean"
+            },
+            "showArrow": {
+              "type": "boolean"
+            },
+            "virtual": {
               "type": "boolean"
             },
             "tooltip": {
               "type": "boolean"
-            },
-            "appearance": {
-              "type": "string",
-              "enum": [
-                "default",
-                "subtle"
-              ]
             }
           }
         }
@@ -527,24 +534,6 @@
             "hidden": {
               "type": "boolean"
             },
-            "size": {
-              "type": "string",
-              "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
-              ]
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "allowClear": {
-              "type": "boolean"
-            },
             "min": {
               "type": "integer"
             },
@@ -554,17 +543,31 @@
             "max": {
               "type": "integer"
             },
-            "prefix": {
-              "type": "string"
-            },
-            "inside": {
+            "showControls": {
               "type": "boolean"
             },
-            "postfix": {
-              "type": "string"
+            "stringMode": {
+              "type": "boolean"
+            },
+            "bordered": {
+              "type": "boolean"
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "small",
+                "default",
+                "large"
+              ]
             },
             "tooltip": {
               "type": "boolean"
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
             }
           }
         }
@@ -597,7 +600,13 @@
             "hidden": {
               "type": "boolean"
             },
-            "tooltip": {
+            "keyboard": {
+              "type": "boolean"
+            },
+            "dots": {
+              "type": "boolean"
+            },
+            "reverse": {
               "type": "boolean"
             },
             "min": {
@@ -609,17 +618,27 @@
             "max": {
               "type": "integer"
             },
-            "vertical": {
+            "tooltipOpen": {
               "type": "boolean"
             },
-            "progress": {
-              "type": "boolean"
-            },
-            "showTooltip": {
-              "type": "boolean"
-            },
-            "graduated": {
-              "type": "boolean"
+            "tooltipPlacement": {
+              "type": "string",
+              "enum": [
+                "top",
+                "left",
+                "right",
+                "bottom",
+                "topLeft",
+                "topRight",
+                "bottomLeft",
+                "bottomRight",
+                "topLeft",
+                "topRight",
+                "leftTop",
+                "leftBottom",
+                "rightTop",
+                "rightBottom"
+              ]
             },
             "marks": {
               "type": "array",
@@ -637,6 +656,9 @@
             },
             "value": {
               "type": "integer"
+            },
+            "included": {
+              "type": "boolean"
             }
           }
         }
@@ -675,60 +697,81 @@
             "format": {
               "type": "string"
             },
-            "block": {
-              "type": "boolean"
-            },
-            "cleanable": {
-              "type": "boolean"
-            },
-            "editable": {
-              "type": "boolean"
-            },
-            "oneTap": {
-              "type": "boolean"
-            },
-            "showMeridian": {
-              "type": "boolean"
-            },
-            "showWeekNumbers": {
-              "type": "boolean"
-            },
-            "isoWeek": {
-              "type": "boolean"
-            },
-            "size": {
+            "picker": {
               "type": "string",
               "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
-              ]
-            },
-            "appearance": {
-              "type": "string",
-              "enum": [
-                "default",
-                "subtle"
+                "date",
+                "week",
+                "month",
+                "quarter",
+                "year"
               ]
             },
             "placement": {
               "type": "string",
               "enum": [
-                "topStart",
-                "topEnd",
-                "leftStart",
-                "rightStart",
-                "leftEnd",
-                "rightEnd",
-                "bottomStart",
-                "bottomEnd",
-                "auto",
-                "autoVerticalStart",
-                "autoVerticalEnd",
-                "autoHorizontalStart",
-                "autoHorizontalEnd"
+                "bottomLeft",
+                "bottomRight",
+                "topLeft",
+                "topRight"
               ]
+            },
+            "mode": {
+              "type": "string",
+              "enum": [
+                "time",
+                "date",
+                "month",
+                "year",
+                "decade"
+              ]
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "small",
+                "default",
+                "large"
+              ]
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "minDate": {
+              "type": "string"
+            },
+            "maxDate": {
+              "type": "string"
+            },
+            "bordered": {
+              "type": "boolean"
+            },
+            "allowClear": {
+              "type": "boolean"
+            },
+            "tooltip": {
+              "type": "boolean"
+            },
+            "showTime": {
+              "type": "boolean"
+            },
+            "showNow": {
+              "type": "boolean"
+            },
+            "showToday": {
+              "type": "boolean"
+            },
+            "preserveInvalidOnBlur": {
+              "type": "boolean"
+            },
+            "inputReadOnly": {
+              "type": "boolean"
+            },
+            "needConfirm": {
+              "type": "boolean"
             }
           }
         }
@@ -759,12 +802,6 @@
               "type": "boolean"
             },
             "hidden": {
-              "type": "boolean"
-            },
-            "indeterminate": {
-              "type": "boolean"
-            },
-            "tooltip": {
               "type": "boolean"
             }
           }
@@ -813,12 +850,6 @@
               "type": "boolean"
             },
             "hidden": {
-              "type": "boolean"
-            },
-            "inline": {
-              "type": "boolean"
-            },
-            "tooltip": {
               "type": "boolean"
             }
           }
@@ -869,151 +900,26 @@
             "hidden": {
               "type": "boolean"
             },
-            "inline": {
-              "type": "boolean"
-            },
-            "appearance": {
+            "optionType": {
               "type": "string",
               "enum": [
                 "default",
-                "picker"
+                "button"
               ]
-            },
-            "tooltip": {
-              "type": "boolean"
-            }
-          }
-        }
-      },
-      {
-        "if": {
-          "properties": {
-            "component": {
-              "const": "input-tag"
-            }
-          }
-        },
-        "then": {
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "label": {
-              "type": "string"
-            },
-            "hint": {
-              "type": "string"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "trigger": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "enum": [
-                  "Enter",
-                  "Space",
-                  "Comma"
-                ]
-              }
-            },
-            "block": {
-              "type": "boolean"
             },
             "size": {
               "type": "string",
               "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
+                "small",
+                "default",
+                "large"
               ]
+            },
+            "inline": {
+              "type": "boolean"
             },
             "tooltip": {
               "type": "boolean"
-            }
-          }
-        }
-      },
-      {
-        "if": {
-          "properties": {
-            "component": {
-              "const": "input-mask"
-            }
-          }
-        },
-        "then": {
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "label": {
-              "type": "string"
-            },
-            "hint": {
-              "type": "string"
-            },
-            "placeholder": {
-              "type": "string"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "mask": {
-              "type": "string"
-            },
-            "guide": {
-              "type": "boolean"
-            },
-            "keepCharPositions": {
-              "type": "boolean"
-            },
-            "showMask": {
-              "type": "boolean"
-            },
-            "placeholderChar": {
-              "type": "string"
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
-              ]
-            },
-            "tooltip": {
-              "type": "boolean"
-            },
-            "prefix": {
-              "type": "string"
-            },
-            "inside": {
-              "type": "boolean"
-            },
-            "postfix": {
-              "type": "string"
             }
           }
         }
@@ -1058,14 +964,25 @@
             "size": {
               "type": "string",
               "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
+                "small",
+                "default",
+                "large"
               ]
             },
-            "rows": {
+            "showCount": {
+              "type": "boolean"
+            },
+            "maxLength": {
               "type": "integer"
+            },
+            "allowClear": {
+              "type": "boolean"
+            },
+            "autoSize": {
+              "type": "boolean"
+            },
+            "bordered": {
+              "type": "boolean"
             },
             "tooltip": {
               "type": "boolean"
@@ -1101,38 +1018,25 @@
             "hidden": {
               "type": "boolean"
             },
+            "count": {
+              "type": "integer"
+            },
             "allowHalf": {
               "type": "boolean"
             },
-            "cleanable": {
+            "allowClear": {
               "type": "boolean"
             },
-            "vertical": {
-              "type": "boolean"
-            },
-            "max": {
-              "type": "integer"
-            },
-            "color": {
-              "type": "string",
-              "enum": [
-                "red",
-                "orange",
-                "yellow",
-                "green",
-                "cyan",
-                "blue",
-                "violet"
-              ]
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
-              ]
+            "tooltips": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "tooltip": {
+                    "type": "string"
+                  }
+                }
+              }
             },
             "tooltip": {
               "type": "boolean"
@@ -1219,173 +1123,55 @@
             "hidden": {
               "type": "boolean"
             },
-            "placement": {
-              "type": "string",
-              "enum": [
-                "topStart",
-                "topEnd",
-                "leftStart",
-                "rightStart",
-                "leftEnd",
-                "rightEnd",
-                "bottomStart",
-                "bottomEnd",
-                "auto",
-                "autoVerticalStart",
-                "autoVerticalEnd",
-                "autoHorizontalStart",
-                "autoHorizontalEnd"
-              ]
-            },
             "size": {
               "type": "string",
               "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
-              ]
-            },
-            "multiselectMode": {
-              "type": "string",
-              "enum": [
-                "tag",
-                "plain"
-              ]
-            },
-            "block": {
-              "type": "boolean"
-            },
-            "searchable": {
-              "type": "boolean"
-            },
-            "cleanable": {
-              "type": "boolean"
-            },
-            "tooltip": {
-              "type": "boolean"
-            },
-            "preventOverflow": {
-              "type": "boolean"
-            }
-          }
-        }
-      },
-      {
-        "if": {
-          "properties": {
-            "component": {
-              "const": "multiselect-language"
-            }
-          }
-        },
-        "then": {
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "label": {
-              "type": "string"
-            },
-            "hint": {
-              "type": "string"
-            },
-            "placeholder": {
-              "type": "string"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "placement": {
-              "type": "string",
-              "enum": [
-                "topStart",
-                "topEnd",
-                "leftStart",
-                "rightStart",
-                "leftEnd",
-                "rightEnd",
-                "bottomStart",
-                "bottomEnd",
-                "auto",
-                "autoVerticalStart",
-                "autoVerticalEnd",
-                "autoHorizontalStart",
-                "autoHorizontalEnd"
-              ]
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
-              ]
-            },
-            "tooltip": {
-              "type": "boolean"
-            }
-          }
-        }
-      },
-      {
-        "if": {
-          "properties": {
-            "component": {
-              "const": "input-text-i18n"
-            }
-          }
-        },
-        "then": {
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "label": {
-              "type": "string"
-            },
-            "hint": {
-              "type": "string"
-            },
-            "placeholder": {
-              "type": "string"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
+                "small",
+                "default",
+                "large"
               ]
             },
             "width": {
               "type": "integer"
             },
-            "textarea": {
+            "listHeight": {
+              "type": "integer"
+            },
+            "allowClear": {
               "type": "boolean"
             },
-            "rows": {
-              "type": "integer"
+            "bordered": {
+              "type": "boolean"
+            },
+            "showSearch": {
+              "type": "boolean"
+            },
+            "showArrow": {
+              "type": "boolean"
+            },
+            "virtual": {
+              "type": "boolean"
             },
             "tooltip": {
               "type": "boolean"
+            },
+            "placement": {
+              "type": "string",
+              "enum": [
+                "bottomLeft",
+                "bottomRight",
+                "topLeft",
+                "topRight"
+              ]
+            },
+            "maxTagCount": {
+              "type": "integer"
+            },
+            "maxTagPlaceholder": {
+              "type": "string"
+            },
+            "maxTagTextLength": {
+              "type": "integer"
             }
           }
         }
@@ -1491,24 +1277,20 @@
             "size": {
               "type": "string",
               "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
+                "small",
+                "default",
+                "large"
               ]
             },
-            "appearance": {
+            "type": {
               "type": "string",
               "enum": [
-                "default",
                 "primary",
-                "subtle",
-                "link",
-                "ghost"
+                "default",
+                "dashed",
+                "text",
+                "link"
               ]
-            },
-            "tooltip": {
-              "type": "boolean"
             }
           }
         }
@@ -1572,60 +1354,81 @@
             "format": {
               "type": "string"
             },
-            "block": {
-              "type": "boolean"
-            },
-            "cleanable": {
-              "type": "boolean"
-            },
-            "editable": {
-              "type": "boolean"
-            },
-            "oneTap": {
-              "type": "boolean"
-            },
-            "showMeridian": {
-              "type": "boolean"
-            },
-            "showWeekNumbers": {
-              "type": "boolean"
-            },
-            "isoWeek": {
-              "type": "boolean"
-            },
-            "size": {
+            "picker": {
               "type": "string",
               "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
-              ]
-            },
-            "appearance": {
-              "type": "string",
-              "enum": [
-                "default",
-                "subtle"
+                "date",
+                "week",
+                "month",
+                "quarter",
+                "year"
               ]
             },
             "placement": {
               "type": "string",
               "enum": [
-                "topStart",
-                "topEnd",
-                "leftStart",
-                "rightStart",
-                "leftEnd",
-                "rightEnd",
-                "bottomStart",
-                "bottomEnd",
-                "auto",
-                "autoVerticalStart",
-                "autoVerticalEnd",
-                "autoHorizontalStart",
-                "autoHorizontalEnd"
+                "bottomLeft",
+                "bottomRight",
+                "topLeft",
+                "topRight"
               ]
+            },
+            "mode": {
+              "type": "string",
+              "enum": [
+                "time",
+                "date",
+                "month",
+                "year",
+                "decade"
+              ]
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "small",
+                "default",
+                "large"
+              ]
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "minDate": {
+              "type": "string"
+            },
+            "maxDate": {
+              "type": "string"
+            },
+            "bordered": {
+              "type": "boolean"
+            },
+            "allowClear": {
+              "type": "boolean"
+            },
+            "tooltip": {
+              "type": "boolean"
+            },
+            "showTime": {
+              "type": "boolean"
+            },
+            "showNow": {
+              "type": "boolean"
+            },
+            "showToday": {
+              "type": "boolean"
+            },
+            "preserveInvalidOnBlur": {
+              "type": "boolean"
+            },
+            "inputReadOnly": {
+              "type": "boolean"
+            },
+            "needConfirm": {
+              "type": "boolean"
             }
           }
         }
@@ -1669,90 +1472,25 @@
             "hidden": {
               "type": "boolean"
             },
-            "appearance": {
+            "size": {
               "type": "string",
               "enum": [
-                "default",
-                "tabs",
-                "subtle"
+                "small",
+                "middle",
+                "large"
               ]
             },
-            "reversed": {
+            "tabType": {
+              "type": "string",
+              "enum": [
+                "line",
+                "card"
+              ]
+            },
+            "animated": {
               "type": "boolean"
             },
-            "justified": {
-              "type": "boolean"
-            }
-          }
-        }
-      },
-      {
-        "if": {
-          "properties": {
-            "component": {
-              "const": "radio-tile"
-            }
-          }
-        },
-        "then": {
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "label": {
-              "type": "string"
-            },
-            "hint": {
-              "type": "string"
-            },
-            "options": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "type": "string"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "icon": {
-                    "type": "string"
-                  }
-                }
-              }
-            },
-            "value": {
-              "type": "string"
-            },
-            "description": {
-              "type": "string"
-            },
-            "icon": {
-              "type": "string"
-            },
-            "initalOption": {
-              "type": "string"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "inline": {
-              "type": "boolean"
-            },
-            "iconWidth": {
-              "type": "integer"
-            },
-            "iconHeight": {
-              "type": "integer"
-            },
-            "tooltip": {
+            "centered": {
               "type": "boolean"
             }
           }
@@ -1797,33 +1535,22 @@
             "acceptedFile": {
               "type": "string"
             },
+            "multiple": {
+              "type": "boolean"
+            },
             "listType": {
               "type": "string",
               "enum": [
                 "text",
-                "picture-text",
-                "picture"
+                "picture",
+                "picture-card",
+                "picture-circle"
               ]
             },
-            "maxPreviewFileSize": {
+            "maxCount": {
               "type": "integer"
             },
-            "tooltip": {
-              "type": "boolean"
-            },
-            "fileListVisible": {
-              "type": "boolean"
-            },
-            "disabledFileItem": {
-              "type": "boolean"
-            },
-            "multiple": {
-              "type": "boolean"
-            },
-            "removable": {
-              "type": "boolean"
-            },
-            "draggable": {
+            "showUploadList": {
               "type": "boolean"
             },
             "uploadButtonLabel": {
@@ -1832,27 +1559,32 @@
             "uploadButtonAppearance": {
               "type": "string",
               "enum": [
-                "default",
                 "primary",
-                "subtle",
-                "link",
-                "ghost"
+                "default",
+                "dashed",
+                "text",
+                "link"
               ]
             },
             "uploadButtonSize": {
               "type": "string",
               "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
+                "small",
+                "default",
+                "large"
               ]
+            },
+            "draggable": {
+              "type": "boolean"
             },
             "draggableText": {
               "type": "string"
             },
             "draggableHeight": {
               "type": "integer"
+            },
+            "tooltip": {
+              "type": "boolean"
             }
           }
         }
@@ -1908,10 +1640,9 @@
             "size": {
               "type": "string",
               "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
+                "small",
+                "default",
+                "large"
               ]
             }
           }
@@ -1958,6 +1689,9 @@
                   "label": {
                     "type": "string"
                   },
+                  "subtitle": {
+                    "type": "string"
+                  },
                   "description": {
                     "type": "string"
                   },
@@ -1973,14 +1707,22 @@
             "label": {
               "type": "string"
             },
+            "subtitle": {
+              "type": "string"
+            },
             "description": {
               "type": "string"
             },
             "icon": {
               "type": "string"
             },
-            "small": {
-              "type": "boolean"
+            "stepsType": {
+              "type": "string",
+              "enum": [
+                "default",
+                "navigation",
+                "inline"
+              ]
             },
             "status": {
               "type": "string",
@@ -1989,6 +1731,22 @@
                 "wait",
                 "process",
                 "error"
+              ]
+            },
+            "percent": {
+              "type": "integer"
+            },
+            "small": {
+              "type": "boolean"
+            },
+            "clickable": {
+              "type": "boolean"
+            },
+            "labelPlacement": {
+              "type": "string",
+              "enum": [
+                "horizontal",
+                "vertical"
               ]
             }
           }

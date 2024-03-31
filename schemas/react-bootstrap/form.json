@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://unpkg.com/lets-form@0.7.6-beta-2/schemas/react-rsuite5/form.json",
+  "$id": "https://unpkg.com/lets-form@0.7.6-beta-2/schemas/react-bootstrap/form.json",
   "type": "object",
   "properties": {
     "version": {
@@ -108,19 +108,8 @@
     "disableSubmitOnError": {
       "type": "boolean"
     },
-    "layout": {
-      "type": "string",
-      "enum": [
-        "inline",
-        "horizontal",
-        "vertical"
-      ]
-    },
-    "fluid": {
-      "type": "boolean"
-    },
     "fields": {
-      "$ref": "https://unpkg.com/lets-form@0.7.6-beta-2/schemas/react-rsuite5/fields.json"
+      "$ref": "https://unpkg.com/lets-form@0.7.6-beta-2/schemas/react-bootstrap/fields.json"
     }
   }
 }
