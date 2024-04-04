@@ -2,6 +2,7 @@
 
 ## 0.7.6
 - Added JSON Schemas for all UI frameworks
+- Extracted react-hook-form from main bundle
 
 ## 0.7.4
 - Mantine: divider, rating, slider, input tag

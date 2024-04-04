@@ -1,5 +1,9 @@
 # LetsForm Designer Changelog
 
+## v0.8.5
+- Added JSON Schemas for all UI frameworks
+- Extracted react-hook-form from main bundle
+
 ## v0.8.4
 - Mantine: divider, rating, slider, input tag
 - fix framework resets
