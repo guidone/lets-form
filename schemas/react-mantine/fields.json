@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://unpkg.com/lets-form@0.7.6-beta-3/schemas/react-mantine/fields.json",
+  "$id": "https://unpkg.com/lets-form@0.7.6/schemas/react-mantine/fields.json",
   "type": "array",
   "items": {
     "required": [
@@ -2173,6 +2173,69 @@
             },
             "rightSectionWidth": {
               "type": "integer"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "tabs"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "hint": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "tabs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "$ref": "#/$defs/i18n"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "value": {
+              "type": "string"
+            },
+            "hidden": {
+              "type": "boolean"
             }
           }
         }

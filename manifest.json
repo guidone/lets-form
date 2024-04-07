@@ -5418,7 +5418,8 @@
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "radio-tile": {
