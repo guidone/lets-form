@@ -1,14 +1,14 @@
 # LetsForm Changelog
 
-## Next
+## v0.7.7
 - Added Mantine: tabs
 - Added RSuite5: color for checkboxes
 
-## 0.7.6
+## v0.7.6
 - Added JSON Schemas for all UI frameworks
 - Extracted react-hook-form from main bundle
 
-## 0.7.4
+## v0.7.4
 - Mantine: divider, rating, slider, input tag
 
 ## v0.7.3
