@@ -2190,26 +2190,6 @@
             "name": {
               "type": "string"
             },
-            "label": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "hint": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
             "tabs": {
               "type": "array",
               "items": {
@@ -2251,12 +2231,25 @@
                   },
                   "rightSection": {
                     "type": "string"
+                  },
+                  "disabled": {
+                    "type": "boolean"
                   }
                 }
               }
             },
             "value": {
               "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "hidden": {
               "type": "boolean"
@@ -2284,6 +2277,9 @@
             },
             "rightSection": {
               "type": "string"
+            },
+            "disabled": {
+              "type": "boolean"
             },
             "variant": {
               "type": "string",

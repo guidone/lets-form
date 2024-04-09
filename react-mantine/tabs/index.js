@@ -3,14 +3,13 @@ import _ from 'lodash';
 import { Tabs } from '@mantine/core';
 import classNames from 'classnames';
 
-import { i18nOptions, passRest } from '../../helpers';
+import { i18nOptions } from '../../helpers/i18n-options';
+import { passRest } from '../../helpers/pass-rest';
+import { TextOrIcon } from '../../common/text-or-icon';
 import { I18N } from '../../components';
 import { lfLog } from '../../helpers/lf-log';
 
 import './tabs.scss';
-
-// TODO if url, then use icon
-// TODO disabled tabs
 
 const MantineTabs = I18N(
   ({
@@ -62,10 +61,11 @@ const MantineTabs = I18N(
             <Tabs.Tab
               key={tab.value}
               value={tab.value}
-              leftSection={tab.leftSection}
-              rightSection={tab.rightSection}
+              leftSection={TextOrIcon(tab.leftSection)}
+              rightSection={TextOrIcon(tab.rightSection)}
               size={tab.size}
               color={tab.color}
+              disabled={tab.disabled}
             >{tab.label}</Tabs.Tab>
           ))}
         </Tabs.List>

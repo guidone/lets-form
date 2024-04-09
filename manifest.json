@@ -2649,6 +2649,19 @@
     ],
     "react-rsuite5": [
       {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "red",
+          "orange",
+          "yellow",
+          "green",
+          "cyan",
+          "blue",
+          "violet"
+        ]
+      },
+      {
         "name": "indeterminate",
         "type": "boolean",
         "description": "Status can be indeterminate (null), cycle values trough false, inderminate, true"
@@ -2828,6 +2841,19 @@
       }
     ],
     "react-rsuite5": [
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "red",
+          "orange",
+          "yellow",
+          "green",
+          "cyan",
+          "blue",
+          "violet"
+        ]
+      },
       {
         "name": "inline",
         "type": "boolean"
@@ -5291,16 +5317,6 @@
         "name": "name",
         "type": "string",
         "description": "The name of the field and the key of the JSON"
-      },
-      {
-        "name": "label",
-        "type": "string | i18n",
-        "description": "Label of the field"
-      },
-      {
-        "name": "hint",
-        "type": "string | i18n",
-        "description": "Help text for the field (generally shown below the input box)"
       },
       {
         "name": "tabs",

@@ -1768,26 +1768,6 @@
             "name": {
               "type": "string"
             },
-            "label": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "hint": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
             "tabs": {
               "type": "array",
               "items": {
@@ -1811,6 +1791,16 @@
             },
             "value": {
               "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "hidden": {
               "type": "boolean"

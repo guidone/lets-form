@@ -1,5 +1,9 @@
 .lf-form-react-mantine {
   .lf-control-tabs {
+    .lf-prefix-icon {
+      max-width: 16px;
+      max-height: 16px;
+    }
     &.orientation-vertical, &.orientation-vertical.placement-left {
       .mantine-Tabs-panel {
         padding-left: var(--lf-field-column-margin);

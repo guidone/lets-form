@@ -836,6 +836,11 @@
     "disabled": null,
     "readOnly": null,
     "hidden": null,
+    "color": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-mantine"
+    ],
     "indeterminate": [
       "react-rsuite5",
       "react-mantine"
@@ -844,10 +849,6 @@
       "react-rsuite5"
     ],
     "size": [
-      "react-material-ui",
-      "react-mantine"
-    ],
-    "color": [
       "react-material-ui",
       "react-mantine"
     ],
@@ -892,6 +893,11 @@
     "disabled": null,
     "readOnly": null,
     "hidden": null,
+    "color": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-mantine"
+    ],
     "inline": [
       "react-rsuite5",
       "react-bootstrap"
@@ -900,10 +906,6 @@
       "react-rsuite5"
     ],
     "size": [
-      "react-material-ui",
-      "react-mantine"
-    ],
-    "color": [
       "react-material-ui",
       "react-mantine"
     ],
@@ -1778,14 +1780,13 @@
   },
   "tabs": {
     "name": null,
-    "label": [
-      "react-mantine"
-    ],
-    "hint": null,
     "tabs": [
       "react-mantine"
     ],
     "value": [
+      "react-mantine"
+    ],
+    "label": [
       "react-mantine"
     ],
     "hidden": null,
@@ -1844,6 +1845,9 @@
     "rightSection": [
       "react-mantine"
     ],
+    "disabled": [
+      "react-mantine"
+    ],
     "radius": [
       "react-mantine"
     ],
@@ -1873,14 +1877,7 @@
     ],
     "loop": [
       "react-mantine"
-    ],
-    "validationMinLength": "validation",
-    "validationMin": "validation",
-    "validationMaxLength": "validation",
-    "validationMax": "validation",
-    "validationPattern": "validation",
-    "validationMessage": "validation",
-    "required": null
+    ]
   },
   "radio-tile": {
     "name": null,

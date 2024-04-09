@@ -2,6 +2,7 @@
 
 ## Next
 - Added Mantine: tabs
+- Added RSuite5: color for checkboxes
 
 ## 0.7.6
 - Added JSON Schemas for all UI frameworks
