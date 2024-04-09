@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://unpkg.com/lets-form@0.7.6-beta-3/schemas/react-mantine/form.json",
+  "$id": "https://unpkg.com/lets-form@0.7.6/schemas/react-mantine/form.json",
   "type": "object",
   "properties": {
     "version": {
@@ -109,7 +109,7 @@
       "type": "boolean"
     },
     "fields": {
-      "$ref": "https://unpkg.com/lets-form@0.7.6-beta-3/schemas/react-mantine/fields.json"
+      "$ref": "https://unpkg.com/lets-form@0.7.6/schemas/react-mantine/fields.json"
     }
   }
 }

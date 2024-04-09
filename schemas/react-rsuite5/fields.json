@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://unpkg.com/lets-form@0.7.6-beta-3/schemas/react-rsuite5/fields.json",
+  "$id": "https://unpkg.com/lets-form@0.7.6/schemas/react-rsuite5/fields.json",
   "type": "array",
   "items": {
     "required": [
@@ -936,6 +936,18 @@
             "hidden": {
               "type": "boolean"
             },
+            "color": {
+              "type": "string",
+              "enum": [
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "cyan",
+                "blue",
+                "violet"
+              ]
+            },
             "indeterminate": {
               "type": "boolean"
             },
@@ -1010,6 +1022,18 @@
             },
             "hidden": {
               "type": "boolean"
+            },
+            "color": {
+              "type": "string",
+              "enum": [
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "cyan",
+                "blue",
+                "violet"
+              ]
             },
             "inline": {
               "type": "boolean"
@@ -2070,26 +2094,6 @@
             "name": {
               "type": "string"
             },
-            "label": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "hint": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
             "tabs": {
               "type": "array",
               "items": {
@@ -2113,6 +2117,16 @@
             },
             "value": {
               "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
             },
             "hidden": {
               "type": "boolean"

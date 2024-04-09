@@ -7,7 +7,7 @@ export const TextOrIcon = str => {
     return (
       <img className="lf-prefix-icon" src={str} alt="icon"/>
     );
-  } else {
+  } else if (str) {
     return <span>{str}</span>;
   }
 };

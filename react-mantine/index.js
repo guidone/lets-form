@@ -60,6 +60,9 @@ const Fields = {
   },
   'input-tag': {
     'react-mantine': lazy(() => import('./input-tag'))
+  },
+  'tabs': {
+    'react-mantine': lazy(() => import('./tabs'))
   }
 };
 

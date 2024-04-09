@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://unpkg.com/lets-form@0.7.6-beta-3/schemas/react-mantine/fields.json",
+  "$id": "https://unpkg.com/lets-form@0.7.6/schemas/react-mantine/fields.json",
   "type": "array",
   "items": {
     "required": [
@@ -2173,6 +2173,175 @@
             },
             "rightSectionWidth": {
               "type": "integer"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "tabs"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "tabs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "$ref": "#/$defs/i18n"
+                      }
+                    ]
+                  },
+                  "color": {
+                    "type": "string",
+                    "enum": [
+                      "grey",
+                      "red",
+                      "pink",
+                      "grape",
+                      "violet",
+                      "indigo",
+                      "blue",
+                      "cyan",
+                      "teal",
+                      "green",
+                      "lime",
+                      "yellow",
+                      "orange"
+                    ]
+                  },
+                  "leftSection": {
+                    "type": "string"
+                  },
+                  "rightSection": {
+                    "type": "string"
+                  },
+                  "disabled": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "value": {
+              "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "color": {
+              "type": "string",
+              "enum": [
+                "grey",
+                "red",
+                "pink",
+                "grape",
+                "violet",
+                "indigo",
+                "blue",
+                "cyan",
+                "teal",
+                "green",
+                "lime",
+                "yellow",
+                "orange"
+              ]
+            },
+            "leftSection": {
+              "type": "string"
+            },
+            "rightSection": {
+              "type": "string"
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "default",
+                "outline",
+                "pills"
+              ]
+            },
+            "radius": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl"
+              ]
+            },
+            "grow": {
+              "type": "boolean"
+            },
+            "justify": {
+              "type": "string",
+              "enum": [
+                "flex-start",
+                "center",
+                "flex-end",
+                "space-between"
+              ]
+            },
+            "orientation": {
+              "type": "string",
+              "enum": [
+                "horizontal",
+                "vertical"
+              ]
+            },
+            "placement": {
+              "type": "string",
+              "enum": [
+                "left",
+                "right"
+              ]
+            },
+            "activateTabWithKeyboard": {
+              "type": "boolean"
+            },
+            "allowTabDeactivation": {
+              "type": "boolean"
+            },
+            "autoContrast": {
+              "type": "boolean"
+            },
+            "inverted": {
+              "type": "boolean"
+            },
+            "keepMounted": {
+              "type": "boolean"
+            },
+            "loop": {
+              "type": "boolean"
             }
           }
         }

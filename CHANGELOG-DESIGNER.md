@@ -1,5 +1,10 @@
 # LetsForm Designer Changelog
 
+## Next
+- Added Mantine: tabs
+- Fixed extra keys in configuring fields (very annoying)
+- Added RSuite5: color for checkboxes
+
 ## v0.8.5
 - Added JSON Schemas for all UI frameworks
 - Extracted react-hook-form from main bundle

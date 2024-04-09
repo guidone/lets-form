@@ -13,13 +13,12 @@ const CheckboxGroupRSuite = I18N(
     label,
     hint,
     value,
-    placeholder,
-    plaintext,
     tooltip = false,
     disabled = false,
     readOnly = false,
     required = false,
     error,
+    color,
     onChange,
     onBlur,
     options = [],
@@ -44,6 +43,7 @@ const CheckboxGroupRSuite = I18N(
               value={value}
               disabled={disabled}
               readOnly={readOnly}
+              color={color}
             >
               {label}
             </Checkbox>
@@ -53,7 +53,7 @@ const CheckboxGroupRSuite = I18N(
       </Form.Group>
     );
   },
-  ['label', 'hint', 'placeholder'],
+  ['label', 'hint'],
   {
     options: i18nOptions
   }

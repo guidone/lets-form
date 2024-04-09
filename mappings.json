@@ -836,6 +836,11 @@
     "disabled": null,
     "readOnly": null,
     "hidden": null,
+    "color": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-mantine"
+    ],
     "indeterminate": [
       "react-rsuite5",
       "react-mantine"
@@ -844,10 +849,6 @@
       "react-rsuite5"
     ],
     "size": [
-      "react-material-ui",
-      "react-mantine"
-    ],
-    "color": [
       "react-material-ui",
       "react-mantine"
     ],
@@ -892,6 +893,11 @@
     "disabled": null,
     "readOnly": null,
     "hidden": null,
+    "color": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-mantine"
+    ],
     "inline": [
       "react-rsuite5",
       "react-bootstrap"
@@ -900,10 +906,6 @@
       "react-rsuite5"
     ],
     "size": [
-      "react-material-ui",
-      "react-mantine"
-    ],
-    "color": [
       "react-material-ui",
       "react-mantine"
     ],
@@ -1778,10 +1780,15 @@
   },
   "tabs": {
     "name": null,
-    "label": null,
-    "hint": null,
-    "tabs": null,
-    "value": null,
+    "tabs": [
+      "react-mantine"
+    ],
+    "value": [
+      "react-mantine"
+    ],
+    "label": [
+      "react-mantine"
+    ],
     "hidden": null,
     "appearance": [
       "react-rsuite5"
@@ -1806,7 +1813,8 @@
       "react-material-ui"
     ],
     "variant": [
-      "react-bootstrap"
+      "react-bootstrap",
+      "react-mantine"
     ],
     "transition": [
       "react-bootstrap"
@@ -1815,7 +1823,8 @@
       "react-bootstrap"
     ],
     "justify": [
-      "react-bootstrap"
+      "react-bootstrap",
+      "react-mantine"
     ],
     "size": [
       "react-antd"
@@ -1826,13 +1835,49 @@
     "animated": [
       "react-antd"
     ],
-    "validationMinLength": "validation",
-    "validationMin": "validation",
-    "validationMaxLength": "validation",
-    "validationMax": "validation",
-    "validationPattern": "validation",
-    "validationMessage": "validation",
-    "required": null
+    "color": [
+      "react-mantine",
+      "react-mantine"
+    ],
+    "leftSection": [
+      "react-mantine"
+    ],
+    "rightSection": [
+      "react-mantine"
+    ],
+    "disabled": [
+      "react-mantine"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "grow": [
+      "react-mantine"
+    ],
+    "orientation": [
+      "react-mantine"
+    ],
+    "placement": [
+      "react-mantine"
+    ],
+    "activateTabWithKeyboard": [
+      "react-mantine"
+    ],
+    "allowTabDeactivation": [
+      "react-mantine"
+    ],
+    "autoContrast": [
+      "react-mantine"
+    ],
+    "inverted": [
+      "react-mantine"
+    ],
+    "keepMounted": [
+      "react-mantine"
+    ],
+    "loop": [
+      "react-mantine"
+    ]
   },
   "radio-tile": {
     "name": null,
