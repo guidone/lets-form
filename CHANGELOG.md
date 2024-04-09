@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## Next
+- Added Mantine: tabs
+
 ## 0.7.6
 - Added JSON Schemas for all UI frameworks
 - Extracted react-hook-form from main bundle

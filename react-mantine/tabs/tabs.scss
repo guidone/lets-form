@@ -1,7 +1,15 @@
-.lf-form-react-rsuite5 {
+.lf-form-react-mantine {
   .lf-control-tabs {
-    .tab-fields {
-      margin-top: 10px;
+    &.orientation-vertical, &.orientation-vertical.placement-left {
+      .mantine-Tabs-panel {
+        padding-left: var(--lf-field-column-margin);
+      }
+    }
+
+    &.orientation-vertical.placement-right {
+      .mantine-Tabs-panel {
+        padding-right: var(--lf-field-column-margin);
+      }
     }
   }
 }

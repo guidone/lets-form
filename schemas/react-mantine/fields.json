@@ -2227,6 +2227,30 @@
                         "$ref": "#/$defs/i18n"
                       }
                     ]
+                  },
+                  "color": {
+                    "type": "string",
+                    "enum": [
+                      "grey",
+                      "red",
+                      "pink",
+                      "grape",
+                      "violet",
+                      "indigo",
+                      "blue",
+                      "cyan",
+                      "teal",
+                      "green",
+                      "lime",
+                      "yellow",
+                      "orange"
+                    ]
+                  },
+                  "leftSection": {
+                    "type": "string"
+                  },
+                  "rightSection": {
+                    "type": "string"
                   }
                 }
               }
@@ -2235,6 +2259,92 @@
               "type": "string"
             },
             "hidden": {
+              "type": "boolean"
+            },
+            "color": {
+              "type": "string",
+              "enum": [
+                "grey",
+                "red",
+                "pink",
+                "grape",
+                "violet",
+                "indigo",
+                "blue",
+                "cyan",
+                "teal",
+                "green",
+                "lime",
+                "yellow",
+                "orange"
+              ]
+            },
+            "leftSection": {
+              "type": "string"
+            },
+            "rightSection": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "default",
+                "outline",
+                "pills"
+              ]
+            },
+            "radius": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl"
+              ]
+            },
+            "grow": {
+              "type": "boolean"
+            },
+            "justify": {
+              "type": "string",
+              "enum": [
+                "flex-start",
+                "center",
+                "flex-end",
+                "space-between"
+              ]
+            },
+            "orientation": {
+              "type": "string",
+              "enum": [
+                "horizontal",
+                "vertical"
+              ]
+            },
+            "placement": {
+              "type": "string",
+              "enum": [
+                "left",
+                "right"
+              ]
+            },
+            "activateTabWithKeyboard": {
+              "type": "boolean"
+            },
+            "allowTabDeactivation": {
+              "type": "boolean"
+            },
+            "autoContrast": {
+              "type": "boolean"
+            },
+            "inverted": {
+              "type": "boolean"
+            },
+            "keepMounted": {
+              "type": "boolean"
+            },
+            "loop": {
               "type": "boolean"
             }
           }

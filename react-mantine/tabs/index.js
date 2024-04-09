@@ -1,13 +1,16 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
-import Nav from 'rsuite/Nav';
-import { Tabs, rem } from '@mantine/core';
+import { Tabs } from '@mantine/core';
+import classNames from 'classnames';
 
 import { i18nOptions, passRest } from '../../helpers';
 import { I18N } from '../../components';
 import { lfLog } from '../../helpers/lf-log';
 
 import './tabs.scss';
+
+// TODO if url, then use icon
+// TODO disabled tabs
 
 const MantineTabs = I18N(
   ({
@@ -16,10 +19,10 @@ const MantineTabs = I18N(
     tabs,
     onChange,
     children,
-    appearance,
-    reversed,
-    justified,
-    pullRight,
+    grow,
+    justify,
+    orientation,
+    placement,
     ...rest
   }) => {
     let defaultKey = value;
@@ -38,26 +41,31 @@ const MantineTabs = I18N(
 
     return (
       <div
-        className="lf-control-tabs"
+        className={classNames('lf-control-tabs', {
+          [`orientation-${orientation}`]: orientation != null,
+          [`placement-${placement}`]: placement != null
+        })}
         data-lf-field-name={name}
       >
         <Tabs
           value={active}
           onChange={handleChange}
-
-
-
-
-          appearance={appearance}
-          reversed={reversed}
-          justified={justified}
-          pullRight={pullRight}
+          orientation={orientation}
+          placement={placement}
           {...passRest(rest)}
         >
-        <Tabs.List>
+        <Tabs.List
+          grow={grow}
+          justify={justify}
+        >
           {(tabs || []).map(tab => (
             <Tabs.Tab
+              key={tab.value}
               value={tab.value}
+              leftSection={tab.leftSection}
+              rightSection={tab.rightSection}
+              size={tab.size}
+              color={tab.color}
             >{tab.label}</Tabs.Tab>
           ))}
         </Tabs.List>

@@ -5414,6 +5414,112 @@
         "type": "boolean"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "tabs",
+        "type": "array"
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "grey",
+          "red",
+          "pink",
+          "grape",
+          "violet",
+          "indigo",
+          "blue",
+          "cyan",
+          "teal",
+          "green",
+          "lime",
+          "yellow",
+          "orange"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "default",
+          "outline",
+          "pills"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "grow",
+        "type": "boolean",
+        "description": "Determines whether tabs should take all available space, false by default"
+      },
+      {
+        "name": "justify",
+        "type": "string",
+        "options": [
+          "flex-start",
+          "center",
+          "flex-end",
+          "space-between"
+        ]
+      },
+      {
+        "name": "orientation",
+        "type": "string",
+        "options": [
+          "horizontal",
+          "vertical"
+        ]
+      },
+      {
+        "name": "placement",
+        "type": "string",
+        "options": [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "name": "activateTabWithKeyboard",
+        "type": "boolean",
+        "description": "Determines whether tab should be activated with arrow key press, true by default"
+      },
+      {
+        "name": "allowTabDeactivation",
+        "type": "boolean",
+        "description": "Determines whether tab can be deactivated, false by default"
+      },
+      {
+        "name": "autoContrast",
+        "type": "boolean",
+        "description": "Determines whether active item text color should depend on background-color of the indicator. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast. Only applicable when variant=\"pills\""
+      },
+      {
+        "name": "inverted",
+        "type": "boolean",
+        "description": "Determines whether tabs should have inverted styles, false by default"
+      },
+      {
+        "name": "keepMounted",
+        "type": "boolean",
+        "description": "If set to false, Tabs.Panel content will be unmounted when the associated tab is not active, true by default"
+      },
+      {
+        "name": "loop",
+        "type": "boolean",
+        "description": "Determines whether arrow key presses should loop though items (first to last and last to first), true by default"
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",

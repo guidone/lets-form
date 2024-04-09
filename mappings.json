@@ -1778,10 +1778,16 @@
   },
   "tabs": {
     "name": null,
-    "label": null,
+    "label": [
+      "react-mantine"
+    ],
     "hint": null,
-    "tabs": null,
-    "value": null,
+    "tabs": [
+      "react-mantine"
+    ],
+    "value": [
+      "react-mantine"
+    ],
     "hidden": null,
     "appearance": [
       "react-rsuite5"
@@ -1806,7 +1812,8 @@
       "react-material-ui"
     ],
     "variant": [
-      "react-bootstrap"
+      "react-bootstrap",
+      "react-mantine"
     ],
     "transition": [
       "react-bootstrap"
@@ -1815,7 +1822,8 @@
       "react-bootstrap"
     ],
     "justify": [
-      "react-bootstrap"
+      "react-bootstrap",
+      "react-mantine"
     ],
     "size": [
       "react-antd"
@@ -1825,6 +1833,46 @@
     ],
     "animated": [
       "react-antd"
+    ],
+    "color": [
+      "react-mantine",
+      "react-mantine"
+    ],
+    "leftSection": [
+      "react-mantine"
+    ],
+    "rightSection": [
+      "react-mantine"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "grow": [
+      "react-mantine"
+    ],
+    "orientation": [
+      "react-mantine"
+    ],
+    "placement": [
+      "react-mantine"
+    ],
+    "activateTabWithKeyboard": [
+      "react-mantine"
+    ],
+    "allowTabDeactivation": [
+      "react-mantine"
+    ],
+    "autoContrast": [
+      "react-mantine"
+    ],
+    "inverted": [
+      "react-mantine"
+    ],
+    "keepMounted": [
+      "react-mantine"
+    ],
+    "loop": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",
