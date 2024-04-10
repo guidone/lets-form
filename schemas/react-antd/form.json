@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://unpkg.com/lets-form@0.7.6/schemas/react-antd/form.json",
+  "$id": "https://unpkg.com/lets-form@0.7.7/schemas/react-antd/form.json",
   "type": "object",
   "properties": {
     "version": {
@@ -150,7 +150,7 @@
       "type": "boolean"
     },
     "fields": {
-      "$ref": "https://unpkg.com/lets-form@0.7.6/schemas/react-antd/fields.json"
+      "$ref": "https://unpkg.com/lets-form@0.7.7/schemas/react-antd/fields.json"
     }
   }
 }
