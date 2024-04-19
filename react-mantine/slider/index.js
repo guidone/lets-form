@@ -10,10 +10,6 @@ const SliderMantine = I18N(
   ({
     name,
     hint,
-    value,
-    fullWidth,
-    width,
-    submitOnEnter = false,
     error,
     onChange,
     onBlur,
@@ -22,6 +18,7 @@ const SliderMantine = I18N(
     lfOnEnter = () => {},
     ...rest
   }) => {
+
     return (
       <Input.Wrapper
         className="lf-control-slider"
