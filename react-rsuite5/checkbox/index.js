@@ -16,20 +16,10 @@ const CheckboxRSuite = I18N(
     label,
     hint,
     value,
-
-    //placeholder,
-    //plaintext,
     tooltip = false,
-    //disabled = false,
-    //readOnly = false,
-    //required = false,
     indeterminate,
     error,
     onChange,
-    //onBlur,
-    //appearance,
-    //locale,
-    //format,
     ...rest
   }) => {
     const [isChecked, setIsChecked] = useState(value ?? null);
@@ -53,8 +43,6 @@ const CheckboxRSuite = I18N(
       [onChange, indeterminate, isChecked],
     );
 
-    console.log('oca rest', rest)
-
     return (
       <Form.Group data-lf-field-name={name} className="lt-control-checkbox">
         <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
@@ -63,8 +51,6 @@ const CheckboxRSuite = I18N(
             name={name}
             checked={isChecked}
             onChange={handleChange}
-            //readOnly={readOnly}
-            //disabled={disabled}
             {...passRest(rest)}
           >
             {label}
