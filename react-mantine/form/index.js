@@ -22,7 +22,7 @@ const MantineForm = ({
   custom
 } = {}) => {
   return (
-    <div> 
+    <div>
       <form
         onSubmit={onSubmit}
         className={classNames('lf-form lf-form-react-mantine', {
@@ -31,7 +31,7 @@ const MantineForm = ({
         data-lf-form-name={name}
       >
         {children}
-        {!hideToolbar && !onlyFields && !plaintext && (          
+        {!hideToolbar && !onlyFields && !plaintext && (
           <Group className="lf-buttons" align={buttonsAlign}>
             <Button
               variant="filled"
@@ -48,7 +48,7 @@ const MantineForm = ({
             {custom}
           </Group>
         )}
-      </form>    
+      </form>
     </div>
   );
 };

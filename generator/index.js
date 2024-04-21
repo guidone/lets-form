@@ -101,14 +101,14 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   locale,
                   onJavascriptError,
                   Components,
-                  prependView: PlaceholderWrapper && (         
-                    <PlaceholderWrapper 
-                      key={`wrapper_top_field`} 
-                      parentField={field} 
+                  prependView: PlaceholderWrapper && (
+                    <PlaceholderWrapper
+                      key={`wrapper_top_field`}
+                      parentField={field}
                       parentFieldTarget="fields"
                       nextField={field.fields && field.fields.length ? field.fields[0] : null}
                     />
-                  )                
+                  )
                 })}
                 {BottomView && <BottomView context="group" key={`bottom_view_${field.name}`} field={field} target="fields" />}
               </>
@@ -122,7 +122,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               index={index}
               className="group"
             >{component}</GroupWrapper> : component;
-        } else if (field.component === 'tabs') {    
+        } else if (field.component === 'tabs') {
           return (
             <Controller
               key={`field_${field.name}`}
@@ -159,7 +159,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                           BottomView,
                           onChange,
                           onEnter,
-                          fields: field.fields && _.isArray(field.fields[tab]) ? field.fields[tab] : [],                    
+                          fields: field.fields && _.isArray(field.fields[tab]) ? field.fields[tab] : [],
                           control,
                           framework,
                           getValues,
@@ -172,10 +172,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                           locale,
                           onJavascriptError,
                           Components,
-                          prependView: PlaceholderWrapper && (         
-                            <PlaceholderWrapper 
-                              key={`wrapper_top_field`} 
-                              parentField={field} 
+                          prependView: PlaceholderWrapper && (
+                            <PlaceholderWrapper
+                              key={`wrapper_top_field`}
+                              parentField={field}
                               parentFieldTarget="fields"
                               parentFieldSubTarget={tab}
                               nextField={field.fields && field.fields.length ? field.fields[0] : null}
@@ -183,16 +183,16 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                           )
                         })}
                         {BottomView && (
-                          <BottomView 
-                            context="tabs" 
-                            key={`bottom_view_${field.name}`} 
-                            field={field} 
-                            target="fields" 
-                            subtarget={tab} 
+                          <BottomView
+                            context="tabs"
+                            key={`bottom_view_${field.name}`}
+                            field={field}
+                            target="fields"
+                            subtarget={tab}
                           />
                         )}
                       </>
-                    );}}              
+                    );}}
                   </Component>
                 );
                 return GroupWrapper ?
@@ -207,7 +207,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             />
           );
 
-        } else if (field.component === 'steps') {    
+        } else if (field.component === 'steps') {
           return (
             <Controller
               key={`field_${field.name}`}
@@ -244,7 +244,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                           BottomView,
                           onChange,
                           onEnter,
-                          fields: field.fields && _.isArray(field.fields[step]) ? field.fields[step] : [],                    
+                          fields: field.fields && _.isArray(field.fields[step]) ? field.fields[step] : [],
                           control,
                           framework,
                           getValues,
@@ -257,10 +257,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                           locale,
                           onJavascriptError,
                           Components,
-                          prependView: PlaceholderWrapper && (         
-                            <PlaceholderWrapper 
-                              key={`wrapper_top_field`} 
-                              parentField={field} 
+                          prependView: PlaceholderWrapper && (
+                            <PlaceholderWrapper
+                              key={`wrapper_top_field`}
+                              parentField={field}
                               parentFieldTarget="fields"
                               parentFieldSubTarget={step}
                               nextField={field.fields && field.fields.length ? field.fields[0] : null}
@@ -268,16 +268,16 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                           )
                         })}
                         {BottomView && (
-                          <BottomView 
-                            context="tabs" 
-                            key={`bottom_view_${field.name}`} 
-                            field={field} 
-                            target="fields" 
-                            subtarget={step} 
+                          <BottomView
+                            context="tabs"
+                            key={`bottom_view_${field.name}`}
+                            field={field}
+                            target="fields"
+                            subtarget={step}
                           />
                         )}
                       </>
-                    );}}              
+                    );}}
                   </Component>
                 );
                 return GroupWrapper ?
@@ -326,10 +326,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   locale,
                   onJavascriptError,
                   Components,
-                  prependView: PlaceholderWrapper && (         
-                    <PlaceholderWrapper 
-                      key={`wrapper_top_field`} 
-                      parentField={field} 
+                  prependView: PlaceholderWrapper && (
+                    <PlaceholderWrapper
+                      key={`wrapper_top_field`}
+                      parentField={field}
                       parentFieldTarget="fields"
                       nextField={field.fields && field.fields.length ? field.fields[0] : null}
                     />
@@ -382,10 +382,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       locale,
                       onJavascriptError,
                       Components,
-                      prependView: PlaceholderWrapper && (         
-                        <PlaceholderWrapper 
-                          key={`wrapper_top_field`} 
-                          parentField={field} 
+                      prependView: PlaceholderWrapper && (
+                        <PlaceholderWrapper
+                          key={`wrapper_top_field`}
+                          parentField={field}
                           parentFieldTarget="leftFields"
                           nextField={field.leftFields && field.leftFields.length ? field.leftFields[0] : null}
                         />
@@ -417,10 +417,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       locale,
                       onJavascriptError,
                       Components,
-                      prependView: PlaceholderWrapper && (         
-                        <PlaceholderWrapper 
-                          key={`wrapper_top_field`} 
-                          parentField={field} 
+                      prependView: PlaceholderWrapper && (
+                        <PlaceholderWrapper
+                          key={`wrapper_top_field`}
+                          parentField={field}
                           parentFieldTarget="rightFields"
                           nextField={field.rightFields && field.rightFields.length ? field.rightFields[0] : null}
                         />
@@ -475,10 +475,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       locale,
                       onJavascriptError,
                       Components,
-                      prependView: PlaceholderWrapper && (         
-                        <PlaceholderWrapper 
-                          key={`wrapper_top_field`} 
-                          parentField={field} 
+                      prependView: PlaceholderWrapper && (
+                        <PlaceholderWrapper
+                          key={`wrapper_top_field`}
+                          parentField={field}
                           parentFieldTarget="leftFields"
                           nextField={field.leftFields && field.leftFields.length ? field.leftFields[0] : null}
                         />
@@ -510,10 +510,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       locale,
                       onJavascriptError,
                       Components,
-                      prependView: PlaceholderWrapper && (         
-                        <PlaceholderWrapper 
-                          key={`wrapper_top_field`} 
-                          parentField={field} 
+                      prependView: PlaceholderWrapper && (
+                        <PlaceholderWrapper
+                          key={`wrapper_top_field`}
+                          parentField={field}
                           parentFieldTarget="centerFields"
                           nextField={field.centerFields && field.centerFields.length ? field.centerFields[0] : null}
                         />
@@ -545,10 +545,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       locale,
                       onJavascriptError,
                       Components,
-                      prependView: PlaceholderWrapper && (         
-                        <PlaceholderWrapper 
-                          key={`wrapper_top_field`} 
-                          parentField={field} 
+                      prependView: PlaceholderWrapper && (
+                        <PlaceholderWrapper
+                          key={`wrapper_top_field`}
+                          parentField={field}
                           parentFieldTarget="rightFields"
                           nextField={field.rightFields && field.rightFields.length ? field.rightFields[0] : null}
                         />
@@ -664,7 +664,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     components,
     className,
     // hide cancel button
-    hideCancel, 
+    hideCancel,
     // hide submit button
     hideSubmit,
     // show demo flag
@@ -695,10 +695,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             []
           ));
           lfLog('Preloading components: ' + components.join(', '));
-          
-          const loaders = components
+
+          let loaders = components
             .map(component => {
-              if (MergedComponents[component] 
+              if (MergedComponents[component]
                 && MergedComponents[component][framework]
                 && _.isFunction(MergedComponents[component][framework].preload)
               ) {
@@ -706,12 +706,14 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               };
             })
             .filter(Boolean);
-          
+          // if preloader exist, also add form
+          if (_.isFunction(Forms[framework].preload)) {
+            loaders.push(Forms[framework].preload());
+          }
           // when everything is loaded (including the form)
           Promise
-            .all([...loaders, Forms[framework].preload()]).then(() => {
-              setPreloading(false);
-            })
+            .all(loaders)
+            .then(() => setPreloading(false))
             .catch(e => {
               lfError('loading component', e);
               throw e;
@@ -892,7 +894,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         locale: locale
         // ..more
       }}>
-        <div 
+        <div
           className={classNames('lf-lets-form', { 'lf-lets-form-edit-mode': demo }, className)}
         >
           {formErrors && showErrors === 'groupedTop' && (
@@ -950,7 +952,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                   locale={locale}
                   errors={enrichWithLabels(formErrors, formFields)}
                 />
-              )}            
+              )}
             </Form>
           </Suspense>
           {demo && (
