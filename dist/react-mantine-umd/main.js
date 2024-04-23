@@ -1,4 +1,4 @@
-/* LetsForm React-Mantine v0.7.8-beta-14 - UMD */
+/* LetsForm React-Mantine v0.7.8 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', '@mantine/dates'], factory) :
@@ -19525,98 +19525,6 @@
   }
 
   var _excluded$g = ["framework", "children"];
-
-  // Switch to direct import, Mantine doesn't support lazy loading
-  /*import InputText from './input-text';
-  import InputNumber from './input-number';
-  import TextArea from './textarea';
-  import Select from './select';
-  import Checkbox from './checkbox';
-  import Toggle from './toggle';
-  import Array from './array';
-  import CheckboxGroup from './checkbox-group';
-  import RadioGroup from './radio-group';
-  import TwoColumns from './two-columns';
-  import ThreeColumns from './three-columns';
-  import Group from './group';
-  import InputDate from './date';
-  import InputDateTime from './datetime';
-  import Rate from './rate';
-  import Placeholder from './placeholder';
-  import Divider from './divider';
-  import Slider from './slider';
-  import InputTag from './input-tag';
-  import Tabs from './tabs';
-  import MantineForm from './form';
-
-  // Import all
-  const Fields = {
-    'input-text': {
-      'react-mantine': InputText
-    },
-    'input-number': {
-      'react-mantine': InputNumber
-    },
-    'textarea': {
-      'react-mantine': TextArea
-    },
-    'select': {
-      'react-mantine': Select
-    },
-    'checkbox': {
-      'react-mantine': Checkbox
-    },
-    'toggle': {
-      'react-mantine': Toggle
-    },
-    'array': {
-      'react-mantine': Array
-    },
-    'checkbox-group': {
-      'react-mantine': CheckboxGroup
-    },
-    'radio-group': {
-      'react-mantine': RadioGroup
-    },
-    'two-columns': {
-      'react-mantine': TwoColumns
-    },
-    'three-columns': {
-      'react-mantine': ThreeColumns
-    },
-    'group': {
-      'react-mantine': Group
-    },
-    'date': {
-      'react-mantine': InputDate
-    },
-    'datetime': {
-      'react-mantine': InputDateTime
-    },
-    'rate': {
-      'react-mantine': Rate
-    },
-    'placeholder': {
-      'react-mantine': Placeholder
-    },
-    'divider': {
-      'react-mantine': Divider
-    },
-    'slider': {
-      'react-mantine': Slider
-    },
-    'input-tag': {
-      'react-mantine': InputTag
-    },
-    'tabs': {
-      'react-mantine': Tabs
-    }
-  };
-
-  const Forms = {
-    'react-mantine': MantineForm
-  };*/
-
   var Fields = {
     'input-text': {
       'react-mantine': lazyPreload(function () {
