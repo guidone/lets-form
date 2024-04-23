@@ -1,6 +1,6 @@
 {
   "name": "lets-form",
-  "version": "0.7.8-beta-13",
+  "version": "0.7.8-beta-14",
   "description": "JSON to React form generator, supporting multiple frameworks (Bootstrap, Material UI, RSuite, etc)",
   "main": "index.js",
   "module": "index.js",
@@ -39,8 +39,8 @@
     "./react-bootstrap": "./dist/react-bootstrap/main.js",
     "./react-bootstrap/": "./dist/react-bootstrap/",
     "./react-mantine": {
-      "import": "./dist/esm-react-mantine/index.js",
-      "require": "./dist/react-mantine/main.js"
+      "import": "./dist/react-mantine-esm/index.js",
+      "require": "./dist/react-mantine-umd/main.js"
     },
     "./react-mantine/": {
       "import": "./dist/esm-react-mantine/",
