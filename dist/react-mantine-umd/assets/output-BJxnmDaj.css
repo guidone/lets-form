@@ -1,0 +1,517 @@
+.lf-lets-form .label-test-buttons {
+  float: right;
+  background-color: #cccccc;
+  color: #555555;
+  font-size: 10px;
+  padding: 1px 3px;
+  margin-top: -16px;
+  border-top-left-radius: 3px;
+  text-transform: uppercase;
+}
+.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {
+  padding: 10px;
+  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);
+  background-size: 56.57px 56.57px;
+}
+
+.lf-form {
+  --lf-field-margin: 16px;
+  --lf-field-column-margin: 16px;
+  --lf-font-size: 15px;
+  --lf-field-button-margin: 10px;
+  --lf-highligh-color: #ff6633;
+  --lf-hover-color: #FF9F85;
+  --lf-drop-highlight-color: #3498ff;
+  --lf-field-margin-top: 5px;
+  --lf-border-color: #e5e5ea;
+  --lf-group-padding: 15px;
+  --lf-group-header: 15px;
+}
+.lf-form.lf-form-buttons-align-center .lf-buttons {
+  justify-content: center;
+}
+.lf-form.lf-form-buttons-align-left .lf-buttons {
+  justify-content: flex-start;
+}
+.lf-form.lf-form-buttons-align-right .lf-buttons {
+  justify-content: flex-end;
+}
+.lf-form .lf-buttons {
+  margin-top: var(--lf-field-margin);
+}
+.lf-form [class*=lf-control]:not(:first-child) {
+  margin-top: var(--lf-field-margin);
+  margin-bottom: 0px !important;
+}
+.lf-form .lf-control-common-array .lf-control-common-array-item {
+  --lf-field-margin: 15px;
+}
+.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {
+  margin-bottom: 0px;
+}
+.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {
+  margin-top: 10px;
+}
+
+.lf-icon-asterisk {
+  margin-top: -3px;
+  display: inline-block;
+}
+
+.lf-missing-component {
+  border: 1px solid #bbbbbb;
+  background-color: #f6f6f6;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+}
+.lf-missing-component .icon {
+  order: 0;
+  flex: 0 0;
+  align-self: auto;
+  margin-top: 2px;
+}
+.lf-missing-component .tag-component {
+  background-color: #673ab7;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 1px 4px 2px 4px;
+  border-radius: 3px;
+  line-height: 17px;
+}
+.lf-missing-component .message {
+  display: inline-block;
+  margin-left: 10px;
+  order: 0;
+  flex: 1 0;
+  align-self: auto;
+}
+
+.lf-form-react-mantine .lf-control-tabs .lf-prefix-icon {
+  max-width: 16px;
+  max-height: 16px;
+}
+.lf-form-react-mantine .lf-control-tabs.orientation-vertical .mantine-Tabs-panel, .lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-left .mantine-Tabs-panel {
+  padding-left: var(--lf-field-column-margin);
+}
+.lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-right .mantine-Tabs-panel {
+  padding-right: var(--lf-field-column-margin);
+}
+
+.lf-form-react-mantine .lf-control-input-number div[data-position=right] .lf-postfix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=right] .lf-postfix-wrapper {
+  padding-right: 1em;
+}
+.lf-form-react-mantine .lf-control-input-number div[data-position=left] .lf-prefix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=left] .lf-prefix-wrapper {
+  padding-left: 1em;
+}
+
+.lf-form-plaintext {
+  font-size: var(--lf-font-size);
+}
+.lf-form-plaintext .lf-plaintext-field-label {
+  font-weight: 600;
+  color: #333333;
+}
+.lf-form-plaintext .plaintext-value:empty::before {
+  content: "-";
+}
+
+.lf-control-three-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  min-height: 20px;
+  /*.left, .right, .center {
+    .rs-form-control-wrapper {
+      > .rs-input, > .rs-input-number {
+        //width: auto;
+      }
+    }
+  }*/
+}
+.lf-control-three-columns .left {
+  flex: 1 0;
+  align-self: auto;
+  margin-right: var(--lf-field-column-margin);
+}
+.lf-control-three-columns .center {
+  margin-right: var(--lf-field-column-margin);
+  flex: 1 0;
+  align-self: auto;
+}
+.lf-control-three-columns .right {
+  flex: 1 0;
+  align-self: auto;
+}
+.lf-control-three-columns .left:empty {
+  display: none;
+}
+.lf-control-three-columns.layout-0-1-0 .left {
+  flex: 0 0;
+}
+.lf-control-three-columns.layout-0-1-0 .center {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-0-1-0 .right {
+  flex: 0 0;
+}
+.lf-control-three-columns.layout-1-0-0 .left {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-1-0-0 .center {
+  flex: 0 0;
+}
+.lf-control-three-columns.layout-1-0-0 .right {
+  flex: 0 0;
+}
+.lf-control-three-columns.layout-1-1-1 .left {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-1-1-1 .center {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-1-1-1 .right {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-1-1-2 .left {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-1-1-2 .center {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-1-1-2 .right {
+  flex: 2 0;
+}
+.lf-control-three-columns.layout-1-2-1 .left {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-1-2-1 .center {
+  flex: 2 0;
+}
+.lf-control-three-columns.layout-1-2-1 .right {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-2-1-1 .left {
+  flex: 2 0;
+}
+.lf-control-three-columns.layout-2-1-1 .center {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-2-1-1 .right {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-1-1-3 .left {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-1-1-3 .center {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-1-1-3 .right {
+  flex: 3 0;
+}
+.lf-control-three-columns.layout-1-3-1 .left {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-1-3-1 .center {
+  flex: 3 0;
+}
+.lf-control-three-columns.layout-1-3-1 .right {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-3-1-1 .left {
+  flex: 3 0;
+}
+.lf-control-three-columns.layout-3-1-1 .center {
+  flex: 1 0;
+}
+.lf-control-three-columns.layout-3-1-1 .right {
+  flex: 1 0;
+}
+
+.lf-control-two-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  min-height: 20px;
+}
+.lf-control-two-columns .left {
+  flex: 1 0;
+  align-self: auto;
+  margin-right: var(--lf-field-column-margin);
+}
+.lf-control-two-columns .right {
+  flex: 1 0;
+  align-self: auto;
+}
+.lf-control-two-columns.layout-1-2 .left {
+  flex: 1 0;
+}
+.lf-control-two-columns.layout-1-2 .right {
+  flex: 2 0;
+}
+.lf-control-two-columns.layout-1-3 .left {
+  flex: 1 0;
+}
+.lf-control-two-columns.layout-1-3 .right {
+  flex: 3 0;
+}
+.lf-control-two-columns.layout-1-4 .left {
+  flex: 1 0;
+}
+.lf-control-two-columns.layout-1-4 .right {
+  flex: 4 0;
+}
+.lf-control-two-columns.layout-1-5 .left {
+  flex: 1 0;
+}
+.lf-control-two-columns.layout-1-5 .right {
+  flex: 4 0;
+}
+.lf-control-two-columns.layout-2-1 .left {
+  flex: 2 0;
+}
+.lf-control-two-columns.layout-2-1 .right {
+  flex: 1 0;
+}
+.lf-control-two-columns.layout-3-1 .left {
+  flex: 3 0;
+}
+.lf-control-two-columns.layout-3-1 .right {
+  flex: 1 0;
+}
+.lf-control-two-columns.layout-4-1 .left {
+  flex: 4 0;
+}
+.lf-control-two-columns.layout-4-1 .right {
+  flex: 1 0;
+}
+.lf-control-two-columns.layout-5-1 .left {
+  flex: 4 0;
+}
+.lf-control-two-columns.layout-5-1 .right {
+  flex: 1 0;
+}
+.lf-control-two-columns.layout-3-2 .left {
+  flex: 3 0;
+}
+.lf-control-two-columns.layout-3-2 .right {
+  flex: 2 0;
+}
+.lf-control-two-columns.layout-2-3 .left {
+  flex: 2 0;
+}
+.lf-control-two-columns.layout-2-3 .right {
+  flex: 3 0;
+}
+.lf-control-two-columns.layout-0-1 .left {
+  flex: 0 0 auto;
+}
+.lf-control-two-columns.layout-0-1 .right {
+  flex: 1 0;
+}
+.lf-control-two-columns.layout-1-0 .left {
+  flex: 1 0;
+}
+.lf-control-two-columns.layout-1-0 .right {
+  flex: 0 0 auto;
+}
+
+.lf-form-react-rsuite5 .lf-two-columns {
+  margin-bottom: var(--lf-field-margin);
+}
+
+.lf-form .lf-control-group:not(:first-child) {
+  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));
+}
+
+.lf-control-group .header svg {
+  display: inline-block;
+}
+.lf-control-group.lf-border-boxed {
+  border-bottom: 1px solid var(--lf-border-color);
+  border-left: 1px solid var(--lf-border-color);
+  border-right: 1px solid var(--lf-border-color);
+}
+.lf-control-group.lf-border-boxed .header:before {
+  border-top: 1px solid var(--lf-border-color);
+  content: "";
+  flex: 1 0;
+}
+.lf-control-group.lf-border-boxed .header:after {
+  border-top: 1px solid var(--lf-border-color);
+  content: "";
+  flex: 1 0;
+}
+.lf-control-group.lf-border-boxed .lf-group-content {
+  padding-left: var(--lf-group-padding);
+  padding-right: var(--lf-group-padding);
+  padding-bottom: var(--lf-group-padding);
+}
+.lf-control-group.lf-border-topBottom {
+  border-bottom: 1px solid var(--lf-border-color);
+}
+.lf-control-group.lf-border-topBottom .header:before {
+  border-top: 1px solid var(--lf-border-color);
+  content: "";
+  flex: 1 0;
+}
+.lf-control-group.lf-border-topBottom .header:after {
+  border-top: 1px solid var(--lf-border-color);
+  content: "";
+  flex: 1 0;
+}
+.lf-control-group.lf-border-top .header:before {
+  border-top: 1px solid var(--lf-border-color);
+  content: "";
+  flex: 1 0;
+}
+.lf-control-group.lf-border-top .header:after {
+  border-top: 1px solid var(--lf-border-color);
+  content: "";
+  flex: 1 0;
+}
+.lf-control-group.lf-border-bottom {
+  border-bottom: 1px solid var(--lf-border-color);
+}
+.lf-control-group .header {
+  align-items: center;
+  background: transparent;
+  display: flex;
+  height: 1px;
+  flex-direction: row;
+  margin: var(--lf-group-header) 0px;
+}
+.lf-control-group .header .inner-text {
+  flex: 0 0 auto;
+  padding: 0 12px;
+  display: inline-block;
+}
+.lf-control-group .header.left:before {
+  flex: 0 0 10px;
+}
+.lf-control-group .header.right:after {
+  flex: 0 0 10px;
+}
+
+.lf-validation-errors {
+  border: 1px solid #eebdd2;
+  background-color: #ffddd2;
+  padding: 15px;
+  color: #000000;
+}
+.lf-validation-errors.bottom {
+  margin-top: 15px;
+}
+.lf-validation-errors.top {
+  margin-bottom: 15px;
+}
+
+.lf-control-placeholder ol, .lf-control-placeholder ul {
+  padding-left: 1rem;
+}
+
+.lf-form .lf-control-placeholder:not(:first-child) {
+  margin-top: var(--lf-field-margin-top);
+}
+
+.lf-control-placeholder-image {
+  min-height: 20px;
+}
+
+.lf-control-divider {
+  min-height: 15px;
+  font-size: 1px;
+  display: flex;
+}
+.lf-control-divider .bar {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.lf-common-icon img {
+  max-width: 32px;
+  max-height: 32px;
+}
+.lf-common-icon.small img {
+  max-width: 24px;
+  max-height: 24px;
+}
+.lf-common-icon.large img {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.lf-control-button-toggle-group .lf-control-button {
+  display: inline-block;
+  margin-top: 0px !important;
+}
+.lf-control-button-toggle-group .lf-control-button:not(:first-child) {
+  margin-left: var(--lf-field-button-margin);
+}
+
+.lf-control-common-array {
+  margin-top: 0px !important;
+}
+.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {
+  align-self: center;
+}
+.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {
+  align-self: flex-start;
+}
+.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {
+  align-self: flex-end;
+}
+.lf-control-common-array .lf-control-common-array-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  position: relative;
+  border-left: 5px solid #dddddd;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px !important;
+  /*.rs-form-group {
+    margin-bottom: 5px !important;
+  }*/
+}
+.lf-control-common-array .lf-control-common-array-item > .inner-form {
+  order: 0;
+  flex: 1 0;
+  align-self: auto;
+  --lf-field-margin: 4px;
+  --lf-field-column-margin: 10px;
+}
+.lf-control-common-array .lf-control-common-array-item > .buttons {
+  flex: 0 0 auto;
+  align-self: center;
+  margin-left: 6px;
+}
+
+.lf-icon-button {
+  display: inline-block;
+  min-height: 16px;
+  min-width: 16px;
+  padding: 4px;
+  border-radius: 3px;
+}
+.lf-icon-button.disabled {
+  opacity: 0.6;
+}
+.lf-icon-button:not(.disabled):hover {
+  background-color: #eeeeee;
+}

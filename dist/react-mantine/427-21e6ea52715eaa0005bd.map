@@ -1,1 +1,0 @@
-{"version":3,"file":"427-21e6ea52715eaa0005bd.js","mappings":"gJAIAA,E,QAAAA,GAAM,wBAEN,UAAeC,EAAK,C","sources":["webpack:///./react-mantine/group/index.js"],"sourcesContent":["import { Group } from '../../common/group';\n\nimport { lfLog } from '../../helpers/lf-log';\n\nlfLog('Loaded RSuite5.Group');\n\nexport default Group;\n"],"names":["lfLog","Group"],"sourceRoot":""}

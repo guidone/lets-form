@@ -1,5 +1,9 @@
 # LetsForm Changelog
 
+## 0.7.8
+- Fix Mantine slider not retaining value
+- Experimental ESM build for MantineUI
+
 ## v0.7.7
 - Added Mantine: tabs
 - Added RSuite5: color for checkboxes
