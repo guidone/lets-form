@@ -1,5 +1,4 @@
-import LOCALES from '../common/data/locales.json';
-
+import { LOCALES } from '../common/data/locales';
 
 const LANGUAGES_OPTIONS = Object
   .keys(LOCALES['language-names'])

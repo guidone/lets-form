@@ -5,7 +5,7 @@ import Form from 'rsuite/Form';
 import CheckPicker from 'rsuite/CheckPicker';
 
 import { RequiredIcon, I18N } from '../../components';
-import LOCALES from '../../common/data/locales.json';
+import { LOCALES } from '../../common/data/locales';
 import { passRest } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';

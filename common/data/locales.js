@@ -1,4 +1,4 @@
-{
+export const LOCALES = {
   "primary-dialects": {
     "af": "af-ZA",
     "ar": "ar",

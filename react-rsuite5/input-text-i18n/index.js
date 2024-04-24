@@ -13,7 +13,7 @@ import { RequiredIcon } from '../../components';
 import FormContext from '../../form-context';
 import TextInput from '../input-text';
 import Textarea from '../textarea';
-import LOCALES from '../../common/data/locales.json';
+import { LOCALES } from '../../common/data/locales';
 import { isI18n } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
