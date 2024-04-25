@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://unpkg.com/lets-form@0.7.7/schemas/react-antd/fields.json",
+  "$id": "https://unpkg.com/lets-form@0.7.8/schemas/react-antd/fields.json",
   "type": "array",
   "items": {
     "required": [
