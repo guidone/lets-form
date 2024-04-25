@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## 0.7.9
+- converted .json imports to .js
+
 ## 0.7.8
 - Fix Mantine slider not retaining value
 - Experimental ESM build for MantineUI
