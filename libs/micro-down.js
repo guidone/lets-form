@@ -1,5 +1,5 @@
 /* eslint-disable no-loop-func */
-const microdown = function () {
+export const microdown = function () {
   /*
    * tag helper
    */
@@ -46,7 +46,7 @@ const microdown = function () {
       (match, wrapper, c, text) =>
         wrapper === '"""' ?
           tag('div', parse(text, options), {class: c})
-          : options && options.preCode 
+          : options && options.preCode
           ? tag('pre', tag('code', encode(text), {class: c}))
           : tag('pre', encode(text), {class: c}),
 
@@ -174,7 +174,3 @@ const microdown = function () {
 
   return {parse, block, inline, inlineBlock};
 }();
-
-if (typeof module !== 'undefined') {
-  module.exports = microdown;
-}

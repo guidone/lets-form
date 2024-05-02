@@ -1,6 +1,6 @@
 import React from 'react';
 import isEmpty from 'lodash/isEmpty';
-import markdown from '../../libs/micro-down';
+import { microdown } from '../../libs/micro-down';
 
 import './placeholder.scss';
 
@@ -10,7 +10,7 @@ const Placeholder = ({ text, name }) => {
       <div
         className="lf-control-placeholder"
         data-lf-field-name={name}
-        dangerouslySetInnerHTML={{ __html: markdown.parse(text) }}
+        dangerouslySetInnerHTML={{ __html: microdown.parse(text) }}
       />
     );
   } else {
