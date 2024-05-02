@@ -2,8 +2,7 @@
   "name": "lets-form",
   "version": "0.7.9",
   "description": "JSON to React form generator, supporting multiple frameworks (Bootstrap, Material UI, RSuite, etc)",
-  "main": "index.js",
-  "module": "index.js",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/guidone/lets-form"
