@@ -1,6 +1,6 @@
 {
   "name": "lets-form",
-  "version": "0.7.10",
+  "version": "0.7.10-beta-11",
   "description": "JSON to React form generator, supporting multiple frameworks (Bootstrap, Material UI, RSuite, etc)",
   "main": "index.js",
   "module": "index.js",
@@ -9,17 +9,17 @@
     "type": "git",
     "url": "https://github.com/guidone/lets-form"
   },
+  "files": [
+    "dist/**",
+    "schemas/**",
+    "manifest.json"
+  ],
   "scripts": {
-    "prebuild": "npm run unstash && npm run build:clear",
+    "prebuild": "npm run unstash",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build-rsuite5 && npm run build-antd && npm run build-bootstrap && npm run build-react && npm run build-material-ui && npm run build-helpers && echo \"\n\nAll done.\"",
+    "build": "rollup -c",
     "build:webpack": "webpack --mode production --progress",
-    "build-rsuite5": "npm run build:webpack -- --env framework=\"rsuite5\"",
-    "build-bootstrap": "npm run build:webpack -- --env framework=\"bootstrap\"",
-    "build-mantine": "npm run build:webpack -- --env framework=\"mantine\"",
-    "build-antd": "npm run build:webpack -- --env framework=\"antd\"",
-    "build-react": "npm run build:webpack -- --env framework=\"react\"",
-    "build-material-ui": "npm run build:webpack -- --env framework=\"material-ui\"",
+
     "build-helpers": "npm run build:webpack -- --env framework=\"helpers\"",
     "build:clear": "node ./scripts/clear-builds.js",
     "stash": "./scripts/stash-node-modules.sh",
@@ -37,26 +37,72 @@
     "react-hook-form": "^7.43.7"
   },
   "exports": {
-    "./react-bootstrap": "./dist/react-bootstrap/main.js",
-    "./react-bootstrap/": "./dist/react-bootstrap/",
+    "./react-bootstrap": {
+      "import": "./dist/react-bootstrap-esm/index.js",
+      "require": "./dist/react-bootstrap-umd/main.js",
+      "default": "./dist/react-bootstrap-esm/index.js"
+    },
+    "./react-bootstrap/": {
+      "import": "./dist/react-bootstrap-esm/",
+      "require": "./dist/react-bootstrap-umd/",
+      "default": "./dist/react-bootstrap-esm/"
+    },
     "./react-mantine": {
       "import": "./dist/react-mantine-esm/index.js",
-      "require": "./dist/react-mantine-umd/main.js"
+      "require": "./dist/react-mantine-umd/main.js",
+      "defaul": "./dist/react-mantine-esm/index.js"
     },
     "./react-mantine/": {
-      "import": "./dist/esm-react-mantine/",
-      "require": "./dist/react-mantine/"
+      "import": "./dist/react-mantine-esm/",
+      "browser": "./dist/react-mantine-esm/",
+      "require": "./dist/react-mantine-umd/",
+      "default": "./dist/react-mantine-esm/"
     },
-    "./react-rsuite5": "./dist/react-rsuite5/main.js",
-    "./react-rsuite5/": "./dist/react-rsuite5/",
-    "./react-antd": "./dist/react-antd/main.js",
-    "./react-antd/": "./dist/react-antd/",
-    "./react-material-ui": "./dist/react-material-ui/main.js",
-    "./react-material-ui/": "./dist/react-material-ui/",
-    "./react": "./dist/react/main.js",
-    "./react/": "./dist/react/",
-    "./utils": "./dist/utils/main.js",
-    "./utils/": "./dist/utils/",
+    "./react-rsuite5": {
+      "import": "./dist/react-rsuite5-esm/index.js",
+      "require": "./dist/react-rsuite5-umd/main.js",
+      "default": "./dist/react-rsuite5-esm/index.js"
+    },
+    "./react-rsuite5/": {
+      "import": "./dist/react-rsuite5-esm/",
+      "require": "./dist/react-rsuite5-umd/",
+      "default": "./dist/react-rsuite5-esm/"
+    },
+    "./react-antd": {
+      "import": "./dist/react-antd-esm/index.js",
+      "require": "./dist/react-antd-umd/main.js",
+      "default": "./dist/react-antd-esm/index.js"
+    },
+    "./react-antd/": {
+      "import": "./dist/react-antd-esm/",
+      "require": "./dist/react-antd-umd/",
+      "default": "./dist/react-antd-esm/"
+    },
+    "./react-material-ui": {
+      "import": "./dist/react-material-ui-esm/index.js",
+      "require": "./dist/react-material-ui-umd/main.js",
+      "default": "./dist/react-material-ui-esm/index.js"
+    },
+    "./react-material-ui/": {
+      "import": "./dist/react-material-ui-esm/",
+      "require": "./dist/react-material-ui-umd/",
+      "default": "./dist/react-material-ui-esm/"
+    },
+    "./react": {
+      "import": "./dist/react-esm/index.js",
+      "require": "./dist/react-umd/main.js",
+      "default": "./dist/react-esm/index.js"
+    },
+    "./react/": {
+      "import": "./dist/react-esm/",
+      "require": "./dist/react-umd/",
+      "default": "./dist/react-esm/"
+    },
+    "./utils": {
+      "import": "./dist/utils-esm/index.js",
+      "require": "./dist/utils-umd/main.js",
+      "default": "./dist/utils-esm/index.js"
+    },
     "./manifest.json": "./manifest.json",
     "./schemas/": "./schemas/"
   },
@@ -92,6 +138,7 @@
     "css-loader": "^6.7.3",
     "eslint": "^8.57.0",
     "micro-down": "^1.6.2",
+    "rollup-plugin-cleandir": "^2.0.0",
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.59.3",
     "sass-loader": "^13.2.0",
