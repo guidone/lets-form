@@ -1,6 +1,5 @@
 import React, { useCallback } from 'react';
-import Form from 'antd/lib/form';
-import Input from 'antd/lib/input';
+import { Form, Input } from 'antd';
 
 import { I18N } from '../../components';
 import { makeWidthStyle, passRest } from '../../helpers';

@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import Form from 'antd/lib/form';
-import Checkbox from 'antd/lib/checkbox';
+import { Form, Checkbox } from 'antd';
 
 import { I18N } from '../../components';
 import { i18nOptions, passRest } from '../../helpers';

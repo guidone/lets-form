@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import Button from 'antd/lib/button';
-import Tooltip from 'antd/lib/tooltip';
+import { Button, Tooltip } from 'antd';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
@@ -18,13 +17,13 @@ const AntdButton = ({ label, icon, hint, tooltip, ...rest }) => {
         icon={<img className="lf-icon" src={icon} />}
         {...rest}
       >{label}</Button>
-    ) 
+    )
   } else if (!_.isEmpty(label) && _.isEmpty(icon)) {
     inner = (
       <Button
         {...rest}
       >{label}</Button>
-    ) 
+    )
   } else if (_.isEmpty(label) && !_.isEmpty(icon)) {
     inner = (
       <Button
@@ -45,7 +44,7 @@ const AntdButton = ({ label, icon, hint, tooltip, ...rest }) => {
           {inner}
         </Tooltip>
       )}
-      {_.isEmpty(hint) && inner}    
+      {_.isEmpty(hint) && inner}
     </>
   );
 };

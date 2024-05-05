@@ -1,6 +1,5 @@
 import React from 'react';
-import Form from 'antd/lib/form';
-import DatePicker from 'antd/lib/date-picker';
+import { Form, DatePicker } from 'antd';
 import dayjs from 'dayjs';
 
 import { passRest, makeWidthStyle } from '../../helpers';
@@ -17,7 +16,7 @@ const AntdGenericDate = ({
   width,
   lfLocale,
   ...rest
-}) => {    
+}) => {
   // set locale for dates
   let defaultValue = dayjs(value);
   if (defaultValue && lfLocale) {

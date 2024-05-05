@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from 'antd/lib/form';
+import { Form } from 'antd';
 
 import { I18N } from '../../components';
 import { i18nOptions } from '../../helpers';
@@ -45,7 +45,7 @@ const AntdButtonsToggleGroup = I18N(
           disabled={disabled}
           size={size}
         />
-      </Form.Item>      
+      </Form.Item>
     );
   },
   ['label', 'hint'],

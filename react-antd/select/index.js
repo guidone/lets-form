@@ -1,7 +1,5 @@
 import React from 'react';
-import Form from 'antd/lib/form';
-import Select from 'antd/lib/select';
-import Space from 'antd/lib/space';
+import { Form, Select, Space } from 'antd';
 
 import { I18N } from '../../components';
 import { passRest, filterOptions, i18nOptions, makeWidthStyle } from '../../helpers';

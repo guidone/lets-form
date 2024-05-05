@@ -1,8 +1,6 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
-import Form from 'antd/lib/form';
-import Radio from 'antd/lib/radio';
-import Space from 'antd/lib/space';
+import { Form, Radio, Space } from 'antd';
 
 import { I18N } from '../../components';
 import { i18nOptions } from '../../helpers';

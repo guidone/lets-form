@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
-import Button from 'antd/lib/button';
-import Steps from 'antd/lib/steps';
+import { Button, Steps } from 'antd';
 
 import { passRest } from '../../helpers';
 import { I18N } from '../../components';
@@ -11,18 +10,18 @@ import { lfLog } from '../../helpers/lf-log';
 import './steps.scss';
 import classNames from 'classnames';
 
-const i18nSteps = (value, i18n) => 
-  (value ?? []).filter(value => value != null).map(value => ({ 
-    ...value, 
+const i18nSteps = (value, i18n) =>
+  (value ?? []).filter(value => value != null).map(value => ({
+    ...value,
     label: i18n(value.label),
     description: i18n(value.description),
     subtitle:  i18n(value.subtitle)
   }));
 
 const AntdSteps = I18N(
-  ({ 
+  ({
     name,
-    children, 
+    children,
     value,
     steps,
     onChange = () => {},
@@ -35,7 +34,7 @@ const AntdSteps = I18N(
     percent,
     clickable,
     stepsType,
-    ...rest 
+    ...rest
   }) => {
     let defaultStep = value;
     let defaultStepIdx = (steps || []).findIndex(obj => obj.value === value);
@@ -84,13 +83,13 @@ const AntdSteps = I18N(
         className="lf-control-steps"
         data-lf-field-name={name}
       >
-        <Steps 
+        <Steps
           current={stepIdx}
           status={status}
           percent={percent}
           type={stepsType}
           labelPlacement={labelPlacement}
-          size={small ? 'small' : 'default'}          
+          size={small ? 'small' : 'default'}
           items={antdSteps}
           onChange={clickable ? handleChange : undefined}
           {...passRest(rest)}
@@ -102,12 +101,12 @@ const AntdSteps = I18N(
         )}
         <div className={classNames('lf-navigation-buttons', align)}>
           <>
-            <Button 
-              onClick={handlePrevious} 
+            <Button
+              onClick={handlePrevious}
               disabled={_.isEmpty(steps) || stepIdx === 0}
             >{labelPrevious || 'Previous'}</Button>
-            <Button 
-              onClick={handleNext} 
+            <Button
+              onClick={handleNext}
               disabled={_.isEmpty(steps) || stepIdx === (steps.length - 1) }
               style={{ margin: '0 8px' }}
             >{labelNext || 'Next'}</Button>

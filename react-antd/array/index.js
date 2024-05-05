@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from 'antd/lib/form';
+import { Form } from 'antd';
 
 import { ListArray } from '../../common';
 import LetsForm from '../../react-antd';

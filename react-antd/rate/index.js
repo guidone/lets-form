@@ -1,6 +1,5 @@
 import React from 'react';
-import Form from 'antd/lib/form';
-import Rate from 'antd/lib/rate';
+import { Form, Rate } from 'antd';
 import _ from 'lodash';
 
 import { I18N } from '../../components';

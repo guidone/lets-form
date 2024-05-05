@@ -1,9 +1,7 @@
 
 import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
-import Button from 'antd/lib/button';
-import Form from 'antd/lib/form';
-import Upload from 'antd/lib/upload';
+import { Button, Form, Upload } from 'antd';
 
 import { passRest } from '../../helpers';
 import { I18N } from '../../components';
@@ -26,7 +24,7 @@ const makeDefaultValue = defaultValue => {
 const translatePayload = files => {
   if (_.isArray(files)) {
     return files.map(translatePayload);
-  } else {  
+  } else {
     return {
       blobFile: files,
       name: files.name,
@@ -37,11 +35,11 @@ const translatePayload = files => {
 
 const ButtonWithHint = ({ hint, ...props}) => {
   const inner = (
-    <Button 
+    <Button
       {...props}
     />
   );
-  
+
   if (hint) {
     return (
       <div className="upload-layout">
@@ -49,7 +47,7 @@ const ButtonWithHint = ({ hint, ...props}) => {
           {inner}
         </div>
         <div className="hint">
-          {hint}  
+          {hint}
         </div>
       </div>
     )
@@ -139,7 +137,7 @@ const AntDUpload = I18N(
     let inner;
     if (draggable) {
       inner = (
-        <Dragger 
+        <Dragger
           {...uploadProps}
           onDrop={handleDrag}
         >

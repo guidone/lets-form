@@ -1,6 +1,5 @@
 import React, { useCallback } from 'react';
-import Form from 'antd/lib/form';
-import Switch from 'antd/lib/switch';
+import { Form, Switch } from 'antd';
 
 import { I18N } from '../../components';
 import { passRest } from '../../helpers';

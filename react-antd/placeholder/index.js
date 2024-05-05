@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from 'antd/lib/form';
+import { Form } from 'antd';
 
 import { Placeholder } from '../../common';
 import { I18N } from '../../components';

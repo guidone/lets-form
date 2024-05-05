@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
-import Tabs from 'antd/lib/tabs';
+import { Tabs } from 'antd';
 
 import { i18nOptions, passRest } from '../../helpers';
 import { I18N } from '../../components';
@@ -40,7 +40,7 @@ const TabsAntd = I18N(
         className="lf-control-tabs"
         data-lf-field-name={name}
       >
-        <Tabs 
+        <Tabs
           animated={animated}
           centered={centered}
           size={size}
@@ -49,8 +49,8 @@ const TabsAntd = I18N(
           items={(tabs || []).map(tab => ({
             key: tab.value,
             label: tab.label
-          }))} 
-          onChange={handleKey} 
+          }))}
+          onChange={handleKey}
           {...passRest(rest)}
         />
         {_.isFunction(children) && (

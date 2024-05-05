@@ -1,6 +1,5 @@
 import React from 'react';
-import Form from 'antd/lib/form';
-import InputNumber from 'antd/lib/input-number';
+import { Form, InputNumber } from 'antd';
 
 import { I18N } from '../../components';
 import { passRest, makeWidthStyle } from '../../helpers';

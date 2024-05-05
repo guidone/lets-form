@@ -1,6 +1,5 @@
 import React from 'react';
-import Form from 'antd/lib/form'
-import Button from 'antd/lib/button';
+import { Form, Button } from 'antd';
 import classNames from 'classnames';
 
 import './index.scss';

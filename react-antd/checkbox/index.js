@@ -1,6 +1,5 @@
 import React, { useCallback } from 'react';
-import Form from 'antd/lib/form';
-import Checkbox from 'antd/lib/checkbox';
+import { Checkbox, Form } from 'antd';
 
 import { I18N } from '../../components';
 import { lfLog } from '../../helpers/lf-log';

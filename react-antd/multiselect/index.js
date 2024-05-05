@@ -1,7 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import Form from 'antd/lib/form';
-import Select from 'antd/lib/select';
+import { Form, Select } from 'antd';
 
 import { I18N } from '../../components';
 import { i18nOptions } from '../../helpers';
