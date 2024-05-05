@@ -1,9 +1,9 @@
-/* LetsForm react-mantine v0.7.10 - UMD */
+/* LetsForm react-material-ui v0.7.10 - UMD */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('@mantine/dates')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', '@mantine/dates'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-mantine"] = {}, global.React, global.core, global.dates));
-})(this, (function (exports, React, core, dates) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/material/Stack')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/material/Stack'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-material-ui"] = {}, global.React, global.FormControlLabel, global.FormGroup, global.Switch, global.Checkbox, global.Slider, global.FormHelperText, global.FormControl, global.FormLabel, global.Rating, global.DatePicker, global.DateTimePicker, global.InputLabel, global.MenuItem, global.Select, global.ListItemText, global.TextField, global.InputAdornment, global.Radio, global.RadioGroup, global.Tabs, global.Tab, global.Box, global.Button, global.Stack$2));
+})(this, (function (exports, React, FormControlLabel, FormGroup, Switch, Checkbox, Slider, FormHelperText, FormControl, FormLabel, Rating, DatePicker, DateTimePicker, InputLabel, MenuItem, Select, ListItemText, TextField, InputAdornment, Radio, RadioGroup, Tabs, Tab, Box, Button, Stack$2) { 'use strict';
 
   function _AsyncGenerator(gen) {
     var front, back;
@@ -6605,8 +6605,8 @@
     }
   }
 
-  var css_248z$d = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
-  styleInject(css_248z$d);
+  var css_248z$g = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
+  styleInject(css_248z$g);
 
   var tx = function tx(str, locale) {
     if (_isString(str)) {
@@ -6735,6 +6735,28 @@
     }, /*#__PURE__*/React.createElement("path", {
       d: "M960 0c530.193 0 960 429.807 960 960s-429.807 960-960 960S0 1490.193 0 960 429.807 0 960 0Zm-9.838 1342.685c-84.47 0-153.19 68.721-153.19 153.19 0 84.47 68.72 153.192 153.19 153.192s153.19-68.721 153.19-153.191-68.72-153.19-153.19-153.19ZM1153.658 320H746.667l99.118 898.623h208.755L1153.658 320Z",
       fillRule: "evenodd"
+    }));
+  };
+
+  var CrossCirle = function CrossCirle(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color;
+    return /*#__PURE__*/React.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 0 24 24",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React.createElement("path", {
+      d: "M16 8L8 16M8.00001 8L16 16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z",
+      stroke: color,
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
     }));
   };
 
@@ -16620,8 +16642,8 @@
     return console.log('%cLF%c Error: ' + s, 'background: #E44D2E; color: #ffffff; padding: 2px; border-radius: 3px', '', e);
   };
 
-  var css_248z$c = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
-  styleInject(css_248z$c);
+  var css_248z$f = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
+  styleInject(css_248z$f);
 
   var baseGetTag = _baseGetTag,
     isObjectLike = isObjectLike_1;
@@ -17244,8 +17266,8 @@
     };
   }();
 
-  var css_248z$b = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
-  styleInject(css_248z$b);
+  var css_248z$e = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
+  styleInject(css_248z$e);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
@@ -17263,8 +17285,8 @@
     }
   };
 
-  var css_248z$a = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
-  styleInject(css_248z$a);
+  var css_248z$d = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
+  styleInject(css_248z$d);
 
   var ThreeColumns = function ThreeColumns(_ref) {
     var name = _ref.name,
@@ -17294,8 +17316,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$9 = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
-  styleInject(css_248z$9);
+  var css_248z$c = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
+  styleInject(css_248z$c);
 
   var TwoColumns = function TwoColumns(_ref) {
     var name = _ref.name,
@@ -17319,8 +17341,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$8 = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
-  styleInject(css_248z$8);
+  var css_248z$b = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject(css_248z$b);
 
   var Group = I18N(function (_ref) {
     var name = _ref.name,
@@ -17373,8 +17395,36 @@
     }, children));
   }, ['label']);
 
-  var css_248z$7 = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
-  styleInject(css_248z$7);
+  var css_248z$a = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
+  styleInject(css_248z$a);
+
+  var PlaceholderImage = function PlaceholderImage(_ref) {
+    var url = _ref.url,
+      label = _ref.label,
+      name = _ref.name,
+      maxWidth = _ref.maxWidth,
+      maxHeight = _ref.maxHeight,
+      marginTop = _ref.marginTop,
+      marginBottom = _ref.marginBottom,
+      align = _ref.align;
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-control-placeholder-image",
+      "data-lf-field-name": name,
+      style: {
+        textAlign: align ? align : undefined
+      }
+    }, url && /*#__PURE__*/React.createElement("img", {
+      src: url,
+      alt: label || name,
+      style: {
+        marginTop: marginTop ? marginTop : undefined,
+        marginBottom: marginBottom ? marginBottom : undefined,
+        maxWidth: maxWidth ? maxWidth : undefined,
+        maxHeight: maxHeight ? maxHeight : undefined,
+        textAlign: align ? align : undefined
+      }
+    }));
+  };
 
   var TextOrIcon = function TextOrIcon(str) {
     if (isUrl(str)) {
@@ -17388,8 +17438,38 @@
     }
   };
 
-  var css_248z$6 = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
-  styleInject(css_248z$6);
+  var css_248z$9 = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
+  styleInject(css_248z$9);
+
+  var Divider = function Divider(_ref) {
+    var name = _ref.name,
+      size = _ref.size,
+      color = _ref.color;
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-control-divider",
+      "data-lf-field-name": name
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "bar",
+      style: {
+        height: "".concat(size, "px"),
+        backgroundColor: color
+      }
+    }, "&npsb;"));
+  };
+
+  var _excluded$g = ["name", "view"];
+  var ReactView = function ReactView(_ref) {
+    var name = _ref.name,
+      view = _ref.view,
+      rest = _objectWithoutProperties(_ref, _excluded$g);
+    var View = view;
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-control-react-view",
+      "data-lf-field-name": name
+    }, View && /*#__PURE__*/React.createElement(View, _extends({
+      name: name
+    }, rest)));
+  };
 
   var isEmptyItem = function isEmptyItem(obj) {
     return Object.keys(obj).filter(function (key) {
@@ -17658,8 +17738,8 @@
     })));
   };
 
-  var css_248z$5 = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
-  styleInject(css_248z$5);
+  var css_248z$8 = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
+  styleInject(css_248z$8);
 
   var randomId = function randomId() {
     var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
@@ -17851,14 +17931,89 @@
     }));
   };
 
-  var css_248z$4 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
-  styleInject(css_248z$4);
+  var css_248z$7 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
+  styleInject(css_248z$7);
 
-  var css_248z$3 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}";
-  styleInject(css_248z$3);
+  var _excluded$f = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue"];
+  var GenericButton = function GenericButton(_ref) {
+    var ButtonComponent = _ref.ButtonComponent,
+      OnStateProps = _ref.OnStateProps,
+      OffStateProps = _ref.OffStateProps,
+      _ref$LinkProps = _ref.LinkProps,
+      LinkProps = _ref$LinkProps === void 0 ? {} : _ref$LinkProps,
+      name = _ref.name,
+      labelOn = _ref.labelOn,
+      labelOff = _ref.labelOff,
+      labelLink = _ref.labelLink,
+      iconOn = _ref.iconOn,
+      iconOff = _ref.iconOff,
+      iconLink = _ref.iconLink,
+      size = _ref.size,
+      href = _ref.href,
+      appearance = _ref.appearance,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      value = _ref.value,
+      buttonType = _ref.buttonType,
+      hint = _ref.hint,
+      initialValue = _ref.initialValue,
+      rest = _objectWithoutProperties(_ref, _excluded$f);
+    var _useState = React.useState(value || initialValue),
+      _useState2 = _slicedToArray(_useState, 2),
+      checked = _useState2[0],
+      setChecked = _useState2[1];
+    var handleClick = React.useCallback(function () {
+      var newValue = !checked;
+      setChecked(!checked);
+      onChange(newValue, name);
+    }, [onChange, checked, name]);
+    var inner;
+    if (buttonType === 'toggle') {
+      inner = /*#__PURE__*/React.createElement(ButtonComponent, _extends({
+        size: size,
+        onClick: handleClick,
+        onBlur: onBlur,
+        icon: checked ? iconOn : iconOff,
+        label: checked ? labelOn : labelOff,
+        hint: hint,
+        style: makeWidthStyle(fullWidth, width)
+      }, passRest(_omit(rest, 'label')), checked ? OnStateProps : OffStateProps));
+    } else if (buttonType === 'link') {
+      inner = /*#__PURE__*/React.createElement(ButtonComponent, _extends({
+        size: size,
+        onBlur: onBlur,
+        appearance: appearance,
+        hint: hint,
+        label: labelLink,
+        icon: iconLink,
+        href: href,
+        target: "_blank",
+        style: makeWidthStyle(fullWidth, width)
+      }, passRest(_omit(rest, 'label')), LinkProps));
+    }
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-control-button",
+      "data-lf-field-name": name
+    }, inner);
+  };
+  var MakeButton = function MakeButton(ButtonComponent, OnStateProps, OffStateProps, LinkProps) {
+    return function (props) {
+      return /*#__PURE__*/React.createElement(GenericButton, _extends({
+        ButtonComponent: ButtonComponent,
+        OnStateProps: _isFunction(OnStateProps) ? OnStateProps(props) : OnStateProps,
+        OffStateProps: _isFunction(OffStateProps) ? OffStateProps(props) : OffStateProps,
+        LinkProps: _isFunction(LinkProps) ? LinkProps(props) : LinkProps
+      }, props));
+    };
+  };
 
-  var css_248z$2 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
-  styleInject(css_248z$2);
+  var css_248z$6 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}";
+  styleInject(css_248z$6);
+
+  var css_248z$5 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
+  styleInject(css_248z$5);
 
   var PlaintextLabel = function PlaintextLabel(_ref) {
     var children = _ref.children;
@@ -19357,111 +19512,131 @@
     return LazyWithPreload;
   }
 
-  var _excluded$g = ["framework", "children"];
+  var _excluded$e = ["framework", "children"];
   var Fields = {
     'input-text': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
-      })
-    },
-    'input-number': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
-      })
-    },
-    'textarea': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$o; });
       })
     },
     'select': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
-      })
-    },
-    'checkbox': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$n; });
       })
     },
     'toggle': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$m; });
       })
     },
-    'array': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
-      })
-    },
-    'checkbox-group': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
-      })
-    },
-    'radio-group': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
-      })
-    },
-    'two-columns': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
-      })
-    },
-    'three-columns': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
-      })
-    },
-    'group': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
-      })
-    },
-    'date': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
-      })
-    },
-    'datetime': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
-      })
-    },
-    'rate': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
-      })
-    },
-    'placeholder': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
-      })
-    },
-    'divider': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+    'checkbox': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$l; });
       })
     },
     'slider': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$k; });
       })
     },
-    'input-tag': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+    'placeholder': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$j; });
+      })
+    },
+    'rate': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$i; });
+      })
+    },
+    'date': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$h; });
+      })
+    },
+    'three-columns': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$g; });
+      })
+    },
+    'two-columns': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$f; });
+      })
+    },
+    'group': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$e; });
+      })
+    },
+    'placeholder-image': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$d; });
+      })
+    },
+    'divider': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$c; });
+      })
+    },
+    'react-view': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$b; });
+      })
+    },
+    'datetime': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$a; });
+      })
+    },
+    'array': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$9; });
+      })
+    },
+    'textarea': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$8; });
+      })
+    },
+    'multiselect': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$7; });
+      })
+    },
+    'input-number': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$6; });
+      })
+    },
+    'radio-group': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$5; });
+      })
+    },
+    'checkbox-group': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$4; });
       })
     },
     'tabs': {
-      'react-mantine': lazyPreload(function () {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$3; });
+      })
+    },
+    'button': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'upload': {
+      'react-material-ui': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
       })
     }
   };
   var Forms = {
-    'react-mantine': lazyPreload(function () {
+    'react-material-ui': lazyPreload(function () {
       return Promise.resolve().then(function () { return index; });
     })
   };
@@ -19472,660 +19647,385 @@
   var LetsForm = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$g);
+      rest = _objectWithoutProperties(_ref, _excluded$e);
     return /*#__PURE__*/React.createElement(FormGenerator, _extends({
-      framework: "react-mantine"
+      framework: "react-material-ui"
     }, rest), children);
   };
 
-  var _excluded$f = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter"];
-  var InputText$1 = I18N(function (_ref) {
-    var name = _ref.name,
-      hint = _ref.hint;
-      _ref.value;
-      var fullWidth = _ref.fullWidth,
-      width = _ref.width,
-      _ref$submitOnEnter = _ref.submitOnEnter,
-      submitOnEnter = _ref$submitOnEnter === void 0 ? false : _ref$submitOnEnter,
-      error = _ref.error,
-      onChange = _ref.onChange,
-      onBlur = _ref.onBlur,
-      _ref$lfOnEnter = _ref.lfOnEnter,
-      lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$f);
-    var handleKeyUp = React.useCallback(function (e) {
-      return e.keyCode === 13 && lfOnEnter();
-    }, [lfOnEnter]);
-    var handleChange = React.useCallback(function (event) {
-      return onChange(event.currentTarget.value);
-    }, [onChange]);
-    return /*#__PURE__*/React.createElement(core.TextInput, _extends({
-      className: "lf-control-input-text",
-      "data-lf-field-name": name,
-      style: makeWidthStyle(fullWidth, width),
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      onChange: handleChange,
-      onBlur: onBlur,
-      onKeyUp: submitOnEnter ? handleKeyUp : undefined
-    }, passRest(rest)));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.InputText');
+  var css_248z$4 = ".lf-react-material-ui-label {\n  color: rgba(0, 0, 0, 0.6);\n  font-family: \"Roboto\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  font-size: 1rem;\n  line-height: 1.4375em;\n  letter-spacing: 0.00938em;\n  padding: 0;\n  position: relative;\n  display: block;\n  transform-origin: top left;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  max-width: 100%;\n  transform: none;\n  position: inherit;\n  margin-top: 0px;\n}";
+  styleInject(css_248z$4);
 
-  var index$k = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: InputText$1
-  });
+  var MuiLabel = function MuiLabel(_ref) {
+    var children = _ref.children;
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-react-material-ui-label"
+    }, children);
+  };
 
-  var _excluded$e = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "lfOnEnter"];
-  var MantineNumberInput = I18N(function (_ref) {
-    var name = _ref.name,
-      hint = _ref.hint,
-      value = _ref.value,
-      _ref$submitOnEnter = _ref.submitOnEnter,
-      submitOnEnter = _ref$submitOnEnter === void 0 ? false : _ref$submitOnEnter,
-      error = _ref.error,
-      fullWidth = _ref.fullWidth,
-      width = _ref.width,
-      _ref$lfOnEnter = _ref.lfOnEnter,
-      lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$e);
-    var handleKeyUp = React.useCallback(function (e) {
-      return e.keyCode === 13 && lfOnEnter();
-    }, [lfOnEnter]);
-    return /*#__PURE__*/React.createElement(core.NumberInput, _extends({
-      className: "lf-control-input-number",
-      "data-lf-field-name": name,
-      style: makeWidthStyle(fullWidth, width),
-      value: value,
-      name: name,
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      onKeyUp: submitOnEnter ? handleKeyUp : undefined
-    }, passRest(rest)));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.InputNumber');
+  var _excluded$d = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
 
-  var index$j = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: MantineNumberInput
-  });
+  // DOC: https://mui.com/material-ui/api/input/
 
-  var _excluded$d = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "lfOnEnter"];
-  var MantineTextarea = I18N(function (_ref) {
+  var MuiGenericInput = function MuiGenericInput(_ref) {
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      inputType = _ref.inputType,
+      autocomplete = _ref.autocomplete;
+      _ref.inputMode;
+      var size = _ref.size,
+      error = _ref.error,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      required = _ref.required,
       _ref$submitOnEnter = _ref.submitOnEnter,
       submitOnEnter = _ref$submitOnEnter === void 0 ? false : _ref$submitOnEnter,
-      error = _ref.error,
-      onChange = _ref.onChange,
-      fullWidth = _ref.fullWidth,
+      _ref$fullWidth = _ref.fullWidth,
+      fullWidth = _ref$fullWidth === void 0 ? false : _ref$fullWidth,
+      variant = _ref.variant,
+      floatingLabel = _ref.floatingLabel,
+      placeholder = _ref.placeholder,
+      color = _ref.color,
       width = _ref.width,
-      inputType = _ref.inputType,
+      prefix = _ref.prefix,
+      postfix = _ref.postfix;
+      _ref.component;
+      var disableUnderline = _ref.disableUnderline,
+      className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
       rest = _objectWithoutProperties(_ref, _excluded$d);
     var handleKeyUp = React.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
-    var handleChange = React.useCallback(function (event) {
-      return onChange(event.currentTarget.value);
-    }, [onChange]);
-    return /*#__PURE__*/React.createElement(core.Textarea, _extends({
-      className: "lf-control-textarea",
+    return /*#__PURE__*/React.createElement("div", {
       "data-lf-field-name": name,
-      name: name,
-      style: makeWidthStyle(fullWidth, width),
-      label: label,
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      onChange: handleChange,
+      className: className
+    }, /*#__PURE__*/React.createElement(FormControl, {
+      required: required,
+      error: error != null,
+      variant: variant !== null && variant !== void 0 ? variant : undefined,
+      fullWidth: fullWidth
+    }, label && !floatingLabel && /*#__PURE__*/React.createElement(MuiLabel, {
+      id: "mui_input_text_".concat(name)
+    }, label), /*#__PURE__*/React.createElement(TextField, _extends({
+      size: size,
+      placeholder: placeholder,
+      value: value,
+      color: color,
+      required: floatingLabel ? required : undefined,
+      style: _isNumber(width) && !fullWidth ? {
+        width: "".concat(parseInt(width, 10), "px")
+      } : undefined,
+      onChange: onChange,
       onKeyUp: submitOnEnter ? handleKeyUp : undefined,
-      type: inputType
-    }, passRest(rest)));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.Textarea');
+      type: inputType,
+      InputProps: {
+        startAdornment: prefix ? /*#__PURE__*/React.createElement(InputAdornment, {
+          position: "start"
+        }, TextOrIcon(prefix)) : undefined,
+        endAdornment: postfix ? /*#__PURE__*/React.createElement(InputAdornment, {
+          position: "end"
+        }, TextOrIcon(postfix)) : undefined,
+        disableUnderline: disableUnderline,
+        readOnly: readOnly,
+        autoComplete: autocomplete
+      },
+      variant: variant !== null && variant !== void 0 ? variant : undefined,
+      onBlur: onBlur,
+      disabled: disabled,
+      label: floatingLabel ? label : undefined
+    }, passRest(rest))), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
+  };
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var _excluded$c = ["onChange"];
+  // DOC: https://mui.com/material-ui/api/input/
+
+  var TextInput = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      rest = _objectWithoutProperties(_ref, _excluded$c);
+    var handleChange = React.useCallback(function (event) {
+      onChange(event.target.value);
+    }, [onChange]);
+    return /*#__PURE__*/React.createElement(MuiGenericInput, _extends({
+      className: "lf-control-input-text",
+      component: "input-text",
+      onChange: handleChange
+    }, rest));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded MUI.InputText');
+
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: MantineTextarea
+    default: TextInput
   });
 
-  var _excluded$c = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "lfOnEnter"];
+  var _excluded$b = ["name", "label", "hint", "value", "placeholder", "options", "filterKey", "filterValue", "component", "disabled", "readOnly", "required", "error", "multiple", "fullWidth", "width", "floatingLabel", "autoWidth", "size", "variant", "onChange", "onBlur", "className", "children"];
 
-  // TODO filter done with proper params
+  // DOC: https://mui.com/material-ui/api/select/
 
-  var MantineSelect = I18N(function (_ref) {
+  var MuiGenericSelect = function MuiGenericSelect(_ref) {
     var name = _ref.name,
+      label = _ref.label,
       hint = _ref.hint,
-      value = _ref.value,
+      value = _ref.value;
+      _ref.placeholder;
+      var options = _ref.options,
+      filterKey = _ref.filterKey,
+      filterValue = _ref.filterValue;
+      _ref.component;
+      var _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
       error = _ref.error,
+      _ref$multiple = _ref.multiple,
+      multiple = _ref$multiple === void 0 ? false : _ref$multiple,
       fullWidth = _ref.fullWidth,
       width = _ref.width,
-      options = _ref.options,
-      filterValue = _ref.filterValue,
-      filterKey = _ref.filterKey;
-      _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$c);
-    return /*#__PURE__*/React.createElement(core.Input.Wrapper, {
-      className: "lf-control-select",
-      "data-lf-field-name": name,
-      style: makeWidthStyle(fullWidth, width),
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error']
-    }, /*#__PURE__*/React.createElement(core.Select, _extends({
-      value: value,
-      name: name,
-      data: filterOptions(options, filterValue, filterKey) || []
-    }, passRest(rest))));
-  }, ['label', 'hint', 'placeholder'], {
-    options: i18nOptions
-  });
-  lfLog('Loaded Mantine.Select');
-
-  var index$h = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: MantineSelect
-  });
-
-  var _excluded$b = ["name", "hint", "value", "onChange", "error", "description"];
-  var MantineCheckbox = I18N(function (_ref) {
-    var name = _ref.name,
-      hint = _ref.hint,
-      value = _ref.value,
+      floatingLabel = _ref.floatingLabel,
+      autoWidth = _ref.autoWidth,
+      size = _ref.size,
+      variant = _ref.variant,
       onChange = _ref.onChange,
-      error = _ref.error;
-      _ref.description;
+      onBlur = _ref.onBlur,
+      className = _ref.className;
+      _ref.children;
       var rest = _objectWithoutProperties(_ref, _excluded$b);
-    var handleChange = React.useCallback(function (event) {
-      return onChange(event.currentTarget.checked);
-    }, [onChange]);
-    return /*#__PURE__*/React.createElement(core.Checkbox, _extends({
-      className: "lf-control-checkbox",
-      "data-lf-field-name": name,
-      checked: value,
-      name: name,
-      onChange: handleChange,
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error']
-    }, passRest(rest)));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.Checkbox');
+    var filteredOptions = filterOptions(options, filterValue, filterKey);
+    var items;
+    if (multiple) {
+      items = (filteredOptions || []).map(function (option) {
+        return /*#__PURE__*/React.createElement(MenuItem, {
+          key: option.value,
+          value: option.value
+        }, /*#__PURE__*/React.createElement(Checkbox, {
+          checked: (value || []).includes(option.value)
+        }), /*#__PURE__*/React.createElement(ListItemText, {
+          primary: option.label
+        }));
+      });
+    } else {
+      items = (filteredOptions || []).map(function (_ref2) {
+        var value = _ref2.value,
+          label = _ref2.label;
+        return /*#__PURE__*/React.createElement(MenuItem, {
+          key: value,
+          value: value
+        }, label);
+      });
+    }
 
-  var index$g = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: MantineCheckbox
-  });
+    // Io un troiaio del genere in una libreria UI non l'ho mai visto, il floating label
+    // si sposta e quando non e' in focus va a coprire il componente, se focus si sposta in alto
+    // ma siccome lo spazio non se lo crea da solo, devi mettere la label anche nel componente select
+    // altrimenti nella variante outlined vedi la label tagliata dalla riga del bordo.
+    return /*#__PURE__*/React.createElement("div", {
+      className: className,
+      "data-lf-field-name": name
+    }, /*#__PURE__*/React.createElement(FormControl, {
+      size: size,
+      disabled: disabled,
+      required: required,
+      error: error != null,
+      variant: variant !== null && variant !== void 0 ? variant : undefined,
+      fullWidth: fullWidth
+    }, label && !floatingLabel && /*#__PURE__*/React.createElement(MuiLabel, null, label), label && floatingLabel && /*#__PURE__*/React.createElement(InputLabel, {
+      id: "mui_select_".concat(name)
+    }, label), /*#__PURE__*/React.createElement(Select, _extends({
+      id: name,
+      labelId: "mui_select_".concat(name),
+      value: value,
+      multiple: multiple,
+      onChange: onChange,
+      onBlur: onBlur,
+      label: floatingLabel ? label : undefined // needed for the background
+      ,
+      style: _isNumber(width) && !fullWidth ? {
+        width: "".concat(parseInt(width, 10), "px")
+      } : undefined,
+      autoWidth: autoWidth,
+      inputProps: readOnly ? {
+        readOnly: true
+      } : undefined
+    }, passRest(rest)), items), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
+  };
 
-  var _excluded$a = ["name", "hint", "value", "onChange", "error", "description"];
-  var MantineToggle = I18N(function (_ref) {
-    var name = _ref.name,
-      hint = _ref.hint,
+  var _excluded$a = ["onChange", "value"];
+  var MuiSelect = I18N(function (_ref) {
+    var onChange = _ref.onChange,
       value = _ref.value,
-      onChange = _ref.onChange,
-      error = _ref.error;
-      _ref.description;
-      var rest = _objectWithoutProperties(_ref, _excluded$a);
-    var handleChange = React.useCallback(function (event) {
-      return onChange(event.currentTarget.checked);
-    }, [onChange]);
-    return /*#__PURE__*/React.createElement(core.Switch, _extends({
-      className: "lf-control-checkbox",
-      "data-lf-field-name": name,
-      checked: value,
-      name: name,
-      onChange: handleChange,
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error']
-    }, passRest(rest)));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.Toggle');
-
-  var index$f = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: MantineToggle
-  });
-
-  var _excluded$9 = ["hint", "required", "tooltip", "name", "label", "error"];
-  var MantineListArray = I18N(function (_ref) {
-    var hint = _ref.hint,
-      required = _ref.required;
-      _ref.tooltip;
-      var name = _ref.name,
-      label = _ref.label,
-      error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$9);
-    return /*#__PURE__*/React.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-array"
-    }, label && /*#__PURE__*/React.createElement(core.Input.Label, {
-      required: required
-    }, label), /*#__PURE__*/React.createElement(ListArray, _extends({
-      LetsFormComponent: LetsForm
-    }, passRest(rest))), hint && /*#__PURE__*/React.createElement(core.Input.Description, null, hint), error && /*#__PURE__*/React.createElement(core.Input.Error, null, error));
-  }, ['label', 'hint']);
-  lfLog('Loaded Mantine.ListArray');
-
-  var index$e = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: MantineListArray
-  });
-
-  var _excluded$8 = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
-  var CheckboxGroup = I18N(function (_ref) {
-    var name = _ref.name,
-      label = _ref.label,
-      hint = _ref.hint,
-      value = _ref.value;
-      _ref.placeholder;
-      _ref.plaintext;
-      _ref.tooltip;
-      var _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-      _ref$required = _ref.required,
-      required = _ref$required === void 0 ? false : _ref$required,
-      error = _ref.error,
-      onChange = _ref.onChange;
-      _ref.onBlur;
-      var size = _ref.size,
-      radius = _ref.radius,
-      color = _ref.color,
-      iconColor = _ref.iconColor,
-      labelPosition = _ref.labelPosition,
-      _ref$options = _ref.options,
-      options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
-    var _useState = React.useState(_isArray(value) ? value : value ? String().split(',') : []),
-      _useState2 = _slicedToArray(_useState, 2),
-      selected = _useState2[0],
-      setSelected = _useState2[1];
+      rest = _objectWithoutProperties(_ref, _excluded$a);
     var handleChange = React.useCallback(function (e) {
-      var newValue;
-      if (e.target.checked) {
-        newValue = [].concat(_toConsumableArray(selected), [e.target.value]);
-      } else {
-        newValue = selected.filter(function (value) {
-          return value !== e.target.value;
-        });
-      }
-      setSelected(newValue);
-      onChange(newValue);
+      return onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-checkbox-group"
-    }, label && /*#__PURE__*/React.createElement(core.Input.Label, {
-      required: required
-    }, label), /*#__PURE__*/React.createElement(core.Stack, {
-      gap: "xs",
-      style: {
-        marginTop: 'var(--lf-field-margin-top)',
-        marginBottom: 'var(--lf-field-margin-top)'
-      }
-    }, (options !== null && options !== void 0 ? options : []).map(function (item) {
-      return /*#__PURE__*/React.createElement(core.Checkbox, _extends({
-        key: item.value,
-        value: item.value,
-        label: item.label,
-        disabled: disabled,
-        readOnly: readOnly,
-        onChange: handleChange,
-        checked: selected.includes(item.value),
-        description: item.description,
-        size: size,
-        radius: radius,
-        color: color,
-        iconColor: iconColor,
-        labelPosition: labelPosition
-      }, passRest(rest, ['description'])), label);
-    })), hint && /*#__PURE__*/React.createElement(core.Input.Description, null, hint), error && /*#__PURE__*/React.createElement(core.Input.Error, null, error));
+    return /*#__PURE__*/React.createElement(MuiGenericSelect, _extends({
+      className: "lf-control-select",
+      component: "select",
+      value: value,
+      onChange: handleChange
+    }, rest));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
-  lfLog('Loaded Mantine.CheckboxGroup');
+  lfLog('Loaded MUI.Select');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: CheckboxGroup
+    default: MuiSelect
   });
 
-  var _excluded$7 = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
-
-  // TODO broken preview in mantine, add ensureframework
-
-  var RadioGroup = I18N(function (_ref) {
+  var Toggle = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
-      hint = _ref.hint,
-      value = _ref.value;
-      _ref.placeholder;
-      _ref.plaintext;
-      _ref.tooltip;
-      var _ref$disabled = _ref.disabled,
+      value = _ref.value,
+      _ref$disabled = _ref.disabled,
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-      _ref$required = _ref.required,
-      required = _ref$required === void 0 ? false : _ref$required,
-      error = _ref.error,
-      onChange = _ref.onChange;
-      _ref.onBlur;
-      var size = _ref.size,
-      radius = _ref.radius,
       color = _ref.color,
-      iconColor = _ref.iconColor,
-      labelPosition = _ref.labelPosition,
-      _ref$options = _ref.options,
-      options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$7);
-    var _useState = React.useState(value),
-      _useState2 = _slicedToArray(_useState, 2);
-      _useState2[0];
-      var setSelected = _useState2[1];
+      onChange = _ref.onChange,
+      size = _ref.size,
+      labelPlacement = _ref.labelPlacement,
+      onBlur = _ref.onBlur,
+      required = _ref.required,
+      disableRipple = _ref.disableRipple;
     var handleChange = React.useCallback(function (e) {
-      setSelected(e.target.value);
+      onChange(e.target.checked);
+    }, [onChange]);
+    var switchCtrl = /*#__PURE__*/React.createElement(Switch, {
+      checked: value,
+      onChange: handleChange,
+      disabled: disabled,
+      onBlur: onBlur,
+      color: color || undefined,
+      size: size || undefined,
+      required: required,
+      disableRipple: disableRipple
+    });
+    return /*#__PURE__*/React.createElement(FormGroup, {
+      "data-lf-field-name": name,
+      className: "lf-control-toggle"
+    }, label && /*#__PURE__*/React.createElement(FormControlLabel, {
+      labelPlacement: labelPlacement || undefined,
+      disabled: disabled,
+      label: label,
+      control: switchCtrl
+    }), !label && switchCtrl);
+  }, ['label', 'hint']);
+  lfLog('Loaded MUI.Toggle');
+
+  var index$m = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Toggle
+  });
+
+  // DOCS: https://mui.com/material-ui/api/checkbox/
+
+  var CheckboxMUI = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      value = _ref.value,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      color = _ref.color,
+      onChange = _ref.onChange,
+      size = _ref.size,
+      labelPlacement = _ref.labelPlacement,
+      onBlur = _ref.onBlur,
+      required = _ref.required,
+      disableRipple = _ref.disableRipple;
+    var handleChange = React.useCallback(function (e) {
+      onChange(e.target.checked);
+    }, [onChange]);
+    var checkboxCtrl = /*#__PURE__*/React.createElement(Checkbox, {
+      checked: value,
+      onChange: handleChange,
+      disabled: disabled,
+      onBlur: onBlur,
+      color: color,
+      size: size,
+      required: required,
+      disableRipple: disableRipple
+    });
+    return /*#__PURE__*/React.createElement(FormGroup, {
+      "data-lf-field-name": name,
+      className: "lf-control-checkbox"
+    }, label && /*#__PURE__*/React.createElement(FormControlLabel, {
+      labelPlacement: labelPlacement ? labelPlacement : undefined,
+      disabled: disabled,
+      label: label,
+      control: checkboxCtrl
+    }), !label && checkboxCtrl);
+  }, ['label', 'hint']);
+  lfLog('Loaded MUI.Checkbox');
+
+  var index$l = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: CheckboxMUI
+  });
+
+  // DOCS: https://mui.com/material-ui/api/slider/
+
+  var SliderMui = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      value = _ref.value,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      required = _ref.required,
+      color = _ref.color,
+      onChange = _ref.onChange,
+      size = _ref.size,
+      valueLabelDisplay = _ref.valueLabelDisplay,
+      onBlur = _ref.onBlur,
+      error = _ref.error,
+      min = _ref.min,
+      max = _ref.max,
+      step = _ref.step,
+      hint = _ref.hint,
+      showMarks = _ref.showMarks,
+      customMarks = _ref.customMarks,
+      width = _ref.width,
+      fullWidth = _ref.fullWidth;
+    var handleChange = React.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
     return /*#__PURE__*/React.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-radio-group"
-    }, /*#__PURE__*/React.createElement(core.Radio.Group, {
-      name: name,
-      label: label,
-      description: hint,
-      withAsterisk: required,
-      error: error,
-      inputWrapperOrder: ['label', 'input', 'description', 'error']
-    }, /*#__PURE__*/React.createElement(core.Stack, {
-      gap: "xs",
-      style: {
-        marginTop: 'var(--lf-field-margin-top)',
-        marginBottom: 'var(--lf-field-margin-top)'
-      }
-    }, (options !== null && options !== void 0 ? options : []).map(function (item) {
-      return /*#__PURE__*/React.createElement(core.Radio, _extends({
-        key: item.value,
-        value: item.value,
-        label: item.label,
-        disabled: disabled,
-        readOnly: readOnly,
-        onChange: handleChange,
-        checked: item.value === value,
-        description: item.description,
-        size: size,
-        radius: radius,
-        color: color,
-        iconColor: iconColor,
-        labelPosition: labelPosition
-      }, passRest(rest, ['description'])));
-    }))));
-  }, ['label', 'hint', 'placeholder'], {
-    options: i18nOptions
-  });
-  lfLog('Loaded Mantine.RadioGroup');
-
-  var index$c = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: RadioGroup
-  });
-
-  lfLog('Loaded Mantine.TwoColumns');
-
-  var index$b = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: TwoColumns
-  });
-
-  lfLog('Loaded RSuite5.ThreeColumns');
-
-  var index$a = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: ThreeColumns
-  });
-
-  lfLog('Loaded RSuite5.Group');
-
-  var index$9 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: Group
-  });
-
-  var _excluded$6 = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime"];
-  var tryDate = function tryDate(value) {
-    if (_isDate(value)) {
-      return value;
-    } else if (_isString(value)) {
-      var d = new Date(value);
-      if (isValidDate(d)) {
-        return d;
-      }
-    }
-    return undefined;
-  };
-  var MantineGenericDate = function MantineGenericDate(_ref) {
-    var hint = _ref.hint,
-      minDate = _ref.minDate,
-      maxDate = _ref.maxDate,
-      error = _ref.error;
-      _ref.onBlur;
-      var fullWidth = _ref.fullWidth,
-      width = _ref.width,
-      lfLocale = _ref.lfLocale,
-      _ref$withTime = _ref.withTime,
-      withTime = _ref$withTime === void 0 ? false : _ref$withTime,
-      rest = _objectWithoutProperties(_ref, _excluded$6);
-    var Component = withTime ? dates.DateTimePicker : dates.DatePickerInput;
-    return /*#__PURE__*/React.createElement(Component, _extends({
-      className: "lf-control-date",
-      "data-lf-field-name": name,
-      style: makeWidthStyle(fullWidth, width),
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      locale: lfLocale,
-      minDate: tryDate(minDate),
-      maxDate: tryDate(maxDate)
-    }, passRest(rest)));
-  };
-
-  var _excluded$5 = ["onChange", "value", "lfLocale"];
-  var SelectDate = I18N(function (_ref) {
-    var onChange = _ref.onChange,
-      value = _ref.value,
-      lfLocale = _ref.lfLocale,
-      rest = _objectWithoutProperties(_ref, _excluded$5);
-    // also accepts string dates
-    var initialValue;
-    if (rest.dateType === 'range') {
-      initialValue = [null, null];
-    } else {
-      if (_isDate(value)) {
-        initialValue = value;
-      } else if (_isString(value)) {
-        var d = new Date(value);
-        if (isValidDate(d)) {
-          initialValue = d;
-        }
-      }
-    }
-    var _useState = React.useState(initialValue),
-      _useState2 = _slicedToArray(_useState, 2),
-      currentValue = _useState2[0],
-      setCurrentValue = _useState2[1];
-
-    // send always date string in format yyyy-mm-dd
-    var handleChange = React.useCallback(function (d) {
-      if (isValidDate(d)) {
-        setCurrentValue(d);
-        onChange(d.toISOString().split('T')[0]);
-      } else {
-        setCurrentValue(null);
-        onChange(null);
-      }
-    }, [onChange]);
-    return /*#__PURE__*/React.createElement(MantineGenericDate, _extends({
-      value: currentValue,
-      onChange: handleChange,
-      lfLocale: lfLocale
-    }, passRest(rest)));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.SelectDate');
-
-  var index$8 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: SelectDate
-  });
-
-  var _excluded$4 = ["onChange", "value", "lfLocale"];
-  var SelectDatTime = I18N(function (_ref) {
-    var onChange = _ref.onChange,
-      value = _ref.value,
-      lfLocale = _ref.lfLocale,
-      rest = _objectWithoutProperties(_ref, _excluded$4);
-    // also accepts string dates
-    var initialValue;
-    if (rest.dateType === 'range') {
-      initialValue = [null, null];
-    } else {
-      if (_isDate(value)) {
-        initialValue = value;
-      } else if (_isString(value)) {
-        var d = new Date(value);
-        if (isValidDate(d)) {
-          initialValue = d;
-        }
-      }
-    }
-    var _useState = React.useState(initialValue),
-      _useState2 = _slicedToArray(_useState, 2),
-      currentValue = _useState2[0],
-      setCurrentValue = _useState2[1];
-
-    // send always date string in format yyyy-mm-dd
-    var handleChange = React.useCallback(function (d) {
-      if (isValidDate(d)) {
-        setCurrentValue(d);
-        onChange(d.toISOString());
-      } else {
-        setCurrentValue(null);
-        onChange(null);
-      }
-    }, [onChange]);
-    return /*#__PURE__*/React.createElement(MantineGenericDate, _extends({
-      value: currentValue,
-      onChange: handleChange,
-      lfLocale: lfLocale
-    }, passRest(rest), {
-      withTime: true
-    }));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.SelectDateTime');
-
-  var index$7 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: SelectDatTime
-  });
-
-  var _excluded$3 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
-  var InputText = I18N(function (_ref) {
-    var name = _ref.name,
-      hint = _ref.hint;
-      _ref.value;
-      _ref.fullWidth;
-      _ref.width;
-      _ref.submitOnEnter;
-      var error = _ref.error,
-      onChange = _ref.onChange;
-      _ref.onBlur;
-      var label = _ref.label,
-      required = _ref.required;
-      _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$3);
-    return /*#__PURE__*/React.createElement(core.Input.Wrapper, {
-      className: "lf-control-rate",
-      "data-lf-field-name": name,
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      label: label,
-      required: required
-    }, /*#__PURE__*/React.createElement(core.Rating, _extends({
-      onChange: onChange
-    }, passRest(rest))));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.Rate');
-
-  var index$6 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: InputText
-  });
-
-  var PlaceholderMantine = I18N(function (_ref) {
-    var name = _ref.name,
-      label = _ref.label,
-      hint = _ref.hint,
-      text = _ref.text;
-    return /*#__PURE__*/React.createElement(core.Input.Wrapper, {
-      className: "lf-control-rate",
-      "data-lf-field-name": name,
-      description: hint,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      label: label
-    }, /*#__PURE__*/React.createElement(Placeholder, {
-      text: text
-    }));
-  }, ['label', 'hint', 'text']);
-  lfLog('Loaded Mantine.Placeholder');
-
-  var index$5 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: PlaceholderMantine
-  });
-
-  var DividerMantine = function DividerMantine(_ref) {
-    var rest = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
-    return /*#__PURE__*/React.createElement(core.Divider, rest);
-  };
-  lfLog('Loaded Mantine.Divider');
-
-  var index$4 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: DividerMantine
-  });
-
-  var _excluded$2 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
-  var SliderMantine = I18N(function (_ref) {
-    var name = _ref.name,
-      hint = _ref.hint,
-      error = _ref.error,
-      onChange = _ref.onChange;
-      _ref.onBlur;
-      var label = _ref.label,
-      required = _ref.required;
-      _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$2);
-    return /*#__PURE__*/React.createElement(core.Input.Wrapper, {
       className: "lf-control-slider",
-      "data-lf-field-name": name,
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      label: label,
-      required: required
-    }, /*#__PURE__*/React.createElement(core.Slider, _extends({
-      onChange: onChange
-    }, passRest(rest))));
-  }, ['label', 'hint', 'placeholder'], {
-    marks: function marks(value, i18n) {
+      "data-lf-field-name": name
+    }, /*#__PURE__*/React.createElement(FormControl, {
+      required: required,
+      error: error != null,
+      fullWidth: fullWidth,
+      sx: {
+        mt: 2
+      }
+    }, label && /*#__PURE__*/React.createElement(FormLabel, null, label), /*#__PURE__*/React.createElement(Slider, {
+      name: name,
+      marks: customMarks ? customMarks : showMarks,
+      value: value,
+      onChange: handleChange,
+      disabled: disabled,
+      onBlur: onBlur,
+      color: color,
+      style: _isNumber(width) && !fullWidth ? {
+        width: "".concat(parseInt(width, 10), "px")
+      } : undefined,
+      min: min,
+      max: max,
+      step: step,
+      size: size,
+      valueLabelDisplay: valueLabelDisplay
+    }), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
+  }, ['label', 'hint'], {
+    customMarks: function customMarks(value, i18n) {
       return (Array.isArray(value) ? value : []).map(function (value) {
         return _objectSpread2(_objectSpread2({}, value), {}, {
           label: i18n(value.label)
@@ -20133,60 +20033,909 @@
       });
     }
   });
-  lfLog('Loaded Mantine.Slider');
+  lfLog('Loaded MUI.Slider');
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: SliderMantine
+    default: SliderMui
   });
 
-  var _excluded$1 = ["name", "hint", "value", "error", "fullWidth", "width", "data"];
-  var MantineTags = I18N(function (_ref) {
+  var PlaceholderMUI = I18N(function (_ref) {
+    var hint = _ref.hint,
+      text = _ref.text,
+      name = _ref.name,
+      label = _ref.label;
+    return /*#__PURE__*/React.createElement(FormControl, {
+      className: "lf-control-placeholder",
+      "data-lf-field-name": name
+    }, label && /*#__PURE__*/React.createElement(MuiLabel, {
+      id: "mui_input_text_".concat(name)
+    }, label), /*#__PURE__*/React.createElement(Placeholder, {
+      text: text
+    }), hint && /*#__PURE__*/React.createElement(FormHelperText, null, hint));
+  }, ['label', 'hint', 'text']);
+  lfLog('Loaded MUI.Placeholder');
+
+  var index$j = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: PlaceholderMUI
+  });
+
+  // DOC: https://mui.com/material-ui/api/rating/
+
+  var Rate = I18N(function (_ref) {
     var name = _ref.name,
+      label = _ref.label,
       hint = _ref.hint,
       value = _ref.value,
-      error = _ref.error,
-      fullWidth = _ref.fullWidth,
-      width = _ref.width,
-      data = _ref.data,
-      rest = _objectWithoutProperties(_ref, _excluded$1);
-    return /*#__PURE__*/React.createElement(core.TagsInput, _extends({
-      className: "lf-control-input-tag",
-      "data-lf-field-name": name,
-      style: makeWidthStyle(fullWidth, width),
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      size = _ref.size,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      required = _ref.required,
+      max = _ref.max,
+      precision = _ref.precision,
+      color = _ref.color,
+      labelPlacement = _ref.labelPlacement,
+      error = _ref.error;
+    var handleChange = React.useCallback(function (event) {
+      onChange(parseFloat(event.target.value));
+    }, [onChange]);
+    var ctrl = /*#__PURE__*/React.createElement(Rating, {
+      size: size !== null && size !== void 0 ? size : undefined,
+      max: max,
+      precision: precision !== null && precision !== void 0 ? precision : 1,
       value: value,
-      name: name,
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      data: (data || []).filter(function (option) {
-        return option.value && option.label;
-      })
-    }, passRest(rest)));
-  }, ['label', 'hint', 'placeholder'], i18nOptions);
-  lfLog('Loaded Mantine.InputTags');
+      color: color,
+      readOnly: readOnly,
+      required: required,
+      onChange: handleChange,
+      onBlur: onBlur,
+      disabled: disabled
+    });
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-control-rate",
+      "data-lf-field-name": name
+    }, /*#__PURE__*/React.createElement(FormControl, {
+      required: required,
+      error: error != null,
+      sx: {
+        mt: 2
+      },
+      variant: "standard"
+    }, label && !labelPlacement && /*#__PURE__*/React.createElement(FormLabel, null, label), label && labelPlacement && /*#__PURE__*/React.createElement(FormControlLabel, {
+      labelPlacement: labelPlacement ? labelPlacement : undefined,
+      disabled: disabled,
+      label: label,
+      control: ctrl,
+      error: error
+    }), !(label && labelPlacement) && ctrl, hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
+  }, ['label', 'hint']);
+  lfLog('Loaded MUI.Rate');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: MantineTags
+    default: Rate
   });
 
-  var css_248z$1 = ".lf-form-react-mantine .lf-control-tabs .lf-prefix-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical .mantine-Tabs-panel, .lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-left .mantine-Tabs-panel {\n  padding-left: var(--lf-field-column-margin);\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-right .mantine-Tabs-panel {\n  padding-right: var(--lf-field-column-margin);\n}";
-  styleInject(css_248z$1);
+  var dayjs_min = {exports: {}};
 
-  var _excluded = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement"];
-  var MantineTabs = I18N(function (_ref) {
-    var _classNames;
+  (function (module, exports) {
+  	!function (t, e) {
+  	  module.exports = e() ;
+  	}(commonjsGlobal, function () {
+
+  	  var t = 1e3,
+  	    e = 6e4,
+  	    n = 36e5,
+  	    r = "millisecond",
+  	    i = "second",
+  	    s = "minute",
+  	    u = "hour",
+  	    a = "day",
+  	    o = "week",
+  	    f = "month",
+  	    h = "quarter",
+  	    c = "year",
+  	    d = "date",
+  	    l = "Invalid Date",
+  	    $ = /^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{0,2})[Tt\s]*(\d{1,2})?:?(\d{1,2})?:?(\d{1,2})?[.:]?(\d+)?$/,
+  	    y = /\[([^\]]+)]|Y{1,4}|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|a|A|m{1,2}|s{1,2}|Z{1,2}|SSS/g,
+  	    M = {
+  	      name: "en",
+  	      weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),
+  	      months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_"),
+  	      ordinal: function (t) {
+  	        var e = ["th", "st", "nd", "rd"],
+  	          n = t % 100;
+  	        return "[" + t + (e[(n - 20) % 10] || e[n] || e[0]) + "]";
+  	      }
+  	    },
+  	    m = function (t, e, n) {
+  	      var r = String(t);
+  	      return !r || r.length >= e ? t : "" + Array(e + 1 - r.length).join(n) + t;
+  	    },
+  	    v = {
+  	      s: m,
+  	      z: function (t) {
+  	        var e = -t.utcOffset(),
+  	          n = Math.abs(e),
+  	          r = Math.floor(n / 60),
+  	          i = n % 60;
+  	        return (e <= 0 ? "+" : "-") + m(r, 2, "0") + ":" + m(i, 2, "0");
+  	      },
+  	      m: function t(e, n) {
+  	        if (e.date() < n.date()) return -t(n, e);
+  	        var r = 12 * (n.year() - e.year()) + (n.month() - e.month()),
+  	          i = e.clone().add(r, f),
+  	          s = n - i < 0,
+  	          u = e.clone().add(r + (s ? -1 : 1), f);
+  	        return +(-(r + (n - i) / (s ? i - u : u - i)) || 0);
+  	      },
+  	      a: function (t) {
+  	        return t < 0 ? Math.ceil(t) || 0 : Math.floor(t);
+  	      },
+  	      p: function (t) {
+  	        return {
+  	          M: f,
+  	          y: c,
+  	          w: o,
+  	          d: a,
+  	          D: d,
+  	          h: u,
+  	          m: s,
+  	          s: i,
+  	          ms: r,
+  	          Q: h
+  	        }[t] || String(t || "").toLowerCase().replace(/s$/, "");
+  	      },
+  	      u: function (t) {
+  	        return void 0 === t;
+  	      }
+  	    },
+  	    g = "en",
+  	    D = {};
+  	  D[g] = M;
+  	  var p = function (t) {
+  	      return t instanceof _;
+  	    },
+  	    S = function t(e, n, r) {
+  	      var i;
+  	      if (!e) return g;
+  	      if ("string" == typeof e) {
+  	        var s = e.toLowerCase();
+  	        D[s] && (i = s), n && (D[s] = n, i = s);
+  	        var u = e.split("-");
+  	        if (!i && u.length > 1) return t(u[0]);
+  	      } else {
+  	        var a = e.name;
+  	        D[a] = e, i = a;
+  	      }
+  	      return !r && i && (g = i), i || !r && g;
+  	    },
+  	    w = function (t, e) {
+  	      if (p(t)) return t.clone();
+  	      var n = "object" == typeof e ? e : {};
+  	      return n.date = t, n.args = arguments, new _(n);
+  	    },
+  	    O = v;
+  	  O.l = S, O.i = p, O.w = function (t, e) {
+  	    return w(t, {
+  	      locale: e.$L,
+  	      utc: e.$u,
+  	      x: e.$x,
+  	      $offset: e.$offset
+  	    });
+  	  };
+  	  var _ = function () {
+  	      function M(t) {
+  	        this.$L = S(t.locale, null, !0), this.parse(t);
+  	      }
+  	      var m = M.prototype;
+  	      return m.parse = function (t) {
+  	        this.$d = function (t) {
+  	          var e = t.date,
+  	            n = t.utc;
+  	          if (null === e) return new Date(NaN);
+  	          if (O.u(e)) return new Date();
+  	          if (e instanceof Date) return new Date(e);
+  	          if ("string" == typeof e && !/Z$/i.test(e)) {
+  	            var r = e.match($);
+  	            if (r) {
+  	              var i = r[2] - 1 || 0,
+  	                s = (r[7] || "0").substring(0, 3);
+  	              return n ? new Date(Date.UTC(r[1], i, r[3] || 1, r[4] || 0, r[5] || 0, r[6] || 0, s)) : new Date(r[1], i, r[3] || 1, r[4] || 0, r[5] || 0, r[6] || 0, s);
+  	            }
+  	          }
+  	          return new Date(e);
+  	        }(t), this.$x = t.x || {}, this.init();
+  	      }, m.init = function () {
+  	        var t = this.$d;
+  	        this.$y = t.getFullYear(), this.$M = t.getMonth(), this.$D = t.getDate(), this.$W = t.getDay(), this.$H = t.getHours(), this.$m = t.getMinutes(), this.$s = t.getSeconds(), this.$ms = t.getMilliseconds();
+  	      }, m.$utils = function () {
+  	        return O;
+  	      }, m.isValid = function () {
+  	        return !(this.$d.toString() === l);
+  	      }, m.isSame = function (t, e) {
+  	        var n = w(t);
+  	        return this.startOf(e) <= n && n <= this.endOf(e);
+  	      }, m.isAfter = function (t, e) {
+  	        return w(t) < this.startOf(e);
+  	      }, m.isBefore = function (t, e) {
+  	        return this.endOf(e) < w(t);
+  	      }, m.$g = function (t, e, n) {
+  	        return O.u(t) ? this[e] : this.set(n, t);
+  	      }, m.unix = function () {
+  	        return Math.floor(this.valueOf() / 1e3);
+  	      }, m.valueOf = function () {
+  	        return this.$d.getTime();
+  	      }, m.startOf = function (t, e) {
+  	        var n = this,
+  	          r = !!O.u(e) || e,
+  	          h = O.p(t),
+  	          l = function (t, e) {
+  	            var i = O.w(n.$u ? Date.UTC(n.$y, e, t) : new Date(n.$y, e, t), n);
+  	            return r ? i : i.endOf(a);
+  	          },
+  	          $ = function (t, e) {
+  	            return O.w(n.toDate()[t].apply(n.toDate("s"), (r ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(e)), n);
+  	          },
+  	          y = this.$W,
+  	          M = this.$M,
+  	          m = this.$D,
+  	          v = "set" + (this.$u ? "UTC" : "");
+  	        switch (h) {
+  	          case c:
+  	            return r ? l(1, 0) : l(31, 11);
+  	          case f:
+  	            return r ? l(1, M) : l(0, M + 1);
+  	          case o:
+  	            var g = this.$locale().weekStart || 0,
+  	              D = (y < g ? y + 7 : y) - g;
+  	            return l(r ? m - D : m + (6 - D), M);
+  	          case a:
+  	          case d:
+  	            return $(v + "Hours", 0);
+  	          case u:
+  	            return $(v + "Minutes", 1);
+  	          case s:
+  	            return $(v + "Seconds", 2);
+  	          case i:
+  	            return $(v + "Milliseconds", 3);
+  	          default:
+  	            return this.clone();
+  	        }
+  	      }, m.endOf = function (t) {
+  	        return this.startOf(t, !1);
+  	      }, m.$set = function (t, e) {
+  	        var n,
+  	          o = O.p(t),
+  	          h = "set" + (this.$u ? "UTC" : ""),
+  	          l = (n = {}, n[a] = h + "Date", n[d] = h + "Date", n[f] = h + "Month", n[c] = h + "FullYear", n[u] = h + "Hours", n[s] = h + "Minutes", n[i] = h + "Seconds", n[r] = h + "Milliseconds", n)[o],
+  	          $ = o === a ? this.$D + (e - this.$W) : e;
+  	        if (o === f || o === c) {
+  	          var y = this.clone().set(d, 1);
+  	          y.$d[l]($), y.init(), this.$d = y.set(d, Math.min(this.$D, y.daysInMonth())).$d;
+  	        } else l && this.$d[l]($);
+  	        return this.init(), this;
+  	      }, m.set = function (t, e) {
+  	        return this.clone().$set(t, e);
+  	      }, m.get = function (t) {
+  	        return this[O.p(t)]();
+  	      }, m.add = function (r, h) {
+  	        var d,
+  	          l = this;
+  	        r = Number(r);
+  	        var $ = O.p(h),
+  	          y = function (t) {
+  	            var e = w(l);
+  	            return O.w(e.date(e.date() + Math.round(t * r)), l);
+  	          };
+  	        if ($ === f) return this.set(f, this.$M + r);
+  	        if ($ === c) return this.set(c, this.$y + r);
+  	        if ($ === a) return y(1);
+  	        if ($ === o) return y(7);
+  	        var M = (d = {}, d[s] = e, d[u] = n, d[i] = t, d)[$] || 1,
+  	          m = this.$d.getTime() + r * M;
+  	        return O.w(m, this);
+  	      }, m.subtract = function (t, e) {
+  	        return this.add(-1 * t, e);
+  	      }, m.format = function (t) {
+  	        var e = this,
+  	          n = this.$locale();
+  	        if (!this.isValid()) return n.invalidDate || l;
+  	        var r = t || "YYYY-MM-DDTHH:mm:ssZ",
+  	          i = O.z(this),
+  	          s = this.$H,
+  	          u = this.$m,
+  	          a = this.$M,
+  	          o = n.weekdays,
+  	          f = n.months,
+  	          h = function (t, n, i, s) {
+  	            return t && (t[n] || t(e, r)) || i[n].slice(0, s);
+  	          },
+  	          c = function (t) {
+  	            return O.s(s % 12 || 12, t, "0");
+  	          },
+  	          d = n.meridiem || function (t, e, n) {
+  	            var r = t < 12 ? "AM" : "PM";
+  	            return n ? r.toLowerCase() : r;
+  	          },
+  	          $ = {
+  	            YY: String(this.$y).slice(-2),
+  	            YYYY: this.$y,
+  	            M: a + 1,
+  	            MM: O.s(a + 1, 2, "0"),
+  	            MMM: h(n.monthsShort, a, f, 3),
+  	            MMMM: h(f, a),
+  	            D: this.$D,
+  	            DD: O.s(this.$D, 2, "0"),
+  	            d: String(this.$W),
+  	            dd: h(n.weekdaysMin, this.$W, o, 2),
+  	            ddd: h(n.weekdaysShort, this.$W, o, 3),
+  	            dddd: o[this.$W],
+  	            H: String(s),
+  	            HH: O.s(s, 2, "0"),
+  	            h: c(1),
+  	            hh: c(2),
+  	            a: d(s, u, !0),
+  	            A: d(s, u, !1),
+  	            m: String(u),
+  	            mm: O.s(u, 2, "0"),
+  	            s: String(this.$s),
+  	            ss: O.s(this.$s, 2, "0"),
+  	            SSS: O.s(this.$ms, 3, "0"),
+  	            Z: i
+  	          };
+  	        return r.replace(y, function (t, e) {
+  	          return e || $[t] || i.replace(":", "");
+  	        });
+  	      }, m.utcOffset = function () {
+  	        return 15 * -Math.round(this.$d.getTimezoneOffset() / 15);
+  	      }, m.diff = function (r, d, l) {
+  	        var $,
+  	          y = O.p(d),
+  	          M = w(r),
+  	          m = (M.utcOffset() - this.utcOffset()) * e,
+  	          v = this - M,
+  	          g = O.m(this, M);
+  	        return g = ($ = {}, $[c] = g / 12, $[f] = g, $[h] = g / 3, $[o] = (v - m) / 6048e5, $[a] = (v - m) / 864e5, $[u] = v / n, $[s] = v / e, $[i] = v / t, $)[y] || v, l ? g : O.a(g);
+  	      }, m.daysInMonth = function () {
+  	        return this.endOf(f).$D;
+  	      }, m.$locale = function () {
+  	        return D[this.$L];
+  	      }, m.locale = function (t, e) {
+  	        if (!t) return this.$L;
+  	        var n = this.clone(),
+  	          r = S(t, e, !0);
+  	        return r && (n.$L = r), n;
+  	      }, m.clone = function () {
+  	        return O.w(this.$d, this);
+  	      }, m.toDate = function () {
+  	        return new Date(this.valueOf());
+  	      }, m.toJSON = function () {
+  	        return this.isValid() ? this.toISOString() : null;
+  	      }, m.toISOString = function () {
+  	        return this.$d.toISOString();
+  	      }, m.toString = function () {
+  	        return this.$d.toUTCString();
+  	      }, M;
+  	    }(),
+  	    T = _.prototype;
+  	  return w.prototype = T, [["$ms", r], ["$s", i], ["$m", s], ["$H", u], ["$W", a], ["$M", f], ["$y", c], ["$D", d]].forEach(function (t) {
+  	    T[t[1]] = function (e) {
+  	      return this.$g(e, t[0], t[1]);
+  	    };
+  	  }), w.extend = function (t, e) {
+  	    return t.$i || (t(e, _, w), t.$i = !0), w;
+  	  }, w.locale = S, w.isDayjs = p, w.unix = function (t) {
+  	    return w(1e3 * t);
+  	  }, w.en = D[g], w.Ls = D, w.p = {}, w;
+  	}); 
+  } (dayjs_min));
+
+  var dayjs_minExports = dayjs_min.exports;
+  var dayjs = /*@__PURE__*/getDefaultExportFromCjs(dayjs_minExports);
+
+  var _excluded$9 = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "fullWidth", "variant", "placeholder", "width", "disableFuture", "disableHighlightToday", "disableOpenPicker", "disablePast", "displayWeekNumber", "format", "maxDate", "minDate", "reduceAnimations", "showDaysOutsideCurrentMonth", "lfLocale", "datetime", "views", "component"];
+
+  // DOC: https://mui.com/x/api/date-pickers/date-picker/
+  //      https://mui.com/x/react-date-pickers/adapters-locale/
+
+  var MuiGenericDate = function MuiGenericDate(_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      error = _ref.error,
+      className = _ref.className,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      required = _ref.required,
+      _ref$fullWidth = _ref.fullWidth,
+      fullWidth = _ref$fullWidth === void 0 ? false : _ref$fullWidth,
+      variant = _ref.variant,
+      placeholder = _ref.placeholder,
+      width = _ref.width,
+      disableFuture = _ref.disableFuture,
+      disableHighlightToday = _ref.disableHighlightToday,
+      disableOpenPicker = _ref.disableOpenPicker,
+      disablePast = _ref.disablePast,
+      displayWeekNumber = _ref.displayWeekNumber,
+      format = _ref.format,
+      maxDate = _ref.maxDate,
+      minDate = _ref.minDate,
+      reduceAnimations = _ref.reduceAnimations,
+      showDaysOutsideCurrentMonth = _ref.showDaysOutsideCurrentMonth,
+      lfLocale = _ref.lfLocale,
+      _ref$datetime = _ref.datetime,
+      datetime = _ref$datetime === void 0 ? false : _ref$datetime,
+      views = _ref.views;
+      _ref.component;
+      var rest = _objectWithoutProperties(_ref, _excluded$9);
+    var localeCode = lfLocale && _isString(lfLocale) ? lfLocale.split('-')[0] : undefined;
+    var Component = datetime ? DateTimePicker.DateTimePicker : DatePicker.DatePicker;
+
+    // set locale for dates
+    var defaultValue = dayjs(value);
+    if (defaultValue && localeCode) {
+      defaultValue = defaultValue.locale(localeCode);
+    }
+    return /*#__PURE__*/React.createElement("div", {
+      "data-lf-field-name": name,
+      className: className
+    }, /*#__PURE__*/React.createElement(FormControl, {
+      required: required,
+      error: error != null,
+      fullWidth: fullWidth
+    }, /*#__PURE__*/React.createElement(Component, _extends({
+      placeholder: placeholder,
+      readOnly: readOnly,
+      required: required,
+      style: _isNumber(width) && !fullWidth ? {
+        width: "".concat(parseInt(width, 10), "px")
+      } : undefined,
+      onChange: onChange,
+      defaultValue: defaultValue,
+      variant: variant !== null && variant !== void 0 ? variant : undefined,
+      onBlur: onBlur,
+      disabled: disabled,
+      label: label,
+      views: !_isEmpty(views) ? views : ['day', 'year'],
+      disableFuture: disableFuture,
+      disableHighlightToday: disableHighlightToday,
+      disableOpenPicker: disableOpenPicker,
+      disablePast: disablePast,
+      displayWeekNumber: displayWeekNumber,
+      format: isValidDayjsFormat(format) ? format : undefined,
+      maxDate: maxDate && dayjs(maxDate),
+      minDate: minDate && dayjs(minDate),
+      reduceAnimations: reduceAnimations,
+      showDaysOutsideCurrentMonth: showDaysOutsideCurrentMonth
+    }, passRest(rest))), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
+  };
+
+  var _excluded$8 = ["onChange", "value"];
+
+  // DOC: https://mui.com/x/api/date-pickers/date-picker/
+  //      https://mui.com/x/react-date-pickers/adapters-locale/
+
+  var MuiDate = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties(_ref, _excluded$8);
+    // also accepts string dates
+    var currentValue;
+    if (_isDate(value)) {
+      currentValue = value;
+    } else if (_isString(value)) {
+      var d = new Date(value);
+      if (isValidDate(d)) {
+        currentValue = d;
+      }
+    }
+
+    // send always date string in format yyyy-mm-dd
+    var handleChange = React.useCallback(function (d) {
+      if (d.toDate && isValidDate(d.toDate())) {
+        onChange(d.toDate().toISOString().split('T')[0]);
+      }
+    }, [onChange]);
+    return /*#__PURE__*/React.createElement(MuiGenericDate, _extends({
+      value: currentValue,
+      className: "lf-control-date",
+      component: "date",
+      onChange: handleChange
+    }, rest));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded MUI.Date');
+
+  var index$h = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: MuiDate
+  });
+
+  lfLog('Loaded MUI.ThreeColumns');
+
+  var index$g = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ThreeColumns
+  });
+
+  lfLog('Loaded MUI.TwoColumns');
+
+  var index$f = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: TwoColumns
+  });
+
+  lfLog('Loaded MUI.Group');
+
+  var index$e = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Group
+  });
+
+  lfLog('Loaded MUI.PlaceholderImage');
+
+  var index$d = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: PlaceholderImage
+  });
+
+  lfLog('Loaded MUI.Divider');
+
+  var index$c = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Divider
+  });
+
+  lfLog('Loaded MUI.ReactView');
+
+  var index$b = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ReactView
+  });
+
+  var _excluded$7 = ["onChange", "value"];
+
+  // DOC: https://mui.com/x/api/date-pickers/date-picker/
+  //      https://mui.com/x/react-date-pickers/adapters-locale/
+
+  var MuiDateTime = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties(_ref, _excluded$7);
+    // also accepts string dates
+    var currentValue;
+    if (_isDate(value)) {
+      currentValue = value;
+    } else if (_isString(value)) {
+      var d = new Date(value);
+      if (isValidDate(d)) {
+        currentValue = d;
+      }
+    }
+
+    // send always date string in format yyyy-mm-dd
+    var handleChange = React.useCallback(function (d) {
+      if (d.toDate && isValidDate(d.toDate())) {
+        onChange(d.toDate().toISOString());
+      }
+    }, [onChange]);
+    return /*#__PURE__*/React.createElement(MuiGenericDate, _extends({
+      value: currentValue,
+      className: "lf-control-datetime",
+      component: "datetime",
+      datetime: true,
+      onChange: handleChange
+    }, rest));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded MUI.DateTime');
+
+  var index$a = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: MuiDateTime
+  });
+
+  var css_248z$3 = ".lf-form.lf-form-react-material-ui .lf-control-common-array [class^=lf-control]:not(:last-child) {\n  margin-bottom: 10px;\n}";
+  styleInject(css_248z$3);
+
+  var _excluded$6 = ["hint", "required", "tooltip", "name", "label", "error"];
+  var ListArrayMui = I18N(function (_ref) {
+    var hint = _ref.hint,
+      required = _ref.required;
+      _ref.tooltip;
+      var name = _ref.name,
+      label = _ref.label,
+      error = _ref.error,
+      rest = _objectWithoutProperties(_ref, _excluded$6);
+    var hasError = error && _isString(error);
+    return /*#__PURE__*/React.createElement("div", {
+      "data-lf-field-name": name,
+      className: "lf-control-array"
+    }, /*#__PURE__*/React.createElement(FormControl, {
+      required: required,
+      error: hasError,
+      fullWidth: true
+    }, /*#__PURE__*/React.createElement(MuiLabel, null, label), /*#__PURE__*/React.createElement(ListArray, _extends({
+      LetsFormComponent: LetsForm
+    }, rest)), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
+  }, ['label', 'hint']);
+  lfLog('Loaded MUI.Array');
+
+  var index$9 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ListArrayMui
+  });
+
+  // DOC: https://mui.com/material-ui/api/input/
+
+  var Textarea = I18N(function (_ref) {
+    var rest = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
+    return /*#__PURE__*/React.createElement(MuiGenericInput, _extends({
+      className: "lf-control-textarea",
+      component: "textarea",
+      multiline: true
+    }, rest));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded MUI.Textarea');
+
+  var index$8 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Textarea
+  });
+
+  var _excluded$5 = ["onChange", "value"];
+  var Multiselect = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties(_ref, _excluded$5);
+    var handleChange = React.useCallback(function (e) {
+      var value = e.target.value;
+      onChange(typeof value === 'string' ? value.split(',') : value);
+    }, [onChange]);
+    var renderValue = React.useMemo(function () {
+      return function (selected) {
+        var selectedOptions = (rest.options || []).filter(function (option) {
+          return (selected || []).includes(option.value);
+        }).map(function (option) {
+          return option.label;
+        });
+        return selectedOptions.join(', ');
+      };
+    }, [rest.options]);
+    return /*#__PURE__*/React.createElement(MuiGenericSelect, _extends({
+      className: "lf-control-multiselect",
+      component: "multiselect",
+      onChange: handleChange,
+      renderValue: renderValue,
+      multiple: true,
+      value: value || []
+    }, rest));
+  }, ['label', 'hint', 'placeholder'], {
+    options: i18nOptions
+  });
+  lfLog('Loaded MUI.Multiselect');
+
+  var index$7 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Multiselect
+  });
+
+  var _excluded$4 = ["onChange"];
+
+  // DOC: https://mui.com/material-ui/api/input/
+
+  var hasDecimals = function hasDecimals(f) {
+    return _isString(f) && (f.includes(',') || f.includes('.'));
+  };
+  var InputNumber = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      rest = _objectWithoutProperties(_ref, _excluded$4);
+    var handleChange = React.useCallback(function (e) {
+      var value = e.target.value;
+      var parsed;
+      if (_isString(value)) {
+        if (value === '') {
+          // void if the user deleted all chars
+          parsed = null;
+        } else if (hasDecimals(value)) {
+          parsed = parseFloat(value);
+        } else {
+          parsed = parseInt(value, 10);
+        }
+        if (!isNaN(parsed)) {
+          onChange(parsed);
+        }
+      }
+    }, [onChange]);
+    return /*#__PURE__*/React.createElement(MuiGenericInput, _extends({
+      className: "lf-control-input-number",
+      component: "input-number",
+      onChange: handleChange,
+      inputType: "number"
+    }, rest));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded MUI.InputNumber');
+
+  var index$6 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: InputNumber
+  });
+
+  var _excluded$3 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "onBlur", "required"];
+
+  // DOCS: https://mui.com/material-ui/api/checkbox/
+
+  var RadioGroupMUI = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      value = _ref.value,
+      options = _ref.options,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      color = _ref.color,
+      onChange = _ref.onChange,
+      error = _ref.error,
+      size = _ref.size,
+      row = _ref.row,
+      hint = _ref.hint,
+      labelPlacement = _ref.labelPlacement,
+      onBlur = _ref.onBlur,
+      required = _ref.required,
+      rest = _objectWithoutProperties(_ref, _excluded$3);
+    var handleChange = React.useCallback(function (e) {
+      onChange(e.target.value);
+    }, [onChange]);
+    return /*#__PURE__*/React.createElement(FormControl, {
+      "data-lf-field-name": name,
+      className: "lf-control-radio-group",
+      required: required,
+      error: error != null
+    }, /*#__PURE__*/React.createElement(FormLabel, {
+      id: "lf-control-radio-group-".concat(name)
+    }, label), /*#__PURE__*/React.createElement(RadioGroup, _extends({
+      "aria-labelledby": "lf-control-radio-group-".concat(name),
+      value: value,
+      name: name,
+      row: row,
+      disabled: disabled,
+      onChange: handleChange,
+      onBlur: onBlur
+    }, passRest(rest)), (options || []).map(function (option) {
+      return /*#__PURE__*/React.createElement(FormControlLabel, {
+        key: option.value,
+        value: option.value,
+        labelPlacement: labelPlacement !== null && labelPlacement !== void 0 ? labelPlacement : undefined,
+        control: /*#__PURE__*/React.createElement(Radio, {
+          size: size !== null && size !== void 0 ? size : undefined,
+          color: color !== null && color !== void 0 ? color : undefined
+        }),
+        label: option.label
+      });
+    })), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, {
+      sx: {
+        marginLeft: '0px'
+      }
+    }, hint), error && /*#__PURE__*/React.createElement(FormHelperText, {
+      sx: {
+        marginLeft: '0px'
+      }
+    }, error));
+  }, ['label', 'hint'], {
+    options: i18nOptions
+  });
+  lfLog('Loaded MUI.RadioGroup');
+
+  var index$5 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RadioGroupMUI
+  });
+
+  var _excluded$2 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "readOnly", "onBlur", "required"];
+
+  // DOCS: https://mui.com/material-ui/api/checkbox/
+
+  var CheckboxGroup = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      value = _ref.value,
+      options = _ref.options,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      color = _ref.color,
+      onChange = _ref.onChange,
+      error = _ref.error,
+      size = _ref.size;
+      _ref.row;
+      var hint = _ref.hint,
+      labelPlacement = _ref.labelPlacement,
+      readOnly = _ref.readOnly;
+      _ref.onBlur;
+      var required = _ref.required,
+      rest = _objectWithoutProperties(_ref, _excluded$2);
+    var _useState = React.useState(_isArray(value) ? value : []),
+      _useState2 = _slicedToArray(_useState, 2),
+      currentValue = _useState2[0],
+      setCurrentValue = _useState2[1];
+    var handleChange = React.useCallback(function (e) {
+      var newValue;
+      if (e.target.checked) {
+        newValue = _toConsumableArray(new Set(currentValue).add(e.target.name));
+      } else {
+        var newSet = new Set(currentValue);
+        newSet.delete(e.target.name);
+        newValue = _toConsumableArray(newSet);
+      }
+      setCurrentValue(newValue);
+      onChange(newValue);
+    }, [currentValue, onChange]);
+    return /*#__PURE__*/React.createElement(FormControl, {
+      "data-lf-field-name": name,
+      className: "lf-control-radio-group",
+      required: required,
+      error: error != null
+    }, /*#__PURE__*/React.createElement(FormLabel, {
+      id: "lf-control-radio-group-".concat(name)
+    }, label), /*#__PURE__*/React.createElement(FormGroup, {
+      "aria-labelledby": "lf-control-radio-group-".concat(name)
+    }, (options || []).map(function (option) {
+      return /*#__PURE__*/React.createElement(FormControlLabel, {
+        key: option.value,
+        value: option.value,
+        labelPlacement: labelPlacement !== null && labelPlacement !== void 0 ? labelPlacement : undefined,
+        control: /*#__PURE__*/React.createElement(Checkbox, _extends({
+          disabled: disabled || readOnly,
+          size: size !== null && size !== void 0 ? size : undefined,
+          color: color !== null && color !== void 0 ? color : undefined,
+          checked: currentValue.includes(option.value),
+          onChange: handleChange,
+          name: option.value
+        }, passRest(rest))),
+        label: option.label
+      });
+    })), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, {
+      sx: {
+        marginLeft: '0px'
+      }
+    }, hint), error && /*#__PURE__*/React.createElement(FormHelperText, {
+      sx: {
+        marginLeft: '0px'
+      }
+    }, error));
+  }, ['label', 'hint'], {
+    options: i18nOptions
+  });
+  lfLog('Loaded MUI.CheckboxGroup');
+
+  var index$4 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: CheckboxGroup
+  });
+
+  var css_248z$2 = ".lf-form-react-material-ui .lf-control-tabs .tab-fields {\n  padding-top: var(--lf-field-margin);\n}";
+  styleInject(css_248z$2);
+
+  var _excluded$1 = ["name", "value", "tabs", "onChange", "children", "centered", "fullWidth", "indicatorColor", "textColor"];
+  var TabsMui = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
       tabs = _ref.tabs,
       onChange = _ref.onChange,
       children = _ref.children,
-      grow = _ref.grow,
-      justify = _ref.justify,
-      orientation = _ref.orientation,
-      placement = _ref.placement,
-      rest = _objectWithoutProperties(_ref, _excluded);
+      centered = _ref.centered,
+      fullWidth = _ref.fullWidth,
+      indicatorColor = _ref.indicatorColor,
+      textColor = _ref.textColor,
+      rest = _objectWithoutProperties(_ref, _excluded$1);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
@@ -20195,96 +20944,343 @@
       _useState2 = _slicedToArray(_useState, 2),
       active = _useState2[0],
       setActive = _useState2[1];
-    var handleChange = React.useCallback(function (active) {
-      setActive(active);
-      onChange(active);
+    var handleKey = React.useCallback(function (event, key) {
+      setActive(key);
+      onChange(key);
     }, [onChange]);
     return /*#__PURE__*/React.createElement("div", {
-      className: classNames('lf-control-tabs', (_classNames = {}, _defineProperty$1(_classNames, "orientation-".concat(orientation), orientation != null), _defineProperty$1(_classNames, "placement-".concat(placement), placement != null), _classNames)),
+      className: "lf-control-tabs",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React.createElement(core.Tabs, _extends({
+    }, /*#__PURE__*/React.createElement(Box, {
+      sx: {
+        borderBottom: 1,
+        borderColor: 'divider'
+      }
+    }, /*#__PURE__*/React.createElement(Tabs, _extends({
       value: active,
-      onChange: handleChange,
-      orientation: orientation,
-      placement: placement
-    }, passRest(rest)), /*#__PURE__*/React.createElement(core.Tabs.List, {
-      grow: grow,
-      justify: justify
-    }, (tabs || []).map(function (tab) {
-      return /*#__PURE__*/React.createElement(core.Tabs.Tab, {
+      onChange: handleKey,
+      centered: centered !== null && centered !== void 0 ? centered : undefined,
+      indicatorColor: indicatorColor !== null && indicatorColor !== void 0 ? indicatorColor : undefined,
+      textColor: textColor !== null && textColor !== void 0 ? textColor : undefined,
+      variant: fullWidth ? 'fullWidth' : 'standard'
+    }, passRest(rest)), (tabs || []).map(function (tab) {
+      return /*#__PURE__*/React.createElement(Tab, {
         key: tab.value,
-        value: tab.value,
-        leftSection: TextOrIcon(tab.leftSection),
-        rightSection: TextOrIcon(tab.rightSection),
-        size: tab.size,
-        color: tab.color,
-        disabled: tab.disabled
-      }, tab.label);
-    })), (tabs || []).map(function (tab) {
-      return /*#__PURE__*/React.createElement(core.Tabs.Panel, {
+        label: tab.label,
         value: tab.value
-      }, children(tab.value));
-    })));
+      });
+    }))), _isFunction(children) && /*#__PURE__*/React.createElement("div", {
+      className: "tab-fields"
+    }, children(active)));
   }, [], {
     tabs: i18nOptions
   });
-  lfLog('Loaded Mantine.Tabs');
+  lfLog('Loaded MUI.Tabs');
+
+  var index$3 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: TabsMui
+  });
+
+  var css_248z$1 = ".lf-form-react-material-ui .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeLarge .lf-icon {\n  max-width: 22px;\n  max-height: 22px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeSmall .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon {\n  min-width: inherit;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon .MuiButton-startIcon {\n  margin-right: 0px !important;\n}";
+  styleInject(css_248z$1);
+
+  var _excluded = ["label", "icon", "hint", "tooltip", "variant", "size", "color"];
+  var MuiButton = function MuiButton(_ref) {
+    var label = _ref.label,
+      icon = _ref.icon,
+      hint = _ref.hint,
+      tooltip = _ref.tooltip,
+      variant = _ref.variant,
+      size = _ref.size,
+      color = _ref.color,
+      rest = _objectWithoutProperties(_ref, _excluded);
+    var inner;
+    if (!_isEmpty(label) && !_isEmpty(icon)) {
+      inner = /*#__PURE__*/React.createElement(Button, _extends({
+        startIcon: /*#__PURE__*/React.createElement("img", {
+          className: "lf-icon",
+          src: icon
+        }),
+        variant: variant || 'contained',
+        size: size !== null && size !== void 0 ? size : undefined,
+        color: color !== null && color !== void 0 ? color : undefined
+      }, rest), label);
+    } else if (!_isEmpty(label) && _isEmpty(icon)) {
+      inner = /*#__PURE__*/React.createElement(Button, _extends({
+        variant: variant || 'contained',
+        size: size !== null && size !== void 0 ? size : undefined,
+        color: color !== null && color !== void 0 ? color : undefined
+      }, rest), label);
+    } else if (_isEmpty(label) && !_isEmpty(icon)) {
+      inner = /*#__PURE__*/React.createElement(Button, _extends({
+        className: "only-icon",
+        startIcon: /*#__PURE__*/React.createElement("img", {
+          className: "lf-icon",
+          src: icon
+        }),
+        variant: variant || 'contained',
+        size: size !== null && size !== void 0 ? size : undefined,
+        color: color !== null && color !== void 0 ? color : undefined
+      }, rest));
+    } else {
+      inner = /*#__PURE__*/React.createElement(React.Fragment, null);
+    }
+    return /*#__PURE__*/React.createElement(React.Fragment, null, (_isEmpty(hint) || !tooltip) && inner, !_isEmpty(hint) && /*#__PURE__*/React.createElement(FormHelperText, null, hint));
+  };
+  var BiStateButton = I18N(MakeButton(MuiButton, {
+    variant: 'contained'
+  }, {
+    variant: 'outlined'
+  }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
+  lfLog('Loaded MUI.Button');
+
+  var index$2 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: BiStateButton
+  });
+
+  function formatBytes(bytes) {
+    var decimals = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+    if (!+bytes) return '0 Bytes';
+    var k = 1024;
+    var dm = decimals < 0 ? 0 : decimals;
+    var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+    var i = Math.floor(Math.log(bytes) / Math.log(k));
+    return "".concat(parseFloat((bytes / Math.pow(k, i)).toFixed(dm)), " ").concat(sizes[i]);
+  }
+
+  var css_248z = ".lf-control-upload .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-control-upload .MuiButton-sizeLarge .lf-icon {\n  max-width: 22px;\n  max-height: 22px;\n}\n.lf-control-upload .MuiButton-sizeSmall .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-control-upload .lf-upload-button-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .lf-upload-button-layout .lf-upload-button-left {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .lf-upload-button-layout .lf-upload-button-right {\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n  margin-left: var(--lf-field-margin);\n}\n.lf-control-upload .lf-upload-file-list {\n  margin-top: 10px;\n  font-family: \"Roboto\", \"Helvetica\", \"Arial\", sans-serif;\n}\n.lf-control-upload .lf-upload-file-list .lf-upload-file-item {\n  padding: 4px 0px;\n}\n.lf-control-upload .lf-upload-file-list .lf-upload-file-item:hover {\n  background-color: #eeeeee;\n}\n.lf-control-upload .lf-upload-file-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .lf-upload-file-item .lf-attachment-icon {\n  flex: 0 0;\n  align-self: auto;\n  margin-right: 5px;\n}\n.lf-control-upload .lf-upload-file-item .lf-clear-button {\n  flex: 0 0;\n  align-self: auto;\n  margin-left: 5px;\n  margin-right: 5px;\n  font-size: 1px;\n}\n.lf-control-upload .lf-upload-file-item .lf-name {\n  flex: 1 0;\n  align-self: auto;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.lf-control-upload .lf-upload-file-item .lf-size {\n  flex: 0 0 auto;\n  align-self: auto;\n  margin-left: 5px;\n  color: #888888;\n}\n.lf-control-upload .lf-upload-file-name .lf-size {\n  color: #888888;\n}";
+  styleInject(css_248z);
+
+  var IconAttachment = function IconAttachment(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color;
+    return /*#__PURE__*/React.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "-8 0 32 32",
+      version: "1.1",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React.createElement("g", {
+      id: "Page-1",
+      stroke: "none",
+      "stroke-width": "1",
+      fill: "none",
+      "fill-rule": "evenodd"
+    }, /*#__PURE__*/React.createElement("g", {
+      id: "Icon-Set",
+      transform: "translate(-212.000000, -151.000000)",
+      fill: color
+    }, /*#__PURE__*/React.createElement("path", {
+      d: "M226,155 L226,175 C226,178.313 223.313,181 220,181 C216.687,181 214,178.313 214,175 L214,157 C214,154.791 215.791,153 218,153 C220.209,153 222,154.791 222,157 L222,175 C222,176.104 221.104,177 220,177 C218.896,177 218,176.104 218,175 L218,159 L216,159 L216,175 C216,177.209 217.791,179 220,179 C222.209,179 224,177.209 224,175 L224,157 C224,153.687 221.313,151 218,151 C214.687,151 212,153.687 212,157 L212,176 C212.493,179.945 215.921,183 220,183 C224.079,183 227.507,179.945 228,176 L228,155 L226,155",
+      id: "attachment"
+    }))));
+  };
+
+  var FileItem = function FileItem(_ref) {
+    var file = _ref.file,
+      _ref$onRemove = _ref.onRemove,
+      onRemove = _ref$onRemove === void 0 ? function () {} : _ref$onRemove;
+    var handleClick = React.useCallback(function (e) {
+      e.preventDefault();
+      onRemove(file);
+    }, [onRemove, file]);
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-upload-file-item"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lf-attachment-icon"
+    }, /*#__PURE__*/React.createElement(IconAttachment, {
+      width: 16,
+      height: 16,
+      color: "#666666"
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "lf-name"
+    }, file.name), /*#__PURE__*/React.createElement("div", {
+      className: "lf-size"
+    }, formatBytes(file.size)), /*#__PURE__*/React.createElement("a", {
+      className: "lf-clear-button",
+      href: "#",
+      onClick: handleClick
+    }, /*#__PURE__*/React.createElement(CrossCirle, {
+      color: "#666666",
+      width: 16,
+      height: 16
+    })));
+  };
+
+  var Upload = I18N(function (_ref) {
+    var label = _ref.label,
+      uploadButtonLabel = _ref.uploadButtonLabel,
+      name = _ref.name,
+      accept = _ref.accept,
+      hint = _ref.hint,
+      error = _ref.error,
+      uploadButtonVariant = _ref.uploadButtonVariant,
+      uploadButtonSize = _ref.uploadButtonSize,
+      uploadButtonIcon = _ref.uploadButtonIcon,
+      color = _ref.color,
+      onChange = _ref.onChange,
+      multiple = _ref.multiple,
+      value = _ref.value;
+    var _useState = React.useState(multiple && _isArray(value) || !multiple && _isObject(value) ? value : undefined),
+      _useState2 = _slicedToArray(_useState, 2),
+      currentFile = _useState2[0],
+      setCurrentFile = _useState2[1];
+    var handleClear = React.useCallback(function (e) {
+      e.preventDefault();
+      setCurrentFile(null);
+      onChange(null);
+    }, [onChange]);
+    var handleRemove = React.useCallback(function (fileToRemove) {
+      var newCurrentFile = currentFile.filter(function (file) {
+        return file !== fileToRemove;
+      });
+      setCurrentFile(newCurrentFile);
+      onChange(newCurrentFile);
+    }, [currentFile, onChange]);
+    var handleChange = React.useCallback(function (e) {
+      if (e.target.files && e.target.files.length > 0) {
+        if (multiple) {
+          var newCurrentFile = currentFile ? _toConsumableArray(currentFile) : [];
+          var idx;
+          for (idx = 0; idx < e.target.files.length; idx++) {
+            console.log('.-', e.target.files[idx]);
+            newCurrentFile.push({
+              blobFile: e.target.files[idx],
+              name: e.target.files[idx].name,
+              size: e.target.files[idx].size
+            });
+          }
+          setCurrentFile(newCurrentFile);
+          onChange(newCurrentFile);
+        } else {
+          setCurrentFile(e.target.files[0]);
+          onChange({
+            blobFile: e.target.files[0],
+            name: e.target.files[0].name
+          });
+        }
+      } else {
+        onChange(null);
+      }
+    }, [onChange, multiple, currentFile]);
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-control-upload",
+      "data-lf-field-name": name
+    }, label && /*#__PURE__*/React.createElement(MuiLabel, {
+      id: "mui_input_text_".concat(name)
+    }, label), /*#__PURE__*/React.createElement("div", {
+      className: "lf-upload-button-layout"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lf-upload-button-left"
+    }, /*#__PURE__*/React.createElement(Button, {
+      color: color !== null && color !== void 0 ? color : undefined,
+      component: "label",
+      variant: uploadButtonVariant !== null && uploadButtonVariant !== void 0 ? uploadButtonVariant : undefined,
+      size: uploadButtonSize !== null && uploadButtonSize !== void 0 ? uploadButtonSize : undefined,
+      startIcon: uploadButtonIcon ? /*#__PURE__*/React.createElement("img", {
+        className: "lf-icon",
+        src: uploadButtonIcon
+      }) : undefined
+    }, uploadButtonLabel || 'Upload', /*#__PURE__*/React.createElement("input", {
+      type: "file",
+      accept: accept,
+      onChange: handleChange,
+      multiple: multiple,
+      style: {
+        clip: 'rect(0 0 0 0)',
+        clipPath: 'inset(50%)',
+        height: 1,
+        overflow: 'hidden',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        whiteSpace: 'nowrap',
+        width: 1
+      }
+    }))), /*#__PURE__*/React.createElement("div", {
+      className: "lf-upload-button-right"
+    }, !multiple && currentFile && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
+      className: "lf-upload-file-name"
+    }, currentFile.name, "\xA0", /*#__PURE__*/React.createElement("span", {
+      className: "lf-size"
+    }, formatBytes(currentFile.size))), "\xA0", /*#__PURE__*/React.createElement("a", {
+      href: "#",
+      onClick: handleClear
+    }, /*#__PURE__*/React.createElement(CrossCirle, {
+      color: "#666666",
+      width: 16,
+      height: 16
+    }))))), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), multiple && currentFile && /*#__PURE__*/React.createElement("div", {
+      className: "lf-upload-file-list"
+    }, currentFile.map(function (file) {
+      return /*#__PURE__*/React.createElement(FileItem, {
+        file: file,
+        key: file.name,
+        onRemove: handleRemove
+      });
+    })));
+  }, ['labelOn', 'labelOff', 'labelLink', 'hint']);
+  lfLog('Loaded MUI.Upload');
+  var Upload$1 = Upload;
 
   var index$1 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: MantineTabs
+    default: Upload$1
   });
 
-  var css_248z = ".lf-form-react-mantine .lf-control-input-number div[data-position=right] .lf-postfix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=right] .lf-postfix-wrapper {\n  padding-right: 1em;\n}\n.lf-form-react-mantine .lf-control-input-number div[data-position=left] .lf-prefix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=left] .lf-prefix-wrapper {\n  padding-left: 1em;\n}";
-  styleInject(css_248z);
-
-  var MantineForm = function MantineForm() {
-    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-      name = _ref.name,
-      children = _ref.children,
+  var FormMaterialUI = function FormMaterialUI(_ref) {
+    var name = _ref.name,
       buttonsAlign = _ref.buttonsAlign,
-      _ref$hideToolbar = _ref.hideToolbar,
-      hideToolbar = _ref$hideToolbar === void 0 ? false : _ref$hideToolbar,
-      _ref$onlyFields = _ref.onlyFields,
-      onlyFields = _ref$onlyFields === void 0 ? false : _ref$onlyFields,
+      children = _ref.children,
+      _ref$labelSubmit = _ref.labelSubmit,
+      labelSubmit = _ref$labelSubmit === void 0 ? 'Submit' : _ref$labelSubmit,
+      _ref$labelCancel = _ref.labelCancel,
+      labelCancel = _ref$labelCancel === void 0 ? 'Cancel' : _ref$labelCancel,
       _ref$disabled = _ref.disabled,
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
       _ref$disabledSubmit = _ref.disabledSubmit,
       disabledSubmit = _ref$disabledSubmit === void 0 ? false : _ref$disabledSubmit,
       plaintext = _ref.plaintext,
-      _ref$labelSubmit = _ref.labelSubmit,
-      labelSubmit = _ref$labelSubmit === void 0 ? 'Submit' : _ref$labelSubmit,
-      _ref$labelCancel = _ref.labelCancel,
-      labelCancel = _ref$labelCancel === void 0 ? 'Cancel' : _ref$labelCancel,
+      _ref$onlyFields = _ref.onlyFields,
+      onlyFields = _ref$onlyFields === void 0 ? false : _ref$onlyFields,
+      _ref$hideToolbar = _ref.hideToolbar,
+      hideToolbar = _ref$hideToolbar === void 0 ? false : _ref$hideToolbar,
       _ref$onSubmit = _ref.onSubmit,
       onSubmit = _ref$onSubmit === void 0 ? function () {} : _ref$onSubmit,
       _ref$onReset = _ref.onReset,
       onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset,
       custom = _ref.custom;
-    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("form", {
-      onSubmit: onSubmit,
-      className: classNames('lf-form lf-form-react-mantine', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
-      "data-lf-form-name": name
-    }, children, !hideToolbar && !onlyFields && !plaintext && /*#__PURE__*/React.createElement(core.Group, {
-      className: "lf-buttons",
-      align: buttonsAlign
-    }, /*#__PURE__*/React.createElement(core.Button, {
-      variant: "filled",
+    return /*#__PURE__*/React.createElement("form", {
+      className: classNames('lf-form lf-form-react-material-ui', _defineProperty$1({
+        'lf-form-react-material-ui-plaintext': plaintext
+      }, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
+      "data-lf-form-name": name,
+      onSubmit: onSubmit
+    }, children, !onlyFields && !hideToolbar && !plaintext && /*#__PURE__*/React.createElement(Stack$2, {
+      spacing: 2,
+      direction: "row",
+      className: "lf-buttons"
+    }, /*#__PURE__*/React.createElement(Button, {
       onClick: onSubmit,
-      disabled: disabled || disabledSubmit,
-      className: "lf-form-react-primary-button"
-    }, labelSubmit), /*#__PURE__*/React.createElement(core.Button, {
-      variant: "outline",
-      disabled: disabled,
-      className: "lf-form-react-secondary-button",
-      onClick: onReset
-    }, labelCancel), custom)));
+      variant: "contained",
+      disabled: disabled || disabledSubmit
+    }, labelSubmit), /*#__PURE__*/React.createElement(Button, {
+      onClick: onReset,
+      variant: "outlined",
+      disabled: disabled
+    }, labelCancel), custom));
   };
-  lfLog('Loaded Mantine.Form');
+  lfLog('Loaded MUI.Form');
 
   var index = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: MantineForm
+    default: FormMaterialUI
   });
 
   exports.FIELDS_KEY = FIELDS_KEY;

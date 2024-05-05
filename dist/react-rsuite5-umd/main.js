@@ -1,9 +1,9 @@
-/* LetsForm react-mantine v0.7.10 - UMD */
+/* LetsForm react-rsuite5 v0.7.10 - UMD */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('@mantine/dates')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', '@mantine/dates'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-mantine"] = {}, global.React, global.core, global.dates));
-})(this, (function (exports, React, core, dates) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite/Form'), require('rsuite/Toggle'), require('rsuite/SelectPicker'), require('rsuite/InputNumber'), require('rsuite/Checkbox'), require('rsuite/CheckboxGroup'), require('rsuite/Slider'), require('rsuite/Radio'), require('rsuite/RadioGroup'), require('rsuite/TagInput'), require('rsuite/MaskedInput'), require('rsuite/InputGroup'), require('rsuite/Rate'), require('rsuite/TagPicker'), require('rsuite/CheckPicker'), require('rsuite/Input'), require('rsuite/DatePicker'), require('rsuite/Whisper'), require('rsuite/Popover'), require('rsuite/Nav'), require('rsuite/RadioTile'), require('rsuite/RadioTileGroup'), require('rsuite/Uploader'), require('rsuite/Button'), require('rsuite/IconButton'), require('rsuite/Tooltip'), require('rsuite/Steps'), require('rsuite/ButtonGroup'), require('rsuite/ButtonToolbar')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite/Form', 'rsuite/Toggle', 'rsuite/SelectPicker', 'rsuite/InputNumber', 'rsuite/Checkbox', 'rsuite/CheckboxGroup', 'rsuite/Slider', 'rsuite/Radio', 'rsuite/RadioGroup', 'rsuite/TagInput', 'rsuite/MaskedInput', 'rsuite/InputGroup', 'rsuite/Rate', 'rsuite/TagPicker', 'rsuite/CheckPicker', 'rsuite/Input', 'rsuite/DatePicker', 'rsuite/Whisper', 'rsuite/Popover', 'rsuite/Nav', 'rsuite/RadioTile', 'rsuite/RadioTileGroup', 'rsuite/Uploader', 'rsuite/Button', 'rsuite/IconButton', 'rsuite/Tooltip', 'rsuite/Steps', 'rsuite/ButtonGroup', 'rsuite/ButtonToolbar'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-rsuite5"] = {}, global.React$1, global.Form, global.Toggle, global.SelectPicker, global.InputNumber, global.Checkbox, global.CheckboxGroup, global.Slider, global.Radio, global.RadioGroup, global.TagInput, global.MaskedInput, global.InputGroup, global.Rate, global.TagPicker, global.CheckPicker, global.Input, global.DatePicker, global.Whisper, global.Popover, global.Nav, global.RadioTile, global.RadioTileGroup, global.Uploader, global.Button, global.IconButton$1, global.Tooltip, global.Steps, global.ButtonGroup, global.ButtonToolbar));
+})(this, (function (exports, React$1, Form, Toggle, SelectPicker, InputNumber, Checkbox, CheckboxGroup, Slider, Radio, RadioGroup, TagInput, MaskedInput, InputGroup, Rate, TagPicker, CheckPicker, Input, DatePicker, Whisper, Popover, Nav, RadioTile, RadioTileGroup, Uploader, Button, IconButton$1, Tooltip, Steps, ButtonGroup, ButtonToolbar) { 'use strict';
 
   function _AsyncGenerator(gen) {
     var front, back;
@@ -534,9 +534,6 @@
       return target;
     };
     return _extends.apply(this, arguments);
-  }
-  function _objectDestructuringEmpty(obj) {
-    if (obj == null) throw new TypeError("Cannot destructure " + obj);
   }
   function _objectWithoutPropertiesLoose(source, excluded) {
     if (source == null) return {};
@@ -4574,7 +4571,7 @@
       validate: 'validate',
   };
 
-  const HookFormContext = React.createContext(null);
+  const HookFormContext = React$1.createContext(null);
   /**
    * This custom hook allows you to access the form context. useFormContext is intended to be used in deeply nested structures, where it would become inconvenient to pass the context as a prop. To be used with {@link FormProvider}.
    *
@@ -4605,7 +4602,7 @@
    * }
    * ```
    */
-  const useFormContext$1 = () => React.useContext(HookFormContext);
+  const useFormContext$1 = () => React$1.useContext(HookFormContext);
 
   var getProxyFormState = (formState, control, localProxyFormState, isRoot = true) => {
       const result = {
@@ -4649,9 +4646,9 @@
                   signalName.startsWith(currentName)));
 
   function useSubscribe(props) {
-      const _props = React.useRef(props);
+      const _props = React$1.useRef(props);
       _props.current = props;
-      React.useEffect(() => {
+      React$1.useEffect(() => {
           const subscription = !props.disabled &&
               _props.current.subject &&
               _props.current.subject.subscribe({
@@ -4696,9 +4693,9 @@
   function useFormState(props) {
       const methods = useFormContext$1();
       const { control = methods.control, disabled, name, exact } = props || {};
-      const [formState, updateFormState] = React.useState(control._formState);
-      const _mounted = React.useRef(true);
-      const _localProxyFormState = React.useRef({
+      const [formState, updateFormState] = React$1.useState(control._formState);
+      const _mounted = React$1.useRef(true);
+      const _localProxyFormState = React$1.useRef({
           isDirty: false,
           isLoading: false,
           dirtyFields: false,
@@ -4707,7 +4704,7 @@
           isValid: false,
           errors: false,
       });
-      const _name = React.useRef(name);
+      const _name = React$1.useRef(name);
       _name.current = name;
       useSubscribe({
           disabled,
@@ -4720,7 +4717,7 @@
               }),
           subject: control._subjects.state,
       });
-      React.useEffect(() => {
+      React$1.useEffect(() => {
           _mounted.current = true;
           const isDirty = control._proxyFormState.isDirty && control._getDirty();
           if (isDirty !== control._formState.isDirty) {
@@ -4769,7 +4766,7 @@
   function useWatch(props) {
       const methods = useFormContext$1();
       const { control = methods.control, name, defaultValue, disabled, exact, } = props || {};
-      const _name = React.useRef(name);
+      const _name = React$1.useRef(name);
       _name.current = name;
       useSubscribe({
           disabled,
@@ -4780,8 +4777,8 @@
               }
           },
       });
-      const [value, updateValue] = React.useState(control._getWatch(name, defaultValue));
-      React.useEffect(() => control._removeUnmounted());
+      const [value, updateValue] = React$1.useState(control._getWatch(name, defaultValue));
+      React$1.useEffect(() => control._removeUnmounted());
       return value;
   }
 
@@ -4850,11 +4847,11 @@
           control,
           name,
       });
-      const _registerProps = React.useRef(control.register(name, {
+      const _registerProps = React$1.useRef(control.register(name, {
           ...props.rules,
           value,
       }));
-      React.useEffect(() => {
+      React$1.useEffect(() => {
           const _shouldUnregisterField = control._options.shouldUnregister || shouldUnregister;
           const updateMounted = (name, value) => {
               const field = get(control._fields, name);
@@ -4882,14 +4879,14 @@
           field: {
               name,
               value,
-              onChange: React.useCallback((event) => _registerProps.current.onChange({
+              onChange: React$1.useCallback((event) => _registerProps.current.onChange({
                   target: {
                       value: getEventValue(event),
                       name: name,
                   },
                   type: EVENTS.CHANGE,
               }), [name]),
-              onBlur: React.useCallback(() => _registerProps.current.onBlur({
+              onBlur: React$1.useCallback(() => _registerProps.current.onBlur({
                   target: {
                       value: get(control._formValues, name),
                       name: name,
@@ -6441,8 +6438,8 @@
    * ```
    */
   function useForm(props = {}) {
-      const _formControl = React.useRef();
-      const [formState, updateFormState] = React.useState({
+      const _formControl = React$1.useRef();
+      const [formState, updateFormState] = React$1.useState({
           isDirty: false,
           isValidating: false,
           isLoading: isFunction(props.defaultValues),
@@ -6474,12 +6471,12 @@
               }
           },
       });
-      React.useEffect(() => {
+      React$1.useEffect(() => {
           if (props.values && !deepEqual(props.values, control._defaultValues)) {
               control._reset(props.values, control._options.resetOptions);
           }
       }, [props.values, control]);
-      React.useEffect(() => {
+      React$1.useEffect(() => {
           if (!control._state.mount) {
               control._updateValid();
               control._state.mount = true;
@@ -6605,8 +6602,8 @@
     }
   }
 
-  var css_248z$d = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
-  styleInject(css_248z$d);
+  var css_248z$p = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
+  styleInject(css_248z$p);
 
   var tx = function tx(str, locale) {
     if (_isString(str)) {
@@ -6629,16 +6626,16 @@
       className = _ref.className,
       locale = _ref.locale;
     var keys = Object.keys(errors);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: classNames('lf-validation-errors', className)
     }, keys.map(function (fieldName) {
       var label = fieldName;
       if (errors[fieldName] && errors[fieldName].ref && errors[fieldName].ref.label) {
         label = tx(errors[fieldName].ref.label, locale);
       }
-      return /*#__PURE__*/React.createElement("div", {
+      return /*#__PURE__*/React$1.createElement("div", {
         key: fieldName
-      }, /*#__PURE__*/React.createElement("b", null, label, ":"), "\xA0", errors[fieldName].message ? errors[fieldName].message : 'This is required');
+      }, /*#__PURE__*/React$1.createElement("b", null, label, ":"), "\xA0", errors[fieldName].message ? errors[fieldName].message : 'This is required');
     }));
   };
 
@@ -6649,13 +6646,13 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       viewBox: "0 0 20 20",
       xmlns: "http://www.w3.org/2000/svg",
       fill: "none"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       fill: color,
       fillRule: "evenodd",
       d: "M10 3a7 7 0 100 14 7 7 0 000-14zm-9 7a9 9 0 1118 0 9 9 0 01-18 0zm14 .069a1 1 0 01-1 1h-2.931V14a1 1 0 11-2 0v-2.931H6a1 1 0 110-2h3.069V6a1 1 0 112 0v3.069H14a1 1 0 011 1z"
@@ -6669,13 +6666,13 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       viewBox: "0 0 24 24",
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       fill: color,
       fillRule: "evenodd",
       clipRule: "evenodd",
@@ -6690,13 +6687,13 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       fill: color,
       viewBox: "0 0 24 24",
       xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       d: "M17,8H7a1,1,0,0,0-.768,1.641l5,6a1,1,0,0,0,1.536,0l5-6A1,1,0,0,0,17,8Zm-5,5.438L9.135,10h5.73Z"
     }));
   };
@@ -6708,15 +6705,40 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       viewBox: "0 0 24 24",
       xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       fill: color,
       d: "M12.768,8.359a1.035,1.035,0,0,0-1.536,0l-5,6A1,1,0,0,0,7,16H17a1,1,0,0,0,.768-1.641ZM9.135,14,12,10.563,14.865,14Z"
     }));
+  };
+
+  var Asterisk = function Asterisk(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color,
+      style = _ref.style;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      style: style,
+      version: "1.1",
+      id: "_x32_",
+      className: "lf-icon-asterisk",
+      viewBox: "0 0 512 512"
+    }, /*#__PURE__*/React$1.createElement("g", null, /*#__PURE__*/React$1.createElement("polygon", {
+      style: {
+        fill: color
+      },
+      className: "st0",
+      points: "501.539,169.221 453.886,86.7 303.669,173.449 303.669,0 208.365,0 208.365,173.479 58.114,86.73\r 10.461,169.261 160.674,255.99 10.501,342.71 58.154,425.231 208.365,338.482 208.365,512 303.669,512 303.669,338.542\r 453.846,425.271 501.499,342.74 351.267,255.99 \t"
+    })));
   };
 
   var Warning = function Warning(_ref) {
@@ -6726,16 +6748,72 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       fill: color,
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       viewBox: "0 0 1920 1920",
       xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       d: "M960 0c530.193 0 960 429.807 960 960s-429.807 960-960 960S0 1490.193 0 960 429.807 0 960 0Zm-9.838 1342.685c-84.47 0-153.19 68.721-153.19 153.19 0 84.47 68.72 153.192 153.19 153.192s153.19-68.721 153.19-153.191-68.72-153.19-153.19-153.19ZM1153.658 320H746.667l99.118 898.623h208.755L1153.658 320Z",
       fillRule: "evenodd"
     }));
+  };
+
+  var CrossCirle = function CrossCirle(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 0 24 24",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React$1.createElement("path", {
+      d: "M16 8L8 16M8.00001 8L16 16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z",
+      stroke: color,
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }));
+  };
+
+  var IconCheck = function IconCheck(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height;
+    return /*#__PURE__*/React.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 0 24 24",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React.createElement("g", {
+      id: "Interface / Check"
+    }, /*#__PURE__*/React.createElement("path", {
+      id: "Vector",
+      d: "M6 12L10.2426 16.2426L18.727 7.75732",
+      stroke: "#000000",
+      strokeWidth: "2",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })));
+  };
+
+  var RequiredIcon = function RequiredIcon() {
+    return /*#__PURE__*/React$1.createElement(Asterisk, {
+      color: "#ff6633",
+      width: 12,
+      height: 12,
+      style: {
+        marginLeft: '3px'
+      }
+    });
   };
 
   /**
@@ -7841,7 +7919,7 @@
     }
   };
 
-  var LANGUAGES_OPTIONS = Object.keys(LOCALES['language-names']).map(function (lang) {
+  var LANGUAGES_OPTIONS$2 = Object.keys(LOCALES['language-names']).map(function (lang) {
     return {
       code: lang,
       name: LOCALES['language-names'][lang][1],
@@ -7849,7 +7927,7 @@
     };
   });
   var getLocales = function getLocales() {
-    return LANGUAGES_OPTIONS;
+    return LANGUAGES_OPTIONS$2;
   };
 
   var i18n = function i18n(value, locale) {
@@ -16582,21 +16660,21 @@
         }
         return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, propName, props[propName]));
       }, {});
-      return /*#__PURE__*/React.createElement(Component, newProps);
+      return /*#__PURE__*/React$1.createElement(Component, newProps);
     };
   };
 
-  var FormContext = /*#__PURE__*/React.createContext();
+  var FormContext = /*#__PURE__*/React$1.createContext();
 
   var useFormContext = function useFormContext() {
-    var context = React.useContext(FormContext);
+    var context = React$1.useContext(FormContext);
 
     // put here some defaults
 
     return context;
   };
   var useStylesheet = function useStylesheet(id, css) {
-    React.useEffect(function () {
+    React$1.useEffect(function () {
       if (!_isEmpty(css)) {
         var head = document.head;
         var style = document.createElement("style");
@@ -16620,8 +16698,8 @@
     return console.log('%cLF%c Error: ' + s, 'background: #E44D2E; color: #ffffff; padding: 2px; border-radius: 3px', '', e);
   };
 
-  var css_248z$c = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
-  styleInject(css_248z$c);
+  var css_248z$o = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
+  styleInject(css_248z$o);
 
   var baseGetTag = _baseGetTag,
     isObjectLike = isObjectLike_1;
@@ -16975,11 +17053,11 @@
       case 'input-number':
       case 'rate':
       case 'slider':
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, value);
       case 'input-text':
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, value);
       case 'date':
@@ -16988,7 +17066,7 @@
         } else if (_isString(value) && isValidDate(new Date(value))) {
           d = new Date(value);
         }
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, d ? d.toLocaleDateString() : '');
       case 'datetime':
@@ -16997,21 +17075,21 @@
         } else if (_isString(value) && isValidDate(new Date(value))) {
           d = new Date(value);
         }
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, d ? d.toLocaleDateString() + ' ' + d.toLocaleTimeString() : '');
       case 'toggle':
       case 'checkbox':
         if (value === true || value === 1) {
-          return /*#__PURE__*/React.createElement("div", {
+          return /*#__PURE__*/React$1.createElement("div", {
             className: "plaintext-value"
           }, i18n(YesLabel, locale));
         } else if (value === false || value === 0) {
-          return /*#__PURE__*/React.createElement("div", {
+          return /*#__PURE__*/React$1.createElement("div", {
             className: "plaintext-value"
           }, i18n(NoLabel, locale));
         }
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         });
       case 'radio-group':
@@ -17028,7 +17106,7 @@
             label = found.label;
           }
         }
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, label);
       case 'checkbox-group':
@@ -17039,17 +17117,17 @@
         var founds = selectedOptions.map(function (option) {
           return isI18n(option.label) ? i18n(option.label, locale) : option.label;
         });
-        return /*#__PURE__*/React.createElement("div", null, founds.join(', '));
+        return /*#__PURE__*/React$1.createElement("div", null, founds.join(', '));
       case 'array':
-        return /*#__PURE__*/React.createElement(React.Fragment, null, _isArray(value) && /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, _isArray(value) && /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
-        }, /*#__PURE__*/React.createElement("span", {
+        }, /*#__PURE__*/React$1.createElement("span", {
           className: "count"
-        }, value.length), ' ', value.length > 1 ? i18n(ElementsLabel, locale) : i18n(ElementLabel, locale)), !_isArray(value) && /*#__PURE__*/React.createElement("div", {
+        }, value.length), ' ', value.length > 1 ? i18n(ElementsLabel, locale) : i18n(ElementLabel, locale)), !_isArray(value) && /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, i18n(NoElementsLabel, locale)));
       case 'textarea':
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value",
           dangerouslySetInnerHTML: {
             __html: (value || '').replaceAll('\n', '<br/>')
@@ -17057,9 +17135,9 @@
         });
       case 'placeholder':
       case 'placeholder-image':
-        return /*#__PURE__*/React.createElement(React.Fragment, null);
+        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null);
       default:
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, _typeof(value) !== 'object' ? value : '');
     }
@@ -17244,14 +17322,14 @@
     };
   }();
 
-  var css_248z$b = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
-  styleInject(css_248z$b);
+  var css_248z$n = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
+  styleInject(css_248z$n);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
       name = _ref.name;
     if (!_isEmpty(text)) {
-      return /*#__PURE__*/React.createElement("div", {
+      return /*#__PURE__*/React$1.createElement("div", {
         className: "lf-control-placeholder",
         "data-lf-field-name": name,
         dangerouslySetInnerHTML: {
@@ -17259,12 +17337,12 @@
         }
       });
     } else {
-      return /*#__PURE__*/React.createElement("div", null);
+      return /*#__PURE__*/React$1.createElement("div", null);
     }
   };
 
-  var css_248z$a = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
-  styleInject(css_248z$a);
+  var css_248z$m = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
+  styleInject(css_248z$m);
 
   var ThreeColumns = function ThreeColumns(_ref) {
     var name = _ref.name,
@@ -17273,20 +17351,20 @@
       leftAlignment = _ref.leftAlignment,
       centerAlignment = _ref.centerAlignment,
       rightAlignment = _ref.rightAlignment;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: classNames('lf-control-three-columns', layout)
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "left",
       style: {
         alignSelf: leftAlignment ? leftAlignment : undefined
       }
-    }, _isFunction(children) && children('left')), /*#__PURE__*/React.createElement("div", {
+    }, _isFunction(children) && children('left')), /*#__PURE__*/React$1.createElement("div", {
       className: "center",
       style: {
         alignSelf: centerAlignment ? centerAlignment : undefined
       }
-    }, _isFunction(children) && children('center')), /*#__PURE__*/React.createElement("div", {
+    }, _isFunction(children) && children('center')), /*#__PURE__*/React$1.createElement("div", {
       className: "right",
       style: {
         alignSelf: rightAlignment ? rightAlignment : undefined
@@ -17294,8 +17372,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$9 = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
-  styleInject(css_248z$9);
+  var css_248z$l = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
+  styleInject(css_248z$l);
 
   var TwoColumns = function TwoColumns(_ref) {
     var name = _ref.name,
@@ -17303,15 +17381,15 @@
       layout = _ref.layout,
       leftAlignment = _ref.leftAlignment,
       rightAlignment = _ref.rightAlignment;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: classNames('lf-control-two-columns', layout),
       "data-lf-field-name": name
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "left",
       style: {
         alignSelf: leftAlignment ? leftAlignment : undefined
       }
-    }, _isFunction(children) && children('left')), /*#__PURE__*/React.createElement("div", {
+    }, _isFunction(children) && children('left')), /*#__PURE__*/React$1.createElement("div", {
       className: "right",
       style: {
         alignSelf: rightAlignment ? rightAlignment : undefined
@@ -17319,8 +17397,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$8 = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
-  styleInject(css_248z$8);
+  var css_248z$k = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject(css_248z$k);
 
   var Group = I18N(function (_ref) {
     var name = _ref.name,
@@ -17335,61 +17413,124 @@
       border = _ref$border === void 0 ? 'top' : _ref$border,
       align = _ref.align,
       children = _ref.children;
-    var _useState = React.useState(open),
+    var _useState = React$1.useState(open),
       _useState2 = _slicedToArray(_useState, 2),
       isOpen = _useState2[0],
       setIsOpen = _useState2[1];
-    var handleClick = React.useCallback(function (event) {
+    var handleClick = React$1.useCallback(function (event) {
       event.preventDefault();
       setIsOpen(!isOpen);
     }, [isOpen]);
     // if open changes, then change status
-    React.useEffect(function () {
+    React$1.useEffect(function () {
       setIsOpen(open);
     }, [open]);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: classNames('lf-control-group', "lf-border-".concat(border), {
         'open': isOpen,
         'close': !isOpen
       })
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       role: "separator",
       className: classNames('header', align)
-    }, /*#__PURE__*/React.createElement("span", {
+    }, /*#__PURE__*/React$1.createElement("span", {
       className: "inner-text"
-    }, label, collapsible && /*#__PURE__*/React.createElement("a", {
+    }, label, collapsible && /*#__PURE__*/React$1.createElement("a", {
       href: "#",
       className: "lf-btn-collapse",
       disabled: disabled,
       appearance: "link",
       onClick: handleClick
-    }, isOpen ? /*#__PURE__*/React.createElement(ChevronUp, {
+    }, isOpen ? /*#__PURE__*/React$1.createElement(ChevronUp, {
       color: "#3498ff"
-    }) : /*#__PURE__*/React.createElement(ChevronDown, {
+    }) : /*#__PURE__*/React$1.createElement(ChevronDown, {
       color: "#3498ff"
-    })))), (isOpen || !collapsible) && /*#__PURE__*/React.createElement("div", {
+    })))), (isOpen || !collapsible) && /*#__PURE__*/React$1.createElement("div", {
       className: "lf-group-content"
     }, children));
   }, ['label']);
 
-  var css_248z$7 = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
-  styleInject(css_248z$7);
+  var css_248z$j = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
+  styleInject(css_248z$j);
+
+  var PlaceholderImage = function PlaceholderImage(_ref) {
+    var url = _ref.url,
+      label = _ref.label,
+      name = _ref.name,
+      maxWidth = _ref.maxWidth,
+      maxHeight = _ref.maxHeight,
+      marginTop = _ref.marginTop,
+      marginBottom = _ref.marginBottom,
+      align = _ref.align;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-placeholder-image",
+      "data-lf-field-name": name,
+      style: {
+        textAlign: align ? align : undefined
+      }
+    }, url && /*#__PURE__*/React$1.createElement("img", {
+      src: url,
+      alt: label || name,
+      style: {
+        marginTop: marginTop ? marginTop : undefined,
+        marginBottom: marginBottom ? marginBottom : undefined,
+        maxWidth: maxWidth ? maxWidth : undefined,
+        maxHeight: maxHeight ? maxHeight : undefined,
+        textAlign: align ? align : undefined
+      }
+    }));
+  };
 
   var TextOrIcon = function TextOrIcon(str) {
     if (isUrl(str)) {
-      return /*#__PURE__*/React.createElement("img", {
+      return /*#__PURE__*/React$1.createElement("img", {
         className: "lf-prefix-icon",
         src: str,
         alt: "icon"
       });
     } else if (str) {
-      return /*#__PURE__*/React.createElement("span", null, str);
+      return /*#__PURE__*/React$1.createElement("span", null, str);
     }
   };
 
-  var css_248z$6 = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
-  styleInject(css_248z$6);
+  var css_248z$i = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
+  styleInject(css_248z$i);
+
+  var Divider = function Divider(_ref) {
+    var name = _ref.name,
+      size = _ref.size,
+      color = _ref.color;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-divider",
+      "data-lf-field-name": name
+    }, /*#__PURE__*/React$1.createElement("div", {
+      className: "bar",
+      style: {
+        height: "".concat(size, "px"),
+        backgroundColor: color
+      }
+    }, "&npsb;"));
+  };
+
+  var index$v = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    Divider: Divider
+  });
+
+  var _excluded$m = ["name", "view"];
+  var ReactView = function ReactView(_ref) {
+    var name = _ref.name,
+      view = _ref.view,
+      rest = _objectWithoutProperties(_ref, _excluded$m);
+    var View = view;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-react-view",
+      "data-lf-field-name": name
+    }, View && /*#__PURE__*/React$1.createElement(View, _extends({
+      name: name
+    }, rest)));
+  };
 
   var isEmptyItem = function isEmptyItem(obj) {
     return Object.keys(obj).filter(function (key) {
@@ -17590,13 +17731,13 @@
       className = _ref.className,
       Icon = _ref.icon,
       onClick = _ref.onClick;
-    var handleClick = React.useCallback(function (e) {
+    var handleClick = React$1.useCallback(function (e) {
       e.preventDefault();
       if (!disabled) {
         onClick();
       }
     }, [disabled, onClick]);
-    return /*#__PURE__*/React.createElement("a", {
+    return /*#__PURE__*/React$1.createElement("a", {
       href: "#",
       className: classNames('lf-icon-button', className, {
         disabled: disabled
@@ -17619,36 +17760,36 @@
       showAdd = _ref2$showAdd === void 0 ? false : _ref2$showAdd,
       align = _ref2.align,
       alignOffset = _ref2.alignOffset;
-    var handleRemove = React.useCallback(function () {
+    var handleRemove = React$1.useCallback(function () {
       return onRemove(item);
     }, [item]);
     var style;
     if ((align === 'top' || align === 'bottom') && _isNumber(alignOffset) && alignOffset > 0) {
       style = _defineProperty$1({}, "margin".concat(_capitalize(align)), "".concat(alignOffset, "px"));
     }
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-common-array-item"
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "inner-form"
-    }, children), /*#__PURE__*/React.createElement("div", {
+    }, children), /*#__PURE__*/React$1.createElement("div", {
       className: "buttons",
       style: style
-    }, showAdd && /*#__PURE__*/React.createElement(IconButton, {
+    }, showAdd && /*#__PURE__*/React$1.createElement(IconButton, {
       disabled: disableAdd || disabled || readOnly,
       className: "arrow",
       appearance: "link",
-      icon: /*#__PURE__*/React.createElement(PlusCircle, {
+      icon: /*#__PURE__*/React$1.createElement(PlusCircle, {
         height: 16,
         width: 16,
         color: "#3498ff"
       }),
       size: "sm",
       onClick: onAdd
-    }), !showAdd && /*#__PURE__*/React.createElement(IconButton, {
+    }), !showAdd && /*#__PURE__*/React$1.createElement(IconButton, {
       className: "arrow",
       disabled: disabled || readOnly,
       appearance: "link",
-      icon: /*#__PURE__*/React.createElement(MinusCircle, {
+      icon: /*#__PURE__*/React$1.createElement(MinusCircle, {
         height: 16,
         width: 16,
         color: "#3498ff"
@@ -17658,8 +17799,8 @@
     })));
   };
 
-  var css_248z$5 = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
-  styleInject(css_248z$5);
+  var css_248z$h = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
+  styleInject(css_248z$h);
 
   var randomId = function randomId() {
     var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
@@ -17713,7 +17854,7 @@
     }
     return cleaned;
   };
-  var makeDefaultValue = function makeDefaultValue(defaultValue, arrayType, form) {
+  var makeDefaultValue$1 = function makeDefaultValue(defaultValue, arrayType, form) {
     if (arrayType === 'arrayOfString') {
       var isArrayOfString = _isArray(defaultValue) && defaultValue.every(function (s) {
         return _isString(s);
@@ -17780,7 +17921,7 @@
       // copy the locales from the main form
       fields: fields
     };
-    var _useState = React.useState(makeDefaultValue(value, arrayType, form)),
+    var _useState = React$1.useState(makeDefaultValue$1(value, arrayType, form)),
       _useState2 = _slicedToArray(_useState, 2),
       items = _useState2[0],
       setItems = _useState2[1];
@@ -17795,14 +17936,14 @@
     if (leftMargin != null) {
       style.marginLeft = _isNumber(leftMargin) ? "".concat(leftMargin, "px") : leftMargin;
     }
-    var handleAdd = React.useCallback(function () {
+    var handleAdd = React$1.useCallback(function () {
       setItems(function (items) {
         return [].concat(_toConsumableArray(items), [{
           id: randomId()
         }]);
       });
     }, []);
-    var handleRemove = React.useCallback(function (item) {
+    var handleRemove = React$1.useCallback(function (item) {
       var newItems = items.filter(function (i) {
         return i.id !== item.id;
       });
@@ -17810,19 +17951,19 @@
       _onChange(formatArray(newItems, arrayType));
     }, [items, _onChange, arrayType]);
     if (children) {
-      return /*#__PURE__*/React.createElement("div", {
+      return /*#__PURE__*/React$1.createElement("div", {
         style: {
           padding: '0px 10px 1px 10px'
         }
       }, children);
     }
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: classNames('lf-control-common-array', align ? "lf-".concat(align) : undefined),
       style: style
     }, (_isArray(items) ? items : []).map(function (item, idx) {
       var canAdd = idx === items.length - 1 && !isEmptyItem(item);
       var showAdd = idx === items.length - 1 || items.length === 1;
-      return /*#__PURE__*/React.createElement(ArrayItem, {
+      return /*#__PURE__*/React$1.createElement(ArrayItem, {
         key: item.id,
         item: item,
         disabled: disabled,
@@ -17833,7 +17974,7 @@
         onRemove: handleRemove,
         align: align,
         alignOffset: alignOffset
-      }, /*#__PURE__*/React.createElement(LetsFormComponent, {
+      }, /*#__PURE__*/React$1.createElement(LetsFormComponent, {
         form: form,
         locale: lfLocale,
         disabled: disabled,
@@ -17851,18 +17992,136 @@
     }));
   };
 
-  var css_248z$4 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
-  styleInject(css_248z$4);
+  var css_248z$g = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
+  styleInject(css_248z$g);
 
-  var css_248z$3 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}";
-  styleInject(css_248z$3);
+  var _excluded$l = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue"];
+  var GenericButton = function GenericButton(_ref) {
+    var ButtonComponent = _ref.ButtonComponent,
+      OnStateProps = _ref.OnStateProps,
+      OffStateProps = _ref.OffStateProps,
+      _ref$LinkProps = _ref.LinkProps,
+      LinkProps = _ref$LinkProps === void 0 ? {} : _ref$LinkProps,
+      name = _ref.name,
+      labelOn = _ref.labelOn,
+      labelOff = _ref.labelOff,
+      labelLink = _ref.labelLink,
+      iconOn = _ref.iconOn,
+      iconOff = _ref.iconOff,
+      iconLink = _ref.iconLink,
+      size = _ref.size,
+      href = _ref.href,
+      appearance = _ref.appearance,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      value = _ref.value,
+      buttonType = _ref.buttonType,
+      hint = _ref.hint,
+      initialValue = _ref.initialValue,
+      rest = _objectWithoutProperties(_ref, _excluded$l);
+    var _useState = React$1.useState(value || initialValue),
+      _useState2 = _slicedToArray(_useState, 2),
+      checked = _useState2[0],
+      setChecked = _useState2[1];
+    var handleClick = React$1.useCallback(function () {
+      var newValue = !checked;
+      setChecked(!checked);
+      onChange(newValue, name);
+    }, [onChange, checked, name]);
+    var inner;
+    if (buttonType === 'toggle') {
+      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends({
+        size: size,
+        onClick: handleClick,
+        onBlur: onBlur,
+        icon: checked ? iconOn : iconOff,
+        label: checked ? labelOn : labelOff,
+        hint: hint,
+        style: makeWidthStyle(fullWidth, width)
+      }, passRest(_omit(rest, 'label')), checked ? OnStateProps : OffStateProps));
+    } else if (buttonType === 'link') {
+      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends({
+        size: size,
+        onBlur: onBlur,
+        appearance: appearance,
+        hint: hint,
+        label: labelLink,
+        icon: iconLink,
+        href: href,
+        target: "_blank",
+        style: makeWidthStyle(fullWidth, width)
+      }, passRest(_omit(rest, 'label')), LinkProps));
+    }
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-button",
+      "data-lf-field-name": name
+    }, inner);
+  };
+  var MakeButton = function MakeButton(ButtonComponent, OnStateProps, OffStateProps, LinkProps) {
+    return function (props) {
+      return /*#__PURE__*/React$1.createElement(GenericButton, _extends({
+        ButtonComponent: ButtonComponent,
+        OnStateProps: _isFunction(OnStateProps) ? OnStateProps(props) : OnStateProps,
+        OffStateProps: _isFunction(OffStateProps) ? OffStateProps(props) : OffStateProps,
+        LinkProps: _isFunction(LinkProps) ? LinkProps(props) : LinkProps
+      }, props));
+    };
+  };
 
-  var css_248z$2 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
-  styleInject(css_248z$2);
+  var css_248z$f = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}";
+  styleInject(css_248z$f);
+
+  var getInitialValue = function getInitialValue(value, multiple) {
+    return multiple ? (_isArray(value) ? value : []).reduce(function (acc, value) {
+      return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, value, true));
+    }, {}) : _defineProperty$1({}, value, true);
+  };
+  var ButtonsToggleGroup = function ButtonsToggleGroup(_ref2) {
+    var value = _ref2.value,
+      options = _ref2.options,
+      onChange = _ref2.onChange,
+      size = _ref2.size,
+      _ref2$multiple = _ref2.multiple,
+      multiple = _ref2$multiple === void 0 ? false : _ref2$multiple,
+      disabled = _ref2.disabled,
+      ButtonComponent = _ref2.ButtonComponent;
+    var _useState = React$1.useState(getInitialValue(value, multiple)),
+      _useState2 = _slicedToArray(_useState, 2),
+      values = _useState2[0],
+      setValues = _useState2[1];
+    var handleClick = React$1.useCallback(function (value, name) {
+      var newValues = multiple ? _objectSpread2(_objectSpread2({}, values), {}, _defineProperty$1({}, name, value)) : _defineProperty$1({}, name, value);
+      setValues(newValues);
+      var newValue = options.reduce(function (acc, option) {
+        return newValues[option.value] ? [].concat(_toConsumableArray(acc), [option.value]) : acc;
+      }, []);
+      onChange(multiple ? newValue : newValue[0]);
+    }, [onChange, options, values, multiple]);
+    return /*#__PURE__*/React$1.createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref4) {
+      var value = _ref4.value,
+        label = _ref4.label;
+      return /*#__PURE__*/React$1.createElement(ButtonComponent, {
+        key: value + values[value],
+        buttonType: "toggle",
+        labelOn: label,
+        name: value,
+        initialValue: values[value],
+        labelOff: label,
+        size: size,
+        disabled: disabled,
+        onChange: handleClick
+      });
+    }));
+  };
+
+  var css_248z$e = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
+  styleInject(css_248z$e);
 
   var PlaintextLabel = function PlaintextLabel(_ref) {
     var children = _ref.children;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-plaintext-field-label"
     }, children);
   };
@@ -17870,13 +18129,13 @@
     var currentValues = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
     return (fields || []).map(function (field) {
       if (field.component === 'group') {
-        return /*#__PURE__*/React.createElement(Group, _extends({
+        return /*#__PURE__*/React$1.createElement(Group, _extends({
           key: field.name,
           collapsible: false,
           label: field.label
         }, _pick(field, ['bottomBorder', 'align'])), renderFields(field.fields, locale, framework, currentValues));
       } else if (field.component === 'two-columns') {
-        return /*#__PURE__*/React.createElement(TwoColumns, _extends({
+        return /*#__PURE__*/React$1.createElement(TwoColumns, _extends({
           key: field.name
         }, _pick(field, ['layout', 'leftAlignment', 'rightAlignment'])), function (column) {
           if (column === 'left') {
@@ -17886,7 +18145,7 @@
           }
         });
       } else if (field.component === 'three-columns') {
-        return /*#__PURE__*/React.createElement(ThreeColumns, _extends({
+        return /*#__PURE__*/React$1.createElement(ThreeColumns, _extends({
           key: field.name
         }, _pick(field, ['layout', 'leftAlignment', 'centerAlignment', 'rightAlignment'])), function (column) {
           if (column === 'left') {
@@ -17902,12 +18161,12 @@
         var _fields = subkeys.map(function (subkey) {
           return renderFields(field.fields[subkey], locale, framework, currentValues);
         });
-        return /*#__PURE__*/React.createElement(React.Fragment, null, _fields);
+        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, _fields);
       }
-      return /*#__PURE__*/React.createElement("div", {
+      return /*#__PURE__*/React$1.createElement("div", {
         key: field.name,
         className: "lf-plaintext-field lf-control-".concat(field.component)
-      }, /*#__PURE__*/React.createElement(PlaintextLabel, null, isI18n(field.label) ? i18n(field.label, locale) : field.label), /*#__PURE__*/React.createElement(Plaintext, {
+      }, /*#__PURE__*/React$1.createElement(PlaintextLabel, null, isI18n(field.label) ? i18n(field.label, locale) : field.label), /*#__PURE__*/React$1.createElement(Plaintext, {
         component: field.component,
         locale: locale,
         value: currentValues[field.name],
@@ -17922,10 +18181,10 @@
       currentValues = _ref2.currentValues;
     var fields = form.fields;
     if (_isEmpty(fields)) {
-      return /*#__PURE__*/React.createElement("span", null);
+      return /*#__PURE__*/React$1.createElement("span", null);
     }
     console.log('plaintext--->', currentValues);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-form lf-form-plaintext"
     }, renderFields(fields, locale, framework, currentValues));
   };
@@ -18270,18 +18529,18 @@
     var lfComponent = _ref.lfComponent,
       label = _ref.label,
       lfFramework = _ref.lfFramework;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-missing-component"
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "icon"
-    }, /*#__PURE__*/React.createElement(Warning, {
+    }, /*#__PURE__*/React$1.createElement(Warning, {
       color: "#ff6633",
       height: 16
-    })), /*#__PURE__*/React.createElement("div", {
+    })), /*#__PURE__*/React$1.createElement("div", {
       className: "message"
-    }, "The component ", /*#__PURE__*/React.createElement("span", {
+    }, "The component ", /*#__PURE__*/React$1.createElement("span", {
       className: "tag-component"
-    }, lfComponent), " (", /*#__PURE__*/React.createElement("em", null, "\"", _isString(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/React.createElement("b", null, lfFramework), ")"));
+    }, lfComponent), " (", /*#__PURE__*/React$1.createElement("em", null, "\"", _isString(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/React$1.createElement("b", null, lfFramework), ")"));
   };
 
   var GenerateGenerator = function GenerateGenerator(_ref) {
@@ -18326,7 +18585,7 @@
 
         // special case of group
         if (field.component === 'group') {
-          var component = /*#__PURE__*/React.createElement(Component, _extends({
+          var component = /*#__PURE__*/React$1.createElement(Component, _extends({
             key: field.name,
             lfComponent: field.component,
             lfFramework: framework,
@@ -18335,7 +18594,7 @@
             label: field.label,
             hint: field.hint,
             disabled: field.disabled
-          }, additionalFields), /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+          }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
             Wrapper: Wrapper,
             GroupWrapper: GroupWrapper,
             PlaceholderWrapper: PlaceholderWrapper,
@@ -18356,19 +18615,19 @@
             locale: locale,
             onJavascriptError: onJavascriptError,
             Components: Components,
-            prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+            prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
               key: "wrapper_top_field",
               parentField: field,
               parentFieldTarget: "fields",
               nextField: field.fields && field.fields.length ? field.fields[0] : null
             })
-          }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+          }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
             context: "group",
             key: "bottom_view_".concat(field.name),
             field: field,
             target: "fields"
           })));
-          return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
             key: "wrapper_".concat(field.name),
             field: field,
             level: level,
@@ -18376,7 +18635,7 @@
             className: "group"
           }, component) : component;
         } else if (field.component === 'tabs') {
-          return /*#__PURE__*/React.createElement(Controller, {
+          return /*#__PURE__*/React$1.createElement(Controller, {
             key: "field_".concat(field.name),
             name: field.name,
             control: control,
@@ -18384,7 +18643,7 @@
               var _values$field$name;
               var fieldInfo = _ref3.field;
               var values = getValues();
-              var component = /*#__PURE__*/React.createElement(Component, _extends({
+              var component = /*#__PURE__*/React$1.createElement(Component, _extends({
                 key: field.name,
                 lfComponent: field.component,
                 lfFramework: framework,
@@ -18400,7 +18659,7 @@
                   _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
                 }
               }, additionalFields, field[framework]), function (tab) {
-                return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+                return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                   Wrapper: Wrapper,
                   GroupWrapper: GroupWrapper,
                   PlaceholderWrapper: PlaceholderWrapper,
@@ -18421,14 +18680,14 @@
                   locale: locale,
                   onJavascriptError: onJavascriptError,
                   Components: Components,
-                  prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                  prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                     key: "wrapper_top_field",
                     parentField: field,
                     parentFieldTarget: "fields",
                     parentFieldSubTarget: tab,
                     nextField: field.fields && field.fields.length ? field.fields[0] : null
                   })
-                }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+                }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                   context: "tabs",
                   key: "bottom_view_".concat(field.name),
                   field: field,
@@ -18436,7 +18695,7 @@
                   subtarget: tab
                 }));
               });
-              return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+              return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
                 key: "wrapper_".concat(field.name),
                 field: field,
                 level: level,
@@ -18446,7 +18705,7 @@
             }
           });
         } else if (field.component === 'steps') {
-          return /*#__PURE__*/React.createElement(Controller, {
+          return /*#__PURE__*/React$1.createElement(Controller, {
             key: "field_".concat(field.name),
             name: field.name,
             control: control,
@@ -18454,7 +18713,7 @@
               var _values$field$name2;
               var fieldInfo = _ref4.field;
               var values = getValues();
-              var component = /*#__PURE__*/React.createElement(Component, _extends({
+              var component = /*#__PURE__*/React$1.createElement(Component, _extends({
                 key: field.name,
                 lfComponent: field.component,
                 lfFramework: framework,
@@ -18470,7 +18729,7 @@
                   _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
                 }
               }, additionalFields, field[framework]), function (step) {
-                return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+                return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                   Wrapper: Wrapper,
                   GroupWrapper: GroupWrapper,
                   PlaceholderWrapper: PlaceholderWrapper,
@@ -18491,14 +18750,14 @@
                   locale: locale,
                   onJavascriptError: onJavascriptError,
                   Components: Components,
-                  prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                  prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                     key: "wrapper_top_field",
                     parentField: field,
                     parentFieldTarget: "fields",
                     parentFieldSubTarget: step,
                     nextField: field.fields && field.fields.length ? field.fields[0] : null
                   })
-                }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+                }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                   context: "tabs",
                   key: "bottom_view_".concat(field.name),
                   field: field,
@@ -18506,7 +18765,7 @@
                   subtarget: step
                 }));
               });
-              return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+              return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
                 key: "wrapper_".concat(field.name),
                 field: field,
                 level: level,
@@ -18516,7 +18775,7 @@
             }
           });
         } else if (field.component === 'array' && GroupWrapper) {
-          var _component = /*#__PURE__*/React.createElement(Component, _extends({
+          var _component = /*#__PURE__*/React$1.createElement(Component, _extends({
             key: field.name,
             lfComponent: field.component,
             lfFramework: framework,
@@ -18525,7 +18784,7 @@
             label: field.label,
             hint: field.hint,
             disabled: field.disabled
-          }, additionalFields), /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+          }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
             Wrapper: Wrapper,
             GroupWrapper: GroupWrapper,
             PlaceholderWrapper: PlaceholderWrapper,
@@ -18546,19 +18805,19 @@
             locale: locale,
             onJavascriptError: onJavascriptError,
             Components: Components,
-            prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+            prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
               key: "wrapper_top_field",
               parentField: field,
               parentFieldTarget: "fields",
               nextField: field.fields && field.fields.length ? field.fields[0] : null
             })
-          }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+          }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
             context: "array",
             key: "bottom_view_".concat(field.name),
             field: field,
             target: "fields"
           })));
-          return /*#__PURE__*/React.createElement(GroupWrapper, {
+          return /*#__PURE__*/React$1.createElement(GroupWrapper, {
             key: "wrapper_".concat(field.name),
             field: field,
             level: level,
@@ -18566,7 +18825,7 @@
             className: "array"
           }, _component);
         } else if (field.component === 'two-columns') {
-          var _component2 = /*#__PURE__*/React.createElement(Component, _extends({
+          var _component2 = /*#__PURE__*/React$1.createElement(Component, _extends({
             key: field.name,
             lfComponent: field.component,
             lfFramework: framework,
@@ -18574,7 +18833,7 @@
             name: field.name
           }, additionalFields), function (column) {
             if (column === 'left') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -18595,20 +18854,20 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "leftFields",
                   nextField: field.leftFields && field.leftFields.length ? field.leftFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "two-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
                 target: "leftFields"
               }));
             } else if (column === 'right') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -18629,13 +18888,13 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "rightFields",
                   nextField: field.rightFields && field.rightFields.length ? field.rightFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "two-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
@@ -18643,7 +18902,7 @@
               }));
             }
           });
-          return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
             key: "wrapper_".concat(field.name),
             className: "two-columns",
             level: level,
@@ -18651,7 +18910,7 @@
             index: index
           }, _component2) : _component2;
         } else if (field.component === 'three-columns') {
-          var _component3 = /*#__PURE__*/React.createElement(Component, _extends({
+          var _component3 = /*#__PURE__*/React$1.createElement(Component, _extends({
             key: "three-columns-".concat(field.name),
             name: field.name,
             lfComponent: field.component,
@@ -18659,7 +18918,7 @@
             lfLocale: locale
           }, additionalFields), function (column) {
             if (column === 'left') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -18680,20 +18939,20 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "leftFields",
                   nextField: field.leftFields && field.leftFields.length ? field.leftFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "three-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
                 target: "leftFields"
               }));
             } else if (column === 'center') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -18714,20 +18973,20 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "centerFields",
                   nextField: field.centerFields && field.centerFields.length ? field.centerFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "three-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
                 target: "centerFields"
               }));
             } else if (column === 'right') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -18748,13 +19007,13 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "rightFields",
                   nextField: field.rightFields && field.rightFields.length ? field.rightFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "three-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
@@ -18762,7 +19021,7 @@
               }));
             }
           });
-          return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
             key: "wrapper_".concat(field.name),
             className: "three-columns",
             field: field,
@@ -18776,14 +19035,14 @@
         var rules = translateValidation(_objectSpread2({
           required: field.required
         }, field.validation), locale, onJavascriptError);
-        return /*#__PURE__*/React.createElement(Controller, {
+        return /*#__PURE__*/React$1.createElement(Controller, {
           key: "field_".concat(field.name),
           name: field.name,
           rules: rules,
           control: control,
           render: function render(_ref5) {
             var fieldInfo = _ref5.field;
-            var component = /*#__PURE__*/React.createElement(Component
+            var component = /*#__PURE__*/React$1.createElement(Component
             // not sure about this, not passing the ref
             , _extends({
               name: fieldInfo.name,
@@ -18809,7 +19068,7 @@
                 _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
               }
             }));
-            return Wrapper ? /*#__PURE__*/React.createElement(Wrapper, {
+            return Wrapper ? /*#__PURE__*/React$1.createElement(Wrapper, {
               key: "wrapper_".concat(field.name),
               field: field,
               level: level,
@@ -18823,7 +19082,7 @@
       //return renderedFields;
       return prependView ? [prependView].concat(_toConsumableArray(renderedFields)) : renderedFields;
     };
-    var FormGenerator = /*#__PURE__*/React.memo(function (_ref6) {
+    var FormGenerator = /*#__PURE__*/React$1.memo(function (_ref6) {
       var _form$name;
       var framework = _ref6.framework,
         form = _ref6.form,
@@ -18870,16 +19129,16 @@
         _ref6$demo = _ref6.demo,
         demo = _ref6$demo === void 0 ? false : _ref6$demo;
       var showErrors = form.showErrors;
-      var _useState = React.useState((_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : _uniqueId('form_')),
+      var _useState = React$1.useState((_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : _uniqueId('form_')),
         _useState2 = _slicedToArray(_useState, 2),
         formName = _useState2[0],
         setFormName = _useState2[1];
       useStylesheet(formName, form.css);
-      var _useState3 = React.useState(null),
+      var _useState3 = React$1.useState(null),
         _useState4 = _slicedToArray(_useState3, 2),
         transformers = _useState4[0],
         setTransformers = _useState4[1];
-      var _useState5 = React.useState(prealoadComponents),
+      var _useState5 = React$1.useState(prealoadComponents),
         _useState6 = _slicedToArray(_useState5, 2),
         preloading = _useState6[0],
         setPreloading = _useState6[1];
@@ -18894,19 +19153,19 @@
         reset = _useForm.reset,
         control = _useForm.control,
         getValues = _useForm.getValues;
-      var _useState7 = React.useState(),
+      var _useState7 = React$1.useState(),
         _useState8 = _slicedToArray(_useState7, 2),
         validationErrors = _useState8[0],
         setValidationErrors = _useState8[1];
       // store form fields, apply immediately transformers (collected from all fields)
-      var _useState9 = React.useState(null),
+      var _useState9 = React$1.useState(null),
         _useState10 = _slicedToArray(_useState9, 2),
         formFields = _useState10[0],
         setFormFields = _useState10[1];
       var MergedComponents = mergeComponents(Fields, components);
 
       // preload components of the form
-      React.useEffect(function () {
+      React$1.useEffect(function () {
         if (prealoadComponents) {
           var _components = _uniq(reduceFields(form.fields, function (field, acc) {
             return [].concat(_toConsumableArray(acc), [field.component]);
@@ -18932,7 +19191,7 @@
       }, []);
 
       // update internal state if form changes
-      React.useEffect(function () {
+      React$1.useEffect(function () {
         var f = /*#__PURE__*/function () {
           var _ref7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
             var _form$name2;
@@ -19079,20 +19338,20 @@
       [form, framework] // don't put defaultValues here
       );
 
-      var onHandleSubmit = React.useCallback(function (data) {
+      var onHandleSubmit = React$1.useCallback(function (data) {
         setValidationErrors(null);
         onSubmit(data);
       }, [onSubmit]);
-      var onHandleError = React.useCallback(function (data) {
+      var onHandleError = React$1.useCallback(function (data) {
         setValidationErrors(data);
         onError(data);
       }, [onError]);
-      var handleReset = React.useCallback(function () {
+      var handleReset = React$1.useCallback(function () {
         setValidationErrors(null);
         reset(defaultValues);
         onReset();
       }, [defaultValues, reset, onReset]);
-      var handleChange = React.useCallback( /*#__PURE__*/function () {
+      var handleChange = React$1.useCallback( /*#__PURE__*/function () {
         var _ref8 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(values, fieldName) {
           var newFields, _iteratorAbruptCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, f, _iteratorAbruptCompletion4, _didIteratorError4, _iteratorError4, _iterator4, _step4, _f;
           return _regeneratorRuntime().wrap(function _callee2$(_context2) {
@@ -19226,7 +19485,7 @@
           return _ref8.apply(this, arguments);
         };
       }(), [onChange, formFields, formName, transformers, framework, onJavascriptError]);
-      var handleEnter = React.useCallback(function () {
+      var handleEnter = React$1.useCallback(function () {
         handleSubmit(onHandleSubmit, onHandleError)();
         onEnter();
       }, [handleSubmit, onEnter, onHandleError, onHandleSubmit]);
@@ -19239,10 +19498,10 @@
       var BottomView = bottomView;
       var PlaceholderWrapper = placeholderWrapper;
       if (preloading) {
-        return Loader ? /*#__PURE__*/React.createElement(Loader, null) : /*#__PURE__*/React.createElement("div", null, "Loading...");
+        return Loader ? /*#__PURE__*/React$1.createElement(Loader, null) : /*#__PURE__*/React$1.createElement("div", null, "Loading...");
       }
       if (plaintext) {
-        return /*#__PURE__*/React.createElement(PlaintextForm, {
+        return /*#__PURE__*/React$1.createElement(PlaintextForm, {
           form: form,
           locale: locale,
           framework: framework,
@@ -19254,23 +19513,23 @@
       if (debug) {
         console.log("[LetsForm] Render form (".concat(form.name, ")"));
       }
-      return /*#__PURE__*/React.createElement(FormContext.Provider, {
+      return /*#__PURE__*/React$1.createElement(FormContext.Provider, {
         value: {
           locales: form.locales,
           locale: locale
           // ..more
         }
-      }, /*#__PURE__*/React.createElement("div", {
+      }, /*#__PURE__*/React$1.createElement("div", {
         className: classNames('lf-lets-form', {
           'lf-lets-form-edit-mode': demo
         }, className)
-      }, formErrors && showErrors === 'groupedTop' && /*#__PURE__*/React.createElement(ValidationErrors, {
+      }, formErrors && showErrors === 'groupedTop' && /*#__PURE__*/React$1.createElement(ValidationErrors, {
         className: "top",
         locale: locale,
         errors: enrichWithLabels(formErrors, formFields)
-      }), /*#__PURE__*/React.createElement(React.Suspense, {
-        fallback: Loader ? /*#__PURE__*/React.createElement(Loader, null) : /*#__PURE__*/React.createElement("div", null, "Loading...")
-      }, /*#__PURE__*/React.createElement(Form, _extends({
+      }), /*#__PURE__*/React$1.createElement(React$1.Suspense, {
+        fallback: Loader ? /*#__PURE__*/React$1.createElement(Loader, null) : /*#__PURE__*/React$1.createElement("div", null, "Loading...")
+      }, /*#__PURE__*/React$1.createElement(Form, _extends({
         onSubmit: handleSubmit(onHandleSubmit, onHandleError),
         name: formName,
         defaultValues: defaultValues,
@@ -19309,11 +19568,11 @@
         locale: locale,
         onJavascriptError: onJavascriptError,
         Components: MergedComponents
-      }), children, formErrors && (showErrors === 'groupedBottom' || _isEmpty(showErrors)) && /*#__PURE__*/React.createElement(ValidationErrors, {
+      }), children, formErrors && (showErrors === 'groupedBottom' || _isEmpty(showErrors)) && /*#__PURE__*/React$1.createElement(ValidationErrors, {
         className: "bottom",
         locale: locale,
         errors: enrichWithLabels(formErrors, formFields)
-      }))), demo && /*#__PURE__*/React.createElement("div", {
+      }))), demo && /*#__PURE__*/React$1.createElement("div", {
         className: "label-test-buttons"
       }, "Test buttons")));
     }, function (prevProps, nextProps) {
@@ -19329,16 +19588,16 @@
   };
 
   function lazyPreload(factory) {
-    var ReactLazyComponent = /*#__PURE__*/React.lazy(factory);
+    var ReactLazyComponent = /*#__PURE__*/React$1.lazy(factory);
     var PreloadedComponent;
     var factoryPromise;
-    var Component = /*#__PURE__*/React.forwardRef(function LazyWithPreload(props, ref) {
+    var Component = /*#__PURE__*/React$1.forwardRef(function LazyWithPreload(props, ref) {
       var _PreloadedComponent;
       // Once one of these is chosen, we must ensure that it continues to be
       // used for all subsequent renders, otherwise it can cause the
       // underlying component to be unmounted and remounted.
-      var ComponentToRender = React.useRef((_PreloadedComponent = PreloadedComponent) !== null && _PreloadedComponent !== void 0 ? _PreloadedComponent : ReactLazyComponent);
-      return /*#__PURE__*/React.createElement(ComponentToRender.current, Object.assign(ref ? {
+      var ComponentToRender = React$1.useRef((_PreloadedComponent = PreloadedComponent) !== null && _PreloadedComponent !== void 0 ? _PreloadedComponent : ReactLazyComponent);
+      return /*#__PURE__*/React$1.createElement(ComponentToRender.current, Object.assign(ref ? {
         ref: ref
       } : {}, props));
     });
@@ -19357,111 +19616,166 @@
     return LazyWithPreload;
   }
 
-  var _excluded$g = ["framework", "children"];
+  var _excluded$k = ["framework", "children"];
   var Fields = {
     'input-text': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
-      })
-    },
-    'input-number': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
-      })
-    },
-    'textarea': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
-      })
-    },
-    'select': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
-      })
-    },
-    'checkbox': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$u; });
       })
     },
     'toggle': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$t; });
       })
     },
-    'array': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
-      })
-    },
-    'checkbox-group': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
-      })
-    },
-    'radio-group': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
-      })
-    },
-    'two-columns': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
-      })
-    },
-    'three-columns': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
+    'select': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$s; });
       })
     },
     'group': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$r; });
+      })
+    },
+    'array': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$q; });
+      })
+    },
+    'two-columns': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$p; });
+      })
+    },
+    'three-columns': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$o; });
+      })
+    },
+    'input-number': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$n; });
       })
     },
     'date': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$m; });
       })
     },
-    'datetime': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+    'checkbox': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$l; });
       })
     },
-    'rate': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
-      })
-    },
-    'placeholder': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
-      })
-    },
-    'divider': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+    'checkbox-group': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$k; });
       })
     },
     'slider': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$j; });
+      })
+    },
+    'radio-group': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$i; });
       })
     },
     'input-tag': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$h; });
+      })
+    },
+    'input-mask': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$g; });
+      })
+    },
+    'textarea': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$f; });
+      })
+    },
+    'rate': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$e; });
+      })
+    },
+    'placeholder': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$d; });
+      })
+    },
+    'multiselect': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$c; });
+      })
+    },
+    'multiselect-language': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$b; });
+      })
+    },
+    'input-text-i18n': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$a; });
+      })
+    },
+    'placeholder-image': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$9; });
+      })
+    },
+    'button': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$8; });
+      })
+    },
+    'divider': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$v; });
+      })
+    },
+    'react-view': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$7; });
+      })
+    },
+    'datetime': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$6; });
       })
     },
     'tabs': {
-      'react-mantine': lazyPreload(function () {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$5; });
+      })
+    },
+    'radio-tile': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$4; });
+      })
+    },
+    'upload': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$3; });
+      })
+    },
+    'buttons-toggle-group': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'steps': {
+      'react-rsuite5': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
       })
     }
   };
   var Forms = {
-    'react-mantine': lazyPreload(function () {
+    'react-rsuite5': lazyPreload(function () {
       return Promise.resolve().then(function () { return index; });
     })
   };
@@ -19472,658 +19786,637 @@
   var LetsForm = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$g);
-    return /*#__PURE__*/React.createElement(FormGenerator, _extends({
-      framework: "react-mantine"
+      rest = _objectWithoutProperties(_ref, _excluded$k);
+    return /*#__PURE__*/React$1.createElement(FormGenerator, _extends({
+      framework: "react-rsuite5"
     }, rest), children);
   };
 
-  var _excluded$f = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter"];
-  var InputText$1 = I18N(function (_ref) {
+  var POPOVER_STYLE = {
+    padding: '6px',
+    color: '#ff6633'
+  };
+  var RSuite5FieldControl = function RSuite5FieldControl(_ref) {
+    var errorMessage = _ref.errorMessage,
+      children = _ref.children;
+    var triggerRef = React$1.useRef();
+    React$1.useEffect(function () {
+      if (errorMessage) {
+        triggerRef.current.open();
+      } else {
+        triggerRef.current.close();
+      }
+    }, [errorMessage]);
+    return /*#__PURE__*/React$1.createElement(Whisper, {
+      placement: "bottomStart",
+      ref: triggerRef,
+      trigger: "none",
+      speaker: /*#__PURE__*/React$1.createElement(Popover, {
+        style: POPOVER_STYLE,
+        visible: !!errorMessage,
+        className: "lf-react-rsuite5-error-popover"
+      }, /*#__PURE__*/React$1.createElement("div", null, errorMessage))
+    }, children);
+  };
+
+  var css_248z$d = ".lf-control-input-text .rs-form-control-wrapper > .rs-input, .lf-control-input-text .rs-form-control-wrapper > .rs-input-number {\n  width: 100%;\n}\n.lf-control-input-text.lf-full-width .rs-input-group {\n  width: 100%;\n}\n.lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-control-input-text.lf-size-lg .lf-prefix-icon {\n  max-height: 22px;\n}\n.lf-control-input-text.lf-size-md .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-control-input-text.lf-size-sm .lf-prefix-icon {\n  max-height: 10px;\n}\n.lf-control-input-text.lf-size-xs .lf-prefix-icon {\n  max-height: 4px;\n}";
+  styleInject(css_248z$d);
+
+  var _excluded$j = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "lfOnEnter"];
+  var TextInput = I18N(function (_ref) {
+    var _classNames;
     var name = _ref.name,
-      hint = _ref.hint;
-      _ref.value;
-      var fullWidth = _ref.fullWidth,
-      width = _ref.width,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      placeholder = _ref.placeholder,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
       _ref$submitOnEnter = _ref.submitOnEnter,
       submitOnEnter = _ref$submitOnEnter === void 0 ? false : _ref$submitOnEnter,
       error = _ref.error,
+      prefix = _ref.prefix,
+      postfix = _ref.postfix,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur,
-      _ref$lfOnEnter = _ref.lfOnEnter,
-      lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$f);
-    var handleKeyUp = React.useCallback(function (e) {
-      return e.keyCode === 13 && lfOnEnter();
-    }, [lfOnEnter]);
-    var handleChange = React.useCallback(function (event) {
-      return onChange(event.currentTarget.value);
-    }, [onChange]);
-    return /*#__PURE__*/React.createElement(core.TextInput, _extends({
-      className: "lf-control-input-text",
-      "data-lf-field-name": name,
-      style: makeWidthStyle(fullWidth, width),
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      onChange: handleChange,
-      onBlur: onBlur,
-      onKeyUp: submitOnEnter ? handleKeyUp : undefined
-    }, passRest(rest)));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.InputText');
-
-  var index$k = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: InputText$1
-  });
-
-  var _excluded$e = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "lfOnEnter"];
-  var MantineNumberInput = I18N(function (_ref) {
-    var name = _ref.name,
-      hint = _ref.hint,
-      value = _ref.value,
-      _ref$submitOnEnter = _ref.submitOnEnter,
-      submitOnEnter = _ref$submitOnEnter === void 0 ? false : _ref$submitOnEnter,
-      error = _ref.error,
       fullWidth = _ref.fullWidth,
       width = _ref.width,
+      autocomplete = _ref.autocomplete,
+      inputMode = _ref.inputMode,
+      inputType = _ref.inputType,
+      _ref$inside = _ref.inside,
+      inside = _ref$inside === void 0 ? false : _ref$inside,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$e);
-    var handleKeyUp = React.useCallback(function (e) {
+      rest = _objectWithoutProperties(_ref, _excluded$j);
+    var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
-    return /*#__PURE__*/React.createElement(core.NumberInput, _extends({
-      className: "lf-control-input-number",
-      "data-lf-field-name": name,
-      style: makeWidthStyle(fullWidth, width),
+    var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(Input, _extends({
+      accepter: Input,
       value: value,
-      name: name,
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      onKeyUp: submitOnEnter ? handleKeyUp : undefined
-    }, passRest(rest)));
+      onChange: onChange,
+      onBlur: onBlur,
+      onKeyUp: submitOnEnter ? handleKeyUp : undefined,
+      disabled: disabled,
+      autoComplete: autocomplete,
+      inputMode: inputMode,
+      type: inputType,
+      size: size,
+      placeholder: placeholder,
+      readOnly: readOnly
+    }, passRest(rest))));
+    var needsGroup = postfix || prefix;
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      className: classNames('lf-control-input-text', (_classNames = {}, _defineProperty$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
+      "data-lf-field-name": name,
+      style: makeWidthStyle(fullWidth, width)
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/React$1.createElement(InputGroup, {
+      inside: inside
+    }, prefix && /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, TextOrIcon(prefix)), inner, postfix && /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, TextOrIcon(postfix))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.InputNumber');
+  lfLog('Loaded RSuite.InputText');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$u = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: MantineNumberInput
+    default: TextInput
   });
 
-  var _excluded$d = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "lfOnEnter"];
-  var MantineTextarea = I18N(function (_ref) {
+  var ToggleInput = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
-      _ref$submitOnEnter = _ref.submitOnEnter,
-      submitOnEnter = _ref$submitOnEnter === void 0 ? false : _ref$submitOnEnter,
-      error = _ref.error,
+      value = _ref.value,
+      size = _ref.size,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
       onChange = _ref.onChange,
-      fullWidth = _ref.fullWidth,
-      width = _ref.width,
-      inputType = _ref.inputType,
-      _ref$lfOnEnter = _ref.lfOnEnter,
-      lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$d);
-    var handleKeyUp = React.useCallback(function (e) {
-      return e.keyCode === 13 && lfOnEnter();
-    }, [lfOnEnter]);
-    var handleChange = React.useCallback(function (event) {
-      return onChange(event.currentTarget.value);
-    }, [onChange]);
-    return /*#__PURE__*/React.createElement(core.Textarea, _extends({
-      className: "lf-control-textarea",
-      "data-lf-field-name": name,
+      checkedChildren = _ref.checkedChildren,
+      unCheckedChildren = _ref.unCheckedChildren,
+      error = _ref.error;
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      controlId: name,
+      className: "lf-control-toggle"
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(Toggle, {
       name: name,
-      style: makeWidthStyle(fullWidth, width),
-      label: label,
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      onChange: handleChange,
-      onKeyUp: submitOnEnter ? handleKeyUp : undefined,
-      type: inputType
-    }, passRest(rest)));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.Textarea');
+      checked: value,
+      onChange: onChange,
+      disabled: disabled,
+      unCheckedChildren: unCheckedChildren && unCheckedChildren !== '' ? unCheckedChildren : undefined,
+      checkedChildren: checkedChildren && checkedChildren !== '' ? checkedChildren : undefined,
+      errorMessage: _isString(error) ? error : undefined,
+      size: size
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
+  lfLog('Loaded RSuite5.ToggleInput');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$t = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: MantineTextarea
+    default: ToggleInput
   });
 
-  var _excluded$c = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "lfOnEnter"];
+  var css_248z$c = ".lf-control-select-option-rsuite5 img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  margin-right: 6px;\n  margin-top: -4px;\n}";
+  styleInject(css_248z$c);
 
-  // TODO filter done with proper params
+  var _excluded$i = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions"];
+  var menuItem = function menuItem(value, item) {
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-select-option-rsuite5"
+    }, item.image && /*#__PURE__*/React$1.createElement("img", {
+      src: item.image,
+      alt: item.label
+    }), /*#__PURE__*/React$1.createElement("span", null, item.label));
+  };
 
-  var MantineSelect = I18N(function (_ref) {
+  /*const manuValue = (value, item) => {
+    return (
+      <div className="lf-control-select-option-rsuite5">
+        {item.image && <img src={item.image} alt={item.label} />}
+        <span>{item.label}</span>
+      </div>
+    )
+  };*/
+
+  var Select = I18N(function (_ref) {
     var name = _ref.name,
+      label = _ref.label,
       hint = _ref.hint,
       value = _ref.value,
+      size = _ref.size,
+      placeholder = _ref.placeholder;
+      _ref.lfLocale;
+      var options = _ref.options,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
       error = _ref.error,
-      fullWidth = _ref.fullWidth,
-      width = _ref.width,
-      options = _ref.options,
+      _ref$block = _ref.block,
+      block = _ref$block === void 0 ? false : _ref$block,
+      _ref$searchable = _ref.searchable,
+      searchable = _ref$searchable === void 0 ? false : _ref$searchable,
+      _ref$cleanable = _ref.cleanable,
+      cleanable = _ref$cleanable === void 0 ? false : _ref$cleanable,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      placement = _ref.placement,
+      appearance = _ref.appearance,
+      filterKey = _ref.filterKey,
       filterValue = _ref.filterValue,
-      filterKey = _ref.filterKey;
-      _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$c);
-    return /*#__PURE__*/React.createElement(core.Input.Wrapper, {
+      showImageOptions = _ref.showImageOptions,
+      rest = _objectWithoutProperties(_ref, _excluded$i);
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
       className: "lf-control-select",
-      "data-lf-field-name": name,
-      style: makeWidthStyle(fullWidth, width),
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error']
-    }, /*#__PURE__*/React.createElement(core.Select, _extends({
-      value: value,
+      controlId: name
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(SelectPicker, _extends({
+      appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
       name: name,
-      data: filterOptions(options, filterValue, filterKey) || []
-    }, passRest(rest))));
+      value: value,
+      onChange: onChange,
+      readOnly: readOnly,
+      onBlur: onBlur,
+      placement: placement,
+      errorMessage: _isString(error) ? error : undefined,
+      disabled: disabled,
+      size: size,
+      placeholder: placeholder,
+      renderMenuItem: showImageOptions ? menuItem : undefined,
+      renderValue: showImageOptions ? menuItem : undefined,
+      data: filterOptions(options, filterValue, filterKey) || [],
+      block: block,
+      searchable: searchable,
+      cleanable: cleanable
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
-  lfLog('Loaded Mantine.Select');
+  lfLog('Loaded RSuite5.Select');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$s = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: MantineSelect
+    default: Select
   });
 
-  var _excluded$b = ["name", "hint", "value", "onChange", "error", "description"];
-  var MantineCheckbox = I18N(function (_ref) {
-    var name = _ref.name,
-      hint = _ref.hint,
-      value = _ref.value,
-      onChange = _ref.onChange,
-      error = _ref.error;
-      _ref.description;
-      var rest = _objectWithoutProperties(_ref, _excluded$b);
-    var handleChange = React.useCallback(function (event) {
-      return onChange(event.currentTarget.checked);
-    }, [onChange]);
-    return /*#__PURE__*/React.createElement(core.Checkbox, _extends({
-      className: "lf-control-checkbox",
-      "data-lf-field-name": name,
-      checked: value,
-      name: name,
-      onChange: handleChange,
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error']
-    }, passRest(rest)));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.Checkbox');
+  lfLog('Loaded RSuite5.Group');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$r = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: MantineCheckbox
+    default: Group
   });
 
-  var _excluded$a = ["name", "hint", "value", "onChange", "error", "description"];
-  var MantineToggle = I18N(function (_ref) {
-    var name = _ref.name,
-      hint = _ref.hint,
-      value = _ref.value,
-      onChange = _ref.onChange,
-      error = _ref.error;
-      _ref.description;
-      var rest = _objectWithoutProperties(_ref, _excluded$a);
-    var handleChange = React.useCallback(function (event) {
-      return onChange(event.currentTarget.checked);
-    }, [onChange]);
-    return /*#__PURE__*/React.createElement(core.Switch, _extends({
-      className: "lf-control-checkbox",
-      "data-lf-field-name": name,
-      checked: value,
-      name: name,
-      onChange: handleChange,
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error']
-    }, passRest(rest)));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.Toggle');
-
-  var index$f = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: MantineToggle
-  });
-
-  var _excluded$9 = ["hint", "required", "tooltip", "name", "label", "error"];
-  var MantineListArray = I18N(function (_ref) {
+  var _excluded$h = ["hint", "required", "tooltip", "name", "label"];
+  var ListArrayRSuite5 = I18N(function (_ref) {
     var hint = _ref.hint,
-      required = _ref.required;
-      _ref.tooltip;
-      var name = _ref.name,
+      required = _ref.required,
+      tooltip = _ref.tooltip,
+      name = _ref.name,
       label = _ref.label,
-      error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$9);
-    return /*#__PURE__*/React.createElement("div", {
+      rest = _objectWithoutProperties(_ref, _excluded$h);
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-array"
-    }, label && /*#__PURE__*/React.createElement(core.Input.Label, {
-      required: required
-    }, label), /*#__PURE__*/React.createElement(ListArray, _extends({
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm
-    }, passRest(rest))), hint && /*#__PURE__*/React.createElement(core.Input.Description, null, hint), error && /*#__PURE__*/React.createElement(core.Input.Error, null, error));
+    }, passRest(rest))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
   }, ['label', 'hint']);
-  lfLog('Loaded Mantine.ListArray');
+  lfLog('Loaded RSuite5.ListArray');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$q = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: MantineListArray
+    default: ListArrayRSuite5
   });
 
-  var _excluded$8 = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
-  var CheckboxGroup = I18N(function (_ref) {
-    var name = _ref.name,
-      label = _ref.label,
-      hint = _ref.hint,
-      value = _ref.value;
-      _ref.placeholder;
-      _ref.plaintext;
-      _ref.tooltip;
-      var _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-      _ref$required = _ref.required,
-      required = _ref$required === void 0 ? false : _ref$required,
-      error = _ref.error,
-      onChange = _ref.onChange;
-      _ref.onBlur;
-      var size = _ref.size,
-      radius = _ref.radius,
-      color = _ref.color,
-      iconColor = _ref.iconColor,
-      labelPosition = _ref.labelPosition,
-      _ref$options = _ref.options,
-      options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
-    var _useState = React.useState(_isArray(value) ? value : value ? String().split(',') : []),
-      _useState2 = _slicedToArray(_useState, 2),
-      selected = _useState2[0],
-      setSelected = _useState2[1];
-    var handleChange = React.useCallback(function (e) {
-      var newValue;
-      if (e.target.checked) {
-        newValue = [].concat(_toConsumableArray(selected), [e.target.value]);
-      } else {
-        newValue = selected.filter(function (value) {
-          return value !== e.target.value;
-        });
-      }
-      setSelected(newValue);
-      onChange(newValue);
-    }, [onChange]);
-    return /*#__PURE__*/React.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-checkbox-group"
-    }, label && /*#__PURE__*/React.createElement(core.Input.Label, {
-      required: required
-    }, label), /*#__PURE__*/React.createElement(core.Stack, {
-      gap: "xs",
-      style: {
-        marginTop: 'var(--lf-field-margin-top)',
-        marginBottom: 'var(--lf-field-margin-top)'
-      }
-    }, (options !== null && options !== void 0 ? options : []).map(function (item) {
-      return /*#__PURE__*/React.createElement(core.Checkbox, _extends({
-        key: item.value,
-        value: item.value,
-        label: item.label,
-        disabled: disabled,
-        readOnly: readOnly,
-        onChange: handleChange,
-        checked: selected.includes(item.value),
-        description: item.description,
-        size: size,
-        radius: radius,
-        color: color,
-        iconColor: iconColor,
-        labelPosition: labelPosition
-      }, passRest(rest, ['description'])), label);
-    })), hint && /*#__PURE__*/React.createElement(core.Input.Description, null, hint), error && /*#__PURE__*/React.createElement(core.Input.Error, null, error));
-  }, ['label', 'hint', 'placeholder'], {
-    options: i18nOptions
-  });
-  lfLog('Loaded Mantine.CheckboxGroup');
+  lfLog('Loaded RSuite5.TwoColumns');
 
-  var index$d = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: CheckboxGroup
-  });
-
-  var _excluded$7 = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
-
-  // TODO broken preview in mantine, add ensureframework
-
-  var RadioGroup = I18N(function (_ref) {
-    var name = _ref.name,
-      label = _ref.label,
-      hint = _ref.hint,
-      value = _ref.value;
-      _ref.placeholder;
-      _ref.plaintext;
-      _ref.tooltip;
-      var _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-      _ref$required = _ref.required,
-      required = _ref$required === void 0 ? false : _ref$required,
-      error = _ref.error,
-      onChange = _ref.onChange;
-      _ref.onBlur;
-      var size = _ref.size,
-      radius = _ref.radius,
-      color = _ref.color,
-      iconColor = _ref.iconColor,
-      labelPosition = _ref.labelPosition,
-      _ref$options = _ref.options,
-      options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$7);
-    var _useState = React.useState(value),
-      _useState2 = _slicedToArray(_useState, 2);
-      _useState2[0];
-      var setSelected = _useState2[1];
-    var handleChange = React.useCallback(function (e) {
-      setSelected(e.target.value);
-      onChange(e.target.value);
-    }, [onChange]);
-    return /*#__PURE__*/React.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-radio-group"
-    }, /*#__PURE__*/React.createElement(core.Radio.Group, {
-      name: name,
-      label: label,
-      description: hint,
-      withAsterisk: required,
-      error: error,
-      inputWrapperOrder: ['label', 'input', 'description', 'error']
-    }, /*#__PURE__*/React.createElement(core.Stack, {
-      gap: "xs",
-      style: {
-        marginTop: 'var(--lf-field-margin-top)',
-        marginBottom: 'var(--lf-field-margin-top)'
-      }
-    }, (options !== null && options !== void 0 ? options : []).map(function (item) {
-      return /*#__PURE__*/React.createElement(core.Radio, _extends({
-        key: item.value,
-        value: item.value,
-        label: item.label,
-        disabled: disabled,
-        readOnly: readOnly,
-        onChange: handleChange,
-        checked: item.value === value,
-        description: item.description,
-        size: size,
-        radius: radius,
-        color: color,
-        iconColor: iconColor,
-        labelPosition: labelPosition
-      }, passRest(rest, ['description'])));
-    }))));
-  }, ['label', 'hint', 'placeholder'], {
-    options: i18nOptions
-  });
-  lfLog('Loaded Mantine.RadioGroup');
-
-  var index$c = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: RadioGroup
-  });
-
-  lfLog('Loaded Mantine.TwoColumns');
-
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded RSuite5.ThreeColumns');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
-  lfLog('Loaded RSuite5.Group');
+  var css_248z$b = ".lf-form-react-rsuite5 .lf-control-input-number.rs-form-group .rs-input-group {\n  width: auto;\n}";
+  styleInject(css_248z$b);
 
-  var index$9 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: Group
-  });
-
-  var _excluded$6 = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime"];
-  var tryDate = function tryDate(value) {
-    if (_isDate(value)) {
-      return value;
-    } else if (_isString(value)) {
-      var d = new Date(value);
-      if (isValidDate(d)) {
-        return d;
-      }
-    }
-    return undefined;
+  var hasDecimals = function hasDecimals(f) {
+    return _isString(f) && (f.includes(',') || f.includes('.'));
   };
-  var MantineGenericDate = function MantineGenericDate(_ref) {
-    var hint = _ref.hint,
-      minDate = _ref.minDate,
-      maxDate = _ref.maxDate,
-      error = _ref.error;
-      _ref.onBlur;
-      var fullWidth = _ref.fullWidth,
-      width = _ref.width,
-      lfLocale = _ref.lfLocale,
-      _ref$withTime = _ref.withTime,
-      withTime = _ref$withTime === void 0 ? false : _ref$withTime,
-      rest = _objectWithoutProperties(_ref, _excluded$6);
-    var Component = withTime ? dates.DateTimePicker : dates.DatePickerInput;
-    return /*#__PURE__*/React.createElement(Component, _extends({
-      className: "lf-control-date",
-      "data-lf-field-name": name,
-      style: makeWidthStyle(fullWidth, width),
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      locale: lfLocale,
-      minDate: tryDate(minDate),
-      maxDate: tryDate(maxDate)
-    }, passRest(rest)));
-  };
-
-  var _excluded$5 = ["onChange", "value", "lfLocale"];
-  var SelectDate = I18N(function (_ref) {
-    var onChange = _ref.onChange,
+  var InputNumberRSuite5 = I18N(function (_ref) {
+    var _classNames;
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
       value = _ref.value,
-      lfLocale = _ref.lfLocale,
-      rest = _objectWithoutProperties(_ref, _excluded$5);
-    // also accepts string dates
-    var initialValue;
-    if (rest.dateType === 'range') {
-      initialValue = [null, null];
-    } else {
-      if (_isDate(value)) {
-        initialValue = value;
-      } else if (_isString(value)) {
-        var d = new Date(value);
-        if (isValidDate(d)) {
-          initialValue = d;
-        }
-      }
-    }
-    var _useState = React.useState(initialValue),
+      size = _ref.size,
+      placeholder = _ref.placeholder,
+      min = _ref.min,
+      max = _ref.max,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      prefix = _ref.prefix,
+      postfix = _ref.postfix,
+      width = _ref.width,
+      fullWidth = _ref.fullWidth,
+      _ref$onChange = _ref.onChange,
+      onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
+      _ref$step = _ref.step,
+      step = _ref$step === void 0 ? 1 : _ref$step,
+      onBlur = _ref.onBlur,
+      _ref$inside = _ref.inside,
+      inside = _ref$inside === void 0 ? false : _ref$inside,
+      allowClear = _ref.allowClear;
+    var _useState = React$1.useState(value !== null && value !== void 0 ? value : null),
       _useState2 = _slicedToArray(_useState, 2),
       currentValue = _useState2[0],
       setCurrentValue = _useState2[1];
-
-    // send always date string in format yyyy-mm-dd
-    var handleChange = React.useCallback(function (d) {
-      if (isValidDate(d)) {
-        setCurrentValue(d);
-        onChange(d.toISOString().split('T')[0]);
-      } else {
-        setCurrentValue(null);
-        onChange(null);
+    var handleChange = React$1.useCallback(function (value) {
+      var parsed = value;
+      if (_isString(value)) {
+        if (value === '') {
+          // void if the user deleted all chars
+          parsed = null;
+        } else if (hasDecimals(value)) {
+          parsed = parseFloat(value);
+        } else {
+          parsed = parseInt(value, 10);
+        }
+      }
+      // set the original value again, otherwise never be able to
+      // input a float number i.e. "0.2"
+      setCurrentValue(value);
+      if (!isNaN(parsed)) {
+        onChange(parsed);
       }
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(MantineGenericDate, _extends({
+    var handleClear = React$1.useCallback(function (e) {
+      e.preventDefault();
+      onChange(undefined);
+      setCurrentValue(null);
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      "data-lf-field-name": name,
+      className: classNames('lf-control-input-number', (_classNames = {}, _defineProperty$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
+      style: makeWidthStyle(fullWidth, width)
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(InputNumber, {
+      name: name,
+      accepter: InputNumber,
       value: currentValue,
       onChange: handleChange,
-      lfLocale: lfLocale
+      onClear: handleClear,
+      onBlur: onBlur,
+      disabled: disabled,
+      size: size,
+      min: min,
+      max: max,
+      step: step,
+      inside: inside,
+      prefix: prefix,
+      postfix: allowClear ? /*#__PURE__*/React$1.createElement("a", {
+        href: "#",
+        onClick: handleClear
+      }, /*#__PURE__*/React$1.createElement(CrossCirle, {
+        width: 16,
+        height: 16
+      })) : postfix,
+      placeholder: placeholder,
+      readOnly: readOnly,
+      errorMessage: _isString(error) ? error : undefined
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded RSuite.InputNumber');
+
+  var index$n = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: InputNumberRSuite5
+  });
+
+  var _excluded$g = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"];
+  var RSuiteGenericDate = function RSuiteGenericDate(_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      placeholder = _ref.placeholder,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      appearance = _ref.appearance,
+      format = _ref.format;
+      _ref.lfLocale;
+      var rest = _objectWithoutProperties(_ref, _excluded$g);
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-date"
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(DatePicker, _extends({
+      appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
+      name: name,
+      format: format || 'yyyy-MM-dd',
+      defaultValue: value,
+      onChange: onChange,
+      readOnly: readOnly,
+      onBlur: onBlur,
+      errorMessage: _isString(error) ? error : undefined,
+      disabled: disabled,
+      placeholder: placeholder
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  };
+
+  var _excluded$f = ["onChange", "value"];
+  var SelectDate = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties(_ref, _excluded$f);
+    // also accepts string dates
+    var currentValue;
+    if (_isDate(value)) {
+      currentValue = value;
+    } else if (_isString(value)) {
+      var d = new Date(value);
+      if (isValidDate(d)) {
+        currentValue = d;
+      }
+    }
+
+    // send always date string in format yyyy-mm-dd
+    var handleChange = React$1.useCallback(function (d) {
+      if (isValidDate(d)) {
+        onChange(d.toISOString().split('T')[0]);
+      }
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(RSuiteGenericDate, _extends({
+      value: currentValue,
+      onChange: handleChange
     }, passRest(rest)));
   }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.SelectDate');
+  lfLog('Loaded RSuite5.SelectDate');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDate
   });
 
-  var _excluded$4 = ["onChange", "value", "lfLocale"];
-  var SelectDatTime = I18N(function (_ref) {
-    var onChange = _ref.onChange,
-      value = _ref.value,
-      lfLocale = _ref.lfLocale,
-      rest = _objectWithoutProperties(_ref, _excluded$4);
-    // also accepts string dates
-    var initialValue;
-    if (rest.dateType === 'range') {
-      initialValue = [null, null];
-    } else {
-      if (_isDate(value)) {
-        initialValue = value;
-      } else if (_isString(value)) {
-        var d = new Date(value);
-        if (isValidDate(d)) {
-          initialValue = d;
-        }
-      }
-    }
-    var _useState = React.useState(initialValue),
-      _useState2 = _slicedToArray(_useState, 2),
-      currentValue = _useState2[0],
-      setCurrentValue = _useState2[1];
+  var css_248z$a = ".lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text {\n  align-items: inherit;\n  margin-top: -1px;\n  display: inline-block;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text svg {\n  margin-top: -2px;\n}";
+  styleInject(css_248z$a);
 
-    // send always date string in format yyyy-mm-dd
-    var handleChange = React.useCallback(function (d) {
-      if (isValidDate(d)) {
-        setCurrentValue(d);
-        onChange(d.toISOString());
-      } else {
-        setCurrentValue(null);
-        onChange(null);
-      }
-    }, [onChange]);
-    return /*#__PURE__*/React.createElement(MantineGenericDate, _extends({
-      value: currentValue,
-      onChange: handleChange,
-      lfLocale: lfLocale
-    }, passRest(rest), {
-      withTime: true
-    }));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.SelectDateTime');
-
-  var index$7 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: SelectDatTime
-  });
-
-  var _excluded$3 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
-  var InputText = I18N(function (_ref) {
-    var name = _ref.name,
-      hint = _ref.hint;
-      _ref.value;
-      _ref.fullWidth;
-      _ref.width;
-      _ref.submitOnEnter;
-      var error = _ref.error,
-      onChange = _ref.onChange;
-      _ref.onBlur;
-      var label = _ref.label,
-      required = _ref.required;
-      _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$3);
-    return /*#__PURE__*/React.createElement(core.Input.Wrapper, {
-      className: "lf-control-rate",
-      "data-lf-field-name": name,
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      label: label,
-      required: required
-    }, /*#__PURE__*/React.createElement(core.Rating, _extends({
-      onChange: onChange
-    }, passRest(rest))));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.Rate');
-
-  var index$6 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: InputText
-  });
-
-  var PlaceholderMantine = I18N(function (_ref) {
+  var _excluded$e = ["name", "label", "hint", "value", "tooltip", "indeterminate", "error", "onChange"];
+  var CheckboxRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
-      text = _ref.text;
-    return /*#__PURE__*/React.createElement(core.Input.Wrapper, {
-      className: "lf-control-rate",
-      "data-lf-field-name": name,
-      description: hint,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      label: label
-    }, /*#__PURE__*/React.createElement(Placeholder, {
-      text: text
-    }));
-  }, ['label', 'hint', 'text']);
-  lfLog('Loaded Mantine.Placeholder');
-
-  var index$5 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: PlaceholderMantine
-  });
-
-  var DividerMantine = function DividerMantine(_ref) {
-    var rest = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
-    return /*#__PURE__*/React.createElement(core.Divider, rest);
-  };
-  lfLog('Loaded Mantine.Divider');
-
-  var index$4 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: DividerMantine
-  });
-
-  var _excluded$2 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
-  var SliderMantine = I18N(function (_ref) {
-    var name = _ref.name,
-      hint = _ref.hint,
+      value = _ref.value,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      indeterminate = _ref.indeterminate,
       error = _ref.error,
+      onChange = _ref.onChange,
+      rest = _objectWithoutProperties(_ref, _excluded$e);
+    var _useState = React$1.useState(value !== null && value !== void 0 ? value : null),
+      _useState2 = _slicedToArray(_useState, 2),
+      isChecked = _useState2[0],
+      setIsChecked = _useState2[1];
+    var handleChange = React$1.useCallback(function (valueType, checked) {
+      var newValue;
+      if (isChecked === true) {
+        newValue = false;
+      }
+      if (isChecked === false) {
+        if (indeterminate) {
+          newValue = null;
+        } else {
+          newValue = true;
+        }
+      } else if (isChecked === null) {
+        newValue = true;
+      }
+      onChange(newValue);
+      setIsChecked(newValue);
+    }, [onChange, indeterminate, isChecked]);
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      "data-lf-field-name": name,
+      className: "lt-control-checkbox"
+    }, /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(Checkbox, _extends({
+      indeterminate: indeterminate && isChecked === null,
+      name: name,
+      checked: isChecked,
+      onChange: handleChange
+    }, passRest(rest)), label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint']);
+  lfLog('Loaded RSuite5.Checkbox');
+
+  var index$l = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: CheckboxRSuite
+  });
+
+  var _excluded$d = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "color", "onChange", "onBlur", "options"];
+  var CheckboxGroupRSuite = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly;
+      _ref.required;
+      _ref.error;
+      var color = _ref.color,
       onChange = _ref.onChange;
       _ref.onBlur;
-      var label = _ref.label,
-      required = _ref.required;
-      _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$2);
-    return /*#__PURE__*/React.createElement(core.Input.Wrapper, {
-      className: "lf-control-slider",
+      var _ref$options = _ref.options,
+      options = _ref$options === void 0 ? [] : _ref$options,
+      rest = _objectWithoutProperties(_ref, _excluded$d);
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
       "data-lf-field-name": name,
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      label: label,
-      required: required
-    }, /*#__PURE__*/React.createElement(core.Slider, _extends({
+      className: "lf-control-checkbox-group"
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint)), /*#__PURE__*/React$1.createElement(CheckboxGroup, _extends({
+      inline: true,
+      name: name,
+      value: value,
       onChange: onChange
-    }, passRest(rest))));
+    }, passRest(rest)), (options !== null && options !== void 0 ? options : []).map(function (_ref2) {
+      var value = _ref2.value,
+        label = _ref2.label;
+      return /*#__PURE__*/React$1.createElement(Checkbox, {
+        key: value,
+        value: value,
+        disabled: disabled,
+        readOnly: readOnly,
+        color: color
+      }, label);
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint'], {
+    options: i18nOptions
+  });
+  lfLog('Loaded RSuite.CheckboxGroup');
+
+  var index$k = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: CheckboxGroupRSuite
+  });
+
+  var css_248z$9 = ".lf-form-react-rsuite5 .lf-control-slider .rs-slider {\n  margin-bottom: 40px;\n}";
+  styleInject(css_248z$9);
+
+  var _excluded$c = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks"];
+  var validateMarks = function validateMarks(marks) {
+    return _isArray(marks) && marks.every(function (mark) {
+      return _isObject(mark) && mark.value && mark.label;
+    });
+  };
+  var SliderRsuite = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      showTooltip = _ref.showTooltip,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      _ref$marks = _ref.marks,
+      marks = _ref$marks === void 0 ? [] : _ref$marks,
+      rest = _objectWithoutProperties(_ref, _excluded$c);
+    var handleRenderMark = React$1.useCallback(function (number) {
+      var found = marks.find(function (mark) {
+        return mark && mark.value === number;
+      });
+      return found ? found.label : undefined;
+    }, [marks]);
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      controlId: name,
+      className: "lf-control-slider"
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(Slider, _extends({
+      style: {
+        marginTop: '15px',
+        marginBottom: '8px'
+      },
+      name: name,
+      value: value,
+      onChange: onChange,
+      readOnly: readOnly,
+      onBlur: onBlur,
+      renderMark: validateMarks(marks) ? handleRenderMark : undefined,
+      errorMessage: _isString(error) ? error : undefined,
+      disabled: disabled,
+      tooltip: showTooltip
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder'], {
     marks: function marks(value, i18n) {
       return (Array.isArray(value) ? value : []).map(function (value) {
@@ -20133,158 +20426,1267 @@
       });
     }
   });
-  lfLog('Loaded Mantine.Slider');
+  lfLog('Loaded RSuite5.Slider');
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: SliderMantine
+    default: SliderRsuite
   });
 
-  var _excluded$1 = ["name", "hint", "value", "error", "fullWidth", "width", "data"];
-  var MantineTags = I18N(function (_ref) {
+  var _excluded$b = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options", "appearance"];
+  var RadioGroupRSuite = I18N(function (_ref) {
     var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value;
+      _ref.placeholder;
+      _ref.plaintext;
+      var _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly;
+      _ref.required;
+      _ref.error;
+      var onChange = _ref.onChange;
+      _ref.onBlur;
+      var _ref$options = _ref.options,
+      options = _ref$options === void 0 ? [] : _ref$options,
+      appearance = _ref.appearance,
+      rest = _objectWithoutProperties(_ref, _excluded$b);
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      controlId: name,
+      className: "lf-control-radio-group",
+      "data-lf-field-name": name
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint)), /*#__PURE__*/React$1.createElement(RadioGroup, _extends({
+      inline: true,
+      name: name,
+      value: value,
+      onChange: onChange,
+      appearance: appearance
+    }, passRest(rest)), (options !== null && options !== void 0 ? options : []).map(function (_ref2) {
+      var value = _ref2.value,
+        label = _ref2.label;
+      return /*#__PURE__*/React$1.createElement(Radio, {
+        key: value,
+        value: value,
+        disabled: disabled,
+        readOnly: readOnly
+      }, label);
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder'], {
+    options: i18nOptions
+  });
+  lfLog('Loaded RSuite.RadioGroup');
+
+  var index$i = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RadioGroupRSuite
+  });
+
+  var css_248z$8 = ".lf-control-input-tag .rs-picker-input {\n  min-width: 120px;\n}";
+  styleInject(css_248z$8);
+
+  var InputTag = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
       hint = _ref.hint,
       value = _ref.value,
+      size = _ref.size,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
       error = _ref.error,
-      fullWidth = _ref.fullWidth,
-      width = _ref.width,
-      data = _ref.data,
-      rest = _objectWithoutProperties(_ref, _excluded$1);
-    return /*#__PURE__*/React.createElement(core.TagsInput, _extends({
-      className: "lf-control-input-tag",
+      trigger = _ref.trigger,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur;
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
       "data-lf-field-name": name,
-      style: makeWidthStyle(fullWidth, width),
-      value: value,
+      className: "lf-control-input-tag"
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(TagInput, {
       name: name,
-      description: hint,
-      error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error'],
-      data: (data || []).filter(function (option) {
-        return option.value && option.label;
-      })
-    }, passRest(rest)));
-  }, ['label', 'hint', 'placeholder'], i18nOptions);
-  lfLog('Loaded Mantine.InputTags');
+      value: value,
+      onChange: onChange,
+      onBlur: onBlur,
+      disabled: disabled,
+      size: size,
+      trigger: trigger,
+      readOnly: readOnly,
+      errorMessage: _isString(error) ? error : undefined
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded RSuite5.InputTag');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: MantineTags
+    default: InputTag
   });
 
-  var css_248z$1 = ".lf-form-react-mantine .lf-control-tabs .lf-prefix-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical .mantine-Tabs-panel, .lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-left .mantine-Tabs-panel {\n  padding-left: var(--lf-field-column-margin);\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-right .mantine-Tabs-panel {\n  padding-right: var(--lf-field-column-margin);\n}";
-  styleInject(css_248z$1);
+  var _excluded$a = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside", "fullWidth", "width"];
+  var prepareMask = function prepareMask(str) {
+    if (typeof str !== 'string' || str.length === 0) {
+      return [];
+    }
+    var matches = str.match(/\$\{[a-zA-Z0-9]\}|.{1,1}/gm);
+    return matches.map(function (token) {
+      if (token === '${d}') {
+        return /\d/;
+      } else if (token === '${D}') {
+        return /\D/;
+      } else if (token === '${a}') {
+        return /[a-zA-Z]/;
+      } else if (token === '${w}') {
+        return /[a-zA-Z0-9]/;
+      }
+      return token;
+    });
+  };
+  var InputMask = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      placeholder = _ref.placeholder,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      prefix = _ref.prefix,
+      postfix = _ref.postfix,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      _ref$placeholderChar = _ref.placeholderChar,
+      placeholderChar = _ref$placeholderChar === void 0 ? '_' : _ref$placeholderChar,
+      _ref$mask = _ref.mask,
+      mask = _ref$mask === void 0 ? [] : _ref$mask,
+      _ref$inside = _ref.inside,
+      inside = _ref$inside === void 0 ? false : _ref$inside,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      rest = _objectWithoutProperties(_ref, _excluded$a);
+    var parsedMask = prepareMask(mask);
+    var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(MaskedInput, _extends({
+      name: name,
+      value: value,
+      onChange: onChange,
+      onBlur: onBlur,
+      disabled: disabled,
+      size: size,
+      placeholder: placeholder,
+      readOnly: readOnly,
+      placeholderChar: typeof placeholderChar === 'string' && placeholderChar.length > 0 ? placeholderChar[0] : '_',
+      errorMessage: _isString(error) ? error : undefined,
+      mask: parsedMask
+    }, passRest(rest))));
+    var needsGroup = postfix || prefix;
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-input-mask",
+      style: makeWidthStyle(fullWidth, width)
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/React$1.createElement(InputGroup, {
+      inside: inside
+    }, prefix && /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, prefix), inner, postfix && /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, postfix)), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded RSuite5.InputMask');
 
-  var _excluded = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement"];
-  var MantineTabs = I18N(function (_ref) {
+  var index$g = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: InputMask
+  });
+
+  var _excluded$9 = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows"];
+  var ControlTextare = function ControlTextare(props) {
+    return /*#__PURE__*/React$1.createElement(Input, _extends({
+      as: "textarea"
+    }, props));
+  };
+  var Textarea = I18N(function (_ref) {
     var _classNames;
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      placeholder = _ref.placeholder,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      _ref$rows = _ref.rows,
+      rows = _ref$rows === void 0 ? 10 : _ref$rows,
+      rest = _objectWithoutProperties(_ref, _excluded$9);
+    var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(ControlTextare, _extends({
+      name: name,
+      rows: rows,
+      value: value,
+      size: size,
+      onChange: onChange,
+      onBlur: onBlur,
+      disabled: disabled,
+      placeholder: placeholder,
+      readOnly: readOnly,
+      errorMessage: _isString(error) ? error : undefined,
+      style: makeWidthStyle(fullWidth, width)
+    }, passRest(rest))));
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      className: classNames('lf-control-textarea', (_classNames = {}, _defineProperty$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
+      "data-lf-field-name": name,
+      style: makeWidthStyle(fullWidth, width)
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), inner, hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded RSuite5.Textarea');
+
+  var index$f = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Textarea
+  });
+
+  var RateRSuite = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      _ref$allowHalf = _ref.allowHalf,
+      allowHalf = _ref$allowHalf === void 0 ? false : _ref$allowHalf,
+      _ref$cleanable = _ref.cleanable,
+      cleanable = _ref$cleanable === void 0 ? true : _ref$cleanable,
+      max = _ref.max,
+      color = _ref.color,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur;
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      controlId: name,
+      className: "lets-form-input-tag"
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(Rate, {
+      name: name,
+      value: value,
+      onChange: onChange,
+      onBlur: onBlur,
+      disabled: disabled,
+      size: size,
+      max: max,
+      color: color,
+      allowHalf: allowHalf,
+      cleanable: cleanable,
+      readOnly: readOnly,
+      errorMessage: _isString(error) ? error : undefined
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded RSuite5.Rate');
+
+  var index$e = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RateRSuite
+  });
+
+  var PlaceholderRSuite5 = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      text = _ref.text,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required;
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-placeholder"
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Placeholder, {
+      text: text
+    }), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint', 'text']);
+  lfLog('Loaded RSuite5.Placeholder');
+
+  var index$d = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: PlaceholderRSuite5
+  });
+
+  var _excluded$8 = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width"];
+  var Multiselect = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      placeholder = _ref.placeholder,
+      options = _ref.options,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      _ref$block = _ref.block,
+      block = _ref$block === void 0 ? false : _ref$block,
+      _ref$searchable = _ref.searchable,
+      searchable = _ref$searchable === void 0 ? false : _ref$searchable,
+      _ref$cleanable = _ref.cleanable,
+      cleanable = _ref$cleanable === void 0 ? false : _ref$cleanable,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      placement = _ref.placement,
+      appearance = _ref.appearance,
+      fullWidth = _ref.fullWidth,
+      multiselectMode = _ref.multiselectMode,
+      width = _ref.width,
+      rest = _objectWithoutProperties(_ref, _excluded$8);
+    var Component = multiselectMode === 'tag' ? TagPicker : CheckPicker;
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-multiselect",
+      style: makeWidthStyle(fullWidth, width)
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(Component, _extends({
+      appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
+      name: name,
+      value: value,
+      onChange: onChange,
+      readOnly: readOnly,
+      onBlur: onBlur,
+      placement: placement,
+      errorMessage: _isString(error) ? error : undefined,
+      disabled: disabled,
+      size: size,
+      placeholder: placeholder,
+      data: options || [],
+      block: block,
+      style: makeWidthStyle(fullWidth, width),
+      searchable: searchable,
+      cleanable: cleanable
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder'], {
+    options: i18nOptions
+  });
+  lfLog('Loaded RSuite5.Multiselect');
+
+  var index$c = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Multiselect
+  });
+
+  var css_248z$7 = ".lf-control-multiselect-language .btn-add-all {\n  padding-left: 5px;\n  font-size: 12px;\n}";
+  styleInject(css_248z$7);
+
+  var _excluded$7 = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "placement", "appearance"];
+  var renderItem = function renderItem(label, item) {
+    return /*#__PURE__*/React$1.createElement("div", null, label, " ", /*#__PURE__*/React$1.createElement("b", null, item.value));
+  };
+  var ALL_LOCALES = Object.keys(LOCALES['language-names']);
+  var LANGUAGES_OPTIONS$1 = Object.keys(LOCALES['language-names']).map(function (lang) {
+    return {
+      value: lang,
+      name: LOCALES['language-names'][lang][1],
+      label: "".concat(LOCALES['language-names'][lang][1])
+    };
+  });
+  var MultiselectLanguage = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      placeholder = _ref.placeholder,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      placement = _ref.placement,
+      appearance = _ref.appearance,
+      rest = _objectWithoutProperties(_ref, _excluded$7);
+    var _useState = React$1.useState(value),
+      _useState2 = _slicedToArray(_useState, 2),
+      locales = _useState2[0],
+      setLocales = _useState2[1];
+    var handleAddAll = React$1.useCallback(function (e) {
+      e.preventDefault();
+      setLocales(ALL_LOCALES);
+      onChange(ALL_LOCALES);
+    }, [onChange]);
+    var handleChange = React$1.useCallback(function (value) {
+      setLocales(value);
+      onChange(value);
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-multiselect-language"
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(CheckPicker, _extends({
+      appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
+      name: name,
+      value: locales,
+      onChange: handleChange,
+      readOnly: readOnly,
+      onBlur: onBlur,
+      placement: placement,
+      errorMessage: _isString(error) ? error : undefined,
+      disabled: disabled,
+      size: size,
+      placeholder: placeholder,
+      data: LANGUAGES_OPTIONS$1,
+      block: true,
+      renderMenuItem: renderItem,
+      searchable: true,
+      cleanable: true
+    }, passRest(rest)))), !(Array.isArray(locales) && locales.length === ALL_LOCALES.length) && /*#__PURE__*/React$1.createElement("div", {
+      className: "btn-add-all"
+    }, /*#__PURE__*/React$1.createElement("a", {
+      href: "#",
+      onClick: handleAddAll
+    }, "add all locales")), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded RSuite5.MultiselectLanguage');
+
+  var index$b = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: MultiselectLanguage
+  });
+
+  var css_248z$6 = ".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n .rs-input-group-addon {\n  padding: 2px 4px !important;\n}\n.lf-input-text-i18n .rs-input-group-addon .status {\n  font-size: 10px;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear {\n  display: inline-block;\n  margin-left: 5px;\n  margin-top: -2px;\n  color: #666666;\n  text-decoration: none;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover {\n  color: #1675e0;\n}\n.lf-input-text-i18n .group-input-select {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-input-text-i18n .group-input-select .translation-control {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  width: unset !important;\n  z-index: 1;\n}\n.lf-input-text-i18n .group-input-select .translation-control .translated {\n  color: #999999;\n}\n.lf-input-text-i18n .group-input-select .select-control {\n  order: 1;\n  flex: 0 0;\n  align-self: center;\n  z-index: 2;\n  margin-left: 5px;\n}\n.lf-input-text-i18n .group-input-select.textarea .select-control {\n  align-self: self-start;\n}";
+  styleInject(css_248z$6);
+
+  var _excluded$6 = ["value"];
+  var LANGUAGES_OPTIONS = Object.keys(LOCALES['language-names']).map(function (lang) {
+    return {
+      value: lang,
+      name: LOCALES['language-names'][lang][1],
+      label: LOCALES['language-names'][lang][1]
+    };
+  });
+  var languageMenuItem = function languageMenuItem(label, item) {
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-input-text-i18n-item-locale"
+    }, item.label, " ", /*#__PURE__*/React$1.createElement("b", null, item.value), item.filled && /*#__PURE__*/React$1.createElement(IconCheck, {
+      width: 16,
+      height: 16
+    }));
+  };
+  var TextareaAccepter = function TextareaAccepter(_ref) {
+    var value = _ref.value,
+      props = _objectWithoutProperties(_ref, _excluded$6);
+    return /*#__PURE__*/React$1.createElement(Input, _extends({
+      as: "textarea",
+      value: value
+    }, props));
+  };
+  var defaultOrEnglish = function defaultOrEnglish(obj) {
+    if (isI18n(obj)) {
+      if (obj['en-US']) {
+        return obj['en-US'];
+      } else if (obj['en-GB']) {
+        return obj['en-GB'];
+      } else if (Object.keys(obj).length !== 0) {
+        return obj[Object.keys(obj)[0]];
+      }
+      return '';
+    }
+    return obj;
+  };
+  var InputTextI18N = function InputTextI18N(props) {
+    var name = props.name,
+      label = props.label,
+      hint = props.hint,
+      value = props.value,
+      size = props.size,
+      placeholder = props.placeholder,
+      _props$tooltip = props.tooltip,
+      tooltip = _props$tooltip === void 0 ? false : _props$tooltip,
+      _props$disabled = props.disabled,
+      disabled = _props$disabled === void 0 ? false : _props$disabled,
+      _props$readOnly = props.readOnly,
+      readOnly = _props$readOnly === void 0 ? false : _props$readOnly,
+      _props$required = props.required,
+      required = _props$required === void 0 ? false : _props$required,
+      width = props.width,
+      error = props.error,
+      _onChange = props.onChange,
+      onBlur = props.onBlur,
+      defaultLocale = props.defaultLocale,
+      _props$textarea = props.textarea,
+      textarea = _props$textarea === void 0 ? false : _props$textarea,
+      rows = props.rows;
+    var _useContext = React$1.useContext(FormContext),
+      _useContext$locales = _useContext.locales,
+      locales = _useContext$locales === void 0 ? [] : _useContext$locales;
+    var preselectedLanguage = null;
+    if (_isObject(value)) {
+      // preselect a value in the drop down of the language only if there's a i18n object
+      // in value, otherwise is a simple string and by definition is not associated with any
+      // language
+      if (defaultLocale && locales.includes(defaultLocale)) {
+        preselectedLanguage = defaultLocale;
+      } else if (!_isEmpty(locales)) {
+        preselectedLanguage = locales[0];
+      }
+    }
+    var preselectedValue = null;
+    if (_isObject(value)) {
+      preselectedValue = preselectedLanguage ? value[preselectedLanguage] : null;
+    } else if (_isString(value)) {
+      preselectedValue = value;
+    }
+    var totalLocales = !_isEmpty(locales) ? locales.length : LANGUAGES_OPTIONS.length;
+    var _useState = React$1.useState(preselectedLanguage),
+      _useState2 = _slicedToArray(_useState, 2),
+      currentLanguage = _useState2[0],
+      setCurrentLanguage = _useState2[1];
+    var _useState3 = React$1.useState(value),
+      _useState4 = _slicedToArray(_useState3, 2),
+      currentValue = _useState4[0],
+      setCurrentValue = _useState4[1];
+    var _useState5 = React$1.useState(preselectedValue),
+      _useState6 = _slicedToArray(_useState5, 2),
+      translation = _useState6[0],
+      setTranslation = _useState6[1];
+    var handleChange = React$1.useCallback(function (value) {
+      // update the UI
+      setTranslation(value);
+      if (_isEmpty(value)) {
+        // in case the user entered an empty value...
+        if (_isObject(currentValue) && currentLanguage) {
+          // if i18n object and a language is selected, then void the value for that language
+          var newCurrentValue = _omit(currentValue, currentLanguage);
+          setCurrentValue(newCurrentValue);
+          _onChange(newCurrentValue);
+        } else if (_isString(currentValue)) {
+          setCurrentValue(value);
+          _onChange(value);
+        }
+      } else {
+        // in case the user entered a non empty value...
+        if (currentLanguage) {
+          // if a current language is selected, then the typed text ends up
+          // in a i18n object
+          var _newCurrentValue = _objectSpread2(_objectSpread2({}, currentValue), {}, _defineProperty$1({}, currentLanguage, value));
+          setCurrentValue(_newCurrentValue);
+          _onChange(_newCurrentValue);
+          //setTranslation(value);
+        } else if (_isObject(currentValue)) ; else {
+          // if language not selected and current value is not an object
+          // just set the current value as string
+          //setTranslation(value);
+          setCurrentValue(value);
+          _onChange(value);
+        }
+      }
+    }, [currentLanguage, currentValue, _onChange]);
+
+    // if no locales, then use plain input text, since it's possible the the value is still
+    // a 18n (in case the user switched from a multi language form to a single language form
+    // then put some defaults)
+    if (_isEmpty(locales)) {
+      var newProps = _objectSpread2(_objectSpread2({}, props), {}, {
+        value: defaultOrEnglish(value)
+      });
+      return textarea ? /*#__PURE__*/React$1.createElement(Textarea, newProps) : /*#__PURE__*/React$1.createElement(TextInput, newProps);
+    }
+    // evaluate current translated locales
+    var translatedLocales = _isObject(currentValue) ? Object.keys(currentValue).filter(function (locale) {
+      return _isEmpty(locales) || locales.includes(locale);
+    }) : [];
+    var multiValuesAndNoLang = _isObject(currentValue) && Object.keys(currentValue).length !== 0 && !currentLanguage;
+    var languageData = LANGUAGES_OPTIONS.filter(function (item) {
+      return _isEmpty(locales) || locales.includes(item.value);
+    }).map(function (item) {
+      return _objectSpread2(_objectSpread2({}, item), {}, {
+        filled: currentValue && !_isEmpty(currentValue[item.value])
+      });
+    });
+    var InputComponent = textarea ? TextareaAccepter : Input;
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-input-text-i18n lf-input-text-i18n"
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", {
+      className: classNames('group-input-select', {
+        'textarea': textarea
+      })
+    }, /*#__PURE__*/React$1.createElement(InputGroup, {
+      className: "translation-control",
+      inside: true
+    }, /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(InputComponent, {
+      name: name,
+      rows: rows,
+      style: width ? {
+        width: "".concat(width, "px")
+      } : undefined,
+      value: multiValuesAndNoLang ? '<multiple translations>' : translation,
+      readOnly: readOnly || multiValuesAndNoLang,
+      onChange: handleChange,
+      onBlur: onBlur,
+      disabled: disabled,
+      size: size,
+      placeholder: placeholder,
+      errorMessage: _isString(error) ? error : undefined
+    })), /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, /*#__PURE__*/React$1.createElement("span", {
+      className: "status"
+    }, /*#__PURE__*/React$1.createElement("span", {
+      className: "translated"
+    }, translatedLocales.length), "\xA0/\xA0", /*#__PURE__*/React$1.createElement("span", null, totalLocales)))), /*#__PURE__*/React$1.createElement("div", {
+      className: "select-control"
+    }, /*#__PURE__*/React$1.createElement(SelectPicker, {
+      appearance: "subtle",
+      cleanable: false,
+      size: "xs",
+      readOnly: readOnly,
+      value: currentLanguage,
+      placement: "autoVerticalEnd",
+      placeholder: "no tx",
+      searchable: languageData.length > 20,
+      renderValue: function renderValue(value) {
+        return /*#__PURE__*/React$1.createElement("span", null, value);
+      },
+      renderMenuItem: languageMenuItem,
+      onChange: function onChange(value) {
+        if (_isString(currentValue) && !_isEmpty(currentValue)) {
+          // if currentValue is a string and not empty,
+          setCurrentLanguage(value);
+          var newValue = _defineProperty$1({}, value, currentValue);
+          setCurrentValue(newValue);
+          _onChange(newValue);
+        } else if (_isObject(currentValue)) {
+          var _currentValue$value;
+          // it's already a i18n object, just switch the language
+          setCurrentLanguage(value);
+          setTranslation((_currentValue$value = currentValue[value]) !== null && _currentValue$value !== void 0 ? _currentValue$value : '');
+        } else {
+          setCurrentLanguage(value);
+        }
+      },
+      data: languageData
+    }))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  };
+  lfLog('Loaded RSuite.InputTextI18N');
+
+  var index$a = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: InputTextI18N
+  });
+
+  lfLog('Loaded RSuite5.PlaceholderImage');
+
+  var index$9 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: PlaceholderImage
+  });
+
+  var css_248z$5 = ".lf-form-react-rsuite5 .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-lg .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-xs .lf-icon {\n  max-width: 12px;\n  max-height: 12px;\n}";
+  styleInject(css_248z$5);
+
+  var _excluded$5 = ["label", "icon", "hint", "tooltip"];
+  var RSuiteButton = function RSuiteButton(_ref) {
+    var label = _ref.label,
+      icon = _ref.icon,
+      hint = _ref.hint,
+      tooltip = _ref.tooltip,
+      rest = _objectWithoutProperties(_ref, _excluded$5);
+    var inner;
+    if (!_isEmpty(label) && !_isEmpty(icon)) {
+      inner = /*#__PURE__*/React$1.createElement(Button, _extends({
+        startIcon: /*#__PURE__*/React$1.createElement("img", {
+          className: "lf-icon",
+          src: icon
+        })
+      }, passRest(rest)), label);
+    } else if (!_isEmpty(label) && _isEmpty(icon)) {
+      inner = /*#__PURE__*/React$1.createElement(Button, passRest(rest), label);
+    } else if (_isEmpty(label) && !_isEmpty(icon)) {
+      inner = /*#__PURE__*/React$1.createElement(IconButton$1, _extends({
+        icon: /*#__PURE__*/React$1.createElement("img", {
+          className: "lf-icon",
+          src: icon
+        })
+      }, passRest(rest)));
+    } else {
+      inner = /*#__PURE__*/React$1.createElement(React$1.Fragment, null);
+    }
+    return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, !_isEmpty(hint) && tooltip && /*#__PURE__*/React$1.createElement(Whisper, {
+      placement: "top",
+      trigger: "hover",
+      speaker: /*#__PURE__*/React$1.createElement(Tooltip, null, hint)
+    }, inner), (_isEmpty(hint) || !tooltip) && inner, !_isEmpty(hint) && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  };
+  var BiStateButton = I18N(MakeButton(RSuiteButton, {
+    appearance: 'primary'
+  }, {
+    appearance: 'ghost'
+  }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
+  lfLog('Loaded RSuite5.Button');
+
+  var index$8 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: BiStateButton
+  });
+
+  lfLog('Loaded RSuite5.ReactView');
+
+  var index$7 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ReactView
+  });
+
+  var _excluded$4 = ["onChange", "value"];
+  var SelectDatetime = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties(_ref, _excluded$4);
+    // also accepts string dates
+    var currentValue;
+    if (_isDate(value)) {
+      currentValue = value;
+    } else if (_isString(value)) {
+      var d = new Date(value);
+      if (isValidDate(d)) {
+        currentValue = d;
+      }
+    }
+
+    // send always date string in iso format
+    var handleChange = React$1.useCallback(function (d) {
+      if (isValidDate(d)) {
+        onChange(d.toISOString());
+      }
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(RSuiteGenericDate, _extends({
+      value: currentValue,
+      onChange: handleChange
+    }, passRest(rest)));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded RSuite5.DateTime');
+
+  var index$6 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: SelectDatetime
+  });
+
+  var css_248z$4 = ".lf-form-react-rsuite5 .lf-control-tabs .tab-fields {\n  margin-top: 10px;\n}";
+  styleInject(css_248z$4);
+
+  var _excluded$3 = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight"];
+  var Tabs = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
       tabs = _ref.tabs,
       onChange = _ref.onChange,
       children = _ref.children,
-      grow = _ref.grow,
-      justify = _ref.justify,
-      orientation = _ref.orientation,
-      placement = _ref.placement,
-      rest = _objectWithoutProperties(_ref, _excluded);
+      appearance = _ref.appearance,
+      reversed = _ref.reversed,
+      justified = _ref.justified,
+      pullRight = _ref.pullRight,
+      rest = _objectWithoutProperties(_ref, _excluded$3);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
     }
-    var _useState = React.useState(defaultKey),
+    var _useState = React$1.useState(defaultKey),
       _useState2 = _slicedToArray(_useState, 2),
       active = _useState2[0],
       setActive = _useState2[1];
-    var handleChange = React.useCallback(function (active) {
-      setActive(active);
-      onChange(active);
+    var handleKey = React$1.useCallback(function (key) {
+      setActive(key);
+      onChange(key);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement("div", {
-      className: classNames('lf-control-tabs', (_classNames = {}, _defineProperty$1(_classNames, "orientation-".concat(orientation), orientation != null), _defineProperty$1(_classNames, "placement-".concat(placement), placement != null), _classNames)),
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-tabs",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React.createElement(core.Tabs, _extends({
-      value: active,
-      onChange: handleChange,
-      orientation: orientation,
-      placement: placement
-    }, passRest(rest)), /*#__PURE__*/React.createElement(core.Tabs.List, {
-      grow: grow,
-      justify: justify
-    }, (tabs || []).map(function (tab) {
-      return /*#__PURE__*/React.createElement(core.Tabs.Tab, {
+    }, /*#__PURE__*/React$1.createElement(Nav, _extends({
+      appearance: appearance,
+      reversed: reversed,
+      justified: justified,
+      pullRight: pullRight,
+      activeKey: active,
+      onSelect: handleKey
+    }, passRest(rest)), (tabs || []).map(function (tab) {
+      return /*#__PURE__*/React$1.createElement(Nav.Item, {
         key: tab.value,
-        value: tab.value,
-        leftSection: TextOrIcon(tab.leftSection),
-        rightSection: TextOrIcon(tab.rightSection),
-        size: tab.size,
-        color: tab.color,
-        disabled: tab.disabled
+        eventKey: tab.value
       }, tab.label);
-    })), (tabs || []).map(function (tab) {
-      return /*#__PURE__*/React.createElement(core.Tabs.Panel, {
-        value: tab.value
-      }, children(tab.value));
-    })));
+    })), _isFunction(children) && /*#__PURE__*/React$1.createElement("div", {
+      className: "tab-fields"
+    }, children(active)));
   }, [], {
     tabs: i18nOptions
   });
-  lfLog('Loaded Mantine.Tabs');
+  lfLog('Loaded RSuite.Tabs');
+
+  var index$5 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Tabs
+  });
+
+  var _excluded$2 = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption"];
+  var RadioTileRSuite = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value;
+      _ref.placeholder;
+      _ref.plaintext;
+      var _ref$inline = _ref.inline,
+      inline = _ref$inline === void 0 ? true : _ref$inline,
+      _ref$iconWidth = _ref.iconWidth,
+      iconWidth = _ref$iconWidth === void 0 ? 24 : _ref$iconWidth,
+      _ref$iconHeight = _ref.iconHeight,
+      iconHeight = _ref$iconHeight === void 0 ? 24 : _ref$iconHeight,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required;
+      _ref.error;
+      var onChange = _ref.onChange;
+      _ref.onBlur;
+      var _ref$options = _ref.options,
+      options = _ref$options === void 0 ? [] : _ref$options,
+      initalOption = _ref.initalOption;
+      _objectWithoutProperties(_ref, _excluded$2);
+    var initialValue = value || initalOption;
+    var _useState = React$1.useState(initialValue),
+      _useState2 = _slicedToArray(_useState, 2),
+      currentValue = _useState2[0],
+      setCurrentValue = _useState2[1];
+    var handleChange = React$1.useCallback(function (value) {
+      setCurrentValue(value);
+      onChange(value);
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      className: "lf-control-input-text",
+      "data-lf-field-name": name
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RadioTileGroup, {
+      value: currentValue,
+      onChange: handleChange,
+      inline: inline,
+      disabled: disabled
+    }, (options || []).map(function (option) {
+      return /*#__PURE__*/React$1.createElement(RadioTile, {
+        key: option.value,
+        label: option.label,
+        value: option.value,
+        icon: option.icon && /*#__PURE__*/React$1.createElement("img", {
+          src: option.icon,
+          width: iconWidth,
+          height: iconHeight
+        })
+      }, option.description);
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint'], {
+    options: function options(value, i18n) {
+      return (value !== null && value !== void 0 ? value : []).filter(function (value) {
+        return value != null;
+      }).map(function (value) {
+        return _objectSpread2(_objectSpread2({}, value), {}, {
+          label: i18n(value.label),
+          description: i18n(value.description)
+        });
+      });
+    }
+  });
+  lfLog('Loaded RSuite.RadioTile');
+
+  var index$4 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RadioTileRSuite
+  });
+
+  var css_248z$3 = ".lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
+  styleInject(css_248z$3);
+
+  var _excluded$1 = ["superDisabled", "superSize", "disabled", "hint"],
+    _excluded2 = ["name", "label", "hint", "tooltip", "required", "onChange", "multiple", "removable", "disabledFileItem", "fileListVisible", "draggable", "disabled", "accept", "defaultValue", "listType", "uploadButtonLabel", "uploadButtonAppearance", "uploadButtonSize", "draggableText", "draggableHeight", "value"];
+  var makeDefaultValue = function makeDefaultValue(defaultValue) {
+    if (_isArray(defaultValue)) {
+      return defaultValue;
+    } else if (defaultValue != null) {
+      return [defaultValue];
+    }
+    return [];
+  };
+
+  // shield props component or the uploaded will replace the disabled prop
+  var ShieldedButton = function ShieldedButton(_ref) {
+    var superDisabled = _ref.superDisabled,
+      superSize = _ref.superSize;
+      _ref.disabled;
+      var hint = _ref.hint,
+      rest = _objectWithoutProperties(_ref, _excluded$1);
+    var inner = /*#__PURE__*/React$1.createElement(Button, _extends({}, rest, {
+      size: superSize,
+      disabled: superDisabled
+    }));
+    if (hint) {
+      return /*#__PURE__*/React$1.createElement("div", {
+        className: "upload-layout"
+      }, /*#__PURE__*/React$1.createElement("div", {
+        className: "upload"
+      }, inner), /*#__PURE__*/React$1.createElement("div", {
+        className: "hint"
+      }, hint));
+    }
+    return inner;
+  };
+  var Upload = I18N(function (_ref2) {
+    var name = _ref2.name,
+      label = _ref2.label,
+      hint = _ref2.hint,
+      tooltip = _ref2.tooltip,
+      required = _ref2.required,
+      onChange = _ref2.onChange,
+      multiple = _ref2.multiple,
+      removable = _ref2.removable,
+      disabledFileItem = _ref2.disabledFileItem,
+      fileListVisible = _ref2.fileListVisible,
+      draggable = _ref2.draggable,
+      disabled = _ref2.disabled,
+      accept = _ref2.accept;
+      _ref2.defaultValue;
+      var listType = _ref2.listType,
+      uploadButtonLabel = _ref2.uploadButtonLabel,
+      uploadButtonAppearance = _ref2.uploadButtonAppearance,
+      uploadButtonSize = _ref2.uploadButtonSize,
+      draggableText = _ref2.draggableText,
+      _ref2$draggableHeight = _ref2.draggableHeight,
+      draggableHeight = _ref2$draggableHeight === void 0 ? 200 : _ref2$draggableHeight,
+      value = _ref2.value,
+      rest = _objectWithoutProperties(_ref2, _excluded2);
+    var _useState = React$1.useState(makeDefaultValue(value)),
+      _useState2 = _slicedToArray(_useState, 2),
+      currentValue = _useState2[0],
+      setCurrentValue = _useState2[1];
+    var handleChange = React$1.useCallback(function (fileList) {
+      setCurrentValue(fileList);
+      if (multiple) {
+        onChange(fileList);
+      } else {
+        onChange(!_isEmpty(fileList) ? fileList[0] : null);
+      }
+    }, [multiple, onChange]);
+    var inner;
+    if (draggable) {
+      inner = /*#__PURE__*/React$1.createElement("div", {
+        style: {
+          height: draggableHeight,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }
+      }, /*#__PURE__*/React$1.createElement("span", null, draggableText || 'Click or Drag files to this area to upload'));
+    } else {
+      inner = /*#__PURE__*/React$1.createElement(ShieldedButton, {
+        appearance: uploadButtonAppearance,
+        superSize: uploadButtonSize,
+        superDisabled: disabled || !multiple && !_isEmpty(value),
+        hint: !tooltip && hint
+      }, uploadButtonLabel || 'Upload');
+    }
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-upload",
+      "data-lf-field-name": name
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Uploader, _extends({
+      autoUpload: false,
+      action: "",
+      accept: _isArray(accept) ? accept.join(',') : accept,
+      multiple: multiple,
+      removable: removable,
+      draggable: draggable,
+      disabled: disabled,
+      fileListVisible: fileListVisible,
+      disabledFileItem: disabledFileItem,
+      fileList: currentValue,
+      listType: listType,
+      onChange: handleChange
+    }, passRest(rest)), inner), hint && draggable && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
+  lfLog('Loaded RSuite.Upload');
+
+  var index$3 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Upload
+  });
+
+  var RSuiteButtonsToggleGroup = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      size = _ref.size,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      _ref$options = _ref.options,
+      options = _ref$options === void 0 ? [] : _ref$options;
+    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-button-toggle-group"
+    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form.Control, {
+      ButtonComponent: BiStateButton,
+      name: name,
+      accepter: ButtonsToggleGroup,
+      value: value,
+      onChange: onChange,
+      options: options,
+      disabled: disabled,
+      size: size,
+      errorMessage: _isString(error) ? error : undefined
+    }), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+  }, ['label', 'hint'], {
+    options: i18nOptions
+  });
+  lfLog('Loaded RSuite5.ButtonsToggleGroup');
+
+  var index$2 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RSuiteButtonsToggleGroup
+  });
+
+  var css_248z$2 = ".lf-generic-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-generic-icon.lg {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-generic-icon .xs {\n  max-width: 12px;\n  max-height: 12px;\n}";
+  styleInject(css_248z$2);
+
+  var GenericIcon = function GenericIcon(_ref) {
+    var icon = _ref.icon,
+      size = _ref.size;
+    return /*#__PURE__*/React$1.createElement("img", {
+      className: classNames("lf-generic-icon", {
+        size: size
+      }),
+      src: icon
+    });
+  };
+
+  var css_248z$1 = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
+  styleInject(css_248z$1);
+
+  var _excluded = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious"];
+  var i18nSteps = function i18nSteps(value, i18n) {
+    return (value !== null && value !== void 0 ? value : []).filter(function (value) {
+      return value != null;
+    }).map(function (value) {
+      return _objectSpread2(_objectSpread2({}, value), {}, {
+        label: i18n(value.label),
+        description: i18n(value.description)
+      });
+    });
+  };
+  var Rsuite5Steps = I18N(function (_ref) {
+    var name = _ref.name,
+      children = _ref.children,
+      value = _ref.value,
+      steps = _ref.steps,
+      _ref$onChange = _ref.onChange,
+      onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
+      align = _ref.align,
+      status = _ref.status,
+      small = _ref.small,
+      labelNext = _ref.labelNext,
+      labelPrevious = _ref.labelPrevious,
+      rest = _objectWithoutProperties(_ref, _excluded);
+    var defaultStep = value;
+    var defaultStepIdx = (steps || []).findIndex(function (obj) {
+      return obj.value === value;
+    });
+    if (!defaultStep && !_isEmpty(steps)) {
+      defaultStepIdx = 0;
+    }
+    var _useState = React$1.useState(defaultStepIdx),
+      _useState2 = _slicedToArray(_useState, 2),
+      stepIdx = _useState2[0],
+      setStepIdx = _useState2[1];
+    var step = _isArray(steps) && !_isEmpty(steps) && stepIdx >= 0 ? steps[stepIdx].value : null;
+    var handleNext = React$1.useCallback(function () {
+      var step = steps[stepIdx + 1].value;
+      setStepIdx(function (value) {
+        return value + 1;
+      });
+      onChange(step);
+    }, [onChange, stepIdx, steps]);
+    var handlePrevious = React$1.useCallback(function () {
+      var step = steps[stepIdx - 1].value;
+      setStepIdx(function (value) {
+        return value - 1;
+      });
+      onChange(step);
+    }, [onChange, stepIdx, steps]);
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-steps",
+      "data-lf-field-name": name
+    }, /*#__PURE__*/React$1.createElement(Steps, _extends({
+      current: stepIdx,
+      currentStatus: status,
+      small: small
+    }, passRest(rest)), (steps || []).map(function (step) {
+      return /*#__PURE__*/React$1.createElement(Steps.Item, {
+        key: "step_".concat(step.value),
+        description: step.description || undefined,
+        title: step.label,
+        icon: step.icon && /*#__PURE__*/React$1.createElement(GenericIcon, {
+          icon: step.icon
+        })
+      });
+    })), _isFunction(children) && /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-step"
+    }, children(step)), /*#__PURE__*/React$1.createElement("div", {
+      className: classNames('lf-navigation-buttons', align)
+    }, /*#__PURE__*/React$1.createElement(ButtonGroup, null, /*#__PURE__*/React$1.createElement(Button, {
+      onClick: handlePrevious,
+      disabled: _isEmpty(steps) || stepIdx === 0
+    }, labelPrevious || 'Previous'), /*#__PURE__*/React$1.createElement(Button, {
+      onClick: handleNext,
+      disabled: _isEmpty(steps) || stepIdx === steps.length - 1
+    }, labelNext || 'Next'))));
+  }, ['labelPrevious', 'labelNext'], {
+    tabs: i18nSteps
+  });
+  lfLog('Loaded Rsuite5.Steps');
 
   var index$1 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: MantineTabs
+    default: Rsuite5Steps
   });
 
-  var css_248z = ".lf-form-react-mantine .lf-control-input-number div[data-position=right] .lf-postfix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=right] .lf-postfix-wrapper {\n  padding-right: 1em;\n}\n.lf-form-react-mantine .lf-control-input-number div[data-position=left] .lf-prefix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=left] .lf-prefix-wrapper {\n  padding-left: 1em;\n}";
+  var css_248z = ".lf-form-react-rsuite5 .lf-buttons {\n  margin-top: 24px;\n}\n.lf-form-react-rsuite5 .rs-form-control-label > .rs-form-help-text.rs-form-help-text-tooltip {\n  margin-top: 0px;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lf-full-width .rs-form-control-wrapper {\n  width: 100%;\n}";
   styleInject(css_248z);
 
-  var MantineForm = function MantineForm() {
-    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+  var FormRsuite5 = function FormRsuite5(_ref) {
+    var children = _ref.children,
       name = _ref.name,
-      children = _ref.children,
-      buttonsAlign = _ref.buttonsAlign,
-      _ref$hideToolbar = _ref.hideToolbar,
-      hideToolbar = _ref$hideToolbar === void 0 ? false : _ref$hideToolbar,
-      _ref$onlyFields = _ref.onlyFields,
-      onlyFields = _ref$onlyFields === void 0 ? false : _ref$onlyFields,
+      layout = _ref.layout,
+      _ref$fluid = _ref.fluid,
+      fluid = _ref$fluid === void 0 ? false : _ref$fluid,
       _ref$disabled = _ref.disabled,
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
       _ref$disabledSubmit = _ref.disabledSubmit,
       disabledSubmit = _ref$disabledSubmit === void 0 ? false : _ref$disabledSubmit,
-      plaintext = _ref.plaintext,
+      buttonsAlign = _ref.buttonsAlign,
       _ref$labelSubmit = _ref.labelSubmit,
       labelSubmit = _ref$labelSubmit === void 0 ? 'Submit' : _ref$labelSubmit,
       _ref$labelCancel = _ref.labelCancel,
       labelCancel = _ref$labelCancel === void 0 ? 'Cancel' : _ref$labelCancel,
+      _ref$hideCancel = _ref.hideCancel,
+      hideCancel = _ref$hideCancel === void 0 ? false : _ref$hideCancel,
+      _ref$hideSumbut = _ref.hideSumbut,
+      hideSumbut = _ref$hideSumbut === void 0 ? false : _ref$hideSumbut,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$onlyFields = _ref.onlyFields,
+      onlyFields = _ref$onlyFields === void 0 ? false : _ref$onlyFields,
+      _ref$hideToolbar = _ref.hideToolbar,
+      hideToolbar = _ref$hideToolbar === void 0 ? false : _ref$hideToolbar,
       _ref$onSubmit = _ref.onSubmit,
       onSubmit = _ref$onSubmit === void 0 ? function () {} : _ref$onSubmit,
       _ref$onReset = _ref.onReset,
       onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset,
       custom = _ref.custom;
-    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("form", {
-      onSubmit: onSubmit,
-      className: classNames('lf-form lf-form-react-mantine', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
-      "data-lf-form-name": name
-    }, children, !hideToolbar && !onlyFields && !plaintext && /*#__PURE__*/React.createElement(core.Group, {
-      className: "lf-buttons",
-      align: buttonsAlign
-    }, /*#__PURE__*/React.createElement(core.Button, {
-      variant: "filled",
+    if (onlyFields) {
+      var _classNames;
+      // TODO check this
+      return /*#__PURE__*/React$1.createElement("div", {
+        className: classNames('rs-form', (_classNames = {}, _defineProperty$1(_classNames, "rs-form-".concat(layout), true), _defineProperty$1(_classNames, 'rs-form-fluid', fluid), _classNames))
+      }, children);
+    }
+    return /*#__PURE__*/React$1.createElement(Form, {
+      className: classNames('lf-form lf-form-react-rsuite5', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
+      "data-lf-form-name": name,
+      layout: layout,
+      fluid: fluid,
+      readOnly: readOnly,
+      disabled: disabled
+    }, /*#__PURE__*/React$1.createElement("div", null, children), !hideToolbar && /*#__PURE__*/React$1.createElement(ButtonToolbar, {
+      className: "lf-buttons"
+    }, !hideSumbut && /*#__PURE__*/React$1.createElement(Button, {
+      appearance: "primary",
       onClick: onSubmit,
-      disabled: disabled || disabledSubmit,
-      className: "lf-form-react-primary-button"
-    }, labelSubmit), /*#__PURE__*/React.createElement(core.Button, {
-      variant: "outline",
-      disabled: disabled,
-      className: "lf-form-react-secondary-button",
-      onClick: onReset
-    }, labelCancel), custom)));
+      disabled: disabled || disabledSubmit
+    }, labelSubmit), !hideCancel && /*#__PURE__*/React$1.createElement(Button, {
+      onClick: onReset,
+      disabled: disabled
+    }, labelCancel), custom));
   };
-  lfLog('Loaded Mantine.Form');
+  lfLog('Loaded RSuite5.Form');
 
   var index = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: MantineForm
+    default: FormRsuite5
   });
 
   exports.FIELDS_KEY = FIELDS_KEY;
