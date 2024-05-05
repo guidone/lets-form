@@ -1,5 +1,11 @@
 # LetsForm Designer Changelog
 
+## v0.8.7
+- added export for Vite and Html import map (beta)
+- switched from WebPack to Rollup
+- ESM build for all frameworks
+- fixed AntD direct import
+
 ## v0.8.6
 - Added Mantine: tabs
 - Fixed extra keys in configuring fields (very annoying)
