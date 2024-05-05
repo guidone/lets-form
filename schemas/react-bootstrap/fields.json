@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://unpkg.com/lets-form@0.7.9/schemas/react-bootstrap/fields.json",
+  "$id": "https://unpkg.com/lets-form@0.7.10/schemas/react-bootstrap/fields.json",
   "type": "array",
   "items": {
     "required": [
