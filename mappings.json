@@ -1493,28 +1493,32 @@
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "maxHeight": [
       "react",
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "marginTop": [
       "react",
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "marginBottom": [
       "react",
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "button": {
@@ -1536,23 +1540,30 @@
       "react-rsuite5",
       "react-material-ui",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "appearance": [
       "react-rsuite5"
     ],
     "tooltip": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-mantine"
     ],
     "variant": [
       "react-material-ui",
-      "react-bootstrap"
+      "react-bootstrap",
+      "react-mantine"
     ],
     "color": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "type": [
       "react-antd"
+    ],
+    "radius": [
+      "react-mantine"
     ]
   },
   "divider": {

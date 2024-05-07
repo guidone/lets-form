@@ -4501,12 +4501,31 @@
         "type": "number"
       }
     ],
+    "react-mantine": [
+      {
+        "name": "maxWidth",
+        "type": "number"
+      },
+      {
+        "name": "maxHeight",
+        "type": "number"
+      },
+      {
+        "name": "marginTop",
+        "type": "number"
+      },
+      {
+        "name": "marginBottom",
+        "type": "number"
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
       "react",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "button": {
@@ -4695,12 +4714,81 @@
         ]
       }
     ],
+    "react-mantine": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "compact-xs",
+          "sm",
+          "compact-sm",
+          "md",
+          "compact-md",
+          "lg",
+          "compact-lg",
+          "xl",
+          "compact-xl"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "description": "Only available for link-type buttons",
+        "options": [
+          "default",
+          "filled",
+          "light",
+          "outline",
+          "subtle",
+          "transparent",
+          "white"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "grey",
+          "red",
+          "pink",
+          "grape",
+          "violet",
+          "indigo",
+          "blue",
+          "cyan",
+          "teal",
+          "green",
+          "lime",
+          "yellow",
+          "orange"
+        ]
+      },
+      {
+        "name": "tooltip",
+        "type": "boolean",
+        "description": "Show hint as tooltip next to label"
+      }
+    ],
     "frameworks": [
       "react-rsuite5",
       "react-material-ui",
       "react",
       "react-bootstrap",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ]
   },
   "divider": {

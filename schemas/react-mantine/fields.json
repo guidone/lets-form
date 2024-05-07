@@ -1957,6 +1957,193 @@
         "if": {
           "properties": {
             "component": {
+              "const": "placeholder-image"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            },
+            "align": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "maxWidth": {
+              "type": "integer"
+            },
+            "maxHeight": {
+              "type": "integer"
+            },
+            "marginTop": {
+              "type": "integer"
+            },
+            "marginBottom": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "button"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "buttonType": {
+              "type": "string",
+              "enum": [
+                "toggle",
+                "link"
+              ]
+            },
+            "labelOn": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "iconOn": {
+              "type": "string"
+            },
+            "labelOff": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "iconOff": {
+              "type": "string"
+            },
+            "initialValue": {
+              "type": "boolean"
+            },
+            "labelLink": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "iconLink": {
+              "type": "string"
+            },
+            "href": {
+              "type": "string"
+            },
+            "hint": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "compact-xs",
+                "sm",
+                "compact-sm",
+                "md",
+                "compact-md",
+                "lg",
+                "compact-lg",
+                "xl",
+                "compact-xl"
+              ]
+            },
+            "radius": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl"
+              ]
+            },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "default",
+                "filled",
+                "light",
+                "outline",
+                "subtle",
+                "transparent",
+                "white"
+              ]
+            },
+            "color": {
+              "type": "string",
+              "enum": [
+                "grey",
+                "red",
+                "pink",
+                "grape",
+                "violet",
+                "indigo",
+                "blue",
+                "cyan",
+                "teal",
+                "green",
+                "lime",
+                "yellow",
+                "orange"
+              ]
+            },
+            "tooltip": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
               "const": "divider"
             }
           }
