@@ -27,8 +27,8 @@ const PlaceholderImage = ({
           style={{
             marginTop: marginTop ? marginTop : undefined,
             marginBottom: marginBottom ? marginBottom : undefined,
-            maxWidth: maxWidth ? maxWidth : undefined,
-            maxHeight: maxHeight ? maxHeight : undefined,
+            maxWidth: maxWidth ? maxWidth : '100%',
+            maxHeight: maxHeight ? maxHeight : '100%',
             textAlign: align ? align : undefined
           }}
         />
