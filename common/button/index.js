@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
+import classNames from 'classnames';
 
 import { passRest, makeWidthStyle } from '../../helpers';
 
@@ -45,7 +46,7 @@ const GenericButton = ({
       <ButtonComponent
         size={size}
         onClick={handleClick}
-        onBlur={onBlur}        
+        onBlur={onBlur}
         icon={checked ? iconOn : iconOff}
         label={checked ? labelOn : labelOff }
         hint={hint}
@@ -73,7 +74,9 @@ const GenericButton = ({
   }
 
   return (
-    <div className="lf-control-button" data-lf-field-name={name}>        
+    <div
+      className={classNames('lf-control-button', { [`lf-control-button-${size ?? ''}`]: true })}
+      data-lf-field-name={name}>
       {inner}
     </div>
   );
@@ -84,7 +87,7 @@ const MakeButton = (ButtonComponent, OnStateProps, OffStateProps, LinkProps) => 
   return props => {
     return (
       <GenericButton
-        ButtonComponent={ButtonComponent} 
+        ButtonComponent={ButtonComponent}
         OnStateProps={_.isFunction(OnStateProps) ? OnStateProps(props) : OnStateProps}
         OffStateProps={_.isFunction(OffStateProps) ? OffStateProps(props) : OffStateProps}
         LinkProps={_.isFunction(LinkProps) ? LinkProps(props) : LinkProps}

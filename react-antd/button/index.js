@@ -54,4 +54,6 @@ const BiStateButton = I18N(
   ['labelOn', 'labelOff', 'labelLink', 'hint']
 );
 
+lfLog('Loaded AntD.Button');
+
 export default BiStateButton;
