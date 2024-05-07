@@ -1,0 +1,45 @@
+.lf-form-react-mantine {
+  .lf-control-button {
+    min-height: 20px;
+
+    .lf-icon {
+      max-width: 16px;
+      max-height: 16px;
+    }
+
+    &.lf-control-button-lg {
+      .lf-icon {
+        max-width: 24px;
+        max-height: 24px;
+      }
+    }
+
+    &.lf-control-button-xs {
+      .lf-icon {
+        max-width: 16px;
+        max-height: 16px;
+      }
+    }
+
+    &.lf-control-button-sm {
+      .lf-icon {
+        max-width: 18px;
+        max-height: 18px;
+      }
+    }
+
+    &.lf-control-button-md {
+      .lf-icon {
+        max-width: 20px;
+        max-height: 20px;
+      }
+    }
+
+    &.lf-control-button-xl {
+      .lf-icon {
+        max-width: 28px;
+        max-height: 28px;
+      }
+    }
+  }
+}
