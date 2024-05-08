@@ -22,13 +22,13 @@ const makeDefaultValue = defaultValue => {
 // shield props component or the uploaded will replace the disabled prop
 const ShieldedButton = ({ superDisabled, superSize, disabled, hint, ...rest }) => {
   const inner = (
-    <Button 
+    <Button
       {...rest}
       size={superSize}
       disabled={superDisabled}
     />
   );
-  
+
   if (hint) {
     return (
       <div className="upload-layout">
@@ -36,7 +36,7 @@ const ShieldedButton = ({ superDisabled, superSize, disabled, hint, ...rest }) =
           {inner}
         </div>
         <div className="hint">
-          {hint}  
+          {hint}
         </div>
       </div>
     )
@@ -66,7 +66,7 @@ const Upload = I18N(
     uploadButtonSize,
     draggableText,
     draggableHeight = 200,
-    value, 
+    value,
     ...rest
   }) => {
     const [currentValue, setCurrentValue] = useState(makeDefaultValue(value));
@@ -114,7 +114,7 @@ const Upload = I18N(
             {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
             {required && <RequiredIcon />}
           </Form.ControlLabel>
-        )} 
+        )}
         <Uploader
           autoUpload={false}
           action=""
@@ -128,7 +128,7 @@ const Upload = I18N(
           fileList={currentValue}
           listType={listType}
           onChange={handleChange}
-          {...passRest(rest)}    
+          {...passRest(rest)}
         >
           {inner}
         </Uploader>
