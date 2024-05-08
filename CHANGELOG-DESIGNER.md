@@ -1,5 +1,11 @@
 # LetsForm Designer Changelog
 
+## Next
+- added Mantine Upload, Image Placeholder and Button
+- ImagePlaceholder max width/height defaults to 100%
+- MUI Upload value is now the entire File object
+- Improved JSON proview in Debug panel
+
 ## v0.8.7
 - added export for Vite and Html import map (beta)
 - switched from WebPack to Rollup
