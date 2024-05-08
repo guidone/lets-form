@@ -15,8 +15,8 @@ import './upload.scss';
 import { FileItem } from './file-item';
 
 const Upload = I18N(
-  ({ 
-    label, 
+  ({
+    label,
     uploadButtonLabel,
     name,
     accept,
@@ -48,7 +48,7 @@ const Upload = I18N(
         const newCurrentFile = currentFile
           .filter(file => file !== fileToRemove);
         setCurrentFile(newCurrentFile);
-        onChange(newCurrentFile); 
+        onChange(newCurrentFile);
       },
       [currentFile, onChange]
     );
@@ -59,23 +59,15 @@ const Upload = I18N(
           if (multiple) {
             const newCurrentFile = currentFile ? [...currentFile] : [];
             let idx;
-            
+
             for(idx = 0; idx < e.target.files.length; idx++) {
-              console.log('.-', e.target.files[idx])
-              newCurrentFile.push({
-                blobFile: e.target.files[idx],
-                name: e.target.files[idx].name,
-                size: e.target.files[idx].size
-              })
+              newCurrentFile.push(e.target.files[idx]);
             }
             setCurrentFile(newCurrentFile);
             onChange(newCurrentFile);
           } else {
             setCurrentFile(e.target.files[0]);
-            onChange({
-              blobFile: e.target.files[0],
-              name: e.target.files[0].name
-            });
+            onChange(e.target.files[0]);
           }
         } else {
           onChange(null);
@@ -94,16 +86,16 @@ const Upload = I18N(
         )}
         <div className="lf-upload-button-layout">
           <div className="lf-upload-button-left">
-            <Button 
-              color={color ?? undefined} 
-              component="label" 
-              variant={uploadButtonVariant ?? undefined} 
+            <Button
+              color={color ?? undefined}
+              component="label"
+              variant={uploadButtonVariant ?? undefined}
               size={uploadButtonSize ?? undefined}
               startIcon={uploadButtonIcon ? <img className="lf-icon" src={uploadButtonIcon} /> : undefined}
             >
               {uploadButtonLabel || 'Upload'}
-              
-              <input 
+
+              <input
                 type="file"
                 accept={accept}
                 onChange={handleChange}
@@ -133,7 +125,7 @@ const Upload = I18N(
                   </span>
                 </span>
                 &nbsp;
-                <a 
+                <a
                   href="#"
                   onClick={handleClear}
                 ><CrossCirle color="#666666" width={16} height={16}/></a>
@@ -145,14 +137,14 @@ const Upload = I18N(
         {multiple && currentFile && (
           <div className="lf-upload-file-list">
             {currentFile.map(file => (
-              <FileItem 
+              <FileItem
                 file={file}
                 key={file.name}
                 onRemove={handleRemove}
               />
             ))}
-          </div>  
-        )}        
+          </div>
+        )}
       </div>
     );
   },
