@@ -1,6 +1,10 @@
 # LetsForm Changelog
 
-## 0.7.10
+## Next
+- added Image Placeholder and Button to Mantine
+- ImagePlaceholder max width/height defaults to 100%
+
+## v0.7.10
 - switched from WebPack to Rollup
 - ESM build for all frameworks
 - fixed AntD direct import

@@ -1949,7 +1949,8 @@
     "multiple": [
       "react-rsuite5",
       "react-material-ui",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "removable": [
       "react-rsuite5"
@@ -1994,6 +1995,45 @@
     ],
     "showUploadList": [
       "react-antd"
+    ],
+    "placeholder": [
+      "react-mantine"
+    ],
+    "size": [
+      "react-mantine"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "variant": [
+      "react-mantine"
+    ],
+    "fullWidth": [
+      "react-mantine"
+    ],
+    "width": [
+      "react-mantine"
+    ],
+    "leftSection": [
+      "react-mantine"
+    ],
+    "rightSection": [
+      "react-mantine"
+    ],
+    "leftSectionWidth": [
+      "react-mantine"
+    ],
+    "rightSectionWidth": [
+      "react-mantine"
+    ],
+    "clearable": [
+      "react-mantine"
+    ],
+    "pointer": [
+      "react-mantine"
+    ],
+    "withErrorStyles": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",

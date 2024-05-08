@@ -2532,6 +2532,130 @@
             }
           }
         }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "upload"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "hint": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "accept": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "acceptedFile": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "acceptedFile": {
+              "type": "string"
+            },
+            "placeholder": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl"
+              ]
+            },
+            "radius": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl"
+              ]
+            },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "default",
+                "filled",
+                "unstyled"
+              ]
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "leftSection": {
+              "type": "string"
+            },
+            "rightSection": {
+              "type": "string"
+            },
+            "leftSectionWidth": {
+              "type": "integer"
+            },
+            "rightSectionWidth": {
+              "type": "integer"
+            },
+            "clearable": {
+              "type": "boolean"
+            },
+            "multiple": {
+              "type": "boolean"
+            },
+            "pointer": {
+              "type": "boolean"
+            },
+            "withErrorStyles": {
+              "type": "boolean"
+            }
+          }
+        }
       }
     ]
   },
