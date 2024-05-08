@@ -69,6 +69,9 @@ const Fields = {
   },
   'button': {
     'react-mantine': lazy(() => import('./button'))
+  },
+  'upload': {
+    'react-mantine': lazy(() => import('./upload'))
   }
 };
 
