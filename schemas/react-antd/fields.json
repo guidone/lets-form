@@ -1405,6 +1405,12 @@
             "value": {
               "type": "string"
             },
+            "filterKey": {
+              "type": "string"
+            },
+            "filterValue": {
+              "type": "string"
+            },
             "placeholder": {
               "anyOf": [
                 {

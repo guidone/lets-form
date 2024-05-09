@@ -1,9 +1,10 @@
 # LetsForm Changelog
 
 ## Next
-- added Mantine Upload, Image Placeholder and Button
+- added Mantine Upload, Image Placeholder, Multiselect and Button
 - ImagePlaceholder max width/height defaults to 100%
 - MUI Upload value is now the entire File object
+- Fixed bottom padding of Group
 
 ## v0.7.10
 - switched from WebPack to Rollup

@@ -4107,6 +4107,14 @@
         "type": "array"
       },
       {
+        "name": "filterKey",
+        "type": "string"
+      },
+      {
+        "name": "filterValue",
+        "type": "string"
+      },
+      {
         "name": "placeholder",
         "type": "string | i18n",
         "description": "Placeholder text, visibile when the field is empty"
