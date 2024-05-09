@@ -6,8 +6,6 @@ import { I18N } from '../../components';
 import { passRest, makeWidthStyle, i18nOptions, filterOptions } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
 
-// TODO filter done with proper params
-
 const MantineSelect = I18N(
   ({
     name,
@@ -19,7 +17,6 @@ const MantineSelect = I18N(
     options,
     filterValue,
     filterKey,
-    lfOnEnter = () => {},
     ...rest
   }) => {
     return (
@@ -37,7 +34,7 @@ const MantineSelect = I18N(
       />
     );
   },
-  ['label', 'hint', 'placeholder'],
+  ['label', 'hint', 'placeholder', 'nothingFoundMessage'],
   {
     options: i18nOptions
   }
