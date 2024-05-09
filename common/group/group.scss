@@ -24,12 +24,12 @@
         content: "";
         flex: 1 0;
       }
-  
+
       &:after {
         border-top: 1px solid var(--lf-border-color);
         content: "";
         flex: 1 0;
-      }  
+      }
     }
 
     .lf-group-content {
@@ -48,12 +48,16 @@
         content: "";
         flex: 1 0;
       }
-  
+
       &:after {
         border-top: 1px solid var(--lf-border-color);
         content: "";
         flex: 1 0;
-      }  
+      }
+    }
+
+    .lf-group-content {
+      padding-bottom: var(--lf-group-padding);
     }
   }
 
@@ -64,12 +68,12 @@
         content: "";
         flex: 1 0;
       }
-  
+
       &:after {
         border-top: 1px solid var(--lf-border-color);
         content: "";
         flex: 1 0;
-      }  
+      }
     }
   }
 
@@ -80,7 +84,7 @@
   .header {
     align-items: center;
     background: transparent;
-    display: flex;    
+    display: flex;
     height: 1px;
     flex-direction: row;
     margin: var(--lf-group-header) 0px;
