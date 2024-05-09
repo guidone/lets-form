@@ -72,6 +72,9 @@ const Fields = {
   },
   'upload': {
     'react-mantine': lazy(() => import('./upload'))
+  },
+  'multiselect': {
+    'react-mantine': lazy(() => import('./multiselect'))
   }
 };
 
