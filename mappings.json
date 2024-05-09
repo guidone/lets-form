@@ -180,12 +180,14 @@
     "fullWidth": [
       "react",
       "react-material-ui",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "width": [
       "react",
       "react-material-ui",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "placement": [
       "react-rsuite5",
@@ -1355,7 +1357,8 @@
     "size": [
       "react-rsuite5",
       "react-material-ui",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "multiselectMode": [
       "react-rsuite5"
@@ -1364,7 +1367,8 @@
       "react-rsuite5"
     ],
     "searchable": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-mantine"
     ],
     "cleanable": [
       "react-rsuite5"
@@ -1380,17 +1384,20 @@
       "react-material-ui"
     ],
     "fullWidth": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "width": [
       "react-material-ui",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "floatingLabel": [
       "react-material-ui"
     ],
     "variant": [
-      "react-material-ui"
+      "react-material-ui",
+      "react-mantine"
     ],
     "listHeight": [
       "react-antd"
@@ -1418,6 +1425,57 @@
     ],
     "maxTagTextLength": [
       "react-antd"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "leftSection": [
+      "react-mantine"
+    ],
+    "rightSection": [
+      "react-mantine"
+    ],
+    "leftSectionWidth": [
+      "react-mantine"
+    ],
+    "rightSectionWidth": [
+      "react-mantine"
+    ],
+    "limit": [
+      "react-mantine"
+    ],
+    "maxDropdownHeight": [
+      "react-mantine"
+    ],
+    "maxValues": [
+      "react-mantine"
+    ],
+    "nothingFoundMessage": [
+      "react-mantine"
+    ],
+    "clearable": [
+      "react-mantine"
+    ],
+    "defaultDropdownOpened": [
+      "react-mantine"
+    ],
+    "hidePickedOptions": [
+      "react-mantine"
+    ],
+    "pointer": [
+      "react-mantine"
+    ],
+    "selectFirstOptionOnChange": [
+      "react-mantine"
+    ],
+    "withCheckIcon": [
+      "react-mantine"
+    ],
+    "withErrorStyles": [
+      "react-mantine"
+    ],
+    "withScrollArea": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",

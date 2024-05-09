@@ -333,6 +333,12 @@
                 "unstyled"
               ]
             },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
             "leftSection": {
               "type": "string"
             },
@@ -1948,6 +1954,177 @@
               ]
             },
             "hidden": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "multiselect"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "hint": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "options": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "$ref": "#/$defs/i18n"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "value": {
+              "type": "string"
+            },
+            "placeholder": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl"
+              ]
+            },
+            "radius": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl"
+              ]
+            },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "default",
+                "filled",
+                "unstyled"
+              ]
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "leftSection": {
+              "type": "string"
+            },
+            "rightSection": {
+              "type": "string"
+            },
+            "leftSectionWidth": {
+              "type": "integer"
+            },
+            "rightSectionWidth": {
+              "type": "integer"
+            },
+            "limit": {
+              "type": "integer"
+            },
+            "maxDropdownHeight": {
+              "type": "integer"
+            },
+            "maxValues": {
+              "type": "integer"
+            },
+            "searchable": {
+              "type": "boolean"
+            },
+            "nothingFoundMessage": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "clearable": {
+              "type": "boolean"
+            },
+            "defaultDropdownOpened": {
+              "type": "boolean"
+            },
+            "hidePickedOptions": {
+              "type": "boolean"
+            },
+            "pointer": {
+              "type": "boolean"
+            },
+            "selectFirstOptionOnChange": {
+              "type": "boolean"
+            },
+            "withCheckIcon": {
+              "type": "boolean"
+            },
+            "withErrorStyles": {
+              "type": "boolean"
+            },
+            "withScrollArea": {
               "type": "boolean"
             }
           }
