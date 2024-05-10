@@ -1,4 +1,4 @@
-/* LetsForm react-antd v0.7.10 - UMD */
+/* LetsForm react-antd v0.7.11 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('antd')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'antd'], factory) :
@@ -7986,12 +7986,14 @@
   	fullWidth: [
   		"react",
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	width: [
   		"react",
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	placement: [
   		"react-rsuite5",
@@ -8702,6 +8704,8 @@
   	hint: null,
   	options: null,
   	value: null,
+  	filterKey: null,
+  	filterValue: null,
   	placeholder: null,
   	disabled: null,
   	readOnly: null,
@@ -8713,7 +8717,8 @@
   	size: [
   		"react-rsuite5",
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	multiselectMode: [
   		"react-rsuite5"
@@ -8722,7 +8727,8 @@
   		"react-rsuite5"
   	],
   	searchable: [
-  		"react-rsuite5"
+  		"react-rsuite5",
+  		"react-mantine"
   	],
   	cleanable: [
   		"react-rsuite5"
@@ -8738,17 +8744,20 @@
   		"react-material-ui"
   	],
   	fullWidth: [
-  		"react-material-ui"
+  		"react-material-ui",
+  		"react-mantine"
   	],
   	width: [
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	floatingLabel: [
   		"react-material-ui"
   	],
   	variant: [
-  		"react-material-ui"
+  		"react-material-ui",
+  		"react-mantine"
   	],
   	listHeight: [
   		"react-antd"
@@ -8777,6 +8786,57 @@
   	maxTagTextLength: [
   		"react-antd"
   	],
+  	radius: [
+  		"react-mantine"
+  	],
+  	leftSection: [
+  		"react-mantine"
+  	],
+  	rightSection: [
+  		"react-mantine"
+  	],
+  	leftSectionWidth: [
+  		"react-mantine"
+  	],
+  	rightSectionWidth: [
+  		"react-mantine"
+  	],
+  	limit: [
+  		"react-mantine"
+  	],
+  	maxDropdownHeight: [
+  		"react-mantine"
+  	],
+  	maxValues: [
+  		"react-mantine"
+  	],
+  	nothingFoundMessage: [
+  		"react-mantine"
+  	],
+  	clearable: [
+  		"react-mantine"
+  	],
+  	defaultDropdownOpened: [
+  		"react-mantine"
+  	],
+  	hidePickedOptions: [
+  		"react-mantine"
+  	],
+  	pointer: [
+  		"react-mantine"
+  	],
+  	selectFirstOptionOnChange: [
+  		"react-mantine"
+  	],
+  	withCheckIcon: [
+  		"react-mantine"
+  	],
+  	withErrorStyles: [
+  		"react-mantine"
+  	],
+  	withScrollArea: [
+  		"react-mantine"
+  	],
   	validationMinLength: "validation",
   	validationMin: "validation",
   	validationMaxLength: "validation",
@@ -8804,23 +8864,30 @@
   		"react-rsuite5",
   		"react-material-ui",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	appearance: [
   		"react-rsuite5"
   	],
   	tooltip: [
-  		"react-rsuite5"
+  		"react-rsuite5",
+  		"react-mantine"
   	],
   	variant: [
   		"react-material-ui",
-  		"react-bootstrap"
+  		"react-bootstrap",
+  		"react-mantine"
   	],
   	color: [
-  		"react-material-ui"
+  		"react-material-ui",
+  		"react-mantine"
   	],
   	type: [
   		"react-antd"
+  	],
+  	radius: [
+  		"react-mantine"
   	]
   };
   var divider$1 = {
@@ -9175,7 +9242,8 @@
   	multiple: [
   		"react-rsuite5",
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	removable: [
   		"react-rsuite5"
@@ -9220,6 +9288,45 @@
   	],
   	showUploadList: [
   		"react-antd"
+  	],
+  	placeholder: [
+  		"react-mantine"
+  	],
+  	size: [
+  		"react-mantine"
+  	],
+  	radius: [
+  		"react-mantine"
+  	],
+  	variant: [
+  		"react-mantine"
+  	],
+  	fullWidth: [
+  		"react-mantine"
+  	],
+  	width: [
+  		"react-mantine"
+  	],
+  	leftSection: [
+  		"react-mantine"
+  	],
+  	rightSection: [
+  		"react-mantine"
+  	],
+  	leftSectionWidth: [
+  		"react-mantine"
+  	],
+  	rightSectionWidth: [
+  		"react-mantine"
+  	],
+  	clearable: [
+  		"react-mantine"
+  	],
+  	pointer: [
+  		"react-mantine"
+  	],
+  	withErrorStyles: [
+  		"react-mantine"
   	],
   	validationMinLength: "validation",
   	validationMin: "validation",
@@ -9921,28 +10028,32 @@
   		"react-rsuite5",
   		"react-material-ui",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	maxHeight: [
   		"react",
   		"react-rsuite5",
   		"react-material-ui",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	marginTop: [
   		"react",
   		"react-rsuite5",
   		"react-material-ui",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	marginBottom: [
   		"react",
   		"react-rsuite5",
   		"react-material-ui",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	]
   },
   	button: button$1,
@@ -10932,6 +11043,16 @@
   				"filled",
   				"unstyled"
   			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
   		},
   		{
   			name: "leftSection",
@@ -12768,6 +12889,14 @@
   			type: "array"
   		},
   		{
+  			name: "filterKey",
+  			type: "string"
+  		},
+  		{
+  			name: "filterValue",
+  			type: "string"
+  		},
+  		{
   			name: "placeholder",
   			type: "string | i18n",
   			description: "Placeholder text, visibile when the field is empty"
@@ -12964,10 +13093,136 @@
   			description: "Maximum length of text tags"
   		}
   	],
+  	"react-mantine": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"default",
+  				"filled",
+  				"unstyled"
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "leftSection",
+  			type: "string"
+  		},
+  		{
+  			name: "rightSection",
+  			type: "string"
+  		},
+  		{
+  			name: "leftSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "rightSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "limit",
+  			type: "number",
+  			description: "Maximum number of options displayed at a time, Infinity by default"
+  		},
+  		{
+  			name: "maxDropdownHeight",
+  			type: "number",
+  			description: "max-height of the dropdown, only applicable when withScrollArea prop is true, 250 by default"
+  		},
+  		{
+  			name: "maxValues",
+  			type: "number",
+  			description: "Maximum number of values, Infinity by default"
+  		},
+  		{
+  			name: "searchable",
+  			type: "boolean",
+  			description: "Determines whether the select should be searchable, false by default"
+  		},
+  		{
+  			name: "nothingFoundMessage",
+  			type: "string | i18n",
+  			description: "Message displayed when no option matched current search query, only applicable when searchable prop is set"
+  		},
+  		{
+  			name: "clearable",
+  			type: "boolean",
+  			description: "Determines whether the clear button should be displayed in the right section when the component has value, false by default"
+  		},
+  		{
+  			name: "defaultDropdownOpened",
+  			type: "boolean",
+  			description: "Uncontrolled dropdown initial opened state"
+  		},
+  		{
+  			name: "hidePickedOptions",
+  			type: "boolean",
+  			description: "Determines whether picked options should be removed from the options list, false by default"
+  		},
+  		{
+  			name: "pointer",
+  			type: "boolean",
+  			description: "Determines whether the input should have cursor: pointer style, false by default"
+  		},
+  		{
+  			name: "selectFirstOptionOnChange",
+  			type: "boolean",
+  			description: "Determines whether the first option should be selected when value changes, false by default"
+  		},
+  		{
+  			name: "withCheckIcon",
+  			type: "boolean",
+  			description: "Determines whether check icon should be displayed near the selected option label, true by default"
+  		},
+  		{
+  			name: "withErrorStyles",
+  			type: "boolean",
+  			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
+  		},
+  		{
+  			name: "withScrollArea",
+  			type: "boolean",
+  			description: "Determines whether the options should be wrapped with scroll bars, true by default"
+  		}
+  	],
   	frameworks: [
   		"react-rsuite5",
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	]
   };
   var button = {
@@ -13156,12 +13411,81 @@
   			]
   		}
   	],
+  	"react-mantine": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"compact-xs",
+  				"sm",
+  				"compact-sm",
+  				"md",
+  				"compact-md",
+  				"lg",
+  				"compact-lg",
+  				"xl",
+  				"compact-xl"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			description: "Only available for link-type buttons",
+  			options: [
+  				"default",
+  				"filled",
+  				"light",
+  				"outline",
+  				"subtle",
+  				"transparent",
+  				"white"
+  			]
+  		},
+  		{
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"grey",
+  				"red",
+  				"pink",
+  				"grape",
+  				"violet",
+  				"indigo",
+  				"blue",
+  				"cyan",
+  				"teal",
+  				"green",
+  				"lime",
+  				"yellow",
+  				"orange"
+  			]
+  		},
+  		{
+  			name: "tooltip",
+  			type: "boolean",
+  			description: "Show hint as tooltip next to label"
+  		}
+  	],
   	frameworks: [
   		"react-rsuite5",
   		"react-material-ui",
   		"react",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	]
   };
   var divider = {
@@ -14235,10 +14559,95 @@
   			type: "boolean"
   		}
   	],
+  	"react-mantine": [
+  		{
+  			name: "placeholder",
+  			type: "string | i18n",
+  			description: "Placeholder text, visibile when the field is empty"
+  		},
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"default",
+  				"filled",
+  				"unstyled"
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "leftSection",
+  			type: "string"
+  		},
+  		{
+  			name: "rightSection",
+  			type: "string"
+  		},
+  		{
+  			name: "leftSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "rightSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "clearable",
+  			type: "boolean"
+  		},
+  		{
+  			name: "multiple",
+  			type: "boolean",
+  			description: "Determines whether user can pick more than one file, false by default"
+  		},
+  		{
+  			name: "pointer",
+  			type: "boolean",
+  			description: "Determines whether the input should have cursor: pointer style, false by default"
+  		},
+  		{
+  			name: "withErrorStyles",
+  			type: "boolean",
+  			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
+  		}
+  	],
   	frameworks: [
   		"react-rsuite5",
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	]
   };
   var steps = {
@@ -16026,7 +16435,7 @@
   		{
   			name: "withScrollArea",
   			type: "boolean",
-  			description: "Determines whether the options should be wrapped with ScrollArea.AutoSize, true by default"
+  			description: "Determines whether the options should be wrapped with scroll bars, true by default"
   		}
   	],
   	frameworks: [
@@ -16353,12 +16762,31 @@
   			type: "number"
   		}
   	],
+  	"react-mantine": [
+  		{
+  			name: "maxWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "maxHeight",
+  			type: "number"
+  		},
+  		{
+  			name: "marginTop",
+  			type: "number"
+  		},
+  		{
+  			name: "marginBottom",
+  			type: "number"
+  		}
+  	],
   	frameworks: [
   		"react-rsuite5",
   		"react-material-ui",
   		"react",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	]
   },
   	button: button,
@@ -17316,7 +17744,7 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$i = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
+  var css_248z$i = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
   styleInject(css_248z$i);
 
   var Group = I18N(function (_ref) {
@@ -17394,8 +17822,8 @@
       style: {
         marginTop: marginTop ? marginTop : undefined,
         marginBottom: marginBottom ? marginBottom : undefined,
-        maxWidth: maxWidth ? maxWidth : undefined,
-        maxHeight: maxHeight ? maxHeight : undefined,
+        maxWidth: maxWidth ? maxWidth : '100%',
+        maxHeight: maxHeight ? maxHeight : '100%',
         textAlign: align ? align : undefined
       }
     }));
@@ -17969,7 +18397,7 @@
       }, passRest(_omit(rest, 'label')), LinkProps));
     }
     return /*#__PURE__*/React.createElement("div", {
-      className: "lf-control-button",
+      className: classNames('lf-control-button', _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
       "data-lf-field-name": name
     }, inner);
   };
@@ -20983,6 +21411,7 @@
   }, {
     type: undefined
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
+  lfLog('Loaded AntD.Button');
 
   var index$6 = /*#__PURE__*/Object.freeze({
     __proto__: null,

@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.7.10 - UMD */
+/* LetsForm Utils v0.7.11 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -5327,6 +5327,16 @@
   			]
   		},
   		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
   			name: "leftSection",
   			type: "string"
   		},
@@ -7161,6 +7171,14 @@
   			type: "array"
   		},
   		{
+  			name: "filterKey",
+  			type: "string"
+  		},
+  		{
+  			name: "filterValue",
+  			type: "string"
+  		},
+  		{
   			name: "placeholder",
   			type: "string | i18n",
   			description: "Placeholder text, visibile when the field is empty"
@@ -7357,10 +7375,136 @@
   			description: "Maximum length of text tags"
   		}
   	],
+  	"react-mantine": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"default",
+  				"filled",
+  				"unstyled"
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "leftSection",
+  			type: "string"
+  		},
+  		{
+  			name: "rightSection",
+  			type: "string"
+  		},
+  		{
+  			name: "leftSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "rightSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "limit",
+  			type: "number",
+  			description: "Maximum number of options displayed at a time, Infinity by default"
+  		},
+  		{
+  			name: "maxDropdownHeight",
+  			type: "number",
+  			description: "max-height of the dropdown, only applicable when withScrollArea prop is true, 250 by default"
+  		},
+  		{
+  			name: "maxValues",
+  			type: "number",
+  			description: "Maximum number of values, Infinity by default"
+  		},
+  		{
+  			name: "searchable",
+  			type: "boolean",
+  			description: "Determines whether the select should be searchable, false by default"
+  		},
+  		{
+  			name: "nothingFoundMessage",
+  			type: "string | i18n",
+  			description: "Message displayed when no option matched current search query, only applicable when searchable prop is set"
+  		},
+  		{
+  			name: "clearable",
+  			type: "boolean",
+  			description: "Determines whether the clear button should be displayed in the right section when the component has value, false by default"
+  		},
+  		{
+  			name: "defaultDropdownOpened",
+  			type: "boolean",
+  			description: "Uncontrolled dropdown initial opened state"
+  		},
+  		{
+  			name: "hidePickedOptions",
+  			type: "boolean",
+  			description: "Determines whether picked options should be removed from the options list, false by default"
+  		},
+  		{
+  			name: "pointer",
+  			type: "boolean",
+  			description: "Determines whether the input should have cursor: pointer style, false by default"
+  		},
+  		{
+  			name: "selectFirstOptionOnChange",
+  			type: "boolean",
+  			description: "Determines whether the first option should be selected when value changes, false by default"
+  		},
+  		{
+  			name: "withCheckIcon",
+  			type: "boolean",
+  			description: "Determines whether check icon should be displayed near the selected option label, true by default"
+  		},
+  		{
+  			name: "withErrorStyles",
+  			type: "boolean",
+  			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
+  		},
+  		{
+  			name: "withScrollArea",
+  			type: "boolean",
+  			description: "Determines whether the options should be wrapped with scroll bars, true by default"
+  		}
+  	],
   	frameworks: [
   		"react-rsuite5",
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	]
   };
   var button = {
@@ -7549,12 +7693,81 @@
   			]
   		}
   	],
+  	"react-mantine": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"compact-xs",
+  				"sm",
+  				"compact-sm",
+  				"md",
+  				"compact-md",
+  				"lg",
+  				"compact-lg",
+  				"xl",
+  				"compact-xl"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			description: "Only available for link-type buttons",
+  			options: [
+  				"default",
+  				"filled",
+  				"light",
+  				"outline",
+  				"subtle",
+  				"transparent",
+  				"white"
+  			]
+  		},
+  		{
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"grey",
+  				"red",
+  				"pink",
+  				"grape",
+  				"violet",
+  				"indigo",
+  				"blue",
+  				"cyan",
+  				"teal",
+  				"green",
+  				"lime",
+  				"yellow",
+  				"orange"
+  			]
+  		},
+  		{
+  			name: "tooltip",
+  			type: "boolean",
+  			description: "Show hint as tooltip next to label"
+  		}
+  	],
   	frameworks: [
   		"react-rsuite5",
   		"react-material-ui",
   		"react",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	]
   };
   var divider = {
@@ -8628,10 +8841,95 @@
   			type: "boolean"
   		}
   	],
+  	"react-mantine": [
+  		{
+  			name: "placeholder",
+  			type: "string | i18n",
+  			description: "Placeholder text, visibile when the field is empty"
+  		},
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"default",
+  				"filled",
+  				"unstyled"
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "leftSection",
+  			type: "string"
+  		},
+  		{
+  			name: "rightSection",
+  			type: "string"
+  		},
+  		{
+  			name: "leftSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "rightSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "clearable",
+  			type: "boolean"
+  		},
+  		{
+  			name: "multiple",
+  			type: "boolean",
+  			description: "Determines whether user can pick more than one file, false by default"
+  		},
+  		{
+  			name: "pointer",
+  			type: "boolean",
+  			description: "Determines whether the input should have cursor: pointer style, false by default"
+  		},
+  		{
+  			name: "withErrorStyles",
+  			type: "boolean",
+  			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
+  		}
+  	],
   	frameworks: [
   		"react-rsuite5",
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	]
   };
   var steps = {
@@ -10419,7 +10717,7 @@
   		{
   			name: "withScrollArea",
   			type: "boolean",
-  			description: "Determines whether the options should be wrapped with ScrollArea.AutoSize, true by default"
+  			description: "Determines whether the options should be wrapped with scroll bars, true by default"
   		}
   	],
   	frameworks: [
@@ -10746,12 +11044,31 @@
   			type: "number"
   		}
   	],
+  	"react-mantine": [
+  		{
+  			name: "maxWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "maxHeight",
+  			type: "number"
+  		},
+  		{
+  			name: "marginTop",
+  			type: "number"
+  		},
+  		{
+  			name: "marginBottom",
+  			type: "number"
+  		}
+  	],
   	frameworks: [
   		"react-rsuite5",
   		"react-material-ui",
   		"react",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	]
   },
   	button: button,

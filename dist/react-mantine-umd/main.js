@@ -1,4 +1,4 @@
-/* LetsForm react-mantine v0.7.10 - UMD */
+/* LetsForm react-mantine v0.7.11 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', '@mantine/dates'], factory) :
@@ -6605,8 +6605,8 @@
     }
   }
 
-  var css_248z$d = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
-  styleInject(css_248z$d);
+  var css_248z$e = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
+  styleInject(css_248z$e);
 
   var tx = function tx(str, locale) {
     if (_isString(str)) {
@@ -7989,12 +7989,14 @@
   	fullWidth: [
   		"react",
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	width: [
   		"react",
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	placement: [
   		"react-rsuite5",
@@ -8705,6 +8707,8 @@
   	hint: null,
   	options: null,
   	value: null,
+  	filterKey: null,
+  	filterValue: null,
   	placeholder: null,
   	disabled: null,
   	readOnly: null,
@@ -8716,7 +8720,8 @@
   	size: [
   		"react-rsuite5",
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	multiselectMode: [
   		"react-rsuite5"
@@ -8725,7 +8730,8 @@
   		"react-rsuite5"
   	],
   	searchable: [
-  		"react-rsuite5"
+  		"react-rsuite5",
+  		"react-mantine"
   	],
   	cleanable: [
   		"react-rsuite5"
@@ -8741,17 +8747,20 @@
   		"react-material-ui"
   	],
   	fullWidth: [
-  		"react-material-ui"
+  		"react-material-ui",
+  		"react-mantine"
   	],
   	width: [
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	floatingLabel: [
   		"react-material-ui"
   	],
   	variant: [
-  		"react-material-ui"
+  		"react-material-ui",
+  		"react-mantine"
   	],
   	listHeight: [
   		"react-antd"
@@ -8780,6 +8789,57 @@
   	maxTagTextLength: [
   		"react-antd"
   	],
+  	radius: [
+  		"react-mantine"
+  	],
+  	leftSection: [
+  		"react-mantine"
+  	],
+  	rightSection: [
+  		"react-mantine"
+  	],
+  	leftSectionWidth: [
+  		"react-mantine"
+  	],
+  	rightSectionWidth: [
+  		"react-mantine"
+  	],
+  	limit: [
+  		"react-mantine"
+  	],
+  	maxDropdownHeight: [
+  		"react-mantine"
+  	],
+  	maxValues: [
+  		"react-mantine"
+  	],
+  	nothingFoundMessage: [
+  		"react-mantine"
+  	],
+  	clearable: [
+  		"react-mantine"
+  	],
+  	defaultDropdownOpened: [
+  		"react-mantine"
+  	],
+  	hidePickedOptions: [
+  		"react-mantine"
+  	],
+  	pointer: [
+  		"react-mantine"
+  	],
+  	selectFirstOptionOnChange: [
+  		"react-mantine"
+  	],
+  	withCheckIcon: [
+  		"react-mantine"
+  	],
+  	withErrorStyles: [
+  		"react-mantine"
+  	],
+  	withScrollArea: [
+  		"react-mantine"
+  	],
   	validationMinLength: "validation",
   	validationMin: "validation",
   	validationMaxLength: "validation",
@@ -8807,23 +8867,30 @@
   		"react-rsuite5",
   		"react-material-ui",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	appearance: [
   		"react-rsuite5"
   	],
   	tooltip: [
-  		"react-rsuite5"
+  		"react-rsuite5",
+  		"react-mantine"
   	],
   	variant: [
   		"react-material-ui",
-  		"react-bootstrap"
+  		"react-bootstrap",
+  		"react-mantine"
   	],
   	color: [
-  		"react-material-ui"
+  		"react-material-ui",
+  		"react-mantine"
   	],
   	type: [
   		"react-antd"
+  	],
+  	radius: [
+  		"react-mantine"
   	]
   };
   var divider$1 = {
@@ -9178,7 +9245,8 @@
   	multiple: [
   		"react-rsuite5",
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	removable: [
   		"react-rsuite5"
@@ -9223,6 +9291,45 @@
   	],
   	showUploadList: [
   		"react-antd"
+  	],
+  	placeholder: [
+  		"react-mantine"
+  	],
+  	size: [
+  		"react-mantine"
+  	],
+  	radius: [
+  		"react-mantine"
+  	],
+  	variant: [
+  		"react-mantine"
+  	],
+  	fullWidth: [
+  		"react-mantine"
+  	],
+  	width: [
+  		"react-mantine"
+  	],
+  	leftSection: [
+  		"react-mantine"
+  	],
+  	rightSection: [
+  		"react-mantine"
+  	],
+  	leftSectionWidth: [
+  		"react-mantine"
+  	],
+  	rightSectionWidth: [
+  		"react-mantine"
+  	],
+  	clearable: [
+  		"react-mantine"
+  	],
+  	pointer: [
+  		"react-mantine"
+  	],
+  	withErrorStyles: [
+  		"react-mantine"
   	],
   	validationMinLength: "validation",
   	validationMin: "validation",
@@ -9924,28 +10031,32 @@
   		"react-rsuite5",
   		"react-material-ui",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	maxHeight: [
   		"react",
   		"react-rsuite5",
   		"react-material-ui",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	marginTop: [
   		"react",
   		"react-rsuite5",
   		"react-material-ui",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	marginBottom: [
   		"react",
   		"react-rsuite5",
   		"react-material-ui",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	]
   },
   	button: button$1,
@@ -10935,6 +11046,16 @@
   				"filled",
   				"unstyled"
   			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
   		},
   		{
   			name: "leftSection",
@@ -12771,6 +12892,14 @@
   			type: "array"
   		},
   		{
+  			name: "filterKey",
+  			type: "string"
+  		},
+  		{
+  			name: "filterValue",
+  			type: "string"
+  		},
+  		{
   			name: "placeholder",
   			type: "string | i18n",
   			description: "Placeholder text, visibile when the field is empty"
@@ -12967,10 +13096,136 @@
   			description: "Maximum length of text tags"
   		}
   	],
+  	"react-mantine": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"default",
+  				"filled",
+  				"unstyled"
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "leftSection",
+  			type: "string"
+  		},
+  		{
+  			name: "rightSection",
+  			type: "string"
+  		},
+  		{
+  			name: "leftSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "rightSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "limit",
+  			type: "number",
+  			description: "Maximum number of options displayed at a time, Infinity by default"
+  		},
+  		{
+  			name: "maxDropdownHeight",
+  			type: "number",
+  			description: "max-height of the dropdown, only applicable when withScrollArea prop is true, 250 by default"
+  		},
+  		{
+  			name: "maxValues",
+  			type: "number",
+  			description: "Maximum number of values, Infinity by default"
+  		},
+  		{
+  			name: "searchable",
+  			type: "boolean",
+  			description: "Determines whether the select should be searchable, false by default"
+  		},
+  		{
+  			name: "nothingFoundMessage",
+  			type: "string | i18n",
+  			description: "Message displayed when no option matched current search query, only applicable when searchable prop is set"
+  		},
+  		{
+  			name: "clearable",
+  			type: "boolean",
+  			description: "Determines whether the clear button should be displayed in the right section when the component has value, false by default"
+  		},
+  		{
+  			name: "defaultDropdownOpened",
+  			type: "boolean",
+  			description: "Uncontrolled dropdown initial opened state"
+  		},
+  		{
+  			name: "hidePickedOptions",
+  			type: "boolean",
+  			description: "Determines whether picked options should be removed from the options list, false by default"
+  		},
+  		{
+  			name: "pointer",
+  			type: "boolean",
+  			description: "Determines whether the input should have cursor: pointer style, false by default"
+  		},
+  		{
+  			name: "selectFirstOptionOnChange",
+  			type: "boolean",
+  			description: "Determines whether the first option should be selected when value changes, false by default"
+  		},
+  		{
+  			name: "withCheckIcon",
+  			type: "boolean",
+  			description: "Determines whether check icon should be displayed near the selected option label, true by default"
+  		},
+  		{
+  			name: "withErrorStyles",
+  			type: "boolean",
+  			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
+  		},
+  		{
+  			name: "withScrollArea",
+  			type: "boolean",
+  			description: "Determines whether the options should be wrapped with scroll bars, true by default"
+  		}
+  	],
   	frameworks: [
   		"react-rsuite5",
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	]
   };
   var button = {
@@ -13159,12 +13414,81 @@
   			]
   		}
   	],
+  	"react-mantine": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"compact-xs",
+  				"sm",
+  				"compact-sm",
+  				"md",
+  				"compact-md",
+  				"lg",
+  				"compact-lg",
+  				"xl",
+  				"compact-xl"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			description: "Only available for link-type buttons",
+  			options: [
+  				"default",
+  				"filled",
+  				"light",
+  				"outline",
+  				"subtle",
+  				"transparent",
+  				"white"
+  			]
+  		},
+  		{
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"grey",
+  				"red",
+  				"pink",
+  				"grape",
+  				"violet",
+  				"indigo",
+  				"blue",
+  				"cyan",
+  				"teal",
+  				"green",
+  				"lime",
+  				"yellow",
+  				"orange"
+  			]
+  		},
+  		{
+  			name: "tooltip",
+  			type: "boolean",
+  			description: "Show hint as tooltip next to label"
+  		}
+  	],
   	frameworks: [
   		"react-rsuite5",
   		"react-material-ui",
   		"react",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	]
   };
   var divider = {
@@ -14238,10 +14562,95 @@
   			type: "boolean"
   		}
   	],
+  	"react-mantine": [
+  		{
+  			name: "placeholder",
+  			type: "string | i18n",
+  			description: "Placeholder text, visibile when the field is empty"
+  		},
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"default",
+  				"filled",
+  				"unstyled"
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "leftSection",
+  			type: "string"
+  		},
+  		{
+  			name: "rightSection",
+  			type: "string"
+  		},
+  		{
+  			name: "leftSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "rightSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "clearable",
+  			type: "boolean"
+  		},
+  		{
+  			name: "multiple",
+  			type: "boolean",
+  			description: "Determines whether user can pick more than one file, false by default"
+  		},
+  		{
+  			name: "pointer",
+  			type: "boolean",
+  			description: "Determines whether the input should have cursor: pointer style, false by default"
+  		},
+  		{
+  			name: "withErrorStyles",
+  			type: "boolean",
+  			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
+  		}
+  	],
   	frameworks: [
   		"react-rsuite5",
   		"react-material-ui",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	]
   };
   var steps = {
@@ -16029,7 +16438,7 @@
   		{
   			name: "withScrollArea",
   			type: "boolean",
-  			description: "Determines whether the options should be wrapped with ScrollArea.AutoSize, true by default"
+  			description: "Determines whether the options should be wrapped with scroll bars, true by default"
   		}
   	],
   	frameworks: [
@@ -16356,12 +16765,31 @@
   			type: "number"
   		}
   	],
+  	"react-mantine": [
+  		{
+  			name: "maxWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "maxHeight",
+  			type: "number"
+  		},
+  		{
+  			name: "marginTop",
+  			type: "number"
+  		},
+  		{
+  			name: "marginBottom",
+  			type: "number"
+  		}
+  	],
   	frameworks: [
   		"react-rsuite5",
   		"react-material-ui",
   		"react",
   		"react-bootstrap",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	]
   },
   	button: button,
@@ -16620,8 +17048,8 @@
     return console.log('%cLF%c Error: ' + s, 'background: #E44D2E; color: #ffffff; padding: 2px; border-radius: 3px', '', e);
   };
 
-  var css_248z$c = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
-  styleInject(css_248z$c);
+  var css_248z$d = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
+  styleInject(css_248z$d);
 
   var baseGetTag = _baseGetTag,
     isObjectLike = isObjectLike_1;
@@ -17244,8 +17672,8 @@
     };
   }();
 
-  var css_248z$b = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
-  styleInject(css_248z$b);
+  var css_248z$c = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
+  styleInject(css_248z$c);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
@@ -17263,8 +17691,8 @@
     }
   };
 
-  var css_248z$a = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
-  styleInject(css_248z$a);
+  var css_248z$b = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
+  styleInject(css_248z$b);
 
   var ThreeColumns = function ThreeColumns(_ref) {
     var name = _ref.name,
@@ -17294,8 +17722,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$9 = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
-  styleInject(css_248z$9);
+  var css_248z$a = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
+  styleInject(css_248z$a);
 
   var TwoColumns = function TwoColumns(_ref) {
     var name = _ref.name,
@@ -17319,8 +17747,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$8 = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
-  styleInject(css_248z$8);
+  var css_248z$9 = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject(css_248z$9);
 
   var Group = I18N(function (_ref) {
     var name = _ref.name,
@@ -17373,8 +17801,36 @@
     }, children));
   }, ['label']);
 
-  var css_248z$7 = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
-  styleInject(css_248z$7);
+  var css_248z$8 = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
+  styleInject(css_248z$8);
+
+  var PlaceholderImage = function PlaceholderImage(_ref) {
+    var url = _ref.url,
+      label = _ref.label,
+      name = _ref.name,
+      maxWidth = _ref.maxWidth,
+      maxHeight = _ref.maxHeight,
+      marginTop = _ref.marginTop,
+      marginBottom = _ref.marginBottom,
+      align = _ref.align;
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-control-placeholder-image",
+      "data-lf-field-name": name,
+      style: {
+        textAlign: align ? align : undefined
+      }
+    }, url && /*#__PURE__*/React.createElement("img", {
+      src: url,
+      alt: label || name,
+      style: {
+        marginTop: marginTop ? marginTop : undefined,
+        marginBottom: marginBottom ? marginBottom : undefined,
+        maxWidth: maxWidth ? maxWidth : '100%',
+        maxHeight: maxHeight ? maxHeight : '100%',
+        textAlign: align ? align : undefined
+      }
+    }));
+  };
 
   var TextOrIcon = function TextOrIcon(str) {
     if (isUrl(str)) {
@@ -17388,8 +17844,8 @@
     }
   };
 
-  var css_248z$6 = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
-  styleInject(css_248z$6);
+  var css_248z$7 = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
+  styleInject(css_248z$7);
 
   var isEmptyItem = function isEmptyItem(obj) {
     return Object.keys(obj).filter(function (key) {
@@ -17658,8 +18114,8 @@
     })));
   };
 
-  var css_248z$5 = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
-  styleInject(css_248z$5);
+  var css_248z$6 = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
+  styleInject(css_248z$6);
 
   var randomId = function randomId() {
     var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
@@ -17851,14 +18307,89 @@
     }));
   };
 
-  var css_248z$4 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
+  var css_248z$5 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
+  styleInject(css_248z$5);
+
+  var _excluded$k = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue"];
+  var GenericButton = function GenericButton(_ref) {
+    var ButtonComponent = _ref.ButtonComponent,
+      OnStateProps = _ref.OnStateProps,
+      OffStateProps = _ref.OffStateProps,
+      _ref$LinkProps = _ref.LinkProps,
+      LinkProps = _ref$LinkProps === void 0 ? {} : _ref$LinkProps,
+      name = _ref.name,
+      labelOn = _ref.labelOn,
+      labelOff = _ref.labelOff,
+      labelLink = _ref.labelLink,
+      iconOn = _ref.iconOn,
+      iconOff = _ref.iconOff,
+      iconLink = _ref.iconLink,
+      size = _ref.size,
+      href = _ref.href,
+      appearance = _ref.appearance,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      value = _ref.value,
+      buttonType = _ref.buttonType,
+      hint = _ref.hint,
+      initialValue = _ref.initialValue,
+      rest = _objectWithoutProperties(_ref, _excluded$k);
+    var _useState = React.useState(value || initialValue),
+      _useState2 = _slicedToArray(_useState, 2),
+      checked = _useState2[0],
+      setChecked = _useState2[1];
+    var handleClick = React.useCallback(function () {
+      var newValue = !checked;
+      setChecked(!checked);
+      onChange(newValue, name);
+    }, [onChange, checked, name]);
+    var inner;
+    if (buttonType === 'toggle') {
+      inner = /*#__PURE__*/React.createElement(ButtonComponent, _extends({
+        size: size,
+        onClick: handleClick,
+        onBlur: onBlur,
+        icon: checked ? iconOn : iconOff,
+        label: checked ? labelOn : labelOff,
+        hint: hint,
+        style: makeWidthStyle(fullWidth, width)
+      }, passRest(_omit(rest, 'label')), checked ? OnStateProps : OffStateProps));
+    } else if (buttonType === 'link') {
+      inner = /*#__PURE__*/React.createElement(ButtonComponent, _extends({
+        size: size,
+        onBlur: onBlur,
+        appearance: appearance,
+        hint: hint,
+        label: labelLink,
+        icon: iconLink,
+        href: href,
+        target: "_blank",
+        style: makeWidthStyle(fullWidth, width)
+      }, passRest(_omit(rest, 'label')), LinkProps));
+    }
+    return /*#__PURE__*/React.createElement("div", {
+      className: classNames('lf-control-button', _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
+      "data-lf-field-name": name
+    }, inner);
+  };
+  var MakeButton = function MakeButton(ButtonComponent, OnStateProps, OffStateProps, LinkProps) {
+    return function (props) {
+      return /*#__PURE__*/React.createElement(GenericButton, _extends({
+        ButtonComponent: ButtonComponent,
+        OnStateProps: _isFunction(OnStateProps) ? OnStateProps(props) : OnStateProps,
+        OffStateProps: _isFunction(OffStateProps) ? OffStateProps(props) : OffStateProps,
+        LinkProps: _isFunction(LinkProps) ? LinkProps(props) : LinkProps
+      }, props));
+    };
+  };
+
+  var css_248z$4 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}";
   styleInject(css_248z$4);
 
-  var css_248z$3 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}";
+  var css_248z$3 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
   styleInject(css_248z$3);
-
-  var css_248z$2 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
-  styleInject(css_248z$2);
 
   var PlaintextLabel = function PlaintextLabel(_ref) {
     var children = _ref.children;
@@ -19357,104 +19888,124 @@
     return LazyWithPreload;
   }
 
-  var _excluded$g = ["framework", "children"];
+  var _excluded$j = ["framework", "children"];
   var Fields = {
     'input-text': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
+        return Promise.resolve().then(function () { return index$o; });
       })
     },
     'input-number': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
+        return Promise.resolve().then(function () { return index$n; });
       })
     },
     'textarea': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
+        return Promise.resolve().then(function () { return index$m; });
       })
     },
     'select': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return index$l; });
       })
     },
     'checkbox': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$k; });
       })
     },
     'toggle': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return index$j; });
       })
     },
     'array': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
+        return Promise.resolve().then(function () { return index$i; });
       })
     },
     'checkbox-group': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
+        return Promise.resolve().then(function () { return index$h; });
       })
     },
     'radio-group': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
+        return Promise.resolve().then(function () { return index$g; });
       })
     },
     'two-columns': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
+        return Promise.resolve().then(function () { return index$f; });
       })
     },
     'three-columns': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
+        return Promise.resolve().then(function () { return index$e; });
       })
     },
     'group': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
+        return Promise.resolve().then(function () { return index$d; });
       })
     },
     'date': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
+        return Promise.resolve().then(function () { return index$c; });
       })
     },
     'datetime': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return index$b; });
       })
     },
     'rate': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return index$a; });
       })
     },
     'placeholder': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return index$9; });
+      })
+    },
+    'placeholder-image': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$8; });
       })
     },
     'divider': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return index$7; });
       })
     },
     'slider': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return index$6; });
       })
     },
     'input-tag': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return index$5; });
       })
     },
     'tabs': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$4; });
+      })
+    },
+    'button': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$3; });
+      })
+    },
+    'upload': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'multiselect': {
       'react-mantine': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
       })
@@ -19472,13 +20023,13 @@
   var LetsForm = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$g);
+      rest = _objectWithoutProperties(_ref, _excluded$j);
     return /*#__PURE__*/React.createElement(FormGenerator, _extends({
       framework: "react-mantine"
     }, rest), children);
   };
 
-  var _excluded$f = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter"];
+  var _excluded$i = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter"];
   var InputText$1 = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint;
@@ -19492,7 +20043,7 @@
       onBlur = _ref.onBlur,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$f);
+      rest = _objectWithoutProperties(_ref, _excluded$i);
     var handleKeyUp = React.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -19513,12 +20064,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.InputText');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputText$1
   });
 
-  var _excluded$e = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "lfOnEnter"];
+  var _excluded$h = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "lfOnEnter"];
   var MantineNumberInput = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -19530,7 +20081,7 @@
       width = _ref.width,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$e);
+      rest = _objectWithoutProperties(_ref, _excluded$h);
     var handleKeyUp = React.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -19548,12 +20099,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.InputNumber');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineNumberInput
   });
 
-  var _excluded$d = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "lfOnEnter"];
+  var _excluded$g = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "lfOnEnter"];
   var MantineTextarea = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19567,7 +20118,7 @@
       inputType = _ref.inputType,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$d);
+      rest = _objectWithoutProperties(_ref, _excluded$g);
     var handleKeyUp = React.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -19590,15 +20141,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Textarea');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTextarea
   });
 
-  var _excluded$c = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "lfOnEnter"];
-
-  // TODO filter done with proper params
-
+  var _excluded$f = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
   var MantineSelect = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -19608,32 +20156,30 @@
       width = _ref.width,
       options = _ref.options,
       filterValue = _ref.filterValue,
-      filterKey = _ref.filterKey;
-      _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$c);
-    return /*#__PURE__*/React.createElement(core.Input.Wrapper, {
+      filterKey = _ref.filterKey,
+      rest = _objectWithoutProperties(_ref, _excluded$f);
+    return /*#__PURE__*/React.createElement(core.Select, _extends({
       className: "lf-control-select",
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
       description: hint,
       error: _isString(error) ? error : undefined,
-      inputWrapperOrder: ['label', 'input', 'description', 'error']
-    }, /*#__PURE__*/React.createElement(core.Select, _extends({
+      inputWrapperOrder: ['label', 'input', 'description', 'error'],
       value: value,
       name: name,
       data: filterOptions(options, filterValue, filterKey) || []
-    }, passRest(rest))));
-  }, ['label', 'hint', 'placeholder'], {
+    }, passRest(rest)));
+  }, ['label', 'hint', 'placeholder', 'nothingFoundMessage'], {
     options: i18nOptions
   });
   lfLog('Loaded Mantine.Select');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineSelect
   });
 
-  var _excluded$b = ["name", "hint", "value", "onChange", "error", "description"];
+  var _excluded$e = ["name", "hint", "value", "onChange", "error", "description"];
   var MantineCheckbox = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -19641,7 +20187,7 @@
       onChange = _ref.onChange,
       error = _ref.error;
       _ref.description;
-      var rest = _objectWithoutProperties(_ref, _excluded$b);
+      var rest = _objectWithoutProperties(_ref, _excluded$e);
     var handleChange = React.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
@@ -19658,12 +20204,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Checkbox');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineCheckbox
   });
 
-  var _excluded$a = ["name", "hint", "value", "onChange", "error", "description"];
+  var _excluded$d = ["name", "hint", "value", "onChange", "error", "description"];
   var MantineToggle = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -19671,7 +20217,7 @@
       onChange = _ref.onChange,
       error = _ref.error;
       _ref.description;
-      var rest = _objectWithoutProperties(_ref, _excluded$a);
+      var rest = _objectWithoutProperties(_ref, _excluded$d);
     var handleChange = React.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
@@ -19688,12 +20234,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Toggle');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineToggle
   });
 
-  var _excluded$9 = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$c = ["hint", "required", "tooltip", "name", "label", "error"];
   var MantineListArray = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required;
@@ -19701,7 +20247,7 @@
       var name = _ref.name,
       label = _ref.label,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$9);
+      rest = _objectWithoutProperties(_ref, _excluded$c);
     return /*#__PURE__*/React.createElement("div", {
       "data-lf-field-name": name,
       className: "lf-control-array"
@@ -19713,12 +20259,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded Mantine.ListArray');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineListArray
   });
 
-  var _excluded$8 = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
+  var _excluded$b = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
   var CheckboxGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19743,7 +20289,7 @@
       labelPosition = _ref.labelPosition,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
+      rest = _objectWithoutProperties(_ref, _excluded$b);
     var _useState = React.useState(_isArray(value) ? value : value ? String().split(',') : []),
       _useState2 = _slicedToArray(_useState, 2),
       selected = _useState2[0],
@@ -19793,12 +20339,12 @@
   });
   lfLog('Loaded Mantine.CheckboxGroup');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroup
   });
 
-  var _excluded$7 = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
+  var _excluded$a = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
 
   // TODO broken preview in mantine, add ensureframework
 
@@ -19826,7 +20372,7 @@
       labelPosition = _ref.labelPosition,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$7);
+      rest = _objectWithoutProperties(_ref, _excluded$a);
     var _useState = React.useState(value),
       _useState2 = _slicedToArray(_useState, 2);
       _useState2[0];
@@ -19873,33 +20419,33 @@
   });
   lfLog('Loaded Mantine.RadioGroup');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroup
   });
 
   lfLog('Loaded Mantine.TwoColumns');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded RSuite5.ThreeColumns');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded RSuite5.Group');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
-  var _excluded$6 = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime"];
+  var _excluded$9 = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime"];
   var tryDate = function tryDate(value) {
     if (_isDate(value)) {
       return value;
@@ -19922,7 +20468,7 @@
       lfLocale = _ref.lfLocale,
       _ref$withTime = _ref.withTime,
       withTime = _ref$withTime === void 0 ? false : _ref$withTime,
-      rest = _objectWithoutProperties(_ref, _excluded$6);
+      rest = _objectWithoutProperties(_ref, _excluded$9);
     var Component = withTime ? dates.DateTimePicker : dates.DatePickerInput;
     return /*#__PURE__*/React.createElement(Component, _extends({
       className: "lf-control-date",
@@ -19937,12 +20483,12 @@
     }, passRest(rest)));
   };
 
-  var _excluded$5 = ["onChange", "value", "lfLocale"];
+  var _excluded$8 = ["onChange", "value", "lfLocale"];
   var SelectDate = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
       lfLocale = _ref.lfLocale,
-      rest = _objectWithoutProperties(_ref, _excluded$5);
+      rest = _objectWithoutProperties(_ref, _excluded$8);
     // also accepts string dates
     var initialValue;
     if (rest.dateType === 'range') {
@@ -19980,17 +20526,17 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.SelectDate');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDate
   });
 
-  var _excluded$4 = ["onChange", "value", "lfLocale"];
+  var _excluded$7 = ["onChange", "value", "lfLocale"];
   var SelectDatTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
       lfLocale = _ref.lfLocale,
-      rest = _objectWithoutProperties(_ref, _excluded$4);
+      rest = _objectWithoutProperties(_ref, _excluded$7);
     // also accepts string dates
     var initialValue;
     if (rest.dateType === 'range') {
@@ -20030,12 +20576,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.SelectDateTime');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var index$b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDatTime
   });
 
-  var _excluded$3 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
+  var _excluded$6 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
   var InputText = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint;
@@ -20049,7 +20595,7 @@
       var label = _ref.label,
       required = _ref.required;
       _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$3);
+      var rest = _objectWithoutProperties(_ref, _excluded$6);
     return /*#__PURE__*/React.createElement(core.Input.Wrapper, {
       className: "lf-control-rate",
       "data-lf-field-name": name,
@@ -20064,7 +20610,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Rate');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var index$a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputText
   });
@@ -20086,9 +20632,16 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded Mantine.Placeholder');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var index$9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderMantine
+  });
+
+  lfLog('Loaded Mantine.PlaceholderImage');
+
+  var index$8 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: PlaceholderImage
   });
 
   var DividerMantine = function DividerMantine(_ref) {
@@ -20097,12 +20650,12 @@
   };
   lfLog('Loaded Mantine.Divider');
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var index$7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DividerMantine
   });
 
-  var _excluded$2 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
+  var _excluded$5 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
   var SliderMantine = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -20112,7 +20665,7 @@
       var label = _ref.label,
       required = _ref.required;
       _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$2);
+      var rest = _objectWithoutProperties(_ref, _excluded$5);
     return /*#__PURE__*/React.createElement(core.Input.Wrapper, {
       className: "lf-control-slider",
       "data-lf-field-name": name,
@@ -20135,12 +20688,12 @@
   });
   lfLog('Loaded Mantine.Slider');
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$6 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderMantine
   });
 
-  var _excluded$1 = ["name", "hint", "value", "error", "fullWidth", "width", "data"];
+  var _excluded$4 = ["name", "hint", "value", "error", "fullWidth", "width", "data"];
   var MantineTags = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -20149,7 +20702,7 @@
       fullWidth = _ref.fullWidth,
       width = _ref.width,
       data = _ref.data,
-      rest = _objectWithoutProperties(_ref, _excluded$1);
+      rest = _objectWithoutProperties(_ref, _excluded$4);
     return /*#__PURE__*/React.createElement(core.TagsInput, _extends({
       className: "lf-control-input-tag",
       "data-lf-field-name": name,
@@ -20166,15 +20719,15 @@
   }, ['label', 'hint', 'placeholder'], i18nOptions);
   lfLog('Loaded Mantine.InputTags');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$5 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTags
   });
 
-  var css_248z$1 = ".lf-form-react-mantine .lf-control-tabs .lf-prefix-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical .mantine-Tabs-panel, .lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-left .mantine-Tabs-panel {\n  padding-left: var(--lf-field-column-margin);\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-right .mantine-Tabs-panel {\n  padding-right: var(--lf-field-column-margin);\n}";
-  styleInject(css_248z$1);
+  var css_248z$2 = ".lf-form-react-mantine .lf-control-tabs .lf-prefix-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical .mantine-Tabs-panel, .lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-left .mantine-Tabs-panel {\n  padding-left: var(--lf-field-column-margin);\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-right .mantine-Tabs-panel {\n  padding-right: var(--lf-field-column-margin);\n}";
+  styleInject(css_248z$2);
 
-  var _excluded = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement"];
+  var _excluded$3 = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement"];
   var MantineTabs = I18N(function (_ref) {
     var _classNames;
     var name = _ref.name,
@@ -20186,7 +20739,7 @@
       justify = _ref.justify,
       orientation = _ref.orientation,
       placement = _ref.placement,
-      rest = _objectWithoutProperties(_ref, _excluded);
+      rest = _objectWithoutProperties(_ref, _excluded$3);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
@@ -20230,9 +20783,123 @@
   });
   lfLog('Loaded Mantine.Tabs');
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var index$4 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTabs
+  });
+
+  var css_248z$1 = ".lf-form-react-mantine .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-mantine .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-lg .lf-icon {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-xs .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-sm .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-md .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-xl .lf-icon {\n  max-width: 28px;\n  max-height: 28px;\n}";
+  styleInject(css_248z$1);
+
+  var _excluded$2 = ["label", "icon", "hint", "tooltip"];
+  var MantineButton = function MantineButton(_ref) {
+    var label = _ref.label,
+      icon = _ref.icon,
+      hint = _ref.hint,
+      tooltip = _ref.tooltip,
+      rest = _objectWithoutProperties(_ref, _excluded$2);
+    var inner;
+    if (!_isEmpty(label) && !_isEmpty(icon)) {
+      inner = /*#__PURE__*/React.createElement(core.Button, _extends({
+        leftSection: /*#__PURE__*/React.createElement("img", {
+          className: "lf-icon",
+          src: icon
+        })
+      }, rest), label);
+    } else if (!_isEmpty(label) && _isEmpty(icon)) {
+      inner = /*#__PURE__*/React.createElement(core.Button, rest, label);
+    } else if (_isEmpty(label) && !_isEmpty(icon)) {
+      inner = /*#__PURE__*/React.createElement(core.Button, _extends({
+        leftSection: /*#__PURE__*/React.createElement("img", {
+          className: "lf-icon",
+          src: icon
+        })
+      }, rest));
+    } else {
+      inner = /*#__PURE__*/React.createElement(React.Fragment, null);
+    }
+    return /*#__PURE__*/React.createElement(React.Fragment, null, !_isEmpty(hint) && tooltip && /*#__PURE__*/React.createElement(core.Tooltip, {
+      label: hint,
+      withArrow: true
+    }, inner), (_isEmpty(hint) || !tooltip) && inner, !_isEmpty(hint) && !tooltip && /*#__PURE__*/React.createElement(core.Input.Description, null, hint));
+  };
+  var BiStateButton = I18N(MakeButton(MantineButton, {
+    variant: 'filled'
+  }, {
+    variant: 'outline'
+  }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
+  lfLog('Loaded Mantine.Button');
+
+  var index$3 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: BiStateButton
+  });
+
+  var _excluded$1 = ["name", "hint", "fullWidth", "width", "error", "onChange", "onBlur", "lfOnEnter", "accept"];
+  var MantineUpload = I18N(function (_ref) {
+    var name = _ref.name,
+      hint = _ref.hint,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur;
+      _ref.lfOnEnter;
+      var accept = _ref.accept,
+      rest = _objectWithoutProperties(_ref, _excluded$1);
+    var handleChange = React.useCallback(function (value) {
+      return onChange(value);
+    }, [onChange]);
+    return /*#__PURE__*/React.createElement(core.FileInput, _extends({
+      className: "lf-control-upload",
+      "data-lf-field-name": name,
+      style: makeWidthStyle(fullWidth, width),
+      description: hint,
+      error: _isString(error) ? error : undefined,
+      inputWrapperOrder: ['label', 'input', 'description', 'error'],
+      onChange: handleChange,
+      onBlur: onBlur,
+      accept: Array.isArray(accept) ? accept.join(',') : accept !== null && accept !== void 0 ? accept : undefined
+    }, passRest(rest)));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded Mantine.Upload');
+
+  var index$2 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: MantineUpload
+  });
+
+  var _excluded = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
+  var MantineMultiSelect = I18N(function (_ref) {
+    var name = _ref.name,
+      hint = _ref.hint,
+      value = _ref.value,
+      error = _ref.error,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      options = _ref.options,
+      filterValue = _ref.filterValue,
+      filterKey = _ref.filterKey,
+      rest = _objectWithoutProperties(_ref, _excluded);
+    return /*#__PURE__*/React.createElement(core.MultiSelect, _extends({
+      value: value,
+      name: name,
+      data: filterOptions(options, filterValue, filterKey) || [],
+      className: "lf-control-select",
+      "data-lf-field-name": name,
+      style: makeWidthStyle(fullWidth, width),
+      description: hint,
+      error: _isString(error) ? error : undefined,
+      inputWrapperOrder: ['label', 'input', 'description', 'error']
+    }, passRest(rest)));
+  }, ['label', 'hint', 'placeholder', 'nothingFoundMessage'], {
+    options: i18nOptions
+  });
+  lfLog('Loaded Mantine.MultiSelect');
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: MantineMultiSelect
   });
 
   var css_248z = ".lf-form-react-mantine .lf-control-input-number div[data-position=right] .lf-postfix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=right] .lf-postfix-wrapper {\n  padding-right: 1em;\n}\n.lf-form-react-mantine .lf-control-input-number div[data-position=left] .lf-prefix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=left] .lf-prefix-wrapper {\n  padding-left: 1em;\n}";
