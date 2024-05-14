@@ -31,7 +31,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git push origin HEAD:master && git push --tags          
+          git push origin HEAD:main && git push --tags          
       - run: npm publish --tag beta
         name: Publish
         env:
