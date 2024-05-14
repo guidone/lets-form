@@ -26,6 +26,8 @@ jobs:
           npm run build
           cp -r dist/ ..
           cd ..
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Bump version
         run: |
           git config --global user.email "guido.bellomo@gmail.com"
