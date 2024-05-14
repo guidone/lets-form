@@ -27,7 +27,7 @@ jobs:
           cp -r dist/ ..
           cd ..
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
       - name: Bump version
         run: |
           git config --global user.email "guido.bellomo@gmail.com"
