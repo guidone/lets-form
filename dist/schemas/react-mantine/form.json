@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://https://unpkg.com/lets-form/schemas/react-mantine/form.json",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "locales": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "af-ZA",
+          "ar",
+          "bg-BG",
+          "ca-AD",
+          "cs-CZ",
+          "cy-GB",
+          "da-DK",
+          "de-DE",
+          "el-GR",
+          "en-US",
+          "es-ES",
+          "et-EE",
+          "eu",
+          "fa-IR",
+          "fi-FI",
+          "fr-FR",
+          "he-IL",
+          "hi-IN",
+          "hr-HR",
+          "hu-HU",
+          "id-ID",
+          "is-IS",
+          "it-IT",
+          "ja-JP",
+          "km-KH",
+          "ko-KR",
+          "la",
+          "lt-LT",
+          "lv-LV",
+          "mn-MN",
+          "nb-NO",
+          "nl-NL",
+          "nn-NO",
+          "pl-PL",
+          "pt-PT",
+          "ro-RO",
+          "ru-RU",
+          "sk-SK",
+          "sl-SI",
+          "sr-RS",
+          "sv-SE",
+          "th-TH",
+          "tr-TR",
+          "uk-UA",
+          "vi-VN",
+          "zh-CN"
+        ]
+      }
+    },
+    "disabled": {
+      "type": "boolean"
+    },
+    "readOnly": {
+      "type": "boolean"
+    },
+    "plaintext": {
+      "type": "boolean"
+    },
+    "labelSubmit": {
+      "type": "string"
+    },
+    "labelCancel": {
+      "type": "string"
+    },
+    "buttonsAlign": {
+      "type": "string",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
+    },
+    "validationMode": {
+      "type": "string",
+      "enum": [
+        "all",
+        "onBlur",
+        "onChange",
+        "onTouched",
+        "onSubmit"
+      ]
+    },
+    "showErrors": {
+      "type": "string",
+      "enum": [
+        "none",
+        "inline",
+        "groupedTop",
+        "groupedBottom"
+      ]
+    },
+    "disableSubmitOnError": {
+      "type": "boolean"
+    },
+    "fields": {
+      "$ref": "https://https://unpkg.com/lets-form/schemas/react-mantine/fields.json"
+    }
+  }
+}
