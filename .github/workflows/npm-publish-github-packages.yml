@@ -26,6 +26,7 @@ jobs:
           npm run build
           cp -r dist/ ..
           cd ..
+          rm -rf lets-form-manifests
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
       - name: Bump version
