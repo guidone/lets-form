@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.7.11 - ESM */
+/* LetsForm Utils v0.7.12 - ESM */
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -11257,4 +11257,12 @@ var validateJSONForm = function validateJSONForm(json) {
   return null;
 };
 
-export { addField, cleanUp, createEmptyField, deleteField, fillIds, filterFields, findField, formHelper, getFieldById, mapFields, reduceFields, replaceField, validateJSONForm };
+var formHasComponents = function formHasComponents(form, component) {
+  var components = Array.isArray(component) ? component : [component];
+  var result = reduceFields(form.fields, function (field, accumulator) {
+    return components.includes(field.component) ? accumulator + 1 : accumulator;
+  }, 0);
+  return result !== 0;
+};
+
+export { addField, cleanUp, createEmptyField, deleteField, fillIds, filterFields, findField, formHasComponents, formHelper, getFieldById, mapFields, reduceFields, replaceField, validateJSONForm };

@@ -1,4 +1,4 @@
-/* LetsForm react-bootstrap v0.7.11 - UMD */
+/* LetsForm react-bootstrap v0.7.12 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('prop-types'), require('react-dom')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'prop-types', 'react-dom'], factory) :
@@ -4537,12 +4537,14 @@
       else if (!(isWeb && (data instanceof Blob || data instanceof FileList)) &&
           (isArray || isObject$1(data))) {
           copy = isArray ? [] : {};
-          if (!Array.isArray(data) && !isPlainObject(data)) {
+          if (!isArray && !isPlainObject(data)) {
               copy = data;
           }
           else {
               for (const key in data) {
-                  copy[key] = cloneObject(data[key]);
+                  if (data.hasOwnProperty(key)) {
+                      copy[key] = cloneObject(data[key]);
+                  }
               }
           }
       }
@@ -4556,17 +4558,19 @@
 
   var isUndefined = (val) => val === undefined;
 
-  var get = (obj, path, defaultValue) => {
-      if (!path || !isObject$1(obj)) {
+  var get = (object, path, defaultValue) => {
+      if (!path || !isObject$1(object)) {
           return defaultValue;
       }
-      const result = compact(path.split(/[,[\].]+?/)).reduce((result, key) => isNullOrUndefined(result) ? result : result[key], obj);
-      return isUndefined(result) || result === obj
-          ? isUndefined(obj[path])
+      const result = compact(path.split(/[,[\].]+?/)).reduce((result, key) => isNullOrUndefined(result) ? result : result[key], object);
+      return isUndefined(result) || result === object
+          ? isUndefined(object[path])
               ? defaultValue
-              : obj[path]
+              : object[path]
           : result;
   };
+
+  var isBoolean$1 = (value) => typeof value === 'boolean';
 
   const EVENTS = {
       BLUR: 'blur',
@@ -4595,7 +4599,7 @@
    * This custom hook allows you to access the form context. useFormContext is intended to be used in deeply nested structures, where it would become inconvenient to pass the context as a prop. To be used with {@link FormProvider}.
    *
    * @remarks
-   * [API](https://react-hook-form.com/api/useformcontext) • [Demo](https://codesandbox.io/s/react-hook-form-v7-form-context-ytudi)
+   * [API](https://react-hook-form.com/docs/useformcontext) • [Demo](https://codesandbox.io/s/react-hook-form-v7-form-context-ytudi)
    *
    * @returns return all useForm methods
    *
@@ -4655,13 +4659,13 @@
 
   var convertToArrayPayload = (value) => (Array.isArray(value) ? value : [value]);
 
-  var shouldSubscribeByName = (name, signalName, exact) => exact && signalName
-      ? name === signalName
-      : !name ||
-          !signalName ||
-          name === signalName ||
-          convertToArrayPayload(name).some((currentName) => currentName &&
-              (currentName.startsWith(signalName) ||
+  var shouldSubscribeByName = (name, signalName, exact) => !name ||
+      !signalName ||
+      name === signalName ||
+      convertToArrayPayload(name).some((currentName) => currentName &&
+          (exact
+              ? currentName === signalName
+              : currentName.startsWith(signalName) ||
                   signalName.startsWith(currentName)));
 
   function useSubscribe(props) {
@@ -4683,7 +4687,7 @@
    * This custom hook allows you to subscribe to each form state, and isolate the re-render at the custom hook level. It has its scope in terms of form state subscription, so it would not affect other useFormState and useForm. Using this hook can reduce the re-render impact on large and complex form application.
    *
    * @remarks
-   * [API](https://react-hook-form.com/api/useformstate) • [Demo](https://codesandbox.io/s/useformstate-75xly)
+   * [API](https://react-hook-form.com/docs/useformstate) • [Demo](https://codesandbox.io/s/useformstate-75xly)
    *
    * @param props - include options on specify fields to subscribe. {@link UseFormStateReturn}
    *
@@ -4719,6 +4723,7 @@
           isLoading: false,
           dirtyFields: false,
           touchedFields: false,
+          validatingFields: false,
           isValidating: false,
           isValid: false,
           errors: false,
@@ -4738,12 +4743,6 @@
       });
       React.useEffect(() => {
           _mounted.current = true;
-          const isDirty = control._proxyFormState.isDirty && control._getDirty();
-          if (isDirty !== control._formState.isDirty) {
-              control._subjects.state.next({
-                  isDirty,
-              });
-          }
           _localProxyFormState.current.isValid && control._updateValid(true);
           return () => {
               _mounted.current = false;
@@ -4771,11 +4770,11 @@
    *
    * @remarks
    *
-   * [API](https://react-hook-form.com/api/usewatch) • [Demo](https://codesandbox.io/s/react-hook-form-v7-ts-usewatch-h9i5e)
+   * [API](https://react-hook-form.com/docs/usewatch) • [Demo](https://codesandbox.io/s/react-hook-form-v7-ts-usewatch-h9i5e)
    *
    * @example
    * ```tsx
-   * const { watch } = useForm();
+   * const { control } = useForm();
    * const values = useWatch({
    *   name: "fieldName"
    *   control,
@@ -4805,7 +4804,7 @@
 
   var stringToPath = (input) => compact(input.replace(/["|']|\]/g, '').split(/\.|\[/));
 
-  function set(object, path, value) {
+  var set = (object, path, value) => {
       let index = -1;
       const tempPath = isKey(path) ? [path] : stringToPath(path);
       const length = tempPath.length;
@@ -4826,13 +4825,13 @@
           object = object[key];
       }
       return object;
-  }
+  };
 
   /**
    * Custom hook to work with controlled component, this function provide you with both form and field level state. Re-render is isolated at the hook level.
    *
    * @remarks
-   * [API](https://react-hook-form.com/api/usecontroller) • [Demo](https://codesandbox.io/s/usecontroller-0o8px)
+   * [API](https://react-hook-form.com/docs/usecontroller) • [Demo](https://codesandbox.io/s/usecontroller-0o8px)
    *
    * @param props - the path name to the form field value, and validation rules.
    *
@@ -4854,7 +4853,7 @@
    */
   function useController(props) {
       const methods = useFormContext$1();
-      const { name, control = methods.control, shouldUnregister } = props;
+      const { name, disabled, control = methods.control, shouldUnregister } = props;
       const isArrayField = isNameInFieldArray(control._names.array, name);
       const value = useWatch({
           control,
@@ -4869,6 +4868,7 @@
       const _registerProps = React.useRef(control.register(name, {
           ...props.rules,
           value,
+          ...(isBoolean$1(props.disabled) ? { disabled: props.disabled } : {}),
       }));
       React.useEffect(() => {
           const _shouldUnregisterField = control._options.shouldUnregister || shouldUnregister;
@@ -4894,10 +4894,23 @@
                   : updateMounted(name, false);
           };
       }, [name, control, isArrayField, shouldUnregister]);
+      React.useEffect(() => {
+          if (get(control._fields, name)) {
+              control._updateDisabledField({
+                  disabled,
+                  fields: control._fields,
+                  name,
+                  value: get(control._fields, name)._f.value,
+              });
+          }
+      }, [disabled, name, control]);
       return {
           field: {
               name,
               value,
+              ...(isBoolean$1(disabled) || formState.disabled
+                  ? { disabled: formState.disabled || disabled }
+                  : {}),
               onChange: React.useCallback((event) => _registerProps.current.onChange({
                   target: {
                       value: getEventValue(event),
@@ -4938,6 +4951,10 @@
                   enumerable: true,
                   get: () => !!get(formState.touchedFields, name),
               },
+              isValidating: {
+                  enumerable: true,
+                  get: () => !!get(formState.validatingFields, name),
+              },
               error: {
                   enumerable: true,
                   get: () => get(formState.errors, name),
@@ -4950,7 +4967,7 @@
    * Component based on `useController` hook to work with controlled component.
    *
    * @remarks
-   * [API](https://react-hook-form.com/api/usecontroller/controller) • [Demo](https://codesandbox.io/s/react-hook-form-v6-controller-ts-jwyzw) • [Video](https://www.youtube.com/watch?v=N2UNk_UCVyA)
+   * [API](https://react-hook-form.com/docs/usecontroller/controller) • [Demo](https://codesandbox.io/s/react-hook-form-v6-controller-ts-jwyzw) • [Video](https://www.youtube.com/watch?v=N2UNk_UCVyA)
    *
    * @param props - the path name to the form field value, and validation rules.
    *
@@ -5000,28 +5017,6 @@
       }
       : {};
 
-  const focusFieldBy = (fields, callback, fieldsNames) => {
-      for (const key of fieldsNames || Object.keys(fields)) {
-          const field = get(fields, key);
-          if (field) {
-              const { _f, ...currentField } = field;
-              if (_f && callback(_f.name)) {
-                  if (_f.ref.focus) {
-                      _f.ref.focus();
-                      break;
-                  }
-                  else if (_f.refs && _f.refs[0].focus) {
-                      _f.refs[0].focus();
-                      break;
-                  }
-              }
-              else if (isObject$1(currentField)) {
-                  focusFieldBy(currentField, callback);
-              }
-          }
-      }
-  };
-
   var getValidationModes = (mode) => ({
       isOnSubmit: !mode || mode === VALIDATION_MODE.onSubmit,
       isOnBlur: mode === VALIDATION_MODE.onBlur,
@@ -5036,14 +5031,35 @@
           [..._names.watch].some((watchName) => name.startsWith(watchName) &&
               /^\.\w+/.test(name.slice(watchName.length))));
 
+  const iterateFieldsByAction = (fields, action, fieldsNames, abortEarly) => {
+      for (const key of fieldsNames || Object.keys(fields)) {
+          const field = get(fields, key);
+          if (field) {
+              const { _f, ...currentField } = field;
+              if (_f) {
+                  if (_f.refs && _f.refs[0] && action(_f.refs[0], key) && !abortEarly) {
+                      break;
+                  }
+                  else if (_f.ref && action(_f.ref, _f.name) && !abortEarly) {
+                      break;
+                  }
+                  else {
+                      iterateFieldsByAction(currentField, action);
+                  }
+              }
+              else if (isObject$1(currentField)) {
+                  iterateFieldsByAction(currentField, action);
+              }
+          }
+      }
+  };
+
   var updateFieldArrayRootError = (errors, error, name) => {
       const fieldArrayErrors = compact(get(errors, name));
       set(fieldArrayErrors, 'root', error[name]);
       set(errors, name, fieldArrayErrors);
       return errors;
   };
-
-  var isBoolean$1 = (value) => typeof value === 'boolean';
 
   var isFileInput = (element) => element.type === 'file';
 
@@ -5310,7 +5326,7 @@
   }
   function isEmptyArray(obj) {
       for (const key in obj) {
-          if (!isUndefined(obj[key])) {
+          if (obj.hasOwnProperty(key) && !isUndefined(obj[key])) {
               return false;
           }
       }
@@ -5336,7 +5352,7 @@
       return object;
   }
 
-  function createSubject() {
+  var createSubject = () => {
       let _observers = [];
       const next = (value) => {
           for (const observer of _observers) {
@@ -5362,7 +5378,7 @@
           subscribe,
           unsubscribe,
       };
-  }
+  };
 
   var isPrimitive = (value) => isNullOrUndefined(value) || !isObjectType(value);
 
@@ -5572,7 +5588,7 @@
       reValidateMode: VALIDATION_MODE.onChange,
       shouldFocusError: true,
   };
-  function createFormControl(props = {}, flushRootRender) {
+  function createFormControl(props = {}) {
       let _options = {
           ...defaultOptions,
           ...props,
@@ -5588,7 +5604,9 @@
           isValid: false,
           touchedFields: {},
           dirtyFields: {},
-          errors: {},
+          validatingFields: {},
+          errors: _options.errors || {},
+          disabled: _options.disabled || false,
       };
       let _fields = {};
       let _defaultValues = isObject$1(_options.defaultValues) || isObject$1(_options.values)
@@ -5613,6 +5631,7 @@
       const _proxyFormState = {
           isDirty: false,
           dirtyFields: false,
+          validatingFields: false,
           touchedFields: false,
           isValidating: false,
           isValid: false,
@@ -5623,7 +5642,6 @@
           array: createSubject(),
           state: createSubject(),
       };
-      const shouldCaptureDirtyFields = props.resetOptions && props.resetOptions.keepDirtyValues;
       const validationModeBeforeSubmit = getValidationModes(_options.mode);
       const validationModeAfterSubmit = getValidationModes(_options.reValidateMode);
       const shouldDisplayAllAssociatedErrors = _options.criteriaMode === VALIDATION_MODE.all;
@@ -5643,10 +5661,16 @@
               }
           }
       };
-      const _updateIsValidating = (value) => _proxyFormState.isValidating &&
-          _subjects.state.next({
-              isValidating: value,
-          });
+      const _updateIsValidating = (names, isValidating) => {
+          if (_proxyFormState.isValidating || _proxyFormState.validatingFields) {
+              (names || Array.from(_names.mount)).forEach((name) => name && set(_formState.validatingFields, name, !!isValidating));
+              _formState.isValidating = Object.values(_formState.validatingFields).some((val) => val);
+              _subjects.state.next({
+                  validatingFields: _formState.validatingFields,
+                  isValidating: _formState.isValidating,
+              });
+          }
+      };
       const _updateFieldArray = (name, values = [], method, args, shouldSetValues = true, shouldUpdateFieldsAndState = true) => {
           if (args && method) {
               _state.action = true;
@@ -5687,6 +5711,13 @@
               errors: _formState.errors,
           });
       };
+      const _setErrors = (errors) => {
+          _formState.errors = errors;
+          _subjects.state.next({
+              errors: _formState.errors,
+              isValid: false,
+          });
+      };
       const updateValidAndValue = (name, shouldSkipSetValueAs, value, ref) => {
           const field = get(_fields, name);
           if (field) {
@@ -5705,15 +5736,16 @@
           const output = {
               name,
           };
+          const disabledField = !!(get(_fields, name) && get(_fields, name)._f.disabled);
           if (!isBlurEvent || shouldDirty) {
               if (_proxyFormState.isDirty) {
                   isPreviousDirty = _formState.isDirty;
                   _formState.isDirty = output.isDirty = _getDirty();
                   shouldUpdateField = isPreviousDirty !== output.isDirty;
               }
-              const isCurrentFieldPristine = deepEqual(get(_defaultValues, name), fieldValue);
-              isPreviousDirty = get(_formState.dirtyFields, name);
-              isCurrentFieldPristine
+              const isCurrentFieldPristine = disabledField || deepEqual(get(_defaultValues, name), fieldValue);
+              isPreviousDirty = !!(!disabledField && get(_formState.dirtyFields, name));
+              isCurrentFieldPristine || disabledField
                   ? unset(_formState.dirtyFields, name)
                   : set(_formState.dirtyFields, name, true);
               output.dirtyFields = _formState.dirtyFields;
@@ -5767,11 +5799,15 @@
               };
               _subjects.state.next(updatedFormState);
           }
-          _updateIsValidating(false);
       };
-      const _executeSchema = async (name) => _options.resolver(_formValues, _options.context, getResolverOptions(name || _names.mount, _fields, _options.criteriaMode, _options.shouldUseNativeValidation));
+      const _executeSchema = async (name) => {
+          _updateIsValidating(name, true);
+          const result = await _options.resolver(_formValues, _options.context, getResolverOptions(name || _names.mount, _fields, _options.criteriaMode, _options.shouldUseNativeValidation));
+          _updateIsValidating(name);
+          return result;
+      };
       const executeSchemaAndUpdateState = async (names) => {
-          const { errors } = await _executeSchema();
+          const { errors } = await _executeSchema(names);
           if (names) {
               for (const name of names) {
                   const error = get(errors, name);
@@ -5794,7 +5830,9 @@
                   const { _f, ...fieldValue } = field;
                   if (_f) {
                       const isFieldArrayRoot = _names.array.has(_f.name);
+                      _updateIsValidating([name], true);
                       const fieldError = await validateField(field, _formValues, shouldDisplayAllAssociatedErrors, _options.shouldUseNativeValidation && !shouldOnlyCheckValid, isFieldArrayRoot);
+                      _updateIsValidating([name]);
                       if (fieldError[_f.name]) {
                           context.valid = false;
                           if (shouldOnlyCheckValid) {
@@ -5923,10 +5961,9 @@
           }
           isWatched(name, _names) && _subjects.state.next({ ..._formState });
           _subjects.values.next({
-              name,
+              name: _state.mount ? name : undefined,
               values: { ..._formValues },
           });
-          !_state.mount && flushRootRender();
       };
       const onChange = async (event) => {
           const target = event.target;
@@ -5934,6 +5971,11 @@
           let isFieldValueUpdated = true;
           const field = get(_fields, name);
           const getCurrentFieldValue = () => target.type ? getFieldValue(field._f) : getEventValue(event);
+          const _updateIsFieldValueUpdated = (fieldValue) => {
+              isFieldValueUpdated =
+                  Number.isNaN(fieldValue) ||
+                      fieldValue === get(_formValues, name, fieldValue);
+          };
           if (field) {
               let error;
               let isValid;
@@ -5967,20 +6009,22 @@
                       _subjects.state.next({ name, ...(watched ? {} : fieldState) }));
               }
               !isBlurEvent && watched && _subjects.state.next({ ..._formState });
-              _updateIsValidating(true);
               if (_options.resolver) {
                   const { errors } = await _executeSchema([name]);
-                  const previousErrorLookupResult = schemaErrorLookup(_formState.errors, _fields, name);
-                  const errorLookupResult = schemaErrorLookup(errors, _fields, previousErrorLookupResult.name || name);
-                  error = errorLookupResult.error;
-                  name = errorLookupResult.name;
-                  isValid = isEmptyObject$1(errors);
+                  _updateIsFieldValueUpdated(fieldValue);
+                  if (isFieldValueUpdated) {
+                      const previousErrorLookupResult = schemaErrorLookup(_formState.errors, _fields, name);
+                      const errorLookupResult = schemaErrorLookup(errors, _fields, previousErrorLookupResult.name || name);
+                      error = errorLookupResult.error;
+                      name = errorLookupResult.name;
+                      isValid = isEmptyObject$1(errors);
+                  }
               }
               else {
+                  _updateIsValidating([name], true);
                   error = (await validateField(field, _formValues, shouldDisplayAllAssociatedErrors, _options.shouldUseNativeValidation))[name];
-                  isFieldValueUpdated =
-                      isNaN(fieldValue) ||
-                          fieldValue === get(_formValues, name, fieldValue);
+                  _updateIsValidating([name]);
+                  _updateIsFieldValueUpdated(fieldValue);
                   if (isFieldValueUpdated) {
                       if (error) {
                           isValid = false;
@@ -5997,11 +6041,17 @@
               }
           }
       };
+      const _focusInput = (ref, key) => {
+          if (get(_formState.errors, key) && ref.focus) {
+              ref.focus();
+              return 1;
+          }
+          return;
+      };
       const trigger = async (name, options = {}) => {
           let isValid;
           let validationResult;
           const fieldNames = convertToArrayPayload(name);
-          _updateIsValidating(true);
           if (_options.resolver) {
               const errors = await executeSchemaAndUpdateState(isUndefined(name) ? name : fieldNames);
               isValid = isEmptyObject$1(errors);
@@ -6026,11 +6076,10 @@
                   : { name }),
               ...(_options.resolver || !name ? { isValid } : {}),
               errors: _formState.errors,
-              isValidating: false,
           });
           options.shouldFocus &&
               !validationResult &&
-              focusFieldBy(_fields, (key) => key && get(_formState.errors, key), name ? fieldNames : _names.mount);
+              iterateFieldsByAction(_fields, _focusInput, name ? fieldNames : _names.mount);
           return validationResult;
       };
       const getValues = (fieldNames) => {
@@ -6048,6 +6097,7 @@
           invalid: !!get((formState || _formState).errors, name),
           isDirty: !!get((formState || _formState).dirtyFields, name),
           isTouched: !!get((formState || _formState).touchedFields, name),
+          isValidating: !!get((formState || _formState).validatingFields, name),
           error: get((formState || _formState).errors, name),
       });
       const clearErrors = (name) => {
@@ -6086,6 +6136,8 @@
               !options.keepError && unset(_formState.errors, fieldName);
               !options.keepDirty && unset(_formState.dirtyFields, fieldName);
               !options.keepTouched && unset(_formState.touchedFields, fieldName);
+              !options.keepIsValidating &&
+                  unset(_formState.validatingFields, fieldName);
               !_options.shouldUnregister &&
                   !options.keepDefaultValue &&
                   unset(_defaultValues, fieldName);
@@ -6098,6 +6150,17 @@
               ...(!options.keepDirty ? {} : { isDirty: _getDirty() }),
           });
           !options.keepIsValid && _updateValid();
+      };
+      const _updateDisabledField = ({ disabled, name, field, fields, value, }) => {
+          if (isBoolean$1(disabled)) {
+              const inputValue = disabled
+                  ? undefined
+                  : isUndefined(value)
+                      ? getFieldValue(field ? field._f : get(fields, name)._f)
+                      : value;
+              set(_formValues, name, inputValue);
+              updateTouchAndDirty(name, inputValue, false, false, true);
+          }
       };
       const register = (name, options = {}) => {
           let field = get(_fields, name);
@@ -6112,15 +6175,20 @@
               },
           });
           _names.mount.add(name);
-          field
-              ? disabledIsDefined &&
-                  set(_formValues, name, options.disabled
-                      ? undefined
-                      : get(_formValues, name, getFieldValue(field._f)))
-              : updateValidAndValue(name, true, options.value);
+          if (field) {
+              _updateDisabledField({
+                  field,
+                  disabled: options.disabled,
+                  name,
+                  value: options.value,
+              });
+          }
+          else {
+              updateValidAndValue(name, true, options.value);
+          }
           return {
               ...(disabledIsDefined ? { disabled: options.disabled } : {}),
-              ...(_options.shouldUseNativeValidation
+              ...(_options.progressive
                   ? {
                       required: !!options.required,
                       min: getRuleValue(options.min),
@@ -6179,8 +6247,22 @@
           };
       };
       const _focusError = () => _options.shouldFocusError &&
-          focusFieldBy(_fields, (key) => key && get(_formState.errors, key), _names.mount);
+          iterateFieldsByAction(_fields, _focusInput, _names.mount);
+      const _disableForm = (disabled) => {
+          if (isBoolean$1(disabled)) {
+              _subjects.state.next({ disabled });
+              iterateFieldsByAction(_fields, (ref, name) => {
+                  let requiredDisabledState = disabled;
+                  const currentField = get(_fields, name);
+                  if (currentField && isBoolean$1(currentField._f.disabled)) {
+                      requiredDisabledState || (requiredDisabledState = currentField._f.disabled);
+                  }
+                  ref.disabled = requiredDisabledState;
+              }, 0, false);
+          }
+      };
       const handleSubmit = (onValid, onInvalid) => async (e) => {
+          let onValidError = undefined;
           if (e) {
               e.preventDefault && e.preventDefault();
               e.persist && e.persist();
@@ -6202,7 +6284,12 @@
               _subjects.state.next({
                   errors: {},
               });
-              await onValid(fieldValues, e);
+              try {
+                  await onValid(fieldValues, e);
+              }
+              catch (error) {
+                  onValidError = error;
+              }
           }
           else {
               if (onInvalid) {
@@ -6214,19 +6301,22 @@
           _subjects.state.next({
               isSubmitted: true,
               isSubmitting: false,
-              isSubmitSuccessful: isEmptyObject$1(_formState.errors),
+              isSubmitSuccessful: isEmptyObject$1(_formState.errors) && !onValidError,
               submitCount: _formState.submitCount + 1,
               errors: _formState.errors,
           });
+          if (onValidError) {
+              throw onValidError;
+          }
       };
       const resetField = (name, options = {}) => {
           if (get(_fields, name)) {
               if (isUndefined(options.defaultValue)) {
-                  setValue(name, get(_defaultValues, name));
+                  setValue(name, cloneObject(get(_defaultValues, name)));
               }
               else {
                   setValue(name, options.defaultValue);
-                  set(_defaultValues, name, options.defaultValue);
+                  set(_defaultValues, name, cloneObject(options.defaultValue));
               }
               if (!options.keepTouched) {
                   unset(_formState.touchedFields, name);
@@ -6234,7 +6324,7 @@
               if (!options.keepDirty) {
                   unset(_formState.dirtyFields, name);
                   _formState.isDirty = options.defaultValue
-                      ? _getDirty(name, get(_defaultValues, name))
+                      ? _getDirty(name, cloneObject(get(_defaultValues, name)))
                       : _getDirty();
               }
               if (!options.keepError) {
@@ -6245,16 +6335,15 @@
           }
       };
       const _reset = (formValues, keepStateOptions = {}) => {
-          const updatedValues = formValues || _defaultValues;
+          const updatedValues = formValues ? cloneObject(formValues) : _defaultValues;
           const cloneUpdatedValues = cloneObject(updatedValues);
-          const values = formValues && !isEmptyObject$1(formValues)
-              ? cloneUpdatedValues
-              : _defaultValues;
+          const isEmptyResetValues = isEmptyObject$1(formValues);
+          const values = isEmptyResetValues ? _defaultValues : cloneUpdatedValues;
           if (!keepStateOptions.keepDefaultValues) {
               _defaultValues = updatedValues;
           }
           if (!keepStateOptions.keepValues) {
-              if (keepStateOptions.keepDirtyValues || shouldCaptureDirtyFields) {
+              if (keepStateOptions.keepDirtyValues) {
                   for (const fieldName of _names.mount) {
                       get(_formState.dirtyFields, fieldName)
                           ? set(values, fieldName, get(_formValues, fieldName))
@@ -6285,7 +6374,7 @@
                   ? keepStateOptions.keepDefaultValues
                       ? cloneObject(_defaultValues)
                       : {}
-                  : cloneUpdatedValues;
+                  : cloneObject(values);
               _subjects.array.next({
                   values: { ...values },
               });
@@ -6294,38 +6383,48 @@
               });
           }
           _names = {
-              mount: new Set(),
+              mount: keepStateOptions.keepDirtyValues ? _names.mount : new Set(),
               unMount: new Set(),
               array: new Set(),
               watch: new Set(),
               watchAll: false,
               focus: '',
           };
-          !_state.mount && flushRootRender();
-          _state.mount = !_proxyFormState.isValid || !!keepStateOptions.keepIsValid;
+          _state.mount =
+              !_proxyFormState.isValid ||
+                  !!keepStateOptions.keepIsValid ||
+                  !!keepStateOptions.keepDirtyValues;
           _state.watch = !!props.shouldUnregister;
           _subjects.state.next({
               submitCount: keepStateOptions.keepSubmitCount
                   ? _formState.submitCount
                   : 0,
-              isDirty: keepStateOptions.keepDirty
-                  ? _formState.isDirty
-                  : !!(keepStateOptions.keepDefaultValues &&
-                      !deepEqual(formValues, _defaultValues)),
+              isDirty: isEmptyResetValues
+                  ? false
+                  : keepStateOptions.keepDirty
+                      ? _formState.isDirty
+                      : !!(keepStateOptions.keepDefaultValues &&
+                          !deepEqual(formValues, _defaultValues)),
               isSubmitted: keepStateOptions.keepIsSubmitted
                   ? _formState.isSubmitted
                   : false,
-              dirtyFields: keepStateOptions.keepDirtyValues
-                  ? _formState.dirtyFields
-                  : keepStateOptions.keepDefaultValues && formValues
-                      ? getDirtyFields(_defaultValues, formValues)
-                      : {},
+              dirtyFields: isEmptyResetValues
+                  ? []
+                  : keepStateOptions.keepDirtyValues
+                      ? keepStateOptions.keepDefaultValues && _formValues
+                          ? getDirtyFields(_defaultValues, _formValues)
+                          : _formState.dirtyFields
+                      : keepStateOptions.keepDefaultValues && formValues
+                          ? getDirtyFields(_defaultValues, formValues)
+                          : {},
               touchedFields: keepStateOptions.keepTouched
                   ? _formState.touchedFields
                   : {},
               errors: keepStateOptions.keepErrors ? _formState.errors : {},
+              isSubmitSuccessful: keepStateOptions.keepIsSubmitSuccessful
+                  ? _formState.isSubmitSuccessful
+                  : false,
               isSubmitting: false,
-              isSubmitSuccessful: false,
           });
       };
       const reset = (formValues, keepStateOptions) => _reset(isFunction(formValues)
@@ -6350,30 +6449,35 @@
               ...updatedFormState,
           };
       };
-      if (isFunction(_options.defaultValues)) {
+      const _resetDefaultValues = () => isFunction(_options.defaultValues) &&
           _options.defaultValues().then((values) => {
               reset(values, _options.resetOptions);
               _subjects.state.next({
                   isLoading: false,
               });
           });
-      }
       return {
           control: {
               register,
               unregister,
               getFieldState,
+              handleSubmit,
+              setError,
               _executeSchema,
               _getWatch,
               _getDirty,
               _updateValid,
               _removeUnmounted,
               _updateFieldArray,
+              _updateDisabledField,
               _getFieldArray,
               _reset,
+              _resetDefaultValues,
               _updateFormState,
+              _disableForm,
               _subjects,
               _proxyFormState,
+              _setErrors,
               get _fields() {
                   return _fields;
               },
@@ -6431,7 +6535,7 @@
    * Custom hook to manage the entire form.
    *
    * @remarks
-   * [API](https://react-hook-form.com/api/useform) • [Demo](https://codesandbox.io/s/react-hook-form-get-started-ts-5ksmm) • [Video](https://www.youtube.com/watch?v=RkXv4AXXC_4)
+   * [API](https://react-hook-form.com/docs/useform) • [Demo](https://codesandbox.io/s/react-hook-form-get-started-ts-5ksmm) • [Video](https://www.youtube.com/watch?v=RkXv4AXXC_4)
    *
    * @param props - form configuration and validation parameters.
    *
@@ -6450,7 +6554,7 @@
    *       <input defaultValue="test" {...register("example")} />
    *       <input {...register("exampleRequired", { required: true })} />
    *       {errors.exampleRequired && <span>This field is required</span>}
-   *       <input type="submit" />
+   *       <button>Submit</button>
    *     </form>
    *   );
    * }
@@ -6458,6 +6562,7 @@
    */
   function useForm(props = {}) {
       const _formControl = React.useRef();
+      const _values = React.useRef();
       const [formState, updateFormState] = React.useState({
           isDirty: false,
           isValidating: false,
@@ -6469,14 +6574,16 @@
           submitCount: 0,
           dirtyFields: {},
           touchedFields: {},
-          errors: {},
+          validatingFields: {},
+          errors: props.errors || {},
+          disabled: props.disabled || false,
           defaultValues: isFunction(props.defaultValues)
               ? undefined
               : props.defaultValues,
       });
       if (!_formControl.current) {
           _formControl.current = {
-              ...createFormControl(props, () => updateFormState((formState) => ({ ...formState }))),
+              ...createFormControl(props),
               formState,
           };
       }
@@ -6490,11 +6597,32 @@
               }
           },
       });
+      React.useEffect(() => control._disableForm(props.disabled), [control, props.disabled]);
       React.useEffect(() => {
-          if (props.values && !deepEqual(props.values, control._defaultValues)) {
+          if (control._proxyFormState.isDirty) {
+              const isDirty = control._getDirty();
+              if (isDirty !== formState.isDirty) {
+                  control._subjects.state.next({
+                      isDirty,
+                  });
+              }
+          }
+      }, [control, formState.isDirty]);
+      React.useEffect(() => {
+          if (props.values && !deepEqual(props.values, _values.current)) {
               control._reset(props.values, control._options.resetOptions);
+              _values.current = props.values;
+              updateFormState((state) => ({ ...state }));
+          }
+          else {
+              control._resetDefaultValues();
           }
       }, [props.values, control]);
+      React.useEffect(() => {
+          if (props.errors) {
+              control._setErrors(props.errors);
+          }
+      }, [props.errors, control]);
       React.useEffect(() => {
           if (!control._state.mount) {
               control._updateValid();
@@ -6506,6 +6634,12 @@
           }
           control._removeUnmounted();
       });
+      React.useEffect(() => {
+          props.shouldUnregister &&
+              control._subjects.values.next({
+                  values: control._getWatch(),
+              });
+      }, [props.shouldUnregister, control]);
       _formControl.current.formState = getProxyFormState(formState, control);
       return _formControl.current;
   }

@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.7.11 - UMD */
+/* LetsForm Utils v0.7.12 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -11263,6 +11263,14 @@
     return null;
   };
 
+  var formHasComponents = function formHasComponents(form, component) {
+    var components = Array.isArray(component) ? component : [component];
+    var result = reduceFields(form.fields, function (field, accumulator) {
+      return components.includes(field.component) ? accumulator + 1 : accumulator;
+    }, 0);
+    return result !== 0;
+  };
+
   exports.addField = addField;
   exports.cleanUp = cleanUp;
   exports.createEmptyField = createEmptyField;
@@ -11270,6 +11278,7 @@
   exports.fillIds = fillIds;
   exports.filterFields = filterFields;
   exports.findField = findField;
+  exports.formHasComponents = formHasComponents;
   exports.formHelper = formHelper;
   exports.getFieldById = getFieldById;
   exports.mapFields = mapFields;
