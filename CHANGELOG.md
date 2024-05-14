@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.7.12
+- general cleanup
+
 ## v0.7.11
 - added Mantine Upload, Image Placeholder, Multiselect and Button
 - ImagePlaceholder max width/height defaults to 100%
