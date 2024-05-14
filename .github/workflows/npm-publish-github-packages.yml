@@ -24,8 +24,9 @@ jobs:
           cd lets-form-manifests
           npm ci
           npm run build
-          cp -r dist/ ..
-          cd ..
+          cd dist
+          cp -r ./ ../..
+          cd ../..
           rm -rf lets-form-manifests
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
