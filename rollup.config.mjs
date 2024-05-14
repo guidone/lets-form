@@ -20,7 +20,6 @@ const rollupConfig = ({ framework }) => ({
     'react',
     'react-dom',
     'prop-types',
-    'fs',
     /^@mantine/,
     /@material-ui\/core\/.*/,
     /^@mui/,

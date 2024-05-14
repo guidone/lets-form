@@ -23,7 +23,6 @@
     "build:clear": "node ./scripts/clear-builds.js",
     "stash": "./scripts/stash-node-modules.sh",
     "unstash": "./scripts/unstash-node-modules.sh",
-    "postversion": "npm run build",
     "lint": "eslint ./react-mantine/**"
   },
   "author": "Guido Bellomo",
