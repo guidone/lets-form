@@ -20,7 +20,7 @@ jobs:
           npm run build
       - name: Generate schemas
         run: |
-          git clone git@github.com:guidone/lets-form-manifests.git
+          git clone https://guidone:${{ secrets.REPO_TOKEN }}@github.com/guidone/lets-form-manifests.git
           cd lets-form-manifests
           npm ci
           npm run build
