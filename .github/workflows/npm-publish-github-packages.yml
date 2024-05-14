@@ -29,7 +29,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Push changes to repository
         env:
-          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git push origin HEAD:master && git push --tags          
       - run: npm publish --tag beta
