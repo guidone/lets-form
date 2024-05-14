@@ -8,3 +8,4 @@ export * from './find-field';
 export * from './filter-fields';
 export * from './form-helper';
 export * from './validate-form';
+export * from './form-has-components';

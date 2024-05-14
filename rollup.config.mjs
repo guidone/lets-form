@@ -20,6 +20,7 @@ const rollupConfig = ({ framework }) => ({
     'react',
     'react-dom',
     'prop-types',
+    'fs',
     /^@mantine/,
     /@material-ui\/core\/.*/,
     /^@mui/,
@@ -150,6 +151,57 @@ export default () => {
     rollupConfig({ framework: 'react-antd' }),
     rollupConfig({ framework: 'react-material-ui' }),
     rollupConfig({ framework: 'react-bootstrap' }),
+    {
+      input: `index.js`,
+      external: [
+        'react',
+        'react-dom',
+        'prop-types',
+        /^@mantine/,
+        /@material-ui\/core\/.*/,
+        /^@mui/,
+        /^rsuite/,
+        /^antd/
+      ],
+      output: [
+        {
+          banner: `/* LetsForm Generator v${packageJson.version} - UMD */`,
+          file: `dist/generator-umd/main.js`,
+          name: `lets-form/generator`,
+          format: 'umd',
+          // umd doesn't support dynamic imports in Rollup, bundle all together
+          inlineDynamicImports: true
+        },
+        {
+          banner: `/* LetsForm Generator v${packageJson.version} - ESM */`,
+          dir: `dist/generator-esm`,
+          name: `lets-form/generator`,
+          format: 'esm'
+        }
+      ],
+      plugins: [
+        cleandir(),
+        json(),
+        postcss({
+          // avoid extracting into separate files, inject css into head
+          extract: false,
+          inject: true,
+          use: ['sass'],
+        }),
+        nodeResolve({
+          extensions: ['.js', '.jsx']
+        }),
+        babel({
+          babelHelpers: 'bundled',
+          presets: ['@babel/preset-react'],
+          extensions: ['.js', '.jsx']
+        }),
+        commonjs(),
+        replace({
+          preventAssignment: false
+        })
+      ]
+    },
     rollupConfigUtils()
   ];
 };
