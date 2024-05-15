@@ -1,11 +1,18 @@
 .lf-control-button-toggle-group {
   .lf-control-button {
     display: inline-block;
-       
-    margin-top: 0px !important; 
-  
+    margin-top: 0px !important;
+
     &:not(:first-child) {
       margin-left: var(--lf-field-button-margin);
+    }
+
+    &.lf-full-width {
+      // if a button is full width, ensure it has a flex 1 and inner element is width 100%
+      flex: 1 0;
+      &> * {
+        width: 100% !important;
+      }
     }
   }
 }

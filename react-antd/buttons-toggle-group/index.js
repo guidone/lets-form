@@ -2,7 +2,7 @@ import React from 'react';
 import { Form } from 'antd';
 
 import { I18N } from '../../components';
-import { i18nOptions } from '../../helpers';
+import { i18nOptions, passRest } from '../../helpers';
 
 import Button from '../button';
 import { ButtonsToggleGroup } from '../../common';
@@ -21,7 +21,8 @@ const AntdButtonsToggleGroup = I18N(
     error,
     onChange,
     multiple,
-    options = []
+    options = [],
+    ...rest
   }) => {
     return (
       <Form.Item
@@ -44,6 +45,7 @@ const AntdButtonsToggleGroup = I18N(
           options={options}
           disabled={disabled}
           size={size}
+          {...passRest(rest)}
         />
       </Form.Item>
     );
