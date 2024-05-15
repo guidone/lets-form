@@ -4,8 +4,8 @@ import { mapFields } from './map-fields';
 import { filterFields } from './filter-fields';
 
 const formHelper = form => {
-  const _form = { ...form };
-  let _fields = [...form.fields];
+  let _form = form ? { ...form } : {};
+  let _fields = form?.fields ? [...form.fields] : [];
   let _skip = false;
 
   const makeHelper = params => {
@@ -45,6 +45,10 @@ const formHelper = form => {
       _skip = skip;
       return obj;
     },
+    append: field => {
+      _fields = [..._fields, field];
+      return obj;
+    },
     setField: (fieldName, key, value) => {
       const toReplace = _.isObject(key) ? key : { [key]: value };
       _fields = mapFields(
@@ -67,6 +71,9 @@ const formHelper = form => {
         ..._form,
         fields: _fields
       };
+    },
+    fields: () => {
+      return _fields;
     }
   };
 
