@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.8.9
+- improved CI/CD tool chain
+
 ## v0.8.8
 - added Mantine Upload, Image Placeholder, Multiselect and Button
 - ImagePlaceholder max width/height defaults to 100%
