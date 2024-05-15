@@ -1,5 +1,9 @@
 # LetsForm Changelog
 
+## v0.7.13
+- removed webpack dependencies
+- CI/CD on gh
+
 ## v0.7.12
 - general cleanup
 
