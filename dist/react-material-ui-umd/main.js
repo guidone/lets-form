@@ -1,4 +1,4 @@
-/* LetsForm react-material-ui v0.7.13-beta-10 - UMD */
+/* LetsForm react-material-ui v0.7.13 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('react-hook-form'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/material/Stack')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', 'react-hook-form', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/material/Stack'], factory) :
@@ -8460,8 +8460,8 @@
   };
 
   var formHelper = function formHelper(_form2) {
-    var _form = _objectSpread2({}, _form2);
-    var _fields = _toConsumableArray(_form2.fields);
+    var _form = _form2 ? _objectSpread2({}, _form2) : {};
+    var _fields = _form2 !== null && _form2 !== void 0 && _form2.fields ? _toConsumableArray(_form2.fields) : [];
     var _skip = false;
     var makeHelper = function makeHelper(params) {
       return function (fieldName) {
@@ -8504,6 +8504,10 @@
         _skip = _skip2;
         return obj;
       },
+      append: function append(field) {
+        _fields = [].concat(_toConsumableArray(_fields), [field]);
+        return obj;
+      },
       setField: function setField(fieldName, key, value) {
         var toReplace = _isObject(key) ? key : _defineProperty$1({}, key, value);
         _fields = mapFields(_fields, function (field) {
@@ -8522,6 +8526,9 @@
         return _objectSpread2(_objectSpread2({}, _form), {}, {
           fields: _fields
         });
+      },
+      fields: function fields() {
+        return _fields;
       }
     };
     return obj;
@@ -16346,7 +16353,7 @@
   var css_248z$7 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$7);
 
-  var _excluded$f = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue"];
+  var _excluded$f = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -16371,6 +16378,7 @@
       buttonType = _ref.buttonType,
       hint = _ref.hint,
       initialValue = _ref.initialValue,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$f);
     var _useState = React.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
@@ -16406,7 +16414,7 @@
       }, passRest(_omit(rest, 'label')), LinkProps));
     }
     return /*#__PURE__*/React.createElement("div", {
-      className: classNames('lf-control-button', _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
+      className: classNames('lf-control-button', className, _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
       "data-lf-field-name": name
     }, inner);
   };
@@ -16421,7 +16429,7 @@
     };
   };
 
-  var css_248z$6 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}";
+  var css_248z$6 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
   styleInject(css_248z$6);
 
   var css_248z$5 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";

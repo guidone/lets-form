@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.7.13-beta-10 - ESM */
+/* LetsForm Utils v0.7.13 - ESM */
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -4433,8 +4433,8 @@ var fieldExists = function fieldExists(fields, predicate) {
 };
 
 var formHelper = function formHelper(_form2) {
-  var _form = _objectSpread2({}, _form2);
-  var _fields = _toConsumableArray(_form2.fields);
+  var _form = _form2 ? _objectSpread2({}, _form2) : {};
+  var _fields = _form2 !== null && _form2 !== void 0 && _form2.fields ? _toConsumableArray(_form2.fields) : [];
   var _skip = false;
   var makeHelper = function makeHelper(params) {
     return function (fieldName) {
@@ -4477,6 +4477,10 @@ var formHelper = function formHelper(_form2) {
       _skip = _skip2;
       return obj;
     },
+    append: function append(field) {
+      _fields = [].concat(_toConsumableArray(_fields), [field]);
+      return obj;
+    },
     setField: function setField(fieldName, key, value) {
       var toReplace = _isObject(key) ? key : _defineProperty$1({}, key, value);
       _fields = mapFields(_fields, function (field) {
@@ -4495,6 +4499,9 @@ var formHelper = function formHelper(_form2) {
       return _objectSpread2(_objectSpread2({}, _form), {}, {
         fields: _fields
       });
+    },
+    fields: function fields() {
+      return _fields;
     }
   };
   return obj;

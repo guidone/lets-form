@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.7.13-beta-10 - UMD */
+/* LetsForm Utils v0.7.13 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -4439,8 +4439,8 @@
   };
 
   var formHelper = function formHelper(_form2) {
-    var _form = _objectSpread2({}, _form2);
-    var _fields = _toConsumableArray(_form2.fields);
+    var _form = _form2 ? _objectSpread2({}, _form2) : {};
+    var _fields = _form2 !== null && _form2 !== void 0 && _form2.fields ? _toConsumableArray(_form2.fields) : [];
     var _skip = false;
     var makeHelper = function makeHelper(params) {
       return function (fieldName) {
@@ -4483,6 +4483,10 @@
         _skip = _skip2;
         return obj;
       },
+      append: function append(field) {
+        _fields = [].concat(_toConsumableArray(_fields), [field]);
+        return obj;
+      },
       setField: function setField(fieldName, key, value) {
         var toReplace = _isObject(key) ? key : _defineProperty$1({}, key, value);
         _fields = mapFields(_fields, function (field) {
@@ -4501,6 +4505,9 @@
         return _objectSpread2(_objectSpread2({}, _form), {}, {
           fields: _fields
         });
+      },
+      fields: function fields() {
+        return _fields;
       }
     };
     return obj;
