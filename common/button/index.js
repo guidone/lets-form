@@ -2,7 +2,8 @@ import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
 import classNames from 'classnames';
 
-import { passRest, makeWidthStyle } from '../../helpers';
+import { passRest } from '../../helpers/pass-rest';
+import { makeWidthStyle } from '../../helpers/make-width-style';
 
 const GenericButton = ({
   ButtonComponent,

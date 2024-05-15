@@ -23,6 +23,8 @@ const ButtonsToggleGroup = ({
 }) => {
   const [values, setValues] = useState(getInitialValue(value, multiple));
 
+  console.log('options', options)
+
   const handleClick = useCallback(
     (value, name) => {
       const newValues = multiple ? { ...values, [name]: value } : { [name]: value };
@@ -49,7 +51,7 @@ const ButtonsToggleGroup = ({
       className="lf-control-button-toggle-group-container"
       style={style}
     >
-      {(options ?? []).map(({ value, label}) => (
+      {(options ?? []).map(({ value, label, image }) => (
         <ButtonComponent
           key={value + values[value]}
           buttonType="toggle"
@@ -59,6 +61,7 @@ const ButtonsToggleGroup = ({
           labelOff={label}
           size={size}
           disabled={disabled}
+          icon={image}
           onChange={handleClick}
           className={classNames({
             'lf-full-width': fullWidth
