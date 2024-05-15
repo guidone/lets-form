@@ -1,5 +1,9 @@
 # LetsForm Changelog
 
+## v0.7.14
+- added append() and fields() to formHelper
+- ToggleButtons now accepts params fullWidth, justifyContent and buttons with image
+
 ## v0.7.13
 - removed webpack dependencies
 - CI/CD on gh

@@ -1,13 +1,14 @@
 import React from 'react';
-
 import _ from 'lodash';
 import Form from 'rsuite/Form';
 
 import { I18N, RequiredIcon } from '../../components';
-import { i18nOptions } from '../../helpers';
+import { i18nOptions, passRest } from '../../helpers';
 import Button from '../button';
-import { ButtonsToggleGroup } from '../../common';
+import { ButtonsToggleGroup } from '../../common/buttons-toggle-group';
 import { lfLog } from '../../helpers/lf-log';
+
+import './buttons-toggle-group.scss';
 
 const RSuiteButtonsToggleGroup = I18N(
   ({
@@ -21,10 +22,14 @@ const RSuiteButtonsToggleGroup = I18N(
     size,
     error,
     onChange,
-    options = []
+    options = [],
+    ...rest
   }) => {
     return (
-      <Form.Group data-lf-field-name={name} className="lf-control-button-toggle-group">
+      <Form.Group
+        data-lf-field-name={name}
+        className="lf-control-button-toggle-group"
+      >
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
@@ -40,7 +45,8 @@ const RSuiteButtonsToggleGroup = I18N(
           disabled={disabled}
           size={size}
           errorMessage={_.isString(error) ? error : undefined }
-        />              
+          {...passRest(rest)}
+        />
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>
     );
