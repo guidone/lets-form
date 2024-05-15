@@ -27,6 +27,7 @@ const GenericButton = ({
   buttonType,
   hint,
   initialValue,
+  className,
   ...rest
 }) => {
   const [checked, setChecked] = useState(value || initialValue);
@@ -75,7 +76,7 @@ const GenericButton = ({
 
   return (
     <div
-      className={classNames('lf-control-button', { [`lf-control-button-${size ?? ''}`]: true })}
+      className={classNames('lf-control-button', className, { [`lf-control-button-${size ?? ''}`]: true })}
       data-lf-field-name={name}>
       {inner}
     </div>
