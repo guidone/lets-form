@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
-import Form from 'rsuite/Form';
-import Checkbox from 'rsuite/Checkbox';
+import { Form, Checkbox } from 'rsuite';
 
 import { I18N } from '../../components';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';

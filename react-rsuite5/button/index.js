@@ -1,10 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import Button from 'rsuite/Button';
-import IconButton from 'rsuite/IconButton';
-import Whisper from 'rsuite/Whisper';
-import Tooltip from 'rsuite/Tooltip';
-import Form from 'rsuite/Form';
+import { Button, Form, IconButton, Whisper, Tooltip } from 'rsuite';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
@@ -22,13 +18,13 @@ const RSuiteButton = ({ label, icon, hint, tooltip, ...rest }) => {
         startIcon={<img className="lf-icon" src={icon} />}
         {...passRest(rest)}
       >{label}</Button>
-    ) 
+    )
   } else if (!_.isEmpty(label) && _.isEmpty(icon)) {
     inner = (
       <Button
         {...passRest(rest)}
       >{label}</Button>
-    ) 
+    )
   } else if (_.isEmpty(label) && !_.isEmpty(icon)) {
     inner = (
       <IconButton
@@ -53,7 +49,7 @@ const RSuiteButton = ({ label, icon, hint, tooltip, ...rest }) => {
         </Whisper>
       )}
       {(_.isEmpty(hint) || !tooltip) && inner}
-      {!_.isEmpty(hint) && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}    
+      {!_.isEmpty(hint) && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
     </>
   );
 };

@@ -1,8 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
-import Steps from 'rsuite/Steps';
-import ButtonGroup from 'rsuite/ButtonGroup';
-import Button from 'rsuite/Button';
+import { Steps, ButtonGroup, Button } from 'rsuite';
 
 import { passRest } from '../../helpers';
 import { I18N } from '../../components';
@@ -12,17 +10,17 @@ import { lfLog } from '../../helpers/lf-log';
 import './steps.scss';
 import classNames from 'classnames';
 
-const i18nSteps = (value, i18n) => 
-  (value ?? []).filter(value => value != null).map(value => ({ 
-    ...value, 
+const i18nSteps = (value, i18n) =>
+  (value ?? []).filter(value => value != null).map(value => ({
+    ...value,
     label: i18n(value.label),
-    description: i18n(value.description) 
+    description: i18n(value.description)
   }));
 
 const Rsuite5Steps = I18N(
-  ({ 
+  ({
     name,
-    children, 
+    children,
     value,
     steps,
     onChange = () => {},
@@ -31,7 +29,7 @@ const Rsuite5Steps = I18N(
     small,
     labelNext,
     labelPrevious,
-    ...rest 
+    ...rest
   }) => {
     let defaultStep = value;
     let defaultStepIdx = (steps || []).findIndex(obj => obj.value === value);
@@ -65,20 +63,20 @@ const Rsuite5Steps = I18N(
         className="lf-control-steps"
         data-lf-field-name={name}
       >
-        <Steps 
+        <Steps
           current={stepIdx}
           currentStatus={status}
           small={small}
           {...passRest(rest)}
         >
           {(steps || []).map(step => (
-            <Steps.Item 
+            <Steps.Item
               key={`step_${step.value}`}
               description={step.description || undefined}
               title={step.label}
-              icon={step.icon && <GenericIcon icon={step.icon} />} 
+              icon={step.icon && <GenericIcon icon={step.icon} />}
             />
-          ))}      
+          ))}
         </Steps>
         {_.isFunction(children) && (
           <div className="lf-step">
@@ -88,12 +86,12 @@ const Rsuite5Steps = I18N(
 
         <div className={classNames('lf-navigation-buttons', align)}>
           <ButtonGroup>
-            <Button 
-              onClick={handlePrevious} 
+            <Button
+              onClick={handlePrevious}
               disabled={_.isEmpty(steps) || stepIdx === 0}
             >{labelPrevious || 'Previous'}</Button>
-            <Button 
-              onClick={handleNext} 
+            <Button
+              onClick={handleNext}
               disabled={_.isEmpty(steps) || stepIdx === (steps.length - 1) }
             >{labelNext || 'Next'}</Button>
           </ButtonGroup>

@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
-import Form from 'rsuite/Form';
-import CheckPicker from 'rsuite/CheckPicker';
+import { Form, CheckPicker } from 'rsuite';
 
 import { RequiredIcon, I18N } from '../../components';
 import { LOCALES } from '../../common/data/locales';

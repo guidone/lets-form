@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
-import Form from 'rsuite/Form';
-import Slider from 'rsuite/Slider';
+import { Form, Slider } from 'rsuite';
 
 import { RequiredIcon, I18N } from '../../components';
 import { passRest } from '../../helpers';

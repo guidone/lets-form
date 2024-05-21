@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useCallback, useState } from 'react';
-import Form from 'rsuite/Form';
-import InputNumber from 'rsuite/InputNumber';
+import { Form, InputNumber } from 'rsuite';
 import _ from 'lodash';
 import classNames from 'classnames';
 

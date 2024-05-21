@@ -1,10 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { useState, useContext, useCallback } from 'react';
-import Form from 'rsuite/Form';
-import Input from 'rsuite/Input';
-import InputGroup from 'rsuite/InputGroup';
-import SelectPicker from 'rsuite/SelectPicker';
+import { Form, Input, InputGroup, SelectPicker } from 'rsuite';
 import _ from 'lodash';
 import classNames from 'classnames';
 

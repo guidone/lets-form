@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
-import Nav from 'rsuite/Nav';
+import { Nav } from 'rsuite';
 
 import { i18nOptions, passRest } from '../../helpers';
 import { I18N } from '../../components';
@@ -40,7 +40,7 @@ const Tabs = I18N(
         className="lf-control-tabs"
         data-lf-field-name={name}
       >
-        <Nav 
+        <Nav
           appearance={appearance}
           reversed={reversed}
           justified={justified}
@@ -50,7 +50,7 @@ const Tabs = I18N(
           {...passRest(rest)}
         >
           {(tabs || []).map(tab => (
-            <Nav.Item 
+            <Nav.Item
               key={tab.value}
               eventKey={tab.value}
             >{tab.label}</Nav.Item>

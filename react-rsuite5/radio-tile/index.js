@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useCallback } from 'react';
-import Form from 'rsuite/Form';
-import RadioTile from 'rsuite/RadioTile';
-import RadioTileGroup from 'rsuite/RadioTileGroup';
+import { Form, RadioTile, RadioTileGroup } from 'rsuite';
 
 import { I18N, RequiredIcon } from '../../components';
 import { lfLog } from '../../helpers/lf-log';
@@ -28,7 +26,7 @@ const RadioTileRSuite = I18N(
     initalOption,
     ...rest
   }) => {
-    const initialValue = value || initalOption; 
+    const initialValue = value || initalOption;
     const [currentValue, setCurrentValue] = useState(initialValue);
 
     const handleChange = useCallback(
@@ -51,16 +49,16 @@ const RadioTileRSuite = I18N(
             {required && <RequiredIcon />}
           </Form.ControlLabel>
         )}
-        <RadioTileGroup 
+        <RadioTileGroup
           value={currentValue}
           onChange={handleChange}
           inline={inline}
           disabled={disabled}
         >
           {(options || []).map(option => (
-            <RadioTile  
+            <RadioTile
               key={option.value}
-              label={option.label} 
+              label={option.label}
               value={option.value}
               icon={option.icon && <img src={option.icon} width={iconWidth} height={iconHeight}/>}
             >
@@ -74,12 +72,12 @@ const RadioTileRSuite = I18N(
   },
   ['label', 'hint'],
   {
-    options: (value, i18n) => 
+    options: (value, i18n) =>
       (value ?? []).filter(value => value != null)
-        .map(value => ({ 
-          ...value, 
+        .map(value => ({
+          ...value,
           label: i18n(value.label),
-          description: i18n(value.description) 
+          description: i18n(value.description)
         }))
   }
 );

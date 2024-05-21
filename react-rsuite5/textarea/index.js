@@ -1,6 +1,5 @@
 import React from 'react';
-import Form from 'rsuite/Form';
-import Input from 'rsuite/Input';
+import { Form, Input } from 'rsuite';
 import _ from 'lodash';
 import classNames from 'classnames';
 

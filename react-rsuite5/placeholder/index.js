@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from 'rsuite/Form';
+import { Form } from 'rsuite';
 
 import { RequiredIcon, I18N } from '../../components';
 import { Placeholder } from '../../common';

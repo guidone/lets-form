@@ -1,7 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import Form from 'rsuite/Form';
-import DatePicker from 'rsuite/DatePicker';
+import { Form, DatePicker } from 'rsuite';
 
 import { RequiredIcon } from '../../components';
 import { passRest } from '../../helpers';
@@ -33,7 +32,7 @@ const RSuiteGenericDate = ({
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
           {required && <RequiredIcon />}
         </Form.ControlLabel>
-      )}      
+      )}
       <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
         <DatePicker
           appearance={appearance ?? undefined}

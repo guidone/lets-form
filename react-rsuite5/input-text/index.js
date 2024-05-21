@@ -1,7 +1,5 @@
 import React, { useCallback } from 'react';
-import Form from 'rsuite/Form';
-import Input from 'rsuite/Input';
-import InputGroup from 'rsuite/InputGroup';
+import { Form, Input, InputGroup } from 'rsuite';
 import _ from 'lodash';
 import classNames from 'classnames';
 

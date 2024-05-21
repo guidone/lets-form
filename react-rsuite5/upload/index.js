@@ -1,8 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
-import Uploader from 'rsuite/Uploader';
-import Button from 'rsuite/Button';
-import Form from 'rsuite/Form';
+import { Uploader, Button, Form } from 'rsuite';
 
 import { lfLog } from '../../helpers/lf-log';
 import { RequiredIcon, I18N } from '../../components';

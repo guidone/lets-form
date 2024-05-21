@@ -1,7 +1,5 @@
 import React from 'react';
-import Form from 'rsuite/Form';
-import Radio from 'rsuite/Radio';
-import RadioGroup from 'rsuite/RadioGroup';
+import { Form, Radio, RadioGroup } from 'rsuite';
 
 import { I18N } from '../../components';
 import { i18nOptions, passRest } from '../../helpers';
@@ -27,7 +25,7 @@ const RadioGroupRSuite = I18N(
     ...rest
   }) => {
     return (
-      <Form.Group 
+      <Form.Group
         controlId={name}
         className="lf-control-radio-group"
         data-lf-field-name={name}
@@ -41,7 +39,7 @@ const RadioGroupRSuite = I18N(
           name={name}
           value={value}
           onChange={onChange}
-          appearance={appearance}          
+          appearance={appearance}
           {...passRest(rest)}
         >
           {(options ?? []).map(({ value, label}) => (

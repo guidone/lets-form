@@ -1,7 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import Form from 'rsuite/Form';
-import SelectPicker from 'rsuite/SelectPicker';
+import { Form, SelectPicker } from 'rsuite';
 
 import { passRest, filterOptions, i18nOptions } from '../../helpers';
 import { RequiredIcon, I18N } from '../../components';

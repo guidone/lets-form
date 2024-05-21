@@ -1,8 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import Form from 'rsuite/Form';
-import ButtonToolbar from 'rsuite/ButtonToolbar';
-import Button from 'rsuite/Button'
+import { Form, ButtonToolbar, Button } from 'rsuite';
 
 import { lfLog } from '../../helpers/lf-log';
 

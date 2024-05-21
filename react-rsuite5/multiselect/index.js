@@ -1,8 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import Form from 'rsuite/Form';
-import TagPicker from 'rsuite/TagPicker';
-import CheckPicker from 'rsuite/CheckPicker';
+import { Form, TagPicker, CheckPicker } from 'rsuite';
 
 import { RequiredIcon, I18N } from '../../components';
 import { i18nOptions, makeWidthStyle, passRest } from '../../helpers';

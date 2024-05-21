@@ -1,7 +1,5 @@
 import React from 'react';
-import Form from 'rsuite/Form';
-import Checkbox from 'rsuite/Checkbox';
-import CheckboxGroup from 'rsuite/CheckboxGroup';
+import { Form, Checkbox, CheckboxGroup } from 'rsuite';
 
 import { I18N } from '../../components';
 import { i18nOptions, passRest } from '../../helpers';

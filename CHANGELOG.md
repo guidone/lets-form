@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.7.15
+- RSuite treeshaking
+
 ## v0.7.14
 - added append() and fields() to formHelper
 - ToggleButtons now accepts params fullWidth, justifyContent and buttons with image

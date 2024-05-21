@@ -1,6 +1,5 @@
 import React from 'react';
-import Form from 'rsuite/Form';
-import Rate from 'rsuite/Rate';
+import { Form, Rate } from 'rsuite';
 import _ from 'lodash';
 
 import { RequiredIcon, I18N } from '../../components';

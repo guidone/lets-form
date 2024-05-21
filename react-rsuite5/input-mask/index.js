@@ -1,8 +1,6 @@
 /* eslint-disable no-template-curly-in-string */
 import React from 'react';
-import Form from 'rsuite/Form';
-import MaskedInput from 'rsuite/MaskedInput';
-import InputGroup from 'rsuite/InputGroup';
+import { Form, MaskedInput, InputGroup } from 'rsuite';
 import _ from 'lodash';
 
 import { RequiredIcon, I18N } from '../../components';
@@ -81,8 +79,8 @@ const InputMask = I18N(
     const needsGroup = postfix || prefix;
 
     return (
-      <Form.Group 
-        data-lf-field-name={name} 
+      <Form.Group
+        data-lf-field-name={name}
         className="lf-control-input-mask"
         style={makeWidthStyle(fullWidth, width)}
       >

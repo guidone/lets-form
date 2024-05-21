@@ -1,6 +1,5 @@
 import React from 'react';
-import Form from 'rsuite/Form';
-import TagInput from 'rsuite/TagInput';
+import { Form, TagInput } from 'rsuite';
 import _ from 'lodash';
 
 import { RequiredIcon, I18N } from '../../components';
