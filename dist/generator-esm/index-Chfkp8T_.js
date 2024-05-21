@@ -1,0 +1,32 @@
+/* LetsForm Generator v0.7.15 - ESM */
+import { I as I18N, l as lfLog, a as _objectWithoutProperties, b as _extends, m as makeWidthStyle, _ as _isString, p as passRest, i as i18nOptions } from './index-BlDYFeHM.js';
+import React__default from 'react';
+import { TagsInput } from '@mantine/core';
+
+var _excluded = ["name", "hint", "value", "error", "fullWidth", "width", "data"];
+var MantineTags = I18N(function (_ref) {
+  var name = _ref.name,
+    hint = _ref.hint,
+    value = _ref.value,
+    error = _ref.error,
+    fullWidth = _ref.fullWidth,
+    width = _ref.width,
+    data = _ref.data,
+    rest = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React__default.createElement(TagsInput, _extends({
+    className: "lf-control-input-tag",
+    "data-lf-field-name": name,
+    style: makeWidthStyle(fullWidth, width),
+    value: value,
+    name: name,
+    description: hint,
+    error: _isString(error) ? error : undefined,
+    inputWrapperOrder: ['label', 'input', 'description', 'error'],
+    data: (data || []).filter(function (option) {
+      return option.value && option.label;
+    })
+  }, passRest(rest)));
+}, ['label', 'hint', 'placeholder'], i18nOptions);
+lfLog('Loaded Mantine.InputTags');
+
+export { MantineTags as default };

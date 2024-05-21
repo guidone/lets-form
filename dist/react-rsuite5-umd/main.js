@@ -1,9 +1,9 @@
-/* LetsForm react-rsuite5 v0.7.13 - UMD */
+/* LetsForm react-rsuite5 v0.7.15 - UMD */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite/Form'), require('rsuite/Toggle'), require('rsuite/SelectPicker'), require('react-hook-form'), require('rsuite/InputNumber'), require('rsuite/Checkbox'), require('rsuite/CheckboxGroup'), require('rsuite/Slider'), require('rsuite/Radio'), require('rsuite/RadioGroup'), require('rsuite/TagInput'), require('rsuite/MaskedInput'), require('rsuite/InputGroup'), require('rsuite/Rate'), require('rsuite/TagPicker'), require('rsuite/CheckPicker'), require('rsuite/Input'), require('rsuite/DatePicker'), require('rsuite/Whisper'), require('rsuite/Popover'), require('rsuite/Nav'), require('rsuite/RadioTile'), require('rsuite/RadioTileGroup'), require('rsuite/Uploader'), require('rsuite/Button'), require('rsuite/IconButton'), require('rsuite/Tooltip'), require('rsuite/Steps'), require('rsuite/ButtonGroup'), require('rsuite/ButtonToolbar')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite/Form', 'rsuite/Toggle', 'rsuite/SelectPicker', 'react-hook-form', 'rsuite/InputNumber', 'rsuite/Checkbox', 'rsuite/CheckboxGroup', 'rsuite/Slider', 'rsuite/Radio', 'rsuite/RadioGroup', 'rsuite/TagInput', 'rsuite/MaskedInput', 'rsuite/InputGroup', 'rsuite/Rate', 'rsuite/TagPicker', 'rsuite/CheckPicker', 'rsuite/Input', 'rsuite/DatePicker', 'rsuite/Whisper', 'rsuite/Popover', 'rsuite/Nav', 'rsuite/RadioTile', 'rsuite/RadioTileGroup', 'rsuite/Uploader', 'rsuite/Button', 'rsuite/IconButton', 'rsuite/Tooltip', 'rsuite/Steps', 'rsuite/ButtonGroup', 'rsuite/ButtonToolbar'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-rsuite5"] = {}, global.React$1, global.Form, global.Toggle, global.SelectPicker, global.reactHookForm, global.InputNumber, global.Checkbox, global.CheckboxGroup, global.Slider, global.Radio, global.RadioGroup, global.TagInput, global.MaskedInput, global.InputGroup, global.Rate, global.TagPicker, global.CheckPicker, global.Input, global.DatePicker, global.Whisper, global.Popover, global.Nav, global.RadioTile, global.RadioTileGroup, global.Uploader, global.Button, global.IconButton$1, global.Tooltip, global.Steps, global.ButtonGroup, global.ButtonToolbar));
-})(this, (function (exports, React$1, Form, Toggle, SelectPicker, reactHookForm, InputNumber, Checkbox, CheckboxGroup, Slider, Radio, RadioGroup, TagInput, MaskedInput, InputGroup, Rate, TagPicker, CheckPicker, Input, DatePicker, Whisper, Popover, Nav, RadioTile, RadioTileGroup, Uploader, Button, IconButton$1, Tooltip, Steps, ButtonGroup, ButtonToolbar) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-rsuite5"] = {}, global.React$1, global.rsuite));
+})(this, (function (exports, React$1, rsuite) { 'use strict';
 
   function _AsyncGenerator(gen) {
     var front, back;
@@ -826,16 +826,16 @@
    * // => false
    */
 
-  function isObject$6(value) {
+  function isObject$7(value) {
     var type = typeof value;
     return value != null && (type == 'object' || type == 'function');
   }
-  var isObject_1 = isObject$6;
+  var isObject_1 = isObject$7;
 
   var _isObject = /*@__PURE__*/getDefaultExportFromCjs(isObject_1);
 
   var baseGetTag$9 = _baseGetTag,
-    isObject$5 = isObject_1;
+    isObject$6 = isObject_1;
 
   /** `Object#toString` result references. */
   var asyncTag = '[object AsyncFunction]',
@@ -860,8 +860,8 @@
    * _.isFunction(/abc/);
    * // => false
    */
-  function isFunction$2(value) {
-    if (!isObject$5(value)) {
+  function isFunction$3(value) {
+    if (!isObject$6(value)) {
       return false;
     }
     // The use of `Object#toString` avoids issues with the `typeof` operator
@@ -869,7 +869,7 @@
     var tag = baseGetTag$9(value);
     return tag == funcTag$2 || tag == genTag$1 || tag == asyncTag || tag == proxyTag;
   }
-  var isFunction_1 = isFunction$2;
+  var isFunction_1 = isFunction$3;
 
   var _isFunction = /*@__PURE__*/getDefaultExportFromCjs(isFunction_1);
 
@@ -926,9 +926,9 @@
   }
   var _toSource = toSource$2;
 
-  var isFunction$1 = isFunction_1,
+  var isFunction$2 = isFunction_1,
     isMasked = _isMasked,
-    isObject$4 = isObject_1,
+    isObject$5 = isObject_1,
     toSource$1 = _toSource;
 
   /**
@@ -962,10 +962,10 @@
    *  else `false`.
    */
   function baseIsNative$1(value) {
-    if (!isObject$4(value) || isMasked(value)) {
+    if (!isObject$5(value) || isMasked(value)) {
       return false;
     }
-    var pattern = isFunction$1(value) ? reIsNative : reIsHostCtor;
+    var pattern = isFunction$2(value) ? reIsNative : reIsHostCtor;
     return pattern.test(toSource$1(value));
   }
   var _baseIsNative = baseIsNative$1;
@@ -1026,8 +1026,8 @@
     root$2 = _root;
 
   /* Built-in method references that are verified to be native. */
-  var Set$2 = getNative$3(root$2, 'Set');
-  var _Set = Set$2;
+  var Set$3 = getNative$3(root$2, 'Set');
+  var _Set = Set$3;
 
   var getNative$2 = _getNative,
     root$1 = _root;
@@ -1039,7 +1039,7 @@
   var DataView = _DataView,
     Map$2 = _Map,
     Promise$1 = _Promise,
-    Set$1 = _Set,
+    Set$2 = _Set,
     WeakMap = _WeakMap,
     baseGetTag$8 = _baseGetTag,
     toSource = _toSource;
@@ -1056,7 +1056,7 @@
   var dataViewCtorString = toSource(DataView),
     mapCtorString = toSource(Map$2),
     promiseCtorString = toSource(Promise$1),
-    setCtorString = toSource(Set$1),
+    setCtorString = toSource(Set$2),
     weakMapCtorString = toSource(WeakMap);
 
   /**
@@ -1069,7 +1069,7 @@
   var getTag$4 = baseGetTag$8;
 
   // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
-  if (DataView && getTag$4(new DataView(new ArrayBuffer(1))) != dataViewTag$3 || Map$2 && getTag$4(new Map$2()) != mapTag$5 || Promise$1 && getTag$4(Promise$1.resolve()) != promiseTag || Set$1 && getTag$4(new Set$1()) != setTag$5 || WeakMap && getTag$4(new WeakMap()) != weakMapTag$2) {
+  if (DataView && getTag$4(new DataView(new ArrayBuffer(1))) != dataViewTag$3 || Map$2 && getTag$4(new Map$2()) != mapTag$5 || Promise$1 && getTag$4(Promise$1.resolve()) != promiseTag || Set$2 && getTag$4(new Set$2()) != setTag$5 || WeakMap && getTag$4(new WeakMap()) != weakMapTag$2) {
     getTag$4 = function (value) {
       var result = baseGetTag$8(value),
         Ctor = result == objectTag$3 ? value.constructor : undefined,
@@ -1242,7 +1242,7 @@
   }
   var isLength_1 = isLength$3;
 
-  var isFunction = isFunction_1,
+  var isFunction$1 = isFunction_1,
     isLength$2 = isLength_1;
 
   /**
@@ -1271,7 +1271,7 @@
    * // => false
    */
   function isArrayLike$3(value) {
-    return value != null && isLength$2(value.length) && !isFunction(value);
+    return value != null && isLength$2(value.length) && !isFunction$1(value);
   }
   var isArrayLike_1 = isArrayLike$3;
 
@@ -2267,7 +2267,7 @@
   }
   var _setToArray = setToArray$2;
 
-  var Set = _Set,
+  var Set$1 = _Set,
     noop = noop_1,
     setToArray$1 = _setToArray;
 
@@ -2281,8 +2281,8 @@
    * @param {Array} values The values to add to the set.
    * @returns {Object} Returns the new set.
    */
-  var createSet$1 = !(Set && 1 / setToArray$1(new Set([, -0]))[1] == INFINITY$2) ? noop : function (values) {
-    return new Set(values);
+  var createSet$1 = !(Set$1 && 1 / setToArray$1(new Set$1([, -0]))[1] == INFINITY$2) ? noop : function (values) {
+    return new Set$1(values);
   };
   var _createSet = createSet$1;
 
@@ -2930,7 +2930,7 @@
   }
   var _nativeKeysIn = nativeKeysIn$1;
 
-  var isObject$3 = isObject_1,
+  var isObject$4 = isObject_1,
     isPrototype$1 = _isPrototype,
     nativeKeysIn = _nativeKeysIn;
 
@@ -2948,7 +2948,7 @@
    * @returns {Array} Returns the array of property names.
    */
   function baseKeysIn$1(object) {
-    if (!isObject$3(object)) {
+    if (!isObject$4(object)) {
       return nativeKeysIn(object);
     }
     var isProto = isPrototype$1(object),
@@ -3479,7 +3479,7 @@
   }
   var _initCloneByTag = initCloneByTag$1;
 
-  var isObject$2 = isObject_1;
+  var isObject$3 = isObject_1;
 
   /** Built-in value references. */
   var objectCreate = Object.create;
@@ -3495,7 +3495,7 @@
   var baseCreate$1 = function () {
     function object() {}
     return function (proto) {
-      if (!isObject$2(proto)) {
+      if (!isObject$3(proto)) {
         return {};
       }
       if (objectCreate) {
@@ -3633,7 +3633,7 @@
     isArray$5 = isArray_1,
     isBuffer = isBufferExports,
     isMap = isMap_1,
-    isObject$1 = isObject_1,
+    isObject$2 = isObject_1,
     isSet = isSet_1,
     keys = keys_1,
     keysIn = keysIn_1;
@@ -3703,7 +3703,7 @@
     if (result !== undefined) {
       return result;
     }
-    if (!isObject$1(value)) {
+    if (!isObject$2(value)) {
       return value;
     }
     var isArr = isArray$5(value);
@@ -3775,7 +3775,7 @@
    * @param {Object} [object] The object to query keys on.
    * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
    */
-  function isKey$1(value, object) {
+  function isKey$2(value, object) {
     if (isArray$4(value)) {
       return false;
     }
@@ -3785,7 +3785,7 @@
     }
     return reIsPlainProp.test(value) || !reIsDeepProp.test(value) || object != null && value in Object(object);
   }
-  var _isKey = isKey$1;
+  var _isKey = isKey$2;
 
   var MapCache = _MapCache;
 
@@ -3899,7 +3899,7 @@
    * @param {string} string The string to convert.
    * @returns {Array} Returns the property path array.
    */
-  var stringToPath$1 = memoizeCapped(function (string) {
+  var stringToPath$2 = memoizeCapped(function (string) {
     var result = [];
     if (string.charCodeAt(0) === 46 /* . */) {
       result.push('');
@@ -3909,11 +3909,11 @@
     });
     return result;
   });
-  var _stringToPath = stringToPath$1;
+  var _stringToPath = stringToPath$2;
 
   var isArray$3 = isArray_1,
-    isKey = _isKey,
-    stringToPath = _stringToPath,
+    isKey$1 = _isKey,
+    stringToPath$1 = _stringToPath,
     toString$3 = toString_1;
 
   /**
@@ -3928,7 +3928,7 @@
     if (isArray$3(value)) {
       return value;
     }
-    return isKey(value, object) ? [value] : stringToPath(toString$3(value));
+    return isKey$1(value, object) ? [value] : stringToPath$1(toString$3(value));
   }
   var _castPath = castPath$6;
 
@@ -3985,7 +3985,7 @@
    * @param {Array|string} path The path of the property to get.
    * @returns {*} Returns the resolved value.
    */
-  function baseGet$2(object, path) {
+  function baseGet$3(object, path) {
     path = castPath$5(path, object);
     var index = 0,
       length = path.length;
@@ -3994,7 +3994,7 @@
     }
     return index && index == length ? object : undefined;
   }
-  var _baseGet = baseGet$2;
+  var _baseGet = baseGet$3;
 
   /**
    * The base implementation of `_.slice` without an iteratee call guard.
@@ -4026,7 +4026,7 @@
   }
   var _baseSlice = baseSlice$2;
 
-  var baseGet$1 = _baseGet,
+  var baseGet$2 = _baseGet,
     baseSlice$1 = _baseSlice;
 
   /**
@@ -4038,7 +4038,7 @@
    * @returns {*} Returns the parent value.
    */
   function parent$1(object, path) {
-    return path.length < 2 ? object : baseGet$1(object, baseSlice$1(path, 0, -1));
+    return path.length < 2 ? object : baseGet$2(object, baseSlice$1(path, 0, -1));
   }
   var _parent = parent$1;
 
@@ -4110,7 +4110,7 @@
    * _.isPlainObject(Object.create(null));
    * // => true
    */
-  function isPlainObject$1(value) {
+  function isPlainObject$2(value) {
     if (!isObjectLike$4(value) || baseGetTag$4(value) != objectTag) {
       return false;
     }
@@ -4121,9 +4121,9 @@
     var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
     return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
   }
-  var isPlainObject_1 = isPlainObject$1;
+  var isPlainObject_1 = isPlainObject$2;
 
-  var isPlainObject = isPlainObject_1;
+  var isPlainObject$1 = isPlainObject_1;
 
   /**
    * Used by `_.omit` to customize its `_.cloneDeep` use to only clone plain
@@ -4135,7 +4135,7 @@
    * @returns {*} Returns the uncloned value or `undefined` to defer cloning to `_.cloneDeep`.
    */
   function customOmitClone$1(value) {
-    return isPlainObject(value) ? undefined : value;
+    return isPlainObject$1(value) ? undefined : value;
   }
   var _customOmitClone = customOmitClone$1;
 
@@ -4474,6 +4474,2156 @@
   var omit_1 = omit;
 
   var _omit = /*@__PURE__*/getDefaultExportFromCjs(omit_1);
+
+  var isCheckBoxInput = (element) => element.type === 'checkbox';
+
+  var isDateObject = (value) => value instanceof Date;
+
+  var isNullOrUndefined = (value) => value == null;
+
+  const isObjectType = (value) => typeof value === 'object';
+  var isObject$1 = (value) => !isNullOrUndefined(value) &&
+      !Array.isArray(value) &&
+      isObjectType(value) &&
+      !isDateObject(value);
+
+  var getEventValue = (event) => isObject$1(event) && event.target
+      ? isCheckBoxInput(event.target)
+          ? event.target.checked
+          : event.target.value
+      : event;
+
+  var getNodeParentName = (name) => name.substring(0, name.search(/\.\d+(\.|$)/)) || name;
+
+  var isNameInFieldArray = (names, name) => names.has(getNodeParentName(name));
+
+  var isPlainObject = (tempObject) => {
+      const prototypeCopy = tempObject.constructor && tempObject.constructor.prototype;
+      return (isObject$1(prototypeCopy) && prototypeCopy.hasOwnProperty('isPrototypeOf'));
+  };
+
+  var isWeb = typeof window !== 'undefined' &&
+      typeof window.HTMLElement !== 'undefined' &&
+      typeof document !== 'undefined';
+
+  function cloneObject(data) {
+      let copy;
+      const isArray = Array.isArray(data);
+      if (data instanceof Date) {
+          copy = new Date(data);
+      }
+      else if (data instanceof Set) {
+          copy = new Set(data);
+      }
+      else if (!(isWeb && (data instanceof Blob || data instanceof FileList)) &&
+          (isArray || isObject$1(data))) {
+          copy = isArray ? [] : {};
+          if (!isArray && !isPlainObject(data)) {
+              copy = data;
+          }
+          else {
+              for (const key in data) {
+                  if (data.hasOwnProperty(key)) {
+                      copy[key] = cloneObject(data[key]);
+                  }
+              }
+          }
+      }
+      else {
+          return data;
+      }
+      return copy;
+  }
+
+  var compact = (value) => Array.isArray(value) ? value.filter(Boolean) : [];
+
+  var isUndefined = (val) => val === undefined;
+
+  var get = (object, path, defaultValue) => {
+      if (!path || !isObject$1(object)) {
+          return defaultValue;
+      }
+      const result = compact(path.split(/[,[\].]+?/)).reduce((result, key) => isNullOrUndefined(result) ? result : result[key], object);
+      return isUndefined(result) || result === object
+          ? isUndefined(object[path])
+              ? defaultValue
+              : object[path]
+          : result;
+  };
+
+  var isBoolean$1 = (value) => typeof value === 'boolean';
+
+  const EVENTS = {
+      BLUR: 'blur',
+      FOCUS_OUT: 'focusout',
+      CHANGE: 'change',
+  };
+  const VALIDATION_MODE = {
+      onBlur: 'onBlur',
+      onChange: 'onChange',
+      onSubmit: 'onSubmit',
+      onTouched: 'onTouched',
+      all: 'all',
+  };
+  const INPUT_VALIDATION_RULES = {
+      max: 'max',
+      min: 'min',
+      maxLength: 'maxLength',
+      minLength: 'minLength',
+      pattern: 'pattern',
+      required: 'required',
+      validate: 'validate',
+  };
+
+  const HookFormContext = React$1.createContext(null);
+  /**
+   * This custom hook allows you to access the form context. useFormContext is intended to be used in deeply nested structures, where it would become inconvenient to pass the context as a prop. To be used with {@link FormProvider}.
+   *
+   * @remarks
+   * [API](https://react-hook-form.com/docs/useformcontext) • [Demo](https://codesandbox.io/s/react-hook-form-v7-form-context-ytudi)
+   *
+   * @returns return all useForm methods
+   *
+   * @example
+   * ```tsx
+   * function App() {
+   *   const methods = useForm();
+   *   const onSubmit = data => console.log(data);
+   *
+   *   return (
+   *     <FormProvider {...methods} >
+   *       <form onSubmit={methods.handleSubmit(onSubmit)}>
+   *         <NestedInput />
+   *         <input type="submit" />
+   *       </form>
+   *     </FormProvider>
+   *   );
+   * }
+   *
+   *  function NestedInput() {
+   *   const { register } = useFormContext(); // retrieve all hook methods
+   *   return <input {...register("test")} />;
+   * }
+   * ```
+   */
+  const useFormContext$1 = () => React$1.useContext(HookFormContext);
+
+  var getProxyFormState = (formState, control, localProxyFormState, isRoot = true) => {
+      const result = {
+          defaultValues: control._defaultValues,
+      };
+      for (const key in formState) {
+          Object.defineProperty(result, key, {
+              get: () => {
+                  const _key = key;
+                  if (control._proxyFormState[_key] !== VALIDATION_MODE.all) {
+                      control._proxyFormState[_key] = !isRoot || VALIDATION_MODE.all;
+                  }
+                  localProxyFormState && (localProxyFormState[_key] = true);
+                  return formState[_key];
+              },
+          });
+      }
+      return result;
+  };
+
+  var isEmptyObject$1 = (value) => isObject$1(value) && !Object.keys(value).length;
+
+  var shouldRenderFormState = (formStateData, _proxyFormState, updateFormState, isRoot) => {
+      updateFormState(formStateData);
+      const { name, ...formState } = formStateData;
+      return (isEmptyObject$1(formState) ||
+          Object.keys(formState).length >= Object.keys(_proxyFormState).length ||
+          Object.keys(formState).find((key) => _proxyFormState[key] ===
+              (!isRoot || VALIDATION_MODE.all)));
+  };
+
+  var convertToArrayPayload = (value) => (Array.isArray(value) ? value : [value]);
+
+  var shouldSubscribeByName = (name, signalName, exact) => !name ||
+      !signalName ||
+      name === signalName ||
+      convertToArrayPayload(name).some((currentName) => currentName &&
+          (exact
+              ? currentName === signalName
+              : currentName.startsWith(signalName) ||
+                  signalName.startsWith(currentName)));
+
+  function useSubscribe(props) {
+      const _props = React$1.useRef(props);
+      _props.current = props;
+      React$1.useEffect(() => {
+          const subscription = !props.disabled &&
+              _props.current.subject &&
+              _props.current.subject.subscribe({
+                  next: _props.current.next,
+              });
+          return () => {
+              subscription && subscription.unsubscribe();
+          };
+      }, [props.disabled]);
+  }
+
+  /**
+   * This custom hook allows you to subscribe to each form state, and isolate the re-render at the custom hook level. It has its scope in terms of form state subscription, so it would not affect other useFormState and useForm. Using this hook can reduce the re-render impact on large and complex form application.
+   *
+   * @remarks
+   * [API](https://react-hook-form.com/docs/useformstate) • [Demo](https://codesandbox.io/s/useformstate-75xly)
+   *
+   * @param props - include options on specify fields to subscribe. {@link UseFormStateReturn}
+   *
+   * @example
+   * ```tsx
+   * function App() {
+   *   const { register, handleSubmit, control } = useForm({
+   *     defaultValues: {
+   *     firstName: "firstName"
+   *   }});
+   *   const { dirtyFields } = useFormState({
+   *     control
+   *   });
+   *   const onSubmit = (data) => console.log(data);
+   *
+   *   return (
+   *     <form onSubmit={handleSubmit(onSubmit)}>
+   *       <input {...register("firstName")} placeholder="First Name" />
+   *       {dirtyFields.firstName && <p>Field is dirty.</p>}
+   *       <input type="submit" />
+   *     </form>
+   *   );
+   * }
+   * ```
+   */
+  function useFormState(props) {
+      const methods = useFormContext$1();
+      const { control = methods.control, disabled, name, exact } = props || {};
+      const [formState, updateFormState] = React$1.useState(control._formState);
+      const _mounted = React$1.useRef(true);
+      const _localProxyFormState = React$1.useRef({
+          isDirty: false,
+          isLoading: false,
+          dirtyFields: false,
+          touchedFields: false,
+          validatingFields: false,
+          isValidating: false,
+          isValid: false,
+          errors: false,
+      });
+      const _name = React$1.useRef(name);
+      _name.current = name;
+      useSubscribe({
+          disabled,
+          next: (value) => _mounted.current &&
+              shouldSubscribeByName(_name.current, value.name, exact) &&
+              shouldRenderFormState(value, _localProxyFormState.current, control._updateFormState) &&
+              updateFormState({
+                  ...control._formState,
+                  ...value,
+              }),
+          subject: control._subjects.state,
+      });
+      React$1.useEffect(() => {
+          _mounted.current = true;
+          _localProxyFormState.current.isValid && control._updateValid(true);
+          return () => {
+              _mounted.current = false;
+          };
+      }, [control]);
+      return getProxyFormState(formState, control, _localProxyFormState.current, false);
+  }
+
+  var isString$1 = (value) => typeof value === 'string';
+
+  var generateWatchOutput = (names, _names, formValues, isGlobal, defaultValue) => {
+      if (isString$1(names)) {
+          isGlobal && _names.watch.add(names);
+          return get(formValues, names, defaultValue);
+      }
+      if (Array.isArray(names)) {
+          return names.map((fieldName) => (isGlobal && _names.watch.add(fieldName), get(formValues, fieldName)));
+      }
+      isGlobal && (_names.watchAll = true);
+      return formValues;
+  };
+
+  /**
+   * Custom hook to subscribe to field change and isolate re-rendering at the component level.
+   *
+   * @remarks
+   *
+   * [API](https://react-hook-form.com/docs/usewatch) • [Demo](https://codesandbox.io/s/react-hook-form-v7-ts-usewatch-h9i5e)
+   *
+   * @example
+   * ```tsx
+   * const { control } = useForm();
+   * const values = useWatch({
+   *   name: "fieldName"
+   *   control,
+   * })
+   * ```
+   */
+  function useWatch(props) {
+      const methods = useFormContext$1();
+      const { control = methods.control, name, defaultValue, disabled, exact, } = props || {};
+      const _name = React$1.useRef(name);
+      _name.current = name;
+      useSubscribe({
+          disabled,
+          subject: control._subjects.values,
+          next: (formState) => {
+              if (shouldSubscribeByName(_name.current, formState.name, exact)) {
+                  updateValue(cloneObject(generateWatchOutput(_name.current, control._names, formState.values || control._formValues, false, defaultValue)));
+              }
+          },
+      });
+      const [value, updateValue] = React$1.useState(control._getWatch(name, defaultValue));
+      React$1.useEffect(() => control._removeUnmounted());
+      return value;
+  }
+
+  var isKey = (value) => /^\w*$/.test(value);
+
+  var stringToPath = (input) => compact(input.replace(/["|']|\]/g, '').split(/\.|\[/));
+
+  var set = (object, path, value) => {
+      let index = -1;
+      const tempPath = isKey(path) ? [path] : stringToPath(path);
+      const length = tempPath.length;
+      const lastIndex = length - 1;
+      while (++index < length) {
+          const key = tempPath[index];
+          let newValue = value;
+          if (index !== lastIndex) {
+              const objValue = object[key];
+              newValue =
+                  isObject$1(objValue) || Array.isArray(objValue)
+                      ? objValue
+                      : !isNaN(+tempPath[index + 1])
+                          ? []
+                          : {};
+          }
+          object[key] = newValue;
+          object = object[key];
+      }
+      return object;
+  };
+
+  /**
+   * Custom hook to work with controlled component, this function provide you with both form and field level state. Re-render is isolated at the hook level.
+   *
+   * @remarks
+   * [API](https://react-hook-form.com/docs/usecontroller) • [Demo](https://codesandbox.io/s/usecontroller-0o8px)
+   *
+   * @param props - the path name to the form field value, and validation rules.
+   *
+   * @returns field properties, field and form state. {@link UseControllerReturn}
+   *
+   * @example
+   * ```tsx
+   * function Input(props) {
+   *   const { field, fieldState, formState } = useController(props);
+   *   return (
+   *     <div>
+   *       <input {...field} placeholder={props.name} />
+   *       <p>{fieldState.isTouched && "Touched"}</p>
+   *       <p>{formState.isSubmitted ? "submitted" : ""}</p>
+   *     </div>
+   *   );
+   * }
+   * ```
+   */
+  function useController(props) {
+      const methods = useFormContext$1();
+      const { name, disabled, control = methods.control, shouldUnregister } = props;
+      const isArrayField = isNameInFieldArray(control._names.array, name);
+      const value = useWatch({
+          control,
+          name,
+          defaultValue: get(control._formValues, name, get(control._defaultValues, name, props.defaultValue)),
+          exact: true,
+      });
+      const formState = useFormState({
+          control,
+          name,
+      });
+      const _registerProps = React$1.useRef(control.register(name, {
+          ...props.rules,
+          value,
+          ...(isBoolean$1(props.disabled) ? { disabled: props.disabled } : {}),
+      }));
+      React$1.useEffect(() => {
+          const _shouldUnregisterField = control._options.shouldUnregister || shouldUnregister;
+          const updateMounted = (name, value) => {
+              const field = get(control._fields, name);
+              if (field) {
+                  field._f.mount = value;
+              }
+          };
+          updateMounted(name, true);
+          if (_shouldUnregisterField) {
+              const value = cloneObject(get(control._options.defaultValues, name));
+              set(control._defaultValues, name, value);
+              if (isUndefined(get(control._formValues, name))) {
+                  set(control._formValues, name, value);
+              }
+          }
+          return () => {
+              (isArrayField
+                  ? _shouldUnregisterField && !control._state.action
+                  : _shouldUnregisterField)
+                  ? control.unregister(name)
+                  : updateMounted(name, false);
+          };
+      }, [name, control, isArrayField, shouldUnregister]);
+      React$1.useEffect(() => {
+          if (get(control._fields, name)) {
+              control._updateDisabledField({
+                  disabled,
+                  fields: control._fields,
+                  name,
+                  value: get(control._fields, name)._f.value,
+              });
+          }
+      }, [disabled, name, control]);
+      return {
+          field: {
+              name,
+              value,
+              ...(isBoolean$1(disabled) || formState.disabled
+                  ? { disabled: formState.disabled || disabled }
+                  : {}),
+              onChange: React$1.useCallback((event) => _registerProps.current.onChange({
+                  target: {
+                      value: getEventValue(event),
+                      name: name,
+                  },
+                  type: EVENTS.CHANGE,
+              }), [name]),
+              onBlur: React$1.useCallback(() => _registerProps.current.onBlur({
+                  target: {
+                      value: get(control._formValues, name),
+                      name: name,
+                  },
+                  type: EVENTS.BLUR,
+              }), [name, control]),
+              ref: (elm) => {
+                  const field = get(control._fields, name);
+                  if (field && elm) {
+                      field._f.ref = {
+                          focus: () => elm.focus(),
+                          select: () => elm.select(),
+                          setCustomValidity: (message) => elm.setCustomValidity(message),
+                          reportValidity: () => elm.reportValidity(),
+                      };
+                  }
+              },
+          },
+          formState,
+          fieldState: Object.defineProperties({}, {
+              invalid: {
+                  enumerable: true,
+                  get: () => !!get(formState.errors, name),
+              },
+              isDirty: {
+                  enumerable: true,
+                  get: () => !!get(formState.dirtyFields, name),
+              },
+              isTouched: {
+                  enumerable: true,
+                  get: () => !!get(formState.touchedFields, name),
+              },
+              isValidating: {
+                  enumerable: true,
+                  get: () => !!get(formState.validatingFields, name),
+              },
+              error: {
+                  enumerable: true,
+                  get: () => get(formState.errors, name),
+              },
+          }),
+      };
+  }
+
+  /**
+   * Component based on `useController` hook to work with controlled component.
+   *
+   * @remarks
+   * [API](https://react-hook-form.com/docs/usecontroller/controller) • [Demo](https://codesandbox.io/s/react-hook-form-v6-controller-ts-jwyzw) • [Video](https://www.youtube.com/watch?v=N2UNk_UCVyA)
+   *
+   * @param props - the path name to the form field value, and validation rules.
+   *
+   * @returns provide field handler functions, field and form state.
+   *
+   * @example
+   * ```tsx
+   * function App() {
+   *   const { control } = useForm<FormValues>({
+   *     defaultValues: {
+   *       test: ""
+   *     }
+   *   });
+   *
+   *   return (
+   *     <form>
+   *       <Controller
+   *         control={control}
+   *         name="test"
+   *         render={({ field: { onChange, onBlur, value, ref }, formState, fieldState }) => (
+   *           <>
+   *             <input
+   *               onChange={onChange} // send value to hook form
+   *               onBlur={onBlur} // notify when input is touched
+   *               value={value} // return updated value
+   *               ref={ref} // set ref for focus management
+   *             />
+   *             <p>{formState.isSubmitted ? "submitted" : ""}</p>
+   *             <p>{fieldState.isTouched ? "touched" : ""}</p>
+   *           </>
+   *         )}
+   *       />
+   *     </form>
+   *   );
+   * }
+   * ```
+   */
+  const Controller = (props) => props.render(useController(props));
+
+  var appendErrors = (name, validateAllFieldCriteria, errors, type, message) => validateAllFieldCriteria
+      ? {
+          ...errors[name],
+          types: {
+              ...(errors[name] && errors[name].types ? errors[name].types : {}),
+              [type]: message || true,
+          },
+      }
+      : {};
+
+  var getValidationModes = (mode) => ({
+      isOnSubmit: !mode || mode === VALIDATION_MODE.onSubmit,
+      isOnBlur: mode === VALIDATION_MODE.onBlur,
+      isOnChange: mode === VALIDATION_MODE.onChange,
+      isOnAll: mode === VALIDATION_MODE.all,
+      isOnTouch: mode === VALIDATION_MODE.onTouched,
+  });
+
+  var isWatched = (name, _names, isBlurEvent) => !isBlurEvent &&
+      (_names.watchAll ||
+          _names.watch.has(name) ||
+          [..._names.watch].some((watchName) => name.startsWith(watchName) &&
+              /^\.\w+/.test(name.slice(watchName.length))));
+
+  const iterateFieldsByAction = (fields, action, fieldsNames, abortEarly) => {
+      for (const key of fieldsNames || Object.keys(fields)) {
+          const field = get(fields, key);
+          if (field) {
+              const { _f, ...currentField } = field;
+              if (_f) {
+                  if (_f.refs && _f.refs[0] && action(_f.refs[0], key) && !abortEarly) {
+                      break;
+                  }
+                  else if (_f.ref && action(_f.ref, _f.name) && !abortEarly) {
+                      break;
+                  }
+                  else {
+                      iterateFieldsByAction(currentField, action);
+                  }
+              }
+              else if (isObject$1(currentField)) {
+                  iterateFieldsByAction(currentField, action);
+              }
+          }
+      }
+  };
+
+  var updateFieldArrayRootError = (errors, error, name) => {
+      const fieldArrayErrors = compact(get(errors, name));
+      set(fieldArrayErrors, 'root', error[name]);
+      set(errors, name, fieldArrayErrors);
+      return errors;
+  };
+
+  var isFileInput = (element) => element.type === 'file';
+
+  var isFunction = (value) => typeof value === 'function';
+
+  var isHTMLElement = (value) => {
+      if (!isWeb) {
+          return false;
+      }
+      const owner = value ? value.ownerDocument : 0;
+      return (value instanceof
+          (owner && owner.defaultView ? owner.defaultView.HTMLElement : HTMLElement));
+  };
+
+  var isMessage = (value) => isString$1(value);
+
+  var isRadioInput = (element) => element.type === 'radio';
+
+  var isRegex = (value) => value instanceof RegExp;
+
+  const defaultResult = {
+      value: false,
+      isValid: false,
+  };
+  const validResult = { value: true, isValid: true };
+  var getCheckboxValue = (options) => {
+      if (Array.isArray(options)) {
+          if (options.length > 1) {
+              const values = options
+                  .filter((option) => option && option.checked && !option.disabled)
+                  .map((option) => option.value);
+              return { value: values, isValid: !!values.length };
+          }
+          return options[0].checked && !options[0].disabled
+              ? // @ts-expect-error expected to work in the browser
+                  options[0].attributes && !isUndefined(options[0].attributes.value)
+                      ? isUndefined(options[0].value) || options[0].value === ''
+                          ? validResult
+                          : { value: options[0].value, isValid: true }
+                      : validResult
+              : defaultResult;
+      }
+      return defaultResult;
+  };
+
+  const defaultReturn = {
+      isValid: false,
+      value: null,
+  };
+  var getRadioValue = (options) => Array.isArray(options)
+      ? options.reduce((previous, option) => option && option.checked && !option.disabled
+          ? {
+              isValid: true,
+              value: option.value,
+          }
+          : previous, defaultReturn)
+      : defaultReturn;
+
+  function getValidateError(result, ref, type = 'validate') {
+      if (isMessage(result) ||
+          (Array.isArray(result) && result.every(isMessage)) ||
+          (isBoolean$1(result) && !result)) {
+          return {
+              type,
+              message: isMessage(result) ? result : '',
+              ref,
+          };
+      }
+  }
+
+  var getValueAndMessage = (validationData) => isObject$1(validationData) && !isRegex(validationData)
+      ? validationData
+      : {
+          value: validationData,
+          message: '',
+      };
+
+  var validateField = async (field, formValues, validateAllFieldCriteria, shouldUseNativeValidation, isFieldArray) => {
+      const { ref, refs, required, maxLength, minLength, min, max, pattern, validate, name, valueAsNumber, mount, disabled, } = field._f;
+      const inputValue = get(formValues, name);
+      if (!mount || disabled) {
+          return {};
+      }
+      const inputRef = refs ? refs[0] : ref;
+      const setCustomValidity = (message) => {
+          if (shouldUseNativeValidation && inputRef.reportValidity) {
+              inputRef.setCustomValidity(isBoolean$1(message) ? '' : message || '');
+              inputRef.reportValidity();
+          }
+      };
+      const error = {};
+      const isRadio = isRadioInput(ref);
+      const isCheckBox = isCheckBoxInput(ref);
+      const isRadioOrCheckbox = isRadio || isCheckBox;
+      const isEmpty = ((valueAsNumber || isFileInput(ref)) &&
+          isUndefined(ref.value) &&
+          isUndefined(inputValue)) ||
+          (isHTMLElement(ref) && ref.value === '') ||
+          inputValue === '' ||
+          (Array.isArray(inputValue) && !inputValue.length);
+      const appendErrorsCurry = appendErrors.bind(null, name, validateAllFieldCriteria, error);
+      const getMinMaxMessage = (exceedMax, maxLengthMessage, minLengthMessage, maxType = INPUT_VALIDATION_RULES.maxLength, minType = INPUT_VALIDATION_RULES.minLength) => {
+          const message = exceedMax ? maxLengthMessage : minLengthMessage;
+          error[name] = {
+              type: exceedMax ? maxType : minType,
+              message,
+              ref,
+              ...appendErrorsCurry(exceedMax ? maxType : minType, message),
+          };
+      };
+      if (isFieldArray
+          ? !Array.isArray(inputValue) || !inputValue.length
+          : required &&
+              ((!isRadioOrCheckbox && (isEmpty || isNullOrUndefined(inputValue))) ||
+                  (isBoolean$1(inputValue) && !inputValue) ||
+                  (isCheckBox && !getCheckboxValue(refs).isValid) ||
+                  (isRadio && !getRadioValue(refs).isValid))) {
+          const { value, message } = isMessage(required)
+              ? { value: !!required, message: required }
+              : getValueAndMessage(required);
+          if (value) {
+              error[name] = {
+                  type: INPUT_VALIDATION_RULES.required,
+                  message,
+                  ref: inputRef,
+                  ...appendErrorsCurry(INPUT_VALIDATION_RULES.required, message),
+              };
+              if (!validateAllFieldCriteria) {
+                  setCustomValidity(message);
+                  return error;
+              }
+          }
+      }
+      if (!isEmpty && (!isNullOrUndefined(min) || !isNullOrUndefined(max))) {
+          let exceedMax;
+          let exceedMin;
+          const maxOutput = getValueAndMessage(max);
+          const minOutput = getValueAndMessage(min);
+          if (!isNullOrUndefined(inputValue) && !isNaN(inputValue)) {
+              const valueNumber = ref.valueAsNumber ||
+                  (inputValue ? +inputValue : inputValue);
+              if (!isNullOrUndefined(maxOutput.value)) {
+                  exceedMax = valueNumber > maxOutput.value;
+              }
+              if (!isNullOrUndefined(minOutput.value)) {
+                  exceedMin = valueNumber < minOutput.value;
+              }
+          }
+          else {
+              const valueDate = ref.valueAsDate || new Date(inputValue);
+              const convertTimeToDate = (time) => new Date(new Date().toDateString() + ' ' + time);
+              const isTime = ref.type == 'time';
+              const isWeek = ref.type == 'week';
+              if (isString$1(maxOutput.value) && inputValue) {
+                  exceedMax = isTime
+                      ? convertTimeToDate(inputValue) > convertTimeToDate(maxOutput.value)
+                      : isWeek
+                          ? inputValue > maxOutput.value
+                          : valueDate > new Date(maxOutput.value);
+              }
+              if (isString$1(minOutput.value) && inputValue) {
+                  exceedMin = isTime
+                      ? convertTimeToDate(inputValue) < convertTimeToDate(minOutput.value)
+                      : isWeek
+                          ? inputValue < minOutput.value
+                          : valueDate < new Date(minOutput.value);
+              }
+          }
+          if (exceedMax || exceedMin) {
+              getMinMaxMessage(!!exceedMax, maxOutput.message, minOutput.message, INPUT_VALIDATION_RULES.max, INPUT_VALIDATION_RULES.min);
+              if (!validateAllFieldCriteria) {
+                  setCustomValidity(error[name].message);
+                  return error;
+              }
+          }
+      }
+      if ((maxLength || minLength) &&
+          !isEmpty &&
+          (isString$1(inputValue) || (isFieldArray && Array.isArray(inputValue)))) {
+          const maxLengthOutput = getValueAndMessage(maxLength);
+          const minLengthOutput = getValueAndMessage(minLength);
+          const exceedMax = !isNullOrUndefined(maxLengthOutput.value) &&
+              inputValue.length > +maxLengthOutput.value;
+          const exceedMin = !isNullOrUndefined(minLengthOutput.value) &&
+              inputValue.length < +minLengthOutput.value;
+          if (exceedMax || exceedMin) {
+              getMinMaxMessage(exceedMax, maxLengthOutput.message, minLengthOutput.message);
+              if (!validateAllFieldCriteria) {
+                  setCustomValidity(error[name].message);
+                  return error;
+              }
+          }
+      }
+      if (pattern && !isEmpty && isString$1(inputValue)) {
+          const { value: patternValue, message } = getValueAndMessage(pattern);
+          if (isRegex(patternValue) && !inputValue.match(patternValue)) {
+              error[name] = {
+                  type: INPUT_VALIDATION_RULES.pattern,
+                  message,
+                  ref,
+                  ...appendErrorsCurry(INPUT_VALIDATION_RULES.pattern, message),
+              };
+              if (!validateAllFieldCriteria) {
+                  setCustomValidity(message);
+                  return error;
+              }
+          }
+      }
+      if (validate) {
+          if (isFunction(validate)) {
+              const result = await validate(inputValue, formValues);
+              const validateError = getValidateError(result, inputRef);
+              if (validateError) {
+                  error[name] = {
+                      ...validateError,
+                      ...appendErrorsCurry(INPUT_VALIDATION_RULES.validate, validateError.message),
+                  };
+                  if (!validateAllFieldCriteria) {
+                      setCustomValidity(validateError.message);
+                      return error;
+                  }
+              }
+          }
+          else if (isObject$1(validate)) {
+              let validationResult = {};
+              for (const key in validate) {
+                  if (!isEmptyObject$1(validationResult) && !validateAllFieldCriteria) {
+                      break;
+                  }
+                  const validateError = getValidateError(await validate[key](inputValue, formValues), inputRef, key);
+                  if (validateError) {
+                      validationResult = {
+                          ...validateError,
+                          ...appendErrorsCurry(key, validateError.message),
+                      };
+                      setCustomValidity(validateError.message);
+                      if (validateAllFieldCriteria) {
+                          error[name] = validationResult;
+                      }
+                  }
+              }
+              if (!isEmptyObject$1(validationResult)) {
+                  error[name] = {
+                      ref: inputRef,
+                      ...validationResult,
+                  };
+                  if (!validateAllFieldCriteria) {
+                      return error;
+                  }
+              }
+          }
+      }
+      setCustomValidity(true);
+      return error;
+  };
+
+  function baseGet$1(object, updatePath) {
+      const length = updatePath.slice(0, -1).length;
+      let index = 0;
+      while (index < length) {
+          object = isUndefined(object) ? index++ : object[updatePath[index++]];
+      }
+      return object;
+  }
+  function isEmptyArray(obj) {
+      for (const key in obj) {
+          if (obj.hasOwnProperty(key) && !isUndefined(obj[key])) {
+              return false;
+          }
+      }
+      return true;
+  }
+  function unset(object, path) {
+      const paths = Array.isArray(path)
+          ? path
+          : isKey(path)
+              ? [path]
+              : stringToPath(path);
+      const childObject = paths.length === 1 ? object : baseGet$1(object, paths);
+      const index = paths.length - 1;
+      const key = paths[index];
+      if (childObject) {
+          delete childObject[key];
+      }
+      if (index !== 0 &&
+          ((isObject$1(childObject) && isEmptyObject$1(childObject)) ||
+              (Array.isArray(childObject) && isEmptyArray(childObject)))) {
+          unset(object, paths.slice(0, -1));
+      }
+      return object;
+  }
+
+  var createSubject = () => {
+      let _observers = [];
+      const next = (value) => {
+          for (const observer of _observers) {
+              observer.next && observer.next(value);
+          }
+      };
+      const subscribe = (observer) => {
+          _observers.push(observer);
+          return {
+              unsubscribe: () => {
+                  _observers = _observers.filter((o) => o !== observer);
+              },
+          };
+      };
+      const unsubscribe = () => {
+          _observers = [];
+      };
+      return {
+          get observers() {
+              return _observers;
+          },
+          next,
+          subscribe,
+          unsubscribe,
+      };
+  };
+
+  var isPrimitive = (value) => isNullOrUndefined(value) || !isObjectType(value);
+
+  function deepEqual(object1, object2) {
+      if (isPrimitive(object1) || isPrimitive(object2)) {
+          return object1 === object2;
+      }
+      if (isDateObject(object1) && isDateObject(object2)) {
+          return object1.getTime() === object2.getTime();
+      }
+      const keys1 = Object.keys(object1);
+      const keys2 = Object.keys(object2);
+      if (keys1.length !== keys2.length) {
+          return false;
+      }
+      for (const key of keys1) {
+          const val1 = object1[key];
+          if (!keys2.includes(key)) {
+              return false;
+          }
+          if (key !== 'ref') {
+              const val2 = object2[key];
+              if ((isDateObject(val1) && isDateObject(val2)) ||
+                  (isObject$1(val1) && isObject$1(val2)) ||
+                  (Array.isArray(val1) && Array.isArray(val2))
+                  ? !deepEqual(val1, val2)
+                  : val1 !== val2) {
+                  return false;
+              }
+          }
+      }
+      return true;
+  }
+
+  var isMultipleSelect = (element) => element.type === `select-multiple`;
+
+  var isRadioOrCheckbox = (ref) => isRadioInput(ref) || isCheckBoxInput(ref);
+
+  var live = (ref) => isHTMLElement(ref) && ref.isConnected;
+
+  var objectHasFunction = (data) => {
+      for (const key in data) {
+          if (isFunction(data[key])) {
+              return true;
+          }
+      }
+      return false;
+  };
+
+  function markFieldsDirty(data, fields = {}) {
+      const isParentNodeArray = Array.isArray(data);
+      if (isObject$1(data) || isParentNodeArray) {
+          for (const key in data) {
+              if (Array.isArray(data[key]) ||
+                  (isObject$1(data[key]) && !objectHasFunction(data[key]))) {
+                  fields[key] = Array.isArray(data[key]) ? [] : {};
+                  markFieldsDirty(data[key], fields[key]);
+              }
+              else if (!isNullOrUndefined(data[key])) {
+                  fields[key] = true;
+              }
+          }
+      }
+      return fields;
+  }
+  function getDirtyFieldsFromDefaultValues(data, formValues, dirtyFieldsFromValues) {
+      const isParentNodeArray = Array.isArray(data);
+      if (isObject$1(data) || isParentNodeArray) {
+          for (const key in data) {
+              if (Array.isArray(data[key]) ||
+                  (isObject$1(data[key]) && !objectHasFunction(data[key]))) {
+                  if (isUndefined(formValues) ||
+                      isPrimitive(dirtyFieldsFromValues[key])) {
+                      dirtyFieldsFromValues[key] = Array.isArray(data[key])
+                          ? markFieldsDirty(data[key], [])
+                          : { ...markFieldsDirty(data[key]) };
+                  }
+                  else {
+                      getDirtyFieldsFromDefaultValues(data[key], isNullOrUndefined(formValues) ? {} : formValues[key], dirtyFieldsFromValues[key]);
+                  }
+              }
+              else {
+                  dirtyFieldsFromValues[key] = !deepEqual(data[key], formValues[key]);
+              }
+          }
+      }
+      return dirtyFieldsFromValues;
+  }
+  var getDirtyFields = (defaultValues, formValues) => getDirtyFieldsFromDefaultValues(defaultValues, formValues, markFieldsDirty(formValues));
+
+  var getFieldValueAs = (value, { valueAsNumber, valueAsDate, setValueAs }) => isUndefined(value)
+      ? value
+      : valueAsNumber
+          ? value === ''
+              ? NaN
+              : value
+                  ? +value
+                  : value
+          : valueAsDate && isString$1(value)
+              ? new Date(value)
+              : setValueAs
+                  ? setValueAs(value)
+                  : value;
+
+  function getFieldValue(_f) {
+      const ref = _f.ref;
+      if (_f.refs ? _f.refs.every((ref) => ref.disabled) : ref.disabled) {
+          return;
+      }
+      if (isFileInput(ref)) {
+          return ref.files;
+      }
+      if (isRadioInput(ref)) {
+          return getRadioValue(_f.refs).value;
+      }
+      if (isMultipleSelect(ref)) {
+          return [...ref.selectedOptions].map(({ value }) => value);
+      }
+      if (isCheckBoxInput(ref)) {
+          return getCheckboxValue(_f.refs).value;
+      }
+      return getFieldValueAs(isUndefined(ref.value) ? _f.ref.value : ref.value, _f);
+  }
+
+  var getResolverOptions = (fieldsNames, _fields, criteriaMode, shouldUseNativeValidation) => {
+      const fields = {};
+      for (const name of fieldsNames) {
+          const field = get(_fields, name);
+          field && set(fields, name, field._f);
+      }
+      return {
+          criteriaMode,
+          names: [...fieldsNames],
+          fields,
+          shouldUseNativeValidation,
+      };
+  };
+
+  var getRuleValue = (rule) => isUndefined(rule)
+      ? rule
+      : isRegex(rule)
+          ? rule.source
+          : isObject$1(rule)
+              ? isRegex(rule.value)
+                  ? rule.value.source
+                  : rule.value
+              : rule;
+
+  var hasValidation = (options) => options.mount &&
+      (options.required ||
+          options.min ||
+          options.max ||
+          options.maxLength ||
+          options.minLength ||
+          options.pattern ||
+          options.validate);
+
+  function schemaErrorLookup(errors, _fields, name) {
+      const error = get(errors, name);
+      if (error || isKey(name)) {
+          return {
+              error,
+              name,
+          };
+      }
+      const names = name.split('.');
+      while (names.length) {
+          const fieldName = names.join('.');
+          const field = get(_fields, fieldName);
+          const foundError = get(errors, fieldName);
+          if (field && !Array.isArray(field) && name !== fieldName) {
+              return { name };
+          }
+          if (foundError && foundError.type) {
+              return {
+                  name: fieldName,
+                  error: foundError,
+              };
+          }
+          names.pop();
+      }
+      return {
+          name,
+      };
+  }
+
+  var skipValidation = (isBlurEvent, isTouched, isSubmitted, reValidateMode, mode) => {
+      if (mode.isOnAll) {
+          return false;
+      }
+      else if (!isSubmitted && mode.isOnTouch) {
+          return !(isTouched || isBlurEvent);
+      }
+      else if (isSubmitted ? reValidateMode.isOnBlur : mode.isOnBlur) {
+          return !isBlurEvent;
+      }
+      else if (isSubmitted ? reValidateMode.isOnChange : mode.isOnChange) {
+          return isBlurEvent;
+      }
+      return true;
+  };
+
+  var unsetEmptyArray = (ref, name) => !compact(get(ref, name)).length && unset(ref, name);
+
+  const defaultOptions = {
+      mode: VALIDATION_MODE.onSubmit,
+      reValidateMode: VALIDATION_MODE.onChange,
+      shouldFocusError: true,
+  };
+  function createFormControl(props = {}) {
+      let _options = {
+          ...defaultOptions,
+          ...props,
+      };
+      let _formState = {
+          submitCount: 0,
+          isDirty: false,
+          isLoading: isFunction(_options.defaultValues),
+          isValidating: false,
+          isSubmitted: false,
+          isSubmitting: false,
+          isSubmitSuccessful: false,
+          isValid: false,
+          touchedFields: {},
+          dirtyFields: {},
+          validatingFields: {},
+          errors: _options.errors || {},
+          disabled: _options.disabled || false,
+      };
+      let _fields = {};
+      let _defaultValues = isObject$1(_options.defaultValues) || isObject$1(_options.values)
+          ? cloneObject(_options.defaultValues || _options.values) || {}
+          : {};
+      let _formValues = _options.shouldUnregister
+          ? {}
+          : cloneObject(_defaultValues);
+      let _state = {
+          action: false,
+          mount: false,
+          watch: false,
+      };
+      let _names = {
+          mount: new Set(),
+          unMount: new Set(),
+          array: new Set(),
+          watch: new Set(),
+      };
+      let delayErrorCallback;
+      let timer = 0;
+      const _proxyFormState = {
+          isDirty: false,
+          dirtyFields: false,
+          validatingFields: false,
+          touchedFields: false,
+          isValidating: false,
+          isValid: false,
+          errors: false,
+      };
+      const _subjects = {
+          values: createSubject(),
+          array: createSubject(),
+          state: createSubject(),
+      };
+      const validationModeBeforeSubmit = getValidationModes(_options.mode);
+      const validationModeAfterSubmit = getValidationModes(_options.reValidateMode);
+      const shouldDisplayAllAssociatedErrors = _options.criteriaMode === VALIDATION_MODE.all;
+      const debounce = (callback) => (wait) => {
+          clearTimeout(timer);
+          timer = setTimeout(callback, wait);
+      };
+      const _updateValid = async (shouldUpdateValid) => {
+          if (_proxyFormState.isValid || shouldUpdateValid) {
+              const isValid = _options.resolver
+                  ? isEmptyObject$1((await _executeSchema()).errors)
+                  : await executeBuiltInValidation(_fields, true);
+              if (isValid !== _formState.isValid) {
+                  _subjects.state.next({
+                      isValid,
+                  });
+              }
+          }
+      };
+      const _updateIsValidating = (names, isValidating) => {
+          if (_proxyFormState.isValidating || _proxyFormState.validatingFields) {
+              (names || Array.from(_names.mount)).forEach((name) => name && set(_formState.validatingFields, name, !!isValidating));
+              _formState.isValidating = Object.values(_formState.validatingFields).some((val) => val);
+              _subjects.state.next({
+                  validatingFields: _formState.validatingFields,
+                  isValidating: _formState.isValidating,
+              });
+          }
+      };
+      const _updateFieldArray = (name, values = [], method, args, shouldSetValues = true, shouldUpdateFieldsAndState = true) => {
+          if (args && method) {
+              _state.action = true;
+              if (shouldUpdateFieldsAndState && Array.isArray(get(_fields, name))) {
+                  const fieldValues = method(get(_fields, name), args.argA, args.argB);
+                  shouldSetValues && set(_fields, name, fieldValues);
+              }
+              if (shouldUpdateFieldsAndState &&
+                  Array.isArray(get(_formState.errors, name))) {
+                  const errors = method(get(_formState.errors, name), args.argA, args.argB);
+                  shouldSetValues && set(_formState.errors, name, errors);
+                  unsetEmptyArray(_formState.errors, name);
+              }
+              if (_proxyFormState.touchedFields &&
+                  shouldUpdateFieldsAndState &&
+                  Array.isArray(get(_formState.touchedFields, name))) {
+                  const touchedFields = method(get(_formState.touchedFields, name), args.argA, args.argB);
+                  shouldSetValues && set(_formState.touchedFields, name, touchedFields);
+              }
+              if (_proxyFormState.dirtyFields) {
+                  _formState.dirtyFields = getDirtyFields(_defaultValues, _formValues);
+              }
+              _subjects.state.next({
+                  name,
+                  isDirty: _getDirty(name, values),
+                  dirtyFields: _formState.dirtyFields,
+                  errors: _formState.errors,
+                  isValid: _formState.isValid,
+              });
+          }
+          else {
+              set(_formValues, name, values);
+          }
+      };
+      const updateErrors = (name, error) => {
+          set(_formState.errors, name, error);
+          _subjects.state.next({
+              errors: _formState.errors,
+          });
+      };
+      const _setErrors = (errors) => {
+          _formState.errors = errors;
+          _subjects.state.next({
+              errors: _formState.errors,
+              isValid: false,
+          });
+      };
+      const updateValidAndValue = (name, shouldSkipSetValueAs, value, ref) => {
+          const field = get(_fields, name);
+          if (field) {
+              const defaultValue = get(_formValues, name, isUndefined(value) ? get(_defaultValues, name) : value);
+              isUndefined(defaultValue) ||
+                  (ref && ref.defaultChecked) ||
+                  shouldSkipSetValueAs
+                  ? set(_formValues, name, shouldSkipSetValueAs ? defaultValue : getFieldValue(field._f))
+                  : setFieldValue(name, defaultValue);
+              _state.mount && _updateValid();
+          }
+      };
+      const updateTouchAndDirty = (name, fieldValue, isBlurEvent, shouldDirty, shouldRender) => {
+          let shouldUpdateField = false;
+          let isPreviousDirty = false;
+          const output = {
+              name,
+          };
+          const disabledField = !!(get(_fields, name) && get(_fields, name)._f.disabled);
+          if (!isBlurEvent || shouldDirty) {
+              if (_proxyFormState.isDirty) {
+                  isPreviousDirty = _formState.isDirty;
+                  _formState.isDirty = output.isDirty = _getDirty();
+                  shouldUpdateField = isPreviousDirty !== output.isDirty;
+              }
+              const isCurrentFieldPristine = disabledField || deepEqual(get(_defaultValues, name), fieldValue);
+              isPreviousDirty = !!(!disabledField && get(_formState.dirtyFields, name));
+              isCurrentFieldPristine || disabledField
+                  ? unset(_formState.dirtyFields, name)
+                  : set(_formState.dirtyFields, name, true);
+              output.dirtyFields = _formState.dirtyFields;
+              shouldUpdateField =
+                  shouldUpdateField ||
+                      (_proxyFormState.dirtyFields &&
+                          isPreviousDirty !== !isCurrentFieldPristine);
+          }
+          if (isBlurEvent) {
+              const isPreviousFieldTouched = get(_formState.touchedFields, name);
+              if (!isPreviousFieldTouched) {
+                  set(_formState.touchedFields, name, isBlurEvent);
+                  output.touchedFields = _formState.touchedFields;
+                  shouldUpdateField =
+                      shouldUpdateField ||
+                          (_proxyFormState.touchedFields &&
+                              isPreviousFieldTouched !== isBlurEvent);
+              }
+          }
+          shouldUpdateField && shouldRender && _subjects.state.next(output);
+          return shouldUpdateField ? output : {};
+      };
+      const shouldRenderByError = (name, isValid, error, fieldState) => {
+          const previousFieldError = get(_formState.errors, name);
+          const shouldUpdateValid = _proxyFormState.isValid &&
+              isBoolean$1(isValid) &&
+              _formState.isValid !== isValid;
+          if (props.delayError && error) {
+              delayErrorCallback = debounce(() => updateErrors(name, error));
+              delayErrorCallback(props.delayError);
+          }
+          else {
+              clearTimeout(timer);
+              delayErrorCallback = null;
+              error
+                  ? set(_formState.errors, name, error)
+                  : unset(_formState.errors, name);
+          }
+          if ((error ? !deepEqual(previousFieldError, error) : previousFieldError) ||
+              !isEmptyObject$1(fieldState) ||
+              shouldUpdateValid) {
+              const updatedFormState = {
+                  ...fieldState,
+                  ...(shouldUpdateValid && isBoolean$1(isValid) ? { isValid } : {}),
+                  errors: _formState.errors,
+                  name,
+              };
+              _formState = {
+                  ..._formState,
+                  ...updatedFormState,
+              };
+              _subjects.state.next(updatedFormState);
+          }
+      };
+      const _executeSchema = async (name) => {
+          _updateIsValidating(name, true);
+          const result = await _options.resolver(_formValues, _options.context, getResolverOptions(name || _names.mount, _fields, _options.criteriaMode, _options.shouldUseNativeValidation));
+          _updateIsValidating(name);
+          return result;
+      };
+      const executeSchemaAndUpdateState = async (names) => {
+          const { errors } = await _executeSchema(names);
+          if (names) {
+              for (const name of names) {
+                  const error = get(errors, name);
+                  error
+                      ? set(_formState.errors, name, error)
+                      : unset(_formState.errors, name);
+              }
+          }
+          else {
+              _formState.errors = errors;
+          }
+          return errors;
+      };
+      const executeBuiltInValidation = async (fields, shouldOnlyCheckValid, context = {
+          valid: true,
+      }) => {
+          for (const name in fields) {
+              const field = fields[name];
+              if (field) {
+                  const { _f, ...fieldValue } = field;
+                  if (_f) {
+                      const isFieldArrayRoot = _names.array.has(_f.name);
+                      _updateIsValidating([name], true);
+                      const fieldError = await validateField(field, _formValues, shouldDisplayAllAssociatedErrors, _options.shouldUseNativeValidation && !shouldOnlyCheckValid, isFieldArrayRoot);
+                      _updateIsValidating([name]);
+                      if (fieldError[_f.name]) {
+                          context.valid = false;
+                          if (shouldOnlyCheckValid) {
+                              break;
+                          }
+                      }
+                      !shouldOnlyCheckValid &&
+                          (get(fieldError, _f.name)
+                              ? isFieldArrayRoot
+                                  ? updateFieldArrayRootError(_formState.errors, fieldError, _f.name)
+                                  : set(_formState.errors, _f.name, fieldError[_f.name])
+                              : unset(_formState.errors, _f.name));
+                  }
+                  fieldValue &&
+                      (await executeBuiltInValidation(fieldValue, shouldOnlyCheckValid, context));
+              }
+          }
+          return context.valid;
+      };
+      const _removeUnmounted = () => {
+          for (const name of _names.unMount) {
+              const field = get(_fields, name);
+              field &&
+                  (field._f.refs
+                      ? field._f.refs.every((ref) => !live(ref))
+                      : !live(field._f.ref)) &&
+                  unregister(name);
+          }
+          _names.unMount = new Set();
+      };
+      const _getDirty = (name, data) => (name && data && set(_formValues, name, data),
+          !deepEqual(getValues(), _defaultValues));
+      const _getWatch = (names, defaultValue, isGlobal) => generateWatchOutput(names, _names, {
+          ...(_state.mount
+              ? _formValues
+              : isUndefined(defaultValue)
+                  ? _defaultValues
+                  : isString$1(names)
+                      ? { [names]: defaultValue }
+                      : defaultValue),
+      }, isGlobal, defaultValue);
+      const _getFieldArray = (name) => compact(get(_state.mount ? _formValues : _defaultValues, name, props.shouldUnregister ? get(_defaultValues, name, []) : []));
+      const setFieldValue = (name, value, options = {}) => {
+          const field = get(_fields, name);
+          let fieldValue = value;
+          if (field) {
+              const fieldReference = field._f;
+              if (fieldReference) {
+                  !fieldReference.disabled &&
+                      set(_formValues, name, getFieldValueAs(value, fieldReference));
+                  fieldValue =
+                      isHTMLElement(fieldReference.ref) && isNullOrUndefined(value)
+                          ? ''
+                          : value;
+                  if (isMultipleSelect(fieldReference.ref)) {
+                      [...fieldReference.ref.options].forEach((optionRef) => (optionRef.selected = fieldValue.includes(optionRef.value)));
+                  }
+                  else if (fieldReference.refs) {
+                      if (isCheckBoxInput(fieldReference.ref)) {
+                          fieldReference.refs.length > 1
+                              ? fieldReference.refs.forEach((checkboxRef) => (!checkboxRef.defaultChecked || !checkboxRef.disabled) &&
+                                  (checkboxRef.checked = Array.isArray(fieldValue)
+                                      ? !!fieldValue.find((data) => data === checkboxRef.value)
+                                      : fieldValue === checkboxRef.value))
+                              : fieldReference.refs[0] &&
+                                  (fieldReference.refs[0].checked = !!fieldValue);
+                      }
+                      else {
+                          fieldReference.refs.forEach((radioRef) => (radioRef.checked = radioRef.value === fieldValue));
+                      }
+                  }
+                  else if (isFileInput(fieldReference.ref)) {
+                      fieldReference.ref.value = '';
+                  }
+                  else {
+                      fieldReference.ref.value = fieldValue;
+                      if (!fieldReference.ref.type) {
+                          _subjects.values.next({
+                              name,
+                              values: { ..._formValues },
+                          });
+                      }
+                  }
+              }
+          }
+          (options.shouldDirty || options.shouldTouch) &&
+              updateTouchAndDirty(name, fieldValue, options.shouldTouch, options.shouldDirty, true);
+          options.shouldValidate && trigger(name);
+      };
+      const setValues = (name, value, options) => {
+          for (const fieldKey in value) {
+              const fieldValue = value[fieldKey];
+              const fieldName = `${name}.${fieldKey}`;
+              const field = get(_fields, fieldName);
+              (_names.array.has(name) ||
+                  !isPrimitive(fieldValue) ||
+                  (field && !field._f)) &&
+                  !isDateObject(fieldValue)
+                  ? setValues(fieldName, fieldValue, options)
+                  : setFieldValue(fieldName, fieldValue, options);
+          }
+      };
+      const setValue = (name, value, options = {}) => {
+          const field = get(_fields, name);
+          const isFieldArray = _names.array.has(name);
+          const cloneValue = cloneObject(value);
+          set(_formValues, name, cloneValue);
+          if (isFieldArray) {
+              _subjects.array.next({
+                  name,
+                  values: { ..._formValues },
+              });
+              if ((_proxyFormState.isDirty || _proxyFormState.dirtyFields) &&
+                  options.shouldDirty) {
+                  _subjects.state.next({
+                      name,
+                      dirtyFields: getDirtyFields(_defaultValues, _formValues),
+                      isDirty: _getDirty(name, cloneValue),
+                  });
+              }
+          }
+          else {
+              field && !field._f && !isNullOrUndefined(cloneValue)
+                  ? setValues(name, cloneValue, options)
+                  : setFieldValue(name, cloneValue, options);
+          }
+          isWatched(name, _names) && _subjects.state.next({ ..._formState });
+          _subjects.values.next({
+              name: _state.mount ? name : undefined,
+              values: { ..._formValues },
+          });
+      };
+      const onChange = async (event) => {
+          const target = event.target;
+          let name = target.name;
+          let isFieldValueUpdated = true;
+          const field = get(_fields, name);
+          const getCurrentFieldValue = () => target.type ? getFieldValue(field._f) : getEventValue(event);
+          const _updateIsFieldValueUpdated = (fieldValue) => {
+              isFieldValueUpdated =
+                  Number.isNaN(fieldValue) ||
+                      fieldValue === get(_formValues, name, fieldValue);
+          };
+          if (field) {
+              let error;
+              let isValid;
+              const fieldValue = getCurrentFieldValue();
+              const isBlurEvent = event.type === EVENTS.BLUR || event.type === EVENTS.FOCUS_OUT;
+              const shouldSkipValidation = (!hasValidation(field._f) &&
+                  !_options.resolver &&
+                  !get(_formState.errors, name) &&
+                  !field._f.deps) ||
+                  skipValidation(isBlurEvent, get(_formState.touchedFields, name), _formState.isSubmitted, validationModeAfterSubmit, validationModeBeforeSubmit);
+              const watched = isWatched(name, _names, isBlurEvent);
+              set(_formValues, name, fieldValue);
+              if (isBlurEvent) {
+                  field._f.onBlur && field._f.onBlur(event);
+                  delayErrorCallback && delayErrorCallback(0);
+              }
+              else if (field._f.onChange) {
+                  field._f.onChange(event);
+              }
+              const fieldState = updateTouchAndDirty(name, fieldValue, isBlurEvent, false);
+              const shouldRender = !isEmptyObject$1(fieldState) || watched;
+              !isBlurEvent &&
+                  _subjects.values.next({
+                      name,
+                      type: event.type,
+                      values: { ..._formValues },
+                  });
+              if (shouldSkipValidation) {
+                  _proxyFormState.isValid && _updateValid();
+                  return (shouldRender &&
+                      _subjects.state.next({ name, ...(watched ? {} : fieldState) }));
+              }
+              !isBlurEvent && watched && _subjects.state.next({ ..._formState });
+              if (_options.resolver) {
+                  const { errors } = await _executeSchema([name]);
+                  _updateIsFieldValueUpdated(fieldValue);
+                  if (isFieldValueUpdated) {
+                      const previousErrorLookupResult = schemaErrorLookup(_formState.errors, _fields, name);
+                      const errorLookupResult = schemaErrorLookup(errors, _fields, previousErrorLookupResult.name || name);
+                      error = errorLookupResult.error;
+                      name = errorLookupResult.name;
+                      isValid = isEmptyObject$1(errors);
+                  }
+              }
+              else {
+                  _updateIsValidating([name], true);
+                  error = (await validateField(field, _formValues, shouldDisplayAllAssociatedErrors, _options.shouldUseNativeValidation))[name];
+                  _updateIsValidating([name]);
+                  _updateIsFieldValueUpdated(fieldValue);
+                  if (isFieldValueUpdated) {
+                      if (error) {
+                          isValid = false;
+                      }
+                      else if (_proxyFormState.isValid) {
+                          isValid = await executeBuiltInValidation(_fields, true);
+                      }
+                  }
+              }
+              if (isFieldValueUpdated) {
+                  field._f.deps &&
+                      trigger(field._f.deps);
+                  shouldRenderByError(name, isValid, error, fieldState);
+              }
+          }
+      };
+      const _focusInput = (ref, key) => {
+          if (get(_formState.errors, key) && ref.focus) {
+              ref.focus();
+              return 1;
+          }
+          return;
+      };
+      const trigger = async (name, options = {}) => {
+          let isValid;
+          let validationResult;
+          const fieldNames = convertToArrayPayload(name);
+          if (_options.resolver) {
+              const errors = await executeSchemaAndUpdateState(isUndefined(name) ? name : fieldNames);
+              isValid = isEmptyObject$1(errors);
+              validationResult = name
+                  ? !fieldNames.some((name) => get(errors, name))
+                  : isValid;
+          }
+          else if (name) {
+              validationResult = (await Promise.all(fieldNames.map(async (fieldName) => {
+                  const field = get(_fields, fieldName);
+                  return await executeBuiltInValidation(field && field._f ? { [fieldName]: field } : field);
+              }))).every(Boolean);
+              !(!validationResult && !_formState.isValid) && _updateValid();
+          }
+          else {
+              validationResult = isValid = await executeBuiltInValidation(_fields);
+          }
+          _subjects.state.next({
+              ...(!isString$1(name) ||
+                  (_proxyFormState.isValid && isValid !== _formState.isValid)
+                  ? {}
+                  : { name }),
+              ...(_options.resolver || !name ? { isValid } : {}),
+              errors: _formState.errors,
+          });
+          options.shouldFocus &&
+              !validationResult &&
+              iterateFieldsByAction(_fields, _focusInput, name ? fieldNames : _names.mount);
+          return validationResult;
+      };
+      const getValues = (fieldNames) => {
+          const values = {
+              ..._defaultValues,
+              ...(_state.mount ? _formValues : {}),
+          };
+          return isUndefined(fieldNames)
+              ? values
+              : isString$1(fieldNames)
+                  ? get(values, fieldNames)
+                  : fieldNames.map((name) => get(values, name));
+      };
+      const getFieldState = (name, formState) => ({
+          invalid: !!get((formState || _formState).errors, name),
+          isDirty: !!get((formState || _formState).dirtyFields, name),
+          isTouched: !!get((formState || _formState).touchedFields, name),
+          isValidating: !!get((formState || _formState).validatingFields, name),
+          error: get((formState || _formState).errors, name),
+      });
+      const clearErrors = (name) => {
+          name &&
+              convertToArrayPayload(name).forEach((inputName) => unset(_formState.errors, inputName));
+          _subjects.state.next({
+              errors: name ? _formState.errors : {},
+          });
+      };
+      const setError = (name, error, options) => {
+          const ref = (get(_fields, name, { _f: {} })._f || {}).ref;
+          set(_formState.errors, name, {
+              ...error,
+              ref,
+          });
+          _subjects.state.next({
+              name,
+              errors: _formState.errors,
+              isValid: false,
+          });
+          options && options.shouldFocus && ref && ref.focus && ref.focus();
+      };
+      const watch = (name, defaultValue) => isFunction(name)
+          ? _subjects.values.subscribe({
+              next: (payload) => name(_getWatch(undefined, defaultValue), payload),
+          })
+          : _getWatch(name, defaultValue, true);
+      const unregister = (name, options = {}) => {
+          for (const fieldName of name ? convertToArrayPayload(name) : _names.mount) {
+              _names.mount.delete(fieldName);
+              _names.array.delete(fieldName);
+              if (!options.keepValue) {
+                  unset(_fields, fieldName);
+                  unset(_formValues, fieldName);
+              }
+              !options.keepError && unset(_formState.errors, fieldName);
+              !options.keepDirty && unset(_formState.dirtyFields, fieldName);
+              !options.keepTouched && unset(_formState.touchedFields, fieldName);
+              !options.keepIsValidating &&
+                  unset(_formState.validatingFields, fieldName);
+              !_options.shouldUnregister &&
+                  !options.keepDefaultValue &&
+                  unset(_defaultValues, fieldName);
+          }
+          _subjects.values.next({
+              values: { ..._formValues },
+          });
+          _subjects.state.next({
+              ..._formState,
+              ...(!options.keepDirty ? {} : { isDirty: _getDirty() }),
+          });
+          !options.keepIsValid && _updateValid();
+      };
+      const _updateDisabledField = ({ disabled, name, field, fields, value, }) => {
+          if (isBoolean$1(disabled)) {
+              const inputValue = disabled
+                  ? undefined
+                  : isUndefined(value)
+                      ? getFieldValue(field ? field._f : get(fields, name)._f)
+                      : value;
+              set(_formValues, name, inputValue);
+              updateTouchAndDirty(name, inputValue, false, false, true);
+          }
+      };
+      const register = (name, options = {}) => {
+          let field = get(_fields, name);
+          const disabledIsDefined = isBoolean$1(options.disabled);
+          set(_fields, name, {
+              ...(field || {}),
+              _f: {
+                  ...(field && field._f ? field._f : { ref: { name } }),
+                  name,
+                  mount: true,
+                  ...options,
+              },
+          });
+          _names.mount.add(name);
+          if (field) {
+              _updateDisabledField({
+                  field,
+                  disabled: options.disabled,
+                  name,
+                  value: options.value,
+              });
+          }
+          else {
+              updateValidAndValue(name, true, options.value);
+          }
+          return {
+              ...(disabledIsDefined ? { disabled: options.disabled } : {}),
+              ...(_options.progressive
+                  ? {
+                      required: !!options.required,
+                      min: getRuleValue(options.min),
+                      max: getRuleValue(options.max),
+                      minLength: getRuleValue(options.minLength),
+                      maxLength: getRuleValue(options.maxLength),
+                      pattern: getRuleValue(options.pattern),
+                  }
+                  : {}),
+              name,
+              onChange,
+              onBlur: onChange,
+              ref: (ref) => {
+                  if (ref) {
+                      register(name, options);
+                      field = get(_fields, name);
+                      const fieldRef = isUndefined(ref.value)
+                          ? ref.querySelectorAll
+                              ? ref.querySelectorAll('input,select,textarea')[0] || ref
+                              : ref
+                          : ref;
+                      const radioOrCheckbox = isRadioOrCheckbox(fieldRef);
+                      const refs = field._f.refs || [];
+                      if (radioOrCheckbox
+                          ? refs.find((option) => option === fieldRef)
+                          : fieldRef === field._f.ref) {
+                          return;
+                      }
+                      set(_fields, name, {
+                          _f: {
+                              ...field._f,
+                              ...(radioOrCheckbox
+                                  ? {
+                                      refs: [
+                                          ...refs.filter(live),
+                                          fieldRef,
+                                          ...(Array.isArray(get(_defaultValues, name)) ? [{}] : []),
+                                      ],
+                                      ref: { type: fieldRef.type, name },
+                                  }
+                                  : { ref: fieldRef }),
+                          },
+                      });
+                      updateValidAndValue(name, false, undefined, fieldRef);
+                  }
+                  else {
+                      field = get(_fields, name, {});
+                      if (field._f) {
+                          field._f.mount = false;
+                      }
+                      (_options.shouldUnregister || options.shouldUnregister) &&
+                          !(isNameInFieldArray(_names.array, name) && _state.action) &&
+                          _names.unMount.add(name);
+                  }
+              },
+          };
+      };
+      const _focusError = () => _options.shouldFocusError &&
+          iterateFieldsByAction(_fields, _focusInput, _names.mount);
+      const _disableForm = (disabled) => {
+          if (isBoolean$1(disabled)) {
+              _subjects.state.next({ disabled });
+              iterateFieldsByAction(_fields, (ref, name) => {
+                  let requiredDisabledState = disabled;
+                  const currentField = get(_fields, name);
+                  if (currentField && isBoolean$1(currentField._f.disabled)) {
+                      requiredDisabledState || (requiredDisabledState = currentField._f.disabled);
+                  }
+                  ref.disabled = requiredDisabledState;
+              }, 0, false);
+          }
+      };
+      const handleSubmit = (onValid, onInvalid) => async (e) => {
+          let onValidError = undefined;
+          if (e) {
+              e.preventDefault && e.preventDefault();
+              e.persist && e.persist();
+          }
+          let fieldValues = cloneObject(_formValues);
+          _subjects.state.next({
+              isSubmitting: true,
+          });
+          if (_options.resolver) {
+              const { errors, values } = await _executeSchema();
+              _formState.errors = errors;
+              fieldValues = values;
+          }
+          else {
+              await executeBuiltInValidation(_fields);
+          }
+          unset(_formState.errors, 'root');
+          if (isEmptyObject$1(_formState.errors)) {
+              _subjects.state.next({
+                  errors: {},
+              });
+              try {
+                  await onValid(fieldValues, e);
+              }
+              catch (error) {
+                  onValidError = error;
+              }
+          }
+          else {
+              if (onInvalid) {
+                  await onInvalid({ ..._formState.errors }, e);
+              }
+              _focusError();
+              setTimeout(_focusError);
+          }
+          _subjects.state.next({
+              isSubmitted: true,
+              isSubmitting: false,
+              isSubmitSuccessful: isEmptyObject$1(_formState.errors) && !onValidError,
+              submitCount: _formState.submitCount + 1,
+              errors: _formState.errors,
+          });
+          if (onValidError) {
+              throw onValidError;
+          }
+      };
+      const resetField = (name, options = {}) => {
+          if (get(_fields, name)) {
+              if (isUndefined(options.defaultValue)) {
+                  setValue(name, cloneObject(get(_defaultValues, name)));
+              }
+              else {
+                  setValue(name, options.defaultValue);
+                  set(_defaultValues, name, cloneObject(options.defaultValue));
+              }
+              if (!options.keepTouched) {
+                  unset(_formState.touchedFields, name);
+              }
+              if (!options.keepDirty) {
+                  unset(_formState.dirtyFields, name);
+                  _formState.isDirty = options.defaultValue
+                      ? _getDirty(name, cloneObject(get(_defaultValues, name)))
+                      : _getDirty();
+              }
+              if (!options.keepError) {
+                  unset(_formState.errors, name);
+                  _proxyFormState.isValid && _updateValid();
+              }
+              _subjects.state.next({ ..._formState });
+          }
+      };
+      const _reset = (formValues, keepStateOptions = {}) => {
+          const updatedValues = formValues ? cloneObject(formValues) : _defaultValues;
+          const cloneUpdatedValues = cloneObject(updatedValues);
+          const isEmptyResetValues = isEmptyObject$1(formValues);
+          const values = isEmptyResetValues ? _defaultValues : cloneUpdatedValues;
+          if (!keepStateOptions.keepDefaultValues) {
+              _defaultValues = updatedValues;
+          }
+          if (!keepStateOptions.keepValues) {
+              if (keepStateOptions.keepDirtyValues) {
+                  for (const fieldName of _names.mount) {
+                      get(_formState.dirtyFields, fieldName)
+                          ? set(values, fieldName, get(_formValues, fieldName))
+                          : setValue(fieldName, get(values, fieldName));
+                  }
+              }
+              else {
+                  if (isWeb && isUndefined(formValues)) {
+                      for (const name of _names.mount) {
+                          const field = get(_fields, name);
+                          if (field && field._f) {
+                              const fieldReference = Array.isArray(field._f.refs)
+                                  ? field._f.refs[0]
+                                  : field._f.ref;
+                              if (isHTMLElement(fieldReference)) {
+                                  const form = fieldReference.closest('form');
+                                  if (form) {
+                                      form.reset();
+                                      break;
+                                  }
+                              }
+                          }
+                      }
+                  }
+                  _fields = {};
+              }
+              _formValues = props.shouldUnregister
+                  ? keepStateOptions.keepDefaultValues
+                      ? cloneObject(_defaultValues)
+                      : {}
+                  : cloneObject(values);
+              _subjects.array.next({
+                  values: { ...values },
+              });
+              _subjects.values.next({
+                  values: { ...values },
+              });
+          }
+          _names = {
+              mount: keepStateOptions.keepDirtyValues ? _names.mount : new Set(),
+              unMount: new Set(),
+              array: new Set(),
+              watch: new Set(),
+              watchAll: false,
+              focus: '',
+          };
+          _state.mount =
+              !_proxyFormState.isValid ||
+                  !!keepStateOptions.keepIsValid ||
+                  !!keepStateOptions.keepDirtyValues;
+          _state.watch = !!props.shouldUnregister;
+          _subjects.state.next({
+              submitCount: keepStateOptions.keepSubmitCount
+                  ? _formState.submitCount
+                  : 0,
+              isDirty: isEmptyResetValues
+                  ? false
+                  : keepStateOptions.keepDirty
+                      ? _formState.isDirty
+                      : !!(keepStateOptions.keepDefaultValues &&
+                          !deepEqual(formValues, _defaultValues)),
+              isSubmitted: keepStateOptions.keepIsSubmitted
+                  ? _formState.isSubmitted
+                  : false,
+              dirtyFields: isEmptyResetValues
+                  ? []
+                  : keepStateOptions.keepDirtyValues
+                      ? keepStateOptions.keepDefaultValues && _formValues
+                          ? getDirtyFields(_defaultValues, _formValues)
+                          : _formState.dirtyFields
+                      : keepStateOptions.keepDefaultValues && formValues
+                          ? getDirtyFields(_defaultValues, formValues)
+                          : {},
+              touchedFields: keepStateOptions.keepTouched
+                  ? _formState.touchedFields
+                  : {},
+              errors: keepStateOptions.keepErrors ? _formState.errors : {},
+              isSubmitSuccessful: keepStateOptions.keepIsSubmitSuccessful
+                  ? _formState.isSubmitSuccessful
+                  : false,
+              isSubmitting: false,
+          });
+      };
+      const reset = (formValues, keepStateOptions) => _reset(isFunction(formValues)
+          ? formValues(_formValues)
+          : formValues, keepStateOptions);
+      const setFocus = (name, options = {}) => {
+          const field = get(_fields, name);
+          const fieldReference = field && field._f;
+          if (fieldReference) {
+              const fieldRef = fieldReference.refs
+                  ? fieldReference.refs[0]
+                  : fieldReference.ref;
+              if (fieldRef.focus) {
+                  fieldRef.focus();
+                  options.shouldSelect && fieldRef.select();
+              }
+          }
+      };
+      const _updateFormState = (updatedFormState) => {
+          _formState = {
+              ..._formState,
+              ...updatedFormState,
+          };
+      };
+      const _resetDefaultValues = () => isFunction(_options.defaultValues) &&
+          _options.defaultValues().then((values) => {
+              reset(values, _options.resetOptions);
+              _subjects.state.next({
+                  isLoading: false,
+              });
+          });
+      return {
+          control: {
+              register,
+              unregister,
+              getFieldState,
+              handleSubmit,
+              setError,
+              _executeSchema,
+              _getWatch,
+              _getDirty,
+              _updateValid,
+              _removeUnmounted,
+              _updateFieldArray,
+              _updateDisabledField,
+              _getFieldArray,
+              _reset,
+              _resetDefaultValues,
+              _updateFormState,
+              _disableForm,
+              _subjects,
+              _proxyFormState,
+              _setErrors,
+              get _fields() {
+                  return _fields;
+              },
+              get _formValues() {
+                  return _formValues;
+              },
+              get _state() {
+                  return _state;
+              },
+              set _state(value) {
+                  _state = value;
+              },
+              get _defaultValues() {
+                  return _defaultValues;
+              },
+              get _names() {
+                  return _names;
+              },
+              set _names(value) {
+                  _names = value;
+              },
+              get _formState() {
+                  return _formState;
+              },
+              set _formState(value) {
+                  _formState = value;
+              },
+              get _options() {
+                  return _options;
+              },
+              set _options(value) {
+                  _options = {
+                      ..._options,
+                      ...value,
+                  };
+              },
+          },
+          trigger,
+          register,
+          handleSubmit,
+          watch,
+          setValue,
+          getValues,
+          reset,
+          resetField,
+          clearErrors,
+          unregister,
+          setError,
+          setFocus,
+          getFieldState,
+      };
+  }
+
+  /**
+   * Custom hook to manage the entire form.
+   *
+   * @remarks
+   * [API](https://react-hook-form.com/docs/useform) • [Demo](https://codesandbox.io/s/react-hook-form-get-started-ts-5ksmm) • [Video](https://www.youtube.com/watch?v=RkXv4AXXC_4)
+   *
+   * @param props - form configuration and validation parameters.
+   *
+   * @returns methods - individual functions to manage the form state. {@link UseFormReturn}
+   *
+   * @example
+   * ```tsx
+   * function App() {
+   *   const { register, handleSubmit, watch, formState: { errors } } = useForm();
+   *   const onSubmit = data => console.log(data);
+   *
+   *   console.log(watch("example"));
+   *
+   *   return (
+   *     <form onSubmit={handleSubmit(onSubmit)}>
+   *       <input defaultValue="test" {...register("example")} />
+   *       <input {...register("exampleRequired", { required: true })} />
+   *       {errors.exampleRequired && <span>This field is required</span>}
+   *       <button>Submit</button>
+   *     </form>
+   *   );
+   * }
+   * ```
+   */
+  function useForm(props = {}) {
+      const _formControl = React$1.useRef();
+      const _values = React$1.useRef();
+      const [formState, updateFormState] = React$1.useState({
+          isDirty: false,
+          isValidating: false,
+          isLoading: isFunction(props.defaultValues),
+          isSubmitted: false,
+          isSubmitting: false,
+          isSubmitSuccessful: false,
+          isValid: false,
+          submitCount: 0,
+          dirtyFields: {},
+          touchedFields: {},
+          validatingFields: {},
+          errors: props.errors || {},
+          disabled: props.disabled || false,
+          defaultValues: isFunction(props.defaultValues)
+              ? undefined
+              : props.defaultValues,
+      });
+      if (!_formControl.current) {
+          _formControl.current = {
+              ...createFormControl(props),
+              formState,
+          };
+      }
+      const control = _formControl.current.control;
+      control._options = props;
+      useSubscribe({
+          subject: control._subjects.state,
+          next: (value) => {
+              if (shouldRenderFormState(value, control._proxyFormState, control._updateFormState, true)) {
+                  updateFormState({ ...control._formState });
+              }
+          },
+      });
+      React$1.useEffect(() => control._disableForm(props.disabled), [control, props.disabled]);
+      React$1.useEffect(() => {
+          if (control._proxyFormState.isDirty) {
+              const isDirty = control._getDirty();
+              if (isDirty !== formState.isDirty) {
+                  control._subjects.state.next({
+                      isDirty,
+                  });
+              }
+          }
+      }, [control, formState.isDirty]);
+      React$1.useEffect(() => {
+          if (props.values && !deepEqual(props.values, _values.current)) {
+              control._reset(props.values, control._options.resetOptions);
+              _values.current = props.values;
+              updateFormState((state) => ({ ...state }));
+          }
+          else {
+              control._resetDefaultValues();
+          }
+      }, [props.values, control]);
+      React$1.useEffect(() => {
+          if (props.errors) {
+              control._setErrors(props.errors);
+          }
+      }, [props.errors, control]);
+      React$1.useEffect(() => {
+          if (!control._state.mount) {
+              control._updateValid();
+              control._state.mount = true;
+          }
+          if (control._state.watch) {
+              control._state.watch = false;
+              control._subjects.state.next({ ...control._formState });
+          }
+          control._removeUnmounted();
+      });
+      React$1.useEffect(() => {
+          props.shouldUnregister &&
+              control._subjects.values.next({
+                  values: control._getWatch(),
+              });
+      }, [props.shouldUnregister, control]);
+      _formControl.current.formState = getProxyFormState(formState, control);
+      return _formControl.current;
+  }
 
   var classnames = {exports: {}};
 
@@ -17074,7 +19224,7 @@
             className: "group"
           }, component) : component;
         } else if (field.component === 'tabs') {
-          return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
+          return /*#__PURE__*/React$1.createElement(Controller, {
             key: "field_".concat(field.name),
             name: field.name,
             control: control,
@@ -17144,7 +19294,7 @@
             }
           });
         } else if (field.component === 'steps') {
-          return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
+          return /*#__PURE__*/React$1.createElement(Controller, {
             key: "field_".concat(field.name),
             name: field.name,
             control: control,
@@ -17474,7 +19624,7 @@
         var rules = translateValidation(_objectSpread2({
           required: field.required
         }, field.validation), locale, onJavascriptError);
-        return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
+        return /*#__PURE__*/React$1.createElement(Controller, {
           key: "field_".concat(field.name),
           name: field.name,
           rules: rules,
@@ -17581,7 +19731,7 @@
         _useState6 = _slicedToArray(_useState5, 2),
         preloading = _useState6[0],
         setPreloading = _useState6[1];
-      var _useForm = reactHookForm.useForm({
+      var _useForm = useForm({
           defaultValues: defaultValues,
           mode: form.validationMode
         }),
@@ -18246,11 +20396,11 @@
         triggerRef.current.close();
       }
     }, [errorMessage]);
-    return /*#__PURE__*/React$1.createElement(Whisper, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Whisper, {
       placement: "bottomStart",
       ref: triggerRef,
       trigger: "none",
-      speaker: /*#__PURE__*/React$1.createElement(Popover, {
+      speaker: /*#__PURE__*/React$1.createElement(rsuite.Popover, {
         style: POPOVER_STYLE,
         visible: !!errorMessage,
         className: "lf-react-rsuite5-error-popover"
@@ -18300,8 +20450,8 @@
     }, [lfOnEnter]);
     var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(Input, _extends({
-      accepter: Input,
+    }, /*#__PURE__*/React$1.createElement(rsuite.Input, _extends({
+      accepter: rsuite.Input,
       value: value,
       onChange: onChange,
       onBlur: onBlur,
@@ -18315,15 +20465,15 @@
       readOnly: readOnly
     }, passRest(rest))));
     var needsGroup = postfix || prefix;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       className: classNames('lf-control-input-text', (_classNames = {}, _defineProperty$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/React$1.createElement(InputGroup, {
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/React$1.createElement(rsuite.InputGroup, {
       inside: inside
-    }, prefix && /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, TextOrIcon(prefix)), inner, postfix && /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, TextOrIcon(postfix))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, prefix && /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, TextOrIcon(prefix)), inner, postfix && /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, TextOrIcon(postfix))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.InputText');
 
@@ -18348,14 +20498,14 @@
       checkedChildren = _ref.checkedChildren,
       unCheckedChildren = _ref.unCheckedChildren,
       error = _ref.error;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       controlId: name,
       className: "lf-control-toggle"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(Toggle, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.Toggle, {
       name: name,
       checked: value,
       onChange: onChange,
@@ -18364,7 +20514,7 @@
       checkedChildren: checkedChildren && checkedChildren !== '' ? checkedChildren : undefined,
       errorMessage: _isString(error) ? error : undefined,
       size: size
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded RSuite5.ToggleInput');
 
@@ -18427,14 +20577,14 @@
       filterValue = _ref.filterValue,
       showImageOptions = _ref.showImageOptions,
       rest = _objectWithoutProperties(_ref, _excluded$j);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       className: "lf-control-select",
       controlId: name
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(SelectPicker, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.SelectPicker, _extends({
       appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
       name: name,
       value: value,
@@ -18452,7 +20602,7 @@
       block: block,
       searchable: searchable,
       cleanable: cleanable
-    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
@@ -18478,14 +20628,14 @@
       name = _ref.name,
       label = _ref.label,
       rest = _objectWithoutProperties(_ref, _excluded$i);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-array"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm
-    }, passRest(rest))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, passRest(rest))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint']);
   lfLog('Loaded RSuite5.ListArray');
 
@@ -18573,17 +20723,17 @@
       onChange(undefined);
       setCurrentValue(null);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: classNames('lf-control-input-number', (_classNames = {}, _defineProperty$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(InputNumber, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.InputNumber, {
       name: name,
-      accepter: InputNumber,
+      accepter: rsuite.InputNumber,
       value: currentValue,
       onChange: handleChange,
       onClear: handleClear,
@@ -18605,7 +20755,7 @@
       placeholder: placeholder,
       readOnly: readOnly,
       errorMessage: _isString(error) ? error : undefined
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.InputNumber');
 
@@ -18636,14 +20786,14 @@
       format = _ref.format;
       _ref.lfLocale;
       var rest = _objectWithoutProperties(_ref, _excluded$h);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-date"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(DatePicker, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.DatePicker, _extends({
       appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
       name: name,
       format: format || 'yyyy-MM-dd',
@@ -18654,7 +20804,7 @@
       errorMessage: _isString(error) ? error : undefined,
       disabled: disabled,
       placeholder: placeholder
-    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   };
 
   var _excluded$g = ["onChange", "value"];
@@ -18727,19 +20877,19 @@
       onChange(newValue);
       setIsChecked(newValue);
     }, [onChange, indeterminate, isChecked]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lt-control-checkbox"
     }, /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(Checkbox, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.Checkbox, _extends({
       indeterminate: indeterminate && isChecked === null,
       name: name,
       checked: isChecked,
       onChange: handleChange
-    }, passRest(rest)), label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, passRest(rest)), label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, hint))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint']);
   lfLog('Loaded RSuite5.Checkbox');
 
@@ -18768,12 +20918,12 @@
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       rest = _objectWithoutProperties(_ref, _excluded$e);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-checkbox-group"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint)), /*#__PURE__*/React$1.createElement(CheckboxGroup, _extends({
+    }, hint)), /*#__PURE__*/React$1.createElement(rsuite.CheckboxGroup, _extends({
       inline: true,
       name: name,
       value: value,
@@ -18781,14 +20931,14 @@
     }, passRest(rest)), (options !== null && options !== void 0 ? options : []).map(function (_ref2) {
       var value = _ref2.value,
         label = _ref2.label;
-      return /*#__PURE__*/React$1.createElement(Checkbox, {
+      return /*#__PURE__*/React$1.createElement(rsuite.Checkbox, {
         key: value,
         value: value,
         disabled: disabled,
         readOnly: readOnly,
         color: color
       }, label);
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint'], {
     options: i18nOptions
   });
@@ -18834,14 +20984,14 @@
       });
       return found ? found.label : undefined;
     }, [marks]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       controlId: name,
       className: "lf-control-slider"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(Slider, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.Slider, _extends({
       style: {
         marginTop: '15px',
         marginBottom: '8px'
@@ -18855,7 +21005,7 @@
       errorMessage: _isString(error) ? error : undefined,
       disabled: disabled,
       tooltip: showTooltip
-    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder'], {
     marks: function marks(value, i18n) {
       return (Array.isArray(value) ? value : []).map(function (value) {
@@ -18894,13 +21044,13 @@
       options = _ref$options === void 0 ? [] : _ref$options,
       appearance = _ref.appearance,
       rest = _objectWithoutProperties(_ref, _excluded$c);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       controlId: name,
       className: "lf-control-radio-group",
       "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint)), /*#__PURE__*/React$1.createElement(RadioGroup, _extends({
+    }, hint)), /*#__PURE__*/React$1.createElement(rsuite.RadioGroup, _extends({
       inline: true,
       name: name,
       value: value,
@@ -18909,13 +21059,13 @@
     }, passRest(rest)), (options !== null && options !== void 0 ? options : []).map(function (_ref2) {
       var value = _ref2.value,
         label = _ref2.label;
-      return /*#__PURE__*/React$1.createElement(Radio, {
+      return /*#__PURE__*/React$1.createElement(rsuite.Radio, {
         key: value,
         value: value,
         disabled: disabled,
         readOnly: readOnly
       }, label);
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
@@ -18947,14 +21097,14 @@
       trigger = _ref.trigger,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-input-tag"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(TagInput, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.TagInput, {
       name: name,
       value: value,
       onChange: onChange,
@@ -18964,7 +21114,7 @@
       trigger: trigger,
       readOnly: readOnly,
       errorMessage: _isString(error) ? error : undefined
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputTag');
 
@@ -19024,7 +21174,7 @@
     var parsedMask = prepareMask(mask);
     var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(MaskedInput, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.MaskedInput, _extends({
       name: name,
       value: value,
       onChange: onChange,
@@ -19038,15 +21188,15 @@
       mask: parsedMask
     }, passRest(rest))));
     var needsGroup = postfix || prefix;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-input-mask",
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/React$1.createElement(InputGroup, {
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/React$1.createElement(rsuite.InputGroup, {
       inside: inside
-    }, prefix && /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, prefix), inner, postfix && /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, postfix)), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, prefix && /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, prefix), inner, postfix && /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, postfix)), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputMask');
 
@@ -19057,7 +21207,7 @@
 
   var _excluded$a = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows"];
   var ControlTextare = function ControlTextare(props) {
-    return /*#__PURE__*/React$1.createElement(Input, _extends({
+    return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends({
       as: "textarea"
     }, props));
   };
@@ -19100,13 +21250,13 @@
       errorMessage: _isString(error) ? error : undefined,
       style: makeWidthStyle(fullWidth, width)
     }, passRest(rest))));
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       className: classNames('lf-control-textarea', (_classNames = {}, _defineProperty$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), inner, hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), inner, hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Textarea');
 
@@ -19138,14 +21288,14 @@
       color = _ref.color,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       controlId: name,
       className: "lets-form-input-tag"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(Rate, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.Rate, {
       name: name,
       value: value,
       onChange: onChange,
@@ -19158,7 +21308,7 @@
       cleanable: cleanable,
       readOnly: readOnly,
       errorMessage: _isString(error) ? error : undefined
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Rate');
 
@@ -19176,14 +21326,14 @@
       text = _ref.text,
       _ref$required = _ref.required,
       required = _ref$required === void 0 ? false : _ref$required;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-placeholder"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Placeholder, {
       text: text
-    }), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'text']);
   lfLog('Loaded RSuite5.Placeholder');
 
@@ -19224,12 +21374,12 @@
       multiselectMode = _ref.multiselectMode,
       width = _ref.width,
       rest = _objectWithoutProperties(_ref, _excluded$9);
-    var Component = multiselectMode === 'tag' ? TagPicker : CheckPicker;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    var Component = multiselectMode === 'tag' ? rsuite.TagPicker : rsuite.CheckPicker;
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-multiselect",
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
@@ -19250,7 +21400,7 @@
       style: makeWidthStyle(fullWidth, width),
       searchable: searchable,
       cleanable: cleanable
-    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
@@ -19310,14 +21460,14 @@
       setLocales(value);
       onChange(value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-multiselect-language"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(CheckPicker, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.CheckPicker, _extends({
       appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
       name: name,
       value: locales,
@@ -19339,7 +21489,7 @@
     }, /*#__PURE__*/React$1.createElement("a", {
       href: "#",
       onClick: handleAddAll
-    }, "add all locales")), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, "add all locales")), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.MultiselectLanguage');
 
@@ -19370,7 +21520,7 @@
   var TextareaAccepter = function TextareaAccepter(_ref) {
     var value = _ref.value,
       props = _objectWithoutProperties(_ref, _excluded$7);
-    return /*#__PURE__*/React$1.createElement(Input, _extends({
+    return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends({
       as: "textarea",
       value: value
     }, props));
@@ -19498,17 +21648,17 @@
         filled: currentValue && !_isEmpty(currentValue[item.value])
       });
     });
-    var InputComponent = textarea ? TextareaAccepter : Input;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    var InputComponent = textarea ? TextareaAccepter : rsuite.Input;
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-input-text-i18n lf-input-text-i18n"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", {
       className: classNames('group-input-select', {
         'textarea': textarea
       })
-    }, /*#__PURE__*/React$1.createElement(InputGroup, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.InputGroup, {
       className: "translation-control",
       inside: true
     }, /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
@@ -19527,13 +21677,13 @@
       size: size,
       placeholder: placeholder,
       errorMessage: _isString(error) ? error : undefined
-    })), /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, /*#__PURE__*/React$1.createElement("span", {
+    })), /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, /*#__PURE__*/React$1.createElement("span", {
       className: "status"
     }, /*#__PURE__*/React$1.createElement("span", {
       className: "translated"
     }, translatedLocales.length), "\xA0/\xA0", /*#__PURE__*/React$1.createElement("span", null, totalLocales)))), /*#__PURE__*/React$1.createElement("div", {
       className: "select-control"
-    }, /*#__PURE__*/React$1.createElement(SelectPicker, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.SelectPicker, {
       appearance: "subtle",
       cleanable: false,
       size: "xs",
@@ -19563,7 +21713,7 @@
         }
       },
       data: languageData
-    }))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   };
   lfLog('Loaded RSuite.InputTextI18N');
 
@@ -19591,16 +21741,16 @@
       rest = _objectWithoutProperties(_ref, _excluded$6);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(Button, _extends({
+      inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends({
         startIcon: /*#__PURE__*/React$1.createElement("img", {
           className: "lf-icon",
           src: icon
         })
       }, passRest(rest)), label);
     } else if (!_isEmpty(label) && _isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(Button, passRest(rest), label);
+      inner = /*#__PURE__*/React$1.createElement(rsuite.Button, passRest(rest), label);
     } else if (_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(IconButton$1, _extends({
+      inner = /*#__PURE__*/React$1.createElement(rsuite.IconButton, _extends({
         icon: /*#__PURE__*/React$1.createElement("img", {
           className: "lf-icon",
           src: icon
@@ -19609,11 +21759,11 @@
     } else {
       inner = /*#__PURE__*/React$1.createElement(React$1.Fragment, null);
     }
-    return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, !_isEmpty(hint) && tooltip && /*#__PURE__*/React$1.createElement(Whisper, {
+    return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, !_isEmpty(hint) && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Whisper, {
       placement: "top",
       trigger: "hover",
-      speaker: /*#__PURE__*/React$1.createElement(Tooltip, null, hint)
-    }, inner), (_isEmpty(hint) || !tooltip) && inner, !_isEmpty(hint) && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+      speaker: /*#__PURE__*/React$1.createElement(rsuite.Tooltip, null, hint)
+    }, inner), (_isEmpty(hint) || !tooltip) && inner, !_isEmpty(hint) && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   };
   var BiStateButton = I18N(MakeButton(RSuiteButton, {
     appearance: 'primary'
@@ -19698,7 +21848,7 @@
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-tabs",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Nav, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.Nav, _extends({
       appearance: appearance,
       reversed: reversed,
       justified: justified,
@@ -19706,7 +21856,7 @@
       activeKey: active,
       onSelect: handleKey
     }, passRest(rest)), (tabs || []).map(function (tab) {
-      return /*#__PURE__*/React$1.createElement(Nav.Item, {
+      return /*#__PURE__*/React$1.createElement(rsuite.Nav.Item, {
         key: tab.value,
         eventKey: tab.value
       }, tab.label);
@@ -19759,18 +21909,18 @@
       setCurrentValue(value);
       onChange(value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       className: "lf-control-input-text",
       "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RadioTileGroup, {
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(rsuite.RadioTileGroup, {
       value: currentValue,
       onChange: handleChange,
       inline: inline,
       disabled: disabled
     }, (options || []).map(function (option) {
-      return /*#__PURE__*/React$1.createElement(RadioTile, {
+      return /*#__PURE__*/React$1.createElement(rsuite.RadioTile, {
         key: option.value,
         label: option.label,
         value: option.value,
@@ -19780,7 +21930,7 @@
           height: iconHeight
         })
       }, option.description);
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint'], {
     options: function options(value, i18n) {
       return (value !== null && value !== void 0 ? value : []).filter(function (value) {
@@ -19821,7 +21971,7 @@
       _ref.disabled;
       var hint = _ref.hint,
       rest = _objectWithoutProperties(_ref, _excluded$2);
-    var inner = /*#__PURE__*/React$1.createElement(Button, _extends({}, rest, {
+    var inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends({}, rest, {
       size: superSize,
       disabled: superDisabled
     }));
@@ -19893,9 +22043,9 @@
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-upload",
       "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Uploader, _extends({
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(rsuite.Uploader, _extends({
       autoUpload: false,
       action: "",
       accept: _isArray(accept) ? accept.join(',') : accept,
@@ -19908,7 +22058,7 @@
       fileList: currentValue,
       listType: listType,
       onChange: handleChange
-    }, passRest(rest)), inner), hint && draggable && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, passRest(rest)), inner), hint && draggable && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
   lfLog('Loaded RSuite.Upload');
 
@@ -19938,12 +22088,12 @@
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       rest = _objectWithoutProperties(_ref, _excluded$1);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-button-toggle-group"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form.Control, _extends({
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(rsuite.Form.Control, _extends({
       ButtonComponent: BiStateButton,
       name: name,
       accepter: ButtonsToggleGroup,
@@ -19953,7 +22103,7 @@
       disabled: disabled,
       size: size,
       errorMessage: _isString(error) ? error : undefined
-    }, passRest(rest))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, passRest(rest))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint'], {
     options: i18nOptions
   });
@@ -20034,12 +22184,12 @@
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-steps",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Steps, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.Steps, _extends({
       current: stepIdx,
       currentStatus: status,
       small: small
     }, passRest(rest)), (steps || []).map(function (step) {
-      return /*#__PURE__*/React$1.createElement(Steps.Item, {
+      return /*#__PURE__*/React$1.createElement(rsuite.Steps.Item, {
         key: "step_".concat(step.value),
         description: step.description || undefined,
         title: step.label,
@@ -20051,10 +22201,10 @@
       className: "lf-step"
     }, children(step)), /*#__PURE__*/React$1.createElement("div", {
       className: classNames('lf-navigation-buttons', align)
-    }, /*#__PURE__*/React$1.createElement(ButtonGroup, null, /*#__PURE__*/React$1.createElement(Button, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.ButtonGroup, null, /*#__PURE__*/React$1.createElement(rsuite.Button, {
       onClick: handlePrevious,
       disabled: _isEmpty(steps) || stepIdx === 0
-    }, labelPrevious || 'Previous'), /*#__PURE__*/React$1.createElement(Button, {
+    }, labelPrevious || 'Previous'), /*#__PURE__*/React$1.createElement(rsuite.Button, {
       onClick: handleNext,
       disabled: _isEmpty(steps) || stepIdx === steps.length - 1
     }, labelNext || 'Next'))));
@@ -20108,20 +22258,20 @@
         className: classNames('rs-form', (_classNames = {}, _defineProperty$1(_classNames, "rs-form-".concat(layout), true), _defineProperty$1(_classNames, 'rs-form-fluid', fluid), _classNames))
       }, children);
     }
-    return /*#__PURE__*/React$1.createElement(Form, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form, {
       className: classNames('lf-form lf-form-react-rsuite5', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name,
       layout: layout,
       fluid: fluid,
       readOnly: readOnly,
       disabled: disabled
-    }, /*#__PURE__*/React$1.createElement("div", null, children), !hideToolbar && /*#__PURE__*/React$1.createElement(ButtonToolbar, {
+    }, /*#__PURE__*/React$1.createElement("div", null, children), !hideToolbar && /*#__PURE__*/React$1.createElement(rsuite.ButtonToolbar, {
       className: "lf-buttons"
-    }, !hideSumbut && /*#__PURE__*/React$1.createElement(Button, {
+    }, !hideSumbut && /*#__PURE__*/React$1.createElement(rsuite.Button, {
       appearance: "primary",
       onClick: onSubmit,
       disabled: disabled || disabledSubmit
-    }, labelSubmit), !hideCancel && /*#__PURE__*/React$1.createElement(Button, {
+    }, labelSubmit), !hideCancel && /*#__PURE__*/React$1.createElement(rsuite.Button, {
       onClick: onReset,
       disabled: disabled
     }, labelCancel), custom));

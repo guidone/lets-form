@@ -1,9 +1,28 @@
-/* LetsForm Generator v0.7.13 - UMD */
+/* LetsForm Generator v0.7.15 - UMD */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite/Form'), require('rsuite/Toggle'), require('rsuite/SelectPicker'), require('rsuite/InputNumber'), require('rsuite/Checkbox'), require('rsuite/CheckboxGroup'), require('rsuite/Slider'), require('rsuite/Radio'), require('rsuite/RadioGroup'), require('rsuite/TagInput'), require('rsuite/MaskedInput'), require('rsuite/InputGroup'), require('rsuite/Rate'), require('rsuite/TagPicker'), require('rsuite/CheckPicker'), require('rsuite/Input'), require('rsuite/DatePicker'), require('rsuite/Whisper'), require('rsuite/Popover'), require('rsuite/Nav'), require('rsuite/RadioTile'), require('rsuite/RadioTileGroup'), require('rsuite/Uploader'), require('rsuite/Button'), require('rsuite/IconButton'), require('rsuite/Tooltip'), require('rsuite/Steps'), require('rsuite/ButtonGroup'), require('rsuite/ButtonToolbar'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/material/Stack'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button'), require('antd'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite/Form', 'rsuite/Toggle', 'rsuite/SelectPicker', 'rsuite/InputNumber', 'rsuite/Checkbox', 'rsuite/CheckboxGroup', 'rsuite/Slider', 'rsuite/Radio', 'rsuite/RadioGroup', 'rsuite/TagInput', 'rsuite/MaskedInput', 'rsuite/InputGroup', 'rsuite/Rate', 'rsuite/TagPicker', 'rsuite/CheckPicker', 'rsuite/Input', 'rsuite/DatePicker', 'rsuite/Whisper', 'rsuite/Popover', 'rsuite/Nav', 'rsuite/RadioTile', 'rsuite/RadioTileGroup', 'rsuite/Uploader', 'rsuite/Button', 'rsuite/IconButton', 'rsuite/Tooltip', 'rsuite/Steps', 'rsuite/ButtonGroup', 'rsuite/ButtonToolbar', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/material/Stack', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button', 'antd', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/generator"] = {}, global.React$1, global.Form, global.Toggle$3, global.SelectPicker, global.InputNumber$3, global.Checkbox$2, global.CheckboxGroup$2, global.Slider$1, global.Radio, global.RadioGroup$2, global.TagInput, global.MaskedInput, global.InputGroup, global.Rate$1, global.TagPicker, global.CheckPicker, global.Input, global.DatePicker, global.Whisper, global.Popover, global.Nav, global.RadioTile, global.RadioTileGroup, global.Uploader, global.Button$1, global.IconButton$1, global.Tooltip, global.Steps, global.ButtonGroup, global.ButtonToolbar, global.FormControlLabel, global.FormGroup, global.Switch, global.Checkbox$3, global.Slider$2, global.FormHelperText, global.FormControl, global.FormLabel, global.Rating, global.DatePicker$1, global.DateTimePicker, global.InputLabel, global.MenuItem, global.Select$3, global.ListItemText, global.TextField, global.InputAdornment, global.Radio$1, global.RadioGroup$3, global.Tabs$1, global.Tab, global.Box, global.Button$2, global.Stack$2, global.FloatingLabel, global.Form$1, global.InputGroup$1, global.reactBootstrap, global.Button$3, global.antd, global.core, global.reactHookForm, global.dates));
-})(this, (function (exports, React$1, Form, Toggle$3, SelectPicker, InputNumber$3, Checkbox$2, CheckboxGroup$2, Slider$1, Radio, RadioGroup$2, TagInput, MaskedInput, InputGroup, Rate$1, TagPicker, CheckPicker, Input, DatePicker, Whisper, Popover, Nav, RadioTile, RadioTileGroup, Uploader, Button$1, IconButton$1, Tooltip, Steps, ButtonGroup, ButtonToolbar, FormControlLabel, FormGroup, Switch, Checkbox$3, Slider$2, FormHelperText, FormControl, FormLabel, Rating, DatePicker$1, DateTimePicker, InputLabel, MenuItem, Select$3, ListItemText, TextField, InputAdornment, Radio$1, RadioGroup$3, Tabs$1, Tab, Box, Button$2, Stack$2, FloatingLabel, Form$1, InputGroup$1, reactBootstrap, Button$3, antd, core, reactHookForm, dates) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/material/Stack'), require('prop-types'), require('react-dom'), require('antd'), require('@mantine/core'), require('@mantine/dates')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/material/Stack', 'prop-types', 'react-dom', 'antd', '@mantine/core', '@mantine/dates'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/generator"] = {}, global.React$1, global.rsuite, global.FormControlLabel, global.FormGroup$1, global.Switch$2, global.Checkbox$2, global.Slider$1, global.FormHelperText, global.FormControl$2, global.FormLabel$1, global.Rating, global.DatePicker, global.DateTimePicker, global.InputLabel, global.MenuItem, global.Select$3, global.ListItemText, global.TextField, global.InputAdornment, global.Radio, global.RadioGroup$2, global.Tabs$3, global.Tab$2, global.Box, global.Button$3, global.Stack$2, global.PropTypes, global.ReactDOM, global.antd, global.core, global.dates));
+})(this, (function (exports, React$1, rsuite, FormControlLabel, FormGroup$1, Switch$2, Checkbox$2, Slider$1, FormHelperText, FormControl$2, FormLabel$1, Rating, DatePicker, DateTimePicker, InputLabel, MenuItem, Select$3, ListItemText, TextField, InputAdornment, Radio, RadioGroup$2, Tabs$3, Tab$2, Box, Button$3, Stack$2, PropTypes, ReactDOM, antd, core, dates) { 'use strict';
+
+  function _interopNamespaceDefault(e) {
+    var n = Object.create(null);
+    if (e) {
+      Object.keys(e).forEach(function (k) {
+        if (k !== 'default') {
+          var d = Object.getOwnPropertyDescriptor(e, k);
+          Object.defineProperty(n, k, d.get ? d : {
+            enumerable: true,
+            get: function () { return e[k]; }
+          });
+        }
+      });
+    }
+    n.default = e;
+    return Object.freeze(n);
+  }
+
+  var React__namespace = /*#__PURE__*/_interopNamespaceDefault(React$1);
 
   function _AsyncGenerator(gen) {
     var front, back;
@@ -508,7 +527,7 @@
     };
   }
   function _defineProperty$1(obj, key, value) {
-    key = _toPropertyKey(key);
+    key = _toPropertyKey$1(key);
     if (key in obj) {
       Object.defineProperty(obj, key, {
         value: value,
@@ -521,8 +540,8 @@
     }
     return obj;
   }
-  function _extends() {
-    _extends = Object.assign ? Object.assign.bind() : function (target) {
+  function _extends$1() {
+    _extends$1 = Object.assign ? Object.assign.bind() : function (target) {
       for (var i = 1; i < arguments.length; i++) {
         var source = arguments[i];
         for (var key in source) {
@@ -533,12 +552,12 @@
       }
       return target;
     };
-    return _extends.apply(this, arguments);
+    return _extends$1.apply(this, arguments);
   }
   function _objectDestructuringEmpty(obj) {
     if (obj == null) throw new TypeError("Cannot destructure " + obj);
   }
-  function _objectWithoutPropertiesLoose(source, excluded) {
+  function _objectWithoutPropertiesLoose$6(source, excluded) {
     if (source == null) return {};
     var target = {};
     var sourceKeys = Object.keys(source);
@@ -552,7 +571,7 @@
   }
   function _objectWithoutProperties(source, excluded) {
     if (source == null) return {};
-    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var target = _objectWithoutPropertiesLoose$6(source, excluded);
     var key, i;
     if (Object.getOwnPropertySymbols) {
       var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
@@ -599,7 +618,7 @@
   function _nonIterableRest() {
     throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
   }
-  function _toPrimitive(input, hint) {
+  function _toPrimitive$1(input, hint) {
     if (typeof input !== "object" || input === null) return input;
     var prim = input[Symbol.toPrimitive];
     if (prim !== undefined) {
@@ -609,8 +628,8 @@
     }
     return (hint === "string" ? String : Number)(input);
   }
-  function _toPropertyKey(arg) {
-    var key = _toPrimitive(arg, "string");
+  function _toPropertyKey$1(arg) {
+    var key = _toPrimitive$1(arg, "string");
     return typeof key === "symbol" ? key : String(key);
   }
 
@@ -829,16 +848,16 @@
    * // => false
    */
 
-  function isObject$6(value) {
+  function isObject$7(value) {
     var type = typeof value;
     return value != null && (type == 'object' || type == 'function');
   }
-  var isObject_1 = isObject$6;
+  var isObject_1 = isObject$7;
 
   var _isObject = /*@__PURE__*/getDefaultExportFromCjs(isObject_1);
 
   var baseGetTag$9 = _baseGetTag,
-    isObject$5 = isObject_1;
+    isObject$6 = isObject_1;
 
   /** `Object#toString` result references. */
   var asyncTag = '[object AsyncFunction]',
@@ -863,8 +882,8 @@
    * _.isFunction(/abc/);
    * // => false
    */
-  function isFunction$2(value) {
-    if (!isObject$5(value)) {
+  function isFunction$3(value) {
+    if (!isObject$6(value)) {
       return false;
     }
     // The use of `Object#toString` avoids issues with the `typeof` operator
@@ -872,7 +891,7 @@
     var tag = baseGetTag$9(value);
     return tag == funcTag$2 || tag == genTag$1 || tag == asyncTag || tag == proxyTag;
   }
-  var isFunction_1 = isFunction$2;
+  var isFunction_1 = isFunction$3;
 
   var _isFunction = /*@__PURE__*/getDefaultExportFromCjs(isFunction_1);
 
@@ -929,9 +948,9 @@
   }
   var _toSource = toSource$2;
 
-  var isFunction$1 = isFunction_1,
+  var isFunction$2 = isFunction_1,
     isMasked = _isMasked,
-    isObject$4 = isObject_1,
+    isObject$5 = isObject_1,
     toSource$1 = _toSource;
 
   /**
@@ -965,10 +984,10 @@
    *  else `false`.
    */
   function baseIsNative$1(value) {
-    if (!isObject$4(value) || isMasked(value)) {
+    if (!isObject$5(value) || isMasked(value)) {
       return false;
     }
-    var pattern = isFunction$1(value) ? reIsNative : reIsHostCtor;
+    var pattern = isFunction$2(value) ? reIsNative : reIsHostCtor;
     return pattern.test(toSource$1(value));
   }
   var _baseIsNative = baseIsNative$1;
@@ -1015,8 +1034,8 @@
     root$4 = _root;
 
   /* Built-in method references that are verified to be native. */
-  var Map$3 = getNative$5(root$4, 'Map');
-  var _Map = Map$3;
+  var Map$4 = getNative$5(root$4, 'Map');
+  var _Map = Map$4;
 
   var getNative$4 = _getNative,
     root$3 = _root;
@@ -1036,14 +1055,14 @@
     root$1 = _root;
 
   /* Built-in method references that are verified to be native. */
-  var WeakMap$1 = getNative$2(root$1, 'WeakMap');
-  var _WeakMap = WeakMap$1;
+  var WeakMap$2 = getNative$2(root$1, 'WeakMap');
+  var _WeakMap = WeakMap$2;
 
   var DataView = _DataView,
-    Map$2 = _Map,
+    Map$3 = _Map,
     Promise$1 = _Promise,
     Set$2 = _Set,
-    WeakMap = _WeakMap,
+    WeakMap$1 = _WeakMap,
     baseGetTag$8 = _baseGetTag,
     toSource = _toSource;
 
@@ -1057,10 +1076,10 @@
 
   /** Used to detect maps, sets, and weakmaps. */
   var dataViewCtorString = toSource(DataView),
-    mapCtorString = toSource(Map$2),
+    mapCtorString = toSource(Map$3),
     promiseCtorString = toSource(Promise$1),
     setCtorString = toSource(Set$2),
-    weakMapCtorString = toSource(WeakMap);
+    weakMapCtorString = toSource(WeakMap$1);
 
   /**
    * Gets the `toStringTag` of `value`.
@@ -1072,7 +1091,7 @@
   var getTag$4 = baseGetTag$8;
 
   // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
-  if (DataView && getTag$4(new DataView(new ArrayBuffer(1))) != dataViewTag$3 || Map$2 && getTag$4(new Map$2()) != mapTag$5 || Promise$1 && getTag$4(Promise$1.resolve()) != promiseTag || Set$2 && getTag$4(new Set$2()) != setTag$5 || WeakMap && getTag$4(new WeakMap()) != weakMapTag$2) {
+  if (DataView && getTag$4(new DataView(new ArrayBuffer(1))) != dataViewTag$3 || Map$3 && getTag$4(new Map$3()) != mapTag$5 || Promise$1 && getTag$4(Promise$1.resolve()) != promiseTag || Set$2 && getTag$4(new Set$2()) != setTag$5 || WeakMap$1 && getTag$4(new WeakMap$1()) != weakMapTag$2) {
     getTag$4 = function (value) {
       var result = baseGetTag$8(value),
         Ctor = result == objectTag$3 ? value.constructor : undefined,
@@ -1245,7 +1264,7 @@
   }
   var isLength_1 = isLength$3;
 
-  var isFunction = isFunction_1,
+  var isFunction$1 = isFunction_1,
     isLength$2 = isLength_1;
 
   /**
@@ -1274,7 +1293,7 @@
    * // => false
    */
   function isArrayLike$3(value) {
-    return value != null && isLength$2(value.length) && !isFunction(value);
+    return value != null && isLength$2(value.length) && !isFunction$1(value);
   }
   var isArrayLike_1 = isArrayLike$3;
 
@@ -1891,7 +1910,7 @@
 
   var Hash = _Hash,
     ListCache$3 = _ListCache,
-    Map$1 = _Map;
+    Map$2 = _Map;
 
   /**
    * Removes all key-value entries from the map.
@@ -1904,7 +1923,7 @@
     this.size = 0;
     this.__data__ = {
       'hash': new Hash(),
-      'map': new (Map$1 || ListCache$3)(),
+      'map': new (Map$2 || ListCache$3)(),
       'string': new Hash()
     };
   }
@@ -2247,10 +2266,10 @@
    * // => [undefined, undefined]
    */
 
-  function noop$1() {
+  function noop$3() {
     // No operation performed.
   }
-  var noop_1 = noop$1;
+  var noop_1 = noop$3;
 
   /**
    * Converts `set` to an array of its values.
@@ -2271,7 +2290,7 @@
   var _setToArray = setToArray$2;
 
   var Set$1 = _Set,
-    noop = noop_1,
+    noop$2 = noop_1,
     setToArray$1 = _setToArray;
 
   /** Used as references for various `Number` constants. */
@@ -2284,7 +2303,7 @@
    * @param {Array} values The values to add to the set.
    * @returns {Object} Returns the new set.
    */
-  var createSet$1 = !(Set$1 && 1 / setToArray$1(new Set$1([, -0]))[1] == INFINITY$2) ? noop : function (values) {
+  var createSet$1 = !(Set$1 && 1 / setToArray$1(new Set$1([, -0]))[1] == INFINITY$2) ? noop$2 : function (values) {
     return new Set$1(values);
   };
   var _createSet = createSet$1;
@@ -2590,7 +2609,7 @@
   var _stackHas = stackHas$1;
 
   var ListCache$1 = _ListCache,
-    Map = _Map,
+    Map$1 = _Map,
     MapCache$1 = _MapCache;
 
   /** Used as the size to enable large array optimizations. */
@@ -2610,7 +2629,7 @@
     var data = this.__data__;
     if (data instanceof ListCache$1) {
       var pairs = data.__data__;
-      if (!Map || pairs.length < LARGE_ARRAY_SIZE - 1) {
+      if (!Map$1 || pairs.length < LARGE_ARRAY_SIZE - 1) {
         pairs.push([key, value]);
         this.size = ++data.size;
         return this;
@@ -2933,7 +2952,7 @@
   }
   var _nativeKeysIn = nativeKeysIn$1;
 
-  var isObject$3 = isObject_1,
+  var isObject$4 = isObject_1,
     isPrototype$1 = _isPrototype,
     nativeKeysIn = _nativeKeysIn;
 
@@ -2951,7 +2970,7 @@
    * @returns {Array} Returns the array of property names.
    */
   function baseKeysIn$1(object) {
-    if (!isObject$3(object)) {
+    if (!isObject$4(object)) {
       return nativeKeysIn(object);
     }
     var isProto = isPrototype$1(object),
@@ -3482,7 +3501,7 @@
   }
   var _initCloneByTag = initCloneByTag$1;
 
-  var isObject$2 = isObject_1;
+  var isObject$3 = isObject_1;
 
   /** Built-in value references. */
   var objectCreate = Object.create;
@@ -3498,7 +3517,7 @@
   var baseCreate$1 = function () {
     function object() {}
     return function (proto) {
-      if (!isObject$2(proto)) {
+      if (!isObject$3(proto)) {
         return {};
       }
       if (objectCreate) {
@@ -3636,7 +3655,7 @@
     isArray$5 = isArray_1,
     isBuffer = isBufferExports,
     isMap = isMap_1,
-    isObject$1 = isObject_1,
+    isObject$2 = isObject_1,
     isSet = isSet_1,
     keys = keys_1,
     keysIn = keysIn_1;
@@ -3706,7 +3725,7 @@
     if (result !== undefined) {
       return result;
     }
-    if (!isObject$1(value)) {
+    if (!isObject$2(value)) {
       return value;
     }
     var isArr = isArray$5(value);
@@ -3778,7 +3797,7 @@
    * @param {Object} [object] The object to query keys on.
    * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
    */
-  function isKey$1(value, object) {
+  function isKey$2(value, object) {
     if (isArray$4(value)) {
       return false;
     }
@@ -3788,7 +3807,7 @@
     }
     return reIsPlainProp.test(value) || !reIsDeepProp.test(value) || object != null && value in Object(object);
   }
-  var _isKey = isKey$1;
+  var _isKey = isKey$2;
 
   var MapCache = _MapCache;
 
@@ -3902,7 +3921,7 @@
    * @param {string} string The string to convert.
    * @returns {Array} Returns the property path array.
    */
-  var stringToPath$1 = memoizeCapped(function (string) {
+  var stringToPath$2 = memoizeCapped(function (string) {
     var result = [];
     if (string.charCodeAt(0) === 46 /* . */) {
       result.push('');
@@ -3912,11 +3931,11 @@
     });
     return result;
   });
-  var _stringToPath = stringToPath$1;
+  var _stringToPath = stringToPath$2;
 
   var isArray$3 = isArray_1,
-    isKey = _isKey,
-    stringToPath = _stringToPath,
+    isKey$1 = _isKey,
+    stringToPath$1 = _stringToPath,
     toString$3 = toString_1;
 
   /**
@@ -3931,7 +3950,7 @@
     if (isArray$3(value)) {
       return value;
     }
-    return isKey(value, object) ? [value] : stringToPath(toString$3(value));
+    return isKey$1(value, object) ? [value] : stringToPath$1(toString$3(value));
   }
   var _castPath = castPath$6;
 
@@ -3988,7 +4007,7 @@
    * @param {Array|string} path The path of the property to get.
    * @returns {*} Returns the resolved value.
    */
-  function baseGet$2(object, path) {
+  function baseGet$3(object, path) {
     path = castPath$5(path, object);
     var index = 0,
       length = path.length;
@@ -3997,7 +4016,7 @@
     }
     return index && index == length ? object : undefined;
   }
-  var _baseGet = baseGet$2;
+  var _baseGet = baseGet$3;
 
   /**
    * The base implementation of `_.slice` without an iteratee call guard.
@@ -4029,7 +4048,7 @@
   }
   var _baseSlice = baseSlice$2;
 
-  var baseGet$1 = _baseGet,
+  var baseGet$2 = _baseGet,
     baseSlice$1 = _baseSlice;
 
   /**
@@ -4041,7 +4060,7 @@
    * @returns {*} Returns the parent value.
    */
   function parent$1(object, path) {
-    return path.length < 2 ? object : baseGet$1(object, baseSlice$1(path, 0, -1));
+    return path.length < 2 ? object : baseGet$2(object, baseSlice$1(path, 0, -1));
   }
   var _parent = parent$1;
 
@@ -4113,7 +4132,7 @@
    * _.isPlainObject(Object.create(null));
    * // => true
    */
-  function isPlainObject$1(value) {
+  function isPlainObject$2(value) {
     if (!isObjectLike$4(value) || baseGetTag$4(value) != objectTag) {
       return false;
     }
@@ -4124,9 +4143,9 @@
     var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
     return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
   }
-  var isPlainObject_1 = isPlainObject$1;
+  var isPlainObject_1 = isPlainObject$2;
 
-  var isPlainObject = isPlainObject_1;
+  var isPlainObject$1 = isPlainObject_1;
 
   /**
    * Used by `_.omit` to customize its `_.cloneDeep` use to only clone plain
@@ -4138,7 +4157,7 @@
    * @returns {*} Returns the uncloned value or `undefined` to defer cloning to `_.cloneDeep`.
    */
   function customOmitClone$1(value) {
-    return isPlainObject(value) ? undefined : value;
+    return isPlainObject$1(value) ? undefined : value;
   }
   var _customOmitClone = customOmitClone$1;
 
@@ -4478,7 +4497,2157 @@
 
   var _omit = /*@__PURE__*/getDefaultExportFromCjs(omit_1);
 
-  var classnames = {exports: {}};
+  var isCheckBoxInput = (element) => element.type === 'checkbox';
+
+  var isDateObject = (value) => value instanceof Date;
+
+  var isNullOrUndefined = (value) => value == null;
+
+  const isObjectType = (value) => typeof value === 'object';
+  var isObject$1 = (value) => !isNullOrUndefined(value) &&
+      !Array.isArray(value) &&
+      isObjectType(value) &&
+      !isDateObject(value);
+
+  var getEventValue = (event) => isObject$1(event) && event.target
+      ? isCheckBoxInput(event.target)
+          ? event.target.checked
+          : event.target.value
+      : event;
+
+  var getNodeParentName = (name) => name.substring(0, name.search(/\.\d+(\.|$)/)) || name;
+
+  var isNameInFieldArray = (names, name) => names.has(getNodeParentName(name));
+
+  var isPlainObject = (tempObject) => {
+      const prototypeCopy = tempObject.constructor && tempObject.constructor.prototype;
+      return (isObject$1(prototypeCopy) && prototypeCopy.hasOwnProperty('isPrototypeOf'));
+  };
+
+  var isWeb = typeof window !== 'undefined' &&
+      typeof window.HTMLElement !== 'undefined' &&
+      typeof document !== 'undefined';
+
+  function cloneObject(data) {
+      let copy;
+      const isArray = Array.isArray(data);
+      if (data instanceof Date) {
+          copy = new Date(data);
+      }
+      else if (data instanceof Set) {
+          copy = new Set(data);
+      }
+      else if (!(isWeb && (data instanceof Blob || data instanceof FileList)) &&
+          (isArray || isObject$1(data))) {
+          copy = isArray ? [] : {};
+          if (!isArray && !isPlainObject(data)) {
+              copy = data;
+          }
+          else {
+              for (const key in data) {
+                  if (data.hasOwnProperty(key)) {
+                      copy[key] = cloneObject(data[key]);
+                  }
+              }
+          }
+      }
+      else {
+          return data;
+      }
+      return copy;
+  }
+
+  var compact = (value) => Array.isArray(value) ? value.filter(Boolean) : [];
+
+  var isUndefined = (val) => val === undefined;
+
+  var get = (object, path, defaultValue) => {
+      if (!path || !isObject$1(object)) {
+          return defaultValue;
+      }
+      const result = compact(path.split(/[,[\].]+?/)).reduce((result, key) => isNullOrUndefined(result) ? result : result[key], object);
+      return isUndefined(result) || result === object
+          ? isUndefined(object[path])
+              ? defaultValue
+              : object[path]
+          : result;
+  };
+
+  var isBoolean$1 = (value) => typeof value === 'boolean';
+
+  const EVENTS = {
+      BLUR: 'blur',
+      FOCUS_OUT: 'focusout',
+      CHANGE: 'change',
+  };
+  const VALIDATION_MODE = {
+      onBlur: 'onBlur',
+      onChange: 'onChange',
+      onSubmit: 'onSubmit',
+      onTouched: 'onTouched',
+      all: 'all',
+  };
+  const INPUT_VALIDATION_RULES = {
+      max: 'max',
+      min: 'min',
+      maxLength: 'maxLength',
+      minLength: 'minLength',
+      pattern: 'pattern',
+      required: 'required',
+      validate: 'validate',
+  };
+
+  const HookFormContext = React$1.createContext(null);
+  /**
+   * This custom hook allows you to access the form context. useFormContext is intended to be used in deeply nested structures, where it would become inconvenient to pass the context as a prop. To be used with {@link FormProvider}.
+   *
+   * @remarks
+   * [API](https://react-hook-form.com/docs/useformcontext) • [Demo](https://codesandbox.io/s/react-hook-form-v7-form-context-ytudi)
+   *
+   * @returns return all useForm methods
+   *
+   * @example
+   * ```tsx
+   * function App() {
+   *   const methods = useForm();
+   *   const onSubmit = data => console.log(data);
+   *
+   *   return (
+   *     <FormProvider {...methods} >
+   *       <form onSubmit={methods.handleSubmit(onSubmit)}>
+   *         <NestedInput />
+   *         <input type="submit" />
+   *       </form>
+   *     </FormProvider>
+   *   );
+   * }
+   *
+   *  function NestedInput() {
+   *   const { register } = useFormContext(); // retrieve all hook methods
+   *   return <input {...register("test")} />;
+   * }
+   * ```
+   */
+  const useFormContext$1 = () => React$1.useContext(HookFormContext);
+
+  var getProxyFormState = (formState, control, localProxyFormState, isRoot = true) => {
+      const result = {
+          defaultValues: control._defaultValues,
+      };
+      for (const key in formState) {
+          Object.defineProperty(result, key, {
+              get: () => {
+                  const _key = key;
+                  if (control._proxyFormState[_key] !== VALIDATION_MODE.all) {
+                      control._proxyFormState[_key] = !isRoot || VALIDATION_MODE.all;
+                  }
+                  localProxyFormState && (localProxyFormState[_key] = true);
+                  return formState[_key];
+              },
+          });
+      }
+      return result;
+  };
+
+  var isEmptyObject$1 = (value) => isObject$1(value) && !Object.keys(value).length;
+
+  var shouldRenderFormState = (formStateData, _proxyFormState, updateFormState, isRoot) => {
+      updateFormState(formStateData);
+      const { name, ...formState } = formStateData;
+      return (isEmptyObject$1(formState) ||
+          Object.keys(formState).length >= Object.keys(_proxyFormState).length ||
+          Object.keys(formState).find((key) => _proxyFormState[key] ===
+              (!isRoot || VALIDATION_MODE.all)));
+  };
+
+  var convertToArrayPayload = (value) => (Array.isArray(value) ? value : [value]);
+
+  var shouldSubscribeByName = (name, signalName, exact) => !name ||
+      !signalName ||
+      name === signalName ||
+      convertToArrayPayload(name).some((currentName) => currentName &&
+          (exact
+              ? currentName === signalName
+              : currentName.startsWith(signalName) ||
+                  signalName.startsWith(currentName)));
+
+  function useSubscribe(props) {
+      const _props = React$1.useRef(props);
+      _props.current = props;
+      React$1.useEffect(() => {
+          const subscription = !props.disabled &&
+              _props.current.subject &&
+              _props.current.subject.subscribe({
+                  next: _props.current.next,
+              });
+          return () => {
+              subscription && subscription.unsubscribe();
+          };
+      }, [props.disabled]);
+  }
+
+  /**
+   * This custom hook allows you to subscribe to each form state, and isolate the re-render at the custom hook level. It has its scope in terms of form state subscription, so it would not affect other useFormState and useForm. Using this hook can reduce the re-render impact on large and complex form application.
+   *
+   * @remarks
+   * [API](https://react-hook-form.com/docs/useformstate) • [Demo](https://codesandbox.io/s/useformstate-75xly)
+   *
+   * @param props - include options on specify fields to subscribe. {@link UseFormStateReturn}
+   *
+   * @example
+   * ```tsx
+   * function App() {
+   *   const { register, handleSubmit, control } = useForm({
+   *     defaultValues: {
+   *     firstName: "firstName"
+   *   }});
+   *   const { dirtyFields } = useFormState({
+   *     control
+   *   });
+   *   const onSubmit = (data) => console.log(data);
+   *
+   *   return (
+   *     <form onSubmit={handleSubmit(onSubmit)}>
+   *       <input {...register("firstName")} placeholder="First Name" />
+   *       {dirtyFields.firstName && <p>Field is dirty.</p>}
+   *       <input type="submit" />
+   *     </form>
+   *   );
+   * }
+   * ```
+   */
+  function useFormState(props) {
+      const methods = useFormContext$1();
+      const { control = methods.control, disabled, name, exact } = props || {};
+      const [formState, updateFormState] = React$1.useState(control._formState);
+      const _mounted = React$1.useRef(true);
+      const _localProxyFormState = React$1.useRef({
+          isDirty: false,
+          isLoading: false,
+          dirtyFields: false,
+          touchedFields: false,
+          validatingFields: false,
+          isValidating: false,
+          isValid: false,
+          errors: false,
+      });
+      const _name = React$1.useRef(name);
+      _name.current = name;
+      useSubscribe({
+          disabled,
+          next: (value) => _mounted.current &&
+              shouldSubscribeByName(_name.current, value.name, exact) &&
+              shouldRenderFormState(value, _localProxyFormState.current, control._updateFormState) &&
+              updateFormState({
+                  ...control._formState,
+                  ...value,
+              }),
+          subject: control._subjects.state,
+      });
+      React$1.useEffect(() => {
+          _mounted.current = true;
+          _localProxyFormState.current.isValid && control._updateValid(true);
+          return () => {
+              _mounted.current = false;
+          };
+      }, [control]);
+      return getProxyFormState(formState, control, _localProxyFormState.current, false);
+  }
+
+  var isString$1 = (value) => typeof value === 'string';
+
+  var generateWatchOutput = (names, _names, formValues, isGlobal, defaultValue) => {
+      if (isString$1(names)) {
+          isGlobal && _names.watch.add(names);
+          return get(formValues, names, defaultValue);
+      }
+      if (Array.isArray(names)) {
+          return names.map((fieldName) => (isGlobal && _names.watch.add(fieldName), get(formValues, fieldName)));
+      }
+      isGlobal && (_names.watchAll = true);
+      return formValues;
+  };
+
+  /**
+   * Custom hook to subscribe to field change and isolate re-rendering at the component level.
+   *
+   * @remarks
+   *
+   * [API](https://react-hook-form.com/docs/usewatch) • [Demo](https://codesandbox.io/s/react-hook-form-v7-ts-usewatch-h9i5e)
+   *
+   * @example
+   * ```tsx
+   * const { control } = useForm();
+   * const values = useWatch({
+   *   name: "fieldName"
+   *   control,
+   * })
+   * ```
+   */
+  function useWatch(props) {
+      const methods = useFormContext$1();
+      const { control = methods.control, name, defaultValue, disabled, exact, } = props || {};
+      const _name = React$1.useRef(name);
+      _name.current = name;
+      useSubscribe({
+          disabled,
+          subject: control._subjects.values,
+          next: (formState) => {
+              if (shouldSubscribeByName(_name.current, formState.name, exact)) {
+                  updateValue(cloneObject(generateWatchOutput(_name.current, control._names, formState.values || control._formValues, false, defaultValue)));
+              }
+          },
+      });
+      const [value, updateValue] = React$1.useState(control._getWatch(name, defaultValue));
+      React$1.useEffect(() => control._removeUnmounted());
+      return value;
+  }
+
+  var isKey = (value) => /^\w*$/.test(value);
+
+  var stringToPath = (input) => compact(input.replace(/["|']|\]/g, '').split(/\.|\[/));
+
+  var set = (object, path, value) => {
+      let index = -1;
+      const tempPath = isKey(path) ? [path] : stringToPath(path);
+      const length = tempPath.length;
+      const lastIndex = length - 1;
+      while (++index < length) {
+          const key = tempPath[index];
+          let newValue = value;
+          if (index !== lastIndex) {
+              const objValue = object[key];
+              newValue =
+                  isObject$1(objValue) || Array.isArray(objValue)
+                      ? objValue
+                      : !isNaN(+tempPath[index + 1])
+                          ? []
+                          : {};
+          }
+          object[key] = newValue;
+          object = object[key];
+      }
+      return object;
+  };
+
+  /**
+   * Custom hook to work with controlled component, this function provide you with both form and field level state. Re-render is isolated at the hook level.
+   *
+   * @remarks
+   * [API](https://react-hook-form.com/docs/usecontroller) • [Demo](https://codesandbox.io/s/usecontroller-0o8px)
+   *
+   * @param props - the path name to the form field value, and validation rules.
+   *
+   * @returns field properties, field and form state. {@link UseControllerReturn}
+   *
+   * @example
+   * ```tsx
+   * function Input(props) {
+   *   const { field, fieldState, formState } = useController(props);
+   *   return (
+   *     <div>
+   *       <input {...field} placeholder={props.name} />
+   *       <p>{fieldState.isTouched && "Touched"}</p>
+   *       <p>{formState.isSubmitted ? "submitted" : ""}</p>
+   *     </div>
+   *   );
+   * }
+   * ```
+   */
+  function useController(props) {
+      const methods = useFormContext$1();
+      const { name, disabled, control = methods.control, shouldUnregister } = props;
+      const isArrayField = isNameInFieldArray(control._names.array, name);
+      const value = useWatch({
+          control,
+          name,
+          defaultValue: get(control._formValues, name, get(control._defaultValues, name, props.defaultValue)),
+          exact: true,
+      });
+      const formState = useFormState({
+          control,
+          name,
+      });
+      const _registerProps = React$1.useRef(control.register(name, {
+          ...props.rules,
+          value,
+          ...(isBoolean$1(props.disabled) ? { disabled: props.disabled } : {}),
+      }));
+      React$1.useEffect(() => {
+          const _shouldUnregisterField = control._options.shouldUnregister || shouldUnregister;
+          const updateMounted = (name, value) => {
+              const field = get(control._fields, name);
+              if (field) {
+                  field._f.mount = value;
+              }
+          };
+          updateMounted(name, true);
+          if (_shouldUnregisterField) {
+              const value = cloneObject(get(control._options.defaultValues, name));
+              set(control._defaultValues, name, value);
+              if (isUndefined(get(control._formValues, name))) {
+                  set(control._formValues, name, value);
+              }
+          }
+          return () => {
+              (isArrayField
+                  ? _shouldUnregisterField && !control._state.action
+                  : _shouldUnregisterField)
+                  ? control.unregister(name)
+                  : updateMounted(name, false);
+          };
+      }, [name, control, isArrayField, shouldUnregister]);
+      React$1.useEffect(() => {
+          if (get(control._fields, name)) {
+              control._updateDisabledField({
+                  disabled,
+                  fields: control._fields,
+                  name,
+                  value: get(control._fields, name)._f.value,
+              });
+          }
+      }, [disabled, name, control]);
+      return {
+          field: {
+              name,
+              value,
+              ...(isBoolean$1(disabled) || formState.disabled
+                  ? { disabled: formState.disabled || disabled }
+                  : {}),
+              onChange: React$1.useCallback((event) => _registerProps.current.onChange({
+                  target: {
+                      value: getEventValue(event),
+                      name: name,
+                  },
+                  type: EVENTS.CHANGE,
+              }), [name]),
+              onBlur: React$1.useCallback(() => _registerProps.current.onBlur({
+                  target: {
+                      value: get(control._formValues, name),
+                      name: name,
+                  },
+                  type: EVENTS.BLUR,
+              }), [name, control]),
+              ref: (elm) => {
+                  const field = get(control._fields, name);
+                  if (field && elm) {
+                      field._f.ref = {
+                          focus: () => elm.focus(),
+                          select: () => elm.select(),
+                          setCustomValidity: (message) => elm.setCustomValidity(message),
+                          reportValidity: () => elm.reportValidity(),
+                      };
+                  }
+              },
+          },
+          formState,
+          fieldState: Object.defineProperties({}, {
+              invalid: {
+                  enumerable: true,
+                  get: () => !!get(formState.errors, name),
+              },
+              isDirty: {
+                  enumerable: true,
+                  get: () => !!get(formState.dirtyFields, name),
+              },
+              isTouched: {
+                  enumerable: true,
+                  get: () => !!get(formState.touchedFields, name),
+              },
+              isValidating: {
+                  enumerable: true,
+                  get: () => !!get(formState.validatingFields, name),
+              },
+              error: {
+                  enumerable: true,
+                  get: () => get(formState.errors, name),
+              },
+          }),
+      };
+  }
+
+  /**
+   * Component based on `useController` hook to work with controlled component.
+   *
+   * @remarks
+   * [API](https://react-hook-form.com/docs/usecontroller/controller) • [Demo](https://codesandbox.io/s/react-hook-form-v6-controller-ts-jwyzw) • [Video](https://www.youtube.com/watch?v=N2UNk_UCVyA)
+   *
+   * @param props - the path name to the form field value, and validation rules.
+   *
+   * @returns provide field handler functions, field and form state.
+   *
+   * @example
+   * ```tsx
+   * function App() {
+   *   const { control } = useForm<FormValues>({
+   *     defaultValues: {
+   *       test: ""
+   *     }
+   *   });
+   *
+   *   return (
+   *     <form>
+   *       <Controller
+   *         control={control}
+   *         name="test"
+   *         render={({ field: { onChange, onBlur, value, ref }, formState, fieldState }) => (
+   *           <>
+   *             <input
+   *               onChange={onChange} // send value to hook form
+   *               onBlur={onBlur} // notify when input is touched
+   *               value={value} // return updated value
+   *               ref={ref} // set ref for focus management
+   *             />
+   *             <p>{formState.isSubmitted ? "submitted" : ""}</p>
+   *             <p>{fieldState.isTouched ? "touched" : ""}</p>
+   *           </>
+   *         )}
+   *       />
+   *     </form>
+   *   );
+   * }
+   * ```
+   */
+  const Controller = (props) => props.render(useController(props));
+
+  var appendErrors = (name, validateAllFieldCriteria, errors, type, message) => validateAllFieldCriteria
+      ? {
+          ...errors[name],
+          types: {
+              ...(errors[name] && errors[name].types ? errors[name].types : {}),
+              [type]: message || true,
+          },
+      }
+      : {};
+
+  var getValidationModes = (mode) => ({
+      isOnSubmit: !mode || mode === VALIDATION_MODE.onSubmit,
+      isOnBlur: mode === VALIDATION_MODE.onBlur,
+      isOnChange: mode === VALIDATION_MODE.onChange,
+      isOnAll: mode === VALIDATION_MODE.all,
+      isOnTouch: mode === VALIDATION_MODE.onTouched,
+  });
+
+  var isWatched = (name, _names, isBlurEvent) => !isBlurEvent &&
+      (_names.watchAll ||
+          _names.watch.has(name) ||
+          [..._names.watch].some((watchName) => name.startsWith(watchName) &&
+              /^\.\w+/.test(name.slice(watchName.length))));
+
+  const iterateFieldsByAction = (fields, action, fieldsNames, abortEarly) => {
+      for (const key of fieldsNames || Object.keys(fields)) {
+          const field = get(fields, key);
+          if (field) {
+              const { _f, ...currentField } = field;
+              if (_f) {
+                  if (_f.refs && _f.refs[0] && action(_f.refs[0], key) && !abortEarly) {
+                      break;
+                  }
+                  else if (_f.ref && action(_f.ref, _f.name) && !abortEarly) {
+                      break;
+                  }
+                  else {
+                      iterateFieldsByAction(currentField, action);
+                  }
+              }
+              else if (isObject$1(currentField)) {
+                  iterateFieldsByAction(currentField, action);
+              }
+          }
+      }
+  };
+
+  var updateFieldArrayRootError = (errors, error, name) => {
+      const fieldArrayErrors = compact(get(errors, name));
+      set(fieldArrayErrors, 'root', error[name]);
+      set(errors, name, fieldArrayErrors);
+      return errors;
+  };
+
+  var isFileInput = (element) => element.type === 'file';
+
+  var isFunction = (value) => typeof value === 'function';
+
+  var isHTMLElement = (value) => {
+      if (!isWeb) {
+          return false;
+      }
+      const owner = value ? value.ownerDocument : 0;
+      return (value instanceof
+          (owner && owner.defaultView ? owner.defaultView.HTMLElement : HTMLElement));
+  };
+
+  var isMessage = (value) => isString$1(value);
+
+  var isRadioInput = (element) => element.type === 'radio';
+
+  var isRegex = (value) => value instanceof RegExp;
+
+  const defaultResult = {
+      value: false,
+      isValid: false,
+  };
+  const validResult = { value: true, isValid: true };
+  var getCheckboxValue = (options) => {
+      if (Array.isArray(options)) {
+          if (options.length > 1) {
+              const values = options
+                  .filter((option) => option && option.checked && !option.disabled)
+                  .map((option) => option.value);
+              return { value: values, isValid: !!values.length };
+          }
+          return options[0].checked && !options[0].disabled
+              ? // @ts-expect-error expected to work in the browser
+                  options[0].attributes && !isUndefined(options[0].attributes.value)
+                      ? isUndefined(options[0].value) || options[0].value === ''
+                          ? validResult
+                          : { value: options[0].value, isValid: true }
+                      : validResult
+              : defaultResult;
+      }
+      return defaultResult;
+  };
+
+  const defaultReturn = {
+      isValid: false,
+      value: null,
+  };
+  var getRadioValue = (options) => Array.isArray(options)
+      ? options.reduce((previous, option) => option && option.checked && !option.disabled
+          ? {
+              isValid: true,
+              value: option.value,
+          }
+          : previous, defaultReturn)
+      : defaultReturn;
+
+  function getValidateError(result, ref, type = 'validate') {
+      if (isMessage(result) ||
+          (Array.isArray(result) && result.every(isMessage)) ||
+          (isBoolean$1(result) && !result)) {
+          return {
+              type,
+              message: isMessage(result) ? result : '',
+              ref,
+          };
+      }
+  }
+
+  var getValueAndMessage = (validationData) => isObject$1(validationData) && !isRegex(validationData)
+      ? validationData
+      : {
+          value: validationData,
+          message: '',
+      };
+
+  var validateField = async (field, formValues, validateAllFieldCriteria, shouldUseNativeValidation, isFieldArray) => {
+      const { ref, refs, required, maxLength, minLength, min, max, pattern, validate, name, valueAsNumber, mount, disabled, } = field._f;
+      const inputValue = get(formValues, name);
+      if (!mount || disabled) {
+          return {};
+      }
+      const inputRef = refs ? refs[0] : ref;
+      const setCustomValidity = (message) => {
+          if (shouldUseNativeValidation && inputRef.reportValidity) {
+              inputRef.setCustomValidity(isBoolean$1(message) ? '' : message || '');
+              inputRef.reportValidity();
+          }
+      };
+      const error = {};
+      const isRadio = isRadioInput(ref);
+      const isCheckBox = isCheckBoxInput(ref);
+      const isRadioOrCheckbox = isRadio || isCheckBox;
+      const isEmpty = ((valueAsNumber || isFileInput(ref)) &&
+          isUndefined(ref.value) &&
+          isUndefined(inputValue)) ||
+          (isHTMLElement(ref) && ref.value === '') ||
+          inputValue === '' ||
+          (Array.isArray(inputValue) && !inputValue.length);
+      const appendErrorsCurry = appendErrors.bind(null, name, validateAllFieldCriteria, error);
+      const getMinMaxMessage = (exceedMax, maxLengthMessage, minLengthMessage, maxType = INPUT_VALIDATION_RULES.maxLength, minType = INPUT_VALIDATION_RULES.minLength) => {
+          const message = exceedMax ? maxLengthMessage : minLengthMessage;
+          error[name] = {
+              type: exceedMax ? maxType : minType,
+              message,
+              ref,
+              ...appendErrorsCurry(exceedMax ? maxType : minType, message),
+          };
+      };
+      if (isFieldArray
+          ? !Array.isArray(inputValue) || !inputValue.length
+          : required &&
+              ((!isRadioOrCheckbox && (isEmpty || isNullOrUndefined(inputValue))) ||
+                  (isBoolean$1(inputValue) && !inputValue) ||
+                  (isCheckBox && !getCheckboxValue(refs).isValid) ||
+                  (isRadio && !getRadioValue(refs).isValid))) {
+          const { value, message } = isMessage(required)
+              ? { value: !!required, message: required }
+              : getValueAndMessage(required);
+          if (value) {
+              error[name] = {
+                  type: INPUT_VALIDATION_RULES.required,
+                  message,
+                  ref: inputRef,
+                  ...appendErrorsCurry(INPUT_VALIDATION_RULES.required, message),
+              };
+              if (!validateAllFieldCriteria) {
+                  setCustomValidity(message);
+                  return error;
+              }
+          }
+      }
+      if (!isEmpty && (!isNullOrUndefined(min) || !isNullOrUndefined(max))) {
+          let exceedMax;
+          let exceedMin;
+          const maxOutput = getValueAndMessage(max);
+          const minOutput = getValueAndMessage(min);
+          if (!isNullOrUndefined(inputValue) && !isNaN(inputValue)) {
+              const valueNumber = ref.valueAsNumber ||
+                  (inputValue ? +inputValue : inputValue);
+              if (!isNullOrUndefined(maxOutput.value)) {
+                  exceedMax = valueNumber > maxOutput.value;
+              }
+              if (!isNullOrUndefined(minOutput.value)) {
+                  exceedMin = valueNumber < minOutput.value;
+              }
+          }
+          else {
+              const valueDate = ref.valueAsDate || new Date(inputValue);
+              const convertTimeToDate = (time) => new Date(new Date().toDateString() + ' ' + time);
+              const isTime = ref.type == 'time';
+              const isWeek = ref.type == 'week';
+              if (isString$1(maxOutput.value) && inputValue) {
+                  exceedMax = isTime
+                      ? convertTimeToDate(inputValue) > convertTimeToDate(maxOutput.value)
+                      : isWeek
+                          ? inputValue > maxOutput.value
+                          : valueDate > new Date(maxOutput.value);
+              }
+              if (isString$1(minOutput.value) && inputValue) {
+                  exceedMin = isTime
+                      ? convertTimeToDate(inputValue) < convertTimeToDate(minOutput.value)
+                      : isWeek
+                          ? inputValue < minOutput.value
+                          : valueDate < new Date(minOutput.value);
+              }
+          }
+          if (exceedMax || exceedMin) {
+              getMinMaxMessage(!!exceedMax, maxOutput.message, minOutput.message, INPUT_VALIDATION_RULES.max, INPUT_VALIDATION_RULES.min);
+              if (!validateAllFieldCriteria) {
+                  setCustomValidity(error[name].message);
+                  return error;
+              }
+          }
+      }
+      if ((maxLength || minLength) &&
+          !isEmpty &&
+          (isString$1(inputValue) || (isFieldArray && Array.isArray(inputValue)))) {
+          const maxLengthOutput = getValueAndMessage(maxLength);
+          const minLengthOutput = getValueAndMessage(minLength);
+          const exceedMax = !isNullOrUndefined(maxLengthOutput.value) &&
+              inputValue.length > +maxLengthOutput.value;
+          const exceedMin = !isNullOrUndefined(minLengthOutput.value) &&
+              inputValue.length < +minLengthOutput.value;
+          if (exceedMax || exceedMin) {
+              getMinMaxMessage(exceedMax, maxLengthOutput.message, minLengthOutput.message);
+              if (!validateAllFieldCriteria) {
+                  setCustomValidity(error[name].message);
+                  return error;
+              }
+          }
+      }
+      if (pattern && !isEmpty && isString$1(inputValue)) {
+          const { value: patternValue, message } = getValueAndMessage(pattern);
+          if (isRegex(patternValue) && !inputValue.match(patternValue)) {
+              error[name] = {
+                  type: INPUT_VALIDATION_RULES.pattern,
+                  message,
+                  ref,
+                  ...appendErrorsCurry(INPUT_VALIDATION_RULES.pattern, message),
+              };
+              if (!validateAllFieldCriteria) {
+                  setCustomValidity(message);
+                  return error;
+              }
+          }
+      }
+      if (validate) {
+          if (isFunction(validate)) {
+              const result = await validate(inputValue, formValues);
+              const validateError = getValidateError(result, inputRef);
+              if (validateError) {
+                  error[name] = {
+                      ...validateError,
+                      ...appendErrorsCurry(INPUT_VALIDATION_RULES.validate, validateError.message),
+                  };
+                  if (!validateAllFieldCriteria) {
+                      setCustomValidity(validateError.message);
+                      return error;
+                  }
+              }
+          }
+          else if (isObject$1(validate)) {
+              let validationResult = {};
+              for (const key in validate) {
+                  if (!isEmptyObject$1(validationResult) && !validateAllFieldCriteria) {
+                      break;
+                  }
+                  const validateError = getValidateError(await validate[key](inputValue, formValues), inputRef, key);
+                  if (validateError) {
+                      validationResult = {
+                          ...validateError,
+                          ...appendErrorsCurry(key, validateError.message),
+                      };
+                      setCustomValidity(validateError.message);
+                      if (validateAllFieldCriteria) {
+                          error[name] = validationResult;
+                      }
+                  }
+              }
+              if (!isEmptyObject$1(validationResult)) {
+                  error[name] = {
+                      ref: inputRef,
+                      ...validationResult,
+                  };
+                  if (!validateAllFieldCriteria) {
+                      return error;
+                  }
+              }
+          }
+      }
+      setCustomValidity(true);
+      return error;
+  };
+
+  function baseGet$1(object, updatePath) {
+      const length = updatePath.slice(0, -1).length;
+      let index = 0;
+      while (index < length) {
+          object = isUndefined(object) ? index++ : object[updatePath[index++]];
+      }
+      return object;
+  }
+  function isEmptyArray(obj) {
+      for (const key in obj) {
+          if (obj.hasOwnProperty(key) && !isUndefined(obj[key])) {
+              return false;
+          }
+      }
+      return true;
+  }
+  function unset(object, path) {
+      const paths = Array.isArray(path)
+          ? path
+          : isKey(path)
+              ? [path]
+              : stringToPath(path);
+      const childObject = paths.length === 1 ? object : baseGet$1(object, paths);
+      const index = paths.length - 1;
+      const key = paths[index];
+      if (childObject) {
+          delete childObject[key];
+      }
+      if (index !== 0 &&
+          ((isObject$1(childObject) && isEmptyObject$1(childObject)) ||
+              (Array.isArray(childObject) && isEmptyArray(childObject)))) {
+          unset(object, paths.slice(0, -1));
+      }
+      return object;
+  }
+
+  var createSubject = () => {
+      let _observers = [];
+      const next = (value) => {
+          for (const observer of _observers) {
+              observer.next && observer.next(value);
+          }
+      };
+      const subscribe = (observer) => {
+          _observers.push(observer);
+          return {
+              unsubscribe: () => {
+                  _observers = _observers.filter((o) => o !== observer);
+              },
+          };
+      };
+      const unsubscribe = () => {
+          _observers = [];
+      };
+      return {
+          get observers() {
+              return _observers;
+          },
+          next,
+          subscribe,
+          unsubscribe,
+      };
+  };
+
+  var isPrimitive = (value) => isNullOrUndefined(value) || !isObjectType(value);
+
+  function deepEqual(object1, object2) {
+      if (isPrimitive(object1) || isPrimitive(object2)) {
+          return object1 === object2;
+      }
+      if (isDateObject(object1) && isDateObject(object2)) {
+          return object1.getTime() === object2.getTime();
+      }
+      const keys1 = Object.keys(object1);
+      const keys2 = Object.keys(object2);
+      if (keys1.length !== keys2.length) {
+          return false;
+      }
+      for (const key of keys1) {
+          const val1 = object1[key];
+          if (!keys2.includes(key)) {
+              return false;
+          }
+          if (key !== 'ref') {
+              const val2 = object2[key];
+              if ((isDateObject(val1) && isDateObject(val2)) ||
+                  (isObject$1(val1) && isObject$1(val2)) ||
+                  (Array.isArray(val1) && Array.isArray(val2))
+                  ? !deepEqual(val1, val2)
+                  : val1 !== val2) {
+                  return false;
+              }
+          }
+      }
+      return true;
+  }
+
+  var isMultipleSelect = (element) => element.type === `select-multiple`;
+
+  var isRadioOrCheckbox = (ref) => isRadioInput(ref) || isCheckBoxInput(ref);
+
+  var live = (ref) => isHTMLElement(ref) && ref.isConnected;
+
+  var objectHasFunction = (data) => {
+      for (const key in data) {
+          if (isFunction(data[key])) {
+              return true;
+          }
+      }
+      return false;
+  };
+
+  function markFieldsDirty(data, fields = {}) {
+      const isParentNodeArray = Array.isArray(data);
+      if (isObject$1(data) || isParentNodeArray) {
+          for (const key in data) {
+              if (Array.isArray(data[key]) ||
+                  (isObject$1(data[key]) && !objectHasFunction(data[key]))) {
+                  fields[key] = Array.isArray(data[key]) ? [] : {};
+                  markFieldsDirty(data[key], fields[key]);
+              }
+              else if (!isNullOrUndefined(data[key])) {
+                  fields[key] = true;
+              }
+          }
+      }
+      return fields;
+  }
+  function getDirtyFieldsFromDefaultValues(data, formValues, dirtyFieldsFromValues) {
+      const isParentNodeArray = Array.isArray(data);
+      if (isObject$1(data) || isParentNodeArray) {
+          for (const key in data) {
+              if (Array.isArray(data[key]) ||
+                  (isObject$1(data[key]) && !objectHasFunction(data[key]))) {
+                  if (isUndefined(formValues) ||
+                      isPrimitive(dirtyFieldsFromValues[key])) {
+                      dirtyFieldsFromValues[key] = Array.isArray(data[key])
+                          ? markFieldsDirty(data[key], [])
+                          : { ...markFieldsDirty(data[key]) };
+                  }
+                  else {
+                      getDirtyFieldsFromDefaultValues(data[key], isNullOrUndefined(formValues) ? {} : formValues[key], dirtyFieldsFromValues[key]);
+                  }
+              }
+              else {
+                  dirtyFieldsFromValues[key] = !deepEqual(data[key], formValues[key]);
+              }
+          }
+      }
+      return dirtyFieldsFromValues;
+  }
+  var getDirtyFields = (defaultValues, formValues) => getDirtyFieldsFromDefaultValues(defaultValues, formValues, markFieldsDirty(formValues));
+
+  var getFieldValueAs = (value, { valueAsNumber, valueAsDate, setValueAs }) => isUndefined(value)
+      ? value
+      : valueAsNumber
+          ? value === ''
+              ? NaN
+              : value
+                  ? +value
+                  : value
+          : valueAsDate && isString$1(value)
+              ? new Date(value)
+              : setValueAs
+                  ? setValueAs(value)
+                  : value;
+
+  function getFieldValue(_f) {
+      const ref = _f.ref;
+      if (_f.refs ? _f.refs.every((ref) => ref.disabled) : ref.disabled) {
+          return;
+      }
+      if (isFileInput(ref)) {
+          return ref.files;
+      }
+      if (isRadioInput(ref)) {
+          return getRadioValue(_f.refs).value;
+      }
+      if (isMultipleSelect(ref)) {
+          return [...ref.selectedOptions].map(({ value }) => value);
+      }
+      if (isCheckBoxInput(ref)) {
+          return getCheckboxValue(_f.refs).value;
+      }
+      return getFieldValueAs(isUndefined(ref.value) ? _f.ref.value : ref.value, _f);
+  }
+
+  var getResolverOptions = (fieldsNames, _fields, criteriaMode, shouldUseNativeValidation) => {
+      const fields = {};
+      for (const name of fieldsNames) {
+          const field = get(_fields, name);
+          field && set(fields, name, field._f);
+      }
+      return {
+          criteriaMode,
+          names: [...fieldsNames],
+          fields,
+          shouldUseNativeValidation,
+      };
+  };
+
+  var getRuleValue = (rule) => isUndefined(rule)
+      ? rule
+      : isRegex(rule)
+          ? rule.source
+          : isObject$1(rule)
+              ? isRegex(rule.value)
+                  ? rule.value.source
+                  : rule.value
+              : rule;
+
+  var hasValidation = (options) => options.mount &&
+      (options.required ||
+          options.min ||
+          options.max ||
+          options.maxLength ||
+          options.minLength ||
+          options.pattern ||
+          options.validate);
+
+  function schemaErrorLookup(errors, _fields, name) {
+      const error = get(errors, name);
+      if (error || isKey(name)) {
+          return {
+              error,
+              name,
+          };
+      }
+      const names = name.split('.');
+      while (names.length) {
+          const fieldName = names.join('.');
+          const field = get(_fields, fieldName);
+          const foundError = get(errors, fieldName);
+          if (field && !Array.isArray(field) && name !== fieldName) {
+              return { name };
+          }
+          if (foundError && foundError.type) {
+              return {
+                  name: fieldName,
+                  error: foundError,
+              };
+          }
+          names.pop();
+      }
+      return {
+          name,
+      };
+  }
+
+  var skipValidation = (isBlurEvent, isTouched, isSubmitted, reValidateMode, mode) => {
+      if (mode.isOnAll) {
+          return false;
+      }
+      else if (!isSubmitted && mode.isOnTouch) {
+          return !(isTouched || isBlurEvent);
+      }
+      else if (isSubmitted ? reValidateMode.isOnBlur : mode.isOnBlur) {
+          return !isBlurEvent;
+      }
+      else if (isSubmitted ? reValidateMode.isOnChange : mode.isOnChange) {
+          return isBlurEvent;
+      }
+      return true;
+  };
+
+  var unsetEmptyArray = (ref, name) => !compact(get(ref, name)).length && unset(ref, name);
+
+  const defaultOptions = {
+      mode: VALIDATION_MODE.onSubmit,
+      reValidateMode: VALIDATION_MODE.onChange,
+      shouldFocusError: true,
+  };
+  function createFormControl(props = {}) {
+      let _options = {
+          ...defaultOptions,
+          ...props,
+      };
+      let _formState = {
+          submitCount: 0,
+          isDirty: false,
+          isLoading: isFunction(_options.defaultValues),
+          isValidating: false,
+          isSubmitted: false,
+          isSubmitting: false,
+          isSubmitSuccessful: false,
+          isValid: false,
+          touchedFields: {},
+          dirtyFields: {},
+          validatingFields: {},
+          errors: _options.errors || {},
+          disabled: _options.disabled || false,
+      };
+      let _fields = {};
+      let _defaultValues = isObject$1(_options.defaultValues) || isObject$1(_options.values)
+          ? cloneObject(_options.defaultValues || _options.values) || {}
+          : {};
+      let _formValues = _options.shouldUnregister
+          ? {}
+          : cloneObject(_defaultValues);
+      let _state = {
+          action: false,
+          mount: false,
+          watch: false,
+      };
+      let _names = {
+          mount: new Set(),
+          unMount: new Set(),
+          array: new Set(),
+          watch: new Set(),
+      };
+      let delayErrorCallback;
+      let timer = 0;
+      const _proxyFormState = {
+          isDirty: false,
+          dirtyFields: false,
+          validatingFields: false,
+          touchedFields: false,
+          isValidating: false,
+          isValid: false,
+          errors: false,
+      };
+      const _subjects = {
+          values: createSubject(),
+          array: createSubject(),
+          state: createSubject(),
+      };
+      const validationModeBeforeSubmit = getValidationModes(_options.mode);
+      const validationModeAfterSubmit = getValidationModes(_options.reValidateMode);
+      const shouldDisplayAllAssociatedErrors = _options.criteriaMode === VALIDATION_MODE.all;
+      const debounce = (callback) => (wait) => {
+          clearTimeout(timer);
+          timer = setTimeout(callback, wait);
+      };
+      const _updateValid = async (shouldUpdateValid) => {
+          if (_proxyFormState.isValid || shouldUpdateValid) {
+              const isValid = _options.resolver
+                  ? isEmptyObject$1((await _executeSchema()).errors)
+                  : await executeBuiltInValidation(_fields, true);
+              if (isValid !== _formState.isValid) {
+                  _subjects.state.next({
+                      isValid,
+                  });
+              }
+          }
+      };
+      const _updateIsValidating = (names, isValidating) => {
+          if (_proxyFormState.isValidating || _proxyFormState.validatingFields) {
+              (names || Array.from(_names.mount)).forEach((name) => name && set(_formState.validatingFields, name, !!isValidating));
+              _formState.isValidating = Object.values(_formState.validatingFields).some((val) => val);
+              _subjects.state.next({
+                  validatingFields: _formState.validatingFields,
+                  isValidating: _formState.isValidating,
+              });
+          }
+      };
+      const _updateFieldArray = (name, values = [], method, args, shouldSetValues = true, shouldUpdateFieldsAndState = true) => {
+          if (args && method) {
+              _state.action = true;
+              if (shouldUpdateFieldsAndState && Array.isArray(get(_fields, name))) {
+                  const fieldValues = method(get(_fields, name), args.argA, args.argB);
+                  shouldSetValues && set(_fields, name, fieldValues);
+              }
+              if (shouldUpdateFieldsAndState &&
+                  Array.isArray(get(_formState.errors, name))) {
+                  const errors = method(get(_formState.errors, name), args.argA, args.argB);
+                  shouldSetValues && set(_formState.errors, name, errors);
+                  unsetEmptyArray(_formState.errors, name);
+              }
+              if (_proxyFormState.touchedFields &&
+                  shouldUpdateFieldsAndState &&
+                  Array.isArray(get(_formState.touchedFields, name))) {
+                  const touchedFields = method(get(_formState.touchedFields, name), args.argA, args.argB);
+                  shouldSetValues && set(_formState.touchedFields, name, touchedFields);
+              }
+              if (_proxyFormState.dirtyFields) {
+                  _formState.dirtyFields = getDirtyFields(_defaultValues, _formValues);
+              }
+              _subjects.state.next({
+                  name,
+                  isDirty: _getDirty(name, values),
+                  dirtyFields: _formState.dirtyFields,
+                  errors: _formState.errors,
+                  isValid: _formState.isValid,
+              });
+          }
+          else {
+              set(_formValues, name, values);
+          }
+      };
+      const updateErrors = (name, error) => {
+          set(_formState.errors, name, error);
+          _subjects.state.next({
+              errors: _formState.errors,
+          });
+      };
+      const _setErrors = (errors) => {
+          _formState.errors = errors;
+          _subjects.state.next({
+              errors: _formState.errors,
+              isValid: false,
+          });
+      };
+      const updateValidAndValue = (name, shouldSkipSetValueAs, value, ref) => {
+          const field = get(_fields, name);
+          if (field) {
+              const defaultValue = get(_formValues, name, isUndefined(value) ? get(_defaultValues, name) : value);
+              isUndefined(defaultValue) ||
+                  (ref && ref.defaultChecked) ||
+                  shouldSkipSetValueAs
+                  ? set(_formValues, name, shouldSkipSetValueAs ? defaultValue : getFieldValue(field._f))
+                  : setFieldValue(name, defaultValue);
+              _state.mount && _updateValid();
+          }
+      };
+      const updateTouchAndDirty = (name, fieldValue, isBlurEvent, shouldDirty, shouldRender) => {
+          let shouldUpdateField = false;
+          let isPreviousDirty = false;
+          const output = {
+              name,
+          };
+          const disabledField = !!(get(_fields, name) && get(_fields, name)._f.disabled);
+          if (!isBlurEvent || shouldDirty) {
+              if (_proxyFormState.isDirty) {
+                  isPreviousDirty = _formState.isDirty;
+                  _formState.isDirty = output.isDirty = _getDirty();
+                  shouldUpdateField = isPreviousDirty !== output.isDirty;
+              }
+              const isCurrentFieldPristine = disabledField || deepEqual(get(_defaultValues, name), fieldValue);
+              isPreviousDirty = !!(!disabledField && get(_formState.dirtyFields, name));
+              isCurrentFieldPristine || disabledField
+                  ? unset(_formState.dirtyFields, name)
+                  : set(_formState.dirtyFields, name, true);
+              output.dirtyFields = _formState.dirtyFields;
+              shouldUpdateField =
+                  shouldUpdateField ||
+                      (_proxyFormState.dirtyFields &&
+                          isPreviousDirty !== !isCurrentFieldPristine);
+          }
+          if (isBlurEvent) {
+              const isPreviousFieldTouched = get(_formState.touchedFields, name);
+              if (!isPreviousFieldTouched) {
+                  set(_formState.touchedFields, name, isBlurEvent);
+                  output.touchedFields = _formState.touchedFields;
+                  shouldUpdateField =
+                      shouldUpdateField ||
+                          (_proxyFormState.touchedFields &&
+                              isPreviousFieldTouched !== isBlurEvent);
+              }
+          }
+          shouldUpdateField && shouldRender && _subjects.state.next(output);
+          return shouldUpdateField ? output : {};
+      };
+      const shouldRenderByError = (name, isValid, error, fieldState) => {
+          const previousFieldError = get(_formState.errors, name);
+          const shouldUpdateValid = _proxyFormState.isValid &&
+              isBoolean$1(isValid) &&
+              _formState.isValid !== isValid;
+          if (props.delayError && error) {
+              delayErrorCallback = debounce(() => updateErrors(name, error));
+              delayErrorCallback(props.delayError);
+          }
+          else {
+              clearTimeout(timer);
+              delayErrorCallback = null;
+              error
+                  ? set(_formState.errors, name, error)
+                  : unset(_formState.errors, name);
+          }
+          if ((error ? !deepEqual(previousFieldError, error) : previousFieldError) ||
+              !isEmptyObject$1(fieldState) ||
+              shouldUpdateValid) {
+              const updatedFormState = {
+                  ...fieldState,
+                  ...(shouldUpdateValid && isBoolean$1(isValid) ? { isValid } : {}),
+                  errors: _formState.errors,
+                  name,
+              };
+              _formState = {
+                  ..._formState,
+                  ...updatedFormState,
+              };
+              _subjects.state.next(updatedFormState);
+          }
+      };
+      const _executeSchema = async (name) => {
+          _updateIsValidating(name, true);
+          const result = await _options.resolver(_formValues, _options.context, getResolverOptions(name || _names.mount, _fields, _options.criteriaMode, _options.shouldUseNativeValidation));
+          _updateIsValidating(name);
+          return result;
+      };
+      const executeSchemaAndUpdateState = async (names) => {
+          const { errors } = await _executeSchema(names);
+          if (names) {
+              for (const name of names) {
+                  const error = get(errors, name);
+                  error
+                      ? set(_formState.errors, name, error)
+                      : unset(_formState.errors, name);
+              }
+          }
+          else {
+              _formState.errors = errors;
+          }
+          return errors;
+      };
+      const executeBuiltInValidation = async (fields, shouldOnlyCheckValid, context = {
+          valid: true,
+      }) => {
+          for (const name in fields) {
+              const field = fields[name];
+              if (field) {
+                  const { _f, ...fieldValue } = field;
+                  if (_f) {
+                      const isFieldArrayRoot = _names.array.has(_f.name);
+                      _updateIsValidating([name], true);
+                      const fieldError = await validateField(field, _formValues, shouldDisplayAllAssociatedErrors, _options.shouldUseNativeValidation && !shouldOnlyCheckValid, isFieldArrayRoot);
+                      _updateIsValidating([name]);
+                      if (fieldError[_f.name]) {
+                          context.valid = false;
+                          if (shouldOnlyCheckValid) {
+                              break;
+                          }
+                      }
+                      !shouldOnlyCheckValid &&
+                          (get(fieldError, _f.name)
+                              ? isFieldArrayRoot
+                                  ? updateFieldArrayRootError(_formState.errors, fieldError, _f.name)
+                                  : set(_formState.errors, _f.name, fieldError[_f.name])
+                              : unset(_formState.errors, _f.name));
+                  }
+                  fieldValue &&
+                      (await executeBuiltInValidation(fieldValue, shouldOnlyCheckValid, context));
+              }
+          }
+          return context.valid;
+      };
+      const _removeUnmounted = () => {
+          for (const name of _names.unMount) {
+              const field = get(_fields, name);
+              field &&
+                  (field._f.refs
+                      ? field._f.refs.every((ref) => !live(ref))
+                      : !live(field._f.ref)) &&
+                  unregister(name);
+          }
+          _names.unMount = new Set();
+      };
+      const _getDirty = (name, data) => (name && data && set(_formValues, name, data),
+          !deepEqual(getValues(), _defaultValues));
+      const _getWatch = (names, defaultValue, isGlobal) => generateWatchOutput(names, _names, {
+          ...(_state.mount
+              ? _formValues
+              : isUndefined(defaultValue)
+                  ? _defaultValues
+                  : isString$1(names)
+                      ? { [names]: defaultValue }
+                      : defaultValue),
+      }, isGlobal, defaultValue);
+      const _getFieldArray = (name) => compact(get(_state.mount ? _formValues : _defaultValues, name, props.shouldUnregister ? get(_defaultValues, name, []) : []));
+      const setFieldValue = (name, value, options = {}) => {
+          const field = get(_fields, name);
+          let fieldValue = value;
+          if (field) {
+              const fieldReference = field._f;
+              if (fieldReference) {
+                  !fieldReference.disabled &&
+                      set(_formValues, name, getFieldValueAs(value, fieldReference));
+                  fieldValue =
+                      isHTMLElement(fieldReference.ref) && isNullOrUndefined(value)
+                          ? ''
+                          : value;
+                  if (isMultipleSelect(fieldReference.ref)) {
+                      [...fieldReference.ref.options].forEach((optionRef) => (optionRef.selected = fieldValue.includes(optionRef.value)));
+                  }
+                  else if (fieldReference.refs) {
+                      if (isCheckBoxInput(fieldReference.ref)) {
+                          fieldReference.refs.length > 1
+                              ? fieldReference.refs.forEach((checkboxRef) => (!checkboxRef.defaultChecked || !checkboxRef.disabled) &&
+                                  (checkboxRef.checked = Array.isArray(fieldValue)
+                                      ? !!fieldValue.find((data) => data === checkboxRef.value)
+                                      : fieldValue === checkboxRef.value))
+                              : fieldReference.refs[0] &&
+                                  (fieldReference.refs[0].checked = !!fieldValue);
+                      }
+                      else {
+                          fieldReference.refs.forEach((radioRef) => (radioRef.checked = radioRef.value === fieldValue));
+                      }
+                  }
+                  else if (isFileInput(fieldReference.ref)) {
+                      fieldReference.ref.value = '';
+                  }
+                  else {
+                      fieldReference.ref.value = fieldValue;
+                      if (!fieldReference.ref.type) {
+                          _subjects.values.next({
+                              name,
+                              values: { ..._formValues },
+                          });
+                      }
+                  }
+              }
+          }
+          (options.shouldDirty || options.shouldTouch) &&
+              updateTouchAndDirty(name, fieldValue, options.shouldTouch, options.shouldDirty, true);
+          options.shouldValidate && trigger(name);
+      };
+      const setValues = (name, value, options) => {
+          for (const fieldKey in value) {
+              const fieldValue = value[fieldKey];
+              const fieldName = `${name}.${fieldKey}`;
+              const field = get(_fields, fieldName);
+              (_names.array.has(name) ||
+                  !isPrimitive(fieldValue) ||
+                  (field && !field._f)) &&
+                  !isDateObject(fieldValue)
+                  ? setValues(fieldName, fieldValue, options)
+                  : setFieldValue(fieldName, fieldValue, options);
+          }
+      };
+      const setValue = (name, value, options = {}) => {
+          const field = get(_fields, name);
+          const isFieldArray = _names.array.has(name);
+          const cloneValue = cloneObject(value);
+          set(_formValues, name, cloneValue);
+          if (isFieldArray) {
+              _subjects.array.next({
+                  name,
+                  values: { ..._formValues },
+              });
+              if ((_proxyFormState.isDirty || _proxyFormState.dirtyFields) &&
+                  options.shouldDirty) {
+                  _subjects.state.next({
+                      name,
+                      dirtyFields: getDirtyFields(_defaultValues, _formValues),
+                      isDirty: _getDirty(name, cloneValue),
+                  });
+              }
+          }
+          else {
+              field && !field._f && !isNullOrUndefined(cloneValue)
+                  ? setValues(name, cloneValue, options)
+                  : setFieldValue(name, cloneValue, options);
+          }
+          isWatched(name, _names) && _subjects.state.next({ ..._formState });
+          _subjects.values.next({
+              name: _state.mount ? name : undefined,
+              values: { ..._formValues },
+          });
+      };
+      const onChange = async (event) => {
+          const target = event.target;
+          let name = target.name;
+          let isFieldValueUpdated = true;
+          const field = get(_fields, name);
+          const getCurrentFieldValue = () => target.type ? getFieldValue(field._f) : getEventValue(event);
+          const _updateIsFieldValueUpdated = (fieldValue) => {
+              isFieldValueUpdated =
+                  Number.isNaN(fieldValue) ||
+                      fieldValue === get(_formValues, name, fieldValue);
+          };
+          if (field) {
+              let error;
+              let isValid;
+              const fieldValue = getCurrentFieldValue();
+              const isBlurEvent = event.type === EVENTS.BLUR || event.type === EVENTS.FOCUS_OUT;
+              const shouldSkipValidation = (!hasValidation(field._f) &&
+                  !_options.resolver &&
+                  !get(_formState.errors, name) &&
+                  !field._f.deps) ||
+                  skipValidation(isBlurEvent, get(_formState.touchedFields, name), _formState.isSubmitted, validationModeAfterSubmit, validationModeBeforeSubmit);
+              const watched = isWatched(name, _names, isBlurEvent);
+              set(_formValues, name, fieldValue);
+              if (isBlurEvent) {
+                  field._f.onBlur && field._f.onBlur(event);
+                  delayErrorCallback && delayErrorCallback(0);
+              }
+              else if (field._f.onChange) {
+                  field._f.onChange(event);
+              }
+              const fieldState = updateTouchAndDirty(name, fieldValue, isBlurEvent, false);
+              const shouldRender = !isEmptyObject$1(fieldState) || watched;
+              !isBlurEvent &&
+                  _subjects.values.next({
+                      name,
+                      type: event.type,
+                      values: { ..._formValues },
+                  });
+              if (shouldSkipValidation) {
+                  _proxyFormState.isValid && _updateValid();
+                  return (shouldRender &&
+                      _subjects.state.next({ name, ...(watched ? {} : fieldState) }));
+              }
+              !isBlurEvent && watched && _subjects.state.next({ ..._formState });
+              if (_options.resolver) {
+                  const { errors } = await _executeSchema([name]);
+                  _updateIsFieldValueUpdated(fieldValue);
+                  if (isFieldValueUpdated) {
+                      const previousErrorLookupResult = schemaErrorLookup(_formState.errors, _fields, name);
+                      const errorLookupResult = schemaErrorLookup(errors, _fields, previousErrorLookupResult.name || name);
+                      error = errorLookupResult.error;
+                      name = errorLookupResult.name;
+                      isValid = isEmptyObject$1(errors);
+                  }
+              }
+              else {
+                  _updateIsValidating([name], true);
+                  error = (await validateField(field, _formValues, shouldDisplayAllAssociatedErrors, _options.shouldUseNativeValidation))[name];
+                  _updateIsValidating([name]);
+                  _updateIsFieldValueUpdated(fieldValue);
+                  if (isFieldValueUpdated) {
+                      if (error) {
+                          isValid = false;
+                      }
+                      else if (_proxyFormState.isValid) {
+                          isValid = await executeBuiltInValidation(_fields, true);
+                      }
+                  }
+              }
+              if (isFieldValueUpdated) {
+                  field._f.deps &&
+                      trigger(field._f.deps);
+                  shouldRenderByError(name, isValid, error, fieldState);
+              }
+          }
+      };
+      const _focusInput = (ref, key) => {
+          if (get(_formState.errors, key) && ref.focus) {
+              ref.focus();
+              return 1;
+          }
+          return;
+      };
+      const trigger = async (name, options = {}) => {
+          let isValid;
+          let validationResult;
+          const fieldNames = convertToArrayPayload(name);
+          if (_options.resolver) {
+              const errors = await executeSchemaAndUpdateState(isUndefined(name) ? name : fieldNames);
+              isValid = isEmptyObject$1(errors);
+              validationResult = name
+                  ? !fieldNames.some((name) => get(errors, name))
+                  : isValid;
+          }
+          else if (name) {
+              validationResult = (await Promise.all(fieldNames.map(async (fieldName) => {
+                  const field = get(_fields, fieldName);
+                  return await executeBuiltInValidation(field && field._f ? { [fieldName]: field } : field);
+              }))).every(Boolean);
+              !(!validationResult && !_formState.isValid) && _updateValid();
+          }
+          else {
+              validationResult = isValid = await executeBuiltInValidation(_fields);
+          }
+          _subjects.state.next({
+              ...(!isString$1(name) ||
+                  (_proxyFormState.isValid && isValid !== _formState.isValid)
+                  ? {}
+                  : { name }),
+              ...(_options.resolver || !name ? { isValid } : {}),
+              errors: _formState.errors,
+          });
+          options.shouldFocus &&
+              !validationResult &&
+              iterateFieldsByAction(_fields, _focusInput, name ? fieldNames : _names.mount);
+          return validationResult;
+      };
+      const getValues = (fieldNames) => {
+          const values = {
+              ..._defaultValues,
+              ...(_state.mount ? _formValues : {}),
+          };
+          return isUndefined(fieldNames)
+              ? values
+              : isString$1(fieldNames)
+                  ? get(values, fieldNames)
+                  : fieldNames.map((name) => get(values, name));
+      };
+      const getFieldState = (name, formState) => ({
+          invalid: !!get((formState || _formState).errors, name),
+          isDirty: !!get((formState || _formState).dirtyFields, name),
+          isTouched: !!get((formState || _formState).touchedFields, name),
+          isValidating: !!get((formState || _formState).validatingFields, name),
+          error: get((formState || _formState).errors, name),
+      });
+      const clearErrors = (name) => {
+          name &&
+              convertToArrayPayload(name).forEach((inputName) => unset(_formState.errors, inputName));
+          _subjects.state.next({
+              errors: name ? _formState.errors : {},
+          });
+      };
+      const setError = (name, error, options) => {
+          const ref = (get(_fields, name, { _f: {} })._f || {}).ref;
+          set(_formState.errors, name, {
+              ...error,
+              ref,
+          });
+          _subjects.state.next({
+              name,
+              errors: _formState.errors,
+              isValid: false,
+          });
+          options && options.shouldFocus && ref && ref.focus && ref.focus();
+      };
+      const watch = (name, defaultValue) => isFunction(name)
+          ? _subjects.values.subscribe({
+              next: (payload) => name(_getWatch(undefined, defaultValue), payload),
+          })
+          : _getWatch(name, defaultValue, true);
+      const unregister = (name, options = {}) => {
+          for (const fieldName of name ? convertToArrayPayload(name) : _names.mount) {
+              _names.mount.delete(fieldName);
+              _names.array.delete(fieldName);
+              if (!options.keepValue) {
+                  unset(_fields, fieldName);
+                  unset(_formValues, fieldName);
+              }
+              !options.keepError && unset(_formState.errors, fieldName);
+              !options.keepDirty && unset(_formState.dirtyFields, fieldName);
+              !options.keepTouched && unset(_formState.touchedFields, fieldName);
+              !options.keepIsValidating &&
+                  unset(_formState.validatingFields, fieldName);
+              !_options.shouldUnregister &&
+                  !options.keepDefaultValue &&
+                  unset(_defaultValues, fieldName);
+          }
+          _subjects.values.next({
+              values: { ..._formValues },
+          });
+          _subjects.state.next({
+              ..._formState,
+              ...(!options.keepDirty ? {} : { isDirty: _getDirty() }),
+          });
+          !options.keepIsValid && _updateValid();
+      };
+      const _updateDisabledField = ({ disabled, name, field, fields, value, }) => {
+          if (isBoolean$1(disabled)) {
+              const inputValue = disabled
+                  ? undefined
+                  : isUndefined(value)
+                      ? getFieldValue(field ? field._f : get(fields, name)._f)
+                      : value;
+              set(_formValues, name, inputValue);
+              updateTouchAndDirty(name, inputValue, false, false, true);
+          }
+      };
+      const register = (name, options = {}) => {
+          let field = get(_fields, name);
+          const disabledIsDefined = isBoolean$1(options.disabled);
+          set(_fields, name, {
+              ...(field || {}),
+              _f: {
+                  ...(field && field._f ? field._f : { ref: { name } }),
+                  name,
+                  mount: true,
+                  ...options,
+              },
+          });
+          _names.mount.add(name);
+          if (field) {
+              _updateDisabledField({
+                  field,
+                  disabled: options.disabled,
+                  name,
+                  value: options.value,
+              });
+          }
+          else {
+              updateValidAndValue(name, true, options.value);
+          }
+          return {
+              ...(disabledIsDefined ? { disabled: options.disabled } : {}),
+              ...(_options.progressive
+                  ? {
+                      required: !!options.required,
+                      min: getRuleValue(options.min),
+                      max: getRuleValue(options.max),
+                      minLength: getRuleValue(options.minLength),
+                      maxLength: getRuleValue(options.maxLength),
+                      pattern: getRuleValue(options.pattern),
+                  }
+                  : {}),
+              name,
+              onChange,
+              onBlur: onChange,
+              ref: (ref) => {
+                  if (ref) {
+                      register(name, options);
+                      field = get(_fields, name);
+                      const fieldRef = isUndefined(ref.value)
+                          ? ref.querySelectorAll
+                              ? ref.querySelectorAll('input,select,textarea')[0] || ref
+                              : ref
+                          : ref;
+                      const radioOrCheckbox = isRadioOrCheckbox(fieldRef);
+                      const refs = field._f.refs || [];
+                      if (radioOrCheckbox
+                          ? refs.find((option) => option === fieldRef)
+                          : fieldRef === field._f.ref) {
+                          return;
+                      }
+                      set(_fields, name, {
+                          _f: {
+                              ...field._f,
+                              ...(radioOrCheckbox
+                                  ? {
+                                      refs: [
+                                          ...refs.filter(live),
+                                          fieldRef,
+                                          ...(Array.isArray(get(_defaultValues, name)) ? [{}] : []),
+                                      ],
+                                      ref: { type: fieldRef.type, name },
+                                  }
+                                  : { ref: fieldRef }),
+                          },
+                      });
+                      updateValidAndValue(name, false, undefined, fieldRef);
+                  }
+                  else {
+                      field = get(_fields, name, {});
+                      if (field._f) {
+                          field._f.mount = false;
+                      }
+                      (_options.shouldUnregister || options.shouldUnregister) &&
+                          !(isNameInFieldArray(_names.array, name) && _state.action) &&
+                          _names.unMount.add(name);
+                  }
+              },
+          };
+      };
+      const _focusError = () => _options.shouldFocusError &&
+          iterateFieldsByAction(_fields, _focusInput, _names.mount);
+      const _disableForm = (disabled) => {
+          if (isBoolean$1(disabled)) {
+              _subjects.state.next({ disabled });
+              iterateFieldsByAction(_fields, (ref, name) => {
+                  let requiredDisabledState = disabled;
+                  const currentField = get(_fields, name);
+                  if (currentField && isBoolean$1(currentField._f.disabled)) {
+                      requiredDisabledState || (requiredDisabledState = currentField._f.disabled);
+                  }
+                  ref.disabled = requiredDisabledState;
+              }, 0, false);
+          }
+      };
+      const handleSubmit = (onValid, onInvalid) => async (e) => {
+          let onValidError = undefined;
+          if (e) {
+              e.preventDefault && e.preventDefault();
+              e.persist && e.persist();
+          }
+          let fieldValues = cloneObject(_formValues);
+          _subjects.state.next({
+              isSubmitting: true,
+          });
+          if (_options.resolver) {
+              const { errors, values } = await _executeSchema();
+              _formState.errors = errors;
+              fieldValues = values;
+          }
+          else {
+              await executeBuiltInValidation(_fields);
+          }
+          unset(_formState.errors, 'root');
+          if (isEmptyObject$1(_formState.errors)) {
+              _subjects.state.next({
+                  errors: {},
+              });
+              try {
+                  await onValid(fieldValues, e);
+              }
+              catch (error) {
+                  onValidError = error;
+              }
+          }
+          else {
+              if (onInvalid) {
+                  await onInvalid({ ..._formState.errors }, e);
+              }
+              _focusError();
+              setTimeout(_focusError);
+          }
+          _subjects.state.next({
+              isSubmitted: true,
+              isSubmitting: false,
+              isSubmitSuccessful: isEmptyObject$1(_formState.errors) && !onValidError,
+              submitCount: _formState.submitCount + 1,
+              errors: _formState.errors,
+          });
+          if (onValidError) {
+              throw onValidError;
+          }
+      };
+      const resetField = (name, options = {}) => {
+          if (get(_fields, name)) {
+              if (isUndefined(options.defaultValue)) {
+                  setValue(name, cloneObject(get(_defaultValues, name)));
+              }
+              else {
+                  setValue(name, options.defaultValue);
+                  set(_defaultValues, name, cloneObject(options.defaultValue));
+              }
+              if (!options.keepTouched) {
+                  unset(_formState.touchedFields, name);
+              }
+              if (!options.keepDirty) {
+                  unset(_formState.dirtyFields, name);
+                  _formState.isDirty = options.defaultValue
+                      ? _getDirty(name, cloneObject(get(_defaultValues, name)))
+                      : _getDirty();
+              }
+              if (!options.keepError) {
+                  unset(_formState.errors, name);
+                  _proxyFormState.isValid && _updateValid();
+              }
+              _subjects.state.next({ ..._formState });
+          }
+      };
+      const _reset = (formValues, keepStateOptions = {}) => {
+          const updatedValues = formValues ? cloneObject(formValues) : _defaultValues;
+          const cloneUpdatedValues = cloneObject(updatedValues);
+          const isEmptyResetValues = isEmptyObject$1(formValues);
+          const values = isEmptyResetValues ? _defaultValues : cloneUpdatedValues;
+          if (!keepStateOptions.keepDefaultValues) {
+              _defaultValues = updatedValues;
+          }
+          if (!keepStateOptions.keepValues) {
+              if (keepStateOptions.keepDirtyValues) {
+                  for (const fieldName of _names.mount) {
+                      get(_formState.dirtyFields, fieldName)
+                          ? set(values, fieldName, get(_formValues, fieldName))
+                          : setValue(fieldName, get(values, fieldName));
+                  }
+              }
+              else {
+                  if (isWeb && isUndefined(formValues)) {
+                      for (const name of _names.mount) {
+                          const field = get(_fields, name);
+                          if (field && field._f) {
+                              const fieldReference = Array.isArray(field._f.refs)
+                                  ? field._f.refs[0]
+                                  : field._f.ref;
+                              if (isHTMLElement(fieldReference)) {
+                                  const form = fieldReference.closest('form');
+                                  if (form) {
+                                      form.reset();
+                                      break;
+                                  }
+                              }
+                          }
+                      }
+                  }
+                  _fields = {};
+              }
+              _formValues = props.shouldUnregister
+                  ? keepStateOptions.keepDefaultValues
+                      ? cloneObject(_defaultValues)
+                      : {}
+                  : cloneObject(values);
+              _subjects.array.next({
+                  values: { ...values },
+              });
+              _subjects.values.next({
+                  values: { ...values },
+              });
+          }
+          _names = {
+              mount: keepStateOptions.keepDirtyValues ? _names.mount : new Set(),
+              unMount: new Set(),
+              array: new Set(),
+              watch: new Set(),
+              watchAll: false,
+              focus: '',
+          };
+          _state.mount =
+              !_proxyFormState.isValid ||
+                  !!keepStateOptions.keepIsValid ||
+                  !!keepStateOptions.keepDirtyValues;
+          _state.watch = !!props.shouldUnregister;
+          _subjects.state.next({
+              submitCount: keepStateOptions.keepSubmitCount
+                  ? _formState.submitCount
+                  : 0,
+              isDirty: isEmptyResetValues
+                  ? false
+                  : keepStateOptions.keepDirty
+                      ? _formState.isDirty
+                      : !!(keepStateOptions.keepDefaultValues &&
+                          !deepEqual(formValues, _defaultValues)),
+              isSubmitted: keepStateOptions.keepIsSubmitted
+                  ? _formState.isSubmitted
+                  : false,
+              dirtyFields: isEmptyResetValues
+                  ? []
+                  : keepStateOptions.keepDirtyValues
+                      ? keepStateOptions.keepDefaultValues && _formValues
+                          ? getDirtyFields(_defaultValues, _formValues)
+                          : _formState.dirtyFields
+                      : keepStateOptions.keepDefaultValues && formValues
+                          ? getDirtyFields(_defaultValues, formValues)
+                          : {},
+              touchedFields: keepStateOptions.keepTouched
+                  ? _formState.touchedFields
+                  : {},
+              errors: keepStateOptions.keepErrors ? _formState.errors : {},
+              isSubmitSuccessful: keepStateOptions.keepIsSubmitSuccessful
+                  ? _formState.isSubmitSuccessful
+                  : false,
+              isSubmitting: false,
+          });
+      };
+      const reset = (formValues, keepStateOptions) => _reset(isFunction(formValues)
+          ? formValues(_formValues)
+          : formValues, keepStateOptions);
+      const setFocus = (name, options = {}) => {
+          const field = get(_fields, name);
+          const fieldReference = field && field._f;
+          if (fieldReference) {
+              const fieldRef = fieldReference.refs
+                  ? fieldReference.refs[0]
+                  : fieldReference.ref;
+              if (fieldRef.focus) {
+                  fieldRef.focus();
+                  options.shouldSelect && fieldRef.select();
+              }
+          }
+      };
+      const _updateFormState = (updatedFormState) => {
+          _formState = {
+              ..._formState,
+              ...updatedFormState,
+          };
+      };
+      const _resetDefaultValues = () => isFunction(_options.defaultValues) &&
+          _options.defaultValues().then((values) => {
+              reset(values, _options.resetOptions);
+              _subjects.state.next({
+                  isLoading: false,
+              });
+          });
+      return {
+          control: {
+              register,
+              unregister,
+              getFieldState,
+              handleSubmit,
+              setError,
+              _executeSchema,
+              _getWatch,
+              _getDirty,
+              _updateValid,
+              _removeUnmounted,
+              _updateFieldArray,
+              _updateDisabledField,
+              _getFieldArray,
+              _reset,
+              _resetDefaultValues,
+              _updateFormState,
+              _disableForm,
+              _subjects,
+              _proxyFormState,
+              _setErrors,
+              get _fields() {
+                  return _fields;
+              },
+              get _formValues() {
+                  return _formValues;
+              },
+              get _state() {
+                  return _state;
+              },
+              set _state(value) {
+                  _state = value;
+              },
+              get _defaultValues() {
+                  return _defaultValues;
+              },
+              get _names() {
+                  return _names;
+              },
+              set _names(value) {
+                  _names = value;
+              },
+              get _formState() {
+                  return _formState;
+              },
+              set _formState(value) {
+                  _formState = value;
+              },
+              get _options() {
+                  return _options;
+              },
+              set _options(value) {
+                  _options = {
+                      ..._options,
+                      ...value,
+                  };
+              },
+          },
+          trigger,
+          register,
+          handleSubmit,
+          watch,
+          setValue,
+          getValues,
+          reset,
+          resetField,
+          clearErrors,
+          unregister,
+          setError,
+          setFocus,
+          getFieldState,
+      };
+  }
+
+  /**
+   * Custom hook to manage the entire form.
+   *
+   * @remarks
+   * [API](https://react-hook-form.com/docs/useform) • [Demo](https://codesandbox.io/s/react-hook-form-get-started-ts-5ksmm) • [Video](https://www.youtube.com/watch?v=RkXv4AXXC_4)
+   *
+   * @param props - form configuration and validation parameters.
+   *
+   * @returns methods - individual functions to manage the form state. {@link UseFormReturn}
+   *
+   * @example
+   * ```tsx
+   * function App() {
+   *   const { register, handleSubmit, watch, formState: { errors } } = useForm();
+   *   const onSubmit = data => console.log(data);
+   *
+   *   console.log(watch("example"));
+   *
+   *   return (
+   *     <form onSubmit={handleSubmit(onSubmit)}>
+   *       <input defaultValue="test" {...register("example")} />
+   *       <input {...register("exampleRequired", { required: true })} />
+   *       {errors.exampleRequired && <span>This field is required</span>}
+   *       <button>Submit</button>
+   *     </form>
+   *   );
+   * }
+   * ```
+   */
+  function useForm(props = {}) {
+      const _formControl = React$1.useRef();
+      const _values = React$1.useRef();
+      const [formState, updateFormState] = React$1.useState({
+          isDirty: false,
+          isValidating: false,
+          isLoading: isFunction(props.defaultValues),
+          isSubmitted: false,
+          isSubmitting: false,
+          isSubmitSuccessful: false,
+          isValid: false,
+          submitCount: 0,
+          dirtyFields: {},
+          touchedFields: {},
+          validatingFields: {},
+          errors: props.errors || {},
+          disabled: props.disabled || false,
+          defaultValues: isFunction(props.defaultValues)
+              ? undefined
+              : props.defaultValues,
+      });
+      if (!_formControl.current) {
+          _formControl.current = {
+              ...createFormControl(props),
+              formState,
+          };
+      }
+      const control = _formControl.current.control;
+      control._options = props;
+      useSubscribe({
+          subject: control._subjects.state,
+          next: (value) => {
+              if (shouldRenderFormState(value, control._proxyFormState, control._updateFormState, true)) {
+                  updateFormState({ ...control._formState });
+              }
+          },
+      });
+      React$1.useEffect(() => control._disableForm(props.disabled), [control, props.disabled]);
+      React$1.useEffect(() => {
+          if (control._proxyFormState.isDirty) {
+              const isDirty = control._getDirty();
+              if (isDirty !== formState.isDirty) {
+                  control._subjects.state.next({
+                      isDirty,
+                  });
+              }
+          }
+      }, [control, formState.isDirty]);
+      React$1.useEffect(() => {
+          if (props.values && !deepEqual(props.values, _values.current)) {
+              control._reset(props.values, control._options.resetOptions);
+              _values.current = props.values;
+              updateFormState((state) => ({ ...state }));
+          }
+          else {
+              control._resetDefaultValues();
+          }
+      }, [props.values, control]);
+      React$1.useEffect(() => {
+          if (props.errors) {
+              control._setErrors(props.errors);
+          }
+      }, [props.errors, control]);
+      React$1.useEffect(() => {
+          if (!control._state.mount) {
+              control._updateValid();
+              control._state.mount = true;
+          }
+          if (control._state.watch) {
+              control._state.watch = false;
+              control._subjects.state.next({ ...control._formState });
+          }
+          control._removeUnmounted();
+      });
+      React$1.useEffect(() => {
+          props.shouldUnregister &&
+              control._subjects.values.next({
+                  values: control._getWatch(),
+              });
+      }, [props.shouldUnregister, control]);
+      _formControl.current.formState = getProxyFormState(formState, control);
+      return _formControl.current;
+  }
+
+  var classnames$1 = {exports: {}};
 
   /*!
   	Copyright (c) 2018 Jed Watson.
@@ -4528,10 +6697,10 @@
   	    window.classNames = classNames;
   	  }
   	})(); 
-  } (classnames));
+  } (classnames$1));
 
-  var classnamesExports = classnames.exports;
-  var classNames = /*@__PURE__*/getDefaultExportFromCjs(classnamesExports);
+  var classnamesExports$1 = classnames$1.exports;
+  var classNames$1 = /*@__PURE__*/getDefaultExportFromCjs(classnamesExports$1);
 
   var baseGetTag$3 = _baseGetTag,
     isArray$1 = isArray_1,
@@ -4614,7 +6783,7 @@
       locale = _ref.locale;
     var keys = Object.keys(errors);
     return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-validation-errors', className)
+      className: classNames$1('lf-validation-errors', className)
     }, keys.map(function (fieldName) {
       var label = fieldName;
       if (errors[fieldName] && errors[fieldName].ref && errors[fieldName].ref.label) {
@@ -15086,10 +17255,10 @@
     };
   };
 
-  var FormContext = /*#__PURE__*/React$1.createContext();
+  var FormContext$1 = /*#__PURE__*/React$1.createContext();
 
   var useFormContext = function useFormContext() {
-    var context = React$1.useContext(FormContext);
+    var context = React$1.useContext(FormContext$1);
 
     // put here some defaults
 
@@ -15775,7 +17944,7 @@
       rightAlignment = _ref.rightAlignment;
     return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
-      className: classNames('lf-control-three-columns', layout)
+      className: classNames$1('lf-control-three-columns', layout)
     }, /*#__PURE__*/React$1.createElement("div", {
       className: "left",
       style: {
@@ -15804,7 +17973,7 @@
       leftAlignment = _ref.leftAlignment,
       rightAlignment = _ref.rightAlignment;
     return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-control-two-columns', layout),
+      className: classNames$1('lf-control-two-columns', layout),
       "data-lf-field-name": name
     }, /*#__PURE__*/React$1.createElement("div", {
       className: "left",
@@ -15849,13 +18018,13 @@
     }, [open]);
     return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
-      className: classNames('lf-control-group', "lf-border-".concat(border), {
+      className: classNames$1('lf-control-group', "lf-border-".concat(border), {
         'open': isOpen,
         'close': !isOpen
       })
     }, /*#__PURE__*/React$1.createElement("div", {
       role: "separator",
-      className: classNames('header', align)
+      className: classNames$1('header', align)
     }, /*#__PURE__*/React$1.createElement("span", {
       className: "inner-text"
     }, label, collapsible && /*#__PURE__*/React$1.createElement("a", {
@@ -15940,16 +18109,16 @@
     Divider: Divider
   });
 
-  var _excluded$1G = ["name", "view"];
+  var _excluded$1L = ["name", "view"];
   var ReactView = function ReactView(_ref) {
     var name = _ref.name,
       view = _ref.view,
-      rest = _objectWithoutProperties(_ref, _excluded$1G);
+      rest = _objectWithoutProperties(_ref, _excluded$1L);
     var View = view;
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-react-view",
       "data-lf-field-name": name
-    }, View && /*#__PURE__*/React$1.createElement(View, _extends({
+    }, View && /*#__PURE__*/React$1.createElement(View, _extends$1({
       name: name
     }, rest)));
   };
@@ -16161,7 +18330,7 @@
     }, [disabled, onClick]);
     return /*#__PURE__*/React$1.createElement("a", {
       href: "#",
-      className: classNames('lf-icon-button', className, {
+      className: classNames$1('lf-icon-button', className, {
         disabled: disabled
       }),
       onClick: handleClick
@@ -16380,7 +18549,7 @@
       }, children);
     }
     return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-control-common-array', align ? "lf-".concat(align) : undefined),
+      className: classNames$1('lf-control-common-array', align ? "lf-".concat(align) : undefined),
       style: style
     }, (_isArray(items) ? items : []).map(function (item, idx) {
       var canAdd = idx === items.length - 1 && !isEmptyItem(item);
@@ -16417,7 +18586,7 @@
   var css_248z$H = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$H);
 
-  var _excluded$1F = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$1K = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -16443,7 +18612,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$1F);
+      rest = _objectWithoutProperties(_ref, _excluded$1K);
     var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -16455,7 +18624,7 @@
     }, [onChange, checked, name]);
     var inner;
     if (buttonType === 'toggle') {
-      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends({
+      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends$1({
         size: size,
         onClick: handleClick,
         onBlur: onBlur,
@@ -16465,7 +18634,7 @@
         style: makeWidthStyle(fullWidth, width)
       }, passRest(_omit(rest, 'label')), checked ? OnStateProps : OffStateProps));
     } else if (buttonType === 'link') {
-      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends({
+      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends$1({
         size: size,
         onBlur: onBlur,
         appearance: appearance,
@@ -16478,13 +18647,13 @@
       }, passRest(_omit(rest, 'label')), LinkProps));
     }
     return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-control-button', className, _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
+      className: classNames$1('lf-control-button', className, _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
       "data-lf-field-name": name
     }, inner);
   };
   var MakeButton = function MakeButton(ButtonComponent, OnStateProps, OffStateProps, LinkProps) {
     return function (props) {
-      return /*#__PURE__*/React$1.createElement(GenericButton, _extends({
+      return /*#__PURE__*/React$1.createElement(GenericButton, _extends$1({
         ButtonComponent: ButtonComponent,
         OnStateProps: _isFunction(OnStateProps) ? OnStateProps(props) : OnStateProps,
         OffStateProps: _isFunction(OffStateProps) ? OffStateProps(props) : OffStateProps,
@@ -16551,7 +18720,7 @@
         disabled: disabled,
         icon: image,
         onChange: handleClick,
-        className: classNames({
+        className: classNames$1({
           'lf-full-width': fullWidth
         })
       });
@@ -16571,13 +18740,13 @@
     var currentValues = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
     return (fields || []).map(function (field) {
       if (field.component === 'group') {
-        return /*#__PURE__*/React$1.createElement(Group, _extends({
+        return /*#__PURE__*/React$1.createElement(Group, _extends$1({
           key: field.name,
           collapsible: false,
           label: field.label
         }, _pick(field, ['bottomBorder', 'align'])), renderFields(field.fields, locale, framework, currentValues));
       } else if (field.component === 'two-columns') {
-        return /*#__PURE__*/React$1.createElement(TwoColumns, _extends({
+        return /*#__PURE__*/React$1.createElement(TwoColumns, _extends$1({
           key: field.name
         }, _pick(field, ['layout', 'leftAlignment', 'rightAlignment'])), function (column) {
           if (column === 'left') {
@@ -16587,7 +18756,7 @@
           }
         });
       } else if (field.component === 'three-columns') {
-        return /*#__PURE__*/React$1.createElement(ThreeColumns, _extends({
+        return /*#__PURE__*/React$1.createElement(ThreeColumns, _extends$1({
           key: field.name
         }, _pick(field, ['layout', 'leftAlignment', 'centerAlignment', 'rightAlignment'])), function (column) {
           if (column === 'left') {
@@ -17027,7 +19196,7 @@
 
         // special case of group
         if (field.component === 'group') {
-          var component = /*#__PURE__*/React$1.createElement(Component, _extends({
+          var component = /*#__PURE__*/React$1.createElement(Component, _extends$1({
             key: field.name,
             lfComponent: field.component,
             lfFramework: framework,
@@ -17077,7 +19246,7 @@
             className: "group"
           }, component) : component;
         } else if (field.component === 'tabs') {
-          return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
+          return /*#__PURE__*/React$1.createElement(Controller, {
             key: "field_".concat(field.name),
             name: field.name,
             control: control,
@@ -17085,7 +19254,7 @@
               var _values$field$name;
               var fieldInfo = _ref3.field;
               var values = getValues();
-              var component = /*#__PURE__*/React$1.createElement(Component, _extends({
+              var component = /*#__PURE__*/React$1.createElement(Component, _extends$1({
                 key: field.name,
                 lfComponent: field.component,
                 lfFramework: framework,
@@ -17147,7 +19316,7 @@
             }
           });
         } else if (field.component === 'steps') {
-          return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
+          return /*#__PURE__*/React$1.createElement(Controller, {
             key: "field_".concat(field.name),
             name: field.name,
             control: control,
@@ -17155,7 +19324,7 @@
               var _values$field$name2;
               var fieldInfo = _ref4.field;
               var values = getValues();
-              var component = /*#__PURE__*/React$1.createElement(Component, _extends({
+              var component = /*#__PURE__*/React$1.createElement(Component, _extends$1({
                 key: field.name,
                 lfComponent: field.component,
                 lfFramework: framework,
@@ -17217,7 +19386,7 @@
             }
           });
         } else if (field.component === 'array' && GroupWrapper) {
-          var _component = /*#__PURE__*/React$1.createElement(Component, _extends({
+          var _component = /*#__PURE__*/React$1.createElement(Component, _extends$1({
             key: field.name,
             lfComponent: field.component,
             lfFramework: framework,
@@ -17267,7 +19436,7 @@
             className: "array"
           }, _component);
         } else if (field.component === 'two-columns') {
-          var _component2 = /*#__PURE__*/React$1.createElement(Component, _extends({
+          var _component2 = /*#__PURE__*/React$1.createElement(Component, _extends$1({
             key: field.name,
             lfComponent: field.component,
             lfFramework: framework,
@@ -17352,7 +19521,7 @@
             index: index
           }, _component2) : _component2;
         } else if (field.component === 'three-columns') {
-          var _component3 = /*#__PURE__*/React$1.createElement(Component, _extends({
+          var _component3 = /*#__PURE__*/React$1.createElement(Component, _extends$1({
             key: "three-columns-".concat(field.name),
             name: field.name,
             lfComponent: field.component,
@@ -17477,7 +19646,7 @@
         var rules = translateValidation(_objectSpread2({
           required: field.required
         }, field.validation), locale, onJavascriptError);
-        return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
+        return /*#__PURE__*/React$1.createElement(Controller, {
           key: "field_".concat(field.name),
           name: field.name,
           rules: rules,
@@ -17486,7 +19655,7 @@
             var fieldInfo = _ref5.field;
             var component = /*#__PURE__*/React$1.createElement(Component
             // not sure about this, not passing the ref
-            , _extends({
+            , _extends$1({
               name: fieldInfo.name,
               value: fieldInfo.value,
               onBlur: fieldInfo.onBlur,
@@ -17584,7 +19753,7 @@
         _useState6 = _slicedToArray(_useState5, 2),
         preloading = _useState6[0],
         setPreloading = _useState6[1];
-      var _useForm = reactHookForm.useForm({
+      var _useForm = useForm({
           defaultValues: defaultValues,
           mode: form.validationMode
         }),
@@ -17955,14 +20124,14 @@
       if (debug) {
         console.log("[LetsForm] Render form (".concat(form.name, ")"));
       }
-      return /*#__PURE__*/React$1.createElement(FormContext.Provider, {
+      return /*#__PURE__*/React$1.createElement(FormContext$1.Provider, {
         value: {
           locales: form.locales,
           locale: locale
           // ..more
         }
       }, /*#__PURE__*/React$1.createElement("div", {
-        className: classNames('lf-lets-form', {
+        className: classNames$1('lf-lets-form', {
           'lf-lets-form-edit-mode': demo
         }, className)
       }, formErrors && showErrors === 'groupedTop' && /*#__PURE__*/React$1.createElement(ValidationErrors, {
@@ -17971,7 +20140,7 @@
         errors: enrichWithLabels(formErrors, formFields)
       }), /*#__PURE__*/React$1.createElement(React$1.Suspense, {
         fallback: Loader ? /*#__PURE__*/React$1.createElement(Loader, null) : /*#__PURE__*/React$1.createElement("div", null, "Loading...")
-      }, /*#__PURE__*/React$1.createElement(Form, _extends({
+      }, /*#__PURE__*/React$1.createElement(Form, _extends$1({
         onSubmit: handleSubmit(onHandleSubmit, onHandleError),
         name: formName,
         defaultValues: defaultValues,
@@ -18058,7 +20227,7 @@
     return LazyWithPreload;
   }
 
-  var _excluded$1E = ["framework", "children"];
+  var _excluded$1J = ["framework", "children"];
   var Fields$6 = {
     'input-text': {
       'react-rsuite5': lazyPreload(function () {
@@ -18228,13 +20397,13 @@
   var LetsForm$5 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1E);
-    return /*#__PURE__*/React$1.createElement(FormGenerator$6, _extends({
+      rest = _objectWithoutProperties(_ref, _excluded$1J);
+    return /*#__PURE__*/React$1.createElement(FormGenerator$6, _extends$1({
       framework: "react-rsuite5"
     }, rest), children);
   };
 
-  var _excluded$1D = ["framework", "children"];
+  var _excluded$1I = ["framework", "children"];
   var Fields$5 = {
     'input-text': {
       'react-material-ui': lazyPreload(function () {
@@ -18369,13 +20538,13 @@
   var LetsForm$4 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1D);
-    return /*#__PURE__*/React$1.createElement(FormGenerator$5, _extends({
+      rest = _objectWithoutProperties(_ref, _excluded$1I);
+    return /*#__PURE__*/React$1.createElement(FormGenerator$5, _extends$1({
       framework: "react-material-ui"
     }, rest), children);
   };
 
-  var _excluded$1C = ["framework", "children"];
+  var _excluded$1H = ["framework", "children"];
   var Fields$4 = {
     'input-text': {
       'react': lazyPreload(function () {
@@ -18475,13 +20644,13 @@
   var LetsForm$3 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1C);
-    return /*#__PURE__*/React$1.createElement(FormGenerator$4, _extends({
+      rest = _objectWithoutProperties(_ref, _excluded$1H);
+    return /*#__PURE__*/React$1.createElement(FormGenerator$4, _extends$1({
       framework: "react"
     }, rest), children);
   };
 
-  var _excluded$1B = ["framework", "children"];
+  var _excluded$1G = ["framework", "children"];
   var Fields$3 = {
     'input-text': {
       'react-bootstrap': lazyPreload(function () {
@@ -18601,13 +20770,13 @@
   var LetsForm$2 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1B);
-    return /*#__PURE__*/React$1.createElement(FormGenerator$3, _extends({
+      rest = _objectWithoutProperties(_ref, _excluded$1G);
+    return /*#__PURE__*/React$1.createElement(FormGenerator$3, _extends$1({
       framework: "react-bootstrap"
     }, rest), children);
   };
 
-  var _excluded$1A = ["framework", "children"];
+  var _excluded$1F = ["framework", "children"];
   var Fields$2 = {
     'input-text': {
       'react-antd': lazyPreload(function () {
@@ -18752,13 +20921,13 @@
   var LetsForm$1 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1A);
-    return /*#__PURE__*/React$1.createElement(FormGenerator$2, _extends({
+      rest = _objectWithoutProperties(_ref, _excluded$1F);
+    return /*#__PURE__*/React$1.createElement(FormGenerator$2, _extends$1({
       framework: "react-antd"
     }, rest), children);
   };
 
-  var _excluded$1z = ["framework", "children"];
+  var _excluded$1E = ["framework", "children"];
   var Fields$1 = {
     'input-text': {
       'react-mantine': lazyPreload(function () {
@@ -18893,8 +21062,8 @@
   var LetsForm = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1z);
-    return /*#__PURE__*/React$1.createElement(FormGenerator$1, _extends({
+      rest = _objectWithoutProperties(_ref, _excluded$1E);
+    return /*#__PURE__*/React$1.createElement(FormGenerator$1, _extends$1({
       framework: "react-mantine"
     }, rest), children);
   };
@@ -18942,11 +21111,11 @@
         triggerRef.current.close();
       }
     }, [errorMessage]);
-    return /*#__PURE__*/React$1.createElement(Whisper, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Whisper, {
       placement: "bottomStart",
       ref: triggerRef,
       trigger: "none",
-      speaker: /*#__PURE__*/React$1.createElement(Popover, {
+      speaker: /*#__PURE__*/React$1.createElement(rsuite.Popover, {
         style: POPOVER_STYLE,
         visible: !!errorMessage,
         className: "lf-react-rsuite5-error-popover"
@@ -18957,7 +21126,7 @@
   var css_248z$E = ".lf-control-input-text .rs-form-control-wrapper > .rs-input, .lf-control-input-text .rs-form-control-wrapper > .rs-input-number {\n  width: 100%;\n}\n.lf-control-input-text.lf-full-width .rs-input-group {\n  width: 100%;\n}\n.lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-control-input-text.lf-size-lg .lf-prefix-icon {\n  max-height: 22px;\n}\n.lf-control-input-text.lf-size-md .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-control-input-text.lf-size-sm .lf-prefix-icon {\n  max-height: 10px;\n}\n.lf-control-input-text.lf-size-xs .lf-prefix-icon {\n  max-height: 4px;\n}";
   styleInject(css_248z$E);
 
-  var _excluded$1y = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "lfOnEnter"];
+  var _excluded$1D = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "lfOnEnter"];
   var TextInput$4 = I18N(function (_ref) {
     var _classNames;
     var name = _ref.name,
@@ -18990,14 +21159,14 @@
       inside = _ref$inside === void 0 ? false : _ref$inside,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$1y);
+      rest = _objectWithoutProperties(_ref, _excluded$1D);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
     var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(Input, _extends({
-      accepter: Input,
+    }, /*#__PURE__*/React$1.createElement(rsuite.Input, _extends$1({
+      accepter: rsuite.Input,
       value: value,
       onChange: onChange,
       onBlur: onBlur,
@@ -19011,15 +21180,15 @@
       readOnly: readOnly
     }, passRest(rest))));
     var needsGroup = postfix || prefix;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: classNames('lf-control-input-text', (_classNames = {}, _defineProperty$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      className: classNames$1('lf-control-input-text', (_classNames = {}, _defineProperty$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/React$1.createElement(InputGroup, {
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/React$1.createElement(rsuite.InputGroup, {
       inside: inside
-    }, prefix && /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, TextOrIcon(prefix)), inner, postfix && /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, TextOrIcon(postfix))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, prefix && /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, TextOrIcon(prefix)), inner, postfix && /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, TextOrIcon(postfix))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.InputText');
 
@@ -19044,14 +21213,14 @@
       checkedChildren = _ref.checkedChildren,
       unCheckedChildren = _ref.unCheckedChildren,
       error = _ref.error;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       controlId: name,
       className: "lf-control-toggle"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(Toggle$3, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.Toggle, {
       name: name,
       checked: value,
       onChange: onChange,
@@ -19060,7 +21229,7 @@
       checkedChildren: checkedChildren && checkedChildren !== '' ? checkedChildren : undefined,
       errorMessage: _isString(error) ? error : undefined,
       size: size
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded RSuite5.ToggleInput');
 
@@ -19072,7 +21241,7 @@
   var css_248z$D = ".lf-control-select-option-rsuite5 img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  margin-right: 6px;\n  margin-top: -4px;\n}";
   styleInject(css_248z$D);
 
-  var _excluded$1x = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions"];
+  var _excluded$1C = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions"];
   var menuItem = function menuItem(value, item) {
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-select-option-rsuite5"
@@ -19122,15 +21291,15 @@
       filterKey = _ref.filterKey,
       filterValue = _ref.filterValue,
       showImageOptions = _ref.showImageOptions,
-      rest = _objectWithoutProperties(_ref, _excluded$1x);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      rest = _objectWithoutProperties(_ref, _excluded$1C);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       className: "lf-control-select",
       controlId: name
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(SelectPicker, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.SelectPicker, _extends$1({
       appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
       name: name,
       value: value,
@@ -19148,7 +21317,7 @@
       block: block,
       searchable: searchable,
       cleanable: cleanable
-    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
@@ -19166,22 +21335,22 @@
     default: Group
   });
 
-  var _excluded$1w = ["hint", "required", "tooltip", "name", "label"];
+  var _excluded$1B = ["hint", "required", "tooltip", "name", "label"];
   var ListArrayRSuite5 = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required,
       tooltip = _ref.tooltip,
       name = _ref.name,
       label = _ref.label,
-      rest = _objectWithoutProperties(_ref, _excluded$1w);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      rest = _objectWithoutProperties(_ref, _excluded$1B);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-array"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends$1({
       LetsFormComponent: LetsForm$5
-    }, passRest(rest))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, passRest(rest))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint']);
   lfLog('Loaded RSuite5.ListArray');
 
@@ -19269,17 +21438,17 @@
       onChange(undefined);
       setCurrentValue(null);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
-      className: classNames('lf-control-input-number', (_classNames = {}, _defineProperty$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
+      className: classNames$1('lf-control-input-number', (_classNames = {}, _defineProperty$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(InputNumber$3, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.InputNumber, {
       name: name,
-      accepter: InputNumber$3,
+      accepter: rsuite.InputNumber,
       value: currentValue,
       onChange: handleChange,
       onClear: handleClear,
@@ -19301,7 +21470,7 @@
       placeholder: placeholder,
       readOnly: readOnly,
       errorMessage: _isString(error) ? error : undefined
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.InputNumber');
 
@@ -19310,7 +21479,7 @@
     default: InputNumberRSuite5
   });
 
-  var _excluded$1v = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"];
+  var _excluded$1A = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"];
   var RSuiteGenericDate = function RSuiteGenericDate(_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19331,15 +21500,15 @@
       appearance = _ref.appearance,
       format = _ref.format;
       _ref.lfLocale;
-      var rest = _objectWithoutProperties(_ref, _excluded$1v);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      var rest = _objectWithoutProperties(_ref, _excluded$1A);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-date"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(DatePicker, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.DatePicker, _extends$1({
       appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
       name: name,
       format: format || 'yyyy-MM-dd',
@@ -19350,14 +21519,14 @@
       errorMessage: _isString(error) ? error : undefined,
       disabled: disabled,
       placeholder: placeholder
-    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   };
 
-  var _excluded$1u = ["onChange", "value"];
+  var _excluded$1z = ["onChange", "value"];
   var SelectDate$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1u);
+      rest = _objectWithoutProperties(_ref, _excluded$1z);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -19375,7 +21544,7 @@
         onChange(d.toISOString().split('T')[0]);
       }
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(RSuiteGenericDate, _extends({
+    return /*#__PURE__*/React$1.createElement(RSuiteGenericDate, _extends$1({
       value: currentValue,
       onChange: handleChange
     }, passRest(rest)));
@@ -19390,7 +21559,7 @@
   var css_248z$B = ".lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text {\n  align-items: inherit;\n  margin-top: -1px;\n  display: inline-block;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text svg {\n  margin-top: -2px;\n}";
   styleInject(css_248z$B);
 
-  var _excluded$1t = ["name", "label", "hint", "value", "tooltip", "indeterminate", "error", "onChange"];
+  var _excluded$1y = ["name", "label", "hint", "value", "tooltip", "indeterminate", "error", "onChange"];
   var CheckboxRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19401,7 +21570,7 @@
       indeterminate = _ref.indeterminate,
       error = _ref.error,
       onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$1t);
+      rest = _objectWithoutProperties(_ref, _excluded$1y);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : null),
       _useState2 = _slicedToArray(_useState, 2),
       isChecked = _useState2[0],
@@ -19423,19 +21592,19 @@
       onChange(newValue);
       setIsChecked(newValue);
     }, [onChange, indeterminate, isChecked]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lt-control-checkbox"
     }, /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(Checkbox$2, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.Checkbox, _extends$1({
       indeterminate: indeterminate && isChecked === null,
       name: name,
       checked: isChecked,
       onChange: handleChange
-    }, passRest(rest)), label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, passRest(rest)), label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, hint))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint']);
   lfLog('Loaded RSuite5.Checkbox');
 
@@ -19444,7 +21613,7 @@
     default: CheckboxRSuite
   });
 
-  var _excluded$1s = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "color", "onChange", "onBlur", "options"];
+  var _excluded$1x = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "color", "onChange", "onBlur", "options"];
   var CheckboxGroupRSuite$1 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19463,13 +21632,13 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$1s);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      rest = _objectWithoutProperties(_ref, _excluded$1x);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-checkbox-group"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint)), /*#__PURE__*/React$1.createElement(CheckboxGroup$2, _extends({
+    }, hint)), /*#__PURE__*/React$1.createElement(rsuite.CheckboxGroup, _extends$1({
       inline: true,
       name: name,
       value: value,
@@ -19477,14 +21646,14 @@
     }, passRest(rest)), (options !== null && options !== void 0 ? options : []).map(function (_ref2) {
       var value = _ref2.value,
         label = _ref2.label;
-      return /*#__PURE__*/React$1.createElement(Checkbox$2, {
+      return /*#__PURE__*/React$1.createElement(rsuite.Checkbox, {
         key: value,
         value: value,
         disabled: disabled,
         readOnly: readOnly,
         color: color
       }, label);
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint'], {
     options: i18nOptions
   });
@@ -19498,7 +21667,7 @@
   var css_248z$A = ".lf-form-react-rsuite5 .lf-control-slider .rs-slider {\n  margin-bottom: 40px;\n}";
   styleInject(css_248z$A);
 
-  var _excluded$1r = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks"];
+  var _excluded$1w = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks"];
   var validateMarks = function validateMarks(marks) {
     return _isArray(marks) && marks.every(function (mark) {
       return _isObject(mark) && mark.value && mark.label;
@@ -19523,21 +21692,21 @@
       onBlur = _ref.onBlur,
       _ref$marks = _ref.marks,
       marks = _ref$marks === void 0 ? [] : _ref$marks,
-      rest = _objectWithoutProperties(_ref, _excluded$1r);
+      rest = _objectWithoutProperties(_ref, _excluded$1w);
     var handleRenderMark = React$1.useCallback(function (number) {
       var found = marks.find(function (mark) {
         return mark && mark.value === number;
       });
       return found ? found.label : undefined;
     }, [marks]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       controlId: name,
       className: "lf-control-slider"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(Slider$1, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.Slider, _extends$1({
       style: {
         marginTop: '15px',
         marginBottom: '8px'
@@ -19551,7 +21720,7 @@
       errorMessage: _isString(error) ? error : undefined,
       disabled: disabled,
       tooltip: showTooltip
-    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder'], {
     marks: function marks(value, i18n) {
       return (Array.isArray(value) ? value : []).map(function (value) {
@@ -19568,7 +21737,7 @@
     default: SliderRsuite
   });
 
-  var _excluded$1q = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options", "appearance"];
+  var _excluded$1v = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options", "appearance"];
   var RadioGroupRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19589,14 +21758,14 @@
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       appearance = _ref.appearance,
-      rest = _objectWithoutProperties(_ref, _excluded$1q);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      rest = _objectWithoutProperties(_ref, _excluded$1v);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       controlId: name,
       className: "lf-control-radio-group",
       "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint)), /*#__PURE__*/React$1.createElement(RadioGroup$2, _extends({
+    }, hint)), /*#__PURE__*/React$1.createElement(rsuite.RadioGroup, _extends$1({
       inline: true,
       name: name,
       value: value,
@@ -19605,13 +21774,13 @@
     }, passRest(rest)), (options !== null && options !== void 0 ? options : []).map(function (_ref2) {
       var value = _ref2.value,
         label = _ref2.label;
-      return /*#__PURE__*/React$1.createElement(Radio, {
+      return /*#__PURE__*/React$1.createElement(rsuite.Radio, {
         key: value,
         value: value,
         disabled: disabled,
         readOnly: readOnly
       }, label);
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
@@ -19643,14 +21812,14 @@
       trigger = _ref.trigger,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-input-tag"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(TagInput, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.TagInput, {
       name: name,
       value: value,
       onChange: onChange,
@@ -19660,7 +21829,7 @@
       trigger: trigger,
       readOnly: readOnly,
       errorMessage: _isString(error) ? error : undefined
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputTag');
 
@@ -19669,7 +21838,7 @@
     default: InputTag
   });
 
-  var _excluded$1p = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside", "fullWidth", "width"];
+  var _excluded$1u = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside", "fullWidth", "width"];
   var prepareMask = function prepareMask(str) {
     if (typeof str !== 'string' || str.length === 0) {
       return [];
@@ -19716,11 +21885,11 @@
       inside = _ref$inside === void 0 ? false : _ref$inside,
       fullWidth = _ref.fullWidth,
       width = _ref.width,
-      rest = _objectWithoutProperties(_ref, _excluded$1p);
+      rest = _objectWithoutProperties(_ref, _excluded$1u);
     var parsedMask = prepareMask(mask);
     var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(MaskedInput, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.MaskedInput, _extends$1({
       name: name,
       value: value,
       onChange: onChange,
@@ -19734,15 +21903,15 @@
       mask: parsedMask
     }, passRest(rest))));
     var needsGroup = postfix || prefix;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-input-mask",
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/React$1.createElement(InputGroup, {
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/React$1.createElement(rsuite.InputGroup, {
       inside: inside
-    }, prefix && /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, prefix), inner, postfix && /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, postfix)), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, prefix && /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, prefix), inner, postfix && /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, postfix)), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputMask');
 
@@ -19751,9 +21920,9 @@
     default: InputMask
   });
 
-  var _excluded$1o = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows"];
+  var _excluded$1t = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows"];
   var ControlTextare = function ControlTextare(props) {
-    return /*#__PURE__*/React$1.createElement(Input, _extends({
+    return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends$1({
       as: "textarea"
     }, props));
   };
@@ -19780,10 +21949,10 @@
       width = _ref.width,
       _ref$rows = _ref.rows,
       rows = _ref$rows === void 0 ? 10 : _ref$rows,
-      rest = _objectWithoutProperties(_ref, _excluded$1o);
+      rest = _objectWithoutProperties(_ref, _excluded$1t);
     var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(ControlTextare, _extends({
+    }, /*#__PURE__*/React$1.createElement(ControlTextare, _extends$1({
       name: name,
       rows: rows,
       value: value,
@@ -19796,13 +21965,13 @@
       errorMessage: _isString(error) ? error : undefined,
       style: makeWidthStyle(fullWidth, width)
     }, passRest(rest))));
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: classNames('lf-control-textarea', (_classNames = {}, _defineProperty$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      className: classNames$1('lf-control-textarea', (_classNames = {}, _defineProperty$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), inner, hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), inner, hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Textarea');
 
@@ -19834,14 +22003,14 @@
       color = _ref.color,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       controlId: name,
       className: "lets-form-input-tag"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(Rate$1, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.Rate, {
       name: name,
       value: value,
       onChange: onChange,
@@ -19854,7 +22023,7 @@
       cleanable: cleanable,
       readOnly: readOnly,
       errorMessage: _isString(error) ? error : undefined
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Rate');
 
@@ -19872,14 +22041,14 @@
       text = _ref.text,
       _ref$required = _ref.required,
       required = _ref$required === void 0 ? false : _ref$required;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-placeholder"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Placeholder, {
       text: text
-    }), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'text']);
   lfLog('Loaded RSuite5.Placeholder');
 
@@ -19888,7 +22057,7 @@
     default: PlaceholderRSuite5
   });
 
-  var _excluded$1n = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width"];
+  var _excluded$1s = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width"];
   var Multiselect$2 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19919,17 +22088,17 @@
       fullWidth = _ref.fullWidth,
       multiselectMode = _ref.multiselectMode,
       width = _ref.width,
-      rest = _objectWithoutProperties(_ref, _excluded$1n);
-    var Component = multiselectMode === 'tag' ? TagPicker : CheckPicker;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      rest = _objectWithoutProperties(_ref, _excluded$1s);
+    var Component = multiselectMode === 'tag' ? rsuite.TagPicker : rsuite.CheckPicker;
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-multiselect",
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(Component, _extends({
+    }, /*#__PURE__*/React$1.createElement(Component, _extends$1({
       appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
       name: name,
       value: value,
@@ -19946,7 +22115,7 @@
       style: makeWidthStyle(fullWidth, width),
       searchable: searchable,
       cleanable: cleanable
-    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
@@ -19960,7 +22129,7 @@
   var css_248z$y = ".lf-control-multiselect-language .btn-add-all {\n  padding-left: 5px;\n  font-size: 12px;\n}";
   styleInject(css_248z$y);
 
-  var _excluded$1m = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "placement", "appearance"];
+  var _excluded$1r = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "placement", "appearance"];
   var renderItem = function renderItem(label, item) {
     return /*#__PURE__*/React$1.createElement("div", null, label, " ", /*#__PURE__*/React$1.createElement("b", null, item.value));
   };
@@ -19992,7 +22161,7 @@
       onBlur = _ref.onBlur,
       placement = _ref.placement,
       appearance = _ref.appearance,
-      rest = _objectWithoutProperties(_ref, _excluded$1m);
+      rest = _objectWithoutProperties(_ref, _excluded$1r);
     var _useState = React$1.useState(value),
       _useState2 = _slicedToArray(_useState, 2),
       locales = _useState2[0],
@@ -20006,14 +22175,14 @@
       setLocales(value);
       onChange(value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-multiselect-language"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(CheckPicker, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.CheckPicker, _extends$1({
       appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
       name: name,
       value: locales,
@@ -20035,7 +22204,7 @@
     }, /*#__PURE__*/React$1.createElement("a", {
       href: "#",
       onClick: handleAddAll
-    }, "add all locales")), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, "add all locales")), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.MultiselectLanguage');
 
@@ -20047,7 +22216,7 @@
   var css_248z$x = ".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n .rs-input-group-addon {\n  padding: 2px 4px !important;\n}\n.lf-input-text-i18n .rs-input-group-addon .status {\n  font-size: 10px;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear {\n  display: inline-block;\n  margin-left: 5px;\n  margin-top: -2px;\n  color: #666666;\n  text-decoration: none;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover {\n  color: #1675e0;\n}\n.lf-input-text-i18n .group-input-select {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-input-text-i18n .group-input-select .translation-control {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  width: unset !important;\n  z-index: 1;\n}\n.lf-input-text-i18n .group-input-select .translation-control .translated {\n  color: #999999;\n}\n.lf-input-text-i18n .group-input-select .select-control {\n  order: 1;\n  flex: 0 0;\n  align-self: center;\n  z-index: 2;\n  margin-left: 5px;\n}\n.lf-input-text-i18n .group-input-select.textarea .select-control {\n  align-self: self-start;\n}";
   styleInject(css_248z$x);
 
-  var _excluded$1l = ["value"];
+  var _excluded$1q = ["value"];
   var LANGUAGES_OPTIONS = Object.keys(LOCALES['language-names']).map(function (lang) {
     return {
       value: lang,
@@ -20065,8 +22234,8 @@
   };
   var TextareaAccepter = function TextareaAccepter(_ref) {
     var value = _ref.value,
-      props = _objectWithoutProperties(_ref, _excluded$1l);
-    return /*#__PURE__*/React$1.createElement(Input, _extends({
+      props = _objectWithoutProperties(_ref, _excluded$1q);
+    return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends$1({
       as: "textarea",
       value: value
     }, props));
@@ -20107,7 +22276,7 @@
       _props$textarea = props.textarea,
       textarea = _props$textarea === void 0 ? false : _props$textarea,
       rows = props.rows;
-    var _useContext = React$1.useContext(FormContext),
+    var _useContext = React$1.useContext(FormContext$1),
       _useContext$locales = _useContext.locales,
       locales = _useContext$locales === void 0 ? [] : _useContext$locales;
     var preselectedLanguage = null;
@@ -20194,17 +22363,17 @@
         filled: currentValue && !_isEmpty(currentValue[item.value])
       });
     });
-    var InputComponent = textarea ? TextareaAccepter : Input;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    var InputComponent = textarea ? TextareaAccepter : rsuite.Input;
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-input-text-i18n lf-input-text-i18n"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('group-input-select', {
+      className: classNames$1('group-input-select', {
         'textarea': textarea
       })
-    }, /*#__PURE__*/React$1.createElement(InputGroup, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.InputGroup, {
       className: "translation-control",
       inside: true
     }, /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
@@ -20223,13 +22392,13 @@
       size: size,
       placeholder: placeholder,
       errorMessage: _isString(error) ? error : undefined
-    })), /*#__PURE__*/React$1.createElement(InputGroup.Addon, null, /*#__PURE__*/React$1.createElement("span", {
+    })), /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, /*#__PURE__*/React$1.createElement("span", {
       className: "status"
     }, /*#__PURE__*/React$1.createElement("span", {
       className: "translated"
     }, translatedLocales.length), "\xA0/\xA0", /*#__PURE__*/React$1.createElement("span", null, totalLocales)))), /*#__PURE__*/React$1.createElement("div", {
       className: "select-control"
-    }, /*#__PURE__*/React$1.createElement(SelectPicker, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.SelectPicker, {
       appearance: "subtle",
       cleanable: false,
       size: "xs",
@@ -20259,7 +22428,7 @@
         }
       },
       data: languageData
-    }))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   };
   lfLog('Loaded RSuite.InputTextI18N');
 
@@ -20278,25 +22447,25 @@
   var css_248z$w = ".lf-form-react-rsuite5 .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-lg .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-xs .lf-icon {\n  max-width: 12px;\n  max-height: 12px;\n}";
   styleInject(css_248z$w);
 
-  var _excluded$1k = ["label", "icon", "hint", "tooltip"];
+  var _excluded$1p = ["label", "icon", "hint", "tooltip"];
   var RSuiteButton = function RSuiteButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint,
       tooltip = _ref.tooltip,
-      rest = _objectWithoutProperties(_ref, _excluded$1k);
+      rest = _objectWithoutProperties(_ref, _excluded$1p);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(Button$1, _extends({
+      inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends$1({
         startIcon: /*#__PURE__*/React$1.createElement("img", {
           className: "lf-icon",
           src: icon
         })
       }, passRest(rest)), label);
     } else if (!_isEmpty(label) && _isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(Button$1, passRest(rest), label);
+      inner = /*#__PURE__*/React$1.createElement(rsuite.Button, passRest(rest), label);
     } else if (_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(IconButton$1, _extends({
+      inner = /*#__PURE__*/React$1.createElement(rsuite.IconButton, _extends$1({
         icon: /*#__PURE__*/React$1.createElement("img", {
           className: "lf-icon",
           src: icon
@@ -20305,11 +22474,11 @@
     } else {
       inner = /*#__PURE__*/React$1.createElement(React$1.Fragment, null);
     }
-    return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, !_isEmpty(hint) && tooltip && /*#__PURE__*/React$1.createElement(Whisper, {
+    return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, !_isEmpty(hint) && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Whisper, {
       placement: "top",
       trigger: "hover",
-      speaker: /*#__PURE__*/React$1.createElement(Tooltip, null, hint)
-    }, inner), (_isEmpty(hint) || !tooltip) && inner, !_isEmpty(hint) && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+      speaker: /*#__PURE__*/React$1.createElement(rsuite.Tooltip, null, hint)
+    }, inner), (_isEmpty(hint) || !tooltip) && inner, !_isEmpty(hint) && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   };
   var BiStateButton$5 = I18N(MakeButton(RSuiteButton, {
     appearance: 'primary'
@@ -20330,11 +22499,11 @@
     default: ReactView
   });
 
-  var _excluded$1j = ["onChange", "value"];
+  var _excluded$1o = ["onChange", "value"];
   var SelectDatetime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1j);
+      rest = _objectWithoutProperties(_ref, _excluded$1o);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -20352,7 +22521,7 @@
         onChange(d.toISOString());
       }
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(RSuiteGenericDate, _extends({
+    return /*#__PURE__*/React$1.createElement(RSuiteGenericDate, _extends$1({
       value: currentValue,
       onChange: handleChange
     }, passRest(rest)));
@@ -20367,8 +22536,8 @@
   var css_248z$v = ".lf-form-react-rsuite5 .lf-control-tabs .tab-fields {\n  margin-top: 10px;\n}";
   styleInject(css_248z$v);
 
-  var _excluded$1i = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight"];
-  var Tabs = I18N(function (_ref) {
+  var _excluded$1n = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight"];
+  var Tabs$2 = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
       tabs = _ref.tabs,
@@ -20378,7 +22547,7 @@
       reversed = _ref.reversed,
       justified = _ref.justified,
       pullRight = _ref.pullRight,
-      rest = _objectWithoutProperties(_ref, _excluded$1i);
+      rest = _objectWithoutProperties(_ref, _excluded$1n);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
@@ -20394,7 +22563,7 @@
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-tabs",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Nav, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.Nav, _extends$1({
       appearance: appearance,
       reversed: reversed,
       justified: justified,
@@ -20402,7 +22571,7 @@
       activeKey: active,
       onSelect: handleKey
     }, passRest(rest)), (tabs || []).map(function (tab) {
-      return /*#__PURE__*/React$1.createElement(Nav.Item, {
+      return /*#__PURE__*/React$1.createElement(rsuite.Nav.Item, {
         key: tab.value,
         eventKey: tab.value
       }, tab.label);
@@ -20416,10 +22585,10 @@
 
   var index$1V = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: Tabs
+    default: Tabs$2
   });
 
-  var _excluded$1h = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption"];
+  var _excluded$1m = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption"];
   var RadioTileRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20445,7 +22614,7 @@
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       initalOption = _ref.initalOption;
-      _objectWithoutProperties(_ref, _excluded$1h);
+      _objectWithoutProperties(_ref, _excluded$1m);
     var initialValue = value || initalOption;
     var _useState = React$1.useState(initialValue),
       _useState2 = _slicedToArray(_useState, 2),
@@ -20455,18 +22624,18 @@
       setCurrentValue(value);
       onChange(value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       className: "lf-control-input-text",
       "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RadioTileGroup, {
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(rsuite.RadioTileGroup, {
       value: currentValue,
       onChange: handleChange,
       inline: inline,
       disabled: disabled
     }, (options || []).map(function (option) {
-      return /*#__PURE__*/React$1.createElement(RadioTile, {
+      return /*#__PURE__*/React$1.createElement(rsuite.RadioTile, {
         key: option.value,
         label: option.label,
         value: option.value,
@@ -20476,7 +22645,7 @@
           height: iconHeight
         })
       }, option.description);
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint'], {
     options: function options(value, i18n) {
       return (value !== null && value !== void 0 ? value : []).filter(function (value) {
@@ -20499,8 +22668,8 @@
   var css_248z$u = ".lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
   styleInject(css_248z$u);
 
-  var _excluded$1g = ["superDisabled", "superSize", "disabled", "hint"],
-    _excluded2$1 = ["name", "label", "hint", "tooltip", "required", "onChange", "multiple", "removable", "disabledFileItem", "fileListVisible", "draggable", "disabled", "accept", "defaultValue", "listType", "uploadButtonLabel", "uploadButtonAppearance", "uploadButtonSize", "draggableText", "draggableHeight", "value"];
+  var _excluded$1l = ["superDisabled", "superSize", "disabled", "hint"],
+    _excluded2$2 = ["name", "label", "hint", "tooltip", "required", "onChange", "multiple", "removable", "disabledFileItem", "fileListVisible", "draggable", "disabled", "accept", "defaultValue", "listType", "uploadButtonLabel", "uploadButtonAppearance", "uploadButtonSize", "draggableText", "draggableHeight", "value"];
   var makeDefaultValue$1 = function makeDefaultValue(defaultValue) {
     if (_isArray(defaultValue)) {
       return defaultValue;
@@ -20516,8 +22685,8 @@
       superSize = _ref.superSize;
       _ref.disabled;
       var hint = _ref.hint,
-      rest = _objectWithoutProperties(_ref, _excluded$1g);
-    var inner = /*#__PURE__*/React$1.createElement(Button$1, _extends({}, rest, {
+      rest = _objectWithoutProperties(_ref, _excluded$1l);
+    var inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends$1({}, rest, {
       size: superSize,
       disabled: superDisabled
     }));
@@ -20555,7 +22724,7 @@
       _ref2$draggableHeight = _ref2.draggableHeight,
       draggableHeight = _ref2$draggableHeight === void 0 ? 200 : _ref2$draggableHeight,
       value = _ref2.value,
-      rest = _objectWithoutProperties(_ref2, _excluded2$1);
+      rest = _objectWithoutProperties(_ref2, _excluded2$2);
     var _useState = React$1.useState(makeDefaultValue$1(value)),
       _useState2 = _slicedToArray(_useState, 2),
       currentValue = _useState2[0],
@@ -20589,9 +22758,9 @@
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-upload",
       "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Uploader, _extends({
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(rsuite.Uploader, _extends$1({
       autoUpload: false,
       action: "",
       accept: _isArray(accept) ? accept.join(',') : accept,
@@ -20604,7 +22773,7 @@
       fileList: currentValue,
       listType: listType,
       onChange: handleChange
-    }, passRest(rest)), inner), hint && draggable && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, passRest(rest)), inner), hint && draggable && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
   lfLog('Loaded RSuite.Upload');
 
@@ -20616,7 +22785,7 @@
   var css_248z$t = ".lf-form-react-rsuite5 .lf-control-button-toggle-group .rs-form-control-wrapper {\n  display: block;\n}";
   styleInject(css_248z$t);
 
-  var _excluded$1f = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "options"];
+  var _excluded$1k = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "options"];
   var RSuiteButtonsToggleGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20633,13 +22802,13 @@
       onChange = _ref.onChange,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$1f);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
+      rest = _objectWithoutProperties(_ref, _excluded$1k);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-button-toggle-group"
-    }, label && /*#__PURE__*/React$1.createElement(Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, {
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form.Control, _extends({
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(rsuite.Form.Control, _extends$1({
       ButtonComponent: BiStateButton$5,
       name: name,
       accepter: ButtonsToggleGroup,
@@ -20649,7 +22818,7 @@
       disabled: disabled,
       size: size,
       errorMessage: _isString(error) ? error : undefined
-    }, passRest(rest))), hint && !tooltip && /*#__PURE__*/React$1.createElement(Form.HelpText, null, hint));
+    }, passRest(rest))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint'], {
     options: i18nOptions
   });
@@ -20667,7 +22836,7 @@
     var icon = _ref.icon,
       size = _ref.size;
     return /*#__PURE__*/React$1.createElement("img", {
-      className: classNames("lf-generic-icon", {
+      className: classNames$1("lf-generic-icon", {
         size: size
       }),
       src: icon
@@ -20677,7 +22846,7 @@
   var css_248z$r = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
   styleInject(css_248z$r);
 
-  var _excluded$1e = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious"];
+  var _excluded$1j = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious"];
   var i18nSteps$1 = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -20700,7 +22869,7 @@
       small = _ref.small,
       labelNext = _ref.labelNext,
       labelPrevious = _ref.labelPrevious,
-      rest = _objectWithoutProperties(_ref, _excluded$1e);
+      rest = _objectWithoutProperties(_ref, _excluded$1j);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
       return obj.value === value;
@@ -20730,12 +22899,12 @@
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-steps",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Steps, _extends({
+    }, /*#__PURE__*/React$1.createElement(rsuite.Steps, _extends$1({
       current: stepIdx,
       currentStatus: status,
       small: small
     }, passRest(rest)), (steps || []).map(function (step) {
-      return /*#__PURE__*/React$1.createElement(Steps.Item, {
+      return /*#__PURE__*/React$1.createElement(rsuite.Steps.Item, {
         key: "step_".concat(step.value),
         description: step.description || undefined,
         title: step.label,
@@ -20746,11 +22915,11 @@
     })), _isFunction(children) && /*#__PURE__*/React$1.createElement("div", {
       className: "lf-step"
     }, children(step)), /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-navigation-buttons', align)
-    }, /*#__PURE__*/React$1.createElement(ButtonGroup, null, /*#__PURE__*/React$1.createElement(Button$1, {
+      className: classNames$1('lf-navigation-buttons', align)
+    }, /*#__PURE__*/React$1.createElement(rsuite.ButtonGroup, null, /*#__PURE__*/React$1.createElement(rsuite.Button, {
       onClick: handlePrevious,
       disabled: _isEmpty(steps) || stepIdx === 0
-    }, labelPrevious || 'Previous'), /*#__PURE__*/React$1.createElement(Button$1, {
+    }, labelPrevious || 'Previous'), /*#__PURE__*/React$1.createElement(rsuite.Button, {
       onClick: handleNext,
       disabled: _isEmpty(steps) || stepIdx === steps.length - 1
     }, labelNext || 'Next'))));
@@ -20801,23 +22970,23 @@
       var _classNames;
       // TODO check this
       return /*#__PURE__*/React$1.createElement("div", {
-        className: classNames('rs-form', (_classNames = {}, _defineProperty$1(_classNames, "rs-form-".concat(layout), true), _defineProperty$1(_classNames, 'rs-form-fluid', fluid), _classNames))
+        className: classNames$1('rs-form', (_classNames = {}, _defineProperty$1(_classNames, "rs-form-".concat(layout), true), _defineProperty$1(_classNames, 'rs-form-fluid', fluid), _classNames))
       }, children);
     }
-    return /*#__PURE__*/React$1.createElement(Form, {
-      className: classNames('lf-form lf-form-react-rsuite5', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
+    return /*#__PURE__*/React$1.createElement(rsuite.Form, {
+      className: classNames$1('lf-form lf-form-react-rsuite5', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name,
       layout: layout,
       fluid: fluid,
       readOnly: readOnly,
       disabled: disabled
-    }, /*#__PURE__*/React$1.createElement("div", null, children), !hideToolbar && /*#__PURE__*/React$1.createElement(ButtonToolbar, {
+    }, /*#__PURE__*/React$1.createElement("div", null, children), !hideToolbar && /*#__PURE__*/React$1.createElement(rsuite.ButtonToolbar, {
       className: "lf-buttons"
-    }, !hideSumbut && /*#__PURE__*/React$1.createElement(Button$1, {
+    }, !hideSumbut && /*#__PURE__*/React$1.createElement(rsuite.Button, {
       appearance: "primary",
       onClick: onSubmit,
       disabled: disabled || disabledSubmit
-    }, labelSubmit), !hideCancel && /*#__PURE__*/React$1.createElement(Button$1, {
+    }, labelSubmit), !hideCancel && /*#__PURE__*/React$1.createElement(rsuite.Button, {
       onClick: onReset,
       disabled: disabled
     }, labelCancel), custom));
@@ -20839,7 +23008,7 @@
     }, children);
   };
 
-  var _excluded$1d = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
+  var _excluded$1i = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
 
   // DOC: https://mui.com/material-ui/api/input/
 
@@ -20876,21 +23045,21 @@
       className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$1d);
+      rest = _objectWithoutProperties(_ref, _excluded$1i);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
     return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: className
-    }, /*#__PURE__*/React$1.createElement(FormControl, {
+    }, /*#__PURE__*/React$1.createElement(FormControl$2, {
       required: required,
       error: error != null,
       variant: variant !== null && variant !== void 0 ? variant : undefined,
       fullWidth: fullWidth
     }, label && !floatingLabel && /*#__PURE__*/React$1.createElement(MuiLabel, {
       id: "mui_input_text_".concat(name)
-    }, label), /*#__PURE__*/React$1.createElement(TextField, _extends({
+    }, label), /*#__PURE__*/React$1.createElement(TextField, _extends$1({
       size: size,
       placeholder: placeholder,
       value: value,
@@ -20920,16 +23089,16 @@
     }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$1c = ["onChange"];
+  var _excluded$1h = ["onChange"];
   // DOC: https://mui.com/material-ui/api/input/
 
   var TextInput$3 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$1c);
+      rest = _objectWithoutProperties(_ref, _excluded$1h);
     var handleChange = React$1.useCallback(function (event) {
       onChange(event.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(MuiGenericInput, _extends({
+    return /*#__PURE__*/React$1.createElement(MuiGenericInput, _extends$1({
       className: "lf-control-input-text",
       component: "input-text",
       onChange: handleChange
@@ -20942,7 +23111,7 @@
     default: TextInput$3
   });
 
-  var _excluded$1b = ["name", "label", "hint", "value", "placeholder", "options", "filterKey", "filterValue", "component", "disabled", "readOnly", "required", "error", "multiple", "fullWidth", "width", "floatingLabel", "autoWidth", "size", "variant", "onChange", "onBlur", "className", "children"];
+  var _excluded$1g = ["name", "label", "hint", "value", "placeholder", "options", "filterKey", "filterValue", "component", "disabled", "readOnly", "required", "error", "multiple", "fullWidth", "width", "floatingLabel", "autoWidth", "size", "variant", "onChange", "onBlur", "className", "children"];
 
   // DOC: https://mui.com/material-ui/api/select/
 
@@ -20975,7 +23144,7 @@
       onBlur = _ref.onBlur,
       className = _ref.className;
       _ref.children;
-      var rest = _objectWithoutProperties(_ref, _excluded$1b);
+      var rest = _objectWithoutProperties(_ref, _excluded$1g);
     var filteredOptions = filterOptions(options, filterValue, filterKey);
     var items;
     if (multiple) {
@@ -20983,7 +23152,7 @@
         return /*#__PURE__*/React$1.createElement(MenuItem, {
           key: option.value,
           value: option.value
-        }, /*#__PURE__*/React$1.createElement(Checkbox$3, {
+        }, /*#__PURE__*/React$1.createElement(Checkbox$2, {
           checked: (value || []).includes(option.value)
         }), /*#__PURE__*/React$1.createElement(ListItemText, {
           primary: option.label
@@ -21007,7 +23176,7 @@
     return /*#__PURE__*/React$1.createElement("div", {
       className: className,
       "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(FormControl, {
+    }, /*#__PURE__*/React$1.createElement(FormControl$2, {
       size: size,
       disabled: disabled,
       required: required,
@@ -21016,7 +23185,7 @@
       fullWidth: fullWidth
     }, label && !floatingLabel && /*#__PURE__*/React$1.createElement(MuiLabel, null, label), label && floatingLabel && /*#__PURE__*/React$1.createElement(InputLabel, {
       id: "mui_select_".concat(name)
-    }, label), /*#__PURE__*/React$1.createElement(Select$3, _extends({
+    }, label), /*#__PURE__*/React$1.createElement(Select$3, _extends$1({
       id: name,
       labelId: "mui_select_".concat(name),
       value: value,
@@ -21035,15 +23204,15 @@
     }, passRest(rest)), items), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$1a = ["onChange", "value"];
+  var _excluded$1f = ["onChange", "value"];
   var MuiSelect = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1a);
+      rest = _objectWithoutProperties(_ref, _excluded$1f);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(MuiGenericSelect, _extends({
+    return /*#__PURE__*/React$1.createElement(MuiGenericSelect, _extends$1({
       className: "lf-control-select",
       component: "select",
       value: value,
@@ -21075,7 +23244,7 @@
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
-    var switchCtrl = /*#__PURE__*/React$1.createElement(Switch, {
+    var switchCtrl = /*#__PURE__*/React$1.createElement(Switch$2, {
       checked: value,
       onChange: handleChange,
       disabled: disabled,
@@ -21085,7 +23254,7 @@
       required: required,
       disableRipple: disableRipple
     });
-    return /*#__PURE__*/React$1.createElement(FormGroup, {
+    return /*#__PURE__*/React$1.createElement(FormGroup$1, {
       "data-lf-field-name": name,
       className: "lf-control-toggle"
     }, label && /*#__PURE__*/React$1.createElement(FormControlLabel, {
@@ -21120,7 +23289,7 @@
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
-    var checkboxCtrl = /*#__PURE__*/React$1.createElement(Checkbox$3, {
+    var checkboxCtrl = /*#__PURE__*/React$1.createElement(Checkbox$2, {
       checked: value,
       onChange: handleChange,
       disabled: disabled,
@@ -21130,7 +23299,7 @@
       required: required,
       disableRipple: disableRipple
     });
-    return /*#__PURE__*/React$1.createElement(FormGroup, {
+    return /*#__PURE__*/React$1.createElement(FormGroup$1, {
       "data-lf-field-name": name,
       className: "lf-control-checkbox"
     }, label && /*#__PURE__*/React$1.createElement(FormControlLabel, {
@@ -21176,14 +23345,14 @@
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-slider",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(FormControl, {
+    }, /*#__PURE__*/React$1.createElement(FormControl$2, {
       required: required,
       error: error != null,
       fullWidth: fullWidth,
       sx: {
         mt: 2
       }
-    }, label && /*#__PURE__*/React$1.createElement(FormLabel, null, label), /*#__PURE__*/React$1.createElement(Slider$2, {
+    }, label && /*#__PURE__*/React$1.createElement(FormLabel$1, null, label), /*#__PURE__*/React$1.createElement(Slider$1, {
       name: name,
       marks: customMarks ? customMarks : showMarks,
       value: value,
@@ -21221,7 +23390,7 @@
       text = _ref.text,
       name = _ref.name,
       label = _ref.label;
-    return /*#__PURE__*/React$1.createElement(FormControl, {
+    return /*#__PURE__*/React$1.createElement(FormControl$2, {
       className: "lf-control-placeholder",
       "data-lf-field-name": name
     }, label && /*#__PURE__*/React$1.createElement(MuiLabel, {
@@ -21275,14 +23444,14 @@
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-rate",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(FormControl, {
+    }, /*#__PURE__*/React$1.createElement(FormControl$2, {
       required: required,
       error: error != null,
       sx: {
         mt: 2
       },
       variant: "standard"
-    }, label && !labelPlacement && /*#__PURE__*/React$1.createElement(FormLabel, null, label), label && labelPlacement && /*#__PURE__*/React$1.createElement(FormControlLabel, {
+    }, label && !labelPlacement && /*#__PURE__*/React$1.createElement(FormLabel$1, null, label), label && labelPlacement && /*#__PURE__*/React$1.createElement(FormControlLabel, {
       labelPlacement: labelPlacement ? labelPlacement : undefined,
       disabled: disabled,
       label: label,
@@ -21616,7 +23785,7 @@
   var dayjs_minExports = dayjs_min.exports;
   var dayjs = /*@__PURE__*/getDefaultExportFromCjs(dayjs_minExports);
 
-  var _excluded$19 = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "fullWidth", "variant", "placeholder", "width", "disableFuture", "disableHighlightToday", "disableOpenPicker", "disablePast", "displayWeekNumber", "format", "maxDate", "minDate", "reduceAnimations", "showDaysOutsideCurrentMonth", "lfLocale", "datetime", "views", "component"];
+  var _excluded$1e = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "fullWidth", "variant", "placeholder", "width", "disableFuture", "disableHighlightToday", "disableOpenPicker", "disablePast", "displayWeekNumber", "format", "maxDate", "minDate", "reduceAnimations", "showDaysOutsideCurrentMonth", "lfLocale", "datetime", "views", "component"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -21655,9 +23824,9 @@
       datetime = _ref$datetime === void 0 ? false : _ref$datetime,
       views = _ref.views;
       _ref.component;
-      var rest = _objectWithoutProperties(_ref, _excluded$19);
+      var rest = _objectWithoutProperties(_ref, _excluded$1e);
     var localeCode = lfLocale && _isString(lfLocale) ? lfLocale.split('-')[0] : undefined;
-    var Component = datetime ? DateTimePicker.DateTimePicker : DatePicker$1.DatePicker;
+    var Component = datetime ? DateTimePicker.DateTimePicker : DatePicker.DatePicker;
 
     // set locale for dates
     var defaultValue = dayjs(value);
@@ -21667,11 +23836,11 @@
     return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: className
-    }, /*#__PURE__*/React$1.createElement(FormControl, {
+    }, /*#__PURE__*/React$1.createElement(FormControl$2, {
       required: required,
       error: error != null,
       fullWidth: fullWidth
-    }, /*#__PURE__*/React$1.createElement(Component, _extends({
+    }, /*#__PURE__*/React$1.createElement(Component, _extends$1({
       placeholder: placeholder,
       readOnly: readOnly,
       required: required,
@@ -21698,7 +23867,7 @@
     }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$18 = ["onChange", "value"];
+  var _excluded$1d = ["onChange", "value"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -21706,7 +23875,7 @@
   var MuiDate = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$18);
+      rest = _objectWithoutProperties(_ref, _excluded$1d);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -21724,7 +23893,7 @@
         onChange(d.toDate().toISOString().split('T')[0]);
       }
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(MuiGenericDate, _extends({
+    return /*#__PURE__*/React$1.createElement(MuiGenericDate, _extends$1({
       value: currentValue,
       className: "lf-control-date",
       component: "date",
@@ -21780,7 +23949,7 @@
     default: ReactView
   });
 
-  var _excluded$17 = ["onChange", "value"];
+  var _excluded$1c = ["onChange", "value"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -21788,7 +23957,7 @@
   var MuiDateTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$17);
+      rest = _objectWithoutProperties(_ref, _excluded$1c);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -21806,7 +23975,7 @@
         onChange(d.toDate().toISOString());
       }
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(MuiGenericDate, _extends({
+    return /*#__PURE__*/React$1.createElement(MuiGenericDate, _extends$1({
       value: currentValue,
       className: "lf-control-datetime",
       component: "datetime",
@@ -21824,7 +23993,7 @@
   var css_248z$o = ".lf-form.lf-form-react-material-ui .lf-control-common-array [class^=lf-control]:not(:last-child) {\n  margin-bottom: 10px;\n}";
   styleInject(css_248z$o);
 
-  var _excluded$16 = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$1b = ["hint", "required", "tooltip", "name", "label", "error"];
   var ListArrayMui = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required;
@@ -21832,16 +24001,16 @@
       var name = _ref.name,
       label = _ref.label,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$16);
+      rest = _objectWithoutProperties(_ref, _excluded$1b);
     var hasError = error && _isString(error);
     return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: "lf-control-array"
-    }, /*#__PURE__*/React$1.createElement(FormControl, {
+    }, /*#__PURE__*/React$1.createElement(FormControl$2, {
       required: required,
       error: hasError,
       fullWidth: true
-    }, /*#__PURE__*/React$1.createElement(MuiLabel, null, label), /*#__PURE__*/React$1.createElement(ListArray, _extends({
+    }, /*#__PURE__*/React$1.createElement(MuiLabel, null, label), /*#__PURE__*/React$1.createElement(ListArray, _extends$1({
       LetsFormComponent: LetsForm$4
     }, rest)), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   }, ['label', 'hint']);
@@ -21855,8 +24024,8 @@
   // DOC: https://mui.com/material-ui/api/input/
 
   var Textarea$2 = I18N(function (_ref) {
-    var rest = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
-    return /*#__PURE__*/React$1.createElement(MuiGenericInput, _extends({
+    var rest = _extends$1({}, (_objectDestructuringEmpty(_ref), _ref));
+    return /*#__PURE__*/React$1.createElement(MuiGenericInput, _extends$1({
       className: "lf-control-textarea",
       component: "textarea",
       multiline: true
@@ -21869,11 +24038,11 @@
     default: Textarea$2
   });
 
-  var _excluded$15 = ["onChange", "value"];
+  var _excluded$1a = ["onChange", "value"];
   var Multiselect$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$15);
+      rest = _objectWithoutProperties(_ref, _excluded$1a);
     var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       onChange(typeof value === 'string' ? value.split(',') : value);
@@ -21888,7 +24057,7 @@
         return selectedOptions.join(', ');
       };
     }, [rest.options]);
-    return /*#__PURE__*/React$1.createElement(MuiGenericSelect, _extends({
+    return /*#__PURE__*/React$1.createElement(MuiGenericSelect, _extends$1({
       className: "lf-control-multiselect",
       component: "multiselect",
       onChange: handleChange,
@@ -21906,7 +24075,7 @@
     default: Multiselect$1
   });
 
-  var _excluded$14 = ["onChange"];
+  var _excluded$19 = ["onChange"];
 
   // DOC: https://mui.com/material-ui/api/input/
 
@@ -21915,7 +24084,7 @@
   };
   var InputNumber$2 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$14);
+      rest = _objectWithoutProperties(_ref, _excluded$19);
     var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       var parsed;
@@ -21933,7 +24102,7 @@
         }
       }
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(MuiGenericInput, _extends({
+    return /*#__PURE__*/React$1.createElement(MuiGenericInput, _extends$1({
       className: "lf-control-input-number",
       component: "input-number",
       onChange: handleChange,
@@ -21947,7 +24116,7 @@
     default: InputNumber$2
   });
 
-  var _excluded$13 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "onBlur", "required"];
+  var _excluded$18 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "onBlur", "required"];
 
   // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -21967,18 +24136,18 @@
       labelPlacement = _ref.labelPlacement,
       onBlur = _ref.onBlur,
       required = _ref.required,
-      rest = _objectWithoutProperties(_ref, _excluded$13);
+      rest = _objectWithoutProperties(_ref, _excluded$18);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(FormControl, {
+    return /*#__PURE__*/React$1.createElement(FormControl$2, {
       "data-lf-field-name": name,
       className: "lf-control-radio-group",
       required: required,
       error: error != null
-    }, /*#__PURE__*/React$1.createElement(FormLabel, {
+    }, /*#__PURE__*/React$1.createElement(FormLabel$1, {
       id: "lf-control-radio-group-".concat(name)
-    }, label), /*#__PURE__*/React$1.createElement(RadioGroup$3, _extends({
+    }, label), /*#__PURE__*/React$1.createElement(RadioGroup$2, _extends$1({
       "aria-labelledby": "lf-control-radio-group-".concat(name),
       value: value,
       name: name,
@@ -21991,7 +24160,7 @@
         key: option.value,
         value: option.value,
         labelPlacement: labelPlacement !== null && labelPlacement !== void 0 ? labelPlacement : undefined,
-        control: /*#__PURE__*/React$1.createElement(Radio$1, {
+        control: /*#__PURE__*/React$1.createElement(Radio, {
           size: size !== null && size !== void 0 ? size : undefined,
           color: color !== null && color !== void 0 ? color : undefined
         }),
@@ -22016,7 +24185,7 @@
     default: RadioGroupMUI
   });
 
-  var _excluded$12 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "readOnly", "onBlur", "required"];
+  var _excluded$17 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "readOnly", "onBlur", "required"];
 
   // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -22037,7 +24206,7 @@
       readOnly = _ref.readOnly;
       _ref.onBlur;
       var required = _ref.required,
-      rest = _objectWithoutProperties(_ref, _excluded$12);
+      rest = _objectWithoutProperties(_ref, _excluded$17);
     var _useState = React$1.useState(_isArray(value) ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
       currentValue = _useState2[0],
@@ -22054,21 +24223,21 @@
       setCurrentValue(newValue);
       onChange(newValue);
     }, [currentValue, onChange]);
-    return /*#__PURE__*/React$1.createElement(FormControl, {
+    return /*#__PURE__*/React$1.createElement(FormControl$2, {
       "data-lf-field-name": name,
       className: "lf-control-radio-group",
       required: required,
       error: error != null
-    }, /*#__PURE__*/React$1.createElement(FormLabel, {
+    }, /*#__PURE__*/React$1.createElement(FormLabel$1, {
       id: "lf-control-radio-group-".concat(name)
-    }, label), /*#__PURE__*/React$1.createElement(FormGroup, {
+    }, label), /*#__PURE__*/React$1.createElement(FormGroup$1, {
       "aria-labelledby": "lf-control-radio-group-".concat(name)
     }, (options || []).map(function (option) {
       return /*#__PURE__*/React$1.createElement(FormControlLabel, {
         key: option.value,
         value: option.value,
         labelPlacement: labelPlacement !== null && labelPlacement !== void 0 ? labelPlacement : undefined,
-        control: /*#__PURE__*/React$1.createElement(Checkbox$3, _extends({
+        control: /*#__PURE__*/React$1.createElement(Checkbox$2, _extends$1({
           disabled: disabled || readOnly,
           size: size !== null && size !== void 0 ? size : undefined,
           color: color !== null && color !== void 0 ? color : undefined,
@@ -22100,7 +24269,7 @@
   var css_248z$n = ".lf-form-react-material-ui .lf-control-tabs .tab-fields {\n  padding-top: var(--lf-field-margin);\n}";
   styleInject(css_248z$n);
 
-  var _excluded$11 = ["name", "value", "tabs", "onChange", "children", "centered", "fullWidth", "indicatorColor", "textColor"];
+  var _excluded$16 = ["name", "value", "tabs", "onChange", "children", "centered", "fullWidth", "indicatorColor", "textColor"];
   var TabsMui = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -22111,7 +24280,7 @@
       fullWidth = _ref.fullWidth,
       indicatorColor = _ref.indicatorColor,
       textColor = _ref.textColor,
-      rest = _objectWithoutProperties(_ref, _excluded$11);
+      rest = _objectWithoutProperties(_ref, _excluded$16);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
@@ -22132,7 +24301,7 @@
         borderBottom: 1,
         borderColor: 'divider'
       }
-    }, /*#__PURE__*/React$1.createElement(Tabs$1, _extends({
+    }, /*#__PURE__*/React$1.createElement(Tabs$3, _extends$1({
       value: active,
       onChange: handleKey,
       centered: centered !== null && centered !== void 0 ? centered : undefined,
@@ -22140,7 +24309,7 @@
       textColor: textColor !== null && textColor !== void 0 ? textColor : undefined,
       variant: fullWidth ? 'fullWidth' : 'standard'
     }, passRest(rest)), (tabs || []).map(function (tab) {
-      return /*#__PURE__*/React$1.createElement(Tab, {
+      return /*#__PURE__*/React$1.createElement(Tab$2, {
         key: tab.value,
         label: tab.label,
         value: tab.value
@@ -22161,7 +24330,7 @@
   var css_248z$m = ".lf-form-react-material-ui .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeLarge .lf-icon {\n  max-width: 22px;\n  max-height: 22px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeSmall .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon {\n  min-width: inherit;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon .MuiButton-startIcon {\n  margin-right: 0px !important;\n}";
   styleInject(css_248z$m);
 
-  var _excluded$10 = ["label", "icon", "hint", "tooltip", "variant", "size", "color"];
+  var _excluded$15 = ["label", "icon", "hint", "tooltip", "variant", "size", "color"];
   var MuiButton = function MuiButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
@@ -22170,10 +24339,10 @@
       variant = _ref.variant,
       size = _ref.size,
       color = _ref.color,
-      rest = _objectWithoutProperties(_ref, _excluded$10);
+      rest = _objectWithoutProperties(_ref, _excluded$15);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(Button$2, _extends({
+      inner = /*#__PURE__*/React$1.createElement(Button$3, _extends$1({
         startIcon: /*#__PURE__*/React$1.createElement("img", {
           className: "lf-icon",
           src: icon
@@ -22183,13 +24352,13 @@
         color: color !== null && color !== void 0 ? color : undefined
       }, rest), label);
     } else if (!_isEmpty(label) && _isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(Button$2, _extends({
+      inner = /*#__PURE__*/React$1.createElement(Button$3, _extends$1({
         variant: variant || 'contained',
         size: size !== null && size !== void 0 ? size : undefined,
         color: color !== null && color !== void 0 ? color : undefined
       }, rest), label);
     } else if (_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(Button$2, _extends({
+      inner = /*#__PURE__*/React$1.createElement(Button$3, _extends$1({
         className: "only-icon",
         startIcon: /*#__PURE__*/React$1.createElement("img", {
           className: "lf-icon",
@@ -22346,7 +24515,7 @@
       className: "lf-upload-button-layout"
     }, /*#__PURE__*/React$1.createElement("div", {
       className: "lf-upload-button-left"
-    }, /*#__PURE__*/React$1.createElement(Button$2, {
+    }, /*#__PURE__*/React$1.createElement(Button$3, {
       color: color !== null && color !== void 0 ? color : undefined,
       component: "label",
       variant: uploadButtonVariant !== null && uploadButtonVariant !== void 0 ? uploadButtonVariant : undefined,
@@ -22425,7 +24594,7 @@
       onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset,
       custom = _ref.custom;
     return /*#__PURE__*/React$1.createElement("form", {
-      className: classNames('lf-form lf-form-react-material-ui', _defineProperty$1({
+      className: classNames$1('lf-form lf-form-react-material-ui', _defineProperty$1({
         'lf-form-react-material-ui-plaintext': plaintext
       }, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name,
@@ -22434,11 +24603,11 @@
       spacing: 2,
       direction: "row",
       className: "lf-buttons"
-    }, /*#__PURE__*/React$1.createElement(Button$2, {
+    }, /*#__PURE__*/React$1.createElement(Button$3, {
       onClick: onSubmit,
       variant: "contained",
       disabled: disabled || disabledSubmit
-    }, labelSubmit), /*#__PURE__*/React$1.createElement(Button$2, {
+    }, labelSubmit), /*#__PURE__*/React$1.createElement(Button$3, {
       onClick: onReset,
       variant: "outlined",
       disabled: disabled
@@ -22451,7 +24620,7 @@
     default: FormMaterialUI
   });
 
-  var _excluded$$ = ["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "submitOnEnter", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component", "lfOnEnter"];
+  var _excluded$14 = ["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "submitOnEnter", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component", "lfOnEnter"];
   var ReactGenericInput = function ReactGenericInput(_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -22477,17 +24646,17 @@
       _ref.component;
       var _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$$);
+      rest = _objectWithoutProperties(_ref, _excluded$14);
     var hasError = error && _isString(error);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
     return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames(className, 'lf-form-react-control-group'),
+      className: classNames$1(className, 'lf-form-react-control-group'),
       "data-lf-field-name": name
     }, /*#__PURE__*/React$1.createElement("label", {
       for: name
-    }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("input", _extends({
+    }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("input", _extends$1({
       type: inputType,
       lang: lfLocale,
       id: name,
@@ -22511,14 +24680,14 @@
   var css_248z$k = ".lf-form-react .lf-control-input-text input[type=color] {\n  min-width: 60px;\n}";
   styleInject(css_248z$k);
 
-  var _excluded$_ = ["onChange"];
+  var _excluded$13 = ["onChange"];
   var TextInput$2 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$_);
+      rest = _objectWithoutProperties(_ref, _excluded$13);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
+    return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends$1({
       component: "input-text",
       className: "lf-control-input-text",
       onChange: handleChange
@@ -22531,7 +24700,7 @@
     default: TextInput$2
   });
 
-  var _excluded$Z = ["onChange", "min", "max", "step"];
+  var _excluded$12 = ["onChange", "min", "max", "step"];
   var hasDecimals$1 = function hasDecimals(f) {
     return _isString(f) && (f.includes(',') || f.includes('.'));
   };
@@ -22540,7 +24709,7 @@
       min = _ref.min,
       max = _ref.max,
       step = _ref.step,
-      rest = _objectWithoutProperties(_ref, _excluded$Z);
+      rest = _objectWithoutProperties(_ref, _excluded$12);
     var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       var parsed;
@@ -22558,7 +24727,7 @@
         }
       }
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
+    return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends$1({
       inputType: "number",
       component: "input-number",
       className: "lf-control-input-number",
@@ -22575,7 +24744,7 @@
     default: InputNumber$1
   });
 
-  var _excluded$Y = ["name", "label", "lfLocale", "className", "inputType", "hint", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"];
+  var _excluded$11 = ["name", "label", "lfLocale", "className", "inputType", "hint", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"];
   var ReactGenericCheckbox = function ReactGenericCheckbox(_ref) {
     var name = _ref.name,
       label = _ref.label;
@@ -22591,15 +24760,15 @@
       disabled = _ref.disabled,
       readOnly = _ref.readOnly,
       required = _ref.required,
-      rest = _objectWithoutProperties(_ref, _excluded$Y);
+      rest = _objectWithoutProperties(_ref, _excluded$11);
     var hasError = error && _isString(error);
     return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames(className, 'lf-form-react-control-group'),
+      className: classNames$1(className, 'lf-form-react-control-group'),
       "data-lf-field-name": name
     }, /*#__PURE__*/React$1.createElement("label", {
       for: name,
       className: "lf-form-react-checkbox"
-    }, /*#__PURE__*/React$1.createElement("input", _extends({
+    }, /*#__PURE__*/React$1.createElement("input", _extends$1({
       type: inputType,
       id: name,
       onChange: onChange,
@@ -22615,14 +24784,14 @@
     }, error));
   };
 
-  var _excluded$X = ["onChange"];
+  var _excluded$10 = ["onChange"];
   var Checkbox$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$X);
+      rest = _objectWithoutProperties(_ref, _excluded$10);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(ReactGenericCheckbox, _extends({
+    return /*#__PURE__*/React$1.createElement(ReactGenericCheckbox, _extends$1({
       inputType: "checkbox",
       className: "lf-control-checkbox",
       onChange: handleChange
@@ -22635,7 +24804,7 @@
     default: Checkbox$1
   });
 
-  var _excluded$W = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "readOnly", "required", "size", "rows", "width", "fullWidth"];
+  var _excluded$$ = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "readOnly", "required", "size", "rows", "width", "fullWidth"];
   var Textarea$1 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -22651,7 +24820,7 @@
       rows = _ref.rows,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
-      rest = _objectWithoutProperties(_ref, _excluded$W);
+      rest = _objectWithoutProperties(_ref, _excluded$$);
     var hasError = error && _isString(error);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
@@ -22661,7 +24830,7 @@
       "data-lf-field-name": name
     }, /*#__PURE__*/React$1.createElement("label", {
       for: name
-    }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("textarea", _extends({
+    }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("textarea", _extends$1({
       type: "text",
       id: name,
       rows: rows,
@@ -22743,7 +24912,7 @@
     default: PlaceholderReact
   });
 
-  var _excluded$V = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey"];
+  var _excluded$_ = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey"];
   var Select$1 = I18N(function (_ref) {
     var _filterOptions;
     var name = _ref.name;
@@ -22764,7 +24933,7 @@
       options = _ref.options,
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
-      rest = _objectWithoutProperties(_ref, _excluded$V);
+      rest = _objectWithoutProperties(_ref, _excluded$_);
     var hasError = error && _isString(error);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value === '' ? null : e.target.value);
@@ -22781,7 +24950,7 @@
       "data-lf-field-name": name
     }, /*#__PURE__*/React$1.createElement("label", {
       for: name
-    }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("select", _extends({
+    }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("select", _extends$1({
       id: name,
       value: value,
       onChange: handleChange,
@@ -22810,11 +24979,11 @@
     default: Select$1
   });
 
-  var _excluded$U = ["onChange", "value"];
+  var _excluded$Z = ["onChange", "value"];
   var DateInput = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$U);
+      rest = _objectWithoutProperties(_ref, _excluded$Z);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -22823,7 +24992,7 @@
       // only take 2023-11-12
       currentDate = value.toISOString().split('T')[0];
     }
-    return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
+    return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends$1({
       inputType: "date",
       component: "date",
       className: "lf-control-date",
@@ -22838,11 +25007,11 @@
     default: DateInput
   });
 
-  var _excluded$T = ["onChange", "value"];
+  var _excluded$Y = ["onChange", "value"];
   var DateTime$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$T);
+      rest = _objectWithoutProperties(_ref, _excluded$Y);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -22854,7 +25023,7 @@
         currentDate = match[0];
       }
     }
-    return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
+    return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends$1({
       inputType: "datetime-local",
       component: "datetime",
       className: "lf-control-datetime",
@@ -22872,7 +25041,7 @@
   var css_248z$j = ".lf-form-react .lf-control-common-array-item {\n  padding-bottom: 5px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-two-columns:last-child {\n  margin-bottom: 0px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-three-columns:last-child {\n  margin-bottom: 0px;\n}";
   styleInject(css_248z$j);
 
-  var _excluded$S = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$X = ["hint", "required", "tooltip", "name", "label", "error"];
   var ListArrayReact = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required;
@@ -22880,14 +25049,14 @@
       var name = _ref.name,
       label = _ref.label,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$S);
+      rest = _objectWithoutProperties(_ref, _excluded$X);
     var hasError = error && _isString(error);
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-array lf-form-react-control-group",
       "data-lf-field-name": name
     }, /*#__PURE__*/React$1.createElement("label", {
       for: name
-    }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
+    }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends$1({
       LetsFormComponent: LetsForm$3
     }, rest)), hint && !hasError && /*#__PURE__*/React$1.createElement("div", {
       className: "lf-form-react-message"
@@ -22912,12 +25081,12 @@
   var css_248z$i = ".lf-form-react .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n  margin-top: -2px;\n  margin-right: 5px;\n}\n.lf-form-react .lf-control-button .btn-lg .lf-icon {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-form-react .lf-control-button .btn-sm .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}";
   styleInject(css_248z$i);
 
-  var _excluded$R = ["label", "icon", "hint"];
+  var _excluded$W = ["label", "icon", "hint"];
   var ReactButton = function ReactButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint,
-      rest = _objectWithoutProperties(_ref, _excluded$R);
+      rest = _objectWithoutProperties(_ref, _excluded$W);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement("button", rest, /*#__PURE__*/React$1.createElement("img", {
@@ -22955,11 +25124,11 @@
     };
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded React.Button');
-  var Button = BiStateButton$3;
+  var Button$2 = BiStateButton$3;
 
   var index$1b = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: Button
+    default: Button$2
   });
 
   var css_248z$h = ".lf-form-react input[type=text],\n.lf-form-react input[type=password],\n.lf-form-react input[type=email],\n.lf-form-react input[type=url],\n.lf-form-react input[type=date],\n.lf-form-react input[type=month],\n.lf-form-react input[type=time],\n.lf-form-react input[type=datetime],\n.lf-form-react input[type=datetime-local],\n.lf-form-react input[type=week],\n.lf-form-react input[type=number],\n.lf-form-react input[type=search],\n.lf-form-react input[type=tel],\n.lf-form-react input[type=color],\n.lf-form-react select,\n.lf-form-react textarea {\n  padding: 0.5em 0.6em;\n  display: inline-block;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  vertical-align: middle;\n  box-sizing: border-box;\n  height: 36px;\n}\n\n/*\nNeed to separate out the :not() selector from the rest of the CSS 2.1 selectors\nsince IE8 won't execute CSS that contains a CSS3 selector.\n*/\n.lf-form-react input:not([type]) {\n  padding: 0.5em 0.6em;\n  display: inline-block;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  box-sizing: border-box;\n}\n\n/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */\n/* May be able to remove this tweak as color inputs become more standardized across browsers. */\n.lf-form-react input[type=color] {\n  padding: 0.2em 0.5em;\n}\n\n.lf-form-react input[type=text]:focus,\n.lf-form-react input[type=password]:focus,\n.lf-form-react input[type=email]:focus,\n.lf-form-react input[type=url]:focus,\n.lf-form-react input[type=date]:focus,\n.lf-form-react input[type=month]:focus,\n.lf-form-react input[type=time]:focus,\n.lf-form-react input[type=datetime]:focus,\n.lf-form-react input[type=datetime-local]:focus,\n.lf-form-react input[type=week]:focus,\n.lf-form-react input[type=number]:focus,\n.lf-form-react input[type=search]:focus,\n.lf-form-react input[type=tel]:focus,\n.lf-form-react input[type=color]:focus,\n.lf-form-react select:focus,\n.lf-form-react textarea:focus {\n  outline: 0;\n  border-color: #129FEA;\n}\n\n/*\nNeed to separate out the :not() selector from the rest of the CSS 2.1 selectors\nsince IE8 won't execute CSS that contains a CSS3 selector.\n*/\n.lf-form-react input:not([type]):focus {\n  outline: 0;\n  border-color: #129FEA;\n}\n\n.lf-form-react input[type=file]:focus,\n.lf-form-react input[type=radio]:focus,\n.lf-form-react input[type=checkbox]:focus {\n  outline: thin solid #129FEA;\n  outline: 1px auto #129FEA;\n}\n\n.lf-form-react .lf-form-react-checkbox,\n.lf-form-react .lf-form-react-radio {\n  display: block;\n}\n\n.lf-form-react input[type=text][disabled],\n.lf-form-react input[type=password][disabled],\n.lf-form-react input[type=email][disabled],\n.lf-form-react input[type=url][disabled],\n.lf-form-react input[type=date][disabled],\n.lf-form-react input[type=month][disabled],\n.lf-form-react input[type=time][disabled],\n.lf-form-react input[type=datetime][disabled],\n.lf-form-react input[type=datetime-local][disabled],\n.lf-form-react input[type=week][disabled],\n.lf-form-react input[type=number][disabled],\n.lf-form-react input[type=search][disabled],\n.lf-form-react input[type=tel][disabled],\n.lf-form-react input[type=color][disabled],\n.lf-form-react select[disabled],\n.lf-form-react textarea[disabled] {\n  cursor: not-allowed;\n  background-color: #eaeded;\n  color: #cad2d3;\n}\n\n.lf-form-react input[readonly],\n.lf-form-react select[readonly],\n.lf-form-react textarea[readonly] {\n  background-color: #eee; /* menu hover bg color */\n  color: #777; /* menu text color */\n  border-color: #ccc;\n}\n\n.lf-form-react input:focus:invalid,\n.lf-form-react textarea:focus:invalid,\n.lf-form-react select:focus:invalid {\n  color: #b94a48;\n  border-color: #e9322d;\n}\n\n.lf-form-react input[type=file]:focus:invalid:focus,\n.lf-form-react input[type=radio]:focus:invalid:focus,\n.lf-form-react input[type=checkbox]:focus:invalid:focus {\n  outline-color: #e9322d;\n}\n\n.lf-form-react select {\n  /* Normalizes the height; padding is not sufficient. */\n  height: 2.25em;\n  border: 1px solid #ccc;\n  background-color: white;\n}\n\n.lf-form-react select[multiple] {\n  height: auto;\n}\n\n.lf-form-react label {\n  margin: 3px 0px;\n}\n\n.lf-form-react fieldset {\n  margin: 0;\n  padding: 0.35em 0 0.75em;\n  border: 0;\n}\n\n.lf-form-react legend {\n  display: block;\n  width: 100%;\n  padding: 0.3em 0;\n  color: #333;\n  border-bottom: 1px solid #e5e5e5;\n}\n\n.lf-form-react-stacked input[type=text],\n.lf-form-react-stacked input[type=password],\n.lf-form-react-stacked input[type=email],\n.lf-form-react-stacked input[type=url],\n.lf-form-react-stacked input[type=date],\n.lf-form-react-stacked input[type=month],\n.lf-form-react-stacked input[type=time],\n.lf-form-react-stacked input[type=datetime],\n.lf-form-react-stacked input[type=datetime-local],\n.lf-form-react-stacked input[type=week],\n.lf-form-react-stacked input[type=number],\n.lf-form-react-stacked input[type=search],\n.lf-form-react-stacked input[type=tel],\n.lf-form-react-stacked input[type=color],\n.lf-form-react-stacked input[type=file],\n.lf-form-react-stacked select,\n.lf-form-react-stacked label,\n.lf-form-react-stacked textarea {\n  display: block;\n}\n\n.pure-form-aligned input,\n.pure-form-aligned textarea,\n.pure-form-aligned select,\n.pure-form-message-inline {\n  display: inline-block;\n  vertical-align: middle;\n}\n\n.pure-form-aligned textarea {\n  vertical-align: top;\n}\n\n/* Aligned Forms */\n.pure-form-aligned .pure-control-group {\n  margin-bottom: 0.5em;\n}\n\n.pure-form-aligned .pure-control-group label {\n  text-align: right;\n  display: inline-block;\n  vertical-align: middle;\n  width: 10em;\n  margin: 0 1em 0 0;\n}\n\n.pure-form-aligned .pure-controls {\n  margin: 1.5em 0 0 11em;\n}\n\n.lf-form-react .lf-form-react-input-1 {\n  width: 100%;\n}\n\n.lf-form-react .lf-form-react-input-3-4 {\n  width: 75%;\n}\n\n.lf-form-react .lf-form-react-input-2-3 {\n  width: 66%;\n}\n\n.lf-form-react .lf-form-react-input-1-2 {\n  width: 50%;\n}\n\n.lf-form-react .lf-form-react-input-1-3 {\n  width: 33%;\n}\n\n.lf-form-react .lf-form-react-input-1-4 {\n  width: 25%;\n}\n\n.lf-form-react-message {\n  display: block;\n  color: #666;\n  font-size: 0.875em;\n}\n\n.lf-form-react-error-message {\n  color: #FF3300;\n  display: block;\n  font-size: 0.875em;\n}\n\n.lf-form-react-primary-button {\n  appearance: button;\n  background-color: #1652F0;\n  border: 1px solid #1652F0;\n  border-radius: 4px;\n  box-sizing: border-box;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.15;\n  overflow: visible;\n  padding: 8px 16px;\n  position: relative;\n  text-align: center;\n  text-transform: none;\n  transition: all 80ms ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  width: fit-content;\n}\n.lf-form-react-primary-button:focus {\n  outline: 0;\n}\n.lf-form-react-primary-button:hover {\n  background-color: #0A46E4;\n  border-color: #0A46E4;\n}\n.lf-form-react-primary-button:active {\n  background-color: #0039D7;\n  border-color: #0039D7;\n}\n\n.lf-form-react-secondary-button {\n  appearance: button;\n  background-color: #999999;\n  border: 1px solid #999999;\n  border-radius: 4px;\n  box-sizing: border-box;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.15;\n  overflow: visible;\n  padding: 8px 16px;\n  position: relative;\n  text-align: center;\n  text-transform: none;\n  transition: all 80ms ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  width: fit-content;\n}\n.lf-form-react-secondary-button:focus {\n  outline: 0;\n}\n.lf-form-react-secondary-button:hover {\n  background-color: #888888;\n  border-color: #888888;\n}\n.lf-form-react-secondary-button:active {\n  background-color: #888888;\n  border-color: #888888;\n}\n\n.lf-form-react .lf-buttons {\n  display: flex;\n}\n.lf-form-react .lf-buttons button:not(:first-child) {\n  margin-left: 10px;\n}";
@@ -22989,7 +25158,7 @@
       custom = _ref.custom;
     return /*#__PURE__*/React$1.createElement("form", {
       onSubmit: onSubmit,
-      className: classNames('lf-form lf-form-react lf-form-react-stacked', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
+      className: classNames$1('lf-form lf-form-react lf-form-react-stacked', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name
     }, children, !hideToolbar && !onlyFields && !plaintext && /*#__PURE__*/React$1.createElement("div", {
       className: "lf-buttons"
@@ -23012,7 +25181,1917 @@
     default: FormReact
   });
 
-  var _excluded$Q = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "className", "inputType", "inputMode", "autocomplete", "lfLocale", "disabled", "readOnly", "plaintext", "error", "component", "required", "submitOnEnter", "prefix", "postfix", "placeholder", "fullWidth", "width", "floatingLabel", "lfOnEnter"];
+  var classnames = {exports: {}};
+
+  /*!
+  	Copyright (c) 2018 Jed Watson.
+  	Licensed under the MIT License (MIT), see
+  	http://jedwatson.github.io/classnames
+  */
+
+  (function (module) {
+  	/* global define */
+
+  	(function () {
+
+  	  var hasOwn = {}.hasOwnProperty;
+  	  function classNames() {
+  	    var classes = '';
+  	    for (var i = 0; i < arguments.length; i++) {
+  	      var arg = arguments[i];
+  	      if (arg) {
+  	        classes = appendClass(classes, parseValue(arg));
+  	      }
+  	    }
+  	    return classes;
+  	  }
+  	  function parseValue(arg) {
+  	    if (typeof arg === 'string' || typeof arg === 'number') {
+  	      return arg;
+  	    }
+  	    if (typeof arg !== 'object') {
+  	      return '';
+  	    }
+  	    if (Array.isArray(arg)) {
+  	      return classNames.apply(null, arg);
+  	    }
+  	    if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
+  	      return arg.toString();
+  	    }
+  	    var classes = '';
+  	    for (var key in arg) {
+  	      if (hasOwn.call(arg, key) && arg[key]) {
+  	        classes = appendClass(classes, key);
+  	      }
+  	    }
+  	    return classes;
+  	  }
+  	  function appendClass(value, newClass) {
+  	    if (!newClass) {
+  	      return value;
+  	    }
+  	    if (value) {
+  	      return value + ' ' + newClass;
+  	    }
+  	    return value + newClass;
+  	  }
+  	  if (module.exports) {
+  	    classNames.default = classNames;
+  	    module.exports = classNames;
+  	  } else {
+  	    window.classNames = classNames;
+  	  }
+  	})(); 
+  } (classnames));
+
+  var classnamesExports = classnames.exports;
+  var classNames = /*@__PURE__*/getDefaultExportFromCjs(classnamesExports);
+
+  var jsxRuntime = {exports: {}};
+
+  var reactJsxRuntime_production_min = {};
+
+  /**
+   * @license React
+   * react-jsx-runtime.production.min.js
+   *
+   * Copyright (c) Facebook, Inc. and its affiliates.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
+
+  var hasRequiredReactJsxRuntime_production_min;
+
+  function requireReactJsxRuntime_production_min () {
+  	if (hasRequiredReactJsxRuntime_production_min) return reactJsxRuntime_production_min;
+  	hasRequiredReactJsxRuntime_production_min = 1;
+
+  	var f = React$1,
+  	  k = Symbol.for("react.element"),
+  	  l = Symbol.for("react.fragment"),
+  	  m = Object.prototype.hasOwnProperty,
+  	  n = f.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,
+  	  p = {
+  	    key: !0,
+  	    ref: !0,
+  	    __self: !0,
+  	    __source: !0
+  	  };
+  	function q(c, a, g) {
+  	  var b,
+  	    d = {},
+  	    e = null,
+  	    h = null;
+  	  void 0 !== g && (e = "" + g);
+  	  void 0 !== a.key && (e = "" + a.key);
+  	  void 0 !== a.ref && (h = a.ref);
+  	  for (b in a) m.call(a, b) && !p.hasOwnProperty(b) && (d[b] = a[b]);
+  	  if (c && c.defaultProps) for (b in a = c.defaultProps, a) void 0 === d[b] && (d[b] = a[b]);
+  	  return {
+  	    $$typeof: k,
+  	    type: c,
+  	    key: e,
+  	    ref: h,
+  	    props: d,
+  	    _owner: n.current
+  	  };
+  	}
+  	reactJsxRuntime_production_min.Fragment = l;
+  	reactJsxRuntime_production_min.jsx = q;
+  	reactJsxRuntime_production_min.jsxs = q;
+  	return reactJsxRuntime_production_min;
+  }
+
+  var reactJsxRuntime_development = {};
+
+  /**
+   * @license React
+   * react-jsx-runtime.development.js
+   *
+   * Copyright (c) Facebook, Inc. and its affiliates.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
+
+  var hasRequiredReactJsxRuntime_development;
+
+  function requireReactJsxRuntime_development () {
+  	if (hasRequiredReactJsxRuntime_development) return reactJsxRuntime_development;
+  	hasRequiredReactJsxRuntime_development = 1;
+
+  	if (process.env.NODE_ENV !== "production") {
+  	  (function () {
+
+  	    var React = React$1;
+
+  	    // ATTENTION
+  	    // When adding new symbols to this file,
+  	    // Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
+  	    // The Symbol used to tag the ReactElement-like types.
+  	    var REACT_ELEMENT_TYPE = Symbol.for('react.element');
+  	    var REACT_PORTAL_TYPE = Symbol.for('react.portal');
+  	    var REACT_FRAGMENT_TYPE = Symbol.for('react.fragment');
+  	    var REACT_STRICT_MODE_TYPE = Symbol.for('react.strict_mode');
+  	    var REACT_PROFILER_TYPE = Symbol.for('react.profiler');
+  	    var REACT_PROVIDER_TYPE = Symbol.for('react.provider');
+  	    var REACT_CONTEXT_TYPE = Symbol.for('react.context');
+  	    var REACT_FORWARD_REF_TYPE = Symbol.for('react.forward_ref');
+  	    var REACT_SUSPENSE_TYPE = Symbol.for('react.suspense');
+  	    var REACT_SUSPENSE_LIST_TYPE = Symbol.for('react.suspense_list');
+  	    var REACT_MEMO_TYPE = Symbol.for('react.memo');
+  	    var REACT_LAZY_TYPE = Symbol.for('react.lazy');
+  	    var REACT_OFFSCREEN_TYPE = Symbol.for('react.offscreen');
+  	    var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
+  	    var FAUX_ITERATOR_SYMBOL = '@@iterator';
+  	    function getIteratorFn(maybeIterable) {
+  	      if (maybeIterable === null || typeof maybeIterable !== 'object') {
+  	        return null;
+  	      }
+  	      var maybeIterator = MAYBE_ITERATOR_SYMBOL && maybeIterable[MAYBE_ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL];
+  	      if (typeof maybeIterator === 'function') {
+  	        return maybeIterator;
+  	      }
+  	      return null;
+  	    }
+  	    var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+  	    function error(format) {
+  	      {
+  	        {
+  	          for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+  	            args[_key2 - 1] = arguments[_key2];
+  	          }
+  	          printWarning('error', format, args);
+  	        }
+  	      }
+  	    }
+  	    function printWarning(level, format, args) {
+  	      // When changing this logic, you might want to also
+  	      // update consoleWithStackDev.www.js as well.
+  	      {
+  	        var ReactDebugCurrentFrame = ReactSharedInternals.ReactDebugCurrentFrame;
+  	        var stack = ReactDebugCurrentFrame.getStackAddendum();
+  	        if (stack !== '') {
+  	          format += '%s';
+  	          args = args.concat([stack]);
+  	        } // eslint-disable-next-line react-internal/safe-string-coercion
+
+  	        var argsWithFormat = args.map(function (item) {
+  	          return String(item);
+  	        }); // Careful: RN currently depends on this prefix
+
+  	        argsWithFormat.unshift('Warning: ' + format); // We intentionally don't use spread (or .apply) directly because it
+  	        // breaks IE9: https://github.com/facebook/react/issues/13610
+  	        // eslint-disable-next-line react-internal/no-production-logging
+
+  	        Function.prototype.apply.call(console[level], console, argsWithFormat);
+  	      }
+  	    }
+
+  	    // -----------------------------------------------------------------------------
+
+  	    var enableScopeAPI = false; // Experimental Create Event Handle API.
+  	    var enableCacheElement = false;
+  	    var enableTransitionTracing = false; // No known bugs, but needs performance testing
+
+  	    var enableLegacyHidden = false; // Enables unstable_avoidThisFallback feature in Fiber
+  	    // stuff. Intended to enable React core members to more easily debug scheduling
+  	    // issues in DEV builds.
+
+  	    var enableDebugTracing = false; // Track which Fiber(s) schedule render work.
+
+  	    var REACT_MODULE_REFERENCE;
+  	    {
+  	      REACT_MODULE_REFERENCE = Symbol.for('react.module.reference');
+  	    }
+  	    function isValidElementType(type) {
+  	      if (typeof type === 'string' || typeof type === 'function') {
+  	        return true;
+  	      } // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
+
+  	      if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || enableDebugTracing || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || enableLegacyHidden || type === REACT_OFFSCREEN_TYPE || enableScopeAPI || enableCacheElement || enableTransitionTracing) {
+  	        return true;
+  	      }
+  	      if (typeof type === 'object' && type !== null) {
+  	        if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE ||
+  	        // This needs to include all possible module reference object
+  	        // types supported by any Flight configuration anywhere since
+  	        // we don't know which Flight build this will end up being used
+  	        // with.
+  	        type.$$typeof === REACT_MODULE_REFERENCE || type.getModuleId !== undefined) {
+  	          return true;
+  	        }
+  	      }
+  	      return false;
+  	    }
+  	    function getWrappedName(outerType, innerType, wrapperName) {
+  	      var displayName = outerType.displayName;
+  	      if (displayName) {
+  	        return displayName;
+  	      }
+  	      var functionName = innerType.displayName || innerType.name || '';
+  	      return functionName !== '' ? wrapperName + "(" + functionName + ")" : wrapperName;
+  	    } // Keep in sync with react-reconciler/getComponentNameFromFiber
+
+  	    function getContextName(type) {
+  	      return type.displayName || 'Context';
+  	    } // Note that the reconciler package should generally prefer to use getComponentNameFromFiber() instead.
+
+  	    function getComponentNameFromType(type) {
+  	      if (type == null) {
+  	        // Host root, text node or just invalid type.
+  	        return null;
+  	      }
+  	      {
+  	        if (typeof type.tag === 'number') {
+  	          error('Received an unexpected object in getComponentNameFromType(). ' + 'This is likely a bug in React. Please file an issue.');
+  	        }
+  	      }
+  	      if (typeof type === 'function') {
+  	        return type.displayName || type.name || null;
+  	      }
+  	      if (typeof type === 'string') {
+  	        return type;
+  	      }
+  	      switch (type) {
+  	        case REACT_FRAGMENT_TYPE:
+  	          return 'Fragment';
+  	        case REACT_PORTAL_TYPE:
+  	          return 'Portal';
+  	        case REACT_PROFILER_TYPE:
+  	          return 'Profiler';
+  	        case REACT_STRICT_MODE_TYPE:
+  	          return 'StrictMode';
+  	        case REACT_SUSPENSE_TYPE:
+  	          return 'Suspense';
+  	        case REACT_SUSPENSE_LIST_TYPE:
+  	          return 'SuspenseList';
+  	      }
+  	      if (typeof type === 'object') {
+  	        switch (type.$$typeof) {
+  	          case REACT_CONTEXT_TYPE:
+  	            var context = type;
+  	            return getContextName(context) + '.Consumer';
+  	          case REACT_PROVIDER_TYPE:
+  	            var provider = type;
+  	            return getContextName(provider._context) + '.Provider';
+  	          case REACT_FORWARD_REF_TYPE:
+  	            return getWrappedName(type, type.render, 'ForwardRef');
+  	          case REACT_MEMO_TYPE:
+  	            var outerName = type.displayName || null;
+  	            if (outerName !== null) {
+  	              return outerName;
+  	            }
+  	            return getComponentNameFromType(type.type) || 'Memo';
+  	          case REACT_LAZY_TYPE:
+  	            {
+  	              var lazyComponent = type;
+  	              var payload = lazyComponent._payload;
+  	              var init = lazyComponent._init;
+  	              try {
+  	                return getComponentNameFromType(init(payload));
+  	              } catch (x) {
+  	                return null;
+  	              }
+  	            }
+
+  	          // eslint-disable-next-line no-fallthrough
+  	        }
+  	      }
+
+  	      return null;
+  	    }
+  	    var assign = Object.assign;
+
+  	    // Helpers to patch console.logs to avoid logging during side-effect free
+  	    // replaying on render function. This currently only patches the object
+  	    // lazily which won't cover if the log function was extracted eagerly.
+  	    // We could also eagerly patch the method.
+  	    var disabledDepth = 0;
+  	    var prevLog;
+  	    var prevInfo;
+  	    var prevWarn;
+  	    var prevError;
+  	    var prevGroup;
+  	    var prevGroupCollapsed;
+  	    var prevGroupEnd;
+  	    function disabledLog() {}
+  	    disabledLog.__reactDisabledLog = true;
+  	    function disableLogs() {
+  	      {
+  	        if (disabledDepth === 0) {
+  	          /* eslint-disable react-internal/no-production-logging */
+  	          prevLog = console.log;
+  	          prevInfo = console.info;
+  	          prevWarn = console.warn;
+  	          prevError = console.error;
+  	          prevGroup = console.group;
+  	          prevGroupCollapsed = console.groupCollapsed;
+  	          prevGroupEnd = console.groupEnd; // https://github.com/facebook/react/issues/19099
+
+  	          var props = {
+  	            configurable: true,
+  	            enumerable: true,
+  	            value: disabledLog,
+  	            writable: true
+  	          }; // $FlowFixMe Flow thinks console is immutable.
+
+  	          Object.defineProperties(console, {
+  	            info: props,
+  	            log: props,
+  	            warn: props,
+  	            error: props,
+  	            group: props,
+  	            groupCollapsed: props,
+  	            groupEnd: props
+  	          });
+  	          /* eslint-enable react-internal/no-production-logging */
+  	        }
+
+  	        disabledDepth++;
+  	      }
+  	    }
+  	    function reenableLogs() {
+  	      {
+  	        disabledDepth--;
+  	        if (disabledDepth === 0) {
+  	          /* eslint-disable react-internal/no-production-logging */
+  	          var props = {
+  	            configurable: true,
+  	            enumerable: true,
+  	            writable: true
+  	          }; // $FlowFixMe Flow thinks console is immutable.
+
+  	          Object.defineProperties(console, {
+  	            log: assign({}, props, {
+  	              value: prevLog
+  	            }),
+  	            info: assign({}, props, {
+  	              value: prevInfo
+  	            }),
+  	            warn: assign({}, props, {
+  	              value: prevWarn
+  	            }),
+  	            error: assign({}, props, {
+  	              value: prevError
+  	            }),
+  	            group: assign({}, props, {
+  	              value: prevGroup
+  	            }),
+  	            groupCollapsed: assign({}, props, {
+  	              value: prevGroupCollapsed
+  	            }),
+  	            groupEnd: assign({}, props, {
+  	              value: prevGroupEnd
+  	            })
+  	          });
+  	          /* eslint-enable react-internal/no-production-logging */
+  	        }
+
+  	        if (disabledDepth < 0) {
+  	          error('disabledDepth fell below zero. ' + 'This is a bug in React. Please file an issue.');
+  	        }
+  	      }
+  	    }
+  	    var ReactCurrentDispatcher = ReactSharedInternals.ReactCurrentDispatcher;
+  	    var prefix;
+  	    function describeBuiltInComponentFrame(name, source, ownerFn) {
+  	      {
+  	        if (prefix === undefined) {
+  	          // Extract the VM specific prefix used by each line.
+  	          try {
+  	            throw Error();
+  	          } catch (x) {
+  	            var match = x.stack.trim().match(/\n( *(at )?)/);
+  	            prefix = match && match[1] || '';
+  	          }
+  	        } // We use the prefix to ensure our stacks line up with native stack frames.
+
+  	        return '\n' + prefix + name;
+  	      }
+  	    }
+  	    var reentry = false;
+  	    var componentFrameCache;
+  	    {
+  	      var PossiblyWeakMap = typeof WeakMap === 'function' ? WeakMap : Map;
+  	      componentFrameCache = new PossiblyWeakMap();
+  	    }
+  	    function describeNativeComponentFrame(fn, construct) {
+  	      // If something asked for a stack inside a fake render, it should get ignored.
+  	      if (!fn || reentry) {
+  	        return '';
+  	      }
+  	      {
+  	        var frame = componentFrameCache.get(fn);
+  	        if (frame !== undefined) {
+  	          return frame;
+  	        }
+  	      }
+  	      var control;
+  	      reentry = true;
+  	      var previousPrepareStackTrace = Error.prepareStackTrace; // $FlowFixMe It does accept undefined.
+
+  	      Error.prepareStackTrace = undefined;
+  	      var previousDispatcher;
+  	      {
+  	        previousDispatcher = ReactCurrentDispatcher.current; // Set the dispatcher in DEV because this might be call in the render function
+  	        // for warnings.
+
+  	        ReactCurrentDispatcher.current = null;
+  	        disableLogs();
+  	      }
+  	      try {
+  	        // This should throw.
+  	        if (construct) {
+  	          // Something should be setting the props in the constructor.
+  	          var Fake = function () {
+  	            throw Error();
+  	          }; // $FlowFixMe
+
+  	          Object.defineProperty(Fake.prototype, 'props', {
+  	            set: function () {
+  	              // We use a throwing setter instead of frozen or non-writable props
+  	              // because that won't throw in a non-strict mode function.
+  	              throw Error();
+  	            }
+  	          });
+  	          if (typeof Reflect === 'object' && Reflect.construct) {
+  	            // We construct a different control for this case to include any extra
+  	            // frames added by the construct call.
+  	            try {
+  	              Reflect.construct(Fake, []);
+  	            } catch (x) {
+  	              control = x;
+  	            }
+  	            Reflect.construct(fn, [], Fake);
+  	          } else {
+  	            try {
+  	              Fake.call();
+  	            } catch (x) {
+  	              control = x;
+  	            }
+  	            fn.call(Fake.prototype);
+  	          }
+  	        } else {
+  	          try {
+  	            throw Error();
+  	          } catch (x) {
+  	            control = x;
+  	          }
+  	          fn();
+  	        }
+  	      } catch (sample) {
+  	        // This is inlined manually because closure doesn't do it for us.
+  	        if (sample && control && typeof sample.stack === 'string') {
+  	          // This extracts the first frame from the sample that isn't also in the control.
+  	          // Skipping one frame that we assume is the frame that calls the two.
+  	          var sampleLines = sample.stack.split('\n');
+  	          var controlLines = control.stack.split('\n');
+  	          var s = sampleLines.length - 1;
+  	          var c = controlLines.length - 1;
+  	          while (s >= 1 && c >= 0 && sampleLines[s] !== controlLines[c]) {
+  	            // We expect at least one stack frame to be shared.
+  	            // Typically this will be the root most one. However, stack frames may be
+  	            // cut off due to maximum stack limits. In this case, one maybe cut off
+  	            // earlier than the other. We assume that the sample is longer or the same
+  	            // and there for cut off earlier. So we should find the root most frame in
+  	            // the sample somewhere in the control.
+  	            c--;
+  	          }
+  	          for (; s >= 1 && c >= 0; s--, c--) {
+  	            // Next we find the first one that isn't the same which should be the
+  	            // frame that called our sample function and the control.
+  	            if (sampleLines[s] !== controlLines[c]) {
+  	              // In V8, the first line is describing the message but other VMs don't.
+  	              // If we're about to return the first line, and the control is also on the same
+  	              // line, that's a pretty good indicator that our sample threw at same line as
+  	              // the control. I.e. before we entered the sample frame. So we ignore this result.
+  	              // This can happen if you passed a class to function component, or non-function.
+  	              if (s !== 1 || c !== 1) {
+  	                do {
+  	                  s--;
+  	                  c--; // We may still have similar intermediate frames from the construct call.
+  	                  // The next one that isn't the same should be our match though.
+
+  	                  if (c < 0 || sampleLines[s] !== controlLines[c]) {
+  	                    // V8 adds a "new" prefix for native classes. Let's remove it to make it prettier.
+  	                    var _frame = '\n' + sampleLines[s].replace(' at new ', ' at '); // If our component frame is labeled "<anonymous>"
+  	                    // but we have a user-provided "displayName"
+  	                    // splice it in to make the stack more readable.
+
+  	                    if (fn.displayName && _frame.includes('<anonymous>')) {
+  	                      _frame = _frame.replace('<anonymous>', fn.displayName);
+  	                    }
+  	                    {
+  	                      if (typeof fn === 'function') {
+  	                        componentFrameCache.set(fn, _frame);
+  	                      }
+  	                    } // Return the line we found.
+
+  	                    return _frame;
+  	                  }
+  	                } while (s >= 1 && c >= 0);
+  	              }
+  	              break;
+  	            }
+  	          }
+  	        }
+  	      } finally {
+  	        reentry = false;
+  	        {
+  	          ReactCurrentDispatcher.current = previousDispatcher;
+  	          reenableLogs();
+  	        }
+  	        Error.prepareStackTrace = previousPrepareStackTrace;
+  	      } // Fallback to just using the name if we couldn't make it throw.
+
+  	      var name = fn ? fn.displayName || fn.name : '';
+  	      var syntheticFrame = name ? describeBuiltInComponentFrame(name) : '';
+  	      {
+  	        if (typeof fn === 'function') {
+  	          componentFrameCache.set(fn, syntheticFrame);
+  	        }
+  	      }
+  	      return syntheticFrame;
+  	    }
+  	    function describeFunctionComponentFrame(fn, source, ownerFn) {
+  	      {
+  	        return describeNativeComponentFrame(fn, false);
+  	      }
+  	    }
+  	    function shouldConstruct(Component) {
+  	      var prototype = Component.prototype;
+  	      return !!(prototype && prototype.isReactComponent);
+  	    }
+  	    function describeUnknownElementTypeFrameInDEV(type, source, ownerFn) {
+  	      if (type == null) {
+  	        return '';
+  	      }
+  	      if (typeof type === 'function') {
+  	        {
+  	          return describeNativeComponentFrame(type, shouldConstruct(type));
+  	        }
+  	      }
+  	      if (typeof type === 'string') {
+  	        return describeBuiltInComponentFrame(type);
+  	      }
+  	      switch (type) {
+  	        case REACT_SUSPENSE_TYPE:
+  	          return describeBuiltInComponentFrame('Suspense');
+  	        case REACT_SUSPENSE_LIST_TYPE:
+  	          return describeBuiltInComponentFrame('SuspenseList');
+  	      }
+  	      if (typeof type === 'object') {
+  	        switch (type.$$typeof) {
+  	          case REACT_FORWARD_REF_TYPE:
+  	            return describeFunctionComponentFrame(type.render);
+  	          case REACT_MEMO_TYPE:
+  	            // Memo may contain any component type so we recursively resolve it.
+  	            return describeUnknownElementTypeFrameInDEV(type.type, source, ownerFn);
+  	          case REACT_LAZY_TYPE:
+  	            {
+  	              var lazyComponent = type;
+  	              var payload = lazyComponent._payload;
+  	              var init = lazyComponent._init;
+  	              try {
+  	                // Lazy may contain any component type so we recursively resolve it.
+  	                return describeUnknownElementTypeFrameInDEV(init(payload), source, ownerFn);
+  	              } catch (x) {}
+  	            }
+  	        }
+  	      }
+  	      return '';
+  	    }
+  	    var hasOwnProperty = Object.prototype.hasOwnProperty;
+  	    var loggedTypeFailures = {};
+  	    var ReactDebugCurrentFrame = ReactSharedInternals.ReactDebugCurrentFrame;
+  	    function setCurrentlyValidatingElement(element) {
+  	      {
+  	        if (element) {
+  	          var owner = element._owner;
+  	          var stack = describeUnknownElementTypeFrameInDEV(element.type, element._source, owner ? owner.type : null);
+  	          ReactDebugCurrentFrame.setExtraStackFrame(stack);
+  	        } else {
+  	          ReactDebugCurrentFrame.setExtraStackFrame(null);
+  	        }
+  	      }
+  	    }
+  	    function checkPropTypes(typeSpecs, values, location, componentName, element) {
+  	      {
+  	        // $FlowFixMe This is okay but Flow doesn't know it.
+  	        var has = Function.call.bind(hasOwnProperty);
+  	        for (var typeSpecName in typeSpecs) {
+  	          if (has(typeSpecs, typeSpecName)) {
+  	            var error$1 = void 0; // Prop type validation may throw. In case they do, we don't want to
+  	            // fail the render phase where it didn't fail before. So we log it.
+  	            // After these have been cleaned up, we'll let them throw.
+
+  	            try {
+  	              // This is intentionally an invariant that gets caught. It's the same
+  	              // behavior as without this statement except with a better message.
+  	              if (typeof typeSpecs[typeSpecName] !== 'function') {
+  	                // eslint-disable-next-line react-internal/prod-error-codes
+  	                var err = Error((componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.' + 'This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.');
+  	                err.name = 'Invariant Violation';
+  	                throw err;
+  	              }
+  	              error$1 = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED');
+  	            } catch (ex) {
+  	              error$1 = ex;
+  	            }
+  	            if (error$1 && !(error$1 instanceof Error)) {
+  	              setCurrentlyValidatingElement(element);
+  	              error('%s: type specification of %s' + ' `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error$1);
+  	              setCurrentlyValidatingElement(null);
+  	            }
+  	            if (error$1 instanceof Error && !(error$1.message in loggedTypeFailures)) {
+  	              // Only monitor this failure once because there tends to be a lot of the
+  	              // same error.
+  	              loggedTypeFailures[error$1.message] = true;
+  	              setCurrentlyValidatingElement(element);
+  	              error('Failed %s type: %s', location, error$1.message);
+  	              setCurrentlyValidatingElement(null);
+  	            }
+  	          }
+  	        }
+  	      }
+  	    }
+  	    var isArrayImpl = Array.isArray; // eslint-disable-next-line no-redeclare
+
+  	    function isArray(a) {
+  	      return isArrayImpl(a);
+  	    }
+
+  	    /*
+  	     * The `'' + value` pattern (used in in perf-sensitive code) throws for Symbol
+  	     * and Temporal.* types. See https://github.com/facebook/react/pull/22064.
+  	     *
+  	     * The functions in this module will throw an easier-to-understand,
+  	     * easier-to-debug exception with a clear errors message message explaining the
+  	     * problem. (Instead of a confusing exception thrown inside the implementation
+  	     * of the `value` object).
+  	     */
+  	    // $FlowFixMe only called in DEV, so void return is not possible.
+  	    function typeName(value) {
+  	      {
+  	        // toStringTag is needed for namespaced types like Temporal.Instant
+  	        var hasToStringTag = typeof Symbol === 'function' && Symbol.toStringTag;
+  	        var type = hasToStringTag && value[Symbol.toStringTag] || value.constructor.name || 'Object';
+  	        return type;
+  	      }
+  	    } // $FlowFixMe only called in DEV, so void return is not possible.
+
+  	    function willCoercionThrow(value) {
+  	      {
+  	        try {
+  	          testStringCoercion(value);
+  	          return false;
+  	        } catch (e) {
+  	          return true;
+  	        }
+  	      }
+  	    }
+  	    function testStringCoercion(value) {
+  	      // If you ended up here by following an exception call stack, here's what's
+  	      // happened: you supplied an object or symbol value to React (as a prop, key,
+  	      // DOM attribute, CSS property, string ref, etc.) and when React tried to
+  	      // coerce it to a string using `'' + value`, an exception was thrown.
+  	      //
+  	      // The most common types that will cause this exception are `Symbol` instances
+  	      // and Temporal objects like `Temporal.Instant`. But any object that has a
+  	      // `valueOf` or `[Symbol.toPrimitive]` method that throws will also cause this
+  	      // exception. (Library authors do this to prevent users from using built-in
+  	      // numeric operators like `+` or comparison operators like `>=` because custom
+  	      // methods are needed to perform accurate arithmetic or comparison.)
+  	      //
+  	      // To fix the problem, coerce this object or symbol value to a string before
+  	      // passing it to React. The most reliable way is usually `String(value)`.
+  	      //
+  	      // To find which value is throwing, check the browser or debugger console.
+  	      // Before this exception was thrown, there should be `console.error` output
+  	      // that shows the type (Symbol, Temporal.PlainDate, etc.) that caused the
+  	      // problem and how that type was used: key, atrribute, input value prop, etc.
+  	      // In most cases, this console output also shows the component and its
+  	      // ancestor components where the exception happened.
+  	      //
+  	      // eslint-disable-next-line react-internal/safe-string-coercion
+  	      return '' + value;
+  	    }
+  	    function checkKeyStringCoercion(value) {
+  	      {
+  	        if (willCoercionThrow(value)) {
+  	          error('The provided key is an unsupported type %s.' + ' This value must be coerced to a string before before using it here.', typeName(value));
+  	          return testStringCoercion(value); // throw (to help callers find troubleshooting comments)
+  	        }
+  	      }
+  	    }
+
+  	    var ReactCurrentOwner = ReactSharedInternals.ReactCurrentOwner;
+  	    var RESERVED_PROPS = {
+  	      key: true,
+  	      ref: true,
+  	      __self: true,
+  	      __source: true
+  	    };
+  	    var specialPropKeyWarningShown;
+  	    var specialPropRefWarningShown;
+  	    var didWarnAboutStringRefs;
+  	    {
+  	      didWarnAboutStringRefs = {};
+  	    }
+  	    function hasValidRef(config) {
+  	      {
+  	        if (hasOwnProperty.call(config, 'ref')) {
+  	          var getter = Object.getOwnPropertyDescriptor(config, 'ref').get;
+  	          if (getter && getter.isReactWarning) {
+  	            return false;
+  	          }
+  	        }
+  	      }
+  	      return config.ref !== undefined;
+  	    }
+  	    function hasValidKey(config) {
+  	      {
+  	        if (hasOwnProperty.call(config, 'key')) {
+  	          var getter = Object.getOwnPropertyDescriptor(config, 'key').get;
+  	          if (getter && getter.isReactWarning) {
+  	            return false;
+  	          }
+  	        }
+  	      }
+  	      return config.key !== undefined;
+  	    }
+  	    function warnIfStringRefCannotBeAutoConverted(config, self) {
+  	      {
+  	        if (typeof config.ref === 'string' && ReactCurrentOwner.current && self && ReactCurrentOwner.current.stateNode !== self) {
+  	          var componentName = getComponentNameFromType(ReactCurrentOwner.current.type);
+  	          if (!didWarnAboutStringRefs[componentName]) {
+  	            error('Component "%s" contains the string ref "%s". ' + 'Support for string refs will be removed in a future major release. ' + 'This case cannot be automatically converted to an arrow function. ' + 'We ask you to manually fix this case by using useRef() or createRef() instead. ' + 'Learn more about using refs safely here: ' + 'https://reactjs.org/link/strict-mode-string-ref', getComponentNameFromType(ReactCurrentOwner.current.type), config.ref);
+  	            didWarnAboutStringRefs[componentName] = true;
+  	          }
+  	        }
+  	      }
+  	    }
+  	    function defineKeyPropWarningGetter(props, displayName) {
+  	      {
+  	        var warnAboutAccessingKey = function () {
+  	          if (!specialPropKeyWarningShown) {
+  	            specialPropKeyWarningShown = true;
+  	            error('%s: `key` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://reactjs.org/link/special-props)', displayName);
+  	          }
+  	        };
+  	        warnAboutAccessingKey.isReactWarning = true;
+  	        Object.defineProperty(props, 'key', {
+  	          get: warnAboutAccessingKey,
+  	          configurable: true
+  	        });
+  	      }
+  	    }
+  	    function defineRefPropWarningGetter(props, displayName) {
+  	      {
+  	        var warnAboutAccessingRef = function () {
+  	          if (!specialPropRefWarningShown) {
+  	            specialPropRefWarningShown = true;
+  	            error('%s: `ref` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://reactjs.org/link/special-props)', displayName);
+  	          }
+  	        };
+  	        warnAboutAccessingRef.isReactWarning = true;
+  	        Object.defineProperty(props, 'ref', {
+  	          get: warnAboutAccessingRef,
+  	          configurable: true
+  	        });
+  	      }
+  	    }
+  	    /**
+  	     * Factory method to create a new React element. This no longer adheres to
+  	     * the class pattern, so do not use new to call it. Also, instanceof check
+  	     * will not work. Instead test $$typeof field against Symbol.for('react.element') to check
+  	     * if something is a React Element.
+  	     *
+  	     * @param {*} type
+  	     * @param {*} props
+  	     * @param {*} key
+  	     * @param {string|object} ref
+  	     * @param {*} owner
+  	     * @param {*} self A *temporary* helper to detect places where `this` is
+  	     * different from the `owner` when React.createElement is called, so that we
+  	     * can warn. We want to get rid of owner and replace string `ref`s with arrow
+  	     * functions, and as long as `this` and owner are the same, there will be no
+  	     * change in behavior.
+  	     * @param {*} source An annotation object (added by a transpiler or otherwise)
+  	     * indicating filename, line number, and/or other information.
+  	     * @internal
+  	     */
+
+  	    var ReactElement = function (type, key, ref, self, source, owner, props) {
+  	      var element = {
+  	        // This tag allows us to uniquely identify this as a React Element
+  	        $$typeof: REACT_ELEMENT_TYPE,
+  	        // Built-in properties that belong on the element
+  	        type: type,
+  	        key: key,
+  	        ref: ref,
+  	        props: props,
+  	        // Record the component responsible for creating this element.
+  	        _owner: owner
+  	      };
+  	      {
+  	        // The validation flag is currently mutative. We put it on
+  	        // an external backing store so that we can freeze the whole object.
+  	        // This can be replaced with a WeakMap once they are implemented in
+  	        // commonly used development environments.
+  	        element._store = {}; // To make comparing ReactElements easier for testing purposes, we make
+  	        // the validation flag non-enumerable (where possible, which should
+  	        // include every environment we run tests in), so the test framework
+  	        // ignores it.
+
+  	        Object.defineProperty(element._store, 'validated', {
+  	          configurable: false,
+  	          enumerable: false,
+  	          writable: true,
+  	          value: false
+  	        }); // self and source are DEV only properties.
+
+  	        Object.defineProperty(element, '_self', {
+  	          configurable: false,
+  	          enumerable: false,
+  	          writable: false,
+  	          value: self
+  	        }); // Two elements created in two different places should be considered
+  	        // equal for testing purposes and therefore we hide it from enumeration.
+
+  	        Object.defineProperty(element, '_source', {
+  	          configurable: false,
+  	          enumerable: false,
+  	          writable: false,
+  	          value: source
+  	        });
+  	        if (Object.freeze) {
+  	          Object.freeze(element.props);
+  	          Object.freeze(element);
+  	        }
+  	      }
+  	      return element;
+  	    };
+  	    /**
+  	     * https://github.com/reactjs/rfcs/pull/107
+  	     * @param {*} type
+  	     * @param {object} props
+  	     * @param {string} key
+  	     */
+
+  	    function jsxDEV(type, config, maybeKey, source, self) {
+  	      {
+  	        var propName; // Reserved names are extracted
+
+  	        var props = {};
+  	        var key = null;
+  	        var ref = null; // Currently, key can be spread in as a prop. This causes a potential
+  	        // issue if key is also explicitly declared (ie. <div {...props} key="Hi" />
+  	        // or <div key="Hi" {...props} /> ). We want to deprecate key spread,
+  	        // but as an intermediary step, we will use jsxDEV for everything except
+  	        // <div {...props} key="Hi" />, because we aren't currently able to tell if
+  	        // key is explicitly declared to be undefined or not.
+
+  	        if (maybeKey !== undefined) {
+  	          {
+  	            checkKeyStringCoercion(maybeKey);
+  	          }
+  	          key = '' + maybeKey;
+  	        }
+  	        if (hasValidKey(config)) {
+  	          {
+  	            checkKeyStringCoercion(config.key);
+  	          }
+  	          key = '' + config.key;
+  	        }
+  	        if (hasValidRef(config)) {
+  	          ref = config.ref;
+  	          warnIfStringRefCannotBeAutoConverted(config, self);
+  	        } // Remaining properties are added to a new props object
+
+  	        for (propName in config) {
+  	          if (hasOwnProperty.call(config, propName) && !RESERVED_PROPS.hasOwnProperty(propName)) {
+  	            props[propName] = config[propName];
+  	          }
+  	        } // Resolve default props
+
+  	        if (type && type.defaultProps) {
+  	          var defaultProps = type.defaultProps;
+  	          for (propName in defaultProps) {
+  	            if (props[propName] === undefined) {
+  	              props[propName] = defaultProps[propName];
+  	            }
+  	          }
+  	        }
+  	        if (key || ref) {
+  	          var displayName = typeof type === 'function' ? type.displayName || type.name || 'Unknown' : type;
+  	          if (key) {
+  	            defineKeyPropWarningGetter(props, displayName);
+  	          }
+  	          if (ref) {
+  	            defineRefPropWarningGetter(props, displayName);
+  	          }
+  	        }
+  	        return ReactElement(type, key, ref, self, source, ReactCurrentOwner.current, props);
+  	      }
+  	    }
+  	    var ReactCurrentOwner$1 = ReactSharedInternals.ReactCurrentOwner;
+  	    var ReactDebugCurrentFrame$1 = ReactSharedInternals.ReactDebugCurrentFrame;
+  	    function setCurrentlyValidatingElement$1(element) {
+  	      {
+  	        if (element) {
+  	          var owner = element._owner;
+  	          var stack = describeUnknownElementTypeFrameInDEV(element.type, element._source, owner ? owner.type : null);
+  	          ReactDebugCurrentFrame$1.setExtraStackFrame(stack);
+  	        } else {
+  	          ReactDebugCurrentFrame$1.setExtraStackFrame(null);
+  	        }
+  	      }
+  	    }
+  	    var propTypesMisspellWarningShown;
+  	    {
+  	      propTypesMisspellWarningShown = false;
+  	    }
+  	    /**
+  	     * Verifies the object is a ReactElement.
+  	     * See https://reactjs.org/docs/react-api.html#isvalidelement
+  	     * @param {?object} object
+  	     * @return {boolean} True if `object` is a ReactElement.
+  	     * @final
+  	     */
+
+  	    function isValidElement(object) {
+  	      {
+  	        return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+  	      }
+  	    }
+  	    function getDeclarationErrorAddendum() {
+  	      {
+  	        if (ReactCurrentOwner$1.current) {
+  	          var name = getComponentNameFromType(ReactCurrentOwner$1.current.type);
+  	          if (name) {
+  	            return '\n\nCheck the render method of `' + name + '`.';
+  	          }
+  	        }
+  	        return '';
+  	      }
+  	    }
+  	    function getSourceInfoErrorAddendum(source) {
+  	      {
+  	        return '';
+  	      }
+  	    }
+  	    /**
+  	     * Warn if there's no key explicitly set on dynamic arrays of children or
+  	     * object keys are not valid. This allows us to keep track of children between
+  	     * updates.
+  	     */
+
+  	    var ownerHasKeyUseWarning = {};
+  	    function getCurrentComponentErrorInfo(parentType) {
+  	      {
+  	        var info = getDeclarationErrorAddendum();
+  	        if (!info) {
+  	          var parentName = typeof parentType === 'string' ? parentType : parentType.displayName || parentType.name;
+  	          if (parentName) {
+  	            info = "\n\nCheck the top-level render call using <" + parentName + ">.";
+  	          }
+  	        }
+  	        return info;
+  	      }
+  	    }
+  	    /**
+  	     * Warn if the element doesn't have an explicit key assigned to it.
+  	     * This element is in an array. The array could grow and shrink or be
+  	     * reordered. All children that haven't already been validated are required to
+  	     * have a "key" property assigned to it. Error statuses are cached so a warning
+  	     * will only be shown once.
+  	     *
+  	     * @internal
+  	     * @param {ReactElement} element Element that requires a key.
+  	     * @param {*} parentType element's parent's type.
+  	     */
+
+  	    function validateExplicitKey(element, parentType) {
+  	      {
+  	        if (!element._store || element._store.validated || element.key != null) {
+  	          return;
+  	        }
+  	        element._store.validated = true;
+  	        var currentComponentErrorInfo = getCurrentComponentErrorInfo(parentType);
+  	        if (ownerHasKeyUseWarning[currentComponentErrorInfo]) {
+  	          return;
+  	        }
+  	        ownerHasKeyUseWarning[currentComponentErrorInfo] = true; // Usually the current owner is the offender, but if it accepts children as a
+  	        // property, it may be the creator of the child that's responsible for
+  	        // assigning it a key.
+
+  	        var childOwner = '';
+  	        if (element && element._owner && element._owner !== ReactCurrentOwner$1.current) {
+  	          // Give the component that originally created this child.
+  	          childOwner = " It was passed a child from " + getComponentNameFromType(element._owner.type) + ".";
+  	        }
+  	        setCurrentlyValidatingElement$1(element);
+  	        error('Each child in a list should have a unique "key" prop.' + '%s%s See https://reactjs.org/link/warning-keys for more information.', currentComponentErrorInfo, childOwner);
+  	        setCurrentlyValidatingElement$1(null);
+  	      }
+  	    }
+  	    /**
+  	     * Ensure that every element either is passed in a static location, in an
+  	     * array with an explicit keys property defined, or in an object literal
+  	     * with valid key property.
+  	     *
+  	     * @internal
+  	     * @param {ReactNode} node Statically passed child of any type.
+  	     * @param {*} parentType node's parent's type.
+  	     */
+
+  	    function validateChildKeys(node, parentType) {
+  	      {
+  	        if (typeof node !== 'object') {
+  	          return;
+  	        }
+  	        if (isArray(node)) {
+  	          for (var i = 0; i < node.length; i++) {
+  	            var child = node[i];
+  	            if (isValidElement(child)) {
+  	              validateExplicitKey(child, parentType);
+  	            }
+  	          }
+  	        } else if (isValidElement(node)) {
+  	          // This element was passed in a valid location.
+  	          if (node._store) {
+  	            node._store.validated = true;
+  	          }
+  	        } else if (node) {
+  	          var iteratorFn = getIteratorFn(node);
+  	          if (typeof iteratorFn === 'function') {
+  	            // Entry iterators used to provide implicit keys,
+  	            // but now we print a separate warning for them later.
+  	            if (iteratorFn !== node.entries) {
+  	              var iterator = iteratorFn.call(node);
+  	              var step;
+  	              while (!(step = iterator.next()).done) {
+  	                if (isValidElement(step.value)) {
+  	                  validateExplicitKey(step.value, parentType);
+  	                }
+  	              }
+  	            }
+  	          }
+  	        }
+  	      }
+  	    }
+  	    /**
+  	     * Given an element, validate that its props follow the propTypes definition,
+  	     * provided by the type.
+  	     *
+  	     * @param {ReactElement} element
+  	     */
+
+  	    function validatePropTypes(element) {
+  	      {
+  	        var type = element.type;
+  	        if (type === null || type === undefined || typeof type === 'string') {
+  	          return;
+  	        }
+  	        var propTypes;
+  	        if (typeof type === 'function') {
+  	          propTypes = type.propTypes;
+  	        } else if (typeof type === 'object' && (type.$$typeof === REACT_FORWARD_REF_TYPE ||
+  	        // Note: Memo only checks outer props here.
+  	        // Inner props are checked in the reconciler.
+  	        type.$$typeof === REACT_MEMO_TYPE)) {
+  	          propTypes = type.propTypes;
+  	        } else {
+  	          return;
+  	        }
+  	        if (propTypes) {
+  	          // Intentionally inside to avoid triggering lazy initializers:
+  	          var name = getComponentNameFromType(type);
+  	          checkPropTypes(propTypes, element.props, 'prop', name, element);
+  	        } else if (type.PropTypes !== undefined && !propTypesMisspellWarningShown) {
+  	          propTypesMisspellWarningShown = true; // Intentionally inside to avoid triggering lazy initializers:
+
+  	          var _name = getComponentNameFromType(type);
+  	          error('Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?', _name || 'Unknown');
+  	        }
+  	        if (typeof type.getDefaultProps === 'function' && !type.getDefaultProps.isReactClassApproved) {
+  	          error('getDefaultProps is only used on classic React.createClass ' + 'definitions. Use a static property named `defaultProps` instead.');
+  	        }
+  	      }
+  	    }
+  	    /**
+  	     * Given a fragment, validate that it can only be provided with fragment props
+  	     * @param {ReactElement} fragment
+  	     */
+
+  	    function validateFragmentProps(fragment) {
+  	      {
+  	        var keys = Object.keys(fragment.props);
+  	        for (var i = 0; i < keys.length; i++) {
+  	          var key = keys[i];
+  	          if (key !== 'children' && key !== 'key') {
+  	            setCurrentlyValidatingElement$1(fragment);
+  	            error('Invalid prop `%s` supplied to `React.Fragment`. ' + 'React.Fragment can only have `key` and `children` props.', key);
+  	            setCurrentlyValidatingElement$1(null);
+  	            break;
+  	          }
+  	        }
+  	        if (fragment.ref !== null) {
+  	          setCurrentlyValidatingElement$1(fragment);
+  	          error('Invalid attribute `ref` supplied to `React.Fragment`.');
+  	          setCurrentlyValidatingElement$1(null);
+  	        }
+  	      }
+  	    }
+  	    function jsxWithValidation(type, props, key, isStaticChildren, source, self) {
+  	      {
+  	        var validType = isValidElementType(type); // We warn in this case but don't throw. We expect the element creation to
+  	        // succeed and there will likely be errors in render.
+
+  	        if (!validType) {
+  	          var info = '';
+  	          if (type === undefined || typeof type === 'object' && type !== null && Object.keys(type).length === 0) {
+  	            info += ' You likely forgot to export your component from the file ' + "it's defined in, or you might have mixed up default and named imports.";
+  	          }
+  	          var sourceInfo = getSourceInfoErrorAddendum();
+  	          if (sourceInfo) {
+  	            info += sourceInfo;
+  	          } else {
+  	            info += getDeclarationErrorAddendum();
+  	          }
+  	          var typeString;
+  	          if (type === null) {
+  	            typeString = 'null';
+  	          } else if (isArray(type)) {
+  	            typeString = 'array';
+  	          } else if (type !== undefined && type.$$typeof === REACT_ELEMENT_TYPE) {
+  	            typeString = "<" + (getComponentNameFromType(type.type) || 'Unknown') + " />";
+  	            info = ' Did you accidentally export a JSX literal instead of a component?';
+  	          } else {
+  	            typeString = typeof type;
+  	          }
+  	          error('React.jsx: type is invalid -- expected a string (for ' + 'built-in components) or a class/function (for composite ' + 'components) but got: %s.%s', typeString, info);
+  	        }
+  	        var element = jsxDEV(type, props, key, source, self); // The result can be nullish if a mock or a custom function is used.
+  	        // TODO: Drop this when these are no longer allowed as the type argument.
+
+  	        if (element == null) {
+  	          return element;
+  	        } // Skip key warning if the type isn't valid since our key validation logic
+  	        // doesn't expect a non-string/function type and can throw confusing errors.
+  	        // We don't want exception behavior to differ between dev and prod.
+  	        // (Rendering will throw with a helpful message and as soon as the type is
+  	        // fixed, the key warnings will appear.)
+
+  	        if (validType) {
+  	          var children = props.children;
+  	          if (children !== undefined) {
+  	            if (isStaticChildren) {
+  	              if (isArray(children)) {
+  	                for (var i = 0; i < children.length; i++) {
+  	                  validateChildKeys(children[i], type);
+  	                }
+  	                if (Object.freeze) {
+  	                  Object.freeze(children);
+  	                }
+  	              } else {
+  	                error('React.jsx: Static children should always be an array. ' + 'You are likely explicitly calling React.jsxs or React.jsxDEV. ' + 'Use the Babel transform instead.');
+  	              }
+  	            } else {
+  	              validateChildKeys(children, type);
+  	            }
+  	          }
+  	        }
+  	        if (type === REACT_FRAGMENT_TYPE) {
+  	          validateFragmentProps(element);
+  	        } else {
+  	          validatePropTypes(element);
+  	        }
+  	        return element;
+  	      }
+  	    } // These two functions exist to still get child warnings in dev
+  	    // even with the prod transform. This means that jsxDEV is purely
+  	    // opt-in behavior for better messages but that we won't stop
+  	    // giving you warnings if you use production apis.
+
+  	    function jsxWithValidationStatic(type, props, key) {
+  	      {
+  	        return jsxWithValidation(type, props, key, true);
+  	      }
+  	    }
+  	    function jsxWithValidationDynamic(type, props, key) {
+  	      {
+  	        return jsxWithValidation(type, props, key, false);
+  	      }
+  	    }
+  	    var jsx = jsxWithValidationDynamic; // we may want to special case jsxs internally to take advantage of static children.
+  	    // for now we can ship identical prod functions
+
+  	    var jsxs = jsxWithValidationStatic;
+  	    reactJsxRuntime_development.Fragment = REACT_FRAGMENT_TYPE;
+  	    reactJsxRuntime_development.jsx = jsx;
+  	    reactJsxRuntime_development.jsxs = jsxs;
+  	  })();
+  	}
+  	return reactJsxRuntime_development;
+  }
+
+  if (process.env.NODE_ENV === 'production') {
+    jsxRuntime.exports = requireReactJsxRuntime_production_min();
+  } else {
+    jsxRuntime.exports = requireReactJsxRuntime_development();
+  }
+
+  var jsxRuntimeExports = jsxRuntime.exports;
+
+  const propTypes$2 = {
+    /**
+     * Specify whether the feedback is for valid or invalid fields
+     *
+     * @type {('valid'|'invalid')}
+     */
+    type: PropTypes.string,
+    /** Display feedback as a tooltip. */
+    tooltip: PropTypes.bool,
+    as: PropTypes.elementType
+  };
+  const Feedback = /*#__PURE__*/React__namespace.forwardRef(
+  // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+  ({
+    as: Component = 'div',
+    className,
+    type = 'valid',
+    tooltip = false,
+    ...props
+  }, ref) => /*#__PURE__*/jsxRuntimeExports.jsx(Component, {
+    ...props,
+    ref: ref,
+    className: classNames(className, `${type}-${tooltip ? 'tooltip' : 'feedback'}`)
+  }));
+  Feedback.displayName = 'Feedback';
+  Feedback.propTypes = propTypes$2;
+
+  // TODO
+
+  const FormContext = /*#__PURE__*/React__namespace.createContext({});
+
+  const DEFAULT_BREAKPOINTS = ['xxl', 'xl', 'lg', 'md', 'sm', 'xs'];
+  const DEFAULT_MIN_BREAKPOINT = 'xs';
+  const ThemeContext = /*#__PURE__*/React__namespace.createContext({
+    prefixes: {},
+    breakpoints: DEFAULT_BREAKPOINTS,
+    minBreakpoint: DEFAULT_MIN_BREAKPOINT
+  });
+  function useBootstrapPrefix(prefix, defaultPrefix) {
+    const {
+      prefixes
+    } = React$1.useContext(ThemeContext);
+    return prefix || prefixes[defaultPrefix] || defaultPrefix;
+  }
+  function useBootstrapBreakpoints() {
+    const {
+      breakpoints
+    } = React$1.useContext(ThemeContext);
+    return breakpoints;
+  }
+  function useBootstrapMinBreakpoint() {
+    const {
+      minBreakpoint
+    } = React$1.useContext(ThemeContext);
+    return minBreakpoint;
+  }
+
+  const FormCheckInput = /*#__PURE__*/React__namespace.forwardRef(({
+    id,
+    bsPrefix,
+    className,
+    type = 'checkbox',
+    isValid = false,
+    isInvalid = false,
+    // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+    as: Component = 'input',
+    ...props
+  }, ref) => {
+    const {
+      controlId
+    } = React$1.useContext(FormContext);
+    bsPrefix = useBootstrapPrefix(bsPrefix, 'form-check-input');
+    return /*#__PURE__*/jsxRuntimeExports.jsx(Component, {
+      ...props,
+      ref: ref,
+      type: type,
+      id: id || controlId,
+      className: classNames(className, bsPrefix, isValid && 'is-valid', isInvalid && 'is-invalid')
+    });
+  });
+  FormCheckInput.displayName = 'FormCheckInput';
+
+  const FormCheckLabel = /*#__PURE__*/React__namespace.forwardRef(({
+    bsPrefix,
+    className,
+    htmlFor,
+    ...props
+  }, ref) => {
+    const {
+      controlId
+    } = React$1.useContext(FormContext);
+    bsPrefix = useBootstrapPrefix(bsPrefix, 'form-check-label');
+    return /*#__PURE__*/jsxRuntimeExports.jsx("label", {
+      ...props,
+      ref: ref,
+      htmlFor: htmlFor || controlId,
+      className: classNames(className, bsPrefix)
+    });
+  });
+  FormCheckLabel.displayName = 'FormCheckLabel';
+
+  /**
+   * Iterates through children that are typically specified as `props.children`,
+   * but only maps over children that are "valid elements".
+   *
+   * The mapFunction provided index will be normalised to the components mapped,
+   * so an invalid component would not increase the index.
+   *
+   */
+  function map(children, func) {
+    let index = 0;
+    return React__namespace.Children.map(children, child => /*#__PURE__*/ /*#__PURE__*/React__namespace.isValidElement(child) ? func(child, index++) : child);
+  }
+
+  /**
+   * Iterates through children that are "valid elements".
+   *
+   * The provided forEachFunc(child, index) will be called for each
+   * leaf child with the index reflecting the position relative to "valid components".
+   */
+  function forEach(children, func) {
+    let index = 0;
+    React__namespace.Children.forEach(children, child => {
+      if ( /*#__PURE__*/React__namespace.isValidElement(child)) func(child, index++);
+    });
+  }
+
+  /**
+   * Finds whether a component's `children` prop includes a React element of the
+   * specified type.
+   */
+  function hasChildOfType(children, type) {
+    return React__namespace.Children.toArray(children).some(child => /*#__PURE__*/ /*#__PURE__*/React__namespace.isValidElement(child) && child.type === type);
+  }
+
+  const FormCheck = /*#__PURE__*/React__namespace.forwardRef(({
+    id,
+    bsPrefix,
+    bsSwitchPrefix,
+    inline = false,
+    reverse = false,
+    disabled = false,
+    isValid = false,
+    isInvalid = false,
+    feedbackTooltip = false,
+    feedback,
+    feedbackType,
+    className,
+    style,
+    title = '',
+    type = 'checkbox',
+    label,
+    children,
+    // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+    as = 'input',
+    ...props
+  }, ref) => {
+    bsPrefix = useBootstrapPrefix(bsPrefix, 'form-check');
+    bsSwitchPrefix = useBootstrapPrefix(bsSwitchPrefix, 'form-switch');
+    const {
+      controlId
+    } = React$1.useContext(FormContext);
+    const innerFormContext = React$1.useMemo(() => ({
+      controlId: id || controlId
+    }), [controlId, id]);
+    const hasLabel = !children && label != null && label !== false || hasChildOfType(children, FormCheckLabel);
+    const input = /*#__PURE__*/jsxRuntimeExports.jsx(FormCheckInput, {
+      ...props,
+      type: type === 'switch' ? 'checkbox' : type,
+      ref: ref,
+      isValid: isValid,
+      isInvalid: isInvalid,
+      disabled: disabled,
+      as: as
+    });
+    return /*#__PURE__*/jsxRuntimeExports.jsx(FormContext.Provider, {
+      value: innerFormContext,
+      children: /*#__PURE__*/jsxRuntimeExports.jsx("div", {
+        style: style,
+        className: classNames(className, hasLabel && bsPrefix, inline && `${bsPrefix}-inline`, reverse && `${bsPrefix}-reverse`, type === 'switch' && bsSwitchPrefix),
+        children: children || /*#__PURE__*/jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, {
+          children: [input, hasLabel && /*#__PURE__*/jsxRuntimeExports.jsx(FormCheckLabel, {
+            title: title,
+            children: label
+          }), feedback && /*#__PURE__*/jsxRuntimeExports.jsx(Feedback, {
+            type: feedbackType,
+            tooltip: feedbackTooltip,
+            children: feedback
+          })]
+        })
+      })
+    });
+  });
+  FormCheck.displayName = 'FormCheck';
+  var FormCheck$1 = Object.assign(FormCheck, {
+    Input: FormCheckInput,
+    Label: FormCheckLabel
+  });
+
+  /**
+   * Copyright (c) 2014-present, Facebook, Inc.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
+
+  /**
+   * Similar to invariant but only logs a warning if the condition is not met.
+   * This can be used to log issues in development environments in critical
+   * paths. Removing the logging code for production environments will keep the
+   * same logic and follow the same code paths.
+   */
+  var __DEV__ = process.env.NODE_ENV !== 'production';
+  var warning = function () {};
+  if (__DEV__) {
+    var printWarning = function printWarning(format, args) {
+      var len = arguments.length;
+      args = new Array(len > 1 ? len - 1 : 0);
+      for (var key = 1; key < len; key++) {
+        args[key - 1] = arguments[key];
+      }
+      var argIndex = 0;
+      var message = 'Warning: ' + format.replace(/%s/g, function () {
+        return args[argIndex++];
+      });
+      if (typeof console !== 'undefined') {
+        console.error(message);
+      }
+      try {
+        // --- Welcome to debugging React ---
+        // This error was thrown as a convenience so that you can use this stack
+        // to find the callsite that caused this warning to fire.
+        throw new Error(message);
+      } catch (x) {}
+    };
+    warning = function (condition, format, args) {
+      var len = arguments.length;
+      args = new Array(len > 2 ? len - 2 : 0);
+      for (var key = 2; key < len; key++) {
+        args[key - 2] = arguments[key];
+      }
+      if (format === undefined) {
+        throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
+      }
+      if (!condition) {
+        printWarning.apply(null, [format].concat(args));
+      }
+    };
+  }
+  var warning_1 = warning;
+
+  var warning$1 = /*@__PURE__*/getDefaultExportFromCjs(warning_1);
+
+  const FormControl = /*#__PURE__*/React__namespace.forwardRef(({
+    bsPrefix,
+    type,
+    size,
+    htmlSize,
+    id,
+    className,
+    isValid = false,
+    isInvalid = false,
+    plaintext,
+    readOnly,
+    // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+    as: Component = 'input',
+    ...props
+  }, ref) => {
+    const {
+      controlId
+    } = React$1.useContext(FormContext);
+    bsPrefix = useBootstrapPrefix(bsPrefix, 'form-control');
+    let classes;
+    if (plaintext) {
+      classes = {
+        [`${bsPrefix}-plaintext`]: true
+      };
+    } else {
+      classes = {
+        [bsPrefix]: true,
+        [`${bsPrefix}-${size}`]: size
+      };
+    }
+    process.env.NODE_ENV !== "production" ? warning$1(controlId == null || !id, '`controlId` is ignored on `<FormControl>` when `id` is specified.') : void 0;
+    return /*#__PURE__*/jsxRuntimeExports.jsx(Component, {
+      ...props,
+      type: type,
+      size: htmlSize,
+      ref: ref,
+      readOnly: readOnly,
+      id: id || controlId,
+      className: classNames(className, classes, isValid && `is-valid`, isInvalid && `is-invalid`, type === 'color' && `${bsPrefix}-color`)
+    });
+  });
+  FormControl.displayName = 'FormControl';
+  var FormControl$1 = Object.assign(FormControl, {
+    Feedback
+  });
+
+  var rHyphen = /-(.)/g;
+  function camelize(string) {
+    return string.replace(rHyphen, function (_, chr) {
+      return chr.toUpperCase();
+    });
+  }
+
+  const pascalCase = str => str[0].toUpperCase() + camelize(str).slice(1);
+  // TODO: emstricten & fix the typing here! `createWithBsPrefix<TElementType>...`
+  function createWithBsPrefix(prefix, {
+    displayName = pascalCase(prefix),
+    Component,
+    defaultProps
+  } = {}) {
+    const BsComponent = /*#__PURE__*/React__namespace.forwardRef(({
+      className,
+      bsPrefix,
+      as: Tag = Component || 'div',
+      ...props
+    }, ref) => {
+      const componentProps = {
+        ...defaultProps,
+        ...props
+      };
+      const resolvedPrefix = useBootstrapPrefix(bsPrefix, prefix);
+      return /*#__PURE__*/jsxRuntimeExports.jsx(Tag, {
+        ref: ref,
+        className: classNames(className, resolvedPrefix),
+        ...componentProps
+      });
+    });
+    BsComponent.displayName = displayName;
+    return BsComponent;
+  }
+
+  var FormFloating = createWithBsPrefix('form-floating');
+
+  const FormGroup = /*#__PURE__*/React__namespace.forwardRef(({
+    controlId,
+    // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+    as: Component = 'div',
+    ...props
+  }, ref) => {
+    const context = React$1.useMemo(() => ({
+      controlId
+    }), [controlId]);
+    return /*#__PURE__*/jsxRuntimeExports.jsx(FormContext.Provider, {
+      value: context,
+      children: /*#__PURE__*/jsxRuntimeExports.jsx(Component, {
+        ...props,
+        ref: ref
+      })
+    });
+  });
+  FormGroup.displayName = 'FormGroup';
+
+  function useCol({
+    as,
+    bsPrefix,
+    className,
+    ...props
+  }) {
+    bsPrefix = useBootstrapPrefix(bsPrefix, 'col');
+    const breakpoints = useBootstrapBreakpoints();
+    const minBreakpoint = useBootstrapMinBreakpoint();
+    const spans = [];
+    const classes = [];
+    breakpoints.forEach(brkPoint => {
+      const propValue = props[brkPoint];
+      delete props[brkPoint];
+      let span;
+      let offset;
+      let order;
+      if (typeof propValue === 'object' && propValue != null) {
+        ({
+          span,
+          offset,
+          order
+        } = propValue);
+      } else {
+        span = propValue;
+      }
+      const infix = brkPoint !== minBreakpoint ? `-${brkPoint}` : '';
+      if (span) spans.push(span === true ? `${bsPrefix}${infix}` : `${bsPrefix}${infix}-${span}`);
+      if (order != null) classes.push(`order${infix}-${order}`);
+      if (offset != null) classes.push(`offset${infix}-${offset}`);
+    });
+    return [{
+      ...props,
+      className: classNames(className, ...spans, ...classes)
+    }, {
+      as,
+      bsPrefix,
+      spans
+    }];
+  }
+  const Col = /*#__PURE__*/React__namespace.forwardRef(
+  // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+  (props, ref) => {
+    const [{
+      className,
+      ...colProps
+    }, {
+      as: Component = 'div',
+      bsPrefix,
+      spans
+    }] = useCol(props);
+    return /*#__PURE__*/jsxRuntimeExports.jsx(Component, {
+      ...colProps,
+      ref: ref,
+      className: classNames(className, !spans.length && bsPrefix)
+    });
+  });
+  Col.displayName = 'Col';
+
+  const FormLabel = /*#__PURE__*/React__namespace.forwardRef(({
+    // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+    as: Component = 'label',
+    bsPrefix,
+    column = false,
+    visuallyHidden = false,
+    className,
+    htmlFor,
+    ...props
+  }, ref) => {
+    const {
+      controlId
+    } = React$1.useContext(FormContext);
+    bsPrefix = useBootstrapPrefix(bsPrefix, 'form-label');
+    let columnClass = 'col-form-label';
+    if (typeof column === 'string') columnClass = `${columnClass} ${columnClass}-${column}`;
+    const classes = classNames(className, bsPrefix, visuallyHidden && 'visually-hidden', column && columnClass);
+    process.env.NODE_ENV !== "production" ? warning$1(controlId == null || !htmlFor, '`controlId` is ignored on `<FormLabel>` when `htmlFor` is specified.') : void 0;
+    htmlFor = htmlFor || controlId;
+    if (column) return /*#__PURE__*/jsxRuntimeExports.jsx(Col, {
+      ref: ref,
+      as: "label",
+      className: classes,
+      htmlFor: htmlFor,
+      ...props
+    });
+    return /*#__PURE__*/(
+      // eslint-disable-next-line jsx-a11y/label-has-for, jsx-a11y/label-has-associated-control
+      jsxRuntimeExports.jsx(Component, {
+        ref: ref,
+        className: classes,
+        htmlFor: htmlFor,
+        ...props
+      })
+    );
+  });
+  FormLabel.displayName = 'FormLabel';
+
+  const FormRange = /*#__PURE__*/React__namespace.forwardRef(({
+    bsPrefix,
+    className,
+    id,
+    ...props
+  }, ref) => {
+    const {
+      controlId
+    } = React$1.useContext(FormContext);
+    bsPrefix = useBootstrapPrefix(bsPrefix, 'form-range');
+    return /*#__PURE__*/jsxRuntimeExports.jsx("input", {
+      ...props,
+      type: "range",
+      ref: ref,
+      className: classNames(className, bsPrefix),
+      id: id || controlId
+    });
+  });
+  FormRange.displayName = 'FormRange';
+
+  const FormSelect = /*#__PURE__*/React__namespace.forwardRef(({
+    bsPrefix,
+    size,
+    htmlSize,
+    className,
+    isValid = false,
+    isInvalid = false,
+    id,
+    ...props
+  }, ref) => {
+    const {
+      controlId
+    } = React$1.useContext(FormContext);
+    bsPrefix = useBootstrapPrefix(bsPrefix, 'form-select');
+    return /*#__PURE__*/jsxRuntimeExports.jsx("select", {
+      ...props,
+      size: htmlSize,
+      ref: ref,
+      className: classNames(className, bsPrefix, size && `${bsPrefix}-${size}`, isValid && `is-valid`, isInvalid && `is-invalid`),
+      id: id || controlId
+    });
+  });
+  FormSelect.displayName = 'FormSelect';
+
+  const FormText = /*#__PURE__*/React__namespace.forwardRef(
+  // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+  ({
+    bsPrefix,
+    className,
+    as: Component = 'small',
+    muted,
+    ...props
+  }, ref) => {
+    bsPrefix = useBootstrapPrefix(bsPrefix, 'form-text');
+    return /*#__PURE__*/jsxRuntimeExports.jsx(Component, {
+      ...props,
+      ref: ref,
+      className: classNames(className, bsPrefix, muted && 'text-muted')
+    });
+  });
+  FormText.displayName = 'FormText';
+
+  const Switch = /*#__PURE__*/React__namespace.forwardRef((props, ref) => /*#__PURE__*/jsxRuntimeExports.jsx(FormCheck$1, {
+    ...props,
+    ref: ref,
+    type: "switch"
+  }));
+  Switch.displayName = 'Switch';
+  var Switch$1 = Object.assign(Switch, {
+    Input: FormCheck$1.Input,
+    Label: FormCheck$1.Label
+  });
+
+  const FloatingLabel = /*#__PURE__*/React__namespace.forwardRef(({
+    bsPrefix,
+    className,
+    children,
+    controlId,
+    label,
+    ...props
+  }, ref) => {
+    bsPrefix = useBootstrapPrefix(bsPrefix, 'form-floating');
+    return /*#__PURE__*/jsxRuntimeExports.jsxs(FormGroup, {
+      ref: ref,
+      className: classNames(className, bsPrefix),
+      controlId: controlId,
+      ...props,
+      children: [children, /*#__PURE__*/jsxRuntimeExports.jsx("label", {
+        htmlFor: controlId,
+        children: label
+      })]
+    });
+  });
+  FloatingLabel.displayName = 'FloatingLabel';
+
+  const propTypes$1 = {
+    /**
+     * The Form `ref` will be forwarded to the underlying element,
+     * which means, unless it's rendered `as` a composite component,
+     * it will be a DOM node, when resolved.
+     *
+     * @type {ReactRef}
+     * @alias ref
+     */
+    _ref: PropTypes.any,
+    /**
+     * Mark a form as having been validated. Setting it to `true` will
+     * toggle any validation styles on the forms elements.
+     */
+    validated: PropTypes.bool,
+    as: PropTypes.elementType
+  };
+  const Form = /*#__PURE__*/React__namespace.forwardRef(({
+    className,
+    validated,
+    // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+    as: Component = 'form',
+    ...props
+  }, ref) => /*#__PURE__*/jsxRuntimeExports.jsx(Component, {
+    ...props,
+    ref: ref,
+    className: classNames(className, validated && 'was-validated')
+  }));
+  Form.displayName = 'Form';
+  Form.propTypes = propTypes$1;
+  var Form$1 = Object.assign(Form, {
+    Group: FormGroup,
+    Control: FormControl$1,
+    Floating: FormFloating,
+    Check: FormCheck$1,
+    Switch: Switch$1,
+    Label: FormLabel,
+    Text: FormText,
+    Range: FormRange,
+    Select: FormSelect,
+    FloatingLabel
+  });
+
+  const context$2 = /*#__PURE__*/React__namespace.createContext(null);
+  context$2.displayName = 'InputGroupContext';
+
+  const InputGroupText = createWithBsPrefix('input-group-text', {
+    Component: 'span'
+  });
+  const InputGroupCheckbox = props => /*#__PURE__*/jsxRuntimeExports.jsx(InputGroupText, {
+    children: /*#__PURE__*/jsxRuntimeExports.jsx(FormCheckInput, {
+      type: "checkbox",
+      ...props
+    })
+  });
+  const InputGroupRadio = props => /*#__PURE__*/jsxRuntimeExports.jsx(InputGroupText, {
+    children: /*#__PURE__*/jsxRuntimeExports.jsx(FormCheckInput, {
+      type: "radio",
+      ...props
+    })
+  });
+  /**
+   *
+   * @property {InputGroupText} Text
+   * @property {InputGroupRadio} Radio
+   * @property {InputGroupCheckbox} Checkbox
+   */
+  const InputGroup = /*#__PURE__*/React__namespace.forwardRef(({
+    bsPrefix,
+    size,
+    hasValidation,
+    className,
+    // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+    as: Component = 'div',
+    ...props
+  }, ref) => {
+    bsPrefix = useBootstrapPrefix(bsPrefix, 'input-group');
+
+    // Intentionally an empty object. Used in detecting if a dropdown
+    // exists under an input group.
+    const contextValue = React$1.useMemo(() => ({}), []);
+    return /*#__PURE__*/jsxRuntimeExports.jsx(context$2.Provider, {
+      value: contextValue,
+      children: /*#__PURE__*/jsxRuntimeExports.jsx(Component, {
+        ref: ref,
+        ...props,
+        className: classNames(className, bsPrefix, size && `${bsPrefix}-${size}`, hasValidation && 'has-validation')
+      })
+    });
+  });
+  InputGroup.displayName = 'InputGroup';
+  var InputGroup$1 = Object.assign(InputGroup, {
+    Text: InputGroupText,
+    Radio: InputGroupRadio,
+    Checkbox: InputGroupCheckbox
+  });
+
+  var _excluded$V = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "className", "inputType", "inputMode", "autocomplete", "lfLocale", "disabled", "readOnly", "plaintext", "error", "component", "required", "submitOnEnter", "prefix", "postfix", "placeholder", "fullWidth", "width", "floatingLabel", "lfOnEnter"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -23049,11 +27128,11 @@
       floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$Q);
+      rest = _objectWithoutProperties(_ref, _excluded$V);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
-    var inner = /*#__PURE__*/React$1.createElement(Form$1.Control, _extends({
+    var inner = /*#__PURE__*/React$1.createElement(Form$1.Control, _extends$1({
       name: name,
       type: inputType !== null && inputType !== void 0 ? inputType : 'text',
       inputmode: inputMode,
@@ -23086,17 +27165,17 @@
     }, error));
   };
 
-  var _excluded$P = ["onChange"];
+  var _excluded$U = ["onChange"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var TextInput$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$P);
+      rest = _objectWithoutProperties(_ref, _excluded$U);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
+    return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends$1({
       className: "lf-control-input-text",
       component: "input-text",
       onChange: handleChange
@@ -23109,7 +27188,7 @@
     default: TextInput$1
   });
 
-  var _excluded$O = ["name", "label", "hint", "value", "size", "placeholder", "options", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "floatingLabel", "filterKey", "filterValue"];
+  var _excluded$T = ["name", "label", "hint", "value", "size", "placeholder", "options", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "floatingLabel", "filterKey", "filterValue"];
   var Select = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23131,12 +27210,12 @@
       floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
       filterKey = _ref.filterKey,
       filterValue = _ref.filterValue,
-      rest = _objectWithoutProperties(_ref, _excluded$O);
+      rest = _objectWithoutProperties(_ref, _excluded$T);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value !== placeholder ? e.target.value : undefined);
     }, [onChange, placeholder]);
     var filteredOptions = filterOptions(options, filterValue, filterKey);
-    var inner = /*#__PURE__*/React$1.createElement(Form$1.Select, _extends({
+    var inner = /*#__PURE__*/React$1.createElement(Form$1.Select, _extends$1({
       name: name,
       value: value,
       onChange: handleChange,
@@ -23172,7 +27251,7 @@
     default: Select
   });
 
-  var _excluded$N = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format"];
+  var _excluded$S = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format"];
   var Checkbox = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23190,7 +27269,7 @@
       _ref.appearance;
       _ref.locale;
       _ref.format;
-      _objectWithoutProperties(_ref, _excluded$N);
+      _objectWithoutProperties(_ref, _excluded$S);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
@@ -23216,7 +27295,7 @@
     default: Checkbox
   });
 
-  var _excluded$M = ["name", "label", "hint", "value", "placeholder", "lfLocale", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format"];
+  var _excluded$R = ["name", "label", "hint", "value", "placeholder", "lfLocale", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format"];
   var Toggle$1 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23235,7 +27314,7 @@
       _ref.appearance;
       _ref.locale;
       _ref.format;
-      _objectWithoutProperties(_ref, _excluded$M);
+      _objectWithoutProperties(_ref, _excluded$R);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
@@ -23260,7 +27339,7 @@
     default: Toggle$1
   });
 
-  var _excluded$L = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options"];
+  var _excluded$Q = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options"];
   var CheckboxGroupBootstrap = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23280,7 +27359,7 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$L);
+      rest = _objectWithoutProperties(_ref, _excluded$Q);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
       values = _useState2[0],
@@ -23308,7 +27387,7 @@
         key: value,
         reverse: reverse,
         inline: inline
-      }, /*#__PURE__*/React$1.createElement(Form$1.Check.Input, _extends({
+      }, /*#__PURE__*/React$1.createElement(Form$1.Check.Input, _extends$1({
         disabled: disabled,
         id: "".concat(name, "_").concat(value),
         value: value,
@@ -23360,14 +27439,14 @@
     default: PlaceholderImage
   });
 
-  var _excluded$K = ["onChange", "value"];
+  var _excluded$P = ["onChange", "value"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var Date$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$K);
+      rest = _objectWithoutProperties(_ref, _excluded$P);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -23376,7 +27455,7 @@
       // only take 2023-11-12
       currentDate = value.toISOString().split('T')[0];
     }
-    return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
+    return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends$1({
       className: "lf-control-date",
       inputType: "date",
       component: "date",
@@ -23391,7 +27470,7 @@
     default: Date$1
   });
 
-  var _excluded$J = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "disabled", "readOnly", "error", "required", "rows", "placeholder", "width", "fullWidth"];
+  var _excluded$O = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "disabled", "readOnly", "error", "required", "rows", "placeholder", "width", "fullWidth"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -23413,14 +27492,14 @@
       placeholder = _ref.placeholder,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
-      rest = _objectWithoutProperties(_ref, _excluded$J);
+      rest = _objectWithoutProperties(_ref, _excluded$O);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(Form$1.Group, {
       className: "lf-control-input-text",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Form$1.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form$1.Control, _extends({
+    }, /*#__PURE__*/React$1.createElement(Form$1.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form$1.Control, _extends$1({
       name: name,
       as: "textarea",
       rows: rows,
@@ -23513,7 +27592,7 @@
     default: Group
   });
 
-  var _excluded$I = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options"];
+  var _excluded$N = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options"];
   var RadioGroupBootstrap = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23533,7 +27612,7 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$I);
+      rest = _objectWithoutProperties(_ref, _excluded$N);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
       values = _useState2[0],
@@ -23561,7 +27640,7 @@
         key: value,
         reverse: reverse,
         inline: inline
-      }, /*#__PURE__*/React$1.createElement(Form$1.Check.Input, _extends({
+      }, /*#__PURE__*/React$1.createElement(Form$1.Check.Input, _extends$1({
         disabled: disabled,
         type: "radio",
         value: value,
@@ -23602,14 +27681,14 @@
     default: ReactView
   });
 
-  var _excluded$H = ["onChange", "value"];
+  var _excluded$M = ["onChange", "value"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var DateTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$H);
+      rest = _objectWithoutProperties(_ref, _excluded$M);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -23621,7 +27700,7 @@
         currentDate = match[0];
       }
     }
-    return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
+    return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends$1({
       className: "lf-control-date",
       inputType: "datetime-local",
       component: "datetime",
@@ -23636,7 +27715,7 @@
     default: DateTime
   });
 
-  var _excluded$G = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$L = ["hint", "required", "tooltip", "name", "label", "error"];
   var ListArrayBootstrap = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required;
@@ -23644,11 +27723,11 @@
       var name = _ref.name,
       label = _ref.label,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$G);
+      rest = _objectWithoutProperties(_ref, _excluded$L);
     return /*#__PURE__*/React$1.createElement(Form$1.Group, {
       "data-lf-field-name": name,
       className: "lf-control-array"
-    }, label && /*#__PURE__*/React$1.createElement(Form$1.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
+    }, label && /*#__PURE__*/React$1.createElement(Form$1.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends$1({
       LetsFormComponent: LetsForm$2
     }, rest)), hint && !error && /*#__PURE__*/React$1.createElement(Form$1.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form$1.Control.Feedback, {
       type: "invalid"
@@ -23661,7 +27740,7 @@
     default: ListArrayBootstrap
   });
 
-  var _excluded$F = ["onChange"];
+  var _excluded$K = ["onChange"];
   var hasDecimals = function hasDecimals(f) {
     return _isString(f) && (f.includes(',') || f.includes('.'));
   };
@@ -23670,7 +27749,7 @@
 
   var InputNumber = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$F);
+      rest = _objectWithoutProperties(_ref, _excluded$K);
     var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       var parsed;
@@ -23688,7 +27767,7 @@
         }
       }
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
+    return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends$1({
       className: "lf-control-input-number",
       component: "input-number",
       onChange: handleChange,
@@ -23701,6 +27780,2153 @@
     __proto__: null,
     InputNumber: InputNumber
   });
+
+  function _extends() {
+    _extends = Object.assign ? Object.assign.bind() : function (target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+    return _extends.apply(this, arguments);
+  }
+
+  function _objectWithoutPropertiesLoose$5(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+      }
+    }
+    return target;
+  }
+
+  /**
+   * Copyright (c) 2013-present, Facebook, Inc.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
+
+  /**
+   * Use invariant() to assert state which your program assumes to be true.
+   *
+   * Provide sprintf-style format (only %s is supported) and arguments
+   * to provide information about what broke and what you were
+   * expecting.
+   *
+   * The invariant message will be stripped in production, but the invariant
+   * will remain to ensure logic does not differ in production.
+   */
+  process.env.NODE_ENV;
+
+  function defaultKey(key) {
+    return 'default' + key.charAt(0).toUpperCase() + key.substr(1);
+  }
+
+  function _toPropertyKey(arg) {
+    var key = _toPrimitive(arg, "string");
+    return typeof key === "symbol" ? key : String(key);
+  }
+  function _toPrimitive(input, hint) {
+    if (typeof input !== "object" || input === null) return input;
+    var prim = input[Symbol.toPrimitive];
+    if (prim !== undefined) {
+      var res = prim.call(input, hint );
+      if (typeof res !== "object") return res;
+      throw new TypeError("@@toPrimitive must return a primitive value.");
+    }
+    return (String )(input);
+  }
+  function useUncontrolledProp$1(propValue, defaultValue, handler) {
+    var wasPropRef = React$1.useRef(propValue !== undefined);
+    var _useState = React$1.useState(defaultValue),
+      stateValue = _useState[0],
+      setState = _useState[1];
+    var isProp = propValue !== undefined;
+    var wasProp = wasPropRef.current;
+    wasPropRef.current = isProp;
+    /**
+     * If a prop switches from controlled to Uncontrolled
+     * reset its value to the defaultValue
+     */
+
+    if (!isProp && wasProp && stateValue !== defaultValue) {
+      setState(defaultValue);
+    }
+    return [isProp ? propValue : stateValue, React$1.useCallback(function (value) {
+      for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        args[_key - 1] = arguments[_key];
+      }
+      if (handler) handler.apply(void 0, [value].concat(args));
+      setState(value);
+    }, [handler])];
+  }
+  function useUncontrolled(props, config) {
+    return Object.keys(config).reduce(function (result, fieldName) {
+      var _extends2;
+      var _ref = result,
+        defaultValue = _ref[defaultKey(fieldName)],
+        propsValue = _ref[fieldName],
+        rest = _objectWithoutPropertiesLoose$5(_ref, [defaultKey(fieldName), fieldName].map(_toPropertyKey));
+      var handlerName = config[fieldName];
+      var _useUncontrolledProp = useUncontrolledProp$1(propsValue, defaultValue, props[handlerName]),
+        value = _useUncontrolledProp[0],
+        handler = _useUncontrolledProp[1];
+      return _extends({}, rest, (_extends2 = {}, _extends2[fieldName] = value, _extends2[handlerName] = handler, _extends2));
+    }, props);
+  }
+
+  function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
+      o.__proto__ = p;
+      return o;
+    };
+    return _setPrototypeOf(o, p);
+  }
+
+  function _inheritsLoose(subClass, superClass) {
+    subClass.prototype = Object.create(superClass.prototype);
+    subClass.prototype.constructor = subClass;
+    _setPrototypeOf(subClass, superClass);
+  }
+
+  /**
+   * Returns the owner document of a given element.
+   * 
+   * @param node the element
+   */
+  function ownerDocument(node) {
+    return node && node.ownerDocument || document;
+  }
+
+  /**
+   * Returns the owner window of a given element.
+   * 
+   * @param node the element
+   */
+
+  function ownerWindow(node) {
+    var doc = ownerDocument(node);
+    return doc && doc.defaultView || window;
+  }
+
+  /**
+   * Returns one or all computed style properties of an element.
+   * 
+   * @param node the element
+   * @param psuedoElement the style property
+   */
+
+  function getComputedStyle(node, psuedoElement) {
+    return ownerWindow(node).getComputedStyle(node, psuedoElement);
+  }
+
+  var rUpper = /([A-Z])/g;
+  function hyphenate(string) {
+    return string.replace(rUpper, '-$1').toLowerCase();
+  }
+
+  /**
+   * Copyright 2013-2014, Facebook, Inc.
+   * All rights reserved.
+   * https://github.com/facebook/react/blob/2aeb8a2a6beb00617a4217f7f8284924fa2ad819/src/vendor/core/hyphenateStyleName.js
+   */
+  var msPattern = /^ms-/;
+  function hyphenateStyleName(string) {
+    return hyphenate(string).replace(msPattern, '-ms-');
+  }
+
+  var supportedTransforms = /^((translate|rotate|scale)(X|Y|Z|3d)?|matrix(3d)?|perspective|skew(X|Y)?)$/i;
+  function isTransform(value) {
+    return !!(value && supportedTransforms.test(value));
+  }
+
+  function style(node, property) {
+    var css = '';
+    var transforms = '';
+    if (typeof property === 'string') {
+      return node.style.getPropertyValue(hyphenateStyleName(property)) || getComputedStyle(node).getPropertyValue(hyphenateStyleName(property));
+    }
+    Object.keys(property).forEach(function (key) {
+      var value = property[key];
+      if (!value && value !== 0) {
+        node.style.removeProperty(hyphenateStyleName(key));
+      } else if (isTransform(key)) {
+        transforms += key + "(" + value + ") ";
+      } else {
+        css += hyphenateStyleName(key) + ": " + value + ";";
+      }
+    });
+    if (transforms) {
+      css += "transform: " + transforms + ";";
+    }
+    node.style.cssText += ";" + css;
+  }
+
+  var config = {
+    disabled: false
+  };
+
+  var timeoutsShape = process.env.NODE_ENV !== 'production' ? PropTypes.oneOfType([PropTypes.number, PropTypes.shape({
+    enter: PropTypes.number,
+    exit: PropTypes.number,
+    appear: PropTypes.number
+  }).isRequired]) : null;
+  process.env.NODE_ENV !== 'production' ? PropTypes.oneOfType([PropTypes.string, PropTypes.shape({
+    enter: PropTypes.string,
+    exit: PropTypes.string,
+    active: PropTypes.string
+  }), PropTypes.shape({
+    enter: PropTypes.string,
+    enterDone: PropTypes.string,
+    enterActive: PropTypes.string,
+    exit: PropTypes.string,
+    exitDone: PropTypes.string,
+    exitActive: PropTypes.string
+  })]) : null;
+
+  var TransitionGroupContext = /*#__PURE__*/React$1.createContext(null);
+
+  var forceReflow = function forceReflow(node) {
+    return node.scrollTop;
+  };
+
+  var UNMOUNTED = 'unmounted';
+  var EXITED = 'exited';
+  var ENTERING = 'entering';
+  var ENTERED = 'entered';
+  var EXITING = 'exiting';
+  /**
+   * The Transition component lets you describe a transition from one component
+   * state to another _over time_ with a simple declarative API. Most commonly
+   * it's used to animate the mounting and unmounting of a component, but can also
+   * be used to describe in-place transition states as well.
+   *
+   * ---
+   *
+   * **Note**: `Transition` is a platform-agnostic base component. If you're using
+   * transitions in CSS, you'll probably want to use
+   * [`CSSTransition`](https://reactcommunity.org/react-transition-group/css-transition)
+   * instead. It inherits all the features of `Transition`, but contains
+   * additional features necessary to play nice with CSS transitions (hence the
+   * name of the component).
+   *
+   * ---
+   *
+   * By default the `Transition` component does not alter the behavior of the
+   * component it renders, it only tracks "enter" and "exit" states for the
+   * components. It's up to you to give meaning and effect to those states. For
+   * example we can add styles to a component when it enters or exits:
+   *
+   * ```jsx
+   * import { Transition } from 'react-transition-group';
+   *
+   * const duration = 300;
+   *
+   * const defaultStyle = {
+   *   transition: `opacity ${duration}ms ease-in-out`,
+   *   opacity: 0,
+   * }
+   *
+   * const transitionStyles = {
+   *   entering: { opacity: 1 },
+   *   entered:  { opacity: 1 },
+   *   exiting:  { opacity: 0 },
+   *   exited:  { opacity: 0 },
+   * };
+   *
+   * const Fade = ({ in: inProp }) => (
+   *   <Transition in={inProp} timeout={duration}>
+   *     {state => (
+   *       <div style={{
+   *         ...defaultStyle,
+   *         ...transitionStyles[state]
+   *       }}>
+   *         I'm a fade Transition!
+   *       </div>
+   *     )}
+   *   </Transition>
+   * );
+   * ```
+   *
+   * There are 4 main states a Transition can be in:
+   *  - `'entering'`
+   *  - `'entered'`
+   *  - `'exiting'`
+   *  - `'exited'`
+   *
+   * Transition state is toggled via the `in` prop. When `true` the component
+   * begins the "Enter" stage. During this stage, the component will shift from
+   * its current transition state, to `'entering'` for the duration of the
+   * transition and then to the `'entered'` stage once it's complete. Let's take
+   * the following example (we'll use the
+   * [useState](https://reactjs.org/docs/hooks-reference.html#usestate) hook):
+   *
+   * ```jsx
+   * function App() {
+   *   const [inProp, setInProp] = useState(false);
+   *   return (
+   *     <div>
+   *       <Transition in={inProp} timeout={500}>
+   *         {state => (
+   *           // ...
+   *         )}
+   *       </Transition>
+   *       <button onClick={() => setInProp(true)}>
+   *         Click to Enter
+   *       </button>
+   *     </div>
+   *   );
+   * }
+   * ```
+   *
+   * When the button is clicked the component will shift to the `'entering'` state
+   * and stay there for 500ms (the value of `timeout`) before it finally switches
+   * to `'entered'`.
+   *
+   * When `in` is `false` the same thing happens except the state moves from
+   * `'exiting'` to `'exited'`.
+   */
+
+  var Transition = /*#__PURE__*/function (_React$Component) {
+    _inheritsLoose(Transition, _React$Component);
+    function Transition(props, context) {
+      var _this;
+      _this = _React$Component.call(this, props, context) || this;
+      var parentGroup = context; // In the context of a TransitionGroup all enters are really appears
+
+      var appear = parentGroup && !parentGroup.isMounting ? props.enter : props.appear;
+      var initialStatus;
+      _this.appearStatus = null;
+      if (props.in) {
+        if (appear) {
+          initialStatus = EXITED;
+          _this.appearStatus = ENTERING;
+        } else {
+          initialStatus = ENTERED;
+        }
+      } else {
+        if (props.unmountOnExit || props.mountOnEnter) {
+          initialStatus = UNMOUNTED;
+        } else {
+          initialStatus = EXITED;
+        }
+      }
+      _this.state = {
+        status: initialStatus
+      };
+      _this.nextCallback = null;
+      return _this;
+    }
+    Transition.getDerivedStateFromProps = function getDerivedStateFromProps(_ref, prevState) {
+      var nextIn = _ref.in;
+      if (nextIn && prevState.status === UNMOUNTED) {
+        return {
+          status: EXITED
+        };
+      }
+      return null;
+    } // getSnapshotBeforeUpdate(prevProps) {
+    //   let nextStatus = null
+    //   if (prevProps !== this.props) {
+    //     const { status } = this.state
+    //     if (this.props.in) {
+    //       if (status !== ENTERING && status !== ENTERED) {
+    //         nextStatus = ENTERING
+    //       }
+    //     } else {
+    //       if (status === ENTERING || status === ENTERED) {
+    //         nextStatus = EXITING
+    //       }
+    //     }
+    //   }
+    //   return { nextStatus }
+    // }
+    ;
+
+    var _proto = Transition.prototype;
+    _proto.componentDidMount = function componentDidMount() {
+      this.updateStatus(true, this.appearStatus);
+    };
+    _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+      var nextStatus = null;
+      if (prevProps !== this.props) {
+        var status = this.state.status;
+        if (this.props.in) {
+          if (status !== ENTERING && status !== ENTERED) {
+            nextStatus = ENTERING;
+          }
+        } else {
+          if (status === ENTERING || status === ENTERED) {
+            nextStatus = EXITING;
+          }
+        }
+      }
+      this.updateStatus(false, nextStatus);
+    };
+    _proto.componentWillUnmount = function componentWillUnmount() {
+      this.cancelNextCallback();
+    };
+    _proto.getTimeouts = function getTimeouts() {
+      var timeout = this.props.timeout;
+      var exit, enter, appear;
+      exit = enter = appear = timeout;
+      if (timeout != null && typeof timeout !== 'number') {
+        exit = timeout.exit;
+        enter = timeout.enter; // TODO: remove fallback for next major
+
+        appear = timeout.appear !== undefined ? timeout.appear : enter;
+      }
+      return {
+        exit: exit,
+        enter: enter,
+        appear: appear
+      };
+    };
+    _proto.updateStatus = function updateStatus(mounting, nextStatus) {
+      if (mounting === void 0) {
+        mounting = false;
+      }
+      if (nextStatus !== null) {
+        // nextStatus will always be ENTERING or EXITING.
+        this.cancelNextCallback();
+        if (nextStatus === ENTERING) {
+          if (this.props.unmountOnExit || this.props.mountOnEnter) {
+            var node = this.props.nodeRef ? this.props.nodeRef.current : ReactDOM.findDOMNode(this); // https://github.com/reactjs/react-transition-group/pull/749
+            // With unmountOnExit or mountOnEnter, the enter animation should happen at the transition between `exited` and `entering`.
+            // To make the animation happen,  we have to separate each rendering and avoid being processed as batched.
+
+            if (node) forceReflow(node);
+          }
+          this.performEnter(mounting);
+        } else {
+          this.performExit();
+        }
+      } else if (this.props.unmountOnExit && this.state.status === EXITED) {
+        this.setState({
+          status: UNMOUNTED
+        });
+      }
+    };
+    _proto.performEnter = function performEnter(mounting) {
+      var _this2 = this;
+      var enter = this.props.enter;
+      var appearing = this.context ? this.context.isMounting : mounting;
+      var _ref2 = this.props.nodeRef ? [appearing] : [ReactDOM.findDOMNode(this), appearing],
+        maybeNode = _ref2[0],
+        maybeAppearing = _ref2[1];
+      var timeouts = this.getTimeouts();
+      var enterTimeout = appearing ? timeouts.appear : timeouts.enter; // no enter animation skip right to ENTERED
+      // if we are mounting and running this it means appear _must_ be set
+
+      if (!mounting && !enter || config.disabled) {
+        this.safeSetState({
+          status: ENTERED
+        }, function () {
+          _this2.props.onEntered(maybeNode);
+        });
+        return;
+      }
+      this.props.onEnter(maybeNode, maybeAppearing);
+      this.safeSetState({
+        status: ENTERING
+      }, function () {
+        _this2.props.onEntering(maybeNode, maybeAppearing);
+        _this2.onTransitionEnd(enterTimeout, function () {
+          _this2.safeSetState({
+            status: ENTERED
+          }, function () {
+            _this2.props.onEntered(maybeNode, maybeAppearing);
+          });
+        });
+      });
+    };
+    _proto.performExit = function performExit() {
+      var _this3 = this;
+      var exit = this.props.exit;
+      var timeouts = this.getTimeouts();
+      var maybeNode = this.props.nodeRef ? undefined : ReactDOM.findDOMNode(this); // no exit animation skip right to EXITED
+
+      if (!exit || config.disabled) {
+        this.safeSetState({
+          status: EXITED
+        }, function () {
+          _this3.props.onExited(maybeNode);
+        });
+        return;
+      }
+      this.props.onExit(maybeNode);
+      this.safeSetState({
+        status: EXITING
+      }, function () {
+        _this3.props.onExiting(maybeNode);
+        _this3.onTransitionEnd(timeouts.exit, function () {
+          _this3.safeSetState({
+            status: EXITED
+          }, function () {
+            _this3.props.onExited(maybeNode);
+          });
+        });
+      });
+    };
+    _proto.cancelNextCallback = function cancelNextCallback() {
+      if (this.nextCallback !== null) {
+        this.nextCallback.cancel();
+        this.nextCallback = null;
+      }
+    };
+    _proto.safeSetState = function safeSetState(nextState, callback) {
+      // This shouldn't be necessary, but there are weird race conditions with
+      // setState callbacks and unmounting in testing, so always make sure that
+      // we can cancel any pending setState callbacks after we unmount.
+      callback = this.setNextCallback(callback);
+      this.setState(nextState, callback);
+    };
+    _proto.setNextCallback = function setNextCallback(callback) {
+      var _this4 = this;
+      var active = true;
+      this.nextCallback = function (event) {
+        if (active) {
+          active = false;
+          _this4.nextCallback = null;
+          callback(event);
+        }
+      };
+      this.nextCallback.cancel = function () {
+        active = false;
+      };
+      return this.nextCallback;
+    };
+    _proto.onTransitionEnd = function onTransitionEnd(timeout, handler) {
+      this.setNextCallback(handler);
+      var node = this.props.nodeRef ? this.props.nodeRef.current : ReactDOM.findDOMNode(this);
+      var doesNotHaveTimeoutOrListener = timeout == null && !this.props.addEndListener;
+      if (!node || doesNotHaveTimeoutOrListener) {
+        setTimeout(this.nextCallback, 0);
+        return;
+      }
+      if (this.props.addEndListener) {
+        var _ref3 = this.props.nodeRef ? [this.nextCallback] : [node, this.nextCallback],
+          maybeNode = _ref3[0],
+          maybeNextCallback = _ref3[1];
+        this.props.addEndListener(maybeNode, maybeNextCallback);
+      }
+      if (timeout != null) {
+        setTimeout(this.nextCallback, timeout);
+      }
+    };
+    _proto.render = function render() {
+      var status = this.state.status;
+      if (status === UNMOUNTED) {
+        return null;
+      }
+      var _this$props = this.props,
+        children = _this$props.children;
+        _this$props.in;
+        _this$props.mountOnEnter;
+        _this$props.unmountOnExit;
+        _this$props.appear;
+        _this$props.enter;
+        _this$props.exit;
+        _this$props.timeout;
+        _this$props.addEndListener;
+        _this$props.onEnter;
+        _this$props.onEntering;
+        _this$props.onEntered;
+        _this$props.onExit;
+        _this$props.onExiting;
+        _this$props.onExited;
+        _this$props.nodeRef;
+        var childProps = _objectWithoutPropertiesLoose$5(_this$props, ["children", "in", "mountOnEnter", "unmountOnExit", "appear", "enter", "exit", "timeout", "addEndListener", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited", "nodeRef"]);
+      return /*#__PURE__*/(
+        // allows for nested Transitions
+        React$1.createElement(TransitionGroupContext.Provider, {
+          value: null
+        }, typeof children === 'function' ? children(status, childProps) : /*#__PURE__*/React$1.cloneElement(React$1.Children.only(children), childProps))
+      );
+    };
+    return Transition;
+  }(React$1.Component);
+  Transition.contextType = TransitionGroupContext;
+  Transition.propTypes = process.env.NODE_ENV !== "production" ? {
+    /**
+     * A React reference to DOM element that need to transition:
+     * https://stackoverflow.com/a/51127130/4671932
+     *
+     *   - When `nodeRef` prop is used, `node` is not passed to callback functions
+     *      (e.g. `onEnter`) because user already has direct access to the node.
+     *   - When changing `key` prop of `Transition` in a `TransitionGroup` a new
+     *     `nodeRef` need to be provided to `Transition` with changed `key` prop
+     *     (see
+     *     [test/CSSTransition-test.js](https://github.com/reactjs/react-transition-group/blob/13435f897b3ab71f6e19d724f145596f5910581c/test/CSSTransition-test.js#L362-L437)).
+     */
+    nodeRef: PropTypes.shape({
+      current: typeof Element === 'undefined' ? PropTypes.any : function (propValue, key, componentName, location, propFullName, secret) {
+        var value = propValue[key];
+        return PropTypes.instanceOf(value && 'ownerDocument' in value ? value.ownerDocument.defaultView.Element : Element)(propValue, key, componentName, location, propFullName, secret);
+      }
+    }),
+    /**
+     * A `function` child can be used instead of a React element. This function is
+     * called with the current transition status (`'entering'`, `'entered'`,
+     * `'exiting'`, `'exited'`), which can be used to apply context
+     * specific props to a component.
+     *
+     * ```jsx
+     * <Transition in={this.state.in} timeout={150}>
+     *   {state => (
+     *     <MyComponent className={`fade fade-${state}`} />
+     *   )}
+     * </Transition>
+     * ```
+     */
+    children: PropTypes.oneOfType([PropTypes.func.isRequired, PropTypes.element.isRequired]).isRequired,
+    /**
+     * Show the component; triggers the enter or exit states
+     */
+    in: PropTypes.bool,
+    /**
+     * By default the child component is mounted immediately along with
+     * the parent `Transition` component. If you want to "lazy mount" the component on the
+     * first `in={true}` you can set `mountOnEnter`. After the first enter transition the component will stay
+     * mounted, even on "exited", unless you also specify `unmountOnExit`.
+     */
+    mountOnEnter: PropTypes.bool,
+    /**
+     * By default the child component stays mounted after it reaches the `'exited'` state.
+     * Set `unmountOnExit` if you'd prefer to unmount the component after it finishes exiting.
+     */
+    unmountOnExit: PropTypes.bool,
+    /**
+     * By default the child component does not perform the enter transition when
+     * it first mounts, regardless of the value of `in`. If you want this
+     * behavior, set both `appear` and `in` to `true`.
+     *
+     * > **Note**: there are no special appear states like `appearing`/`appeared`, this prop
+     * > only adds an additional enter transition. However, in the
+     * > `<CSSTransition>` component that first enter transition does result in
+     * > additional `.appear-*` classes, that way you can choose to style it
+     * > differently.
+     */
+    appear: PropTypes.bool,
+    /**
+     * Enable or disable enter transitions.
+     */
+    enter: PropTypes.bool,
+    /**
+     * Enable or disable exit transitions.
+     */
+    exit: PropTypes.bool,
+    /**
+     * The duration of the transition, in milliseconds.
+     * Required unless `addEndListener` is provided.
+     *
+     * You may specify a single timeout for all transitions:
+     *
+     * ```jsx
+     * timeout={500}
+     * ```
+     *
+     * or individually:
+     *
+     * ```jsx
+     * timeout={{
+     *  appear: 500,
+     *  enter: 300,
+     *  exit: 500,
+     * }}
+     * ```
+     *
+     * - `appear` defaults to the value of `enter`
+     * - `enter` defaults to `0`
+     * - `exit` defaults to `0`
+     *
+     * @type {number | { enter?: number, exit?: number, appear?: number }}
+     */
+    timeout: function timeout(props) {
+      var pt = timeoutsShape;
+      if (!props.addEndListener) pt = pt.isRequired;
+      for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        args[_key - 1] = arguments[_key];
+      }
+      return pt.apply(void 0, [props].concat(args));
+    },
+    /**
+     * Add a custom transition end trigger. Called with the transitioning
+     * DOM node and a `done` callback. Allows for more fine grained transition end
+     * logic. Timeouts are still used as a fallback if provided.
+     *
+     * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+     *
+     * ```jsx
+     * addEndListener={(node, done) => {
+     *   // use the css transitionend event to mark the finish of a transition
+     *   node.addEventListener('transitionend', done, false);
+     * }}
+     * ```
+     */
+    addEndListener: PropTypes.func,
+    /**
+     * Callback fired before the "entering" status is applied. An extra parameter
+     * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
+     *
+     * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+     *
+     * @type Function(node: HtmlElement, isAppearing: bool) -> void
+     */
+    onEnter: PropTypes.func,
+    /**
+     * Callback fired after the "entering" status is applied. An extra parameter
+     * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
+     *
+     * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+     *
+     * @type Function(node: HtmlElement, isAppearing: bool)
+     */
+    onEntering: PropTypes.func,
+    /**
+     * Callback fired after the "entered" status is applied. An extra parameter
+     * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
+     *
+     * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+     *
+     * @type Function(node: HtmlElement, isAppearing: bool) -> void
+     */
+    onEntered: PropTypes.func,
+    /**
+     * Callback fired before the "exiting" status is applied.
+     *
+     * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+     *
+     * @type Function(node: HtmlElement) -> void
+     */
+    onExit: PropTypes.func,
+    /**
+     * Callback fired after the "exiting" status is applied.
+     *
+     * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+     *
+     * @type Function(node: HtmlElement) -> void
+     */
+    onExiting: PropTypes.func,
+    /**
+     * Callback fired after the "exited" status is applied.
+     *
+     * **Note**: when `nodeRef` prop is passed, `node` is not passed
+     *
+     * @type Function(node: HtmlElement) -> void
+     */
+    onExited: PropTypes.func
+  } : {}; // Name the function so it is clearer in the documentation
+
+  function noop$1() {}
+  Transition.defaultProps = {
+    in: false,
+    mountOnEnter: false,
+    unmountOnExit: false,
+    appear: false,
+    enter: true,
+    exit: true,
+    onEnter: noop$1,
+    onEntering: noop$1,
+    onEntered: noop$1,
+    onExit: noop$1,
+    onExiting: noop$1,
+    onExited: noop$1
+  };
+  Transition.UNMOUNTED = UNMOUNTED;
+  Transition.EXITED = EXITED;
+  Transition.ENTERING = ENTERING;
+  Transition.ENTERED = ENTERED;
+  Transition.EXITING = EXITING;
+
+  var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+
+  /* eslint-disable no-return-assign */
+  var optionsSupported = false;
+  var onceSupported = false;
+  try {
+    var options = {
+      get passive() {
+        return optionsSupported = true;
+      },
+      get once() {
+        // eslint-disable-next-line no-multi-assign
+        return onceSupported = optionsSupported = true;
+      }
+    };
+    if (canUseDOM) {
+      window.addEventListener('test', options, options);
+      window.removeEventListener('test', options, true);
+    }
+  } catch (e) {
+    /* */
+  }
+
+  /**
+   * An `addEventListener` ponyfill, supports the `once` option
+   * 
+   * @param node the element
+   * @param eventName the event name
+   * @param handle the handler
+   * @param options event options
+   */
+  function addEventListener(node, eventName, handler, options) {
+    if (options && typeof options !== 'boolean' && !onceSupported) {
+      var once = options.once,
+        capture = options.capture;
+      var wrappedHandler = handler;
+      if (!onceSupported && once) {
+        wrappedHandler = handler.__once || function onceHandler(event) {
+          this.removeEventListener(eventName, onceHandler, capture);
+          handler.call(this, event);
+        };
+        handler.__once = wrappedHandler;
+      }
+      node.addEventListener(eventName, wrappedHandler, optionsSupported ? options : capture);
+    }
+    node.addEventListener(eventName, handler, options);
+  }
+
+  /**
+   * A `removeEventListener` ponyfill
+   * 
+   * @param node the element
+   * @param eventName the event name
+   * @param handle the handler
+   * @param options event options
+   */
+  function removeEventListener(node, eventName, handler, options) {
+    var capture = options && typeof options !== 'boolean' ? options.capture : options;
+    node.removeEventListener(eventName, handler, capture);
+    if (handler.__once) {
+      node.removeEventListener(eventName, handler.__once, capture);
+    }
+  }
+
+  function listen(node, eventName, handler, options) {
+    addEventListener(node, eventName, handler, options);
+    return function () {
+      removeEventListener(node, eventName, handler, options);
+    };
+  }
+
+  /**
+   * Triggers an event on a given element.
+   * 
+   * @param node the element
+   * @param eventName the event name to trigger
+   * @param bubbles whether the event should bubble up
+   * @param cancelable whether the event should be cancelable
+   */
+  function triggerEvent(node, eventName, bubbles, cancelable) {
+    if (cancelable === void 0) {
+      cancelable = true;
+    }
+    if (node) {
+      var event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, bubbles, cancelable);
+      node.dispatchEvent(event);
+    }
+  }
+
+  function parseDuration$1(node) {
+    var str = style(node, 'transitionDuration') || '';
+    var mult = str.indexOf('ms') === -1 ? 1000 : 1;
+    return parseFloat(str) * mult;
+  }
+  function emulateTransitionEnd(element, duration, padding) {
+    if (padding === void 0) {
+      padding = 5;
+    }
+    var called = false;
+    var handle = setTimeout(function () {
+      if (!called) triggerEvent(element, 'transitionend', true);
+    }, duration + padding);
+    var remove = listen(element, 'transitionend', function () {
+      called = true;
+    }, {
+      once: true
+    });
+    return function () {
+      clearTimeout(handle);
+      remove();
+    };
+  }
+  function transitionEnd(element, handler, duration, padding) {
+    if (duration == null) duration = parseDuration$1(element) || 0;
+    var removeEmulate = emulateTransitionEnd(element, duration, padding);
+    var remove = listen(element, 'transitionend', handler);
+    return function () {
+      removeEmulate();
+      remove();
+    };
+  }
+
+  function parseDuration(node, property) {
+    const str = style(node, property) || '';
+    const mult = str.indexOf('ms') === -1 ? 1000 : 1;
+    return parseFloat(str) * mult;
+  }
+  function transitionEndListener(element, handler) {
+    const duration = parseDuration(element, 'transitionDuration');
+    const delay = parseDuration(element, 'transitionDelay');
+    const remove = transitionEnd(element, e => {
+      if (e.target === element) {
+        remove();
+        handler(e);
+      }
+    }, duration + delay);
+  }
+
+  // reading a dimension prop will cause the browser to recalculate,
+  // which will let our animations work
+  function triggerBrowserReflow(node) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    node.offsetHeight;
+  }
+
+  var toFnRef = function toFnRef(ref) {
+    return !ref || typeof ref === 'function' ? ref : function (value) {
+      ref.current = value;
+    };
+  };
+  function mergeRefs(refA, refB) {
+    var a = toFnRef(refA);
+    var b = toFnRef(refB);
+    return function (value) {
+      if (a) a(value);
+      if (b) b(value);
+    };
+  }
+  /**
+   * Create and returns a single callback ref composed from two other Refs.
+   *
+   * ```tsx
+   * const Button = React.forwardRef((props, ref) => {
+   *   const [element, attachRef] = useCallbackRef<HTMLButtonElement>();
+   *   const mergedRef = useMergedRefs(ref, attachRef);
+   *
+   *   return <button ref={mergedRef} {...props}/>
+   * })
+   * ```
+   *
+   * @param refA A Callback or mutable Ref
+   * @param refB A Callback or mutable Ref
+   * @category refs
+   */
+
+  function useMergedRefs(refA, refB) {
+    return React$1.useMemo(function () {
+      return mergeRefs(refA, refB);
+    }, [refA, refB]);
+  }
+
+  function safeFindDOMNode(componentOrElement) {
+    if (componentOrElement && 'setState' in componentOrElement) {
+      return ReactDOM.findDOMNode(componentOrElement);
+    }
+    return componentOrElement != null ? componentOrElement : null;
+  }
+
+  // Normalizes Transition callbacks when nodeRef is used.
+  const TransitionWrapper = /*#__PURE__*/React$1.forwardRef(({
+    onEnter,
+    onEntering,
+    onEntered,
+    onExit,
+    onExiting,
+    onExited,
+    addEndListener,
+    children,
+    childRef,
+    ...props
+  }, ref) => {
+    const nodeRef = React$1.useRef(null);
+    const mergedRef = useMergedRefs(nodeRef, childRef);
+    const attachRef = r => {
+      mergedRef(safeFindDOMNode(r));
+    };
+    const normalize = callback => param => {
+      if (callback && nodeRef.current) {
+        callback(nodeRef.current, param);
+      }
+    };
+
+    /* eslint-disable react-hooks/exhaustive-deps */
+    const handleEnter = React$1.useCallback(normalize(onEnter), [onEnter]);
+    const handleEntering = React$1.useCallback(normalize(onEntering), [onEntering]);
+    const handleEntered = React$1.useCallback(normalize(onEntered), [onEntered]);
+    const handleExit = React$1.useCallback(normalize(onExit), [onExit]);
+    const handleExiting = React$1.useCallback(normalize(onExiting), [onExiting]);
+    const handleExited = React$1.useCallback(normalize(onExited), [onExited]);
+    const handleAddEndListener = React$1.useCallback(normalize(addEndListener), [addEndListener]);
+    /* eslint-enable react-hooks/exhaustive-deps */
+
+    return /*#__PURE__*/jsxRuntimeExports.jsx(Transition, {
+      ref: ref,
+      ...props,
+      onEnter: handleEnter,
+      onEntered: handleEntered,
+      onEntering: handleEntering,
+      onExit: handleExit,
+      onExited: handleExited,
+      onExiting: handleExiting,
+      addEndListener: handleAddEndListener,
+      nodeRef: nodeRef,
+      children: typeof children === 'function' ? (status, innerProps) => children(status, {
+        ...innerProps,
+        ref: attachRef
+      }) : /*#__PURE__*/React$1.cloneElement(children, {
+        ref: attachRef
+      })
+    });
+  });
+
+  /**
+   * Creates a `Ref` whose value is updated in an effect, ensuring the most recent
+   * value is the one rendered with. Generally only required for Concurrent mode usage
+   * where previous work in `render()` may be discarded before being used.
+   *
+   * This is safe to access in an event handler.
+   *
+   * @param value The `Ref` value
+   */
+
+  function useCommittedRef(value) {
+    var ref = React$1.useRef(value);
+    React$1.useEffect(function () {
+      ref.current = value;
+    }, [value]);
+    return ref;
+  }
+
+  function useEventCallback(fn) {
+    var ref = useCommittedRef(fn);
+    return React$1.useCallback(function () {
+      return ref.current && ref.current.apply(ref, arguments);
+    }, [ref]);
+  }
+
+  const _excluded$J = ["as", "disabled"];
+  function _objectWithoutPropertiesLoose$4(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for (i = 0; i < sourceKeys.length; i++) {
+      key = sourceKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      target[key] = source[key];
+    }
+    return target;
+  }
+  function isTrivialHref$1(href) {
+    return !href || href.trim() === '#';
+  }
+  function useButtonProps({
+    tagName,
+    disabled,
+    href,
+    target,
+    rel,
+    role,
+    onClick,
+    tabIndex = 0,
+    type
+  }) {
+    if (!tagName) {
+      if (href != null || target != null || rel != null) {
+        tagName = 'a';
+      } else {
+        tagName = 'button';
+      }
+    }
+    const meta = {
+      tagName
+    };
+    if (tagName === 'button') {
+      return [{
+        type: type || 'button',
+        disabled
+      }, meta];
+    }
+    const handleClick = event => {
+      if (disabled || tagName === 'a' && isTrivialHref$1(href)) {
+        event.preventDefault();
+      }
+      if (disabled) {
+        event.stopPropagation();
+        return;
+      }
+      onClick == null ? void 0 : onClick(event);
+    };
+    const handleKeyDown = event => {
+      if (event.key === ' ') {
+        event.preventDefault();
+        handleClick(event);
+      }
+    };
+    if (tagName === 'a') {
+      // Ensure there's a href so Enter can trigger anchor button.
+      href || (href = '#');
+      if (disabled) {
+        href = undefined;
+      }
+    }
+    return [{
+      role: role != null ? role : 'button',
+      // explicitly undefined so that it overrides the props disabled in a spread
+      // e.g. <Tag {...props} {...hookProps} />
+      disabled: undefined,
+      tabIndex: disabled ? undefined : tabIndex,
+      href,
+      target: tagName === 'a' ? target : undefined,
+      'aria-disabled': !disabled ? undefined : disabled,
+      rel: tagName === 'a' ? rel : undefined,
+      onClick: handleClick,
+      onKeyDown: handleKeyDown
+    }, meta];
+  }
+  const Button$1 = /*#__PURE__*/React__namespace.forwardRef((_ref, ref) => {
+    let {
+        as: asProp,
+        disabled
+      } = _ref,
+      props = _objectWithoutPropertiesLoose$4(_ref, _excluded$J);
+    const [buttonProps, {
+      tagName: Component
+    }] = useButtonProps(Object.assign({
+      tagName: asProp,
+      disabled
+    }, props));
+    return /*#__PURE__*/jsxRuntimeExports.jsx(Component, Object.assign({}, props, buttonProps, {
+      ref: ref
+    }));
+  });
+  Button$1.displayName = 'Button';
+
+  const _excluded$I = ["onKeyDown"];
+  function _objectWithoutPropertiesLoose$3(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for (i = 0; i < sourceKeys.length; i++) {
+      key = sourceKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      target[key] = source[key];
+    }
+    return target;
+  }
+  function isTrivialHref(href) {
+    return !href || href.trim() === '#';
+  }
+  /**
+   * An generic `<a>` component that covers a few A11y cases, ensuring that
+   * cases where the `href` is missing or trivial like "#" are treated like buttons.
+   */
+  const Anchor = /*#__PURE__*/React__namespace.forwardRef((_ref, ref) => {
+    let {
+        onKeyDown
+      } = _ref,
+      props = _objectWithoutPropertiesLoose$3(_ref, _excluded$I);
+    const [buttonProps] = useButtonProps(Object.assign({
+      tagName: 'a'
+    }, props));
+    const handleKeyDown = useEventCallback(e => {
+      buttonProps.onKeyDown(e);
+      onKeyDown == null ? void 0 : onKeyDown(e);
+    });
+    if (isTrivialHref(props.href) || props.role === 'button') {
+      return /*#__PURE__*/jsxRuntimeExports.jsx("a", Object.assign({
+        ref: ref
+      }, props, buttonProps, {
+        onKeyDown: handleKeyDown
+      }));
+    }
+    return /*#__PURE__*/jsxRuntimeExports.jsx("a", Object.assign({
+      ref: ref
+    }, props, {
+      onKeyDown: onKeyDown
+    }));
+  });
+  Anchor.displayName = 'Anchor';
+
+  const fadeStyles = {
+    [ENTERING]: 'show',
+    [ENTERED]: 'show'
+  };
+  const Fade = /*#__PURE__*/React__namespace.forwardRef(({
+    className,
+    children,
+    transitionClasses = {},
+    onEnter,
+    ...rest
+  }, ref) => {
+    const props = {
+      in: false,
+      timeout: 300,
+      mountOnEnter: false,
+      unmountOnExit: false,
+      appear: false,
+      ...rest
+    };
+    const handleEnter = React$1.useCallback((node, isAppearing) => {
+      triggerBrowserReflow(node);
+      onEnter == null ? void 0 : onEnter(node, isAppearing);
+    }, [onEnter]);
+    return /*#__PURE__*/jsxRuntimeExports.jsx(TransitionWrapper, {
+      ref: ref,
+      addEndListener: transitionEndListener,
+      ...props,
+      onEnter: handleEnter,
+      childRef: children.ref,
+      children: (status, innerProps) => /*#__PURE__*/React__namespace.cloneElement(children, {
+        ...innerProps,
+        className: classNames('fade', className, children.props.className, fadeStyles[status], transitionClasses[status])
+      })
+    });
+  });
+  Fade.displayName = 'Fade';
+
+  const Button = /*#__PURE__*/React__namespace.forwardRef(({
+    as,
+    bsPrefix,
+    variant = 'primary',
+    size,
+    active = false,
+    disabled = false,
+    className,
+    ...props
+  }, ref) => {
+    const prefix = useBootstrapPrefix(bsPrefix, 'btn');
+    const [buttonProps, {
+      tagName
+    }] = useButtonProps({
+      tagName: as,
+      disabled,
+      ...props
+    });
+    const Component = tagName;
+    return /*#__PURE__*/jsxRuntimeExports.jsx(Component, {
+      ...buttonProps,
+      ...props,
+      ref: ref,
+      disabled: disabled,
+      className: classNames(className, prefix, active && 'active', variant && `${prefix}-${variant}`, size && `${prefix}-${size}`, props.href && disabled && 'disabled')
+    });
+  });
+  Button.displayName = 'Button';
+
+  const context$1 = /*#__PURE__*/React__namespace.createContext(null);
+  context$1.displayName = 'CardHeaderContext';
+
+  var toArray = Function.prototype.bind.call(Function.prototype.call, [].slice);
+  /**
+   * Runs `querySelectorAll` on a given element.
+   * 
+   * @param element the element
+   * @param selector the selector
+   */
+
+  function qsa(element, selector) {
+    return toArray(element.querySelectorAll(selector));
+  }
+
+  function useUncontrolledProp(propValue, defaultValue, handler) {
+    const wasPropRef = React$1.useRef(propValue !== undefined);
+    const [stateValue, setState] = React$1.useState(defaultValue);
+    const isProp = propValue !== undefined;
+    const wasProp = wasPropRef.current;
+    wasPropRef.current = isProp;
+
+    /**
+     * If a prop switches from controlled to Uncontrolled
+     * reset its value to the defaultValue
+     */
+    if (!isProp && wasProp && stateValue !== defaultValue) {
+      setState(defaultValue);
+    }
+    return [isProp ? propValue : stateValue, React$1.useCallback((value, ...args) => {
+      if (handler) handler(value, ...args);
+      setState(value);
+    }, [handler])];
+  }
+
+  /**
+   * Returns a function that triggers a component update. the hook equivalent to
+   * `this.forceUpdate()` in a class component. In most cases using a state value directly
+   * is preferable but may be required in some advanced usages of refs for interop or
+   * when direct DOM manipulation is required.
+   *
+   * ```ts
+   * const forceUpdate = useForceUpdate();
+   *
+   * const updateOnClick = useCallback(() => {
+   *  forceUpdate()
+   * }, [forceUpdate])
+   *
+   * return <button type="button" onClick={updateOnClick}>Hi there</button>
+   * ```
+   */
+
+  function useForceUpdate() {
+    // The toggling state value is designed to defeat React optimizations for skipping
+    // updates when they are stricting equal to the last state value
+    var _useReducer = React$1.useReducer(function (state) {
+        return !state;
+      }, false),
+      dispatch = _useReducer[1];
+    return dispatch;
+  }
+
+  /*
+   * Copyright 2020 Adobe. All rights reserved.
+   * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License. You may obtain a copy
+   * of the License at http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software distributed under
+   * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+   * OF ANY KIND, either express or implied. See the License for the specific language
+   * governing permissions and limitations under the License.
+   */ /*
+   * Copyright 2020 Adobe. All rights reserved.
+   * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+   * you may not use this file except in compliance with the License. You may obtain a copy
+   * of the License at http://www.apache.org/licenses/LICENSE-2.0
+   *
+   * Unless required by applicable law or agreed to in writing, software distributed under
+   * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+   * OF ANY KIND, either express or implied. See the License for the specific language
+   * governing permissions and limitations under the License.
+   */ // We must avoid a circular dependency with @react-aria/utils, and this useLayoutEffect is
+  // guarded by a check that it only runs on the client side.
+  // eslint-disable-next-line rulesdir/useLayoutEffectRule
+
+  // Default context value to use in case there is no SSRProvider. This is fine for
+  // client-only apps. In order to support multiple copies of React Aria potentially
+  // being on the page at once, the prefix is set to a random number. SSRProvider
+  // will reset this to zero for consistency between server and client, so in the
+  // SSR case multiple copies of React Aria is not supported.
+  const $704cf1d3b684cc5c$var$defaultContext = {
+      prefix: String(Math.round(Math.random() * 10000000000)),
+      current: 0
+  };
+  const $704cf1d3b684cc5c$var$SSRContext = /*#__PURE__*/ (React$1).createContext($704cf1d3b684cc5c$var$defaultContext);
+  let $704cf1d3b684cc5c$var$canUseDOM = Boolean(typeof window !== "undefined" && window.document && window.document.createElement);
+  let $704cf1d3b684cc5c$var$componentIds = new WeakMap();
+  function $704cf1d3b684cc5c$var$useCounter(isDisabled = false) {
+      let ctx = (React$1.useContext)($704cf1d3b684cc5c$var$SSRContext);
+      let ref = (React$1.useRef)(null);
+      if (ref.current === null && !isDisabled) {
+          var _React___SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED, _React___SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_ReactCurrentOwner;
+          // In strict mode, React renders components twice, and the ref will be reset to null on the second render.
+          // This means our id counter will be incremented twice instead of once. This is a problem because on the
+          // server, components are only rendered once and so ids generated on the server won't match the client.
+          // In React 18, useId was introduced to solve this, but it is not available in older versions. So to solve this
+          // we need to use some React internals to access the underlying Fiber instance, which is stable between renders.
+          // This is exposed as ReactCurrentOwner in development, which is all we need since StrictMode only runs in development.
+          // To ensure that we only increment the global counter once, we store the starting id for this component in
+          // a weak map associated with the Fiber. On the second render, we reset the global counter to this value.
+          // Since React runs the second render immediately after the first, this is safe.
+          // @ts-ignore
+          let currentOwner = (_React___SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = (React$1).__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED) === null || _React___SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED === void 0 ? void 0 : (_React___SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_ReactCurrentOwner = _React___SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner) === null || _React___SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_ReactCurrentOwner === void 0 ? void 0 : _React___SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_ReactCurrentOwner.current;
+          if (currentOwner) {
+              let prevComponentValue = $704cf1d3b684cc5c$var$componentIds.get(currentOwner);
+              if (prevComponentValue == null) // On the first render, and first call to useId, store the id and state in our weak map.
+              $704cf1d3b684cc5c$var$componentIds.set(currentOwner, {
+                  id: ctx.current,
+                  state: currentOwner.memoizedState
+              });
+              else if (currentOwner.memoizedState !== prevComponentValue.state) {
+                  // On the second render, the memoizedState gets reset by React.
+                  // Reset the counter, and remove from the weak map so we don't
+                  // do this for subsequent useId calls.
+                  ctx.current = prevComponentValue.id;
+                  $704cf1d3b684cc5c$var$componentIds.delete(currentOwner);
+              }
+          }
+          ref.current = ++ctx.current;
+      }
+      return ref.current;
+  }
+  function $704cf1d3b684cc5c$export$619500959fc48b26(defaultId) {
+      let ctx = (React$1.useContext)($704cf1d3b684cc5c$var$SSRContext);
+      // If we are rendering in a non-DOM environment, and there's no SSRProvider,
+      // provide a warning to hint to the developer to add one.
+      if (ctx === $704cf1d3b684cc5c$var$defaultContext && !$704cf1d3b684cc5c$var$canUseDOM) console.warn("When server rendering, you must wrap your application in an <SSRProvider> to ensure consistent ids are generated between the client and server.");
+      let counter = $704cf1d3b684cc5c$var$useCounter(!!defaultId);
+      return defaultId || `react-aria${ctx.prefix}-${counter}`;
+  }
+
+  const SelectableContext = /*#__PURE__*/React__namespace.createContext(null);
+  const makeEventKey = (eventKey, href = null) => {
+    if (eventKey != null) return String(eventKey);
+    return href || null;
+  };
+
+  const NavContext = /*#__PURE__*/React__namespace.createContext(null);
+  NavContext.displayName = 'NavContext';
+
+  const ATTRIBUTE_PREFIX = `data-rr-ui-`;
+  const PROPERTY_PREFIX = `rrUi`;
+  function dataAttr(property) {
+    return `${ATTRIBUTE_PREFIX}${property}`;
+  }
+  function dataProp(property) {
+    return `${PROPERTY_PREFIX}${property}`;
+  }
+
+  // TODO: check
+
+  const context = /*#__PURE__*/React__namespace.createContext(null);
+  context.displayName = 'NavbarContext';
+
+  const TabContext = /*#__PURE__*/React__namespace.createContext(null);
+
+  const _excluded$H = ["as", "active", "eventKey"];
+  function _objectWithoutPropertiesLoose$2(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for (i = 0; i < sourceKeys.length; i++) {
+      key = sourceKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      target[key] = source[key];
+    }
+    return target;
+  }
+  function useNavItem({
+    key,
+    onClick,
+    active,
+    id,
+    role,
+    disabled
+  }) {
+    const parentOnSelect = React$1.useContext(SelectableContext);
+    const navContext = React$1.useContext(NavContext);
+    const tabContext = React$1.useContext(TabContext);
+    let isActive = active;
+    const props = {
+      role
+    };
+    if (navContext) {
+      if (!role && navContext.role === 'tablist') props.role = 'tab';
+      const contextControllerId = navContext.getControllerId(key != null ? key : null);
+      const contextControlledId = navContext.getControlledId(key != null ? key : null);
+
+      // @ts-ignore
+      props[dataAttr('event-key')] = key;
+      props.id = contextControllerId || id;
+      isActive = active == null && key != null ? navContext.activeKey === key : active;
+
+      /**
+       * Simplified scenario for `mountOnEnter`.
+       *
+       * While it would make sense to keep 'aria-controls' for tabs that have been mounted at least
+       * once, it would also complicate the code quite a bit, for very little gain.
+       * The following implementation is probably good enough.
+       *
+       * @see https://github.com/react-restart/ui/pull/40#issuecomment-1009971561
+       */
+      if (isActive || !(tabContext != null && tabContext.unmountOnExit) && !(tabContext != null && tabContext.mountOnEnter)) props['aria-controls'] = contextControlledId;
+    }
+    if (props.role === 'tab') {
+      props['aria-selected'] = isActive;
+      if (!isActive) {
+        props.tabIndex = -1;
+      }
+      if (disabled) {
+        props.tabIndex = -1;
+        props['aria-disabled'] = true;
+      }
+    }
+    props.onClick = useEventCallback(e => {
+      if (disabled) return;
+      onClick == null ? void 0 : onClick(e);
+      if (key == null) {
+        return;
+      }
+      if (parentOnSelect && !e.isPropagationStopped()) {
+        parentOnSelect(key, e);
+      }
+    });
+    return [props, {
+      isActive
+    }];
+  }
+  const NavItem$1 = /*#__PURE__*/React__namespace.forwardRef((_ref, ref) => {
+    let {
+        as: Component = Button$1,
+        active,
+        eventKey
+      } = _ref,
+      options = _objectWithoutPropertiesLoose$2(_ref, _excluded$H);
+    const [props, meta] = useNavItem(Object.assign({
+      key: makeEventKey(eventKey, options.href),
+      active
+    }, options));
+
+    // @ts-ignore
+    props[dataAttr('active')] = meta.isActive;
+    return /*#__PURE__*/jsxRuntimeExports.jsx(Component, Object.assign({}, options, props, {
+      ref: ref
+    }));
+  });
+  NavItem$1.displayName = 'NavItem';
+  var NavItem$2 = NavItem$1;
+
+  const _excluded$G = ["as", "onSelect", "activeKey", "role", "onKeyDown"];
+  function _objectWithoutPropertiesLoose$1(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for (i = 0; i < sourceKeys.length; i++) {
+      key = sourceKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      target[key] = source[key];
+    }
+    return target;
+  }
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  const noop = () => {};
+  const EVENT_KEY_ATTR = dataAttr('event-key');
+  const Nav$2 = /*#__PURE__*/React__namespace.forwardRef((_ref, ref) => {
+    let {
+        // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+        as: Component = 'div',
+        onSelect,
+        activeKey,
+        role,
+        onKeyDown
+      } = _ref,
+      props = _objectWithoutPropertiesLoose$1(_ref, _excluded$G);
+    // A ref and forceUpdate for refocus, b/c we only want to trigger when needed
+    // and don't want to reset the set in the effect
+    const forceUpdate = useForceUpdate();
+    const needsRefocusRef = React$1.useRef(false);
+    const parentOnSelect = React$1.useContext(SelectableContext);
+    const tabContext = React$1.useContext(TabContext);
+    let getControlledId, getControllerId;
+    if (tabContext) {
+      role = role || 'tablist';
+      activeKey = tabContext.activeKey;
+      // TODO: do we need to duplicate these?
+      getControlledId = tabContext.getControlledId;
+      getControllerId = tabContext.getControllerId;
+    }
+    const listNode = React$1.useRef(null);
+    const getNextActiveTab = offset => {
+      const currentListNode = listNode.current;
+      if (!currentListNode) return null;
+      const items = qsa(currentListNode, `[${EVENT_KEY_ATTR}]:not([aria-disabled=true])`);
+      const activeChild = currentListNode.querySelector('[aria-selected=true]');
+      if (!activeChild || activeChild !== document.activeElement) return null;
+      const index = items.indexOf(activeChild);
+      if (index === -1) return null;
+      let nextIndex = index + offset;
+      if (nextIndex >= items.length) nextIndex = 0;
+      if (nextIndex < 0) nextIndex = items.length - 1;
+      return items[nextIndex];
+    };
+    const handleSelect = (key, event) => {
+      if (key == null) return;
+      onSelect == null ? void 0 : onSelect(key, event);
+      parentOnSelect == null ? void 0 : parentOnSelect(key, event);
+    };
+    const handleKeyDown = event => {
+      onKeyDown == null ? void 0 : onKeyDown(event);
+      if (!tabContext) {
+        return;
+      }
+      let nextActiveChild;
+      switch (event.key) {
+        case 'ArrowLeft':
+        case 'ArrowUp':
+          nextActiveChild = getNextActiveTab(-1);
+          break;
+        case 'ArrowRight':
+        case 'ArrowDown':
+          nextActiveChild = getNextActiveTab(1);
+          break;
+        default:
+          return;
+      }
+      if (!nextActiveChild) return;
+      event.preventDefault();
+      handleSelect(nextActiveChild.dataset[dataProp('EventKey')] || null, event);
+      needsRefocusRef.current = true;
+      forceUpdate();
+    };
+    React$1.useEffect(() => {
+      if (listNode.current && needsRefocusRef.current) {
+        const activeChild = listNode.current.querySelector(`[${EVENT_KEY_ATTR}][aria-selected=true]`);
+        activeChild == null ? void 0 : activeChild.focus();
+      }
+      needsRefocusRef.current = false;
+    });
+    const mergedRef = useMergedRefs(ref, listNode);
+    return /*#__PURE__*/jsxRuntimeExports.jsx(SelectableContext.Provider, {
+      value: handleSelect,
+      children: /*#__PURE__*/jsxRuntimeExports.jsx(NavContext.Provider, {
+        value: {
+          role,
+          // used by NavLink to determine it's role
+          activeKey: makeEventKey(activeKey),
+          getControlledId: getControlledId || noop,
+          getControllerId: getControllerId || noop
+        },
+        children: /*#__PURE__*/jsxRuntimeExports.jsx(Component, Object.assign({}, props, {
+          onKeyDown: handleKeyDown,
+          ref: mergedRef,
+          role: role
+        }))
+      })
+    });
+  });
+  Nav$2.displayName = 'Nav';
+  var BaseNav = Object.assign(Nav$2, {
+    Item: NavItem$2
+  });
+
+  function NoopTransition({
+    children,
+    in: inProp,
+    onExited,
+    mountOnEnter,
+    unmountOnExit
+  }) {
+    const ref = React$1.useRef(null);
+    const hasEnteredRef = React$1.useRef(inProp);
+    const handleExited = useEventCallback(onExited);
+    React$1.useEffect(() => {
+      if (inProp) hasEnteredRef.current = true;else {
+        handleExited(ref.current);
+      }
+    }, [inProp, handleExited]);
+    const combinedRef = useMergedRefs(ref, children.ref);
+    const child = /*#__PURE__*/React$1.cloneElement(children, {
+      ref: combinedRef
+    });
+    if (inProp) return child;
+    if (unmountOnExit) {
+      return null;
+    }
+    if (!hasEnteredRef.current && mountOnEnter) {
+      return null;
+    }
+    return child;
+  }
+
+  var all = {exports: {}};
+
+  var createChainableTypeChecker = {exports: {}};
+
+  (function (module, exports) {
+
+  	Object.defineProperty(exports, "__esModule", {
+  	  value: true
+  	});
+  	exports.default = createChainableTypeChecker;
+  	/**
+  	 * Copyright 2013-present, Facebook, Inc.
+  	 * All rights reserved.
+  	 *
+  	 * This source code is licensed under the BSD-style license found in the
+  	 * LICENSE file in the root directory of this source tree. An additional grant
+  	 * of patent rights can be found in the PATENTS file in the same directory.
+  	 */
+
+  	// Mostly taken from ReactPropTypes.
+
+  	function createChainableTypeChecker(validate) {
+  	  function checkType(isRequired, props, propName, componentName, location, propFullName) {
+  	    var componentNameSafe = componentName || '<<anonymous>>';
+  	    var propFullNameSafe = propFullName || propName;
+  	    if (props[propName] == null) {
+  	      if (isRequired) {
+  	        return new Error('Required ' + location + ' `' + propFullNameSafe + '` was not specified ' + ('in `' + componentNameSafe + '`.'));
+  	      }
+  	      return null;
+  	    }
+  	    for (var _len = arguments.length, args = Array(_len > 6 ? _len - 6 : 0), _key = 6; _key < _len; _key++) {
+  	      args[_key - 6] = arguments[_key];
+  	    }
+  	    return validate.apply(undefined, [props, propName, componentNameSafe, location, propFullNameSafe].concat(args));
+  	  }
+  	  var chainedCheckType = checkType.bind(null, false);
+  	  chainedCheckType.isRequired = checkType.bind(null, true);
+  	  return chainedCheckType;
+  	}
+  	module.exports = exports['default']; 
+  } (createChainableTypeChecker, createChainableTypeChecker.exports));
+
+  var createChainableTypeCheckerExports = createChainableTypeChecker.exports;
+
+  (function (module, exports) {
+
+  	Object.defineProperty(exports, "__esModule", {
+  	  value: true
+  	});
+  	exports.default = all;
+  	var _createChainableTypeChecker = createChainableTypeCheckerExports;
+  	var _createChainableTypeChecker2 = _interopRequireDefault(_createChainableTypeChecker);
+  	function _interopRequireDefault(obj) {
+  	  return obj && obj.__esModule ? obj : {
+  	    default: obj
+  	  };
+  	}
+  	function all() {
+  	  for (var _len = arguments.length, validators = Array(_len), _key = 0; _key < _len; _key++) {
+  	    validators[_key] = arguments[_key];
+  	  }
+  	  function allPropTypes() {
+  	    for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+  	      args[_key2] = arguments[_key2];
+  	    }
+  	    var error = null;
+  	    validators.forEach(function (validator) {
+  	      if (error != null) {
+  	        return;
+  	      }
+  	      var result = validator.apply(undefined, args);
+  	      if (result != null) {
+  	        error = result;
+  	      }
+  	    });
+  	    return error;
+  	  }
+  	  return (0, _createChainableTypeChecker2.default)(allPropTypes);
+  	}
+  	module.exports = exports['default']; 
+  } (all, all.exports));
+
+  var NavItem = createWithBsPrefix('nav-item');
+
+  const NavLink = /*#__PURE__*/React__namespace.forwardRef(({
+    bsPrefix,
+    className,
+    as: Component = Anchor,
+    active,
+    eventKey,
+    disabled = false,
+    ...props
+  }, ref) => {
+    bsPrefix = useBootstrapPrefix(bsPrefix, 'nav-link');
+    const [navItemProps, meta] = useNavItem({
+      key: makeEventKey(eventKey, props.href),
+      active,
+      disabled,
+      ...props
+    });
+    return /*#__PURE__*/jsxRuntimeExports.jsx(Component, {
+      ...props,
+      ...navItemProps,
+      ref: ref,
+      disabled: disabled,
+      className: classNames(className, bsPrefix, disabled && 'disabled', meta.isActive && 'active')
+    });
+  });
+  NavLink.displayName = 'NavLink';
+
+  const Nav = /*#__PURE__*/React__namespace.forwardRef((uncontrolledProps, ref) => {
+    const {
+      as = 'div',
+      bsPrefix: initialBsPrefix,
+      variant,
+      fill = false,
+      justify = false,
+      navbar,
+      navbarScroll,
+      className,
+      activeKey,
+      ...props
+    } = useUncontrolled(uncontrolledProps, {
+      activeKey: 'onSelect'
+    });
+    const bsPrefix = useBootstrapPrefix(initialBsPrefix, 'nav');
+    let navbarBsPrefix;
+    let cardHeaderBsPrefix;
+    let isNavbar = false;
+    const navbarContext = React$1.useContext(context);
+    const cardHeaderContext = React$1.useContext(context$1);
+    if (navbarContext) {
+      navbarBsPrefix = navbarContext.bsPrefix;
+      isNavbar = navbar == null ? true : navbar;
+    } else if (cardHeaderContext) {
+      ({
+        cardHeaderBsPrefix
+      } = cardHeaderContext);
+    }
+    return /*#__PURE__*/jsxRuntimeExports.jsx(BaseNav, {
+      as: as,
+      ref: ref,
+      activeKey: activeKey,
+      className: classNames(className, {
+        [bsPrefix]: !isNavbar,
+        [`${navbarBsPrefix}-nav`]: isNavbar,
+        [`${navbarBsPrefix}-nav-scroll`]: isNavbar && navbarScroll,
+        [`${cardHeaderBsPrefix}-${variant}`]: !!cardHeaderBsPrefix,
+        [`${bsPrefix}-${variant}`]: !!variant,
+        [`${bsPrefix}-fill`]: fill,
+        [`${bsPrefix}-justified`]: justify
+      }),
+      ...props
+    });
+  });
+  Nav.displayName = 'Nav';
+  var Nav$1 = Object.assign(Nav, {
+    Item: NavItem,
+    Link: NavLink
+  });
+
+  const _excluded$F = ["active", "eventKey", "mountOnEnter", "transition", "unmountOnExit", "role", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited"],
+    _excluded2$1 = ["activeKey", "getControlledId", "getControllerId"],
+    _excluded3 = ["as"];
+  function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for (i = 0; i < sourceKeys.length; i++) {
+      key = sourceKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      target[key] = source[key];
+    }
+    return target;
+  }
+  function useTabPanel(_ref) {
+    let {
+        active,
+        eventKey,
+        mountOnEnter,
+        transition,
+        unmountOnExit,
+        role = 'tabpanel',
+        onEnter,
+        onEntering,
+        onEntered,
+        onExit,
+        onExiting,
+        onExited
+      } = _ref,
+      props = _objectWithoutPropertiesLoose(_ref, _excluded$F);
+    const context = React$1.useContext(TabContext);
+    if (!context) return [Object.assign({}, props, {
+      role
+    }), {
+      eventKey,
+      isActive: active,
+      mountOnEnter,
+      transition,
+      unmountOnExit,
+      onEnter,
+      onEntering,
+      onEntered,
+      onExit,
+      onExiting,
+      onExited
+    }];
+    const {
+        activeKey,
+        getControlledId,
+        getControllerId
+      } = context,
+      rest = _objectWithoutPropertiesLoose(context, _excluded2$1);
+    const key = makeEventKey(eventKey);
+    return [Object.assign({}, props, {
+      role,
+      id: getControlledId(eventKey),
+      'aria-labelledby': getControllerId(eventKey)
+    }), {
+      eventKey,
+      isActive: active == null && key != null ? makeEventKey(activeKey) === key : active,
+      transition: transition || rest.transition,
+      mountOnEnter: mountOnEnter != null ? mountOnEnter : rest.mountOnEnter,
+      unmountOnExit: unmountOnExit != null ? unmountOnExit : rest.unmountOnExit,
+      onEnter,
+      onEntering,
+      onEntered,
+      onExit,
+      onExiting,
+      onExited
+    }];
+  }
+  const TabPanel = /*#__PURE__*/React__namespace.forwardRef(
+  // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+  (_ref2, ref) => {
+    let {
+        as: Component = 'div'
+      } = _ref2,
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded3);
+    const [tabPanelProps, {
+      isActive,
+      onEnter,
+      onEntering,
+      onEntered,
+      onExit,
+      onExiting,
+      onExited,
+      mountOnEnter,
+      unmountOnExit,
+      transition: Transition = NoopTransition
+    }] = useTabPanel(props);
+    // We provide an empty the TabContext so `<Nav>`s in `<TabPanel>`s don't
+    // conflict with the top level one.
+    return /*#__PURE__*/jsxRuntimeExports.jsx(TabContext.Provider, {
+      value: null,
+      children: /*#__PURE__*/jsxRuntimeExports.jsx(SelectableContext.Provider, {
+        value: null,
+        children: /*#__PURE__*/jsxRuntimeExports.jsx(Transition, {
+          in: isActive,
+          onEnter: onEnter,
+          onEntering: onEntering,
+          onEntered: onEntered,
+          onExit: onExit,
+          onExiting: onExiting,
+          onExited: onExited,
+          mountOnEnter: mountOnEnter,
+          unmountOnExit: unmountOnExit,
+          children: /*#__PURE__*/jsxRuntimeExports.jsx(Component, Object.assign({}, tabPanelProps, {
+            ref: ref,
+            hidden: !isActive,
+            "aria-hidden": !isActive
+          }))
+        })
+      })
+    });
+  });
+  TabPanel.displayName = 'TabPanel';
+
+  const Tabs$1 = props => {
+    const {
+      id: userId,
+      generateChildId: generateCustomChildId,
+      onSelect: propsOnSelect,
+      activeKey: propsActiveKey,
+      defaultActiveKey,
+      transition,
+      mountOnEnter,
+      unmountOnExit,
+      children
+    } = props;
+    const [activeKey, onSelect] = useUncontrolledProp(propsActiveKey, defaultActiveKey, propsOnSelect);
+    const id = $704cf1d3b684cc5c$export$619500959fc48b26(userId);
+    const generateChildId = React$1.useMemo(() => generateCustomChildId || ((key, type) => id ? `${id}-${type}-${key}` : null), [id, generateCustomChildId]);
+    const tabContext = React$1.useMemo(() => ({
+      onSelect,
+      activeKey,
+      transition,
+      mountOnEnter: mountOnEnter || false,
+      unmountOnExit: unmountOnExit || false,
+      getControlledId: key => generateChildId(key, 'tabpane'),
+      getControllerId: key => generateChildId(key, 'tab')
+    }), [onSelect, activeKey, transition, mountOnEnter, unmountOnExit, generateChildId]);
+    return /*#__PURE__*/jsxRuntimeExports.jsx(TabContext.Provider, {
+      value: tabContext,
+      children: /*#__PURE__*/jsxRuntimeExports.jsx(SelectableContext.Provider, {
+        value: onSelect || null,
+        children: children
+      })
+    });
+  };
+  Tabs$1.Panel = TabPanel;
+
+  function getTabTransitionComponent(transition) {
+    if (typeof transition === 'boolean') {
+      return transition ? Fade : NoopTransition;
+    }
+    return transition;
+  }
+
+  const TabContainer = ({
+    transition,
+    ...props
+  }) => /*#__PURE__*/jsxRuntimeExports.jsx(Tabs$1, {
+    ...props,
+    transition: getTabTransitionComponent(transition)
+  });
+  TabContainer.displayName = 'TabContainer';
+
+  var TabContent = createWithBsPrefix('tab-content');
+
+  const TabPane = /*#__PURE__*/React__namespace.forwardRef(({
+    bsPrefix,
+    transition,
+    ...props
+  }, ref) => {
+    const [{
+      className,
+      // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+      as: Component = 'div',
+      ...rest
+    }, {
+      isActive,
+      onEnter,
+      onEntering,
+      onEntered,
+      onExit,
+      onExiting,
+      onExited,
+      mountOnEnter,
+      unmountOnExit,
+      transition: Transition = Fade
+    }] = useTabPanel({
+      ...props,
+      transition: getTabTransitionComponent(transition)
+    });
+    const prefix = useBootstrapPrefix(bsPrefix, 'tab-pane');
+
+    // We provide an empty the TabContext so `<Nav>`s in `<TabPanel>`s don't
+    // conflict with the top level one.
+    return /*#__PURE__*/jsxRuntimeExports.jsx(TabContext.Provider, {
+      value: null,
+      children: /*#__PURE__*/jsxRuntimeExports.jsx(SelectableContext.Provider, {
+        value: null,
+        children: /*#__PURE__*/jsxRuntimeExports.jsx(Transition, {
+          in: isActive,
+          onEnter: onEnter,
+          onEntering: onEntering,
+          onEntered: onEntered,
+          onExit: onExit,
+          onExiting: onExiting,
+          onExited: onExited,
+          mountOnEnter: mountOnEnter,
+          unmountOnExit: unmountOnExit,
+          children: /*#__PURE__*/jsxRuntimeExports.jsx(Component, {
+            ...rest,
+            ref: ref,
+            className: classNames(className, prefix, isActive && 'active')
+          })
+        })
+      })
+    });
+  });
+  TabPane.displayName = 'TabPane';
+
+  /* eslint-disable react/no-unused-prop-types */
+  const propTypes = {
+    eventKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+     * Content for the tab title.
+     */
+    title: PropTypes.node.isRequired,
+    /**
+     * The disabled state of the tab.
+     */
+    disabled: PropTypes.bool,
+    /**
+     * Class to pass to the underlying nav link.
+     */
+    tabClassName: PropTypes.string,
+    /**
+     * Object containing attributes to pass to underlying nav link.
+     */
+    tabAttrs: PropTypes.object
+  };
+  const Tab = () => {
+    throw new Error('ReactBootstrap: The `Tab` component is not meant to be rendered! ' + "It's an abstract component that is only valid as a direct Child of the `Tabs` Component. " + 'For custom tabs components use TabPane and TabsContainer directly');
+  };
+  Tab.propTypes = propTypes;
+  var Tab$1 = Object.assign(Tab, {
+    Container: TabContainer,
+    Content: TabContent,
+    Pane: TabPane
+  });
+
+  function getDefaultActiveKey(children) {
+    let defaultActiveKey;
+    forEach(children, child => {
+      if (defaultActiveKey == null) {
+        defaultActiveKey = child.props.eventKey;
+      }
+    });
+    return defaultActiveKey;
+  }
+  function renderTab(child) {
+    const {
+      title,
+      eventKey,
+      disabled,
+      tabClassName,
+      tabAttrs,
+      id
+    } = child.props;
+    if (title == null) {
+      return null;
+    }
+    return /*#__PURE__*/jsxRuntimeExports.jsx(NavItem, {
+      as: "li",
+      role: "presentation",
+      children: /*#__PURE__*/jsxRuntimeExports.jsx(NavLink, {
+        as: "button",
+        type: "button",
+        eventKey: eventKey,
+        disabled: disabled,
+        id: id,
+        className: tabClassName,
+        ...tabAttrs,
+        children: title
+      })
+    });
+  }
+  const Tabs = props => {
+    const {
+      id,
+      onSelect,
+      transition,
+      mountOnEnter = false,
+      unmountOnExit = false,
+      variant = 'tabs',
+      children,
+      activeKey = getDefaultActiveKey(children),
+      ...controlledProps
+    } = useUncontrolled(props, {
+      activeKey: 'onSelect'
+    });
+    return /*#__PURE__*/jsxRuntimeExports.jsxs(Tabs$1, {
+      id: id,
+      activeKey: activeKey,
+      onSelect: onSelect,
+      transition: getTabTransitionComponent(transition),
+      mountOnEnter: mountOnEnter,
+      unmountOnExit: unmountOnExit,
+      children: [/*#__PURE__*/jsxRuntimeExports.jsx(Nav$1, {
+        ...controlledProps,
+        role: "tablist",
+        as: "ul",
+        variant: variant,
+        children: map(children, renderTab)
+      }), /*#__PURE__*/jsxRuntimeExports.jsx(TabContent, {
+        children: map(children, child => {
+          const childProps = {
+            ...child.props
+          };
+          delete childProps.title;
+          delete childProps.disabled;
+          delete childProps.tabClassName;
+          delete childProps.tabAttrs;
+          return /*#__PURE__*/jsxRuntimeExports.jsx(TabPane, {
+            ...childProps
+          });
+        })
+      })]
+    });
+  };
+  Tabs.displayName = 'Tabs';
 
   var css_248z$g = ".lf-form-react-bootstrap .lf-control-tabs [role=tabpanel] {\n  padding-top: var(--lf-field-margin);\n}";
   styleInject(css_248z$g);
@@ -23732,7 +29958,7 @@
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-tabs",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(reactBootstrap.Tabs, _extends({
+    }, /*#__PURE__*/React$1.createElement(Tabs, _extends$1({
       activeKey: active,
       onSelect: handleKey,
       variant: variant || 'tabs',
@@ -23740,7 +29966,7 @@
       fill: fill,
       justify: justify
     }, passRest(rest)), (tabs || []).map(function (tab) {
-      return /*#__PURE__*/React$1.createElement(reactBootstrap.Tab, {
+      return /*#__PURE__*/React$1.createElement(Tab$1, {
         key: tab.value,
         eventKey: tab.value,
         title: tab.label
@@ -23767,21 +29993,21 @@
       rest = _objectWithoutProperties(_ref, _excluded$D);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(reactBootstrap.Button, rest, /*#__PURE__*/React$1.createElement("img", {
+      inner = /*#__PURE__*/React$1.createElement(Button, rest, /*#__PURE__*/React$1.createElement("img", {
         className: "lf-icon",
         src: icon
       }), label);
     } else if (!_isEmpty(label) && _isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(reactBootstrap.Button, rest, label);
+      inner = /*#__PURE__*/React$1.createElement(Button, rest, label);
     } else if (_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(reactBootstrap.Button, rest, /*#__PURE__*/React$1.createElement("img", {
+      inner = /*#__PURE__*/React$1.createElement(Button, rest, /*#__PURE__*/React$1.createElement("img", {
         className: "lf-icon",
         src: icon
       }));
     } else {
       inner = /*#__PURE__*/React$1.createElement(React$1.Fragment, null);
     }
-    return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, inner, hint && /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement(reactBootstrap.Form.Text, null, hint)));
+    return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, inner, hint && /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement(Form$1.Text, null, hint)));
   };
   var BiStateButton$2 = I18N(MakeButton(BootstrapButton, function (props) {
     return {
@@ -23823,16 +30049,16 @@
       labelCancel = _ref$labelCancel === void 0 ? 'Cancel' : _ref$labelCancel,
       custom = _ref.custom;
     return /*#__PURE__*/React$1.createElement(Form$1, {
-      className: classNames('lf-form lf-form-react-bootstrap', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
+      className: classNames$1('lf-form lf-form-react-bootstrap', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name,
       onSubmit: onSubmit
     }, /*#__PURE__*/React$1.createElement("div", null, children), !hideToolbar && !onlyFields && !plaintext && /*#__PURE__*/React$1.createElement("div", {
       className: "lf-buttons"
-    }, /*#__PURE__*/React$1.createElement(Button$3, {
+    }, /*#__PURE__*/React$1.createElement(Button, {
       variant: "primary",
       onClick: onSubmit,
       disabled: disabled || disabledSubmit
-    }, labelSubmit), /*#__PURE__*/React$1.createElement(Button$3, {
+    }, labelSubmit), /*#__PURE__*/React$1.createElement(Button, {
       variant: "secondary",
       onClick: onReset,
       disabled: disabled
@@ -23890,7 +30116,7 @@
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      className: classNames('lf-control-input-text', "lf-size-".concat(size)),
+      className: classNames$1('lf-control-input-text', "lf-size-".concat(size)),
       "data-lf-field-name": name,
       label: label,
       name: name,
@@ -23899,7 +30125,7 @@
       tooltip: tooltip && hint,
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
-    }, /*#__PURE__*/React$1.createElement(antd.Input, _extends({
+    }, /*#__PURE__*/React$1.createElement(antd.Input, _extends$1({
       placeholder: placeholder,
       readOnly: readOnly,
       autocomplete: autocomplete,
@@ -23970,7 +30196,7 @@
       tooltip: tooltip && hint,
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
-    }, /*#__PURE__*/React$1.createElement(antd.Switch, _extends({
+    }, /*#__PURE__*/React$1.createElement(antd.Switch, _extends$1({
       defaultChecked: value,
       readOnly: readOnly,
       onChange: handleChange,
@@ -24072,7 +30298,7 @@
       tooltip: tooltip && hint,
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
-    }, /*#__PURE__*/React$1.createElement(antd.DatePicker, _extends({
+    }, /*#__PURE__*/React$1.createElement(antd.DatePicker, _extends$1({
       key: "".concat(name, "-").concat(lfLocale !== null && lfLocale !== void 0 ? lfLocale : '') // add key or will not re-render if locale is changed
       ,
       defaultValue: defaultValue,
@@ -24102,7 +30328,7 @@
         onChange(d.toISOString().split('T')[0]);
       }
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(AntdGenericDate, _extends({
+    return /*#__PURE__*/React$1.createElement(AntdGenericDate, _extends$1({
       value: currentValue,
       component: "date",
       onChange: handleChange
@@ -24168,7 +30394,7 @@
       tooltip: tooltip && hint,
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
-    }, /*#__PURE__*/React$1.createElement(antd.Select, _extends({
+    }, /*#__PURE__*/React$1.createElement(antd.Select, _extends$1({
       placeholder: placeholder,
       readOnly: readOnly,
       disabled: disabled,
@@ -24243,7 +30469,7 @@
     }, [onChange]);
     var ctrl;
     if (inline) {
-      ctrl = /*#__PURE__*/React$1.createElement(antd.Radio.Group, _extends({
+      ctrl = /*#__PURE__*/React$1.createElement(antd.Radio.Group, _extends$1({
         onChange: handleChange,
         defaultValue: value,
         disabled: disabled,
@@ -24253,7 +30479,7 @@
         size: size
       }, _omit(rest, 'lfFramework', 'lfComponent')));
     } else {
-      ctrl = /*#__PURE__*/React$1.createElement(antd.Radio.Group, _extends({
+      ctrl = /*#__PURE__*/React$1.createElement(antd.Radio.Group, _extends$1({
         onChange: handleChange,
         defaultValue: value,
         disabled: disabled,
@@ -24431,7 +30657,7 @@
       tooltip: tooltip && hint,
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
-    }, /*#__PURE__*/React$1.createElement(antd.InputNumber, _extends({
+    }, /*#__PURE__*/React$1.createElement(antd.InputNumber, _extends$1({
       placeholder: placeholder,
       readOnly: readOnly,
       onChange: onChange,
@@ -24496,7 +30722,7 @@
       tooltip: tooltip && hint,
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
-    }, /*#__PURE__*/React$1.createElement(antd.Input.TextArea, _extends({
+    }, /*#__PURE__*/React$1.createElement(antd.Input.TextArea, _extends$1({
       placeholder: placeholder,
       readOnly: readOnly,
       onChange: handleChange,
@@ -24562,7 +30788,7 @@
       tooltip: tooltip && hint,
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
-    }, /*#__PURE__*/React$1.createElement(antd.Select, _extends({
+    }, /*#__PURE__*/React$1.createElement(antd.Select, _extends$1({
       placeholder: placeholder,
       readOnly: readOnly,
       onChange: onChange,
@@ -24676,7 +30902,7 @@
       tooltip: tooltip && hint,
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
-    }, /*#__PURE__*/React$1.createElement(antd.Slider, _extends({
+    }, /*#__PURE__*/React$1.createElement(antd.Slider, _extends$1({
       readOnly: readOnly,
       included: included,
       onChange: onChange,
@@ -24741,7 +30967,7 @@
         onChange(d.toISOString());
       }
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(AntdGenericDate, _extends({
+    return /*#__PURE__*/React$1.createElement(AntdGenericDate, _extends$1({
       value: currentValue,
       component: "datetime",
       onChange: handleChange
@@ -24778,7 +31004,7 @@
       tooltip: tooltip && hint,
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
-    }, /*#__PURE__*/React$1.createElement(ListArray, _extends({
+    }, /*#__PURE__*/React$1.createElement(ListArray, _extends$1({
       LetsFormComponent: LetsForm$1
     }, rest)));
   }, ['label', 'hint']);
@@ -24801,7 +31027,7 @@
       var rest = _objectWithoutProperties(_ref, _excluded$o);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(antd.Button, _extends({
+      inner = /*#__PURE__*/React$1.createElement(antd.Button, _extends$1({
         icon: /*#__PURE__*/React$1.createElement("img", {
           className: "lf-icon",
           src: icon
@@ -24810,7 +31036,7 @@
     } else if (!_isEmpty(label) && _isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(antd.Button, rest, label);
     } else if (_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(antd.Button, _extends({
+      inner = /*#__PURE__*/React$1.createElement(antd.Button, _extends$1({
         icon: /*#__PURE__*/React$1.createElement("img", {
           className: "lf-icon",
           src: icon
@@ -24858,7 +31084,7 @@
       options = _ref$options === void 0 ? [] : _ref$options,
       rest = _objectWithoutProperties(_ref, _excluded$n);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      className: classNames('lf-control-checkbox-group', className),
+      className: classNames$1('lf-control-checkbox-group', className),
       "data-lf-field-name": name,
       label: label,
       name: name,
@@ -24867,7 +31093,7 @@
       tooltip: tooltip && hint,
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
-    }, /*#__PURE__*/React$1.createElement(antd.Checkbox.Group, _extends({
+    }, /*#__PURE__*/React$1.createElement(antd.Checkbox.Group, _extends$1({
       options: options,
       disabled: disabled,
       defaultValue: value,
@@ -24913,7 +31139,7 @@
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-tabs",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(antd.Tabs, _extends({
+    }, /*#__PURE__*/React$1.createElement(antd.Tabs, _extends$1({
       animated: animated,
       centered: centered,
       size: size,
@@ -25045,7 +31271,7 @@
     }, passRest(rest));
     var inner;
     if (draggable) {
-      inner = /*#__PURE__*/React$1.createElement(Dragger, _extends({}, uploadProps, {
+      inner = /*#__PURE__*/React$1.createElement(Dragger, _extends$1({}, uploadProps, {
         onDrop: handleDrag
       }), /*#__PURE__*/React$1.createElement("div", {
         style: {
@@ -25113,7 +31339,7 @@
       tooltip: tooltip && hint,
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
-    }, /*#__PURE__*/React$1.createElement(ButtonsToggleGroup, _extends({
+    }, /*#__PURE__*/React$1.createElement(ButtonsToggleGroup, _extends$1({
       ButtonComponent: BiStateButton$1,
       name: name,
       multiple: multiple,
@@ -25208,7 +31434,7 @@
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-steps",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(antd.Steps, _extends({
+    }, /*#__PURE__*/React$1.createElement(antd.Steps, _extends$1({
       current: stepIdx,
       status: status,
       percent: percent,
@@ -25220,7 +31446,7 @@
     }, passRest(rest))), _isFunction(children) && /*#__PURE__*/React$1.createElement("div", {
       className: "lf-step"
     }, children(step)), /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-navigation-buttons', align)
+      className: classNames$1('lf-navigation-buttons', align)
     }, /*#__PURE__*/React$1.createElement(React$1.Fragment, null, /*#__PURE__*/React$1.createElement(antd.Button, {
       onClick: handlePrevious,
       disabled: _isEmpty(steps) || stepIdx === 0
@@ -25292,7 +31518,7 @@
       children = _ref.children,
       custom = _ref.custom;
     return /*#__PURE__*/React$1.createElement(antd.Form, {
-      className: classNames('lf-form lf-form-react-antd', _defineProperty$1({
+      className: classNames$1('lf-form lf-form-react-antd', _defineProperty$1({
         'lf-form-react-antd-plaintext': plaintext
       }, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name,
@@ -25345,7 +31571,7 @@
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.TextInput, _extends({
+    return /*#__PURE__*/React$1.createElement(core.TextInput, _extends$1({
       className: "lf-control-input-text",
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
@@ -25380,7 +31606,7 @@
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
-    return /*#__PURE__*/React$1.createElement(core.NumberInput, _extends({
+    return /*#__PURE__*/React$1.createElement(core.NumberInput, _extends$1({
       className: "lf-control-input-number",
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
@@ -25420,7 +31646,7 @@
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.Textarea, _extends({
+    return /*#__PURE__*/React$1.createElement(core.Textarea, _extends$1({
       className: "lf-control-textarea",
       "data-lf-field-name": name,
       name: name,
@@ -25453,7 +31679,7 @@
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
       rest = _objectWithoutProperties(_ref, _excluded$f);
-    return /*#__PURE__*/React$1.createElement(core.Select, _extends({
+    return /*#__PURE__*/React$1.createElement(core.Select, _extends$1({
       className: "lf-control-select",
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
@@ -25486,7 +31712,7 @@
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.Checkbox, _extends({
+    return /*#__PURE__*/React$1.createElement(core.Checkbox, _extends$1({
       className: "lf-control-checkbox",
       "data-lf-field-name": name,
       checked: value,
@@ -25516,7 +31742,7 @@
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.Switch, _extends({
+    return /*#__PURE__*/React$1.createElement(core.Switch, _extends$1({
       className: "lf-control-checkbox",
       "data-lf-field-name": name,
       checked: value,
@@ -25548,7 +31774,7 @@
       className: "lf-control-array"
     }, label && /*#__PURE__*/React$1.createElement(core.Input.Label, {
       required: required
-    }, label), /*#__PURE__*/React$1.createElement(ListArray, _extends({
+    }, label), /*#__PURE__*/React$1.createElement(ListArray, _extends$1({
       LetsFormComponent: LetsForm
     }, passRest(rest))), hint && /*#__PURE__*/React$1.createElement(core.Input.Description, null, hint), error && /*#__PURE__*/React$1.createElement(core.Input.Error, null, error));
   }, ['label', 'hint']);
@@ -25613,7 +31839,7 @@
         marginBottom: 'var(--lf-field-margin-top)'
       }
     }, (options !== null && options !== void 0 ? options : []).map(function (item) {
-      return /*#__PURE__*/React$1.createElement(core.Checkbox, _extends({
+      return /*#__PURE__*/React$1.createElement(core.Checkbox, _extends$1({
         key: item.value,
         value: item.value,
         label: item.label,
@@ -25693,7 +31919,7 @@
         marginBottom: 'var(--lf-field-margin-top)'
       }
     }, (options !== null && options !== void 0 ? options : []).map(function (item) {
-      return /*#__PURE__*/React$1.createElement(core.Radio, _extends({
+      return /*#__PURE__*/React$1.createElement(core.Radio, _extends$1({
         key: item.value,
         value: item.value,
         label: item.label,
@@ -25765,7 +31991,7 @@
       withTime = _ref$withTime === void 0 ? false : _ref$withTime,
       rest = _objectWithoutProperties(_ref, _excluded$9);
     var Component = withTime ? dates.DateTimePicker : dates.DatePickerInput;
-    return /*#__PURE__*/React$1.createElement(Component, _extends({
+    return /*#__PURE__*/React$1.createElement(Component, _extends$1({
       className: "lf-control-date",
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
@@ -25813,7 +32039,7 @@
         onChange(null);
       }
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(MantineGenericDate, _extends({
+    return /*#__PURE__*/React$1.createElement(MantineGenericDate, _extends$1({
       value: currentValue,
       onChange: handleChange,
       lfLocale: lfLocale
@@ -25861,7 +32087,7 @@
         onChange(null);
       }
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(MantineGenericDate, _extends({
+    return /*#__PURE__*/React$1.createElement(MantineGenericDate, _extends$1({
       value: currentValue,
       onChange: handleChange,
       lfLocale: lfLocale
@@ -25899,7 +32125,7 @@
       inputWrapperOrder: ['label', 'input', 'description', 'error'],
       label: label,
       required: required
-    }, /*#__PURE__*/React$1.createElement(core.Rating, _extends({
+    }, /*#__PURE__*/React$1.createElement(core.Rating, _extends$1({
       onChange: onChange
     }, passRest(rest))));
   }, ['label', 'hint', 'placeholder']);
@@ -25940,7 +32166,7 @@
   });
 
   var DividerMantine = function DividerMantine(_ref) {
-    var rest = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
+    var rest = _extends$1({}, (_objectDestructuringEmpty(_ref), _ref));
     return /*#__PURE__*/React$1.createElement(core.Divider, rest);
   };
   lfLog('Loaded Mantine.Divider');
@@ -25969,7 +32195,7 @@
       inputWrapperOrder: ['label', 'input', 'description', 'error'],
       label: label,
       required: required
-    }, /*#__PURE__*/React$1.createElement(core.Slider, _extends({
+    }, /*#__PURE__*/React$1.createElement(core.Slider, _extends$1({
       onChange: onChange
     }, passRest(rest))));
   }, ['label', 'hint', 'placeholder'], {
@@ -25998,7 +32224,7 @@
       width = _ref.width,
       data = _ref.data,
       rest = _objectWithoutProperties(_ref, _excluded$4);
-    return /*#__PURE__*/React$1.createElement(core.TagsInput, _extends({
+    return /*#__PURE__*/React$1.createElement(core.TagsInput, _extends$1({
       className: "lf-control-input-tag",
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
@@ -26048,9 +32274,9 @@
       onChange(active);
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-control-tabs', (_classNames = {}, _defineProperty$1(_classNames, "orientation-".concat(orientation), orientation != null), _defineProperty$1(_classNames, "placement-".concat(placement), placement != null), _classNames)),
+      className: classNames$1('lf-control-tabs', (_classNames = {}, _defineProperty$1(_classNames, "orientation-".concat(orientation), orientation != null), _defineProperty$1(_classNames, "placement-".concat(placement), placement != null), _classNames)),
       "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(core.Tabs, _extends({
+    }, /*#__PURE__*/React$1.createElement(core.Tabs, _extends$1({
       value: active,
       onChange: handleChange,
       orientation: orientation,
@@ -26095,7 +32321,7 @@
       rest = _objectWithoutProperties(_ref, _excluded$2);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(core.Button, _extends({
+      inner = /*#__PURE__*/React$1.createElement(core.Button, _extends$1({
         leftSection: /*#__PURE__*/React$1.createElement("img", {
           className: "lf-icon",
           src: icon
@@ -26104,7 +32330,7 @@
     } else if (!_isEmpty(label) && _isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(core.Button, rest, label);
     } else if (_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React$1.createElement(core.Button, _extends({
+      inner = /*#__PURE__*/React$1.createElement(core.Button, _extends$1({
         leftSection: /*#__PURE__*/React$1.createElement("img", {
           className: "lf-icon",
           src: icon
@@ -26145,7 +32371,7 @@
     var handleChange = React$1.useCallback(function (value) {
       return onChange(value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.FileInput, _extends({
+    return /*#__PURE__*/React$1.createElement(core.FileInput, _extends$1({
       className: "lf-control-upload",
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
@@ -26176,7 +32402,7 @@
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
       rest = _objectWithoutProperties(_ref, _excluded);
-    return /*#__PURE__*/React$1.createElement(core.MultiSelect, _extends({
+    return /*#__PURE__*/React$1.createElement(core.MultiSelect, _extends$1({
       value: value,
       name: name,
       data: filterOptions(options, filterValue, filterKey) || [],
@@ -26225,7 +32451,7 @@
       custom = _ref.custom;
     return /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement("form", {
       onSubmit: onSubmit,
-      className: classNames('lf-form lf-form-react-mantine', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
+      className: classNames$1('lf-form lf-form-react-mantine', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name
     }, children, !hideToolbar && !onlyFields && !plaintext && /*#__PURE__*/React$1.createElement(core.Group, {
       className: "lf-buttons",
