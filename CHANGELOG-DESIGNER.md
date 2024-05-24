@@ -1,5 +1,9 @@
 # LetsForm Designer Changelog
 
+## v0.8.10
+- news box
+- preparation for Form Playground
+
 ## v0.8.9
 - improved CI/CD tool chain
 
