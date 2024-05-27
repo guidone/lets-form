@@ -49,7 +49,7 @@ const ArrayItem = ({
 }) => {
   const handleRemove = useCallback(
     () => onRemove(item),
-    [item]
+    [item, onRemove]
   );
   let style;
   if ((align === 'top' || align === 'bottom') && _.isNumber(alignOffset) && alignOffset > 0) {

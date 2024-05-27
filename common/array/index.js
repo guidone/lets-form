@@ -16,8 +16,8 @@ const randomId = function(length = 12) {
 
 /**
  * Check if object is empty or all the keys are empty
- * @param {*} obj 
- * @returns 
+ * @param {*} obj
+ * @returns
  */
 const isEmptyObject = obj => {
   return _.isEmpty(obj) || Object.keys(obj).every(key => _.isEmpty(obj[key]));
@@ -26,14 +26,14 @@ const isEmptyObject = obj => {
 /**
  * flatArrayOfString
  * If an array of object can be flattned (one keuy), then return a flat array, otherwise raise expection
- * @param {*} a 
- * @returns 
+ * @param {*} a
+ * @returns
  */
  const flatArrayOfString = a => {
   const canBeFlat = a.every(obj => Object.keys(obj).length === 1);
   if (!canBeFlat) {
     throw new Error(`Cannot be flattened`);
-  }  
+  }
   return a.map(obj => obj[Object.keys(obj)[0]]);
 }
 
@@ -67,7 +67,7 @@ const makeDefaultValue = (defaultValue, arrayType, form) => {
         [names[0]]: s
       }));
     }
-    return [{ id: randomId() }]; 
+    return [{ id: randomId() }];
   } else if (arrayType === 'commaSeparated') {
     const names = collectNames(form);
     if (names.length === 1 && _.isString(defaultValue) && !_.isEmpty(defaultValue)) {
@@ -79,7 +79,7 @@ const makeDefaultValue = (defaultValue, arrayType, form) => {
     return [{ id: randomId() }];
   } else {
     return _.isArray(defaultValue) && !_.isEmpty(defaultValue) ? fillIds(defaultValue) : [{ id: randomId() }]
-  } 
+  }
 };
 
 
@@ -130,6 +130,15 @@ const ListArray = ({
     []
   );
 
+  const handleChange = useCallback(
+    value => {
+      const newItems = items.map(i => i.id === value.id ? value : i);
+      setItems(newItems);
+      onChange(formatArray(newItems, arrayType));
+    },
+    [items, onChange, arrayType]
+  );
+
   const handleRemove = useCallback(
     (item) => {
       const newItems = items.filter(i => i.id !== item.id);
@@ -172,11 +181,7 @@ const ListArray = ({
               readOnly={readOnly}
               defaultValues={item}
               onlyFields={true}
-              onChange={value => {
-                const newItems = items.map(i => i.id === value.id ? value : i);
-                setItems(newItems);
-                onChange(formatArray(newItems, arrayType));
-              }}
+              onChange={handleChange}
             />
           </ArrayItem>
         );
