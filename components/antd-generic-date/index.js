@@ -15,6 +15,7 @@ const AntdGenericDate = ({
   fullWidth,
   width,
   lfLocale,
+  className,
   ...rest
 }) => {
   // set locale for dates
@@ -26,6 +27,7 @@ const AntdGenericDate = ({
   return (
     <Form.Item
       label={label}
+      className={className}
       // not needed, breaks in case date is set
       //name={name}
       data-lf-field-name={name}
