@@ -1,5 +1,9 @@
 # LetsForm Changelog
 
+## v0.7.16
+- fix array components onRemove deleting all elements
+- fix AntD date spacing
+
 ## v0.7.15
 - RSuite treeshaking
 
