@@ -2109,10 +2109,14 @@
     "hint": null,
     "options": null,
     "value": null,
+    "image": null,
+    "showImageOptions": null,
     "multiple": null,
     "disabled": null,
     "readOnly": null,
     "hidden": null,
+    "fullWidth": null,
+    "justifyContent": null,
     "size": [
       "react-rsuite5",
       "react-antd"

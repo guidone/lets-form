@@ -6180,6 +6180,11 @@
         "type": "array"
       },
       {
+        "name": "showImageOptions",
+        "type": "boolean",
+        "description": "Show image field for Select options to be displayed in the drop-down"
+      },
+      {
         "name": "multiple",
         "type": "boolean",
         "description": "Allow to select multiple values"
@@ -6198,6 +6203,22 @@
         "name": "hidden",
         "type": "boolean",
         "description": "Hides the field from the form"
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the container field to 100%"
+      },
+      {
+        "name": "justifyContent",
+        "type": "string",
+        "options": [
+          "center",
+          "flex-start",
+          "flex-end",
+          "space-between",
+          "space-around"
+        ]
       }
     ],
     "react-rsuite5": [

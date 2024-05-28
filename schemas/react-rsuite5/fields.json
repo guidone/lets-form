@@ -2362,12 +2362,21 @@
                         "$ref": "#/$defs/i18n"
                       }
                     ]
+                  },
+                  "image": {
+                    "type": "string"
                   }
                 }
               }
             },
             "value": {
               "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "showImageOptions": {
+              "type": "boolean"
             },
             "multiple": {
               "type": "boolean"
@@ -2380,6 +2389,19 @@
             },
             "hidden": {
               "type": "boolean"
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "justifyContent": {
+              "type": "string",
+              "enum": [
+                "center",
+                "flex-start",
+                "flex-end",
+                "space-between",
+                "space-around"
+              ]
             },
             "size": {
               "type": "string",
