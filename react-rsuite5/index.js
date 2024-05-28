@@ -96,6 +96,9 @@ const Fields = {
   },
   'steps': {
     'react-rsuite5': lazy(() => import('./steps'))
+  },
+  'esm-module': {
+    'react-rsuite5': lazy(() => import('./module'))
   }
 };
 
