@@ -1,5 +1,10 @@
 # LetsForm Designer Changelog
 
+## v0.8.11
+- news box
+- preparation for Form Playground
+- fix infinite loop reading news
+
 ## v0.8.10
 - news box
 - preparation for Form Playground
