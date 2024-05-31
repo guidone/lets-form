@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.8.12
+- preparation for Form Playground
+
 ## v0.8.11
 - news box
 - preparation for Form Playground
