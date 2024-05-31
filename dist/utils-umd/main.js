@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.7.15 - UMD */
+/* LetsForm Utils v0.7.16 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -4438,6 +4438,10 @@
     return findField(fields, predicate) != null;
   };
 
+  var lfLog = function lfLog(s) {
+    return console.log('%cLF%c ' + s, 'background: #3498ff; color: #ffffff; padding: 2px; border-radius: 3px', '');
+  };
+
   var formHelper = function formHelper(_form2) {
     var _form = _form2 ? _objectSpread2({}, _form2) : {};
     var _fields = _form2 !== null && _form2 !== void 0 && _form2.fields ? _toConsumableArray(_form2.fields) : [];
@@ -4457,6 +4461,11 @@
     var obj = {
       filter: function filter(predicate) {
         _fields = filterFields(_fields, predicate);
+        return obj;
+      },
+      debug: function debug() {
+        var s = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+        lfLog("FormHelper: ".concat(s));
         return obj;
       },
       enable: makeHelper({
@@ -11173,6 +11182,11 @@
   			type: "array"
   		},
   		{
+  			name: "showImageOptions",
+  			type: "boolean",
+  			description: "Show image field for Select options to be displayed in the drop-down"
+  		},
+  		{
   			name: "multiple",
   			type: "boolean",
   			description: "Allow to select multiple values"
@@ -11191,6 +11205,22 @@
   			name: "hidden",
   			type: "boolean",
   			description: "Hides the field from the form"
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the container field to 100%"
+  		},
+  		{
+  			name: "justifyContent",
+  			type: "string",
+  			options: [
+  				"center",
+  				"flex-start",
+  				"flex-end",
+  				"space-between",
+  				"space-around"
+  			]
   		}
   	],
   	"react-rsuite5": [

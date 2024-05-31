@@ -2185,5 +2185,22 @@
     "validationPattern": "validation",
     "validationMessage": "validation",
     "required": null
+  },
+  "esm-module": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "componentUrl": null,
+    "defaultExport": null,
+    "exportedKey": null,
+    "count": null,
+    "placeholder": null,
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
   }
 }
