@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.7.17
+- fix RSuite select icon
+
 ## v0.7.16
 - fix array components onRemove deleting all elements
 - fix AntD date spacing
