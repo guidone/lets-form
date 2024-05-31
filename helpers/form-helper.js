@@ -2,6 +2,7 @@ import _ from 'lodash';
 
 import { mapFields } from './map-fields';
 import { filterFields } from './filter-fields';
+import { lfLog } from './lf-log';
 
 const formHelper = form => {
   let _form = form ? { ...form } : {};
@@ -27,6 +28,10 @@ const formHelper = form => {
   const obj = {
     filter: predicate => {
       _fields = filterFields(_fields, predicate);
+      return obj;
+    },
+    debug: (s = '') => {
+      lfLog(`FormHelper: ${s}`);
       return obj;
     },
     enable: makeHelper({ disabled: false }),
