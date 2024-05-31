@@ -12,6 +12,7 @@ const makeImportMap = ({ name, componentUrl }) => `{
 
 const makeInstallCode = ({
   eventsContainerId,
+  containerId,
   currentProps,
   defaultExport,
   name,

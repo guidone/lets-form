@@ -3,14 +3,13 @@ import React, { useEffect } from 'react';
 import { ModuleComponent } from '../../common/module';
 import { passRest } from '../../helpers';
 
-const DEF_1 = false;
-const DEF_2 = 'Input';
-
 const RSuite5ModuleComponent = ({
   name,
   componentUrl,
   onChange,
   value,
+  defaultExport,
+  exportedKey,
   ...rest
 }) => {
   return (
@@ -19,8 +18,8 @@ const RSuite5ModuleComponent = ({
       onChange={onChange}
       componentUrl={componentUrl}
       value={value}
-      defaultExport={DEF_1}
-      exportedKey={DEF_2}
+      defaultExport={defaultExport}
+      exportedKey={exportedKey}
       {...passRest(rest)}
     />
   );
