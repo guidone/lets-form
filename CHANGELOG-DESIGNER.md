@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.8.13
+- added feedback button
+
 ## v0.8.12
 - preparation for Form Playground
 
