@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.8.15
+- updated PostHog lib
+
 ## v0.8.14
 - added feedback button
 
