@@ -75,6 +75,9 @@ const Fields = {
   },
   'multiselect': {
     'react-mantine': lazy(() => import('./multiselect'))
+  },
+  'steps': {
+    'react-mantine': lazy(() => import('./steps'))
   }
 };
 
