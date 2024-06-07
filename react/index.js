@@ -51,6 +51,9 @@ const Fields = {
   },
   'button': {
     'react': lazy(() => import('./button'))
+  },
+  'upload': {
+    'react': lazy(() => import('./upload'))
   }
   // Removed, doesn't work
   /*'toggle': {

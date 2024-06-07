@@ -76,7 +76,7 @@ const MuiGenericSelect = ({
         fullWidth={fullWidth}
       >
         {label && !floatingLabel && (
-          <MuiLabel>{label}</MuiLabel>
+          <MuiLabel required={required}>{label}</MuiLabel>
         )}
         {label && floatingLabel && (
           <InputLabel id={`mui_select_${name}`}>{label}</InputLabel>

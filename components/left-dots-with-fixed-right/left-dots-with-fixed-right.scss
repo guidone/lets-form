@@ -1,0 +1,18 @@
+.lf-left-dots-with-fixed-right {
+  display: flex;
+  width: inherit;
+  overflow: hidden;
+
+  .lf-left-dots {
+    flex: 1 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .lf-right-fixed {
+    flex: 0 0;
+    white-space: nowrap;
+  }
+}

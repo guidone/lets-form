@@ -1,18 +1,15 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useCallback, useState } from 'react';
-import Button from '@mui/material/Button';
-import FormHelperText from '@mui/material/FormHelperText';
+import React, { useCallback, useState, useId } from 'react';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
-import { MuiLabel } from '../../components/mui-label';
 import { CrossCirle } from '../../assets/icons/cross-circle';
 import { formatBytes } from '../../helpers/format-bytes';
 import { lfLog } from '../../helpers/lf-log';
+import { RequiredIcon } from '../../components/required-icon';
 import { LetfDotsWithFixedRight } from '../../components/left-dots-with-fixed-right';
 
 import './upload.scss';
-
 import { FileItem } from './file-item';
 
 const Upload = I18N(
@@ -23,18 +20,16 @@ const Upload = I18N(
     accept,
     hint,
     error,
-    uploadButtonVariant,
-    uploadButtonSize,
-    uploadButtonIcon,
-    color,
     onChange,
     multiple,
-    required,
-    value
+    value,
+    required
   }) => {
+    const uploadButtonId = useId();
     const [currentFile, setCurrentFile] = useState(
       (multiple && _.isArray(value)) || (!multiple && _.isObject(value)) ? value : undefined
     );
+    const hasError = error && _.isString(error);
 
     const handleClear = useCallback(
       e => {
@@ -84,20 +79,19 @@ const Upload = I18N(
         data-lf-field-name={name}
       >
         {label && (
-          <MuiLabel id={`mui_input_text_${name}`} required={required}>{label}</MuiLabel>
+          <label for={name}>
+            {label}
+            {required && <RequiredIcon />}
+          </label>
         )}
         <div className="lf-upload-button-layout">
           <div className="lf-upload-button-left">
-            <Button
-              color={color ?? undefined}
-              component="label"
-              variant={uploadButtonVariant ?? undefined}
-              size={uploadButtonSize ?? undefined}
-              startIcon={uploadButtonIcon ? <img className="lf-icon" src={uploadButtonIcon} /> : undefined}
-            >
-              {uploadButtonLabel || 'Upload'}
-
+              <label
+                className="lf-form-react-primary-button"
+                for={uploadButtonId}
+              >{uploadButtonLabel || 'Upload'}</label>
               <input
+                id={uploadButtonId}
                 type="file"
                 accept={accept}
                 onChange={handleChange}
@@ -114,7 +108,6 @@ const Upload = I18N(
                   width: 1,
                 }}
               />
-            </Button>
           </div>
           <div className="lf-upload-button-right">
             {!multiple && currentFile && (
@@ -141,8 +134,8 @@ const Upload = I18N(
             )}
           </div>
         </div>
-        {hint && !error && <FormHelperText>{hint}</FormHelperText>}
-        {error && <FormHelperText>{error}</FormHelperText>}
+        {hint && !hasError && <div className="lf-form-react-message">{hint}</div>}
+        {hasError && <div className="lf-form-react-error-message">{error}</div>}
         {multiple && currentFile && (
           <div className="lf-upload-file-list">
             {currentFile.map(file => (
@@ -159,6 +152,6 @@ const Upload = I18N(
   },
   ['label', 'uploadButtonLabel', 'hint']
 );
-lfLog('Loaded MUI.Upload');
+lfLog('Loaded React.Upload');
 
 export default Upload;

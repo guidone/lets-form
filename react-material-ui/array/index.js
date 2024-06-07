@@ -30,7 +30,7 @@ const ListArrayMui = I18N(
           error={hasError}
           fullWidth={true}
         >
-          <MuiLabel>{label}</MuiLabel>
+          <MuiLabel required={required}>{label}</MuiLabel>
           <ListArray
             LetsFormComponent={LetsForm}
             {...rest}

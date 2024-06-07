@@ -55,7 +55,7 @@ const MuiGenericInput = ({
         fullWidth={fullWidth}
       >
         {label && !floatingLabel && (
-          <MuiLabel id={`mui_input_text_${name}`}>{label}</MuiLabel>
+          <MuiLabel id={`mui_input_text_${name}`} required={required}>{label}</MuiLabel>
         )}
         <TextField
           size={size}

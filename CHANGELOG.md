@@ -1,5 +1,10 @@
 # LetsForm Changelog
 
+## Next
+- added React Upload component
+- fixed css layout ofr MUI React Upload
+- fixed required icon for non-floating label in MUI
+
 ## v0.7.17
 - fix RSuite select icon
 
