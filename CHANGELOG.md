@@ -1,9 +1,11 @@
 # LetsForm Changelog
 
-## Next
+## v0.7.18
 - added React Upload component
 - fixed css layout ofr MUI React Upload
 - fixed required icon for non-floating label in MUI
+- tabs component for Mantine
+- fixed RSuite spacing
 
 ## v0.7.17
 - fix RSuite select icon

@@ -1,5 +1,10 @@
 .lf-form-react-rsuite5 {
 
+  // void Rsuite rule that put a margin on last element
+  &.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {
+    margin-bottom: unset;
+  }
+
   .lf-buttons {
     margin-top: 24px;
   }
