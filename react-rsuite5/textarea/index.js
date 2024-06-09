@@ -3,8 +3,10 @@ import { Form, Input } from 'rsuite';
 import _ from 'lodash';
 import classNames from 'classnames';
 
-import { RequiredIcon, I18N } from '../../components';
-import { makeWidthStyle, passRest } from '../../helpers';
+import { RequiredIcon } from '../../components/required-icon';
+import { I18N } from '../../components/i18n';
+import { makeWidthStyle } from '../../helpers/make-width-style';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 

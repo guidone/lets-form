@@ -2,8 +2,9 @@ import React, { useCallback } from 'react';
 import _ from 'lodash';
 import { Form, Slider } from 'rsuite';
 
-import { RequiredIcon, I18N } from '../../components';
-import { passRest } from '../../helpers';
+import { RequiredIcon } from '../../components/required-icon';
+import { I18N } from '../../components/i18n';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 

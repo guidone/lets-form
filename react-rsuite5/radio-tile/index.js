@@ -2,7 +2,8 @@
 import React, { useState, useCallback } from 'react';
 import { Form, RadioTile, RadioTileGroup } from 'rsuite';
 
-import { I18N, RequiredIcon } from '../../components';
+import { I18N } from '../../components/i18n';
+import { RequiredIcon } from '../../components/required-icon';
 import { lfLog } from '../../helpers/lf-log';
 
 const RadioTileRSuite = I18N(

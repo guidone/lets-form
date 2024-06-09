@@ -3,7 +3,8 @@ import _ from 'lodash';
 import { Uploader, Button, Form } from 'rsuite';
 
 import { lfLog } from '../../helpers/lf-log';
-import { RequiredIcon, I18N } from '../../components';
+import { RequiredIcon } from '../../components/required-icon';
+import { I18N } from '../../components/i18n';
 import { passRest } from '../../helpers';
 
 import './upload.scss';

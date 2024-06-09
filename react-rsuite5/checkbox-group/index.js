@@ -1,9 +1,11 @@
 import React from 'react';
 import { Form, Checkbox, CheckboxGroup } from 'rsuite';
 
-import { I18N } from '../../components';
-import { i18nOptions, passRest } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { i18nOptions } from '../../helpers/i18n-options';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 
 const CheckboxGroupRSuite = I18N(
   ({
@@ -28,25 +30,27 @@ const CheckboxGroupRSuite = I18N(
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
         </Form.ControlLabel>}
-        <CheckboxGroup
-          inline
-          name={name}
-          value={value}
-          onChange={onChange}
-          {...passRest(rest)}
-        >
-          {(options ?? []).map(({ value, label}) => (
-            <Checkbox
-              key={value}
-              value={value}
-              disabled={disabled}
-              readOnly={readOnly}
-              color={color}
-            >
-              {label}
-            </Checkbox>
-          ))}
-        </CheckboxGroup>
+        <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+          <CheckboxGroup
+            inline
+            name={name}
+            value={value}
+            onChange={onChange}
+            {...passRest(rest)}
+          >
+            {(options ?? []).map(({ value, label}) => (
+              <Checkbox
+                key={value}
+                value={value}
+                disabled={disabled}
+                readOnly={readOnly}
+                color={color}
+              >
+                {label}
+              </Checkbox>
+            ))}
+          </CheckboxGroup>
+        </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>
     );

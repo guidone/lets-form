@@ -3,9 +3,11 @@ import React from 'react';
 import { Form, MaskedInput, InputGroup } from 'rsuite';
 import _ from 'lodash';
 
-import { RequiredIcon, I18N } from '../../components';
+import { RequiredIcon } from '../../components/required-icon';
+import { I18N } from '../../components/i18n';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
-import { passRest, makeWidthStyle } from '../../helpers';
+import { passRest } from '../../helpers/pass-rest';
+import { makeWidthStyle } from '../../helpers/make-width-style';
 import { lfLog } from '../../helpers/lf-log';
 
 const prepareMask = str => {

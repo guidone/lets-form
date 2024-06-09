@@ -2,8 +2,11 @@ import React from 'react';
 import _ from 'lodash';
 import { Form, SelectPicker } from 'rsuite';
 
-import { passRest, filterOptions, i18nOptions } from '../../helpers';
-import { RequiredIcon, I18N } from '../../components';
+import { passRest } from '../../helpers/pass-rest';
+import { filterOptions } from '../../helpers/filter-options';
+import { i18nOptions } from '../../helpers/i18n-options';
+import { RequiredIcon } from '../../components/required-icon';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 
@@ -17,15 +20,6 @@ const menuItem = (value, item) => {
     </div>
   )
 };
-
-/*const manuValue = (value, item) => {
-  return (
-    <div className="lf-control-select-option-rsuite5">
-      {item.image && <img src={item.image} alt={item.label} />}
-      <span>{item.label}</span>
-    </div>
-  )
-};*/
 
 const Select = I18N(
   ({

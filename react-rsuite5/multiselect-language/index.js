@@ -3,9 +3,10 @@ import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
 import { Form, CheckPicker } from 'rsuite';
 
-import { RequiredIcon, I18N } from '../../components';
+import { RequiredIcon } from '../../components/required-icon';
+import { I18N } from '../../components/i18n';
 import { LOCALES } from '../../common/data/locales';
-import { passRest } from '../../helpers';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 

@@ -4,9 +4,10 @@ import { Form, InputNumber } from 'rsuite';
 import _ from 'lodash';
 import classNames from 'classnames';
 
-import { RequiredIcon, I18N } from '../../components';
-import { CrossCirle } from '../../assets/icons';
-import { makeWidthStyle } from '../../helpers';
+import { RequiredIcon } from '../../components/required-icon';
+import { I18N } from '../../components/i18n';
+import { CrossCirle } from '../../assets/icons/cross-circle';
+import { makeWidthStyle } from '../../helpers/make-width-style';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 

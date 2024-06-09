@@ -1,8 +1,9 @@
 import React from 'react';
 import { Form } from 'rsuite';
 
-import { RequiredIcon, I18N } from '../../components';
-import { ListArray } from '../../common';
+import { RequiredIcon } from '../../components/required-icon';
+import { I18N } from '../../components/i18n';
+import { ListArray } from '../../common/array';
 import LetsForm from '../../react-rsuite5';
 import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';

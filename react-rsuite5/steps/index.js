@@ -2,8 +2,8 @@ import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
 import { Steps, ButtonGroup, Button } from 'rsuite';
 
-import { passRest } from '../../helpers';
-import { I18N } from '../../components';
+import { passRest } from '../../helpers/pass-rest';
+import { I18N } from '../../components/i18n';
 import { GenericIcon } from '../../components/generic-icon';
 import { lfLog } from '../../helpers/lf-log';
 

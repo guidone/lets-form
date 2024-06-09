@@ -2,8 +2,10 @@ import React from 'react';
 import _ from 'lodash';
 import { Form } from 'rsuite';
 
-import { I18N, RequiredIcon } from '../../components';
-import { i18nOptions, passRest } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { RequiredIcon } from '../../components/required-icon';
+import { i18nOptions } from '../../helpers/i18n-options';
+import { passRest } from '../../helpers/pass-rest';
 import Button from '../button';
 import { ButtonsToggleGroup } from '../../common/buttons-toggle-group';
 import { lfLog } from '../../helpers/lf-log';

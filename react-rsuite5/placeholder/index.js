@@ -1,8 +1,9 @@
 import React from 'react';
 import { Form } from 'rsuite';
 
-import { RequiredIcon, I18N } from '../../components';
-import { Placeholder } from '../../common';
+import { RequiredIcon } from '../../components/required-icon';
+import { I18N } from '../../components/i18n';
+import { Placeholder } from '../../common/placeholder';
 import { lfLog } from '../../helpers/lf-log';
 
 const PlaceholderRSuite5 = I18N(

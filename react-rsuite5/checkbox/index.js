@@ -2,9 +2,9 @@ import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
 import { Form, Checkbox } from 'rsuite';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
-import { passRest } from '../../helpers';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
 
 import './index.scss';
