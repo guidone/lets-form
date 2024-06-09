@@ -1,4 +1,4 @@
-/* LetsForm react v0.7.16 - UMD */
+/* LetsForm react v0.7.17 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-hook-form'], factory) :
@@ -4586,8 +4586,8 @@
     }
   }
 
-  var css_248z$f = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
-  styleInject(css_248z$f);
+  var css_248z$h = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
+  styleInject(css_248z$h);
 
   var tx = function tx(str, locale) {
     if (_isString(str)) {
@@ -4741,6 +4741,30 @@
     }, /*#__PURE__*/React.createElement("path", {
       d: "M960 0c530.193 0 960 429.807 960 960s-429.807 960-960 960S0 1490.193 0 960 429.807 0 960 0Zm-9.838 1342.685c-84.47 0-153.19 68.721-153.19 153.19 0 84.47 68.72 153.192 153.19 153.192s153.19-68.721 153.19-153.191-68.72-153.19-153.19-153.19ZM1153.658 320H746.667l99.118 898.623h208.755L1153.658 320Z",
       fillRule: "evenodd"
+    }));
+  };
+
+  var CrossCirle = function CrossCirle(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color,
+      _ref$yOffset = _ref.yOffset,
+      yOffset = _ref$yOffset === void 0 ? 0 : _ref$yOffset;
+    return /*#__PURE__*/React.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 ".concat(yOffset, " 24 24"),
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React.createElement("path", {
+      d: "M16 8L8 16M8.00001 8L16 16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z",
+      stroke: color,
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
     }));
   };
 
@@ -8138,7 +8162,24 @@
   	validationMessage: "validation",
   	required: null
   },
-  	steps: steps$1
+  	steps: steps$1,
+  	"esm-module": {
+  	name: null,
+  	label: null,
+  	hint: null,
+  	componentUrl: null,
+  	defaultExport: null,
+  	exportedKey: null,
+  	count: null,
+  	placeholder: null,
+  	validationMinLength: "validation",
+  	validationMin: "validation",
+  	validationMaxLength: "validation",
+  	validationMax: "validation",
+  	validationPattern: "validation",
+  	validationMessage: "validation",
+  	required: null
+  }
   };
 
   var translateValidationKey = function translateValidationKey(str) {
@@ -14998,7 +15039,52 @@
   		"react-antd"
   	]
   },
-  	steps: steps
+  	steps: steps,
+  	"esm-module": {
+  	label: "Module",
+  	category: "general",
+  	name: "esm-module",
+  	description: "Generic ESM module",
+  	common: [
+  		{
+  			name: "name",
+  			type: "string",
+  			description: "The name of the field and the key of the JSON"
+  		},
+  		{
+  			name: "label",
+  			type: "string | i18n",
+  			description: "Label of the field"
+  		},
+  		{
+  			name: "hint",
+  			type: "string | i18n",
+  			description: "Help text for the field (generally shown below the input box)"
+  		},
+  		{
+  			name: "componentUrl",
+  			type: "string"
+  		},
+  		{
+  			name: "defaultExport",
+  			type: "boolean"
+  		},
+  		{
+  			name: "exportedKey",
+  			type: "string",
+  			description: "The exported key from the ESM module"
+  		},
+  		{
+  			name: "count",
+  			type: "number"
+  		},
+  		{
+  			name: "placeholder",
+  			type: "string",
+  			description: "Placeholder text, visibile when the field is empty"
+  		}
+  	]
+  }
   };
 
   var LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns'];
@@ -15102,8 +15188,8 @@
     }, [css, id]);
   };
 
-  var css_248z$e = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
-  styleInject(css_248z$e);
+  var css_248z$g = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
+  styleInject(css_248z$g);
 
   var baseGetTag = _baseGetTag,
     isObjectLike = isObjectLike_1;
@@ -15726,8 +15812,8 @@
     };
   }();
 
-  var css_248z$d = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
-  styleInject(css_248z$d);
+  var css_248z$f = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
+  styleInject(css_248z$f);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
@@ -15745,8 +15831,8 @@
     }
   };
 
-  var css_248z$c = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
-  styleInject(css_248z$c);
+  var css_248z$e = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
+  styleInject(css_248z$e);
 
   var ThreeColumns = function ThreeColumns(_ref) {
     var name = _ref.name,
@@ -15776,8 +15862,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$b = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
-  styleInject(css_248z$b);
+  var css_248z$d = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
+  styleInject(css_248z$d);
 
   var TwoColumns = function TwoColumns(_ref) {
     var name = _ref.name,
@@ -15801,8 +15887,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$a = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
-  styleInject(css_248z$a);
+  var css_248z$c = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject(css_248z$c);
 
   var Group = I18N(function (_ref) {
     var name = _ref.name,
@@ -15855,8 +15941,8 @@
     }, children));
   }, ['label']);
 
-  var css_248z$9 = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
-  styleInject(css_248z$9);
+  var css_248z$b = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
+  styleInject(css_248z$b);
 
   var PlaceholderImage = function PlaceholderImage(_ref) {
     var url = _ref.url,
@@ -15886,8 +15972,8 @@
     }));
   };
 
-  var css_248z$8 = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
-  styleInject(css_248z$8);
+  var css_248z$a = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
+  styleInject(css_248z$a);
 
   var Divider = function Divider(_ref) {
     var name = _ref.name,
@@ -16186,8 +16272,8 @@
     })));
   };
 
-  var css_248z$7 = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
-  styleInject(css_248z$7);
+  var css_248z$9 = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
+  styleInject(css_248z$9);
 
   var randomId = function randomId() {
     var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
@@ -16380,8 +16466,8 @@
     }));
   };
 
-  var css_248z$6 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
-  styleInject(css_248z$6);
+  var css_248z$8 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
+  styleInject(css_248z$8);
 
   var _excluded$c = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
@@ -16459,11 +16545,11 @@
     };
   };
 
-  var css_248z$5 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
-  styleInject(css_248z$5);
+  var css_248z$7 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
+  styleInject(css_248z$7);
 
-  var css_248z$4 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
-  styleInject(css_248z$4);
+  var css_248z$6 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
+  styleInject(css_248z$6);
 
   var PlaintextLabel = function PlaintextLabel(_ref) {
     var children = _ref.children;
@@ -17966,80 +18052,85 @@
   var Fields = {
     'input-text': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$h; });
       })
     },
     'input-number': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return index$g; });
       })
     },
     'checkbox': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
+        return Promise.resolve().then(function () { return index$f; });
       })
     },
     'textarea': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
+        return Promise.resolve().then(function () { return index$e; });
       })
     },
     'three-columns': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
+        return Promise.resolve().then(function () { return index$d; });
       })
     },
     'two-columns': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
+        return Promise.resolve().then(function () { return index$c; });
       })
     },
     'group': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
+        return Promise.resolve().then(function () { return index$b; });
       })
     },
     'divider': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
+        return Promise.resolve().then(function () { return index$a; });
       })
     },
     'react-view': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
+        return Promise.resolve().then(function () { return index$9; });
       })
     },
     'placeholder': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return index$8; });
       })
     },
     'select': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return index$7; });
       })
     },
     'date': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return index$6; });
       })
     },
     'datetime': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return index$5; });
       })
     },
     'array': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return index$4; });
       })
     },
     'placeholder-image': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return index$3; });
       })
     },
     'button': {
+      'react': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'upload': {
       'react': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
       })
@@ -18125,8 +18216,8 @@
     }, error));
   };
 
-  var css_248z$3 = ".lf-form-react .lf-control-input-text input[type=color] {\n  min-width: 60px;\n}";
-  styleInject(css_248z$3);
+  var css_248z$5 = ".lf-form-react .lf-control-input-text input[type=color] {\n  min-width: 60px;\n}";
+  styleInject(css_248z$5);
 
   var _excluded$9 = ["onChange"];
   var TextInput = I18N(function (_ref) {
@@ -18143,7 +18234,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.InputText');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
@@ -18187,7 +18278,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.InputNumber');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumber
   });
@@ -18247,7 +18338,7 @@
   }, ['hint', 'label']);
   lfLog('Loaded React.Checkbox');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Checkbox
   });
@@ -18297,42 +18388,42 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.Textarea');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea
   });
 
   lfLog('Loaded React.ThreeColumns');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded React.TwoColumns');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded React.Group');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
   lfLog('Loaded React.Divider');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index$a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
   lfLog('Loaded React.ReactView');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
@@ -18355,7 +18446,7 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded React.Placeholder');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var index$8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderReact
   });
@@ -18422,7 +18513,7 @@
   });
   lfLog('Loaded React.Select');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var index$7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select
   });
@@ -18450,7 +18541,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.Date');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var index$6 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateInput
   });
@@ -18481,13 +18572,13 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.DateTime');
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var index$5 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateTime
   });
 
-  var css_248z$2 = ".lf-form-react .lf-control-common-array-item {\n  padding-bottom: 5px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-two-columns:last-child {\n  margin-bottom: 0px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-three-columns:last-child {\n  margin-bottom: 0px;\n}";
-  styleInject(css_248z$2);
+  var css_248z$4 = ".lf-form-react .lf-control-common-array-item {\n  padding-bottom: 5px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-two-columns:last-child {\n  margin-bottom: 0px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-three-columns:last-child {\n  margin-bottom: 0px;\n}";
+  styleInject(css_248z$4);
 
   var _excluded$1 = ["hint", "required", "tooltip", "name", "label", "error"];
   var ListArrayReact = I18N(function (_ref) {
@@ -18514,20 +18605,20 @@
   }, ['label', 'hint']);
   lfLog('Loaded React.Array');
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$4 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayReact
   });
 
   lfLog('Loaded React.PlaceholderImage');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$3 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
-  var css_248z$1 = ".lf-form-react .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n  margin-top: -2px;\n  margin-right: 5px;\n}\n.lf-form-react .lf-control-button .btn-lg .lf-icon {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-form-react .lf-control-button .btn-sm .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}";
-  styleInject(css_248z$1);
+  var css_248z$3 = ".lf-form-react .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n  margin-top: -2px;\n  margin-right: 5px;\n}\n.lf-form-react .lf-control-button .btn-lg .lf-icon {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-form-react .lf-control-button .btn-sm .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}";
+  styleInject(css_248z$3);
 
   var _excluded = ["label", "icon", "hint"];
   var ReactButton = function ReactButton(_ref) {
@@ -18574,9 +18665,219 @@
   lfLog('Loaded React.Button');
   var Button = BiStateButton;
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var index$2 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Button
+  });
+
+  function formatBytes(bytes) {
+    var decimals = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+    if (!+bytes) return '0 Bytes';
+    var k = 1024;
+    var dm = decimals < 0 ? 0 : decimals;
+    var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+    var i = Math.floor(Math.log(bytes) / Math.log(k));
+    return "".concat(parseFloat((bytes / Math.pow(k, i)).toFixed(dm)), " ").concat(sizes[i]);
+  }
+
+  var css_248z$2 = ".lf-left-dots-with-fixed-right {\n  display: flex;\n  width: inherit;\n  overflow: hidden;\n}\n.lf-left-dots-with-fixed-right .lf-left-dots {\n  flex: 1 0;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  max-width: 100%;\n}\n.lf-left-dots-with-fixed-right .lf-right-fixed {\n  flex: 0 0;\n  white-space: nowrap;\n}";
+  styleInject(css_248z$2);
+
+  /**
+   * LetfDotsWithFixedRight
+   * Layout component to have a fixed view on the right and a expandable view on the left
+   * which takes all remaining space and show ellipsis if the text overflows
+   * @param {*} param0
+   * @returns
+   */
+  var LetfDotsWithFixedRight = function LetfDotsWithFixedRight(_ref) {
+    var left = _ref.left,
+      right = _ref.right;
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-left-dots-with-fixed-right"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lf-left-dots"
+    }, left), /*#__PURE__*/React.createElement("div", {
+      className: "lf-right-fixed"
+    }, right));
+  };
+
+  var css_248z$1 = ".lf-control-upload .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-control-upload .MuiButton-sizeLarge .lf-icon {\n  max-width: 22px;\n  max-height: 22px;\n}\n.lf-control-upload .MuiButton-sizeSmall .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-control-upload .lf-upload-button-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .lf-upload-button-layout .lf-upload-button-left {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .lf-upload-button-layout .lf-upload-button-right {\n  order: 0;\n  flex: 1 0;\n  overflow: hidden;\n  align-self: auto;\n  margin-left: var(--lf-field-margin);\n}\n.lf-control-upload .lf-upload-file-list {\n  margin-top: 10px;\n  font-family: \"Roboto\", \"Helvetica\", \"Arial\", sans-serif;\n}\n.lf-control-upload .lf-upload-file-list .lf-upload-file-item {\n  padding: 4px 0px;\n}\n.lf-control-upload .lf-upload-file-list .lf-upload-file-item:hover {\n  background-color: #eeeeee;\n}\n.lf-control-upload .lf-upload-file-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .lf-upload-file-item .lf-attachment-icon {\n  flex: 0 0;\n  align-self: auto;\n  margin-right: 5px;\n}\n.lf-control-upload .lf-upload-file-item .lf-clear-button {\n  flex: 0 0;\n  align-self: auto;\n  margin-left: 5px;\n  margin-right: 5px;\n  font-size: 1px;\n}\n.lf-control-upload .lf-upload-file-item .lf-name {\n  flex: 1 0;\n  align-self: auto;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.lf-control-upload .lf-upload-file-item .lf-size {\n  flex: 0 0 auto;\n  align-self: auto;\n  margin-left: 5px;\n  color: #888888;\n}\n.lf-control-upload .lf-size {\n  color: #888888;\n}";
+  styleInject(css_248z$1);
+
+  var IconAttachment = function IconAttachment(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color;
+    return /*#__PURE__*/React.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "-8 0 32 32",
+      version: "1.1",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React.createElement("g", {
+      id: "Page-1",
+      stroke: "none",
+      "stroke-width": "1",
+      fill: "none",
+      fillRule: "evenodd"
+    }, /*#__PURE__*/React.createElement("g", {
+      id: "Icon-Set",
+      transform: "translate(-212.000000, -151.000000)",
+      fill: color
+    }, /*#__PURE__*/React.createElement("path", {
+      d: "M226,155 L226,175 C226,178.313 223.313,181 220,181 C216.687,181 214,178.313 214,175 L214,157 C214,154.791 215.791,153 218,153 C220.209,153 222,154.791 222,157 L222,175 C222,176.104 221.104,177 220,177 C218.896,177 218,176.104 218,175 L218,159 L216,159 L216,175 C216,177.209 217.791,179 220,179 C222.209,179 224,177.209 224,175 L224,157 C224,153.687 221.313,151 218,151 C214.687,151 212,153.687 212,157 L212,176 C212.493,179.945 215.921,183 220,183 C224.079,183 227.507,179.945 228,176 L228,155 L226,155",
+      id: "attachment"
+    }))));
+  };
+
+  var FileItem = function FileItem(_ref) {
+    var file = _ref.file,
+      _ref$onRemove = _ref.onRemove,
+      onRemove = _ref$onRemove === void 0 ? function () {} : _ref$onRemove;
+    var handleClick = React.useCallback(function (e) {
+      e.preventDefault();
+      onRemove(file);
+    }, [onRemove, file]);
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-upload-file-item"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lf-attachment-icon"
+    }, /*#__PURE__*/React.createElement(IconAttachment, {
+      width: 16,
+      height: 16,
+      color: "#666666"
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "lf-name"
+    }, file.name), /*#__PURE__*/React.createElement("div", {
+      className: "lf-size"
+    }, formatBytes(file.size)), /*#__PURE__*/React.createElement("a", {
+      className: "lf-clear-button",
+      href: "#",
+      onClick: handleClick
+    }, /*#__PURE__*/React.createElement(CrossCirle, {
+      color: "#666666",
+      width: 16,
+      height: 16
+    })));
+  };
+
+  var Upload = I18N(function (_ref) {
+    var label = _ref.label,
+      uploadButtonLabel = _ref.uploadButtonLabel,
+      name = _ref.name,
+      accept = _ref.accept,
+      hint = _ref.hint,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      multiple = _ref.multiple,
+      value = _ref.value,
+      required = _ref.required;
+    var uploadButtonId = React.useId();
+    var _useState = React.useState(multiple && _isArray(value) || !multiple && _isObject(value) ? value : undefined),
+      _useState2 = _slicedToArray(_useState, 2),
+      currentFile = _useState2[0],
+      setCurrentFile = _useState2[1];
+    var hasError = error && _isString(error);
+    var handleClear = React.useCallback(function (e) {
+      e.preventDefault();
+      setCurrentFile(null);
+      onChange(null);
+    }, [onChange]);
+    var handleRemove = React.useCallback(function (fileToRemove) {
+      var newCurrentFile = currentFile.filter(function (file) {
+        return file !== fileToRemove;
+      });
+      setCurrentFile(newCurrentFile);
+      onChange(newCurrentFile);
+    }, [currentFile, onChange]);
+    var handleChange = React.useCallback(function (e) {
+      if (e.target.files && e.target.files.length > 0) {
+        if (multiple) {
+          var newCurrentFile = currentFile ? _toConsumableArray(currentFile) : [];
+          var idx;
+          for (idx = 0; idx < e.target.files.length; idx++) {
+            newCurrentFile.push(e.target.files[idx]);
+          }
+          setCurrentFile(newCurrentFile);
+          onChange(newCurrentFile);
+        } else {
+          setCurrentFile(e.target.files[0]);
+          onChange(e.target.files[0]);
+        }
+      } else {
+        onChange(null);
+      }
+    }, [onChange, multiple, currentFile]);
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-control-upload",
+      "data-lf-field-name": name
+    }, label && /*#__PURE__*/React.createElement("label", {
+      for: name
+    }, label, required && /*#__PURE__*/React.createElement(RequiredIcon, null)), /*#__PURE__*/React.createElement("div", {
+      className: "lf-upload-button-layout"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lf-upload-button-left"
+    }, /*#__PURE__*/React.createElement("label", {
+      className: "lf-form-react-primary-button",
+      for: uploadButtonId
+    }, uploadButtonLabel || 'Upload'), /*#__PURE__*/React.createElement("input", {
+      id: uploadButtonId,
+      type: "file",
+      accept: accept,
+      onChange: handleChange,
+      multiple: multiple,
+      style: {
+        clip: 'rect(0 0 0 0)',
+        clipPath: 'inset(50%)',
+        height: 1,
+        overflow: 'hidden',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        whiteSpace: 'nowrap',
+        width: 1
+      }
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "lf-upload-button-right"
+    }, !multiple && currentFile && /*#__PURE__*/React.createElement(LetfDotsWithFixedRight, {
+      left: /*#__PURE__*/React.createElement("span", {
+        className: "lf-upload-file-name"
+      }, currentFile.name),
+      right: /*#__PURE__*/React.createElement(React.Fragment, null, "\xA0", /*#__PURE__*/React.createElement("span", {
+        className: "lf-size"
+      }, formatBytes(currentFile.size)), "\xA0", /*#__PURE__*/React.createElement("a", {
+        href: "#",
+        onClick: handleClear
+      }, /*#__PURE__*/React.createElement(CrossCirle, {
+        color: "#666666",
+        yOffset: 2,
+        width: 16,
+        height: 16
+      })))
+    }))), hint && !hasError && /*#__PURE__*/React.createElement("div", {
+      className: "lf-form-react-message"
+    }, hint), hasError && /*#__PURE__*/React.createElement("div", {
+      className: "lf-form-react-error-message"
+    }, error), multiple && currentFile && /*#__PURE__*/React.createElement("div", {
+      className: "lf-upload-file-list"
+    }, currentFile.map(function (file) {
+      return /*#__PURE__*/React.createElement(FileItem, {
+        file: file,
+        key: file.name,
+        onRemove: handleRemove
+      });
+    })));
+  }, ['label', 'uploadButtonLabel', 'hint']);
+  lfLog('Loaded React.Upload');
+  var Upload$1 = Upload;
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Upload$1
   });
 
   var css_248z = ".lf-form-react input[type=text],\n.lf-form-react input[type=password],\n.lf-form-react input[type=email],\n.lf-form-react input[type=url],\n.lf-form-react input[type=date],\n.lf-form-react input[type=month],\n.lf-form-react input[type=time],\n.lf-form-react input[type=datetime],\n.lf-form-react input[type=datetime-local],\n.lf-form-react input[type=week],\n.lf-form-react input[type=number],\n.lf-form-react input[type=search],\n.lf-form-react input[type=tel],\n.lf-form-react input[type=color],\n.lf-form-react select,\n.lf-form-react textarea {\n  padding: 0.5em 0.6em;\n  display: inline-block;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  vertical-align: middle;\n  box-sizing: border-box;\n  height: 36px;\n}\n\n/*\nNeed to separate out the :not() selector from the rest of the CSS 2.1 selectors\nsince IE8 won't execute CSS that contains a CSS3 selector.\n*/\n.lf-form-react input:not([type]) {\n  padding: 0.5em 0.6em;\n  display: inline-block;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  box-sizing: border-box;\n}\n\n/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */\n/* May be able to remove this tweak as color inputs become more standardized across browsers. */\n.lf-form-react input[type=color] {\n  padding: 0.2em 0.5em;\n}\n\n.lf-form-react input[type=text]:focus,\n.lf-form-react input[type=password]:focus,\n.lf-form-react input[type=email]:focus,\n.lf-form-react input[type=url]:focus,\n.lf-form-react input[type=date]:focus,\n.lf-form-react input[type=month]:focus,\n.lf-form-react input[type=time]:focus,\n.lf-form-react input[type=datetime]:focus,\n.lf-form-react input[type=datetime-local]:focus,\n.lf-form-react input[type=week]:focus,\n.lf-form-react input[type=number]:focus,\n.lf-form-react input[type=search]:focus,\n.lf-form-react input[type=tel]:focus,\n.lf-form-react input[type=color]:focus,\n.lf-form-react select:focus,\n.lf-form-react textarea:focus {\n  outline: 0;\n  border-color: #129FEA;\n}\n\n/*\nNeed to separate out the :not() selector from the rest of the CSS 2.1 selectors\nsince IE8 won't execute CSS that contains a CSS3 selector.\n*/\n.lf-form-react input:not([type]):focus {\n  outline: 0;\n  border-color: #129FEA;\n}\n\n.lf-form-react input[type=file]:focus,\n.lf-form-react input[type=radio]:focus,\n.lf-form-react input[type=checkbox]:focus {\n  outline: thin solid #129FEA;\n  outline: 1px auto #129FEA;\n}\n\n.lf-form-react .lf-form-react-checkbox,\n.lf-form-react .lf-form-react-radio {\n  display: block;\n}\n\n.lf-form-react input[type=text][disabled],\n.lf-form-react input[type=password][disabled],\n.lf-form-react input[type=email][disabled],\n.lf-form-react input[type=url][disabled],\n.lf-form-react input[type=date][disabled],\n.lf-form-react input[type=month][disabled],\n.lf-form-react input[type=time][disabled],\n.lf-form-react input[type=datetime][disabled],\n.lf-form-react input[type=datetime-local][disabled],\n.lf-form-react input[type=week][disabled],\n.lf-form-react input[type=number][disabled],\n.lf-form-react input[type=search][disabled],\n.lf-form-react input[type=tel][disabled],\n.lf-form-react input[type=color][disabled],\n.lf-form-react select[disabled],\n.lf-form-react textarea[disabled] {\n  cursor: not-allowed;\n  background-color: #eaeded;\n  color: #cad2d3;\n}\n\n.lf-form-react input[readonly],\n.lf-form-react select[readonly],\n.lf-form-react textarea[readonly] {\n  background-color: #eee; /* menu hover bg color */\n  color: #777; /* menu text color */\n  border-color: #ccc;\n}\n\n.lf-form-react input:focus:invalid,\n.lf-form-react textarea:focus:invalid,\n.lf-form-react select:focus:invalid {\n  color: #b94a48;\n  border-color: #e9322d;\n}\n\n.lf-form-react input[type=file]:focus:invalid:focus,\n.lf-form-react input[type=radio]:focus:invalid:focus,\n.lf-form-react input[type=checkbox]:focus:invalid:focus {\n  outline-color: #e9322d;\n}\n\n.lf-form-react select {\n  /* Normalizes the height; padding is not sufficient. */\n  height: 2.25em;\n  border: 1px solid #ccc;\n  background-color: white;\n}\n\n.lf-form-react select[multiple] {\n  height: auto;\n}\n\n.lf-form-react label {\n  margin: 3px 0px;\n}\n\n.lf-form-react fieldset {\n  margin: 0;\n  padding: 0.35em 0 0.75em;\n  border: 0;\n}\n\n.lf-form-react legend {\n  display: block;\n  width: 100%;\n  padding: 0.3em 0;\n  color: #333;\n  border-bottom: 1px solid #e5e5e5;\n}\n\n.lf-form-react-stacked input[type=text],\n.lf-form-react-stacked input[type=password],\n.lf-form-react-stacked input[type=email],\n.lf-form-react-stacked input[type=url],\n.lf-form-react-stacked input[type=date],\n.lf-form-react-stacked input[type=month],\n.lf-form-react-stacked input[type=time],\n.lf-form-react-stacked input[type=datetime],\n.lf-form-react-stacked input[type=datetime-local],\n.lf-form-react-stacked input[type=week],\n.lf-form-react-stacked input[type=number],\n.lf-form-react-stacked input[type=search],\n.lf-form-react-stacked input[type=tel],\n.lf-form-react-stacked input[type=color],\n.lf-form-react-stacked input[type=file],\n.lf-form-react-stacked select,\n.lf-form-react-stacked label,\n.lf-form-react-stacked textarea {\n  display: block;\n}\n\n.pure-form-aligned input,\n.pure-form-aligned textarea,\n.pure-form-aligned select,\n.pure-form-message-inline {\n  display: inline-block;\n  vertical-align: middle;\n}\n\n.pure-form-aligned textarea {\n  vertical-align: top;\n}\n\n/* Aligned Forms */\n.pure-form-aligned .pure-control-group {\n  margin-bottom: 0.5em;\n}\n\n.pure-form-aligned .pure-control-group label {\n  text-align: right;\n  display: inline-block;\n  vertical-align: middle;\n  width: 10em;\n  margin: 0 1em 0 0;\n}\n\n.pure-form-aligned .pure-controls {\n  margin: 1.5em 0 0 11em;\n}\n\n.lf-form-react .lf-form-react-input-1 {\n  width: 100%;\n}\n\n.lf-form-react .lf-form-react-input-3-4 {\n  width: 75%;\n}\n\n.lf-form-react .lf-form-react-input-2-3 {\n  width: 66%;\n}\n\n.lf-form-react .lf-form-react-input-1-2 {\n  width: 50%;\n}\n\n.lf-form-react .lf-form-react-input-1-3 {\n  width: 33%;\n}\n\n.lf-form-react .lf-form-react-input-1-4 {\n  width: 25%;\n}\n\n.lf-form-react-message {\n  display: block;\n  color: #666;\n  font-size: 0.875em;\n}\n\n.lf-form-react-error-message {\n  color: #FF3300;\n  display: block;\n  font-size: 0.875em;\n}\n\n.lf-form-react-primary-button {\n  appearance: button;\n  background-color: #1652F0;\n  border: 1px solid #1652F0;\n  border-radius: 4px;\n  box-sizing: border-box;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.15;\n  overflow: visible;\n  padding: 8px 16px;\n  position: relative;\n  text-align: center;\n  text-transform: none;\n  transition: all 80ms ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  width: fit-content;\n}\n.lf-form-react-primary-button:focus {\n  outline: 0;\n}\n.lf-form-react-primary-button:hover {\n  background-color: #0A46E4;\n  border-color: #0A46E4;\n}\n.lf-form-react-primary-button:active {\n  background-color: #0039D7;\n  border-color: #0039D7;\n}\n\n.lf-form-react-secondary-button {\n  appearance: button;\n  background-color: #999999;\n  border: 1px solid #999999;\n  border-radius: 4px;\n  box-sizing: border-box;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.15;\n  overflow: visible;\n  padding: 8px 16px;\n  position: relative;\n  text-align: center;\n  text-transform: none;\n  transition: all 80ms ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  width: fit-content;\n}\n.lf-form-react-secondary-button:focus {\n  outline: 0;\n}\n.lf-form-react-secondary-button:hover {\n  background-color: #888888;\n  border-color: #888888;\n}\n.lf-form-react-secondary-button:active {\n  background-color: #888888;\n  border-color: #888888;\n}\n\n.lf-form-react .lf-buttons {\n  display: flex;\n}\n.lf-form-react .lf-buttons button:not(:first-child) {\n  margin-left: 10px;\n}";

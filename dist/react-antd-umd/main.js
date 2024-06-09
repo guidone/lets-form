@@ -1,4 +1,4 @@
-/* LetsForm react-antd v0.7.16 - UMD */
+/* LetsForm react-antd v0.7.17 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('antd'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'antd', 'react-hook-form'], factory) :
@@ -8102,7 +8102,24 @@
   	validationMessage: "validation",
   	required: null
   },
-  	steps: steps$1
+  	steps: steps$1,
+  	"esm-module": {
+  	name: null,
+  	label: null,
+  	hint: null,
+  	componentUrl: null,
+  	defaultExport: null,
+  	exportedKey: null,
+  	count: null,
+  	placeholder: null,
+  	validationMinLength: "validation",
+  	validationMin: "validation",
+  	validationMaxLength: "validation",
+  	validationMax: "validation",
+  	validationPattern: "validation",
+  	validationMessage: "validation",
+  	required: null
+  }
   };
 
   var translateValidationKey = function translateValidationKey(str) {
@@ -14962,7 +14979,52 @@
   		"react-antd"
   	]
   },
-  	steps: steps
+  	steps: steps,
+  	"esm-module": {
+  	label: "Module",
+  	category: "general",
+  	name: "esm-module",
+  	description: "Generic ESM module",
+  	common: [
+  		{
+  			name: "name",
+  			type: "string",
+  			description: "The name of the field and the key of the JSON"
+  		},
+  		{
+  			name: "label",
+  			type: "string | i18n",
+  			description: "Label of the field"
+  		},
+  		{
+  			name: "hint",
+  			type: "string | i18n",
+  			description: "Help text for the field (generally shown below the input box)"
+  		},
+  		{
+  			name: "componentUrl",
+  			type: "string"
+  		},
+  		{
+  			name: "defaultExport",
+  			type: "boolean"
+  		},
+  		{
+  			name: "exportedKey",
+  			type: "string",
+  			description: "The exported key from the ESM module"
+  		},
+  		{
+  			name: "count",
+  			type: "number"
+  		},
+  		{
+  			name: "placeholder",
+  			type: "string",
+  			description: "Placeholder text, visibile when the field is empty"
+  		}
+  	]
+  }
   };
 
   var LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns'];

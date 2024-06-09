@@ -1,4 +1,4 @@
-/* LetsForm react-material-ui v0.7.16 - UMD */
+/* LetsForm react-material-ui v0.7.17 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('react-hook-form'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/material/Stack')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', 'react-hook-form', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/material/Stack'], factory) :
@@ -4589,8 +4589,8 @@
     }
   }
 
-  var css_248z$g = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
-  styleInject(css_248z$g);
+  var css_248z$h = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
+  styleInject(css_248z$h);
 
   var tx = function tx(str, locale) {
     if (_isString(str)) {
@@ -4703,6 +4703,31 @@
     }));
   };
 
+  var Asterisk = function Asterisk(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color,
+      style = _ref.style;
+    return /*#__PURE__*/React.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      style: style,
+      version: "1.1",
+      id: "_x32_",
+      className: "lf-icon-asterisk",
+      viewBox: "0 0 512 512"
+    }, /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("polygon", {
+      style: {
+        fill: color
+      },
+      className: "st0",
+      points: "501.539,169.221 453.886,86.7 303.669,173.449 303.669,0 208.365,0 208.365,173.479 58.114,86.73\r 10.461,169.261 160.674,255.99 10.501,342.71 58.154,425.231 208.365,338.482 208.365,512 303.669,512 303.669,338.542\r 453.846,425.271 501.499,342.74 351.267,255.99 \t"
+    })));
+  };
+
   var Warning = function Warning(_ref) {
     var _ref$width = _ref.width,
       width = _ref$width === void 0 ? 24 : _ref$width,
@@ -4728,11 +4753,13 @@
       _ref$height = _ref.height,
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
-      color = _ref$color === void 0 ? '#000000' : _ref$color;
+      color = _ref$color === void 0 ? '#000000' : _ref$color,
+      _ref$yOffset = _ref.yOffset,
+      yOffset = _ref$yOffset === void 0 ? 0 : _ref$yOffset;
     return /*#__PURE__*/React.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
-      viewBox: "0 0 24 24",
+      viewBox: "0 ".concat(yOffset, " 24 24"),
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg"
     }, /*#__PURE__*/React.createElement("path", {
@@ -4742,6 +4769,17 @@
       strokeLinecap: "round",
       strokeLinejoin: "round"
     }));
+  };
+
+  var RequiredIcon = function RequiredIcon() {
+    return /*#__PURE__*/React.createElement(Asterisk, {
+      color: "#ff6633",
+      width: 12,
+      height: 12,
+      style: {
+        marginLeft: '3px'
+      }
+    });
   };
 
   /**
@@ -8127,7 +8165,24 @@
   	validationMessage: "validation",
   	required: null
   },
-  	steps: steps$1
+  	steps: steps$1,
+  	"esm-module": {
+  	name: null,
+  	label: null,
+  	hint: null,
+  	componentUrl: null,
+  	defaultExport: null,
+  	exportedKey: null,
+  	count: null,
+  	placeholder: null,
+  	validationMinLength: "validation",
+  	validationMin: "validation",
+  	validationMaxLength: "validation",
+  	validationMax: "validation",
+  	validationPattern: "validation",
+  	validationMessage: "validation",
+  	required: null
+  }
   };
 
   var translateValidationKey = function translateValidationKey(str) {
@@ -14987,7 +15042,52 @@
   		"react-antd"
   	]
   },
-  	steps: steps
+  	steps: steps,
+  	"esm-module": {
+  	label: "Module",
+  	category: "general",
+  	name: "esm-module",
+  	description: "Generic ESM module",
+  	common: [
+  		{
+  			name: "name",
+  			type: "string",
+  			description: "The name of the field and the key of the JSON"
+  		},
+  		{
+  			name: "label",
+  			type: "string | i18n",
+  			description: "Label of the field"
+  		},
+  		{
+  			name: "hint",
+  			type: "string | i18n",
+  			description: "Help text for the field (generally shown below the input box)"
+  		},
+  		{
+  			name: "componentUrl",
+  			type: "string"
+  		},
+  		{
+  			name: "defaultExport",
+  			type: "boolean"
+  		},
+  		{
+  			name: "exportedKey",
+  			type: "string",
+  			description: "The exported key from the ESM module"
+  		},
+  		{
+  			name: "count",
+  			type: "number"
+  		},
+  		{
+  			name: "placeholder",
+  			type: "string",
+  			description: "Placeholder text, visibile when the field is empty"
+  		}
+  	]
+  }
   };
 
   var LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns'];
@@ -15091,8 +15191,8 @@
     }, [css, id]);
   };
 
-  var css_248z$f = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
-  styleInject(css_248z$f);
+  var css_248z$g = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
+  styleInject(css_248z$g);
 
   var baseGetTag = _baseGetTag,
     isObjectLike = isObjectLike_1;
@@ -15715,8 +15815,8 @@
     };
   }();
 
-  var css_248z$e = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
-  styleInject(css_248z$e);
+  var css_248z$f = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
+  styleInject(css_248z$f);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
@@ -15734,8 +15834,8 @@
     }
   };
 
-  var css_248z$d = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
-  styleInject(css_248z$d);
+  var css_248z$e = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
+  styleInject(css_248z$e);
 
   var ThreeColumns = function ThreeColumns(_ref) {
     var name = _ref.name,
@@ -15765,8 +15865,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$c = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
-  styleInject(css_248z$c);
+  var css_248z$d = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
+  styleInject(css_248z$d);
 
   var TwoColumns = function TwoColumns(_ref) {
     var name = _ref.name,
@@ -15790,8 +15890,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$b = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
-  styleInject(css_248z$b);
+  var css_248z$c = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject(css_248z$c);
 
   var Group = I18N(function (_ref) {
     var name = _ref.name,
@@ -15844,8 +15944,8 @@
     }, children));
   }, ['label']);
 
-  var css_248z$a = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
-  styleInject(css_248z$a);
+  var css_248z$b = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
+  styleInject(css_248z$b);
 
   var PlaceholderImage = function PlaceholderImage(_ref) {
     var url = _ref.url,
@@ -15887,8 +15987,8 @@
     }
   };
 
-  var css_248z$9 = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
-  styleInject(css_248z$9);
+  var css_248z$a = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
+  styleInject(css_248z$a);
 
   var Divider = function Divider(_ref) {
     var name = _ref.name,
@@ -16187,8 +16287,8 @@
     })));
   };
 
-  var css_248z$8 = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
-  styleInject(css_248z$8);
+  var css_248z$9 = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
+  styleInject(css_248z$9);
 
   var randomId = function randomId() {
     var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
@@ -16381,8 +16481,8 @@
     }));
   };
 
-  var css_248z$7 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
-  styleInject(css_248z$7);
+  var css_248z$8 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
+  styleInject(css_248z$8);
 
   var _excluded$f = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
@@ -16460,11 +16560,11 @@
     };
   };
 
-  var css_248z$6 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
-  styleInject(css_248z$6);
+  var css_248z$7 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
+  styleInject(css_248z$7);
 
-  var css_248z$5 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
-  styleInject(css_248z$5);
+  var css_248z$6 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
+  styleInject(css_248z$6);
 
   var PlaintextLabel = function PlaintextLabel(_ref) {
     var children = _ref.children;
@@ -18104,14 +18204,16 @@
     }, rest), children);
   };
 
-  var css_248z$4 = ".lf-react-material-ui-label {\n  color: rgba(0, 0, 0, 0.6);\n  font-family: \"Roboto\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  font-size: 1rem;\n  line-height: 1.4375em;\n  letter-spacing: 0.00938em;\n  padding: 0;\n  position: relative;\n  display: block;\n  transform-origin: top left;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  max-width: 100%;\n  transform: none;\n  position: inherit;\n  margin-top: 0px;\n}";
-  styleInject(css_248z$4);
+  var css_248z$5 = ".lf-react-material-ui-label {\n  color: rgba(0, 0, 0, 0.6);\n  font-family: \"Roboto\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  font-size: 1rem;\n  line-height: 1.4375em;\n  letter-spacing: 0.00938em;\n  padding: 0;\n  position: relative;\n  display: block;\n  transform-origin: top left;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  max-width: 100%;\n  transform: none;\n  position: inherit;\n  margin-top: 0px;\n}";
+  styleInject(css_248z$5);
 
   var MuiLabel = function MuiLabel(_ref) {
-    var children = _ref.children;
+    var children = _ref.children,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required;
     return /*#__PURE__*/React.createElement("div", {
       className: "lf-react-material-ui-label"
-    }, children);
+    }, children, required && /*#__PURE__*/React.createElement(RequiredIcon, null));
   };
 
   var _excluded$d = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
@@ -18164,7 +18266,8 @@
       variant: variant !== null && variant !== void 0 ? variant : undefined,
       fullWidth: fullWidth
     }, label && !floatingLabel && /*#__PURE__*/React.createElement(MuiLabel, {
-      id: "mui_input_text_".concat(name)
+      id: "mui_input_text_".concat(name),
+      required: required
     }, label), /*#__PURE__*/React.createElement(TextField, _extends({
       size: size,
       placeholder: placeholder,
@@ -18289,7 +18392,9 @@
       error: error != null,
       variant: variant !== null && variant !== void 0 ? variant : undefined,
       fullWidth: fullWidth
-    }, label && !floatingLabel && /*#__PURE__*/React.createElement(MuiLabel, null, label), label && floatingLabel && /*#__PURE__*/React.createElement(InputLabel, {
+    }, label && !floatingLabel && /*#__PURE__*/React.createElement(MuiLabel, {
+      required: required
+    }, label), label && floatingLabel && /*#__PURE__*/React.createElement(InputLabel, {
       id: "mui_select_".concat(name)
     }, label), /*#__PURE__*/React.createElement(Select, _extends({
       id: name,
@@ -19096,8 +19201,8 @@
     default: MuiDateTime
   });
 
-  var css_248z$3 = ".lf-form.lf-form-react-material-ui .lf-control-common-array [class^=lf-control]:not(:last-child) {\n  margin-bottom: 10px;\n}";
-  styleInject(css_248z$3);
+  var css_248z$4 = ".lf-form.lf-form-react-material-ui .lf-control-common-array [class^=lf-control]:not(:last-child) {\n  margin-bottom: 10px;\n}";
+  styleInject(css_248z$4);
 
   var _excluded$6 = ["hint", "required", "tooltip", "name", "label", "error"];
   var ListArrayMui = I18N(function (_ref) {
@@ -19116,7 +19221,9 @@
       required: required,
       error: hasError,
       fullWidth: true
-    }, /*#__PURE__*/React.createElement(MuiLabel, null, label), /*#__PURE__*/React.createElement(ListArray, _extends({
+    }, /*#__PURE__*/React.createElement(MuiLabel, {
+      required: required
+    }, label), /*#__PURE__*/React.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm
     }, rest)), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
   }, ['label', 'hint']);
@@ -19372,8 +19479,8 @@
     default: CheckboxGroup
   });
 
-  var css_248z$2 = ".lf-form-react-material-ui .lf-control-tabs .tab-fields {\n  padding-top: var(--lf-field-margin);\n}";
-  styleInject(css_248z$2);
+  var css_248z$3 = ".lf-form-react-material-ui .lf-control-tabs .tab-fields {\n  padding-top: var(--lf-field-margin);\n}";
+  styleInject(css_248z$3);
 
   var _excluded$1 = ["name", "value", "tabs", "onChange", "children", "centered", "fullWidth", "indicatorColor", "textColor"];
   var TabsMui = I18N(function (_ref) {
@@ -19433,8 +19540,8 @@
     default: TabsMui
   });
 
-  var css_248z$1 = ".lf-form-react-material-ui .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeLarge .lf-icon {\n  max-width: 22px;\n  max-height: 22px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeSmall .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon {\n  min-width: inherit;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon .MuiButton-startIcon {\n  margin-right: 0px !important;\n}";
-  styleInject(css_248z$1);
+  var css_248z$2 = ".lf-form-react-material-ui .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeLarge .lf-icon {\n  max-width: 22px;\n  max-height: 22px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeSmall .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon {\n  min-width: inherit;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon .MuiButton-startIcon {\n  margin-right: 0px !important;\n}";
+  styleInject(css_248z$2);
 
   var _excluded = ["label", "icon", "hint", "tooltip", "variant", "size", "color"];
   var MuiButton = function MuiButton(_ref) {
@@ -19501,7 +19608,29 @@
     return "".concat(parseFloat((bytes / Math.pow(k, i)).toFixed(dm)), " ").concat(sizes[i]);
   }
 
-  var css_248z = ".lf-control-upload .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-control-upload .MuiButton-sizeLarge .lf-icon {\n  max-width: 22px;\n  max-height: 22px;\n}\n.lf-control-upload .MuiButton-sizeSmall .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-control-upload .lf-upload-button-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .lf-upload-button-layout .lf-upload-button-left {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .lf-upload-button-layout .lf-upload-button-right {\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n  margin-left: var(--lf-field-margin);\n}\n.lf-control-upload .lf-upload-file-list {\n  margin-top: 10px;\n  font-family: \"Roboto\", \"Helvetica\", \"Arial\", sans-serif;\n}\n.lf-control-upload .lf-upload-file-list .lf-upload-file-item {\n  padding: 4px 0px;\n}\n.lf-control-upload .lf-upload-file-list .lf-upload-file-item:hover {\n  background-color: #eeeeee;\n}\n.lf-control-upload .lf-upload-file-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .lf-upload-file-item .lf-attachment-icon {\n  flex: 0 0;\n  align-self: auto;\n  margin-right: 5px;\n}\n.lf-control-upload .lf-upload-file-item .lf-clear-button {\n  flex: 0 0;\n  align-self: auto;\n  margin-left: 5px;\n  margin-right: 5px;\n  font-size: 1px;\n}\n.lf-control-upload .lf-upload-file-item .lf-name {\n  flex: 1 0;\n  align-self: auto;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.lf-control-upload .lf-upload-file-item .lf-size {\n  flex: 0 0 auto;\n  align-self: auto;\n  margin-left: 5px;\n  color: #888888;\n}\n.lf-control-upload .lf-upload-file-name .lf-size {\n  color: #888888;\n}";
+  var css_248z$1 = ".lf-left-dots-with-fixed-right {\n  display: flex;\n  width: inherit;\n  overflow: hidden;\n}\n.lf-left-dots-with-fixed-right .lf-left-dots {\n  flex: 1 0;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  max-width: 100%;\n}\n.lf-left-dots-with-fixed-right .lf-right-fixed {\n  flex: 0 0;\n  white-space: nowrap;\n}";
+  styleInject(css_248z$1);
+
+  /**
+   * LetfDotsWithFixedRight
+   * Layout component to have a fixed view on the right and a expandable view on the left
+   * which takes all remaining space and show ellipsis if the text overflows
+   * @param {*} param0
+   * @returns
+   */
+  var LetfDotsWithFixedRight = function LetfDotsWithFixedRight(_ref) {
+    var left = _ref.left,
+      right = _ref.right;
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-left-dots-with-fixed-right"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "lf-left-dots"
+    }, left), /*#__PURE__*/React.createElement("div", {
+      className: "lf-right-fixed"
+    }, right));
+  };
+
+  var css_248z = ".lf-control-upload .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-control-upload .MuiButton-sizeLarge .lf-icon {\n  max-width: 22px;\n  max-height: 22px;\n}\n.lf-control-upload .MuiButton-sizeSmall .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-control-upload .lf-upload-button-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .lf-upload-button-layout .lf-upload-button-left {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .lf-upload-button-layout .lf-upload-button-right {\n  order: 0;\n  flex: 1 0;\n  overflow: hidden;\n  align-self: auto;\n  margin-left: var(--lf-field-margin);\n}\n.lf-control-upload .lf-upload-file-list {\n  margin-top: 10px;\n  font-family: \"Roboto\", \"Helvetica\", \"Arial\", sans-serif;\n}\n.lf-control-upload .lf-upload-file-list .lf-upload-file-item {\n  padding: 4px 0px;\n}\n.lf-control-upload .lf-upload-file-list .lf-upload-file-item:hover {\n  background-color: #eeeeee;\n}\n.lf-control-upload .lf-upload-file-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .lf-upload-file-item .lf-attachment-icon {\n  flex: 0 0;\n  align-self: auto;\n  margin-right: 5px;\n}\n.lf-control-upload .lf-upload-file-item .lf-clear-button {\n  flex: 0 0;\n  align-self: auto;\n  margin-left: 5px;\n  margin-right: 5px;\n  font-size: 1px;\n}\n.lf-control-upload .lf-upload-file-item .lf-name {\n  flex: 1 0;\n  align-self: auto;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.lf-control-upload .lf-upload-file-item .lf-size {\n  flex: 0 0 auto;\n  align-self: auto;\n  margin-left: 5px;\n  color: #888888;\n}\n.lf-control-upload .lf-upload-file-name .lf-size {\n  color: #888888;\n}";
   styleInject(css_248z);
 
   var IconAttachment = function IconAttachment(_ref) {
@@ -19577,6 +19706,7 @@
       color = _ref.color,
       onChange = _ref.onChange,
       multiple = _ref.multiple,
+      required = _ref.required,
       value = _ref.value;
     var _useState = React.useState(multiple && _isArray(value) || !multiple && _isObject(value) ? value : undefined),
       _useState2 = _slicedToArray(_useState, 2),
@@ -19616,7 +19746,8 @@
       className: "lf-control-upload",
       "data-lf-field-name": name
     }, label && /*#__PURE__*/React.createElement(MuiLabel, {
-      id: "mui_input_text_".concat(name)
+      id: "mui_input_text_".concat(name),
+      required: required
     }, label), /*#__PURE__*/React.createElement("div", {
       className: "lf-upload-button-layout"
     }, /*#__PURE__*/React.createElement("div", {
@@ -19648,18 +19779,22 @@
       }
     }))), /*#__PURE__*/React.createElement("div", {
       className: "lf-upload-button-right"
-    }, !multiple && currentFile && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
-      className: "lf-upload-file-name"
-    }, currentFile.name, "\xA0", /*#__PURE__*/React.createElement("span", {
-      className: "lf-size"
-    }, formatBytes(currentFile.size))), "\xA0", /*#__PURE__*/React.createElement("a", {
-      href: "#",
-      onClick: handleClear
-    }, /*#__PURE__*/React.createElement(CrossCirle, {
-      color: "#666666",
-      width: 16,
-      height: 16
-    }))))), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), multiple && currentFile && /*#__PURE__*/React.createElement("div", {
+    }, !multiple && currentFile && /*#__PURE__*/React.createElement(LetfDotsWithFixedRight, {
+      left: /*#__PURE__*/React.createElement("span", {
+        className: "lf-upload-file-name"
+      }, currentFile.name),
+      right: /*#__PURE__*/React.createElement(React.Fragment, null, "\xA0", /*#__PURE__*/React.createElement("span", {
+        className: "lf-size"
+      }, formatBytes(currentFile.size)), "\xA0", /*#__PURE__*/React.createElement("a", {
+        href: "#",
+        onClick: handleClear
+      }, /*#__PURE__*/React.createElement(CrossCirle, {
+        color: "#666666",
+        yOffset: 2,
+        width: 16,
+        height: 16
+      })))
+    }))), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error), multiple && currentFile && /*#__PURE__*/React.createElement("div", {
       className: "lf-upload-file-list"
     }, currentFile.map(function (file) {
       return /*#__PURE__*/React.createElement(FileItem, {
@@ -19668,7 +19803,7 @@
         onRemove: handleRemove
       });
     })));
-  }, ['labelOn', 'labelOff', 'labelLink', 'hint']);
+  }, ['label', 'uploadButtonLabel', 'hint']);
   lfLog('Loaded MUI.Upload');
   var Upload$1 = Upload;
 

@@ -1989,6 +1989,19 @@
     "hidden": null,
     "accept": null,
     "acceptedFile": null,
+    "uploadButtonLabel": [
+      "react",
+      "react-rsuite5",
+      "react-material-ui",
+      "react-antd"
+    ],
+    "multiple": [
+      "react",
+      "react-rsuite5",
+      "react-material-ui",
+      "react-antd",
+      "react-mantine"
+    ],
     "listType": [
       "react-rsuite5",
       "react-antd"
@@ -2006,22 +2019,11 @@
     "disabledFileItem": [
       "react-rsuite5"
     ],
-    "multiple": [
-      "react-rsuite5",
-      "react-material-ui",
-      "react-antd",
-      "react-mantine"
-    ],
     "removable": [
       "react-rsuite5"
     ],
     "draggable": [
       "react-rsuite5",
-      "react-antd"
-    ],
-    "uploadButtonLabel": [
-      "react-rsuite5",
-      "react-material-ui",
       "react-antd"
     ],
     "uploadButtonAppearance": [
@@ -2137,23 +2139,28 @@
     "align": null,
     "steps": [
       "react-rsuite5",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "value": [
       "react-rsuite5",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "label": [
       "react-rsuite5",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "description": [
       "react-rsuite5",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "icon": [
       "react-rsuite5",
-      "react-antd"
+      "react-antd",
+      "react-mantine"
     ],
     "small": [
       "react-rsuite5",
@@ -2177,6 +2184,33 @@
     ],
     "labelPlacement": [
       "react-antd"
+    ],
+    "color": [
+      "react-mantine"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "size": [
+      "react-mantine"
+    ],
+    "iconPosition": [
+      "react-mantine"
+    ],
+    "iconSize": [
+      "react-mantine"
+    ],
+    "wrap": [
+      "react-mantine"
+    ],
+    "allowStepClick": [
+      "react-mantine"
+    ],
+    "allowStepSelect": [
+      "react-mantine"
+    ],
+    "autoContrast": [
+      "react-mantine"
     ],
     "validationMinLength": "validation",
     "validationMin": "validation",

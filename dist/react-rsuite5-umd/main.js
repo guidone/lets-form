@@ -1,4 +1,4 @@
-/* LetsForm react-rsuite5 v0.7.16 - UMD */
+/* LetsForm react-rsuite5 v0.7.17 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', 'react-hook-form'], factory) :
@@ -4750,11 +4750,13 @@
       _ref$height = _ref.height,
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
-      color = _ref$color === void 0 ? '#000000' : _ref$color;
+      color = _ref$color === void 0 ? '#000000' : _ref$color,
+      _ref$yOffset = _ref.yOffset,
+      yOffset = _ref$yOffset === void 0 ? 0 : _ref$yOffset;
     return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
-      viewBox: "0 0 24 24",
+      viewBox: "0 ".concat(yOffset, " 24 24"),
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg"
     }, /*#__PURE__*/React$1.createElement("path", {
@@ -8183,7 +8185,24 @@
   	validationMessage: "validation",
   	required: null
   },
-  	steps: steps$1
+  	steps: steps$1,
+  	"esm-module": {
+  	name: null,
+  	label: null,
+  	hint: null,
+  	componentUrl: null,
+  	defaultExport: null,
+  	exportedKey: null,
+  	count: null,
+  	placeholder: null,
+  	validationMinLength: "validation",
+  	validationMin: "validation",
+  	validationMaxLength: "validation",
+  	validationMax: "validation",
+  	validationPattern: "validation",
+  	validationMessage: "validation",
+  	required: null
+  }
   };
 
   var translateValidationKey = function translateValidationKey(str) {
@@ -15043,7 +15062,52 @@
   		"react-antd"
   	]
   },
-  	steps: steps
+  	steps: steps,
+  	"esm-module": {
+  	label: "Module",
+  	category: "general",
+  	name: "esm-module",
+  	description: "Generic ESM module",
+  	common: [
+  		{
+  			name: "name",
+  			type: "string",
+  			description: "The name of the field and the key of the JSON"
+  		},
+  		{
+  			name: "label",
+  			type: "string | i18n",
+  			description: "Label of the field"
+  		},
+  		{
+  			name: "hint",
+  			type: "string | i18n",
+  			description: "Help text for the field (generally shown below the input box)"
+  		},
+  		{
+  			name: "componentUrl",
+  			type: "string"
+  		},
+  		{
+  			name: "defaultExport",
+  			type: "boolean"
+  		},
+  		{
+  			name: "exportedKey",
+  			type: "string",
+  			description: "The exported key from the ESM module"
+  		},
+  		{
+  			name: "count",
+  			type: "number"
+  		},
+  		{
+  			name: "placeholder",
+  			type: "string",
+  			description: "Placeholder text, visibile when the field is empty"
+  		}
+  	]
+  }
   };
 
   var LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns'];
@@ -20241,7 +20305,7 @@
     default: RSuite5ModuleComponent
   });
 
-  var css_248z = ".lf-form-react-rsuite5 .lf-buttons {\n  margin-top: 24px;\n}\n.lf-form-react-rsuite5 .rs-form-control-label > .rs-form-help-text.rs-form-help-text-tooltip {\n  margin-top: 0px;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lf-full-width .rs-form-control-wrapper {\n  width: 100%;\n}";
+  var css_248z = ".lf-form-react-rsuite5.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {\n  margin-bottom: unset;\n}\n.lf-form-react-rsuite5 .lf-buttons {\n  margin-top: 24px;\n}\n.lf-form-react-rsuite5 .rs-form-control-label > .rs-form-help-text.rs-form-help-text-tooltip {\n  margin-top: 0px;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lf-full-width .rs-form-control-wrapper {\n  width: 100%;\n}";
   styleInject(css_248z);
 
   var FormRsuite5 = function FormRsuite5(_ref) {
