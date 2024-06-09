@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useId } from 'react';
 import _ from 'lodash';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
+import FormLabel from '@mui/material/FormLabel';
 
 import { ListArray } from '../../common';
 import LetsForm from '../../react-material-ui';
-import { MuiLabel } from '../../components/mui-label';
 import { I18N } from '../../components';
 import { lfLog } from '../../helpers/lf-log';
 
@@ -22,6 +22,7 @@ const ListArrayMui = I18N(
     ...rest
   }) => {
     const hasError = error && _.isString(error);
+    const controlId = useId();
 
     return (
       <div data-lf-field-name={name} className="lf-control-array">
@@ -30,7 +31,7 @@ const ListArrayMui = I18N(
           error={hasError}
           fullWidth={true}
         >
-          <MuiLabel required={required}>{label}</MuiLabel>
+          <FormLabel id={controlId}>{label}</FormLabel>
           <ListArray
             LetsFormComponent={LetsForm}
             {...rest}

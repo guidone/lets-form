@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useId } from 'react';
 import _ from 'lodash';
-import { MuiLabel } from '../mui-label';
+
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -8,6 +8,7 @@ import Select from '@mui/material/Select';
 import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
 import ListItemText from '@mui/material/ListItemText';
+import FormLabel from '@mui/material/FormLabel';
 
 import { passRest, filterOptions } from '../../helpers';
 
@@ -41,6 +42,7 @@ const MuiGenericSelect = ({
   ...rest
 }) => {
   const filteredOptions = filterOptions(options, filterValue, filterKey);
+  const controlId = useId();
 
   let items;
   if (multiple) {
@@ -76,7 +78,7 @@ const MuiGenericSelect = ({
         fullWidth={fullWidth}
       >
         {label && !floatingLabel && (
-          <MuiLabel required={required}>{label}</MuiLabel>
+          <FormLabel id={controlId}>{label}</FormLabel>
         )}
         {label && floatingLabel && (
           <InputLabel id={`mui_select_${name}`}>{label}</InputLabel>

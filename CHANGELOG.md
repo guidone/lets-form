@@ -1,5 +1,9 @@
 # LetsForm Changelog
 
+## Next
+- fixed RSuite radio-group missing required icon
+- fixed required icon for MUI
+
 ## v0.7.18
 - added React Upload component
 - fixed css layout ofr MUI React Upload

@@ -1,13 +1,13 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useId } from 'react';
 import _ from 'lodash';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import InputAdornment from '@mui/material/InputAdornment';
+import FormLabel from '@mui/material/FormLabel';
 
 import { passRest } from '../../helpers';
 import { TextOrIcon } from '../../common';
-import { MuiLabel } from '../mui-label';
 
 // DOC: https://mui.com/material-ui/api/input/
 
@@ -42,6 +42,7 @@ const MuiGenericInput = ({
   ...rest
 }) => {
   const handleKeyUp = useCallback(e => e.keyCode === 13 && lfOnEnter(), [lfOnEnter]);
+  const controlId = useId();
 
   return (
     <div
@@ -55,7 +56,7 @@ const MuiGenericInput = ({
         fullWidth={fullWidth}
       >
         {label && !floatingLabel && (
-          <MuiLabel id={`mui_input_text_${name}`} required={required}>{label}</MuiLabel>
+          <FormLabel id={controlId}>{label}</FormLabel>
         )}
         <TextField
           size={size}

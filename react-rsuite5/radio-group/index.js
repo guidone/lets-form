@@ -1,8 +1,11 @@
 import React from 'react';
 import { Form, Radio, RadioGroup } from 'rsuite';
 
-import { I18N } from '../../components';
-import { i18nOptions, passRest } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { RequiredIcon } from '../../components/required-icon';
+import { passRest } from '../../helpers/pass-rest';
+import { i18nOptions } from '../../helpers/i18n-options';
+import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 import { lfLog } from '../../helpers/lf-log';
 
 const RadioGroupRSuite = I18N(
@@ -33,26 +36,29 @@ const RadioGroupRSuite = I18N(
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
+          {required && <RequiredIcon />}
         </Form.ControlLabel>}
-        <RadioGroup
-          inline
-          name={name}
-          value={value}
-          onChange={onChange}
-          appearance={appearance}
-          {...passRest(rest)}
-        >
-          {(options ?? []).map(({ value, label}) => (
-            <Radio
-              key={value}
-              value={value}
-              disabled={disabled}
-              readOnly={readOnly}
-            >
-              {label}
-            </Radio>
-          ))}
-        </RadioGroup>
+        <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
+          <RadioGroup
+            inline
+            name={name}
+            value={value}
+            onChange={onChange}
+            appearance={appearance}
+            {...passRest(rest)}
+          >
+            {(options ?? []).map(({ value, label}) => (
+              <Radio
+                key={value}
+                value={value}
+                disabled={disabled}
+                readOnly={readOnly}
+              >
+                {label}
+              </Radio>
+            ))}
+          </RadioGroup>
+        </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>
     );

@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useId } from 'react';
 import Button from '@mui/material/Button';
 import FormHelperText from '@mui/material/FormHelperText';
+import FormLabel from '@mui/material/FormLabel';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
-import { MuiLabel } from '../../components/mui-label';
 import { CrossCirle } from '../../assets/icons/cross-circle';
 import { formatBytes } from '../../helpers/format-bytes';
 import { lfLog } from '../../helpers/lf-log';
@@ -32,6 +32,7 @@ const Upload = I18N(
     required,
     value
   }) => {
+    const controlId = useId();
     const [currentFile, setCurrentFile] = useState(
       (multiple && _.isArray(value)) || (!multiple && _.isObject(value)) ? value : undefined
     );
@@ -84,7 +85,7 @@ const Upload = I18N(
         data-lf-field-name={name}
       >
         {label && (
-          <MuiLabel id={`mui_input_text_${name}`} required={required}>{label}</MuiLabel>
+          <FormLabel id={controlId} required={required}>{label}</FormLabel>
         )}
         <div className="lf-upload-button-layout">
           <div className="lf-upload-button-left">

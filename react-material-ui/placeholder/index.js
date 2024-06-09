@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useId } from 'react';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
+import FormLabel from '@mui/material/FormLabel';
 
-import { MuiLabel } from '../../components/mui-label';
 import { Placeholder } from '../../common';
 import { I18N } from '../../components';
 import { lfLog } from '../../helpers/lf-log';
@@ -14,13 +14,15 @@ const PlaceholderMUI = I18N(
     name,
     label
   }) => {
+    const controlId = useId();
+
     return (
       <FormControl
         className="lf-control-placeholder"
         data-lf-field-name={name}
       >
         {label && (
-          <MuiLabel id={`mui_input_text_${name}`}>{label}</MuiLabel>
+          <FormLabel id={controlId}>{label}</FormLabel>
         )}
         <Placeholder text={text} />
         {hint && <FormHelperText>{hint}</FormHelperText>}
