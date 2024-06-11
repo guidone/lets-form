@@ -5,6 +5,10 @@
     margin-bottom: unset;
   }
 
+  &.rs-form-vertical .rs-form-group .rs-input-group {
+    width: unset;
+  }
+
   .lf-buttons {
     margin-top: 24px;
   }
