@@ -75,6 +75,9 @@ const Fields = {
   },
   'upload': {
     'react-material-ui': lazy(() => import('./upload'))
+  },
+  'time': {
+    'react-material-ui': lazy(() => import('./time'))
   }
 };
 
