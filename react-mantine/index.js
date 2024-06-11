@@ -78,6 +78,9 @@ const Fields = {
   },
   'steps': {
     'react-mantine': lazy(() => import('./steps'))
+  },
+  'time': {
+    'react-mantine': lazy(() => import('./time'))
   }
 };
 
