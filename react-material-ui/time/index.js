@@ -1,7 +1,5 @@
 import React, { useCallback, useId } from 'react';
-import Rating from '@mui/material/Rating';
 import FormControl from '@mui/material/FormControl';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import FormLabel from '@mui/material/FormLabel';
 import FormHelperText from '@mui/material/FormHelperText';
 import { MobileTimePicker } from '@mui/x-date-pickers/MobileTimePicker';
@@ -13,6 +11,7 @@ import { passRest } from '../../helpers/pass-rest';
 
 import { isValidTime } from '../../helpers/is-valid-time';
 import { timeToDayJSTime } from '../../helpers/time-to-dayjs-time';
+import { makeWidthStyle } from '../../helpers/make-width-style';
 
 // DOC: https://mui.com/x/api/date-pickers/time-picker/
 
@@ -24,9 +23,8 @@ const Time = I18N(
     value,
     onChange,
     onBlur,
-    size,
-    variant,
     fullWidth,
+    width,
     floatingLabel,
     disabled = false,
     readOnly = false,
@@ -35,10 +33,13 @@ const Time = I18N(
     timeStepsHours,
     timeStepsMinutes,
     timeStepsSeconds,
+    size,
+    variant,
+    color,
     error,
     maxTime,
     minTime,
-    forceMobile = true,
+    forceMobile,
     format = 'HH:mm:ss',
     ...rest
   }) => {
@@ -84,16 +85,22 @@ const Time = I18N(
           required={required}
           error={error != null}
           fullWidth={fullWidth}
+          style={makeWidthStyle(fullWidth, width)}
         >
           {label && !floatingLabel && (
             <FormLabel htmlFor={controlId}>{label}</FormLabel>
           )}
           <Component
             id={controlId}
-            required={floatingLabel ? required : undefined}
+            label={floatingLabel ? label : undefined}
+            slotProps={{ textField: {
+              size: size ?? undefined,
+              variant: variant ?? undefined,
+              color: color ?? undefined,
+              required: !!(floatingLabel && required)
+            }}}
             onChange={handleChange}
             onBlur={onBlur}
-            label={floatingLabel ? label : undefined}
             timeSteps={timeSteps}
             maxTime={parsedMaxTime}
             minTime={parsedMinTime}

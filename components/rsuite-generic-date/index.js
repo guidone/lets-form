@@ -30,7 +30,6 @@ const RSuiteGenericDate = ({
   lfLocale,
   ...rest
 }) => {
-  console.log('------- fullWidth', fullWidth, width)
   return (
     <Form.Group
       data-lf-field-name={name}

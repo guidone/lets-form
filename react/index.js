@@ -43,6 +43,9 @@ const Fields = {
   'datetime': {
     'react': lazy(() => import('./datetime'))
   },
+  'time': {
+    'react': lazy(() => import('./time'))
+  },
   'array': {
     'react': lazy(() => import('./array'))
   },

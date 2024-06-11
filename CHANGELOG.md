@@ -2,7 +2,10 @@
 
 ## Next
 - fixed RSuite radio-group missing required icon
-- fixed required icon for MUI
+- fixed RSuite fullWidth / Width params in select
+- added MUI, RSuite Time
+- fixed required icon for MUI for all components
+- cleanup and more properties for MUI Date and MUI Datime
 
 ## v0.7.18
 - added React Upload component
