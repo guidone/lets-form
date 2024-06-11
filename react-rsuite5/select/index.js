@@ -11,6 +11,7 @@ import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 
 import './select.scss';
+import { makeWidthStyle } from '../../helpers';
 
 const menuItem = (value, item) => {
   return (
@@ -46,12 +47,15 @@ const Select = I18N(
     filterKey,
     filterValue,
     showImageOptions,
+    fullWidth,
+    width,
     ...rest
   }) => {
     return (
       <Form.Group
         className="lf-control-select"
         controlId={name}
+        style={makeWidthStyle(fullWidth, width)}
       >
         {label && (
           <Form.ControlLabel>
@@ -76,7 +80,7 @@ const Select = I18N(
             renderMenuItem={showImageOptions ? menuItem : undefined}
             renderValue={showImageOptions ? menuItem : undefined}
             data={filterOptions(options, filterValue, filterKey) || []}
-            block={block}
+            block={block || fullWidth || width != null}
             searchable={searchable}
             cleanable={cleanable}
             {...passRest(rest)}

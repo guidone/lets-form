@@ -99,6 +99,9 @@ const Fields = {
   },
   'esm-module': {
     'react-rsuite5': lazy(() => import('./module'))
+  },
+  'time': {
+    'react-rsuite5': lazy(() => import('./time'))
   }
 };
 
