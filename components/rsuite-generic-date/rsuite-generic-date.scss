@@ -1,0 +1,8 @@
+.lf-control-date {
+  &.lf-full-width {
+    // if full width, expand the picker to 100%, otherwise it's just a fraction of the space
+    .rs-picker-date {
+      width: 100%;
+    }
+  }
+}

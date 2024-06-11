@@ -13,6 +13,7 @@ const Plaintext = ({ value, component, options, locale }) => {
     case 'slider':
       return <div className="plaintext-value">{value}</div>
     case 'input-text':
+    case 'time':
       return <div className="plaintext-value">{value}</div>;
     case 'date':
       if (_.isDate(value)) {

@@ -5,6 +5,10 @@ import { Form, DatePicker } from 'rsuite';
 import { RequiredIcon } from '../../components';
 import { passRest } from '../../helpers';
 import { RSuite5FieldControl } from '../rsuite-field-control';
+import { makeWidthStyle } from '../../helpers/make-width-style';
+import classNames from 'classnames';
+
+import './rsuite-generic-date.scss';
 
 const RSuiteGenericDate = ({
   name,
@@ -16,6 +20,8 @@ const RSuiteGenericDate = ({
   disabled = false,
   readOnly = false,
   required = false,
+  fullWidth,
+  width,
   error,
   onChange,
   onBlur,
@@ -24,8 +30,15 @@ const RSuiteGenericDate = ({
   lfLocale,
   ...rest
 }) => {
+  console.log('------- fullWidth', fullWidth, width)
   return (
-    <Form.Group data-lf-field-name={name} className="lf-control-date">
+    <Form.Group
+      data-lf-field-name={name}
+      className={classNames('lf-control-date', {
+        'lf-full-width': fullWidth || width != null
+      })}
+      style={makeWidthStyle(fullWidth, width)}
+    >
       {label && (
         <Form.ControlLabel>
           {label}

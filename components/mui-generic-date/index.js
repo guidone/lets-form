@@ -47,9 +47,12 @@ const MuiGenericDate = ({
   const Component = datetime ? DateTimePicker : DatePicker;
 
   // set locale for dates
-  let defaultValue = dayjs(value);
-  if (defaultValue && localeCode) {
-    defaultValue = defaultValue.locale(localeCode);
+  let defaultValue;
+  if (value) {
+    defaultValue = dayjs(value);
+    if (defaultValue && localeCode) {
+      defaultValue = defaultValue.locale(localeCode);
+    }
   }
 
   return (
