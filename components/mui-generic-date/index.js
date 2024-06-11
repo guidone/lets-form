@@ -9,7 +9,8 @@ import dayjs from 'dayjs';
 
 import { isValidDayjsFormat } from '../../helpers/is-valid-dayjs-format';
 import { passRest } from '../../helpers/pass-rest';
-import { makeWidthStyle } from '../../helpers';
+import { makeWidthStyle } from '../../helpers/make-width-style';
+import { tryParseDateDayJs } from '../../helpers/try-parse-date-dayjs';
 
 // DOC: https://mui.com/x/api/date-pickers/date-picker/
 //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -36,6 +37,8 @@ const MuiGenericDate = ({
   format,
   maxDate,
   minDate,
+  maxDateTime,
+  minDateTime,
   lfLocale,
   datetime = false,
   views,
@@ -54,6 +57,12 @@ const MuiGenericDate = ({
       defaultValue = defaultValue.locale(localeCode);
     }
   }
+
+  // parse dates
+  const parsedMinDate = tryParseDateDayJs(minDate);
+  const parsedMaxDate = tryParseDateDayJs(maxDate);
+  const parsedMinDateTime = tryParseDateDayJs(minDateTime);
+  const parsedMaxDateTime = tryParseDateDayJs(maxDateTime);
 
   return (
     <div
@@ -87,8 +96,10 @@ const MuiGenericDate = ({
           views={!_.isEmpty(views) ? views : ['day', 'year']}
           displayWeekNumber={displayWeekNumber}
           format={isValidDayjsFormat(format) ? format : undefined}
-          maxDate={maxDate && dayjs(maxDate)}
-          minDate={minDate && dayjs(minDate)}
+          minDate={parsedMinDate}
+          maxDate={parsedMaxDate}
+          minDateTime={parsedMinDateTime}
+          maxDateTime={parsedMaxDateTime}
           {...passRest(rest)}
         />
         {hint && !error && <FormHelperText>{hint}</FormHelperText>}
