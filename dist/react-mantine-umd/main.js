@@ -1,9 +1,9 @@
-/* LetsForm react-mantine v0.7.17 - UMD */
+/* LetsForm react-mantine v0.7.18 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-mantine"] = {}, global.React, global.core, global.reactHookForm, global.dates));
-})(this, (function (exports, React, core, reactHookForm, dates) { 'use strict';
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-mantine"] = {}, global.React$1, global.core, global.reactHookForm, global.dates));
+})(this, (function (exports, React$1, core, reactHookForm, dates) { 'use strict';
 
   function _AsyncGenerator(gen) {
     var front, back;
@@ -4613,16 +4613,16 @@
       className = _ref.className,
       locale = _ref.locale;
     var keys = Object.keys(errors);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: classNames('lf-validation-errors', className)
     }, keys.map(function (fieldName) {
       var label = fieldName;
       if (errors[fieldName] && errors[fieldName].ref && errors[fieldName].ref.label) {
         label = tx(errors[fieldName].ref.label, locale);
       }
-      return /*#__PURE__*/React.createElement("div", {
+      return /*#__PURE__*/React$1.createElement("div", {
         key: fieldName
-      }, /*#__PURE__*/React.createElement("b", null, label, ":"), "\xA0", errors[fieldName].message ? errors[fieldName].message : 'This is required');
+      }, /*#__PURE__*/React$1.createElement("b", null, label, ":"), "\xA0", errors[fieldName].message ? errors[fieldName].message : 'This is required');
     }));
   };
 
@@ -4633,13 +4633,13 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       viewBox: "0 0 20 20",
       xmlns: "http://www.w3.org/2000/svg",
       fill: "none"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       fill: color,
       fillRule: "evenodd",
       d: "M10 3a7 7 0 100 14 7 7 0 000-14zm-9 7a9 9 0 1118 0 9 9 0 01-18 0zm14 .069a1 1 0 01-1 1h-2.931V14a1 1 0 11-2 0v-2.931H6a1 1 0 110-2h3.069V6a1 1 0 112 0v3.069H14a1 1 0 011 1z"
@@ -4653,13 +4653,13 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       viewBox: "0 0 24 24",
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       fill: color,
       fillRule: "evenodd",
       clipRule: "evenodd",
@@ -4674,13 +4674,13 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       fill: color,
       viewBox: "0 0 24 24",
       xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       d: "M17,8H7a1,1,0,0,0-.768,1.641l5,6a1,1,0,0,0,1.536,0l5-6A1,1,0,0,0,17,8Zm-5,5.438L9.135,10h5.73Z"
     }));
   };
@@ -4692,12 +4692,12 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       viewBox: "0 0 24 24",
       xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       fill: color,
       d: "M12.768,8.359a1.035,1.035,0,0,0-1.536,0l-5,6A1,1,0,0,0,7,16H17a1,1,0,0,0,.768-1.641ZM9.135,14,12,10.563,14.865,14Z"
     }));
@@ -4710,13 +4710,13 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       fill: color,
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       viewBox: "0 0 1920 1920",
       xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       d: "M960 0c530.193 0 960 429.807 960 960s-429.807 960-960 960S0 1490.193 0 960 429.807 0 960 0Zm-9.838 1342.685c-84.47 0-153.19 68.721-153.19 153.19 0 84.47 68.72 153.192 153.19 153.192s153.19-68.721 153.19-153.191-68.72-153.19-153.19-153.19ZM1153.658 320H746.667l99.118 898.623h208.755L1153.658 320Z",
       fillRule: "evenodd"
     }));
@@ -7209,6 +7209,19 @@
   	hidden: null,
   	accept: null,
   	acceptedFile: null,
+  	uploadButtonLabel: [
+  		"react",
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-antd"
+  	],
+  	multiple: [
+  		"react",
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-antd",
+  		"react-mantine"
+  	],
   	listType: [
   		"react-rsuite5",
   		"react-antd"
@@ -7226,22 +7239,11 @@
   	disabledFileItem: [
   		"react-rsuite5"
   	],
-  	multiple: [
-  		"react-rsuite5",
-  		"react-material-ui",
-  		"react-antd",
-  		"react-mantine"
-  	],
   	removable: [
   		"react-rsuite5"
   	],
   	draggable: [
   		"react-rsuite5",
-  		"react-antd"
-  	],
-  	uploadButtonLabel: [
-  		"react-rsuite5",
-  		"react-material-ui",
   		"react-antd"
   	],
   	uploadButtonAppearance: [
@@ -7331,23 +7333,28 @@
   	align: null,
   	steps: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	value: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	label: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	description: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	icon: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	small: [
   		"react-rsuite5",
@@ -7371,6 +7378,33 @@
   	],
   	labelPlacement: [
   		"react-antd"
+  	],
+  	color: [
+  		"react-mantine"
+  	],
+  	radius: [
+  		"react-mantine"
+  	],
+  	size: [
+  		"react-mantine"
+  	],
+  	iconPosition: [
+  		"react-mantine"
+  	],
+  	iconSize: [
+  		"react-mantine"
+  	],
+  	wrap: [
+  		"react-mantine"
+  	],
+  	allowStepClick: [
+  		"react-mantine"
+  	],
+  	allowStepSelect: [
+  		"react-mantine"
+  	],
+  	autoContrast: [
+  		"react-mantine"
   	],
   	validationMinLength: "validation",
   	validationMin: "validation",
@@ -9256,7 +9290,8 @@
   		},
   		{
   			name: "alignOffset",
-  			type: "number"
+  			type: "number",
+  			description: "Offset of the add / remove button from the top / bottom (depends on the alignment)"
   		},
   		{
   			name: "arrayType",
@@ -12337,7 +12372,7 @@
   		{
   			name: "autoContrast",
   			type: "boolean",
-  			description: "Determines whether active item text color should depend on background-color of the indicator. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast. Only applicable when variant=\"pills\""
+  			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
   		},
   		{
   			name: "inverted",
@@ -12398,6 +12433,17 @@
   			name: "accept",
   			type: "array",
   			description: "Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "
+  		}
+  	],
+  	react: [
+  		{
+  			name: "uploadButtonLabel",
+  			type: "string | i18n"
+  		},
+  		{
+  			name: "multiple",
+  			type: "boolean",
+  			description: "Allow selecting multiple files"
   		}
   	],
   	"react-rsuite5": [
@@ -12680,7 +12726,7 @@
   var steps = {
   	label: "Steps",
   	category: "layout",
-  	description: "Split the form in multiple steps",
+  	description: "Layout component to split the form in multiple steps",
   	name: "steps",
   	common: [
   		{
@@ -12777,6 +12823,88 @@
   				"horizontal",
   				"vertical"
   			]
+  		}
+  	],
+  	"react-mantine": [
+  		{
+  			name: "steps",
+  			type: "array"
+  		},
+  		{
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"grey",
+  				"red",
+  				"pink",
+  				"grape",
+  				"violet",
+  				"indigo",
+  				"blue",
+  				"cyan",
+  				"teal",
+  				"green",
+  				"lime",
+  				"yellow",
+  				"orange"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "iconPosition",
+  			type: "string",
+  			description: "Icon position relative to the step body, \"left\" by default",
+  			options: [
+  				"left",
+  				"right"
+  			]
+  		},
+  		{
+  			name: "iconSize",
+  			type: "number",
+  			description: "Determines whether steps should wrap to the next line if no space is available, true by default"
+  		},
+  		{
+  			name: "wrap",
+  			type: "boolean",
+  			description: "Determines whether steps should wrap to the next line if no space is available, true by default"
+  		},
+  		{
+  			name: "allowStepClick",
+  			type: "boolean",
+  			description: "Set to false to disable clicks on step"
+  		},
+  		{
+  			name: "allowStepSelect",
+  			type: "boolean",
+  			description: "Should step selection be allowed"
+  		},
+  		{
+  			name: "autoContrast",
+  			type: "boolean",
+  			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
   		}
   	],
   	frameworks: [
@@ -15082,6 +15210,24 @@
     return result !== 0;
   };
 
+  /**
+   * isValidTime
+   *
+   * @param {} d Time string (i.e. 12:12:00)
+   * @returns
+   */
+  var isValidTime = function isValidTime(d) {
+    return typeof d === 'string' && d.match(/^[0-9]{1,2}:[0-9]{2,2}(:[0-9]{2,2}){0,1}$/) != null;
+  };
+
+  var omitFields = function omitFields(fields) {
+    var fieldNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+    var toBeOmitted = Array.isArray(fieldNames) ? fieldNames : [fieldNames];
+    return filterFields(fields, function (field) {
+      return !toBeOmitted.includes(field.name);
+    });
+  };
+
   var I18N = function I18N(Component) {
     var propNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
     var funcPropNames = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
@@ -15100,21 +15246,21 @@
         }
         return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, propName, props[propName]));
       }, {});
-      return /*#__PURE__*/React.createElement(Component, newProps);
+      return /*#__PURE__*/React$1.createElement(Component, newProps);
     };
   };
 
-  var FormContext = /*#__PURE__*/React.createContext();
+  var FormContext = /*#__PURE__*/React$1.createContext();
 
   var useFormContext = function useFormContext() {
-    var context = React.useContext(FormContext);
+    var context = React$1.useContext(FormContext);
 
     // put here some defaults
 
     return context;
   };
   var useStylesheet = function useStylesheet(id, css) {
-    React.useEffect(function () {
+    React$1.useEffect(function () {
       if (!_isEmpty(css)) {
         var head = document.head;
         var style = document.createElement("style");
@@ -15486,11 +15632,12 @@
       case 'input-number':
       case 'rate':
       case 'slider':
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, value);
       case 'input-text':
-        return /*#__PURE__*/React.createElement("div", {
+      case 'time':
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, value);
       case 'date':
@@ -15499,7 +15646,7 @@
         } else if (_isString(value) && isValidDate(new Date(value))) {
           d = new Date(value);
         }
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, d ? d.toLocaleDateString() : '');
       case 'datetime':
@@ -15508,21 +15655,21 @@
         } else if (_isString(value) && isValidDate(new Date(value))) {
           d = new Date(value);
         }
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, d ? d.toLocaleDateString() + ' ' + d.toLocaleTimeString() : '');
       case 'toggle':
       case 'checkbox':
         if (value === true || value === 1) {
-          return /*#__PURE__*/React.createElement("div", {
+          return /*#__PURE__*/React$1.createElement("div", {
             className: "plaintext-value"
           }, i18n(YesLabel, locale));
         } else if (value === false || value === 0) {
-          return /*#__PURE__*/React.createElement("div", {
+          return /*#__PURE__*/React$1.createElement("div", {
             className: "plaintext-value"
           }, i18n(NoLabel, locale));
         }
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         });
       case 'radio-group':
@@ -15539,7 +15686,7 @@
             label = found.label;
           }
         }
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, label);
       case 'checkbox-group':
@@ -15550,17 +15697,17 @@
         var founds = selectedOptions.map(function (option) {
           return isI18n(option.label) ? i18n(option.label, locale) : option.label;
         });
-        return /*#__PURE__*/React.createElement("div", null, founds.join(', '));
+        return /*#__PURE__*/React$1.createElement("div", null, founds.join(', '));
       case 'array':
-        return /*#__PURE__*/React.createElement(React.Fragment, null, _isArray(value) && /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, _isArray(value) && /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
-        }, /*#__PURE__*/React.createElement("span", {
+        }, /*#__PURE__*/React$1.createElement("span", {
           className: "count"
-        }, value.length), ' ', value.length > 1 ? i18n(ElementsLabel, locale) : i18n(ElementLabel, locale)), !_isArray(value) && /*#__PURE__*/React.createElement("div", {
+        }, value.length), ' ', value.length > 1 ? i18n(ElementsLabel, locale) : i18n(ElementLabel, locale)), !_isArray(value) && /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, i18n(NoElementsLabel, locale)));
       case 'textarea':
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value",
           dangerouslySetInnerHTML: {
             __html: (value || '').replaceAll('\n', '<br/>')
@@ -15568,9 +15715,9 @@
         });
       case 'placeholder':
       case 'placeholder-image':
-        return /*#__PURE__*/React.createElement(React.Fragment, null);
+        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null);
       default:
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, _typeof(value) !== 'object' ? value : '');
     }
@@ -15762,7 +15909,7 @@
     var text = _ref.text,
       name = _ref.name;
     if (!_isEmpty(text)) {
-      return /*#__PURE__*/React.createElement("div", {
+      return /*#__PURE__*/React$1.createElement("div", {
         className: "lf-control-placeholder",
         "data-lf-field-name": name,
         dangerouslySetInnerHTML: {
@@ -15770,7 +15917,7 @@
         }
       });
     } else {
-      return /*#__PURE__*/React.createElement("div", null);
+      return /*#__PURE__*/React$1.createElement("div", null);
     }
   };
 
@@ -15784,20 +15931,20 @@
       leftAlignment = _ref.leftAlignment,
       centerAlignment = _ref.centerAlignment,
       rightAlignment = _ref.rightAlignment;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: classNames('lf-control-three-columns', layout)
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "left",
       style: {
         alignSelf: leftAlignment ? leftAlignment : undefined
       }
-    }, _isFunction(children) && children('left')), /*#__PURE__*/React.createElement("div", {
+    }, _isFunction(children) && children('left')), /*#__PURE__*/React$1.createElement("div", {
       className: "center",
       style: {
         alignSelf: centerAlignment ? centerAlignment : undefined
       }
-    }, _isFunction(children) && children('center')), /*#__PURE__*/React.createElement("div", {
+    }, _isFunction(children) && children('center')), /*#__PURE__*/React$1.createElement("div", {
       className: "right",
       style: {
         alignSelf: rightAlignment ? rightAlignment : undefined
@@ -15814,15 +15961,15 @@
       layout = _ref.layout,
       leftAlignment = _ref.leftAlignment,
       rightAlignment = _ref.rightAlignment;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: classNames('lf-control-two-columns', layout),
       "data-lf-field-name": name
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "left",
       style: {
         alignSelf: leftAlignment ? leftAlignment : undefined
       }
-    }, _isFunction(children) && children('left')), /*#__PURE__*/React.createElement("div", {
+    }, _isFunction(children) && children('left')), /*#__PURE__*/React$1.createElement("div", {
       className: "right",
       style: {
         alignSelf: rightAlignment ? rightAlignment : undefined
@@ -15846,40 +15993,40 @@
       border = _ref$border === void 0 ? 'top' : _ref$border,
       align = _ref.align,
       children = _ref.children;
-    var _useState = React.useState(open),
+    var _useState = React$1.useState(open),
       _useState2 = _slicedToArray(_useState, 2),
       isOpen = _useState2[0],
       setIsOpen = _useState2[1];
-    var handleClick = React.useCallback(function (event) {
+    var handleClick = React$1.useCallback(function (event) {
       event.preventDefault();
       setIsOpen(!isOpen);
     }, [isOpen]);
     // if open changes, then change status
-    React.useEffect(function () {
+    React$1.useEffect(function () {
       setIsOpen(open);
     }, [open]);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: classNames('lf-control-group', "lf-border-".concat(border), {
         'open': isOpen,
         'close': !isOpen
       })
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       role: "separator",
       className: classNames('header', align)
-    }, /*#__PURE__*/React.createElement("span", {
+    }, /*#__PURE__*/React$1.createElement("span", {
       className: "inner-text"
-    }, label, collapsible && /*#__PURE__*/React.createElement("a", {
+    }, label, collapsible && /*#__PURE__*/React$1.createElement("a", {
       href: "#",
       className: "lf-btn-collapse",
       disabled: disabled,
       appearance: "link",
       onClick: handleClick
-    }, isOpen ? /*#__PURE__*/React.createElement(ChevronUp, {
+    }, isOpen ? /*#__PURE__*/React$1.createElement(ChevronUp, {
       color: "#3498ff"
-    }) : /*#__PURE__*/React.createElement(ChevronDown, {
+    }) : /*#__PURE__*/React$1.createElement(ChevronDown, {
       color: "#3498ff"
-    })))), (isOpen || !collapsible) && /*#__PURE__*/React.createElement("div", {
+    })))), (isOpen || !collapsible) && /*#__PURE__*/React$1.createElement("div", {
       className: "lf-group-content"
     }, children));
   }, ['label']);
@@ -15896,13 +16043,13 @@
       marginTop = _ref.marginTop,
       marginBottom = _ref.marginBottom,
       align = _ref.align;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-placeholder-image",
       "data-lf-field-name": name,
       style: {
         textAlign: align ? align : undefined
       }
-    }, url && /*#__PURE__*/React.createElement("img", {
+    }, url && /*#__PURE__*/React$1.createElement("img", {
       src: url,
       alt: label || name,
       style: {
@@ -15917,13 +16064,13 @@
 
   var TextOrIcon = function TextOrIcon(str) {
     if (isUrl(str)) {
-      return /*#__PURE__*/React.createElement("img", {
+      return /*#__PURE__*/React$1.createElement("img", {
         className: "lf-prefix-icon",
         src: str,
         alt: "icon"
       });
     } else if (str) {
-      return /*#__PURE__*/React.createElement("span", null, str);
+      return /*#__PURE__*/React$1.createElement("span", null, str);
     }
   };
 
@@ -16129,13 +16276,13 @@
       className = _ref.className,
       Icon = _ref.icon,
       onClick = _ref.onClick;
-    var handleClick = React.useCallback(function (e) {
+    var handleClick = React$1.useCallback(function (e) {
       e.preventDefault();
       if (!disabled) {
         onClick();
       }
     }, [disabled, onClick]);
-    return /*#__PURE__*/React.createElement("a", {
+    return /*#__PURE__*/React$1.createElement("a", {
       href: "#",
       className: classNames('lf-icon-button', className, {
         disabled: disabled
@@ -16158,36 +16305,36 @@
       showAdd = _ref2$showAdd === void 0 ? false : _ref2$showAdd,
       align = _ref2.align,
       alignOffset = _ref2.alignOffset;
-    var handleRemove = React.useCallback(function () {
+    var handleRemove = React$1.useCallback(function () {
       return onRemove(item);
     }, [item, onRemove]);
     var style;
     if ((align === 'top' || align === 'bottom') && _isNumber(alignOffset) && alignOffset > 0) {
       style = _defineProperty$1({}, "margin".concat(_capitalize(align)), "".concat(alignOffset, "px"));
     }
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-common-array-item"
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "inner-form"
-    }, children), /*#__PURE__*/React.createElement("div", {
+    }, children), /*#__PURE__*/React$1.createElement("div", {
       className: "buttons",
       style: style
-    }, showAdd && /*#__PURE__*/React.createElement(IconButton, {
+    }, showAdd && /*#__PURE__*/React$1.createElement(IconButton, {
       disabled: disableAdd || disabled || readOnly,
       className: "arrow",
       appearance: "link",
-      icon: /*#__PURE__*/React.createElement(PlusCircle, {
+      icon: /*#__PURE__*/React$1.createElement(PlusCircle, {
         height: 16,
         width: 16,
         color: "#3498ff"
       }),
       size: "sm",
       onClick: onAdd
-    }), !showAdd && /*#__PURE__*/React.createElement(IconButton, {
+    }), !showAdd && /*#__PURE__*/React$1.createElement(IconButton, {
       className: "arrow",
       disabled: disabled || readOnly,
       appearance: "link",
-      icon: /*#__PURE__*/React.createElement(MinusCircle, {
+      icon: /*#__PURE__*/React$1.createElement(MinusCircle, {
         height: 16,
         width: 16,
         color: "#3498ff"
@@ -16319,7 +16466,7 @@
       // copy the locales from the main form
       fields: fields
     };
-    var _useState = React.useState(makeDefaultValue(value, arrayType, form)),
+    var _useState = React$1.useState(makeDefaultValue(value, arrayType, form)),
       _useState2 = _slicedToArray(_useState, 2),
       items = _useState2[0],
       setItems = _useState2[1];
@@ -16334,21 +16481,21 @@
     if (leftMargin != null) {
       style.marginLeft = _isNumber(leftMargin) ? "".concat(leftMargin, "px") : leftMargin;
     }
-    var handleAdd = React.useCallback(function () {
+    var handleAdd = React$1.useCallback(function () {
       setItems(function (items) {
         return [].concat(_toConsumableArray(items), [{
           id: randomId()
         }]);
       });
     }, []);
-    var handleChange = React.useCallback(function (value) {
+    var handleChange = React$1.useCallback(function (value) {
       var newItems = items.map(function (i) {
         return i.id === value.id ? value : i;
       });
       setItems(newItems);
       onChange(formatArray(newItems, arrayType));
     }, [items, onChange, arrayType]);
-    var handleRemove = React.useCallback(function (item) {
+    var handleRemove = React$1.useCallback(function (item) {
       var newItems = items.filter(function (i) {
         return i.id !== item.id;
       });
@@ -16356,19 +16503,19 @@
       onChange(formatArray(newItems, arrayType));
     }, [items, onChange, arrayType]);
     if (children) {
-      return /*#__PURE__*/React.createElement("div", {
+      return /*#__PURE__*/React$1.createElement("div", {
         style: {
           padding: '0px 10px 1px 10px'
         }
       }, children);
     }
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: classNames('lf-control-common-array', align ? "lf-".concat(align) : undefined),
       style: style
     }, (_isArray(items) ? items : []).map(function (item, idx) {
       var canAdd = idx === items.length - 1 && !isEmptyItem(item);
       var showAdd = idx === items.length - 1 || items.length === 1;
-      return /*#__PURE__*/React.createElement(ArrayItem, {
+      return /*#__PURE__*/React$1.createElement(ArrayItem, {
         key: item.id,
         item: item,
         disabled: disabled,
@@ -16379,7 +16526,7 @@
         onRemove: handleRemove,
         align: align,
         alignOffset: alignOffset
-      }, /*#__PURE__*/React.createElement(LetsFormComponent, {
+      }, /*#__PURE__*/React$1.createElement(LetsFormComponent, {
         form: form,
         locale: lfLocale,
         disabled: disabled,
@@ -16394,7 +16541,7 @@
   var css_248z$7 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$7);
 
-  var _excluded$l = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$m = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -16420,19 +16567,19 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$l);
-    var _useState = React.useState(value || initialValue),
+      rest = _objectWithoutProperties(_ref, _excluded$m);
+    var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
       setChecked = _useState2[1];
-    var handleClick = React.useCallback(function () {
+    var handleClick = React$1.useCallback(function () {
       var newValue = !checked;
       setChecked(!checked);
       onChange(newValue, name);
     }, [onChange, checked, name]);
     var inner;
     if (buttonType === 'toggle') {
-      inner = /*#__PURE__*/React.createElement(ButtonComponent, _extends({
+      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends({
         size: size,
         onClick: handleClick,
         onBlur: onBlur,
@@ -16442,7 +16589,7 @@
         style: makeWidthStyle(fullWidth, width)
       }, passRest(_omit(rest, 'label')), checked ? OnStateProps : OffStateProps));
     } else if (buttonType === 'link') {
-      inner = /*#__PURE__*/React.createElement(ButtonComponent, _extends({
+      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends({
         size: size,
         onBlur: onBlur,
         appearance: appearance,
@@ -16454,14 +16601,14 @@
         style: makeWidthStyle(fullWidth, width)
       }, passRest(_omit(rest, 'label')), LinkProps));
     }
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: classNames('lf-control-button', className, _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
       "data-lf-field-name": name
     }, inner);
   };
   var MakeButton = function MakeButton(ButtonComponent, OnStateProps, OffStateProps, LinkProps) {
     return function (props) {
-      return /*#__PURE__*/React.createElement(GenericButton, _extends({
+      return /*#__PURE__*/React$1.createElement(GenericButton, _extends({
         ButtonComponent: ButtonComponent,
         OnStateProps: _isFunction(OnStateProps) ? OnStateProps(props) : OnStateProps,
         OffStateProps: _isFunction(OffStateProps) ? OffStateProps(props) : OffStateProps,
@@ -16478,7 +16625,7 @@
 
   var PlaintextLabel = function PlaintextLabel(_ref) {
     var children = _ref.children;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-plaintext-field-label"
     }, children);
   };
@@ -16486,13 +16633,13 @@
     var currentValues = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
     return (fields || []).map(function (field) {
       if (field.component === 'group') {
-        return /*#__PURE__*/React.createElement(Group, _extends({
+        return /*#__PURE__*/React$1.createElement(Group, _extends({
           key: field.name,
           collapsible: false,
           label: field.label
         }, _pick(field, ['bottomBorder', 'align'])), renderFields(field.fields, locale, framework, currentValues));
       } else if (field.component === 'two-columns') {
-        return /*#__PURE__*/React.createElement(TwoColumns, _extends({
+        return /*#__PURE__*/React$1.createElement(TwoColumns, _extends({
           key: field.name
         }, _pick(field, ['layout', 'leftAlignment', 'rightAlignment'])), function (column) {
           if (column === 'left') {
@@ -16502,7 +16649,7 @@
           }
         });
       } else if (field.component === 'three-columns') {
-        return /*#__PURE__*/React.createElement(ThreeColumns, _extends({
+        return /*#__PURE__*/React$1.createElement(ThreeColumns, _extends({
           key: field.name
         }, _pick(field, ['layout', 'leftAlignment', 'centerAlignment', 'rightAlignment'])), function (column) {
           if (column === 'left') {
@@ -16518,12 +16665,12 @@
         var _fields = subkeys.map(function (subkey) {
           return renderFields(field.fields[subkey], locale, framework, currentValues);
         });
-        return /*#__PURE__*/React.createElement(React.Fragment, null, _fields);
+        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, _fields);
       }
-      return /*#__PURE__*/React.createElement("div", {
+      return /*#__PURE__*/React$1.createElement("div", {
         key: field.name,
         className: "lf-plaintext-field lf-control-".concat(field.component)
-      }, /*#__PURE__*/React.createElement(PlaintextLabel, null, isI18n(field.label) ? i18n(field.label, locale) : field.label), /*#__PURE__*/React.createElement(Plaintext, {
+      }, /*#__PURE__*/React$1.createElement(PlaintextLabel, null, isI18n(field.label) ? i18n(field.label, locale) : field.label), /*#__PURE__*/React$1.createElement(Plaintext, {
         component: field.component,
         locale: locale,
         value: currentValues[field.name],
@@ -16538,10 +16685,10 @@
       currentValues = _ref2.currentValues;
     var fields = form.fields;
     if (_isEmpty(fields)) {
-      return /*#__PURE__*/React.createElement("span", null);
+      return /*#__PURE__*/React$1.createElement("span", null);
     }
     console.log('plaintext--->', currentValues);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-form lf-form-plaintext"
     }, renderFields(fields, locale, framework, currentValues));
   };
@@ -16886,18 +17033,18 @@
     var lfComponent = _ref.lfComponent,
       label = _ref.label,
       lfFramework = _ref.lfFramework;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-missing-component"
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "icon"
-    }, /*#__PURE__*/React.createElement(Warning, {
+    }, /*#__PURE__*/React$1.createElement(Warning, {
       color: "#ff6633",
       height: 16
-    })), /*#__PURE__*/React.createElement("div", {
+    })), /*#__PURE__*/React$1.createElement("div", {
       className: "message"
-    }, "The component ", /*#__PURE__*/React.createElement("span", {
+    }, "The component ", /*#__PURE__*/React$1.createElement("span", {
       className: "tag-component"
-    }, lfComponent), " (", /*#__PURE__*/React.createElement("em", null, "\"", _isString(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/React.createElement("b", null, lfFramework), ")"));
+    }, lfComponent), " (", /*#__PURE__*/React$1.createElement("em", null, "\"", _isString(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/React$1.createElement("b", null, lfFramework), ")"));
   };
 
   var GenerateGenerator = function GenerateGenerator(_ref) {
@@ -16927,8 +17074,12 @@
         Components = _ref2.Components,
         prependView = _ref2.prependView;
       var renderedFields = (fields || []).filter(function (field) {
+        return Wrapper || field.component !== 'hidden';
+      }) // skip hidden type field (not in design mode)
+      .filter(function (field) {
         return Wrapper || field.hidden !== true;
-      }).map(function (field, index) {
+      }) // skip fields with "hidden" attribute (not in design mode)
+      .map(function (field, index) {
         var Component;
         if (Components[field.component] && Components[field.component][framework]) {
           Component = Components[field.component][framework];
@@ -16942,7 +17093,7 @@
 
         // special case of group
         if (field.component === 'group') {
-          var component = /*#__PURE__*/React.createElement(Component, _extends({
+          var component = /*#__PURE__*/React$1.createElement(Component, _extends({
             key: field.name,
             lfComponent: field.component,
             lfFramework: framework,
@@ -16951,7 +17102,7 @@
             label: field.label,
             hint: field.hint,
             disabled: field.disabled
-          }, additionalFields), /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+          }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
             Wrapper: Wrapper,
             GroupWrapper: GroupWrapper,
             PlaceholderWrapper: PlaceholderWrapper,
@@ -16972,19 +17123,19 @@
             locale: locale,
             onJavascriptError: onJavascriptError,
             Components: Components,
-            prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+            prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
               key: "wrapper_top_field",
               parentField: field,
               parentFieldTarget: "fields",
               nextField: field.fields && field.fields.length ? field.fields[0] : null
             })
-          }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+          }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
             context: "group",
             key: "bottom_view_".concat(field.name),
             field: field,
             target: "fields"
           })));
-          return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
             key: "wrapper_".concat(field.name),
             field: field,
             level: level,
@@ -16992,7 +17143,7 @@
             className: "group"
           }, component) : component;
         } else if (field.component === 'tabs') {
-          return /*#__PURE__*/React.createElement(reactHookForm.Controller, {
+          return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
             key: "field_".concat(field.name),
             name: field.name,
             control: control,
@@ -17000,7 +17151,7 @@
               var _values$field$name;
               var fieldInfo = _ref3.field;
               var values = getValues();
-              var component = /*#__PURE__*/React.createElement(Component, _extends({
+              var component = /*#__PURE__*/React$1.createElement(Component, _extends({
                 key: field.name,
                 lfComponent: field.component,
                 lfFramework: framework,
@@ -17016,7 +17167,7 @@
                   _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
                 }
               }, additionalFields, field[framework]), function (tab) {
-                return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+                return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                   Wrapper: Wrapper,
                   GroupWrapper: GroupWrapper,
                   PlaceholderWrapper: PlaceholderWrapper,
@@ -17037,14 +17188,14 @@
                   locale: locale,
                   onJavascriptError: onJavascriptError,
                   Components: Components,
-                  prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                  prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                     key: "wrapper_top_field",
                     parentField: field,
                     parentFieldTarget: "fields",
                     parentFieldSubTarget: tab,
                     nextField: field.fields && field.fields.length ? field.fields[0] : null
                   })
-                }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+                }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                   context: "tabs",
                   key: "bottom_view_".concat(field.name),
                   field: field,
@@ -17052,7 +17203,7 @@
                   subtarget: tab
                 }));
               });
-              return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+              return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
                 key: "wrapper_".concat(field.name),
                 field: field,
                 level: level,
@@ -17062,7 +17213,7 @@
             }
           });
         } else if (field.component === 'steps') {
-          return /*#__PURE__*/React.createElement(reactHookForm.Controller, {
+          return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
             key: "field_".concat(field.name),
             name: field.name,
             control: control,
@@ -17070,7 +17221,7 @@
               var _values$field$name2;
               var fieldInfo = _ref4.field;
               var values = getValues();
-              var component = /*#__PURE__*/React.createElement(Component, _extends({
+              var component = /*#__PURE__*/React$1.createElement(Component, _extends({
                 key: field.name,
                 lfComponent: field.component,
                 lfFramework: framework,
@@ -17086,7 +17237,7 @@
                   _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
                 }
               }, additionalFields, field[framework]), function (step) {
-                return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+                return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                   Wrapper: Wrapper,
                   GroupWrapper: GroupWrapper,
                   PlaceholderWrapper: PlaceholderWrapper,
@@ -17107,14 +17258,14 @@
                   locale: locale,
                   onJavascriptError: onJavascriptError,
                   Components: Components,
-                  prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                  prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                     key: "wrapper_top_field",
                     parentField: field,
                     parentFieldTarget: "fields",
                     parentFieldSubTarget: step,
                     nextField: field.fields && field.fields.length ? field.fields[0] : null
                   })
-                }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+                }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                   context: "tabs",
                   key: "bottom_view_".concat(field.name),
                   field: field,
@@ -17122,7 +17273,7 @@
                   subtarget: step
                 }));
               });
-              return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+              return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
                 key: "wrapper_".concat(field.name),
                 field: field,
                 level: level,
@@ -17132,7 +17283,7 @@
             }
           });
         } else if (field.component === 'array' && GroupWrapper) {
-          var _component = /*#__PURE__*/React.createElement(Component, _extends({
+          var _component = /*#__PURE__*/React$1.createElement(Component, _extends({
             key: field.name,
             lfComponent: field.component,
             lfFramework: framework,
@@ -17141,7 +17292,7 @@
             label: field.label,
             hint: field.hint,
             disabled: field.disabled
-          }, additionalFields), /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+          }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
             Wrapper: Wrapper,
             GroupWrapper: GroupWrapper,
             PlaceholderWrapper: PlaceholderWrapper,
@@ -17162,19 +17313,19 @@
             locale: locale,
             onJavascriptError: onJavascriptError,
             Components: Components,
-            prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+            prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
               key: "wrapper_top_field",
               parentField: field,
               parentFieldTarget: "fields",
               nextField: field.fields && field.fields.length ? field.fields[0] : null
             })
-          }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+          }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
             context: "array",
             key: "bottom_view_".concat(field.name),
             field: field,
             target: "fields"
           })));
-          return /*#__PURE__*/React.createElement(GroupWrapper, {
+          return /*#__PURE__*/React$1.createElement(GroupWrapper, {
             key: "wrapper_".concat(field.name),
             field: field,
             level: level,
@@ -17182,7 +17333,7 @@
             className: "array"
           }, _component);
         } else if (field.component === 'two-columns') {
-          var _component2 = /*#__PURE__*/React.createElement(Component, _extends({
+          var _component2 = /*#__PURE__*/React$1.createElement(Component, _extends({
             key: field.name,
             lfComponent: field.component,
             lfFramework: framework,
@@ -17190,7 +17341,7 @@
             name: field.name
           }, additionalFields), function (column) {
             if (column === 'left') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -17211,20 +17362,20 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "leftFields",
                   nextField: field.leftFields && field.leftFields.length ? field.leftFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "two-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
                 target: "leftFields"
               }));
             } else if (column === 'right') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -17245,13 +17396,13 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "rightFields",
                   nextField: field.rightFields && field.rightFields.length ? field.rightFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "two-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
@@ -17259,7 +17410,7 @@
               }));
             }
           });
-          return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
             key: "wrapper_".concat(field.name),
             className: "two-columns",
             level: level,
@@ -17267,7 +17418,7 @@
             index: index
           }, _component2) : _component2;
         } else if (field.component === 'three-columns') {
-          var _component3 = /*#__PURE__*/React.createElement(Component, _extends({
+          var _component3 = /*#__PURE__*/React$1.createElement(Component, _extends({
             key: "three-columns-".concat(field.name),
             name: field.name,
             lfComponent: field.component,
@@ -17275,7 +17426,7 @@
             lfLocale: locale
           }, additionalFields), function (column) {
             if (column === 'left') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -17296,20 +17447,20 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "leftFields",
                   nextField: field.leftFields && field.leftFields.length ? field.leftFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "three-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
                 target: "leftFields"
               }));
             } else if (column === 'center') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -17330,20 +17481,20 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "centerFields",
                   nextField: field.centerFields && field.centerFields.length ? field.centerFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "three-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
                 target: "centerFields"
               }));
             } else if (column === 'right') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -17364,13 +17515,13 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "rightFields",
                   nextField: field.rightFields && field.rightFields.length ? field.rightFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "three-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
@@ -17378,7 +17529,7 @@
               }));
             }
           });
-          return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
             key: "wrapper_".concat(field.name),
             className: "three-columns",
             field: field,
@@ -17392,14 +17543,14 @@
         var rules = translateValidation(_objectSpread2({
           required: field.required
         }, field.validation), locale, onJavascriptError);
-        return /*#__PURE__*/React.createElement(reactHookForm.Controller, {
+        return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
           key: "field_".concat(field.name),
           name: field.name,
           rules: rules,
           control: control,
           render: function render(_ref5) {
             var fieldInfo = _ref5.field;
-            var component = /*#__PURE__*/React.createElement(Component
+            var component = /*#__PURE__*/React$1.createElement(Component
             // not sure about this, not passing the ref
             , _extends({
               name: fieldInfo.name,
@@ -17425,7 +17576,7 @@
                 _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
               }
             }));
-            return Wrapper ? /*#__PURE__*/React.createElement(Wrapper, {
+            return Wrapper ? /*#__PURE__*/React$1.createElement(Wrapper, {
               key: "wrapper_".concat(field.name),
               field: field,
               level: level,
@@ -17439,7 +17590,7 @@
       //return renderedFields;
       return prependView ? [prependView].concat(_toConsumableArray(renderedFields)) : renderedFields;
     };
-    var FormGenerator = /*#__PURE__*/React.memo(function (_ref6) {
+    var FormGenerator = /*#__PURE__*/React$1.memo(function (_ref6) {
       var _form$name;
       var framework = _ref6.framework,
         form = _ref6.form,
@@ -17486,16 +17637,16 @@
         _ref6$demo = _ref6.demo,
         demo = _ref6$demo === void 0 ? false : _ref6$demo;
       var showErrors = form.showErrors;
-      var _useState = React.useState((_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : _uniqueId('form_')),
+      var _useState = React$1.useState((_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : _uniqueId('form_')),
         _useState2 = _slicedToArray(_useState, 2),
         formName = _useState2[0],
         setFormName = _useState2[1];
       useStylesheet(formName, form.css);
-      var _useState3 = React.useState(null),
+      var _useState3 = React$1.useState(null),
         _useState4 = _slicedToArray(_useState3, 2),
         transformers = _useState4[0],
         setTransformers = _useState4[1];
-      var _useState5 = React.useState(prealoadComponents),
+      var _useState5 = React$1.useState(prealoadComponents),
         _useState6 = _slicedToArray(_useState5, 2),
         preloading = _useState6[0],
         setPreloading = _useState6[1];
@@ -17510,19 +17661,19 @@
         reset = _useForm.reset,
         control = _useForm.control,
         getValues = _useForm.getValues;
-      var _useState7 = React.useState(),
+      var _useState7 = React$1.useState(),
         _useState8 = _slicedToArray(_useState7, 2),
         validationErrors = _useState8[0],
         setValidationErrors = _useState8[1];
       // store form fields, apply immediately transformers (collected from all fields)
-      var _useState9 = React.useState(null),
+      var _useState9 = React$1.useState(null),
         _useState10 = _slicedToArray(_useState9, 2),
         formFields = _useState10[0],
         setFormFields = _useState10[1];
       var MergedComponents = mergeComponents(Fields, components);
 
       // preload components of the form
-      React.useEffect(function () {
+      React$1.useEffect(function () {
         if (prealoadComponents) {
           var _components = _uniq(reduceFields(form.fields, function (field, acc) {
             return [].concat(_toConsumableArray(acc), [field.component]);
@@ -17548,7 +17699,7 @@
       }, []);
 
       // update internal state if form changes
-      React.useEffect(function () {
+      React$1.useEffect(function () {
         var f = /*#__PURE__*/function () {
           var _ref7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
             var _form$name2;
@@ -17695,20 +17846,20 @@
       [form, framework] // don't put defaultValues here
       );
 
-      var onHandleSubmit = React.useCallback(function (data) {
+      var onHandleSubmit = React$1.useCallback(function (data) {
         setValidationErrors(null);
         onSubmit(data);
       }, [onSubmit]);
-      var onHandleError = React.useCallback(function (data) {
+      var onHandleError = React$1.useCallback(function (data) {
         setValidationErrors(data);
         onError(data);
       }, [onError]);
-      var handleReset = React.useCallback(function () {
+      var handleReset = React$1.useCallback(function () {
         setValidationErrors(null);
         reset(defaultValues);
         onReset();
       }, [defaultValues, reset, onReset]);
-      var handleChange = React.useCallback( /*#__PURE__*/function () {
+      var handleChange = React$1.useCallback( /*#__PURE__*/function () {
         var _ref8 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(values, fieldName) {
           var newFields, _iteratorAbruptCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, f, _iteratorAbruptCompletion4, _didIteratorError4, _iteratorError4, _iterator4, _step4, _f;
           return _regeneratorRuntime().wrap(function _callee2$(_context2) {
@@ -17842,7 +17993,7 @@
           return _ref8.apply(this, arguments);
         };
       }(), [onChange, formFields, formName, transformers, framework, onJavascriptError]);
-      var handleEnter = React.useCallback(function () {
+      var handleEnter = React$1.useCallback(function () {
         handleSubmit(onHandleSubmit, onHandleError)();
         onEnter();
       }, [handleSubmit, onEnter, onHandleError, onHandleSubmit]);
@@ -17855,10 +18006,10 @@
       var BottomView = bottomView;
       var PlaceholderWrapper = placeholderWrapper;
       if (preloading) {
-        return Loader ? /*#__PURE__*/React.createElement(Loader, null) : /*#__PURE__*/React.createElement("div", null, "Loading...");
+        return Loader ? /*#__PURE__*/React$1.createElement(Loader, null) : /*#__PURE__*/React$1.createElement("div", null, "Loading...");
       }
       if (plaintext) {
-        return /*#__PURE__*/React.createElement(PlaintextForm, {
+        return /*#__PURE__*/React$1.createElement(PlaintextForm, {
           form: form,
           locale: locale,
           framework: framework,
@@ -17870,23 +18021,23 @@
       if (debug) {
         console.log("[LetsForm] Render form (".concat(form.name, ")"));
       }
-      return /*#__PURE__*/React.createElement(FormContext.Provider, {
+      return /*#__PURE__*/React$1.createElement(FormContext.Provider, {
         value: {
           locales: form.locales,
           locale: locale
           // ..more
         }
-      }, /*#__PURE__*/React.createElement("div", {
+      }, /*#__PURE__*/React$1.createElement("div", {
         className: classNames('lf-lets-form', {
           'lf-lets-form-edit-mode': demo
         }, className)
-      }, formErrors && showErrors === 'groupedTop' && /*#__PURE__*/React.createElement(ValidationErrors, {
+      }, formErrors && showErrors === 'groupedTop' && /*#__PURE__*/React$1.createElement(ValidationErrors, {
         className: "top",
         locale: locale,
         errors: enrichWithLabels(formErrors, formFields)
-      }), /*#__PURE__*/React.createElement(React.Suspense, {
-        fallback: Loader ? /*#__PURE__*/React.createElement(Loader, null) : /*#__PURE__*/React.createElement("div", null, "Loading...")
-      }, /*#__PURE__*/React.createElement(Form, _extends({
+      }), /*#__PURE__*/React$1.createElement(React$1.Suspense, {
+        fallback: Loader ? /*#__PURE__*/React$1.createElement(Loader, null) : /*#__PURE__*/React$1.createElement("div", null, "Loading...")
+      }, /*#__PURE__*/React$1.createElement(Form, _extends({
         onSubmit: handleSubmit(onHandleSubmit, onHandleError),
         name: formName,
         defaultValues: defaultValues,
@@ -17925,11 +18076,11 @@
         locale: locale,
         onJavascriptError: onJavascriptError,
         Components: MergedComponents
-      }), children, formErrors && (showErrors === 'groupedBottom' || _isEmpty(showErrors)) && /*#__PURE__*/React.createElement(ValidationErrors, {
+      }), children, formErrors && (showErrors === 'groupedBottom' || _isEmpty(showErrors)) && /*#__PURE__*/React$1.createElement(ValidationErrors, {
         className: "bottom",
         locale: locale,
         errors: enrichWithLabels(formErrors, formFields)
-      }))), demo && /*#__PURE__*/React.createElement("div", {
+      }))), demo && /*#__PURE__*/React$1.createElement("div", {
         className: "label-test-buttons"
       }, "Test buttons")));
     }, function (prevProps, nextProps) {
@@ -17945,16 +18096,16 @@
   };
 
   function lazyPreload(factory) {
-    var ReactLazyComponent = /*#__PURE__*/React.lazy(factory);
+    var ReactLazyComponent = /*#__PURE__*/React$1.lazy(factory);
     var PreloadedComponent;
     var factoryPromise;
-    var Component = /*#__PURE__*/React.forwardRef(function LazyWithPreload(props, ref) {
+    var Component = /*#__PURE__*/React$1.forwardRef(function LazyWithPreload(props, ref) {
       var _PreloadedComponent;
       // Once one of these is chosen, we must ensure that it continues to be
       // used for all subsequent renders, otherwise it can cause the
       // underlying component to be unmounted and remounted.
-      var ComponentToRender = React.useRef((_PreloadedComponent = PreloadedComponent) !== null && _PreloadedComponent !== void 0 ? _PreloadedComponent : ReactLazyComponent);
-      return /*#__PURE__*/React.createElement(ComponentToRender.current, Object.assign(ref ? {
+      var ComponentToRender = React$1.useRef((_PreloadedComponent = PreloadedComponent) !== null && _PreloadedComponent !== void 0 ? _PreloadedComponent : ReactLazyComponent);
+      return /*#__PURE__*/React$1.createElement(ComponentToRender.current, Object.assign(ref ? {
         ref: ref
       } : {}, props));
     });
@@ -17973,129 +18124,139 @@
     return LazyWithPreload;
   }
 
-  var _excluded$k = ["framework", "children"];
+  var _excluded$l = ["framework", "children"];
   var Fields = {
     'input-text': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$p; });
+        return Promise.resolve().then(function () { return index$r; });
       })
     },
     'input-number': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$o; });
+        return Promise.resolve().then(function () { return index$q; });
       })
     },
     'textarea': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$n; });
+        return Promise.resolve().then(function () { return index$p; });
       })
     },
     'select': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$m; });
+        return Promise.resolve().then(function () { return index$o; });
       })
     },
     'checkbox': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
+        return Promise.resolve().then(function () { return index$n; });
       })
     },
     'toggle': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
+        return Promise.resolve().then(function () { return index$m; });
       })
     },
     'array': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
+        return Promise.resolve().then(function () { return index$l; });
       })
     },
     'checkbox-group': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
+        return Promise.resolve().then(function () { return index$k; });
       })
     },
     'radio-group': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return index$j; });
       })
     },
     'two-columns': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$i; });
       })
     },
     'three-columns': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return index$h; });
       })
     },
     'group': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
+        return Promise.resolve().then(function () { return index$g; });
       })
     },
     'date': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
+        return Promise.resolve().then(function () { return index$f; });
       })
     },
     'datetime': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
+        return Promise.resolve().then(function () { return index$e; });
       })
     },
     'rate': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
+        return Promise.resolve().then(function () { return index$d; });
       })
     },
     'placeholder': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
+        return Promise.resolve().then(function () { return index$c; });
       })
     },
     'placeholder-image': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
+        return Promise.resolve().then(function () { return index$b; });
       })
     },
     'divider': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
+        return Promise.resolve().then(function () { return index$a; });
       })
     },
     'slider': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return index$9; });
       })
     },
     'input-tag': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return index$8; });
       })
     },
     'tabs': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return index$7; });
       })
     },
     'button': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return index$6; });
       })
     },
     'upload': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return index$5; });
       })
     },
     'multiselect': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return index$4; });
       })
     },
     'steps': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$3; });
+      })
+    },
+    'time': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'hidden': {
       'react-mantine': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
       })
@@ -18113,13 +18274,13 @@
   var LetsForm = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$k);
-    return /*#__PURE__*/React.createElement(FormGenerator, _extends({
+      rest = _objectWithoutProperties(_ref, _excluded$l);
+    return /*#__PURE__*/React$1.createElement(FormGenerator, _extends({
       framework: "react-mantine"
     }, rest), children);
   };
 
-  var _excluded$j = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter"];
+  var _excluded$k = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter"];
   var InputText$1 = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint;
@@ -18133,14 +18294,14 @@
       onBlur = _ref.onBlur,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$j);
-    var handleKeyUp = React.useCallback(function (e) {
+      rest = _objectWithoutProperties(_ref, _excluded$k);
+    var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
-    var handleChange = React.useCallback(function (event) {
+    var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.value);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(core.TextInput, _extends({
+    return /*#__PURE__*/React$1.createElement(core.TextInput, _extends({
       className: "lf-control-input-text",
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
@@ -18154,12 +18315,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.InputText');
 
-  var index$p = /*#__PURE__*/Object.freeze({
+  var index$r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputText$1
   });
 
-  var _excluded$i = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "lfOnEnter"];
+  var _excluded$j = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "lfOnEnter"];
   var MantineNumberInput = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -18171,11 +18332,11 @@
       width = _ref.width,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$i);
-    var handleKeyUp = React.useCallback(function (e) {
+      rest = _objectWithoutProperties(_ref, _excluded$j);
+    var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
-    return /*#__PURE__*/React.createElement(core.NumberInput, _extends({
+    return /*#__PURE__*/React$1.createElement(core.NumberInput, _extends({
       className: "lf-control-input-number",
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
@@ -18189,12 +18350,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.InputNumber');
 
-  var index$o = /*#__PURE__*/Object.freeze({
+  var index$q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineNumberInput
   });
 
-  var _excluded$h = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "lfOnEnter"];
+  var _excluded$i = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "lfOnEnter"];
   var MantineTextarea = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -18208,14 +18369,14 @@
       inputType = _ref.inputType,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$h);
-    var handleKeyUp = React.useCallback(function (e) {
+      rest = _objectWithoutProperties(_ref, _excluded$i);
+    var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
-    var handleChange = React.useCallback(function (event) {
+    var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.value);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(core.Textarea, _extends({
+    return /*#__PURE__*/React$1.createElement(core.Textarea, _extends({
       className: "lf-control-textarea",
       "data-lf-field-name": name,
       name: name,
@@ -18231,12 +18392,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Textarea');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var index$p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTextarea
   });
 
-  var _excluded$g = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
+  var _excluded$h = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
   var MantineSelect = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -18247,8 +18408,8 @@
       options = _ref.options,
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
-      rest = _objectWithoutProperties(_ref, _excluded$g);
-    return /*#__PURE__*/React.createElement(core.Select, _extends({
+      rest = _objectWithoutProperties(_ref, _excluded$h);
+    return /*#__PURE__*/React$1.createElement(core.Select, _extends({
       className: "lf-control-select",
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
@@ -18264,12 +18425,12 @@
   });
   lfLog('Loaded Mantine.Select');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineSelect
   });
 
-  var _excluded$f = ["name", "hint", "value", "onChange", "error", "description"];
+  var _excluded$g = ["name", "hint", "value", "onChange", "error", "description"];
   var MantineCheckbox = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -18277,11 +18438,11 @@
       onChange = _ref.onChange,
       error = _ref.error;
       _ref.description;
-      var rest = _objectWithoutProperties(_ref, _excluded$f);
-    var handleChange = React.useCallback(function (event) {
+      var rest = _objectWithoutProperties(_ref, _excluded$g);
+    var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(core.Checkbox, _extends({
+    return /*#__PURE__*/React$1.createElement(core.Checkbox, _extends({
       className: "lf-control-checkbox",
       "data-lf-field-name": name,
       checked: value,
@@ -18294,12 +18455,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Checkbox');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineCheckbox
   });
 
-  var _excluded$e = ["name", "hint", "value", "onChange", "error", "description"];
+  var _excluded$f = ["name", "hint", "value", "onChange", "error", "description"];
   var MantineToggle = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -18307,11 +18468,11 @@
       onChange = _ref.onChange,
       error = _ref.error;
       _ref.description;
-      var rest = _objectWithoutProperties(_ref, _excluded$e);
-    var handleChange = React.useCallback(function (event) {
+      var rest = _objectWithoutProperties(_ref, _excluded$f);
+    var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(core.Switch, _extends({
+    return /*#__PURE__*/React$1.createElement(core.Switch, _extends({
       className: "lf-control-checkbox",
       "data-lf-field-name": name,
       checked: value,
@@ -18324,12 +18485,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Toggle');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineToggle
   });
 
-  var _excluded$d = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$e = ["hint", "required", "tooltip", "name", "label", "error"];
   var MantineListArray = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required;
@@ -18337,24 +18498,24 @@
       var name = _ref.name,
       label = _ref.label,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$d);
-    return /*#__PURE__*/React.createElement("div", {
+      rest = _objectWithoutProperties(_ref, _excluded$e);
+    return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: "lf-control-array"
-    }, label && /*#__PURE__*/React.createElement(core.Input.Label, {
+    }, label && /*#__PURE__*/React$1.createElement(core.Input.Label, {
       required: required
-    }, label), /*#__PURE__*/React.createElement(ListArray, _extends({
+    }, label), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm
-    }, passRest(rest))), hint && /*#__PURE__*/React.createElement(core.Input.Description, null, hint), error && /*#__PURE__*/React.createElement(core.Input.Error, null, error));
+    }, passRest(rest))), hint && /*#__PURE__*/React$1.createElement(core.Input.Description, null, hint), error && /*#__PURE__*/React$1.createElement(core.Input.Error, null, error));
   }, ['label', 'hint']);
   lfLog('Loaded Mantine.ListArray');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineListArray
   });
 
-  var _excluded$c = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
+  var _excluded$d = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
   var CheckboxGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -18379,12 +18540,12 @@
       labelPosition = _ref.labelPosition,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$c);
-    var _useState = React.useState(_isArray(value) ? value : value ? String().split(',') : []),
+      rest = _objectWithoutProperties(_ref, _excluded$d);
+    var _useState = React$1.useState(_isArray(value) ? value : value ? String().split(',') : []),
       _useState2 = _slicedToArray(_useState, 2),
       selected = _useState2[0],
       setSelected = _useState2[1];
-    var handleChange = React.useCallback(function (e) {
+    var handleChange = React$1.useCallback(function (e) {
       var newValue;
       if (e.target.checked) {
         newValue = [].concat(_toConsumableArray(selected), [e.target.value]);
@@ -18396,19 +18557,19 @@
       setSelected(newValue);
       onChange(newValue);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: "lf-control-checkbox-group"
-    }, label && /*#__PURE__*/React.createElement(core.Input.Label, {
+    }, label && /*#__PURE__*/React$1.createElement(core.Input.Label, {
       required: required
-    }, label), /*#__PURE__*/React.createElement(core.Stack, {
+    }, label), /*#__PURE__*/React$1.createElement(core.Stack, {
       gap: "xs",
       style: {
         marginTop: 'var(--lf-field-margin-top)',
         marginBottom: 'var(--lf-field-margin-top)'
       }
     }, (options !== null && options !== void 0 ? options : []).map(function (item) {
-      return /*#__PURE__*/React.createElement(core.Checkbox, _extends({
+      return /*#__PURE__*/React$1.createElement(core.Checkbox, _extends({
         key: item.value,
         value: item.value,
         label: item.label,
@@ -18423,18 +18584,18 @@
         iconColor: iconColor,
         labelPosition: labelPosition
       }, passRest(rest, ['description'])), label);
-    })), hint && /*#__PURE__*/React.createElement(core.Input.Description, null, hint), error && /*#__PURE__*/React.createElement(core.Input.Error, null, error));
+    })), hint && /*#__PURE__*/React$1.createElement(core.Input.Description, null, hint), error && /*#__PURE__*/React$1.createElement(core.Input.Error, null, error));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
   lfLog('Loaded Mantine.CheckboxGroup');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroup
   });
 
-  var _excluded$b = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
+  var _excluded$c = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
 
   // TODO broken preview in mantine, add ensureframework
 
@@ -18462,33 +18623,33 @@
       labelPosition = _ref.labelPosition,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$b);
-    var _useState = React.useState(value),
+      rest = _objectWithoutProperties(_ref, _excluded$c);
+    var _useState = React$1.useState(value),
       _useState2 = _slicedToArray(_useState, 2);
       _useState2[0];
       var setSelected = _useState2[1];
-    var handleChange = React.useCallback(function (e) {
+    var handleChange = React$1.useCallback(function (e) {
       setSelected(e.target.value);
       onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: "lf-control-radio-group"
-    }, /*#__PURE__*/React.createElement(core.Radio.Group, {
+    }, /*#__PURE__*/React$1.createElement(core.Radio.Group, {
       name: name,
       label: label,
       description: hint,
       withAsterisk: required,
       error: error,
       inputWrapperOrder: ['label', 'input', 'description', 'error']
-    }, /*#__PURE__*/React.createElement(core.Stack, {
+    }, /*#__PURE__*/React$1.createElement(core.Stack, {
       gap: "xs",
       style: {
         marginTop: 'var(--lf-field-margin-top)',
         marginBottom: 'var(--lf-field-margin-top)'
       }
     }, (options !== null && options !== void 0 ? options : []).map(function (item) {
-      return /*#__PURE__*/React.createElement(core.Radio, _extends({
+      return /*#__PURE__*/React$1.createElement(core.Radio, _extends({
         key: item.value,
         value: item.value,
         label: item.label,
@@ -18509,33 +18670,33 @@
   });
   lfLog('Loaded Mantine.RadioGroup');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroup
   });
 
   lfLog('Loaded Mantine.TwoColumns');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded RSuite5.ThreeColumns');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded RSuite5.Group');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
-  var _excluded$a = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime"];
+  var _excluded$b = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime"];
   var tryDate = function tryDate(value) {
     if (_isDate(value)) {
       return value;
@@ -18558,9 +18719,9 @@
       lfLocale = _ref.lfLocale,
       _ref$withTime = _ref.withTime,
       withTime = _ref$withTime === void 0 ? false : _ref$withTime,
-      rest = _objectWithoutProperties(_ref, _excluded$a);
+      rest = _objectWithoutProperties(_ref, _excluded$b);
     var Component = withTime ? dates.DateTimePicker : dates.DatePickerInput;
-    return /*#__PURE__*/React.createElement(Component, _extends({
+    return /*#__PURE__*/React$1.createElement(Component, _extends({
       className: "lf-control-date",
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
@@ -18573,8 +18734,56 @@
     }, passRest(rest)));
   };
 
-  var _excluded$9 = ["onChange", "value", "lfLocale"];
+  var _excluded$a = ["onChange", "value", "lfLocale"];
   var SelectDate = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      lfLocale = _ref.lfLocale,
+      rest = _objectWithoutProperties(_ref, _excluded$a);
+    // also accepts string dates
+    var initialValue;
+    if (rest.dateType === 'range') {
+      initialValue = [null, null];
+    } else {
+      if (_isDate(value)) {
+        initialValue = value;
+      } else if (_isString(value)) {
+        var d = new Date(value);
+        if (isValidDate(d)) {
+          initialValue = d;
+        }
+      }
+    }
+    var _useState = React$1.useState(initialValue),
+      _useState2 = _slicedToArray(_useState, 2),
+      currentValue = _useState2[0],
+      setCurrentValue = _useState2[1];
+
+    // send always date string in format yyyy-mm-dd
+    var handleChange = React$1.useCallback(function (d) {
+      if (isValidDate(d)) {
+        setCurrentValue(d);
+        onChange(d.toISOString().split('T')[0]);
+      } else {
+        setCurrentValue(null);
+        onChange(null);
+      }
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(MantineGenericDate, _extends({
+      value: currentValue,
+      onChange: handleChange,
+      lfLocale: lfLocale
+    }, passRest(rest)));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded Mantine.SelectDate');
+
+  var index$f = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: SelectDate
+  });
+
+  var _excluded$9 = ["onChange", "value", "lfLocale"];
+  var SelectDatTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
       lfLocale = _ref.lfLocale,
@@ -18593,61 +18802,13 @@
         }
       }
     }
-    var _useState = React.useState(initialValue),
+    var _useState = React$1.useState(initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       currentValue = _useState2[0],
       setCurrentValue = _useState2[1];
 
     // send always date string in format yyyy-mm-dd
-    var handleChange = React.useCallback(function (d) {
-      if (isValidDate(d)) {
-        setCurrentValue(d);
-        onChange(d.toISOString().split('T')[0]);
-      } else {
-        setCurrentValue(null);
-        onChange(null);
-      }
-    }, [onChange]);
-    return /*#__PURE__*/React.createElement(MantineGenericDate, _extends({
-      value: currentValue,
-      onChange: handleChange,
-      lfLocale: lfLocale
-    }, passRest(rest)));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded Mantine.SelectDate');
-
-  var index$d = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: SelectDate
-  });
-
-  var _excluded$8 = ["onChange", "value", "lfLocale"];
-  var SelectDatTime = I18N(function (_ref) {
-    var onChange = _ref.onChange,
-      value = _ref.value,
-      lfLocale = _ref.lfLocale,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
-    // also accepts string dates
-    var initialValue;
-    if (rest.dateType === 'range') {
-      initialValue = [null, null];
-    } else {
-      if (_isDate(value)) {
-        initialValue = value;
-      } else if (_isString(value)) {
-        var d = new Date(value);
-        if (isValidDate(d)) {
-          initialValue = d;
-        }
-      }
-    }
-    var _useState = React.useState(initialValue),
-      _useState2 = _slicedToArray(_useState, 2),
-      currentValue = _useState2[0],
-      setCurrentValue = _useState2[1];
-
-    // send always date string in format yyyy-mm-dd
-    var handleChange = React.useCallback(function (d) {
+    var handleChange = React$1.useCallback(function (d) {
       if (isValidDate(d)) {
         setCurrentValue(d);
         onChange(d.toISOString());
@@ -18656,7 +18817,7 @@
         onChange(null);
       }
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(MantineGenericDate, _extends({
+    return /*#__PURE__*/React$1.createElement(MantineGenericDate, _extends({
       value: currentValue,
       onChange: handleChange,
       lfLocale: lfLocale
@@ -18666,12 +18827,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.SelectDateTime');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDatTime
   });
 
-  var _excluded$7 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
+  var _excluded$8 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
   var InputText = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint;
@@ -18685,8 +18846,8 @@
       var label = _ref.label,
       required = _ref.required;
       _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$7);
-    return /*#__PURE__*/React.createElement(core.Input.Wrapper, {
+      var rest = _objectWithoutProperties(_ref, _excluded$8);
+    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, {
       className: "lf-control-rate",
       "data-lf-field-name": name,
       description: hint,
@@ -18694,13 +18855,13 @@
       inputWrapperOrder: ['label', 'input', 'description', 'error'],
       label: label,
       required: required
-    }, /*#__PURE__*/React.createElement(core.Rating, _extends({
+    }, /*#__PURE__*/React$1.createElement(core.Rating, _extends({
       onChange: onChange
     }, passRest(rest))));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Rate');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputText
   });
@@ -18710,42 +18871,42 @@
       label = _ref.label,
       hint = _ref.hint,
       text = _ref.text;
-    return /*#__PURE__*/React.createElement(core.Input.Wrapper, {
+    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, {
       className: "lf-control-rate",
       "data-lf-field-name": name,
       description: hint,
       inputWrapperOrder: ['label', 'input', 'description', 'error'],
       label: label
-    }, /*#__PURE__*/React.createElement(Placeholder, {
+    }, /*#__PURE__*/React$1.createElement(Placeholder, {
       text: text
     }));
   }, ['label', 'hint', 'text']);
   lfLog('Loaded Mantine.Placeholder');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderMantine
   });
 
   lfLog('Loaded Mantine.PlaceholderImage');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index$b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
   var DividerMantine = function DividerMantine(_ref) {
     var rest = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
-    return /*#__PURE__*/React.createElement(core.Divider, rest);
+    return /*#__PURE__*/React$1.createElement(core.Divider, rest);
   };
   lfLog('Loaded Mantine.Divider');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DividerMantine
   });
 
-  var _excluded$6 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
+  var _excluded$7 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
   var SliderMantine = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -18755,8 +18916,8 @@
       var label = _ref.label,
       required = _ref.required;
       _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$6);
-    return /*#__PURE__*/React.createElement(core.Input.Wrapper, {
+      var rest = _objectWithoutProperties(_ref, _excluded$7);
+    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, {
       className: "lf-control-slider",
       "data-lf-field-name": name,
       description: hint,
@@ -18764,7 +18925,7 @@
       inputWrapperOrder: ['label', 'input', 'description', 'error'],
       label: label,
       required: required
-    }, /*#__PURE__*/React.createElement(core.Slider, _extends({
+    }, /*#__PURE__*/React$1.createElement(core.Slider, _extends({
       onChange: onChange
     }, passRest(rest))));
   }, ['label', 'hint', 'placeholder'], {
@@ -18778,12 +18939,12 @@
   });
   lfLog('Loaded Mantine.Slider');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var index$9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderMantine
   });
 
-  var _excluded$5 = ["name", "hint", "value", "error", "fullWidth", "width", "data"];
+  var _excluded$6 = ["name", "hint", "value", "error", "fullWidth", "width", "data"];
   var MantineTags = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -18792,8 +18953,8 @@
       fullWidth = _ref.fullWidth,
       width = _ref.width,
       data = _ref.data,
-      rest = _objectWithoutProperties(_ref, _excluded$5);
-    return /*#__PURE__*/React.createElement(core.TagsInput, _extends({
+      rest = _objectWithoutProperties(_ref, _excluded$6);
+    return /*#__PURE__*/React$1.createElement(core.TagsInput, _extends({
       className: "lf-control-input-tag",
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
@@ -18809,7 +18970,7 @@
   }, ['label', 'hint', 'placeholder'], i18nOptions);
   lfLog('Loaded Mantine.InputTags');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var index$8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTags
   });
@@ -18817,7 +18978,7 @@
   var css_248z$4 = ".lf-form-react-mantine .lf-control-tabs .lf-prefix-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical .mantine-Tabs-panel, .lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-left .mantine-Tabs-panel {\n  padding-left: var(--lf-field-column-margin);\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-right .mantine-Tabs-panel {\n  padding-right: var(--lf-field-column-margin);\n}";
   styleInject(css_248z$4);
 
-  var _excluded$4 = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement"];
+  var _excluded$5 = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement"];
   var MantineTabs = I18N(function (_ref) {
     var _classNames;
     var name = _ref.name,
@@ -18829,32 +18990,32 @@
       justify = _ref.justify,
       orientation = _ref.orientation,
       placement = _ref.placement,
-      rest = _objectWithoutProperties(_ref, _excluded$4);
+      rest = _objectWithoutProperties(_ref, _excluded$5);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
     }
-    var _useState = React.useState(defaultKey),
+    var _useState = React$1.useState(defaultKey),
       _useState2 = _slicedToArray(_useState, 2),
       active = _useState2[0],
       setActive = _useState2[1];
-    var handleChange = React.useCallback(function (active) {
+    var handleChange = React$1.useCallback(function (active) {
       setActive(active);
       onChange(active);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: classNames('lf-control-tabs', (_classNames = {}, _defineProperty$1(_classNames, "orientation-".concat(orientation), orientation != null), _defineProperty$1(_classNames, "placement-".concat(placement), placement != null), _classNames)),
       "data-lf-field-name": name
-    }, /*#__PURE__*/React.createElement(core.Tabs, _extends({
+    }, /*#__PURE__*/React$1.createElement(core.Tabs, _extends({
       value: active,
       onChange: handleChange,
       orientation: orientation,
       placement: placement
-    }, passRest(rest)), /*#__PURE__*/React.createElement(core.Tabs.List, {
+    }, passRest(rest)), /*#__PURE__*/React$1.createElement(core.Tabs.List, {
       grow: grow,
       justify: justify
     }, (tabs || []).map(function (tab) {
-      return /*#__PURE__*/React.createElement(core.Tabs.Tab, {
+      return /*#__PURE__*/React$1.createElement(core.Tabs.Tab, {
         key: tab.value,
         value: tab.value,
         leftSection: TextOrIcon(tab.leftSection),
@@ -18864,7 +19025,7 @@
         disabled: tab.disabled
       }, tab.label);
     })), (tabs || []).map(function (tab) {
-      return /*#__PURE__*/React.createElement(core.Tabs.Panel, {
+      return /*#__PURE__*/React$1.createElement(core.Tabs.Panel, {
         value: tab.value
       }, children(tab.value));
     })));
@@ -18873,7 +19034,7 @@
   });
   lfLog('Loaded Mantine.Tabs');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var index$7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTabs
   });
@@ -18881,37 +19042,37 @@
   var css_248z$3 = ".lf-form-react-mantine .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-mantine .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-lg .lf-icon {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-xs .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-sm .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-md .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-xl .lf-icon {\n  max-width: 28px;\n  max-height: 28px;\n}";
   styleInject(css_248z$3);
 
-  var _excluded$3 = ["label", "icon", "hint", "tooltip"];
+  var _excluded$4 = ["label", "icon", "hint", "tooltip"];
   var MantineButton = function MantineButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint,
       tooltip = _ref.tooltip,
-      rest = _objectWithoutProperties(_ref, _excluded$3);
+      rest = _objectWithoutProperties(_ref, _excluded$4);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React.createElement(core.Button, _extends({
-        leftSection: /*#__PURE__*/React.createElement("img", {
+      inner = /*#__PURE__*/React$1.createElement(core.Button, _extends({
+        leftSection: /*#__PURE__*/React$1.createElement("img", {
           className: "lf-icon",
           src: icon
         })
       }, rest), label);
     } else if (!_isEmpty(label) && _isEmpty(icon)) {
-      inner = /*#__PURE__*/React.createElement(core.Button, rest, label);
+      inner = /*#__PURE__*/React$1.createElement(core.Button, rest, label);
     } else if (_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React.createElement(core.Button, _extends({
-        leftSection: /*#__PURE__*/React.createElement("img", {
+      inner = /*#__PURE__*/React$1.createElement(core.Button, _extends({
+        leftSection: /*#__PURE__*/React$1.createElement("img", {
           className: "lf-icon",
           src: icon
         })
       }, rest));
     } else {
-      inner = /*#__PURE__*/React.createElement(React.Fragment, null);
+      inner = /*#__PURE__*/React$1.createElement(React$1.Fragment, null);
     }
-    return /*#__PURE__*/React.createElement(React.Fragment, null, !_isEmpty(hint) && tooltip && /*#__PURE__*/React.createElement(core.Tooltip, {
+    return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, !_isEmpty(hint) && tooltip && /*#__PURE__*/React$1.createElement(core.Tooltip, {
       label: hint,
       withArrow: true
-    }, inner), (_isEmpty(hint) || !tooltip) && inner, !_isEmpty(hint) && !tooltip && /*#__PURE__*/React.createElement(core.Input.Description, null, hint));
+    }, inner), (_isEmpty(hint) || !tooltip) && inner, !_isEmpty(hint) && !tooltip && /*#__PURE__*/React$1.createElement(core.Input.Description, null, hint));
   };
   var BiStateButton = I18N(MakeButton(MantineButton, {
     variant: 'filled'
@@ -18920,12 +19081,12 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded Mantine.Button');
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var index$6 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton
   });
 
-  var _excluded$2 = ["name", "hint", "fullWidth", "width", "error", "onChange", "onBlur", "lfOnEnter", "accept"];
+  var _excluded$3 = ["name", "hint", "fullWidth", "width", "error", "onChange", "onBlur", "lfOnEnter", "accept"];
   var MantineUpload = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -18936,11 +19097,11 @@
       onBlur = _ref.onBlur;
       _ref.lfOnEnter;
       var accept = _ref.accept,
-      rest = _objectWithoutProperties(_ref, _excluded$2);
-    var handleChange = React.useCallback(function (value) {
+      rest = _objectWithoutProperties(_ref, _excluded$3);
+    var handleChange = React$1.useCallback(function (value) {
       return onChange(value);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(core.FileInput, _extends({
+    return /*#__PURE__*/React$1.createElement(core.FileInput, _extends({
       className: "lf-control-upload",
       "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
@@ -18954,12 +19115,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Upload');
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$5 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineUpload
   });
 
-  var _excluded$1 = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
+  var _excluded$2 = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
   var MantineMultiSelect = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -18970,8 +19131,8 @@
       options = _ref.options,
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
-      rest = _objectWithoutProperties(_ref, _excluded$1);
-    return /*#__PURE__*/React.createElement(core.MultiSelect, _extends({
+      rest = _objectWithoutProperties(_ref, _excluded$2);
+    return /*#__PURE__*/React$1.createElement(core.MultiSelect, _extends({
       value: value,
       name: name,
       data: filterOptions(options, filterValue, filterKey) || [],
@@ -18987,7 +19148,7 @@
   });
   lfLog('Loaded Mantine.MultiSelect');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$4 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineMultiSelect
   });
@@ -18998,7 +19159,7 @@
   var GenericIcon = function GenericIcon(_ref) {
     var icon = _ref.icon,
       size = _ref.size;
-    return /*#__PURE__*/React.createElement("img", {
+    return /*#__PURE__*/React$1.createElement("img", {
       className: classNames("lf-generic-icon", {
         size: size
       }),
@@ -19009,7 +19170,7 @@
   var css_248z$1 = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
   styleInject(css_248z$1);
 
-  var _excluded = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "allowStepClick", "allowStepSelect"];
+  var _excluded$1 = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "allowStepClick", "allowStepSelect"];
   var i18nSteps = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -19034,7 +19195,7 @@
       labelPrevious = _ref.labelPrevious,
       allowStepClick = _ref.allowStepClick,
       allowStepSelect = _ref.allowStepSelect,
-      rest = _objectWithoutProperties(_ref, _excluded);
+      rest = _objectWithoutProperties(_ref, _excluded$1);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
       return obj.value === value;
@@ -19042,56 +19203,56 @@
     if (!defaultStep && !_isEmpty(steps)) {
       defaultStepIdx = 0;
     }
-    var _useState = React.useState(defaultStepIdx),
+    var _useState = React$1.useState(defaultStepIdx),
       _useState2 = _slicedToArray(_useState, 2),
       stepIdx = _useState2[0],
       setStepIdx = _useState2[1];
     var step = _isArray(steps) && !_isEmpty(steps) && stepIdx >= 0 ? steps[stepIdx].value : null;
-    var handleNext = React.useCallback(function () {
+    var handleNext = React$1.useCallback(function () {
       var step = steps[stepIdx + 1].value;
       setStepIdx(function (value) {
         return value + 1;
       });
       onChange(step);
     }, [onChange, stepIdx, steps]);
-    var handleStepClick = React.useCallback(function (stepIndex) {
+    var handleStepClick = React$1.useCallback(function (stepIndex) {
       setStepIdx(stepIndex);
       onChange(stepIndex);
     }, [onChange]);
-    var handlePrevious = React.useCallback(function () {
+    var handlePrevious = React$1.useCallback(function () {
       var step = steps[stepIdx - 1].value;
       setStepIdx(function (value) {
         return value - 1;
       });
       onChange(step);
     }, [onChange, stepIdx, steps]);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-steps",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React.createElement(core.Stepper, _extends({
+    }, /*#__PURE__*/React$1.createElement(core.Stepper, _extends({
       active: stepIdx,
       onStepClick: handleStepClick
     }, passRest(rest)), (steps || []).map(function (step) {
-      return /*#__PURE__*/React.createElement(core.Stepper.Step, {
+      return /*#__PURE__*/React$1.createElement(core.Stepper.Step, {
         key: "step_".concat(step.value),
         allowStepClick: allowStepClick,
         allowStepSelect: allowStepSelect,
         description: step.description || undefined,
         label: step.label,
-        icon: step.icon && /*#__PURE__*/React.createElement(GenericIcon, {
+        icon: step.icon && /*#__PURE__*/React$1.createElement(GenericIcon, {
           icon: step.icon
         })
       });
-    })), _isFunction(children) && /*#__PURE__*/React.createElement("div", {
+    })), _isFunction(children) && /*#__PURE__*/React$1.createElement("div", {
       className: "lf-step"
-    }, children(step)), /*#__PURE__*/React.createElement(core.Group, {
+    }, children(step)), /*#__PURE__*/React$1.createElement(core.Group, {
       justify: align,
       mt: "xl",
       className: "lf-navigation-buttons"
-    }, /*#__PURE__*/React.createElement(core.Button, {
+    }, /*#__PURE__*/React$1.createElement(core.Button, {
       onClick: handlePrevious,
       disabled: _isEmpty(steps) || stepIdx === 0
-    }, labelPrevious || 'Previous'), /*#__PURE__*/React.createElement(core.Button, {
+    }, labelPrevious || 'Previous'), /*#__PURE__*/React$1.createElement(core.Button, {
       onClick: handleNext,
       disabled: _isEmpty(steps) || stepIdx === steps.length - 1
     }, labelNext || 'Next')));
@@ -19100,9 +19261,119 @@
   });
   lfLog('Loaded Mantine.Steps');
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var index$3 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineSteps
+  });
+
+  var ClockIcon = function ClockIcon(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 16 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 16 : _ref$height;
+    return /*#__PURE__*/React.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 0 24 24",
+      fill: "none"
+    }, /*#__PURE__*/React.createElement("circle", {
+      opacity: "0.5",
+      cx: "12",
+      cy: "12",
+      r: "10",
+      stroke: "#1C274C",
+      "stroke-width": "1.5"
+    }), /*#__PURE__*/React.createElement("path", {
+      d: "M12 8V12L14.5 14.5",
+      stroke: "#1C274C",
+      "stroke-width": "1.5",
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round"
+    }));
+  };
+
+  var _excluded = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "showBrowserPicker"];
+  var MANTINE_ICON_SIZE = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32
+  };
+  var mantineIconSize = function mantineIconSize(size) {
+    return MANTINE_ICON_SIZE[size] || 16;
+  };
+  var Time = I18N(function (_ref) {
+    var name = _ref.name,
+      hint = _ref.hint;
+      _ref.value;
+      var fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      _ref$submitOnEnter = _ref.submitOnEnter,
+      submitOnEnter = _ref$submitOnEnter === void 0 ? false : _ref$submitOnEnter,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      _ref$lfOnEnter = _ref.lfOnEnter,
+      lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
+      showBrowserPicker = _ref.showBrowserPicker,
+      rest = _objectWithoutProperties(_ref, _excluded);
+    var ref = React$1.useRef(null);
+    var handleKeyUp = React$1.useCallback(function (e) {
+      return e.keyCode === 13 && lfOnEnter();
+    }, [lfOnEnter]);
+    var handleChange = React$1.useCallback(function (event) {
+      return onChange(event.currentTarget.value);
+    }, [onChange]);
+    var handlePicker = React$1.useCallback(function () {
+      var _ref$current;
+      return (_ref$current = ref.current) === null || _ref$current === void 0 ? void 0 : _ref$current.showPicker();
+    }, []);
+    var additional = {};
+    if (showBrowserPicker) {
+      additional.rightSection = /*#__PURE__*/React$1.createElement(core.ActionIcon, {
+        variant: "subtle",
+        color: "gray",
+        onClick: handlePicker
+      }, /*#__PURE__*/React$1.createElement(ClockIcon, {
+        width: mantineIconSize(rest.size),
+        height: mantineIconSize(rest.size)
+      }));
+    }
+    return /*#__PURE__*/React$1.createElement(dates.TimeInput, _extends({
+      ref: ref,
+      className: "lf-control-time",
+      "data-lf-field-name": name,
+      style: makeWidthStyle(fullWidth, width),
+      description: hint,
+      error: _isString(error) ? error : undefined,
+      inputWrapperOrder: ['label', 'input', 'description', 'error'],
+      onChange: handleChange,
+      onBlur: onBlur,
+      onKeyUp: submitOnEnter ? handleKeyUp : undefined
+    }, passRest(rest), additional));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded Mantine.Time');
+
+  var index$2 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Time
+  });
+
+  var Hidden = function Hidden(_ref) {
+    var name = _ref.name;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-hidden",
+      style: {
+        padding: '10px'
+      }
+    }, "Hidden field: ", /*#__PURE__*/React$1.createElement("em", null, name));
+  };
+  lfLog('Loaded RSuite5.Hidden');
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Hidden
   });
 
   var css_248z = ".lf-form-react-mantine .lf-control-input-number div[data-position=right] .lf-postfix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=right] .lf-postfix-wrapper {\n  padding-right: 1em;\n}\n.lf-form-react-mantine .lf-control-input-number div[data-position=left] .lf-prefix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=left] .lf-prefix-wrapper {\n  padding-left: 1em;\n}";
@@ -19131,19 +19402,19 @@
       _ref$onReset = _ref.onReset,
       onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset,
       custom = _ref.custom;
-    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("form", {
+    return /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement("form", {
       onSubmit: onSubmit,
       className: classNames('lf-form lf-form-react-mantine', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name
-    }, children, !hideToolbar && !onlyFields && !plaintext && /*#__PURE__*/React.createElement(core.Group, {
+    }, children, !hideToolbar && !onlyFields && !plaintext && /*#__PURE__*/React$1.createElement(core.Group, {
       className: "lf-buttons",
       align: buttonsAlign
-    }, /*#__PURE__*/React.createElement(core.Button, {
+    }, /*#__PURE__*/React$1.createElement(core.Button, {
       variant: "filled",
       onClick: onSubmit,
       disabled: disabled || disabledSubmit,
       className: "lf-form-react-primary-button"
-    }, labelSubmit), /*#__PURE__*/React.createElement(core.Button, {
+    }, labelSubmit), /*#__PURE__*/React$1.createElement(core.Button, {
       variant: "outline",
       disabled: disabled,
       className: "lf-form-react-secondary-button",
@@ -19187,8 +19458,10 @@
   exports.isUrl = isUrl;
   exports.isValidDate = isValidDate;
   exports.isValidDayjsFormat = isValidDayjsFormat;
+  exports.isValidTime = isValidTime;
   exports.makeWidthStyle = makeWidthStyle;
   exports.mapFields = mapFields;
+  exports.omitFields = omitFields;
   exports.passRest = passRest;
   exports.reduceFields = reduceFields;
   exports.replaceField = replaceField;

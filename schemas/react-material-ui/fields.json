@@ -855,10 +855,49 @@
             "hidden": {
               "type": "boolean"
             },
+            "size": {
+              "type": "string",
+              "enum": [
+                "small",
+                "medium",
+                "large"
+              ]
+            },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "outlined",
+                "filled",
+                "standard"
+              ]
+            },
+            "color": {
+              "type": "string",
+              "enum": [
+                "error",
+                "info",
+                "primary",
+                "secondary",
+                "success",
+                "warning"
+              ]
+            },
             "format": {
               "type": "string"
             },
-            "fullWidth": {
+            "views": {
+              "type": "string"
+            },
+            "closeOnSelect": {
+              "type": "boolean"
+            },
+            "reduceAnimations": {
+              "type": "boolean"
+            },
+            "showDaysOutsideCurrentMonth": {
+              "type": "boolean"
+            },
+            "floatingLabel": {
               "type": "boolean"
             },
             "disableFuture": {
@@ -876,19 +915,43 @@
             "displayWeekNumber": {
               "type": "boolean"
             },
-            "reduceAnimations": {
+            "loading": {
               "type": "boolean"
             },
-            "showDaysOutsideCurrentMonth": {
+            "fixedWeekNumber": {
+              "type": "integer"
+            },
+            "formatDensity": {
+              "type": "string",
+              "enum": [
+                "dense",
+                "spacious"
+              ]
+            },
+            "monthsPerRow": {
+              "type": "string",
+              "enum": [
+                3,
+                4
+              ]
+            },
+            "yearsPerRow": {
+              "type": "string",
+              "enum": [
+                3,
+                4
+              ]
+            },
+            "fullWidth": {
               "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
             },
             "minDate": {
               "type": "string"
             },
             "maxDate": {
-              "type": "string"
-            },
-            "views": {
               "type": "string"
             }
           }
@@ -1722,10 +1785,49 @@
             "hidden": {
               "type": "boolean"
             },
+            "size": {
+              "type": "string",
+              "enum": [
+                "small",
+                "medium",
+                "large"
+              ]
+            },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "outlined",
+                "filled",
+                "standard"
+              ]
+            },
+            "color": {
+              "type": "string",
+              "enum": [
+                "error",
+                "info",
+                "primary",
+                "secondary",
+                "success",
+                "warning"
+              ]
+            },
             "format": {
               "type": "string"
             },
-            "fullWidth": {
+            "views": {
+              "type": "string"
+            },
+            "closeOnSelect": {
+              "type": "boolean"
+            },
+            "reduceAnimations": {
+              "type": "boolean"
+            },
+            "showDaysOutsideCurrentMonth": {
+              "type": "boolean"
+            },
+            "floatingLabel": {
               "type": "boolean"
             },
             "disableFuture": {
@@ -1743,20 +1845,71 @@
             "displayWeekNumber": {
               "type": "boolean"
             },
-            "reduceAnimations": {
+            "ampm": {
               "type": "boolean"
             },
-            "showDaysOutsideCurrentMonth": {
+            "ampmInClock": {
               "type": "boolean"
             },
-            "maxDate": {
-              "type": "string"
+            "forceMobile": {
+              "type": "boolean"
+            },
+            "loading": {
+              "type": "boolean"
+            },
+            "fixedWeekNumber": {
+              "type": "integer"
+            },
+            "formatDensity": {
+              "type": "string",
+              "enum": [
+                "dense",
+                "spacious"
+              ]
+            },
+            "monthsPerRow": {
+              "type": "string",
+              "enum": [
+                3,
+                4
+              ]
+            },
+            "yearsPerRow": {
+              "type": "string",
+              "enum": [
+                3,
+                4
+              ]
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
             },
             "minDate": {
               "type": "string"
             },
-            "views": {
+            "maxDate": {
               "type": "string"
+            },
+            "minDateTime": {
+              "type": "string"
+            },
+            "maxDateTime": {
+              "type": "string"
+            },
+            "minutesStep": {
+              "type": "integer"
+            },
+            "timeStepsHours": {
+              "type": "integer"
+            },
+            "timeStepsMinutes": {
+              "type": "integer"
+            },
+            "timeStepsSeconds": {
+              "type": "integer"
             }
           }
         }

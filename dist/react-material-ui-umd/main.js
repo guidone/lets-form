@@ -1,9 +1,9 @@
-/* LetsForm react-material-ui v0.7.17 - UMD */
+/* LetsForm react-material-ui v0.7.18 - UMD */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('react-hook-form'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/material/Stack')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', 'react-hook-form', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/material/Stack'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-material-ui"] = {}, global.React, global.FormControlLabel, global.FormGroup, global.Switch, global.Checkbox, global.Slider, global.FormHelperText, global.FormControl, global.FormLabel, global.Rating, global.DatePicker, global.DateTimePicker, global.reactHookForm, global.InputLabel, global.MenuItem, global.Select, global.ListItemText, global.TextField, global.InputAdornment, global.Radio, global.RadioGroup, global.Tabs, global.Tab, global.Box, global.Button, global.Stack$2));
-})(this, (function (exports, React, FormControlLabel, FormGroup, Switch, Checkbox, Slider, FormHelperText, FormControl, FormLabel, Rating, DatePicker, DateTimePicker, reactHookForm, InputLabel, MenuItem, Select, ListItemText, TextField, InputAdornment, Radio, RadioGroup, Tabs, Tab, Box, Button, Stack$2) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('react-hook-form'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', 'react-hook-form', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-material-ui"] = {}, global.React, global.FormControlLabel, global.FormGroup, global.Switch, global.Checkbox, global.Slider, global.FormHelperText, global.FormControl, global.FormLabel, global.Rating, global.DatePicker, global.DateTimePicker, global.reactHookForm, global.InputLabel, global.MenuItem, global.Select, global.ListItemText, global.TextField, global.InputAdornment, global.Radio, global.RadioGroup, global.Tabs, global.Tab, global.Box, global.Button, global.MobileTimePicker, global.DesktopTimePicker, global.Stack$2));
+})(this, (function (exports, React, FormControlLabel, FormGroup, Switch, Checkbox, Slider, FormHelperText, FormControl, FormLabel, Rating, DatePicker, DateTimePicker, reactHookForm, InputLabel, MenuItem, Select, ListItemText, TextField, InputAdornment, Radio, RadioGroup, Tabs, Tab, Box, Button, MobileTimePicker, DesktopTimePicker, Stack$2) { 'use strict';
 
   function _AsyncGenerator(gen) {
     var front, back;
@@ -128,7 +128,10 @@
         _n = !0,
         _d = !1;
       try {
-        if (_x = (_i = _i.call(arr)).next, 0 === i) ; else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0);
+        if (_x = (_i = _i.call(arr)).next, 0 === i) {
+          if (Object(_i) !== _i) return;
+          _n = !1;
+        } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0);
       } catch (err) {
         _d = !0, _e = err;
       } finally {
@@ -4589,8 +4592,8 @@
     }
   }
 
-  var css_248z$h = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
-  styleInject(css_248z$h);
+  var css_248z$g = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
+  styleInject(css_248z$g);
 
   var tx = function tx(str, locale) {
     if (_isString(str)) {
@@ -4703,31 +4706,6 @@
     }));
   };
 
-  var Asterisk = function Asterisk(_ref) {
-    var _ref$width = _ref.width,
-      width = _ref$width === void 0 ? 24 : _ref$width,
-      _ref$height = _ref.height,
-      height = _ref$height === void 0 ? 24 : _ref$height,
-      _ref$color = _ref.color,
-      color = _ref$color === void 0 ? '#000000' : _ref$color,
-      style = _ref.style;
-    return /*#__PURE__*/React.createElement("svg", {
-      width: "".concat(width, "px"),
-      height: "".concat(height, "px"),
-      style: style,
-      version: "1.1",
-      id: "_x32_",
-      className: "lf-icon-asterisk",
-      viewBox: "0 0 512 512"
-    }, /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("polygon", {
-      style: {
-        fill: color
-      },
-      className: "st0",
-      points: "501.539,169.221 453.886,86.7 303.669,173.449 303.669,0 208.365,0 208.365,173.479 58.114,86.73\r 10.461,169.261 160.674,255.99 10.501,342.71 58.154,425.231 208.365,338.482 208.365,512 303.669,512 303.669,338.542\r 453.846,425.271 501.499,342.74 351.267,255.99 \t"
-    })));
-  };
-
   var Warning = function Warning(_ref) {
     var _ref$width = _ref.width,
       width = _ref$width === void 0 ? 24 : _ref$width,
@@ -4769,17 +4747,6 @@
       strokeLinecap: "round",
       strokeLinejoin: "round"
     }));
-  };
-
-  var RequiredIcon = function RequiredIcon() {
-    return /*#__PURE__*/React.createElement(Asterisk, {
-      color: "#ff6633",
-      width: 12,
-      height: 12,
-      style: {
-        marginLeft: '3px'
-      }
-    });
   };
 
   /**
@@ -7269,6 +7236,19 @@
   	hidden: null,
   	accept: null,
   	acceptedFile: null,
+  	uploadButtonLabel: [
+  		"react",
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-antd"
+  	],
+  	multiple: [
+  		"react",
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-antd",
+  		"react-mantine"
+  	],
   	listType: [
   		"react-rsuite5",
   		"react-antd"
@@ -7286,22 +7266,11 @@
   	disabledFileItem: [
   		"react-rsuite5"
   	],
-  	multiple: [
-  		"react-rsuite5",
-  		"react-material-ui",
-  		"react-antd",
-  		"react-mantine"
-  	],
   	removable: [
   		"react-rsuite5"
   	],
   	draggable: [
   		"react-rsuite5",
-  		"react-antd"
-  	],
-  	uploadButtonLabel: [
-  		"react-rsuite5",
-  		"react-material-ui",
   		"react-antd"
   	],
   	uploadButtonAppearance: [
@@ -7391,23 +7360,28 @@
   	align: null,
   	steps: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	value: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	label: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	description: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	icon: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	small: [
   		"react-rsuite5",
@@ -7431,6 +7405,33 @@
   	],
   	labelPlacement: [
   		"react-antd"
+  	],
+  	color: [
+  		"react-mantine"
+  	],
+  	radius: [
+  		"react-mantine"
+  	],
+  	size: [
+  		"react-mantine"
+  	],
+  	iconPosition: [
+  		"react-mantine"
+  	],
+  	iconSize: [
+  		"react-mantine"
+  	],
+  	wrap: [
+  		"react-mantine"
+  	],
+  	allowStepClick: [
+  		"react-mantine"
+  	],
+  	allowStepSelect: [
+  		"react-mantine"
+  	],
+  	autoContrast: [
+  		"react-mantine"
   	],
   	validationMinLength: "validation",
   	validationMin: "validation",
@@ -9316,7 +9317,8 @@
   		},
   		{
   			name: "alignOffset",
-  			type: "number"
+  			type: "number",
+  			description: "Offset of the add / remove button from the top / bottom (depends on the alignment)"
   		},
   		{
   			name: "arrayType",
@@ -12397,7 +12399,7 @@
   		{
   			name: "autoContrast",
   			type: "boolean",
-  			description: "Determines whether active item text color should depend on background-color of the indicator. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast. Only applicable when variant=\"pills\""
+  			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
   		},
   		{
   			name: "inverted",
@@ -12458,6 +12460,17 @@
   			name: "accept",
   			type: "array",
   			description: "Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "
+  		}
+  	],
+  	react: [
+  		{
+  			name: "uploadButtonLabel",
+  			type: "string | i18n"
+  		},
+  		{
+  			name: "multiple",
+  			type: "boolean",
+  			description: "Allow selecting multiple files"
   		}
   	],
   	"react-rsuite5": [
@@ -12740,7 +12753,7 @@
   var steps = {
   	label: "Steps",
   	category: "layout",
-  	description: "Split the form in multiple steps",
+  	description: "Layout component to split the form in multiple steps",
   	name: "steps",
   	common: [
   		{
@@ -12837,6 +12850,88 @@
   				"horizontal",
   				"vertical"
   			]
+  		}
+  	],
+  	"react-mantine": [
+  		{
+  			name: "steps",
+  			type: "array"
+  		},
+  		{
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"grey",
+  				"red",
+  				"pink",
+  				"grape",
+  				"violet",
+  				"indigo",
+  				"blue",
+  				"cyan",
+  				"teal",
+  				"green",
+  				"lime",
+  				"yellow",
+  				"orange"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "iconPosition",
+  			type: "string",
+  			description: "Icon position relative to the step body, \"left\" by default",
+  			options: [
+  				"left",
+  				"right"
+  			]
+  		},
+  		{
+  			name: "iconSize",
+  			type: "number",
+  			description: "Determines whether steps should wrap to the next line if no space is available, true by default"
+  		},
+  		{
+  			name: "wrap",
+  			type: "boolean",
+  			description: "Determines whether steps should wrap to the next line if no space is available, true by default"
+  		},
+  		{
+  			name: "allowStepClick",
+  			type: "boolean",
+  			description: "Set to false to disable clicks on step"
+  		},
+  		{
+  			name: "allowStepSelect",
+  			type: "boolean",
+  			description: "Should step selection be allowed"
+  		},
+  		{
+  			name: "autoContrast",
+  			type: "boolean",
+  			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
   		}
   	],
   	frameworks: [
@@ -15142,6 +15237,24 @@
     return result !== 0;
   };
 
+  /**
+   * isValidTime
+   *
+   * @param {} d Time string (i.e. 12:12:00)
+   * @returns
+   */
+  var isValidTime = function isValidTime(d) {
+    return typeof d === 'string' && d.match(/^[0-9]{1,2}:[0-9]{2,2}(:[0-9]{2,2}){0,1}$/) != null;
+  };
+
+  var omitFields = function omitFields(fields) {
+    var fieldNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+    var toBeOmitted = Array.isArray(fieldNames) ? fieldNames : [fieldNames];
+    return filterFields(fields, function (field) {
+      return !toBeOmitted.includes(field.name);
+    });
+  };
+
   var I18N = function I18N(Component) {
     var propNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
     var funcPropNames = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
@@ -15191,8 +15304,8 @@
     }, [css, id]);
   };
 
-  var css_248z$g = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
-  styleInject(css_248z$g);
+  var css_248z$f = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
+  styleInject(css_248z$f);
 
   var baseGetTag = _baseGetTag,
     isObjectLike = isObjectLike_1;
@@ -15550,6 +15663,7 @@
           className: "plaintext-value"
         }, value);
       case 'input-text':
+      case 'time':
         return /*#__PURE__*/React.createElement("div", {
           className: "plaintext-value"
         }, value);
@@ -15815,8 +15929,8 @@
     };
   }();
 
-  var css_248z$f = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
-  styleInject(css_248z$f);
+  var css_248z$e = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
+  styleInject(css_248z$e);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
@@ -15834,8 +15948,8 @@
     }
   };
 
-  var css_248z$e = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
-  styleInject(css_248z$e);
+  var css_248z$d = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
+  styleInject(css_248z$d);
 
   var ThreeColumns = function ThreeColumns(_ref) {
     var name = _ref.name,
@@ -15865,8 +15979,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$d = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
-  styleInject(css_248z$d);
+  var css_248z$c = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
+  styleInject(css_248z$c);
 
   var TwoColumns = function TwoColumns(_ref) {
     var name = _ref.name,
@@ -15890,8 +16004,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$c = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
-  styleInject(css_248z$c);
+  var css_248z$b = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject(css_248z$b);
 
   var Group = I18N(function (_ref) {
     var name = _ref.name,
@@ -15944,8 +16058,8 @@
     }, children));
   }, ['label']);
 
-  var css_248z$b = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
-  styleInject(css_248z$b);
+  var css_248z$a = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
+  styleInject(css_248z$a);
 
   var PlaceholderImage = function PlaceholderImage(_ref) {
     var url = _ref.url,
@@ -15987,8 +16101,8 @@
     }
   };
 
-  var css_248z$a = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
-  styleInject(css_248z$a);
+  var css_248z$9 = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
+  styleInject(css_248z$9);
 
   var Divider = function Divider(_ref) {
     var name = _ref.name,
@@ -16006,11 +16120,11 @@
     }, "&npsb;"));
   };
 
-  var _excluded$g = ["name", "view"];
+  var _excluded$h = ["name", "view"];
   var ReactView = function ReactView(_ref) {
     var name = _ref.name,
       view = _ref.view,
-      rest = _objectWithoutProperties(_ref, _excluded$g);
+      rest = _objectWithoutProperties(_ref, _excluded$h);
     var View = view;
     return /*#__PURE__*/React.createElement("div", {
       className: "lf-control-react-view",
@@ -16287,8 +16401,8 @@
     })));
   };
 
-  var css_248z$9 = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
-  styleInject(css_248z$9);
+  var css_248z$8 = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
+  styleInject(css_248z$8);
 
   var randomId = function randomId() {
     var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
@@ -16481,10 +16595,10 @@
     }));
   };
 
-  var css_248z$8 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
-  styleInject(css_248z$8);
+  var css_248z$7 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
+  styleInject(css_248z$7);
 
-  var _excluded$f = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$g = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -16510,7 +16624,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$f);
+      rest = _objectWithoutProperties(_ref, _excluded$g);
     var _useState = React.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -16560,11 +16674,11 @@
     };
   };
 
-  var css_248z$7 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
-  styleInject(css_248z$7);
-
-  var css_248z$6 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
+  var css_248z$6 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
   styleInject(css_248z$6);
+
+  var css_248z$5 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
+  styleInject(css_248z$5);
 
   var PlaintextLabel = function PlaintextLabel(_ref) {
     var children = _ref.children;
@@ -17017,8 +17131,12 @@
         Components = _ref2.Components,
         prependView = _ref2.prependView;
       var renderedFields = (fields || []).filter(function (field) {
+        return Wrapper || field.component !== 'hidden';
+      }) // skip hidden type field (not in design mode)
+      .filter(function (field) {
         return Wrapper || field.hidden !== true;
-      }).map(function (field, index) {
+      }) // skip fields with "hidden" attribute (not in design mode)
+      .map(function (field, index) {
         var Component;
         if (Components[field.component] && Components[field.component][framework]) {
           Component = Components[field.component][framework];
@@ -18063,124 +18181,134 @@
     return LazyWithPreload;
   }
 
-  var _excluded$e = ["framework", "children"];
+  var _excluded$f = ["framework", "children"];
   var Fields = {
     'input-text': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$o; });
+        return Promise.resolve().then(function () { return index$q; });
       })
     },
     'select': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$n; });
+        return Promise.resolve().then(function () { return index$p; });
       })
     },
     'toggle': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$m; });
+        return Promise.resolve().then(function () { return index$o; });
       })
     },
     'checkbox': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
+        return Promise.resolve().then(function () { return index$n; });
       })
     },
     'slider': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
+        return Promise.resolve().then(function () { return index$m; });
       })
     },
     'placeholder': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
+        return Promise.resolve().then(function () { return index$l; });
       })
     },
     'rate': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
+        return Promise.resolve().then(function () { return index$k; });
       })
     },
     'date': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return index$j; });
       })
     },
     'three-columns': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$i; });
       })
     },
     'two-columns': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return index$h; });
       })
     },
     'group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
+        return Promise.resolve().then(function () { return index$g; });
       })
     },
     'placeholder-image': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
+        return Promise.resolve().then(function () { return index$f; });
       })
     },
     'divider': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
+        return Promise.resolve().then(function () { return index$e; });
       })
     },
     'react-view': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
+        return Promise.resolve().then(function () { return index$d; });
       })
     },
     'datetime': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
+        return Promise.resolve().then(function () { return index$c; });
       })
     },
     'array': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
+        return Promise.resolve().then(function () { return index$b; });
       })
     },
     'textarea': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
+        return Promise.resolve().then(function () { return index$a; });
       })
     },
     'multiselect': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return index$9; });
       })
     },
     'input-number': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return index$8; });
       })
     },
     'radio-group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return index$7; });
       })
     },
     'checkbox-group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return index$6; });
       })
     },
     'tabs': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return index$5; });
       })
     },
     'button': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return index$4; });
       })
     },
     'upload': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$3; });
+      })
+    },
+    'time': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'hidden': {
       'react-material-ui': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
       })
@@ -18198,25 +18326,13 @@
   var LetsForm = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$e);
+      rest = _objectWithoutProperties(_ref, _excluded$f);
     return /*#__PURE__*/React.createElement(FormGenerator, _extends({
       framework: "react-material-ui"
     }, rest), children);
   };
 
-  var css_248z$5 = ".lf-react-material-ui-label {\n  color: rgba(0, 0, 0, 0.6);\n  font-family: \"Roboto\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  font-size: 1rem;\n  line-height: 1.4375em;\n  letter-spacing: 0.00938em;\n  padding: 0;\n  position: relative;\n  display: block;\n  transform-origin: top left;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  max-width: 100%;\n  transform: none;\n  position: inherit;\n  margin-top: 0px;\n}";
-  styleInject(css_248z$5);
-
-  var MuiLabel = function MuiLabel(_ref) {
-    var children = _ref.children,
-      _ref$required = _ref.required,
-      required = _ref$required === void 0 ? false : _ref$required;
-    return /*#__PURE__*/React.createElement("div", {
-      className: "lf-react-material-ui-label"
-    }, children, required && /*#__PURE__*/React.createElement(RequiredIcon, null));
-  };
-
-  var _excluded$d = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
+  var _excluded$e = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
 
   // DOC: https://mui.com/material-ui/api/input/
 
@@ -18253,10 +18369,11 @@
       className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$d);
+      rest = _objectWithoutProperties(_ref, _excluded$e);
     var handleKeyUp = React.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
+    var controlId = React.useId();
     return /*#__PURE__*/React.createElement("div", {
       "data-lf-field-name": name,
       className: className
@@ -18265,9 +18382,8 @@
       error: error != null,
       variant: variant !== null && variant !== void 0 ? variant : undefined,
       fullWidth: fullWidth
-    }, label && !floatingLabel && /*#__PURE__*/React.createElement(MuiLabel, {
-      id: "mui_input_text_".concat(name),
-      required: required
+    }, label && !floatingLabel && /*#__PURE__*/React.createElement(FormLabel, {
+      id: controlId
     }, label), /*#__PURE__*/React.createElement(TextField, _extends({
       size: size,
       placeholder: placeholder,
@@ -18298,12 +18414,12 @@
     }, passRest(rest))), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$c = ["onChange"];
+  var _excluded$d = ["onChange"];
   // DOC: https://mui.com/material-ui/api/input/
 
   var TextInput = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$c);
+      rest = _objectWithoutProperties(_ref, _excluded$d);
     var handleChange = React.useCallback(function (event) {
       onChange(event.target.value);
     }, [onChange]);
@@ -18315,12 +18431,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.InputText');
 
-  var index$o = /*#__PURE__*/Object.freeze({
+  var index$q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
 
-  var _excluded$b = ["name", "label", "hint", "value", "placeholder", "options", "filterKey", "filterValue", "component", "disabled", "readOnly", "required", "error", "multiple", "fullWidth", "width", "floatingLabel", "autoWidth", "size", "variant", "onChange", "onBlur", "className", "children"];
+  var _excluded$c = ["name", "label", "hint", "value", "placeholder", "options", "filterKey", "filterValue", "component", "disabled", "readOnly", "required", "error", "multiple", "fullWidth", "width", "floatingLabel", "autoWidth", "size", "variant", "onChange", "onBlur", "className", "children"];
 
   // DOC: https://mui.com/material-ui/api/select/
 
@@ -18353,8 +18469,9 @@
       onBlur = _ref.onBlur,
       className = _ref.className;
       _ref.children;
-      var rest = _objectWithoutProperties(_ref, _excluded$b);
+      var rest = _objectWithoutProperties(_ref, _excluded$c);
     var filteredOptions = filterOptions(options, filterValue, filterKey);
+    var controlId = React.useId();
     var items;
     if (multiple) {
       items = (filteredOptions || []).map(function (option) {
@@ -18392,8 +18509,8 @@
       error: error != null,
       variant: variant !== null && variant !== void 0 ? variant : undefined,
       fullWidth: fullWidth
-    }, label && !floatingLabel && /*#__PURE__*/React.createElement(MuiLabel, {
-      required: required
+    }, label && !floatingLabel && /*#__PURE__*/React.createElement(FormLabel, {
+      id: controlId
     }, label), label && floatingLabel && /*#__PURE__*/React.createElement(InputLabel, {
       id: "mui_select_".concat(name)
     }, label), /*#__PURE__*/React.createElement(Select, _extends({
@@ -18415,11 +18532,11 @@
     }, passRest(rest)), items), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$a = ["onChange", "value"];
+  var _excluded$b = ["onChange", "value"];
   var MuiSelect = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$a);
+      rest = _objectWithoutProperties(_ref, _excluded$b);
     var handleChange = React.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -18434,7 +18551,7 @@
   });
   lfLog('Loaded MUI.Select');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var index$p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiSelect
   });
@@ -18477,7 +18594,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Toggle');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle
   });
@@ -18522,7 +18639,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Checkbox');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxMUI
   });
@@ -18591,7 +18708,7 @@
   });
   lfLog('Loaded MUI.Slider');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderMui
   });
@@ -18601,18 +18718,19 @@
       text = _ref.text,
       name = _ref.name,
       label = _ref.label;
+    var controlId = React.useId();
     return /*#__PURE__*/React.createElement(FormControl, {
       className: "lf-control-placeholder",
       "data-lf-field-name": name
-    }, label && /*#__PURE__*/React.createElement(MuiLabel, {
-      id: "mui_input_text_".concat(name)
+    }, label && /*#__PURE__*/React.createElement(FormLabel, {
+      id: controlId
     }, label), /*#__PURE__*/React.createElement(Placeholder, {
       text: text
     }), hint && /*#__PURE__*/React.createElement(FormHelperText, null, hint));
   }, ['label', 'hint', 'text']);
   lfLog('Loaded MUI.Placeholder');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderMUI
   });
@@ -18672,7 +18790,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Rate');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Rate
   });
@@ -18996,7 +19114,19 @@
   var dayjs_minExports = dayjs_min.exports;
   var dayjs = /*@__PURE__*/getDefaultExportFromCjs(dayjs_minExports);
 
-  var _excluded$9 = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "fullWidth", "variant", "placeholder", "width", "disableFuture", "disableHighlightToday", "disableOpenPicker", "disablePast", "displayWeekNumber", "format", "maxDate", "minDate", "reduceAnimations", "showDaysOutsideCurrentMonth", "lfLocale", "datetime", "views", "component"];
+  var tryParseDateDayJs = function tryParseDateDayJs(value) {
+    if (_isDate(value)) {
+      return dayjs(value);
+    } else if (_isString(value)) {
+      var d = new Date(value);
+      if (isValidDate(d)) {
+        return dayjs(d);
+      }
+    }
+    return undefined;
+  };
+
+  var _excluded$a = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "className", "size", "variant", "color", "readOnly", "required", "fullWidth", "placeholder", "floatingLabel", "width", "displayWeekNumber", "format", "maxDate", "minDate", "maxDateTime", "minDateTime", "lfLocale", "datetime", "views", "component"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -19010,75 +19140,85 @@
       onBlur = _ref.onBlur,
       error = _ref.error,
       className = _ref.className,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      size = _ref.size,
+      variant = _ref.variant,
+      color = _ref.color,
       _ref$readOnly = _ref.readOnly,
       readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
       required = _ref.required,
       _ref$fullWidth = _ref.fullWidth,
       fullWidth = _ref$fullWidth === void 0 ? false : _ref$fullWidth,
-      variant = _ref.variant,
       placeholder = _ref.placeholder,
+      floatingLabel = _ref.floatingLabel,
       width = _ref.width,
-      disableFuture = _ref.disableFuture,
-      disableHighlightToday = _ref.disableHighlightToday,
-      disableOpenPicker = _ref.disableOpenPicker,
-      disablePast = _ref.disablePast,
       displayWeekNumber = _ref.displayWeekNumber,
       format = _ref.format,
       maxDate = _ref.maxDate,
       minDate = _ref.minDate,
-      reduceAnimations = _ref.reduceAnimations,
-      showDaysOutsideCurrentMonth = _ref.showDaysOutsideCurrentMonth,
+      maxDateTime = _ref.maxDateTime,
+      minDateTime = _ref.minDateTime,
       lfLocale = _ref.lfLocale,
       _ref$datetime = _ref.datetime,
       datetime = _ref$datetime === void 0 ? false : _ref$datetime,
       views = _ref.views;
       _ref.component;
-      var rest = _objectWithoutProperties(_ref, _excluded$9);
+      var rest = _objectWithoutProperties(_ref, _excluded$a);
+    var controlId = React.useId();
     var localeCode = lfLocale && _isString(lfLocale) ? lfLocale.split('-')[0] : undefined;
     var Component = datetime ? DateTimePicker.DateTimePicker : DatePicker.DatePicker;
 
     // set locale for dates
-    var defaultValue = dayjs(value);
-    if (defaultValue && localeCode) {
-      defaultValue = defaultValue.locale(localeCode);
+    var defaultValue;
+    if (value) {
+      defaultValue = dayjs(value);
+      if (defaultValue && localeCode) {
+        defaultValue = defaultValue.locale(localeCode);
+      }
     }
+
+    // parse dates
+    var parsedMinDate = tryParseDateDayJs(minDate);
+    var parsedMaxDate = tryParseDateDayJs(maxDate);
+    var parsedMinDateTime = tryParseDateDayJs(minDateTime);
+    var parsedMaxDateTime = tryParseDateDayJs(maxDateTime);
     return /*#__PURE__*/React.createElement("div", {
       "data-lf-field-name": name,
       className: className
     }, /*#__PURE__*/React.createElement(FormControl, {
       required: required,
       error: error != null,
-      fullWidth: fullWidth
-    }, /*#__PURE__*/React.createElement(Component, _extends({
+      fullWidth: fullWidth,
+      style: makeWidthStyle(fullWidth, width)
+    }, label && !floatingLabel && /*#__PURE__*/React.createElement(FormLabel, {
+      htmlFor: controlId
+    }, label), /*#__PURE__*/React.createElement(Component, _extends({
+      id: controlId,
+      required: floatingLabel ? required : undefined,
+      label: floatingLabel ? label : undefined,
       placeholder: placeholder,
+      slotProps: {
+        textField: {
+          size: size !== null && size !== void 0 ? size : undefined,
+          variant: variant !== null && variant !== void 0 ? variant : undefined,
+          color: color !== null && color !== void 0 ? color : undefined,
+          required: !!(floatingLabel && required)
+        }
+      },
       readOnly: readOnly,
-      required: required,
-      style: _isNumber(width) && !fullWidth ? {
-        width: "".concat(parseInt(width, 10), "px")
-      } : undefined,
       onChange: onChange,
       defaultValue: defaultValue,
-      variant: variant !== null && variant !== void 0 ? variant : undefined,
       onBlur: onBlur,
-      disabled: disabled,
-      label: label,
       views: !_isEmpty(views) ? views : ['day', 'year'],
-      disableFuture: disableFuture,
-      disableHighlightToday: disableHighlightToday,
-      disableOpenPicker: disableOpenPicker,
-      disablePast: disablePast,
       displayWeekNumber: displayWeekNumber,
       format: isValidDayjsFormat(format) ? format : undefined,
-      maxDate: maxDate && dayjs(maxDate),
-      minDate: minDate && dayjs(minDate),
-      reduceAnimations: reduceAnimations,
-      showDaysOutsideCurrentMonth: showDaysOutsideCurrentMonth
+      minDate: parsedMinDate,
+      maxDate: parsedMaxDate,
+      minDateTime: parsedMinDateTime,
+      maxDateTime: parsedMaxDateTime
     }, passRest(rest))), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$8 = ["onChange", "value"];
+  var _excluded$9 = ["onChange", "value"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -19086,7 +19226,7 @@
   var MuiDate = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
+      rest = _objectWithoutProperties(_ref, _excluded$9);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -19113,54 +19253,54 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.Date');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiDate
   });
 
   lfLog('Loaded MUI.ThreeColumns');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded MUI.TwoColumns');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded MUI.Group');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
   lfLog('Loaded MUI.PlaceholderImage');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
   lfLog('Loaded MUI.Divider');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
   lfLog('Loaded MUI.ReactView');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
 
-  var _excluded$7 = ["onChange", "value"];
+  var _excluded$8 = ["onChange", "value"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -19168,7 +19308,7 @@
   var MuiDateTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$7);
+      rest = _objectWithoutProperties(_ref, _excluded$8);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -19196,7 +19336,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.DateTime');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiDateTime
   });
@@ -19204,7 +19344,7 @@
   var css_248z$4 = ".lf-form.lf-form-react-material-ui .lf-control-common-array [class^=lf-control]:not(:last-child) {\n  margin-bottom: 10px;\n}";
   styleInject(css_248z$4);
 
-  var _excluded$6 = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$7 = ["hint", "required", "tooltip", "name", "label", "error"];
   var ListArrayMui = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required;
@@ -19212,8 +19352,9 @@
       var name = _ref.name,
       label = _ref.label,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$6);
+      rest = _objectWithoutProperties(_ref, _excluded$7);
     var hasError = error && _isString(error);
+    var controlId = React.useId();
     return /*#__PURE__*/React.createElement("div", {
       "data-lf-field-name": name,
       className: "lf-control-array"
@@ -19221,15 +19362,15 @@
       required: required,
       error: hasError,
       fullWidth: true
-    }, /*#__PURE__*/React.createElement(MuiLabel, {
-      required: required
+    }, /*#__PURE__*/React.createElement(FormLabel, {
+      id: controlId
     }, label), /*#__PURE__*/React.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm
     }, rest)), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Array');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index$b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayMui
   });
@@ -19246,16 +19387,16 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.Textarea');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea
   });
 
-  var _excluded$5 = ["onChange", "value"];
+  var _excluded$6 = ["onChange", "value"];
   var Multiselect = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$5);
+      rest = _objectWithoutProperties(_ref, _excluded$6);
     var handleChange = React.useCallback(function (e) {
       var value = e.target.value;
       onChange(typeof value === 'string' ? value.split(',') : value);
@@ -19283,12 +19424,12 @@
   });
   lfLog('Loaded MUI.Multiselect');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var index$9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect
   });
 
-  var _excluded$4 = ["onChange"];
+  var _excluded$5 = ["onChange"];
 
   // DOC: https://mui.com/material-ui/api/input/
 
@@ -19297,7 +19438,7 @@
   };
   var InputNumber = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$4);
+      rest = _objectWithoutProperties(_ref, _excluded$5);
     var handleChange = React.useCallback(function (e) {
       var value = e.target.value;
       var parsed;
@@ -19324,12 +19465,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.InputNumber');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var index$8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumber
   });
 
-  var _excluded$3 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "onBlur", "required"];
+  var _excluded$4 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "onBlur", "required"];
 
   // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -19349,7 +19490,7 @@
       labelPlacement = _ref.labelPlacement,
       onBlur = _ref.onBlur,
       required = _ref.required,
-      rest = _objectWithoutProperties(_ref, _excluded$3);
+      rest = _objectWithoutProperties(_ref, _excluded$4);
     var handleChange = React.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -19393,12 +19534,12 @@
   });
   lfLog('Loaded MUI.RadioGroup');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var index$7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupMUI
   });
 
-  var _excluded$2 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "readOnly", "onBlur", "required"];
+  var _excluded$3 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "readOnly", "onBlur", "required"];
 
   // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -19419,7 +19560,7 @@
       readOnly = _ref.readOnly;
       _ref.onBlur;
       var required = _ref.required,
-      rest = _objectWithoutProperties(_ref, _excluded$2);
+      rest = _objectWithoutProperties(_ref, _excluded$3);
     var _useState = React.useState(_isArray(value) ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
       currentValue = _useState2[0],
@@ -19474,7 +19615,7 @@
   });
   lfLog('Loaded MUI.CheckboxGroup');
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var index$6 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroup
   });
@@ -19482,7 +19623,7 @@
   var css_248z$3 = ".lf-form-react-material-ui .lf-control-tabs .tab-fields {\n  padding-top: var(--lf-field-margin);\n}";
   styleInject(css_248z$3);
 
-  var _excluded$1 = ["name", "value", "tabs", "onChange", "children", "centered", "fullWidth", "indicatorColor", "textColor"];
+  var _excluded$2 = ["name", "value", "tabs", "onChange", "children", "centered", "fullWidth", "indicatorColor", "textColor"];
   var TabsMui = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -19493,7 +19634,7 @@
       fullWidth = _ref.fullWidth,
       indicatorColor = _ref.indicatorColor,
       textColor = _ref.textColor,
-      rest = _objectWithoutProperties(_ref, _excluded$1);
+      rest = _objectWithoutProperties(_ref, _excluded$2);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
@@ -19535,7 +19676,7 @@
   });
   lfLog('Loaded MUI.Tabs');
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$5 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsMui
   });
@@ -19543,7 +19684,7 @@
   var css_248z$2 = ".lf-form-react-material-ui .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeLarge .lf-icon {\n  max-width: 22px;\n  max-height: 22px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeSmall .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon {\n  min-width: inherit;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon .MuiButton-startIcon {\n  margin-right: 0px !important;\n}";
   styleInject(css_248z$2);
 
-  var _excluded = ["label", "icon", "hint", "tooltip", "variant", "size", "color"];
+  var _excluded$1 = ["label", "icon", "hint", "tooltip", "variant", "size", "color"];
   var MuiButton = function MuiButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
@@ -19552,7 +19693,7 @@
       variant = _ref.variant,
       size = _ref.size,
       color = _ref.color,
-      rest = _objectWithoutProperties(_ref, _excluded);
+      rest = _objectWithoutProperties(_ref, _excluded$1);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React.createElement(Button, _extends({
@@ -19593,7 +19734,7 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded MUI.Button');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$4 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton
   });
@@ -19708,6 +19849,7 @@
       multiple = _ref.multiple,
       required = _ref.required,
       value = _ref.value;
+    var controlId = React.useId();
     var _useState = React.useState(multiple && _isArray(value) || !multiple && _isObject(value) ? value : undefined),
       _useState2 = _slicedToArray(_useState, 2),
       currentFile = _useState2[0],
@@ -19745,8 +19887,8 @@
     return /*#__PURE__*/React.createElement("div", {
       className: "lf-control-upload",
       "data-lf-field-name": name
-    }, label && /*#__PURE__*/React.createElement(MuiLabel, {
-      id: "mui_input_text_".concat(name),
+    }, label && /*#__PURE__*/React.createElement(FormLabel, {
+      id: controlId,
       required: required
     }, label), /*#__PURE__*/React.createElement("div", {
       className: "lf-upload-button-layout"
@@ -19807,9 +19949,142 @@
   lfLog('Loaded MUI.Upload');
   var Upload$1 = Upload;
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var index$3 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload$1
+  });
+
+  var timeToDayJSTime = function timeToDayJSTime(str) {
+    var _str$split = str.split(':'),
+      _str$split2 = _slicedToArray(_str$split, 3),
+      hours = _str$split2[0],
+      minutes = _str$split2[1],
+      seconds = _str$split2[2];
+    if (hours || minutes || seconds) {
+      console.log('splittato ', hours, minutes, seconds);
+      var d = dayjs();
+      if (hours) {
+        d = d.hour(hours);
+      }
+      if (minutes) {
+        d = d.minute(minutes);
+      }
+      if (seconds) {
+        d = d.second(seconds);
+      }
+      return d;
+    }
+    return undefined;
+  };
+
+  var _excluded = ["name", "label", "hint", "value", "onChange", "onBlur", "fullWidth", "width", "floatingLabel", "disabled", "readOnly", "required", "className", "timeStepsHours", "timeStepsMinutes", "timeStepsSeconds", "size", "variant", "color", "error", "maxTime", "minTime", "forceMobile", "format"];
+
+  // DOC: https://mui.com/x/api/date-pickers/time-picker/
+
+  var Time = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      floatingLabel = _ref.floatingLabel;
+      _ref.disabled;
+      _ref.readOnly;
+      var required = _ref.required,
+      className = _ref.className,
+      timeStepsHours = _ref.timeStepsHours,
+      timeStepsMinutes = _ref.timeStepsMinutes,
+      timeStepsSeconds = _ref.timeStepsSeconds,
+      size = _ref.size,
+      variant = _ref.variant,
+      color = _ref.color,
+      error = _ref.error,
+      maxTime = _ref.maxTime,
+      minTime = _ref.minTime,
+      forceMobile = _ref.forceMobile,
+      _ref$format = _ref.format,
+      format = _ref$format === void 0 ? 'HH:mm:ss' : _ref$format,
+      rest = _objectWithoutProperties(_ref, _excluded);
+    var controlId = React.useId();
+    var Component = forceMobile ? MobileTimePicker.MobileTimePicker : DesktopTimePicker.DesktopTimePicker;
+    // default value
+    var defaultValue;
+    if (isValidTime(value)) {
+      defaultValue = timeToDayJSTime(value);
+    }
+    var handleChange = React.useCallback(function (d) {
+      onChange(d.format(format));
+    }, [onChange, format]);
+    // set time steps
+    var timeSteps;
+    if (timeStepsHours || timeStepsMinutes || timeStepsSeconds) {
+      timeSteps = {
+        hours: timeStepsHours !== null && timeStepsHours !== void 0 ? timeStepsHours : 1,
+        minutes: timeStepsMinutes !== null && timeStepsMinutes !== void 0 ? timeStepsMinutes : 5,
+        seconds: timeStepsSeconds !== null && timeStepsSeconds !== void 0 ? timeStepsSeconds : 5
+      };
+    }
+    var parsedMaxTime;
+    if (isValidTime(maxTime)) {
+      parsedMaxTime = timeToDayJSTime(maxTime);
+    }
+    var parsedMinTime;
+    if (isValidTime(minTime)) {
+      parsedMinTime = timeToDayJSTime(minTime);
+    }
+    return /*#__PURE__*/React.createElement("div", {
+      "data-lf-field-name": name,
+      className: className
+    }, /*#__PURE__*/React.createElement(FormControl, {
+      required: required,
+      error: error != null,
+      fullWidth: fullWidth,
+      style: makeWidthStyle(fullWidth, width)
+    }, label && !floatingLabel && /*#__PURE__*/React.createElement(FormLabel, {
+      htmlFor: controlId
+    }, label), /*#__PURE__*/React.createElement(Component, _extends({
+      id: controlId,
+      label: floatingLabel ? label : undefined,
+      slotProps: {
+        textField: {
+          size: size !== null && size !== void 0 ? size : undefined,
+          variant: variant !== null && variant !== void 0 ? variant : undefined,
+          color: color !== null && color !== void 0 ? color : undefined,
+          required: !!(floatingLabel && required)
+        }
+      },
+      onChange: handleChange,
+      onBlur: onBlur,
+      timeSteps: timeSteps,
+      maxTime: parsedMaxTime,
+      minTime: parsedMinTime,
+      defaultValue: defaultValue
+    }, passRest(rest))), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
+  }, ['label', 'hint']);
+  lfLog('Loaded MUI.Time');
+
+  var index$2 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Time
+  });
+
+  var Hidden = function Hidden(_ref) {
+    var name = _ref.name;
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-control-hidden",
+      style: {
+        padding: '10px'
+      }
+    }, "Hidden field: ", /*#__PURE__*/React.createElement("em", null, name));
+  };
+  lfLog('Loaded RSuite5.Hidden');
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Hidden
   });
 
   var FormMaterialUI = function FormMaterialUI(_ref) {
@@ -19891,8 +20166,10 @@
   exports.isUrl = isUrl;
   exports.isValidDate = isValidDate;
   exports.isValidDayjsFormat = isValidDayjsFormat;
+  exports.isValidTime = isValidTime;
   exports.makeWidthStyle = makeWidthStyle;
   exports.mapFields = mapFields;
+  exports.omitFields = omitFields;
   exports.passRest = passRest;
   exports.reduceFields = reduceFields;
   exports.replaceField = replaceField;

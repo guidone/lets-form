@@ -288,8 +288,11 @@
                 "xs"
               ]
             },
-            "block": {
+            "fullWidth": {
               "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
             },
             "searchable": {
               "type": "boolean"
@@ -836,27 +839,6 @@
             "format": {
               "type": "string"
             },
-            "block": {
-              "type": "boolean"
-            },
-            "cleanable": {
-              "type": "boolean"
-            },
-            "editable": {
-              "type": "boolean"
-            },
-            "oneTap": {
-              "type": "boolean"
-            },
-            "showMeridian": {
-              "type": "boolean"
-            },
-            "showWeekNumbers": {
-              "type": "boolean"
-            },
-            "isoWeek": {
-              "type": "boolean"
-            },
             "size": {
               "type": "string",
               "enum": [
@@ -890,6 +872,30 @@
                 "autoHorizontalStart",
                 "autoHorizontalEnd"
               ]
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "cleanable": {
+              "type": "boolean"
+            },
+            "editable": {
+              "type": "boolean"
+            },
+            "oneTap": {
+              "type": "boolean"
+            },
+            "showMeridian": {
+              "type": "boolean"
+            },
+            "showWeekNumbers": {
+              "type": "boolean"
+            },
+            "isoWeek": {
+              "type": "boolean"
             }
           }
         }
@@ -1953,27 +1959,6 @@
             "format": {
               "type": "string"
             },
-            "block": {
-              "type": "boolean"
-            },
-            "cleanable": {
-              "type": "boolean"
-            },
-            "editable": {
-              "type": "boolean"
-            },
-            "oneTap": {
-              "type": "boolean"
-            },
-            "showMeridian": {
-              "type": "boolean"
-            },
-            "showWeekNumbers": {
-              "type": "boolean"
-            },
-            "isoWeek": {
-              "type": "boolean"
-            },
             "size": {
               "type": "string",
               "enum": [
@@ -2007,6 +1992,30 @@
                 "autoHorizontalStart",
                 "autoHorizontalEnd"
               ]
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "cleanable": {
+              "type": "boolean"
+            },
+            "editable": {
+              "type": "boolean"
+            },
+            "oneTap": {
+              "type": "boolean"
+            },
+            "showMeridian": {
+              "type": "boolean"
+            },
+            "isoWeek": {
+              "type": "boolean"
+            },
+            "showWeekNumbers": {
+              "type": "boolean"
             }
           }
         }

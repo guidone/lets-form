@@ -1,9 +1,9 @@
-/* LetsForm Generator v0.7.17 - UMD */
+/* LetsForm Generator v0.7.18 - UMD */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/material/Stack'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button'), require('antd'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/material/Stack', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button', 'antd', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/generator"] = {}, global.React$1, global.rsuite, global.FormControlLabel, global.FormGroup, global.Switch, global.Checkbox$2, global.Slider$1, global.FormHelperText, global.FormControl, global.FormLabel, global.Rating, global.DatePicker, global.DateTimePicker, global.InputLabel, global.MenuItem, global.Select$3, global.ListItemText, global.TextField, global.InputAdornment, global.Radio, global.RadioGroup$2, global.Tabs$1, global.Tab, global.Box, global.Button$1, global.Stack$2, global.FloatingLabel, global.Form, global.InputGroup, global.reactBootstrap, global.Button$2, global.antd, global.core, global.reactHookForm, global.dates));
-})(this, (function (exports, React$1, rsuite, FormControlLabel, FormGroup, Switch, Checkbox$2, Slider$1, FormHelperText, FormControl, FormLabel, Rating, DatePicker, DateTimePicker, InputLabel, MenuItem, Select$3, ListItemText, TextField, InputAdornment, Radio, RadioGroup$2, Tabs$1, Tab, Box, Button$1, Stack$2, FloatingLabel, Form, InputGroup, reactBootstrap, Button$2, antd, core, reactHookForm, dates) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button'), require('antd'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button', 'antd', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/generator"] = {}, global.React$1, global.rsuite, global.FormControlLabel, global.FormGroup, global.Switch, global.Checkbox$2, global.Slider$1, global.FormHelperText, global.FormControl, global.FormLabel, global.Rating, global.DatePicker, global.DateTimePicker, global.InputLabel, global.MenuItem, global.Select$3, global.ListItemText, global.TextField, global.InputAdornment, global.Radio, global.RadioGroup$2, global.Tabs$1, global.Tab, global.Box, global.Button$1, global.MobileTimePicker, global.DesktopTimePicker, global.Stack$2, global.FloatingLabel, global.Form, global.InputGroup, global.reactBootstrap, global.Button$2, global.antd, global.core, global.reactHookForm, global.dates));
+})(this, (function (exports, React$1, rsuite, FormControlLabel, FormGroup, Switch, Checkbox$2, Slider$1, FormHelperText, FormControl, FormLabel, Rating, DatePicker, DateTimePicker, InputLabel, MenuItem, Select$3, ListItemText, TextField, InputAdornment, Radio, RadioGroup$2, Tabs$1, Tab, Box, Button$1, MobileTimePicker, DesktopTimePicker, Stack$2, FloatingLabel, Form, InputGroup, reactBootstrap, Button$2, antd, core, reactHookForm, dates) { 'use strict';
 
   function _AsyncGenerator(gen) {
     var front, back;
@@ -128,7 +128,10 @@
         _n = !0,
         _d = !1;
       try {
-        if (_x = (_i = _i.call(arr)).next, 0 === i) ; else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0);
+        if (_x = (_i = _i.call(arr)).next, 0 === i) {
+          if (Object(_i) !== _i) return;
+          _n = !1;
+        } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0);
       } catch (err) {
         _d = !0, _e = err;
       } finally {
@@ -7292,6 +7295,19 @@
   	hidden: null,
   	accept: null,
   	acceptedFile: null,
+  	uploadButtonLabel: [
+  		"react",
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-antd"
+  	],
+  	multiple: [
+  		"react",
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-antd",
+  		"react-mantine"
+  	],
   	listType: [
   		"react-rsuite5",
   		"react-antd"
@@ -7309,22 +7325,11 @@
   	disabledFileItem: [
   		"react-rsuite5"
   	],
-  	multiple: [
-  		"react-rsuite5",
-  		"react-material-ui",
-  		"react-antd",
-  		"react-mantine"
-  	],
   	removable: [
   		"react-rsuite5"
   	],
   	draggable: [
   		"react-rsuite5",
-  		"react-antd"
-  	],
-  	uploadButtonLabel: [
-  		"react-rsuite5",
-  		"react-material-ui",
   		"react-antd"
   	],
   	uploadButtonAppearance: [
@@ -7414,23 +7419,28 @@
   	align: null,
   	steps: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	value: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	label: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	description: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	icon: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	small: [
   		"react-rsuite5",
@@ -7454,6 +7464,33 @@
   	],
   	labelPlacement: [
   		"react-antd"
+  	],
+  	color: [
+  		"react-mantine"
+  	],
+  	radius: [
+  		"react-mantine"
+  	],
+  	size: [
+  		"react-mantine"
+  	],
+  	iconPosition: [
+  		"react-mantine"
+  	],
+  	iconSize: [
+  		"react-mantine"
+  	],
+  	wrap: [
+  		"react-mantine"
+  	],
+  	allowStepClick: [
+  		"react-mantine"
+  	],
+  	allowStepSelect: [
+  		"react-mantine"
+  	],
+  	autoContrast: [
+  		"react-mantine"
   	],
   	validationMinLength: "validation",
   	validationMin: "validation",
@@ -9339,7 +9376,8 @@
   		},
   		{
   			name: "alignOffset",
-  			type: "number"
+  			type: "number",
+  			description: "Offset of the add / remove button from the top / bottom (depends on the alignment)"
   		},
   		{
   			name: "arrayType",
@@ -12420,7 +12458,7 @@
   		{
   			name: "autoContrast",
   			type: "boolean",
-  			description: "Determines whether active item text color should depend on background-color of the indicator. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast. Only applicable when variant=\"pills\""
+  			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
   		},
   		{
   			name: "inverted",
@@ -12481,6 +12519,17 @@
   			name: "accept",
   			type: "array",
   			description: "Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "
+  		}
+  	],
+  	react: [
+  		{
+  			name: "uploadButtonLabel",
+  			type: "string | i18n"
+  		},
+  		{
+  			name: "multiple",
+  			type: "boolean",
+  			description: "Allow selecting multiple files"
   		}
   	],
   	"react-rsuite5": [
@@ -12763,7 +12812,7 @@
   var steps = {
   	label: "Steps",
   	category: "layout",
-  	description: "Split the form in multiple steps",
+  	description: "Layout component to split the form in multiple steps",
   	name: "steps",
   	common: [
   		{
@@ -12860,6 +12909,88 @@
   				"horizontal",
   				"vertical"
   			]
+  		}
+  	],
+  	"react-mantine": [
+  		{
+  			name: "steps",
+  			type: "array"
+  		},
+  		{
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"grey",
+  				"red",
+  				"pink",
+  				"grape",
+  				"violet",
+  				"indigo",
+  				"blue",
+  				"cyan",
+  				"teal",
+  				"green",
+  				"lime",
+  				"yellow",
+  				"orange"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "iconPosition",
+  			type: "string",
+  			description: "Icon position relative to the step body, \"left\" by default",
+  			options: [
+  				"left",
+  				"right"
+  			]
+  		},
+  		{
+  			name: "iconSize",
+  			type: "number",
+  			description: "Determines whether steps should wrap to the next line if no space is available, true by default"
+  		},
+  		{
+  			name: "wrap",
+  			type: "boolean",
+  			description: "Determines whether steps should wrap to the next line if no space is available, true by default"
+  		},
+  		{
+  			name: "allowStepClick",
+  			type: "boolean",
+  			description: "Set to false to disable clicks on step"
+  		},
+  		{
+  			name: "allowStepSelect",
+  			type: "boolean",
+  			description: "Should step selection be allowed"
+  		},
+  		{
+  			name: "autoContrast",
+  			type: "boolean",
+  			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
   		}
   	],
   	frameworks: [
@@ -15165,6 +15296,24 @@
     return result !== 0;
   };
 
+  /**
+   * isValidTime
+   *
+   * @param {} d Time string (i.e. 12:12:00)
+   * @returns
+   */
+  var isValidTime = function isValidTime(d) {
+    return typeof d === 'string' && d.match(/^[0-9]{1,2}:[0-9]{2,2}(:[0-9]{2,2}){0,1}$/) != null;
+  };
+
+  var omitFields = function omitFields(fields) {
+    var fieldNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+    var toBeOmitted = Array.isArray(fieldNames) ? fieldNames : [fieldNames];
+    return filterFields(fields, function (field) {
+      return !toBeOmitted.includes(field.name);
+    });
+  };
+
   var I18N = function I18N(Component) {
     var propNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
     var funcPropNames = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
@@ -15573,6 +15722,7 @@
           className: "plaintext-value"
         }, value);
       case 'input-text':
+      case 'time':
         return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, value);
@@ -16029,16 +16179,16 @@
     }, "&npsb;"));
   };
 
-  var index$2m = /*#__PURE__*/Object.freeze({
+  var index$2r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Divider: Divider
   });
 
-  var _excluded$1J = ["name", "view"];
+  var _excluded$1N = ["name", "view"];
   var ReactView = function ReactView(_ref) {
     var name = _ref.name,
       view = _ref.view,
-      rest = _objectWithoutProperties(_ref, _excluded$1J);
+      rest = _objectWithoutProperties(_ref, _excluded$1N);
     var View = view;
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-react-view",
@@ -16512,7 +16662,7 @@
   var css_248z$K = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$K);
 
-  var _excluded$1I = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$1M = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -16538,7 +16688,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$1I);
+      rest = _objectWithoutProperties(_ref, _excluded$1M);
     var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -17107,8 +17257,12 @@
         Components = _ref2.Components,
         prependView = _ref2.prependView;
       var renderedFields = (fields || []).filter(function (field) {
+        return Wrapper || field.component !== 'hidden';
+      }) // skip hidden type field (not in design mode)
+      .filter(function (field) {
         return Wrapper || field.hidden !== true;
-      }).map(function (field, index) {
+      }) // skip fields with "hidden" attribute (not in design mode)
+      .map(function (field, index) {
         var Component;
         if (Components[field.component] && Components[field.component][framework]) {
           Component = Components[field.component][framework];
@@ -18153,172 +18307,182 @@
     return LazyWithPreload;
   }
 
-  var _excluded$1H = ["framework", "children"];
+  var _excluded$1L = ["framework", "children"];
   var Fields$6 = {
     'input-text': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2l; });
+        return Promise.resolve().then(function () { return index$2q; });
       })
     },
     'toggle': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2k; });
+        return Promise.resolve().then(function () { return index$2p; });
       })
     },
     'select': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2j; });
+        return Promise.resolve().then(function () { return index$2o; });
       })
     },
     'group': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2i; });
+        return Promise.resolve().then(function () { return index$2n; });
       })
     },
     'array': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2h; });
+        return Promise.resolve().then(function () { return index$2m; });
       })
     },
     'two-columns': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2g; });
+        return Promise.resolve().then(function () { return index$2l; });
       })
     },
     'three-columns': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2f; });
+        return Promise.resolve().then(function () { return index$2k; });
       })
     },
     'input-number': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2e; });
+        return Promise.resolve().then(function () { return index$2j; });
       })
     },
     'date': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2d; });
+        return Promise.resolve().then(function () { return index$2i; });
       })
     },
     'checkbox': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2c; });
+        return Promise.resolve().then(function () { return index$2h; });
       })
     },
     'checkbox-group': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2b; });
+        return Promise.resolve().then(function () { return index$2g; });
       })
     },
     'slider': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2a; });
+        return Promise.resolve().then(function () { return index$2f; });
       })
     },
     'radio-group': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$29; });
+        return Promise.resolve().then(function () { return index$2e; });
       })
     },
     'input-tag': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$28; });
+        return Promise.resolve().then(function () { return index$2d; });
       })
     },
     'input-mask': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$27; });
+        return Promise.resolve().then(function () { return index$2c; });
       })
     },
     'textarea': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$26; });
+        return Promise.resolve().then(function () { return index$2b; });
       })
     },
     'rate': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$25; });
+        return Promise.resolve().then(function () { return index$2a; });
       })
     },
     'placeholder': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$24; });
+        return Promise.resolve().then(function () { return index$29; });
       })
     },
     'multiselect': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$23; });
+        return Promise.resolve().then(function () { return index$28; });
       })
     },
     'multiselect-language': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$22; });
+        return Promise.resolve().then(function () { return index$27; });
       })
     },
     'input-text-i18n': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$21; });
+        return Promise.resolve().then(function () { return index$26; });
       })
     },
     'placeholder-image': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$20; });
+        return Promise.resolve().then(function () { return index$25; });
       })
     },
     'button': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1$; });
+        return Promise.resolve().then(function () { return index$24; });
       })
     },
     'divider': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2m; });
+        return Promise.resolve().then(function () { return index$2r; });
       })
     },
     'react-view': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1_; });
+        return Promise.resolve().then(function () { return index$23; });
       })
     },
     'datetime': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1Z; });
+        return Promise.resolve().then(function () { return index$22; });
       })
     },
     'tabs': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1Y; });
+        return Promise.resolve().then(function () { return index$21; });
       })
     },
     'radio-tile': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1X; });
+        return Promise.resolve().then(function () { return index$20; });
       })
     },
     'upload': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1W; });
+        return Promise.resolve().then(function () { return index$1$; });
       })
     },
     'buttons-toggle-group': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1V; });
+        return Promise.resolve().then(function () { return index$1_; });
       })
     },
     'steps': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1U; });
+        return Promise.resolve().then(function () { return index$1Z; });
       })
     },
     'esm-module': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1T; });
+        return Promise.resolve().then(function () { return index$1Y; });
+      })
+    },
+    'time': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$1X; });
+      })
+    },
+    'hidden': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$1W; });
       })
     }
   };
   var Forms$6 = {
     'react-rsuite5': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index$1S; });
+      return Promise.resolve().then(function () { return index$1V; });
     })
   };
   var FormGenerator$6 = GenerateGenerator({
@@ -18328,138 +18492,148 @@
   var LetsForm$5 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1H);
+      rest = _objectWithoutProperties(_ref, _excluded$1L);
     return /*#__PURE__*/React$1.createElement(FormGenerator$6, _extends({
       framework: "react-rsuite5"
     }, rest), children);
   };
 
-  var _excluded$1G = ["framework", "children"];
+  var _excluded$1K = ["framework", "children"];
   var Fields$5 = {
     'input-text': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1R; });
+        return Promise.resolve().then(function () { return index$1U; });
       })
     },
     'select': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1Q; });
+        return Promise.resolve().then(function () { return index$1T; });
       })
     },
     'toggle': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1P; });
+        return Promise.resolve().then(function () { return index$1S; });
       })
     },
     'checkbox': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1O; });
+        return Promise.resolve().then(function () { return index$1R; });
       })
     },
     'slider': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1N; });
+        return Promise.resolve().then(function () { return index$1Q; });
       })
     },
     'placeholder': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1M; });
+        return Promise.resolve().then(function () { return index$1P; });
       })
     },
     'rate': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1L; });
+        return Promise.resolve().then(function () { return index$1O; });
       })
     },
     'date': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1K; });
+        return Promise.resolve().then(function () { return index$1N; });
       })
     },
     'three-columns': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1J; });
+        return Promise.resolve().then(function () { return index$1M; });
       })
     },
     'two-columns': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1I; });
+        return Promise.resolve().then(function () { return index$1L; });
       })
     },
     'group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1H; });
+        return Promise.resolve().then(function () { return index$1K; });
       })
     },
     'placeholder-image': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1G; });
+        return Promise.resolve().then(function () { return index$1J; });
       })
     },
     'divider': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1F; });
+        return Promise.resolve().then(function () { return index$1I; });
       })
     },
     'react-view': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1E; });
+        return Promise.resolve().then(function () { return index$1H; });
       })
     },
     'datetime': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1D; });
+        return Promise.resolve().then(function () { return index$1G; });
       })
     },
     'array': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1C; });
+        return Promise.resolve().then(function () { return index$1F; });
       })
     },
     'textarea': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1B; });
+        return Promise.resolve().then(function () { return index$1E; });
       })
     },
     'multiselect': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1A; });
+        return Promise.resolve().then(function () { return index$1D; });
       })
     },
     'input-number': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1z; });
+        return Promise.resolve().then(function () { return index$1C; });
       })
     },
     'radio-group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1y; });
+        return Promise.resolve().then(function () { return index$1B; });
       })
     },
     'checkbox-group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1x; });
+        return Promise.resolve().then(function () { return index$1A; });
       })
     },
     'tabs': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1w; });
+        return Promise.resolve().then(function () { return index$1z; });
       })
     },
     'button': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1v; });
+        return Promise.resolve().then(function () { return index$1y; });
       })
     },
     'upload': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1u; });
+        return Promise.resolve().then(function () { return index$1x; });
+      })
+    },
+    'time': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$1w; });
+      })
+    },
+    'hidden': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$1W; });
       })
     }
   };
   var Forms$5 = {
     'react-material-ui': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index$1t; });
+      return Promise.resolve().then(function () { return index$1v; });
     })
   };
   var FormGenerator$5 = GenerateGenerator({
@@ -18469,97 +18643,107 @@
   var LetsForm$4 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1G);
+      rest = _objectWithoutProperties(_ref, _excluded$1K);
     return /*#__PURE__*/React$1.createElement(FormGenerator$5, _extends({
       framework: "react-material-ui"
     }, rest), children);
   };
 
-  var _excluded$1F = ["framework", "children"];
+  var _excluded$1J = ["framework", "children"];
   var Fields$4 = {
     'input-text': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1s; });
+        return Promise.resolve().then(function () { return index$1u; });
       })
     },
     'input-number': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1r; });
+        return Promise.resolve().then(function () { return index$1t; });
       })
     },
     'checkbox': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1q; });
+        return Promise.resolve().then(function () { return index$1s; });
       })
     },
     'textarea': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1p; });
+        return Promise.resolve().then(function () { return index$1r; });
       })
     },
     'three-columns': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1o; });
+        return Promise.resolve().then(function () { return index$1q; });
       })
     },
     'two-columns': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1n; });
+        return Promise.resolve().then(function () { return index$1p; });
       })
     },
     'group': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1m; });
+        return Promise.resolve().then(function () { return index$1o; });
       })
     },
     'divider': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1l; });
+        return Promise.resolve().then(function () { return index$1n; });
       })
     },
     'react-view': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1k; });
+        return Promise.resolve().then(function () { return index$1m; });
       })
     },
     'placeholder': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1j; });
+        return Promise.resolve().then(function () { return index$1l; });
       })
     },
     'select': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1i; });
+        return Promise.resolve().then(function () { return index$1k; });
       })
     },
     'date': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1h; });
+        return Promise.resolve().then(function () { return index$1j; });
       })
     },
     'datetime': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1g; });
+        return Promise.resolve().then(function () { return index$1i; });
+      })
+    },
+    'time': {
+      'react': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$1h; });
       })
     },
     'array': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1f; });
+        return Promise.resolve().then(function () { return index$1g; });
       })
     },
     'placeholder-image': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1e; });
+        return Promise.resolve().then(function () { return index$1f; });
       })
     },
     'button': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1d; });
+        return Promise.resolve().then(function () { return index$1e; });
       })
     },
     'upload': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1c; });
+        return Promise.resolve().then(function () { return index$1d; });
+      })
+    },
+    'hidden': {
+      'react': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$1W; });
       })
     }
     // Removed, doesn't work
@@ -18570,7 +18754,7 @@
 
   var Forms$4 = {
     'react': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index$1b; });
+      return Promise.resolve().then(function () { return index$1c; });
     })
   };
   var FormGenerator$4 = GenerateGenerator({
@@ -18580,123 +18764,128 @@
   var LetsForm$3 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1F);
+      rest = _objectWithoutProperties(_ref, _excluded$1J);
     return /*#__PURE__*/React$1.createElement(FormGenerator$4, _extends({
       framework: "react"
     }, rest), children);
   };
 
-  var _excluded$1E = ["framework", "children"];
+  var _excluded$1I = ["framework", "children"];
   var Fields$3 = {
     'input-text': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1a; });
+        return Promise.resolve().then(function () { return index$1b; });
       })
     },
     'select': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$19; });
+        return Promise.resolve().then(function () { return index$1a; });
       })
     },
     'checkbox': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$18; });
+        return Promise.resolve().then(function () { return index$19; });
       })
     },
     'toggle': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$17; });
+        return Promise.resolve().then(function () { return index$18; });
       })
     },
     'checkbox-group': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$16; });
+        return Promise.resolve().then(function () { return index$17; });
       })
     },
     'placeholder': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$15; });
+        return Promise.resolve().then(function () { return index$16; });
       })
     },
     'placeholder-image': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$14; });
+        return Promise.resolve().then(function () { return index$15; });
       })
     },
     'date': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$13; });
+        return Promise.resolve().then(function () { return index$14; });
       })
     },
     'textarea': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$12; });
+        return Promise.resolve().then(function () { return index$13; });
       })
     },
     'slider': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$11; });
+        return Promise.resolve().then(function () { return index$12; });
       })
     },
     'three-columns': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$10; });
+        return Promise.resolve().then(function () { return index$11; });
       })
     },
     'two-columns': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$$; });
+        return Promise.resolve().then(function () { return index$10; });
       })
     },
     'group': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$_; });
+        return Promise.resolve().then(function () { return index$$; });
       })
     },
     'radio-group': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$Z; });
+        return Promise.resolve().then(function () { return index$_; });
       })
     },
     'divider': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$Y; });
+        return Promise.resolve().then(function () { return index$Z; });
       })
     },
     'react-view': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$X; });
+        return Promise.resolve().then(function () { return index$Y; });
       })
     },
     'datetime': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$W; });
+        return Promise.resolve().then(function () { return index$X; });
       })
     },
     'array': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$V; });
+        return Promise.resolve().then(function () { return index$W; });
       })
     },
     'input-number': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$U; });
+        return Promise.resolve().then(function () { return index$V; });
       })
     },
     'tabs': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$T; });
+        return Promise.resolve().then(function () { return index$U; });
       })
     },
     'button': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$S; });
+        return Promise.resolve().then(function () { return index$T; });
+      })
+    },
+    'hidden': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$1W; });
       })
     }
   };
   var Forms$3 = {
     'react-bootstrap': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index$R; });
+      return Promise.resolve().then(function () { return index$S; });
     })
   };
   var FormGenerator$3 = GenerateGenerator({
@@ -18706,148 +18895,153 @@
   var LetsForm$2 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1E);
+      rest = _objectWithoutProperties(_ref, _excluded$1I);
     return /*#__PURE__*/React$1.createElement(FormGenerator$3, _extends({
       framework: "react-bootstrap"
     }, rest), children);
   };
 
-  var _excluded$1D = ["framework", "children"];
+  var _excluded$1H = ["framework", "children"];
   var Fields$2 = {
     'input-text': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$Q; });
+        return Promise.resolve().then(function () { return index$R; });
       })
     },
     'toggle': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$P; });
+        return Promise.resolve().then(function () { return index$Q; });
       })
     },
     'checkbox': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$O; });
+        return Promise.resolve().then(function () { return index$P; });
       })
     },
     'date': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$N; });
+        return Promise.resolve().then(function () { return index$O; });
       })
     },
     'select': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$M; });
+        return Promise.resolve().then(function () { return index$N; });
       })
     },
     'radio-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$L; });
+        return Promise.resolve().then(function () { return index$M; });
       })
     },
     'rate': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$K; });
+        return Promise.resolve().then(function () { return index$L; });
       })
     },
     'placeholder': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$J; });
+        return Promise.resolve().then(function () { return index$K; });
       })
     },
     'placeholder-image': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$I; });
+        return Promise.resolve().then(function () { return index$J; });
       })
     },
     'input-number': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$H; });
+        return Promise.resolve().then(function () { return index$I; });
       })
     },
     'textarea': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$G; });
+        return Promise.resolve().then(function () { return index$H; });
       })
     },
     'multiselect': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$F; });
+        return Promise.resolve().then(function () { return index$G; });
       })
     },
     'three-columns': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$E; });
+        return Promise.resolve().then(function () { return index$F; });
       })
     },
     'two-columns': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$D; });
+        return Promise.resolve().then(function () { return index$E; });
       })
     },
     'group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$C; });
+        return Promise.resolve().then(function () { return index$D; });
       })
     },
     'slider': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$B; });
+        return Promise.resolve().then(function () { return index$C; });
       })
     },
     'divider': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$A; });
+        return Promise.resolve().then(function () { return index$B; });
       })
     },
     'react-view': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$z; });
+        return Promise.resolve().then(function () { return index$A; });
       })
     },
     'datetime': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$y; });
+        return Promise.resolve().then(function () { return index$z; });
       })
     },
     'array': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$x; });
+        return Promise.resolve().then(function () { return index$y; });
       })
     },
     'button': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$w; });
+        return Promise.resolve().then(function () { return index$x; });
       })
     },
     'checkbox-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$v; });
+        return Promise.resolve().then(function () { return index$w; });
       })
     },
     'tabs': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$u; });
+        return Promise.resolve().then(function () { return index$v; });
       })
     },
     'upload': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$t; });
+        return Promise.resolve().then(function () { return index$u; });
       })
     },
     'buttons-toggle-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$s; });
+        return Promise.resolve().then(function () { return index$t; });
       })
     },
     'steps': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$r; });
+        return Promise.resolve().then(function () { return index$s; });
+      })
+    },
+    'hidden': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$1W; });
       })
     }
   };
   var Forms$2 = {
     'react-antd': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index$q; });
+      return Promise.resolve().then(function () { return index$r; });
     })
   };
   var FormGenerator$2 = GenerateGenerator({
@@ -18857,137 +19051,147 @@
   var LetsForm$1 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1D);
+      rest = _objectWithoutProperties(_ref, _excluded$1H);
     return /*#__PURE__*/React$1.createElement(FormGenerator$2, _extends({
       framework: "react-antd"
     }, rest), children);
   };
 
-  var _excluded$1C = ["framework", "children"];
+  var _excluded$1G = ["framework", "children"];
   var Fields$1 = {
     'input-text': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$p; });
+        return Promise.resolve().then(function () { return index$q; });
       })
     },
     'input-number': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$o; });
+        return Promise.resolve().then(function () { return index$p; });
       })
     },
     'textarea': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$n; });
+        return Promise.resolve().then(function () { return index$o; });
       })
     },
     'select': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$m; });
+        return Promise.resolve().then(function () { return index$n; });
       })
     },
     'checkbox': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
+        return Promise.resolve().then(function () { return index$m; });
       })
     },
     'toggle': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
+        return Promise.resolve().then(function () { return index$l; });
       })
     },
     'array': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
+        return Promise.resolve().then(function () { return index$k; });
       })
     },
     'checkbox-group': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
+        return Promise.resolve().then(function () { return index$j; });
       })
     },
     'radio-group': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return index$i; });
       })
     },
     'two-columns': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$h; });
       })
     },
     'three-columns': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return index$g; });
       })
     },
     'group': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
+        return Promise.resolve().then(function () { return index$f; });
       })
     },
     'date': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
+        return Promise.resolve().then(function () { return index$e; });
       })
     },
     'datetime': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
+        return Promise.resolve().then(function () { return index$d; });
       })
     },
     'rate': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
+        return Promise.resolve().then(function () { return index$c; });
       })
     },
     'placeholder': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
+        return Promise.resolve().then(function () { return index$b; });
       })
     },
     'placeholder-image': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
+        return Promise.resolve().then(function () { return index$a; });
       })
     },
     'divider': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
+        return Promise.resolve().then(function () { return index$9; });
       })
     },
     'slider': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return index$8; });
       })
     },
     'input-tag': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return index$7; });
       })
     },
     'tabs': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return index$6; });
       })
     },
     'button': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return index$5; });
       })
     },
     'upload': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return index$4; });
       })
     },
     'multiselect': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return index$3; });
       })
     },
     'steps': {
       'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'time': {
+      'react-mantine': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
+      })
+    },
+    'hidden': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$1W; });
       })
     }
   };
@@ -19003,7 +19207,7 @@
   var LetsForm = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1C);
+      rest = _objectWithoutProperties(_ref, _excluded$1G);
     return /*#__PURE__*/React$1.createElement(FormGenerator$1, _extends({
       framework: "react-mantine"
     }, rest), children);
@@ -19067,7 +19271,7 @@
   var css_248z$H = ".lf-control-input-text .rs-form-control-wrapper > .rs-input, .lf-control-input-text .rs-form-control-wrapper > .rs-input-number {\n  width: 100%;\n}\n.lf-control-input-text.lf-full-width .rs-input-group {\n  width: 100%;\n}\n.lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-control-input-text.lf-size-lg .lf-prefix-icon {\n  max-height: 22px;\n}\n.lf-control-input-text.lf-size-md .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-control-input-text.lf-size-sm .lf-prefix-icon {\n  max-height: 10px;\n}\n.lf-control-input-text.lf-size-xs .lf-prefix-icon {\n  max-height: 4px;\n}";
   styleInject(css_248z$H);
 
-  var _excluded$1B = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "lfOnEnter"];
+  var _excluded$1F = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "lfOnEnter"];
   var TextInput$4 = I18N(function (_ref) {
     var _classNames;
     var name = _ref.name,
@@ -19100,7 +19304,7 @@
       inside = _ref$inside === void 0 ? false : _ref$inside,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$1B);
+      rest = _objectWithoutProperties(_ref, _excluded$1F);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -19133,7 +19337,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.InputText');
 
-  var index$2l = /*#__PURE__*/Object.freeze({
+  var index$2q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput$4
   });
@@ -19174,7 +19378,7 @@
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded RSuite5.ToggleInput');
 
-  var index$2k = /*#__PURE__*/Object.freeze({
+  var index$2p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ToggleInput
   });
@@ -19182,7 +19386,7 @@
   var css_248z$G = ".lf-control-select-option-rsuite5 img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  margin-right: 6px;\n  margin-top: -4px;\n  display: inline-block;\n}";
   styleInject(css_248z$G);
 
-  var _excluded$1A = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions"];
+  var _excluded$1E = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions", "fullWidth", "width"];
   var menuItem = function menuItem(value, item) {
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-select-option-rsuite5"
@@ -19191,16 +19395,6 @@
       alt: item.label
     }), /*#__PURE__*/React$1.createElement("span", null, item.label));
   };
-
-  /*const manuValue = (value, item) => {
-    return (
-      <div className="lf-control-select-option-rsuite5">
-        {item.image && <img src={item.image} alt={item.label} />}
-        <span>{item.label}</span>
-      </div>
-    )
-  };*/
-
   var Select$2 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19232,10 +19426,13 @@
       filterKey = _ref.filterKey,
       filterValue = _ref.filterValue,
       showImageOptions = _ref.showImageOptions,
-      rest = _objectWithoutProperties(_ref, _excluded$1A);
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      rest = _objectWithoutProperties(_ref, _excluded$1E);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       className: "lf-control-select",
-      controlId: name
+      controlId: name,
+      style: makeWidthStyle(fullWidth, width)
     }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
@@ -19255,7 +19452,7 @@
       renderMenuItem: showImageOptions ? menuItem : undefined,
       renderValue: showImageOptions ? menuItem : undefined,
       data: filterOptions(options, filterValue, filterKey) || [],
-      block: block,
+      block: block || fullWidth || width != null,
       searchable: searchable,
       cleanable: cleanable
     }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
@@ -19264,26 +19461,26 @@
   });
   lfLog('Loaded RSuite5.Select');
 
-  var index$2j = /*#__PURE__*/Object.freeze({
+  var index$2o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select$2
   });
 
   lfLog('Loaded RSuite5.Group');
 
-  var index$2i = /*#__PURE__*/Object.freeze({
+  var index$2n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
-  var _excluded$1z = ["hint", "required", "tooltip", "name", "label"];
+  var _excluded$1D = ["hint", "required", "tooltip", "name", "label"];
   var ListArrayRSuite5 = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required,
       tooltip = _ref.tooltip,
       name = _ref.name,
       label = _ref.label,
-      rest = _objectWithoutProperties(_ref, _excluded$1z);
+      rest = _objectWithoutProperties(_ref, _excluded$1D);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-array"
@@ -19295,21 +19492,21 @@
   }, ['label', 'hint']);
   lfLog('Loaded RSuite5.ListArray');
 
-  var index$2h = /*#__PURE__*/Object.freeze({
+  var index$2m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayRSuite5
   });
 
   lfLog('Loaded RSuite5.TwoColumns');
 
-  var index$2g = /*#__PURE__*/Object.freeze({
+  var index$2l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded RSuite5.ThreeColumns');
 
-  var index$2f = /*#__PURE__*/Object.freeze({
+  var index$2k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
@@ -19415,12 +19612,15 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.InputNumber');
 
-  var index$2e = /*#__PURE__*/Object.freeze({
+  var index$2j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumberRSuite5
   });
 
-  var _excluded$1y = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"];
+  var css_248z$E = ".lf-control-date.lf-full-width .rs-picker-date {\n  width: 100%;\n}";
+  styleInject(css_248z$E);
+
+  var _excluded$1C = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "fullWidth", "width", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"];
   var RSuiteGenericDate = function RSuiteGenericDate(_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19435,16 +19635,21 @@
       readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
       _ref$required = _ref.required,
       required = _ref$required === void 0 ? false : _ref$required,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
       error = _ref.error,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur,
       appearance = _ref.appearance,
       format = _ref.format;
       _ref.lfLocale;
-      var rest = _objectWithoutProperties(_ref, _excluded$1y);
+      var rest = _objectWithoutProperties(_ref, _excluded$1C);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
-      className: "lf-control-date"
+      className: classNames('lf-control-date', {
+        'lf-full-width': fullWidth || width != null
+      }),
+      style: makeWidthStyle(fullWidth, width)
     }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
@@ -19463,11 +19668,11 @@
     }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   };
 
-  var _excluded$1x = ["onChange", "value"];
+  var _excluded$1B = ["onChange", "value"];
   var SelectDate$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1x);
+      rest = _objectWithoutProperties(_ref, _excluded$1B);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -19492,15 +19697,15 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.SelectDate');
 
-  var index$2d = /*#__PURE__*/Object.freeze({
+  var index$2i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDate$1
   });
 
-  var css_248z$E = ".lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text {\n  align-items: inherit;\n  margin-top: -1px;\n  display: inline-block;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text svg {\n  margin-top: -2px;\n}";
-  styleInject(css_248z$E);
+  var css_248z$D = ".lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text {\n  align-items: inherit;\n  margin-top: -1px;\n  display: inline-block;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text svg {\n  margin-top: -2px;\n}";
+  styleInject(css_248z$D);
 
-  var _excluded$1w = ["name", "label", "hint", "value", "tooltip", "indeterminate", "error", "onChange"];
+  var _excluded$1A = ["name", "label", "hint", "value", "tooltip", "indeterminate", "error", "onChange"];
   var CheckboxRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19511,7 +19716,7 @@
       indeterminate = _ref.indeterminate,
       error = _ref.error,
       onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$1w);
+      rest = _objectWithoutProperties(_ref, _excluded$1A);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : null),
       _useState2 = _slicedToArray(_useState, 2),
       isChecked = _useState2[0],
@@ -19549,12 +19754,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded RSuite5.Checkbox');
 
-  var index$2c = /*#__PURE__*/Object.freeze({
+  var index$2h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxRSuite
   });
 
-  var _excluded$1v = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "color", "onChange", "onBlur", "options"];
+  var _excluded$1z = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "color", "onChange", "onBlur", "options"];
   var CheckboxGroupRSuite$1 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19567,19 +19772,21 @@
       _ref$readOnly = _ref.readOnly,
       readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly;
       _ref.required;
-      _ref.error;
-      var color = _ref.color,
+      var error = _ref.error,
+      color = _ref.color,
       onChange = _ref.onChange;
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$1v);
+      rest = _objectWithoutProperties(_ref, _excluded$1z);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-checkbox-group"
     }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint)), /*#__PURE__*/React$1.createElement(rsuite.CheckboxGroup, _extends({
+    }, hint)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _.isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.CheckboxGroup, _extends({
       inline: true,
       name: name,
       value: value,
@@ -19594,21 +19801,21 @@
         readOnly: readOnly,
         color: color
       }, label);
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+    }))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint'], {
     options: i18nOptions
   });
   lfLog('Loaded RSuite.CheckboxGroup');
 
-  var index$2b = /*#__PURE__*/Object.freeze({
+  var index$2g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupRSuite$1
   });
 
-  var css_248z$D = ".lf-form-react-rsuite5 .lf-control-slider .rs-slider {\n  margin-bottom: 40px;\n}";
-  styleInject(css_248z$D);
+  var css_248z$C = ".lf-form-react-rsuite5 .lf-control-slider .rs-slider {\n  margin-bottom: 40px;\n}";
+  styleInject(css_248z$C);
 
-  var _excluded$1u = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks"];
+  var _excluded$1y = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks"];
   var validateMarks = function validateMarks(marks) {
     return _isArray(marks) && marks.every(function (mark) {
       return _isObject(mark) && mark.value && mark.label;
@@ -19633,7 +19840,7 @@
       onBlur = _ref.onBlur,
       _ref$marks = _ref.marks,
       marks = _ref$marks === void 0 ? [] : _ref$marks,
-      rest = _objectWithoutProperties(_ref, _excluded$1u);
+      rest = _objectWithoutProperties(_ref, _excluded$1y);
     var handleRenderMark = React$1.useCallback(function (number) {
       var found = marks.find(function (mark) {
         return mark && mark.value === number;
@@ -19673,12 +19880,12 @@
   });
   lfLog('Loaded RSuite5.Slider');
 
-  var index$2a = /*#__PURE__*/Object.freeze({
+  var index$2f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderRsuite
   });
 
-  var _excluded$1t = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options", "appearance"];
+  var _excluded$1x = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options", "appearance"];
   var RadioGroupRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19691,22 +19898,25 @@
       _ref$disabled = _ref.disabled,
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
       _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly;
-      _ref.required;
-      _ref.error;
-      var onChange = _ref.onChange;
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      onChange = _ref.onChange;
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       appearance = _ref.appearance,
-      rest = _objectWithoutProperties(_ref, _excluded$1t);
+      rest = _objectWithoutProperties(_ref, _excluded$1x);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       controlId: name,
       className: "lf-control-radio-group",
       "data-lf-field-name": name
     }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint)), /*#__PURE__*/React$1.createElement(rsuite.RadioGroup, _extends({
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _.isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.RadioGroup, _extends({
       inline: true,
       name: name,
       value: value,
@@ -19721,19 +19931,19 @@
         disabled: disabled,
         readOnly: readOnly
       }, label);
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+    }))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
   lfLog('Loaded RSuite.RadioGroup');
 
-  var index$29 = /*#__PURE__*/Object.freeze({
+  var index$2e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupRSuite
   });
 
-  var css_248z$C = ".lf-control-input-tag .rs-picker-input {\n  min-width: 120px;\n}";
-  styleInject(css_248z$C);
+  var css_248z$B = ".lf-control-input-tag .rs-picker-input {\n  min-width: 120px;\n}";
+  styleInject(css_248z$B);
 
   var InputTag = I18N(function (_ref) {
     var name = _ref.name,
@@ -19774,12 +19984,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputTag');
 
-  var index$28 = /*#__PURE__*/Object.freeze({
+  var index$2d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputTag
   });
 
-  var _excluded$1s = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside", "fullWidth", "width"];
+  var _excluded$1w = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside", "fullWidth", "width"];
   var prepareMask = function prepareMask(str) {
     if (typeof str !== 'string' || str.length === 0) {
       return [];
@@ -19826,7 +20036,7 @@
       inside = _ref$inside === void 0 ? false : _ref$inside,
       fullWidth = _ref.fullWidth,
       width = _ref.width,
-      rest = _objectWithoutProperties(_ref, _excluded$1s);
+      rest = _objectWithoutProperties(_ref, _excluded$1w);
     var parsedMask = prepareMask(mask);
     var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
@@ -19856,12 +20066,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputMask');
 
-  var index$27 = /*#__PURE__*/Object.freeze({
+  var index$2c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputMask
   });
 
-  var _excluded$1r = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows"];
+  var _excluded$1v = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows"];
   var ControlTextare = function ControlTextare(props) {
     return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends({
       as: "textarea"
@@ -19890,7 +20100,7 @@
       width = _ref.width,
       _ref$rows = _ref.rows,
       rows = _ref$rows === void 0 ? 10 : _ref$rows,
-      rest = _objectWithoutProperties(_ref, _excluded$1r);
+      rest = _objectWithoutProperties(_ref, _excluded$1v);
     var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
     }, /*#__PURE__*/React$1.createElement(ControlTextare, _extends({
@@ -19916,7 +20126,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Textarea');
 
-  var index$26 = /*#__PURE__*/Object.freeze({
+  var index$2b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea$3
   });
@@ -19968,7 +20178,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Rate');
 
-  var index$25 = /*#__PURE__*/Object.freeze({
+  var index$2a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RateRSuite
   });
@@ -19993,12 +20203,12 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded RSuite5.Placeholder');
 
-  var index$24 = /*#__PURE__*/Object.freeze({
+  var index$29 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderRSuite5
   });
 
-  var _excluded$1q = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width"];
+  var _excluded$1u = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width"];
   var Multiselect$2 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20029,7 +20239,7 @@
       fullWidth = _ref.fullWidth,
       multiselectMode = _ref.multiselectMode,
       width = _ref.width,
-      rest = _objectWithoutProperties(_ref, _excluded$1q);
+      rest = _objectWithoutProperties(_ref, _excluded$1u);
     var Component = multiselectMode === 'tag' ? rsuite.TagPicker : rsuite.CheckPicker;
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
@@ -20062,15 +20272,15 @@
   });
   lfLog('Loaded RSuite5.Multiselect');
 
-  var index$23 = /*#__PURE__*/Object.freeze({
+  var index$28 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect$2
   });
 
-  var css_248z$B = ".lf-control-multiselect-language .btn-add-all {\n  padding-left: 5px;\n  font-size: 12px;\n}";
-  styleInject(css_248z$B);
+  var css_248z$A = ".lf-control-multiselect-language .btn-add-all {\n  padding-left: 5px;\n  font-size: 12px;\n}";
+  styleInject(css_248z$A);
 
-  var _excluded$1p = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "placement", "appearance"];
+  var _excluded$1t = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "placement", "appearance"];
   var renderItem = function renderItem(label, item) {
     return /*#__PURE__*/React$1.createElement("div", null, label, " ", /*#__PURE__*/React$1.createElement("b", null, item.value));
   };
@@ -20102,7 +20312,7 @@
       onBlur = _ref.onBlur,
       placement = _ref.placement,
       appearance = _ref.appearance,
-      rest = _objectWithoutProperties(_ref, _excluded$1p);
+      rest = _objectWithoutProperties(_ref, _excluded$1t);
     var _useState = React$1.useState(value),
       _useState2 = _slicedToArray(_useState, 2),
       locales = _useState2[0],
@@ -20149,15 +20359,15 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.MultiselectLanguage');
 
-  var index$22 = /*#__PURE__*/Object.freeze({
+  var index$27 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MultiselectLanguage
   });
 
-  var css_248z$A = ".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n .rs-input-group-addon {\n  padding: 2px 4px !important;\n}\n.lf-input-text-i18n .rs-input-group-addon .status {\n  font-size: 10px;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear {\n  display: inline-block;\n  margin-left: 5px;\n  margin-top: -2px;\n  color: #666666;\n  text-decoration: none;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover {\n  color: #1675e0;\n}\n.lf-input-text-i18n .group-input-select {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-input-text-i18n .group-input-select .translation-control {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  width: unset !important;\n  z-index: 1;\n}\n.lf-input-text-i18n .group-input-select .translation-control .translated {\n  color: #999999;\n}\n.lf-input-text-i18n .group-input-select .select-control {\n  order: 1;\n  flex: 0 0;\n  align-self: center;\n  z-index: 2;\n  margin-left: 5px;\n}\n.lf-input-text-i18n .group-input-select.textarea .select-control {\n  align-self: self-start;\n}";
-  styleInject(css_248z$A);
+  var css_248z$z = ".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n .rs-input-group-addon {\n  padding: 2px 4px !important;\n}\n.lf-input-text-i18n .rs-input-group-addon .status {\n  font-size: 10px;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear {\n  display: inline-block;\n  margin-left: 5px;\n  margin-top: -2px;\n  color: #666666;\n  text-decoration: none;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover {\n  color: #1675e0;\n}\n.lf-input-text-i18n .group-input-select {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-input-text-i18n .group-input-select .translation-control {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  width: unset !important;\n  z-index: 1;\n}\n.lf-input-text-i18n .group-input-select .translation-control .translated {\n  color: #999999;\n}\n.lf-input-text-i18n .group-input-select .select-control {\n  order: 1;\n  flex: 0 0;\n  align-self: center;\n  z-index: 2;\n  margin-left: 5px;\n}\n.lf-input-text-i18n .group-input-select.textarea .select-control {\n  align-self: self-start;\n}";
+  styleInject(css_248z$z);
 
-  var _excluded$1o = ["value"];
+  var _excluded$1s = ["value"];
   var LANGUAGES_OPTIONS = Object.keys(LOCALES['language-names']).map(function (lang) {
     return {
       value: lang,
@@ -20175,7 +20385,7 @@
   };
   var TextareaAccepter = function TextareaAccepter(_ref) {
     var value = _ref.value,
-      props = _objectWithoutProperties(_ref, _excluded$1o);
+      props = _objectWithoutProperties(_ref, _excluded$1s);
     return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends({
       as: "textarea",
       value: value
@@ -20373,28 +20583,28 @@
   };
   lfLog('Loaded RSuite.InputTextI18N');
 
-  var index$21 = /*#__PURE__*/Object.freeze({
+  var index$26 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputTextI18N
   });
 
   lfLog('Loaded RSuite5.PlaceholderImage');
 
-  var index$20 = /*#__PURE__*/Object.freeze({
+  var index$25 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
-  var css_248z$z = ".lf-form-react-rsuite5 .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-lg .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-xs .lf-icon {\n  max-width: 12px;\n  max-height: 12px;\n}";
-  styleInject(css_248z$z);
+  var css_248z$y = ".lf-form-react-rsuite5 .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-lg .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-xs .lf-icon {\n  max-width: 12px;\n  max-height: 12px;\n}";
+  styleInject(css_248z$y);
 
-  var _excluded$1n = ["label", "icon", "hint", "tooltip"];
+  var _excluded$1r = ["label", "icon", "hint", "tooltip"];
   var RSuiteButton = function RSuiteButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint,
       tooltip = _ref.tooltip,
-      rest = _objectWithoutProperties(_ref, _excluded$1n);
+      rest = _objectWithoutProperties(_ref, _excluded$1r);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends({
@@ -20428,23 +20638,23 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded RSuite5.Button');
 
-  var index$1$ = /*#__PURE__*/Object.freeze({
+  var index$24 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton$5
   });
 
   lfLog('Loaded RSuite5.ReactView');
 
-  var index$1_ = /*#__PURE__*/Object.freeze({
+  var index$23 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
 
-  var _excluded$1m = ["onChange", "value"];
+  var _excluded$1q = ["onChange", "value"];
   var SelectDatetime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1m);
+      rest = _objectWithoutProperties(_ref, _excluded$1q);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -20469,15 +20679,15 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.DateTime');
 
-  var index$1Z = /*#__PURE__*/Object.freeze({
+  var index$22 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDatetime
   });
 
-  var css_248z$y = ".lf-form-react-rsuite5 .lf-control-tabs .tab-fields {\n  margin-top: 10px;\n}";
-  styleInject(css_248z$y);
+  var css_248z$x = ".lf-form-react-rsuite5 .lf-control-tabs .tab-fields {\n  margin-top: 10px;\n}";
+  styleInject(css_248z$x);
 
-  var _excluded$1l = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight"];
+  var _excluded$1p = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight"];
   var Tabs = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -20488,7 +20698,7 @@
       reversed = _ref.reversed,
       justified = _ref.justified,
       pullRight = _ref.pullRight,
-      rest = _objectWithoutProperties(_ref, _excluded$1l);
+      rest = _objectWithoutProperties(_ref, _excluded$1p);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
@@ -20524,12 +20734,12 @@
   });
   lfLog('Loaded RSuite.Tabs');
 
-  var index$1Y = /*#__PURE__*/Object.freeze({
+  var index$21 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Tabs
   });
 
-  var _excluded$1k = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption"];
+  var _excluded$1o = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption"];
   var RadioTileRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20555,7 +20765,7 @@
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       initalOption = _ref.initalOption;
-      _objectWithoutProperties(_ref, _excluded$1k);
+      _objectWithoutProperties(_ref, _excluded$1o);
     var initialValue = value || initalOption;
     var _useState = React$1.useState(initialValue),
       _useState2 = _slicedToArray(_useState, 2),
@@ -20601,15 +20811,15 @@
   });
   lfLog('Loaded RSuite.RadioTile');
 
-  var index$1X = /*#__PURE__*/Object.freeze({
+  var index$20 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioTileRSuite
   });
 
-  var css_248z$x = ".lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
-  styleInject(css_248z$x);
+  var css_248z$w = ".lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
+  styleInject(css_248z$w);
 
-  var _excluded$1j = ["superDisabled", "superSize", "disabled", "hint"],
+  var _excluded$1n = ["superDisabled", "superSize", "disabled", "hint"],
     _excluded2$1 = ["name", "label", "hint", "tooltip", "required", "onChange", "multiple", "removable", "disabledFileItem", "fileListVisible", "draggable", "disabled", "accept", "defaultValue", "listType", "uploadButtonLabel", "uploadButtonAppearance", "uploadButtonSize", "draggableText", "draggableHeight", "value"];
   var makeDefaultValue$1 = function makeDefaultValue(defaultValue) {
     if (_isArray(defaultValue)) {
@@ -20626,7 +20836,7 @@
       superSize = _ref.superSize;
       _ref.disabled;
       var hint = _ref.hint,
-      rest = _objectWithoutProperties(_ref, _excluded$1j);
+      rest = _objectWithoutProperties(_ref, _excluded$1n);
     var inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends({}, rest, {
       size: superSize,
       disabled: superDisabled
@@ -20718,15 +20928,15 @@
   }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
   lfLog('Loaded RSuite.Upload');
 
-  var index$1W = /*#__PURE__*/Object.freeze({
+  var index$1$ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload$4
   });
 
-  var css_248z$w = ".lf-form-react-rsuite5 .lf-control-button-toggle-group .rs-form-control-wrapper {\n  display: block;\n}";
-  styleInject(css_248z$w);
+  var css_248z$v = ".lf-form-react-rsuite5 .lf-control-button-toggle-group .rs-form-control-wrapper {\n  display: block;\n}";
+  styleInject(css_248z$v);
 
-  var _excluded$1i = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "options"];
+  var _excluded$1m = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "options"];
   var RSuiteButtonsToggleGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20743,7 +20953,7 @@
       onChange = _ref.onChange,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$1i);
+      rest = _objectWithoutProperties(_ref, _excluded$1m);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-button-toggle-group"
@@ -20765,13 +20975,13 @@
   });
   lfLog('Loaded RSuite5.ButtonsToggleGroup');
 
-  var index$1V = /*#__PURE__*/Object.freeze({
+  var index$1_ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RSuiteButtonsToggleGroup
   });
 
-  var css_248z$v = ".lf-generic-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-generic-icon.lg {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-generic-icon .xs {\n  max-width: 12px;\n  max-height: 12px;\n}";
-  styleInject(css_248z$v);
+  var css_248z$u = ".lf-generic-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-generic-icon.lg {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-generic-icon .xs {\n  max-width: 12px;\n  max-height: 12px;\n}";
+  styleInject(css_248z$u);
 
   var GenericIcon = function GenericIcon(_ref) {
     var icon = _ref.icon,
@@ -20784,10 +20994,10 @@
     });
   };
 
-  var css_248z$u = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
-  styleInject(css_248z$u);
+  var css_248z$t = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
+  styleInject(css_248z$t);
 
-  var _excluded$1h = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious"];
+  var _excluded$1l = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious"];
   var i18nSteps$2 = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -20810,7 +21020,7 @@
       small = _ref.small,
       labelNext = _ref.labelNext,
       labelPrevious = _ref.labelPrevious,
-      rest = _objectWithoutProperties(_ref, _excluded$1h);
+      rest = _objectWithoutProperties(_ref, _excluded$1l);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
       return obj.value === value;
@@ -20869,12 +21079,12 @@
   });
   lfLog('Loaded Rsuite5.Steps');
 
-  var index$1U = /*#__PURE__*/Object.freeze({
+  var index$1Z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Rsuite5Steps
   });
 
-  var _excluded$1g = ["name", "componentUrl", "defaultExport", "exportedKey", "onChange"];
+  var _excluded$1k = ["name", "componentUrl", "defaultExport", "exportedKey", "onChange"];
   var makeModuleName = function makeModuleName(name) {
     return "".concat(name, "Module");
   };
@@ -20899,7 +21109,7 @@
       exportedKey = _ref3.exportedKey,
       _ref3$onChange = _ref3.onChange,
       onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
-      rest = _objectWithoutProperties(_ref3, _excluded$1g);
+      rest = _objectWithoutProperties(_ref3, _excluded$1k);
     var eventsContainerId = React$1.useId();
     var containerId = React$1.useId();
     var _useState = React$1.useState(),
@@ -20987,7 +21197,7 @@
     }), error && /*#__PURE__*/React$1.createElement("div", null, "some error"));
   };
 
-  var _excluded$1f = ["name", "componentUrl", "onChange", "value", "defaultExport", "exportedKey"];
+  var _excluded$1j = ["name", "componentUrl", "onChange", "value", "defaultExport", "exportedKey"];
   var RSuite5ModuleComponent = function RSuite5ModuleComponent(_ref) {
     var name = _ref.name,
       componentUrl = _ref.componentUrl,
@@ -20995,7 +21205,7 @@
       value = _ref.value,
       defaultExport = _ref.defaultExport,
       exportedKey = _ref.exportedKey,
-      rest = _objectWithoutProperties(_ref, _excluded$1f);
+      rest = _objectWithoutProperties(_ref, _excluded$1j);
     return /*#__PURE__*/React$1.createElement(ModuleComponent, _extends({
       name: name,
       onChange: onChange,
@@ -21006,13 +21216,81 @@
     }, passRest(rest)));
   };
 
-  var index$1T = /*#__PURE__*/Object.freeze({
+  var index$1Y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RSuite5ModuleComponent
   });
 
-  var css_248z$t = ".lf-form-react-rsuite5.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {\n  margin-bottom: unset;\n}\n.lf-form-react-rsuite5 .lf-buttons {\n  margin-top: 24px;\n}\n.lf-form-react-rsuite5 .rs-form-control-label > .rs-form-help-text.rs-form-help-text-tooltip {\n  margin-top: 0px;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lf-full-width .rs-form-control-wrapper {\n  width: 100%;\n}";
-  styleInject(css_248z$t);
+  var toInt = function toInt(s) {
+    return !isNaN(parseInt(s, 10)) ? parseInt(s, 10) : undefined;
+  };
+  var todayWithTime = function todayWithTime(s) {
+    if (isValidTime(s)) {
+      var _s$split = s.split(':'),
+        _s$split2 = _slicedToArray(_s$split, 3),
+        hours = _s$split2[0],
+        minutes = _s$split2[1],
+        seconds = _s$split2[2];
+      var d = new Date();
+      d.setHours(toInt(hours), toInt(minutes), toInt(seconds));
+      return d;
+    }
+    return undefined;
+  };
+
+  var _excluded$1i = ["onChange", "value"];
+  var SelectTime = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties(_ref, _excluded$1i);
+    // also accepts string dates
+    var currentValue;
+    if (_isDate(value)) {
+      currentValue = value;
+    } else if (_isString(value)) {
+      if (isValidTime(value)) {
+        currentValue = todayWithTime(value);
+      }
+    }
+
+    // send always time string in iso format
+    var handleChange = React$1.useCallback(function (d) {
+      if (isValidDate(d)) {
+        onChange(d.toLocaleTimeString());
+      } else {
+        onChange(null);
+      }
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(RSuiteGenericDate, _extends({
+      value: currentValue,
+      onChange: handleChange
+    }, passRest(rest)));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded RSuite5.SelectTime');
+
+  var index$1X = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: SelectTime
+  });
+
+  var Hidden = function Hidden(_ref) {
+    var name = _ref.name;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-hidden",
+      style: {
+        padding: '10px'
+      }
+    }, "Hidden field: ", /*#__PURE__*/React$1.createElement("em", null, name));
+  };
+  lfLog('Loaded RSuite5.Hidden');
+
+  var index$1W = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Hidden
+  });
+
+  var css_248z$s = ".lf-form-react-rsuite5.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {\n  margin-bottom: unset;\n}\n.lf-form-react-rsuite5.rs-form-vertical .rs-form-group .rs-input-group {\n  width: unset;\n}\n.lf-form-react-rsuite5 .lf-buttons {\n  margin-top: 24px;\n}\n.lf-form-react-rsuite5 .rs-form-control-label > .rs-form-help-text.rs-form-help-text-tooltip {\n  margin-top: 0px;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lf-full-width .rs-form-control-wrapper {\n  width: 100%;\n}";
+  styleInject(css_248z$s);
 
   var FormRsuite5 = function FormRsuite5(_ref) {
     var children = _ref.children,
@@ -21071,24 +21349,12 @@
   };
   lfLog('Loaded RSuite5.Form');
 
-  var index$1S = /*#__PURE__*/Object.freeze({
+  var index$1V = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormRsuite5
   });
 
-  var css_248z$s = ".lf-react-material-ui-label {\n  color: rgba(0, 0, 0, 0.6);\n  font-family: \"Roboto\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  font-size: 1rem;\n  line-height: 1.4375em;\n  letter-spacing: 0.00938em;\n  padding: 0;\n  position: relative;\n  display: block;\n  transform-origin: top left;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  max-width: 100%;\n  transform: none;\n  position: inherit;\n  margin-top: 0px;\n}";
-  styleInject(css_248z$s);
-
-  var MuiLabel = function MuiLabel(_ref) {
-    var children = _ref.children,
-      _ref$required = _ref.required,
-      required = _ref$required === void 0 ? false : _ref$required;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-react-material-ui-label"
-    }, children, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null));
-  };
-
-  var _excluded$1e = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
+  var _excluded$1h = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
 
   // DOC: https://mui.com/material-ui/api/input/
 
@@ -21125,10 +21391,11 @@
       className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$1e);
+      rest = _objectWithoutProperties(_ref, _excluded$1h);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
+    var controlId = React$1.useId();
     return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: className
@@ -21137,9 +21404,8 @@
       error: error != null,
       variant: variant !== null && variant !== void 0 ? variant : undefined,
       fullWidth: fullWidth
-    }, label && !floatingLabel && /*#__PURE__*/React$1.createElement(MuiLabel, {
-      id: "mui_input_text_".concat(name),
-      required: required
+    }, label && !floatingLabel && /*#__PURE__*/React$1.createElement(FormLabel, {
+      id: controlId
     }, label), /*#__PURE__*/React$1.createElement(TextField, _extends({
       size: size,
       placeholder: placeholder,
@@ -21170,12 +21436,12 @@
     }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$1d = ["onChange"];
+  var _excluded$1g = ["onChange"];
   // DOC: https://mui.com/material-ui/api/input/
 
   var TextInput$3 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$1d);
+      rest = _objectWithoutProperties(_ref, _excluded$1g);
     var handleChange = React$1.useCallback(function (event) {
       onChange(event.target.value);
     }, [onChange]);
@@ -21187,12 +21453,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.InputText');
 
-  var index$1R = /*#__PURE__*/Object.freeze({
+  var index$1U = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput$3
   });
 
-  var _excluded$1c = ["name", "label", "hint", "value", "placeholder", "options", "filterKey", "filterValue", "component", "disabled", "readOnly", "required", "error", "multiple", "fullWidth", "width", "floatingLabel", "autoWidth", "size", "variant", "onChange", "onBlur", "className", "children"];
+  var _excluded$1f = ["name", "label", "hint", "value", "placeholder", "options", "filterKey", "filterValue", "component", "disabled", "readOnly", "required", "error", "multiple", "fullWidth", "width", "floatingLabel", "autoWidth", "size", "variant", "onChange", "onBlur", "className", "children"];
 
   // DOC: https://mui.com/material-ui/api/select/
 
@@ -21225,8 +21491,9 @@
       onBlur = _ref.onBlur,
       className = _ref.className;
       _ref.children;
-      var rest = _objectWithoutProperties(_ref, _excluded$1c);
+      var rest = _objectWithoutProperties(_ref, _excluded$1f);
     var filteredOptions = filterOptions(options, filterValue, filterKey);
+    var controlId = React$1.useId();
     var items;
     if (multiple) {
       items = (filteredOptions || []).map(function (option) {
@@ -21264,8 +21531,8 @@
       error: error != null,
       variant: variant !== null && variant !== void 0 ? variant : undefined,
       fullWidth: fullWidth
-    }, label && !floatingLabel && /*#__PURE__*/React$1.createElement(MuiLabel, {
-      required: required
+    }, label && !floatingLabel && /*#__PURE__*/React$1.createElement(FormLabel, {
+      id: controlId
     }, label), label && floatingLabel && /*#__PURE__*/React$1.createElement(InputLabel, {
       id: "mui_select_".concat(name)
     }, label), /*#__PURE__*/React$1.createElement(Select$3, _extends({
@@ -21287,11 +21554,11 @@
     }, passRest(rest)), items), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$1b = ["onChange", "value"];
+  var _excluded$1e = ["onChange", "value"];
   var MuiSelect = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1b);
+      rest = _objectWithoutProperties(_ref, _excluded$1e);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -21306,7 +21573,7 @@
   });
   lfLog('Loaded MUI.Select');
 
-  var index$1Q = /*#__PURE__*/Object.freeze({
+  var index$1T = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiSelect
   });
@@ -21349,7 +21616,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Toggle');
 
-  var index$1P = /*#__PURE__*/Object.freeze({
+  var index$1S = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle$2
   });
@@ -21394,7 +21661,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Checkbox');
 
-  var index$1O = /*#__PURE__*/Object.freeze({
+  var index$1R = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxMUI
   });
@@ -21463,7 +21730,7 @@
   });
   lfLog('Loaded MUI.Slider');
 
-  var index$1N = /*#__PURE__*/Object.freeze({
+  var index$1Q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderMui
   });
@@ -21473,18 +21740,19 @@
       text = _ref.text,
       name = _ref.name,
       label = _ref.label;
+    var controlId = React$1.useId();
     return /*#__PURE__*/React$1.createElement(FormControl, {
       className: "lf-control-placeholder",
       "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(MuiLabel, {
-      id: "mui_input_text_".concat(name)
+    }, label && /*#__PURE__*/React$1.createElement(FormLabel, {
+      id: controlId
     }, label), /*#__PURE__*/React$1.createElement(Placeholder, {
       text: text
     }), hint && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint));
   }, ['label', 'hint', 'text']);
   lfLog('Loaded MUI.Placeholder');
 
-  var index$1M = /*#__PURE__*/Object.freeze({
+  var index$1P = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderMUI
   });
@@ -21544,7 +21812,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Rate');
 
-  var index$1L = /*#__PURE__*/Object.freeze({
+  var index$1O = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Rate
   });
@@ -21868,7 +22136,19 @@
   var dayjs_minExports = dayjs_min.exports;
   var dayjs = /*@__PURE__*/getDefaultExportFromCjs(dayjs_minExports);
 
-  var _excluded$1a = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "fullWidth", "variant", "placeholder", "width", "disableFuture", "disableHighlightToday", "disableOpenPicker", "disablePast", "displayWeekNumber", "format", "maxDate", "minDate", "reduceAnimations", "showDaysOutsideCurrentMonth", "lfLocale", "datetime", "views", "component"];
+  var tryParseDateDayJs = function tryParseDateDayJs(value) {
+    if (_isDate(value)) {
+      return dayjs(value);
+    } else if (_isString(value)) {
+      var d = new Date(value);
+      if (isValidDate(d)) {
+        return dayjs(d);
+      }
+    }
+    return undefined;
+  };
+
+  var _excluded$1d = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "className", "size", "variant", "color", "readOnly", "required", "fullWidth", "placeholder", "floatingLabel", "width", "displayWeekNumber", "format", "maxDate", "minDate", "maxDateTime", "minDateTime", "lfLocale", "datetime", "views", "component"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -21882,75 +22162,85 @@
       onBlur = _ref.onBlur,
       error = _ref.error,
       className = _ref.className,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      size = _ref.size,
+      variant = _ref.variant,
+      color = _ref.color,
       _ref$readOnly = _ref.readOnly,
       readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
       required = _ref.required,
       _ref$fullWidth = _ref.fullWidth,
       fullWidth = _ref$fullWidth === void 0 ? false : _ref$fullWidth,
-      variant = _ref.variant,
       placeholder = _ref.placeholder,
+      floatingLabel = _ref.floatingLabel,
       width = _ref.width,
-      disableFuture = _ref.disableFuture,
-      disableHighlightToday = _ref.disableHighlightToday,
-      disableOpenPicker = _ref.disableOpenPicker,
-      disablePast = _ref.disablePast,
       displayWeekNumber = _ref.displayWeekNumber,
       format = _ref.format,
       maxDate = _ref.maxDate,
       minDate = _ref.minDate,
-      reduceAnimations = _ref.reduceAnimations,
-      showDaysOutsideCurrentMonth = _ref.showDaysOutsideCurrentMonth,
+      maxDateTime = _ref.maxDateTime,
+      minDateTime = _ref.minDateTime,
       lfLocale = _ref.lfLocale,
       _ref$datetime = _ref.datetime,
       datetime = _ref$datetime === void 0 ? false : _ref$datetime,
       views = _ref.views;
       _ref.component;
-      var rest = _objectWithoutProperties(_ref, _excluded$1a);
+      var rest = _objectWithoutProperties(_ref, _excluded$1d);
+    var controlId = React$1.useId();
     var localeCode = lfLocale && _isString(lfLocale) ? lfLocale.split('-')[0] : undefined;
     var Component = datetime ? DateTimePicker.DateTimePicker : DatePicker.DatePicker;
 
     // set locale for dates
-    var defaultValue = dayjs(value);
-    if (defaultValue && localeCode) {
-      defaultValue = defaultValue.locale(localeCode);
+    var defaultValue;
+    if (value) {
+      defaultValue = dayjs(value);
+      if (defaultValue && localeCode) {
+        defaultValue = defaultValue.locale(localeCode);
+      }
     }
+
+    // parse dates
+    var parsedMinDate = tryParseDateDayJs(minDate);
+    var parsedMaxDate = tryParseDateDayJs(maxDate);
+    var parsedMinDateTime = tryParseDateDayJs(minDateTime);
+    var parsedMaxDateTime = tryParseDateDayJs(maxDateTime);
     return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: className
     }, /*#__PURE__*/React$1.createElement(FormControl, {
       required: required,
       error: error != null,
-      fullWidth: fullWidth
-    }, /*#__PURE__*/React$1.createElement(Component, _extends({
+      fullWidth: fullWidth,
+      style: makeWidthStyle(fullWidth, width)
+    }, label && !floatingLabel && /*#__PURE__*/React$1.createElement(FormLabel, {
+      htmlFor: controlId
+    }, label), /*#__PURE__*/React$1.createElement(Component, _extends({
+      id: controlId,
+      required: floatingLabel ? required : undefined,
+      label: floatingLabel ? label : undefined,
       placeholder: placeholder,
+      slotProps: {
+        textField: {
+          size: size !== null && size !== void 0 ? size : undefined,
+          variant: variant !== null && variant !== void 0 ? variant : undefined,
+          color: color !== null && color !== void 0 ? color : undefined,
+          required: !!(floatingLabel && required)
+        }
+      },
       readOnly: readOnly,
-      required: required,
-      style: _isNumber(width) && !fullWidth ? {
-        width: "".concat(parseInt(width, 10), "px")
-      } : undefined,
       onChange: onChange,
       defaultValue: defaultValue,
-      variant: variant !== null && variant !== void 0 ? variant : undefined,
       onBlur: onBlur,
-      disabled: disabled,
-      label: label,
       views: !_isEmpty(views) ? views : ['day', 'year'],
-      disableFuture: disableFuture,
-      disableHighlightToday: disableHighlightToday,
-      disableOpenPicker: disableOpenPicker,
-      disablePast: disablePast,
       displayWeekNumber: displayWeekNumber,
       format: isValidDayjsFormat(format) ? format : undefined,
-      maxDate: maxDate && dayjs(maxDate),
-      minDate: minDate && dayjs(minDate),
-      reduceAnimations: reduceAnimations,
-      showDaysOutsideCurrentMonth: showDaysOutsideCurrentMonth
+      minDate: parsedMinDate,
+      maxDate: parsedMaxDate,
+      minDateTime: parsedMinDateTime,
+      maxDateTime: parsedMaxDateTime
     }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$19 = ["onChange", "value"];
+  var _excluded$1c = ["onChange", "value"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -21958,7 +22248,7 @@
   var MuiDate = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$19);
+      rest = _objectWithoutProperties(_ref, _excluded$1c);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -21985,54 +22275,54 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.Date');
 
-  var index$1K = /*#__PURE__*/Object.freeze({
+  var index$1N = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiDate
   });
 
   lfLog('Loaded MUI.ThreeColumns');
 
-  var index$1J = /*#__PURE__*/Object.freeze({
+  var index$1M = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded MUI.TwoColumns');
 
-  var index$1I = /*#__PURE__*/Object.freeze({
+  var index$1L = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded MUI.Group');
 
-  var index$1H = /*#__PURE__*/Object.freeze({
+  var index$1K = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
   lfLog('Loaded MUI.PlaceholderImage');
 
-  var index$1G = /*#__PURE__*/Object.freeze({
+  var index$1J = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
   lfLog('Loaded MUI.Divider');
 
-  var index$1F = /*#__PURE__*/Object.freeze({
+  var index$1I = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
   lfLog('Loaded MUI.ReactView');
 
-  var index$1E = /*#__PURE__*/Object.freeze({
+  var index$1H = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
 
-  var _excluded$18 = ["onChange", "value"];
+  var _excluded$1b = ["onChange", "value"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -22040,7 +22330,7 @@
   var MuiDateTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$18);
+      rest = _objectWithoutProperties(_ref, _excluded$1b);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -22068,7 +22358,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.DateTime');
 
-  var index$1D = /*#__PURE__*/Object.freeze({
+  var index$1G = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiDateTime
   });
@@ -22076,7 +22366,7 @@
   var css_248z$r = ".lf-form.lf-form-react-material-ui .lf-control-common-array [class^=lf-control]:not(:last-child) {\n  margin-bottom: 10px;\n}";
   styleInject(css_248z$r);
 
-  var _excluded$17 = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$1a = ["hint", "required", "tooltip", "name", "label", "error"];
   var ListArrayMui = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required;
@@ -22084,8 +22374,9 @@
       var name = _ref.name,
       label = _ref.label,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$17);
+      rest = _objectWithoutProperties(_ref, _excluded$1a);
     var hasError = error && _isString(error);
+    var controlId = React$1.useId();
     return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: "lf-control-array"
@@ -22093,15 +22384,15 @@
       required: required,
       error: hasError,
       fullWidth: true
-    }, /*#__PURE__*/React$1.createElement(MuiLabel, {
-      required: required
+    }, /*#__PURE__*/React$1.createElement(FormLabel, {
+      id: controlId
     }, label), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm$4
     }, rest)), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Array');
 
-  var index$1C = /*#__PURE__*/Object.freeze({
+  var index$1F = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayMui
   });
@@ -22118,16 +22409,16 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.Textarea');
 
-  var index$1B = /*#__PURE__*/Object.freeze({
+  var index$1E = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea$2
   });
 
-  var _excluded$16 = ["onChange", "value"];
+  var _excluded$19 = ["onChange", "value"];
   var Multiselect$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$16);
+      rest = _objectWithoutProperties(_ref, _excluded$19);
     var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       onChange(typeof value === 'string' ? value.split(',') : value);
@@ -22155,12 +22446,12 @@
   });
   lfLog('Loaded MUI.Multiselect');
 
-  var index$1A = /*#__PURE__*/Object.freeze({
+  var index$1D = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect$1
   });
 
-  var _excluded$15 = ["onChange"];
+  var _excluded$18 = ["onChange"];
 
   // DOC: https://mui.com/material-ui/api/input/
 
@@ -22169,7 +22460,7 @@
   };
   var InputNumber$2 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$15);
+      rest = _objectWithoutProperties(_ref, _excluded$18);
     var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       var parsed;
@@ -22196,12 +22487,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.InputNumber');
 
-  var index$1z = /*#__PURE__*/Object.freeze({
+  var index$1C = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumber$2
   });
 
-  var _excluded$14 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "onBlur", "required"];
+  var _excluded$17 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "onBlur", "required"];
 
   // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -22221,7 +22512,7 @@
       labelPlacement = _ref.labelPlacement,
       onBlur = _ref.onBlur,
       required = _ref.required,
-      rest = _objectWithoutProperties(_ref, _excluded$14);
+      rest = _objectWithoutProperties(_ref, _excluded$17);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -22265,12 +22556,12 @@
   });
   lfLog('Loaded MUI.RadioGroup');
 
-  var index$1y = /*#__PURE__*/Object.freeze({
+  var index$1B = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupMUI
   });
 
-  var _excluded$13 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "readOnly", "onBlur", "required"];
+  var _excluded$16 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "readOnly", "onBlur", "required"];
 
   // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -22291,7 +22582,7 @@
       readOnly = _ref.readOnly;
       _ref.onBlur;
       var required = _ref.required,
-      rest = _objectWithoutProperties(_ref, _excluded$13);
+      rest = _objectWithoutProperties(_ref, _excluded$16);
     var _useState = React$1.useState(_isArray(value) ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
       currentValue = _useState2[0],
@@ -22346,7 +22637,7 @@
   });
   lfLog('Loaded MUI.CheckboxGroup');
 
-  var index$1x = /*#__PURE__*/Object.freeze({
+  var index$1A = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroup$1
   });
@@ -22354,7 +22645,7 @@
   var css_248z$q = ".lf-form-react-material-ui .lf-control-tabs .tab-fields {\n  padding-top: var(--lf-field-margin);\n}";
   styleInject(css_248z$q);
 
-  var _excluded$12 = ["name", "value", "tabs", "onChange", "children", "centered", "fullWidth", "indicatorColor", "textColor"];
+  var _excluded$15 = ["name", "value", "tabs", "onChange", "children", "centered", "fullWidth", "indicatorColor", "textColor"];
   var TabsMui = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -22365,7 +22656,7 @@
       fullWidth = _ref.fullWidth,
       indicatorColor = _ref.indicatorColor,
       textColor = _ref.textColor,
-      rest = _objectWithoutProperties(_ref, _excluded$12);
+      rest = _objectWithoutProperties(_ref, _excluded$15);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
@@ -22407,7 +22698,7 @@
   });
   lfLog('Loaded MUI.Tabs');
 
-  var index$1w = /*#__PURE__*/Object.freeze({
+  var index$1z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsMui
   });
@@ -22415,7 +22706,7 @@
   var css_248z$p = ".lf-form-react-material-ui .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeLarge .lf-icon {\n  max-width: 22px;\n  max-height: 22px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeSmall .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon {\n  min-width: inherit;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon .MuiButton-startIcon {\n  margin-right: 0px !important;\n}";
   styleInject(css_248z$p);
 
-  var _excluded$11 = ["label", "icon", "hint", "tooltip", "variant", "size", "color"];
+  var _excluded$14 = ["label", "icon", "hint", "tooltip", "variant", "size", "color"];
   var MuiButton = function MuiButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
@@ -22424,7 +22715,7 @@
       variant = _ref.variant,
       size = _ref.size,
       color = _ref.color,
-      rest = _objectWithoutProperties(_ref, _excluded$11);
+      rest = _objectWithoutProperties(_ref, _excluded$14);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(Button$1, _extends({
@@ -22465,7 +22756,7 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded MUI.Button');
 
-  var index$1v = /*#__PURE__*/Object.freeze({
+  var index$1y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton$4
   });
@@ -22580,6 +22871,7 @@
       multiple = _ref.multiple,
       required = _ref.required,
       value = _ref.value;
+    var controlId = React$1.useId();
     var _useState = React$1.useState(multiple && _isArray(value) || !multiple && _isObject(value) ? value : undefined),
       _useState2 = _slicedToArray(_useState, 2),
       currentFile = _useState2[0],
@@ -22617,8 +22909,8 @@
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-upload",
       "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(MuiLabel, {
-      id: "mui_input_text_".concat(name),
+    }, label && /*#__PURE__*/React$1.createElement(FormLabel, {
+      id: controlId,
       required: required
     }, label), /*#__PURE__*/React$1.createElement("div", {
       className: "lf-upload-button-layout"
@@ -22679,9 +22971,126 @@
   lfLog('Loaded MUI.Upload');
   var Upload$3 = Upload$2;
 
-  var index$1u = /*#__PURE__*/Object.freeze({
+  var index$1x = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload$3
+  });
+
+  var timeToDayJSTime = function timeToDayJSTime(str) {
+    var _str$split = str.split(':'),
+      _str$split2 = _slicedToArray(_str$split, 3),
+      hours = _str$split2[0],
+      minutes = _str$split2[1],
+      seconds = _str$split2[2];
+    if (hours || minutes || seconds) {
+      console.log('splittato ', hours, minutes, seconds);
+      var d = dayjs();
+      if (hours) {
+        d = d.hour(hours);
+      }
+      if (minutes) {
+        d = d.minute(minutes);
+      }
+      if (seconds) {
+        d = d.second(seconds);
+      }
+      return d;
+    }
+    return undefined;
+  };
+
+  var _excluded$13 = ["name", "label", "hint", "value", "onChange", "onBlur", "fullWidth", "width", "floatingLabel", "disabled", "readOnly", "required", "className", "timeStepsHours", "timeStepsMinutes", "timeStepsSeconds", "size", "variant", "color", "error", "maxTime", "minTime", "forceMobile", "format"];
+
+  // DOC: https://mui.com/x/api/date-pickers/time-picker/
+
+  var Time$2 = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      floatingLabel = _ref.floatingLabel;
+      _ref.disabled;
+      _ref.readOnly;
+      var required = _ref.required,
+      className = _ref.className,
+      timeStepsHours = _ref.timeStepsHours,
+      timeStepsMinutes = _ref.timeStepsMinutes,
+      timeStepsSeconds = _ref.timeStepsSeconds,
+      size = _ref.size,
+      variant = _ref.variant,
+      color = _ref.color,
+      error = _ref.error,
+      maxTime = _ref.maxTime,
+      minTime = _ref.minTime,
+      forceMobile = _ref.forceMobile,
+      _ref$format = _ref.format,
+      format = _ref$format === void 0 ? 'HH:mm:ss' : _ref$format,
+      rest = _objectWithoutProperties(_ref, _excluded$13);
+    var controlId = React$1.useId();
+    var Component = forceMobile ? MobileTimePicker.MobileTimePicker : DesktopTimePicker.DesktopTimePicker;
+    // default value
+    var defaultValue;
+    if (isValidTime(value)) {
+      defaultValue = timeToDayJSTime(value);
+    }
+    var handleChange = React$1.useCallback(function (d) {
+      onChange(d.format(format));
+    }, [onChange, format]);
+    // set time steps
+    var timeSteps;
+    if (timeStepsHours || timeStepsMinutes || timeStepsSeconds) {
+      timeSteps = {
+        hours: timeStepsHours !== null && timeStepsHours !== void 0 ? timeStepsHours : 1,
+        minutes: timeStepsMinutes !== null && timeStepsMinutes !== void 0 ? timeStepsMinutes : 5,
+        seconds: timeStepsSeconds !== null && timeStepsSeconds !== void 0 ? timeStepsSeconds : 5
+      };
+    }
+    var parsedMaxTime;
+    if (isValidTime(maxTime)) {
+      parsedMaxTime = timeToDayJSTime(maxTime);
+    }
+    var parsedMinTime;
+    if (isValidTime(minTime)) {
+      parsedMinTime = timeToDayJSTime(minTime);
+    }
+    return /*#__PURE__*/React$1.createElement("div", {
+      "data-lf-field-name": name,
+      className: className
+    }, /*#__PURE__*/React$1.createElement(FormControl, {
+      required: required,
+      error: error != null,
+      fullWidth: fullWidth,
+      style: makeWidthStyle(fullWidth, width)
+    }, label && !floatingLabel && /*#__PURE__*/React$1.createElement(FormLabel, {
+      htmlFor: controlId
+    }, label), /*#__PURE__*/React$1.createElement(Component, _extends({
+      id: controlId,
+      label: floatingLabel ? label : undefined,
+      slotProps: {
+        textField: {
+          size: size !== null && size !== void 0 ? size : undefined,
+          variant: variant !== null && variant !== void 0 ? variant : undefined,
+          color: color !== null && color !== void 0 ? color : undefined,
+          required: !!(floatingLabel && required)
+        }
+      },
+      onChange: handleChange,
+      onBlur: onBlur,
+      timeSteps: timeSteps,
+      maxTime: parsedMaxTime,
+      minTime: parsedMinTime,
+      defaultValue: defaultValue
+    }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
+  }, ['label', 'hint']);
+  lfLog('Loaded MUI.Time');
+
+  var index$1w = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Time$2
   });
 
   var FormMaterialUI = function FormMaterialUI(_ref) {
@@ -22728,12 +23137,12 @@
   };
   lfLog('Loaded MUI.Form');
 
-  var index$1t = /*#__PURE__*/Object.freeze({
+  var index$1v = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormMaterialUI
   });
 
-  var _excluded$10 = ["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "submitOnEnter", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component", "lfOnEnter"];
+  var _excluded$12 = ["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "submitOnEnter", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component", "lfOnEnter"];
   var ReactGenericInput = function ReactGenericInput(_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -22759,7 +23168,7 @@
       _ref.component;
       var _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$10);
+      rest = _objectWithoutProperties(_ref, _excluded$12);
     var hasError = error && _isString(error);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
@@ -22793,10 +23202,10 @@
   var css_248z$m = ".lf-form-react .lf-control-input-text input[type=color] {\n  min-width: 60px;\n}";
   styleInject(css_248z$m);
 
-  var _excluded$$ = ["onChange"];
+  var _excluded$11 = ["onChange"];
   var TextInput$2 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$$);
+      rest = _objectWithoutProperties(_ref, _excluded$11);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -22808,12 +23217,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.InputText');
 
-  var index$1s = /*#__PURE__*/Object.freeze({
+  var index$1u = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput$2
   });
 
-  var _excluded$_ = ["onChange", "min", "max", "step"];
+  var _excluded$10 = ["onChange", "min", "max", "step"];
   var hasDecimals$1 = function hasDecimals(f) {
     return _isString(f) && (f.includes(',') || f.includes('.'));
   };
@@ -22822,7 +23231,7 @@
       min = _ref.min,
       max = _ref.max,
       step = _ref.step,
-      rest = _objectWithoutProperties(_ref, _excluded$_);
+      rest = _objectWithoutProperties(_ref, _excluded$10);
     var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       var parsed;
@@ -22852,12 +23261,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.InputNumber');
 
-  var index$1r = /*#__PURE__*/Object.freeze({
+  var index$1t = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumber$1
   });
 
-  var _excluded$Z = ["name", "label", "lfLocale", "className", "inputType", "hint", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"];
+  var _excluded$$ = ["name", "label", "lfLocale", "className", "inputType", "hint", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"];
   var ReactGenericCheckbox = function ReactGenericCheckbox(_ref) {
     var name = _ref.name,
       label = _ref.label;
@@ -22873,7 +23282,7 @@
       disabled = _ref.disabled,
       readOnly = _ref.readOnly,
       required = _ref.required,
-      rest = _objectWithoutProperties(_ref, _excluded$Z);
+      rest = _objectWithoutProperties(_ref, _excluded$$);
     var hasError = error && _isString(error);
     return /*#__PURE__*/React$1.createElement("div", {
       className: classNames(className, 'lf-form-react-control-group'),
@@ -22897,10 +23306,10 @@
     }, error));
   };
 
-  var _excluded$Y = ["onChange"];
+  var _excluded$_ = ["onChange"];
   var Checkbox$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$Y);
+      rest = _objectWithoutProperties(_ref, _excluded$_);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
@@ -22912,12 +23321,12 @@
   }, ['hint', 'label']);
   lfLog('Loaded React.Checkbox');
 
-  var index$1q = /*#__PURE__*/Object.freeze({
+  var index$1s = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Checkbox$1
   });
 
-  var _excluded$X = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "readOnly", "required", "size", "rows", "width", "fullWidth"];
+  var _excluded$Z = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "readOnly", "required", "size", "rows", "width", "fullWidth"];
   var Textarea$1 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -22933,7 +23342,7 @@
       rows = _ref.rows,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
-      rest = _objectWithoutProperties(_ref, _excluded$X);
+      rest = _objectWithoutProperties(_ref, _excluded$Z);
     var hasError = error && _isString(error);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
@@ -22962,42 +23371,42 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.Textarea');
 
-  var index$1p = /*#__PURE__*/Object.freeze({
+  var index$1r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea$1
   });
 
   lfLog('Loaded React.ThreeColumns');
 
-  var index$1o = /*#__PURE__*/Object.freeze({
+  var index$1q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded React.TwoColumns');
 
-  var index$1n = /*#__PURE__*/Object.freeze({
+  var index$1p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded React.Group');
 
-  var index$1m = /*#__PURE__*/Object.freeze({
+  var index$1o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
   lfLog('Loaded React.Divider');
 
-  var index$1l = /*#__PURE__*/Object.freeze({
+  var index$1n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
   lfLog('Loaded React.ReactView');
 
-  var index$1k = /*#__PURE__*/Object.freeze({
+  var index$1m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
@@ -23020,12 +23429,12 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded React.Placeholder');
 
-  var index$1j = /*#__PURE__*/Object.freeze({
+  var index$1l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderReact
   });
 
-  var _excluded$W = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey"];
+  var _excluded$Y = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey"];
   var Select$1 = I18N(function (_ref) {
     var _filterOptions;
     var name = _ref.name;
@@ -23046,7 +23455,7 @@
       options = _ref.options,
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
-      rest = _objectWithoutProperties(_ref, _excluded$W);
+      rest = _objectWithoutProperties(_ref, _excluded$Y);
     var hasError = error && _isString(error);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value === '' ? null : e.target.value);
@@ -23087,16 +23496,16 @@
   });
   lfLog('Loaded React.Select');
 
-  var index$1i = /*#__PURE__*/Object.freeze({
+  var index$1k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select$1
   });
 
-  var _excluded$V = ["onChange", "value"];
+  var _excluded$X = ["onChange", "value"];
   var DateInput = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$V);
+      rest = _objectWithoutProperties(_ref, _excluded$X);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -23115,16 +23524,16 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.Date');
 
-  var index$1h = /*#__PURE__*/Object.freeze({
+  var index$1j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateInput
   });
 
-  var _excluded$U = ["onChange", "value"];
+  var _excluded$W = ["onChange", "value"];
   var DateTime$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$U);
+      rest = _objectWithoutProperties(_ref, _excluded$W);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -23146,15 +23555,46 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.DateTime');
 
-  var index$1g = /*#__PURE__*/Object.freeze({
+  var index$1i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateTime$1
+  });
+
+  var _excluded$V = ["onChange", "value"];
+  var Time$1 = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties(_ref, _excluded$V);
+    var handleChange = React$1.useCallback(function (e) {
+      console.log('cosa arriva?', e.target.value);
+      onChange(e.target.value);
+    }, [onChange]);
+    var currentDate = value;
+    if (isValidDate(value)) {
+      // only keep iso up to the minutes digits
+      var match = value.toISOString().match(/(.*?T[0-9]{1,2}:[0-9]{1,2})/gm);
+      if (match != null) {
+        currentDate = match[0];
+      }
+    }
+    return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
+      inputType: "time",
+      className: "lf-control-time",
+      value: currentDate,
+      onChange: handleChange
+    }, rest));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded React.Time');
+
+  var index$1h = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Time$1
   });
 
   var css_248z$l = ".lf-form-react .lf-control-common-array-item {\n  padding-bottom: 5px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-two-columns:last-child {\n  margin-bottom: 0px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-three-columns:last-child {\n  margin-bottom: 0px;\n}";
   styleInject(css_248z$l);
 
-  var _excluded$T = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$U = ["hint", "required", "tooltip", "name", "label", "error"];
   var ListArrayReact = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required;
@@ -23162,7 +23602,7 @@
       var name = _ref.name,
       label = _ref.label,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$T);
+      rest = _objectWithoutProperties(_ref, _excluded$U);
     var hasError = error && _isString(error);
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-array lf-form-react-control-group",
@@ -23179,14 +23619,14 @@
   }, ['label', 'hint']);
   lfLog('Loaded React.Array');
 
-  var index$1f = /*#__PURE__*/Object.freeze({
+  var index$1g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayReact
   });
 
   lfLog('Loaded React.PlaceholderImage');
 
-  var index$1e = /*#__PURE__*/Object.freeze({
+  var index$1f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
@@ -23194,12 +23634,12 @@
   var css_248z$k = ".lf-form-react .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n  margin-top: -2px;\n  margin-right: 5px;\n}\n.lf-form-react .lf-control-button .btn-lg .lf-icon {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-form-react .lf-control-button .btn-sm .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}";
   styleInject(css_248z$k);
 
-  var _excluded$S = ["label", "icon", "hint"];
+  var _excluded$T = ["label", "icon", "hint"];
   var ReactButton = function ReactButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint,
-      rest = _objectWithoutProperties(_ref, _excluded$S);
+      rest = _objectWithoutProperties(_ref, _excluded$T);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement("button", rest, /*#__PURE__*/React$1.createElement("img", {
@@ -23239,7 +23679,7 @@
   lfLog('Loaded React.Button');
   var Button = BiStateButton$3;
 
-  var index$1d = /*#__PURE__*/Object.freeze({
+  var index$1e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Button
   });
@@ -23388,7 +23828,7 @@
   lfLog('Loaded React.Upload');
   var Upload$1 = Upload;
 
-  var index$1c = /*#__PURE__*/Object.freeze({
+  var index$1d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload$1
   });
@@ -23438,12 +23878,12 @@
   };
   lfLog('Loaded React.Form');
 
-  var index$1b = /*#__PURE__*/Object.freeze({
+  var index$1c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormReact
   });
 
-  var _excluded$R = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "className", "inputType", "inputMode", "autocomplete", "lfLocale", "disabled", "readOnly", "plaintext", "error", "component", "required", "submitOnEnter", "prefix", "postfix", "placeholder", "fullWidth", "width", "floatingLabel", "lfOnEnter"];
+  var _excluded$S = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "className", "inputType", "inputMode", "autocomplete", "lfLocale", "disabled", "readOnly", "plaintext", "error", "component", "required", "submitOnEnter", "prefix", "postfix", "placeholder", "fullWidth", "width", "floatingLabel", "lfOnEnter"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -23480,7 +23920,7 @@
       floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$R);
+      rest = _objectWithoutProperties(_ref, _excluded$S);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -23517,13 +23957,13 @@
     }, error));
   };
 
-  var _excluded$Q = ["onChange"];
+  var _excluded$R = ["onChange"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var TextInput$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$Q);
+      rest = _objectWithoutProperties(_ref, _excluded$R);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -23535,12 +23975,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Input');
 
-  var index$1a = /*#__PURE__*/Object.freeze({
+  var index$1b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput$1
   });
 
-  var _excluded$P = ["name", "label", "hint", "value", "size", "placeholder", "options", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "floatingLabel", "filterKey", "filterValue"];
+  var _excluded$Q = ["name", "label", "hint", "value", "size", "placeholder", "options", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "floatingLabel", "filterKey", "filterValue"];
   var Select = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23562,7 +24002,7 @@
       floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
       filterKey = _ref.filterKey,
       filterValue = _ref.filterValue,
-      rest = _objectWithoutProperties(_ref, _excluded$P);
+      rest = _objectWithoutProperties(_ref, _excluded$Q);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value !== placeholder ? e.target.value : undefined);
     }, [onChange, placeholder]);
@@ -23598,12 +24038,12 @@
   });
   lfLog('Loaded ReactBootrap.Select');
 
-  var index$19 = /*#__PURE__*/Object.freeze({
+  var index$1a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select
   });
 
-  var _excluded$O = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format"];
+  var _excluded$P = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format"];
   var Checkbox = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23621,7 +24061,7 @@
       _ref.appearance;
       _ref.locale;
       _ref.format;
-      _objectWithoutProperties(_ref, _excluded$O);
+      _objectWithoutProperties(_ref, _excluded$P);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
@@ -23642,12 +24082,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Checkbox');
 
-  var index$18 = /*#__PURE__*/Object.freeze({
+  var index$19 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Checkbox
   });
 
-  var _excluded$N = ["name", "label", "hint", "value", "placeholder", "lfLocale", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format"];
+  var _excluded$O = ["name", "label", "hint", "value", "placeholder", "lfLocale", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format"];
   var Toggle$1 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23666,7 +24106,7 @@
       _ref.appearance;
       _ref.locale;
       _ref.format;
-      _objectWithoutProperties(_ref, _excluded$N);
+      _objectWithoutProperties(_ref, _excluded$O);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
@@ -23686,12 +24126,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Toggle');
 
-  var index$17 = /*#__PURE__*/Object.freeze({
+  var index$18 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle$1
   });
 
-  var _excluded$M = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options"];
+  var _excluded$N = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options"];
   var CheckboxGroupBootstrap = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23711,7 +24151,7 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$M);
+      rest = _objectWithoutProperties(_ref, _excluded$N);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
       values = _useState2[0],
@@ -23760,7 +24200,7 @@
   });
   lfLog('Loaded ReactBootrap.CheckboxGroup');
 
-  var index$16 = /*#__PURE__*/Object.freeze({
+  var index$17 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupBootstrap
   });
@@ -23779,26 +24219,26 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded ReactBootrap.Placeholder');
 
-  var index$15 = /*#__PURE__*/Object.freeze({
+  var index$16 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderBootstrap
   });
 
   lfLog('Loaded ReactBootrap.PlaceholderImage');
 
-  var index$14 = /*#__PURE__*/Object.freeze({
+  var index$15 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
-  var _excluded$L = ["onChange", "value"];
+  var _excluded$M = ["onChange", "value"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var Date$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$L);
+      rest = _objectWithoutProperties(_ref, _excluded$M);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -23817,12 +24257,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Date');
 
-  var index$13 = /*#__PURE__*/Object.freeze({
+  var index$14 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Date$1
   });
 
-  var _excluded$K = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "disabled", "readOnly", "error", "required", "rows", "placeholder", "width", "fullWidth"];
+  var _excluded$L = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "disabled", "readOnly", "error", "required", "rows", "placeholder", "width", "fullWidth"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -23844,7 +24284,7 @@
       placeholder = _ref.placeholder,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
-      rest = _objectWithoutProperties(_ref, _excluded$K);
+      rest = _objectWithoutProperties(_ref, _excluded$L);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -23870,7 +24310,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Textarea');
 
-  var index$12 = /*#__PURE__*/Object.freeze({
+  var index$13 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea
   });
@@ -23918,33 +24358,33 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Slider');
 
-  var index$11 = /*#__PURE__*/Object.freeze({
+  var index$12 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Slider
   });
 
   lfLog('Loaded ReactBootrap.ThreeColumn');
 
-  var index$10 = /*#__PURE__*/Object.freeze({
+  var index$11 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded ReactBootrap.TwoColumns');
 
-  var index$$ = /*#__PURE__*/Object.freeze({
+  var index$10 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded ReactBootrap.Group');
 
-  var index$_ = /*#__PURE__*/Object.freeze({
+  var index$$ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
-  var _excluded$J = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options"];
+  var _excluded$K = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options"];
   var RadioGroupBootstrap = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23964,7 +24404,7 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$J);
+      rest = _objectWithoutProperties(_ref, _excluded$K);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
       values = _useState2[0],
@@ -24014,33 +24454,33 @@
   });
   lfLog('Loaded ReactBootrap.RadioGroup');
 
-  var index$Z = /*#__PURE__*/Object.freeze({
+  var index$_ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupBootstrap
   });
 
   lfLog('Loaded ReactBootrap.Divider');
 
-  var index$Y = /*#__PURE__*/Object.freeze({
+  var index$Z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
   lfLog('Loaded ReactBootrap.ReactView');
 
-  var index$X = /*#__PURE__*/Object.freeze({
+  var index$Y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
 
-  var _excluded$I = ["onChange", "value"];
+  var _excluded$J = ["onChange", "value"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var DateTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$I);
+      rest = _objectWithoutProperties(_ref, _excluded$J);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -24062,12 +24502,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.DateTime');
 
-  var index$W = /*#__PURE__*/Object.freeze({
+  var index$X = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateTime
   });
 
-  var _excluded$H = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$I = ["hint", "required", "tooltip", "name", "label", "error"];
   var ListArrayBootstrap = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required;
@@ -24075,7 +24515,7 @@
       var name = _ref.name,
       label = _ref.label,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$H);
+      rest = _objectWithoutProperties(_ref, _excluded$I);
     return /*#__PURE__*/React$1.createElement(Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-array"
@@ -24087,12 +24527,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Array');
 
-  var index$V = /*#__PURE__*/Object.freeze({
+  var index$W = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayBootstrap
   });
 
-  var _excluded$G = ["onChange"];
+  var _excluded$H = ["onChange"];
   var hasDecimals = function hasDecimals(f) {
     return _isString(f) && (f.includes(',') || f.includes('.'));
   };
@@ -24101,7 +24541,7 @@
 
   var InputNumber = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$G);
+      rest = _objectWithoutProperties(_ref, _excluded$H);
     var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       var parsed;
@@ -24128,7 +24568,7 @@
     }, rest));
   }, ['label', 'hint', 'placeholder']);
 
-  var index$U = /*#__PURE__*/Object.freeze({
+  var index$V = /*#__PURE__*/Object.freeze({
     __proto__: null,
     InputNumber: InputNumber
   });
@@ -24136,7 +24576,7 @@
   var css_248z$h = ".lf-form-react-bootstrap .lf-control-tabs [role=tabpanel] {\n  padding-top: var(--lf-field-margin);\n}";
   styleInject(css_248z$h);
 
-  var _excluded$F = ["name", "value", "tabs", "onChange", "children", "variant", "transition", "fill", "justify"];
+  var _excluded$G = ["name", "value", "tabs", "onChange", "children", "variant", "transition", "fill", "justify"];
   var TabsReactBootstrap = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -24147,7 +24587,7 @@
       transition = _ref.transition,
       fill = _ref.fill,
       justify = _ref.justify,
-      rest = _objectWithoutProperties(_ref, _excluded$F);
+      rest = _objectWithoutProperties(_ref, _excluded$G);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
@@ -24182,7 +24622,7 @@
   });
   lfLog('Loaded ReactBootrap.Tabs');
 
-  var index$T = /*#__PURE__*/Object.freeze({
+  var index$U = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsReactBootstrap
   });
@@ -24190,12 +24630,12 @@
   var css_248z$g = ".lf-form-react-bootstrap .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-bootstrap .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n  margin-top: -2px;\n  margin-right: 5px;\n}\n.lf-form-react-bootstrap .lf-control-button .btn-lg .lf-icon {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-form-react-bootstrap .lf-control-button .btn-sm .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}";
   styleInject(css_248z$g);
 
-  var _excluded$E = ["label", "icon", "hint"];
+  var _excluded$F = ["label", "icon", "hint"];
   var BootstrapButton = function BootstrapButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint,
-      rest = _objectWithoutProperties(_ref, _excluded$E);
+      rest = _objectWithoutProperties(_ref, _excluded$F);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(reactBootstrap.Button, rest, /*#__PURE__*/React$1.createElement("img", {
@@ -24225,7 +24665,7 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded ReactBootrap.Button');
 
-  var index$S = /*#__PURE__*/Object.freeze({
+  var index$T = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton$2
   });
@@ -24271,7 +24711,7 @@
   };
   lfLog('Loaded ReactBootrap.Form');
 
-  var index$R = /*#__PURE__*/Object.freeze({
+  var index$S = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormBootstrap
   });
@@ -24279,7 +24719,7 @@
   var css_248z$e = ".lf-form-react-antd .lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-antd .lf-control-input-text.lf-size-small .lf-prefix-icon {\n  max-height: 12px;\n}\n.lf-form-react-antd .lf-control-input-text.lf-size-large .lf-prefix-icon {\n  max-height: 18px;\n}\n.lf-form-react-antd .lf-control-input-text input[type=color] {\n  min-width: 60px;\n}";
   styleInject(css_248z$e);
 
-  var _excluded$D = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "fullWidth", "width", "inputType", "inputMode", "autocomplete", "lfOnEnter"];
+  var _excluded$E = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "fullWidth", "width", "inputType", "inputMode", "autocomplete", "lfOnEnter"];
   var TextInput = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24313,7 +24753,7 @@
       autocomplete = _ref.autocomplete,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$D);
+      rest = _objectWithoutProperties(_ref, _excluded$E);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -24353,12 +24793,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputText');
 
-  var index$Q = /*#__PURE__*/Object.freeze({
+  var index$R = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
 
-  var _excluded$C = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "lfLocale", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "checkedChildren", "unCheckedChildren"];
+  var _excluded$D = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "lfLocale", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "checkedChildren", "unCheckedChildren"];
   var Toggle = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24387,7 +24827,7 @@
       _ref.width;
       var checkedChildren = _ref.checkedChildren,
       unCheckedChildren = _ref.unCheckedChildren,
-      rest = _objectWithoutProperties(_ref, _excluded$C);
+      rest = _objectWithoutProperties(_ref, _excluded$D);
     var handleChange = React$1.useCallback(function (checked) {
       return onChange(checked);
     }, [onChange]);
@@ -24414,12 +24854,12 @@
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded AntD.Toggle');
 
-  var index$P = /*#__PURE__*/Object.freeze({
+  var index$Q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle
   });
 
-  var _excluded$B = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "checkedChildren", "unCheckedChildren"];
+  var _excluded$C = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "checkedChildren", "unCheckedChildren"];
   var CheckboxAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24446,7 +24886,7 @@
       _ref.width;
       _ref.checkedChildren;
       _ref.unCheckedChildren;
-      _objectWithoutProperties(_ref, _excluded$B);
+      _objectWithoutProperties(_ref, _excluded$C);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.checked);
     }, [onChange]);
@@ -24467,12 +24907,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Checkbox');
 
-  var index$O = /*#__PURE__*/Object.freeze({
+  var index$P = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxAntd
   });
 
-  var _excluded$A = ["name", "label", "hint", "value", "tooltip", "required", "error", "fullWidth", "width", "lfLocale", "className"];
+  var _excluded$B = ["name", "label", "hint", "value", "tooltip", "required", "error", "fullWidth", "width", "lfLocale", "className"];
   var AntdGenericDate = function AntdGenericDate(_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24487,7 +24927,7 @@
       width = _ref.width,
       lfLocale = _ref.lfLocale,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$A);
+      rest = _objectWithoutProperties(_ref, _excluded$B);
     // set locale for dates
     var defaultValue = dayjs(value);
     if (defaultValue && lfLocale) {
@@ -24513,11 +24953,11 @@
     }, passRest(rest))));
   };
 
-  var _excluded$z = ["onChange", "value"];
+  var _excluded$A = ["onChange", "value"];
   var AntdDate = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$z);
+      rest = _objectWithoutProperties(_ref, _excluded$A);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -24544,7 +24984,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Date');
 
-  var index$N = /*#__PURE__*/Object.freeze({
+  var index$O = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdDate
   });
@@ -24552,7 +24992,7 @@
   var css_248z$d = ".lf-control-select-option-antd img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  vertical-align: middle;\n  margin-top: -2px;\n}";
   styleInject(css_248z$d);
 
-  var _excluded$y = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "lfLocale", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "fullWidth", "popupMatchSelectWidth", "showSearch", "placement", "showArrow", "listHeight", "virtual", "options", "filterKey", "filterValue", "showImageOptions"];
+  var _excluded$z = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "lfLocale", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "fullWidth", "popupMatchSelectWidth", "showSearch", "placement", "showArrow", "listHeight", "virtual", "options", "filterKey", "filterValue", "showImageOptions"];
   var SelectAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24591,7 +25031,7 @@
       filterValue = _ref.filterValue,
       _ref$showImageOptions = _ref.showImageOptions,
       showImageOptions = _ref$showImageOptions === void 0 ? false : _ref$showImageOptions,
-      rest = _objectWithoutProperties(_ref, _excluded$y);
+      rest = _objectWithoutProperties(_ref, _excluded$z);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
       "data-lf-field-name": name,
       className: "lf-control-select",
@@ -24637,12 +25077,12 @@
   });
   lfLog('Loaded AntD.Select');
 
-  var index$M = /*#__PURE__*/Object.freeze({
+  var index$N = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectAntd
   });
 
-  var _excluded$x = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "options", "maxLength", "inline", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "optionType"];
+  var _excluded$y = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "options", "maxLength", "inline", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "optionType"];
   var RadioGroup$1 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24671,7 +25111,7 @@
       _ref.onBlur;
       _ref.width;
       var optionType = _ref.optionType,
-      rest = _objectWithoutProperties(_ref, _excluded$x);
+      rest = _objectWithoutProperties(_ref, _excluded$y);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -24721,12 +25161,12 @@
   });
   lfLog('Loaded AntD.RadioGroup');
 
-  var index$L = /*#__PURE__*/Object.freeze({
+  var index$M = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroup$1
   });
 
-  var _excluded$w = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "count", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "allowHalf", "bordered", "onChange", "onBlur", "width", "tooltips"];
+  var _excluded$x = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "count", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "allowHalf", "bordered", "onChange", "onBlur", "width", "tooltips"];
   var RateAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24755,7 +25195,7 @@
       onBlur = _ref.onBlur;
       _ref.width;
       var tooltips = _ref.tooltips;
-      _objectWithoutProperties(_ref, _excluded$w);
+      _objectWithoutProperties(_ref, _excluded$x);
     var mappedTooltips = (tooltips !== null && tooltips !== void 0 ? tooltips : []).map(function (item) {
       if (_isString(item)) {
         return item;
@@ -24788,7 +25228,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded AntD.Rate');
 
-  var index$K = /*#__PURE__*/Object.freeze({
+  var index$L = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RateAntd
   });
@@ -24811,19 +25251,19 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded AntD.Placeholder');
 
-  var index$J = /*#__PURE__*/Object.freeze({
+  var index$K = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderAntd
   });
 
   lfLog('Loaded AntD.PlaceholderImage');
 
-  var index$I = /*#__PURE__*/Object.freeze({
+  var index$J = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
-  var _excluded$v = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "fullWidth", "showControl", "min", "max", "step"];
+  var _excluded$w = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "fullWidth", "showControl", "min", "max", "step"];
   var InputNumberAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24854,7 +25294,7 @@
       min = _ref.min,
       max = _ref.max,
       step = _ref.step,
-      rest = _objectWithoutProperties(_ref, _excluded$v);
+      rest = _objectWithoutProperties(_ref, _excluded$w);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
       label: label,
       name: name,
@@ -24886,12 +25326,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputNumber');
 
-  var index$H = /*#__PURE__*/Object.freeze({
+  var index$I = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumberAntd
   });
 
-  var _excluded$u = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "allowClear", "bordered", "onChange", "onBlur", "width", "fullWidth"];
+  var _excluded$v = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "allowClear", "bordered", "onChange", "onBlur", "width", "fullWidth"];
   var TextareaAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24916,7 +25356,7 @@
       onBlur = _ref.onBlur,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
-      rest = _objectWithoutProperties(_ref, _excluded$u);
+      rest = _objectWithoutProperties(_ref, _excluded$v);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -24947,12 +25387,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Textarea');
 
-  var index$G = /*#__PURE__*/Object.freeze({
+  var index$H = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextareaAntd
   });
 
-  var _excluded$t = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "showSearch", "placement", "showArrow", "listHeight", "virtual", "maxTagCount", "maxTagPlaceholder", "maxTagTextLength"];
+  var _excluded$u = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "showSearch", "placement", "showArrow", "listHeight", "virtual", "maxTagCount", "maxTagPlaceholder", "maxTagTextLength"];
   var Multiselect = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24985,7 +25425,7 @@
       maxTagCount = _ref.maxTagCount,
       maxTagPlaceholder = _ref.maxTagPlaceholder,
       maxTagTextLength = _ref.maxTagTextLength,
-      rest = _objectWithoutProperties(_ref, _excluded$t);
+      rest = _objectWithoutProperties(_ref, _excluded$u);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
       label: label,
       "data-lf-field-name": name,
@@ -25027,7 +25467,7 @@
   });
   lfLog('Loaded AntD.MultiSelect');
 
-  var index$F = /*#__PURE__*/Object.freeze({
+  var index$G = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect
   });
@@ -25037,7 +25477,7 @@
 
   lfLog('Loaded AntD.ThreeColumns');
 
-  var index$E = /*#__PURE__*/Object.freeze({
+  var index$F = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
@@ -25047,7 +25487,7 @@
 
   lfLog('Loaded AntD.TwoColumns');
 
-  var index$D = /*#__PURE__*/Object.freeze({
+  var index$E = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
@@ -25057,12 +25497,12 @@
 
   lfLog('Loaded AntD.Group');
 
-  var index$C = /*#__PURE__*/Object.freeze({
+  var index$D = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
-  var _excluded$s = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "keyboard", "dots", "min", "max", "step", "reverse", "tooltipOpen", "tooltipPlacement", "error", "onChange", "onBlur", "width", "marks", "included"];
+  var _excluded$t = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "keyboard", "dots", "min", "max", "step", "reverse", "tooltipOpen", "tooltipPlacement", "error", "onChange", "onBlur", "width", "marks", "included"];
   var SliderAnt = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -25093,7 +25533,7 @@
       _ref.width;
       var marks = _ref.marks,
       included = _ref.included,
-      rest = _objectWithoutProperties(_ref, _excluded$s);
+      rest = _objectWithoutProperties(_ref, _excluded$t);
     var antdMarks = undefined;
     if (_isArray(marks) && !_isEmpty(marks)) {
       antdMarks = marks.reduce(function (accumulator, value) {
@@ -25134,30 +25574,30 @@
   });
   lfLog('Loaded AntD.Slider');
 
-  var index$B = /*#__PURE__*/Object.freeze({
+  var index$C = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderAnt
   });
 
   lfLog('Loaded AntD.Divider');
 
-  var index$A = /*#__PURE__*/Object.freeze({
+  var index$B = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
   lfLog('Loaded AntD.ReactView');
 
-  var index$z = /*#__PURE__*/Object.freeze({
+  var index$A = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
 
-  var _excluded$r = ["onChange", "value"];
+  var _excluded$s = ["onChange", "value"];
   var Datetime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$r);
+      rest = _objectWithoutProperties(_ref, _excluded$s);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -25186,7 +25626,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.DateTime');
 
-  var index$y = /*#__PURE__*/Object.freeze({
+  var index$z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Datetime
   });
@@ -25194,7 +25634,7 @@
   var css_248z$9 = ".lf-form-react-antd .lf-control-common-array-item .ant-form-item {\n  margin-bottom: 0px !important;\n}\n.lf-form-react-antd .lf-control-common-array-item {\n  padding-bottom: 5px;\n}\n.lf-form-react-antd .lf-control-two-columns:last-child {\n  margin-bottom: 0px;\n}\n.lf-form-react-antd .lf-control-three-columns:last-child {\n  margin-bottom: 0px;\n}";
   styleInject(css_248z$9);
 
-  var _excluded$q = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$r = ["hint", "required", "tooltip", "name", "label", "error"];
   var ListArrayAntd = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required,
@@ -25202,7 +25642,7 @@
       name = _ref.name,
       label = _ref.label,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$q);
+      rest = _objectWithoutProperties(_ref, _excluded$r);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
       className: "lf-control-array",
       "data-lf-field-name": name,
@@ -25219,7 +25659,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded AntD.ListArray');
 
-  var index$x = /*#__PURE__*/Object.freeze({
+  var index$y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayAntd
   });
@@ -25227,13 +25667,13 @@
   var css_248z$8 = ".lf-form-react-antd .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn {\n  min-width: 32px;\n}\n.lf-form-react-antd .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n  margin-top: -2px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-lg {\n  min-width: 40px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-lg .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-sm {\n  min-width: 24px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-sm .lf-icon {\n  max-width: 14px;\n  max-height: 14px;\n}";
   styleInject(css_248z$8);
 
-  var _excluded$p = ["label", "icon", "hint", "tooltip"];
+  var _excluded$q = ["label", "icon", "hint", "tooltip"];
   var AntdButton = function AntdButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint;
       _ref.tooltip;
-      var rest = _objectWithoutProperties(_ref, _excluded$p);
+      var rest = _objectWithoutProperties(_ref, _excluded$q);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(antd.Button, _extends({
@@ -25265,12 +25705,12 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded AntD.Button');
 
-  var index$w = /*#__PURE__*/Object.freeze({
+  var index$x = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton$1
   });
 
-  var _excluded$o = ["name", "label", "hint", "value", "placeholder", "className", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
+  var _excluded$p = ["name", "label", "hint", "value", "placeholder", "className", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
   var CheckboxGroupRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -25291,7 +25731,7 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$o);
+      rest = _objectWithoutProperties(_ref, _excluded$p);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
       className: classNames('lf-control-checkbox-group', className),
       "data-lf-field-name": name,
@@ -25313,7 +25753,7 @@
   });
   lfLog('Loaded AntD.CheckboxGroup');
 
-  var index$v = /*#__PURE__*/Object.freeze({
+  var index$w = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupRSuite
   });
@@ -25321,7 +25761,7 @@
   var css_248z$7 = ".lf-form-react-antd .lf-control-tabs .tab-fields {\n  margin-top: 0px;\n}";
   styleInject(css_248z$7);
 
-  var _excluded$n = ["name", "value", "tabs", "onChange", "children", "animated", "centered", "size", "tabType"];
+  var _excluded$o = ["name", "value", "tabs", "onChange", "children", "animated", "centered", "size", "tabType"];
   var TabsAntd = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -25332,7 +25772,7 @@
       centered = _ref.centered,
       size = _ref.size,
       tabType = _ref.tabType,
-      rest = _objectWithoutProperties(_ref, _excluded$n);
+      rest = _objectWithoutProperties(_ref, _excluded$o);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
@@ -25369,7 +25809,7 @@
   });
   lfLog('Loaded AntD.Tabs');
 
-  var index$u = /*#__PURE__*/Object.freeze({
+  var index$v = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsAntd
   });
@@ -25377,7 +25817,7 @@
   var css_248z$6 = ".lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
   styleInject(css_248z$6);
 
-  var _excluded$m = ["hint"],
+  var _excluded$n = ["hint"],
     _excluded2 = ["name", "accept", "draggable", "draggableText", "draggableHeight", "uploadButtonLabel", "error", "label", "hint", "tooltip", "required", "size", "disabled", "value", "multiple", "listType", "maxCount", "showUploadList", "uploadButtonSize", "uploadButtonAppearance", "onChange"];
   var Dragger = antd.Upload.Dragger;
   var makeDefaultValue = function makeDefaultValue(defaultValue) {
@@ -25403,7 +25843,7 @@
   };
   var ButtonWithHint = function ButtonWithHint(_ref) {
     var hint = _ref.hint,
-      props = _objectWithoutProperties(_ref, _excluded$m);
+      props = _objectWithoutProperties(_ref, _excluded$n);
     var inner = /*#__PURE__*/React$1.createElement(antd.Button, props);
     if (hint) {
       return /*#__PURE__*/React$1.createElement("div", {
@@ -25514,12 +25954,12 @@
   }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
   lfLog('Loaded AnttD.Upload');
 
-  var index$t = /*#__PURE__*/Object.freeze({
+  var index$u = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntDUpload
   });
 
-  var _excluded$l = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "multiple", "options"];
+  var _excluded$m = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "multiple", "options"];
   var AntdButtonsToggleGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -25537,7 +25977,7 @@
       multiple = _ref.multiple,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$l);
+      rest = _objectWithoutProperties(_ref, _excluded$m);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
       className: "lf-control-button-toggle-group",
       "data-lf-field-name": name,
@@ -25563,7 +26003,7 @@
   });
   lfLog('Loaded AntD.ButtonsToggleGroup');
 
-  var index$s = /*#__PURE__*/Object.freeze({
+  var index$t = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdButtonsToggleGroup
   });
@@ -25571,7 +26011,7 @@
   var css_248z$5 = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}\n\n.lf-form-react-antd .lf-control-steps .ant-steps-icon svg {\n  vertical-align: baseline;\n}";
   styleInject(css_248z$5);
 
-  var _excluded$k = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "labelPlacement", "percent", "clickable", "stepsType"];
+  var _excluded$l = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "labelPlacement", "percent", "clickable", "stepsType"];
   var i18nSteps$1 = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -25599,7 +26039,7 @@
       percent = _ref.percent,
       clickable = _ref.clickable,
       stepsType = _ref.stepsType,
-      rest = _objectWithoutProperties(_ref, _excluded$k);
+      rest = _objectWithoutProperties(_ref, _excluded$l);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
       return obj.value === value;
@@ -25672,7 +26112,7 @@
   lfLog('Loaded AntD.Steps');
   var AntdSteps$1 = AntdSteps;
 
-  var index$r = /*#__PURE__*/Object.freeze({
+  var index$s = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdSteps$1
   });
@@ -25754,12 +26194,12 @@
     }, labelCancel), custom));
   };
 
-  var index$q = /*#__PURE__*/Object.freeze({
+  var index$r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormAntD
   });
 
-  var _excluded$j = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter"];
+  var _excluded$k = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter"];
   var InputText$1 = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint;
@@ -25773,7 +26213,7 @@
       onBlur = _ref.onBlur,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$j);
+      rest = _objectWithoutProperties(_ref, _excluded$k);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -25794,12 +26234,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.InputText');
 
-  var index$p = /*#__PURE__*/Object.freeze({
+  var index$q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputText$1
   });
 
-  var _excluded$i = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "lfOnEnter"];
+  var _excluded$j = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "lfOnEnter"];
   var MantineNumberInput = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -25811,7 +26251,7 @@
       width = _ref.width,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$i);
+      rest = _objectWithoutProperties(_ref, _excluded$j);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -25829,12 +26269,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.InputNumber');
 
-  var index$o = /*#__PURE__*/Object.freeze({
+  var index$p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineNumberInput
   });
 
-  var _excluded$h = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "lfOnEnter"];
+  var _excluded$i = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "lfOnEnter"];
   var MantineTextarea = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -25848,7 +26288,7 @@
       inputType = _ref.inputType,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$h);
+      rest = _objectWithoutProperties(_ref, _excluded$i);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -25871,12 +26311,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Textarea');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTextarea
   });
 
-  var _excluded$g = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
+  var _excluded$h = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
   var MantineSelect = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -25887,7 +26327,7 @@
       options = _ref.options,
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
-      rest = _objectWithoutProperties(_ref, _excluded$g);
+      rest = _objectWithoutProperties(_ref, _excluded$h);
     return /*#__PURE__*/React$1.createElement(core.Select, _extends({
       className: "lf-control-select",
       "data-lf-field-name": name,
@@ -25904,12 +26344,12 @@
   });
   lfLog('Loaded Mantine.Select');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineSelect
   });
 
-  var _excluded$f = ["name", "hint", "value", "onChange", "error", "description"];
+  var _excluded$g = ["name", "hint", "value", "onChange", "error", "description"];
   var MantineCheckbox = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -25917,7 +26357,7 @@
       onChange = _ref.onChange,
       error = _ref.error;
       _ref.description;
-      var rest = _objectWithoutProperties(_ref, _excluded$f);
+      var rest = _objectWithoutProperties(_ref, _excluded$g);
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
@@ -25934,12 +26374,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Checkbox');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineCheckbox
   });
 
-  var _excluded$e = ["name", "hint", "value", "onChange", "error", "description"];
+  var _excluded$f = ["name", "hint", "value", "onChange", "error", "description"];
   var MantineToggle = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -25947,7 +26387,7 @@
       onChange = _ref.onChange,
       error = _ref.error;
       _ref.description;
-      var rest = _objectWithoutProperties(_ref, _excluded$e);
+      var rest = _objectWithoutProperties(_ref, _excluded$f);
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
@@ -25964,12 +26404,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Toggle');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineToggle
   });
 
-  var _excluded$d = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$e = ["hint", "required", "tooltip", "name", "label", "error"];
   var MantineListArray = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required;
@@ -25977,7 +26417,7 @@
       var name = _ref.name,
       label = _ref.label,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$d);
+      rest = _objectWithoutProperties(_ref, _excluded$e);
     return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: "lf-control-array"
@@ -25989,12 +26429,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded Mantine.ListArray');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineListArray
   });
 
-  var _excluded$c = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
+  var _excluded$d = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
   var CheckboxGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -26019,7 +26459,7 @@
       labelPosition = _ref.labelPosition,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$c);
+      rest = _objectWithoutProperties(_ref, _excluded$d);
     var _useState = React$1.useState(_isArray(value) ? value : value ? String().split(',') : []),
       _useState2 = _slicedToArray(_useState, 2),
       selected = _useState2[0],
@@ -26069,12 +26509,12 @@
   });
   lfLog('Loaded Mantine.CheckboxGroup');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroup
   });
 
-  var _excluded$b = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
+  var _excluded$c = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
 
   // TODO broken preview in mantine, add ensureframework
 
@@ -26102,7 +26542,7 @@
       labelPosition = _ref.labelPosition,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$b);
+      rest = _objectWithoutProperties(_ref, _excluded$c);
     var _useState = React$1.useState(value),
       _useState2 = _slicedToArray(_useState, 2);
       _useState2[0];
@@ -26149,33 +26589,33 @@
   });
   lfLog('Loaded Mantine.RadioGroup');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroup
   });
 
   lfLog('Loaded Mantine.TwoColumns');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded RSuite5.ThreeColumns');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded RSuite5.Group');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
-  var _excluded$a = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime"];
+  var _excluded$b = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime"];
   var tryDate = function tryDate(value) {
     if (_isDate(value)) {
       return value;
@@ -26198,7 +26638,7 @@
       lfLocale = _ref.lfLocale,
       _ref$withTime = _ref.withTime,
       withTime = _ref$withTime === void 0 ? false : _ref$withTime,
-      rest = _objectWithoutProperties(_ref, _excluded$a);
+      rest = _objectWithoutProperties(_ref, _excluded$b);
     var Component = withTime ? dates.DateTimePicker : dates.DatePickerInput;
     return /*#__PURE__*/React$1.createElement(Component, _extends({
       className: "lf-control-date",
@@ -26213,12 +26653,12 @@
     }, passRest(rest)));
   };
 
-  var _excluded$9 = ["onChange", "value", "lfLocale"];
+  var _excluded$a = ["onChange", "value", "lfLocale"];
   var SelectDate = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
       lfLocale = _ref.lfLocale,
-      rest = _objectWithoutProperties(_ref, _excluded$9);
+      rest = _objectWithoutProperties(_ref, _excluded$a);
     // also accepts string dates
     var initialValue;
     if (rest.dateType === 'range') {
@@ -26256,17 +26696,17 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.SelectDate');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDate
   });
 
-  var _excluded$8 = ["onChange", "value", "lfLocale"];
+  var _excluded$9 = ["onChange", "value", "lfLocale"];
   var SelectDatTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
       lfLocale = _ref.lfLocale,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
+      rest = _objectWithoutProperties(_ref, _excluded$9);
     // also accepts string dates
     var initialValue;
     if (rest.dateType === 'range') {
@@ -26306,12 +26746,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.SelectDateTime');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDatTime
   });
 
-  var _excluded$7 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
+  var _excluded$8 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
   var InputText = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint;
@@ -26325,7 +26765,7 @@
       var label = _ref.label,
       required = _ref.required;
       _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$7);
+      var rest = _objectWithoutProperties(_ref, _excluded$8);
     return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, {
       className: "lf-control-rate",
       "data-lf-field-name": name,
@@ -26340,7 +26780,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Rate');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputText
   });
@@ -26362,14 +26802,14 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded Mantine.Placeholder');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderMantine
   });
 
   lfLog('Loaded Mantine.PlaceholderImage');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index$a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
@@ -26380,12 +26820,12 @@
   };
   lfLog('Loaded Mantine.Divider');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DividerMantine
   });
 
-  var _excluded$6 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
+  var _excluded$7 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
   var SliderMantine = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -26395,7 +26835,7 @@
       var label = _ref.label,
       required = _ref.required;
       _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$6);
+      var rest = _objectWithoutProperties(_ref, _excluded$7);
     return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, {
       className: "lf-control-slider",
       "data-lf-field-name": name,
@@ -26418,12 +26858,12 @@
   });
   lfLog('Loaded Mantine.Slider');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var index$8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderMantine
   });
 
-  var _excluded$5 = ["name", "hint", "value", "error", "fullWidth", "width", "data"];
+  var _excluded$6 = ["name", "hint", "value", "error", "fullWidth", "width", "data"];
   var MantineTags = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -26432,7 +26872,7 @@
       fullWidth = _ref.fullWidth,
       width = _ref.width,
       data = _ref.data,
-      rest = _objectWithoutProperties(_ref, _excluded$5);
+      rest = _objectWithoutProperties(_ref, _excluded$6);
     return /*#__PURE__*/React$1.createElement(core.TagsInput, _extends({
       className: "lf-control-input-tag",
       "data-lf-field-name": name,
@@ -26449,7 +26889,7 @@
   }, ['label', 'hint', 'placeholder'], i18nOptions);
   lfLog('Loaded Mantine.InputTags');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var index$7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTags
   });
@@ -26457,7 +26897,7 @@
   var css_248z$3 = ".lf-form-react-mantine .lf-control-tabs .lf-prefix-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical .mantine-Tabs-panel, .lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-left .mantine-Tabs-panel {\n  padding-left: var(--lf-field-column-margin);\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-right .mantine-Tabs-panel {\n  padding-right: var(--lf-field-column-margin);\n}";
   styleInject(css_248z$3);
 
-  var _excluded$4 = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement"];
+  var _excluded$5 = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement"];
   var MantineTabs = I18N(function (_ref) {
     var _classNames;
     var name = _ref.name,
@@ -26469,7 +26909,7 @@
       justify = _ref.justify,
       orientation = _ref.orientation,
       placement = _ref.placement,
-      rest = _objectWithoutProperties(_ref, _excluded$4);
+      rest = _objectWithoutProperties(_ref, _excluded$5);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
@@ -26513,7 +26953,7 @@
   });
   lfLog('Loaded Mantine.Tabs');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var index$6 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTabs
   });
@@ -26521,13 +26961,13 @@
   var css_248z$2 = ".lf-form-react-mantine .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-mantine .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-lg .lf-icon {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-xs .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-sm .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-md .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-xl .lf-icon {\n  max-width: 28px;\n  max-height: 28px;\n}";
   styleInject(css_248z$2);
 
-  var _excluded$3 = ["label", "icon", "hint", "tooltip"];
+  var _excluded$4 = ["label", "icon", "hint", "tooltip"];
   var MantineButton = function MantineButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint,
       tooltip = _ref.tooltip,
-      rest = _objectWithoutProperties(_ref, _excluded$3);
+      rest = _objectWithoutProperties(_ref, _excluded$4);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(core.Button, _extends({
@@ -26560,12 +27000,12 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded Mantine.Button');
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var index$5 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton
   });
 
-  var _excluded$2 = ["name", "hint", "fullWidth", "width", "error", "onChange", "onBlur", "lfOnEnter", "accept"];
+  var _excluded$3 = ["name", "hint", "fullWidth", "width", "error", "onChange", "onBlur", "lfOnEnter", "accept"];
   var MantineUpload = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -26576,7 +27016,7 @@
       onBlur = _ref.onBlur;
       _ref.lfOnEnter;
       var accept = _ref.accept,
-      rest = _objectWithoutProperties(_ref, _excluded$2);
+      rest = _objectWithoutProperties(_ref, _excluded$3);
     var handleChange = React$1.useCallback(function (value) {
       return onChange(value);
     }, [onChange]);
@@ -26594,12 +27034,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Upload');
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$4 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineUpload
   });
 
-  var _excluded$1 = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
+  var _excluded$2 = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
   var MantineMultiSelect = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -26610,7 +27050,7 @@
       options = _ref.options,
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
-      rest = _objectWithoutProperties(_ref, _excluded$1);
+      rest = _objectWithoutProperties(_ref, _excluded$2);
     return /*#__PURE__*/React$1.createElement(core.MultiSelect, _extends({
       value: value,
       name: name,
@@ -26627,7 +27067,7 @@
   });
   lfLog('Loaded Mantine.MultiSelect');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$3 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineMultiSelect
   });
@@ -26635,7 +27075,7 @@
   var css_248z$1 = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
   styleInject(css_248z$1);
 
-  var _excluded = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "allowStepClick", "allowStepSelect"];
+  var _excluded$1 = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "allowStepClick", "allowStepSelect"];
   var i18nSteps = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -26660,7 +27100,7 @@
       labelPrevious = _ref.labelPrevious,
       allowStepClick = _ref.allowStepClick,
       allowStepSelect = _ref.allowStepSelect,
-      rest = _objectWithoutProperties(_ref, _excluded);
+      rest = _objectWithoutProperties(_ref, _excluded$1);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
       return obj.value === value;
@@ -26726,9 +27166,103 @@
   });
   lfLog('Loaded Mantine.Steps');
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var index$2 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineSteps
+  });
+
+  var ClockIcon = function ClockIcon(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 16 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 16 : _ref$height;
+    return /*#__PURE__*/React.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 0 24 24",
+      fill: "none"
+    }, /*#__PURE__*/React.createElement("circle", {
+      opacity: "0.5",
+      cx: "12",
+      cy: "12",
+      r: "10",
+      stroke: "#1C274C",
+      "stroke-width": "1.5"
+    }), /*#__PURE__*/React.createElement("path", {
+      d: "M12 8V12L14.5 14.5",
+      stroke: "#1C274C",
+      "stroke-width": "1.5",
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round"
+    }));
+  };
+
+  var _excluded = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "showBrowserPicker"];
+  var MANTINE_ICON_SIZE = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32
+  };
+  var mantineIconSize = function mantineIconSize(size) {
+    return MANTINE_ICON_SIZE[size] || 16;
+  };
+  var Time = I18N(function (_ref) {
+    var name = _ref.name,
+      hint = _ref.hint;
+      _ref.value;
+      var fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      _ref$submitOnEnter = _ref.submitOnEnter,
+      submitOnEnter = _ref$submitOnEnter === void 0 ? false : _ref$submitOnEnter,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      _ref$lfOnEnter = _ref.lfOnEnter,
+      lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
+      showBrowserPicker = _ref.showBrowserPicker,
+      rest = _objectWithoutProperties(_ref, _excluded);
+    var ref = React$1.useRef(null);
+    var handleKeyUp = React$1.useCallback(function (e) {
+      return e.keyCode === 13 && lfOnEnter();
+    }, [lfOnEnter]);
+    var handleChange = React$1.useCallback(function (event) {
+      return onChange(event.currentTarget.value);
+    }, [onChange]);
+    var handlePicker = React$1.useCallback(function () {
+      var _ref$current;
+      return (_ref$current = ref.current) === null || _ref$current === void 0 ? void 0 : _ref$current.showPicker();
+    }, []);
+    var additional = {};
+    if (showBrowserPicker) {
+      additional.rightSection = /*#__PURE__*/React$1.createElement(core.ActionIcon, {
+        variant: "subtle",
+        color: "gray",
+        onClick: handlePicker
+      }, /*#__PURE__*/React$1.createElement(ClockIcon, {
+        width: mantineIconSize(rest.size),
+        height: mantineIconSize(rest.size)
+      }));
+    }
+    return /*#__PURE__*/React$1.createElement(dates.TimeInput, _extends({
+      ref: ref,
+      className: "lf-control-time",
+      "data-lf-field-name": name,
+      style: makeWidthStyle(fullWidth, width),
+      description: hint,
+      error: _isString(error) ? error : undefined,
+      inputWrapperOrder: ['label', 'input', 'description', 'error'],
+      onChange: handleChange,
+      onBlur: onBlur,
+      onKeyUp: submitOnEnter ? handleKeyUp : undefined
+    }, passRest(rest), additional));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded Mantine.Time');
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Time
   });
 
   var css_248z = ".lf-form-react-mantine .lf-control-input-number div[data-position=right] .lf-postfix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=right] .lf-postfix-wrapper {\n  padding-right: 1em;\n}\n.lf-form-react-mantine .lf-control-input-number div[data-position=left] .lf-prefix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=left] .lf-prefix-wrapper {\n  padding-left: 1em;\n}";
@@ -26813,8 +27347,10 @@
   exports.isUrl = isUrl;
   exports.isValidDate = isValidDate;
   exports.isValidDayjsFormat = isValidDayjsFormat;
+  exports.isValidTime = isValidTime;
   exports.makeWidthStyle = makeWidthStyle;
   exports.mapFields = mapFields;
+  exports.omitFields = omitFields;
   exports.passRest = passRest;
   exports.reduceFields = reduceFields;
   exports.replaceField = replaceField;

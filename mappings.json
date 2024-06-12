@@ -179,12 +179,14 @@
     "hidden": null,
     "fullWidth": [
       "react",
+      "react-rsuite5",
       "react-material-ui",
       "react-antd",
       "react-mantine"
     ],
     "width": [
       "react",
+      "react-rsuite5",
       "react-material-ui",
       "react-antd",
       "react-mantine"
@@ -199,9 +201,6 @@
       "react-bootstrap",
       "react-antd",
       "react-mantine"
-    ],
-    "block": [
-      "react-rsuite5"
     ],
     "searchable": [
       "react-rsuite5"
@@ -633,8 +632,33 @@
       "react-material-ui",
       "react-antd"
     ],
-    "block": [
+    "size": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd",
+      "react-mantine"
+    ],
+    "appearance": [
       "react-rsuite5"
+    ],
+    "placement": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "fullWidth": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd",
+      "react-mantine"
+    ],
+    "width": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd",
+      "react-mantine"
     ],
     "cleanable": [
       "react-rsuite5"
@@ -654,24 +678,28 @@
     "isoWeek": [
       "react-rsuite5"
     ],
-    "size": [
-      "react-rsuite5",
-      "react-bootstrap",
-      "react-antd",
-      "react-mantine"
-    ],
-    "appearance": [
-      "react-rsuite5"
-    ],
-    "placement": [
-      "react-rsuite5",
-      "react-antd"
-    ],
-    "fullWidth": [
+    "variant": [
       "react-material-ui",
-      "react-bootstrap",
-      "react-antd",
       "react-mantine"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
+    "views": [
+      "react-material-ui"
+    ],
+    "closeOnSelect": [
+      "react-material-ui"
+    ],
+    "reduceAnimations": [
+      "react-material-ui"
+    ],
+    "showDaysOutsideCurrentMonth": [
+      "react-material-ui"
+    ],
+    "floatingLabel": [
+      "react-material-ui",
+      "react-bootstrap"
     ],
     "disableFuture": [
       "react-material-ui"
@@ -688,10 +716,19 @@
     "displayWeekNumber": [
       "react-material-ui"
     ],
-    "reduceAnimations": [
+    "loading": [
       "react-material-ui"
     ],
-    "showDaysOutsideCurrentMonth": [
+    "fixedWeekNumber": [
+      "react-material-ui"
+    ],
+    "formatDensity": [
+      "react-material-ui"
+    ],
+    "monthsPerRow": [
+      "react-material-ui"
+    ],
+    "yearsPerRow": [
       "react-material-ui"
     ],
     "minDate": [
@@ -704,22 +741,11 @@
       "react-antd",
       "react-mantine"
     ],
-    "views": [
-      "react-material-ui"
-    ],
     "prefix": [
       "react-bootstrap"
     ],
     "postfix": [
       "react-bootstrap"
-    ],
-    "floatingLabel": [
-      "react-bootstrap"
-    ],
-    "width": [
-      "react-bootstrap",
-      "react-antd",
-      "react-mantine"
     ],
     "picker": [
       "react-antd"
@@ -755,9 +781,6 @@
       "react-antd"
     ],
     "radius": [
-      "react-mantine"
-    ],
-    "variant": [
       "react-mantine"
     ],
     "valueFormat": [
@@ -1651,8 +1674,33 @@
       "react-material-ui",
       "react-antd"
     ],
-    "block": [
+    "size": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd",
+      "react-mantine"
+    ],
+    "appearance": [
       "react-rsuite5"
+    ],
+    "placement": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "fullWidth": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd",
+      "react-mantine"
+    ],
+    "width": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd",
+      "react-mantine"
     ],
     "cleanable": [
       "react-rsuite5"
@@ -1666,30 +1714,34 @@
     "showMeridian": [
       "react-rsuite5"
     ],
-    "showWeekNumbers": [
-      "react-rsuite5"
-    ],
     "isoWeek": [
       "react-rsuite5"
     ],
-    "size": [
-      "react-rsuite5",
-      "react-bootstrap",
-      "react-antd",
-      "react-mantine"
-    ],
-    "appearance": [
+    "showWeekNumbers": [
       "react-rsuite5"
     ],
-    "placement": [
-      "react-rsuite5",
-      "react-antd"
-    ],
-    "fullWidth": [
+    "variant": [
       "react-material-ui",
-      "react-bootstrap",
-      "react-antd",
       "react-mantine"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
+    "views": [
+      "react-material-ui"
+    ],
+    "closeOnSelect": [
+      "react-material-ui"
+    ],
+    "reduceAnimations": [
+      "react-material-ui"
+    ],
+    "showDaysOutsideCurrentMonth": [
+      "react-material-ui"
+    ],
+    "floatingLabel": [
+      "react-material-ui",
+      "react-bootstrap"
     ],
     "disableFuture": [
       "react-material-ui"
@@ -1706,23 +1758,57 @@
     "displayWeekNumber": [
       "react-material-ui"
     ],
-    "reduceAnimations": [
+    "ampm": [
       "react-material-ui"
     ],
-    "showDaysOutsideCurrentMonth": [
+    "ampmInClock": [
       "react-material-ui"
     ],
-    "maxDate": [
+    "forceMobile": [
+      "react-material-ui"
+    ],
+    "loading": [
+      "react-material-ui"
+    ],
+    "fixedWeekNumber": [
+      "react-material-ui"
+    ],
+    "formatDensity": [
       "react-material-ui",
-      "react-antd",
-      "react-mantine"
+      "react-material-ui"
+    ],
+    "monthsPerRow": [
+      "react-material-ui"
+    ],
+    "yearsPerRow": [
+      "react-material-ui"
     ],
     "minDate": [
       "react-material-ui",
       "react-antd",
       "react-mantine"
     ],
-    "views": [
+    "maxDate": [
+      "react-material-ui",
+      "react-antd",
+      "react-mantine"
+    ],
+    "minDateTime": [
+      "react-material-ui"
+    ],
+    "maxDateTime": [
+      "react-material-ui"
+    ],
+    "minutesStep": [
+      "react-material-ui"
+    ],
+    "timeStepsHours": [
+      "react-material-ui"
+    ],
+    "timeStepsMinutes": [
+      "react-material-ui"
+    ],
+    "timeStepsSeconds": [
       "react-material-ui"
     ],
     "prefix": [
@@ -1730,14 +1816,6 @@
     ],
     "postfix": [
       "react-bootstrap"
-    ],
-    "floatingLabel": [
-      "react-bootstrap"
-    ],
-    "width": [
-      "react-bootstrap",
-      "react-antd",
-      "react-mantine"
     ],
     "picker": [
       "react-antd"
@@ -1773,9 +1851,6 @@
       "react-antd"
     ],
     "radius": [
-      "react-mantine"
-    ],
-    "variant": [
       "react-mantine"
     ],
     "valueFormat": [
@@ -2236,5 +2311,143 @@
     "validationPattern": "validation",
     "validationMessage": "validation",
     "required": null
+  },
+  "time": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "placeholder": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "size": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-mantine"
+    ],
+    "appearance": [
+      "react-rsuite5"
+    ],
+    "placement": [
+      "react-rsuite5"
+    ],
+    "fullWidth": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-mantine"
+    ],
+    "width": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-mantine"
+    ],
+    "cleanable": [
+      "react-rsuite5"
+    ],
+    "editable": [
+      "react-rsuite5"
+    ],
+    "oneTap": [
+      "react-rsuite5"
+    ],
+    "showMeridian": [
+      "react-rsuite5"
+    ],
+    "format": [
+      "react-rsuite5",
+      "react-material-ui"
+    ],
+    "variant": [
+      "react-material-ui",
+      "react-mantine"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
+    "views": [
+      "react-material-ui"
+    ],
+    "floatingLabel": [
+      "react-material-ui"
+    ],
+    "ampm": [
+      "react-material-ui"
+    ],
+    "ampmInClock": [
+      "react-material-ui"
+    ],
+    "forceMobile": [
+      "react-material-ui"
+    ],
+    "closeOnSelect": [
+      "react-material-ui"
+    ],
+    "disableFuture": [
+      "react-material-ui"
+    ],
+    "disableOpenPicker": [
+      "react-material-ui"
+    ],
+    "disablePast": [
+      "react-material-ui"
+    ],
+    "minTime": [
+      "react-material-ui",
+      "react-mantine"
+    ],
+    "maxTime": [
+      "react-material-ui",
+      "react-mantine"
+    ],
+    "formatDensity": [
+      "react-material-ui"
+    ],
+    "minutesStep": [
+      "react-material-ui"
+    ],
+    "timeStepsHours": [
+      "react-material-ui"
+    ],
+    "timeStepsMinutes": [
+      "react-material-ui"
+    ],
+    "timeStepsSeconds": [
+      "react-material-ui"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "withSeconds": [
+      "react-mantine"
+    ],
+    "pointer": [
+      "react-mantine"
+    ],
+    "showBrowserPicker": [
+      "react-mantine"
+    ],
+    "leftSection": [
+      "react-mantine"
+    ],
+    "rightSection": [
+      "react-mantine"
+    ],
+    "leftSectionWidth": [
+      "react-mantine"
+    ],
+    "rightSectionWidth": [
+      "react-mantine"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
+  },
+  "hidden": {
+    "name": null,
+    "info": null
   }
 }

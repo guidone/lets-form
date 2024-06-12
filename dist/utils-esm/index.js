@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.7.17 - ESM */
+/* LetsForm Utils v0.7.18 - ESM */
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -5521,7 +5521,8 @@ var array = {
 		},
 		{
 			name: "alignOffset",
-			type: "number"
+			type: "number",
+			description: "Offset of the add / remove button from the top / bottom (depends on the alignment)"
 		},
 		{
 			name: "arrayType",
@@ -8602,7 +8603,7 @@ var tabs = {
 		{
 			name: "autoContrast",
 			type: "boolean",
-			description: "Determines whether active item text color should depend on background-color of the indicator. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast. Only applicable when variant=\"pills\""
+			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
 		},
 		{
 			name: "inverted",
@@ -8663,6 +8664,17 @@ var upload = {
 			name: "accept",
 			type: "array",
 			description: "Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "
+		}
+	],
+	react: [
+		{
+			name: "uploadButtonLabel",
+			type: "string | i18n"
+		},
+		{
+			name: "multiple",
+			type: "boolean",
+			description: "Allow selecting multiple files"
 		}
 	],
 	"react-rsuite5": [
@@ -8945,7 +8957,7 @@ var upload = {
 var steps = {
 	label: "Steps",
 	category: "layout",
-	description: "Split the form in multiple steps",
+	description: "Layout component to split the form in multiple steps",
 	name: "steps",
 	common: [
 		{
@@ -9042,6 +9054,88 @@ var steps = {
 				"horizontal",
 				"vertical"
 			]
+		}
+	],
+	"react-mantine": [
+		{
+			name: "steps",
+			type: "array"
+		},
+		{
+			name: "color",
+			type: "string",
+			options: [
+				"grey",
+				"red",
+				"pink",
+				"grape",
+				"violet",
+				"indigo",
+				"blue",
+				"cyan",
+				"teal",
+				"green",
+				"lime",
+				"yellow",
+				"orange"
+			]
+		},
+		{
+			name: "radius",
+			type: "string",
+			options: [
+				"xs",
+				"sm",
+				"md",
+				"lg",
+				"xl"
+			]
+		},
+		{
+			name: "size",
+			type: "string",
+			description: "Size of the field",
+			options: [
+				"xs",
+				"sm",
+				"md",
+				"lg",
+				"xl"
+			]
+		},
+		{
+			name: "iconPosition",
+			type: "string",
+			description: "Icon position relative to the step body, \"left\" by default",
+			options: [
+				"left",
+				"right"
+			]
+		},
+		{
+			name: "iconSize",
+			type: "number",
+			description: "Determines whether steps should wrap to the next line if no space is available, true by default"
+		},
+		{
+			name: "wrap",
+			type: "boolean",
+			description: "Determines whether steps should wrap to the next line if no space is available, true by default"
+		},
+		{
+			name: "allowStepClick",
+			type: "boolean",
+			description: "Set to false to disable clicks on step"
+		},
+		{
+			name: "allowStepSelect",
+			type: "boolean",
+			description: "Should step selection be allowed"
+		},
+		{
+			name: "autoContrast",
+			type: "boolean",
+			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
 		}
 	],
 	frameworks: [

@@ -1,4 +1,4 @@
-/* LetsForm react-bootstrap v0.7.17 - UMD */
+/* LetsForm react-bootstrap v0.7.18 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-hook-form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-hook-form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button'], factory) :
@@ -7242,6 +7242,19 @@
   	hidden: null,
   	accept: null,
   	acceptedFile: null,
+  	uploadButtonLabel: [
+  		"react",
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-antd"
+  	],
+  	multiple: [
+  		"react",
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-antd",
+  		"react-mantine"
+  	],
   	listType: [
   		"react-rsuite5",
   		"react-antd"
@@ -7259,22 +7272,11 @@
   	disabledFileItem: [
   		"react-rsuite5"
   	],
-  	multiple: [
-  		"react-rsuite5",
-  		"react-material-ui",
-  		"react-antd",
-  		"react-mantine"
-  	],
   	removable: [
   		"react-rsuite5"
   	],
   	draggable: [
   		"react-rsuite5",
-  		"react-antd"
-  	],
-  	uploadButtonLabel: [
-  		"react-rsuite5",
-  		"react-material-ui",
   		"react-antd"
   	],
   	uploadButtonAppearance: [
@@ -7364,23 +7366,28 @@
   	align: null,
   	steps: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	value: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	label: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	description: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	icon: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	small: [
   		"react-rsuite5",
@@ -7404,6 +7411,33 @@
   	],
   	labelPlacement: [
   		"react-antd"
+  	],
+  	color: [
+  		"react-mantine"
+  	],
+  	radius: [
+  		"react-mantine"
+  	],
+  	size: [
+  		"react-mantine"
+  	],
+  	iconPosition: [
+  		"react-mantine"
+  	],
+  	iconSize: [
+  		"react-mantine"
+  	],
+  	wrap: [
+  		"react-mantine"
+  	],
+  	allowStepClick: [
+  		"react-mantine"
+  	],
+  	allowStepSelect: [
+  		"react-mantine"
+  	],
+  	autoContrast: [
+  		"react-mantine"
   	],
   	validationMinLength: "validation",
   	validationMin: "validation",
@@ -9289,7 +9323,8 @@
   		},
   		{
   			name: "alignOffset",
-  			type: "number"
+  			type: "number",
+  			description: "Offset of the add / remove button from the top / bottom (depends on the alignment)"
   		},
   		{
   			name: "arrayType",
@@ -12370,7 +12405,7 @@
   		{
   			name: "autoContrast",
   			type: "boolean",
-  			description: "Determines whether active item text color should depend on background-color of the indicator. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast. Only applicable when variant=\"pills\""
+  			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
   		},
   		{
   			name: "inverted",
@@ -12431,6 +12466,17 @@
   			name: "accept",
   			type: "array",
   			description: "Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "
+  		}
+  	],
+  	react: [
+  		{
+  			name: "uploadButtonLabel",
+  			type: "string | i18n"
+  		},
+  		{
+  			name: "multiple",
+  			type: "boolean",
+  			description: "Allow selecting multiple files"
   		}
   	],
   	"react-rsuite5": [
@@ -12713,7 +12759,7 @@
   var steps = {
   	label: "Steps",
   	category: "layout",
-  	description: "Split the form in multiple steps",
+  	description: "Layout component to split the form in multiple steps",
   	name: "steps",
   	common: [
   		{
@@ -12810,6 +12856,88 @@
   				"horizontal",
   				"vertical"
   			]
+  		}
+  	],
+  	"react-mantine": [
+  		{
+  			name: "steps",
+  			type: "array"
+  		},
+  		{
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"grey",
+  				"red",
+  				"pink",
+  				"grape",
+  				"violet",
+  				"indigo",
+  				"blue",
+  				"cyan",
+  				"teal",
+  				"green",
+  				"lime",
+  				"yellow",
+  				"orange"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "iconPosition",
+  			type: "string",
+  			description: "Icon position relative to the step body, \"left\" by default",
+  			options: [
+  				"left",
+  				"right"
+  			]
+  		},
+  		{
+  			name: "iconSize",
+  			type: "number",
+  			description: "Determines whether steps should wrap to the next line if no space is available, true by default"
+  		},
+  		{
+  			name: "wrap",
+  			type: "boolean",
+  			description: "Determines whether steps should wrap to the next line if no space is available, true by default"
+  		},
+  		{
+  			name: "allowStepClick",
+  			type: "boolean",
+  			description: "Set to false to disable clicks on step"
+  		},
+  		{
+  			name: "allowStepSelect",
+  			type: "boolean",
+  			description: "Should step selection be allowed"
+  		},
+  		{
+  			name: "autoContrast",
+  			type: "boolean",
+  			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
   		}
   	],
   	frameworks: [
@@ -15115,6 +15243,24 @@
     return result !== 0;
   };
 
+  /**
+   * isValidTime
+   *
+   * @param {} d Time string (i.e. 12:12:00)
+   * @returns
+   */
+  var isValidTime = function isValidTime(d) {
+    return typeof d === 'string' && d.match(/^[0-9]{1,2}:[0-9]{2,2}(:[0-9]{2,2}){0,1}$/) != null;
+  };
+
+  var omitFields = function omitFields(fields) {
+    var fieldNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+    var toBeOmitted = Array.isArray(fieldNames) ? fieldNames : [fieldNames];
+    return filterFields(fields, function (field) {
+      return !toBeOmitted.includes(field.name);
+    });
+  };
+
   var I18N = function I18N(Component) {
     var propNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
     var funcPropNames = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
@@ -15523,6 +15669,7 @@
           className: "plaintext-value"
         }, value);
       case 'input-text':
+      case 'time':
         return /*#__PURE__*/React.createElement("div", {
           className: "plaintext-value"
         }, value);
@@ -16990,8 +17137,12 @@
         Components = _ref2.Components,
         prependView = _ref2.prependView;
       var renderedFields = (fields || []).filter(function (field) {
+        return Wrapper || field.component !== 'hidden';
+      }) // skip hidden type field (not in design mode)
+      .filter(function (field) {
         return Wrapper || field.hidden !== true;
-      }).map(function (field, index) {
+      }) // skip fields with "hidden" attribute (not in design mode)
+      .map(function (field, index) {
         var Component;
         if (Components[field.component] && Components[field.component][framework]) {
           Component = Components[field.component][framework];
@@ -18040,105 +18191,110 @@
   var Fields = {
     'input-text': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
+        return Promise.resolve().then(function () { return index$m; });
       })
     },
     'select': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
+        return Promise.resolve().then(function () { return index$l; });
       })
     },
     'checkbox': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
+        return Promise.resolve().then(function () { return index$k; });
       })
     },
     'toggle': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
+        return Promise.resolve().then(function () { return index$j; });
       })
     },
     'checkbox-group': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return index$i; });
       })
     },
     'placeholder': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$h; });
       })
     },
     'placeholder-image': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return index$g; });
       })
     },
     'date': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
+        return Promise.resolve().then(function () { return index$f; });
       })
     },
     'textarea': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
+        return Promise.resolve().then(function () { return index$e; });
       })
     },
     'slider': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
+        return Promise.resolve().then(function () { return index$d; });
       })
     },
     'three-columns': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
+        return Promise.resolve().then(function () { return index$c; });
       })
     },
     'two-columns': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
+        return Promise.resolve().then(function () { return index$b; });
       })
     },
     'group': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
+        return Promise.resolve().then(function () { return index$a; });
       })
     },
     'radio-group': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
+        return Promise.resolve().then(function () { return index$9; });
       })
     },
     'divider': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return index$8; });
       })
     },
     'react-view': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return index$7; });
       })
     },
     'datetime': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return index$6; });
       })
     },
     'array': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return index$5; });
       })
     },
     'input-number': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return index$4; });
       })
     },
     'tabs': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return index$3; });
       })
     },
     'button': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'hidden': {
       'react-bootstrap': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
       })
@@ -18254,7 +18410,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Input');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
@@ -18317,7 +18473,7 @@
   });
   lfLog('Loaded ReactBootrap.Select');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select
   });
@@ -18361,7 +18517,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Checkbox');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Checkbox
   });
@@ -18405,7 +18561,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Toggle');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle
   });
@@ -18479,7 +18635,7 @@
   });
   lfLog('Loaded ReactBootrap.CheckboxGroup');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupBootstrap
   });
@@ -18498,14 +18654,14 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded ReactBootrap.Placeholder');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderBootstrap
   });
 
   lfLog('Loaded ReactBootrap.PlaceholderImage');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
@@ -18536,7 +18692,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Date');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Date$1
   });
@@ -18589,7 +18745,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Textarea');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea
   });
@@ -18637,28 +18793,28 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Slider');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Slider
   });
 
   lfLog('Loaded ReactBootrap.ThreeColumn');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded ReactBootrap.TwoColumns');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded ReactBootrap.Group');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index$a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
@@ -18733,21 +18889,21 @@
   });
   lfLog('Loaded ReactBootrap.RadioGroup');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupBootstrap
   });
 
   lfLog('Loaded ReactBootrap.Divider');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var index$8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
   lfLog('Loaded ReactBootrap.ReactView');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var index$7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
@@ -18781,7 +18937,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.DateTime');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var index$6 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateTime
   });
@@ -18806,7 +18962,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Array');
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var index$5 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayBootstrap
   });
@@ -18847,7 +19003,7 @@
     }, rest));
   }, ['label', 'hint', 'placeholder']);
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$4 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     InputNumber: InputNumber
   });
@@ -18901,7 +19057,7 @@
   });
   lfLog('Loaded ReactBootrap.Tabs');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$3 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsReactBootstrap
   });
@@ -18944,9 +19100,25 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded ReactBootrap.Button');
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var index$2 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton
+  });
+
+  var Hidden = function Hidden(_ref) {
+    var name = _ref.name;
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-control-hidden",
+      style: {
+        padding: '10px'
+      }
+    }, "Hidden field: ", /*#__PURE__*/React.createElement("em", null, name));
+  };
+  lfLog('Loaded RSuite5.Hidden');
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Hidden
   });
 
   var css_248z = ".lf-form-react-bootstrap .lf-buttons {\n  display: flex;\n}\n.lf-form-react-bootstrap .lf-buttons button:not(:first-child) {\n  margin-left: 10px;\n}";
@@ -19025,8 +19197,10 @@
   exports.isUrl = isUrl;
   exports.isValidDate = isValidDate;
   exports.isValidDayjsFormat = isValidDayjsFormat;
+  exports.isValidTime = isValidTime;
   exports.makeWidthStyle = makeWidthStyle;
   exports.mapFields = mapFields;
+  exports.omitFields = omitFields;
   exports.passRest = passRest;
   exports.reduceFields = reduceFields;
   exports.replaceField = replaceField;

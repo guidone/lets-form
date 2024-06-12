@@ -1,4 +1,4 @@
-/* LetsForm react v0.7.17 - UMD */
+/* LetsForm react v0.7.18 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-hook-form'], factory) :
@@ -7266,6 +7266,19 @@
   	hidden: null,
   	accept: null,
   	acceptedFile: null,
+  	uploadButtonLabel: [
+  		"react",
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-antd"
+  	],
+  	multiple: [
+  		"react",
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-antd",
+  		"react-mantine"
+  	],
   	listType: [
   		"react-rsuite5",
   		"react-antd"
@@ -7283,22 +7296,11 @@
   	disabledFileItem: [
   		"react-rsuite5"
   	],
-  	multiple: [
-  		"react-rsuite5",
-  		"react-material-ui",
-  		"react-antd",
-  		"react-mantine"
-  	],
   	removable: [
   		"react-rsuite5"
   	],
   	draggable: [
   		"react-rsuite5",
-  		"react-antd"
-  	],
-  	uploadButtonLabel: [
-  		"react-rsuite5",
-  		"react-material-ui",
   		"react-antd"
   	],
   	uploadButtonAppearance: [
@@ -7388,23 +7390,28 @@
   	align: null,
   	steps: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	value: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	label: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	description: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	icon: [
   		"react-rsuite5",
-  		"react-antd"
+  		"react-antd",
+  		"react-mantine"
   	],
   	small: [
   		"react-rsuite5",
@@ -7428,6 +7435,33 @@
   	],
   	labelPlacement: [
   		"react-antd"
+  	],
+  	color: [
+  		"react-mantine"
+  	],
+  	radius: [
+  		"react-mantine"
+  	],
+  	size: [
+  		"react-mantine"
+  	],
+  	iconPosition: [
+  		"react-mantine"
+  	],
+  	iconSize: [
+  		"react-mantine"
+  	],
+  	wrap: [
+  		"react-mantine"
+  	],
+  	allowStepClick: [
+  		"react-mantine"
+  	],
+  	allowStepSelect: [
+  		"react-mantine"
+  	],
+  	autoContrast: [
+  		"react-mantine"
   	],
   	validationMinLength: "validation",
   	validationMin: "validation",
@@ -9313,7 +9347,8 @@
   		},
   		{
   			name: "alignOffset",
-  			type: "number"
+  			type: "number",
+  			description: "Offset of the add / remove button from the top / bottom (depends on the alignment)"
   		},
   		{
   			name: "arrayType",
@@ -12394,7 +12429,7 @@
   		{
   			name: "autoContrast",
   			type: "boolean",
-  			description: "Determines whether active item text color should depend on background-color of the indicator. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast. Only applicable when variant=\"pills\""
+  			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
   		},
   		{
   			name: "inverted",
@@ -12455,6 +12490,17 @@
   			name: "accept",
   			type: "array",
   			description: "Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "
+  		}
+  	],
+  	react: [
+  		{
+  			name: "uploadButtonLabel",
+  			type: "string | i18n"
+  		},
+  		{
+  			name: "multiple",
+  			type: "boolean",
+  			description: "Allow selecting multiple files"
   		}
   	],
   	"react-rsuite5": [
@@ -12737,7 +12783,7 @@
   var steps = {
   	label: "Steps",
   	category: "layout",
-  	description: "Split the form in multiple steps",
+  	description: "Layout component to split the form in multiple steps",
   	name: "steps",
   	common: [
   		{
@@ -12834,6 +12880,88 @@
   				"horizontal",
   				"vertical"
   			]
+  		}
+  	],
+  	"react-mantine": [
+  		{
+  			name: "steps",
+  			type: "array"
+  		},
+  		{
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"grey",
+  				"red",
+  				"pink",
+  				"grape",
+  				"violet",
+  				"indigo",
+  				"blue",
+  				"cyan",
+  				"teal",
+  				"green",
+  				"lime",
+  				"yellow",
+  				"orange"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "iconPosition",
+  			type: "string",
+  			description: "Icon position relative to the step body, \"left\" by default",
+  			options: [
+  				"left",
+  				"right"
+  			]
+  		},
+  		{
+  			name: "iconSize",
+  			type: "number",
+  			description: "Determines whether steps should wrap to the next line if no space is available, true by default"
+  		},
+  		{
+  			name: "wrap",
+  			type: "boolean",
+  			description: "Determines whether steps should wrap to the next line if no space is available, true by default"
+  		},
+  		{
+  			name: "allowStepClick",
+  			type: "boolean",
+  			description: "Set to false to disable clicks on step"
+  		},
+  		{
+  			name: "allowStepSelect",
+  			type: "boolean",
+  			description: "Should step selection be allowed"
+  		},
+  		{
+  			name: "autoContrast",
+  			type: "boolean",
+  			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
   		}
   	],
   	frameworks: [
@@ -15139,6 +15267,24 @@
     return result !== 0;
   };
 
+  /**
+   * isValidTime
+   *
+   * @param {} d Time string (i.e. 12:12:00)
+   * @returns
+   */
+  var isValidTime = function isValidTime(d) {
+    return typeof d === 'string' && d.match(/^[0-9]{1,2}:[0-9]{2,2}(:[0-9]{2,2}){0,1}$/) != null;
+  };
+
+  var omitFields = function omitFields(fields) {
+    var fieldNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+    var toBeOmitted = Array.isArray(fieldNames) ? fieldNames : [fieldNames];
+    return filterFields(fields, function (field) {
+      return !toBeOmitted.includes(field.name);
+    });
+  };
+
   var I18N = function I18N(Component) {
     var propNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
     var funcPropNames = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
@@ -15547,6 +15693,7 @@
           className: "plaintext-value"
         }, value);
       case 'input-text':
+      case 'time':
         return /*#__PURE__*/React.createElement("div", {
           className: "plaintext-value"
         }, value);
@@ -15991,11 +16138,11 @@
     }, "&npsb;"));
   };
 
-  var _excluded$d = ["name", "view"];
+  var _excluded$e = ["name", "view"];
   var ReactView = function ReactView(_ref) {
     var name = _ref.name,
       view = _ref.view,
-      rest = _objectWithoutProperties(_ref, _excluded$d);
+      rest = _objectWithoutProperties(_ref, _excluded$e);
     var View = view;
     return /*#__PURE__*/React.createElement("div", {
       className: "lf-control-react-view",
@@ -16469,7 +16616,7 @@
   var css_248z$8 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$8);
 
-  var _excluded$c = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$d = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -16495,7 +16642,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$c);
+      rest = _objectWithoutProperties(_ref, _excluded$d);
     var _useState = React.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -17002,8 +17149,12 @@
         Components = _ref2.Components,
         prependView = _ref2.prependView;
       var renderedFields = (fields || []).filter(function (field) {
+        return Wrapper || field.component !== 'hidden';
+      }) // skip hidden type field (not in design mode)
+      .filter(function (field) {
         return Wrapper || field.hidden !== true;
-      }).map(function (field, index) {
+      }) // skip fields with "hidden" attribute (not in design mode)
+      .map(function (field, index) {
         var Component;
         if (Components[field.component] && Components[field.component][framework]) {
           Component = Components[field.component][framework];
@@ -18048,89 +18199,99 @@
     return LazyWithPreload;
   }
 
-  var _excluded$b = ["framework", "children"];
+  var _excluded$c = ["framework", "children"];
   var Fields = {
     'input-text': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return index$j; });
       })
     },
     'input-number': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$i; });
       })
     },
     'checkbox': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return index$h; });
       })
     },
     'textarea': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
+        return Promise.resolve().then(function () { return index$g; });
       })
     },
     'three-columns': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
+        return Promise.resolve().then(function () { return index$f; });
       })
     },
     'two-columns': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
+        return Promise.resolve().then(function () { return index$e; });
       })
     },
     'group': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
+        return Promise.resolve().then(function () { return index$d; });
       })
     },
     'divider': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
+        return Promise.resolve().then(function () { return index$c; });
       })
     },
     'react-view': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
+        return Promise.resolve().then(function () { return index$b; });
       })
     },
     'placeholder': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
+        return Promise.resolve().then(function () { return index$a; });
       })
     },
     'select': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return index$9; });
       })
     },
     'date': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return index$8; });
       })
     },
     'datetime': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return index$7; });
+      })
+    },
+    'time': {
+      'react': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$6; });
       })
     },
     'array': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return index$5; });
       })
     },
     'placeholder-image': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return index$4; });
       })
     },
     'button': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return index$3; });
       })
     },
     'upload': {
+      'react': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'hidden': {
       'react': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
       })
@@ -18153,13 +18314,13 @@
   var LetsForm = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$b);
+      rest = _objectWithoutProperties(_ref, _excluded$c);
     return /*#__PURE__*/React.createElement(FormGenerator, _extends({
       framework: "react"
     }, rest), children);
   };
 
-  var _excluded$a = ["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "submitOnEnter", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component", "lfOnEnter"];
+  var _excluded$b = ["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "submitOnEnter", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component", "lfOnEnter"];
   var ReactGenericInput = function ReactGenericInput(_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -18185,7 +18346,7 @@
       _ref.component;
       var _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$a);
+      rest = _objectWithoutProperties(_ref, _excluded$b);
     var hasError = error && _isString(error);
     var handleKeyUp = React.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
@@ -18219,10 +18380,10 @@
   var css_248z$5 = ".lf-form-react .lf-control-input-text input[type=color] {\n  min-width: 60px;\n}";
   styleInject(css_248z$5);
 
-  var _excluded$9 = ["onChange"];
+  var _excluded$a = ["onChange"];
   var TextInput = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$9);
+      rest = _objectWithoutProperties(_ref, _excluded$a);
     var handleChange = React.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -18234,12 +18395,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.InputText');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
 
-  var _excluded$8 = ["onChange", "min", "max", "step"];
+  var _excluded$9 = ["onChange", "min", "max", "step"];
   var hasDecimals = function hasDecimals(f) {
     return _isString(f) && (f.includes(',') || f.includes('.'));
   };
@@ -18248,7 +18409,7 @@
       min = _ref.min,
       max = _ref.max,
       step = _ref.step,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
+      rest = _objectWithoutProperties(_ref, _excluded$9);
     var handleChange = React.useCallback(function (e) {
       var value = e.target.value;
       var parsed;
@@ -18278,12 +18439,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.InputNumber');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumber
   });
 
-  var _excluded$7 = ["name", "label", "lfLocale", "className", "inputType", "hint", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"];
+  var _excluded$8 = ["name", "label", "lfLocale", "className", "inputType", "hint", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"];
   var ReactGenericCheckbox = function ReactGenericCheckbox(_ref) {
     var name = _ref.name,
       label = _ref.label;
@@ -18299,7 +18460,7 @@
       disabled = _ref.disabled,
       readOnly = _ref.readOnly,
       required = _ref.required,
-      rest = _objectWithoutProperties(_ref, _excluded$7);
+      rest = _objectWithoutProperties(_ref, _excluded$8);
     var hasError = error && _isString(error);
     return /*#__PURE__*/React.createElement("div", {
       className: classNames(className, 'lf-form-react-control-group'),
@@ -18323,10 +18484,10 @@
     }, error));
   };
 
-  var _excluded$6 = ["onChange"];
+  var _excluded$7 = ["onChange"];
   var Checkbox = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$6);
+      rest = _objectWithoutProperties(_ref, _excluded$7);
     var handleChange = React.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
@@ -18338,12 +18499,12 @@
   }, ['hint', 'label']);
   lfLog('Loaded React.Checkbox');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Checkbox
   });
 
-  var _excluded$5 = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "readOnly", "required", "size", "rows", "width", "fullWidth"];
+  var _excluded$6 = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "readOnly", "required", "size", "rows", "width", "fullWidth"];
   var Textarea = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -18359,7 +18520,7 @@
       rows = _ref.rows,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
-      rest = _objectWithoutProperties(_ref, _excluded$5);
+      rest = _objectWithoutProperties(_ref, _excluded$6);
     var hasError = error && _isString(error);
     var handleChange = React.useCallback(function (e) {
       return onChange(e.target.value);
@@ -18388,42 +18549,42 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.Textarea');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea
   });
 
   lfLog('Loaded React.ThreeColumns');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded React.TwoColumns');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded React.Group');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
   lfLog('Loaded React.Divider');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
   lfLog('Loaded React.ReactView');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index$b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
@@ -18446,12 +18607,12 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded React.Placeholder');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderReact
   });
 
-  var _excluded$4 = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey"];
+  var _excluded$5 = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey"];
   var Select = I18N(function (_ref) {
     var _filterOptions;
     var name = _ref.name;
@@ -18472,7 +18633,7 @@
       options = _ref.options,
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
-      rest = _objectWithoutProperties(_ref, _excluded$4);
+      rest = _objectWithoutProperties(_ref, _excluded$5);
     var hasError = error && _isString(error);
     var handleChange = React.useCallback(function (e) {
       return onChange(e.target.value === '' ? null : e.target.value);
@@ -18513,16 +18674,16 @@
   });
   lfLog('Loaded React.Select');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var index$9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select
   });
 
-  var _excluded$3 = ["onChange", "value"];
+  var _excluded$4 = ["onChange", "value"];
   var DateInput = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$3);
+      rest = _objectWithoutProperties(_ref, _excluded$4);
     var handleChange = React.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -18541,16 +18702,16 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.Date');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var index$8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateInput
   });
 
-  var _excluded$2 = ["onChange", "value"];
+  var _excluded$3 = ["onChange", "value"];
   var DateTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$2);
+      rest = _objectWithoutProperties(_ref, _excluded$3);
     var handleChange = React.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -18572,9 +18733,40 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.DateTime');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var index$7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateTime
+  });
+
+  var _excluded$2 = ["onChange", "value"];
+  var Time = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties(_ref, _excluded$2);
+    var handleChange = React.useCallback(function (e) {
+      console.log('cosa arriva?', e.target.value);
+      onChange(e.target.value);
+    }, [onChange]);
+    var currentDate = value;
+    if (isValidDate(value)) {
+      // only keep iso up to the minutes digits
+      var match = value.toISOString().match(/(.*?T[0-9]{1,2}:[0-9]{1,2})/gm);
+      if (match != null) {
+        currentDate = match[0];
+      }
+    }
+    return /*#__PURE__*/React.createElement(ReactGenericInput, _extends({
+      inputType: "time",
+      className: "lf-control-time",
+      value: currentDate,
+      onChange: handleChange
+    }, rest));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded React.Time');
+
+  var index$6 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Time
   });
 
   var css_248z$4 = ".lf-form-react .lf-control-common-array-item {\n  padding-bottom: 5px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-two-columns:last-child {\n  margin-bottom: 0px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-three-columns:last-child {\n  margin-bottom: 0px;\n}";
@@ -18605,14 +18797,14 @@
   }, ['label', 'hint']);
   lfLog('Loaded React.Array');
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var index$5 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayReact
   });
 
   lfLog('Loaded React.PlaceholderImage');
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$4 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
@@ -18665,7 +18857,7 @@
   lfLog('Loaded React.Button');
   var Button = BiStateButton;
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$3 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Button
   });
@@ -18875,9 +19067,25 @@
   lfLog('Loaded React.Upload');
   var Upload$1 = Upload;
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var index$2 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload$1
+  });
+
+  var Hidden = function Hidden(_ref) {
+    var name = _ref.name;
+    return /*#__PURE__*/React.createElement("div", {
+      className: "lf-control-hidden",
+      style: {
+        padding: '10px'
+      }
+    }, "Hidden field: ", /*#__PURE__*/React.createElement("em", null, name));
+  };
+  lfLog('Loaded RSuite5.Hidden');
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Hidden
   });
 
   var css_248z = ".lf-form-react input[type=text],\n.lf-form-react input[type=password],\n.lf-form-react input[type=email],\n.lf-form-react input[type=url],\n.lf-form-react input[type=date],\n.lf-form-react input[type=month],\n.lf-form-react input[type=time],\n.lf-form-react input[type=datetime],\n.lf-form-react input[type=datetime-local],\n.lf-form-react input[type=week],\n.lf-form-react input[type=number],\n.lf-form-react input[type=search],\n.lf-form-react input[type=tel],\n.lf-form-react input[type=color],\n.lf-form-react select,\n.lf-form-react textarea {\n  padding: 0.5em 0.6em;\n  display: inline-block;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  vertical-align: middle;\n  box-sizing: border-box;\n  height: 36px;\n}\n\n/*\nNeed to separate out the :not() selector from the rest of the CSS 2.1 selectors\nsince IE8 won't execute CSS that contains a CSS3 selector.\n*/\n.lf-form-react input:not([type]) {\n  padding: 0.5em 0.6em;\n  display: inline-block;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  box-sizing: border-box;\n}\n\n/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */\n/* May be able to remove this tweak as color inputs become more standardized across browsers. */\n.lf-form-react input[type=color] {\n  padding: 0.2em 0.5em;\n}\n\n.lf-form-react input[type=text]:focus,\n.lf-form-react input[type=password]:focus,\n.lf-form-react input[type=email]:focus,\n.lf-form-react input[type=url]:focus,\n.lf-form-react input[type=date]:focus,\n.lf-form-react input[type=month]:focus,\n.lf-form-react input[type=time]:focus,\n.lf-form-react input[type=datetime]:focus,\n.lf-form-react input[type=datetime-local]:focus,\n.lf-form-react input[type=week]:focus,\n.lf-form-react input[type=number]:focus,\n.lf-form-react input[type=search]:focus,\n.lf-form-react input[type=tel]:focus,\n.lf-form-react input[type=color]:focus,\n.lf-form-react select:focus,\n.lf-form-react textarea:focus {\n  outline: 0;\n  border-color: #129FEA;\n}\n\n/*\nNeed to separate out the :not() selector from the rest of the CSS 2.1 selectors\nsince IE8 won't execute CSS that contains a CSS3 selector.\n*/\n.lf-form-react input:not([type]):focus {\n  outline: 0;\n  border-color: #129FEA;\n}\n\n.lf-form-react input[type=file]:focus,\n.lf-form-react input[type=radio]:focus,\n.lf-form-react input[type=checkbox]:focus {\n  outline: thin solid #129FEA;\n  outline: 1px auto #129FEA;\n}\n\n.lf-form-react .lf-form-react-checkbox,\n.lf-form-react .lf-form-react-radio {\n  display: block;\n}\n\n.lf-form-react input[type=text][disabled],\n.lf-form-react input[type=password][disabled],\n.lf-form-react input[type=email][disabled],\n.lf-form-react input[type=url][disabled],\n.lf-form-react input[type=date][disabled],\n.lf-form-react input[type=month][disabled],\n.lf-form-react input[type=time][disabled],\n.lf-form-react input[type=datetime][disabled],\n.lf-form-react input[type=datetime-local][disabled],\n.lf-form-react input[type=week][disabled],\n.lf-form-react input[type=number][disabled],\n.lf-form-react input[type=search][disabled],\n.lf-form-react input[type=tel][disabled],\n.lf-form-react input[type=color][disabled],\n.lf-form-react select[disabled],\n.lf-form-react textarea[disabled] {\n  cursor: not-allowed;\n  background-color: #eaeded;\n  color: #cad2d3;\n}\n\n.lf-form-react input[readonly],\n.lf-form-react select[readonly],\n.lf-form-react textarea[readonly] {\n  background-color: #eee; /* menu hover bg color */\n  color: #777; /* menu text color */\n  border-color: #ccc;\n}\n\n.lf-form-react input:focus:invalid,\n.lf-form-react textarea:focus:invalid,\n.lf-form-react select:focus:invalid {\n  color: #b94a48;\n  border-color: #e9322d;\n}\n\n.lf-form-react input[type=file]:focus:invalid:focus,\n.lf-form-react input[type=radio]:focus:invalid:focus,\n.lf-form-react input[type=checkbox]:focus:invalid:focus {\n  outline-color: #e9322d;\n}\n\n.lf-form-react select {\n  /* Normalizes the height; padding is not sufficient. */\n  height: 2.25em;\n  border: 1px solid #ccc;\n  background-color: white;\n}\n\n.lf-form-react select[multiple] {\n  height: auto;\n}\n\n.lf-form-react label {\n  margin: 3px 0px;\n}\n\n.lf-form-react fieldset {\n  margin: 0;\n  padding: 0.35em 0 0.75em;\n  border: 0;\n}\n\n.lf-form-react legend {\n  display: block;\n  width: 100%;\n  padding: 0.3em 0;\n  color: #333;\n  border-bottom: 1px solid #e5e5e5;\n}\n\n.lf-form-react-stacked input[type=text],\n.lf-form-react-stacked input[type=password],\n.lf-form-react-stacked input[type=email],\n.lf-form-react-stacked input[type=url],\n.lf-form-react-stacked input[type=date],\n.lf-form-react-stacked input[type=month],\n.lf-form-react-stacked input[type=time],\n.lf-form-react-stacked input[type=datetime],\n.lf-form-react-stacked input[type=datetime-local],\n.lf-form-react-stacked input[type=week],\n.lf-form-react-stacked input[type=number],\n.lf-form-react-stacked input[type=search],\n.lf-form-react-stacked input[type=tel],\n.lf-form-react-stacked input[type=color],\n.lf-form-react-stacked input[type=file],\n.lf-form-react-stacked select,\n.lf-form-react-stacked label,\n.lf-form-react-stacked textarea {\n  display: block;\n}\n\n.pure-form-aligned input,\n.pure-form-aligned textarea,\n.pure-form-aligned select,\n.pure-form-message-inline {\n  display: inline-block;\n  vertical-align: middle;\n}\n\n.pure-form-aligned textarea {\n  vertical-align: top;\n}\n\n/* Aligned Forms */\n.pure-form-aligned .pure-control-group {\n  margin-bottom: 0.5em;\n}\n\n.pure-form-aligned .pure-control-group label {\n  text-align: right;\n  display: inline-block;\n  vertical-align: middle;\n  width: 10em;\n  margin: 0 1em 0 0;\n}\n\n.pure-form-aligned .pure-controls {\n  margin: 1.5em 0 0 11em;\n}\n\n.lf-form-react .lf-form-react-input-1 {\n  width: 100%;\n}\n\n.lf-form-react .lf-form-react-input-3-4 {\n  width: 75%;\n}\n\n.lf-form-react .lf-form-react-input-2-3 {\n  width: 66%;\n}\n\n.lf-form-react .lf-form-react-input-1-2 {\n  width: 50%;\n}\n\n.lf-form-react .lf-form-react-input-1-3 {\n  width: 33%;\n}\n\n.lf-form-react .lf-form-react-input-1-4 {\n  width: 25%;\n}\n\n.lf-form-react-message {\n  display: block;\n  color: #666;\n  font-size: 0.875em;\n}\n\n.lf-form-react-error-message {\n  color: #FF3300;\n  display: block;\n  font-size: 0.875em;\n}\n\n.lf-form-react-primary-button {\n  appearance: button;\n  background-color: #1652F0;\n  border: 1px solid #1652F0;\n  border-radius: 4px;\n  box-sizing: border-box;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.15;\n  overflow: visible;\n  padding: 8px 16px;\n  position: relative;\n  text-align: center;\n  text-transform: none;\n  transition: all 80ms ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  width: fit-content;\n}\n.lf-form-react-primary-button:focus {\n  outline: 0;\n}\n.lf-form-react-primary-button:hover {\n  background-color: #0A46E4;\n  border-color: #0A46E4;\n}\n.lf-form-react-primary-button:active {\n  background-color: #0039D7;\n  border-color: #0039D7;\n}\n\n.lf-form-react-secondary-button {\n  appearance: button;\n  background-color: #999999;\n  border: 1px solid #999999;\n  border-radius: 4px;\n  box-sizing: border-box;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.15;\n  overflow: visible;\n  padding: 8px 16px;\n  position: relative;\n  text-align: center;\n  text-transform: none;\n  transition: all 80ms ease-in-out;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  width: fit-content;\n}\n.lf-form-react-secondary-button:focus {\n  outline: 0;\n}\n.lf-form-react-secondary-button:hover {\n  background-color: #888888;\n  border-color: #888888;\n}\n.lf-form-react-secondary-button:active {\n  background-color: #888888;\n  border-color: #888888;\n}\n\n.lf-form-react .lf-buttons {\n  display: flex;\n}\n.lf-form-react .lf-buttons button:not(:first-child) {\n  margin-left: 10px;\n}";
@@ -18960,8 +19168,10 @@
   exports.isUrl = isUrl;
   exports.isValidDate = isValidDate;
   exports.isValidDayjsFormat = isValidDayjsFormat;
+  exports.isValidTime = isValidTime;
   exports.makeWidthStyle = makeWidthStyle;
   exports.mapFields = mapFields;
+  exports.omitFields = omitFields;
   exports.passRest = passRest;
   exports.reduceFields = reduceFields;
   exports.replaceField = replaceField;
