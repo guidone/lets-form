@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.8.0 - ESM */
+/* LetsForm Utils v0.8.1 - ESM */
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -4860,6 +4860,13 @@ var toggle = {
 	label: "Toggle",
 	category: "general",
 	name: "toggle",
+	frameworks: [
+		"react-antd",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -4969,7 +4976,8 @@ var toggle = {
 		},
 		{
 			name: "tooltip",
-			type: "boolean"
+			type: "boolean",
+			description: "Show hint as tooltip"
 		},
 		{
 			name: "checkedChildren",
@@ -5041,19 +5049,20 @@ var toggle = {
 				"orange"
 			]
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var select = {
 	label: "Select",
 	category: "general",
 	description: "Select / Combo box",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	name: "select",
 	common: [
 		{
@@ -5296,7 +5305,8 @@ var select = {
 		},
 		{
 			name: "tooltip",
-			type: "boolean"
+			type: "boolean",
+			description: "Show hint as tooltip"
 		},
 		{
 			name: "showSearch",
@@ -5410,14 +5420,6 @@ var select = {
 			type: "boolean",
 			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var group = {
@@ -5425,6 +5427,14 @@ var group = {
 	category: "layout",
 	name: "group",
 	description: "Visually Group a set of fields, can be collapsed",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -5467,20 +5477,20 @@ var group = {
 				"boxed"
 			]
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var array = {
 	label: "List Array",
 	category: "general",
 	name: "array",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	"react-mui": [
 	],
 	common: [
@@ -5539,20 +5549,19 @@ var array = {
 				"commaSeparated"
 			]
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var slider = {
 	label: "Slider",
 	category: "general",
 	name: "slider",
+	frameworks: [
+		"react-antd",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -5849,13 +5858,6 @@ var slider = {
 			type: "boolean",
 			description: "Determines whether the label should be displayed when the slider is hovered, true by default"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var date = {
@@ -5863,6 +5865,14 @@ var date = {
 	category: "general",
 	description: "Date field, returns a string in ISO-8601 format (i.e., 1972-10-01)",
 	name: "date",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	dependencies: {
 		"react-material-ui": {
 			imports: {
@@ -6331,7 +6341,8 @@ var date = {
 		},
 		{
 			name: "tooltip",
-			type: "boolean"
+			type: "boolean",
+			description: "Show hint as tooltip"
 		}
 	],
 	"react-mantine": [
@@ -6512,20 +6523,20 @@ var date = {
 			name: "rightSectionWidth",
 			type: "number"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var checkbox = {
 	label: "Checkbox",
 	category: "general",
 	name: "checkbox",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -6701,20 +6712,20 @@ var checkbox = {
 			name: "indeterminate",
 			type: "boolean"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var textarea = {
 	label: "Textarea",
 	category: "general",
 	name: "textarea",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -6929,7 +6940,8 @@ var textarea = {
 		},
 		{
 			name: "tooltip",
-			type: "boolean"
+			type: "boolean",
+			description: "Show hint as tooltip"
 		}
 	],
 	"react-mantine": [
@@ -7013,14 +7025,6 @@ var textarea = {
 			type: "boolean",
 			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var rate = {
@@ -7028,6 +7032,12 @@ var rate = {
 	category: "general",
 	name: "rate",
 	description: "Five stars rating field",
+	frameworks: [
+		"react-antd",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -7156,7 +7166,8 @@ var rate = {
 		},
 		{
 			name: "tooltip",
-			type: "boolean"
+			type: "boolean",
+			description: "Show hint as tooltip"
 		}
 	],
 	"react-mantine": [
@@ -7206,18 +7217,20 @@ var rate = {
 			type: "boolean",
 			description: "If set, only the selected symbol changes to full symbol when selected, false by default"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var placeholder = {
 	label: "Placeholder",
 	category: "layout",
 	name: "placeholder",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	description: "Generic placeholder for an image inside the form, supports basic parameters like width, height and margin",
 	common: [
 		{
@@ -7256,22 +7269,21 @@ var placeholder = {
 	"react-antd": [
 		{
 			name: "tooltip",
-			type: "boolean"
+			type: "boolean",
+			description: "Show hint as tooltip"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var multiselect = {
 	label: "MultiSelect",
 	category: "general",
 	name: "multiselect",
+	frameworks: [
+		"react-antd",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -7481,7 +7493,8 @@ var multiselect = {
 		},
 		{
 			name: "tooltip",
-			type: "boolean"
+			type: "boolean",
+			description: "Show hint as tooltip"
 		},
 		{
 			name: "showSearch",
@@ -7632,12 +7645,6 @@ var multiselect = {
 			type: "boolean",
 			description: "Determines whether the options should be wrapped with scroll bars, true by default"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var button = {
@@ -7645,6 +7652,14 @@ var button = {
 	category: "layout",
 	description: "Icon button, can be used as toggle button or just a link button",
 	name: "button",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -7893,14 +7908,6 @@ var button = {
 			type: "boolean",
 			description: "Show hint as tooltip next to label"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var divider = {
@@ -7908,6 +7915,14 @@ var divider = {
 	category: "layout",
 	description: "Layout divider, customizable with size and color",
 	name: "divider",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -7944,20 +7959,20 @@ var divider = {
 				"right"
 			]
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var datetime = {
 	label: "Date Time",
 	category: "general",
 	name: "datetime",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	dependencies: {
 		"react-material-ui": {
 			imports: {
@@ -8476,7 +8491,8 @@ var datetime = {
 		},
 		{
 			name: "tooltip",
-			type: "boolean"
+			type: "boolean",
+			description: "Show hint as tooltip"
 		}
 	],
 	"react-mantine": [
@@ -8652,14 +8668,6 @@ var datetime = {
 			name: "rightSectionWidth",
 			type: "number"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var tabs = {
@@ -8667,6 +8675,11 @@ var tabs = {
 	category: "layout",
 	description: "Layout component for tabs",
 	name: "tabs",
+	frameworks: [
+		"react-antd",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -8890,19 +8903,19 @@ var tabs = {
 			type: "boolean",
 			description: "Determines whether arrow key presses should loop though items (first to last and last to first), true by default"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var upload = {
 	label: "Upload",
 	category: "general",
 	name: "upload",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	description: "Upload file control, returns an array of json with file info and blob",
 	common: [
 		{
@@ -9130,7 +9143,8 @@ var upload = {
 		},
 		{
 			name: "tooltip",
-			type: "boolean"
+			type: "boolean",
+			description: "Show hint as tooltip"
 		}
 	],
 	"react-mantine": [
@@ -9216,12 +9230,6 @@ var upload = {
 			type: "boolean",
 			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react-antd",
-		"react-mantine"
 	]
 };
 var steps = {
@@ -9229,6 +9237,11 @@ var steps = {
 	category: "layout",
 	description: "Layout component to split the form in multiple steps",
 	name: "steps",
+	frameworks: [
+		"react-antd",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -9407,10 +9420,6 @@ var steps = {
 			type: "boolean",
 			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-antd"
 	]
 };
 var time = {
@@ -9418,6 +9427,13 @@ var time = {
 	category: "general",
 	description: "Time input",
 	name: "time",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	dependencies: {
 		"react-material-ui": {
 			imports: {
@@ -9791,7 +9807,8 @@ var time = {
 		},
 		{
 			name: "tooltip",
-			type: "boolean"
+			type: "boolean",
+			description: "Show hint as tooltip"
 		},
 		{
 			name: "placement",
@@ -9892,6 +9909,14 @@ var hidden = {
 	label: "Hidden",
 	category: "general",
 	name: "hidden",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	description: "Hidden field, just a placeholder for data, component will not be visible in the form (only during design)",
 	common: [
 		{
@@ -9907,6 +9932,14 @@ var Manifests = {
 	category: "general",
 	name: "input-text",
 	description: "Basic input text",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -10259,7 +10292,8 @@ var Manifests = {
 		},
 		{
 			name: "tooltip",
-			type: "boolean"
+			type: "boolean",
+			description: "Show hint as tooltip"
 		},
 		{
 			name: "bordered",
@@ -10335,14 +10369,6 @@ var Manifests = {
 			type: "boolean",
 			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 },
 	toggle: toggle,
@@ -10352,6 +10378,14 @@ var Manifests = {
 	label: "Two Columns",
 	category: "layout",
 	name: "two-columns",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -10424,20 +10458,20 @@ var Manifests = {
 			type: "boolean",
 			description: "Hides the field from the form"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 },
 	"three-columns": {
 	label: "Three Columns",
 	category: "layout",
 	name: "three-columns",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -10530,21 +10564,21 @@ var Manifests = {
 			type: "boolean",
 			description: "Hides the field from the form"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 },
 	array: array,
 	"input-number": {
-	label: "Input number",
+	label: "Input Number",
 	category: "general",
 	name: "input-number",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	description: "Basic input number field, returns a numeric value",
 	common: [
 		{
@@ -10840,7 +10874,8 @@ var Manifests = {
 		},
 		{
 			name: "tooltip",
-			type: "boolean"
+			type: "boolean",
+			description: "Show hint as tooltip"
 		}
 	],
 	"react-mantine": [
@@ -10991,14 +11026,6 @@ var Manifests = {
 			type: "string",
 			description: "A character used to separate thousands"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 },
 	slider: slider,
@@ -11008,6 +11035,13 @@ var Manifests = {
 	label: "Checkbox Group",
 	category: "general",
 	name: "checkbox-group",
+	frameworks: [
+		"react-antd",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -11191,19 +11225,19 @@ var Manifests = {
 			type: "boolean",
 			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 },
 	"radio-group": {
 	label: "Radio Group",
 	category: "general",
 	name: "radio-group",
+	frameworks: [
+		"react-antd",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -11333,7 +11367,8 @@ var Manifests = {
 		},
 		{
 			name: "tooltip",
-			type: "boolean"
+			type: "boolean",
+			description: "Show hint as tooltip"
 		}
 	],
 	"react-mantine": [
@@ -11415,13 +11450,6 @@ var Manifests = {
 			type: "boolean",
 			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 },
 	"input-tag": {
@@ -11429,6 +11457,10 @@ var Manifests = {
 	category: "general",
 	name: "input-tag",
 	description: "Input tags, create tags, returns an array of string",
+	frameworks: [
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -11605,10 +11637,6 @@ var Manifests = {
 			type: "boolean",
 			description: "Determines whether the options should be wrapped with scroll bars, true by default"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-mantine"
 	]
 },
 	"input-mask": {
@@ -11616,6 +11644,9 @@ var Manifests = {
 	category: "general",
 	name: "input-mask",
 	description: "Masked input text",
+	frameworks: [
+		"react-rsuite5"
+	],
 	common: [
 		{
 			name: "name",
@@ -11719,9 +11750,6 @@ var Manifests = {
 			type: "string",
 			description: "Fixed trailing text"
 		}
-	],
-	frameworks: [
-		"react-rsuite5"
 	]
 },
 	textarea: textarea,
@@ -11808,7 +11836,6 @@ var Manifests = {
 		}
 	],
 	frameworks: [
-		"react-rsuite5"
 	]
 },
 	"placeholder-image": {
@@ -11816,6 +11843,14 @@ var Manifests = {
 	category: "layout",
 	name: "placeholder-image",
 	description: "Image placeholder",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-mui",
+		"react-rsuite5",
+		"react-mantine"
+	],
 	common: [
 		{
 			name: "name",
@@ -11947,14 +11982,6 @@ var Manifests = {
 			name: "marginBottom",
 			type: "number"
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-material-ui",
-		"react",
-		"react-bootstrap",
-		"react-antd",
-		"react-mantine"
 	]
 },
 	button: button,
@@ -11966,6 +11993,9 @@ var Manifests = {
 	description: "Radio control with card, description and icon",
 	category: "general",
 	name: "radio-tile",
+	frameworks: [
+		"react-rsuite5"
+	],
 	common: [
 		{
 			name: "name",
@@ -12020,9 +12050,6 @@ var Manifests = {
 			type: "boolean",
 			description: "Show hint as tooltip next to label"
 		}
-	],
-	frameworks: [
-		"react-rsuite5"
 	]
 },
 	upload: upload,
@@ -12031,6 +12058,10 @@ var Manifests = {
 	category: "layout",
 	description: "List of toggle buttons, works like a radio group, returns an array of string",
 	name: "buttons-toggle-group",
+	frameworks: [
+		"react-antd",
+		"react-rsuite5"
+	],
 	common: [
 		{
 			name: "name",
@@ -12117,10 +12148,6 @@ var Manifests = {
 				"large"
 			]
 		}
-	],
-	frameworks: [
-		"react-rsuite5",
-		"react-antd"
 	]
 },
 	steps: steps,
@@ -12129,6 +12156,9 @@ var Manifests = {
 	category: "general",
 	name: "esm-module",
 	description: "Generic ESM module",
+	frameworks: [
+		"react-rsuite5"
+	],
 	common: [
 		{
 			name: "name",
