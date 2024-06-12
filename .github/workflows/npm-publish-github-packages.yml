@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4         
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '18.x'
@@ -36,15 +36,15 @@ jobs:
           git config --global user.name "Guido Bellomo"
           git add .
           git commit -m "build"
-          npm version ${{ github.ref_name }} 
+          npm version ${{ github.ref_name }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Push changes to repository
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git push origin HEAD:main && git push --tags          
-      - run: npm publish --tag beta
+          git push origin HEAD:main && git push --tags
+      - run: npm publish
         name: Publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
