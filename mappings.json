@@ -52,6 +52,7 @@
     ],
     "variant": [
       "react-material-ui",
+      "react-antd",
       "react-mantine"
     ],
     "color": [
@@ -224,10 +225,8 @@
     ],
     "variant": [
       "react-material-ui",
+      "react-antd",
       "react-mantine"
-    ],
-    "popupMatchSelectWidth": [
-      "react-antd"
     ],
     "listHeight": [
       "react-antd"
@@ -235,13 +234,10 @@
     "allowClear": [
       "react-antd"
     ],
-    "bordered": [
+    "popupMatchSelectWidth": [
       "react-antd"
     ],
     "showSearch": [
-      "react-antd"
-    ],
-    "showArrow": [
       "react-antd"
     ],
     "virtual": [
@@ -394,7 +390,8 @@
     "prefix": [
       "react-rsuite5",
       "react-material-ui",
-      "react-bootstrap"
+      "react-bootstrap",
+      "react-antd"
     ],
     "inside": [
       "react-rsuite5"
@@ -402,7 +399,8 @@
     "postfix": [
       "react-rsuite5",
       "react-material-ui",
-      "react-bootstrap"
+      "react-bootstrap",
+      "react-antd"
     ],
     "tooltip": [
       "react-rsuite5",
@@ -410,6 +408,7 @@
     ],
     "variant": [
       "react-material-ui",
+      "react-antd",
       "react-mantine"
     ],
     "color": [
@@ -426,9 +425,6 @@
       "react-antd"
     ],
     "stringMode": [
-      "react-antd"
-    ],
-    "bordered": [
       "react-antd"
     ],
     "radius": [
@@ -680,6 +676,7 @@
     ],
     "variant": [
       "react-material-ui",
+      "react-antd",
       "react-mantine"
     ],
     "color": [
@@ -753,15 +750,6 @@
     "mode": [
       "react-antd"
     ],
-    "bordered": [
-      "react-antd"
-    ],
-    "allowClear": [
-      "react-antd"
-    ],
-    "tooltip": [
-      "react-antd"
-    ],
     "showTime": [
       "react-antd"
     ],
@@ -778,6 +766,12 @@
       "react-antd"
     ],
     "needConfirm": [
+      "react-antd"
+    ],
+    "allowClear": [
+      "react-antd"
+    ],
+    "tooltip": [
       "react-antd"
     ],
     "radius": [
@@ -1218,6 +1212,7 @@
     ],
     "variant": [
       "react-material-ui",
+      "react-antd",
       "react-mantine"
     ],
     "color": [
@@ -1236,16 +1231,13 @@
     "showCount": [
       "react-antd"
     ],
+    "autoSize": [
+      "react-antd"
+    ],
     "maxLength": [
       "react-antd"
     ],
     "allowClear": [
-      "react-antd"
-    ],
-    "autoSize": [
-      "react-antd"
-    ],
-    "bordered": [
       "react-antd"
     ],
     "radius": [
@@ -1410,6 +1402,7 @@
     ],
     "fullWidth": [
       "react-material-ui",
+      "react-antd",
       "react-mantine"
     ],
     "width": [
@@ -1422,6 +1415,7 @@
     ],
     "variant": [
       "react-material-ui",
+      "react-antd",
       "react-mantine"
     ],
     "listHeight": [
@@ -1430,13 +1424,10 @@
     "allowClear": [
       "react-antd"
     ],
-    "bordered": [
+    "popupMatchSelectWidth": [
       "react-antd"
     ],
     "showSearch": [
-      "react-antd"
-    ],
-    "showArrow": [
       "react-antd"
     ],
     "virtual": [
@@ -1722,6 +1713,7 @@
     ],
     "variant": [
       "react-material-ui",
+      "react-antd",
       "react-mantine"
     ],
     "color": [
@@ -1823,15 +1815,6 @@
     "mode": [
       "react-antd"
     ],
-    "bordered": [
-      "react-antd"
-    ],
-    "allowClear": [
-      "react-antd"
-    ],
-    "tooltip": [
-      "react-antd"
-    ],
     "showTime": [
       "react-antd"
     ],
@@ -1848,6 +1831,12 @@
       "react-antd"
     ],
     "needConfirm": [
+      "react-antd"
+    ],
+    "allowClear": [
+      "react-antd"
+    ],
+    "tooltip": [
       "react-antd"
     ],
     "radius": [
@@ -2323,13 +2312,15 @@
     "size": [
       "react-rsuite5",
       "react-material-ui",
+      "react-antd",
       "react-mantine"
     ],
     "appearance": [
       "react-rsuite5"
     ],
     "placement": [
-      "react-rsuite5"
+      "react-rsuite5",
+      "react-antd"
     ],
     "fullWidth": [
       "react-rsuite5",
@@ -2355,10 +2346,12 @@
     ],
     "format": [
       "react-rsuite5",
-      "react-material-ui"
+      "react-material-ui",
+      "react-antd"
     ],
     "variant": [
       "react-material-ui",
+      "react-antd",
       "react-mantine"
     ],
     "color": [
@@ -2413,6 +2406,36 @@
     ],
     "timeStepsSeconds": [
       "react-material-ui"
+    ],
+    "hourStep": [
+      "react-antd"
+    ],
+    "minuteStep": [
+      "react-antd"
+    ],
+    "secondStep": [
+      "react-antd"
+    ],
+    "allowClear": [
+      "react-antd"
+    ],
+    "hideDisabledOptions": [
+      "react-antd"
+    ],
+    "inputReadOnly": [
+      "react-antd"
+    ],
+    "needConfirm": [
+      "react-antd"
+    ],
+    "showNow": [
+      "react-antd"
+    ],
+    "use12Hours": [
+      "react-antd"
+    ],
+    "tooltip": [
+      "react-antd"
     ],
     "radius": [
       "react-mantine"

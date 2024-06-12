@@ -1,4 +1,4 @@
-/* LetsForm react-rsuite5 v0.7.18 - UMD */
+/* LetsForm react-rsuite5 v0.7.19 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', 'react-hook-form'], factory) :
@@ -6055,12 +6055,14 @@
   	hidden: null,
   	fullWidth: [
   		"react",
+  		"react-rsuite5",
   		"react-material-ui",
   		"react-antd",
   		"react-mantine"
   	],
   	width: [
   		"react",
+  		"react-rsuite5",
   		"react-material-ui",
   		"react-antd",
   		"react-mantine"
@@ -6075,9 +6077,6 @@
   		"react-bootstrap",
   		"react-antd",
   		"react-mantine"
-  	],
-  	block: [
-  		"react-rsuite5"
   	],
   	searchable: [
   		"react-rsuite5"
@@ -6334,8 +6333,33 @@
   		"react-material-ui",
   		"react-antd"
   	],
-  	block: [
+  	size: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	appearance: [
   		"react-rsuite5"
+  	],
+  	placement: [
+  		"react-rsuite5",
+  		"react-antd"
+  	],
+  	fullWidth: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	width: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
   	],
   	cleanable: [
   		"react-rsuite5"
@@ -6355,24 +6379,28 @@
   	isoWeek: [
   		"react-rsuite5"
   	],
-  	size: [
-  		"react-rsuite5",
-  		"react-bootstrap",
-  		"react-antd",
-  		"react-mantine"
-  	],
-  	appearance: [
-  		"react-rsuite5"
-  	],
-  	placement: [
-  		"react-rsuite5",
-  		"react-antd"
-  	],
-  	fullWidth: [
+  	variant: [
   		"react-material-ui",
-  		"react-bootstrap",
-  		"react-antd",
   		"react-mantine"
+  	],
+  	color: [
+  		"react-material-ui"
+  	],
+  	views: [
+  		"react-material-ui"
+  	],
+  	closeOnSelect: [
+  		"react-material-ui"
+  	],
+  	reduceAnimations: [
+  		"react-material-ui"
+  	],
+  	showDaysOutsideCurrentMonth: [
+  		"react-material-ui"
+  	],
+  	floatingLabel: [
+  		"react-material-ui",
+  		"react-bootstrap"
   	],
   	disableFuture: [
   		"react-material-ui"
@@ -6389,10 +6417,19 @@
   	displayWeekNumber: [
   		"react-material-ui"
   	],
-  	reduceAnimations: [
+  	loading: [
   		"react-material-ui"
   	],
-  	showDaysOutsideCurrentMonth: [
+  	fixedWeekNumber: [
+  		"react-material-ui"
+  	],
+  	formatDensity: [
+  		"react-material-ui"
+  	],
+  	monthsPerRow: [
+  		"react-material-ui"
+  	],
+  	yearsPerRow: [
   		"react-material-ui"
   	],
   	minDate: [
@@ -6405,22 +6442,11 @@
   		"react-antd",
   		"react-mantine"
   	],
-  	views: [
-  		"react-material-ui"
-  	],
   	prefix: [
   		"react-bootstrap"
   	],
   	postfix: [
   		"react-bootstrap"
-  	],
-  	floatingLabel: [
-  		"react-bootstrap"
-  	],
-  	width: [
-  		"react-bootstrap",
-  		"react-antd",
-  		"react-mantine"
   	],
   	picker: [
   		"react-antd"
@@ -6456,9 +6482,6 @@
   		"react-antd"
   	],
   	radius: [
-  		"react-mantine"
-  	],
-  	variant: [
   		"react-mantine"
   	],
   	valueFormat: [
@@ -6985,8 +7008,33 @@
   		"react-material-ui",
   		"react-antd"
   	],
-  	block: [
+  	size: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	appearance: [
   		"react-rsuite5"
+  	],
+  	placement: [
+  		"react-rsuite5",
+  		"react-antd"
+  	],
+  	fullWidth: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	width: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
   	],
   	cleanable: [
   		"react-rsuite5"
@@ -7000,30 +7048,34 @@
   	showMeridian: [
   		"react-rsuite5"
   	],
-  	showWeekNumbers: [
-  		"react-rsuite5"
-  	],
   	isoWeek: [
   		"react-rsuite5"
   	],
-  	size: [
-  		"react-rsuite5",
-  		"react-bootstrap",
-  		"react-antd",
-  		"react-mantine"
-  	],
-  	appearance: [
+  	showWeekNumbers: [
   		"react-rsuite5"
   	],
-  	placement: [
-  		"react-rsuite5",
-  		"react-antd"
-  	],
-  	fullWidth: [
+  	variant: [
   		"react-material-ui",
-  		"react-bootstrap",
-  		"react-antd",
   		"react-mantine"
+  	],
+  	color: [
+  		"react-material-ui"
+  	],
+  	views: [
+  		"react-material-ui"
+  	],
+  	closeOnSelect: [
+  		"react-material-ui"
+  	],
+  	reduceAnimations: [
+  		"react-material-ui"
+  	],
+  	showDaysOutsideCurrentMonth: [
+  		"react-material-ui"
+  	],
+  	floatingLabel: [
+  		"react-material-ui",
+  		"react-bootstrap"
   	],
   	disableFuture: [
   		"react-material-ui"
@@ -7040,23 +7092,57 @@
   	displayWeekNumber: [
   		"react-material-ui"
   	],
-  	reduceAnimations: [
+  	ampm: [
   		"react-material-ui"
   	],
-  	showDaysOutsideCurrentMonth: [
+  	ampmInClock: [
   		"react-material-ui"
   	],
-  	maxDate: [
+  	forceMobile: [
+  		"react-material-ui"
+  	],
+  	loading: [
+  		"react-material-ui"
+  	],
+  	fixedWeekNumber: [
+  		"react-material-ui"
+  	],
+  	formatDensity: [
   		"react-material-ui",
-  		"react-antd",
-  		"react-mantine"
+  		"react-material-ui"
+  	],
+  	monthsPerRow: [
+  		"react-material-ui"
+  	],
+  	yearsPerRow: [
+  		"react-material-ui"
   	],
   	minDate: [
   		"react-material-ui",
   		"react-antd",
   		"react-mantine"
   	],
-  	views: [
+  	maxDate: [
+  		"react-material-ui",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	minDateTime: [
+  		"react-material-ui"
+  	],
+  	maxDateTime: [
+  		"react-material-ui"
+  	],
+  	minutesStep: [
+  		"react-material-ui"
+  	],
+  	timeStepsHours: [
+  		"react-material-ui"
+  	],
+  	timeStepsMinutes: [
+  		"react-material-ui"
+  	],
+  	timeStepsSeconds: [
   		"react-material-ui"
   	],
   	prefix: [
@@ -7064,14 +7150,6 @@
   	],
   	postfix: [
   		"react-bootstrap"
-  	],
-  	floatingLabel: [
-  		"react-bootstrap"
-  	],
-  	width: [
-  		"react-bootstrap",
-  		"react-antd",
-  		"react-mantine"
   	],
   	picker: [
   		"react-antd"
@@ -7107,9 +7185,6 @@
   		"react-antd"
   	],
   	radius: [
-  		"react-mantine"
-  	],
-  	variant: [
   		"react-mantine"
   	],
   	valueFormat: [
@@ -7496,6 +7571,144 @@
   	validationPattern: "validation",
   	validationMessage: "validation",
   	required: null
+  };
+  var time$1 = {
+  	name: null,
+  	label: null,
+  	hint: null,
+  	placeholder: null,
+  	disabled: null,
+  	readOnly: null,
+  	hidden: null,
+  	size: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	appearance: [
+  		"react-rsuite5"
+  	],
+  	placement: [
+  		"react-rsuite5"
+  	],
+  	fullWidth: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	width: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	cleanable: [
+  		"react-rsuite5"
+  	],
+  	editable: [
+  		"react-rsuite5"
+  	],
+  	oneTap: [
+  		"react-rsuite5"
+  	],
+  	showMeridian: [
+  		"react-rsuite5"
+  	],
+  	format: [
+  		"react-rsuite5",
+  		"react-material-ui"
+  	],
+  	variant: [
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	color: [
+  		"react-material-ui"
+  	],
+  	views: [
+  		"react-material-ui"
+  	],
+  	floatingLabel: [
+  		"react-material-ui"
+  	],
+  	ampm: [
+  		"react-material-ui"
+  	],
+  	ampmInClock: [
+  		"react-material-ui"
+  	],
+  	forceMobile: [
+  		"react-material-ui"
+  	],
+  	closeOnSelect: [
+  		"react-material-ui"
+  	],
+  	disableFuture: [
+  		"react-material-ui"
+  	],
+  	disableOpenPicker: [
+  		"react-material-ui"
+  	],
+  	disablePast: [
+  		"react-material-ui"
+  	],
+  	minTime: [
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	maxTime: [
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	formatDensity: [
+  		"react-material-ui"
+  	],
+  	minutesStep: [
+  		"react-material-ui"
+  	],
+  	timeStepsHours: [
+  		"react-material-ui"
+  	],
+  	timeStepsMinutes: [
+  		"react-material-ui"
+  	],
+  	timeStepsSeconds: [
+  		"react-material-ui"
+  	],
+  	radius: [
+  		"react-mantine"
+  	],
+  	withSeconds: [
+  		"react-mantine"
+  	],
+  	pointer: [
+  		"react-mantine"
+  	],
+  	showBrowserPicker: [
+  		"react-mantine"
+  	],
+  	leftSection: [
+  		"react-mantine"
+  	],
+  	rightSection: [
+  		"react-mantine"
+  	],
+  	leftSectionWidth: [
+  		"react-mantine"
+  	],
+  	rightSectionWidth: [
+  		"react-mantine"
+  	],
+  	validationMinLength: "validation",
+  	validationMin: "validation",
+  	validationMaxLength: "validation",
+  	validationMax: "validation",
+  	validationPattern: "validation",
+  	validationMessage: "validation",
+  	required: null
+  };
+  var hidden$1 = {
+  	name: null,
+  	info: null
   };
   var FIELD_MAPPINGS = {
   	"input-text": {
@@ -8239,7 +8452,9 @@
   	validationPattern: "validation",
   	validationMessage: "validation",
   	required: null
-  }
+  },
+  	time: time$1,
+  	hidden: hidden$1
   };
 
   var translateValidationKey = function translateValidationKey(str) {
@@ -9005,9 +9220,14 @@
   			]
   		},
   		{
-  			name: "block",
+  			name: "fullWidth",
   			type: "boolean",
-  			description: "Only in fluid layout"
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
   		},
   		{
   			name: "searchable",
@@ -9721,7 +9941,7 @@
   			],
   			packages: {
   				"@mui/x-date-pickers": "latest",
-  				dayjs: "1.11.10"
+  				dayjs: "latest"
   			}
   		},
   		"react-mantine": {
@@ -9808,39 +10028,6 @@
   			description: "Check https://date-fns.org library for available formats"
   		},
   		{
-  			name: "block",
-  			type: "boolean",
-  			description: "Only in fluid layout"
-  		},
-  		{
-  			name: "cleanable",
-  			type: "boolean"
-  		},
-  		{
-  			name: "editable",
-  			type: "boolean",
-  			description: "Rendered as an input, the date can be entered via the keyboard"
-  		},
-  		{
-  			name: "oneTap",
-  			type: "boolean",
-  			description: "One click to complete the selection date"
-  		},
-  		{
-  			name: "showMeridian",
-  			type: "boolean",
-  			description: "Display hours in 12 format"
-  		},
-  		{
-  			name: "showWeekNumbers",
-  			type: "boolean"
-  		},
-  		{
-  			name: "isoWeek",
-  			type: "boolean",
-  			description: "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
-  		},
-  		{
   			name: "size",
   			type: "string",
   			description: "Size of the field",
@@ -9877,46 +10064,184 @@
   				"autoHorizontalStart",
   				"autoHorizontalEnd"
   			]
-  		}
-  	],
-  	"react-material-ui": [
-  		{
-  			name: "format",
-  			type: "string",
-  			description: "Date format, i.e. DD/MM/YYYY"
   		},
   		{
   			name: "fullWidth",
   			type: "boolean",
-  			description: "Set the width of the container field to 100%"
+  			description: "Set the width of the field to 100% of the enclosing container"
   		},
   		{
-  			name: "disableFuture",
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "cleanable",
   			type: "boolean"
   		},
   		{
-  			name: "disableHighlightToday",
+  			name: "editable",
+  			type: "boolean",
+  			description: "Rendered as an input, the date can be entered via the keyboard"
+  		},
+  		{
+  			name: "oneTap",
+  			type: "boolean",
+  			description: "One click to complete the selection date"
+  		},
+  		{
+  			name: "showMeridian",
+  			type: "boolean",
+  			description: "Display hours in 12 format"
+  		},
+  		{
+  			name: "showWeekNumbers",
   			type: "boolean"
   		},
   		{
-  			name: "disableOpenPicker",
-  			type: "boolean"
+  			name: "isoWeek",
+  			type: "boolean",
+  			description: "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
+  		}
+  	],
+  	"react-material-ui": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"small",
+  				"medium",
+  				"large"
+  			]
   		},
   		{
-  			name: "disablePast",
-  			type: "boolean"
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"filled",
+  				"standard"
+  			]
   		},
   		{
-  			name: "displayWeekNumber",
-  			type: "boolean"
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"error",
+  				"info",
+  				"primary",
+  				"secondary",
+  				"success",
+  				"warning"
+  			]
+  		},
+  		{
+  			name: "format",
+  			type: "string",
+  			description: "Check https://date-fns.org library for available formats"
+  		},
+  		{
+  			name: "views",
+  			type: "[string]",
+  			description: "Available views",
+  			options: [
+  				"day",
+  				"month",
+  				"year"
+  			]
+  		},
+  		{
+  			name: "closeOnSelect",
+  			type: "boolean",
+  			description: "If true, the popover or modal will close after submitting the full date"
   		},
   		{
   			name: "reduceAnimations",
-  			type: "boolean"
+  			type: "boolean",
+  			description: "If true, disable heavy animations"
   		},
   		{
   			name: "showDaysOutsideCurrentMonth",
-  			type: "boolean"
+  			type: "boolean",
+  			description: "If true, days outside the current month are rendered:\n- if fixedWeekNumber is defined, renders days to have the weeks requested.\n- if fixedWeekNumber is not defined, renders day to fill the first and last week of the current month.\n- ignored if calendars equals more than 1 on range pickers"
+  		},
+  		{
+  			name: "floatingLabel",
+  			type: "boolean",
+  			description: "Show floating label for the control"
+  		},
+  		{
+  			name: "disableFuture",
+  			type: "boolean",
+  			description: "If true, disable values after the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "disableHighlightToday",
+  			type: "boolean",
+  			description: "If true, today's date is rendering without highlighting with circle"
+  		},
+  		{
+  			name: "disableOpenPicker",
+  			type: "boolean",
+  			description: "If true, the open picker button will not be rendered (renders only the field)"
+  		},
+  		{
+  			name: "disablePast",
+  			type: "boolean",
+  			description: "If true, disable values before the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "displayWeekNumber",
+  			type: "boolean",
+  			description: "If true, the week number will be display in the calendar"
+  		},
+  		{
+  			name: "loading",
+  			type: "boolean",
+  			description: "If true, calls renderLoading instead of rendering the day calendar. Can be used to preload information and show it in calendar"
+  		},
+  		{
+  			name: "fixedWeekNumber",
+  			type: "number",
+  			description: "The day view will show as many weeks as needed after the end of the current month to match this value. Put it to 6 to have a fixed number of weeks in Gregorian calendars"
+  		},
+  		{
+  			name: "formatDensity",
+  			type: "string",
+  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
+  			options: [
+  				"dense",
+  				"spacious"
+  			]
+  		},
+  		{
+  			name: "monthsPerRow",
+  			type: "string",
+  			description: "Months rendered per row",
+  			options: [
+  				3,
+  				4
+  			]
+  		},
+  		{
+  			name: "yearsPerRow",
+  			type: "string",
+  			description: "Years rendered per row",
+  			options: [
+  				3,
+  				4
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
   		},
   		{
   			name: "minDate",
@@ -9925,15 +10250,6 @@
   		{
   			name: "maxDate",
   			type: "date"
-  		},
-  		{
-  			name: "views",
-  			type: "[string]",
-  			options: [
-  				"day",
-  				"month",
-  				"year"
-  			]
   		}
   	],
   	"react-bootstrap": [
@@ -11699,7 +12015,7 @@
   			],
   			packages: {
   				"@mui/x-date-pickers": "latest",
-  				dayjs: "1.11.10"
+  				dayjs: "latest"
   			}
   		},
   		"react-mantine": {
@@ -11786,39 +12102,6 @@
   			description: "Check https://date-fns.org library for available formats"
   		},
   		{
-  			name: "block",
-  			type: "boolean",
-  			description: "Only in fluid layout"
-  		},
-  		{
-  			name: "cleanable",
-  			type: "boolean"
-  		},
-  		{
-  			name: "editable",
-  			type: "boolean",
-  			description: "Rendered as an input, the date can be entered via the keyboard"
-  		},
-  		{
-  			name: "oneTap",
-  			type: "boolean",
-  			description: "One click to complete the selection date"
-  		},
-  		{
-  			name: "showMeridian",
-  			type: "boolean",
-  			description: "Display hours in 12 format"
-  		},
-  		{
-  			name: "showWeekNumbers",
-  			type: "boolean"
-  		},
-  		{
-  			name: "isoWeek",
-  			type: "boolean",
-  			description: "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
-  		},
-  		{
   			name: "size",
   			type: "string",
   			description: "Size of the field",
@@ -11855,54 +12138,82 @@
   				"autoHorizontalStart",
   				"autoHorizontalEnd"
   			]
-  		}
-  	],
-  	"react-material-ui": [
-  		{
-  			name: "format",
-  			type: "string",
-  			description: "Date format, i.e. DD/MM/YYYY"
   		},
   		{
   			name: "fullWidth",
   			type: "boolean",
-  			description: "Set the width of the container field to 100%"
+  			description: "Set the width of the field to 100% of the enclosing container"
   		},
   		{
-  			name: "disableFuture",
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "cleanable",
   			type: "boolean"
   		},
   		{
-  			name: "disableHighlightToday",
+  			name: "editable",
+  			type: "boolean",
+  			description: "Rendered as an input, the date can be entered via the keyboard"
+  		},
+  		{
+  			name: "oneTap",
+  			type: "boolean",
+  			description: "One click to complete the selection date"
+  		},
+  		{
+  			name: "showMeridian",
+  			type: "boolean",
+  			description: "Display hours in 12 format"
+  		},
+  		{
+  			name: "isoWeek",
+  			type: "boolean",
+  			description: "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
+  		},
+  		{
+  			name: "showWeekNumbers",
   			type: "boolean"
+  		}
+  	],
+  	"react-material-ui": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"small",
+  				"medium",
+  				"large"
+  			]
   		},
   		{
-  			name: "disableOpenPicker",
-  			type: "boolean"
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"filled",
+  				"standard"
+  			]
   		},
   		{
-  			name: "disablePast",
-  			type: "boolean"
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"error",
+  				"info",
+  				"primary",
+  				"secondary",
+  				"success",
+  				"warning"
+  			]
   		},
   		{
-  			name: "displayWeekNumber",
-  			type: "boolean"
-  		},
-  		{
-  			name: "reduceAnimations",
-  			type: "boolean"
-  		},
-  		{
-  			name: "showDaysOutsideCurrentMonth",
-  			type: "boolean"
-  		},
-  		{
-  			name: "maxDate",
-  			type: "date"
-  		},
-  		{
-  			name: "minDate",
-  			type: "date"
+  			name: "format",
+  			type: "string",
+  			description: "Check https://date-fns.org library for available formats"
   		},
   		{
   			name: "views",
@@ -11915,6 +12226,154 @@
   				"month",
   				"year"
   			]
+  		},
+  		{
+  			name: "closeOnSelect",
+  			type: "boolean",
+  			description: "If true, the popover or modal will close after submitting the full date"
+  		},
+  		{
+  			name: "reduceAnimations",
+  			type: "boolean",
+  			description: "If true, disable heavy animations"
+  		},
+  		{
+  			name: "showDaysOutsideCurrentMonth",
+  			type: "boolean",
+  			description: "If true, days outside the current month are rendered:\n- if fixedWeekNumber is defined, renders days to have the weeks requested.\n- if fixedWeekNumber is not defined, renders day to fill the first and last week of the current month.\n- ignored if calendars equals more than 1 on range pickers"
+  		},
+  		{
+  			name: "floatingLabel",
+  			type: "boolean",
+  			description: "Show floating label for the control"
+  		},
+  		{
+  			name: "disableFuture",
+  			type: "boolean",
+  			description: "If true, disable values after the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "disableHighlightToday",
+  			type: "boolean",
+  			description: "If true, today's date is rendering without highlighting with circle"
+  		},
+  		{
+  			name: "disableOpenPicker",
+  			type: "boolean",
+  			description: "If true, the open picker button will not be rendered (renders only the field)"
+  		},
+  		{
+  			name: "disablePast",
+  			type: "boolean",
+  			description: "If true, disable values before the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "displayWeekNumber",
+  			type: "boolean",
+  			description: "If true, the week number will be display in the calendar"
+  		},
+  		{
+  			name: "ampm",
+  			type: "boolean",
+  			description: "12h/24h view for hour selection clock"
+  		},
+  		{
+  			name: "ampmInClock",
+  			type: "boolean",
+  			description: "Display ampm controls under the clock (instead of in the toolbar)"
+  		},
+  		{
+  			name: "forceMobile",
+  			type: "boolean",
+  			description: "Force mobile component"
+  		},
+  		{
+  			name: "loading",
+  			type: "boolean",
+  			description: "If true, calls renderLoading instead of rendering the day calendar. Can be used to preload information and show it in calendar"
+  		},
+  		{
+  			name: "fixedWeekNumber",
+  			type: "number",
+  			description: "The day view will show as many weeks as needed after the end of the current month to match this value. Put it to 6 to have a fixed number of weeks in Gregorian calendars"
+  		},
+  		{
+  			name: "formatDensity",
+  			type: "string",
+  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
+  			options: [
+  				"dense",
+  				"spacious"
+  			]
+  		},
+  		{
+  			name: "monthsPerRow",
+  			type: "string",
+  			description: "Months rendered per row",
+  			options: [
+  				3,
+  				4
+  			]
+  		},
+  		{
+  			name: "yearsPerRow",
+  			type: "string",
+  			description: "Years rendered per row",
+  			options: [
+  				3,
+  				4
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "minDate",
+  			type: "date"
+  		},
+  		{
+  			name: "maxDate",
+  			type: "date"
+  		},
+  		{
+  			name: "minDateTime"
+  		},
+  		{
+  			name: "maxDateTime"
+  		},
+  		{
+  			name: "formatDensity",
+  			type: "string",
+  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
+  			options: [
+  				"dense",
+  				"spacious"
+  			]
+  		},
+  		{
+  			name: "minutesStep",
+  			type: "number",
+  			description: "Step over minutes"
+  		},
+  		{
+  			name: "timeStepsHours",
+  			type: "number",
+  			description: "The time steps between two time unit options. For example, if timeStep.minutes = 8, then the available minute options will be [0, 8, 16, 24, 32, 40, 48, 56]"
+  		},
+  		{
+  			name: "timeStepsMinutes",
+  			type: "number"
+  		},
+  		{
+  			name: "timeStepsSeconds",
+  			type: "number"
   		}
   	],
   	"react-bootstrap": [
@@ -12993,6 +13452,410 @@
   	frameworks: [
   		"react-rsuite5",
   		"react-antd"
+  	]
+  };
+  var time = {
+  	label: "Time",
+  	category: "general",
+  	description: "Time input",
+  	name: "time",
+  	dependencies: {
+  		"react-material-ui": {
+  			imports: {
+  			},
+  			js: [
+  				"import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';",
+  				"import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';",
+  				null
+  			],
+  			packages: {
+  				"@mui/x-date-pickers": "latest",
+  				dayjs: "latest"
+  			}
+  		},
+  		"react-mantine": {
+  			js: [
+  				null
+  			],
+  			css: [
+  				null
+  			],
+  			imports: {
+  			},
+  			packages: {
+  				"@mantine/dates": "^7.6.2",
+  				dayjs: "^1.11.10"
+  			}
+  		},
+  		"react-rsuite5": {
+  			js: [
+  				null
+  			],
+  			css: [
+  			],
+  			imports: {
+  			},
+  			packages: {
+  			}
+  		},
+  		"react-antd": {
+  			js: [
+  				null,
+  				null,
+  				null
+  			],
+  			css: [
+  			],
+  			imports: {
+  			},
+  			packages: {
+  				dayjs: "^1.11.10"
+  			}
+  		}
+  	},
+  	common: [
+  		{
+  			name: "name",
+  			type: "string",
+  			description: "The name of the field and the key of the JSON"
+  		},
+  		{
+  			name: "label",
+  			type: "string | i18n",
+  			description: "Label of the field"
+  		},
+  		{
+  			name: "hint",
+  			type: "string | i18n",
+  			description: "Help text for the field (generally shown below the input box)"
+  		},
+  		{
+  			name: "placeholder",
+  			type: "string | i18n",
+  			description: "Placeholder text, visibile when the field is empty"
+  		},
+  		{
+  			name: "disabled",
+  			type: "boolean",
+  			description: "Disables and greys out the field"
+  		},
+  		{
+  			name: "readOnly",
+  			type: "boolean",
+  			description: "Put the field in read only mode"
+  		},
+  		{
+  			name: "hidden",
+  			type: "boolean",
+  			description: "Hides the field from the form"
+  		}
+  	],
+  	"react-rsuite5": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"lg",
+  				"md",
+  				"sm",
+  				"xs"
+  			]
+  		},
+  		{
+  			name: "appearance",
+  			type: "string",
+  			options: [
+  				"default",
+  				"subtle"
+  			]
+  		},
+  		{
+  			name: "placement",
+  			type: "string",
+  			options: [
+  				"topStart",
+  				"topEnd",
+  				"leftStart",
+  				"rightStart",
+  				"leftEnd",
+  				"rightEnd",
+  				"bottomStart",
+  				"bottomEnd",
+  				"auto",
+  				"autoVerticalStart",
+  				"autoVerticalEnd",
+  				"autoHorizontalStart",
+  				"autoHorizontalEnd"
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "cleanable",
+  			type: "boolean"
+  		},
+  		{
+  			name: "editable",
+  			type: "boolean",
+  			description: "Rendered as an input, the date can be entered via the keyboard"
+  		},
+  		{
+  			name: "oneTap",
+  			type: "boolean",
+  			description: "One click to complete the selection date"
+  		},
+  		{
+  			name: "showMeridian",
+  			type: "boolean",
+  			description: "Display hours in 12 format"
+  		},
+  		{
+  			name: "format",
+  			type: "string",
+  			options: [
+  				"HH:mm",
+  				"HH:mm:ss",
+  				"hh:mm:ss aaa",
+  				"hh:mm aaa"
+  			]
+  		}
+  	],
+  	"react-material-ui": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"small",
+  				"medium",
+  				"large"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"filled",
+  				"standard"
+  			]
+  		},
+  		{
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"error",
+  				"info",
+  				"primary",
+  				"secondary",
+  				"success",
+  				"warning"
+  			]
+  		},
+  		{
+  			name: "format",
+  			type: "string",
+  			description: "Check https://date-fns.org library for available formats"
+  		},
+  		{
+  			name: "views",
+  			type: "[string]",
+  			options: [
+  				"hours",
+  				"minutes",
+  				"seconds"
+  			]
+  		},
+  		{
+  			name: "floatingLabel",
+  			type: "boolean",
+  			description: "Show floating label for the control"
+  		},
+  		{
+  			name: "ampm",
+  			type: "boolean",
+  			description: "12h/24h view for hour selection clock"
+  		},
+  		{
+  			name: "ampmInClock",
+  			type: "boolean",
+  			description: "Display ampm controls under the clock (instead of in the toolbar)"
+  		},
+  		{
+  			name: "forceMobile",
+  			type: "boolean",
+  			description: "Force mobile component"
+  		},
+  		{
+  			name: "closeOnSelect",
+  			type: "boolean",
+  			description: "If true, the popover or modal will close after submitting the full date."
+  		},
+  		{
+  			name: "disableFuture",
+  			type: "boolean",
+  			description: "If true, disable values after the current date for date components, time for time components and both for date time components."
+  		},
+  		{
+  			name: "disableOpenPicker",
+  			type: "boolean",
+  			description: "If true, the open picker button will not be rendered (renders only the field)"
+  		},
+  		{
+  			name: "disablePast",
+  			type: "boolean",
+  			description: "If true, disable values before the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "minTime",
+  			type: "string"
+  		},
+  		{
+  			name: "maxTime",
+  			type: "string"
+  		},
+  		{
+  			name: "formatDensity",
+  			type: "string",
+  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
+  			options: [
+  				"dense",
+  				"spacious"
+  			]
+  		},
+  		{
+  			name: "minutesStep",
+  			type: "number",
+  			description: "Step over minutes"
+  		},
+  		{
+  			name: "timeStepsHours",
+  			type: "number",
+  			description: "The time steps between two time unit options. For example, if timeStep.minutes = 8, then the available minute options will be [0, 8, 16, 24, 32, 40, 48, 56]"
+  		},
+  		{
+  			name: "timeStepsMinutes",
+  			type: "number"
+  		},
+  		{
+  			name: "timeStepsSeconds",
+  			type: "number"
+  		}
+  	],
+  	"react-mantine": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"default",
+  				"filled",
+  				"unstyled"
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "minTime",
+  			type: "string"
+  		},
+  		{
+  			name: "maxTime",
+  			type: "string"
+  		},
+  		{
+  			name: "withSeconds",
+  			type: "boolean",
+  			description: "Determines whether seconds input should be rendered"
+  		},
+  		{
+  			name: "pointer",
+  			type: "boolean",
+  			description: "Determines whether the input should have cursor: pointer style, false by default"
+  		},
+  		{
+  			name: "showBrowserPicker",
+  			type: "boolean",
+  			description: "Show browser native picker (if supported)"
+  		},
+  		{
+  			name: "leftSection",
+  			type: "string"
+  		},
+  		{
+  			name: "rightSection",
+  			type: "string"
+  		},
+  		{
+  			name: "leftSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "rightSectionWidth",
+  			type: "number"
+  		}
+  	]
+  };
+  var hidden = {
+  	label: "Hidden",
+  	category: "general",
+  	name: "hidden",
+  	description: "Hidden field, just a placeholder for data, component will not be visible in the form (only during design)",
+  	common: [
+  		{
+  			name: "name",
+  			type: "string",
+  			description: "The name of the field and the key of the JSON"
+  		}
   	]
   };
   var Manifests = {
@@ -15238,7 +16101,9 @@
   			description: "Placeholder text, visibile when the field is empty"
   		}
   	]
-  }
+  },
+  	time: time,
+  	hidden: hidden
   };
 
   var LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns'];

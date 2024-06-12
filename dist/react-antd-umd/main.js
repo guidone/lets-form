@@ -1,4 +1,4 @@
-/* LetsForm react-antd v0.7.18 - UMD */
+/* LetsForm react-antd v0.7.19 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('antd'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'antd', 'react-hook-form'], factory) :
@@ -128,7 +128,10 @@
         _n = !0,
         _d = !1;
       try {
-        if (_x = (_i = _i.call(arr)).next, 0 === i) ; else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0);
+        if (_x = (_i = _i.call(arr)).next, 0 === i) {
+          if (Object(_i) !== _i) return;
+          _n = !1;
+        } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0);
       } catch (err) {
         _d = !0, _e = err;
       } finally {
@@ -5969,12 +5972,14 @@
   	hidden: null,
   	fullWidth: [
   		"react",
+  		"react-rsuite5",
   		"react-material-ui",
   		"react-antd",
   		"react-mantine"
   	],
   	width: [
   		"react",
+  		"react-rsuite5",
   		"react-material-ui",
   		"react-antd",
   		"react-mantine"
@@ -5989,9 +5994,6 @@
   		"react-bootstrap",
   		"react-antd",
   		"react-mantine"
-  	],
-  	block: [
-  		"react-rsuite5"
   	],
   	searchable: [
   		"react-rsuite5"
@@ -6248,8 +6250,33 @@
   		"react-material-ui",
   		"react-antd"
   	],
-  	block: [
+  	size: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	appearance: [
   		"react-rsuite5"
+  	],
+  	placement: [
+  		"react-rsuite5",
+  		"react-antd"
+  	],
+  	fullWidth: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	width: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
   	],
   	cleanable: [
   		"react-rsuite5"
@@ -6269,24 +6296,28 @@
   	isoWeek: [
   		"react-rsuite5"
   	],
-  	size: [
-  		"react-rsuite5",
-  		"react-bootstrap",
-  		"react-antd",
-  		"react-mantine"
-  	],
-  	appearance: [
-  		"react-rsuite5"
-  	],
-  	placement: [
-  		"react-rsuite5",
-  		"react-antd"
-  	],
-  	fullWidth: [
+  	variant: [
   		"react-material-ui",
-  		"react-bootstrap",
-  		"react-antd",
   		"react-mantine"
+  	],
+  	color: [
+  		"react-material-ui"
+  	],
+  	views: [
+  		"react-material-ui"
+  	],
+  	closeOnSelect: [
+  		"react-material-ui"
+  	],
+  	reduceAnimations: [
+  		"react-material-ui"
+  	],
+  	showDaysOutsideCurrentMonth: [
+  		"react-material-ui"
+  	],
+  	floatingLabel: [
+  		"react-material-ui",
+  		"react-bootstrap"
   	],
   	disableFuture: [
   		"react-material-ui"
@@ -6303,10 +6334,19 @@
   	displayWeekNumber: [
   		"react-material-ui"
   	],
-  	reduceAnimations: [
+  	loading: [
   		"react-material-ui"
   	],
-  	showDaysOutsideCurrentMonth: [
+  	fixedWeekNumber: [
+  		"react-material-ui"
+  	],
+  	formatDensity: [
+  		"react-material-ui"
+  	],
+  	monthsPerRow: [
+  		"react-material-ui"
+  	],
+  	yearsPerRow: [
   		"react-material-ui"
   	],
   	minDate: [
@@ -6319,22 +6359,11 @@
   		"react-antd",
   		"react-mantine"
   	],
-  	views: [
-  		"react-material-ui"
-  	],
   	prefix: [
   		"react-bootstrap"
   	],
   	postfix: [
   		"react-bootstrap"
-  	],
-  	floatingLabel: [
-  		"react-bootstrap"
-  	],
-  	width: [
-  		"react-bootstrap",
-  		"react-antd",
-  		"react-mantine"
   	],
   	picker: [
   		"react-antd"
@@ -6370,9 +6399,6 @@
   		"react-antd"
   	],
   	radius: [
-  		"react-mantine"
-  	],
-  	variant: [
   		"react-mantine"
   	],
   	valueFormat: [
@@ -6899,8 +6925,33 @@
   		"react-material-ui",
   		"react-antd"
   	],
-  	block: [
+  	size: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	appearance: [
   		"react-rsuite5"
+  	],
+  	placement: [
+  		"react-rsuite5",
+  		"react-antd"
+  	],
+  	fullWidth: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	width: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
   	],
   	cleanable: [
   		"react-rsuite5"
@@ -6914,30 +6965,34 @@
   	showMeridian: [
   		"react-rsuite5"
   	],
-  	showWeekNumbers: [
-  		"react-rsuite5"
-  	],
   	isoWeek: [
   		"react-rsuite5"
   	],
-  	size: [
-  		"react-rsuite5",
-  		"react-bootstrap",
-  		"react-antd",
-  		"react-mantine"
-  	],
-  	appearance: [
+  	showWeekNumbers: [
   		"react-rsuite5"
   	],
-  	placement: [
-  		"react-rsuite5",
-  		"react-antd"
-  	],
-  	fullWidth: [
+  	variant: [
   		"react-material-ui",
-  		"react-bootstrap",
-  		"react-antd",
   		"react-mantine"
+  	],
+  	color: [
+  		"react-material-ui"
+  	],
+  	views: [
+  		"react-material-ui"
+  	],
+  	closeOnSelect: [
+  		"react-material-ui"
+  	],
+  	reduceAnimations: [
+  		"react-material-ui"
+  	],
+  	showDaysOutsideCurrentMonth: [
+  		"react-material-ui"
+  	],
+  	floatingLabel: [
+  		"react-material-ui",
+  		"react-bootstrap"
   	],
   	disableFuture: [
   		"react-material-ui"
@@ -6954,23 +7009,57 @@
   	displayWeekNumber: [
   		"react-material-ui"
   	],
-  	reduceAnimations: [
+  	ampm: [
   		"react-material-ui"
   	],
-  	showDaysOutsideCurrentMonth: [
+  	ampmInClock: [
   		"react-material-ui"
   	],
-  	maxDate: [
+  	forceMobile: [
+  		"react-material-ui"
+  	],
+  	loading: [
+  		"react-material-ui"
+  	],
+  	fixedWeekNumber: [
+  		"react-material-ui"
+  	],
+  	formatDensity: [
   		"react-material-ui",
-  		"react-antd",
-  		"react-mantine"
+  		"react-material-ui"
+  	],
+  	monthsPerRow: [
+  		"react-material-ui"
+  	],
+  	yearsPerRow: [
+  		"react-material-ui"
   	],
   	minDate: [
   		"react-material-ui",
   		"react-antd",
   		"react-mantine"
   	],
-  	views: [
+  	maxDate: [
+  		"react-material-ui",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	minDateTime: [
+  		"react-material-ui"
+  	],
+  	maxDateTime: [
+  		"react-material-ui"
+  	],
+  	minutesStep: [
+  		"react-material-ui"
+  	],
+  	timeStepsHours: [
+  		"react-material-ui"
+  	],
+  	timeStepsMinutes: [
+  		"react-material-ui"
+  	],
+  	timeStepsSeconds: [
   		"react-material-ui"
   	],
   	prefix: [
@@ -6978,14 +7067,6 @@
   	],
   	postfix: [
   		"react-bootstrap"
-  	],
-  	floatingLabel: [
-  		"react-bootstrap"
-  	],
-  	width: [
-  		"react-bootstrap",
-  		"react-antd",
-  		"react-mantine"
   	],
   	picker: [
   		"react-antd"
@@ -7021,9 +7102,6 @@
   		"react-antd"
   	],
   	radius: [
-  		"react-mantine"
-  	],
-  	variant: [
   		"react-mantine"
   	],
   	valueFormat: [
@@ -7410,6 +7488,144 @@
   	validationPattern: "validation",
   	validationMessage: "validation",
   	required: null
+  };
+  var time$1 = {
+  	name: null,
+  	label: null,
+  	hint: null,
+  	placeholder: null,
+  	disabled: null,
+  	readOnly: null,
+  	hidden: null,
+  	size: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	appearance: [
+  		"react-rsuite5"
+  	],
+  	placement: [
+  		"react-rsuite5"
+  	],
+  	fullWidth: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	width: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	cleanable: [
+  		"react-rsuite5"
+  	],
+  	editable: [
+  		"react-rsuite5"
+  	],
+  	oneTap: [
+  		"react-rsuite5"
+  	],
+  	showMeridian: [
+  		"react-rsuite5"
+  	],
+  	format: [
+  		"react-rsuite5",
+  		"react-material-ui"
+  	],
+  	variant: [
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	color: [
+  		"react-material-ui"
+  	],
+  	views: [
+  		"react-material-ui"
+  	],
+  	floatingLabel: [
+  		"react-material-ui"
+  	],
+  	ampm: [
+  		"react-material-ui"
+  	],
+  	ampmInClock: [
+  		"react-material-ui"
+  	],
+  	forceMobile: [
+  		"react-material-ui"
+  	],
+  	closeOnSelect: [
+  		"react-material-ui"
+  	],
+  	disableFuture: [
+  		"react-material-ui"
+  	],
+  	disableOpenPicker: [
+  		"react-material-ui"
+  	],
+  	disablePast: [
+  		"react-material-ui"
+  	],
+  	minTime: [
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	maxTime: [
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	formatDensity: [
+  		"react-material-ui"
+  	],
+  	minutesStep: [
+  		"react-material-ui"
+  	],
+  	timeStepsHours: [
+  		"react-material-ui"
+  	],
+  	timeStepsMinutes: [
+  		"react-material-ui"
+  	],
+  	timeStepsSeconds: [
+  		"react-material-ui"
+  	],
+  	radius: [
+  		"react-mantine"
+  	],
+  	withSeconds: [
+  		"react-mantine"
+  	],
+  	pointer: [
+  		"react-mantine"
+  	],
+  	showBrowserPicker: [
+  		"react-mantine"
+  	],
+  	leftSection: [
+  		"react-mantine"
+  	],
+  	rightSection: [
+  		"react-mantine"
+  	],
+  	leftSectionWidth: [
+  		"react-mantine"
+  	],
+  	rightSectionWidth: [
+  		"react-mantine"
+  	],
+  	validationMinLength: "validation",
+  	validationMin: "validation",
+  	validationMaxLength: "validation",
+  	validationMax: "validation",
+  	validationPattern: "validation",
+  	validationMessage: "validation",
+  	required: null
+  };
+  var hidden$1 = {
+  	name: null,
+  	info: null
   };
   var FIELD_MAPPINGS = {
   	"input-text": {
@@ -8153,7 +8369,9 @@
   	validationPattern: "validation",
   	validationMessage: "validation",
   	required: null
-  }
+  },
+  	time: time$1,
+  	hidden: hidden$1
   };
 
   var translateValidationKey = function translateValidationKey(str) {
@@ -8919,9 +9137,14 @@
   			]
   		},
   		{
-  			name: "block",
+  			name: "fullWidth",
   			type: "boolean",
-  			description: "Only in fluid layout"
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
   		},
   		{
   			name: "searchable",
@@ -9635,7 +9858,7 @@
   			],
   			packages: {
   				"@mui/x-date-pickers": "latest",
-  				dayjs: "1.11.10"
+  				dayjs: "latest"
   			}
   		},
   		"react-mantine": {
@@ -9722,39 +9945,6 @@
   			description: "Check https://date-fns.org library for available formats"
   		},
   		{
-  			name: "block",
-  			type: "boolean",
-  			description: "Only in fluid layout"
-  		},
-  		{
-  			name: "cleanable",
-  			type: "boolean"
-  		},
-  		{
-  			name: "editable",
-  			type: "boolean",
-  			description: "Rendered as an input, the date can be entered via the keyboard"
-  		},
-  		{
-  			name: "oneTap",
-  			type: "boolean",
-  			description: "One click to complete the selection date"
-  		},
-  		{
-  			name: "showMeridian",
-  			type: "boolean",
-  			description: "Display hours in 12 format"
-  		},
-  		{
-  			name: "showWeekNumbers",
-  			type: "boolean"
-  		},
-  		{
-  			name: "isoWeek",
-  			type: "boolean",
-  			description: "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
-  		},
-  		{
   			name: "size",
   			type: "string",
   			description: "Size of the field",
@@ -9791,46 +9981,184 @@
   				"autoHorizontalStart",
   				"autoHorizontalEnd"
   			]
-  		}
-  	],
-  	"react-material-ui": [
-  		{
-  			name: "format",
-  			type: "string",
-  			description: "Date format, i.e. DD/MM/YYYY"
   		},
   		{
   			name: "fullWidth",
   			type: "boolean",
-  			description: "Set the width of the container field to 100%"
+  			description: "Set the width of the field to 100% of the enclosing container"
   		},
   		{
-  			name: "disableFuture",
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "cleanable",
   			type: "boolean"
   		},
   		{
-  			name: "disableHighlightToday",
+  			name: "editable",
+  			type: "boolean",
+  			description: "Rendered as an input, the date can be entered via the keyboard"
+  		},
+  		{
+  			name: "oneTap",
+  			type: "boolean",
+  			description: "One click to complete the selection date"
+  		},
+  		{
+  			name: "showMeridian",
+  			type: "boolean",
+  			description: "Display hours in 12 format"
+  		},
+  		{
+  			name: "showWeekNumbers",
   			type: "boolean"
   		},
   		{
-  			name: "disableOpenPicker",
-  			type: "boolean"
+  			name: "isoWeek",
+  			type: "boolean",
+  			description: "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
+  		}
+  	],
+  	"react-material-ui": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"small",
+  				"medium",
+  				"large"
+  			]
   		},
   		{
-  			name: "disablePast",
-  			type: "boolean"
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"filled",
+  				"standard"
+  			]
   		},
   		{
-  			name: "displayWeekNumber",
-  			type: "boolean"
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"error",
+  				"info",
+  				"primary",
+  				"secondary",
+  				"success",
+  				"warning"
+  			]
+  		},
+  		{
+  			name: "format",
+  			type: "string",
+  			description: "Check https://date-fns.org library for available formats"
+  		},
+  		{
+  			name: "views",
+  			type: "[string]",
+  			description: "Available views",
+  			options: [
+  				"day",
+  				"month",
+  				"year"
+  			]
+  		},
+  		{
+  			name: "closeOnSelect",
+  			type: "boolean",
+  			description: "If true, the popover or modal will close after submitting the full date"
   		},
   		{
   			name: "reduceAnimations",
-  			type: "boolean"
+  			type: "boolean",
+  			description: "If true, disable heavy animations"
   		},
   		{
   			name: "showDaysOutsideCurrentMonth",
-  			type: "boolean"
+  			type: "boolean",
+  			description: "If true, days outside the current month are rendered:\n- if fixedWeekNumber is defined, renders days to have the weeks requested.\n- if fixedWeekNumber is not defined, renders day to fill the first and last week of the current month.\n- ignored if calendars equals more than 1 on range pickers"
+  		},
+  		{
+  			name: "floatingLabel",
+  			type: "boolean",
+  			description: "Show floating label for the control"
+  		},
+  		{
+  			name: "disableFuture",
+  			type: "boolean",
+  			description: "If true, disable values after the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "disableHighlightToday",
+  			type: "boolean",
+  			description: "If true, today's date is rendering without highlighting with circle"
+  		},
+  		{
+  			name: "disableOpenPicker",
+  			type: "boolean",
+  			description: "If true, the open picker button will not be rendered (renders only the field)"
+  		},
+  		{
+  			name: "disablePast",
+  			type: "boolean",
+  			description: "If true, disable values before the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "displayWeekNumber",
+  			type: "boolean",
+  			description: "If true, the week number will be display in the calendar"
+  		},
+  		{
+  			name: "loading",
+  			type: "boolean",
+  			description: "If true, calls renderLoading instead of rendering the day calendar. Can be used to preload information and show it in calendar"
+  		},
+  		{
+  			name: "fixedWeekNumber",
+  			type: "number",
+  			description: "The day view will show as many weeks as needed after the end of the current month to match this value. Put it to 6 to have a fixed number of weeks in Gregorian calendars"
+  		},
+  		{
+  			name: "formatDensity",
+  			type: "string",
+  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
+  			options: [
+  				"dense",
+  				"spacious"
+  			]
+  		},
+  		{
+  			name: "monthsPerRow",
+  			type: "string",
+  			description: "Months rendered per row",
+  			options: [
+  				3,
+  				4
+  			]
+  		},
+  		{
+  			name: "yearsPerRow",
+  			type: "string",
+  			description: "Years rendered per row",
+  			options: [
+  				3,
+  				4
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
   		},
   		{
   			name: "minDate",
@@ -9839,15 +10167,6 @@
   		{
   			name: "maxDate",
   			type: "date"
-  		},
-  		{
-  			name: "views",
-  			type: "[string]",
-  			options: [
-  				"day",
-  				"month",
-  				"year"
-  			]
   		}
   	],
   	"react-bootstrap": [
@@ -11613,7 +11932,7 @@
   			],
   			packages: {
   				"@mui/x-date-pickers": "latest",
-  				dayjs: "1.11.10"
+  				dayjs: "latest"
   			}
   		},
   		"react-mantine": {
@@ -11700,39 +12019,6 @@
   			description: "Check https://date-fns.org library for available formats"
   		},
   		{
-  			name: "block",
-  			type: "boolean",
-  			description: "Only in fluid layout"
-  		},
-  		{
-  			name: "cleanable",
-  			type: "boolean"
-  		},
-  		{
-  			name: "editable",
-  			type: "boolean",
-  			description: "Rendered as an input, the date can be entered via the keyboard"
-  		},
-  		{
-  			name: "oneTap",
-  			type: "boolean",
-  			description: "One click to complete the selection date"
-  		},
-  		{
-  			name: "showMeridian",
-  			type: "boolean",
-  			description: "Display hours in 12 format"
-  		},
-  		{
-  			name: "showWeekNumbers",
-  			type: "boolean"
-  		},
-  		{
-  			name: "isoWeek",
-  			type: "boolean",
-  			description: "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
-  		},
-  		{
   			name: "size",
   			type: "string",
   			description: "Size of the field",
@@ -11769,54 +12055,82 @@
   				"autoHorizontalStart",
   				"autoHorizontalEnd"
   			]
-  		}
-  	],
-  	"react-material-ui": [
-  		{
-  			name: "format",
-  			type: "string",
-  			description: "Date format, i.e. DD/MM/YYYY"
   		},
   		{
   			name: "fullWidth",
   			type: "boolean",
-  			description: "Set the width of the container field to 100%"
+  			description: "Set the width of the field to 100% of the enclosing container"
   		},
   		{
-  			name: "disableFuture",
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "cleanable",
   			type: "boolean"
   		},
   		{
-  			name: "disableHighlightToday",
+  			name: "editable",
+  			type: "boolean",
+  			description: "Rendered as an input, the date can be entered via the keyboard"
+  		},
+  		{
+  			name: "oneTap",
+  			type: "boolean",
+  			description: "One click to complete the selection date"
+  		},
+  		{
+  			name: "showMeridian",
+  			type: "boolean",
+  			description: "Display hours in 12 format"
+  		},
+  		{
+  			name: "isoWeek",
+  			type: "boolean",
+  			description: "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
+  		},
+  		{
+  			name: "showWeekNumbers",
   			type: "boolean"
+  		}
+  	],
+  	"react-material-ui": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"small",
+  				"medium",
+  				"large"
+  			]
   		},
   		{
-  			name: "disableOpenPicker",
-  			type: "boolean"
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"filled",
+  				"standard"
+  			]
   		},
   		{
-  			name: "disablePast",
-  			type: "boolean"
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"error",
+  				"info",
+  				"primary",
+  				"secondary",
+  				"success",
+  				"warning"
+  			]
   		},
   		{
-  			name: "displayWeekNumber",
-  			type: "boolean"
-  		},
-  		{
-  			name: "reduceAnimations",
-  			type: "boolean"
-  		},
-  		{
-  			name: "showDaysOutsideCurrentMonth",
-  			type: "boolean"
-  		},
-  		{
-  			name: "maxDate",
-  			type: "date"
-  		},
-  		{
-  			name: "minDate",
-  			type: "date"
+  			name: "format",
+  			type: "string",
+  			description: "Check https://date-fns.org library for available formats"
   		},
   		{
   			name: "views",
@@ -11829,6 +12143,154 @@
   				"month",
   				"year"
   			]
+  		},
+  		{
+  			name: "closeOnSelect",
+  			type: "boolean",
+  			description: "If true, the popover or modal will close after submitting the full date"
+  		},
+  		{
+  			name: "reduceAnimations",
+  			type: "boolean",
+  			description: "If true, disable heavy animations"
+  		},
+  		{
+  			name: "showDaysOutsideCurrentMonth",
+  			type: "boolean",
+  			description: "If true, days outside the current month are rendered:\n- if fixedWeekNumber is defined, renders days to have the weeks requested.\n- if fixedWeekNumber is not defined, renders day to fill the first and last week of the current month.\n- ignored if calendars equals more than 1 on range pickers"
+  		},
+  		{
+  			name: "floatingLabel",
+  			type: "boolean",
+  			description: "Show floating label for the control"
+  		},
+  		{
+  			name: "disableFuture",
+  			type: "boolean",
+  			description: "If true, disable values after the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "disableHighlightToday",
+  			type: "boolean",
+  			description: "If true, today's date is rendering without highlighting with circle"
+  		},
+  		{
+  			name: "disableOpenPicker",
+  			type: "boolean",
+  			description: "If true, the open picker button will not be rendered (renders only the field)"
+  		},
+  		{
+  			name: "disablePast",
+  			type: "boolean",
+  			description: "If true, disable values before the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "displayWeekNumber",
+  			type: "boolean",
+  			description: "If true, the week number will be display in the calendar"
+  		},
+  		{
+  			name: "ampm",
+  			type: "boolean",
+  			description: "12h/24h view for hour selection clock"
+  		},
+  		{
+  			name: "ampmInClock",
+  			type: "boolean",
+  			description: "Display ampm controls under the clock (instead of in the toolbar)"
+  		},
+  		{
+  			name: "forceMobile",
+  			type: "boolean",
+  			description: "Force mobile component"
+  		},
+  		{
+  			name: "loading",
+  			type: "boolean",
+  			description: "If true, calls renderLoading instead of rendering the day calendar. Can be used to preload information and show it in calendar"
+  		},
+  		{
+  			name: "fixedWeekNumber",
+  			type: "number",
+  			description: "The day view will show as many weeks as needed after the end of the current month to match this value. Put it to 6 to have a fixed number of weeks in Gregorian calendars"
+  		},
+  		{
+  			name: "formatDensity",
+  			type: "string",
+  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
+  			options: [
+  				"dense",
+  				"spacious"
+  			]
+  		},
+  		{
+  			name: "monthsPerRow",
+  			type: "string",
+  			description: "Months rendered per row",
+  			options: [
+  				3,
+  				4
+  			]
+  		},
+  		{
+  			name: "yearsPerRow",
+  			type: "string",
+  			description: "Years rendered per row",
+  			options: [
+  				3,
+  				4
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "minDate",
+  			type: "date"
+  		},
+  		{
+  			name: "maxDate",
+  			type: "date"
+  		},
+  		{
+  			name: "minDateTime"
+  		},
+  		{
+  			name: "maxDateTime"
+  		},
+  		{
+  			name: "formatDensity",
+  			type: "string",
+  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
+  			options: [
+  				"dense",
+  				"spacious"
+  			]
+  		},
+  		{
+  			name: "minutesStep",
+  			type: "number",
+  			description: "Step over minutes"
+  		},
+  		{
+  			name: "timeStepsHours",
+  			type: "number",
+  			description: "The time steps between two time unit options. For example, if timeStep.minutes = 8, then the available minute options will be [0, 8, 16, 24, 32, 40, 48, 56]"
+  		},
+  		{
+  			name: "timeStepsMinutes",
+  			type: "number"
+  		},
+  		{
+  			name: "timeStepsSeconds",
+  			type: "number"
   		}
   	],
   	"react-bootstrap": [
@@ -12907,6 +13369,410 @@
   	frameworks: [
   		"react-rsuite5",
   		"react-antd"
+  	]
+  };
+  var time = {
+  	label: "Time",
+  	category: "general",
+  	description: "Time input",
+  	name: "time",
+  	dependencies: {
+  		"react-material-ui": {
+  			imports: {
+  			},
+  			js: [
+  				"import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';",
+  				"import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';",
+  				null
+  			],
+  			packages: {
+  				"@mui/x-date-pickers": "latest",
+  				dayjs: "latest"
+  			}
+  		},
+  		"react-mantine": {
+  			js: [
+  				null
+  			],
+  			css: [
+  				null
+  			],
+  			imports: {
+  			},
+  			packages: {
+  				"@mantine/dates": "^7.6.2",
+  				dayjs: "^1.11.10"
+  			}
+  		},
+  		"react-rsuite5": {
+  			js: [
+  				null
+  			],
+  			css: [
+  			],
+  			imports: {
+  			},
+  			packages: {
+  			}
+  		},
+  		"react-antd": {
+  			js: [
+  				null,
+  				null,
+  				null
+  			],
+  			css: [
+  			],
+  			imports: {
+  			},
+  			packages: {
+  				dayjs: "^1.11.10"
+  			}
+  		}
+  	},
+  	common: [
+  		{
+  			name: "name",
+  			type: "string",
+  			description: "The name of the field and the key of the JSON"
+  		},
+  		{
+  			name: "label",
+  			type: "string | i18n",
+  			description: "Label of the field"
+  		},
+  		{
+  			name: "hint",
+  			type: "string | i18n",
+  			description: "Help text for the field (generally shown below the input box)"
+  		},
+  		{
+  			name: "placeholder",
+  			type: "string | i18n",
+  			description: "Placeholder text, visibile when the field is empty"
+  		},
+  		{
+  			name: "disabled",
+  			type: "boolean",
+  			description: "Disables and greys out the field"
+  		},
+  		{
+  			name: "readOnly",
+  			type: "boolean",
+  			description: "Put the field in read only mode"
+  		},
+  		{
+  			name: "hidden",
+  			type: "boolean",
+  			description: "Hides the field from the form"
+  		}
+  	],
+  	"react-rsuite5": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"lg",
+  				"md",
+  				"sm",
+  				"xs"
+  			]
+  		},
+  		{
+  			name: "appearance",
+  			type: "string",
+  			options: [
+  				"default",
+  				"subtle"
+  			]
+  		},
+  		{
+  			name: "placement",
+  			type: "string",
+  			options: [
+  				"topStart",
+  				"topEnd",
+  				"leftStart",
+  				"rightStart",
+  				"leftEnd",
+  				"rightEnd",
+  				"bottomStart",
+  				"bottomEnd",
+  				"auto",
+  				"autoVerticalStart",
+  				"autoVerticalEnd",
+  				"autoHorizontalStart",
+  				"autoHorizontalEnd"
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "cleanable",
+  			type: "boolean"
+  		},
+  		{
+  			name: "editable",
+  			type: "boolean",
+  			description: "Rendered as an input, the date can be entered via the keyboard"
+  		},
+  		{
+  			name: "oneTap",
+  			type: "boolean",
+  			description: "One click to complete the selection date"
+  		},
+  		{
+  			name: "showMeridian",
+  			type: "boolean",
+  			description: "Display hours in 12 format"
+  		},
+  		{
+  			name: "format",
+  			type: "string",
+  			options: [
+  				"HH:mm",
+  				"HH:mm:ss",
+  				"hh:mm:ss aaa",
+  				"hh:mm aaa"
+  			]
+  		}
+  	],
+  	"react-material-ui": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"small",
+  				"medium",
+  				"large"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"filled",
+  				"standard"
+  			]
+  		},
+  		{
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"error",
+  				"info",
+  				"primary",
+  				"secondary",
+  				"success",
+  				"warning"
+  			]
+  		},
+  		{
+  			name: "format",
+  			type: "string",
+  			description: "Check https://date-fns.org library for available formats"
+  		},
+  		{
+  			name: "views",
+  			type: "[string]",
+  			options: [
+  				"hours",
+  				"minutes",
+  				"seconds"
+  			]
+  		},
+  		{
+  			name: "floatingLabel",
+  			type: "boolean",
+  			description: "Show floating label for the control"
+  		},
+  		{
+  			name: "ampm",
+  			type: "boolean",
+  			description: "12h/24h view for hour selection clock"
+  		},
+  		{
+  			name: "ampmInClock",
+  			type: "boolean",
+  			description: "Display ampm controls under the clock (instead of in the toolbar)"
+  		},
+  		{
+  			name: "forceMobile",
+  			type: "boolean",
+  			description: "Force mobile component"
+  		},
+  		{
+  			name: "closeOnSelect",
+  			type: "boolean",
+  			description: "If true, the popover or modal will close after submitting the full date."
+  		},
+  		{
+  			name: "disableFuture",
+  			type: "boolean",
+  			description: "If true, disable values after the current date for date components, time for time components and both for date time components."
+  		},
+  		{
+  			name: "disableOpenPicker",
+  			type: "boolean",
+  			description: "If true, the open picker button will not be rendered (renders only the field)"
+  		},
+  		{
+  			name: "disablePast",
+  			type: "boolean",
+  			description: "If true, disable values before the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "minTime",
+  			type: "string"
+  		},
+  		{
+  			name: "maxTime",
+  			type: "string"
+  		},
+  		{
+  			name: "formatDensity",
+  			type: "string",
+  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
+  			options: [
+  				"dense",
+  				"spacious"
+  			]
+  		},
+  		{
+  			name: "minutesStep",
+  			type: "number",
+  			description: "Step over minutes"
+  		},
+  		{
+  			name: "timeStepsHours",
+  			type: "number",
+  			description: "The time steps between two time unit options. For example, if timeStep.minutes = 8, then the available minute options will be [0, 8, 16, 24, 32, 40, 48, 56]"
+  		},
+  		{
+  			name: "timeStepsMinutes",
+  			type: "number"
+  		},
+  		{
+  			name: "timeStepsSeconds",
+  			type: "number"
+  		}
+  	],
+  	"react-mantine": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"default",
+  				"filled",
+  				"unstyled"
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "minTime",
+  			type: "string"
+  		},
+  		{
+  			name: "maxTime",
+  			type: "string"
+  		},
+  		{
+  			name: "withSeconds",
+  			type: "boolean",
+  			description: "Determines whether seconds input should be rendered"
+  		},
+  		{
+  			name: "pointer",
+  			type: "boolean",
+  			description: "Determines whether the input should have cursor: pointer style, false by default"
+  		},
+  		{
+  			name: "showBrowserPicker",
+  			type: "boolean",
+  			description: "Show browser native picker (if supported)"
+  		},
+  		{
+  			name: "leftSection",
+  			type: "string"
+  		},
+  		{
+  			name: "rightSection",
+  			type: "string"
+  		},
+  		{
+  			name: "leftSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "rightSectionWidth",
+  			type: "number"
+  		}
+  	]
+  };
+  var hidden = {
+  	label: "Hidden",
+  	category: "general",
+  	name: "hidden",
+  	description: "Hidden field, just a placeholder for data, component will not be visible in the form (only during design)",
+  	common: [
+  		{
+  			name: "name",
+  			type: "string",
+  			description: "The name of the field and the key of the JSON"
+  		}
   	]
   };
   var Manifests = {
@@ -15152,7 +16018,9 @@
   			description: "Placeholder text, visibile when the field is empty"
   		}
   	]
-  }
+  },
+  	time: time,
+  	hidden: hidden
   };
 
   var LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns'];
@@ -18217,135 +19085,140 @@
   var Fields = {
     'input-text': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$r; });
+        return Promise.resolve().then(function () { return index$s; });
       })
     },
     'toggle': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$q; });
+        return Promise.resolve().then(function () { return index$r; });
       })
     },
     'checkbox': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$p; });
+        return Promise.resolve().then(function () { return index$q; });
       })
     },
     'date': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$o; });
+        return Promise.resolve().then(function () { return index$p; });
       })
     },
     'select': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$n; });
+        return Promise.resolve().then(function () { return index$o; });
       })
     },
     'radio-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$m; });
+        return Promise.resolve().then(function () { return index$n; });
       })
     },
     'rate': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
+        return Promise.resolve().then(function () { return index$m; });
       })
     },
     'placeholder': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
+        return Promise.resolve().then(function () { return index$l; });
       })
     },
     'placeholder-image': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
+        return Promise.resolve().then(function () { return index$k; });
       })
     },
     'input-number': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
+        return Promise.resolve().then(function () { return index$j; });
       })
     },
     'textarea': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return index$i; });
       })
     },
     'multiselect': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$h; });
       })
     },
     'three-columns': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return index$g; });
       })
     },
     'two-columns': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
+        return Promise.resolve().then(function () { return index$f; });
       })
     },
     'group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
+        return Promise.resolve().then(function () { return index$e; });
       })
     },
     'slider': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
+        return Promise.resolve().then(function () { return index$d; });
       })
     },
     'divider': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
+        return Promise.resolve().then(function () { return index$c; });
       })
     },
     'react-view': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
+        return Promise.resolve().then(function () { return index$b; });
       })
     },
     'datetime': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
+        return Promise.resolve().then(function () { return index$a; });
       })
     },
     'array': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
+        return Promise.resolve().then(function () { return index$9; });
       })
     },
     'button': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return index$8; });
       })
     },
     'checkbox-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return index$7; });
       })
     },
     'tabs': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return index$6; });
       })
     },
     'upload': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return index$5; });
       })
     },
     'buttons-toggle-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return index$4; });
       })
     },
     'steps': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return index$3; });
       })
     },
     'hidden': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'time': {
       'react-antd': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
       })
@@ -18372,38 +19245,28 @@
   var css_248z$b = ".lf-form-react-antd .lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-antd .lf-control-input-text.lf-size-small .lf-prefix-icon {\n  max-height: 12px;\n}\n.lf-form-react-antd .lf-control-input-text.lf-size-large .lf-prefix-icon {\n  max-height: 18px;\n}\n.lf-form-react-antd .lf-control-input-text input[type=color] {\n  min-width: 60px;\n}";
   styleInject(css_248z$b);
 
-  var _excluded$j = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "fullWidth", "width", "inputType", "inputMode", "autocomplete", "lfOnEnter"];
+  var _excluded$j = ["name", "label", "hint", "value", "size", "tooltip", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "inputType", "inputMode", "lfOnEnter"];
   var TextInput = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
       value = _ref.value,
       size = _ref.size,
-      placeholder = _ref.placeholder,
-      showCount = _ref.showCount,
       _ref$tooltip = _ref.tooltip,
       tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
       _ref$required = _ref.required,
       required = _ref$required === void 0 ? false : _ref$required,
       _ref$submitOnEnter = _ref.submitOnEnter,
       submitOnEnter = _ref$submitOnEnter === void 0 ? false : _ref$submitOnEnter,
-      maxLength = _ref.maxLength,
       error = _ref.error,
       prefix = _ref.prefix,
       postfix = _ref.postfix,
-      allowClear = _ref.allowClear,
-      bordered = _ref.bordered,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur,
       fullWidth = _ref.fullWidth,
       width = _ref.width,
       inputType = _ref.inputType,
       inputMode = _ref.inputMode,
-      autocomplete = _ref.autocomplete,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
       rest = _objectWithoutProperties(_ref, _excluded$j);
@@ -18424,29 +19287,21 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
     }, /*#__PURE__*/React.createElement(antd.Input, _extends({
-      placeholder: placeholder,
-      readOnly: readOnly,
-      autocomplete: autocomplete,
       type: inputType !== null && inputType !== void 0 ? inputType : 'text',
       inputmode: inputMode,
       onChange: handleChange,
       onBlur: onBlur,
       onKeyUp: submitOnEnter ? handleKeyUp : undefined,
-      value: value,
+      defaultValue: value,
       size: size,
       prefix: TextOrIcon(prefix),
       suffix: TextOrIcon(postfix),
-      allowClear: allowClear,
-      bordered: bordered,
-      disabled: disabled,
-      showCount: showCount,
-      maxLength: maxLength,
       style: makeWidthStyle(fullWidth, width)
     }, passRest(rest))));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputText');
 
-  var index$r = /*#__PURE__*/Object.freeze({
+  var index$s = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
@@ -18507,7 +19362,7 @@
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded AntD.Toggle');
 
-  var index$q = /*#__PURE__*/Object.freeze({
+  var index$r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle
   });
@@ -18560,7 +19415,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Checkbox');
 
-  var index$p = /*#__PURE__*/Object.freeze({
+  var index$q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxAntd
   });
@@ -18956,7 +19811,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Date');
 
-  var index$o = /*#__PURE__*/Object.freeze({
+  var index$p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdDate
   });
@@ -18964,21 +19819,15 @@
   var css_248z$a = ".lf-control-select-option-antd img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  vertical-align: middle;\n  margin-top: -2px;\n}";
   styleInject(css_248z$a);
 
-  var _excluded$e = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "lfLocale", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "fullWidth", "popupMatchSelectWidth", "showSearch", "placement", "showArrow", "listHeight", "virtual", "options", "filterKey", "filterValue", "showImageOptions"];
-  var SelectAntd = I18N(function (_ref) {
+  var _excluded$e = ["name", "label", "hint", "value", "showCount", "tooltip", "required", "maxLength", "error", "prefix", "lfLocale", "postfix", "onChange", "onBlur", "width", "fullWidth", "options", "filterKey", "filterValue", "className", "showImageOptions"];
+  var AntdGenericSelect = function AntdGenericSelect(_ref) {
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
-      value = _ref.value,
-      size = _ref.size,
-      placeholder = _ref.placeholder;
+      value = _ref.value;
       _ref.showCount;
       var _ref$tooltip = _ref.tooltip,
       tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
       _ref$required = _ref.required,
       required = _ref$required === void 0 ? false : _ref$required;
       _ref.maxLength;
@@ -18986,27 +19835,20 @@
       _ref.prefix;
       _ref.lfLocale;
       _ref.postfix;
-      var allowClear = _ref.allowClear,
-      bordered = _ref.bordered,
-      onChange = _ref.onChange,
+      var onChange = _ref.onChange,
       onBlur = _ref.onBlur,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
-      popupMatchSelectWidth = _ref.popupMatchSelectWidth,
-      showSearch = _ref.showSearch,
-      placement = _ref.placement,
-      showArrow = _ref.showArrow,
-      listHeight = _ref.listHeight,
-      virtual = _ref.virtual,
       options = _ref.options,
       filterKey = _ref.filterKey,
       filterValue = _ref.filterValue,
+      className = _ref.className,
       _ref$showImageOptions = _ref.showImageOptions,
       showImageOptions = _ref$showImageOptions === void 0 ? false : _ref$showImageOptions,
       rest = _objectWithoutProperties(_ref, _excluded$e);
     return /*#__PURE__*/React.createElement(antd.Form.Item, {
       "data-lf-field-name": name,
-      className: "lf-control-select",
+      className: className,
       label: label,
       name: name,
       help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -19015,21 +19857,9 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
     }, /*#__PURE__*/React.createElement(antd.Select, _extends({
-      placeholder: placeholder,
-      readOnly: readOnly,
-      disabled: disabled,
       onChange: onChange,
       onBlur: onBlur,
-      value: value,
-      size: size,
-      bordered: bordered,
-      listHeight: listHeight,
-      placement: placement,
-      showArrow: showArrow,
-      virtual: virtual,
-      showSearch: showSearch,
-      allowClear: allowClear,
-      popupMatchSelectWidth: popupMatchSelectWidth,
+      defaultValue: value,
       style: makeWidthStyle(fullWidth, width)
     }, passRest(rest)), (filterOptions(options, filterValue, filterKey) || []).map(function (option) {
       return /*#__PURE__*/React.createElement(antd.Select.Option, {
@@ -19044,12 +19874,18 @@
         alt: option.label
       }), option.label));
     })));
+  };
+
+  var SelectAntd = I18N(function (props) {
+    return /*#__PURE__*/React.createElement(AntdGenericSelect, _extends({
+      className: "lf-control-select"
+    }, props));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
   lfLog('Loaded AntD.Select');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectAntd
   });
@@ -19133,7 +19969,7 @@
   });
   lfLog('Loaded AntD.RadioGroup');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroup
   });
@@ -19200,7 +20036,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded AntD.Rate');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RateAntd
   });
@@ -19223,49 +20059,36 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded AntD.Placeholder');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderAntd
   });
 
   lfLog('Loaded AntD.PlaceholderImage');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
-  var _excluded$b = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "fullWidth", "showControl", "min", "max", "step"];
+  var _excluded$b = ["name", "label", "hint", "value", "showCount", "tooltip", "required", "maxLength", "error", "onChange", "onBlur", "width", "fullWidth", "showControl"];
   var InputNumberAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
-      value = _ref.value,
-      size = _ref.size,
-      placeholder = _ref.placeholder;
+      value = _ref.value;
       _ref.showCount;
       var _ref$tooltip = _ref.tooltip,
       tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
       _ref$required = _ref.required,
       required = _ref$required === void 0 ? false : _ref$required;
       _ref.maxLength;
       var error = _ref.error,
-      prefix = _ref.prefix,
-      postfix = _ref.postfix,
-      allowClear = _ref.allowClear,
-      bordered = _ref.bordered,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
       showControl = _ref.showControl,
-      min = _ref.min,
-      max = _ref.max,
-      step = _ref.step,
       rest = _objectWithoutProperties(_ref, _excluded$b);
     return /*#__PURE__*/React.createElement(antd.Form.Item, {
       label: label,
@@ -19278,52 +20101,31 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
     }, /*#__PURE__*/React.createElement(antd.InputNumber, _extends({
-      placeholder: placeholder,
-      readOnly: readOnly,
       onChange: onChange,
       onBlur: onBlur,
       defaultValue: value,
-      size: size,
-      prefix: prefix,
-      suffix: postfix,
-      allowClear: allowClear,
-      bordered: bordered,
-      disabled: disabled,
       controls: showControl,
-      min: min,
-      max: max,
-      step: step,
       style: makeWidthStyle(fullWidth, width)
     }, passRest(rest))));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputNumber');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumberAntd
   });
 
-  var _excluded$a = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "allowClear", "bordered", "onChange", "onBlur", "width", "fullWidth"];
+  var _excluded$a = ["name", "label", "hint", "value", "tooltip", "required", "error", "onChange", "onBlur", "width", "fullWidth"];
   var TextareaAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
       value = _ref.value,
-      size = _ref.size,
-      placeholder = _ref.placeholder,
-      showCount = _ref.showCount,
       _ref$tooltip = _ref.tooltip,
       tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
       _ref$required = _ref.required,
       required = _ref$required === void 0 ? false : _ref$required,
-      maxLength = _ref.maxLength,
       error = _ref.error,
-      allowClear = _ref.allowClear,
-      bordered = _ref.bordered,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur,
       width = _ref.width,
@@ -19343,103 +20145,30 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
     }, /*#__PURE__*/React.createElement(antd.Input.TextArea, _extends({
-      placeholder: placeholder,
-      readOnly: readOnly,
       onChange: handleChange,
       onBlur: onBlur,
-      value: value,
-      size: size,
-      allowClear: allowClear,
-      disabled: disabled,
-      showCount: showCount,
-      maxLength: maxLength,
-      bordered: bordered,
+      defaultValue: value,
       style: makeWidthStyle(fullWidth, width)
     }, passRest(rest))));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Textarea');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextareaAntd
   });
 
-  var _excluded$9 = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "showSearch", "placement", "showArrow", "listHeight", "virtual", "maxTagCount", "maxTagPlaceholder", "maxTagTextLength"];
-  var Multiselect = I18N(function (_ref) {
-    var name = _ref.name,
-      label = _ref.label,
-      hint = _ref.hint,
-      value = _ref.value,
-      size = _ref.size,
-      placeholder = _ref.placeholder;
-      _ref.showCount;
-      var _ref$tooltip = _ref.tooltip,
-      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip;
-      _ref.disabled;
-      var _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-      _ref$required = _ref.required,
-      required = _ref$required === void 0 ? false : _ref$required;
-      _ref.maxLength;
-      var error = _ref.error;
-      _ref.prefix;
-      _ref.postfix;
-      var allowClear = _ref.allowClear,
-      bordered = _ref.bordered,
-      onChange = _ref.onChange,
-      onBlur = _ref.onBlur,
-      width = _ref.width,
-      showSearch = _ref.showSearch,
-      placement = _ref.placement,
-      showArrow = _ref.showArrow,
-      listHeight = _ref.listHeight,
-      virtual = _ref.virtual,
-      maxTagCount = _ref.maxTagCount,
-      maxTagPlaceholder = _ref.maxTagPlaceholder,
-      maxTagTextLength = _ref.maxTagTextLength,
-      rest = _objectWithoutProperties(_ref, _excluded$9);
-    return /*#__PURE__*/React.createElement(antd.Form.Item, {
-      label: label,
-      "data-lf-field-name": name,
+  var Multiselect = I18N(function (props) {
+    return /*#__PURE__*/React.createElement(AntdGenericSelect, _extends({
       className: "lf-control-multiselect",
-      name: name,
-      help: error != null ? error : hint && !tooltip ? hint : undefined,
-      required: required,
-      tooltip: tooltip && hint,
-      hasFeedback: error != null,
-      validateStatus: error ? 'error' : undefined
-    }, /*#__PURE__*/React.createElement(antd.Select, _extends({
-      placeholder: placeholder,
-      readOnly: readOnly,
-      onChange: onChange,
-      onBlur: onBlur,
-      value: value,
-      size: size,
       mode: "multiple"
-      //mode="tags"
-      ,
-      bordered: bordered,
-      listHeight: listHeight,
-      placement: placement,
-      showArrow: showArrow,
-      virtual: virtual,
-      showSearch: showSearch,
-      allowClear: allowClear,
-      maxTagCount: maxTagCount,
-      maxTagPlaceholder: maxTagPlaceholder,
-      maxTagTextLength: maxTagTextLength
-      // tokenSeparators={["-", " "]} only for tags
-      ,
-      style: _isNumber(width) ? {
-        width: "".concat(width, "px")
-      } : undefined
-    }, _omit(rest, 'lfFramework', 'lfComponent'))));
+    }, props));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
-  lfLog('Loaded AntD.MultiSelect');
+  lfLog('Loaded AntD.Multiselect');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect
   });
@@ -19449,7 +20178,7 @@
 
   lfLog('Loaded AntD.ThreeColumns');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
@@ -19459,7 +20188,7 @@
 
   lfLog('Loaded AntD.TwoColumns');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
@@ -19469,12 +20198,12 @@
 
   lfLog('Loaded AntD.Group');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
-  var _excluded$8 = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "keyboard", "dots", "min", "max", "step", "reverse", "tooltipOpen", "tooltipPlacement", "error", "onChange", "onBlur", "width", "marks", "included"];
+  var _excluded$9 = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "keyboard", "dots", "min", "max", "step", "reverse", "tooltipOpen", "tooltipPlacement", "error", "onChange", "onBlur", "width", "marks", "included"];
   var SliderAnt = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19505,7 +20234,7 @@
       _ref.width;
       var marks = _ref.marks,
       included = _ref.included,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
+      rest = _objectWithoutProperties(_ref, _excluded$9);
     var antdMarks = undefined;
     if (_isArray(marks) && !_isEmpty(marks)) {
       antdMarks = marks.reduce(function (accumulator, value) {
@@ -19546,30 +20275,30 @@
   });
   lfLog('Loaded AntD.Slider');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderAnt
   });
 
   lfLog('Loaded AntD.Divider');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
   lfLog('Loaded AntD.ReactView');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
 
-  var _excluded$7 = ["onChange", "value"];
+  var _excluded$8 = ["onChange", "value"];
   var Datetime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$7);
+      rest = _objectWithoutProperties(_ref, _excluded$8);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -19598,7 +20327,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.DateTime');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index$a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Datetime
   });
@@ -19606,7 +20335,7 @@
   var css_248z$6 = ".lf-form-react-antd .lf-control-common-array-item .ant-form-item {\n  margin-bottom: 0px !important;\n}\n.lf-form-react-antd .lf-control-common-array-item {\n  padding-bottom: 5px;\n}\n.lf-form-react-antd .lf-control-two-columns:last-child {\n  margin-bottom: 0px;\n}\n.lf-form-react-antd .lf-control-three-columns:last-child {\n  margin-bottom: 0px;\n}";
   styleInject(css_248z$6);
 
-  var _excluded$6 = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$7 = ["hint", "required", "tooltip", "name", "label", "error"];
   var ListArrayAntd = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required,
@@ -19614,7 +20343,7 @@
       name = _ref.name,
       label = _ref.label,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$6);
+      rest = _objectWithoutProperties(_ref, _excluded$7);
     return /*#__PURE__*/React.createElement(antd.Form.Item, {
       className: "lf-control-array",
       "data-lf-field-name": name,
@@ -19631,7 +20360,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded AntD.ListArray');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayAntd
   });
@@ -19639,13 +20368,13 @@
   var css_248z$5 = ".lf-form-react-antd .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn {\n  min-width: 32px;\n}\n.lf-form-react-antd .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n  margin-top: -2px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-lg {\n  min-width: 40px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-lg .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-sm {\n  min-width: 24px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-sm .lf-icon {\n  max-width: 14px;\n  max-height: 14px;\n}";
   styleInject(css_248z$5);
 
-  var _excluded$5 = ["label", "icon", "hint", "tooltip"];
+  var _excluded$6 = ["label", "icon", "hint", "tooltip"];
   var AntdButton = function AntdButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint;
       _ref.tooltip;
-      var rest = _objectWithoutProperties(_ref, _excluded$5);
+      var rest = _objectWithoutProperties(_ref, _excluded$6);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React.createElement(antd.Button, _extends({
@@ -19677,12 +20406,12 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded AntD.Button');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var index$8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton
   });
 
-  var _excluded$4 = ["name", "label", "hint", "value", "placeholder", "className", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
+  var _excluded$5 = ["name", "label", "hint", "value", "placeholder", "className", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
   var CheckboxGroupRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19703,7 +20432,7 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$4);
+      rest = _objectWithoutProperties(_ref, _excluded$5);
     return /*#__PURE__*/React.createElement(antd.Form.Item, {
       className: classNames('lf-control-checkbox-group', className),
       "data-lf-field-name": name,
@@ -19725,7 +20454,7 @@
   });
   lfLog('Loaded AntD.CheckboxGroup');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var index$7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupRSuite
   });
@@ -19733,7 +20462,7 @@
   var css_248z$4 = ".lf-form-react-antd .lf-control-tabs .tab-fields {\n  margin-top: 0px;\n}";
   styleInject(css_248z$4);
 
-  var _excluded$3 = ["name", "value", "tabs", "onChange", "children", "animated", "centered", "size", "tabType"];
+  var _excluded$4 = ["name", "value", "tabs", "onChange", "children", "animated", "centered", "size", "tabType"];
   var TabsAntd = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -19744,7 +20473,7 @@
       centered = _ref.centered,
       size = _ref.size,
       tabType = _ref.tabType,
-      rest = _objectWithoutProperties(_ref, _excluded$3);
+      rest = _objectWithoutProperties(_ref, _excluded$4);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
@@ -19781,7 +20510,7 @@
   });
   lfLog('Loaded AntD.Tabs');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var index$6 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsAntd
   });
@@ -19789,7 +20518,7 @@
   var css_248z$3 = ".lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
   styleInject(css_248z$3);
 
-  var _excluded$2 = ["hint"],
+  var _excluded$3 = ["hint"],
     _excluded2 = ["name", "accept", "draggable", "draggableText", "draggableHeight", "uploadButtonLabel", "error", "label", "hint", "tooltip", "required", "size", "disabled", "value", "multiple", "listType", "maxCount", "showUploadList", "uploadButtonSize", "uploadButtonAppearance", "onChange"];
   var Dragger = antd.Upload.Dragger;
   var makeDefaultValue = function makeDefaultValue(defaultValue) {
@@ -19815,7 +20544,7 @@
   };
   var ButtonWithHint = function ButtonWithHint(_ref) {
     var hint = _ref.hint,
-      props = _objectWithoutProperties(_ref, _excluded$2);
+      props = _objectWithoutProperties(_ref, _excluded$3);
     var inner = /*#__PURE__*/React.createElement(antd.Button, props);
     if (hint) {
       return /*#__PURE__*/React.createElement("div", {
@@ -19926,12 +20655,12 @@
   }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
   lfLog('Loaded AnttD.Upload');
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var index$5 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntDUpload
   });
 
-  var _excluded$1 = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "multiple", "options"];
+  var _excluded$2 = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "multiple", "options"];
   var AntdButtonsToggleGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19949,7 +20678,7 @@
       multiple = _ref.multiple,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$1);
+      rest = _objectWithoutProperties(_ref, _excluded$2);
     return /*#__PURE__*/React.createElement(antd.Form.Item, {
       className: "lf-control-button-toggle-group",
       "data-lf-field-name": name,
@@ -19975,7 +20704,7 @@
   });
   lfLog('Loaded AntD.ButtonsToggleGroup');
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$4 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdButtonsToggleGroup
   });
@@ -19997,7 +20726,7 @@
   var css_248z$1 = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}\n\n.lf-form-react-antd .lf-control-steps .ant-steps-icon svg {\n  vertical-align: baseline;\n}";
   styleInject(css_248z$1);
 
-  var _excluded = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "labelPlacement", "percent", "clickable", "stepsType"];
+  var _excluded$1 = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "labelPlacement", "percent", "clickable", "stepsType"];
   var i18nSteps = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -20025,7 +20754,7 @@
       percent = _ref.percent,
       clickable = _ref.clickable,
       stepsType = _ref.stepsType,
-      rest = _objectWithoutProperties(_ref, _excluded);
+      rest = _objectWithoutProperties(_ref, _excluded$1);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
       return obj.value === value;
@@ -20098,7 +20827,7 @@
   lfLog('Loaded AntD.Steps');
   var AntdSteps$1 = AntdSteps;
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$3 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdSteps$1
   });
@@ -20114,9 +20843,76 @@
   };
   lfLog('Loaded RSuite5.Hidden');
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var index$2 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Hidden
+  });
+
+  var timeToDayJSTime = function timeToDayJSTime(str) {
+    var _str$split = str.split(':'),
+      _str$split2 = _slicedToArray(_str$split, 3),
+      hours = _str$split2[0],
+      minutes = _str$split2[1],
+      seconds = _str$split2[2];
+    if (hours || minutes || seconds) {
+      console.log('splittato ', hours, minutes, seconds);
+      var d = dayjs();
+      if (hours) {
+        d = d.hour(hours);
+      }
+      if (minutes) {
+        d = d.minute(minutes);
+      }
+      if (seconds) {
+        d = d.second(seconds);
+      }
+      return d;
+    }
+    return undefined;
+  };
+
+  var _excluded = ["name", "error", "hint", "required", "label", "tooltip", "onChange", "value"];
+  var Time = I18N(function (_ref) {
+    var name = _ref.name,
+      error = _ref.error,
+      hint = _ref.hint,
+      required = _ref.required,
+      label = _ref.label,
+      tooltip = _ref.tooltip,
+      onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties(_ref, _excluded);
+    // default value
+    var defaultValue;
+    if (isValidTime(value)) {
+      defaultValue = timeToDayJSTime(value);
+    }
+
+    // send always date string in iso format
+    var handleChange = React.useCallback(function (d) {
+      var _rest$format;
+      onChange(d.format((_rest$format = rest.format) !== null && _rest$format !== void 0 ? _rest$format : 'HH:mm'));
+    }, [onChange, rest.format]);
+    return /*#__PURE__*/React.createElement(antd.Form.Item, {
+      className: "lf-control-date",
+      "data-lf-field-name": name,
+      label: label,
+      name: name,
+      help: error != null ? error : hint && !tooltip ? hint : undefined,
+      required: required,
+      tooltip: tooltip && hint,
+      hasFeedback: error != null,
+      validateStatus: error ? 'error' : undefined
+    }, /*#__PURE__*/React.createElement(antd.TimePicker, _extends({
+      defaultValue: defaultValue,
+      onChange: handleChange
+    }, passRest(rest))));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded AntD.Time');
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Time
   });
 
   var css_248z = ".lf-form-react-antd .ant-form-item {\n  margin-bottom: 0px;\n}\n.lf-form-react-antd .lf-buttons {\n  margin-top: 25px;\n  display: flex;\n}\n.lf-form-react-antd .lf-buttons button:not(:first-child) {\n  margin-left: 10px;\n}\n.lf-form-react-antd.lf-form-react-antd-plaintext .ant-col.ant-form-item-label {\n  padding-bottom: 0px;\n}";

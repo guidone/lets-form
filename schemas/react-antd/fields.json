@@ -71,6 +71,14 @@
                 "large"
               ]
             },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "outlined",
+                "borderless",
+                "filled"
+              ]
+            },
             "fullWidth": {
               "type": "boolean"
             },
@@ -275,23 +283,19 @@
                 "large"
               ]
             },
-            "popupMatchSelectWidth": {
-              "type": "boolean"
-            },
-            "listHeight": {
-              "type": "integer"
+            "variant": {
+              "type": "string",
+              "enum": [
+                "outlined",
+                "borderless",
+                "filled"
+              ]
             },
             "fullWidth": {
               "type": "boolean"
             },
             "width": {
               "type": "integer"
-            },
-            "allowClear": {
-              "type": "boolean"
-            },
-            "bordered": {
-              "type": "boolean"
             },
             "placement": {
               "type": "string",
@@ -302,16 +306,22 @@
                 "topRight"
               ]
             },
-            "showSearch": {
+            "listHeight": {
+              "type": "integer"
+            },
+            "allowClear": {
               "type": "boolean"
             },
-            "showArrow": {
-              "type": "boolean"
-            },
-            "virtual": {
+            "popupMatchSelectWidth": {
               "type": "boolean"
             },
             "tooltip": {
+              "type": "boolean"
+            },
+            "showSearch": {
+              "type": "boolean"
+            },
+            "virtual": {
               "type": "boolean"
             }
           }
@@ -653,6 +663,22 @@
             "hidden": {
               "type": "boolean"
             },
+            "size": {
+              "type": "string",
+              "enum": [
+                "small",
+                "default",
+                "large"
+              ]
+            },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "outlined",
+                "borderless",
+                "filled"
+              ]
+            },
             "min": {
               "type": "integer"
             },
@@ -662,31 +688,26 @@
             "max": {
               "type": "integer"
             },
-            "showControls": {
-              "type": "boolean"
+            "prefix": {
+              "type": "string"
             },
-            "stringMode": {
-              "type": "boolean"
-            },
-            "bordered": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
-            },
-            "tooltip": {
-              "type": "boolean"
+            "postfix": {
+              "type": "string"
             },
             "fullWidth": {
               "type": "boolean"
             },
             "width": {
               "type": "integer"
+            },
+            "showControls": {
+              "type": "boolean"
+            },
+            "stringMode": {
+              "type": "boolean"
+            },
+            "tooltip": {
+              "type": "boolean"
             }
           }
         }
@@ -855,6 +876,22 @@
             "hidden": {
               "type": "boolean"
             },
+            "size": {
+              "type": "string",
+              "enum": [
+                "small",
+                "default",
+                "large"
+              ]
+            },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "outlined",
+                "borderless",
+                "filled"
+              ]
+            },
             "format": {
               "type": "string"
             },
@@ -887,14 +924,6 @@
                 "decade"
               ]
             },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
-            },
             "fullWidth": {
               "type": "boolean"
             },
@@ -906,15 +935,6 @@
             },
             "maxDate": {
               "type": "string"
-            },
-            "bordered": {
-              "type": "boolean"
-            },
-            "allowClear": {
-              "type": "boolean"
-            },
-            "tooltip": {
-              "type": "boolean"
             },
             "showTime": {
               "type": "boolean"
@@ -932,6 +952,12 @@
               "type": "boolean"
             },
             "needConfirm": {
+              "type": "boolean"
+            },
+            "allowClear": {
+              "type": "boolean"
+            },
+            "tooltip": {
               "type": "boolean"
             }
           }
@@ -1193,12 +1219,6 @@
             "hidden": {
               "type": "boolean"
             },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
             "size": {
               "type": "string",
               "enum": [
@@ -1207,19 +1227,30 @@
                 "large"
               ]
             },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "outlined",
+                "borderless",
+                "filled"
+              ]
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
             "showCount": {
+              "type": "boolean"
+            },
+            "autoSize": {
               "type": "boolean"
             },
             "maxLength": {
               "type": "integer"
             },
             "allowClear": {
-              "type": "boolean"
-            },
-            "autoSize": {
-              "type": "boolean"
-            },
-            "bordered": {
               "type": "boolean"
             },
             "tooltip": {
@@ -1438,29 +1469,19 @@
                 "large"
               ]
             },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "outlined",
+                "borderless",
+                "filled"
+              ]
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
             "width": {
               "type": "integer"
-            },
-            "listHeight": {
-              "type": "integer"
-            },
-            "allowClear": {
-              "type": "boolean"
-            },
-            "bordered": {
-              "type": "boolean"
-            },
-            "showSearch": {
-              "type": "boolean"
-            },
-            "showArrow": {
-              "type": "boolean"
-            },
-            "virtual": {
-              "type": "boolean"
-            },
-            "tooltip": {
-              "type": "boolean"
             },
             "placement": {
               "type": "string",
@@ -1470,6 +1491,24 @@
                 "topLeft",
                 "topRight"
               ]
+            },
+            "listHeight": {
+              "type": "integer"
+            },
+            "allowClear": {
+              "type": "boolean"
+            },
+            "popupMatchSelectWidth": {
+              "type": "boolean"
+            },
+            "tooltip": {
+              "type": "boolean"
+            },
+            "showSearch": {
+              "type": "boolean"
+            },
+            "virtual": {
+              "type": "boolean"
             },
             "maxTagCount": {
               "type": "integer"
@@ -1707,6 +1746,22 @@
             "hidden": {
               "type": "boolean"
             },
+            "size": {
+              "type": "string",
+              "enum": [
+                "small",
+                "default",
+                "large"
+              ]
+            },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "outlined",
+                "borderless",
+                "filled"
+              ]
+            },
             "format": {
               "type": "string"
             },
@@ -1739,14 +1794,6 @@
                 "decade"
               ]
             },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
-            },
             "fullWidth": {
               "type": "boolean"
             },
@@ -1758,15 +1805,6 @@
             },
             "maxDate": {
               "type": "string"
-            },
-            "bordered": {
-              "type": "boolean"
-            },
-            "allowClear": {
-              "type": "boolean"
-            },
-            "tooltip": {
-              "type": "boolean"
             },
             "showTime": {
               "type": "boolean"
@@ -1784,6 +1822,12 @@
               "type": "boolean"
             },
             "needConfirm": {
+              "type": "boolean"
+            },
+            "allowClear": {
+              "type": "boolean"
+            },
+            "tooltip": {
               "type": "boolean"
             }
           }

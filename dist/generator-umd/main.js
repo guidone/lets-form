@@ -1,4 +1,4 @@
-/* LetsForm Generator v0.7.18 - UMD */
+/* LetsForm Generator v0.7.19 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button'), require('antd'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button', 'antd', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
@@ -6058,12 +6058,14 @@
   	hidden: null,
   	fullWidth: [
   		"react",
+  		"react-rsuite5",
   		"react-material-ui",
   		"react-antd",
   		"react-mantine"
   	],
   	width: [
   		"react",
+  		"react-rsuite5",
   		"react-material-ui",
   		"react-antd",
   		"react-mantine"
@@ -6078,9 +6080,6 @@
   		"react-bootstrap",
   		"react-antd",
   		"react-mantine"
-  	],
-  	block: [
-  		"react-rsuite5"
   	],
   	searchable: [
   		"react-rsuite5"
@@ -6337,8 +6336,33 @@
   		"react-material-ui",
   		"react-antd"
   	],
-  	block: [
+  	size: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	appearance: [
   		"react-rsuite5"
+  	],
+  	placement: [
+  		"react-rsuite5",
+  		"react-antd"
+  	],
+  	fullWidth: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	width: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
   	],
   	cleanable: [
   		"react-rsuite5"
@@ -6358,24 +6382,28 @@
   	isoWeek: [
   		"react-rsuite5"
   	],
-  	size: [
-  		"react-rsuite5",
-  		"react-bootstrap",
-  		"react-antd",
-  		"react-mantine"
-  	],
-  	appearance: [
-  		"react-rsuite5"
-  	],
-  	placement: [
-  		"react-rsuite5",
-  		"react-antd"
-  	],
-  	fullWidth: [
+  	variant: [
   		"react-material-ui",
-  		"react-bootstrap",
-  		"react-antd",
   		"react-mantine"
+  	],
+  	color: [
+  		"react-material-ui"
+  	],
+  	views: [
+  		"react-material-ui"
+  	],
+  	closeOnSelect: [
+  		"react-material-ui"
+  	],
+  	reduceAnimations: [
+  		"react-material-ui"
+  	],
+  	showDaysOutsideCurrentMonth: [
+  		"react-material-ui"
+  	],
+  	floatingLabel: [
+  		"react-material-ui",
+  		"react-bootstrap"
   	],
   	disableFuture: [
   		"react-material-ui"
@@ -6392,10 +6420,19 @@
   	displayWeekNumber: [
   		"react-material-ui"
   	],
-  	reduceAnimations: [
+  	loading: [
   		"react-material-ui"
   	],
-  	showDaysOutsideCurrentMonth: [
+  	fixedWeekNumber: [
+  		"react-material-ui"
+  	],
+  	formatDensity: [
+  		"react-material-ui"
+  	],
+  	monthsPerRow: [
+  		"react-material-ui"
+  	],
+  	yearsPerRow: [
   		"react-material-ui"
   	],
   	minDate: [
@@ -6408,22 +6445,11 @@
   		"react-antd",
   		"react-mantine"
   	],
-  	views: [
-  		"react-material-ui"
-  	],
   	prefix: [
   		"react-bootstrap"
   	],
   	postfix: [
   		"react-bootstrap"
-  	],
-  	floatingLabel: [
-  		"react-bootstrap"
-  	],
-  	width: [
-  		"react-bootstrap",
-  		"react-antd",
-  		"react-mantine"
   	],
   	picker: [
   		"react-antd"
@@ -6459,9 +6485,6 @@
   		"react-antd"
   	],
   	radius: [
-  		"react-mantine"
-  	],
-  	variant: [
   		"react-mantine"
   	],
   	valueFormat: [
@@ -6988,8 +7011,33 @@
   		"react-material-ui",
   		"react-antd"
   	],
-  	block: [
+  	size: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	appearance: [
   		"react-rsuite5"
+  	],
+  	placement: [
+  		"react-rsuite5",
+  		"react-antd"
+  	],
+  	fullWidth: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	width: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-bootstrap",
+  		"react-antd",
+  		"react-mantine"
   	],
   	cleanable: [
   		"react-rsuite5"
@@ -7003,30 +7051,34 @@
   	showMeridian: [
   		"react-rsuite5"
   	],
-  	showWeekNumbers: [
-  		"react-rsuite5"
-  	],
   	isoWeek: [
   		"react-rsuite5"
   	],
-  	size: [
-  		"react-rsuite5",
-  		"react-bootstrap",
-  		"react-antd",
-  		"react-mantine"
-  	],
-  	appearance: [
+  	showWeekNumbers: [
   		"react-rsuite5"
   	],
-  	placement: [
-  		"react-rsuite5",
-  		"react-antd"
-  	],
-  	fullWidth: [
+  	variant: [
   		"react-material-ui",
-  		"react-bootstrap",
-  		"react-antd",
   		"react-mantine"
+  	],
+  	color: [
+  		"react-material-ui"
+  	],
+  	views: [
+  		"react-material-ui"
+  	],
+  	closeOnSelect: [
+  		"react-material-ui"
+  	],
+  	reduceAnimations: [
+  		"react-material-ui"
+  	],
+  	showDaysOutsideCurrentMonth: [
+  		"react-material-ui"
+  	],
+  	floatingLabel: [
+  		"react-material-ui",
+  		"react-bootstrap"
   	],
   	disableFuture: [
   		"react-material-ui"
@@ -7043,23 +7095,57 @@
   	displayWeekNumber: [
   		"react-material-ui"
   	],
-  	reduceAnimations: [
+  	ampm: [
   		"react-material-ui"
   	],
-  	showDaysOutsideCurrentMonth: [
+  	ampmInClock: [
   		"react-material-ui"
   	],
-  	maxDate: [
+  	forceMobile: [
+  		"react-material-ui"
+  	],
+  	loading: [
+  		"react-material-ui"
+  	],
+  	fixedWeekNumber: [
+  		"react-material-ui"
+  	],
+  	formatDensity: [
   		"react-material-ui",
-  		"react-antd",
-  		"react-mantine"
+  		"react-material-ui"
+  	],
+  	monthsPerRow: [
+  		"react-material-ui"
+  	],
+  	yearsPerRow: [
+  		"react-material-ui"
   	],
   	minDate: [
   		"react-material-ui",
   		"react-antd",
   		"react-mantine"
   	],
-  	views: [
+  	maxDate: [
+  		"react-material-ui",
+  		"react-antd",
+  		"react-mantine"
+  	],
+  	minDateTime: [
+  		"react-material-ui"
+  	],
+  	maxDateTime: [
+  		"react-material-ui"
+  	],
+  	minutesStep: [
+  		"react-material-ui"
+  	],
+  	timeStepsHours: [
+  		"react-material-ui"
+  	],
+  	timeStepsMinutes: [
+  		"react-material-ui"
+  	],
+  	timeStepsSeconds: [
   		"react-material-ui"
   	],
   	prefix: [
@@ -7067,14 +7153,6 @@
   	],
   	postfix: [
   		"react-bootstrap"
-  	],
-  	floatingLabel: [
-  		"react-bootstrap"
-  	],
-  	width: [
-  		"react-bootstrap",
-  		"react-antd",
-  		"react-mantine"
   	],
   	picker: [
   		"react-antd"
@@ -7110,9 +7188,6 @@
   		"react-antd"
   	],
   	radius: [
-  		"react-mantine"
-  	],
-  	variant: [
   		"react-mantine"
   	],
   	valueFormat: [
@@ -7499,6 +7574,144 @@
   	validationPattern: "validation",
   	validationMessage: "validation",
   	required: null
+  };
+  var time$1 = {
+  	name: null,
+  	label: null,
+  	hint: null,
+  	placeholder: null,
+  	disabled: null,
+  	readOnly: null,
+  	hidden: null,
+  	size: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	appearance: [
+  		"react-rsuite5"
+  	],
+  	placement: [
+  		"react-rsuite5"
+  	],
+  	fullWidth: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	width: [
+  		"react-rsuite5",
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	cleanable: [
+  		"react-rsuite5"
+  	],
+  	editable: [
+  		"react-rsuite5"
+  	],
+  	oneTap: [
+  		"react-rsuite5"
+  	],
+  	showMeridian: [
+  		"react-rsuite5"
+  	],
+  	format: [
+  		"react-rsuite5",
+  		"react-material-ui"
+  	],
+  	variant: [
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	color: [
+  		"react-material-ui"
+  	],
+  	views: [
+  		"react-material-ui"
+  	],
+  	floatingLabel: [
+  		"react-material-ui"
+  	],
+  	ampm: [
+  		"react-material-ui"
+  	],
+  	ampmInClock: [
+  		"react-material-ui"
+  	],
+  	forceMobile: [
+  		"react-material-ui"
+  	],
+  	closeOnSelect: [
+  		"react-material-ui"
+  	],
+  	disableFuture: [
+  		"react-material-ui"
+  	],
+  	disableOpenPicker: [
+  		"react-material-ui"
+  	],
+  	disablePast: [
+  		"react-material-ui"
+  	],
+  	minTime: [
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	maxTime: [
+  		"react-material-ui",
+  		"react-mantine"
+  	],
+  	formatDensity: [
+  		"react-material-ui"
+  	],
+  	minutesStep: [
+  		"react-material-ui"
+  	],
+  	timeStepsHours: [
+  		"react-material-ui"
+  	],
+  	timeStepsMinutes: [
+  		"react-material-ui"
+  	],
+  	timeStepsSeconds: [
+  		"react-material-ui"
+  	],
+  	radius: [
+  		"react-mantine"
+  	],
+  	withSeconds: [
+  		"react-mantine"
+  	],
+  	pointer: [
+  		"react-mantine"
+  	],
+  	showBrowserPicker: [
+  		"react-mantine"
+  	],
+  	leftSection: [
+  		"react-mantine"
+  	],
+  	rightSection: [
+  		"react-mantine"
+  	],
+  	leftSectionWidth: [
+  		"react-mantine"
+  	],
+  	rightSectionWidth: [
+  		"react-mantine"
+  	],
+  	validationMinLength: "validation",
+  	validationMin: "validation",
+  	validationMaxLength: "validation",
+  	validationMax: "validation",
+  	validationPattern: "validation",
+  	validationMessage: "validation",
+  	required: null
+  };
+  var hidden$1 = {
+  	name: null,
+  	info: null
   };
   var FIELD_MAPPINGS = {
   	"input-text": {
@@ -8242,7 +8455,9 @@
   	validationPattern: "validation",
   	validationMessage: "validation",
   	required: null
-  }
+  },
+  	time: time$1,
+  	hidden: hidden$1
   };
 
   var translateValidationKey = function translateValidationKey(str) {
@@ -9008,9 +9223,14 @@
   			]
   		},
   		{
-  			name: "block",
+  			name: "fullWidth",
   			type: "boolean",
-  			description: "Only in fluid layout"
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
   		},
   		{
   			name: "searchable",
@@ -9724,7 +9944,7 @@
   			],
   			packages: {
   				"@mui/x-date-pickers": "latest",
-  				dayjs: "1.11.10"
+  				dayjs: "latest"
   			}
   		},
   		"react-mantine": {
@@ -9811,39 +10031,6 @@
   			description: "Check https://date-fns.org library for available formats"
   		},
   		{
-  			name: "block",
-  			type: "boolean",
-  			description: "Only in fluid layout"
-  		},
-  		{
-  			name: "cleanable",
-  			type: "boolean"
-  		},
-  		{
-  			name: "editable",
-  			type: "boolean",
-  			description: "Rendered as an input, the date can be entered via the keyboard"
-  		},
-  		{
-  			name: "oneTap",
-  			type: "boolean",
-  			description: "One click to complete the selection date"
-  		},
-  		{
-  			name: "showMeridian",
-  			type: "boolean",
-  			description: "Display hours in 12 format"
-  		},
-  		{
-  			name: "showWeekNumbers",
-  			type: "boolean"
-  		},
-  		{
-  			name: "isoWeek",
-  			type: "boolean",
-  			description: "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
-  		},
-  		{
   			name: "size",
   			type: "string",
   			description: "Size of the field",
@@ -9880,46 +10067,184 @@
   				"autoHorizontalStart",
   				"autoHorizontalEnd"
   			]
-  		}
-  	],
-  	"react-material-ui": [
-  		{
-  			name: "format",
-  			type: "string",
-  			description: "Date format, i.e. DD/MM/YYYY"
   		},
   		{
   			name: "fullWidth",
   			type: "boolean",
-  			description: "Set the width of the container field to 100%"
+  			description: "Set the width of the field to 100% of the enclosing container"
   		},
   		{
-  			name: "disableFuture",
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "cleanable",
   			type: "boolean"
   		},
   		{
-  			name: "disableHighlightToday",
+  			name: "editable",
+  			type: "boolean",
+  			description: "Rendered as an input, the date can be entered via the keyboard"
+  		},
+  		{
+  			name: "oneTap",
+  			type: "boolean",
+  			description: "One click to complete the selection date"
+  		},
+  		{
+  			name: "showMeridian",
+  			type: "boolean",
+  			description: "Display hours in 12 format"
+  		},
+  		{
+  			name: "showWeekNumbers",
   			type: "boolean"
   		},
   		{
-  			name: "disableOpenPicker",
-  			type: "boolean"
+  			name: "isoWeek",
+  			type: "boolean",
+  			description: "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
+  		}
+  	],
+  	"react-material-ui": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"small",
+  				"medium",
+  				"large"
+  			]
   		},
   		{
-  			name: "disablePast",
-  			type: "boolean"
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"filled",
+  				"standard"
+  			]
   		},
   		{
-  			name: "displayWeekNumber",
-  			type: "boolean"
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"error",
+  				"info",
+  				"primary",
+  				"secondary",
+  				"success",
+  				"warning"
+  			]
+  		},
+  		{
+  			name: "format",
+  			type: "string",
+  			description: "Check https://date-fns.org library for available formats"
+  		},
+  		{
+  			name: "views",
+  			type: "[string]",
+  			description: "Available views",
+  			options: [
+  				"day",
+  				"month",
+  				"year"
+  			]
+  		},
+  		{
+  			name: "closeOnSelect",
+  			type: "boolean",
+  			description: "If true, the popover or modal will close after submitting the full date"
   		},
   		{
   			name: "reduceAnimations",
-  			type: "boolean"
+  			type: "boolean",
+  			description: "If true, disable heavy animations"
   		},
   		{
   			name: "showDaysOutsideCurrentMonth",
-  			type: "boolean"
+  			type: "boolean",
+  			description: "If true, days outside the current month are rendered:\n- if fixedWeekNumber is defined, renders days to have the weeks requested.\n- if fixedWeekNumber is not defined, renders day to fill the first and last week of the current month.\n- ignored if calendars equals more than 1 on range pickers"
+  		},
+  		{
+  			name: "floatingLabel",
+  			type: "boolean",
+  			description: "Show floating label for the control"
+  		},
+  		{
+  			name: "disableFuture",
+  			type: "boolean",
+  			description: "If true, disable values after the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "disableHighlightToday",
+  			type: "boolean",
+  			description: "If true, today's date is rendering without highlighting with circle"
+  		},
+  		{
+  			name: "disableOpenPicker",
+  			type: "boolean",
+  			description: "If true, the open picker button will not be rendered (renders only the field)"
+  		},
+  		{
+  			name: "disablePast",
+  			type: "boolean",
+  			description: "If true, disable values before the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "displayWeekNumber",
+  			type: "boolean",
+  			description: "If true, the week number will be display in the calendar"
+  		},
+  		{
+  			name: "loading",
+  			type: "boolean",
+  			description: "If true, calls renderLoading instead of rendering the day calendar. Can be used to preload information and show it in calendar"
+  		},
+  		{
+  			name: "fixedWeekNumber",
+  			type: "number",
+  			description: "The day view will show as many weeks as needed after the end of the current month to match this value. Put it to 6 to have a fixed number of weeks in Gregorian calendars"
+  		},
+  		{
+  			name: "formatDensity",
+  			type: "string",
+  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
+  			options: [
+  				"dense",
+  				"spacious"
+  			]
+  		},
+  		{
+  			name: "monthsPerRow",
+  			type: "string",
+  			description: "Months rendered per row",
+  			options: [
+  				3,
+  				4
+  			]
+  		},
+  		{
+  			name: "yearsPerRow",
+  			type: "string",
+  			description: "Years rendered per row",
+  			options: [
+  				3,
+  				4
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
   		},
   		{
   			name: "minDate",
@@ -9928,15 +10253,6 @@
   		{
   			name: "maxDate",
   			type: "date"
-  		},
-  		{
-  			name: "views",
-  			type: "[string]",
-  			options: [
-  				"day",
-  				"month",
-  				"year"
-  			]
   		}
   	],
   	"react-bootstrap": [
@@ -11702,7 +12018,7 @@
   			],
   			packages: {
   				"@mui/x-date-pickers": "latest",
-  				dayjs: "1.11.10"
+  				dayjs: "latest"
   			}
   		},
   		"react-mantine": {
@@ -11789,39 +12105,6 @@
   			description: "Check https://date-fns.org library for available formats"
   		},
   		{
-  			name: "block",
-  			type: "boolean",
-  			description: "Only in fluid layout"
-  		},
-  		{
-  			name: "cleanable",
-  			type: "boolean"
-  		},
-  		{
-  			name: "editable",
-  			type: "boolean",
-  			description: "Rendered as an input, the date can be entered via the keyboard"
-  		},
-  		{
-  			name: "oneTap",
-  			type: "boolean",
-  			description: "One click to complete the selection date"
-  		},
-  		{
-  			name: "showMeridian",
-  			type: "boolean",
-  			description: "Display hours in 12 format"
-  		},
-  		{
-  			name: "showWeekNumbers",
-  			type: "boolean"
-  		},
-  		{
-  			name: "isoWeek",
-  			type: "boolean",
-  			description: "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
-  		},
-  		{
   			name: "size",
   			type: "string",
   			description: "Size of the field",
@@ -11858,54 +12141,82 @@
   				"autoHorizontalStart",
   				"autoHorizontalEnd"
   			]
-  		}
-  	],
-  	"react-material-ui": [
-  		{
-  			name: "format",
-  			type: "string",
-  			description: "Date format, i.e. DD/MM/YYYY"
   		},
   		{
   			name: "fullWidth",
   			type: "boolean",
-  			description: "Set the width of the container field to 100%"
+  			description: "Set the width of the field to 100% of the enclosing container"
   		},
   		{
-  			name: "disableFuture",
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "cleanable",
   			type: "boolean"
   		},
   		{
-  			name: "disableHighlightToday",
+  			name: "editable",
+  			type: "boolean",
+  			description: "Rendered as an input, the date can be entered via the keyboard"
+  		},
+  		{
+  			name: "oneTap",
+  			type: "boolean",
+  			description: "One click to complete the selection date"
+  		},
+  		{
+  			name: "showMeridian",
+  			type: "boolean",
+  			description: "Display hours in 12 format"
+  		},
+  		{
+  			name: "isoWeek",
+  			type: "boolean",
+  			description: "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
+  		},
+  		{
+  			name: "showWeekNumbers",
   			type: "boolean"
+  		}
+  	],
+  	"react-material-ui": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"small",
+  				"medium",
+  				"large"
+  			]
   		},
   		{
-  			name: "disableOpenPicker",
-  			type: "boolean"
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"filled",
+  				"standard"
+  			]
   		},
   		{
-  			name: "disablePast",
-  			type: "boolean"
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"error",
+  				"info",
+  				"primary",
+  				"secondary",
+  				"success",
+  				"warning"
+  			]
   		},
   		{
-  			name: "displayWeekNumber",
-  			type: "boolean"
-  		},
-  		{
-  			name: "reduceAnimations",
-  			type: "boolean"
-  		},
-  		{
-  			name: "showDaysOutsideCurrentMonth",
-  			type: "boolean"
-  		},
-  		{
-  			name: "maxDate",
-  			type: "date"
-  		},
-  		{
-  			name: "minDate",
-  			type: "date"
+  			name: "format",
+  			type: "string",
+  			description: "Check https://date-fns.org library for available formats"
   		},
   		{
   			name: "views",
@@ -11918,6 +12229,154 @@
   				"month",
   				"year"
   			]
+  		},
+  		{
+  			name: "closeOnSelect",
+  			type: "boolean",
+  			description: "If true, the popover or modal will close after submitting the full date"
+  		},
+  		{
+  			name: "reduceAnimations",
+  			type: "boolean",
+  			description: "If true, disable heavy animations"
+  		},
+  		{
+  			name: "showDaysOutsideCurrentMonth",
+  			type: "boolean",
+  			description: "If true, days outside the current month are rendered:\n- if fixedWeekNumber is defined, renders days to have the weeks requested.\n- if fixedWeekNumber is not defined, renders day to fill the first and last week of the current month.\n- ignored if calendars equals more than 1 on range pickers"
+  		},
+  		{
+  			name: "floatingLabel",
+  			type: "boolean",
+  			description: "Show floating label for the control"
+  		},
+  		{
+  			name: "disableFuture",
+  			type: "boolean",
+  			description: "If true, disable values after the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "disableHighlightToday",
+  			type: "boolean",
+  			description: "If true, today's date is rendering without highlighting with circle"
+  		},
+  		{
+  			name: "disableOpenPicker",
+  			type: "boolean",
+  			description: "If true, the open picker button will not be rendered (renders only the field)"
+  		},
+  		{
+  			name: "disablePast",
+  			type: "boolean",
+  			description: "If true, disable values before the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "displayWeekNumber",
+  			type: "boolean",
+  			description: "If true, the week number will be display in the calendar"
+  		},
+  		{
+  			name: "ampm",
+  			type: "boolean",
+  			description: "12h/24h view for hour selection clock"
+  		},
+  		{
+  			name: "ampmInClock",
+  			type: "boolean",
+  			description: "Display ampm controls under the clock (instead of in the toolbar)"
+  		},
+  		{
+  			name: "forceMobile",
+  			type: "boolean",
+  			description: "Force mobile component"
+  		},
+  		{
+  			name: "loading",
+  			type: "boolean",
+  			description: "If true, calls renderLoading instead of rendering the day calendar. Can be used to preload information and show it in calendar"
+  		},
+  		{
+  			name: "fixedWeekNumber",
+  			type: "number",
+  			description: "The day view will show as many weeks as needed after the end of the current month to match this value. Put it to 6 to have a fixed number of weeks in Gregorian calendars"
+  		},
+  		{
+  			name: "formatDensity",
+  			type: "string",
+  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
+  			options: [
+  				"dense",
+  				"spacious"
+  			]
+  		},
+  		{
+  			name: "monthsPerRow",
+  			type: "string",
+  			description: "Months rendered per row",
+  			options: [
+  				3,
+  				4
+  			]
+  		},
+  		{
+  			name: "yearsPerRow",
+  			type: "string",
+  			description: "Years rendered per row",
+  			options: [
+  				3,
+  				4
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "minDate",
+  			type: "date"
+  		},
+  		{
+  			name: "maxDate",
+  			type: "date"
+  		},
+  		{
+  			name: "minDateTime"
+  		},
+  		{
+  			name: "maxDateTime"
+  		},
+  		{
+  			name: "formatDensity",
+  			type: "string",
+  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
+  			options: [
+  				"dense",
+  				"spacious"
+  			]
+  		},
+  		{
+  			name: "minutesStep",
+  			type: "number",
+  			description: "Step over minutes"
+  		},
+  		{
+  			name: "timeStepsHours",
+  			type: "number",
+  			description: "The time steps between two time unit options. For example, if timeStep.minutes = 8, then the available minute options will be [0, 8, 16, 24, 32, 40, 48, 56]"
+  		},
+  		{
+  			name: "timeStepsMinutes",
+  			type: "number"
+  		},
+  		{
+  			name: "timeStepsSeconds",
+  			type: "number"
   		}
   	],
   	"react-bootstrap": [
@@ -12996,6 +13455,410 @@
   	frameworks: [
   		"react-rsuite5",
   		"react-antd"
+  	]
+  };
+  var time = {
+  	label: "Time",
+  	category: "general",
+  	description: "Time input",
+  	name: "time",
+  	dependencies: {
+  		"react-material-ui": {
+  			imports: {
+  			},
+  			js: [
+  				"import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';",
+  				"import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';",
+  				null
+  			],
+  			packages: {
+  				"@mui/x-date-pickers": "latest",
+  				dayjs: "latest"
+  			}
+  		},
+  		"react-mantine": {
+  			js: [
+  				null
+  			],
+  			css: [
+  				null
+  			],
+  			imports: {
+  			},
+  			packages: {
+  				"@mantine/dates": "^7.6.2",
+  				dayjs: "^1.11.10"
+  			}
+  		},
+  		"react-rsuite5": {
+  			js: [
+  				null
+  			],
+  			css: [
+  			],
+  			imports: {
+  			},
+  			packages: {
+  			}
+  		},
+  		"react-antd": {
+  			js: [
+  				null,
+  				null,
+  				null
+  			],
+  			css: [
+  			],
+  			imports: {
+  			},
+  			packages: {
+  				dayjs: "^1.11.10"
+  			}
+  		}
+  	},
+  	common: [
+  		{
+  			name: "name",
+  			type: "string",
+  			description: "The name of the field and the key of the JSON"
+  		},
+  		{
+  			name: "label",
+  			type: "string | i18n",
+  			description: "Label of the field"
+  		},
+  		{
+  			name: "hint",
+  			type: "string | i18n",
+  			description: "Help text for the field (generally shown below the input box)"
+  		},
+  		{
+  			name: "placeholder",
+  			type: "string | i18n",
+  			description: "Placeholder text, visibile when the field is empty"
+  		},
+  		{
+  			name: "disabled",
+  			type: "boolean",
+  			description: "Disables and greys out the field"
+  		},
+  		{
+  			name: "readOnly",
+  			type: "boolean",
+  			description: "Put the field in read only mode"
+  		},
+  		{
+  			name: "hidden",
+  			type: "boolean",
+  			description: "Hides the field from the form"
+  		}
+  	],
+  	"react-rsuite5": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"lg",
+  				"md",
+  				"sm",
+  				"xs"
+  			]
+  		},
+  		{
+  			name: "appearance",
+  			type: "string",
+  			options: [
+  				"default",
+  				"subtle"
+  			]
+  		},
+  		{
+  			name: "placement",
+  			type: "string",
+  			options: [
+  				"topStart",
+  				"topEnd",
+  				"leftStart",
+  				"rightStart",
+  				"leftEnd",
+  				"rightEnd",
+  				"bottomStart",
+  				"bottomEnd",
+  				"auto",
+  				"autoVerticalStart",
+  				"autoVerticalEnd",
+  				"autoHorizontalStart",
+  				"autoHorizontalEnd"
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "cleanable",
+  			type: "boolean"
+  		},
+  		{
+  			name: "editable",
+  			type: "boolean",
+  			description: "Rendered as an input, the date can be entered via the keyboard"
+  		},
+  		{
+  			name: "oneTap",
+  			type: "boolean",
+  			description: "One click to complete the selection date"
+  		},
+  		{
+  			name: "showMeridian",
+  			type: "boolean",
+  			description: "Display hours in 12 format"
+  		},
+  		{
+  			name: "format",
+  			type: "string",
+  			options: [
+  				"HH:mm",
+  				"HH:mm:ss",
+  				"hh:mm:ss aaa",
+  				"hh:mm aaa"
+  			]
+  		}
+  	],
+  	"react-material-ui": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"small",
+  				"medium",
+  				"large"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"filled",
+  				"standard"
+  			]
+  		},
+  		{
+  			name: "color",
+  			type: "string",
+  			options: [
+  				"error",
+  				"info",
+  				"primary",
+  				"secondary",
+  				"success",
+  				"warning"
+  			]
+  		},
+  		{
+  			name: "format",
+  			type: "string",
+  			description: "Check https://date-fns.org library for available formats"
+  		},
+  		{
+  			name: "views",
+  			type: "[string]",
+  			options: [
+  				"hours",
+  				"minutes",
+  				"seconds"
+  			]
+  		},
+  		{
+  			name: "floatingLabel",
+  			type: "boolean",
+  			description: "Show floating label for the control"
+  		},
+  		{
+  			name: "ampm",
+  			type: "boolean",
+  			description: "12h/24h view for hour selection clock"
+  		},
+  		{
+  			name: "ampmInClock",
+  			type: "boolean",
+  			description: "Display ampm controls under the clock (instead of in the toolbar)"
+  		},
+  		{
+  			name: "forceMobile",
+  			type: "boolean",
+  			description: "Force mobile component"
+  		},
+  		{
+  			name: "closeOnSelect",
+  			type: "boolean",
+  			description: "If true, the popover or modal will close after submitting the full date."
+  		},
+  		{
+  			name: "disableFuture",
+  			type: "boolean",
+  			description: "If true, disable values after the current date for date components, time for time components and both for date time components."
+  		},
+  		{
+  			name: "disableOpenPicker",
+  			type: "boolean",
+  			description: "If true, the open picker button will not be rendered (renders only the field)"
+  		},
+  		{
+  			name: "disablePast",
+  			type: "boolean",
+  			description: "If true, disable values before the current date for date components, time for time components and both for date time components"
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "minTime",
+  			type: "string"
+  		},
+  		{
+  			name: "maxTime",
+  			type: "string"
+  		},
+  		{
+  			name: "formatDensity",
+  			type: "string",
+  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
+  			options: [
+  				"dense",
+  				"spacious"
+  			]
+  		},
+  		{
+  			name: "minutesStep",
+  			type: "number",
+  			description: "Step over minutes"
+  		},
+  		{
+  			name: "timeStepsHours",
+  			type: "number",
+  			description: "The time steps between two time unit options. For example, if timeStep.minutes = 8, then the available minute options will be [0, 8, 16, 24, 32, 40, 48, 56]"
+  		},
+  		{
+  			name: "timeStepsMinutes",
+  			type: "number"
+  		},
+  		{
+  			name: "timeStepsSeconds",
+  			type: "number"
+  		}
+  	],
+  	"react-mantine": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "radius",
+  			type: "string",
+  			options: [
+  				"xs",
+  				"sm",
+  				"md",
+  				"lg",
+  				"xl"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"default",
+  				"filled",
+  				"unstyled"
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "minTime",
+  			type: "string"
+  		},
+  		{
+  			name: "maxTime",
+  			type: "string"
+  		},
+  		{
+  			name: "withSeconds",
+  			type: "boolean",
+  			description: "Determines whether seconds input should be rendered"
+  		},
+  		{
+  			name: "pointer",
+  			type: "boolean",
+  			description: "Determines whether the input should have cursor: pointer style, false by default"
+  		},
+  		{
+  			name: "showBrowserPicker",
+  			type: "boolean",
+  			description: "Show browser native picker (if supported)"
+  		},
+  		{
+  			name: "leftSection",
+  			type: "string"
+  		},
+  		{
+  			name: "rightSection",
+  			type: "string"
+  		},
+  		{
+  			name: "leftSectionWidth",
+  			type: "number"
+  		},
+  		{
+  			name: "rightSectionWidth",
+  			type: "number"
+  		}
+  	]
+  };
+  var hidden = {
+  	label: "Hidden",
+  	category: "general",
+  	name: "hidden",
+  	description: "Hidden field, just a placeholder for data, component will not be visible in the form (only during design)",
+  	common: [
+  		{
+  			name: "name",
+  			type: "string",
+  			description: "The name of the field and the key of the JSON"
+  		}
   	]
   };
   var Manifests = {
@@ -15241,7 +16104,9 @@
   			description: "Placeholder text, visibile when the field is empty"
   		}
   	]
-  }
+  },
+  	time: time,
+  	hidden: hidden
   };
 
   var LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns'];
@@ -16179,16 +17044,16 @@
     }, "&npsb;"));
   };
 
-  var index$2r = /*#__PURE__*/Object.freeze({
+  var index$2s = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Divider: Divider
   });
 
-  var _excluded$1N = ["name", "view"];
+  var _excluded$1O = ["name", "view"];
   var ReactView = function ReactView(_ref) {
     var name = _ref.name,
       view = _ref.view,
-      rest = _objectWithoutProperties(_ref, _excluded$1N);
+      rest = _objectWithoutProperties(_ref, _excluded$1O);
     var View = view;
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-react-view",
@@ -16662,7 +17527,7 @@
   var css_248z$K = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$K);
 
-  var _excluded$1M = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$1N = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -16688,7 +17553,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$1M);
+      rest = _objectWithoutProperties(_ref, _excluded$1N);
     var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -18307,182 +19172,182 @@
     return LazyWithPreload;
   }
 
-  var _excluded$1L = ["framework", "children"];
+  var _excluded$1M = ["framework", "children"];
   var Fields$6 = {
     'input-text': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2q; });
-      })
-    },
-    'toggle': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2p; });
-      })
-    },
-    'select': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2o; });
-      })
-    },
-    'group': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2n; });
-      })
-    },
-    'array': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2m; });
-      })
-    },
-    'two-columns': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2l; });
-      })
-    },
-    'three-columns': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2k; });
-      })
-    },
-    'input-number': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2j; });
-      })
-    },
-    'date': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2i; });
-      })
-    },
-    'checkbox': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2h; });
-      })
-    },
-    'checkbox-group': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2g; });
-      })
-    },
-    'slider': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2f; });
-      })
-    },
-    'radio-group': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2e; });
-      })
-    },
-    'input-tag': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2d; });
-      })
-    },
-    'input-mask': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2c; });
-      })
-    },
-    'textarea': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2b; });
-      })
-    },
-    'rate': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2a; });
-      })
-    },
-    'placeholder': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$29; });
-      })
-    },
-    'multiselect': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$28; });
-      })
-    },
-    'multiselect-language': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$27; });
-      })
-    },
-    'input-text-i18n': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$26; });
-      })
-    },
-    'placeholder-image': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$25; });
-      })
-    },
-    'button': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$24; });
-      })
-    },
-    'divider': {
       'react-rsuite5': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$2r; });
       })
     },
+    'toggle': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2q; });
+      })
+    },
+    'select': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2p; });
+      })
+    },
+    'group': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2o; });
+      })
+    },
+    'array': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2n; });
+      })
+    },
+    'two-columns': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2m; });
+      })
+    },
+    'three-columns': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2l; });
+      })
+    },
+    'input-number': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2k; });
+      })
+    },
+    'date': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2j; });
+      })
+    },
+    'checkbox': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2i; });
+      })
+    },
+    'checkbox-group': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2h; });
+      })
+    },
+    'slider': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2g; });
+      })
+    },
+    'radio-group': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2f; });
+      })
+    },
+    'input-tag': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2e; });
+      })
+    },
+    'input-mask': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2d; });
+      })
+    },
+    'textarea': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2c; });
+      })
+    },
+    'rate': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2b; });
+      })
+    },
+    'placeholder': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2a; });
+      })
+    },
+    'multiselect': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$29; });
+      })
+    },
+    'multiselect-language': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$28; });
+      })
+    },
+    'input-text-i18n': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$27; });
+      })
+    },
+    'placeholder-image': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$26; });
+      })
+    },
+    'button': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$25; });
+      })
+    },
+    'divider': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2s; });
+      })
+    },
     'react-view': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$23; });
+        return Promise.resolve().then(function () { return index$24; });
       })
     },
     'datetime': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$22; });
+        return Promise.resolve().then(function () { return index$23; });
       })
     },
     'tabs': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$21; });
+        return Promise.resolve().then(function () { return index$22; });
       })
     },
     'radio-tile': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$20; });
+        return Promise.resolve().then(function () { return index$21; });
       })
     },
     'upload': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1$; });
+        return Promise.resolve().then(function () { return index$20; });
       })
     },
     'buttons-toggle-group': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1_; });
+        return Promise.resolve().then(function () { return index$1$; });
       })
     },
     'steps': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1Z; });
+        return Promise.resolve().then(function () { return index$1_; });
       })
     },
     'esm-module': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1Y; });
+        return Promise.resolve().then(function () { return index$1Z; });
       })
     },
     'time': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1X; });
+        return Promise.resolve().then(function () { return index$1Y; });
       })
     },
     'hidden': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1W; });
+        return Promise.resolve().then(function () { return index$1X; });
       })
     }
   };
   var Forms$6 = {
     'react-rsuite5': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index$1V; });
+      return Promise.resolve().then(function () { return index$1W; });
     })
   };
   var FormGenerator$6 = GenerateGenerator({
@@ -18492,148 +19357,148 @@
   var LetsForm$5 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1L);
+      rest = _objectWithoutProperties(_ref, _excluded$1M);
     return /*#__PURE__*/React$1.createElement(FormGenerator$6, _extends({
       framework: "react-rsuite5"
     }, rest), children);
   };
 
-  var _excluded$1K = ["framework", "children"];
+  var _excluded$1L = ["framework", "children"];
   var Fields$5 = {
     'input-text': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1U; });
+        return Promise.resolve().then(function () { return index$1V; });
       })
     },
     'select': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1T; });
+        return Promise.resolve().then(function () { return index$1U; });
       })
     },
     'toggle': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1S; });
+        return Promise.resolve().then(function () { return index$1T; });
       })
     },
     'checkbox': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1R; });
+        return Promise.resolve().then(function () { return index$1S; });
       })
     },
     'slider': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1Q; });
+        return Promise.resolve().then(function () { return index$1R; });
       })
     },
     'placeholder': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1P; });
+        return Promise.resolve().then(function () { return index$1Q; });
       })
     },
     'rate': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1O; });
+        return Promise.resolve().then(function () { return index$1P; });
       })
     },
     'date': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1N; });
+        return Promise.resolve().then(function () { return index$1O; });
       })
     },
     'three-columns': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1M; });
+        return Promise.resolve().then(function () { return index$1N; });
       })
     },
     'two-columns': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1L; });
+        return Promise.resolve().then(function () { return index$1M; });
       })
     },
     'group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1K; });
+        return Promise.resolve().then(function () { return index$1L; });
       })
     },
     'placeholder-image': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1J; });
+        return Promise.resolve().then(function () { return index$1K; });
       })
     },
     'divider': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1I; });
+        return Promise.resolve().then(function () { return index$1J; });
       })
     },
     'react-view': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1H; });
+        return Promise.resolve().then(function () { return index$1I; });
       })
     },
     'datetime': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1G; });
+        return Promise.resolve().then(function () { return index$1H; });
       })
     },
     'array': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1F; });
+        return Promise.resolve().then(function () { return index$1G; });
       })
     },
     'textarea': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1E; });
+        return Promise.resolve().then(function () { return index$1F; });
       })
     },
     'multiselect': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1D; });
+        return Promise.resolve().then(function () { return index$1E; });
       })
     },
     'input-number': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1C; });
+        return Promise.resolve().then(function () { return index$1D; });
       })
     },
     'radio-group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1B; });
+        return Promise.resolve().then(function () { return index$1C; });
       })
     },
     'checkbox-group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1A; });
+        return Promise.resolve().then(function () { return index$1B; });
       })
     },
     'tabs': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1z; });
+        return Promise.resolve().then(function () { return index$1A; });
       })
     },
     'button': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1y; });
+        return Promise.resolve().then(function () { return index$1z; });
       })
     },
     'upload': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1x; });
+        return Promise.resolve().then(function () { return index$1y; });
       })
     },
     'time': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1w; });
+        return Promise.resolve().then(function () { return index$1x; });
       })
     },
     'hidden': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1W; });
+        return Promise.resolve().then(function () { return index$1X; });
       })
     }
   };
   var Forms$5 = {
     'react-material-ui': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index$1v; });
+      return Promise.resolve().then(function () { return index$1w; });
     })
   };
   var FormGenerator$5 = GenerateGenerator({
@@ -18643,107 +19508,107 @@
   var LetsForm$4 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1K);
+      rest = _objectWithoutProperties(_ref, _excluded$1L);
     return /*#__PURE__*/React$1.createElement(FormGenerator$5, _extends({
       framework: "react-material-ui"
     }, rest), children);
   };
 
-  var _excluded$1J = ["framework", "children"];
+  var _excluded$1K = ["framework", "children"];
   var Fields$4 = {
     'input-text': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1u; });
+        return Promise.resolve().then(function () { return index$1v; });
       })
     },
     'input-number': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1t; });
+        return Promise.resolve().then(function () { return index$1u; });
       })
     },
     'checkbox': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1s; });
+        return Promise.resolve().then(function () { return index$1t; });
       })
     },
     'textarea': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1r; });
+        return Promise.resolve().then(function () { return index$1s; });
       })
     },
     'three-columns': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1q; });
+        return Promise.resolve().then(function () { return index$1r; });
       })
     },
     'two-columns': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1p; });
+        return Promise.resolve().then(function () { return index$1q; });
       })
     },
     'group': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1o; });
+        return Promise.resolve().then(function () { return index$1p; });
       })
     },
     'divider': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1n; });
+        return Promise.resolve().then(function () { return index$1o; });
       })
     },
     'react-view': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1m; });
+        return Promise.resolve().then(function () { return index$1n; });
       })
     },
     'placeholder': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1l; });
+        return Promise.resolve().then(function () { return index$1m; });
       })
     },
     'select': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1k; });
+        return Promise.resolve().then(function () { return index$1l; });
       })
     },
     'date': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1j; });
+        return Promise.resolve().then(function () { return index$1k; });
       })
     },
     'datetime': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1i; });
+        return Promise.resolve().then(function () { return index$1j; });
       })
     },
     'time': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1h; });
+        return Promise.resolve().then(function () { return index$1i; });
       })
     },
     'array': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1g; });
+        return Promise.resolve().then(function () { return index$1h; });
       })
     },
     'placeholder-image': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1f; });
+        return Promise.resolve().then(function () { return index$1g; });
       })
     },
     'button': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1e; });
+        return Promise.resolve().then(function () { return index$1f; });
       })
     },
     'upload': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1d; });
+        return Promise.resolve().then(function () { return index$1e; });
       })
     },
     'hidden': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1W; });
+        return Promise.resolve().then(function () { return index$1X; });
       })
     }
     // Removed, doesn't work
@@ -18754,7 +19619,7 @@
 
   var Forms$4 = {
     'react': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index$1c; });
+      return Promise.resolve().then(function () { return index$1d; });
     })
   };
   var FormGenerator$4 = GenerateGenerator({
@@ -18764,128 +19629,128 @@
   var LetsForm$3 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1J);
+      rest = _objectWithoutProperties(_ref, _excluded$1K);
     return /*#__PURE__*/React$1.createElement(FormGenerator$4, _extends({
       framework: "react"
     }, rest), children);
   };
 
-  var _excluded$1I = ["framework", "children"];
+  var _excluded$1J = ["framework", "children"];
   var Fields$3 = {
     'input-text': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1b; });
+        return Promise.resolve().then(function () { return index$1c; });
       })
     },
     'select': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1a; });
+        return Promise.resolve().then(function () { return index$1b; });
       })
     },
     'checkbox': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$19; });
+        return Promise.resolve().then(function () { return index$1a; });
       })
     },
     'toggle': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$18; });
+        return Promise.resolve().then(function () { return index$19; });
       })
     },
     'checkbox-group': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$17; });
+        return Promise.resolve().then(function () { return index$18; });
       })
     },
     'placeholder': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$16; });
+        return Promise.resolve().then(function () { return index$17; });
       })
     },
     'placeholder-image': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$15; });
+        return Promise.resolve().then(function () { return index$16; });
       })
     },
     'date': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$14; });
+        return Promise.resolve().then(function () { return index$15; });
       })
     },
     'textarea': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$13; });
+        return Promise.resolve().then(function () { return index$14; });
       })
     },
     'slider': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$12; });
+        return Promise.resolve().then(function () { return index$13; });
       })
     },
     'three-columns': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$11; });
+        return Promise.resolve().then(function () { return index$12; });
       })
     },
     'two-columns': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$10; });
+        return Promise.resolve().then(function () { return index$11; });
       })
     },
     'group': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$$; });
+        return Promise.resolve().then(function () { return index$10; });
       })
     },
     'radio-group': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$_; });
+        return Promise.resolve().then(function () { return index$$; });
       })
     },
     'divider': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$Z; });
+        return Promise.resolve().then(function () { return index$_; });
       })
     },
     'react-view': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$Y; });
+        return Promise.resolve().then(function () { return index$Z; });
       })
     },
     'datetime': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$X; });
+        return Promise.resolve().then(function () { return index$Y; });
       })
     },
     'array': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$W; });
+        return Promise.resolve().then(function () { return index$X; });
       })
     },
     'input-number': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$V; });
+        return Promise.resolve().then(function () { return index$W; });
       })
     },
     'tabs': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$U; });
+        return Promise.resolve().then(function () { return index$V; });
       })
     },
     'button': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$T; });
+        return Promise.resolve().then(function () { return index$U; });
       })
     },
     'hidden': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1W; });
+        return Promise.resolve().then(function () { return index$1X; });
       })
     }
   };
   var Forms$3 = {
     'react-bootstrap': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index$S; });
+      return Promise.resolve().then(function () { return index$T; });
     })
   };
   var FormGenerator$3 = GenerateGenerator({
@@ -18895,147 +19760,152 @@
   var LetsForm$2 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1I);
+      rest = _objectWithoutProperties(_ref, _excluded$1J);
     return /*#__PURE__*/React$1.createElement(FormGenerator$3, _extends({
       framework: "react-bootstrap"
     }, rest), children);
   };
 
-  var _excluded$1H = ["framework", "children"];
+  var _excluded$1I = ["framework", "children"];
   var Fields$2 = {
     'input-text': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$R; });
+        return Promise.resolve().then(function () { return index$S; });
       })
     },
     'toggle': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$Q; });
+        return Promise.resolve().then(function () { return index$R; });
       })
     },
     'checkbox': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$P; });
+        return Promise.resolve().then(function () { return index$Q; });
       })
     },
     'date': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$O; });
+        return Promise.resolve().then(function () { return index$P; });
       })
     },
     'select': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$N; });
+        return Promise.resolve().then(function () { return index$O; });
       })
     },
     'radio-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$M; });
+        return Promise.resolve().then(function () { return index$N; });
       })
     },
     'rate': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$L; });
+        return Promise.resolve().then(function () { return index$M; });
       })
     },
     'placeholder': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$K; });
+        return Promise.resolve().then(function () { return index$L; });
       })
     },
     'placeholder-image': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$J; });
+        return Promise.resolve().then(function () { return index$K; });
       })
     },
     'input-number': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$I; });
+        return Promise.resolve().then(function () { return index$J; });
       })
     },
     'textarea': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$H; });
+        return Promise.resolve().then(function () { return index$I; });
       })
     },
     'multiselect': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$G; });
+        return Promise.resolve().then(function () { return index$H; });
       })
     },
     'three-columns': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$F; });
+        return Promise.resolve().then(function () { return index$G; });
       })
     },
     'two-columns': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$E; });
+        return Promise.resolve().then(function () { return index$F; });
       })
     },
     'group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$D; });
+        return Promise.resolve().then(function () { return index$E; });
       })
     },
     'slider': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$C; });
+        return Promise.resolve().then(function () { return index$D; });
       })
     },
     'divider': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$B; });
+        return Promise.resolve().then(function () { return index$C; });
       })
     },
     'react-view': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$A; });
+        return Promise.resolve().then(function () { return index$B; });
       })
     },
     'datetime': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$z; });
+        return Promise.resolve().then(function () { return index$A; });
       })
     },
     'array': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$y; });
+        return Promise.resolve().then(function () { return index$z; });
       })
     },
     'button': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$x; });
+        return Promise.resolve().then(function () { return index$y; });
       })
     },
     'checkbox-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$w; });
+        return Promise.resolve().then(function () { return index$x; });
       })
     },
     'tabs': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$v; });
+        return Promise.resolve().then(function () { return index$w; });
       })
     },
     'upload': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$u; });
+        return Promise.resolve().then(function () { return index$v; });
       })
     },
     'buttons-toggle-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$t; });
+        return Promise.resolve().then(function () { return index$u; });
       })
     },
     'steps': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$s; });
+        return Promise.resolve().then(function () { return index$t; });
       })
     },
     'hidden': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1W; });
+        return Promise.resolve().then(function () { return index$1X; });
+      })
+    },
+    'time': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$s; });
       })
     }
   };
@@ -19051,13 +19921,13 @@
   var LetsForm$1 = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1H);
+      rest = _objectWithoutProperties(_ref, _excluded$1I);
     return /*#__PURE__*/React$1.createElement(FormGenerator$2, _extends({
       framework: "react-antd"
     }, rest), children);
   };
 
-  var _excluded$1G = ["framework", "children"];
+  var _excluded$1H = ["framework", "children"];
   var Fields$1 = {
     'input-text': {
       'react-mantine': lazyPreload(function () {
@@ -19191,7 +20061,7 @@
     },
     'hidden': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1W; });
+        return Promise.resolve().then(function () { return index$1X; });
       })
     }
   };
@@ -19207,7 +20077,7 @@
   var LetsForm = function LetsForm(_ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1G);
+      rest = _objectWithoutProperties(_ref, _excluded$1H);
     return /*#__PURE__*/React$1.createElement(FormGenerator$1, _extends({
       framework: "react-mantine"
     }, rest), children);
@@ -19271,7 +20141,7 @@
   var css_248z$H = ".lf-control-input-text .rs-form-control-wrapper > .rs-input, .lf-control-input-text .rs-form-control-wrapper > .rs-input-number {\n  width: 100%;\n}\n.lf-control-input-text.lf-full-width .rs-input-group {\n  width: 100%;\n}\n.lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-control-input-text.lf-size-lg .lf-prefix-icon {\n  max-height: 22px;\n}\n.lf-control-input-text.lf-size-md .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-control-input-text.lf-size-sm .lf-prefix-icon {\n  max-height: 10px;\n}\n.lf-control-input-text.lf-size-xs .lf-prefix-icon {\n  max-height: 4px;\n}";
   styleInject(css_248z$H);
 
-  var _excluded$1F = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "lfOnEnter"];
+  var _excluded$1G = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "lfOnEnter"];
   var TextInput$4 = I18N(function (_ref) {
     var _classNames;
     var name = _ref.name,
@@ -19304,7 +20174,7 @@
       inside = _ref$inside === void 0 ? false : _ref$inside,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$1F);
+      rest = _objectWithoutProperties(_ref, _excluded$1G);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -19337,7 +20207,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.InputText');
 
-  var index$2q = /*#__PURE__*/Object.freeze({
+  var index$2r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput$4
   });
@@ -19378,7 +20248,7 @@
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded RSuite5.ToggleInput');
 
-  var index$2p = /*#__PURE__*/Object.freeze({
+  var index$2q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ToggleInput
   });
@@ -19386,7 +20256,7 @@
   var css_248z$G = ".lf-control-select-option-rsuite5 img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  margin-right: 6px;\n  margin-top: -4px;\n  display: inline-block;\n}";
   styleInject(css_248z$G);
 
-  var _excluded$1E = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions", "fullWidth", "width"];
+  var _excluded$1F = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions", "fullWidth", "width"];
   var menuItem = function menuItem(value, item) {
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-select-option-rsuite5"
@@ -19428,7 +20298,7 @@
       showImageOptions = _ref.showImageOptions,
       fullWidth = _ref.fullWidth,
       width = _ref.width,
-      rest = _objectWithoutProperties(_ref, _excluded$1E);
+      rest = _objectWithoutProperties(_ref, _excluded$1F);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       className: "lf-control-select",
       controlId: name,
@@ -19461,26 +20331,26 @@
   });
   lfLog('Loaded RSuite5.Select');
 
-  var index$2o = /*#__PURE__*/Object.freeze({
+  var index$2p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select$2
   });
 
   lfLog('Loaded RSuite5.Group');
 
-  var index$2n = /*#__PURE__*/Object.freeze({
+  var index$2o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
-  var _excluded$1D = ["hint", "required", "tooltip", "name", "label"];
+  var _excluded$1E = ["hint", "required", "tooltip", "name", "label"];
   var ListArrayRSuite5 = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required,
       tooltip = _ref.tooltip,
       name = _ref.name,
       label = _ref.label,
-      rest = _objectWithoutProperties(_ref, _excluded$1D);
+      rest = _objectWithoutProperties(_ref, _excluded$1E);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-array"
@@ -19492,21 +20362,21 @@
   }, ['label', 'hint']);
   lfLog('Loaded RSuite5.ListArray');
 
-  var index$2m = /*#__PURE__*/Object.freeze({
+  var index$2n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayRSuite5
   });
 
   lfLog('Loaded RSuite5.TwoColumns');
 
-  var index$2l = /*#__PURE__*/Object.freeze({
+  var index$2m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded RSuite5.ThreeColumns');
 
-  var index$2k = /*#__PURE__*/Object.freeze({
+  var index$2l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
@@ -19612,7 +20482,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.InputNumber');
 
-  var index$2j = /*#__PURE__*/Object.freeze({
+  var index$2k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumberRSuite5
   });
@@ -19620,7 +20490,7 @@
   var css_248z$E = ".lf-control-date.lf-full-width .rs-picker-date {\n  width: 100%;\n}";
   styleInject(css_248z$E);
 
-  var _excluded$1C = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "fullWidth", "width", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"];
+  var _excluded$1D = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "fullWidth", "width", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"];
   var RSuiteGenericDate = function RSuiteGenericDate(_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19643,7 +20513,7 @@
       appearance = _ref.appearance,
       format = _ref.format;
       _ref.lfLocale;
-      var rest = _objectWithoutProperties(_ref, _excluded$1C);
+      var rest = _objectWithoutProperties(_ref, _excluded$1D);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: classNames('lf-control-date', {
@@ -19668,11 +20538,11 @@
     }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   };
 
-  var _excluded$1B = ["onChange", "value"];
+  var _excluded$1C = ["onChange", "value"];
   var SelectDate$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1B);
+      rest = _objectWithoutProperties(_ref, _excluded$1C);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -19697,7 +20567,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.SelectDate');
 
-  var index$2i = /*#__PURE__*/Object.freeze({
+  var index$2j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDate$1
   });
@@ -19705,7 +20575,7 @@
   var css_248z$D = ".lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text {\n  align-items: inherit;\n  margin-top: -1px;\n  display: inline-block;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text svg {\n  margin-top: -2px;\n}";
   styleInject(css_248z$D);
 
-  var _excluded$1A = ["name", "label", "hint", "value", "tooltip", "indeterminate", "error", "onChange"];
+  var _excluded$1B = ["name", "label", "hint", "value", "tooltip", "indeterminate", "error", "onChange"];
   var CheckboxRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19716,7 +20586,7 @@
       indeterminate = _ref.indeterminate,
       error = _ref.error,
       onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$1A);
+      rest = _objectWithoutProperties(_ref, _excluded$1B);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : null),
       _useState2 = _slicedToArray(_useState, 2),
       isChecked = _useState2[0],
@@ -19754,12 +20624,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded RSuite5.Checkbox');
 
-  var index$2h = /*#__PURE__*/Object.freeze({
+  var index$2i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxRSuite
   });
 
-  var _excluded$1z = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "color", "onChange", "onBlur", "options"];
+  var _excluded$1A = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "color", "onChange", "onBlur", "options"];
   var CheckboxGroupRSuite$1 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19778,7 +20648,7 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$1z);
+      rest = _objectWithoutProperties(_ref, _excluded$1A);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-checkbox-group"
@@ -19807,7 +20677,7 @@
   });
   lfLog('Loaded RSuite.CheckboxGroup');
 
-  var index$2g = /*#__PURE__*/Object.freeze({
+  var index$2h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupRSuite$1
   });
@@ -19815,7 +20685,7 @@
   var css_248z$C = ".lf-form-react-rsuite5 .lf-control-slider .rs-slider {\n  margin-bottom: 40px;\n}";
   styleInject(css_248z$C);
 
-  var _excluded$1y = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks"];
+  var _excluded$1z = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks"];
   var validateMarks = function validateMarks(marks) {
     return _isArray(marks) && marks.every(function (mark) {
       return _isObject(mark) && mark.value && mark.label;
@@ -19840,7 +20710,7 @@
       onBlur = _ref.onBlur,
       _ref$marks = _ref.marks,
       marks = _ref$marks === void 0 ? [] : _ref$marks,
-      rest = _objectWithoutProperties(_ref, _excluded$1y);
+      rest = _objectWithoutProperties(_ref, _excluded$1z);
     var handleRenderMark = React$1.useCallback(function (number) {
       var found = marks.find(function (mark) {
         return mark && mark.value === number;
@@ -19880,12 +20750,12 @@
   });
   lfLog('Loaded RSuite5.Slider');
 
-  var index$2f = /*#__PURE__*/Object.freeze({
+  var index$2g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderRsuite
   });
 
-  var _excluded$1x = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options", "appearance"];
+  var _excluded$1y = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options", "appearance"];
   var RadioGroupRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -19907,7 +20777,7 @@
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       appearance = _ref.appearance,
-      rest = _objectWithoutProperties(_ref, _excluded$1x);
+      rest = _objectWithoutProperties(_ref, _excluded$1y);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       controlId: name,
       className: "lf-control-radio-group",
@@ -19937,7 +20807,7 @@
   });
   lfLog('Loaded RSuite.RadioGroup');
 
-  var index$2e = /*#__PURE__*/Object.freeze({
+  var index$2f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupRSuite
   });
@@ -19984,12 +20854,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputTag');
 
-  var index$2d = /*#__PURE__*/Object.freeze({
+  var index$2e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputTag
   });
 
-  var _excluded$1w = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside", "fullWidth", "width"];
+  var _excluded$1x = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside", "fullWidth", "width"];
   var prepareMask = function prepareMask(str) {
     if (typeof str !== 'string' || str.length === 0) {
       return [];
@@ -20036,7 +20906,7 @@
       inside = _ref$inside === void 0 ? false : _ref$inside,
       fullWidth = _ref.fullWidth,
       width = _ref.width,
-      rest = _objectWithoutProperties(_ref, _excluded$1w);
+      rest = _objectWithoutProperties(_ref, _excluded$1x);
     var parsedMask = prepareMask(mask);
     var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
@@ -20066,12 +20936,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputMask');
 
-  var index$2c = /*#__PURE__*/Object.freeze({
+  var index$2d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputMask
   });
 
-  var _excluded$1v = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows"];
+  var _excluded$1w = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows"];
   var ControlTextare = function ControlTextare(props) {
     return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends({
       as: "textarea"
@@ -20100,7 +20970,7 @@
       width = _ref.width,
       _ref$rows = _ref.rows,
       rows = _ref$rows === void 0 ? 10 : _ref$rows,
-      rest = _objectWithoutProperties(_ref, _excluded$1v);
+      rest = _objectWithoutProperties(_ref, _excluded$1w);
     var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
     }, /*#__PURE__*/React$1.createElement(ControlTextare, _extends({
@@ -20126,7 +20996,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Textarea');
 
-  var index$2b = /*#__PURE__*/Object.freeze({
+  var index$2c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea$3
   });
@@ -20178,7 +21048,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Rate');
 
-  var index$2a = /*#__PURE__*/Object.freeze({
+  var index$2b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RateRSuite
   });
@@ -20203,12 +21073,12 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded RSuite5.Placeholder');
 
-  var index$29 = /*#__PURE__*/Object.freeze({
+  var index$2a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderRSuite5
   });
 
-  var _excluded$1u = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width"];
+  var _excluded$1v = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width"];
   var Multiselect$2 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20239,7 +21109,7 @@
       fullWidth = _ref.fullWidth,
       multiselectMode = _ref.multiselectMode,
       width = _ref.width,
-      rest = _objectWithoutProperties(_ref, _excluded$1u);
+      rest = _objectWithoutProperties(_ref, _excluded$1v);
     var Component = multiselectMode === 'tag' ? rsuite.TagPicker : rsuite.CheckPicker;
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
@@ -20272,7 +21142,7 @@
   });
   lfLog('Loaded RSuite5.Multiselect');
 
-  var index$28 = /*#__PURE__*/Object.freeze({
+  var index$29 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect$2
   });
@@ -20280,7 +21150,7 @@
   var css_248z$A = ".lf-control-multiselect-language .btn-add-all {\n  padding-left: 5px;\n  font-size: 12px;\n}";
   styleInject(css_248z$A);
 
-  var _excluded$1t = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "placement", "appearance"];
+  var _excluded$1u = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "placement", "appearance"];
   var renderItem = function renderItem(label, item) {
     return /*#__PURE__*/React$1.createElement("div", null, label, " ", /*#__PURE__*/React$1.createElement("b", null, item.value));
   };
@@ -20312,7 +21182,7 @@
       onBlur = _ref.onBlur,
       placement = _ref.placement,
       appearance = _ref.appearance,
-      rest = _objectWithoutProperties(_ref, _excluded$1t);
+      rest = _objectWithoutProperties(_ref, _excluded$1u);
     var _useState = React$1.useState(value),
       _useState2 = _slicedToArray(_useState, 2),
       locales = _useState2[0],
@@ -20359,7 +21229,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.MultiselectLanguage');
 
-  var index$27 = /*#__PURE__*/Object.freeze({
+  var index$28 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MultiselectLanguage
   });
@@ -20367,7 +21237,7 @@
   var css_248z$z = ".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n .rs-input-group-addon {\n  padding: 2px 4px !important;\n}\n.lf-input-text-i18n .rs-input-group-addon .status {\n  font-size: 10px;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear {\n  display: inline-block;\n  margin-left: 5px;\n  margin-top: -2px;\n  color: #666666;\n  text-decoration: none;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover {\n  color: #1675e0;\n}\n.lf-input-text-i18n .group-input-select {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-input-text-i18n .group-input-select .translation-control {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  width: unset !important;\n  z-index: 1;\n}\n.lf-input-text-i18n .group-input-select .translation-control .translated {\n  color: #999999;\n}\n.lf-input-text-i18n .group-input-select .select-control {\n  order: 1;\n  flex: 0 0;\n  align-self: center;\n  z-index: 2;\n  margin-left: 5px;\n}\n.lf-input-text-i18n .group-input-select.textarea .select-control {\n  align-self: self-start;\n}";
   styleInject(css_248z$z);
 
-  var _excluded$1s = ["value"];
+  var _excluded$1t = ["value"];
   var LANGUAGES_OPTIONS = Object.keys(LOCALES['language-names']).map(function (lang) {
     return {
       value: lang,
@@ -20385,7 +21255,7 @@
   };
   var TextareaAccepter = function TextareaAccepter(_ref) {
     var value = _ref.value,
-      props = _objectWithoutProperties(_ref, _excluded$1s);
+      props = _objectWithoutProperties(_ref, _excluded$1t);
     return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends({
       as: "textarea",
       value: value
@@ -20583,14 +21453,14 @@
   };
   lfLog('Loaded RSuite.InputTextI18N');
 
-  var index$26 = /*#__PURE__*/Object.freeze({
+  var index$27 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputTextI18N
   });
 
   lfLog('Loaded RSuite5.PlaceholderImage');
 
-  var index$25 = /*#__PURE__*/Object.freeze({
+  var index$26 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
@@ -20598,13 +21468,13 @@
   var css_248z$y = ".lf-form-react-rsuite5 .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-lg .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-xs .lf-icon {\n  max-width: 12px;\n  max-height: 12px;\n}";
   styleInject(css_248z$y);
 
-  var _excluded$1r = ["label", "icon", "hint", "tooltip"];
+  var _excluded$1s = ["label", "icon", "hint", "tooltip"];
   var RSuiteButton = function RSuiteButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint,
       tooltip = _ref.tooltip,
-      rest = _objectWithoutProperties(_ref, _excluded$1r);
+      rest = _objectWithoutProperties(_ref, _excluded$1s);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends({
@@ -20638,23 +21508,23 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded RSuite5.Button');
 
-  var index$24 = /*#__PURE__*/Object.freeze({
+  var index$25 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton$5
   });
 
   lfLog('Loaded RSuite5.ReactView');
 
-  var index$23 = /*#__PURE__*/Object.freeze({
+  var index$24 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
 
-  var _excluded$1q = ["onChange", "value"];
+  var _excluded$1r = ["onChange", "value"];
   var SelectDatetime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1q);
+      rest = _objectWithoutProperties(_ref, _excluded$1r);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -20679,7 +21549,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.DateTime');
 
-  var index$22 = /*#__PURE__*/Object.freeze({
+  var index$23 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDatetime
   });
@@ -20687,7 +21557,7 @@
   var css_248z$x = ".lf-form-react-rsuite5 .lf-control-tabs .tab-fields {\n  margin-top: 10px;\n}";
   styleInject(css_248z$x);
 
-  var _excluded$1p = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight"];
+  var _excluded$1q = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight"];
   var Tabs = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -20698,7 +21568,7 @@
       reversed = _ref.reversed,
       justified = _ref.justified,
       pullRight = _ref.pullRight,
-      rest = _objectWithoutProperties(_ref, _excluded$1p);
+      rest = _objectWithoutProperties(_ref, _excluded$1q);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
@@ -20734,12 +21604,12 @@
   });
   lfLog('Loaded RSuite.Tabs');
 
-  var index$21 = /*#__PURE__*/Object.freeze({
+  var index$22 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Tabs
   });
 
-  var _excluded$1o = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption"];
+  var _excluded$1p = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption"];
   var RadioTileRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20765,7 +21635,7 @@
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       initalOption = _ref.initalOption;
-      _objectWithoutProperties(_ref, _excluded$1o);
+      _objectWithoutProperties(_ref, _excluded$1p);
     var initialValue = value || initalOption;
     var _useState = React$1.useState(initialValue),
       _useState2 = _slicedToArray(_useState, 2),
@@ -20811,7 +21681,7 @@
   });
   lfLog('Loaded RSuite.RadioTile');
 
-  var index$20 = /*#__PURE__*/Object.freeze({
+  var index$21 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioTileRSuite
   });
@@ -20819,7 +21689,7 @@
   var css_248z$w = ".lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
   styleInject(css_248z$w);
 
-  var _excluded$1n = ["superDisabled", "superSize", "disabled", "hint"],
+  var _excluded$1o = ["superDisabled", "superSize", "disabled", "hint"],
     _excluded2$1 = ["name", "label", "hint", "tooltip", "required", "onChange", "multiple", "removable", "disabledFileItem", "fileListVisible", "draggable", "disabled", "accept", "defaultValue", "listType", "uploadButtonLabel", "uploadButtonAppearance", "uploadButtonSize", "draggableText", "draggableHeight", "value"];
   var makeDefaultValue$1 = function makeDefaultValue(defaultValue) {
     if (_isArray(defaultValue)) {
@@ -20836,7 +21706,7 @@
       superSize = _ref.superSize;
       _ref.disabled;
       var hint = _ref.hint,
-      rest = _objectWithoutProperties(_ref, _excluded$1n);
+      rest = _objectWithoutProperties(_ref, _excluded$1o);
     var inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends({}, rest, {
       size: superSize,
       disabled: superDisabled
@@ -20928,7 +21798,7 @@
   }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
   lfLog('Loaded RSuite.Upload');
 
-  var index$1$ = /*#__PURE__*/Object.freeze({
+  var index$20 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload$4
   });
@@ -20936,7 +21806,7 @@
   var css_248z$v = ".lf-form-react-rsuite5 .lf-control-button-toggle-group .rs-form-control-wrapper {\n  display: block;\n}";
   styleInject(css_248z$v);
 
-  var _excluded$1m = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "options"];
+  var _excluded$1n = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "options"];
   var RSuiteButtonsToggleGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20953,7 +21823,7 @@
       onChange = _ref.onChange,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$1m);
+      rest = _objectWithoutProperties(_ref, _excluded$1n);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-button-toggle-group"
@@ -20975,7 +21845,7 @@
   });
   lfLog('Loaded RSuite5.ButtonsToggleGroup');
 
-  var index$1_ = /*#__PURE__*/Object.freeze({
+  var index$1$ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RSuiteButtonsToggleGroup
   });
@@ -20997,7 +21867,7 @@
   var css_248z$t = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
   styleInject(css_248z$t);
 
-  var _excluded$1l = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious"];
+  var _excluded$1m = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious"];
   var i18nSteps$2 = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -21020,7 +21890,7 @@
       small = _ref.small,
       labelNext = _ref.labelNext,
       labelPrevious = _ref.labelPrevious,
-      rest = _objectWithoutProperties(_ref, _excluded$1l);
+      rest = _objectWithoutProperties(_ref, _excluded$1m);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
       return obj.value === value;
@@ -21079,12 +21949,12 @@
   });
   lfLog('Loaded Rsuite5.Steps');
 
-  var index$1Z = /*#__PURE__*/Object.freeze({
+  var index$1_ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Rsuite5Steps
   });
 
-  var _excluded$1k = ["name", "componentUrl", "defaultExport", "exportedKey", "onChange"];
+  var _excluded$1l = ["name", "componentUrl", "defaultExport", "exportedKey", "onChange"];
   var makeModuleName = function makeModuleName(name) {
     return "".concat(name, "Module");
   };
@@ -21109,7 +21979,7 @@
       exportedKey = _ref3.exportedKey,
       _ref3$onChange = _ref3.onChange,
       onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
-      rest = _objectWithoutProperties(_ref3, _excluded$1k);
+      rest = _objectWithoutProperties(_ref3, _excluded$1l);
     var eventsContainerId = React$1.useId();
     var containerId = React$1.useId();
     var _useState = React$1.useState(),
@@ -21197,7 +22067,7 @@
     }), error && /*#__PURE__*/React$1.createElement("div", null, "some error"));
   };
 
-  var _excluded$1j = ["name", "componentUrl", "onChange", "value", "defaultExport", "exportedKey"];
+  var _excluded$1k = ["name", "componentUrl", "onChange", "value", "defaultExport", "exportedKey"];
   var RSuite5ModuleComponent = function RSuite5ModuleComponent(_ref) {
     var name = _ref.name,
       componentUrl = _ref.componentUrl,
@@ -21205,7 +22075,7 @@
       value = _ref.value,
       defaultExport = _ref.defaultExport,
       exportedKey = _ref.exportedKey,
-      rest = _objectWithoutProperties(_ref, _excluded$1j);
+      rest = _objectWithoutProperties(_ref, _excluded$1k);
     return /*#__PURE__*/React$1.createElement(ModuleComponent, _extends({
       name: name,
       onChange: onChange,
@@ -21216,7 +22086,7 @@
     }, passRest(rest)));
   };
 
-  var index$1Y = /*#__PURE__*/Object.freeze({
+  var index$1Z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RSuite5ModuleComponent
   });
@@ -21238,11 +22108,11 @@
     return undefined;
   };
 
-  var _excluded$1i = ["onChange", "value"];
+  var _excluded$1j = ["onChange", "value"];
   var SelectTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1i);
+      rest = _objectWithoutProperties(_ref, _excluded$1j);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -21268,7 +22138,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.SelectTime');
 
-  var index$1X = /*#__PURE__*/Object.freeze({
+  var index$1Y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectTime
   });
@@ -21284,7 +22154,7 @@
   };
   lfLog('Loaded RSuite5.Hidden');
 
-  var index$1W = /*#__PURE__*/Object.freeze({
+  var index$1X = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Hidden
   });
@@ -21349,12 +22219,12 @@
   };
   lfLog('Loaded RSuite5.Form');
 
-  var index$1V = /*#__PURE__*/Object.freeze({
+  var index$1W = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormRsuite5
   });
 
-  var _excluded$1h = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
+  var _excluded$1i = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
 
   // DOC: https://mui.com/material-ui/api/input/
 
@@ -21391,7 +22261,7 @@
       className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$1h);
+      rest = _objectWithoutProperties(_ref, _excluded$1i);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -21436,12 +22306,12 @@
     }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$1g = ["onChange"];
+  var _excluded$1h = ["onChange"];
   // DOC: https://mui.com/material-ui/api/input/
 
   var TextInput$3 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$1g);
+      rest = _objectWithoutProperties(_ref, _excluded$1h);
     var handleChange = React$1.useCallback(function (event) {
       onChange(event.target.value);
     }, [onChange]);
@@ -21453,12 +22323,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.InputText');
 
-  var index$1U = /*#__PURE__*/Object.freeze({
+  var index$1V = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput$3
   });
 
-  var _excluded$1f = ["name", "label", "hint", "value", "placeholder", "options", "filterKey", "filterValue", "component", "disabled", "readOnly", "required", "error", "multiple", "fullWidth", "width", "floatingLabel", "autoWidth", "size", "variant", "onChange", "onBlur", "className", "children"];
+  var _excluded$1g = ["name", "label", "hint", "value", "placeholder", "options", "filterKey", "filterValue", "component", "disabled", "readOnly", "required", "error", "multiple", "fullWidth", "width", "floatingLabel", "autoWidth", "size", "variant", "onChange", "onBlur", "className", "children"];
 
   // DOC: https://mui.com/material-ui/api/select/
 
@@ -21491,7 +22361,7 @@
       onBlur = _ref.onBlur,
       className = _ref.className;
       _ref.children;
-      var rest = _objectWithoutProperties(_ref, _excluded$1f);
+      var rest = _objectWithoutProperties(_ref, _excluded$1g);
     var filteredOptions = filterOptions(options, filterValue, filterKey);
     var controlId = React$1.useId();
     var items;
@@ -21554,11 +22424,11 @@
     }, passRest(rest)), items), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$1e = ["onChange", "value"];
+  var _excluded$1f = ["onChange", "value"];
   var MuiSelect = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1e);
+      rest = _objectWithoutProperties(_ref, _excluded$1f);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -21573,7 +22443,7 @@
   });
   lfLog('Loaded MUI.Select');
 
-  var index$1T = /*#__PURE__*/Object.freeze({
+  var index$1U = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiSelect
   });
@@ -21616,7 +22486,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Toggle');
 
-  var index$1S = /*#__PURE__*/Object.freeze({
+  var index$1T = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle$2
   });
@@ -21661,7 +22531,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Checkbox');
 
-  var index$1R = /*#__PURE__*/Object.freeze({
+  var index$1S = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxMUI
   });
@@ -21730,7 +22600,7 @@
   });
   lfLog('Loaded MUI.Slider');
 
-  var index$1Q = /*#__PURE__*/Object.freeze({
+  var index$1R = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderMui
   });
@@ -21752,7 +22622,7 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded MUI.Placeholder');
 
-  var index$1P = /*#__PURE__*/Object.freeze({
+  var index$1Q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderMUI
   });
@@ -21812,7 +22682,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Rate');
 
-  var index$1O = /*#__PURE__*/Object.freeze({
+  var index$1P = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Rate
   });
@@ -22148,7 +23018,7 @@
     return undefined;
   };
 
-  var _excluded$1d = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "className", "size", "variant", "color", "readOnly", "required", "fullWidth", "placeholder", "floatingLabel", "width", "displayWeekNumber", "format", "maxDate", "minDate", "maxDateTime", "minDateTime", "lfLocale", "datetime", "views", "component"];
+  var _excluded$1e = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "className", "size", "variant", "color", "readOnly", "required", "fullWidth", "placeholder", "floatingLabel", "width", "displayWeekNumber", "format", "maxDate", "minDate", "maxDateTime", "minDateTime", "lfLocale", "datetime", "views", "component"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -22184,7 +23054,7 @@
       datetime = _ref$datetime === void 0 ? false : _ref$datetime,
       views = _ref.views;
       _ref.component;
-      var rest = _objectWithoutProperties(_ref, _excluded$1d);
+      var rest = _objectWithoutProperties(_ref, _excluded$1e);
     var controlId = React$1.useId();
     var localeCode = lfLocale && _isString(lfLocale) ? lfLocale.split('-')[0] : undefined;
     var Component = datetime ? DateTimePicker.DateTimePicker : DatePicker.DatePicker;
@@ -22240,7 +23110,7 @@
     }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$1c = ["onChange", "value"];
+  var _excluded$1d = ["onChange", "value"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -22248,7 +23118,7 @@
   var MuiDate = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1c);
+      rest = _objectWithoutProperties(_ref, _excluded$1d);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -22275,54 +23145,54 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.Date');
 
-  var index$1N = /*#__PURE__*/Object.freeze({
+  var index$1O = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiDate
   });
 
   lfLog('Loaded MUI.ThreeColumns');
 
-  var index$1M = /*#__PURE__*/Object.freeze({
+  var index$1N = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded MUI.TwoColumns');
 
-  var index$1L = /*#__PURE__*/Object.freeze({
+  var index$1M = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded MUI.Group');
 
-  var index$1K = /*#__PURE__*/Object.freeze({
+  var index$1L = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
   lfLog('Loaded MUI.PlaceholderImage');
 
-  var index$1J = /*#__PURE__*/Object.freeze({
+  var index$1K = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
   lfLog('Loaded MUI.Divider');
 
-  var index$1I = /*#__PURE__*/Object.freeze({
+  var index$1J = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
   lfLog('Loaded MUI.ReactView');
 
-  var index$1H = /*#__PURE__*/Object.freeze({
+  var index$1I = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
 
-  var _excluded$1b = ["onChange", "value"];
+  var _excluded$1c = ["onChange", "value"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -22330,7 +23200,7 @@
   var MuiDateTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1b);
+      rest = _objectWithoutProperties(_ref, _excluded$1c);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -22358,7 +23228,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.DateTime');
 
-  var index$1G = /*#__PURE__*/Object.freeze({
+  var index$1H = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiDateTime
   });
@@ -22366,7 +23236,7 @@
   var css_248z$r = ".lf-form.lf-form-react-material-ui .lf-control-common-array [class^=lf-control]:not(:last-child) {\n  margin-bottom: 10px;\n}";
   styleInject(css_248z$r);
 
-  var _excluded$1a = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$1b = ["hint", "required", "tooltip", "name", "label", "error"];
   var ListArrayMui = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required;
@@ -22374,7 +23244,7 @@
       var name = _ref.name,
       label = _ref.label,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$1a);
+      rest = _objectWithoutProperties(_ref, _excluded$1b);
     var hasError = error && _isString(error);
     var controlId = React$1.useId();
     return /*#__PURE__*/React$1.createElement("div", {
@@ -22392,24 +23262,31 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Array');
 
-  var index$1F = /*#__PURE__*/Object.freeze({
+  var index$1G = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayMui
   });
 
+  var _excluded$1a = ["onChange"];
+
   // DOC: https://mui.com/material-ui/api/input/
 
   var Textarea$2 = I18N(function (_ref) {
-    var rest = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
+    var onChange = _ref.onChange,
+      rest = _objectWithoutProperties(_ref, _excluded$1a);
+    var handleChange = React$1.useCallback(function (event) {
+      onChange(event.target.value);
+    }, [onChange]);
     return /*#__PURE__*/React$1.createElement(MuiGenericInput, _extends({
       className: "lf-control-textarea",
       component: "textarea",
+      onChange: handleChange,
       multiline: true
     }, rest));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.Textarea');
 
-  var index$1E = /*#__PURE__*/Object.freeze({
+  var index$1F = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea$2
   });
@@ -22446,7 +23323,7 @@
   });
   lfLog('Loaded MUI.Multiselect');
 
-  var index$1D = /*#__PURE__*/Object.freeze({
+  var index$1E = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect$1
   });
@@ -22487,7 +23364,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.InputNumber');
 
-  var index$1C = /*#__PURE__*/Object.freeze({
+  var index$1D = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumber$2
   });
@@ -22556,7 +23433,7 @@
   });
   lfLog('Loaded MUI.RadioGroup');
 
-  var index$1B = /*#__PURE__*/Object.freeze({
+  var index$1C = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupMUI
   });
@@ -22637,7 +23514,7 @@
   });
   lfLog('Loaded MUI.CheckboxGroup');
 
-  var index$1A = /*#__PURE__*/Object.freeze({
+  var index$1B = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroup$1
   });
@@ -22698,7 +23575,7 @@
   });
   lfLog('Loaded MUI.Tabs');
 
-  var index$1z = /*#__PURE__*/Object.freeze({
+  var index$1A = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsMui
   });
@@ -22756,7 +23633,7 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded MUI.Button');
 
-  var index$1y = /*#__PURE__*/Object.freeze({
+  var index$1z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton$4
   });
@@ -22971,7 +23848,7 @@
   lfLog('Loaded MUI.Upload');
   var Upload$3 = Upload$2;
 
-  var index$1x = /*#__PURE__*/Object.freeze({
+  var index$1y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload$3
   });
@@ -23003,7 +23880,7 @@
 
   // DOC: https://mui.com/x/api/date-pickers/time-picker/
 
-  var Time$2 = I18N(function (_ref) {
+  var Time$3 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
@@ -23088,9 +23965,9 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Time');
 
-  var index$1w = /*#__PURE__*/Object.freeze({
+  var index$1x = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: Time$2
+    default: Time$3
   });
 
   var FormMaterialUI = function FormMaterialUI(_ref) {
@@ -23137,7 +24014,7 @@
   };
   lfLog('Loaded MUI.Form');
 
-  var index$1v = /*#__PURE__*/Object.freeze({
+  var index$1w = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormMaterialUI
   });
@@ -23217,7 +24094,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.InputText');
 
-  var index$1u = /*#__PURE__*/Object.freeze({
+  var index$1v = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput$2
   });
@@ -23261,7 +24138,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.InputNumber');
 
-  var index$1t = /*#__PURE__*/Object.freeze({
+  var index$1u = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumber$1
   });
@@ -23321,7 +24198,7 @@
   }, ['hint', 'label']);
   lfLog('Loaded React.Checkbox');
 
-  var index$1s = /*#__PURE__*/Object.freeze({
+  var index$1t = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Checkbox$1
   });
@@ -23371,42 +24248,42 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.Textarea');
 
-  var index$1r = /*#__PURE__*/Object.freeze({
+  var index$1s = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea$1
   });
 
   lfLog('Loaded React.ThreeColumns');
 
-  var index$1q = /*#__PURE__*/Object.freeze({
+  var index$1r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded React.TwoColumns');
 
-  var index$1p = /*#__PURE__*/Object.freeze({
+  var index$1q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded React.Group');
 
-  var index$1o = /*#__PURE__*/Object.freeze({
+  var index$1p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
   lfLog('Loaded React.Divider');
 
-  var index$1n = /*#__PURE__*/Object.freeze({
+  var index$1o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
   lfLog('Loaded React.ReactView');
 
-  var index$1m = /*#__PURE__*/Object.freeze({
+  var index$1n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
@@ -23429,7 +24306,7 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded React.Placeholder');
 
-  var index$1l = /*#__PURE__*/Object.freeze({
+  var index$1m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderReact
   });
@@ -23496,7 +24373,7 @@
   });
   lfLog('Loaded React.Select');
 
-  var index$1k = /*#__PURE__*/Object.freeze({
+  var index$1l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select$1
   });
@@ -23524,7 +24401,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.Date');
 
-  var index$1j = /*#__PURE__*/Object.freeze({
+  var index$1k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateInput
   });
@@ -23555,18 +24432,17 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.DateTime');
 
-  var index$1i = /*#__PURE__*/Object.freeze({
+  var index$1j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateTime$1
   });
 
   var _excluded$V = ["onChange", "value"];
-  var Time$1 = I18N(function (_ref) {
+  var Time$2 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
       rest = _objectWithoutProperties(_ref, _excluded$V);
     var handleChange = React$1.useCallback(function (e) {
-      console.log('cosa arriva?', e.target.value);
       onChange(e.target.value);
     }, [onChange]);
     var currentDate = value;
@@ -23586,9 +24462,9 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.Time');
 
-  var index$1h = /*#__PURE__*/Object.freeze({
+  var index$1i = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: Time$1
+    default: Time$2
   });
 
   var css_248z$l = ".lf-form-react .lf-control-common-array-item {\n  padding-bottom: 5px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-two-columns:last-child {\n  margin-bottom: 0px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-three-columns:last-child {\n  margin-bottom: 0px;\n}";
@@ -23619,14 +24495,14 @@
   }, ['label', 'hint']);
   lfLog('Loaded React.Array');
 
-  var index$1g = /*#__PURE__*/Object.freeze({
+  var index$1h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayReact
   });
 
   lfLog('Loaded React.PlaceholderImage');
 
-  var index$1f = /*#__PURE__*/Object.freeze({
+  var index$1g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
@@ -23679,7 +24555,7 @@
   lfLog('Loaded React.Button');
   var Button = BiStateButton$3;
 
-  var index$1e = /*#__PURE__*/Object.freeze({
+  var index$1f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Button
   });
@@ -23828,7 +24704,7 @@
   lfLog('Loaded React.Upload');
   var Upload$1 = Upload;
 
-  var index$1d = /*#__PURE__*/Object.freeze({
+  var index$1e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload$1
   });
@@ -23878,7 +24754,7 @@
   };
   lfLog('Loaded React.Form');
 
-  var index$1c = /*#__PURE__*/Object.freeze({
+  var index$1d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormReact
   });
@@ -23975,7 +24851,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Input');
 
-  var index$1b = /*#__PURE__*/Object.freeze({
+  var index$1c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput$1
   });
@@ -24038,7 +24914,7 @@
   });
   lfLog('Loaded ReactBootrap.Select');
 
-  var index$1a = /*#__PURE__*/Object.freeze({
+  var index$1b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select
   });
@@ -24082,7 +24958,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Checkbox');
 
-  var index$19 = /*#__PURE__*/Object.freeze({
+  var index$1a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Checkbox
   });
@@ -24126,7 +25002,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Toggle');
 
-  var index$18 = /*#__PURE__*/Object.freeze({
+  var index$19 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle$1
   });
@@ -24200,7 +25076,7 @@
   });
   lfLog('Loaded ReactBootrap.CheckboxGroup');
 
-  var index$17 = /*#__PURE__*/Object.freeze({
+  var index$18 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupBootstrap
   });
@@ -24219,14 +25095,14 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded ReactBootrap.Placeholder');
 
-  var index$16 = /*#__PURE__*/Object.freeze({
+  var index$17 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderBootstrap
   });
 
   lfLog('Loaded ReactBootrap.PlaceholderImage');
 
-  var index$15 = /*#__PURE__*/Object.freeze({
+  var index$16 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
@@ -24257,7 +25133,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Date');
 
-  var index$14 = /*#__PURE__*/Object.freeze({
+  var index$15 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Date$1
   });
@@ -24310,7 +25186,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Textarea');
 
-  var index$13 = /*#__PURE__*/Object.freeze({
+  var index$14 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea
   });
@@ -24358,28 +25234,28 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Slider');
 
-  var index$12 = /*#__PURE__*/Object.freeze({
+  var index$13 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Slider
   });
 
   lfLog('Loaded ReactBootrap.ThreeColumn');
 
-  var index$11 = /*#__PURE__*/Object.freeze({
+  var index$12 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded ReactBootrap.TwoColumns');
 
-  var index$10 = /*#__PURE__*/Object.freeze({
+  var index$11 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded ReactBootrap.Group');
 
-  var index$$ = /*#__PURE__*/Object.freeze({
+  var index$10 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
@@ -24454,21 +25330,21 @@
   });
   lfLog('Loaded ReactBootrap.RadioGroup');
 
-  var index$_ = /*#__PURE__*/Object.freeze({
+  var index$$ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupBootstrap
   });
 
   lfLog('Loaded ReactBootrap.Divider');
 
-  var index$Z = /*#__PURE__*/Object.freeze({
+  var index$_ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
   lfLog('Loaded ReactBootrap.ReactView');
 
-  var index$Y = /*#__PURE__*/Object.freeze({
+  var index$Z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
@@ -24502,7 +25378,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.DateTime');
 
-  var index$X = /*#__PURE__*/Object.freeze({
+  var index$Y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateTime
   });
@@ -24527,7 +25403,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Array');
 
-  var index$W = /*#__PURE__*/Object.freeze({
+  var index$X = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayBootstrap
   });
@@ -24568,7 +25444,7 @@
     }, rest));
   }, ['label', 'hint', 'placeholder']);
 
-  var index$V = /*#__PURE__*/Object.freeze({
+  var index$W = /*#__PURE__*/Object.freeze({
     __proto__: null,
     InputNumber: InputNumber
   });
@@ -24622,7 +25498,7 @@
   });
   lfLog('Loaded ReactBootrap.Tabs');
 
-  var index$U = /*#__PURE__*/Object.freeze({
+  var index$V = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsReactBootstrap
   });
@@ -24665,7 +25541,7 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded ReactBootrap.Button');
 
-  var index$T = /*#__PURE__*/Object.freeze({
+  var index$U = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton$2
   });
@@ -24711,7 +25587,7 @@
   };
   lfLog('Loaded ReactBootrap.Form');
 
-  var index$S = /*#__PURE__*/Object.freeze({
+  var index$T = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormBootstrap
   });
@@ -24719,38 +25595,28 @@
   var css_248z$e = ".lf-form-react-antd .lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-antd .lf-control-input-text.lf-size-small .lf-prefix-icon {\n  max-height: 12px;\n}\n.lf-form-react-antd .lf-control-input-text.lf-size-large .lf-prefix-icon {\n  max-height: 18px;\n}\n.lf-form-react-antd .lf-control-input-text input[type=color] {\n  min-width: 60px;\n}";
   styleInject(css_248z$e);
 
-  var _excluded$E = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "fullWidth", "width", "inputType", "inputMode", "autocomplete", "lfOnEnter"];
+  var _excluded$E = ["name", "label", "hint", "value", "size", "tooltip", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "inputType", "inputMode", "lfOnEnter"];
   var TextInput = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
       value = _ref.value,
       size = _ref.size,
-      placeholder = _ref.placeholder,
-      showCount = _ref.showCount,
       _ref$tooltip = _ref.tooltip,
       tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
       _ref$required = _ref.required,
       required = _ref$required === void 0 ? false : _ref$required,
       _ref$submitOnEnter = _ref.submitOnEnter,
       submitOnEnter = _ref$submitOnEnter === void 0 ? false : _ref$submitOnEnter,
-      maxLength = _ref.maxLength,
       error = _ref.error,
       prefix = _ref.prefix,
       postfix = _ref.postfix,
-      allowClear = _ref.allowClear,
-      bordered = _ref.bordered,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur,
       fullWidth = _ref.fullWidth,
       width = _ref.width,
       inputType = _ref.inputType,
       inputMode = _ref.inputMode,
-      autocomplete = _ref.autocomplete,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
       rest = _objectWithoutProperties(_ref, _excluded$E);
@@ -24771,29 +25637,21 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
     }, /*#__PURE__*/React$1.createElement(antd.Input, _extends({
-      placeholder: placeholder,
-      readOnly: readOnly,
-      autocomplete: autocomplete,
       type: inputType !== null && inputType !== void 0 ? inputType : 'text',
       inputmode: inputMode,
       onChange: handleChange,
       onBlur: onBlur,
       onKeyUp: submitOnEnter ? handleKeyUp : undefined,
-      value: value,
+      defaultValue: value,
       size: size,
       prefix: TextOrIcon(prefix),
       suffix: TextOrIcon(postfix),
-      allowClear: allowClear,
-      bordered: bordered,
-      disabled: disabled,
-      showCount: showCount,
-      maxLength: maxLength,
       style: makeWidthStyle(fullWidth, width)
     }, passRest(rest))));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputText');
 
-  var index$R = /*#__PURE__*/Object.freeze({
+  var index$S = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
@@ -24854,7 +25712,7 @@
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded AntD.Toggle');
 
-  var index$Q = /*#__PURE__*/Object.freeze({
+  var index$R = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle
   });
@@ -24907,7 +25765,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Checkbox');
 
-  var index$P = /*#__PURE__*/Object.freeze({
+  var index$Q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxAntd
   });
@@ -24984,7 +25842,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Date');
 
-  var index$O = /*#__PURE__*/Object.freeze({
+  var index$P = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdDate
   });
@@ -24992,21 +25850,15 @@
   var css_248z$d = ".lf-control-select-option-antd img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  vertical-align: middle;\n  margin-top: -2px;\n}";
   styleInject(css_248z$d);
 
-  var _excluded$z = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "lfLocale", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "fullWidth", "popupMatchSelectWidth", "showSearch", "placement", "showArrow", "listHeight", "virtual", "options", "filterKey", "filterValue", "showImageOptions"];
-  var SelectAntd = I18N(function (_ref) {
+  var _excluded$z = ["name", "label", "hint", "value", "showCount", "tooltip", "required", "maxLength", "error", "prefix", "lfLocale", "postfix", "onChange", "onBlur", "width", "fullWidth", "options", "filterKey", "filterValue", "className", "showImageOptions"];
+  var AntdGenericSelect = function AntdGenericSelect(_ref) {
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
-      value = _ref.value,
-      size = _ref.size,
-      placeholder = _ref.placeholder;
+      value = _ref.value;
       _ref.showCount;
       var _ref$tooltip = _ref.tooltip,
       tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
       _ref$required = _ref.required,
       required = _ref$required === void 0 ? false : _ref$required;
       _ref.maxLength;
@@ -25014,27 +25866,20 @@
       _ref.prefix;
       _ref.lfLocale;
       _ref.postfix;
-      var allowClear = _ref.allowClear,
-      bordered = _ref.bordered,
-      onChange = _ref.onChange,
+      var onChange = _ref.onChange,
       onBlur = _ref.onBlur,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
-      popupMatchSelectWidth = _ref.popupMatchSelectWidth,
-      showSearch = _ref.showSearch,
-      placement = _ref.placement,
-      showArrow = _ref.showArrow,
-      listHeight = _ref.listHeight,
-      virtual = _ref.virtual,
       options = _ref.options,
       filterKey = _ref.filterKey,
       filterValue = _ref.filterValue,
+      className = _ref.className,
       _ref$showImageOptions = _ref.showImageOptions,
       showImageOptions = _ref$showImageOptions === void 0 ? false : _ref$showImageOptions,
       rest = _objectWithoutProperties(_ref, _excluded$z);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
       "data-lf-field-name": name,
-      className: "lf-control-select",
+      className: className,
       label: label,
       name: name,
       help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -25043,21 +25888,9 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
     }, /*#__PURE__*/React$1.createElement(antd.Select, _extends({
-      placeholder: placeholder,
-      readOnly: readOnly,
-      disabled: disabled,
       onChange: onChange,
       onBlur: onBlur,
-      value: value,
-      size: size,
-      bordered: bordered,
-      listHeight: listHeight,
-      placement: placement,
-      showArrow: showArrow,
-      virtual: virtual,
-      showSearch: showSearch,
-      allowClear: allowClear,
-      popupMatchSelectWidth: popupMatchSelectWidth,
+      defaultValue: value,
       style: makeWidthStyle(fullWidth, width)
     }, passRest(rest)), (filterOptions(options, filterValue, filterKey) || []).map(function (option) {
       return /*#__PURE__*/React$1.createElement(antd.Select.Option, {
@@ -25072,12 +25905,18 @@
         alt: option.label
       }), option.label));
     })));
+  };
+
+  var SelectAntd = I18N(function (props) {
+    return /*#__PURE__*/React$1.createElement(AntdGenericSelect, _extends({
+      className: "lf-control-select"
+    }, props));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
   lfLog('Loaded AntD.Select');
 
-  var index$N = /*#__PURE__*/Object.freeze({
+  var index$O = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectAntd
   });
@@ -25161,7 +26000,7 @@
   });
   lfLog('Loaded AntD.RadioGroup');
 
-  var index$M = /*#__PURE__*/Object.freeze({
+  var index$N = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroup$1
   });
@@ -25228,7 +26067,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded AntD.Rate');
 
-  var index$L = /*#__PURE__*/Object.freeze({
+  var index$M = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RateAntd
   });
@@ -25251,49 +26090,36 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded AntD.Placeholder');
 
-  var index$K = /*#__PURE__*/Object.freeze({
+  var index$L = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderAntd
   });
 
   lfLog('Loaded AntD.PlaceholderImage');
 
-  var index$J = /*#__PURE__*/Object.freeze({
+  var index$K = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
-  var _excluded$w = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "fullWidth", "showControl", "min", "max", "step"];
+  var _excluded$w = ["name", "label", "hint", "value", "showCount", "tooltip", "required", "maxLength", "error", "onChange", "onBlur", "width", "fullWidth", "showControl"];
   var InputNumberAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
-      value = _ref.value,
-      size = _ref.size,
-      placeholder = _ref.placeholder;
+      value = _ref.value;
       _ref.showCount;
       var _ref$tooltip = _ref.tooltip,
       tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
       _ref$required = _ref.required,
       required = _ref$required === void 0 ? false : _ref$required;
       _ref.maxLength;
       var error = _ref.error,
-      prefix = _ref.prefix,
-      postfix = _ref.postfix,
-      allowClear = _ref.allowClear,
-      bordered = _ref.bordered,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
       showControl = _ref.showControl,
-      min = _ref.min,
-      max = _ref.max,
-      step = _ref.step,
       rest = _objectWithoutProperties(_ref, _excluded$w);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
       label: label,
@@ -25306,52 +26132,31 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
     }, /*#__PURE__*/React$1.createElement(antd.InputNumber, _extends({
-      placeholder: placeholder,
-      readOnly: readOnly,
       onChange: onChange,
       onBlur: onBlur,
       defaultValue: value,
-      size: size,
-      prefix: prefix,
-      suffix: postfix,
-      allowClear: allowClear,
-      bordered: bordered,
-      disabled: disabled,
       controls: showControl,
-      min: min,
-      max: max,
-      step: step,
       style: makeWidthStyle(fullWidth, width)
     }, passRest(rest))));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputNumber');
 
-  var index$I = /*#__PURE__*/Object.freeze({
+  var index$J = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumberAntd
   });
 
-  var _excluded$v = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "allowClear", "bordered", "onChange", "onBlur", "width", "fullWidth"];
+  var _excluded$v = ["name", "label", "hint", "value", "tooltip", "required", "error", "onChange", "onBlur", "width", "fullWidth"];
   var TextareaAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
       value = _ref.value,
-      size = _ref.size,
-      placeholder = _ref.placeholder,
-      showCount = _ref.showCount,
       _ref$tooltip = _ref.tooltip,
       tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
       _ref$required = _ref.required,
       required = _ref$required === void 0 ? false : _ref$required,
-      maxLength = _ref.maxLength,
       error = _ref.error,
-      allowClear = _ref.allowClear,
-      bordered = _ref.bordered,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur,
       width = _ref.width,
@@ -25371,103 +26176,30 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined
     }, /*#__PURE__*/React$1.createElement(antd.Input.TextArea, _extends({
-      placeholder: placeholder,
-      readOnly: readOnly,
       onChange: handleChange,
       onBlur: onBlur,
-      value: value,
-      size: size,
-      allowClear: allowClear,
-      disabled: disabled,
-      showCount: showCount,
-      maxLength: maxLength,
-      bordered: bordered,
+      defaultValue: value,
       style: makeWidthStyle(fullWidth, width)
     }, passRest(rest))));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Textarea');
 
-  var index$H = /*#__PURE__*/Object.freeze({
+  var index$I = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextareaAntd
   });
 
-  var _excluded$u = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "showSearch", "placement", "showArrow", "listHeight", "virtual", "maxTagCount", "maxTagPlaceholder", "maxTagTextLength"];
-  var Multiselect = I18N(function (_ref) {
-    var name = _ref.name,
-      label = _ref.label,
-      hint = _ref.hint,
-      value = _ref.value,
-      size = _ref.size,
-      placeholder = _ref.placeholder;
-      _ref.showCount;
-      var _ref$tooltip = _ref.tooltip,
-      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip;
-      _ref.disabled;
-      var _ref$readOnly = _ref.readOnly,
-      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
-      _ref$required = _ref.required,
-      required = _ref$required === void 0 ? false : _ref$required;
-      _ref.maxLength;
-      var error = _ref.error;
-      _ref.prefix;
-      _ref.postfix;
-      var allowClear = _ref.allowClear,
-      bordered = _ref.bordered,
-      onChange = _ref.onChange,
-      onBlur = _ref.onBlur,
-      width = _ref.width,
-      showSearch = _ref.showSearch,
-      placement = _ref.placement,
-      showArrow = _ref.showArrow,
-      listHeight = _ref.listHeight,
-      virtual = _ref.virtual,
-      maxTagCount = _ref.maxTagCount,
-      maxTagPlaceholder = _ref.maxTagPlaceholder,
-      maxTagTextLength = _ref.maxTagTextLength,
-      rest = _objectWithoutProperties(_ref, _excluded$u);
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      label: label,
-      "data-lf-field-name": name,
+  var Multiselect = I18N(function (props) {
+    return /*#__PURE__*/React$1.createElement(AntdGenericSelect, _extends({
       className: "lf-control-multiselect",
-      name: name,
-      help: error != null ? error : hint && !tooltip ? hint : undefined,
-      required: required,
-      tooltip: tooltip && hint,
-      hasFeedback: error != null,
-      validateStatus: error ? 'error' : undefined
-    }, /*#__PURE__*/React$1.createElement(antd.Select, _extends({
-      placeholder: placeholder,
-      readOnly: readOnly,
-      onChange: onChange,
-      onBlur: onBlur,
-      value: value,
-      size: size,
       mode: "multiple"
-      //mode="tags"
-      ,
-      bordered: bordered,
-      listHeight: listHeight,
-      placement: placement,
-      showArrow: showArrow,
-      virtual: virtual,
-      showSearch: showSearch,
-      allowClear: allowClear,
-      maxTagCount: maxTagCount,
-      maxTagPlaceholder: maxTagPlaceholder,
-      maxTagTextLength: maxTagTextLength
-      // tokenSeparators={["-", " "]} only for tags
-      ,
-      style: _isNumber(width) ? {
-        width: "".concat(width, "px")
-      } : undefined
-    }, _omit(rest, 'lfFramework', 'lfComponent'))));
+    }, props));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
-  lfLog('Loaded AntD.MultiSelect');
+  lfLog('Loaded AntD.Multiselect');
 
-  var index$G = /*#__PURE__*/Object.freeze({
+  var index$H = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect
   });
@@ -25477,7 +26209,7 @@
 
   lfLog('Loaded AntD.ThreeColumns');
 
-  var index$F = /*#__PURE__*/Object.freeze({
+  var index$G = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
@@ -25487,7 +26219,7 @@
 
   lfLog('Loaded AntD.TwoColumns');
 
-  var index$E = /*#__PURE__*/Object.freeze({
+  var index$F = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
@@ -25497,12 +26229,12 @@
 
   lfLog('Loaded AntD.Group');
 
-  var index$D = /*#__PURE__*/Object.freeze({
+  var index$E = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
-  var _excluded$t = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "keyboard", "dots", "min", "max", "step", "reverse", "tooltipOpen", "tooltipPlacement", "error", "onChange", "onBlur", "width", "marks", "included"];
+  var _excluded$u = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "keyboard", "dots", "min", "max", "step", "reverse", "tooltipOpen", "tooltipPlacement", "error", "onChange", "onBlur", "width", "marks", "included"];
   var SliderAnt = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -25533,7 +26265,7 @@
       _ref.width;
       var marks = _ref.marks,
       included = _ref.included,
-      rest = _objectWithoutProperties(_ref, _excluded$t);
+      rest = _objectWithoutProperties(_ref, _excluded$u);
     var antdMarks = undefined;
     if (_isArray(marks) && !_isEmpty(marks)) {
       antdMarks = marks.reduce(function (accumulator, value) {
@@ -25574,30 +26306,30 @@
   });
   lfLog('Loaded AntD.Slider');
 
-  var index$C = /*#__PURE__*/Object.freeze({
+  var index$D = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderAnt
   });
 
   lfLog('Loaded AntD.Divider');
 
-  var index$B = /*#__PURE__*/Object.freeze({
+  var index$C = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
   lfLog('Loaded AntD.ReactView');
 
-  var index$A = /*#__PURE__*/Object.freeze({
+  var index$B = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
 
-  var _excluded$s = ["onChange", "value"];
+  var _excluded$t = ["onChange", "value"];
   var Datetime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$s);
+      rest = _objectWithoutProperties(_ref, _excluded$t);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -25626,7 +26358,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.DateTime');
 
-  var index$z = /*#__PURE__*/Object.freeze({
+  var index$A = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Datetime
   });
@@ -25634,7 +26366,7 @@
   var css_248z$9 = ".lf-form-react-antd .lf-control-common-array-item .ant-form-item {\n  margin-bottom: 0px !important;\n}\n.lf-form-react-antd .lf-control-common-array-item {\n  padding-bottom: 5px;\n}\n.lf-form-react-antd .lf-control-two-columns:last-child {\n  margin-bottom: 0px;\n}\n.lf-form-react-antd .lf-control-three-columns:last-child {\n  margin-bottom: 0px;\n}";
   styleInject(css_248z$9);
 
-  var _excluded$r = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$s = ["hint", "required", "tooltip", "name", "label", "error"];
   var ListArrayAntd = I18N(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required,
@@ -25642,7 +26374,7 @@
       name = _ref.name,
       label = _ref.label,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$r);
+      rest = _objectWithoutProperties(_ref, _excluded$s);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
       className: "lf-control-array",
       "data-lf-field-name": name,
@@ -25659,7 +26391,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded AntD.ListArray');
 
-  var index$y = /*#__PURE__*/Object.freeze({
+  var index$z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayAntd
   });
@@ -25667,13 +26399,13 @@
   var css_248z$8 = ".lf-form-react-antd .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn {\n  min-width: 32px;\n}\n.lf-form-react-antd .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n  margin-top: -2px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-lg {\n  min-width: 40px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-lg .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-sm {\n  min-width: 24px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-sm .lf-icon {\n  max-width: 14px;\n  max-height: 14px;\n}";
   styleInject(css_248z$8);
 
-  var _excluded$q = ["label", "icon", "hint", "tooltip"];
+  var _excluded$r = ["label", "icon", "hint", "tooltip"];
   var AntdButton = function AntdButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint;
       _ref.tooltip;
-      var rest = _objectWithoutProperties(_ref, _excluded$q);
+      var rest = _objectWithoutProperties(_ref, _excluded$r);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(antd.Button, _extends({
@@ -25705,12 +26437,12 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded AntD.Button');
 
-  var index$x = /*#__PURE__*/Object.freeze({
+  var index$y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton$1
   });
 
-  var _excluded$p = ["name", "label", "hint", "value", "placeholder", "className", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
+  var _excluded$q = ["name", "label", "hint", "value", "placeholder", "className", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
   var CheckboxGroupRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -25731,7 +26463,7 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$p);
+      rest = _objectWithoutProperties(_ref, _excluded$q);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
       className: classNames('lf-control-checkbox-group', className),
       "data-lf-field-name": name,
@@ -25753,7 +26485,7 @@
   });
   lfLog('Loaded AntD.CheckboxGroup');
 
-  var index$w = /*#__PURE__*/Object.freeze({
+  var index$x = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupRSuite
   });
@@ -25761,7 +26493,7 @@
   var css_248z$7 = ".lf-form-react-antd .lf-control-tabs .tab-fields {\n  margin-top: 0px;\n}";
   styleInject(css_248z$7);
 
-  var _excluded$o = ["name", "value", "tabs", "onChange", "children", "animated", "centered", "size", "tabType"];
+  var _excluded$p = ["name", "value", "tabs", "onChange", "children", "animated", "centered", "size", "tabType"];
   var TabsAntd = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -25772,7 +26504,7 @@
       centered = _ref.centered,
       size = _ref.size,
       tabType = _ref.tabType,
-      rest = _objectWithoutProperties(_ref, _excluded$o);
+      rest = _objectWithoutProperties(_ref, _excluded$p);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
@@ -25809,7 +26541,7 @@
   });
   lfLog('Loaded AntD.Tabs');
 
-  var index$v = /*#__PURE__*/Object.freeze({
+  var index$w = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsAntd
   });
@@ -25817,7 +26549,7 @@
   var css_248z$6 = ".lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
   styleInject(css_248z$6);
 
-  var _excluded$n = ["hint"],
+  var _excluded$o = ["hint"],
     _excluded2 = ["name", "accept", "draggable", "draggableText", "draggableHeight", "uploadButtonLabel", "error", "label", "hint", "tooltip", "required", "size", "disabled", "value", "multiple", "listType", "maxCount", "showUploadList", "uploadButtonSize", "uploadButtonAppearance", "onChange"];
   var Dragger = antd.Upload.Dragger;
   var makeDefaultValue = function makeDefaultValue(defaultValue) {
@@ -25843,7 +26575,7 @@
   };
   var ButtonWithHint = function ButtonWithHint(_ref) {
     var hint = _ref.hint,
-      props = _objectWithoutProperties(_ref, _excluded$n);
+      props = _objectWithoutProperties(_ref, _excluded$o);
     var inner = /*#__PURE__*/React$1.createElement(antd.Button, props);
     if (hint) {
       return /*#__PURE__*/React$1.createElement("div", {
@@ -25954,12 +26686,12 @@
   }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
   lfLog('Loaded AnttD.Upload');
 
-  var index$u = /*#__PURE__*/Object.freeze({
+  var index$v = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntDUpload
   });
 
-  var _excluded$m = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "multiple", "options"];
+  var _excluded$n = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "multiple", "options"];
   var AntdButtonsToggleGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -25977,7 +26709,7 @@
       multiple = _ref.multiple,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$m);
+      rest = _objectWithoutProperties(_ref, _excluded$n);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
       className: "lf-control-button-toggle-group",
       "data-lf-field-name": name,
@@ -26003,7 +26735,7 @@
   });
   lfLog('Loaded AntD.ButtonsToggleGroup');
 
-  var index$t = /*#__PURE__*/Object.freeze({
+  var index$u = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdButtonsToggleGroup
   });
@@ -26011,7 +26743,7 @@
   var css_248z$5 = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}\n\n.lf-form-react-antd .lf-control-steps .ant-steps-icon svg {\n  vertical-align: baseline;\n}";
   styleInject(css_248z$5);
 
-  var _excluded$l = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "labelPlacement", "percent", "clickable", "stepsType"];
+  var _excluded$m = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "labelPlacement", "percent", "clickable", "stepsType"];
   var i18nSteps$1 = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -26039,7 +26771,7 @@
       percent = _ref.percent,
       clickable = _ref.clickable,
       stepsType = _ref.stepsType,
-      rest = _objectWithoutProperties(_ref, _excluded$l);
+      rest = _objectWithoutProperties(_ref, _excluded$m);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
       return obj.value === value;
@@ -26112,9 +26844,53 @@
   lfLog('Loaded AntD.Steps');
   var AntdSteps$1 = AntdSteps;
 
-  var index$s = /*#__PURE__*/Object.freeze({
+  var index$t = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdSteps$1
+  });
+
+  var _excluded$l = ["name", "error", "hint", "required", "label", "tooltip", "onChange", "value"];
+  var Time$1 = I18N(function (_ref) {
+    var name = _ref.name,
+      error = _ref.error,
+      hint = _ref.hint,
+      required = _ref.required,
+      label = _ref.label,
+      tooltip = _ref.tooltip,
+      onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties(_ref, _excluded$l);
+    // default value
+    var defaultValue;
+    if (isValidTime(value)) {
+      defaultValue = timeToDayJSTime(value);
+    }
+
+    // send always date string in iso format
+    var handleChange = React$1.useCallback(function (d) {
+      var _rest$format;
+      onChange(d.format((_rest$format = rest.format) !== null && _rest$format !== void 0 ? _rest$format : 'HH:mm'));
+    }, [onChange, rest.format]);
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
+      className: "lf-control-date",
+      "data-lf-field-name": name,
+      label: label,
+      name: name,
+      help: error != null ? error : hint && !tooltip ? hint : undefined,
+      required: required,
+      tooltip: tooltip && hint,
+      hasFeedback: error != null,
+      validateStatus: error ? 'error' : undefined
+    }, /*#__PURE__*/React$1.createElement(antd.TimePicker, _extends({
+      defaultValue: defaultValue,
+      onChange: handleChange
+    }, passRest(rest))));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded AntD.Time');
+
+  var index$s = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Time$1
   });
 
   var css_248z$4 = ".lf-form-react-antd .ant-form-item {\n  margin-bottom: 0px;\n}\n.lf-form-react-antd .lf-buttons {\n  margin-top: 25px;\n  display: flex;\n}\n.lf-form-react-antd .lf-buttons button:not(:first-child) {\n  margin-left: 10px;\n}\n.lf-form-react-antd.lf-form-react-antd-plaintext .ant-col.ant-form-item-label {\n  padding-bottom: 0px;\n}";
