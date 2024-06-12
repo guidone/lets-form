@@ -1,5 +1,9 @@
 # LetsForm Changelog
 
+## 0.7.20
+- AntD: removed _borderless_ attribute, added _variant_
+- added Time field to AntD
+
 ## 0.7.19
 - fixed RSuite radio-group missing required icon
 - fixed RSuite fullWidth / Width params in select
