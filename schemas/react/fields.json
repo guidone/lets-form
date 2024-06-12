@@ -947,6 +947,149 @@
             }
           }
         }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "upload"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "hint": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "accept": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "acceptedFile": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "acceptedFile": {
+              "type": "string"
+            },
+            "uploadButtonLabel": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "multiple": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "time"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "hint": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "placeholder": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "hidden"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "info": {
+              "type": "string"
+            }
+          }
+        }
       }
     ]
   },

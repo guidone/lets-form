@@ -1,4 +1,4 @@
-/* LetsForm react-rsuite5 v0.7.20 - UMD */
+/* LetsForm react-rsuite5 v0.8.0 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', 'react-hook-form'], factory) :

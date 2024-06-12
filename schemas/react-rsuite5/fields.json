@@ -1647,91 +1647,6 @@
         "if": {
           "properties": {
             "component": {
-              "const": "multiselect-language"
-            }
-          }
-        },
-        "then": {
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "label": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "hint": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "placeholder": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "placement": {
-              "type": "string",
-              "enum": [
-                "topStart",
-                "topEnd",
-                "leftStart",
-                "rightStart",
-                "leftEnd",
-                "rightEnd",
-                "bottomStart",
-                "bottomEnd",
-                "auto",
-                "autoVerticalStart",
-                "autoVerticalEnd",
-                "autoHorizontalStart",
-                "autoHorizontalEnd"
-              ]
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "lg",
-                "md",
-                "sm",
-                "xs"
-              ]
-            },
-            "tooltip": {
-              "type": "boolean"
-            }
-          }
-        }
-      },
-      {
-        "if": {
-          "properties": {
-            "component": {
               "const": "placeholder-image"
             }
           }
@@ -2539,6 +2454,192 @@
                 "process",
                 "error"
               ]
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "esm-module"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "hint": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "componentUrl": {
+              "type": "string"
+            },
+            "defaultExport": {
+              "type": "boolean"
+            },
+            "exportedKey": {
+              "type": "string"
+            },
+            "count": {
+              "type": "integer"
+            },
+            "placeholder": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "time"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "hint": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "placeholder": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "lg",
+                "md",
+                "sm",
+                "xs"
+              ]
+            },
+            "appearance": {
+              "type": "string",
+              "enum": [
+                "default",
+                "subtle"
+              ]
+            },
+            "placement": {
+              "type": "string",
+              "enum": [
+                "topStart",
+                "topEnd",
+                "leftStart",
+                "rightStart",
+                "leftEnd",
+                "rightEnd",
+                "bottomStart",
+                "bottomEnd",
+                "auto",
+                "autoVerticalStart",
+                "autoVerticalEnd",
+                "autoHorizontalStart",
+                "autoHorizontalEnd"
+              ]
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "cleanable": {
+              "type": "boolean"
+            },
+            "editable": {
+              "type": "boolean"
+            },
+            "oneTap": {
+              "type": "boolean"
+            },
+            "showMeridian": {
+              "type": "boolean"
+            },
+            "format": {
+              "type": "string",
+              "enum": [
+                "HH:mm",
+                "HH:mm:ss",
+                "hh:mm:ss aaa",
+                "hh:mm aaa"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "hidden"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "info": {
+              "type": "string"
             }
           }
         }

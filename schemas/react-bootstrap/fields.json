@@ -1309,7 +1309,7 @@
         "if": {
           "properties": {
             "component": {
-              "const": "tabs"
+              "const": "hidden"
             }
           }
         },
@@ -1318,59 +1318,8 @@
             "name": {
               "type": "string"
             },
-            "tabs": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  }
-                }
-              }
-            },
-            "value": {
+            "info": {
               "type": "string"
-            },
-            "label": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "tabs",
-                "pills",
-                "underline"
-              ]
-            },
-            "transition": {
-              "type": "boolean"
-            },
-            "fill": {
-              "type": "boolean"
-            },
-            "justify": {
-              "type": "boolean"
             }
           }
         }

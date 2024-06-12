@@ -2289,6 +2289,138 @@
             }
           }
         }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "time"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "hint": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "placeholder": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "small",
+                "default",
+                "large"
+              ]
+            },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "outlined",
+                "borderless",
+                "filled"
+              ]
+            },
+            "format": {
+              "type": "string"
+            },
+            "hourStep": {
+              "type": "integer"
+            },
+            "minuteStep": {
+              "type": "integer"
+            },
+            "secondStep": {
+              "type": "integer"
+            },
+            "allowClear": {
+              "type": "boolean"
+            },
+            "hideDisabledOptions": {
+              "type": "boolean"
+            },
+            "inputReadOnly": {
+              "type": "boolean"
+            },
+            "needConfirm": {
+              "type": "boolean"
+            },
+            "showNow": {
+              "type": "boolean"
+            },
+            "use12Hours": {
+              "type": "boolean"
+            },
+            "tooltip": {
+              "type": "boolean"
+            },
+            "placement": {
+              "type": "string",
+              "enum": [
+                "bottomLeft",
+                "bottomRight",
+                "topLeft",
+                "topRight"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "hidden"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "info": {
+              "type": "string"
+            }
+          }
+        }
       }
     ]
   },

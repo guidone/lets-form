@@ -2839,6 +2839,308 @@
             }
           }
         }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "steps"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "labelNext": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "labelPrevious": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "align": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            "steps": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "$ref": "#/$defs/i18n"
+                      }
+                    ]
+                  },
+                  "description": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "$ref": "#/$defs/i18n"
+                      }
+                    ]
+                  },
+                  "icon": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "value": {
+              "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "description": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "icon": {
+              "type": "string"
+            },
+            "color": {
+              "type": "string",
+              "enum": [
+                "grey",
+                "red",
+                "pink",
+                "grape",
+                "violet",
+                "indigo",
+                "blue",
+                "cyan",
+                "teal",
+                "green",
+                "lime",
+                "yellow",
+                "orange"
+              ]
+            },
+            "radius": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl"
+              ]
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl"
+              ]
+            },
+            "iconPosition": {
+              "type": "string",
+              "enum": [
+                "left",
+                "right"
+              ]
+            },
+            "iconSize": {
+              "type": "integer"
+            },
+            "wrap": {
+              "type": "boolean"
+            },
+            "allowStepClick": {
+              "type": "boolean"
+            },
+            "allowStepSelect": {
+              "type": "boolean"
+            },
+            "autoContrast": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "time"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "hint": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "placeholder": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl"
+              ]
+            },
+            "radius": {
+              "type": "string",
+              "enum": [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl"
+              ]
+            },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "default",
+                "filled",
+                "unstyled"
+              ]
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "minTime": {
+              "type": "string"
+            },
+            "maxTime": {
+              "type": "string"
+            },
+            "withSeconds": {
+              "type": "boolean"
+            },
+            "pointer": {
+              "type": "boolean"
+            },
+            "showBrowserPicker": {
+              "type": "boolean"
+            },
+            "leftSection": {
+              "type": "string"
+            },
+            "rightSection": {
+              "type": "string"
+            },
+            "leftSectionWidth": {
+              "type": "integer"
+            },
+            "rightSectionWidth": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "hidden"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "info": {
+              "type": "string"
+            }
+          }
+        }
       }
     ]
   },
