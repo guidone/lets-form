@@ -16,26 +16,18 @@ const TextInput = I18N(
     hint,
     value,
     size,
-    placeholder,
-    showCount,
     tooltip = false,
-    disabled = false,
-    readOnly = false,
     required = false,
     submitOnEnter = false,
-    maxLength,
     error,
     prefix,
     postfix,
-    allowClear,
-    bordered,
     onChange,
     onBlur,
     fullWidth,
     width,
     inputType,
     inputMode,
-    autocomplete,
     lfOnEnter = () => {},
     ...rest
   }) => {
@@ -58,23 +50,15 @@ const TextInput = I18N(
         validateStatus={error ? 'error': undefined}
       >
         <Input
-          placeholder={placeholder}
-          readOnly={readOnly}
-          autocomplete={autocomplete}
           type={inputType ?? 'text'}
           inputmode={inputMode}
           onChange={handleChange}
           onBlur={onBlur}
           onKeyUp={submitOnEnter ? handleKeyUp : undefined}
-          value={value}
+          defaultValue={value}
           size={size}
           prefix={TextOrIcon(prefix)}
           suffix={TextOrIcon(postfix)}
-          allowClear={allowClear}
-          bordered={bordered}
-          disabled={disabled}
-          showCount={showCount}
-          maxLength={maxLength}
           style={makeWidthStyle(fullWidth, width)}
           {...passRest(rest)}
         />

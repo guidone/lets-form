@@ -11,7 +11,6 @@ const Time = I18N(
 
     const handleChange = useCallback(
       e => {
-        console.log('cosa arriva?', e.target.value)
         onChange(e.target.value)
       },
       [onChange]

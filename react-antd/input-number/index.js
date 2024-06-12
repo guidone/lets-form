@@ -1,8 +1,9 @@
 import React from 'react';
 import { Form, InputNumber } from 'antd';
 
-import { I18N } from '../../components';
-import { passRest, makeWidthStyle } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { passRest } from '../../helpers/pass-rest';
+import { makeWidthStyle } from '../../helpers/make-width-style';
 import { lfLog } from '../../helpers/lf-log';
 
 const InputNumberAntd = I18N(
@@ -11,27 +12,16 @@ const InputNumberAntd = I18N(
     label,
     hint,
     value,
-    size,
-    placeholder,
     showCount,
     tooltip = false,
-    disabled = false,
-    readOnly = false,
     required = false,
     maxLength,
     error,
-    prefix,
-    postfix,
-    allowClear,
-    bordered,
     onChange,
     onBlur,
     width,
     fullWidth,
     showControl,
-    min,
-    max,
-    step,
     ...rest
   }) => {
     return (
@@ -47,21 +37,10 @@ const InputNumberAntd = I18N(
         validateStatus={error ? 'error': undefined}
       >
         <InputNumber
-          placeholder={placeholder}
-          readOnly={readOnly}
           onChange={onChange}
           onBlur={onBlur}
           defaultValue={value}
-          size={size}
-          prefix={prefix}
-          suffix={postfix}
-          allowClear={allowClear}
-          bordered={bordered}
-          disabled={disabled}
           controls={showControl}
-          min={min}
-          max={max}
-          step={step}
           style={makeWidthStyle(fullWidth, width)}
           {...passRest(rest)}
         />

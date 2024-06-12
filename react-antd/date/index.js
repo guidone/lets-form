@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { AntdGenericDate } from '../../components/antd-generic-date';
 import { lfLog } from '../../helpers/lf-log';
 import { isValidDate } from '../../helpers/is-valid-date';

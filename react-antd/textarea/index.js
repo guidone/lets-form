@@ -1,8 +1,9 @@
 import React, { useCallback } from 'react';
 import { Form, Input } from 'antd';
 
-import { I18N } from '../../components';
-import { makeWidthStyle, passRest } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { makeWidthStyle } from '../../helpers/make-width-style';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
 
 const TextareaAntd = I18N(
@@ -11,17 +12,9 @@ const TextareaAntd = I18N(
     label,
     hint,
     value,
-    size,
-    placeholder,
-    showCount,
     tooltip = false,
-    disabled = false,
-    readOnly = false,
     required = false,
-    maxLength,
     error,
-    allowClear,
-    bordered,
     onChange,
     onBlur,
     width,
@@ -46,17 +39,9 @@ const TextareaAntd = I18N(
         validateStatus={error ? 'error': undefined}
       >
         <Input.TextArea
-          placeholder={placeholder}
-          readOnly={readOnly}
           onChange={handleChange}
           onBlur={onBlur}
-          value={value}
-          size={size}
-          allowClear={allowClear}
-          disabled={disabled}
-          showCount={showCount}
-          maxLength={maxLength}
-          bordered={bordered}
+          defaultValue={value}
           style={makeWidthStyle(fullWidth, width)}
           {...passRest(rest)}
         />

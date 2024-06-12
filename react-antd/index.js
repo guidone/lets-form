@@ -84,6 +84,9 @@ const Fields = {
   },
   'hidden': {
     'react-antd': lazy(() => import('./../common/hidden'))
+  },
+  'time': {
+    'react-antd': lazy(() => import('./time'))
   }
 };
 

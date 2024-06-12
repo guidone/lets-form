@@ -2,7 +2,8 @@ import React from 'react';
 import { Form, DatePicker } from 'antd';
 import dayjs from 'dayjs';
 
-import { passRest, makeWidthStyle } from '../../helpers';
+import { passRest } from '../../helpers/pass-rest';
+import { makeWidthStyle } from '../../helpers/make-width-style';
 
 const AntdGenericDate = ({
   name,
