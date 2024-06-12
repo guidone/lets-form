@@ -1,4 +1,4 @@
-/* LetsForm react-material-ui v0.7.19 - UMD */
+/* LetsForm react-material-ui v0.7.20 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('react-hook-form'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', 'react-hook-form', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack'], factory) :
@@ -6041,10 +6041,8 @@
   	],
   	variant: [
   		"react-material-ui",
+  		"react-antd",
   		"react-mantine"
-  	],
-  	popupMatchSelectWidth: [
-  		"react-antd"
   	],
   	listHeight: [
   		"react-antd"
@@ -6052,13 +6050,10 @@
   	allowClear: [
   		"react-antd"
   	],
-  	bordered: [
+  	popupMatchSelectWidth: [
   		"react-antd"
   	],
   	showSearch: [
-  		"react-antd"
-  	],
-  	showArrow: [
   		"react-antd"
   	],
   	virtual: [
@@ -6322,6 +6317,7 @@
   	],
   	variant: [
   		"react-material-ui",
+  		"react-antd",
   		"react-mantine"
   	],
   	color: [
@@ -6395,15 +6391,6 @@
   	mode: [
   		"react-antd"
   	],
-  	bordered: [
-  		"react-antd"
-  	],
-  	allowClear: [
-  		"react-antd"
-  	],
-  	tooltip: [
-  		"react-antd"
-  	],
   	showTime: [
   		"react-antd"
   	],
@@ -6420,6 +6407,12 @@
   		"react-antd"
   	],
   	needConfirm: [
+  		"react-antd"
+  	],
+  	allowClear: [
+  		"react-antd"
+  	],
+  	tooltip: [
   		"react-antd"
   	],
   	radius: [
@@ -6587,6 +6580,7 @@
   	],
   	variant: [
   		"react-material-ui",
+  		"react-antd",
   		"react-mantine"
   	],
   	color: [
@@ -6605,16 +6599,13 @@
   	showCount: [
   		"react-antd"
   	],
+  	autoSize: [
+  		"react-antd"
+  	],
   	maxLength: [
   		"react-antd"
   	],
   	allowClear: [
-  		"react-antd"
-  	],
-  	autoSize: [
-  		"react-antd"
-  	],
-  	bordered: [
   		"react-antd"
   	],
   	radius: [
@@ -6779,6 +6770,7 @@
   	],
   	fullWidth: [
   		"react-material-ui",
+  		"react-antd",
   		"react-mantine"
   	],
   	width: [
@@ -6791,6 +6783,7 @@
   	],
   	variant: [
   		"react-material-ui",
+  		"react-antd",
   		"react-mantine"
   	],
   	listHeight: [
@@ -6799,13 +6792,10 @@
   	allowClear: [
   		"react-antd"
   	],
-  	bordered: [
+  	popupMatchSelectWidth: [
   		"react-antd"
   	],
   	showSearch: [
-  		"react-antd"
-  	],
-  	showArrow: [
   		"react-antd"
   	],
   	virtual: [
@@ -6997,6 +6987,7 @@
   	],
   	variant: [
   		"react-material-ui",
+  		"react-antd",
   		"react-mantine"
   	],
   	color: [
@@ -7098,15 +7089,6 @@
   	mode: [
   		"react-antd"
   	],
-  	bordered: [
-  		"react-antd"
-  	],
-  	allowClear: [
-  		"react-antd"
-  	],
-  	tooltip: [
-  		"react-antd"
-  	],
   	showTime: [
   		"react-antd"
   	],
@@ -7123,6 +7105,12 @@
   		"react-antd"
   	],
   	needConfirm: [
+  		"react-antd"
+  	],
+  	allowClear: [
+  		"react-antd"
+  	],
+  	tooltip: [
   		"react-antd"
   	],
   	radius: [
@@ -7524,13 +7512,15 @@
   	size: [
   		"react-rsuite5",
   		"react-material-ui",
+  		"react-antd",
   		"react-mantine"
   	],
   	appearance: [
   		"react-rsuite5"
   	],
   	placement: [
-  		"react-rsuite5"
+  		"react-rsuite5",
+  		"react-antd"
   	],
   	fullWidth: [
   		"react-rsuite5",
@@ -7556,10 +7546,12 @@
   	],
   	format: [
   		"react-rsuite5",
-  		"react-material-ui"
+  		"react-material-ui",
+  		"react-antd"
   	],
   	variant: [
   		"react-material-ui",
+  		"react-antd",
   		"react-mantine"
   	],
   	color: [
@@ -7614,6 +7606,36 @@
   	],
   	timeStepsSeconds: [
   		"react-material-ui"
+  	],
+  	hourStep: [
+  		"react-antd"
+  	],
+  	minuteStep: [
+  		"react-antd"
+  	],
+  	secondStep: [
+  		"react-antd"
+  	],
+  	allowClear: [
+  		"react-antd"
+  	],
+  	hideDisabledOptions: [
+  		"react-antd"
+  	],
+  	inputReadOnly: [
+  		"react-antd"
+  	],
+  	needConfirm: [
+  		"react-antd"
+  	],
+  	showNow: [
+  		"react-antd"
+  	],
+  	use12Hours: [
+  		"react-antd"
+  	],
+  	tooltip: [
+  		"react-antd"
   	],
   	radius: [
   		"react-mantine"
@@ -7705,6 +7727,7 @@
   	],
   	variant: [
   		"react-material-ui",
+  		"react-antd",
   		"react-mantine"
   	],
   	color: [
@@ -7838,7 +7861,8 @@
   	prefix: [
   		"react-rsuite5",
   		"react-material-ui",
-  		"react-bootstrap"
+  		"react-bootstrap",
+  		"react-antd"
   	],
   	inside: [
   		"react-rsuite5"
@@ -7846,7 +7870,8 @@
   	postfix: [
   		"react-rsuite5",
   		"react-material-ui",
-  		"react-bootstrap"
+  		"react-bootstrap",
+  		"react-antd"
   	],
   	tooltip: [
   		"react-rsuite5",
@@ -7854,6 +7879,7 @@
   	],
   	variant: [
   		"react-material-ui",
+  		"react-antd",
   		"react-mantine"
   	],
   	color: [
@@ -7870,9 +7896,6 @@
   		"react-antd"
   	],
   	stringMode: [
-  		"react-antd"
-  	],
-  	bordered: [
   		"react-antd"
   	],
   	radius: [
@@ -9260,14 +9283,13 @@
   			]
   		},
   		{
-  			name: "popupMatchSelectWidth",
-  			type: "boolean",
-  			description: "Determine whether the popup menu and the select input are the same width"
-  		},
-  		{
-  			name: "listHeight",
-  			type: "number",
-  			description: "Config popup height"
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"borderless",
+  				"filled"
+  			]
   		},
   		{
   			name: "fullWidth",
@@ -9280,14 +9302,6 @@
   			description: "Set the width (in pixel) of the field"
   		},
   		{
-  			name: "allowClear",
-  			type: "boolean"
-  		},
-  		{
-  			name: "bordered",
-  			type: "boolean"
-  		},
-  		{
   			name: "placement",
   			type: "string",
   			options: [
@@ -9298,21 +9312,30 @@
   			]
   		},
   		{
+  			name: "listHeight",
+  			type: "number",
+  			description: "Config popup height"
+  		},
+  		{
+  			name: "allowClear",
+  			type: "boolean"
+  		},
+  		{
+  			name: "popupMatchSelectWidth",
+  			type: "boolean",
+  			description: "Determine whether the popup menu and the select input are the same width"
+  		},
+  		{
+  			name: "tooltip",
+  			type: "boolean"
+  		},
+  		{
   			name: "showSearch",
   			type: "boolean",
   			description: "Whether select is searchable"
   		},
   		{
-  			name: "showArrow",
-  			type: "boolean",
-  			description: "Whether to show the drop-down arrow"
-  		},
-  		{
   			name: "virtual",
-  			type: "boolean"
-  		},
-  		{
-  			name: "tooltip",
   			type: "boolean"
   		}
   	],
@@ -10231,6 +10254,25 @@
   	],
   	"react-antd": [
   		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"small",
+  				"default",
+  				"large"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"borderless",
+  				"filled"
+  			]
+  		},
+  		{
   			name: "format",
   			type: "string",
   			description: "Dayjs format to display input value, \"MMMM D, YYYY\" by default. Check https://day.js.org/docs/en/display/format for reference"
@@ -10268,16 +10310,6 @@
   			]
   		},
   		{
-  			name: "size",
-  			type: "string",
-  			description: "Size of the field",
-  			options: [
-  				"small",
-  				"default",
-  				"large"
-  			]
-  		},
-  		{
   			name: "fullWidth",
   			type: "boolean",
   			description: "Set the width of the field to 100% of the enclosing container"
@@ -10294,18 +10326,6 @@
   		{
   			name: "maxDate",
   			type: "date"
-  		},
-  		{
-  			name: "bordered",
-  			type: "boolean"
-  		},
-  		{
-  			name: "allowClear",
-  			type: "boolean"
-  		},
-  		{
-  			name: "tooltip",
-  			type: "boolean"
   		},
   		{
   			name: "showTime",
@@ -10335,6 +10355,14 @@
   			name: "needConfirm",
   			type: "boolean",
   			description: "Need click confirm button to trigger value change. Default false when multiple"
+  		},
+  		{
+  			name: "allowClear",
+  			type: "boolean"
+  		},
+  		{
+  			name: "tooltip",
+  			type: "boolean"
   		}
   	],
   	"react-mantine": [
@@ -10886,16 +10914,6 @@
   	],
   	"react-antd": [
   		{
-  			name: "fullWidth",
-  			type: "boolean",
-  			description: "Set the width of the field to 100% of the enclosing container"
-  		},
-  		{
-  			name: "width",
-  			type: "number",
-  			description: "Set the width (in pixel) of the field"
-  		},
-  		{
   			name: "size",
   			type: "string",
   			description: "Size of the field",
@@ -10906,7 +10924,30 @@
   			]
   		},
   		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"borderless",
+  				"filled"
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
+  			name: "width",
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
   			name: "showCount",
+  			type: "boolean"
+  		},
+  		{
+  			name: "autoSize",
   			type: "boolean"
   		},
   		{
@@ -10915,14 +10956,6 @@
   		},
   		{
   			name: "allowClear",
-  			type: "boolean"
-  		},
-  		{
-  			name: "autoSize",
-  			type: "boolean"
-  		},
-  		{
-  			name: "bordered",
   			type: "boolean"
   		},
   		{
@@ -11435,8 +11468,33 @@
   			]
   		},
   		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"borderless",
+  				"filled"
+  			]
+  		},
+  		{
+  			name: "fullWidth",
+  			type: "boolean",
+  			description: "Set the width of the field to 100% of the enclosing container"
+  		},
+  		{
   			name: "width",
-  			type: "number"
+  			type: "number",
+  			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "placement",
+  			type: "string",
+  			options: [
+  				"bottomLeft",
+  				"bottomRight",
+  				"topLeft",
+  				"topRight"
+  			]
   		},
   		{
   			name: "listHeight",
@@ -11448,7 +11506,12 @@
   			type: "boolean"
   		},
   		{
-  			name: "bordered",
+  			name: "popupMatchSelectWidth",
+  			type: "boolean",
+  			description: "Determine whether the popup menu and the select input are the same width"
+  		},
+  		{
+  			name: "tooltip",
   			type: "boolean"
   		},
   		{
@@ -11457,27 +11520,8 @@
   			description: "Whether select is searchable"
   		},
   		{
-  			name: "showArrow",
-  			type: "boolean",
-  			description: "Whether to show the drop-down arrow"
-  		},
-  		{
   			name: "virtual",
   			type: "boolean"
-  		},
-  		{
-  			name: "tooltip",
-  			type: "boolean"
-  		},
-  		{
-  			name: "placement",
-  			type: "string",
-  			options: [
-  				"bottomLeft",
-  				"bottomRight",
-  				"topLeft",
-  				"topRight"
-  			]
   		},
   		{
   			name: "maxTagCount",
@@ -12355,6 +12399,25 @@
   	],
   	"react-antd": [
   		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"small",
+  				"default",
+  				"large"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"borderless",
+  				"filled"
+  			]
+  		},
+  		{
   			name: "format",
   			type: "string",
   			description: "Dayjs format to display input value, \"MMMM D, YYYY\" by default. Check https://day.js.org/docs/en/display/format for reference"
@@ -12392,16 +12455,6 @@
   			]
   		},
   		{
-  			name: "size",
-  			type: "string",
-  			description: "Size of the field",
-  			options: [
-  				"small",
-  				"default",
-  				"large"
-  			]
-  		},
-  		{
   			name: "fullWidth",
   			type: "boolean",
   			description: "Set the width of the field to 100% of the enclosing container"
@@ -12418,18 +12471,6 @@
   		{
   			name: "maxDate",
   			type: "date"
-  		},
-  		{
-  			name: "bordered",
-  			type: "boolean"
-  		},
-  		{
-  			name: "allowClear",
-  			type: "boolean"
-  		},
-  		{
-  			name: "tooltip",
-  			type: "boolean"
   		},
   		{
   			name: "showTime",
@@ -12459,6 +12500,14 @@
   			name: "needConfirm",
   			type: "boolean",
   			description: "Need click confirm button to trigger value change. Default false when multiple"
+  		},
+  		{
+  			name: "allowClear",
+  			type: "boolean"
+  		},
+  		{
+  			name: "tooltip",
+  			type: "boolean"
   		}
   	],
   	"react-mantine": [
@@ -13702,6 +13751,90 @@
   			type: "number"
   		}
   	],
+  	"react-antd": [
+  		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"small",
+  				"default",
+  				"large"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"borderless",
+  				"filled"
+  			]
+  		},
+  		{
+  			name: "format",
+  			type: "string",
+  			description: "Dayjs format to display input value, \"HH:mm:ss\" by default. Check https://day.js.org/docs/en/display/format for reference"
+  		},
+  		{
+  			name: "hourStep",
+  			type: "number",
+  			description: "Interval between hours in picker"
+  		},
+  		{
+  			name: "minuteStep",
+  			type: "number",
+  			description: "Interval between minutes in picker"
+  		},
+  		{
+  			name: "secondStep",
+  			type: "number",
+  			description: "Interval between seconds in picker"
+  		},
+  		{
+  			name: "allowClear",
+  			type: "boolean"
+  		},
+  		{
+  			name: "hideDisabledOptions",
+  			type: "boolean",
+  			description: "Whether hide the options that can not be selected"
+  		},
+  		{
+  			name: "inputReadOnly",
+  			type: "boolean",
+  			description: "Set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)"
+  		},
+  		{
+  			name: "needConfirm",
+  			type: "boolean",
+  			description: "Need click confirm button to trigger value change"
+  		},
+  		{
+  			name: "showNow",
+  			type: "boolean",
+  			description: "Whether to show Now button on panel"
+  		},
+  		{
+  			name: "use12Hours",
+  			type: "boolean",
+  			description: "Display as 12 hours format, with default format h:mm:ss a"
+  		},
+  		{
+  			name: "tooltip",
+  			type: "boolean"
+  		},
+  		{
+  			name: "placement",
+  			type: "string",
+  			options: [
+  				"bottomLeft",
+  				"bottomRight",
+  				"topLeft",
+  				"topRight"
+  			]
+  		}
+  	],
   	"react-mantine": [
   		{
   			name: "size",
@@ -14112,6 +14245,15 @@
   				"small",
   				"default",
   				"large"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"borderless",
+  				"filled"
   			]
   		},
   		{
@@ -14667,6 +14809,25 @@
   	],
   	"react-antd": [
   		{
+  			name: "size",
+  			type: "string",
+  			description: "Size of the field",
+  			options: [
+  				"small",
+  				"default",
+  				"large"
+  			]
+  		},
+  		{
+  			name: "variant",
+  			type: "string",
+  			options: [
+  				"outlined",
+  				"borderless",
+  				"filled"
+  			]
+  		},
+  		{
   			name: "min",
   			type: "number"
   		},
@@ -14679,32 +14840,14 @@
   			type: "number"
   		},
   		{
-  			name: "showControls",
-  			type: "boolean",
-  			description: "Whether to show +- controls, or set custom arrows icon"
-  		},
-  		{
-  			name: "stringMode",
-  			type: "boolean",
-  			description: "Set value as string to support high precision decimals. Will return string value by onChange"
-  		},
-  		{
-  			name: "bordered",
-  			type: "boolean"
-  		},
-  		{
-  			name: "size",
+  			name: "prefix",
   			type: "string",
-  			description: "Size of the field",
-  			options: [
-  				"small",
-  				"default",
-  				"large"
-  			]
+  			description: "Fixed heading text"
   		},
   		{
-  			name: "tooltip",
-  			type: "boolean"
+  			name: "postfix",
+  			type: "string",
+  			description: "Fixed trailing text"
   		},
   		{
   			name: "fullWidth",
@@ -14715,6 +14858,20 @@
   			name: "width",
   			type: "number",
   			description: "Set the width (in pixel) of the field"
+  		},
+  		{
+  			name: "showControls",
+  			type: "boolean",
+  			description: "Whether to show +- controls, or set custom arrows icon"
+  		},
+  		{
+  			name: "stringMode",
+  			type: "boolean",
+  			description: "Set value as string to support high precision decimals. Will return string value by onChange"
+  		},
+  		{
+  			name: "tooltip",
+  			type: "boolean"
   		}
   	],
   	"react-mantine": [
