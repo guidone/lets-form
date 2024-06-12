@@ -50,7 +50,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     prependView
   }) => {
     const renderedFields = (fields || [])
-      .filter(field => Wrapper || field.hidden !== true)
+      .filter(field => Wrapper || field.component !== 'hidden') // skip hidden type field (not in design mode)
+      .filter(field => Wrapper || field.hidden !== true) // skip fields with "hidden" attribute (not in design mode)
       .map((field, index) => {
         let Component;
         if (Components[field.component] && Components[field.component][framework]) {

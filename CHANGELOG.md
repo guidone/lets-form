@@ -1,11 +1,12 @@
 # LetsForm Changelog
 
-## Next
+## 0.7.19
 - fixed RSuite radio-group missing required icon
 - fixed RSuite fullWidth / Width params in select
 - added time component for MUI, RSuite, Mantine
 - fixed required icon for MUI for all components
 - cleanup and more properties for MUI Date and MUI Datime
+- Hidden field for all frameworks
 
 ## v0.7.18
 - added React Upload component

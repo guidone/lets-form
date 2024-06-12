@@ -78,6 +78,9 @@ const Fields = {
   },
   'time': {
     'react-material-ui': lazy(() => import('./time'))
+  },
+  'hidden': {
+    'react-material-ui': lazy(() => import('./../common/hidden'))
   }
 };
 

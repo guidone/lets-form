@@ -66,6 +66,9 @@ const Fields = {
   },
   'button': {
     'react-bootstrap': lazy(() => import('./button'))
+  },
+  'hidden': {
+    'react-bootstrap': lazy(() => import('./../common/hidden'))
   }
 };
 

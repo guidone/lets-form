@@ -81,6 +81,9 @@ const Fields = {
   },
   'steps': {
     'react-antd': lazy(() => import('./steps'))
+  },
+  'hidden': {
+    'react-antd': lazy(() => import('./../common/hidden'))
   }
 };
 
