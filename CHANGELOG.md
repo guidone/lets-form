@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## 0.8.0
+- finally remove beta tag
+
 ## 0.7.20
 - AntD: removed _borderless_ attribute, added _variant_
 - added Time field to AntD
