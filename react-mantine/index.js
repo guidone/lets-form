@@ -56,7 +56,7 @@ const Fields = {
     'react-mantine': lazy(() => import('./placeholder-image'))
   },
   'divider': {
-    'react-mantine': lazy(() => import('./divider'))
+    'react-mantine': lazy(() => import('../common/divider'))
   },
   'slider': {
     'react-mantine': lazy(() => import('./slider'))

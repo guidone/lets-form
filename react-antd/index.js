@@ -53,7 +53,7 @@ const Fields = {
     'react-antd': lazy(() => import('./slider'))
   },
   'divider': {
-    'react-antd': lazy(() => import('./divider'))
+    'react-antd': lazy(() => import('../common/divider'))
   },
   'react-view': {
     'react-antd': lazy(() => import('./react-view'))

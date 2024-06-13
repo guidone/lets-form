@@ -41,7 +41,7 @@ const Fields = {
     'react-material-ui': lazy(() => import('./placeholder-image'))
   },
   'divider': {
-    'react-material-ui': lazy(() => import('./divider'))
+    'react-material-ui': lazy(() => import('../common/divider'))
   },
   'react-view': {
     'react-material-ui': lazy(() => import('./react-view'))

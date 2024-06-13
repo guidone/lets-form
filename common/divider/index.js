@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './divider.scss';
+import { lfLog } from '../../helpers/lf-log';
 
 const Divider = ({
   name,
@@ -21,5 +22,6 @@ const Divider = ({
     </div>
   );
 };
+lfLog('Loaded Common.Divider');
 
-export { Divider };
+export default Divider;

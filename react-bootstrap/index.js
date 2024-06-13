@@ -47,7 +47,7 @@ const Fields = {
     'react-bootstrap': lazy(() => import('./radio-group'))
   },
   'divider': {
-    'react-bootstrap': lazy(() => import('./divider'))
+    'react-bootstrap': lazy(() => import('../common/divider'))
   },
   'react-view': {
     'react-bootstrap': lazy(() => import('./react-view'))

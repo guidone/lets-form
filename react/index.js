@@ -26,7 +26,7 @@ const Fields = {
     'react': lazy(() => import('./group'))
   },
   'divider': {
-    'react': lazy(() => import('./divider'))
+    'react': lazy(() => import('../common/divider'))
   },
   'react-view': {
     'react': lazy(() => import('./react-view'))

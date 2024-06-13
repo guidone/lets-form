@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## 0.8.2
+- fixed Divider field
+
 ## 0.8.0
 - finally remove beta tag
 
