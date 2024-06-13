@@ -1,4 +1,4 @@
-/* LetsForm react v0.8.1 - UMD */
+/* LetsForm react v0.8.2 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-hook-form'], factory) :
@@ -8927,7 +8927,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9123,7 +9123,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9495,7 +9495,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9551,7 +9551,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9622,7 +9622,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9933,7 +9933,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -10597,7 +10597,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -10786,7 +10786,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11098,7 +11098,7 @@
   	description: "Five stars rating field",
   	frameworks: [
   		"react-antd",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11291,7 +11291,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11344,7 +11344,7 @@
   	name: "multiselect",
   	frameworks: [
   		"react-antd",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11720,7 +11720,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11983,7 +11983,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -12033,7 +12033,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -12976,7 +12976,7 @@
   	frameworks: [
   		"react-antd",
   		"react",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -13494,7 +13494,7 @@
   	frameworks: [
   		"react-antd",
   		"react",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -13977,7 +13977,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -14000,7 +14000,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -14446,7 +14446,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -14532,7 +14532,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -14639,7 +14639,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -15102,7 +15102,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -15298,7 +15298,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -15911,7 +15911,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -17189,6 +17189,12 @@
       }
     }, "&npsb;"));
   };
+  lfLog('Loaded Common.Divider');
+
+  var index$j = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Divider
+  });
 
   var _excluded$e = ["name", "view"];
   var ReactView = function ReactView(_ref) {
@@ -19255,42 +19261,42 @@
   var Fields = {
     'input-text': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
+        return Promise.resolve().then(function () { return index$i; });
       })
     },
     'input-number': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
+        return Promise.resolve().then(function () { return index$h; });
       })
     },
     'checkbox': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return index$g; });
       })
     },
     'textarea': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$f; });
       })
     },
     'three-columns': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return index$e; });
       })
     },
     'two-columns': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
+        return Promise.resolve().then(function () { return index$d; });
       })
     },
     'group': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
+        return Promise.resolve().then(function () { return index$c; });
       })
     },
     'divider': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
+        return Promise.resolve().then(function () { return index$j; });
       })
     },
     'react-view': {
@@ -19447,7 +19453,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.InputText');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
@@ -19491,7 +19497,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.InputNumber');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumber
   });
@@ -19551,7 +19557,7 @@
   }, ['hint', 'label']);
   lfLog('Loaded React.Checkbox');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Checkbox
   });
@@ -19601,37 +19607,30 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.Textarea');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea
   });
 
   lfLog('Loaded React.ThreeColumns');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded React.TwoColumns');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded React.Group');
 
-  var index$d = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: Group
-  });
-
-  lfLog('Loaded React.Divider');
-
   var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: Divider
+    default: Group
   });
 
   lfLog('Loaded React.ReactView');

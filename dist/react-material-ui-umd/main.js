@@ -1,4 +1,4 @@
-/* LetsForm react-material-ui v0.8.1 - UMD */
+/* LetsForm react-material-ui v0.8.2 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('react-hook-form'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', 'react-hook-form', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack'], factory) :
@@ -8894,7 +8894,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9090,7 +9090,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9462,7 +9462,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9518,7 +9518,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9589,7 +9589,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9900,7 +9900,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -10564,7 +10564,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -10753,7 +10753,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11065,7 +11065,7 @@
   	description: "Five stars rating field",
   	frameworks: [
   		"react-antd",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11258,7 +11258,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11311,7 +11311,7 @@
   	name: "multiselect",
   	frameworks: [
   		"react-antd",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11687,7 +11687,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11950,7 +11950,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -12000,7 +12000,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -12943,7 +12943,7 @@
   	frameworks: [
   		"react-antd",
   		"react",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -13461,7 +13461,7 @@
   	frameworks: [
   		"react-antd",
   		"react",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -13944,7 +13944,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -13967,7 +13967,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -14413,7 +14413,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -14499,7 +14499,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -14606,7 +14606,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -15069,7 +15069,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -15265,7 +15265,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -15878,7 +15878,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -17168,6 +17168,12 @@
       }
     }, "&npsb;"));
   };
+  lfLog('Loaded Common.Divider');
+
+  var index$q = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Divider
+  });
 
   var _excluded$i = ["name", "view"];
   var ReactView = function ReactView(_ref) {
@@ -19234,67 +19240,67 @@
   var Fields = {
     'input-text': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$q; });
+        return Promise.resolve().then(function () { return index$p; });
       })
     },
     'select': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$p; });
+        return Promise.resolve().then(function () { return index$o; });
       })
     },
     'toggle': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$o; });
+        return Promise.resolve().then(function () { return index$n; });
       })
     },
     'checkbox': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$n; });
+        return Promise.resolve().then(function () { return index$m; });
       })
     },
     'slider': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$m; });
+        return Promise.resolve().then(function () { return index$l; });
       })
     },
     'placeholder': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
+        return Promise.resolve().then(function () { return index$k; });
       })
     },
     'rate': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
+        return Promise.resolve().then(function () { return index$j; });
       })
     },
     'date': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
+        return Promise.resolve().then(function () { return index$i; });
       })
     },
     'three-columns': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
+        return Promise.resolve().then(function () { return index$h; });
       })
     },
     'two-columns': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return index$g; });
       })
     },
     'group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$f; });
       })
     },
     'placeholder-image': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return index$e; });
       })
     },
     'divider': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
+        return Promise.resolve().then(function () { return index$q; });
       })
     },
     'react-view': {
@@ -19480,7 +19486,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.InputText');
 
-  var index$q = /*#__PURE__*/Object.freeze({
+  var index$p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
@@ -19600,7 +19606,7 @@
   });
   lfLog('Loaded MUI.Select');
 
-  var index$p = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiSelect
   });
@@ -19643,7 +19649,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Toggle');
 
-  var index$o = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle
   });
@@ -19688,7 +19694,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Checkbox');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxMUI
   });
@@ -19757,7 +19763,7 @@
   });
   lfLog('Loaded MUI.Slider');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderMui
   });
@@ -19779,7 +19785,7 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded MUI.Placeholder');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderMUI
   });
@@ -19839,7 +19845,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Rate');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Rate
   });
@@ -20302,44 +20308,37 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.Date');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiDate
   });
 
   lfLog('Loaded MUI.ThreeColumns');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded MUI.TwoColumns');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded MUI.Group');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
   lfLog('Loaded MUI.PlaceholderImage');
 
-  var index$f = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: PlaceholderImage
-  });
-
-  lfLog('Loaded MUI.Divider');
-
   var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: Divider
+    default: PlaceholderImage
   });
 
   lfLog('Loaded MUI.ReactView');

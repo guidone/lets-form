@@ -1,4 +1,4 @@
-/* LetsForm react-antd v0.8.1 - UMD */
+/* LetsForm react-antd v0.8.2 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('antd'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'antd', 'react-hook-form'], factory) :
@@ -8870,7 +8870,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9066,7 +9066,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9438,7 +9438,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9494,7 +9494,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9565,7 +9565,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9876,7 +9876,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -10540,7 +10540,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -10729,7 +10729,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11041,7 +11041,7 @@
   	description: "Five stars rating field",
   	frameworks: [
   		"react-antd",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11234,7 +11234,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11287,7 +11287,7 @@
   	name: "multiselect",
   	frameworks: [
   		"react-antd",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11663,7 +11663,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11926,7 +11926,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11976,7 +11976,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -12919,7 +12919,7 @@
   	frameworks: [
   		"react-antd",
   		"react",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -13437,7 +13437,7 @@
   	frameworks: [
   		"react-antd",
   		"react",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -13920,7 +13920,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -13943,7 +13943,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -14389,7 +14389,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -14475,7 +14475,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -14582,7 +14582,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -15045,7 +15045,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -15241,7 +15241,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -15854,7 +15854,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -17144,6 +17144,12 @@
       }
     }, "&npsb;"));
   };
+  lfLog('Loaded Common.Divider');
+
+  var index$s = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Divider
+  });
 
   var _excluded$m = ["name", "view"];
   var ReactView = function ReactView(_ref) {
@@ -19272,87 +19278,87 @@
   var Fields = {
     'input-text': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$s; });
+        return Promise.resolve().then(function () { return index$r; });
       })
     },
     'toggle': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$r; });
+        return Promise.resolve().then(function () { return index$q; });
       })
     },
     'checkbox': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$q; });
+        return Promise.resolve().then(function () { return index$p; });
       })
     },
     'date': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$p; });
+        return Promise.resolve().then(function () { return index$o; });
       })
     },
     'select': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$o; });
+        return Promise.resolve().then(function () { return index$n; });
       })
     },
     'radio-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$n; });
+        return Promise.resolve().then(function () { return index$m; });
       })
     },
     'rate': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$m; });
+        return Promise.resolve().then(function () { return index$l; });
       })
     },
     'placeholder': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
+        return Promise.resolve().then(function () { return index$k; });
       })
     },
     'placeholder-image': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
+        return Promise.resolve().then(function () { return index$j; });
       })
     },
     'input-number': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
+        return Promise.resolve().then(function () { return index$i; });
       })
     },
     'textarea': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
+        return Promise.resolve().then(function () { return index$h; });
       })
     },
     'multiselect': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return index$g; });
       })
     },
     'three-columns': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$f; });
       })
     },
     'two-columns': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return index$e; });
       })
     },
     'group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
+        return Promise.resolve().then(function () { return index$d; });
       })
     },
     'slider': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
+        return Promise.resolve().then(function () { return index$c; });
       })
     },
     'divider': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
+        return Promise.resolve().then(function () { return index$s; });
       })
     },
     'react-view': {
@@ -19488,7 +19494,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputText');
 
-  var index$s = /*#__PURE__*/Object.freeze({
+  var index$r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
@@ -19549,7 +19555,7 @@
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded AntD.Toggle');
 
-  var index$r = /*#__PURE__*/Object.freeze({
+  var index$q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle
   });
@@ -19602,7 +19608,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Checkbox');
 
-  var index$q = /*#__PURE__*/Object.freeze({
+  var index$p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxAntd
   });
@@ -19998,7 +20004,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Date');
 
-  var index$p = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdDate
   });
@@ -20072,7 +20078,7 @@
   });
   lfLog('Loaded AntD.Select');
 
-  var index$o = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectAntd
   });
@@ -20156,7 +20162,7 @@
   });
   lfLog('Loaded AntD.RadioGroup');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroup
   });
@@ -20223,7 +20229,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded AntD.Rate');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RateAntd
   });
@@ -20246,14 +20252,14 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded AntD.Placeholder');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderAntd
   });
 
   lfLog('Loaded AntD.PlaceholderImage');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
@@ -20297,7 +20303,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputNumber');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumberAntd
   });
@@ -20340,7 +20346,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Textarea');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextareaAntd
   });
@@ -20355,7 +20361,7 @@
   });
   lfLog('Loaded AntD.Multiselect');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect
   });
@@ -20365,7 +20371,7 @@
 
   lfLog('Loaded AntD.ThreeColumns');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
@@ -20375,7 +20381,7 @@
 
   lfLog('Loaded AntD.TwoColumns');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
@@ -20385,7 +20391,7 @@
 
   lfLog('Loaded AntD.Group');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
@@ -20462,16 +20468,9 @@
   });
   lfLog('Loaded AntD.Slider');
 
-  var index$d = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: SliderAnt
-  });
-
-  lfLog('Loaded AntD.Divider');
-
   var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: Divider
+    default: SliderAnt
   });
 
   lfLog('Loaded AntD.ReactView');

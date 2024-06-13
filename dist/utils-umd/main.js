@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.8.1 - UMD */
+/* LetsForm Utils v0.8.2 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -4869,7 +4869,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -5065,7 +5065,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -5437,7 +5437,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -5493,7 +5493,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -5564,7 +5564,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -5875,7 +5875,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -6539,7 +6539,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -6728,7 +6728,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -7040,7 +7040,7 @@
   	description: "Five stars rating field",
   	frameworks: [
   		"react-antd",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -7233,7 +7233,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -7286,7 +7286,7 @@
   	name: "multiselect",
   	frameworks: [
   		"react-antd",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -7662,7 +7662,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -7925,7 +7925,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -7975,7 +7975,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -8918,7 +8918,7 @@
   	frameworks: [
   		"react-antd",
   		"react",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9436,7 +9436,7 @@
   	frameworks: [
   		"react-antd",
   		"react",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9919,7 +9919,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -9942,7 +9942,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -10388,7 +10388,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -10474,7 +10474,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -10581,7 +10581,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11044,7 +11044,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11240,7 +11240,7 @@
   	frameworks: [
   		"react-antd",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],
@@ -11853,7 +11853,7 @@
   		"react-antd",
   		"react",
   		"react-bootstrap",
-  		"react-mui",
+  		"react-material-ui",
   		"react-rsuite5",
   		"react-mantine"
   	],

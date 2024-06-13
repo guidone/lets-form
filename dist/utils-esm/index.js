@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.8.1 - ESM */
+/* LetsForm Utils v0.8.2 - ESM */
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -4863,7 +4863,7 @@ var toggle = {
 	frameworks: [
 		"react-antd",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -5059,7 +5059,7 @@ var select = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -5431,7 +5431,7 @@ var group = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -5487,7 +5487,7 @@ var array = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -5558,7 +5558,7 @@ var slider = {
 	frameworks: [
 		"react-antd",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -5869,7 +5869,7 @@ var date = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -6533,7 +6533,7 @@ var checkbox = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -6722,7 +6722,7 @@ var textarea = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -7034,7 +7034,7 @@ var rate = {
 	description: "Five stars rating field",
 	frameworks: [
 		"react-antd",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -7227,7 +7227,7 @@ var placeholder = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -7280,7 +7280,7 @@ var multiselect = {
 	name: "multiselect",
 	frameworks: [
 		"react-antd",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -7656,7 +7656,7 @@ var button = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -7919,7 +7919,7 @@ var divider = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -7969,7 +7969,7 @@ var datetime = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -8912,7 +8912,7 @@ var upload = {
 	frameworks: [
 		"react-antd",
 		"react",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -9430,7 +9430,7 @@ var time = {
 	frameworks: [
 		"react-antd",
 		"react",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -9913,7 +9913,7 @@ var hidden = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -9936,7 +9936,7 @@ var Manifests = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -10382,7 +10382,7 @@ var Manifests = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -10468,7 +10468,7 @@ var Manifests = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -10575,7 +10575,7 @@ var Manifests = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -11038,7 +11038,7 @@ var Manifests = {
 	frameworks: [
 		"react-antd",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -11234,7 +11234,7 @@ var Manifests = {
 	frameworks: [
 		"react-antd",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
@@ -11847,7 +11847,7 @@ var Manifests = {
 		"react-antd",
 		"react",
 		"react-bootstrap",
-		"react-mui",
+		"react-material-ui",
 		"react-rsuite5",
 		"react-mantine"
 	],
