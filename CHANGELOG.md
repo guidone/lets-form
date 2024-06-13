@@ -1,7 +1,8 @@
 # LetsForm Changelog
 
-## 0.8.2
+## 0.8.3
 - fixed Divider field
+- fixed broken manifests
 
 ## 0.8.0
 - finally remove beta tag
