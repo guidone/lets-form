@@ -101,30 +101,6 @@ const MyView = () => {
 }
 ```
 
-# Why LetsForm
-Using a JSON form schema to create React forms is - of course - opinionated, it brings some advantages
-
-- **Best practices**: Define the form declaratively and use one of the available frameworks to render it. The components will be rendered in an idiomatic way, following the best practices of the specific framework.
-
-- **React Hook Form**: based on the performant React Hook Form, no more unwanted re-renders even with complex forms
-
-- **Consistency**: with a JSON form schema all forms are rendered in the same way across all pages, with consistent margins, colors, customizations and components.
-
-- **Boilerplate**: Avoid writing the same code over and over to set up labels, hints, validation elements, and other comon form features. No more copy and paste
-
-- **Toolchain**: enable a set of tools to work with JSON form schemas, i.e. GitHub and Npm integration, automatic translators, etc
-
-- **Maintanable**: decouple the business logic from the definition of the form. This allows - for example - translators and content editors to handle the form without interfering with the code
-
-- **Don’t reinvent the wheel**: Don’t implement over and over the same functionalities like validation, localization, dynamic fields, plaintext mode for confirmation pages, disabling the form while submitting, etc.
-
-- **Forms defined programmatically**: JSON forms can be created programmatically, for example in those use cases where a form is defined after introspection of a data scheme (database table, GraphQL schema, etc.)
-
-- **Developer friendly**: is some circumstances with dynamic fors, it's easier to manipulate
-  the JSON schema rather then the React code
-
-- **Serializable**: JSON schema can be easily serialized and stored, this can be useful in scenarios where data needs to be stored along with *"how"* the data is manipulated
-
 ## The MIT License
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
