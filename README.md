@@ -10,16 +10,49 @@
 </p>
 
 # About LetsForm
-**LetsForm** is an open source tool to generate React forms with simple JSON schemas using native UI components: Material UI, AntD, RSuite, ReactBootstrap or just React
+**LetsForm** is an open source tool to generate React forms with simple JSON schemas using native UI components: Material UI, AntD, RSuite, ReactBootstrap, Mantine or just React
 
-* [multi-language](https://letsform.dev/lets-form-designer/automatic-translations) (i18n) support
-* [validation](https://letsform.dev/advanced/validation) with i18n and scripting support
-* read-only and disabled mode
-* scripting support for [dynamic forms](https://letsform.dev/advanced/form-scripts)
-* over **30** [components](https://letsform.dev/components-matrix) available, including layout components like array, tabs, steps, groups and columns
-* use [LetsForm designer](https://designer.letsform.dev) to visually create forms
-* full set of [helpers](https://letsform.dev/advanced/helpers) to programmatically interact with JSON forms
-* standalone and open source component, no connections with third party servers
+* **forget tedious boilerplate** copy and paste everytime you need to add a field. No more copy and paste from old code
+
+* build the form **visually** with [LetsForm designer](https://designer.letsform.dev)
+
+* based on the performant **React Hook Form**, no more unwanted re-renders even with complex forms
+
+* keep **visual consistency** of the form, with a JSON form schema all forms are rendered in the same way across all pages,
+with the same margins, colors, customizations and components.
+
+* [validation](https://letsform.dev/advanced/validation) out of the box with **i18n** and scripting support
+
+* [multi-language](https://letsform.dev/lets-form-designer/automatic-translations) **(i18n) support** and
+[automatic translations of i18n tokens](https://letsform.dev/lets-form-designer/i18n-support#autocomplete-translations)
+
+* [implement dynamic forms](https://letsform.dev/advanced/form-scripts) with the language you love - JavaScript -
+and a simple set of instructions
+
+* use **form features you will certainly need** in every project like splitting the form in
+[tabs](https://letsform.dev/components/tabs#tabs), [steps](https://letsform.dev/components/steps),
+[collapsible groups](https://letsform.dev/components/group) or [columns](https://letsform.dev/components/two-columns)
+
+* easily switch **form modes**: [editable, disabled, read only and plaintext](https://letsform.dev/advanced/form-modes)
+(you will never have to write form confirmation views)
+
+* [support for arrays](https://letsform.dev/components/array), just define the fields of the array and you'll get the
+**UI to add, remove and validate** the items in the array
+
+* over **30** [components](https://letsform.dev/components-matrix) with consistent behaviour and properties
+
+* full set of [helpers](https://letsform.dev/advanced/helpers) to **programmatically interact** with JSON form schemas
+
+* **toolchain** to organize your forms in [projects](https://letsform.dev/lets-form-designer/projects) with
+[versioning](https://letsform.dev/lets-form-designer/versioning) and integration with
+[GitHub](https://letsform.dev/lets-form-designer/export-to-github), [NPM](https://letsform.dev/lets-form-designer/export-to-npm)
+or your [repository](https://letsform.dev/lets-form-designer/export-to-file)
+
+* **leverage** [ready-to-use and useful form templates](https://letsform.dev//lets-form-designer/templates) (like cascading
+drop downs of all countries and provinces in all languages or credit card with validation)
+
+* JSON forms can be **created programmatically**, for example in those use cases where a form is defined after introspection
+of a data scheme (database table, GraphQL schema, etc.)
 
 # Getting started
 Install LetsForm
