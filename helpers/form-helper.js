@@ -2,7 +2,8 @@ import _ from 'lodash';
 
 import { mapFields } from './map-fields';
 import { filterFields } from './filter-fields';
-import { lfLog } from './lf-log';
+import { lfLog, lfError } from './lf-log';
+import { isValidForm, isValidField, isValidArrayOfFields } from './validate-form';
 
 const formHelper = form => {
   let _form = form ? { ...form } : {};
@@ -34,6 +35,14 @@ const formHelper = form => {
       lfLog(`FormHelper: ${s}`);
       return obj;
     },
+    dump: () => {
+      lfLog('FormHelper: current form');
+      console.log({
+        ..._form,
+        fields: _fields
+      });
+      return obj;
+    },
     enable: makeHelper({ disabled: false }),
     disable: makeHelper({ disabled: true }),
     hide: makeHelper({ hidden: true }),
@@ -50,8 +59,20 @@ const formHelper = form => {
       _skip = skip;
       return obj;
     },
-    append: field => {
-      _fields = [..._fields, field];
+    append: item => {
+      // do nothing if null
+      if (item) {
+        if (isValidForm(item)) {
+          _fields = [..._fields, ...item.fields];
+        } else if (isValidArrayOfFields(item)) {
+          _fields = [..._fields, ...item];
+        } else if (isValidField(item)) {
+          _fields = [..._fields, item];
+        } else {
+          lfError('FormHelper: invalid item to append');
+          console.error(item);
+        }
+      }
       return obj;
     },
     setField: (fieldName, key, value) => {
@@ -65,6 +86,13 @@ const formHelper = form => {
           return field;
         }
       );
+      return obj;
+    },
+    setValue: (key, value) => {
+      _form = {
+        ..._form,
+        [key]: value
+      };
       return obj;
     },
     form: () => {

@@ -46,7 +46,7 @@ const TextInput = I18N(
       <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
         <Input
           accepter={Input}
-          value={value}
+          defaultValue={value}
           onChange={onChange}
           onBlur={onBlur}
           onKeyUp={submitOnEnter ? handleKeyUp : undefined}

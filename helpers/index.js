@@ -27,3 +27,6 @@ export * from './validate-form';
 export * from './form-has-components';
 export * from './is-valid-time';
 export * from './omit-fields';
+
+import * as Connectors from './connectors';
+export { Connectors };

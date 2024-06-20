@@ -55,4 +55,16 @@ const validateJSONForm = json => {
   return null;
 };
 
+
+export const isValidForm = form => validateJSONForm(form) == null;
+
+export const isValidField = obj => {
+  return typeof obj === 'object' && obj.component && obj.name;
+};
+
+export const isValidArrayOfFields = obj => {
+  return Array.isArray(obj) && obj.every(isValidField);
+};
+
+
 export { validateJSONForm };

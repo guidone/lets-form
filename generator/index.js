@@ -6,11 +6,13 @@ import _ from 'lodash';
 
 import { ValidationErrors } from '../components';
 import { FRAMEWORKS } from '../costants';
-import { reduceFields, applyTransformers, isI18n, i18n } from '../helpers';
+import { reduceFields, applyTransformers, i18n } from '../helpers';
+import { ProxyFetch } from './helpers/proxy-fetch';
 import { useStylesheet } from '../hooks';
 import { lfLog, lfError } from '../helpers/lf-log';
 
 import FormContext from '../form-context';
+import * as Connectors from '../helpers/connectors';
 
 import './index.scss';
 import { PlaintextForm } from '../components/plaintext-form';
@@ -637,6 +639,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     form,
     onChange = () => {},
     onSubmit = () => {},
+    onSubmitted = () => {},
+    onSubmitError = () => {},
     onReset = () => {},
     onError = () => {},
     onEnter = () => {},
@@ -649,7 +653,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     defaultValues = {},
     onlyFields = false,
     debug = false,
-    disabled = false,
+    disabled: disabledProp = false,
     readOnly = false,
     // show the form in plaintext mode
     plaintext = false,
@@ -669,13 +673,19 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     // hide submit button
     hideSubmit,
     // show demo flag
-    demo = false
+    demo = false,
+    disableOnSubmit = true,
+    resetAfterSubmit = true
   }) => {
-    const { showErrors } = form;
+    const { showErrors, connectors } = form;
     const [formName, setFormName] = useState(form.name ?? _.uniqueId('form_'));
     useStylesheet(formName, form.css)
     const [transformers, setTransformers] = useState(null);
     const [preloading, setPreloading] = useState(prealoadComponents);
+    const [stateDisabled, setDisabled] = useState(false);
+    const [version, setVersion] = useState(1);
+
+    const disabled = stateDisabled || disabledProp;
 
     const { handleSubmit, formState: { errors, isValid }, reset, control, getValues } = useForm({
       defaultValues,
@@ -780,11 +790,53 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     );
 
     const onHandleSubmit = useCallback(
-      data => {
-        setValidationErrors(null);
-        onSubmit(data);
+      async data => {
+        // call connectors if any
+        if (Array.isArray(connectors) && connectors.length !== 0) {
+          // call onSubmit immediately
+          onSubmit(data);
+
+          if (disableOnSubmit) {
+            setDisabled(true);
+          }
+          let idx;
+          const responses = [];
+          for(idx = 0; idx < connectors.length; idx++) {
+            const connector = connectors[idx];
+            const proxyFetch = ProxyFetch(connector.options); // wrap fetch
+            try {
+              const response = await Connectors[connector.name]({
+                  data,
+                  options: connector.options,
+                  fetch: proxyFetch,
+                  fields: reduceFields(
+                    formFields,
+                    (field, acc) => ({ ...acc, [field.name]: field.component }),
+                    {}
+                  )
+              });
+              responses.push(response);
+            } catch(e) {
+              console.log('failed call', e);
+              responses.push(e);
+            }
+          }
+          if (disableOnSubmit) {
+            setDisabled(false);
+          }
+          if (resetAfterSubmit) {
+            reset();
+            setVersion(version => version + 1);
+          }
+          // clear the form
+          reset(defaultValues);
+          onSubmitted(responses.length === 1 ? responses[0] : responses);
+        } else {
+          setValidationErrors(null);
+          onSubmit(data);
+        }
       },
-      [onSubmit]
+      [onSubmit, onSubmitted, formFields]
     );
 
     const onHandleError = useCallback(
@@ -799,6 +851,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       () => {
         setValidationErrors(null);
         reset(defaultValues);
+        // not proud of this
+        setVersion(version => version + 1);
         onReset();
       },
       [defaultValues, reset, onReset]
@@ -907,6 +961,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           )}
           <Suspense fallback={Loader ? <Loader /> : <div>Loading...</div>}>
             <Form
+              key={`lf_${version}`}
               onSubmit={handleSubmit(onHandleSubmit, onHandleError)}
               name={formName}
               defaultValues={defaultValues}
