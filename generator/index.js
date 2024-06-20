@@ -629,8 +629,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         );
       });
 
-    //console.log('prependView', prependView)
-    //return renderedFields;
     return prependView ? [prependView, ...renderedFields] : renderedFields;
   }
 
@@ -639,7 +637,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     form,
     onChange = () => {},
     onSubmit = () => {},
-    onSubmitted = () => {},
+    onSubmitSuccess = () => {},
     onSubmitError = () => {},
     onReset = () => {},
     onError = () => {},
@@ -795,10 +793,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         if (Array.isArray(connectors) && connectors.length !== 0) {
           // call onSubmit immediately
           onSubmit(data);
-
+          // disable if needed
           if (disableOnSubmit) {
             setDisabled(true);
           }
+          // loop over connectors
           let idx;
           const responses = [];
           for(idx = 0; idx < connectors.length; idx++) {
@@ -815,28 +814,40 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                     {}
                   )
               });
+              // if error code, stop chain of connectors and don't reset the form, but re-enable it
+              if (response.status >= 400) {
+                if (disableOnSubmit) {
+                  setDisabled(false);
+                }
+                onSubmitError(response);
+                return;
+              }
               responses.push(response);
             } catch(e) {
-              console.log('failed call', e);
-              responses.push(e);
+              // if failed call, return the erro, stop the chain and re-enable the form
+              if (disableOnSubmit) {
+                setDisabled(false);
+              }
+              onSubmitError(e);
+              return;
             }
           }
+          // re-enable and reset if needed
           if (disableOnSubmit) {
             setDisabled(false);
           }
           if (resetAfterSubmit) {
-            reset();
+            reset(defaultValues);
             setVersion(version => version + 1);
           }
-          // clear the form
-          reset(defaultValues);
-          onSubmitted(responses.length === 1 ? responses[0] : responses);
+          // finally the callback
+          onSubmitSuccess(responses.length === 1 ? responses[0] : responses);
         } else {
           setValidationErrors(null);
           onSubmit(data);
         }
       },
-      [onSubmit, onSubmitted, formFields]
+      [onSubmit, onSubmitSuccess, formFields]
     );
 
     const onHandleError = useCallback(

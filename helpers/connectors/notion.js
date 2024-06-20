@@ -1,5 +1,4 @@
-
-
+const LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns', 'steps', 'tabs'];
 
 const defaultBlockProperty = s => ({
   rich_text: [
@@ -12,7 +11,32 @@ const defaultBlockProperty = s => ({
 });
 
 const NotionMappings = {
-  'input-number': 'number'
+  'input-number': 'number',
+  'toggle': b => ({ 'checkbox': !!b }),
+  'checkbox': b => ({ 'checkbox': !!b }),
+  'date': d => ({
+    date: {
+      start: d
+    }
+  }),
+  'datetime': d => ({
+    date: {
+      start: d
+    }
+  }),
+  'select': s => ({
+    select: {
+      name: s
+    }
+  }),
+  'radio-group': s => ({
+    select: {
+      name: s
+    }
+  }),
+  'multiselect': d => ({
+    'multi_select': (d ?? []).map(key => ({ name: key }))
+  })
 };
 
 
@@ -27,9 +51,11 @@ const Notion = async ({
     databaseId: null
   }, options);
 
-  console.log('notion fields', fields)
-
+  // translat properties according to this
+  // DOC: https://developers.notion.com/reference/property-value-object
+  // omit all layout fields
   const notionProperties = Object.keys(data)
+    .filter(key => !LAYOUT_FIELDS.includes(key))
     .reduce(
       (acc, key) => {
         let newValue;
@@ -40,7 +66,6 @@ const Notion = async ({
         } else {
           newValue = defaultBlockProperty(data[key]);
         }
-
         return {
           ...acc,
           [key]: newValue
@@ -49,13 +74,10 @@ const Notion = async ({
       {}
     );
 
-  console.log('notionProperties', notionProperties)
-
   return await fetch(
     'https://api.notion.com/v1/pages',
     {
       method: 'POST',
-
       headers: new Headers({
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${opts.secretKey}`,
@@ -66,7 +88,6 @@ const Notion = async ({
           database_id: opts.databaseId
         },
         properties: notionProperties,
-
       })
     }
   );

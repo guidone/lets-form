@@ -1,6 +1,3 @@
-import { method } from "lodash";
-
-
 const FormSparkIo = async ({
   data,
   options
@@ -9,17 +6,7 @@ const FormSparkIo = async ({
     formId: null
   }, options)
 
-  console.log('FormSparkIo', opts.formId, `https://submit-form.com/${opts.formId}`)
-
-  const formData = new FormData();
-  Object.keys(data)
-    .forEach(key => formData.append(
-      key,
-      typeof data[key] === 'string' ? data[key] : JSON.stringify(data[key])
-    ))
-
-
-  const res = await fetch(
+  return await fetch(
     `https://submit-form.com/${opts.formId}`,
     {
       method: 'POST',
@@ -27,20 +14,9 @@ const FormSparkIo = async ({
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: formData,
-      mode: 'no-cors'
+      body: JSON.stringify(data)
     }
   );
-  let responseData;
-  try {
-    responseData = await res.json();
-  } catch(e) {
-    // do nothing
-  }
-
-  console.log('responseData', responseData)
-
-  return responseData;
 };
 
 export { FormSparkIo };

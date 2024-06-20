@@ -1,6 +1,3 @@
-import { method } from "lodash";
-
-
 const IFTT = async ({
   data,
   options
@@ -10,7 +7,7 @@ const IFTT = async ({
     eventName: null
   }, options);
 
-  const res = await fetch(
+  return await fetch(
     `https://maker.ifttt.com/trigger/${opts.eventName}/json/with/key/${opts.key}`,
     {
       method: 'POST',
@@ -22,14 +19,6 @@ const IFTT = async ({
       mode: 'no-cors'
     }
   );
-  let responseData;
-  try {
-    responseData = await res.json();
-  } catch(e) {
-    // do nothing
-  }
-
-  return responseData;
 };
 
 export { IFTT };

@@ -14,19 +14,9 @@ const AirTable = async ({
       headers: {
         'Content-Type': 'application/json'
       },
-      redirect: 'follow',
       body: JSON.stringify(data)
     }
   );
-
-  /*let responseData;
-  try {
-    responseData = await res.json();
-  } catch(e) {
-    // do nothing
-  }
-
-  return responseData;*/
 };
 
 export { AirTable };
