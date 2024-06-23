@@ -1,4 +1,4 @@
-/* LetsForm react-bootstrap v0.8.2 - UMD */
+/* LetsForm react-bootstrap v0.8.3 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-hook-form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-hook-form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button'], factory) :
@@ -5722,20 +5722,6 @@
     return newFields;
   };
 
-  var validateRulesDefinition = function validateRulesDefinition(rules) {
-    if (Array.isArray(rules)) {
-      // empty is ok
-      if (rules.length === 0) {
-        return null;
-      }
-      var genericFormat = rules.every(function (rule) {
-        return _typeof(rule) === 'object' && rule.condition != null && rule.verb != null;
-      });
-      return genericFormat ? null : 'Every rule should be an object with these keys: condition, verb and optionally names';
-    }
-    return 'Rules object is not an array';
-  };
-
   var DAYJS_VALID_TOKENS = ['YY', 'YYYY', 'M', 'MM', 'MMM', 'MMMM', 'D', 'DD', 'Do', 'd', 'dd', 'ddd', 'dddd', 'A', 'a', 'H', 'HH', 'h', 'hh', 'm', 'mm', 's', 'ss'];
   var isValidDayjsFormat = function isValidDayjsFormat(str) {
     if (_isString(str) && !_isEmpty(str)) {
@@ -8768,132 +8754,6 @@
   };
   var lfError = function lfError(s, e) {
     return console.log('%cLF%c Error: ' + s, 'background: #E44D2E; color: #ffffff; padding: 2px; border-radius: 3px', '', e);
-  };
-
-  var formHelper = function formHelper(_form2) {
-    var _form = _form2 ? _objectSpread2({}, _form2) : {};
-    var _fields = _form2 !== null && _form2 !== void 0 && _form2.fields ? _toConsumableArray(_form2.fields) : [];
-    var _skip = false;
-    var makeHelper = function makeHelper(params) {
-      return function (fieldName) {
-        var fieldNames = Array.isArray(fieldName) ? fieldName : [fieldName];
-        _fields = mapFields(_fields, function (field) {
-          if (fieldNames.includes(field.name)) {
-            return _objectSpread2(_objectSpread2({}, field), params);
-          }
-          return field;
-        });
-        return obj;
-      };
-    };
-    var obj = {
-      filter: function filter(predicate) {
-        _fields = filterFields(_fields, predicate);
-        return obj;
-      },
-      debug: function debug() {
-        var s = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-        lfLog("FormHelper: ".concat(s));
-        return obj;
-      },
-      enable: makeHelper({
-        disabled: false
-      }),
-      disable: makeHelper({
-        disabled: true
-      }),
-      hide: makeHelper({
-        hidden: true
-      }),
-      show: makeHelper({
-        hidden: false
-      }),
-      set: function set(key, value) {
-        _form[key] = value;
-        return obj;
-      },
-      map: function map(predicate) {
-        _fields = mapFields(_fields, predicate);
-        return obj;
-      },
-      skip: function skip(_skip2) {
-        _skip = _skip2;
-        return obj;
-      },
-      append: function append(field) {
-        _fields = [].concat(_toConsumableArray(_fields), [field]);
-        return obj;
-      },
-      setField: function setField(fieldName, key, value) {
-        var toReplace = _isObject(key) ? key : _defineProperty$1({}, key, value);
-        _fields = mapFields(_fields, function (field) {
-          if (field.name === fieldName) {
-            return _objectSpread2(_objectSpread2({}, field), toReplace);
-          }
-          return field;
-        });
-        return obj;
-      },
-      form: function form() {
-        // if skip, then just return the same form
-        if (_skip) {
-          return _form2;
-        }
-        return _objectSpread2(_objectSpread2({}, _form), {}, {
-          fields: _fields
-        });
-      },
-      fields: function fields() {
-        return _fields;
-      }
-    };
-    return obj;
-  };
-
-  var i18nOptions = function i18nOptions(value, i18n) {
-    return (value !== null && value !== void 0 ? value : []).filter(function (value) {
-      return value != null;
-    }).map(function (value) {
-      return _objectSpread2(_objectSpread2({}, value), {}, {
-        label: i18n(value.label),
-        description: i18n(value.description)
-      });
-    });
-  };
-
-  var collectIds = function collectIds(fields) {
-    return reduceFields(fields || [], function (field, accumulator) {
-      if (!accumulator.includes(field.id)) {
-        return [].concat(_toConsumableArray(accumulator), [field.id]);
-      }
-      return accumulator;
-    }, []);
-  };
-
-  /**
-   * isChildrenOf
-   * Returns true if the field (id: fieldId) is a child (nested field) of a field with id parentFieldId
-   * @param {*} fieldId 
-   * @param {*} parentFieldId 
-   * @param {*} fields 
-   * @returns 
-   */
-  var isChildrenOf = function isChildrenOf(fieldId, parentFieldId, fields) {
-    if (_isEmpty(parentFieldId) || _isEmpty(fieldId)) {
-      return false;
-    }
-    // for each fields, collect all subIds
-    var obj = reduceFields(fields, function (field, accumulator) {
-      if (field.fields || field.leftFields || field.rightFields || field.centerFields) {
-        accumulator = _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, field.id, collectIds([field])));
-      }
-      return accumulator;
-    }, {});
-    // then check if parentFieldIs contains as subfield with this id
-    if (obj && _isArray(obj[parentFieldId])) {
-      return obj[parentFieldId].includes(fieldId);
-    }
-    return false;
   };
 
   var toggle = {
@@ -16243,7 +16103,326 @@
   	hidden: hidden
   };
 
-  var LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns'];
+  var HttpCall = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
+      var data, options, fetch, opts;
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, options = _ref.options, fetch = _ref.fetch;
+            opts = Object.assign({
+              method: 'POST'
+            }, options);
+            _context.next = 4;
+            return fetch(opts.url, {
+              method: opts.method,
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              redirect: 'follow',
+              body: JSON.stringify(data)
+            });
+          case 4:
+            return _context.abrupt("return", _context.sent);
+          case 5:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function HttpCall(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var GetFormIo = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
+      var data, options, opts, formData;
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, options = _ref.options;
+            opts = Object.assign(options, {
+              url: null
+            });
+            formData = new FormData();
+            Object.keys(data).forEach(function (key) {
+              return formData.append(key, typeof data[key] === 'string' ? data[key] : JSON.stringify(data[key]));
+            });
+            _context.next = 6;
+            return fetch(opts.url, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: formData
+            });
+          case 6:
+            return _context.abrupt("return", _context.sent);
+          case 7:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function GetFormIo(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var IFTT = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
+      var data, options, opts;
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, options = _ref.options;
+            opts = Object.assign({
+              key: null,
+              eventName: null
+            }, options);
+            _context.next = 4;
+            return fetch("https://maker.ifttt.com/trigger/".concat(opts.eventName, "/json/with/key/").concat(opts.key), {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              redirect: 'follow',
+              body: JSON.stringify(data),
+              mode: 'no-cors'
+            });
+          case 4:
+            return _context.abrupt("return", _context.sent);
+          case 5:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function IFTT(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var LAYOUT_FIELDS$1 = ['group', 'two-columns', 'three-columns', 'steps', 'tabs'];
+  var defaultBlockProperty = function defaultBlockProperty(s) {
+    return {
+      rich_text: [{
+        text: {
+          content: s
+        }
+      }]
+    };
+  };
+  var NotionMappings = {
+    'input-number': 'number',
+    'toggle': function toggle(b) {
+      return {
+        'checkbox': !!b
+      };
+    },
+    'checkbox': function checkbox(b) {
+      return {
+        'checkbox': !!b
+      };
+    },
+    'date': function date(d) {
+      return {
+        date: {
+          start: d
+        }
+      };
+    },
+    'datetime': function datetime(d) {
+      return {
+        date: {
+          start: d
+        }
+      };
+    },
+    'select': function select(s) {
+      return {
+        select: {
+          name: s
+        }
+      };
+    },
+    'radio-group': function radioGroup(s) {
+      return {
+        select: {
+          name: s
+        }
+      };
+    },
+    'multiselect': function multiselect(d) {
+      return {
+        'multi_select': (d !== null && d !== void 0 ? d : []).map(function (key) {
+          return {
+            name: key
+          };
+        })
+      };
+    }
+  };
+  var Notion = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
+      var data, options, fetch, fields, opts, notionProperties;
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, options = _ref.options, fetch = _ref.fetch, fields = _ref.fields;
+            opts = Object.assign({
+              secretKey: null,
+              databaseId: null
+            }, options); // translat properties according to this
+            // DOC: https://developers.notion.com/reference/property-value-object
+            // omit all layout fields
+            notionProperties = Object.keys(data).filter(function (key) {
+              return !LAYOUT_FIELDS$1.includes(key);
+            }).reduce(function (acc, key) {
+              var newValue;
+              if (typeof NotionMappings[fields[key]] === 'function') {
+                newValue = NotionMappings[fields[key]](data[key]);
+              } else if (NotionMappings[fields[key]]) {
+                newValue = _defineProperty$1({}, NotionMappings[fields[key]], data[key]);
+              } else {
+                newValue = defaultBlockProperty(data[key]);
+              }
+              return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, key, newValue));
+            }, {});
+            _context.next = 5;
+            return fetch('https://api.notion.com/v1/pages', {
+              method: 'POST',
+              headers: new Headers({
+                'Content-Type': 'application/json',
+                'Authorization': "Bearer ".concat(opts.secretKey),
+                'Notion-Version': '2022-06-28'
+              }),
+              body: JSON.stringify({
+                parent: {
+                  database_id: opts.databaseId
+                },
+                properties: notionProperties
+              })
+            });
+          case 5:
+            return _context.abrupt("return", _context.sent);
+          case 6:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function Notion(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var Zapier = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
+      var data, options, fetch, opts;
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, options = _ref.options, fetch = _ref.fetch;
+            opts = Object.assign({
+              url: null
+            }, options);
+            _context.next = 4;
+            return fetch(opts.url, {
+              method: 'POST',
+              headers: new Headers({
+                'Content-Type': 'application/json'
+              }),
+              body: JSON.stringify(data)
+            });
+          case 4:
+            return _context.abrupt("return", _context.sent);
+          case 5:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function Zapier(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var FormSparkIo = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
+      var data, options, opts;
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, options = _ref.options;
+            opts = Object.assign({
+              formId: null
+            }, options);
+            _context.next = 4;
+            return fetch("https://submit-form.com/".concat(opts.formId), {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(data)
+            });
+          case 4:
+            return _context.abrupt("return", _context.sent);
+          case 5:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function FormSparkIo(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var AirTable = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
+      var data, options, fetch, opts;
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, options = _ref.options, fetch = _ref.fetch;
+            opts = Object.assign({
+              webhookUrl: null
+            }, options);
+            return _context.abrupt("return", fetch(opts.webhookUrl, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            }));
+          case 3:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function AirTable(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var Connectors = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    AirTable: AirTable,
+    FormSparkIo: FormSparkIo,
+    GetFormIo: GetFormIo,
+    HttpCall: HttpCall,
+    IFTT: IFTT,
+    Notion: Notion,
+    Zapier: Zapier
+  });
+
+  var CONNECTOR_NAMES = Object.keys(Connectors);
+  var AVAILABLE_COMPONENTS = Object.keys(Manifests);
+  var LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns', 'steps', 'tabs'];
   var validateJSONForm = function validateJSONForm(json) {
     if (!_isObject(json)) {
       return 'Not a valid JSON object';
@@ -16277,14 +16456,188 @@
     var usedComponets = _uniq(reduceFields(json.fields, function (field, acc) {
       return [].concat(_toConsumableArray(acc), [field.component]);
     }, []));
-    var availableComponents = Object.keys(Manifests);
     var unknownCommponents = usedComponets.filter(function (component) {
-      return !availableComponents.includes(component);
+      return !AVAILABLE_COMPONENTS.includes(component);
     });
     if (unknownCommponents.length !== 0) {
-      return 'Form contains unknows component(s): ' + unknownCommponents.join(', ');
+      return 'Form uses unknows component(s): ' + unknownCommponents.join(', ');
+    }
+    if (json.connectors) {
+      if (!Array.isArray(json.connectors)) {
+        return '"Connectors" key should be an array';
+      }
+      var invalidConnectors = json.connectors.filter(function (c) {
+        return !isValidConnector(c);
+      });
+      if (invalidConnectors.length !== 0) {
+        return 'Form uses unknown connector(s): ' + invalidConnectors.map(function (c) {
+          var _c$name;
+          return (_c$name = c.name) !== null && _c$name !== void 0 ? _c$name : 'unknown';
+        }).join(',');
+      }
     }
     return null;
+  };
+  var isValidConnector = function isValidConnector(c) {
+    return _typeof(c) === 'object' && c.name && CONNECTOR_NAMES.includes(c.name);
+  };
+  var isValidForm = function isValidForm(form) {
+    return validateJSONForm(form) == null;
+  };
+  var isValidField = function isValidField(obj) {
+    return _typeof(obj) === 'object' && obj.component && obj.name && AVAILABLE_COMPONENTS.includes(obj.component);
+  };
+  var isValidArrayOfFields = function isValidArrayOfFields(obj) {
+    return Array.isArray(obj) && obj.every(isValidField);
+  };
+
+  var formHelper = function formHelper(_form2) {
+    var _form = _form2 ? _objectSpread2({}, _form2) : {};
+    var _fields = _form2 !== null && _form2 !== void 0 && _form2.fields ? _toConsumableArray(_form2.fields) : [];
+    var _skip = false;
+    var makeHelper = function makeHelper(params) {
+      return function (fieldName) {
+        var fieldNames = Array.isArray(fieldName) ? fieldName : [fieldName];
+        _fields = mapFields(_fields, function (field) {
+          if (fieldNames.includes(field.name)) {
+            return _objectSpread2(_objectSpread2({}, field), params);
+          }
+          return field;
+        });
+        return obj;
+      };
+    };
+    var obj = {
+      filter: function filter(predicate) {
+        _fields = filterFields(_fields, predicate);
+        return obj;
+      },
+      debug: function debug() {
+        var s = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+        lfLog("FormHelper: ".concat(s));
+        return obj;
+      },
+      dump: function dump() {
+        lfLog('FormHelper: current form');
+        console.log(_objectSpread2(_objectSpread2({}, _form), {}, {
+          fields: _fields
+        }));
+        return obj;
+      },
+      enable: makeHelper({
+        disabled: false
+      }),
+      disable: makeHelper({
+        disabled: true
+      }),
+      hide: makeHelper({
+        hidden: true
+      }),
+      show: makeHelper({
+        hidden: false
+      }),
+      set: function set(key, value) {
+        _form[key] = value;
+        return obj;
+      },
+      map: function map(predicate) {
+        _fields = mapFields(_fields, predicate);
+        return obj;
+      },
+      skip: function skip(_skip2) {
+        _skip = _skip2;
+        return obj;
+      },
+      append: function append(item) {
+        // do nothing if null
+        if (item) {
+          if (isValidForm(item)) {
+            _fields = [].concat(_toConsumableArray(_fields), _toConsumableArray(item.fields));
+          } else if (isValidArrayOfFields(item)) {
+            _fields = [].concat(_toConsumableArray(_fields), _toConsumableArray(item));
+          } else if (isValidField(item)) {
+            _fields = [].concat(_toConsumableArray(_fields), [item]);
+          } else {
+            lfError('FormHelper: invalid item to append');
+            console.error(item);
+          }
+        }
+        return obj;
+      },
+      setField: function setField(fieldName, key, value) {
+        var toReplace = _isObject(key) ? key : _defineProperty$1({}, key, value);
+        _fields = mapFields(_fields, function (field) {
+          if (field.name === fieldName) {
+            return _objectSpread2(_objectSpread2({}, field), toReplace);
+          }
+          return field;
+        });
+        return obj;
+      },
+      setValue: function setValue(key, value) {
+        _form = _objectSpread2(_objectSpread2({}, _form), {}, _defineProperty$1({}, key, value));
+        return obj;
+      },
+      form: function form() {
+        // if skip, then just return the same form
+        if (_skip) {
+          return _form2;
+        }
+        return _objectSpread2(_objectSpread2({}, _form), {}, {
+          fields: _fields
+        });
+      },
+      fields: function fields() {
+        return _fields;
+      }
+    };
+    return obj;
+  };
+
+  var i18nOptions = function i18nOptions(value, i18n) {
+    return (value !== null && value !== void 0 ? value : []).filter(function (value) {
+      return value != null;
+    }).map(function (value) {
+      return _objectSpread2(_objectSpread2({}, value), {}, {
+        label: i18n(value.label),
+        description: i18n(value.description)
+      });
+    });
+  };
+
+  var collectIds = function collectIds(fields) {
+    return reduceFields(fields || [], function (field, accumulator) {
+      if (!accumulator.includes(field.id)) {
+        return [].concat(_toConsumableArray(accumulator), [field.id]);
+      }
+      return accumulator;
+    }, []);
+  };
+
+  /**
+   * isChildrenOf
+   * Returns true if the field (id: fieldId) is a child (nested field) of a field with id parentFieldId
+   * @param {*} fieldId 
+   * @param {*} parentFieldId 
+   * @param {*} fields 
+   * @returns 
+   */
+  var isChildrenOf = function isChildrenOf(fieldId, parentFieldId, fields) {
+    if (_isEmpty(parentFieldId) || _isEmpty(fieldId)) {
+      return false;
+    }
+    // for each fields, collect all subIds
+    var obj = reduceFields(fields, function (field, accumulator) {
+      if (field.fields || field.leftFields || field.rightFields || field.centerFields) {
+        accumulator = _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, field.id, collectIds([field])));
+      }
+      return accumulator;
+    }, {});
+    // then check if parentFieldIs contains as subfield with this id
+    if (obj && _isArray(obj[parentFieldId])) {
+      return obj[parentFieldId].includes(fieldId);
+    }
+    return false;
   };
 
   var formHasComponents = function formHasComponents(form, component) {
@@ -16333,6 +16686,58 @@
       }, {});
       return /*#__PURE__*/React.createElement(Component, newProps);
     };
+  };
+
+  /**
+   * ProxyFetch
+   * Factory to create a wrapped version of the fetch function to work with predefined CORS proxy
+   * @param {Object} params
+   * @returns
+   */
+  var ProxyFetch = function ProxyFetch(params) {
+    return /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(url, options) {
+        var proxyUrl, proxyOptions, _proxyOptions$headers;
+        return _regeneratorRuntime().wrap(function _callee$(_context) {
+          while (1) switch (_context.prev = _context.next) {
+            case 0:
+              proxyUrl = url;
+              proxyOptions = _objectSpread2({}, options);
+              if (params.proxy === 'cors-lol') {
+                proxyUrl = 'https://api.cors.lol/?url=' + encodeURIComponent(url);
+              } else if (params.proxy === 'just-cors') {
+                proxyUrl = params.justCorsUrl + url;
+              } else if (params.proxy === 'proxy-cors-sh') {
+                proxyUrl = 'https://proxy.cors.sh/' + url;
+                proxyOptions = _objectSpread2(_objectSpread2({}, proxyOptions), {}, {
+                  headers: _objectSpread2(_objectSpread2({}, (_proxyOptions$headers = proxyOptions.headers) !== null && _proxyOptions$headers !== void 0 ? _proxyOptions$headers : {}), {}, {
+                    'x-cors-api-key': params.corsShApiKey
+                  })
+                });
+              } else if (params.proxy === 'cors-proxy-io') {
+                proxyUrl = 'https://corsproxy.io/?' + url;
+              }
+              _context.prev = 3;
+              _context.next = 6;
+              return fetch(proxyUrl, proxyOptions);
+            case 6:
+              return _context.abrupt("return", _context.sent);
+            case 9:
+              _context.prev = 9;
+              _context.t0 = _context["catch"](3);
+              // capture url
+              _context.t0.url = proxyUrl;
+              throw _context.t0;
+            case 13:
+            case "end":
+              return _context.stop();
+          }
+        }, _callee, null, [[3, 9]]);
+      }));
+      return function (_x, _x2) {
+        return _ref.apply(this, arguments);
+      };
+    }();
   };
 
   var FormContext = /*#__PURE__*/React.createContext();
@@ -18706,9 +19111,6 @@
           }
         });
       });
-
-      //console.log('prependView', prependView)
-      //return renderedFields;
       return prependView ? [prependView].concat(_toConsumableArray(renderedFields)) : renderedFields;
     };
     var FormGenerator = /*#__PURE__*/React.memo(function (_ref6) {
@@ -18719,6 +19121,10 @@
         onChange = _ref6$onChange === void 0 ? function () {} : _ref6$onChange,
         _ref6$onSubmit = _ref6.onSubmit,
         onSubmit = _ref6$onSubmit === void 0 ? function () {} : _ref6$onSubmit,
+        _ref6$onSubmitSuccess = _ref6.onSubmitSuccess,
+        onSubmitSuccess = _ref6$onSubmitSuccess === void 0 ? function () {} : _ref6$onSubmitSuccess,
+        _ref6$onSubmitError = _ref6.onSubmitError,
+        onSubmitError = _ref6$onSubmitError === void 0 ? function () {} : _ref6$onSubmitError,
         _ref6$onReset = _ref6.onReset,
         onReset = _ref6$onReset === void 0 ? function () {} : _ref6$onReset,
         _ref6$onError = _ref6.onError,
@@ -18739,7 +19145,7 @@
         _ref6$debug = _ref6.debug,
         debug = _ref6$debug === void 0 ? false : _ref6$debug,
         _ref6$disabled = _ref6.disabled,
-        disabled = _ref6$disabled === void 0 ? false : _ref6$disabled,
+        disabledProp = _ref6$disabled === void 0 ? false : _ref6$disabled,
         _ref6$readOnly = _ref6.readOnly,
         readOnly = _ref6$readOnly === void 0 ? false : _ref6$readOnly,
         _ref6$plaintext = _ref6.plaintext,
@@ -18756,8 +19162,13 @@
         hideCancel = _ref6.hideCancel,
         hideSubmit = _ref6.hideSubmit,
         _ref6$demo = _ref6.demo,
-        demo = _ref6$demo === void 0 ? false : _ref6$demo;
-      var showErrors = form.showErrors;
+        demo = _ref6$demo === void 0 ? false : _ref6$demo,
+        _ref6$disableOnSubmit = _ref6.disableOnSubmit,
+        disableOnSubmit = _ref6$disableOnSubmit === void 0 ? true : _ref6$disableOnSubmit,
+        _ref6$resetAfterSubmi = _ref6.resetAfterSubmit,
+        resetAfterSubmit = _ref6$resetAfterSubmi === void 0 ? true : _ref6$resetAfterSubmi;
+      var showErrors = form.showErrors,
+        connectors = form.connectors;
       var _useState = React.useState((_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : _uniqueId('form_')),
         _useState2 = _slicedToArray(_useState, 2),
         formName = _useState2[0],
@@ -18771,6 +19182,15 @@
         _useState6 = _slicedToArray(_useState5, 2),
         preloading = _useState6[0],
         setPreloading = _useState6[1];
+      var _useState7 = React.useState(false),
+        _useState8 = _slicedToArray(_useState7, 2),
+        stateDisabled = _useState8[0],
+        setDisabled = _useState8[1];
+      var _useState9 = React.useState(1),
+        _useState10 = _slicedToArray(_useState9, 2),
+        version = _useState10[0],
+        setVersion = _useState10[1];
+      var disabled = stateDisabled || disabledProp;
       var _useForm = reactHookForm.useForm({
           defaultValues: defaultValues,
           mode: form.validationMode
@@ -18782,15 +19202,15 @@
         reset = _useForm.reset,
         control = _useForm.control,
         getValues = _useForm.getValues;
-      var _useState7 = React.useState(),
-        _useState8 = _slicedToArray(_useState7, 2),
-        validationErrors = _useState8[0],
-        setValidationErrors = _useState8[1];
+      var _useState11 = React.useState(),
+        _useState12 = _slicedToArray(_useState11, 2),
+        validationErrors = _useState12[0],
+        setValidationErrors = _useState12[1];
       // store form fields, apply immediately transformers (collected from all fields)
-      var _useState9 = React.useState(null),
-        _useState10 = _slicedToArray(_useState9, 2),
-        formFields = _useState10[0],
-        setFormFields = _useState10[1];
+      var _useState13 = React.useState(null),
+        _useState14 = _slicedToArray(_useState13, 2),
+        formFields = _useState14[0],
+        setFormFields = _useState14[1];
       var MergedComponents = mergeComponents(Fields, components);
 
       // preload components of the form
@@ -18967,10 +19387,98 @@
       [form, framework] // don't put defaultValues here
       );
 
-      var onHandleSubmit = React.useCallback(function (data) {
-        setValidationErrors(null);
-        onSubmit(data);
-      }, [onSubmit]);
+      var onHandleSubmit = React.useCallback( /*#__PURE__*/function () {
+        var _ref8 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(data) {
+          var idx, responses, connector, proxyFetch, response;
+          return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+            while (1) switch (_context2.prev = _context2.next) {
+              case 0:
+                if (!(Array.isArray(connectors) && connectors.length !== 0)) {
+                  _context2.next = 32;
+                  break;
+                }
+                // call onSubmit immediately
+                onSubmit(data);
+                // disable if needed
+                if (disableOnSubmit) {
+                  setDisabled(true);
+                }
+                // loop over connectors
+                responses = [];
+                idx = 0;
+              case 5:
+                if (!(idx < connectors.length)) {
+                  _context2.next = 27;
+                  break;
+                }
+                connector = connectors[idx];
+                proxyFetch = ProxyFetch(connector.options); // wrap fetch
+                _context2.prev = 8;
+                _context2.next = 11;
+                return Connectors[connector.name]({
+                  data: data,
+                  options: connector.options,
+                  fetch: proxyFetch,
+                  fields: reduceFields(formFields, function (field, acc) {
+                    return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, field.name, field.component));
+                  }, {})
+                });
+              case 11:
+                response = _context2.sent;
+                if (!(response.status >= 400)) {
+                  _context2.next = 16;
+                  break;
+                }
+                if (disableOnSubmit) {
+                  setDisabled(false);
+                }
+                onSubmitError(response);
+                return _context2.abrupt("return");
+              case 16:
+                responses.push(response);
+                _context2.next = 24;
+                break;
+              case 19:
+                _context2.prev = 19;
+                _context2.t0 = _context2["catch"](8);
+                // if failed call, return the erro, stop the chain and re-enable the form
+                if (disableOnSubmit) {
+                  setDisabled(false);
+                }
+                onSubmitError(_context2.t0);
+                return _context2.abrupt("return");
+              case 24:
+                idx++;
+                _context2.next = 5;
+                break;
+              case 27:
+                // re-enable and reset if needed
+                if (disableOnSubmit) {
+                  setDisabled(false);
+                }
+                if (resetAfterSubmit) {
+                  reset(defaultValues);
+                  setVersion(function (version) {
+                    return version + 1;
+                  });
+                }
+                // finally the callback
+                onSubmitSuccess(responses.length === 1 ? responses[0] : responses);
+                _context2.next = 34;
+                break;
+              case 32:
+                setValidationErrors(null);
+                onSubmit(data);
+              case 34:
+              case "end":
+                return _context2.stop();
+            }
+          }, _callee2, null, [[8, 19]]);
+        }));
+        return function (_x) {
+          return _ref8.apply(this, arguments);
+        };
+      }(), [onSubmit, onSubmitSuccess, formFields]);
       var onHandleError = React.useCallback(function (data) {
         setValidationErrors(data);
         onError(data);
@@ -18978,36 +19486,40 @@
       var handleReset = React.useCallback(function () {
         setValidationErrors(null);
         reset(defaultValues);
+        // not proud of this
+        setVersion(function (version) {
+          return version + 1;
+        });
         onReset();
       }, [defaultValues, reset, onReset]);
       var handleChange = React.useCallback( /*#__PURE__*/function () {
-        var _ref8 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(values, fieldName) {
+        var _ref9 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(values, fieldName) {
           var newFields, _iteratorAbruptCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, f, _iteratorAbruptCompletion4, _didIteratorError4, _iteratorError4, _iterator4, _step4, _f;
-          return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-            while (1) switch (_context2.prev = _context2.next) {
+          return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+            while (1) switch (_context3.prev = _context3.next) {
               case 0:
                 if (transformers) {
-                  _context2.next = 2;
+                  _context3.next = 2;
                   break;
                 }
-                return _context2.abrupt("return");
+                return _context3.abrupt("return");
               case 2:
                 // execute main transformer
                 newFields = formFields;
                 if (_isEmpty(transformers.onRender)) {
-                  _context2.next = 33;
+                  _context3.next = 33;
                   break;
                 }
                 _iteratorAbruptCompletion3 = false;
                 _didIteratorError3 = false;
-                _context2.prev = 6;
+                _context3.prev = 6;
                 _iterator3 = _asyncIterator(applyTransformers(formName, framework, newFields, transformers.onRender, values, onJavascriptError));
               case 8:
-                _context2.next = 10;
+                _context3.next = 10;
                 return _iterator3.next();
               case 10:
-                if (!(_iteratorAbruptCompletion3 = !(_step3 = _context2.sent).done)) {
-                  _context2.next = 17;
+                if (!(_iteratorAbruptCompletion3 = !(_step3 = _context3.sent).done)) {
+                  _context3.next = 17;
                   break;
                 }
                 f = _step3.value;
@@ -19017,52 +19529,52 @@
                 }
               case 14:
                 _iteratorAbruptCompletion3 = false;
-                _context2.next = 8;
+                _context3.next = 8;
                 break;
               case 17:
-                _context2.next = 23;
+                _context3.next = 23;
                 break;
               case 19:
-                _context2.prev = 19;
-                _context2.t0 = _context2["catch"](6);
+                _context3.prev = 19;
+                _context3.t0 = _context3["catch"](6);
                 _didIteratorError3 = true;
-                _iteratorError3 = _context2.t0;
+                _iteratorError3 = _context3.t0;
               case 23:
-                _context2.prev = 23;
-                _context2.prev = 24;
+                _context3.prev = 23;
+                _context3.prev = 24;
                 if (!(_iteratorAbruptCompletion3 && _iterator3.return != null)) {
-                  _context2.next = 28;
+                  _context3.next = 28;
                   break;
                 }
-                _context2.next = 28;
+                _context3.next = 28;
                 return _iterator3.return();
               case 28:
-                _context2.prev = 28;
+                _context3.prev = 28;
                 if (!_didIteratorError3) {
-                  _context2.next = 31;
+                  _context3.next = 31;
                   break;
                 }
                 throw _iteratorError3;
               case 31:
-                return _context2.finish(28);
+                return _context3.finish(28);
               case 32:
-                return _context2.finish(23);
+                return _context3.finish(23);
               case 33:
                 if (!(transformers.onChange != null && !_isEmpty(transformers.onChange[fieldName]))) {
-                  _context2.next = 63;
+                  _context3.next = 63;
                   break;
                 }
                 // execute the async generator transformer
                 _iteratorAbruptCompletion4 = false;
                 _didIteratorError4 = false;
-                _context2.prev = 36;
+                _context3.prev = 36;
                 _iterator4 = _asyncIterator(applyTransformers(formName, framework, newFields, transformers.onChange[fieldName], values, onJavascriptError));
               case 38:
-                _context2.next = 40;
+                _context3.next = 40;
                 return _iterator4.next();
               case 40:
-                if (!(_iteratorAbruptCompletion4 = !(_step4 = _context2.sent).done)) {
-                  _context2.next = 47;
+                if (!(_iteratorAbruptCompletion4 = !(_step4 = _context3.sent).done)) {
+                  _context3.next = 47;
                   break;
                 }
                 _f = _step4.value;
@@ -19072,46 +19584,46 @@
                 }
               case 44:
                 _iteratorAbruptCompletion4 = false;
-                _context2.next = 38;
+                _context3.next = 38;
                 break;
               case 47:
-                _context2.next = 53;
+                _context3.next = 53;
                 break;
               case 49:
-                _context2.prev = 49;
-                _context2.t1 = _context2["catch"](36);
+                _context3.prev = 49;
+                _context3.t1 = _context3["catch"](36);
                 _didIteratorError4 = true;
-                _iteratorError4 = _context2.t1;
+                _iteratorError4 = _context3.t1;
               case 53:
-                _context2.prev = 53;
-                _context2.prev = 54;
+                _context3.prev = 53;
+                _context3.prev = 54;
                 if (!(_iteratorAbruptCompletion4 && _iterator4.return != null)) {
-                  _context2.next = 58;
+                  _context3.next = 58;
                   break;
                 }
-                _context2.next = 58;
+                _context3.next = 58;
                 return _iterator4.return();
               case 58:
-                _context2.prev = 58;
+                _context3.prev = 58;
                 if (!_didIteratorError4) {
-                  _context2.next = 61;
+                  _context3.next = 61;
                   break;
                 }
                 throw _iteratorError4;
               case 61:
-                return _context2.finish(58);
+                return _context3.finish(58);
               case 62:
-                return _context2.finish(53);
+                return _context3.finish(53);
               case 63:
                 onChange(values);
               case 64:
               case "end":
-                return _context2.stop();
+                return _context3.stop();
             }
-          }, _callee2, null, [[6, 19, 23, 33], [24,, 28, 32], [36, 49, 53, 63], [54,, 58, 62]]);
+          }, _callee3, null, [[6, 19, 23, 33], [24,, 28, 32], [36, 49, 53, 63], [54,, 58, 62]]);
         }));
-        return function (_x, _x2) {
-          return _ref8.apply(this, arguments);
+        return function (_x2, _x3) {
+          return _ref9.apply(this, arguments);
         };
       }(), [onChange, formFields, formName, transformers, framework, onJavascriptError]);
       var handleEnter = React.useCallback(function () {
@@ -19159,6 +19671,7 @@
       }), /*#__PURE__*/React.createElement(React.Suspense, {
         fallback: Loader ? /*#__PURE__*/React.createElement(Loader, null) : /*#__PURE__*/React.createElement("div", null, "Loading...")
       }, /*#__PURE__*/React.createElement(Form, _extends({
+        key: "lf_".concat(version),
         onSubmit: handleSubmit(onHandleSubmit, onHandleError),
         name: formName,
         defaultValues: defaultValues,
@@ -19443,9 +19956,9 @@
     return /*#__PURE__*/React.createElement(Form.Group, {
       className: className,
       "data-lf-field-name": name
-    }, useFloatingLabels && /*#__PURE__*/React.createElement(FloatingLabel, {
+    }, useFloatingLabels && label && /*#__PURE__*/React.createElement(FloatingLabel, {
       label: label
-    }, innerGroup), !useFloatingLabels && /*#__PURE__*/React.createElement(Form.Label, null, label, required && /*#__PURE__*/React.createElement(RequiredIcon, null)), !useFloatingLabels && innerGroup, hint && !error && /*#__PURE__*/React.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React.createElement(Form.Control.Feedback, {
+    }, innerGroup), !useFloatingLabels && label && /*#__PURE__*/React.createElement(Form.Label, null, label, required && /*#__PURE__*/React.createElement(RequiredIcon, null)), !useFloatingLabels && innerGroup, hint && !error && /*#__PURE__*/React.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React.createElement(Form.Control.Feedback, {
       type: "invalid"
     }, error));
   };
@@ -20218,6 +20731,7 @@
     default: FormBootstrap
   });
 
+  exports.Connectors = Connectors;
   exports.FIELDS_KEY = FIELDS_KEY;
   exports.FRAMEWORKS = FRAMEWORKS;
   exports.FRAMEWORKS_LABELS = FRAMEWORKS_LABELS;
@@ -20246,8 +20760,12 @@
   exports.isEmptyForm = isEmptyForm;
   exports.isI18n = isI18n;
   exports.isUrl = isUrl;
+  exports.isValidArrayOfFields = isValidArrayOfFields;
+  exports.isValidConnector = isValidConnector;
   exports.isValidDate = isValidDate;
   exports.isValidDayjsFormat = isValidDayjsFormat;
+  exports.isValidField = isValidField;
+  exports.isValidForm = isValidForm;
   exports.isValidTime = isValidTime;
   exports.makeWidthStyle = makeWidthStyle;
   exports.mapFields = mapFields;
@@ -20256,7 +20774,6 @@
   exports.reduceFields = reduceFields;
   exports.replaceField = replaceField;
   exports.validateJSONForm = validateJSONForm;
-  exports.validateRulesDefinition = validateRulesDefinition;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
