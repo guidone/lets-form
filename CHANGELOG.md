@@ -1,17 +1,21 @@
 # LetsForm Changelog
 
-## 0.8.3
+## v0.9.0
+- added connectors
+- minor fixes in React Bootstrap
+
+## v0.8.3
 - fixed Divider field
 - fixed broken manifests
 
-## 0.8.0
+## v0.8.0
 - finally remove beta tag
 
-## 0.7.20
+## v0.7.20
 - AntD: removed _borderless_ attribute, added _variant_
 - added Time field to AntD
 
-## 0.7.19
+## v0.7.19
 - fixed RSuite radio-group missing required icon
 - fixed RSuite fullWidth / Width params in select
 - added time component for MUI, RSuite, Mantine
