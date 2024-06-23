@@ -81,14 +81,14 @@ const BootstrapGenericInput = ({
       className={className}
       data-lf-field-name={name}
     >
-      {useFloatingLabels && (
+      {useFloatingLabels && label && (
         <FloatingLabel
           label={label}
         >
           {innerGroup}
         </FloatingLabel>
       )}
-      {!useFloatingLabels && (
+      {!useFloatingLabels && label && (
         <Form.Label>
           {label}
           {required && <RequiredIcon />}
