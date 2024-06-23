@@ -1,5 +1,9 @@
 # LetsForm Designer Changelog
 
+## v0.9.0
+- connectors in Beta
+- search filters for tempplates (and more templates available)
+
 ## v0.8.17
 - AntD: removed _borderless_ attribute, added _variant_
 - added Time field to AntD

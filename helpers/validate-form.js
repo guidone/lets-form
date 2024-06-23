@@ -1,11 +1,14 @@
 import _ from 'lodash';
 
 import Manifests from '../manifest.json';
+import * as Connectors from './connectors';
 
 import { reduceFields } from './reduce-fields';
 import { filterFields } from './filter-fields';
 
-const LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns'];
+const CONNECTOR_NAMES = Object.keys(Connectors);
+const AVAILABLE_COMPONENTS = Object.keys(Manifests);
+const LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns', 'steps', 'tabs'];
 
 const validateJSONForm = json => {
   if (!_.isObject(json)) {
@@ -46,13 +49,38 @@ const validateJSONForm = json => {
       []
     )
   );
-  const availableComponents = Object.keys(Manifests);
-  const unknownCommponents = usedComponets.filter(component => !availableComponents.includes(component));
+
+  const unknownCommponents = usedComponets.filter(component => !AVAILABLE_COMPONENTS.includes(component));
   if (unknownCommponents.length !== 0) {
-    return 'Form contains unknows component(s): ' + unknownCommponents.join(', ');
+    return 'Form uses unknows component(s): ' + unknownCommponents.join(', ');
+  }
+
+  if (json.connectors) {
+    if (!Array.isArray(json.connectors)) {
+      return '"Connectors" key should be an array';
+    }
+    const invalidConnectors = json.connectors.filter(c => !isValidConnector(c));
+    if (invalidConnectors.length !== 0) {
+      return 'Form uses unknown connector(s): ' + invalidConnectors.map(c => c.name ?? 'unknown').join(',');
+    }
   }
 
   return null;
 };
+
+export const isValidConnector = c => {
+  return typeof c === 'object' && c.name && CONNECTOR_NAMES.includes(c.name);
+};
+
+export const isValidForm = form => validateJSONForm(form) == null;
+
+export const isValidField = obj => {
+  return typeof obj === 'object' && obj.component && obj.name && AVAILABLE_COMPONENTS.includes(obj.component);
+};
+
+export const isValidArrayOfFields = obj => {
+  return Array.isArray(obj) && obj.every(isValidField);
+};
+
 
 export { validateJSONForm };
