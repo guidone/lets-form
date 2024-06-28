@@ -1,24 +1,25 @@
-const FormSparkIo = async ({
+const FormCarry = async ({
   data,
-  options = {},
+  options,
   fetch
 }) => {
+  console.log('form carry', data, options)
   const opts = {
-    formId: null,
+    url: null,
     ...options
   };
 
   return await fetch(
-    `https://submit-form.com/${opts.formId}`,
+    opts.url,
     {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json'
+        'Accept': 'application/json',
       },
       body: JSON.stringify(data)
     }
   );
 };
 
-export { FormSparkIo };
+export { FormCarry };

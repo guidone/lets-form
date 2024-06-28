@@ -1,10 +1,12 @@
 const GetFormIo = async ({
   data,
-  options
+  options = {},
+  fetch
 }) => {
-  const opts = Object.assign(options, {
-    url: null
-  });
+  const opts = {
+    url: null,
+    ...options
+  };
 
   const formData = new FormData();
   Object.keys(data)

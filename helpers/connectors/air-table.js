@@ -1,11 +1,12 @@
 const AirTable = async ({
   data,
-  options,
+  options = {},
   fetch
 }) => {
-  const opts = Object.assign({
-    webhookUrl: null
-  }, options);
+  const opts = {
+    webhookUrl: null,
+    ...options
+  };
 
   return fetch(
     opts.webhookUrl,

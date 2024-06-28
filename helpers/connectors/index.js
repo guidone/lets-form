@@ -5,3 +5,4 @@ export * from './notion';
 export * from './zapier';
 export * from './form-spark-io';
 export * from './air-table';
+export * from './form-carry';
