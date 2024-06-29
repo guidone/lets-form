@@ -26,8 +26,7 @@ import { traverseChildren } from './helpers/dsl';
 import './index.scss';
 
 const DEBUG_RENDER = true;
-
-
+const DEFAULT_FORM = { version: 1, fields: [] };
 
 
 const GenerateGenerator = ({ Forms, Fields }) => {
@@ -638,7 +637,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
   const FormGenerator = React.memo(({
     framework,
-    form,
+    form = DEFAULT_FORM, // use const, or it will refresh endlessly
     onChange = () => {},
     onSubmit = () => {},
     onSubmitSuccess = () => {},
@@ -702,8 +701,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     // it's the combination of the fields from the form schema and those specified
     // with the DSL, from now on every func should reference this (not form.fields)
-    const actualFields = [...(form.fields ?? []), ...traverseChildren(children)]
-
+    const actualFields = [
+      ...(form.fields ?? []),
+      ...traverseChildren(children, { components: MergedComponents, framework })
+    ];
 
     // preload components of the form
     useEffect(
