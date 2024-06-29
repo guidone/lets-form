@@ -1042,7 +1042,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     );
   }, function (prevProps, nextProps) {
     if (DEBUG_RENDER) {
-      console.log(`[LetsForm] Form generator ${nextProps.form.name ? '(' + nextProps.form.name + `)` : ''} re-render: `
+      console.log(`[LetsForm] Form generator ${nextProps.form?.name ? '(' + nextProps.form?.name + `)` : ''} re-render: `
         + ' framework=' + (prevProps.framework === nextProps.framework)
         + ' onChange=' + (prevProps.onChange === nextProps.onChange)
         + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper)
@@ -1050,6 +1050,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         + ' locale=' + (prevProps.locale === nextProps.locale)
         + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext)
         + ' disabled=' + (prevProps.disabled === nextProps.disabled)
+        + ' children=' + (prevProps.children === nextProps.children)
       );
     }
 
@@ -1059,7 +1060,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       && prevProps.form === nextProps.form
       && prevProps.locale === nextProps.locale
       && prevProps.plaintext === nextProps.plaintext
-      && prevProps.disabled === nextProps.disabled;
+      && prevProps.disabled === nextProps.disabled
+      && prevProps.children === nextProps.children;
     console.log('Is re-rendering?', !isEqual);
     return isEqual;
   });
