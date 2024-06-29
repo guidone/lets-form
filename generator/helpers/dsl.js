@@ -70,17 +70,41 @@ const assertElementsOf = (elements, types) => {
   const checkTypes = Array.isArray(types) ? types : [types];
   return elements.every(element => {
     if (!elementOf(element, checkTypes)) {
-      throw new Error('LetsForm DSL error, this element ' + elementToString(element) +
+      throw new Error('LetsForm DSL error, element ' + elementToString(element) +
         ' should be one of these components: ' + typesToString(checkTypes));
     }
     return true;
   })
-}
+};
 
-export const traverseChildren = children => {
+/**
+ * assertElementName
+ * Assert element has name property or raise error
+ */
+const assertElementName = element => {
+  if (_.isEmpty(element.props.name)) {
+    throw new Error('LetsForm DSL error, element ' + elementToString(element) +' missing "name" property ');
+  }
+  return true;
+};
 
-  ///console.log('TRAVERSED-------');
-  //console.log(children);
+/**
+ * assertElementComponent
+ * Assert element has component prop, or raise error
+ */
+const assertElementComponent = (element, { components, framework } = {}) => {
+  if (_.isEmpty(element.props.component)) {
+    throw new Error('LetsForm DSL error, element ' + elementToString(element) +' missing "component" property ');
+  }
+  if (components && framework) {
+    if (!components[element.props.component] || !components[element.props.component][framework]) {
+      throw new Error('LetsForm DSL error, element ' + elementToString(element) +` invalid component property "${element.props.component}" for framework "${framework}"`);
+    }
+  }
+  return true;
+};
+
+export const traverseChildren = (children, { components, framework } = {}) => {
 
   let elements = [];
   if (children) {
@@ -89,15 +113,16 @@ export const traverseChildren = children => {
 
   return elements
     .map(element => {
-      if (elementOf(element, LfField)) {
+      if (elementOf(element, LfField)
+        && assertElementName(element)
+        && assertElementComponent(element, { components, framework })
+      ) {
         return {
-          id: _.uniqueId('lf_dsl_'),
           ...element.props
         };
       } else if (elementOf(element, LfGroup)) {
         console.log('traverse group', element)
         return {
-          id: _.uniqueId('lf_dsl_'),
           ..._.omit(element.props, 'children'),
           component: 'group',
           fields: traverseChildren(element.props.children)
@@ -109,7 +134,6 @@ export const traverseChildren = children => {
 
       ) {
         return {
-          id: _.uniqueId('lf_dsl_'),
           component: 'two-columns',
           ..._.omit(element.props, 'children'),
           leftFields: traverseChildren(element.props.children[0].props.children),
@@ -121,7 +145,6 @@ export const traverseChildren = children => {
         assertElementsOf(element.props.children, [LfColumn])
       ) {
         return {
-          id: _.uniqueId('lf_dsl_'),
           component: 'three-columns',
           ..._.omit(element.props, 'children'),
           leftFields: traverseChildren(element.props.children[0].props.children),
@@ -132,14 +155,14 @@ export const traverseChildren = children => {
         assertElementsOf(element.props.children, [LfField, LfGroup, LfColumn, LfColumns])
       ) {
         return {
-          id: _.uniqueId('lf_dsl_'),
           ..._.omit(element.props, 'children'),
           component: 'array',
           fields: traverseChildren(element.props.children)
         };
       } else {
+        // othwerwise wrap in react-view component
         return {
-          name: 'script', // TODO randomize
+          name: _.uniqueId('lf_name_'),
           component: 'react-view',
           view: () => {
             return <>{element}</>
