@@ -675,7 +675,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     hideSubmit,
     // show demo flag
     demo = false,
-    extra,
+    footer,
     disableOnSubmit = true,
     resetAfterSubmit = true
   }) => {
@@ -1024,7 +1024,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 onJavascriptError,
                 Components: MergedComponents
               })}
-              {extra}
+              {footer}
               {formErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (
                 <ValidationErrors
                   className="bottom"

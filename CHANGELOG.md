@@ -1,5 +1,9 @@
 # LetsForm Changelog
 
+## v0.9.2
+- added `footer` param to LetsForm
+- support for DSL to create forms
+
 ## v0.9.1
 - cleanup for connectors
 
