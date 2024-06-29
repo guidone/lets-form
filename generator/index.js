@@ -796,7 +796,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         f();
       },
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      [form, framework] // don't put defaultValues here
+      [form, framework, children] // don't put defaultValues here
     );
 
     const onHandleSubmit = useCallback(
