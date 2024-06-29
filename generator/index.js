@@ -13,8 +13,6 @@ import { lfLog, lfError } from '../helpers/lf-log';
 
 import FormContext from '../form-context';
 import * as Connectors from '../helpers/connectors';
-
-import './index.scss';
 import { PlaintextForm } from '../components/plaintext-form';
 
 import { enrichWithLabels } from './helpers/enrich-with-labels';
@@ -24,6 +22,8 @@ import { errorToString } from './helpers/error-to-string';
 import { mergeComponents } from './helpers/merge-components';
 import { MissingComponent } from './helpers/missing-component';
 import { traverseChildren } from './helpers/dsl';
+
+import './index.scss';
 
 const DEBUG_RENDER = true;
 
