@@ -3,7 +3,6 @@ const FormCarry = async ({
   options,
   fetch
 }) => {
-  console.log('form carry', data, options)
   const opts = {
     url: null,
     ...options

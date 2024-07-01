@@ -3,17 +3,27 @@ const HttpCall = async ({
   options,
   fetch
 }) => {
-  const opts = Object.assign({
-    method: 'POST'
-  }, options);
+  const opts = {
+    method: 'POST',
+    ...options
+  };
+
+  const headers = {
+    'Content-Type': 'application/json'
+  };
+
+  if (opts.authorization === 'bearer') {
+    headers.Authorization = `Bearer ${opts.bearerToken}`;
+  } else if (opts.authorization === 'basic') {
+    const hash = btoa(opts.username + ':' + opts.password);
+    headers.Authorization = `Basic ${hash}`;
+  }
 
   return await fetch(
     opts.url,
     {
       method: opts.method,
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers,
       redirect: 'follow',
       body: JSON.stringify(data)
     }
