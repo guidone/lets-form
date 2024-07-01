@@ -1,4 +1,4 @@
-import { GenerateGenerator } from './generator';
+import { GenerateGenerator, LfField, LfGroup, LfColumns, LfColumn, LfArray, LfTabs, LfTab, LfSteps, LfStep } from './generator';
 
 import { Fields as FieldsReactRsuite5, Forms as FormsReactRsuite5 } from './react-rsuite5/index';
 import { Fields as FieldsReactMaterialUI, Forms as FormsReactMaterialUI } from './react-material-ui/index';
@@ -29,7 +29,10 @@ const Forms = {
 
 const FormGenerator = GenerateGenerator({ Fields, Forms });
 
+
+
+
 export default FormGenerator ;
 export * from './helpers';
 export * from './costants';
-export { Fields, Forms };
+export { Fields, Forms, LfField, LfGroup, LfColumns, LfColumn, LfArray, LfTabs, LfTab, LfSteps, LfStep };

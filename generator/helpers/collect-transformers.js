@@ -4,12 +4,13 @@ import { reduceFields } from '../../helpers';
 
 import { makeTransformer } from './make-transformer';
 
-export const collectTransformers = (form, onJavascriptError) => {
+//export const collectTransformers = (form, onJavascriptError) => {
+export const collectTransformers = (fields, formScript, onJavascriptError) => {
   let transformers = {};
 
   // collect all fieldlist needed to compile the transformer
   const fieldList = reduceFields(
-    form.fields,
+    fields,
     (field, accumulator) => {
       if (field.component !== 'group' && field.component !== 'two-columns' && field.component !== 'three-columns') {
         return [...accumulator, field.name];
@@ -22,21 +23,22 @@ export const collectTransformers = (form, onJavascriptError) => {
 
   // compile transformer of the form
   try {
-    if (!_.isEmpty(form.transformer) || !_.isEmpty(form.script)) {
-      transformers.onRender = [makeTransformer(form.script || form.transformer, fieldList)];
+    //if (!_.isEmpty(form.transformer) || !_.isEmpty(form.script)) {
+    if (formScript) {
+      transformers.onRender = [makeTransformer(formScript, fieldList)];
     }
   } catch(e) {
     const error = new Error('Error compiling main form script: ' + e.message, { cause: e });
-    error.sourceCode = form.script || form.transformer;
+    error.sourceCode = formScript;
     error.errorType = 'compile';
     onJavascriptError(error);
   }
 
   // collect transformers for each field and put it onChange
   transformers = reduceFields(
-    form.fields,
+    fields,
     (field, acc) => {
-      
+
       if (field.script || field.transformer) {
         let transformer;
         try {

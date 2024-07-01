@@ -13,8 +13,6 @@ import { lfLog, lfError } from '../helpers/lf-log';
 
 import FormContext from '../form-context';
 import * as Connectors from '../helpers/connectors';
-
-import './index.scss';
 import { PlaintextForm } from '../components/plaintext-form';
 
 import { enrichWithLabels } from './helpers/enrich-with-labels';
@@ -23,8 +21,13 @@ import { collectTransformers } from './helpers/collect-transformers';
 import { errorToString } from './helpers/error-to-string';
 import { mergeComponents } from './helpers/merge-components';
 import { MissingComponent } from './helpers/missing-component';
+import { traverseChildren } from './helpers/dsl';
+
+import './index.scss';
 
 const DEBUG_RENDER = true;
+const DEFAULT_FORM = { version: 1, fields: [] };
+
 
 const GenerateGenerator = ({ Forms, Fields }) => {
 
@@ -634,7 +637,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
   const FormGenerator = React.memo(({
     framework,
-    form,
+    form = DEFAULT_FORM, // use const, or it will refresh endlessly
     onChange = () => {},
     onSubmit = () => {},
     onSubmitSuccess = () => {},
@@ -672,6 +675,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     hideSubmit,
     // show demo flag
     demo = false,
+    footer,
     disableOnSubmit = true,
     resetAfterSubmit = true
   }) => {
@@ -681,6 +685,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [transformers, setTransformers] = useState(null);
     const [preloading, setPreloading] = useState(prealoadComponents);
     const [stateDisabled, setDisabled] = useState(false);
+    //const [traversedFields, setTraversedFields] = useState([]);
     const [version, setVersion] = useState(1);
 
     const disabled = stateDisabled || disabledProp;
@@ -694,12 +699,19 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [formFields, setFormFields] = useState(null);
     const MergedComponents = mergeComponents(Fields, components);
 
+    // it's the combination of the fields from the form schema and those specified
+    // with the DSL, from now on every func should reference this (not form.fields)
+    const actualFields = [
+      ...(form.fields ?? []),
+      ...traverseChildren(children, { components: MergedComponents, framework })
+    ];
+
     // preload components of the form
     useEffect(
       () => {
         if (prealoadComponents) {
           const components = _.uniq(reduceFields(
-            form.fields,
+            actualFields,
             (field, acc) => [...acc, field.component],
             []
           ));
@@ -736,10 +748,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     useEffect(
       () => {
         const f = async () => {
-          const newTransformers = collectTransformers(form, onJavascriptError);
+          const newTransformers = collectTransformers(actualFields, form.transformer || form.script, onJavascriptError);
 
           // initial fields values
-          let newFields = form.fields;
+          let newFields = actualFields;
           // apply onRender transformers
           if (!_.isEmpty(newTransformers.onRender)) {
             for await(const newFormFields of applyTransformers(
@@ -784,7 +796,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         f();
       },
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      [form, framework] // don't put defaultValues here
+      [form, framework, children] // don't put defaultValues here
     );
 
     const onHandleSubmit = useCallback(
@@ -1012,7 +1024,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 onJavascriptError,
                 Components: MergedComponents
               })}
-              {children}
+              {footer}
               {formErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (
                 <ValidationErrors
                   className="bottom"
@@ -1030,7 +1042,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     );
   }, function (prevProps, nextProps) {
     if (DEBUG_RENDER) {
-      console.log(`[LetsForm] Form generator ${nextProps.form.name ? '(' + nextProps.form.name + `)` : ''} re-render: `
+      console.log(`[LetsForm] Form generator ${nextProps.form?.name ? '(' + nextProps.form?.name + `)` : ''} re-render: `
         + ' framework=' + (prevProps.framework === nextProps.framework)
         + ' onChange=' + (prevProps.onChange === nextProps.onChange)
         + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper)
@@ -1038,6 +1050,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         + ' locale=' + (prevProps.locale === nextProps.locale)
         + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext)
         + ' disabled=' + (prevProps.disabled === nextProps.disabled)
+        + ' children=' + (prevProps.children === nextProps.children)
       );
     }
 
@@ -1047,7 +1060,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       && prevProps.form === nextProps.form
       && prevProps.locale === nextProps.locale
       && prevProps.plaintext === nextProps.plaintext
-      && prevProps.disabled === nextProps.disabled;
+      && prevProps.disabled === nextProps.disabled
+      && prevProps.children === nextProps.children;
     console.log('Is re-rendering?', !isEqual);
     return isEqual;
   });
@@ -1057,3 +1071,4 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 };
 
 export { GenerateGenerator };
+export * from './helpers/dsl';
