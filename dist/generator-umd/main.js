@@ -1,4 +1,4 @@
-/* LetsForm Generator v0.8.3 - UMD */
+/* LetsForm Generator v0.9.0 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button'), require('antd'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button', 'antd', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
@@ -16155,26 +16155,33 @@
 
   var HttpCall = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
-      var data, options, fetch, opts;
+      var data, options, fetch, opts, headers, hash;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             data = _ref.data, options = _ref.options, fetch = _ref.fetch;
-            opts = Object.assign({
+            opts = _objectSpread2({
               method: 'POST'
             }, options);
-            _context.next = 4;
+            headers = {
+              'Content-Type': 'application/json'
+            };
+            if (opts.authorization === 'bearer') {
+              headers.Authorization = "Bearer ".concat(opts.bearerToken);
+            } else if (opts.authorization === 'basic') {
+              hash = btoa(opts.username + ':' + opts.password);
+              headers.Authorization = "Basic ".concat(hash);
+            }
+            _context.next = 6;
             return fetch(opts.url, {
               method: opts.method,
-              headers: {
-                'Content-Type': 'application/json'
-              },
+              headers: headers,
               redirect: 'follow',
               body: JSON.stringify(data)
             });
-          case 4:
+          case 6:
             return _context.abrupt("return", _context.sent);
-          case 5:
+          case 7:
           case "end":
             return _context.stop();
         }
@@ -16187,14 +16194,14 @@
 
   var GetFormIo = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
-      var data, options, opts, formData;
+      var data, _ref$options, options, fetch, opts, formData;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            data = _ref.data, options = _ref.options;
-            opts = Object.assign(options, {
+            data = _ref.data, _ref$options = _ref.options, options = _ref$options === void 0 ? {} : _ref$options, fetch = _ref.fetch;
+            opts = _objectSpread2({
               url: null
-            });
+            }, options);
             formData = new FormData();
             Object.keys(data).forEach(function (key) {
               return formData.append(key, typeof data[key] === 'string' ? data[key] : JSON.stringify(data[key]));
@@ -16401,12 +16408,12 @@
 
   var FormSparkIo = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
-      var data, options, opts;
+      var data, _ref$options, options, fetch, opts;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            data = _ref.data, options = _ref.options;
-            opts = Object.assign({
+            data = _ref.data, _ref$options = _ref.options, options = _ref$options === void 0 ? {} : _ref$options, fetch = _ref.fetch;
+            opts = _objectSpread2({
               formId: null
             }, options);
             _context.next = 4;
@@ -16433,12 +16440,12 @@
 
   var AirTable = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
-      var data, options, fetch, opts;
+      var data, _ref$options, options, fetch, opts;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            data = _ref.data, options = _ref.options, fetch = _ref.fetch;
-            opts = Object.assign({
+            data = _ref.data, _ref$options = _ref.options, options = _ref$options === void 0 ? {} : _ref$options, fetch = _ref.fetch;
+            opts = _objectSpread2({
               webhookUrl: null
             }, options);
             return _context.abrupt("return", fetch(opts.webhookUrl, {
@@ -16459,9 +16466,42 @@
     };
   }();
 
+  var FormCarry = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
+      var data, options, fetch, opts;
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, options = _ref.options, fetch = _ref.fetch;
+            opts = _objectSpread2({
+              url: null
+            }, options);
+            _context.next = 4;
+            return fetch(opts.url, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(data)
+            });
+          case 4:
+            return _context.abrupt("return", _context.sent);
+          case 5:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function FormCarry(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
   var Connectors = /*#__PURE__*/Object.freeze({
     __proto__: null,
     AirTable: AirTable,
+    FormCarry: FormCarry,
     FormSparkIo: FormSparkIo,
     GetFormIo: GetFormIo,
     HttpCall: HttpCall,

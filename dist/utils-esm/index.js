@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.8.3 - ESM */
+/* LetsForm Utils v0.9.0 - ESM */
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -12468,26 +12468,33 @@ var Manifests = {
 
 var HttpCall = /*#__PURE__*/function () {
   var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
-    var data, options, fetch, opts;
+    var data, options, fetch, opts, headers, hash;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
           data = _ref.data, options = _ref.options, fetch = _ref.fetch;
-          opts = Object.assign({
+          opts = _objectSpread2({
             method: 'POST'
           }, options);
-          _context.next = 4;
+          headers = {
+            'Content-Type': 'application/json'
+          };
+          if (opts.authorization === 'bearer') {
+            headers.Authorization = "Bearer ".concat(opts.bearerToken);
+          } else if (opts.authorization === 'basic') {
+            hash = btoa(opts.username + ':' + opts.password);
+            headers.Authorization = "Basic ".concat(hash);
+          }
+          _context.next = 6;
           return fetch(opts.url, {
             method: opts.method,
-            headers: {
-              'Content-Type': 'application/json'
-            },
+            headers: headers,
             redirect: 'follow',
             body: JSON.stringify(data)
           });
-        case 4:
+        case 6:
           return _context.abrupt("return", _context.sent);
-        case 5:
+        case 7:
         case "end":
           return _context.stop();
       }
@@ -12500,14 +12507,14 @@ var HttpCall = /*#__PURE__*/function () {
 
 var GetFormIo = /*#__PURE__*/function () {
   var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
-    var data, options, opts, formData;
+    var data, _ref$options, options, fetch, opts, formData;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          data = _ref.data, options = _ref.options;
-          opts = Object.assign(options, {
+          data = _ref.data, _ref$options = _ref.options, options = _ref$options === void 0 ? {} : _ref$options, fetch = _ref.fetch;
+          opts = _objectSpread2({
             url: null
-          });
+          }, options);
           formData = new FormData();
           Object.keys(data).forEach(function (key) {
             return formData.append(key, typeof data[key] === 'string' ? data[key] : JSON.stringify(data[key]));
@@ -12714,12 +12721,12 @@ var Zapier = /*#__PURE__*/function () {
 
 var FormSparkIo = /*#__PURE__*/function () {
   var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
-    var data, options, opts;
+    var data, _ref$options, options, fetch, opts;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          data = _ref.data, options = _ref.options;
-          opts = Object.assign({
+          data = _ref.data, _ref$options = _ref.options, options = _ref$options === void 0 ? {} : _ref$options, fetch = _ref.fetch;
+          opts = _objectSpread2({
             formId: null
           }, options);
           _context.next = 4;
@@ -12746,12 +12753,12 @@ var FormSparkIo = /*#__PURE__*/function () {
 
 var AirTable = /*#__PURE__*/function () {
   var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
-    var data, options, fetch, opts;
+    var data, _ref$options, options, fetch, opts;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          data = _ref.data, options = _ref.options, fetch = _ref.fetch;
-          opts = Object.assign({
+          data = _ref.data, _ref$options = _ref.options, options = _ref$options === void 0 ? {} : _ref$options, fetch = _ref.fetch;
+          opts = _objectSpread2({
             webhookUrl: null
           }, options);
           return _context.abrupt("return", fetch(opts.webhookUrl, {
@@ -12772,9 +12779,42 @@ var AirTable = /*#__PURE__*/function () {
   };
 }();
 
+var FormCarry = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
+    var data, options, fetch, opts;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          data = _ref.data, options = _ref.options, fetch = _ref.fetch;
+          opts = _objectSpread2({
+            url: null
+          }, options);
+          _context.next = 4;
+          return fetch(opts.url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+          });
+        case 4:
+          return _context.abrupt("return", _context.sent);
+        case 5:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  }));
+  return function FormCarry(_x) {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
 var Connectors = /*#__PURE__*/Object.freeze({
   __proto__: null,
   AirTable: AirTable,
+  FormCarry: FormCarry,
   FormSparkIo: FormSparkIo,
   GetFormIo: GetFormIo,
   HttpCall: HttpCall,
