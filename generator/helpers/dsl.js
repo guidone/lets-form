@@ -10,9 +10,6 @@ export const LfTab = () => (<></>);
 export const LfSteps = () => (<></>);
 export const LfStep = () => (<></>);
 
-// TODO import <LfTab> properties
-// TODO import <LfSteps> properties
-
 const elementToString = el => {
   return `type: ${typeToString(el.type)}${cleanupProperties(el.props)}`;
 };
@@ -54,7 +51,6 @@ const cleanupProperties = props => {
   }
   return '';
 };
-
 
 /**
  * elementOf

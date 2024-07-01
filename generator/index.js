@@ -685,7 +685,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [transformers, setTransformers] = useState(null);
     const [preloading, setPreloading] = useState(prealoadComponents);
     const [stateDisabled, setDisabled] = useState(false);
-    //const [traversedFields, setTraversedFields] = useState([]);
     const [version, setVersion] = useState(1);
 
     const disabled = stateDisabled || disabledProp;

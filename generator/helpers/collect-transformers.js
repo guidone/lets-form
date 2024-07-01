@@ -4,7 +4,6 @@ import { reduceFields } from '../../helpers';
 
 import { makeTransformer } from './make-transformer';
 
-//export const collectTransformers = (form, onJavascriptError) => {
 export const collectTransformers = (fields, formScript, onJavascriptError) => {
   let transformers = {};
 
@@ -23,7 +22,6 @@ export const collectTransformers = (fields, formScript, onJavascriptError) => {
 
   // compile transformer of the form
   try {
-    //if (!_.isEmpty(form.transformer) || !_.isEmpty(form.script)) {
     if (formScript) {
       transformers.onRender = [makeTransformer(formScript, fieldList)];
     }
