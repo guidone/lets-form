@@ -1,5 +1,5 @@
 
-
+// create blank elements for the DSL
 export const LfField = () => (<></>);
 export const LfGroup = () => (<></>);
 export const LfColumns = () => (<></>);
@@ -10,8 +10,10 @@ export const LfTab = () => (<></>);
 export const LfSteps = () => (<></>);
 export const LfStep = () => (<></>);
 
+// TODO import <LfTab> properties
+// TODO import <LfSteps> properties
+
 const elementToString = el => {
-  console.log('failed comp', el)
   return `type: ${typeToString(el.type)}${cleanupProperties(el.props)}`;
 };
 
@@ -34,7 +36,6 @@ const typesToString = types => {
 };
 
 const cleanupProperties = props => {
-  console.log('cleanup', props)
   const cleaned = Object.keys(props)
     .reduce(
       (acc, key) => {
@@ -66,15 +67,32 @@ const elementOf = (element, types) => {
   return checkTypes.some(type => element.type === type);
 };
 
-const assertElementsOf = (elements, types) => {
+const assertElementsOf = (elements, types, quiet= false) => {
   const checkTypes = Array.isArray(types) ? types : [types];
-  return elements.every(element => {
+  const checkElements = Array.isArray(elements) ? elements : [elements];
+  return checkElements.every(element => {
     if (!elementOf(element, checkTypes)) {
-      throw new Error('LetsForm DSL error, element ' + elementToString(element) +
-        ' should be one of these components: ' + typesToString(checkTypes));
+      if (!quiet) {
+        throw new Error('LetsForm DSL error, element ' + elementToString(element) +
+          ' should be one of these components: ' + typesToString(checkTypes));
+      }
+      return false;
     }
     return true;
-  })
+  });
+};
+
+const assertElementsOfElements = (elements, types) => {
+  const checkTypes = Array.isArray(types) ? types : [types];
+  const checkElements = Array.isArray(elements) ? elements : [elements];
+
+   return checkElements.every(element => {
+    if (!assertElementsOf(element.props.children, checkTypes, true)) {
+      throw new Error('LetsForm DSL error, element ' + elementToString(element) +
+        ' should only have childrenbe of these components: ' + typesToString(checkTypes));
+    }
+    return true;
+  });
 };
 
 /**
@@ -121,7 +139,6 @@ export const traverseChildren = (children, { components, framework } = {}) => {
           ...element.props
         };
       } else if (elementOf(element, LfGroup)) {
-        console.log('traverse group', element)
         return {
           ..._.omit(element.props, 'children'),
           component: 'group',
@@ -152,21 +169,55 @@ export const traverseChildren = (children, { components, framework } = {}) => {
           rightFields: traverseChildren(element.props.children[2].props.children)
         };
       } else if (element.type === LfArray &&
-        assertElementsOf(element.props.children, [LfField, LfGroup, LfColumn, LfColumns])
+        assertElementsOf(element.props.children, [LfField, LfGroup, LfColumns])
       ) {
         return {
           ..._.omit(element.props, 'children'),
           component: 'array',
           fields: traverseChildren(element.props.children)
         };
+      } else if (element.type === LfTabs &&
+        assertElementsOf(element.props.children, [LfTab]) &&
+        assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray])
+      ) {
+        return {
+          name: _.uniqueId('lf_name_'),
+          component: 'tabs',
+          ..._.omit(element.props, 'children'),
+          tabs: element.props.children.map(el => (_.omit(el.props, 'children'))),
+          fields: element.props.children
+            .reduce(
+              (acc, tabElement) => ({
+                ...acc,
+                [tabElement.props.value]: traverseChildren(tabElement.props.children)
+              }),
+              {}
+            )
+        };
+      } else if (element.type === LfSteps &&
+        assertElementsOf(element.props.children, [LfStep]) &&
+        assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray])
+      ) {
+        return {
+          name: _.uniqueId('lf_name_'),
+          component: 'steps',
+          ..._.omit(element.props, 'children'),
+          steps: element.props.children.map(el => (_.omit(el.props, 'children'))),
+          fields: element.props.children
+            .reduce(
+              (acc, tabElement) => ({
+                ...acc,
+                [tabElement.props.value]: traverseChildren(tabElement.props.children)
+              }),
+              {}
+            )
+        };
       } else {
         // othwerwise wrap in react-view component
         return {
           name: _.uniqueId('lf_name_'),
           component: 'react-view',
-          view: () => {
-            return <>{element}</>
-          }
+          view: () => (<>{element}</>)
         };
       }
     })
