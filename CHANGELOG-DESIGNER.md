@@ -1,5 +1,9 @@
 # LetsForm Designer Changelog
 
+## v0.9.1
+- added DSL for form definition
+- connectors available for everyone
+
 ## v0.9.0
 - connectors in Beta
 - search filters for tempplates (and more templates available)
