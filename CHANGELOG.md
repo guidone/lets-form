@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.9.1
+- cleanup for connectors
+
 ## v0.9.0
 - added connectors
 - minor fixes in React Bootstrap
