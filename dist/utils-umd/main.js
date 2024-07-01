@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.9.0 - UMD */
+/* LetsForm Utils v0.9.1 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -12711,6 +12711,7 @@
                 'Content-Type': 'application/json'
               }),
               body: JSON.stringify(data)
+              //mode: 'no-cors'
             });
           case 4:
             return _context.abrupt("return", _context.sent);

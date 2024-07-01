@@ -1,9 +1,9 @@
-/* LetsForm react-material-ui v0.9.0 - UMD */
+/* LetsForm react-material-ui v0.9.1 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('react-hook-form'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', 'react-hook-form', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-material-ui"] = {}, global.React, global.FormControlLabel, global.FormGroup, global.Switch, global.Checkbox, global.Slider, global.FormHelperText, global.FormControl, global.FormLabel, global.Rating, global.DatePicker, global.DateTimePicker, global.reactHookForm, global.InputLabel, global.MenuItem, global.Select, global.ListItemText, global.TextField, global.InputAdornment, global.Radio, global.RadioGroup, global.Tabs, global.Tab, global.Box, global.Button, global.MobileTimePicker, global.DesktopTimePicker, global.Stack$2));
-})(this, (function (exports, React, FormControlLabel, FormGroup, Switch, Checkbox, Slider, FormHelperText, FormControl, FormLabel, Rating, DatePicker, DateTimePicker, reactHookForm, InputLabel, MenuItem, Select, ListItemText, TextField, InputAdornment, Radio, RadioGroup, Tabs, Tab, Box, Button, MobileTimePicker, DesktopTimePicker, Stack$2) { 'use strict';
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-material-ui"] = {}, global.React$1, global.FormControlLabel, global.FormGroup, global.Switch, global.Checkbox, global.Slider, global.FormHelperText, global.FormControl, global.FormLabel, global.Rating, global.DatePicker, global.DateTimePicker, global.reactHookForm, global.InputLabel, global.MenuItem, global.Select, global.ListItemText, global.TextField, global.InputAdornment, global.Radio, global.RadioGroup, global.Tabs, global.Tab, global.Box, global.Button, global.MobileTimePicker, global.DesktopTimePicker, global.Stack$2));
+})(this, (function (exports, React$1, FormControlLabel, FormGroup, Switch, Checkbox, Slider, FormHelperText, FormControl, FormLabel, Rating, DatePicker, DateTimePicker, reactHookForm, InputLabel, MenuItem, Select, ListItemText, TextField, InputAdornment, Radio, RadioGroup, Tabs, Tab, Box, Button, MobileTimePicker, DesktopTimePicker, Stack$2) { 'use strict';
 
   function _AsyncGenerator(gen) {
     var front, back;
@@ -4613,16 +4613,16 @@
       className = _ref.className,
       locale = _ref.locale;
     var keys = Object.keys(errors);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: classNames('lf-validation-errors', className)
     }, keys.map(function (fieldName) {
       var label = fieldName;
       if (errors[fieldName] && errors[fieldName].ref && errors[fieldName].ref.label) {
         label = tx(errors[fieldName].ref.label, locale);
       }
-      return /*#__PURE__*/React.createElement("div", {
+      return /*#__PURE__*/React$1.createElement("div", {
         key: fieldName
-      }, /*#__PURE__*/React.createElement("b", null, label, ":"), "\xA0", errors[fieldName].message ? errors[fieldName].message : 'This is required');
+      }, /*#__PURE__*/React$1.createElement("b", null, label, ":"), "\xA0", errors[fieldName].message ? errors[fieldName].message : 'This is required');
     }));
   };
 
@@ -4633,13 +4633,13 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       viewBox: "0 0 20 20",
       xmlns: "http://www.w3.org/2000/svg",
       fill: "none"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       fill: color,
       fillRule: "evenodd",
       d: "M10 3a7 7 0 100 14 7 7 0 000-14zm-9 7a9 9 0 1118 0 9 9 0 01-18 0zm14 .069a1 1 0 01-1 1h-2.931V14a1 1 0 11-2 0v-2.931H6a1 1 0 110-2h3.069V6a1 1 0 112 0v3.069H14a1 1 0 011 1z"
@@ -4653,13 +4653,13 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       viewBox: "0 0 24 24",
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       fill: color,
       fillRule: "evenodd",
       clipRule: "evenodd",
@@ -4674,13 +4674,13 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       fill: color,
       viewBox: "0 0 24 24",
       xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       d: "M17,8H7a1,1,0,0,0-.768,1.641l5,6a1,1,0,0,0,1.536,0l5-6A1,1,0,0,0,17,8Zm-5,5.438L9.135,10h5.73Z"
     }));
   };
@@ -4692,12 +4692,12 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       viewBox: "0 0 24 24",
       xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       fill: color,
       d: "M12.768,8.359a1.035,1.035,0,0,0-1.536,0l-5,6A1,1,0,0,0,7,16H17a1,1,0,0,0,.768-1.641ZM9.135,14,12,10.563,14.865,14Z"
     }));
@@ -4710,13 +4710,13 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       fill: color,
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       viewBox: "0 0 1920 1920",
       xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       d: "M960 0c530.193 0 960 429.807 960 960s-429.807 960-960 960S0 1490.193 0 960 429.807 0 960 0Zm-9.838 1342.685c-84.47 0-153.19 68.721-153.19 153.19 0 84.47 68.72 153.192 153.19 153.192s153.19-68.721 153.19-153.191-68.72-153.19-153.19-153.19ZM1153.658 320H746.667l99.118 898.623h208.755L1153.658 320Z",
       fillRule: "evenodd"
     }));
@@ -4731,13 +4731,13 @@
       color = _ref$color === void 0 ? '#000000' : _ref$color,
       _ref$yOffset = _ref.yOffset,
       yOffset = _ref$yOffset === void 0 ? 0 : _ref$yOffset;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       viewBox: "0 ".concat(yOffset, " 24 24"),
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       d: "M16 8L8 16M8.00001 8L16 16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z",
       stroke: color,
       strokeWidth: "1.5",
@@ -16333,6 +16333,7 @@
                 'Content-Type': 'application/json'
               }),
               body: JSON.stringify(data)
+              //mode: 'no-cors'
             });
           case 4:
             return _context.abrupt("return", _context.sent);
@@ -16715,7 +16716,7 @@
         }
         return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, propName, props[propName]));
       }, {});
-      return /*#__PURE__*/React.createElement(Component, newProps);
+      return /*#__PURE__*/React$1.createElement(Component, newProps);
     };
   };
 
@@ -16771,17 +16772,17 @@
     }();
   };
 
-  var FormContext = /*#__PURE__*/React.createContext();
+  var FormContext = /*#__PURE__*/React$1.createContext();
 
   var useFormContext = function useFormContext() {
-    var context = React.useContext(FormContext);
+    var context = React$1.useContext(FormContext);
 
     // put here some defaults
 
     return context;
   };
   var useStylesheet = function useStylesheet(id, css) {
-    React.useEffect(function () {
+    React$1.useEffect(function () {
       if (!_isEmpty(css)) {
         var head = document.head;
         var style = document.createElement("style");
@@ -16797,9 +16798,6 @@
       };
     }, [css, id]);
   };
-
-  var css_248z$f = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
-  styleInject(css_248z$f);
 
   var baseGetTag = _baseGetTag,
     isObjectLike = isObjectLike_1;
@@ -17153,12 +17151,12 @@
       case 'input-number':
       case 'rate':
       case 'slider':
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, value);
       case 'input-text':
       case 'time':
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, value);
       case 'date':
@@ -17167,7 +17165,7 @@
         } else if (_isString(value) && isValidDate(new Date(value))) {
           d = new Date(value);
         }
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, d ? d.toLocaleDateString() : '');
       case 'datetime':
@@ -17176,21 +17174,21 @@
         } else if (_isString(value) && isValidDate(new Date(value))) {
           d = new Date(value);
         }
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, d ? d.toLocaleDateString() + ' ' + d.toLocaleTimeString() : '');
       case 'toggle':
       case 'checkbox':
         if (value === true || value === 1) {
-          return /*#__PURE__*/React.createElement("div", {
+          return /*#__PURE__*/React$1.createElement("div", {
             className: "plaintext-value"
           }, i18n(YesLabel, locale));
         } else if (value === false || value === 0) {
-          return /*#__PURE__*/React.createElement("div", {
+          return /*#__PURE__*/React$1.createElement("div", {
             className: "plaintext-value"
           }, i18n(NoLabel, locale));
         }
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         });
       case 'radio-group':
@@ -17207,7 +17205,7 @@
             label = found.label;
           }
         }
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, label);
       case 'checkbox-group':
@@ -17218,17 +17216,17 @@
         var founds = selectedOptions.map(function (option) {
           return isI18n(option.label) ? i18n(option.label, locale) : option.label;
         });
-        return /*#__PURE__*/React.createElement("div", null, founds.join(', '));
+        return /*#__PURE__*/React$1.createElement("div", null, founds.join(', '));
       case 'array':
-        return /*#__PURE__*/React.createElement(React.Fragment, null, _isArray(value) && /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, _isArray(value) && /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
-        }, /*#__PURE__*/React.createElement("span", {
+        }, /*#__PURE__*/React$1.createElement("span", {
           className: "count"
-        }, value.length), ' ', value.length > 1 ? i18n(ElementsLabel, locale) : i18n(ElementLabel, locale)), !_isArray(value) && /*#__PURE__*/React.createElement("div", {
+        }, value.length), ' ', value.length > 1 ? i18n(ElementsLabel, locale) : i18n(ElementLabel, locale)), !_isArray(value) && /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, i18n(NoElementsLabel, locale)));
       case 'textarea':
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value",
           dangerouslySetInnerHTML: {
             __html: (value || '').replaceAll('\n', '<br/>')
@@ -17236,9 +17234,9 @@
         });
       case 'placeholder':
       case 'placeholder-image':
-        return /*#__PURE__*/React.createElement(React.Fragment, null);
+        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null);
       default:
-        return /*#__PURE__*/React.createElement("div", {
+        return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, _typeof(value) !== 'object' ? value : '');
     }
@@ -17423,14 +17421,14 @@
     };
   }();
 
-  var css_248z$e = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
-  styleInject(css_248z$e);
+  var css_248z$f = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
+  styleInject(css_248z$f);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
       name = _ref.name;
     if (!_isEmpty(text)) {
-      return /*#__PURE__*/React.createElement("div", {
+      return /*#__PURE__*/React$1.createElement("div", {
         className: "lf-control-placeholder",
         "data-lf-field-name": name,
         dangerouslySetInnerHTML: {
@@ -17438,12 +17436,12 @@
         }
       });
     } else {
-      return /*#__PURE__*/React.createElement("div", null);
+      return /*#__PURE__*/React$1.createElement("div", null);
     }
   };
 
-  var css_248z$d = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
-  styleInject(css_248z$d);
+  var css_248z$e = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
+  styleInject(css_248z$e);
 
   var ThreeColumns = function ThreeColumns(_ref) {
     var name = _ref.name,
@@ -17452,20 +17450,20 @@
       leftAlignment = _ref.leftAlignment,
       centerAlignment = _ref.centerAlignment,
       rightAlignment = _ref.rightAlignment;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: classNames('lf-control-three-columns', layout)
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "left",
       style: {
         alignSelf: leftAlignment ? leftAlignment : undefined
       }
-    }, _isFunction(children) && children('left')), /*#__PURE__*/React.createElement("div", {
+    }, _isFunction(children) && children('left')), /*#__PURE__*/React$1.createElement("div", {
       className: "center",
       style: {
         alignSelf: centerAlignment ? centerAlignment : undefined
       }
-    }, _isFunction(children) && children('center')), /*#__PURE__*/React.createElement("div", {
+    }, _isFunction(children) && children('center')), /*#__PURE__*/React$1.createElement("div", {
       className: "right",
       style: {
         alignSelf: rightAlignment ? rightAlignment : undefined
@@ -17473,8 +17471,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$c = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
-  styleInject(css_248z$c);
+  var css_248z$d = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
+  styleInject(css_248z$d);
 
   var TwoColumns = function TwoColumns(_ref) {
     var name = _ref.name,
@@ -17482,15 +17480,15 @@
       layout = _ref.layout,
       leftAlignment = _ref.leftAlignment,
       rightAlignment = _ref.rightAlignment;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: classNames('lf-control-two-columns', layout),
       "data-lf-field-name": name
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "left",
       style: {
         alignSelf: leftAlignment ? leftAlignment : undefined
       }
-    }, _isFunction(children) && children('left')), /*#__PURE__*/React.createElement("div", {
+    }, _isFunction(children) && children('left')), /*#__PURE__*/React$1.createElement("div", {
       className: "right",
       style: {
         alignSelf: rightAlignment ? rightAlignment : undefined
@@ -17498,8 +17496,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$b = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
-  styleInject(css_248z$b);
+  var css_248z$c = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject(css_248z$c);
 
   var Group = I18N(function (_ref) {
     var name = _ref.name,
@@ -17514,46 +17512,46 @@
       border = _ref$border === void 0 ? 'top' : _ref$border,
       align = _ref.align,
       children = _ref.children;
-    var _useState = React.useState(open),
+    var _useState = React$1.useState(open),
       _useState2 = _slicedToArray(_useState, 2),
       isOpen = _useState2[0],
       setIsOpen = _useState2[1];
-    var handleClick = React.useCallback(function (event) {
+    var handleClick = React$1.useCallback(function (event) {
       event.preventDefault();
       setIsOpen(!isOpen);
     }, [isOpen]);
     // if open changes, then change status
-    React.useEffect(function () {
+    React$1.useEffect(function () {
       setIsOpen(open);
     }, [open]);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: classNames('lf-control-group', "lf-border-".concat(border), {
         'open': isOpen,
         'close': !isOpen
       })
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       role: "separator",
       className: classNames('header', align)
-    }, /*#__PURE__*/React.createElement("span", {
+    }, /*#__PURE__*/React$1.createElement("span", {
       className: "inner-text"
-    }, label, collapsible && /*#__PURE__*/React.createElement("a", {
+    }, label, collapsible && /*#__PURE__*/React$1.createElement("a", {
       href: "#",
       className: "lf-btn-collapse",
       disabled: disabled,
       appearance: "link",
       onClick: handleClick
-    }, isOpen ? /*#__PURE__*/React.createElement(ChevronUp, {
+    }, isOpen ? /*#__PURE__*/React$1.createElement(ChevronUp, {
       color: "#3498ff"
-    }) : /*#__PURE__*/React.createElement(ChevronDown, {
+    }) : /*#__PURE__*/React$1.createElement(ChevronDown, {
       color: "#3498ff"
-    })))), (isOpen || !collapsible) && /*#__PURE__*/React.createElement("div", {
+    })))), (isOpen || !collapsible) && /*#__PURE__*/React$1.createElement("div", {
       className: "lf-group-content"
     }, children));
   }, ['label']);
 
-  var css_248z$a = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
-  styleInject(css_248z$a);
+  var css_248z$b = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
+  styleInject(css_248z$b);
 
   var PlaceholderImage = function PlaceholderImage(_ref) {
     var url = _ref.url,
@@ -17564,13 +17562,13 @@
       marginTop = _ref.marginTop,
       marginBottom = _ref.marginBottom,
       align = _ref.align;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-placeholder-image",
       "data-lf-field-name": name,
       style: {
         textAlign: align ? align : undefined
       }
-    }, url && /*#__PURE__*/React.createElement("img", {
+    }, url && /*#__PURE__*/React$1.createElement("img", {
       src: url,
       alt: label || name,
       style: {
@@ -17585,27 +17583,27 @@
 
   var TextOrIcon = function TextOrIcon(str) {
     if (isUrl(str)) {
-      return /*#__PURE__*/React.createElement("img", {
+      return /*#__PURE__*/React$1.createElement("img", {
         className: "lf-prefix-icon",
         src: str,
         alt: "icon"
       });
     } else if (str) {
-      return /*#__PURE__*/React.createElement("span", null, str);
+      return /*#__PURE__*/React$1.createElement("span", null, str);
     }
   };
 
-  var css_248z$9 = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
-  styleInject(css_248z$9);
+  var css_248z$a = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
+  styleInject(css_248z$a);
 
   var Divider = function Divider(_ref) {
     var name = _ref.name,
       size = _ref.size,
       color = _ref.color;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-divider",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "bar",
       style: {
         height: "".concat(size, "px"),
@@ -17626,10 +17624,10 @@
       view = _ref.view,
       rest = _objectWithoutProperties(_ref, _excluded$i);
     var View = view;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-react-view",
       "data-lf-field-name": name
-    }, View && /*#__PURE__*/React.createElement(View, _extends({
+    }, View && /*#__PURE__*/React$1.createElement(View, _extends({
       name: name
     }, rest)));
   };
@@ -17833,13 +17831,13 @@
       className = _ref.className,
       Icon = _ref.icon,
       onClick = _ref.onClick;
-    var handleClick = React.useCallback(function (e) {
+    var handleClick = React$1.useCallback(function (e) {
       e.preventDefault();
       if (!disabled) {
         onClick();
       }
     }, [disabled, onClick]);
-    return /*#__PURE__*/React.createElement("a", {
+    return /*#__PURE__*/React$1.createElement("a", {
       href: "#",
       className: classNames('lf-icon-button', className, {
         disabled: disabled
@@ -17862,36 +17860,36 @@
       showAdd = _ref2$showAdd === void 0 ? false : _ref2$showAdd,
       align = _ref2.align,
       alignOffset = _ref2.alignOffset;
-    var handleRemove = React.useCallback(function () {
+    var handleRemove = React$1.useCallback(function () {
       return onRemove(item);
     }, [item, onRemove]);
     var style;
     if ((align === 'top' || align === 'bottom') && _isNumber(alignOffset) && alignOffset > 0) {
       style = _defineProperty$1({}, "margin".concat(_capitalize(align)), "".concat(alignOffset, "px"));
     }
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-common-array-item"
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "inner-form"
-    }, children), /*#__PURE__*/React.createElement("div", {
+    }, children), /*#__PURE__*/React$1.createElement("div", {
       className: "buttons",
       style: style
-    }, showAdd && /*#__PURE__*/React.createElement(IconButton, {
+    }, showAdd && /*#__PURE__*/React$1.createElement(IconButton, {
       disabled: disableAdd || disabled || readOnly,
       className: "arrow",
       appearance: "link",
-      icon: /*#__PURE__*/React.createElement(PlusCircle, {
+      icon: /*#__PURE__*/React$1.createElement(PlusCircle, {
         height: 16,
         width: 16,
         color: "#3498ff"
       }),
       size: "sm",
       onClick: onAdd
-    }), !showAdd && /*#__PURE__*/React.createElement(IconButton, {
+    }), !showAdd && /*#__PURE__*/React$1.createElement(IconButton, {
       className: "arrow",
       disabled: disabled || readOnly,
       appearance: "link",
-      icon: /*#__PURE__*/React.createElement(MinusCircle, {
+      icon: /*#__PURE__*/React$1.createElement(MinusCircle, {
         height: 16,
         width: 16,
         color: "#3498ff"
@@ -17901,8 +17899,8 @@
     })));
   };
 
-  var css_248z$8 = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
-  styleInject(css_248z$8);
+  var css_248z$9 = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
+  styleInject(css_248z$9);
 
   var randomId = function randomId() {
     var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
@@ -18023,7 +18021,7 @@
       // copy the locales from the main form
       fields: fields
     };
-    var _useState = React.useState(makeDefaultValue(value, arrayType, form)),
+    var _useState = React$1.useState(makeDefaultValue(value, arrayType, form)),
       _useState2 = _slicedToArray(_useState, 2),
       items = _useState2[0],
       setItems = _useState2[1];
@@ -18038,21 +18036,21 @@
     if (leftMargin != null) {
       style.marginLeft = _isNumber(leftMargin) ? "".concat(leftMargin, "px") : leftMargin;
     }
-    var handleAdd = React.useCallback(function () {
+    var handleAdd = React$1.useCallback(function () {
       setItems(function (items) {
         return [].concat(_toConsumableArray(items), [{
           id: randomId()
         }]);
       });
     }, []);
-    var handleChange = React.useCallback(function (value) {
+    var handleChange = React$1.useCallback(function (value) {
       var newItems = items.map(function (i) {
         return i.id === value.id ? value : i;
       });
       setItems(newItems);
       onChange(formatArray(newItems, arrayType));
     }, [items, onChange, arrayType]);
-    var handleRemove = React.useCallback(function (item) {
+    var handleRemove = React$1.useCallback(function (item) {
       var newItems = items.filter(function (i) {
         return i.id !== item.id;
       });
@@ -18060,19 +18058,19 @@
       onChange(formatArray(newItems, arrayType));
     }, [items, onChange, arrayType]);
     if (children) {
-      return /*#__PURE__*/React.createElement("div", {
+      return /*#__PURE__*/React$1.createElement("div", {
         style: {
           padding: '0px 10px 1px 10px'
         }
       }, children);
     }
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: classNames('lf-control-common-array', align ? "lf-".concat(align) : undefined),
       style: style
     }, (_isArray(items) ? items : []).map(function (item, idx) {
       var canAdd = idx === items.length - 1 && !isEmptyItem(item);
       var showAdd = idx === items.length - 1 || items.length === 1;
-      return /*#__PURE__*/React.createElement(ArrayItem, {
+      return /*#__PURE__*/React$1.createElement(ArrayItem, {
         key: item.id,
         item: item,
         disabled: disabled,
@@ -18083,7 +18081,7 @@
         onRemove: handleRemove,
         align: align,
         alignOffset: alignOffset
-      }, /*#__PURE__*/React.createElement(LetsFormComponent, {
+      }, /*#__PURE__*/React$1.createElement(LetsFormComponent, {
         form: form,
         locale: lfLocale,
         disabled: disabled,
@@ -18095,8 +18093,8 @@
     }));
   };
 
-  var css_248z$7 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
-  styleInject(css_248z$7);
+  var css_248z$8 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
+  styleInject(css_248z$8);
 
   var _excluded$h = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
@@ -18125,18 +18123,18 @@
       initialValue = _ref.initialValue,
       className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$h);
-    var _useState = React.useState(value || initialValue),
+    var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
       setChecked = _useState2[1];
-    var handleClick = React.useCallback(function () {
+    var handleClick = React$1.useCallback(function () {
       var newValue = !checked;
       setChecked(!checked);
       onChange(newValue, name);
     }, [onChange, checked, name]);
     var inner;
     if (buttonType === 'toggle') {
-      inner = /*#__PURE__*/React.createElement(ButtonComponent, _extends({
+      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends({
         size: size,
         onClick: handleClick,
         onBlur: onBlur,
@@ -18146,7 +18144,7 @@
         style: makeWidthStyle(fullWidth, width)
       }, passRest(_omit(rest, 'label')), checked ? OnStateProps : OffStateProps));
     } else if (buttonType === 'link') {
-      inner = /*#__PURE__*/React.createElement(ButtonComponent, _extends({
+      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends({
         size: size,
         onBlur: onBlur,
         appearance: appearance,
@@ -18158,14 +18156,14 @@
         style: makeWidthStyle(fullWidth, width)
       }, passRest(_omit(rest, 'label')), LinkProps));
     }
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: classNames('lf-control-button', className, _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
       "data-lf-field-name": name
     }, inner);
   };
   var MakeButton = function MakeButton(ButtonComponent, OnStateProps, OffStateProps, LinkProps) {
     return function (props) {
-      return /*#__PURE__*/React.createElement(GenericButton, _extends({
+      return /*#__PURE__*/React$1.createElement(GenericButton, _extends({
         ButtonComponent: ButtonComponent,
         OnStateProps: _isFunction(OnStateProps) ? OnStateProps(props) : OnStateProps,
         OffStateProps: _isFunction(OffStateProps) ? OffStateProps(props) : OffStateProps,
@@ -18174,15 +18172,15 @@
     };
   };
 
-  var css_248z$6 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
-  styleInject(css_248z$6);
+  var css_248z$7 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
+  styleInject(css_248z$7);
 
-  var css_248z$5 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
-  styleInject(css_248z$5);
+  var css_248z$6 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
+  styleInject(css_248z$6);
 
   var PlaintextLabel = function PlaintextLabel(_ref) {
     var children = _ref.children;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-plaintext-field-label"
     }, children);
   };
@@ -18190,13 +18188,13 @@
     var currentValues = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
     return (fields || []).map(function (field) {
       if (field.component === 'group') {
-        return /*#__PURE__*/React.createElement(Group, _extends({
+        return /*#__PURE__*/React$1.createElement(Group, _extends({
           key: field.name,
           collapsible: false,
           label: field.label
         }, _pick(field, ['bottomBorder', 'align'])), renderFields(field.fields, locale, framework, currentValues));
       } else if (field.component === 'two-columns') {
-        return /*#__PURE__*/React.createElement(TwoColumns, _extends({
+        return /*#__PURE__*/React$1.createElement(TwoColumns, _extends({
           key: field.name
         }, _pick(field, ['layout', 'leftAlignment', 'rightAlignment'])), function (column) {
           if (column === 'left') {
@@ -18206,7 +18204,7 @@
           }
         });
       } else if (field.component === 'three-columns') {
-        return /*#__PURE__*/React.createElement(ThreeColumns, _extends({
+        return /*#__PURE__*/React$1.createElement(ThreeColumns, _extends({
           key: field.name
         }, _pick(field, ['layout', 'leftAlignment', 'centerAlignment', 'rightAlignment'])), function (column) {
           if (column === 'left') {
@@ -18222,12 +18220,12 @@
         var _fields = subkeys.map(function (subkey) {
           return renderFields(field.fields[subkey], locale, framework, currentValues);
         });
-        return /*#__PURE__*/React.createElement(React.Fragment, null, _fields);
+        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, _fields);
       }
-      return /*#__PURE__*/React.createElement("div", {
+      return /*#__PURE__*/React$1.createElement("div", {
         key: field.name,
         className: "lf-plaintext-field lf-control-".concat(field.component)
-      }, /*#__PURE__*/React.createElement(PlaintextLabel, null, isI18n(field.label) ? i18n(field.label, locale) : field.label), /*#__PURE__*/React.createElement(Plaintext, {
+      }, /*#__PURE__*/React$1.createElement(PlaintextLabel, null, isI18n(field.label) ? i18n(field.label, locale) : field.label), /*#__PURE__*/React$1.createElement(Plaintext, {
         component: field.component,
         locale: locale,
         value: currentValues[field.name],
@@ -18242,10 +18240,10 @@
       currentValues = _ref2.currentValues;
     var fields = form.fields;
     if (_isEmpty(fields)) {
-      return /*#__PURE__*/React.createElement("span", null);
+      return /*#__PURE__*/React$1.createElement("span", null);
     }
     console.log('plaintext--->', currentValues);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-form lf-form-plaintext"
     }, renderFields(fields, locale, framework, currentValues));
   };
@@ -18487,11 +18485,12 @@
     }
   };
 
-  var collectTransformers = function collectTransformers(form, onJavascriptError) {
+  //export const collectTransformers = (form, onJavascriptError) => {
+  var collectTransformers = function collectTransformers(fields, formScript, onJavascriptError) {
     var transformers = {};
 
     // collect all fieldlist needed to compile the transformer
-    var fieldList = reduceFields(form.fields, function (field, accumulator) {
+    var fieldList = reduceFields(fields, function (field, accumulator) {
       if (field.component !== 'group' && field.component !== 'two-columns' && field.component !== 'three-columns') {
         return [].concat(_toConsumableArray(accumulator), [field.name]);
       }
@@ -18503,20 +18502,21 @@
 
     // compile transformer of the form
     try {
-      if (!_isEmpty(form.transformer) || !_isEmpty(form.script)) {
-        transformers.onRender = [makeTransformer(form.script || form.transformer, fieldList)];
+      //if (!_.isEmpty(form.transformer) || !_.isEmpty(form.script)) {
+      if (formScript) {
+        transformers.onRender = [makeTransformer(formScript, fieldList)];
       }
     } catch (e) {
       var error = new Error('Error compiling main form script: ' + e.message, {
         cause: e
       });
-      error.sourceCode = form.script || form.transformer;
+      error.sourceCode = formScript;
       error.errorType = 'compile';
       onJavascriptError(error);
     }
 
     // collect transformers for each field and put it onChange
-    transformers = reduceFields(form.fields, function (field, acc) {
+    transformers = reduceFields(fields, function (field, acc) {
       if (field.script || field.transformer) {
         var transformer;
         try {
@@ -18590,20 +18590,243 @@
     var lfComponent = _ref.lfComponent,
       label = _ref.label,
       lfFramework = _ref.lfFramework;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-missing-component"
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "icon"
-    }, /*#__PURE__*/React.createElement(Warning, {
+    }, /*#__PURE__*/React$1.createElement(Warning, {
       color: "#ff6633",
       height: 16
-    })), /*#__PURE__*/React.createElement("div", {
+    })), /*#__PURE__*/React$1.createElement("div", {
       className: "message"
-    }, "The component ", /*#__PURE__*/React.createElement("span", {
+    }, "The component ", /*#__PURE__*/React$1.createElement("span", {
       className: "tag-component"
-    }, lfComponent), " (", /*#__PURE__*/React.createElement("em", null, "\"", _isString(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/React.createElement("b", null, lfFramework), ")"));
+    }, lfComponent), " (", /*#__PURE__*/React$1.createElement("em", null, "\"", _isString(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/React$1.createElement("b", null, lfFramework), ")"));
   };
 
+  // create blank elements for the DSL
+  var LfField = function LfField() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfGroup = function LfGroup() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfColumns = function LfColumns() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfColumn = function LfColumn() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfArray = function LfArray() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfTabs = function LfTabs() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfTab = function LfTab() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfSteps = function LfSteps() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfStep = function LfStep() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+
+  // TODO import <LfTab> properties
+  // TODO import <LfSteps> properties
+
+  var elementToString = function elementToString(el) {
+    return "type: ".concat(typeToString(el.type)).concat(cleanupProperties(el.props));
+  };
+  var typeToString = function typeToString(type) {
+    if (type === LfField) {
+      return '<LfField>';
+    } else if (type === LfGroup) {
+      return '<LfGroup>';
+    } else if (type === LfColumns) {
+      return '<LfColumns>';
+    } else if (type === LfColumn) {
+      return '<LfColumn>';
+    } else if (type === LfArray) {
+      return '<LfArray>';
+    } else if (type === LfTabs) {
+      return '<LfTabs>';
+    } else if (type === LfTab) {
+      return '<LfTab>';
+    } else if (type === LfSteps) {
+      return '<LfSteps>';
+    } else if (type === LfStep) {
+      return '<LfStep>';
+    } else {
+      return 'unknown';
+    }
+  };
+  var typesToString = function typesToString(types) {
+    return types.map(typeToString).join(', ');
+  };
+  var cleanupProperties = function cleanupProperties(props) {
+    var cleaned = Object.keys(props).reduce(function (acc, key) {
+      if (typeof props[key] === 'string' || typeof props[key] === 'number') {
+        return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, key, props[key]));
+      }
+      return acc;
+    }, {});
+    if (Object.keys(cleaned).length !== 0) {
+      return ' - ' + JSON.stringify(cleaned);
+    }
+    return '';
+  };
+
+  /**
+   * elementOf
+   * Check if element is one of the type
+   * @param {obj} element
+   * @param {ReactElement,[ReactElement]} types
+   */
+  var elementOf = function elementOf(element, types) {
+    var checkTypes = Array.isArray(types) ? types : [types];
+    return checkTypes.some(function (type) {
+      return element.type === type;
+    });
+  };
+  var assertElementsOf = function assertElementsOf(elements, types) {
+    var quiet = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+    var checkTypes = Array.isArray(types) ? types : [types];
+    var checkElements = Array.isArray(elements) ? elements : [elements];
+    return checkElements.every(function (element) {
+      if (!elementOf(element, checkTypes)) {
+        if (!quiet) {
+          throw new Error('LetsForm DSL error, element ' + elementToString(element) + ' should be one of these components: ' + typesToString(checkTypes));
+        }
+        return false;
+      }
+      return true;
+    });
+  };
+  var assertElementsOfElements = function assertElementsOfElements(elements, types) {
+    var checkTypes = Array.isArray(types) ? types : [types];
+    var checkElements = Array.isArray(elements) ? elements : [elements];
+    return checkElements.every(function (element) {
+      if (!assertElementsOf(element.props.children, checkTypes, true)) {
+        throw new Error('LetsForm DSL error, element ' + elementToString(element) + ' should only have childrenbe of these components: ' + typesToString(checkTypes));
+      }
+      return true;
+    });
+  };
+
+  /**
+   * assertElementName
+   * Assert element has name property or raise error
+   */
+  var assertElementName = function assertElementName(element) {
+    if (_.isEmpty(element.props.name)) {
+      throw new Error('LetsForm DSL error, element ' + elementToString(element) + ' missing "name" property ');
+    }
+    return true;
+  };
+
+  /**
+   * assertElementComponent
+   * Assert element has component prop, or raise error
+   */
+  var assertElementComponent = function assertElementComponent(element) {
+    var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+      components = _ref.components,
+      framework = _ref.framework;
+    if (_.isEmpty(element.props.component)) {
+      throw new Error('LetsForm DSL error, element ' + elementToString(element) + ' missing "component" property ');
+    }
+    if (components && framework) {
+      if (!components[element.props.component] || !components[element.props.component][framework]) {
+        throw new Error('LetsForm DSL error, element ' + elementToString(element) + " invalid component property \"".concat(element.props.component, "\" for framework \"").concat(framework, "\""));
+      }
+    }
+    return true;
+  };
+  var traverseChildren = function traverseChildren(children) {
+    var _ref2 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+      components = _ref2.components,
+      framework = _ref2.framework;
+    var elements = [];
+    if (children) {
+      elements = Array.isArray(children) ? children : [children];
+    }
+    return elements.map(function (element) {
+      if (elementOf(element, LfField) && assertElementName(element) && assertElementComponent(element, {
+        components: components,
+        framework: framework
+      })) {
+        return _objectSpread2({}, element.props);
+      } else if (elementOf(element, LfGroup)) {
+        return _objectSpread2(_objectSpread2({}, _.omit(element.props, 'children')), {}, {
+          component: 'group',
+          fields: traverseChildren(element.props.children)
+        });
+      } else if (elementOf(element, LfColumns) && Array.isArray(element.props.children) && element.props.children.length == 2 && assertElementsOf(element.props.children, LfColumn)) {
+        return _objectSpread2(_objectSpread2({
+          component: 'two-columns'
+        }, _.omit(element.props, 'children')), {}, {
+          leftFields: traverseChildren(element.props.children[0].props.children),
+          rightFields: traverseChildren(element.props.children[1].props.children)
+        });
+      } else if (element.type === LfColumns && Array.isArray(element.props.children) && element.props.children.length == 3 && assertElementsOf(element.props.children, [LfColumn])) {
+        return _objectSpread2(_objectSpread2({
+          component: 'three-columns'
+        }, _.omit(element.props, 'children')), {}, {
+          leftFields: traverseChildren(element.props.children[0].props.children),
+          centerFields: traverseChildren(element.props.children[1].props.children),
+          rightFields: traverseChildren(element.props.children[2].props.children)
+        });
+      } else if (element.type === LfArray && assertElementsOf(element.props.children, [LfField, LfGroup, LfColumns])) {
+        return _objectSpread2(_objectSpread2({}, _.omit(element.props, 'children')), {}, {
+          component: 'array',
+          fields: traverseChildren(element.props.children)
+        });
+      } else if (element.type === LfTabs && assertElementsOf(element.props.children, [LfTab]) && assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray])) {
+        return _objectSpread2(_objectSpread2({
+          name: _.uniqueId('lf_name_'),
+          component: 'tabs'
+        }, _.omit(element.props, 'children')), {}, {
+          tabs: element.props.children.map(function (el) {
+            return _.omit(el.props, 'children');
+          }),
+          fields: element.props.children.reduce(function (acc, tabElement) {
+            return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, tabElement.props.value, traverseChildren(tabElement.props.children)));
+          }, {})
+        });
+      } else if (element.type === LfSteps && assertElementsOf(element.props.children, [LfStep]) && assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray])) {
+        return _objectSpread2(_objectSpread2({
+          name: _.uniqueId('lf_name_'),
+          component: 'steps'
+        }, _.omit(element.props, 'children')), {}, {
+          steps: element.props.children.map(function (el) {
+            return _.omit(el.props, 'children');
+          }),
+          fields: element.props.children.reduce(function (acc, tabElement) {
+            return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, tabElement.props.value, traverseChildren(tabElement.props.children)));
+          }, {})
+        });
+      } else {
+        // othwerwise wrap in react-view component
+        return {
+          name: _.uniqueId('lf_name_'),
+          component: 'react-view',
+          view: function view() {
+            return /*#__PURE__*/React.createElement(React.Fragment, null, element);
+          }
+        };
+      }
+    }).filter(Boolean);
+  };
+
+  var css_248z$5 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
+  styleInject(css_248z$5);
+
+  var DEFAULT_FORM = {
+    version: 1,
+    fields: []
+  };
   var GenerateGenerator = function GenerateGenerator(_ref) {
     var Forms = _ref.Forms,
       Fields = _ref.Fields;
@@ -18650,7 +18873,7 @@
 
         // special case of group
         if (field.component === 'group') {
-          var component = /*#__PURE__*/React.createElement(Component, _extends({
+          var component = /*#__PURE__*/React$1.createElement(Component, _extends({
             key: field.name,
             lfComponent: field.component,
             lfFramework: framework,
@@ -18659,7 +18882,7 @@
             label: field.label,
             hint: field.hint,
             disabled: field.disabled
-          }, additionalFields), /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+          }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
             Wrapper: Wrapper,
             GroupWrapper: GroupWrapper,
             PlaceholderWrapper: PlaceholderWrapper,
@@ -18680,19 +18903,19 @@
             locale: locale,
             onJavascriptError: onJavascriptError,
             Components: Components,
-            prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+            prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
               key: "wrapper_top_field",
               parentField: field,
               parentFieldTarget: "fields",
               nextField: field.fields && field.fields.length ? field.fields[0] : null
             })
-          }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+          }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
             context: "group",
             key: "bottom_view_".concat(field.name),
             field: field,
             target: "fields"
           })));
-          return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
             key: "wrapper_".concat(field.name),
             field: field,
             level: level,
@@ -18700,7 +18923,7 @@
             className: "group"
           }, component) : component;
         } else if (field.component === 'tabs') {
-          return /*#__PURE__*/React.createElement(reactHookForm.Controller, {
+          return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
             key: "field_".concat(field.name),
             name: field.name,
             control: control,
@@ -18708,7 +18931,7 @@
               var _values$field$name;
               var fieldInfo = _ref3.field;
               var values = getValues();
-              var component = /*#__PURE__*/React.createElement(Component, _extends({
+              var component = /*#__PURE__*/React$1.createElement(Component, _extends({
                 key: field.name,
                 lfComponent: field.component,
                 lfFramework: framework,
@@ -18724,7 +18947,7 @@
                   _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
                 }
               }, additionalFields, field[framework]), function (tab) {
-                return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+                return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                   Wrapper: Wrapper,
                   GroupWrapper: GroupWrapper,
                   PlaceholderWrapper: PlaceholderWrapper,
@@ -18745,14 +18968,14 @@
                   locale: locale,
                   onJavascriptError: onJavascriptError,
                   Components: Components,
-                  prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                  prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                     key: "wrapper_top_field",
                     parentField: field,
                     parentFieldTarget: "fields",
                     parentFieldSubTarget: tab,
                     nextField: field.fields && field.fields.length ? field.fields[0] : null
                   })
-                }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+                }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                   context: "tabs",
                   key: "bottom_view_".concat(field.name),
                   field: field,
@@ -18760,7 +18983,7 @@
                   subtarget: tab
                 }));
               });
-              return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+              return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
                 key: "wrapper_".concat(field.name),
                 field: field,
                 level: level,
@@ -18770,7 +18993,7 @@
             }
           });
         } else if (field.component === 'steps') {
-          return /*#__PURE__*/React.createElement(reactHookForm.Controller, {
+          return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
             key: "field_".concat(field.name),
             name: field.name,
             control: control,
@@ -18778,7 +19001,7 @@
               var _values$field$name2;
               var fieldInfo = _ref4.field;
               var values = getValues();
-              var component = /*#__PURE__*/React.createElement(Component, _extends({
+              var component = /*#__PURE__*/React$1.createElement(Component, _extends({
                 key: field.name,
                 lfComponent: field.component,
                 lfFramework: framework,
@@ -18794,7 +19017,7 @@
                   _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
                 }
               }, additionalFields, field[framework]), function (step) {
-                return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+                return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                   Wrapper: Wrapper,
                   GroupWrapper: GroupWrapper,
                   PlaceholderWrapper: PlaceholderWrapper,
@@ -18815,14 +19038,14 @@
                   locale: locale,
                   onJavascriptError: onJavascriptError,
                   Components: Components,
-                  prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                  prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                     key: "wrapper_top_field",
                     parentField: field,
                     parentFieldTarget: "fields",
                     parentFieldSubTarget: step,
                     nextField: field.fields && field.fields.length ? field.fields[0] : null
                   })
-                }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+                }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                   context: "tabs",
                   key: "bottom_view_".concat(field.name),
                   field: field,
@@ -18830,7 +19053,7 @@
                   subtarget: step
                 }));
               });
-              return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+              return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
                 key: "wrapper_".concat(field.name),
                 field: field,
                 level: level,
@@ -18840,7 +19063,7 @@
             }
           });
         } else if (field.component === 'array' && GroupWrapper) {
-          var _component = /*#__PURE__*/React.createElement(Component, _extends({
+          var _component = /*#__PURE__*/React$1.createElement(Component, _extends({
             key: field.name,
             lfComponent: field.component,
             lfFramework: framework,
@@ -18849,7 +19072,7 @@
             label: field.label,
             hint: field.hint,
             disabled: field.disabled
-          }, additionalFields), /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+          }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
             Wrapper: Wrapper,
             GroupWrapper: GroupWrapper,
             PlaceholderWrapper: PlaceholderWrapper,
@@ -18870,19 +19093,19 @@
             locale: locale,
             onJavascriptError: onJavascriptError,
             Components: Components,
-            prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+            prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
               key: "wrapper_top_field",
               parentField: field,
               parentFieldTarget: "fields",
               nextField: field.fields && field.fields.length ? field.fields[0] : null
             })
-          }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+          }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
             context: "array",
             key: "bottom_view_".concat(field.name),
             field: field,
             target: "fields"
           })));
-          return /*#__PURE__*/React.createElement(GroupWrapper, {
+          return /*#__PURE__*/React$1.createElement(GroupWrapper, {
             key: "wrapper_".concat(field.name),
             field: field,
             level: level,
@@ -18890,7 +19113,7 @@
             className: "array"
           }, _component);
         } else if (field.component === 'two-columns') {
-          var _component2 = /*#__PURE__*/React.createElement(Component, _extends({
+          var _component2 = /*#__PURE__*/React$1.createElement(Component, _extends({
             key: field.name,
             lfComponent: field.component,
             lfFramework: framework,
@@ -18898,7 +19121,7 @@
             name: field.name
           }, additionalFields), function (column) {
             if (column === 'left') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -18919,20 +19142,20 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "leftFields",
                   nextField: field.leftFields && field.leftFields.length ? field.leftFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "two-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
                 target: "leftFields"
               }));
             } else if (column === 'right') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -18953,13 +19176,13 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "rightFields",
                   nextField: field.rightFields && field.rightFields.length ? field.rightFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "two-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
@@ -18967,7 +19190,7 @@
               }));
             }
           });
-          return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
             key: "wrapper_".concat(field.name),
             className: "two-columns",
             level: level,
@@ -18975,7 +19198,7 @@
             index: index
           }, _component2) : _component2;
         } else if (field.component === 'three-columns') {
-          var _component3 = /*#__PURE__*/React.createElement(Component, _extends({
+          var _component3 = /*#__PURE__*/React$1.createElement(Component, _extends({
             key: "three-columns-".concat(field.name),
             name: field.name,
             lfComponent: field.component,
@@ -18983,7 +19206,7 @@
             lfLocale: locale
           }, additionalFields), function (column) {
             if (column === 'left') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -19004,20 +19227,20 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "leftFields",
                   nextField: field.leftFields && field.leftFields.length ? field.leftFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "three-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
                 target: "leftFields"
               }));
             } else if (column === 'center') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -19038,20 +19261,20 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "centerFields",
                   nextField: field.centerFields && field.centerFields.length ? field.centerFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "three-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
                 target: "centerFields"
               }));
             } else if (column === 'right') {
-              return /*#__PURE__*/React.createElement(React.Fragment, null, renderFields({
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
                 Wrapper: Wrapper,
                 GroupWrapper: GroupWrapper,
                 PlaceholderWrapper: PlaceholderWrapper,
@@ -19072,13 +19295,13 @@
                 locale: locale,
                 onJavascriptError: onJavascriptError,
                 Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React.createElement(PlaceholderWrapper, {
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                   key: "wrapper_top_field",
                   parentField: field,
                   parentFieldTarget: "rightFields",
                   nextField: field.rightFields && field.rightFields.length ? field.rightFields[0] : null
                 })
-              }), BottomView && /*#__PURE__*/React.createElement(BottomView, {
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                 context: "three-columns",
                 key: "bottom_view_".concat(field.name),
                 field: field,
@@ -19086,7 +19309,7 @@
               }));
             }
           });
-          return GroupWrapper ? /*#__PURE__*/React.createElement(GroupWrapper, {
+          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
             key: "wrapper_".concat(field.name),
             className: "three-columns",
             field: field,
@@ -19100,14 +19323,14 @@
         var rules = translateValidation(_objectSpread2({
           required: field.required
         }, field.validation), locale, onJavascriptError);
-        return /*#__PURE__*/React.createElement(reactHookForm.Controller, {
+        return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
           key: "field_".concat(field.name),
           name: field.name,
           rules: rules,
           control: control,
           render: function render(_ref5) {
             var fieldInfo = _ref5.field;
-            var component = /*#__PURE__*/React.createElement(Component
+            var component = /*#__PURE__*/React$1.createElement(Component
             // not sure about this, not passing the ref
             , _extends({
               name: fieldInfo.name,
@@ -19133,7 +19356,7 @@
                 _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
               }
             }));
-            return Wrapper ? /*#__PURE__*/React.createElement(Wrapper, {
+            return Wrapper ? /*#__PURE__*/React$1.createElement(Wrapper, {
               key: "wrapper_".concat(field.name),
               field: field,
               level: level,
@@ -19144,10 +19367,11 @@
       });
       return prependView ? [prependView].concat(_toConsumableArray(renderedFields)) : renderedFields;
     };
-    var FormGenerator = /*#__PURE__*/React.memo(function (_ref6) {
-      var _form$name;
+    var FormGenerator = /*#__PURE__*/React$1.memo(function (_ref6) {
+      var _form$name, _form$fields;
       var framework = _ref6.framework,
-        form = _ref6.form,
+        _ref6$form = _ref6.form,
+        form = _ref6$form === void 0 ? DEFAULT_FORM : _ref6$form,
         _ref6$onChange = _ref6.onChange,
         onChange = _ref6$onChange === void 0 ? function () {} : _ref6$onChange,
         _ref6$onSubmit = _ref6.onSubmit,
@@ -19194,30 +19418,32 @@
         hideSubmit = _ref6.hideSubmit,
         _ref6$demo = _ref6.demo,
         demo = _ref6$demo === void 0 ? false : _ref6$demo,
+        footer = _ref6.footer,
         _ref6$disableOnSubmit = _ref6.disableOnSubmit,
         disableOnSubmit = _ref6$disableOnSubmit === void 0 ? true : _ref6$disableOnSubmit,
         _ref6$resetAfterSubmi = _ref6.resetAfterSubmit,
         resetAfterSubmit = _ref6$resetAfterSubmi === void 0 ? true : _ref6$resetAfterSubmi;
       var showErrors = form.showErrors,
         connectors = form.connectors;
-      var _useState = React.useState((_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : _uniqueId('form_')),
+      var _useState = React$1.useState((_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : _uniqueId('form_')),
         _useState2 = _slicedToArray(_useState, 2),
         formName = _useState2[0],
         setFormName = _useState2[1];
       useStylesheet(formName, form.css);
-      var _useState3 = React.useState(null),
+      var _useState3 = React$1.useState(null),
         _useState4 = _slicedToArray(_useState3, 2),
         transformers = _useState4[0],
         setTransformers = _useState4[1];
-      var _useState5 = React.useState(prealoadComponents),
+      var _useState5 = React$1.useState(prealoadComponents),
         _useState6 = _slicedToArray(_useState5, 2),
         preloading = _useState6[0],
         setPreloading = _useState6[1];
-      var _useState7 = React.useState(false),
+      var _useState7 = React$1.useState(false),
         _useState8 = _slicedToArray(_useState7, 2),
         stateDisabled = _useState8[0],
         setDisabled = _useState8[1];
-      var _useState9 = React.useState(1),
+      //const [traversedFields, setTraversedFields] = useState([]);
+      var _useState9 = React$1.useState(1),
         _useState10 = _slicedToArray(_useState9, 2),
         version = _useState10[0],
         setVersion = _useState10[1];
@@ -19233,21 +19459,28 @@
         reset = _useForm.reset,
         control = _useForm.control,
         getValues = _useForm.getValues;
-      var _useState11 = React.useState(),
+      var _useState11 = React$1.useState(),
         _useState12 = _slicedToArray(_useState11, 2),
         validationErrors = _useState12[0],
         setValidationErrors = _useState12[1];
       // store form fields, apply immediately transformers (collected from all fields)
-      var _useState13 = React.useState(null),
+      var _useState13 = React$1.useState(null),
         _useState14 = _slicedToArray(_useState13, 2),
         formFields = _useState14[0],
         setFormFields = _useState14[1];
       var MergedComponents = mergeComponents(Fields, components);
 
+      // it's the combination of the fields from the form schema and those specified
+      // with the DSL, from now on every func should reference this (not form.fields)
+      var actualFields = [].concat(_toConsumableArray((_form$fields = form.fields) !== null && _form$fields !== void 0 ? _form$fields : []), _toConsumableArray(traverseChildren(children, {
+        components: MergedComponents,
+        framework: framework
+      })));
+
       // preload components of the form
-      React.useEffect(function () {
+      React$1.useEffect(function () {
         if (prealoadComponents) {
-          var _components = _uniq(reduceFields(form.fields, function (field, acc) {
+          var _components = _uniq(reduceFields(actualFields, function (field, acc) {
             return [].concat(_toConsumableArray(acc), [field.component]);
           }, []));
           lfLog('Preloading components: ' + _components.join(', '));
@@ -19271,7 +19504,7 @@
       }, []);
 
       // update internal state if form changes
-      React.useEffect(function () {
+      React$1.useEffect(function () {
         var f = /*#__PURE__*/function () {
           var _ref7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
             var _form$name2;
@@ -19279,8 +19512,8 @@
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
-                  newTransformers = collectTransformers(form, onJavascriptError); // initial fields values
-                  newFields = form.fields; // apply onRender transformers
+                  newTransformers = collectTransformers(actualFields, form.transformer || form.script, onJavascriptError); // initial fields values
+                  newFields = actualFields; // apply onRender transformers
                   if (_isEmpty(newTransformers.onRender)) {
                     _context.next = 32;
                     break;
@@ -19415,10 +19648,10 @@
         f();
       },
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      [form, framework] // don't put defaultValues here
+      [form, framework, children] // don't put defaultValues here
       );
 
-      var onHandleSubmit = React.useCallback( /*#__PURE__*/function () {
+      var onHandleSubmit = React$1.useCallback( /*#__PURE__*/function () {
         var _ref8 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(data) {
           var idx, responses, connector, proxyFetch, response;
           return _regeneratorRuntime().wrap(function _callee2$(_context2) {
@@ -19510,11 +19743,11 @@
           return _ref8.apply(this, arguments);
         };
       }(), [onSubmit, onSubmitSuccess, formFields]);
-      var onHandleError = React.useCallback(function (data) {
+      var onHandleError = React$1.useCallback(function (data) {
         setValidationErrors(data);
         onError(data);
       }, [onError]);
-      var handleReset = React.useCallback(function () {
+      var handleReset = React$1.useCallback(function () {
         setValidationErrors(null);
         reset(defaultValues);
         // not proud of this
@@ -19523,7 +19756,7 @@
         });
         onReset();
       }, [defaultValues, reset, onReset]);
-      var handleChange = React.useCallback( /*#__PURE__*/function () {
+      var handleChange = React$1.useCallback( /*#__PURE__*/function () {
         var _ref9 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(values, fieldName) {
           var newFields, _iteratorAbruptCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, f, _iteratorAbruptCompletion4, _didIteratorError4, _iteratorError4, _iterator4, _step4, _f;
           return _regeneratorRuntime().wrap(function _callee3$(_context3) {
@@ -19657,7 +19890,7 @@
           return _ref9.apply(this, arguments);
         };
       }(), [onChange, formFields, formName, transformers, framework, onJavascriptError]);
-      var handleEnter = React.useCallback(function () {
+      var handleEnter = React$1.useCallback(function () {
         handleSubmit(onHandleSubmit, onHandleError)();
         onEnter();
       }, [handleSubmit, onEnter, onHandleError, onHandleSubmit]);
@@ -19670,10 +19903,10 @@
       var BottomView = bottomView;
       var PlaceholderWrapper = placeholderWrapper;
       if (preloading) {
-        return Loader ? /*#__PURE__*/React.createElement(Loader, null) : /*#__PURE__*/React.createElement("div", null, "Loading...");
+        return Loader ? /*#__PURE__*/React$1.createElement(Loader, null) : /*#__PURE__*/React$1.createElement("div", null, "Loading...");
       }
       if (plaintext) {
-        return /*#__PURE__*/React.createElement(PlaintextForm, {
+        return /*#__PURE__*/React$1.createElement(PlaintextForm, {
           form: form,
           locale: locale,
           framework: framework,
@@ -19685,23 +19918,23 @@
       if (debug) {
         console.log("[LetsForm] Render form (".concat(form.name, ")"));
       }
-      return /*#__PURE__*/React.createElement(FormContext.Provider, {
+      return /*#__PURE__*/React$1.createElement(FormContext.Provider, {
         value: {
           locales: form.locales,
           locale: locale
           // ..more
         }
-      }, /*#__PURE__*/React.createElement("div", {
+      }, /*#__PURE__*/React$1.createElement("div", {
         className: classNames('lf-lets-form', {
           'lf-lets-form-edit-mode': demo
         }, className)
-      }, formErrors && showErrors === 'groupedTop' && /*#__PURE__*/React.createElement(ValidationErrors, {
+      }, formErrors && showErrors === 'groupedTop' && /*#__PURE__*/React$1.createElement(ValidationErrors, {
         className: "top",
         locale: locale,
         errors: enrichWithLabels(formErrors, formFields)
-      }), /*#__PURE__*/React.createElement(React.Suspense, {
-        fallback: Loader ? /*#__PURE__*/React.createElement(Loader, null) : /*#__PURE__*/React.createElement("div", null, "Loading...")
-      }, /*#__PURE__*/React.createElement(Form, _extends({
+      }), /*#__PURE__*/React$1.createElement(React$1.Suspense, {
+        fallback: Loader ? /*#__PURE__*/React$1.createElement(Loader, null) : /*#__PURE__*/React$1.createElement("div", null, "Loading...")
+      }, /*#__PURE__*/React$1.createElement(Form, _extends({
         key: "lf_".concat(version),
         onSubmit: handleSubmit(onHandleSubmit, onHandleError),
         name: formName,
@@ -19741,18 +19974,19 @@
         locale: locale,
         onJavascriptError: onJavascriptError,
         Components: MergedComponents
-      }), children, formErrors && (showErrors === 'groupedBottom' || _isEmpty(showErrors)) && /*#__PURE__*/React.createElement(ValidationErrors, {
+      }), footer, formErrors && (showErrors === 'groupedBottom' || _isEmpty(showErrors)) && /*#__PURE__*/React$1.createElement(ValidationErrors, {
         className: "bottom",
         locale: locale,
         errors: enrichWithLabels(formErrors, formFields)
-      }))), demo && /*#__PURE__*/React.createElement("div", {
+      }))), demo && /*#__PURE__*/React$1.createElement("div", {
         className: "label-test-buttons"
       }, "Test buttons")));
     }, function (prevProps, nextProps) {
       {
-        console.log("[LetsForm] Form generator ".concat(nextProps.form.name ? '(' + nextProps.form.name + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale) + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext) + ' disabled=' + (prevProps.disabled === nextProps.disabled));
+        var _nextProps$form, _nextProps$form2;
+        console.log("[LetsForm] Form generator ".concat((_nextProps$form = nextProps.form) !== null && _nextProps$form !== void 0 && _nextProps$form.name ? '(' + ((_nextProps$form2 = nextProps.form) === null || _nextProps$form2 === void 0 ? void 0 : _nextProps$form2.name) + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale) + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext) + ' disabled=' + (prevProps.disabled === nextProps.disabled) + ' children=' + (prevProps.children === nextProps.children));
       }
-      var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale && prevProps.plaintext === nextProps.plaintext && prevProps.disabled === nextProps.disabled;
+      var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale && prevProps.plaintext === nextProps.plaintext && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children;
       console.log('Is re-rendering?', !isEqual);
       return isEqual;
     });
@@ -19761,16 +19995,16 @@
   };
 
   function lazyPreload(factory) {
-    var ReactLazyComponent = /*#__PURE__*/React.lazy(factory);
+    var ReactLazyComponent = /*#__PURE__*/React$1.lazy(factory);
     var PreloadedComponent;
     var factoryPromise;
-    var Component = /*#__PURE__*/React.forwardRef(function LazyWithPreload(props, ref) {
+    var Component = /*#__PURE__*/React$1.forwardRef(function LazyWithPreload(props, ref) {
       var _PreloadedComponent;
       // Once one of these is chosen, we must ensure that it continues to be
       // used for all subsequent renders, otherwise it can cause the
       // underlying component to be unmounted and remounted.
-      var ComponentToRender = React.useRef((_PreloadedComponent = PreloadedComponent) !== null && _PreloadedComponent !== void 0 ? _PreloadedComponent : ReactLazyComponent);
-      return /*#__PURE__*/React.createElement(ComponentToRender.current, Object.assign(ref ? {
+      var ComponentToRender = React$1.useRef((_PreloadedComponent = PreloadedComponent) !== null && _PreloadedComponent !== void 0 ? _PreloadedComponent : ReactLazyComponent);
+      return /*#__PURE__*/React$1.createElement(ComponentToRender.current, Object.assign(ref ? {
         ref: ref
       } : {}, props));
     });
@@ -19935,7 +20169,7 @@
     _ref.framework;
       var children = _ref.children,
       rest = _objectWithoutProperties(_ref, _excluded$g);
-    return /*#__PURE__*/React.createElement(FormGenerator, _extends({
+    return /*#__PURE__*/React$1.createElement(FormGenerator, _extends({
       framework: "react-material-ui"
     }, rest), children);
   };
@@ -19978,21 +20212,21 @@
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
       rest = _objectWithoutProperties(_ref, _excluded$f);
-    var handleKeyUp = React.useCallback(function (e) {
+    var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
-    var controlId = React.useId();
-    return /*#__PURE__*/React.createElement("div", {
+    var controlId = React$1.useId();
+    return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: className
-    }, /*#__PURE__*/React.createElement(FormControl, {
+    }, /*#__PURE__*/React$1.createElement(FormControl, {
       required: required,
       error: error != null,
       variant: variant !== null && variant !== void 0 ? variant : undefined,
       fullWidth: fullWidth
-    }, label && !floatingLabel && /*#__PURE__*/React.createElement(FormLabel, {
+    }, label && !floatingLabel && /*#__PURE__*/React$1.createElement(FormLabel, {
       id: controlId
-    }, label), /*#__PURE__*/React.createElement(TextField, _extends({
+    }, label), /*#__PURE__*/React$1.createElement(TextField, _extends({
       size: size,
       placeholder: placeholder,
       value: value,
@@ -20005,10 +20239,10 @@
       onKeyUp: submitOnEnter ? handleKeyUp : undefined,
       type: inputType,
       InputProps: {
-        startAdornment: prefix ? /*#__PURE__*/React.createElement(InputAdornment, {
+        startAdornment: prefix ? /*#__PURE__*/React$1.createElement(InputAdornment, {
           position: "start"
         }, TextOrIcon(prefix)) : undefined,
-        endAdornment: postfix ? /*#__PURE__*/React.createElement(InputAdornment, {
+        endAdornment: postfix ? /*#__PURE__*/React$1.createElement(InputAdornment, {
           position: "end"
         }, TextOrIcon(postfix)) : undefined,
         disableUnderline: disableUnderline,
@@ -20019,7 +20253,7 @@
       onBlur: onBlur,
       disabled: disabled,
       label: floatingLabel ? label : undefined
-    }, passRest(rest))), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
+    }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
   var _excluded$e = ["onChange"];
@@ -20028,10 +20262,10 @@
   var TextInput = I18N(function (_ref) {
     var onChange = _ref.onChange,
       rest = _objectWithoutProperties(_ref, _excluded$e);
-    var handleChange = React.useCallback(function (event) {
+    var handleChange = React$1.useCallback(function (event) {
       onChange(event.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(MuiGenericInput, _extends({
+    return /*#__PURE__*/React$1.createElement(MuiGenericInput, _extends({
       className: "lf-control-input-text",
       component: "input-text",
       onChange: handleChange
@@ -20079,16 +20313,16 @@
       _ref.children;
       var rest = _objectWithoutProperties(_ref, _excluded$d);
     var filteredOptions = filterOptions(options, filterValue, filterKey);
-    var controlId = React.useId();
+    var controlId = React$1.useId();
     var items;
     if (multiple) {
       items = (filteredOptions || []).map(function (option) {
-        return /*#__PURE__*/React.createElement(MenuItem, {
+        return /*#__PURE__*/React$1.createElement(MenuItem, {
           key: option.value,
           value: option.value
-        }, /*#__PURE__*/React.createElement(Checkbox, {
+        }, /*#__PURE__*/React$1.createElement(Checkbox, {
           checked: (value || []).includes(option.value)
-        }), /*#__PURE__*/React.createElement(ListItemText, {
+        }), /*#__PURE__*/React$1.createElement(ListItemText, {
           primary: option.label
         }));
       });
@@ -20096,7 +20330,7 @@
       items = (filteredOptions || []).map(function (_ref2) {
         var value = _ref2.value,
           label = _ref2.label;
-        return /*#__PURE__*/React.createElement(MenuItem, {
+        return /*#__PURE__*/React$1.createElement(MenuItem, {
           key: value,
           value: value
         }, label);
@@ -20107,21 +20341,21 @@
     // si sposta e quando non e' in focus va a coprire il componente, se focus si sposta in alto
     // ma siccome lo spazio non se lo crea da solo, devi mettere la label anche nel componente select
     // altrimenti nella variante outlined vedi la label tagliata dalla riga del bordo.
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: className,
       "data-lf-field-name": name
-    }, /*#__PURE__*/React.createElement(FormControl, {
+    }, /*#__PURE__*/React$1.createElement(FormControl, {
       size: size,
       disabled: disabled,
       required: required,
       error: error != null,
       variant: variant !== null && variant !== void 0 ? variant : undefined,
       fullWidth: fullWidth
-    }, label && !floatingLabel && /*#__PURE__*/React.createElement(FormLabel, {
+    }, label && !floatingLabel && /*#__PURE__*/React$1.createElement(FormLabel, {
       id: controlId
-    }, label), label && floatingLabel && /*#__PURE__*/React.createElement(InputLabel, {
+    }, label), label && floatingLabel && /*#__PURE__*/React$1.createElement(InputLabel, {
       id: "mui_select_".concat(name)
-    }, label), /*#__PURE__*/React.createElement(Select, _extends({
+    }, label), /*#__PURE__*/React$1.createElement(Select, _extends({
       id: name,
       labelId: "mui_select_".concat(name),
       value: value,
@@ -20137,7 +20371,7 @@
       inputProps: readOnly ? {
         readOnly: true
       } : undefined
-    }, passRest(rest)), items), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
+    }, passRest(rest)), items), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
   var _excluded$c = ["onChange", "value"];
@@ -20145,10 +20379,10 @@
     var onChange = _ref.onChange,
       value = _ref.value,
       rest = _objectWithoutProperties(_ref, _excluded$c);
-    var handleChange = React.useCallback(function (e) {
+    var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(MuiGenericSelect, _extends({
+    return /*#__PURE__*/React$1.createElement(MuiGenericSelect, _extends({
       className: "lf-control-select",
       component: "select",
       value: value,
@@ -20177,10 +20411,10 @@
       onBlur = _ref.onBlur,
       required = _ref.required,
       disableRipple = _ref.disableRipple;
-    var handleChange = React.useCallback(function (e) {
+    var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
-    var switchCtrl = /*#__PURE__*/React.createElement(Switch, {
+    var switchCtrl = /*#__PURE__*/React$1.createElement(Switch, {
       checked: value,
       onChange: handleChange,
       disabled: disabled,
@@ -20190,10 +20424,10 @@
       required: required,
       disableRipple: disableRipple
     });
-    return /*#__PURE__*/React.createElement(FormGroup, {
+    return /*#__PURE__*/React$1.createElement(FormGroup, {
       "data-lf-field-name": name,
       className: "lf-control-toggle"
-    }, label && /*#__PURE__*/React.createElement(FormControlLabel, {
+    }, label && /*#__PURE__*/React$1.createElement(FormControlLabel, {
       labelPlacement: labelPlacement || undefined,
       disabled: disabled,
       label: label,
@@ -20222,10 +20456,10 @@
       onBlur = _ref.onBlur,
       required = _ref.required,
       disableRipple = _ref.disableRipple;
-    var handleChange = React.useCallback(function (e) {
+    var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
-    var checkboxCtrl = /*#__PURE__*/React.createElement(Checkbox, {
+    var checkboxCtrl = /*#__PURE__*/React$1.createElement(Checkbox, {
       checked: value,
       onChange: handleChange,
       disabled: disabled,
@@ -20235,10 +20469,10 @@
       required: required,
       disableRipple: disableRipple
     });
-    return /*#__PURE__*/React.createElement(FormGroup, {
+    return /*#__PURE__*/React$1.createElement(FormGroup, {
       "data-lf-field-name": name,
       className: "lf-control-checkbox"
-    }, label && /*#__PURE__*/React.createElement(FormControlLabel, {
+    }, label && /*#__PURE__*/React$1.createElement(FormControlLabel, {
       labelPlacement: labelPlacement ? labelPlacement : undefined,
       disabled: disabled,
       label: label,
@@ -20275,20 +20509,20 @@
       customMarks = _ref.customMarks,
       width = _ref.width,
       fullWidth = _ref.fullWidth;
-    var handleChange = React.useCallback(function (e) {
+    var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-slider",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React.createElement(FormControl, {
+    }, /*#__PURE__*/React$1.createElement(FormControl, {
       required: required,
       error: error != null,
       fullWidth: fullWidth,
       sx: {
         mt: 2
       }
-    }, label && /*#__PURE__*/React.createElement(FormLabel, null, label), /*#__PURE__*/React.createElement(Slider, {
+    }, label && /*#__PURE__*/React$1.createElement(FormLabel, null, label), /*#__PURE__*/React$1.createElement(Slider, {
       name: name,
       marks: customMarks ? customMarks : showMarks,
       value: value,
@@ -20304,7 +20538,7 @@
       step: step,
       size: size,
       valueLabelDisplay: valueLabelDisplay
-    }), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
+    }), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   }, ['label', 'hint'], {
     customMarks: function customMarks(value, i18n) {
       return (Array.isArray(value) ? value : []).map(function (value) {
@@ -20326,15 +20560,15 @@
       text = _ref.text,
       name = _ref.name,
       label = _ref.label;
-    var controlId = React.useId();
-    return /*#__PURE__*/React.createElement(FormControl, {
+    var controlId = React$1.useId();
+    return /*#__PURE__*/React$1.createElement(FormControl, {
       className: "lf-control-placeholder",
       "data-lf-field-name": name
-    }, label && /*#__PURE__*/React.createElement(FormLabel, {
+    }, label && /*#__PURE__*/React$1.createElement(FormLabel, {
       id: controlId
-    }, label), /*#__PURE__*/React.createElement(Placeholder, {
+    }, label), /*#__PURE__*/React$1.createElement(Placeholder, {
       text: text
-    }), hint && /*#__PURE__*/React.createElement(FormHelperText, null, hint));
+    }), hint && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint));
   }, ['label', 'hint', 'text']);
   lfLog('Loaded MUI.Placeholder');
 
@@ -20363,10 +20597,10 @@
       color = _ref.color,
       labelPlacement = _ref.labelPlacement,
       error = _ref.error;
-    var handleChange = React.useCallback(function (event) {
+    var handleChange = React$1.useCallback(function (event) {
       onChange(parseFloat(event.target.value));
     }, [onChange]);
-    var ctrl = /*#__PURE__*/React.createElement(Rating, {
+    var ctrl = /*#__PURE__*/React$1.createElement(Rating, {
       size: size !== null && size !== void 0 ? size : undefined,
       max: max,
       precision: precision !== null && precision !== void 0 ? precision : 1,
@@ -20378,23 +20612,23 @@
       onBlur: onBlur,
       disabled: disabled
     });
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-rate",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React.createElement(FormControl, {
+    }, /*#__PURE__*/React$1.createElement(FormControl, {
       required: required,
       error: error != null,
       sx: {
         mt: 2
       },
       variant: "standard"
-    }, label && !labelPlacement && /*#__PURE__*/React.createElement(FormLabel, null, label), label && labelPlacement && /*#__PURE__*/React.createElement(FormControlLabel, {
+    }, label && !labelPlacement && /*#__PURE__*/React$1.createElement(FormLabel, null, label), label && labelPlacement && /*#__PURE__*/React$1.createElement(FormControlLabel, {
       labelPlacement: labelPlacement ? labelPlacement : undefined,
       disabled: disabled,
       label: label,
       control: ctrl,
       error: error
-    }), !(label && labelPlacement) && ctrl, hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
+    }), !(label && labelPlacement) && ctrl, hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Rate');
 
@@ -20771,7 +21005,7 @@
       views = _ref.views;
       _ref.component;
       var rest = _objectWithoutProperties(_ref, _excluded$b);
-    var controlId = React.useId();
+    var controlId = React$1.useId();
     var localeCode = lfLocale && _isString(lfLocale) ? lfLocale.split('-')[0] : undefined;
     var Component = datetime ? DateTimePicker.DateTimePicker : DatePicker.DatePicker;
 
@@ -20789,17 +21023,17 @@
     var parsedMaxDate = tryParseDateDayJs(maxDate);
     var parsedMinDateTime = tryParseDateDayJs(minDateTime);
     var parsedMaxDateTime = tryParseDateDayJs(maxDateTime);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: className
-    }, /*#__PURE__*/React.createElement(FormControl, {
+    }, /*#__PURE__*/React$1.createElement(FormControl, {
       required: required,
       error: error != null,
       fullWidth: fullWidth,
       style: makeWidthStyle(fullWidth, width)
-    }, label && !floatingLabel && /*#__PURE__*/React.createElement(FormLabel, {
+    }, label && !floatingLabel && /*#__PURE__*/React$1.createElement(FormLabel, {
       htmlFor: controlId
-    }, label), /*#__PURE__*/React.createElement(Component, _extends({
+    }, label), /*#__PURE__*/React$1.createElement(Component, _extends({
       id: controlId,
       required: floatingLabel ? required : undefined,
       label: floatingLabel ? label : undefined,
@@ -20823,7 +21057,7 @@
       maxDate: parsedMaxDate,
       minDateTime: parsedMinDateTime,
       maxDateTime: parsedMaxDateTime
-    }, passRest(rest))), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
+    }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
   var _excluded$a = ["onChange", "value"];
@@ -20847,12 +21081,12 @@
     }
 
     // send always date string in format yyyy-mm-dd
-    var handleChange = React.useCallback(function (d) {
+    var handleChange = React$1.useCallback(function (d) {
       if (d.toDate && isValidDate(d.toDate())) {
         onChange(d.toDate().toISOString().split('T')[0]);
       }
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(MuiGenericDate, _extends({
+    return /*#__PURE__*/React$1.createElement(MuiGenericDate, _extends({
       value: currentValue,
       className: "lf-control-date",
       component: "date",
@@ -20922,12 +21156,12 @@
     }
 
     // send always date string in format yyyy-mm-dd
-    var handleChange = React.useCallback(function (d) {
+    var handleChange = React$1.useCallback(function (d) {
       if (d.toDate && isValidDate(d.toDate())) {
         onChange(d.toDate().toISOString());
       }
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(MuiGenericDate, _extends({
+    return /*#__PURE__*/React$1.createElement(MuiGenericDate, _extends({
       value: currentValue,
       className: "lf-control-datetime",
       component: "datetime",
@@ -20955,19 +21189,19 @@
       error = _ref.error,
       rest = _objectWithoutProperties(_ref, _excluded$8);
     var hasError = error && _isString(error);
-    var controlId = React.useId();
-    return /*#__PURE__*/React.createElement("div", {
+    var controlId = React$1.useId();
+    return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: "lf-control-array"
-    }, /*#__PURE__*/React.createElement(FormControl, {
+    }, /*#__PURE__*/React$1.createElement(FormControl, {
       required: required,
       error: hasError,
       fullWidth: true
-    }, /*#__PURE__*/React.createElement(FormLabel, {
+    }, /*#__PURE__*/React$1.createElement(FormLabel, {
       id: controlId
-    }, label), /*#__PURE__*/React.createElement(ListArray, _extends({
+    }, label), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm
-    }, rest)), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
+    }, rest)), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Array');
 
@@ -20983,10 +21217,10 @@
   var Textarea = I18N(function (_ref) {
     var onChange = _ref.onChange,
       rest = _objectWithoutProperties(_ref, _excluded$7);
-    var handleChange = React.useCallback(function (event) {
+    var handleChange = React$1.useCallback(function (event) {
       onChange(event.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(MuiGenericInput, _extends({
+    return /*#__PURE__*/React$1.createElement(MuiGenericInput, _extends({
       className: "lf-control-textarea",
       component: "textarea",
       onChange: handleChange,
@@ -21005,11 +21239,11 @@
     var onChange = _ref.onChange,
       value = _ref.value,
       rest = _objectWithoutProperties(_ref, _excluded$6);
-    var handleChange = React.useCallback(function (e) {
+    var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       onChange(typeof value === 'string' ? value.split(',') : value);
     }, [onChange]);
-    var renderValue = React.useMemo(function () {
+    var renderValue = React$1.useMemo(function () {
       return function (selected) {
         var selectedOptions = (rest.options || []).filter(function (option) {
           return (selected || []).includes(option.value);
@@ -21019,7 +21253,7 @@
         return selectedOptions.join(', ');
       };
     }, [rest.options]);
-    return /*#__PURE__*/React.createElement(MuiGenericSelect, _extends({
+    return /*#__PURE__*/React$1.createElement(MuiGenericSelect, _extends({
       className: "lf-control-multiselect",
       component: "multiselect",
       onChange: handleChange,
@@ -21047,7 +21281,7 @@
   var InputNumber = I18N(function (_ref) {
     var onChange = _ref.onChange,
       rest = _objectWithoutProperties(_ref, _excluded$5);
-    var handleChange = React.useCallback(function (e) {
+    var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       var parsed;
       if (_isString(value)) {
@@ -21064,7 +21298,7 @@
         }
       }
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(MuiGenericInput, _extends({
+    return /*#__PURE__*/React$1.createElement(MuiGenericInput, _extends({
       className: "lf-control-input-number",
       component: "input-number",
       onChange: handleChange,
@@ -21099,17 +21333,17 @@
       onBlur = _ref.onBlur,
       required = _ref.required,
       rest = _objectWithoutProperties(_ref, _excluded$4);
-    var handleChange = React.useCallback(function (e) {
+    var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(FormControl, {
+    return /*#__PURE__*/React$1.createElement(FormControl, {
       "data-lf-field-name": name,
       className: "lf-control-radio-group",
       required: required,
       error: error != null
-    }, /*#__PURE__*/React.createElement(FormLabel, {
+    }, /*#__PURE__*/React$1.createElement(FormLabel, {
       id: "lf-control-radio-group-".concat(name)
-    }, label), /*#__PURE__*/React.createElement(RadioGroup, _extends({
+    }, label), /*#__PURE__*/React$1.createElement(RadioGroup, _extends({
       "aria-labelledby": "lf-control-radio-group-".concat(name),
       value: value,
       name: name,
@@ -21118,21 +21352,21 @@
       onChange: handleChange,
       onBlur: onBlur
     }, passRest(rest)), (options || []).map(function (option) {
-      return /*#__PURE__*/React.createElement(FormControlLabel, {
+      return /*#__PURE__*/React$1.createElement(FormControlLabel, {
         key: option.value,
         value: option.value,
         labelPlacement: labelPlacement !== null && labelPlacement !== void 0 ? labelPlacement : undefined,
-        control: /*#__PURE__*/React.createElement(Radio, {
+        control: /*#__PURE__*/React$1.createElement(Radio, {
           size: size !== null && size !== void 0 ? size : undefined,
           color: color !== null && color !== void 0 ? color : undefined
         }),
         label: option.label
       });
-    })), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, {
+    })), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, {
       sx: {
         marginLeft: '0px'
       }
-    }, hint), error && /*#__PURE__*/React.createElement(FormHelperText, {
+    }, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, {
       sx: {
         marginLeft: '0px'
       }
@@ -21169,11 +21403,11 @@
       _ref.onBlur;
       var required = _ref.required,
       rest = _objectWithoutProperties(_ref, _excluded$3);
-    var _useState = React.useState(_isArray(value) ? value : []),
+    var _useState = React$1.useState(_isArray(value) ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
       currentValue = _useState2[0],
       setCurrentValue = _useState2[1];
-    var handleChange = React.useCallback(function (e) {
+    var handleChange = React$1.useCallback(function (e) {
       var newValue;
       if (e.target.checked) {
         newValue = _toConsumableArray(new Set(currentValue).add(e.target.name));
@@ -21185,21 +21419,21 @@
       setCurrentValue(newValue);
       onChange(newValue);
     }, [currentValue, onChange]);
-    return /*#__PURE__*/React.createElement(FormControl, {
+    return /*#__PURE__*/React$1.createElement(FormControl, {
       "data-lf-field-name": name,
       className: "lf-control-radio-group",
       required: required,
       error: error != null
-    }, /*#__PURE__*/React.createElement(FormLabel, {
+    }, /*#__PURE__*/React$1.createElement(FormLabel, {
       id: "lf-control-radio-group-".concat(name)
-    }, label), /*#__PURE__*/React.createElement(FormGroup, {
+    }, label), /*#__PURE__*/React$1.createElement(FormGroup, {
       "aria-labelledby": "lf-control-radio-group-".concat(name)
     }, (options || []).map(function (option) {
-      return /*#__PURE__*/React.createElement(FormControlLabel, {
+      return /*#__PURE__*/React$1.createElement(FormControlLabel, {
         key: option.value,
         value: option.value,
         labelPlacement: labelPlacement !== null && labelPlacement !== void 0 ? labelPlacement : undefined,
-        control: /*#__PURE__*/React.createElement(Checkbox, _extends({
+        control: /*#__PURE__*/React$1.createElement(Checkbox, _extends({
           disabled: disabled || readOnly,
           size: size !== null && size !== void 0 ? size : undefined,
           color: color !== null && color !== void 0 ? color : undefined,
@@ -21209,11 +21443,11 @@
         }, passRest(rest))),
         label: option.label
       });
-    })), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, {
+    })), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, {
       sx: {
         marginLeft: '0px'
       }
-    }, hint), error && /*#__PURE__*/React.createElement(FormHelperText, {
+    }, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, {
       sx: {
         marginLeft: '0px'
       }
@@ -21247,23 +21481,23 @@
     if (!defaultKey && !_isEmpty(tabs)) {
       defaultKey = tabs[0].value;
     }
-    var _useState = React.useState(defaultKey),
+    var _useState = React$1.useState(defaultKey),
       _useState2 = _slicedToArray(_useState, 2),
       active = _useState2[0],
       setActive = _useState2[1];
-    var handleKey = React.useCallback(function (event, key) {
+    var handleKey = React$1.useCallback(function (event, key) {
       setActive(key);
       onChange(key);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-tabs",
       "data-lf-field-name": name
-    }, /*#__PURE__*/React.createElement(Box, {
+    }, /*#__PURE__*/React$1.createElement(Box, {
       sx: {
         borderBottom: 1,
         borderColor: 'divider'
       }
-    }, /*#__PURE__*/React.createElement(Tabs, _extends({
+    }, /*#__PURE__*/React$1.createElement(Tabs, _extends({
       value: active,
       onChange: handleKey,
       centered: centered !== null && centered !== void 0 ? centered : undefined,
@@ -21271,12 +21505,12 @@
       textColor: textColor !== null && textColor !== void 0 ? textColor : undefined,
       variant: fullWidth ? 'fullWidth' : 'standard'
     }, passRest(rest)), (tabs || []).map(function (tab) {
-      return /*#__PURE__*/React.createElement(Tab, {
+      return /*#__PURE__*/React$1.createElement(Tab, {
         key: tab.value,
         label: tab.label,
         value: tab.value
       });
-    }))), _isFunction(children) && /*#__PURE__*/React.createElement("div", {
+    }))), _isFunction(children) && /*#__PURE__*/React$1.createElement("div", {
       className: "tab-fields"
     }, children(active)));
   }, [], {
@@ -21304,8 +21538,8 @@
       rest = _objectWithoutProperties(_ref, _excluded$1);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React.createElement(Button, _extends({
-        startIcon: /*#__PURE__*/React.createElement("img", {
+      inner = /*#__PURE__*/React$1.createElement(Button, _extends({
+        startIcon: /*#__PURE__*/React$1.createElement("img", {
           className: "lf-icon",
           src: icon
         }),
@@ -21314,15 +21548,15 @@
         color: color !== null && color !== void 0 ? color : undefined
       }, rest), label);
     } else if (!_isEmpty(label) && _isEmpty(icon)) {
-      inner = /*#__PURE__*/React.createElement(Button, _extends({
+      inner = /*#__PURE__*/React$1.createElement(Button, _extends({
         variant: variant || 'contained',
         size: size !== null && size !== void 0 ? size : undefined,
         color: color !== null && color !== void 0 ? color : undefined
       }, rest), label);
     } else if (_isEmpty(label) && !_isEmpty(icon)) {
-      inner = /*#__PURE__*/React.createElement(Button, _extends({
+      inner = /*#__PURE__*/React$1.createElement(Button, _extends({
         className: "only-icon",
-        startIcon: /*#__PURE__*/React.createElement("img", {
+        startIcon: /*#__PURE__*/React$1.createElement("img", {
           className: "lf-icon",
           src: icon
         }),
@@ -21331,9 +21565,9 @@
         color: color !== null && color !== void 0 ? color : undefined
       }, rest));
     } else {
-      inner = /*#__PURE__*/React.createElement(React.Fragment, null);
+      inner = /*#__PURE__*/React$1.createElement(React$1.Fragment, null);
     }
-    return /*#__PURE__*/React.createElement(React.Fragment, null, (_isEmpty(hint) || !tooltip) && inner, !_isEmpty(hint) && /*#__PURE__*/React.createElement(FormHelperText, null, hint));
+    return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, (_isEmpty(hint) || !tooltip) && inner, !_isEmpty(hint) && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint));
   };
   var BiStateButton = I18N(MakeButton(MuiButton, {
     variant: 'contained'
@@ -21370,11 +21604,11 @@
   var LetfDotsWithFixedRight = function LetfDotsWithFixedRight(_ref) {
     var left = _ref.left,
       right = _ref.right;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-left-dots-with-fixed-right"
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "lf-left-dots"
-    }, left), /*#__PURE__*/React.createElement("div", {
+    }, left), /*#__PURE__*/React$1.createElement("div", {
       className: "lf-right-fixed"
     }, right));
   };
@@ -21389,23 +21623,23 @@
       height = _ref$height === void 0 ? 24 : _ref$height,
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React.createElement("svg", {
+    return /*#__PURE__*/React$1.createElement("svg", {
       width: "".concat(width, "px"),
       height: "".concat(height, "px"),
       viewBox: "-8 0 32 32",
       version: "1.1",
       xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React.createElement("g", {
+    }, /*#__PURE__*/React$1.createElement("g", {
       id: "Page-1",
       stroke: "none",
       "stroke-width": "1",
       fill: "none",
       fillRule: "evenodd"
-    }, /*#__PURE__*/React.createElement("g", {
+    }, /*#__PURE__*/React$1.createElement("g", {
       id: "Icon-Set",
       transform: "translate(-212.000000, -151.000000)",
       fill: color
-    }, /*#__PURE__*/React.createElement("path", {
+    }, /*#__PURE__*/React$1.createElement("path", {
       d: "M226,155 L226,175 C226,178.313 223.313,181 220,181 C216.687,181 214,178.313 214,175 L214,157 C214,154.791 215.791,153 218,153 C220.209,153 222,154.791 222,157 L222,175 C222,176.104 221.104,177 220,177 C218.896,177 218,176.104 218,175 L218,159 L216,159 L216,175 C216,177.209 217.791,179 220,179 C222.209,179 224,177.209 224,175 L224,157 C224,153.687 221.313,151 218,151 C214.687,151 212,153.687 212,157 L212,176 C212.493,179.945 215.921,183 220,183 C224.079,183 227.507,179.945 228,176 L228,155 L226,155",
       id: "attachment"
     }))));
@@ -21415,27 +21649,27 @@
     var file = _ref.file,
       _ref$onRemove = _ref.onRemove,
       onRemove = _ref$onRemove === void 0 ? function () {} : _ref$onRemove;
-    var handleClick = React.useCallback(function (e) {
+    var handleClick = React$1.useCallback(function (e) {
       e.preventDefault();
       onRemove(file);
     }, [onRemove, file]);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-upload-file-item"
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "lf-attachment-icon"
-    }, /*#__PURE__*/React.createElement(IconAttachment, {
+    }, /*#__PURE__*/React$1.createElement(IconAttachment, {
       width: 16,
       height: 16,
       color: "#666666"
-    })), /*#__PURE__*/React.createElement("div", {
+    })), /*#__PURE__*/React$1.createElement("div", {
       className: "lf-name"
-    }, file.name), /*#__PURE__*/React.createElement("div", {
+    }, file.name), /*#__PURE__*/React$1.createElement("div", {
       className: "lf-size"
-    }, formatBytes(file.size)), /*#__PURE__*/React.createElement("a", {
+    }, formatBytes(file.size)), /*#__PURE__*/React$1.createElement("a", {
       className: "lf-clear-button",
       href: "#",
       onClick: handleClick
-    }, /*#__PURE__*/React.createElement(CrossCirle, {
+    }, /*#__PURE__*/React$1.createElement(CrossCirle, {
       color: "#666666",
       width: 16,
       height: 16
@@ -21457,24 +21691,24 @@
       multiple = _ref.multiple,
       required = _ref.required,
       value = _ref.value;
-    var controlId = React.useId();
-    var _useState = React.useState(multiple && _isArray(value) || !multiple && _isObject(value) ? value : undefined),
+    var controlId = React$1.useId();
+    var _useState = React$1.useState(multiple && _isArray(value) || !multiple && _isObject(value) ? value : undefined),
       _useState2 = _slicedToArray(_useState, 2),
       currentFile = _useState2[0],
       setCurrentFile = _useState2[1];
-    var handleClear = React.useCallback(function (e) {
+    var handleClear = React$1.useCallback(function (e) {
       e.preventDefault();
       setCurrentFile(null);
       onChange(null);
     }, [onChange]);
-    var handleRemove = React.useCallback(function (fileToRemove) {
+    var handleRemove = React$1.useCallback(function (fileToRemove) {
       var newCurrentFile = currentFile.filter(function (file) {
         return file !== fileToRemove;
       });
       setCurrentFile(newCurrentFile);
       onChange(newCurrentFile);
     }, [currentFile, onChange]);
-    var handleChange = React.useCallback(function (e) {
+    var handleChange = React$1.useCallback(function (e) {
       if (e.target.files && e.target.files.length > 0) {
         if (multiple) {
           var newCurrentFile = currentFile ? _toConsumableArray(currentFile) : [];
@@ -21492,26 +21726,26 @@
         onChange(null);
       }
     }, [onChange, multiple, currentFile]);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-upload",
       "data-lf-field-name": name
-    }, label && /*#__PURE__*/React.createElement(FormLabel, {
+    }, label && /*#__PURE__*/React$1.createElement(FormLabel, {
       id: controlId,
       required: required
-    }, label), /*#__PURE__*/React.createElement("div", {
+    }, label), /*#__PURE__*/React$1.createElement("div", {
       className: "lf-upload-button-layout"
-    }, /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React$1.createElement("div", {
       className: "lf-upload-button-left"
-    }, /*#__PURE__*/React.createElement(Button, {
+    }, /*#__PURE__*/React$1.createElement(Button, {
       color: color !== null && color !== void 0 ? color : undefined,
       component: "label",
       variant: uploadButtonVariant !== null && uploadButtonVariant !== void 0 ? uploadButtonVariant : undefined,
       size: uploadButtonSize !== null && uploadButtonSize !== void 0 ? uploadButtonSize : undefined,
-      startIcon: uploadButtonIcon ? /*#__PURE__*/React.createElement("img", {
+      startIcon: uploadButtonIcon ? /*#__PURE__*/React$1.createElement("img", {
         className: "lf-icon",
         src: uploadButtonIcon
       }) : undefined
-    }, uploadButtonLabel || 'Upload', /*#__PURE__*/React.createElement("input", {
+    }, uploadButtonLabel || 'Upload', /*#__PURE__*/React$1.createElement("input", {
       type: "file",
       accept: accept,
       onChange: handleChange,
@@ -21527,27 +21761,27 @@
         whiteSpace: 'nowrap',
         width: 1
       }
-    }))), /*#__PURE__*/React.createElement("div", {
+    }))), /*#__PURE__*/React$1.createElement("div", {
       className: "lf-upload-button-right"
-    }, !multiple && currentFile && /*#__PURE__*/React.createElement(LetfDotsWithFixedRight, {
-      left: /*#__PURE__*/React.createElement("span", {
+    }, !multiple && currentFile && /*#__PURE__*/React$1.createElement(LetfDotsWithFixedRight, {
+      left: /*#__PURE__*/React$1.createElement("span", {
         className: "lf-upload-file-name"
       }, currentFile.name),
-      right: /*#__PURE__*/React.createElement(React.Fragment, null, "\xA0", /*#__PURE__*/React.createElement("span", {
+      right: /*#__PURE__*/React$1.createElement(React$1.Fragment, null, "\xA0", /*#__PURE__*/React$1.createElement("span", {
         className: "lf-size"
-      }, formatBytes(currentFile.size)), "\xA0", /*#__PURE__*/React.createElement("a", {
+      }, formatBytes(currentFile.size)), "\xA0", /*#__PURE__*/React$1.createElement("a", {
         href: "#",
         onClick: handleClear
-      }, /*#__PURE__*/React.createElement(CrossCirle, {
+      }, /*#__PURE__*/React$1.createElement(CrossCirle, {
         color: "#666666",
         yOffset: 2,
         width: 16,
         height: 16
       })))
-    }))), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error), multiple && currentFile && /*#__PURE__*/React.createElement("div", {
+    }))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error), multiple && currentFile && /*#__PURE__*/React$1.createElement("div", {
       className: "lf-upload-file-list"
     }, currentFile.map(function (file) {
-      return /*#__PURE__*/React.createElement(FileItem, {
+      return /*#__PURE__*/React$1.createElement(FileItem, {
         file: file,
         key: file.name,
         onRemove: handleRemove
@@ -21616,14 +21850,14 @@
       _ref$format = _ref.format,
       format = _ref$format === void 0 ? 'HH:mm:ss' : _ref$format,
       rest = _objectWithoutProperties(_ref, _excluded);
-    var controlId = React.useId();
+    var controlId = React$1.useId();
     var Component = forceMobile ? MobileTimePicker.MobileTimePicker : DesktopTimePicker.DesktopTimePicker;
     // default value
     var defaultValue;
     if (isValidTime(value)) {
       defaultValue = timeToDayJSTime(value);
     }
-    var handleChange = React.useCallback(function (d) {
+    var handleChange = React$1.useCallback(function (d) {
       onChange(d.format(format));
     }, [onChange, format]);
     // set time steps
@@ -21643,17 +21877,17 @@
     if (isValidTime(minTime)) {
       parsedMinTime = timeToDayJSTime(minTime);
     }
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
       className: className
-    }, /*#__PURE__*/React.createElement(FormControl, {
+    }, /*#__PURE__*/React$1.createElement(FormControl, {
       required: required,
       error: error != null,
       fullWidth: fullWidth,
       style: makeWidthStyle(fullWidth, width)
-    }, label && !floatingLabel && /*#__PURE__*/React.createElement(FormLabel, {
+    }, label && !floatingLabel && /*#__PURE__*/React$1.createElement(FormLabel, {
       htmlFor: controlId
-    }, label), /*#__PURE__*/React.createElement(Component, _extends({
+    }, label), /*#__PURE__*/React$1.createElement(Component, _extends({
       id: controlId,
       label: floatingLabel ? label : undefined,
       slotProps: {
@@ -21670,7 +21904,7 @@
       maxTime: parsedMaxTime,
       minTime: parsedMinTime,
       defaultValue: defaultValue
-    }, passRest(rest))), hint && !error && /*#__PURE__*/React.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React.createElement(FormHelperText, null, error)));
+    }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Time');
 
@@ -21681,12 +21915,12 @@
 
   var Hidden = function Hidden(_ref) {
     var name = _ref.name;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-hidden",
       style: {
         padding: '10px'
       }
-    }, "Hidden field: ", /*#__PURE__*/React.createElement("em", null, name));
+    }, "Hidden field: ", /*#__PURE__*/React$1.createElement("em", null, name));
   };
   lfLog('Loaded RSuite5.Hidden');
 
@@ -21717,21 +21951,21 @@
       _ref$onReset = _ref.onReset,
       onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset,
       custom = _ref.custom;
-    return /*#__PURE__*/React.createElement("form", {
+    return /*#__PURE__*/React$1.createElement("form", {
       className: classNames('lf-form lf-form-react-material-ui', _defineProperty$1({
         'lf-form-react-material-ui-plaintext': plaintext
       }, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name,
       onSubmit: onSubmit
-    }, children, !onlyFields && !hideToolbar && !plaintext && /*#__PURE__*/React.createElement(Stack$2, {
+    }, children, !onlyFields && !hideToolbar && !plaintext && /*#__PURE__*/React$1.createElement(Stack$2, {
       spacing: 2,
       direction: "row",
       className: "lf-buttons"
-    }, /*#__PURE__*/React.createElement(Button, {
+    }, /*#__PURE__*/React$1.createElement(Button, {
       onClick: onSubmit,
       variant: "contained",
       disabled: disabled || disabledSubmit
-    }, labelSubmit), /*#__PURE__*/React.createElement(Button, {
+    }, labelSubmit), /*#__PURE__*/React$1.createElement(Button, {
       onClick: onReset,
       variant: "outlined",
       disabled: disabled

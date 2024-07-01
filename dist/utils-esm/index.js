@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.9.0 - ESM */
+/* LetsForm Utils v0.9.1 - ESM */
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -12705,6 +12705,7 @@ var Zapier = /*#__PURE__*/function () {
               'Content-Type': 'application/json'
             }),
             body: JSON.stringify(data)
+            //mode: 'no-cors'
           });
         case 4:
           return _context.abrupt("return", _context.sent);
