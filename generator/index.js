@@ -21,6 +21,7 @@ import { collectTransformers } from './helpers/collect-transformers';
 import { errorToString } from './helpers/error-to-string';
 import { mergeComponents } from './helpers/merge-components';
 import { MissingComponent } from './helpers/missing-component';
+import { makeImportMap } from './helpers/make-import-map';
 import { traverseChildren } from './helpers/dsl';
 
 import './index.scss';
@@ -677,7 +678,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     demo = false,
     footer,
     disableOnSubmit = true,
-    resetAfterSubmit = true
+    resetAfterSubmit = true,
+    // define new components using an import map
+    importMap
   }) => {
     const { showErrors, connectors } = form;
     const [formName, setFormName] = useState(form.name ?? _.uniqueId('form_'));
@@ -696,7 +699,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [validationErrors, setValidationErrors] = useState();
     // store form fields, apply immediately transformers (collected from all fields)
     const [formFields, setFormFields] = useState(null);
-    const MergedComponents = mergeComponents(Fields, components);
+    const MergedComponents = mergeComponents(Fields, components, importMap);
 
     // it's the combination of the fields from the form schema and those specified
     // with the DSL, from now on every func should reference this (not form.fields)
@@ -705,7 +708,26 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       ...traverseChildren(children, { components: MergedComponents, framework })
     ];
 
-    // preload components of the form
+    // add import map if any
+    useEffect(
+      () => {
+        const scriptImportMap = document.createElement('script');
+        scriptImportMap.type = 'importmap';
+        const importMapCode = makeImportMap(importMap);
+        scriptImportMap.innerHTML = importMapCode;
+        document.body.appendChild(scriptImportMap);
+
+        console.log('------ ADDED IMPORT MAP')
+
+        return () => {
+          document.body.removeChild(scriptImportMap);
+        }
+      },
+      [importMap]
+    );
+
+
+    // preload components of the form and
     useEffect(
       () => {
         if (prealoadComponents) {

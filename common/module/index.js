@@ -6,9 +6,11 @@ const makeImportMap = ({ name, componentUrl }) => `{
   "imports": {
     "react": "https://esm.sh/react@18.2.0",
     "react-dom": "https://esm.sh/react-dom@18.2.0",
-    "${makeModuleName(name)}": "${componentUrl}"
+    "antd-rate": "https://esm.sh/antd?external=react,react-dom"
   }
 }`;
+
+//"${makeModuleName(name)}": "${componentUrl}"
 
 const makeInstallCode = ({
   eventsContainerId,
@@ -80,6 +82,8 @@ const ModuleComponent = ({
   const [isValid, setIsValid] = useState(false);
   const [currentProps, setCurrentProps] = useState(rest);
 
+
+
   console.log('Render EMS value:', rest)
 
   useEffect(
@@ -89,13 +93,6 @@ const ModuleComponent = ({
         setIsValid(false);
         return;
       }
-
-      const scriptImportMap = document.createElement('script');
-      scriptImportMap.type = 'importmap';
-      const importMapCode = makeImportMap({ name, componentUrl });
-
-      scriptImportMap.innerHTML = importMapCode;
-      document.body.appendChild(scriptImportMap);
 
       const scriptMountComponent = document.createElement('script');
       scriptMountComponent.type = 'module';
