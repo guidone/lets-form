@@ -1,5 +1,9 @@
 # LetsForm Designer Changelog
 
+## v0.8.23
+- removed module component
+- pre-select framework with url in designer
+
 ## v0.8.20
 - added DSL for form definition
 - connectors available for everyone
