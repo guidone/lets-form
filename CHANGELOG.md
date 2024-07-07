@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.9.4
+- fixed DSL
+
 ## v0.9.3
 - fixed Zapier connector
 - added DSL for form definition
