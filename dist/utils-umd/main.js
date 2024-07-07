@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.9.1 - UMD */
+/* LetsForm Utils v0.9.3 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -4782,7 +4782,7 @@
     return console.log('%cLF%c ' + s, 'background: #3498ff; color: #ffffff; padding: 2px; border-radius: 3px', '');
   };
   var lfError = function lfError(s, e) {
-    return console.log('%cLF%c Error: ' + s, 'background: #E44D2E; color: #ffffff; padding: 2px; border-radius: 3px', '', e);
+    return console.log('%cLF%c Error: ' + s, 'background: #E44D2E; color: #ffffff; padding: 2px; border-radius: 3px', '', '');
   };
 
   /** Used to stand-in for `undefined` hash values. */

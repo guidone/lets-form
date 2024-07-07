@@ -1,4 +1,4 @@
-/* LetsForm react-material-ui v0.9.1 - UMD */
+/* LetsForm react-material-ui v0.9.3 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('react-hook-form'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', 'react-hook-form', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack'], factory) :
@@ -8744,7 +8744,7 @@
     return console.log('%cLF%c ' + s, 'background: #3498ff; color: #ffffff; padding: 2px; border-radius: 3px', '');
   };
   var lfError = function lfError(s, e) {
-    return console.log('%cLF%c Error: ' + s, 'background: #E44D2E; color: #ffffff; padding: 2px; border-radius: 3px', '', e);
+    return console.log('%cLF%c Error: ' + s, 'background: #E44D2E; color: #ffffff; padding: 2px; border-radius: 3px', '', e !== null && e !== void 0 ? e : '');
   };
 
   var toggle = {
@@ -17618,11 +17618,11 @@
     default: Divider
   });
 
-  var _excluded$i = ["name", "view"];
+  var _excluded$j = ["name", "view"];
   var ReactView = function ReactView(_ref) {
     var name = _ref.name,
       view = _ref.view,
-      rest = _objectWithoutProperties(_ref, _excluded$i);
+      rest = _objectWithoutProperties(_ref, _excluded$j);
     var View = view;
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-react-view",
@@ -18096,7 +18096,7 @@
   var css_248z$8 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$8);
 
-  var _excluded$h = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$i = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -18122,7 +18122,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$h);
+      rest = _objectWithoutProperties(_ref, _excluded$i);
     var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -18485,7 +18485,6 @@
     }
   };
 
-  //export const collectTransformers = (form, onJavascriptError) => {
   var collectTransformers = function collectTransformers(fields, formScript, onJavascriptError) {
     var transformers = {};
 
@@ -18502,7 +18501,6 @@
 
     // compile transformer of the form
     try {
-      //if (!_.isEmpty(form.transformer) || !_.isEmpty(form.script)) {
       if (formScript) {
         transformers.onRender = [makeTransformer(formScript, fieldList)];
       }
@@ -18632,10 +18630,6 @@
   var LfStep = function LfStep() {
     return /*#__PURE__*/React.createElement(React.Fragment, null);
   };
-
-  // TODO import <LfTab> properties
-  // TODO import <LfSteps> properties
-
   var elementToString = function elementToString(el) {
     return "type: ".concat(typeToString(el.type)).concat(cleanupProperties(el.props));
   };
@@ -18761,27 +18755,48 @@
       } else if (elementOf(element, LfGroup)) {
         return _objectSpread2(_objectSpread2({}, _.omit(element.props, 'children')), {}, {
           component: 'group',
-          fields: traverseChildren(element.props.children)
+          fields: traverseChildren(element.props.children, {
+            components: components,
+            framework: framework
+          })
         });
       } else if (elementOf(element, LfColumns) && Array.isArray(element.props.children) && element.props.children.length == 2 && assertElementsOf(element.props.children, LfColumn)) {
         return _objectSpread2(_objectSpread2({
           component: 'two-columns'
         }, _.omit(element.props, 'children')), {}, {
-          leftFields: traverseChildren(element.props.children[0].props.children),
-          rightFields: traverseChildren(element.props.children[1].props.children)
+          leftFields: traverseChildren(element.props.children[0].props.children, {
+            components: components,
+            framework: framework
+          }),
+          rightFields: traverseChildren(element.props.children[1].props.children, {
+            components: components,
+            framework: framework
+          })
         });
       } else if (element.type === LfColumns && Array.isArray(element.props.children) && element.props.children.length == 3 && assertElementsOf(element.props.children, [LfColumn])) {
         return _objectSpread2(_objectSpread2({
           component: 'three-columns'
         }, _.omit(element.props, 'children')), {}, {
-          leftFields: traverseChildren(element.props.children[0].props.children),
-          centerFields: traverseChildren(element.props.children[1].props.children),
-          rightFields: traverseChildren(element.props.children[2].props.children)
+          leftFields: traverseChildren(element.props.children[0].props.children, {
+            components: components,
+            framework: framework
+          }),
+          centerFields: traverseChildren(element.props.children[1].props.children, {
+            components: components,
+            framework: framework
+          }),
+          rightFields: traverseChildren(element.props.children[2].props.children, {
+            components: components,
+            framework: framework
+          })
         });
       } else if (element.type === LfArray && assertElementsOf(element.props.children, [LfField, LfGroup, LfColumns])) {
         return _objectSpread2(_objectSpread2({}, _.omit(element.props, 'children')), {}, {
           component: 'array',
-          fields: traverseChildren(element.props.children)
+          fields: traverseChildren(element.props.children, {
+            components: components,
+            framework: framework
+          })
         });
       } else if (element.type === LfTabs && assertElementsOf(element.props.children, [LfTab]) && assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray])) {
         return _objectSpread2(_objectSpread2({
@@ -18792,7 +18807,10 @@
             return _.omit(el.props, 'children');
           }),
           fields: element.props.children.reduce(function (acc, tabElement) {
-            return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, tabElement.props.value, traverseChildren(tabElement.props.children)));
+            return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, tabElement.props.value, traverseChildren(tabElement.props.children, {
+              components: components,
+              framework: framework
+            })));
           }, {})
         });
       } else if (element.type === LfSteps && assertElementsOf(element.props.children, [LfStep]) && assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray])) {
@@ -18804,7 +18822,10 @@
             return _.omit(el.props, 'children');
           }),
           fields: element.props.children.reduce(function (acc, tabElement) {
-            return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, tabElement.props.value, traverseChildren(tabElement.props.children)));
+            return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, tabElement.props.value, traverseChildren(tabElement.props.children, {
+              components: components,
+              framework: framework
+            })));
           }, {})
         });
       } else {
@@ -18823,6 +18844,7 @@
   var css_248z$5 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
   styleInject(css_248z$5);
 
+  var _excluded$h = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableOnSubmit", "resetAfterSubmit"];
   var DEFAULT_FORM = {
     version: 1,
     fields: []
@@ -19368,7 +19390,7 @@
       return prependView ? [prependView].concat(_toConsumableArray(renderedFields)) : renderedFields;
     };
     var FormGenerator = /*#__PURE__*/React$1.memo(function (_ref6) {
-      var _form$name, _form$fields;
+      var _form$name, _form$fields, _form$labelSubmit, _form$labelCancel;
       var framework = _ref6.framework,
         _ref6$form = _ref6.form,
         form = _ref6$form === void 0 ? DEFAULT_FORM : _ref6$form,
@@ -19415,6 +19437,8 @@
         components = _ref6.components,
         className = _ref6.className,
         hideCancel = _ref6.hideCancel,
+        labelCancel = _ref6.labelCancel,
+        labelSubmit = _ref6.labelSubmit,
         hideSubmit = _ref6.hideSubmit,
         _ref6$demo = _ref6.demo,
         demo = _ref6$demo === void 0 ? false : _ref6$demo,
@@ -19422,7 +19446,8 @@
         _ref6$disableOnSubmit = _ref6.disableOnSubmit,
         disableOnSubmit = _ref6$disableOnSubmit === void 0 ? true : _ref6$disableOnSubmit,
         _ref6$resetAfterSubmi = _ref6.resetAfterSubmit,
-        resetAfterSubmit = _ref6$resetAfterSubmi === void 0 ? true : _ref6$resetAfterSubmi;
+        resetAfterSubmit = _ref6$resetAfterSubmi === void 0 ? true : _ref6$resetAfterSubmi,
+        rest = _objectWithoutProperties(_ref6, _excluded$h);
       var showErrors = form.showErrors,
         connectors = form.connectors;
       var _useState = React$1.useState((_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : _uniqueId('form_')),
@@ -19442,7 +19467,6 @@
         _useState8 = _slicedToArray(_useState7, 2),
         stateDisabled = _useState8[0],
         setDisabled = _useState8[1];
-      //const [traversedFields, setTraversedFields] = useState([]);
       var _useState9 = React$1.useState(1),
         _useState10 = _slicedToArray(_useState9, 2),
         version = _useState10[0],
@@ -19476,6 +19500,10 @@
         components: MergedComponents,
         framework: framework
       })));
+      if (!framework) {
+        lfError('missing "framework" prop');
+        return;
+      }
 
       // preload components of the form
       React$1.useEffect(function () {
@@ -19948,12 +19976,12 @@
         plaintext: plaintext,
         locale: locale
       }, _omit(form, 'id', 'fields', 'version'), {
-        labelSubmit: i18n(form.labelSubmit, locale) || 'Submit',
-        labelCancel: i18n(form.labelCancel, locale) || 'Cancel',
+        labelSubmit: i18n((_form$labelSubmit = form.labelSubmit) !== null && _form$labelSubmit !== void 0 ? _form$labelSubmit : labelSubmit, locale) || 'Submit',
+        labelCancel: i18n((_form$labelCancel = form.labelCancel) !== null && _form$labelCancel !== void 0 ? _form$labelCancel : labelCancel, locale) || 'Reset',
         hideCancel: hideCancel,
         hideSubmit: hideSubmit,
         custom: custom
-      }), renderFields({
+      }, rest), renderFields({
         Wrapper: Wrapper,
         GroupWrapper: GroupWrapper,
         PlaceholderWrapper: PlaceholderWrapper,
