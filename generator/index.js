@@ -636,6 +636,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
   }
 
   const FormGenerator = React.memo(({
+    // UI framework to use, mandatory
     framework,
     form = DEFAULT_FORM, // use const, or it will refresh endlessly
     onChange = () => {},
@@ -671,13 +672,16 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     className,
     // hide cancel button
     hideCancel,
+    labelCancel,
     // hide submit button
+    labelSubmit,
     hideSubmit,
     // show demo flag
     demo = false,
     footer,
     disableOnSubmit = true,
-    resetAfterSubmit = true
+    resetAfterSubmit = true,
+    ...rest
   }) => {
     const { showErrors, connectors } = form;
     const [formName, setFormName] = useState(form.name ?? _.uniqueId('form_'));
@@ -704,6 +708,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       ...(form.fields ?? []),
       ...traverseChildren(children, { components: MergedComponents, framework })
     ];
+
+    if (!framework) {
+      lfError('missing "framework" prop');
+      return;
+    };
 
     // preload components of the form
     useEffect(
@@ -996,11 +1005,12 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               plaintext={plaintext}
               locale={locale}
               {..._.omit(form, 'id', 'fields', 'version')}
-              labelSubmit={i18n(form.labelSubmit, locale) || 'Submit'}
-              labelCancel={i18n(form.labelCancel, locale) || 'Cancel'}
+              labelSubmit={i18n(form.labelSubmit ?? labelSubmit, locale) || 'Submit'}
+              labelCancel={i18n(form.labelCancel ?? labelCancel, locale) || 'Reset'}
               hideCancel={hideCancel}
               hideSubmit={hideSubmit}
               custom={custom}
+              {...rest}
             >
               {renderFields({
                 Wrapper,

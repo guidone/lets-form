@@ -138,19 +138,18 @@ export const traverseChildren = (children, { components, framework } = {}) => {
         return {
           ..._.omit(element.props, 'children'),
           component: 'group',
-          fields: traverseChildren(element.props.children)
+          fields: traverseChildren(element.props.children, { components, framework })
         };
       } else if (elementOf(element, LfColumns) &&
         Array.isArray(element.props.children) &&
         element.props.children.length == 2 &&
         assertElementsOf(element.props.children, LfColumn)
-
       ) {
         return {
           component: 'two-columns',
           ..._.omit(element.props, 'children'),
-          leftFields: traverseChildren(element.props.children[0].props.children),
-          rightFields: traverseChildren(element.props.children[1].props.children)
+          leftFields: traverseChildren(element.props.children[0].props.children, { components, framework }),
+          rightFields: traverseChildren(element.props.children[1].props.children, { components, framework })
         }
       } else if (element.type === LfColumns &&
         Array.isArray(element.props.children) &&
@@ -160,9 +159,9 @@ export const traverseChildren = (children, { components, framework } = {}) => {
         return {
           component: 'three-columns',
           ..._.omit(element.props, 'children'),
-          leftFields: traverseChildren(element.props.children[0].props.children),
-          centerFields: traverseChildren(element.props.children[1].props.children),
-          rightFields: traverseChildren(element.props.children[2].props.children)
+          leftFields: traverseChildren(element.props.children[0].props.children, { components, framework }),
+          centerFields: traverseChildren(element.props.children[1].props.children, { components, framework }),
+          rightFields: traverseChildren(element.props.children[2].props.children, { components, framework })
         };
       } else if (element.type === LfArray &&
         assertElementsOf(element.props.children, [LfField, LfGroup, LfColumns])
@@ -170,7 +169,7 @@ export const traverseChildren = (children, { components, framework } = {}) => {
         return {
           ..._.omit(element.props, 'children'),
           component: 'array',
-          fields: traverseChildren(element.props.children)
+          fields: traverseChildren(element.props.children, { components, framework })
         };
       } else if (element.type === LfTabs &&
         assertElementsOf(element.props.children, [LfTab]) &&
@@ -185,7 +184,7 @@ export const traverseChildren = (children, { components, framework } = {}) => {
             .reduce(
               (acc, tabElement) => ({
                 ...acc,
-                [tabElement.props.value]: traverseChildren(tabElement.props.children)
+                [tabElement.props.value]: traverseChildren(tabElement.props.children, { components, framework })
               }),
               {}
             )
@@ -203,7 +202,7 @@ export const traverseChildren = (children, { components, framework } = {}) => {
             .reduce(
               (acc, tabElement) => ({
                 ...acc,
-                [tabElement.props.value]: traverseChildren(tabElement.props.children)
+                [tabElement.props.value]: traverseChildren(tabElement.props.children, { components, framework })
               }),
               {}
             )

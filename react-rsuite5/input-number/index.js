@@ -12,6 +12,7 @@ import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 
 import './index.scss';
+import { passRest } from 'lets-form/react-rsuite5';
 
 const hasDecimals = f => _.isString(f) && (f.includes(',') || f.includes('.'));
 
@@ -38,7 +39,8 @@ const InputNumberRSuite5 = I18N(
     step = 1,
     onBlur,
     inside = false,
-    allowClear
+    allowClear,
+    ...rest
   }) => {
     const [currentValue, setCurrentValue] = useState(value ?? null);
     const handleChange = useCallback(
@@ -95,7 +97,6 @@ const InputNumberRSuite5 = I18N(
             accepter={InputNumber}
             value={currentValue}
             onChange={handleChange}
-            onClear={handleClear}
             onBlur={onBlur}
             disabled={disabled}
             size={size}
@@ -112,7 +113,7 @@ const InputNumberRSuite5 = I18N(
             }
             placeholder={placeholder}
             readOnly={readOnly}
-            errorMessage={_.isString(error) ? error : undefined }
+            {...passRest(rest)}
           />
         </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
