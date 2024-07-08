@@ -1,6 +1,10 @@
 # LetsForm Designer Changelog
 
 ## v0.8.23
+- updated PostHog library
+- fixed export to LetsForm DSL
+
+## v0.8.23
 - removed module component
 - pre-select framework with url in designer
 
