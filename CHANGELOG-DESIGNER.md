@@ -1,6 +1,6 @@
 # LetsForm Designer Changelog
 
-## v0.8.23
+## v0.8.24
 - updated PostHog library
 - fixed export to LetsForm DSL
 
