@@ -17,7 +17,7 @@ const FormRsuite5 = ({
   labelSubmit = 'Submit',
   labelCancel = 'Cancel',
   hideCancel = false,
-  hideSumbut = false,
+  hideSubmit = false,
   readOnly = false,
   onlyFields = false,
   hideToolbar = false,
@@ -53,7 +53,7 @@ const FormRsuite5 = ({
       </div>
       {!hideToolbar && (
         <ButtonToolbar className="lf-buttons">
-          {!hideSumbut && (
+          {!hideSubmit && (
             <Button
               appearance="primary"
               onClick={onSubmit}
