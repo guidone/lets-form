@@ -1,5 +1,5 @@
 /* eslint-disable no-new-func */
-import React, { useCallback, useState, useEffect, Suspense } from 'react';
+import React, { useCallback, useState, useEffect, Suspense, forwardRef, useImperativeHandle } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -635,7 +635,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     return prependView ? [prependView, ...renderedFields] : renderedFields;
   }
 
-  const FormGenerator = React.memo(({
+  const BaseFormGeneratorWithRef = ({
     // UI framework to use, mandatory
     framework,
     form = DEFAULT_FORM, // use const, or it will refresh endlessly
@@ -682,7 +682,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     disableOnSubmit = true,
     resetAfterSubmit = true,
     ...rest
-  }) => {
+  }, ref) => {
     const { showErrors, connectors } = form;
     const [formName, setFormName] = useState(form.name ?? _.uniqueId('form_'));
     useStylesheet(formName, form.css)
@@ -691,17 +691,21 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [stateDisabled, setDisabled] = useState(false);
     const [version, setVersion] = useState(1);
 
-    const disabled = stateDisabled || disabledProp;
 
-    const { handleSubmit, formState: { errors, isValid }, reset, control, getValues } = useForm({
+
+    const { handleSubmit, formState: { errors, isValid }, reset, control, getValues, trigger } = useForm({
       defaultValues,
       mode: form.validationMode
     });
+    useImperativeHandle(ref, () => ({
+      validate: async () => trigger()
+    }));
     const [validationErrors, setValidationErrors] = useState();
     // store form fields, apply immediately transformers (collected from all fields)
     const [formFields, setFormFields] = useState(null);
     const MergedComponents = mergeComponents(Fields, components);
 
+    const disabled = stateDisabled || disabledProp;
     // it's the combination of the fields from the form schema and those specified
     // with the DSL, from now on every func should reference this (not form.fields)
     const actualFields = [
@@ -1049,7 +1053,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         </div>
       </FormContext.Provider>
     );
-  }, function (prevProps, nextProps) {
+  };
+
+  const BaseFormGenerator = forwardRef(BaseFormGeneratorWithRef);
+
+  const FormGenerator = React.memo(BaseFormGenerator, function (prevProps, nextProps) {
     if (DEBUG_RENDER) {
       console.log(`[LetsForm] Form generator ${nextProps.form?.name ? '(' + nextProps.form?.name + `)` : ''} re-render: `
         + ' framework=' + (prevProps.framework === nextProps.framework)
@@ -1075,7 +1083,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     return isEqual;
   });
 
-  FormGenerator.displayName = 'FormGenerator';
+  FormGenerator.displayName = 'LetsForm';
   return FormGenerator;
 };
 

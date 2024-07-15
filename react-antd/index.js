@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef, useImperativeHandle, useRef } from 'react';
 
 import { GenerateGenerator } from '../generator';
 import { lazyPreload as lazy } from '../helpers/lazy-preload';
@@ -95,9 +95,14 @@ const Forms = {
 };
 
 const FormGenerator = GenerateGenerator({ Fields, Forms });
-const LetsForm = ({ framework, children, ...rest}) => (
-  <FormGenerator framework="react-antd" {...rest}>{children}</FormGenerator>
-);
+const LetsForm = forwardRef(({ framework, children, ...rest}, ref) => {
+  const refForm = useRef();
+  useImperativeHandle(ref, () => ({
+    validate: () => refForm.current.validate()
+  }));
+  return <FormGenerator ref={refForm} framework="react-antd" {...rest}>{children}</FormGenerator>;
+});
+
 export default LetsForm;
 export * from '../helpers';
 export * from '../costants';
