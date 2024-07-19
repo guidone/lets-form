@@ -681,6 +681,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     footer,
     disableOnSubmit = true,
     resetAfterSubmit = true,
+    context: formContext = {},
     ...rest
   }, ref) => {
     const { showErrors, connectors } = form;
@@ -712,6 +713,13 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       ...(form.fields ?? []),
       ...traverseChildren(children, { components: MergedComponents, framework })
     ];
+
+    const mergedFormContext = {
+      locales: form.locales,
+      locale: locale,
+      // ..more
+      ...formContext
+    };
 
     if (!framework) {
       lfError('missing "framework" prop');
@@ -772,7 +780,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               newFields,
               newTransformers.onRender,
               defaultValues,
-              onJavascriptError
+              onJavascriptError,
+              mergedFormContext
             )) {
               newFields = newFormFields;
               setFormFields(newFormFields);
@@ -790,7 +799,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               newFields,
               newTransformers.onChange[onChangeFields[idx]],
               defaultValues,
-              onJavascriptError
+              onJavascriptError,
+              mergedFormContext
             )) {
               newFields = newFormFields;
               setFormFields(newFormFields);
@@ -908,7 +918,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             newFields,
             transformers.onRender,
             values,
-            onJavascriptError
+            onJavascriptError,
+            mergedFormContext
           )) {
             newFields = f;
             if (f !== formFields) {
@@ -925,7 +936,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             newFields,
             transformers.onChange[fieldName],
             values,
-            onJavascriptError
+            onJavascriptError,
+            mergedFormContext
           )) {
             newFields = f;
             if (f !== formFields) {
@@ -979,11 +991,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     }
 
     return (
-      <FormContext.Provider value={{
-        locales: form.locales,
-        locale: locale
-        // ..more
-      }}>
+      <FormContext.Provider value={mergedFormContext}>
         <div
           className={classNames('lf-lets-form', { 'lf-lets-form-edit-mode': demo }, className)}
         >

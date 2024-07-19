@@ -21,7 +21,7 @@ export const makeTransformer = (str, fieldList) => {
     }
     const tx = new AsyncGeneratorFunction(
       'api',
-      `const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue } = api;\n` +
+      `const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue, context, toggle } = api;\n` +
       spreadVars +
       yieldedStr +
       '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
