@@ -83,4 +83,5 @@ const LetsForm = forwardRef(({ framework, children, ...rest}, ref) => {
 export default LetsForm;
 export * from '../helpers';
 export * from '../costants';
+export * from '../generator/helpers/dsl';
 export { Fields, Forms };
