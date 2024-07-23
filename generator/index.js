@@ -681,7 +681,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     footer,
     disableOnSubmit = true,
     resetAfterSubmit = true,
-    context: formContext = {},
+    context: formContext,
     ...rest
   }, ref) => {
     const { showErrors, connectors } = form;
@@ -691,8 +691,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [preloading, setPreloading] = useState(prealoadComponents);
     const [stateDisabled, setDisabled] = useState(false);
     const [version, setVersion] = useState(1);
-
-
+    const [currentContext, setCurrentContext] = useState({
+      locales: form.locales,
+      locale: locale,
+      ...formContext
+    });
 
     const { handleSubmit, formState: { errors, isValid }, reset, control, getValues, trigger } = useForm({
       defaultValues,
@@ -714,17 +717,20 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       ...traverseChildren(children, { components: MergedComponents, framework })
     ];
 
-    const mergedFormContext = {
-      locales: form.locales,
-      locale: locale,
-      // ..more
-      ...formContext
-    };
-
     if (!framework) {
       lfError('missing "framework" prop');
       return;
     };
+
+    // listen to changes of context, re-render just in case
+    useEffect(
+      () => {
+        if (formContext) {
+          setCurrentContext(formContext);
+        }
+      },
+      [formContext]
+    );
 
     // preload components of the form
     useEffect(
@@ -781,7 +787,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               newTransformers.onRender,
               defaultValues,
               onJavascriptError,
-              mergedFormContext
+              currentContext
             )) {
               newFields = newFormFields;
               setFormFields(newFormFields);
@@ -800,7 +806,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               newTransformers.onChange[onChangeFields[idx]],
               defaultValues,
               onJavascriptError,
-              mergedFormContext
+              currentContext
             )) {
               newFields = newFormFields;
               setFormFields(newFormFields);
@@ -919,7 +925,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             transformers.onRender,
             values,
             onJavascriptError,
-            mergedFormContext
+            currentContext
           )) {
             newFields = f;
             if (f !== formFields) {
@@ -937,7 +943,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             transformers.onChange[fieldName],
             values,
             onJavascriptError,
-            mergedFormContext
+            currentContext
           )) {
             newFields = f;
             if (f !== formFields) {
@@ -991,7 +997,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     }
 
     return (
-      <FormContext.Provider value={mergedFormContext}>
+      <FormContext.Provider value={currentContext}>
         <div
           className={classNames('lf-lets-form', { 'lf-lets-form-edit-mode': demo }, className)}
         >
@@ -1077,6 +1083,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         + ' disabled=' + (prevProps.disabled === nextProps.disabled)
         + ' children=' + (prevProps.children === nextProps.children)
         + ' custom=' + (prevProps.custom === nextProps.custom)
+        + ' context=' + (prevProps.context === nextProps.context)
       );
     }
 
@@ -1088,8 +1095,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       && prevProps.plaintext === nextProps.plaintext
       && prevProps.disabled === nextProps.disabled
       && prevProps.children === nextProps.children
-      && prevProps.custom === nextProps.custom;
-    console.log('Is re-rendering?', !isEqual);
+      && prevProps.custom === nextProps.custom
+      && prevProps.context === nextProps.context;
+    console.log(`Is re-rendering? ${!isEqual}`);
     return isEqual;
   });
 
