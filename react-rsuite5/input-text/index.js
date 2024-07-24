@@ -31,7 +31,7 @@ const TextInput = I18N(
     postfix,
     onChange,
     onBlur,
-    fullWidth,
+    fullWidth = true,
     width,
     autocomplete,
     inputMode,
@@ -57,6 +57,10 @@ const TextInput = I18N(
           size={size}
           placeholder={placeholder}
           readOnly={readOnly}
+          style={makeWidthStyle(fullWidth, width)}
+          className={classNames({
+            'lf-full-width': fullWidth || width != null
+          })}
           {...passRest(rest)}
         />
       </RSuite5FieldControl>
@@ -67,12 +71,12 @@ const TextInput = I18N(
       <Form.Group
         className={classNames(
           'lf-control-input-text', {
-            [`lf-size-${size}`]: size != null,
-            'lf-full-width': fullWidth || width != null
+            [`lf-size-${size}`]: size != null
+
           }
         )}
         data-lf-field-name={name}
-        style={makeWidthStyle(fullWidth, width)}
+
       >
         {label && <Form.ControlLabel>
           {label}

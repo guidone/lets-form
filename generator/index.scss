@@ -32,6 +32,7 @@
   --lf-border-color: #e5e5ea;
   --lf-group-padding: 15px;
   --lf-group-header: 15px;
+  --lf-buttons-margin: 32px;
 
   &.lf-form-buttons-align-center {
     .lf-buttons {
@@ -50,7 +51,7 @@
   }
 
   .lf-buttons {
-    margin-top: var(--lf-field-margin);
+    margin-top: var(--lf-buttons-margin);
   }
 
   // as a general rule, components have a top margin, unless they are the first of their container

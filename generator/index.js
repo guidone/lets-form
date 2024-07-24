@@ -1,5 +1,5 @@
 /* eslint-disable no-new-func */
-import React, { useCallback, useState, useEffect, Suspense } from 'react';
+import React, { useCallback, useState, useEffect, Suspense, forwardRef, useImperativeHandle } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -635,7 +635,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     return prependView ? [prependView, ...renderedFields] : renderedFields;
   }
 
-  const FormGenerator = React.memo(({
+  const BaseFormGeneratorWithRef = ({
     // UI framework to use, mandatory
     framework,
     form = DEFAULT_FORM, // use const, or it will refresh endlessly
@@ -681,8 +681,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     footer,
     disableOnSubmit = true,
     resetAfterSubmit = true,
+    context: formContext,
     ...rest
-  }) => {
+  }, ref) => {
     const { showErrors, connectors } = form;
     const [formName, setFormName] = useState(form.name ?? _.uniqueId('form_'));
     useStylesheet(formName, form.css)
@@ -690,18 +691,25 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [preloading, setPreloading] = useState(prealoadComponents);
     const [stateDisabled, setDisabled] = useState(false);
     const [version, setVersion] = useState(1);
+    const [currentContext, setCurrentContext] = useState({
+      locales: form.locales,
+      locale: locale,
+      ...formContext
+    });
 
-    const disabled = stateDisabled || disabledProp;
-
-    const { handleSubmit, formState: { errors, isValid }, reset, control, getValues } = useForm({
+    const { handleSubmit, formState: { errors, isValid }, reset, control, getValues, trigger } = useForm({
       defaultValues,
       mode: form.validationMode
     });
+    useImperativeHandle(ref, () => ({
+      validate: async () => trigger()
+    }));
     const [validationErrors, setValidationErrors] = useState();
     // store form fields, apply immediately transformers (collected from all fields)
     const [formFields, setFormFields] = useState(null);
     const MergedComponents = mergeComponents(Fields, components);
 
+    const disabled = stateDisabled || disabledProp;
     // it's the combination of the fields from the form schema and those specified
     // with the DSL, from now on every func should reference this (not form.fields)
     const actualFields = [
@@ -713,6 +721,16 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       lfError('missing "framework" prop');
       return;
     };
+
+    // listen to changes of context, re-render just in case
+    useEffect(
+      () => {
+        if (formContext) {
+          setCurrentContext(formContext);
+        }
+      },
+      [formContext]
+    );
 
     // preload components of the form
     useEffect(
@@ -768,7 +786,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               newFields,
               newTransformers.onRender,
               defaultValues,
-              onJavascriptError
+              onJavascriptError,
+              currentContext
             )) {
               newFields = newFormFields;
               setFormFields(newFormFields);
@@ -786,7 +805,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               newFields,
               newTransformers.onChange[onChangeFields[idx]],
               defaultValues,
-              onJavascriptError
+              onJavascriptError,
+              currentContext
             )) {
               newFields = newFormFields;
               setFormFields(newFormFields);
@@ -904,7 +924,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             newFields,
             transformers.onRender,
             values,
-            onJavascriptError
+            onJavascriptError,
+            currentContext
           )) {
             newFields = f;
             if (f !== formFields) {
@@ -921,7 +942,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             newFields,
             transformers.onChange[fieldName],
             values,
-            onJavascriptError
+            onJavascriptError,
+            currentContext
           )) {
             newFields = f;
             if (f !== formFields) {
@@ -975,11 +997,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     }
 
     return (
-      <FormContext.Provider value={{
-        locales: form.locales,
-        locale: locale
-        // ..more
-      }}>
+      <FormContext.Provider value={currentContext}>
         <div
           className={classNames('lf-lets-form', { 'lf-lets-form-edit-mode': demo }, className)}
         >
@@ -1049,7 +1067,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         </div>
       </FormContext.Provider>
     );
-  }, function (prevProps, nextProps) {
+  };
+
+  const BaseFormGenerator = forwardRef(BaseFormGeneratorWithRef);
+
+  const FormGenerator = React.memo(BaseFormGenerator, function (prevProps, nextProps) {
     if (DEBUG_RENDER) {
       console.log(`[LetsForm] Form generator ${nextProps.form?.name ? '(' + nextProps.form?.name + `)` : ''} re-render: `
         + ' framework=' + (prevProps.framework === nextProps.framework)
@@ -1060,6 +1082,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext)
         + ' disabled=' + (prevProps.disabled === nextProps.disabled)
         + ' children=' + (prevProps.children === nextProps.children)
+        + ' custom=' + (prevProps.custom === nextProps.custom)
+        + ' context=' + (prevProps.context === nextProps.context)
       );
     }
 
@@ -1070,12 +1094,14 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       && prevProps.locale === nextProps.locale
       && prevProps.plaintext === nextProps.plaintext
       && prevProps.disabled === nextProps.disabled
-      && prevProps.children === nextProps.children;
-    console.log('Is re-rendering?', !isEqual);
+      && prevProps.children === nextProps.children
+      && prevProps.custom === nextProps.custom
+      && prevProps.context === nextProps.context;
+    console.log(`Is re-rendering? ${!isEqual}`);
     return isEqual;
   });
 
-  FormGenerator.displayName = 'FormGenerator';
+  FormGenerator.displayName = 'LetsForm';
   return FormGenerator;
 };
 

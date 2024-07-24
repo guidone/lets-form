@@ -21,7 +21,7 @@ const translateValidationKey = str => {
   }
 };
 
-const ApiFactory = function(formName, framework, formFields, currenValues) {
+const ApiFactory = function(formName, framework, formFields, currenValues, formContext) {
   let fields = formFields;
 
   const fieldExists = name => {
@@ -32,9 +32,13 @@ const ApiFactory = function(formName, framework, formFields, currenValues) {
     }
   }
 
-  return {
+  const methods = {
     fields: () => {
       return fields;
+    },
+
+    context: key => {
+      return formContext ? formContext[key] : null
     },
 
     element: name => {
@@ -76,6 +80,15 @@ const ApiFactory = function(formName, framework, formFields, currenValues) {
           Object.keys(obj).forEach(key => element.style[key] = obj[key]);
         }
       }
+    },
+
+    toggle: (name, key) => {
+      const field = findField(fields, field => field.name === name);
+      if (!field) {
+        return;
+      }
+
+      methods.setValue(name, key, !field[key]);
     },
 
     setValue: (name, key, value) => {
@@ -236,9 +249,19 @@ const ApiFactory = function(formName, framework, formFields, currenValues) {
 
     values: Object.freeze({ ...currenValues })
   };
+
+  return methods;
 };
 
-const applyTransformers = async function*(formName, framework, fields, transformers, values, onJavascriptError) {
+const applyTransformers = async function*(
+  formName,
+  framework,
+  fields,
+  transformers,
+  values,
+  onJavascriptError,
+  formContext
+) {
 
   if (_.isArray(transformers) && !_.isEmpty(transformers)) {
 
@@ -248,10 +271,8 @@ const applyTransformers = async function*(formName, framework, fields, transform
     let idx;
     for(idx = 0; idx < txs.length; idx++) {
 
-      const api = new ApiFactory(formName, framework, newFields, values);
+      const api = new ApiFactory(formName, framework, newFields, values, formContext);
       try {
-        //newFields = await txs[idx](api);
-        //console.log('sto per chiamare', txs[idx])
         for await (const f of txs[idx](api)) {
           newFields = f;
           yield f;

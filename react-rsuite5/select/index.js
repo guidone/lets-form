@@ -13,7 +13,7 @@ import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 import './select.scss';
 import { makeWidthStyle } from '../../helpers';
 
-const menuItem = (value, item) => {
+const menuItem = (_value, item) => {
   return (
     <div className="lf-control-select-option-rsuite5">
       {item.image && <img src={item.image} alt={item.label} />}
