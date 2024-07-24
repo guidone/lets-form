@@ -1,4 +1,4 @@
-/* LetsForm react-material-ui v0.9.3 - UMD */
+/* LetsForm react-material-ui v0.9.4 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('react-hook-form'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', 'react-hook-form', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack'], factory) :
@@ -8418,7 +8418,7 @@
       return str;
     }
   };
-  var ApiFactory = function ApiFactory(formName, framework, formFields, currenValues) {
+  var ApiFactory = function ApiFactory(formName, framework, formFields, currenValues, formContext) {
     var _fields = formFields;
     var fieldExists = function fieldExists(name) {
       if (findField(_fields, function (field) {
@@ -8429,9 +8429,12 @@
         throw new Error("Field \"".concat(name, "\" doesn't exist in the form"));
       }
     };
-    return {
+    var methods = {
       fields: function fields() {
         return _fields;
+      },
+      context: function context(key) {
+        return formContext ? formContext[key] : null;
       },
       element: function element(name) {
         if (!fieldExists(name)) {
@@ -8473,6 +8476,15 @@
             });
           }
         }
+      },
+      toggle: function toggle(name, key) {
+        var field = findField(_fields, function (field) {
+          return field.name === name;
+        });
+        if (!field) {
+          return;
+        }
+        methods.setValue(name, key, !field[key]);
       },
       setValue: function setValue(name, key, value) {
         if (!fieldExists(name)) {
@@ -8589,9 +8601,10 @@
       },
       values: Object.freeze(_objectSpread2({}, currenValues))
     };
+    return methods;
   };
   var applyTransformers = /*#__PURE__*/function () {
-    var _ref = _wrapAsyncGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(formName, framework, fields, transformers, values, onJavascriptError) {
+    var _ref = _wrapAsyncGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(formName, framework, fields, transformers, values, onJavascriptError, formContext) {
       var newFields, txs, idx, api, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _iterator, _step, f, error;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
@@ -8609,10 +8622,8 @@
               _context.next = 48;
               break;
             }
-            api = new ApiFactory(formName, framework, newFields, values);
+            api = new ApiFactory(formName, framework, newFields, values, formContext);
             _context.prev = 6;
-            //newFields = await txs[idx](api);
-            //console.log('sto per chiamare', txs[idx])
             _iteratorAbruptCompletion = false;
             _didIteratorError = false;
             _context.prev = 9;
@@ -8692,7 +8703,7 @@
         }
       }, _callee, null, [[6, 39], [9, 23, 27, 37], [28,, 32, 36]]);
     }));
-    return function applyTransformers(_x, _x2, _x3, _x4, _x5, _x6) {
+    return function applyTransformers(_x, _x2, _x3, _x4, _x5, _x6, _x7) {
       return _ref.apply(this, arguments);
     };
   }();
@@ -18474,7 +18485,7 @@
       if (!_isEmpty(fieldList)) {
         spreadVars = 'const { ' + fieldList.join(', ') + ' } = values;\n';
       }
-      var tx = new AsyncGeneratorFunction('api', "const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue } = api;\n" + spreadVars + yieldedStr + '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
+      var tx = new AsyncGeneratorFunction('api', "const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue, context, toggle } = api;\n" + spreadVars + yieldedStr + '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
       );
 
       return tx;
@@ -18841,10 +18852,10 @@
     }).filter(Boolean);
   };
 
-  var css_248z$5 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
+  var css_248z$5 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
   styleInject(css_248z$5);
 
-  var _excluded$h = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableOnSubmit", "resetAfterSubmit"];
+  var _excluded$h = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableOnSubmit", "resetAfterSubmit", "context"];
   var DEFAULT_FORM = {
     version: 1,
     fields: []
@@ -19389,7 +19400,7 @@
       });
       return prependView ? [prependView].concat(_toConsumableArray(renderedFields)) : renderedFields;
     };
-    var FormGenerator = /*#__PURE__*/React$1.memo(function (_ref6) {
+    var BaseFormGeneratorWithRef = function BaseFormGeneratorWithRef(_ref6, ref) {
       var _form$name, _form$fields, _form$labelSubmit, _form$labelCancel;
       var framework = _ref6.framework,
         _ref6$form = _ref6.form,
@@ -19447,6 +19458,7 @@
         disableOnSubmit = _ref6$disableOnSubmit === void 0 ? true : _ref6$disableOnSubmit,
         _ref6$resetAfterSubmi = _ref6.resetAfterSubmit,
         resetAfterSubmit = _ref6$resetAfterSubmi === void 0 ? true : _ref6$resetAfterSubmi,
+        formContext = _ref6.context,
         rest = _objectWithoutProperties(_ref6, _excluded$h);
       var showErrors = form.showErrors,
         connectors = form.connectors;
@@ -19471,7 +19483,13 @@
         _useState10 = _slicedToArray(_useState9, 2),
         version = _useState10[0],
         setVersion = _useState10[1];
-      var disabled = stateDisabled || disabledProp;
+      var _useState11 = React$1.useState(_objectSpread2({
+          locales: form.locales,
+          locale: locale
+        }, formContext)),
+        _useState12 = _slicedToArray(_useState11, 2),
+        currentContext = _useState12[0],
+        setCurrentContext = _useState12[1];
       var _useForm = reactHookForm.useForm({
           defaultValues: defaultValues,
           mode: form.validationMode
@@ -19482,18 +19500,40 @@
         isValid = _useForm$formState.isValid,
         reset = _useForm.reset,
         control = _useForm.control,
-        getValues = _useForm.getValues;
-      var _useState11 = React$1.useState(),
-        _useState12 = _slicedToArray(_useState11, 2),
-        validationErrors = _useState12[0],
-        setValidationErrors = _useState12[1];
-      // store form fields, apply immediately transformers (collected from all fields)
-      var _useState13 = React$1.useState(null),
+        getValues = _useForm.getValues,
+        trigger = _useForm.trigger;
+      React$1.useImperativeHandle(ref, function () {
+        return {
+          validate: function () {
+            var _validate = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+              return _regeneratorRuntime().wrap(function _callee$(_context) {
+                while (1) switch (_context.prev = _context.next) {
+                  case 0:
+                    return _context.abrupt("return", trigger());
+                  case 1:
+                  case "end":
+                    return _context.stop();
+                }
+              }, _callee);
+            }));
+            function validate() {
+              return _validate.apply(this, arguments);
+            }
+            return validate;
+          }()
+        };
+      });
+      var _useState13 = React$1.useState(),
         _useState14 = _slicedToArray(_useState13, 2),
-        formFields = _useState14[0],
-        setFormFields = _useState14[1];
+        validationErrors = _useState14[0],
+        setValidationErrors = _useState14[1];
+      // store form fields, apply immediately transformers (collected from all fields)
+      var _useState15 = React$1.useState(null),
+        _useState16 = _slicedToArray(_useState15, 2),
+        formFields = _useState16[0],
+        setFormFields = _useState16[1];
       var MergedComponents = mergeComponents(Fields, components);
-
+      var disabled = stateDisabled || disabledProp;
       // it's the combination of the fields from the form schema and those specified
       // with the DSL, from now on every func should reference this (not form.fields)
       var actualFields = [].concat(_toConsumableArray((_form$fields = form.fields) !== null && _form$fields !== void 0 ? _form$fields : []), _toConsumableArray(traverseChildren(children, {
@@ -19504,6 +19544,13 @@
         lfError('missing "framework" prop');
         return;
       }
+
+      // listen to changes of context, re-render just in case
+      React$1.useEffect(function () {
+        if (formContext) {
+          setCurrentContext(formContext);
+        }
+      }, [formContext]);
 
       // preload components of the form
       React$1.useEffect(function () {
@@ -19534,28 +19581,28 @@
       // update internal state if form changes
       React$1.useEffect(function () {
         var f = /*#__PURE__*/function () {
-          var _ref7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+          var _ref7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
             var _form$name2;
             var newTransformers, newFields, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _iterator, _step, newFormFields, onChangeFields, idx, _iteratorAbruptCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, _newFormFields;
-            return _regeneratorRuntime().wrap(function _callee$(_context) {
-              while (1) switch (_context.prev = _context.next) {
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
                 case 0:
                   newTransformers = collectTransformers(actualFields, form.transformer || form.script, onJavascriptError); // initial fields values
                   newFields = actualFields; // apply onRender transformers
                   if (_isEmpty(newTransformers.onRender)) {
-                    _context.next = 32;
+                    _context2.next = 32;
                     break;
                   }
                   _iteratorAbruptCompletion = false;
                   _didIteratorError = false;
-                  _context.prev = 5;
-                  _iterator = _asyncIterator(applyTransformers(formName, framework, newFields, newTransformers.onRender, defaultValues, onJavascriptError));
+                  _context2.prev = 5;
+                  _iterator = _asyncIterator(applyTransformers(formName, framework, newFields, newTransformers.onRender, defaultValues, onJavascriptError, currentContext));
                 case 7:
-                  _context.next = 9;
+                  _context2.next = 9;
                   return _iterator.next();
                 case 9:
-                  if (!(_iteratorAbruptCompletion = !(_step = _context.sent).done)) {
-                    _context.next = 16;
+                  if (!(_iteratorAbruptCompletion = !(_step = _context2.sent).done)) {
+                    _context2.next = 16;
                     break;
                   }
                   newFormFields = _step.value;
@@ -19563,36 +19610,36 @@
                   setFormFields(newFormFields);
                 case 13:
                   _iteratorAbruptCompletion = false;
-                  _context.next = 7;
+                  _context2.next = 7;
                   break;
                 case 16:
-                  _context.next = 22;
+                  _context2.next = 22;
                   break;
                 case 18:
-                  _context.prev = 18;
-                  _context.t0 = _context["catch"](5);
+                  _context2.prev = 18;
+                  _context2.t0 = _context2["catch"](5);
                   _didIteratorError = true;
-                  _iteratorError = _context.t0;
+                  _iteratorError = _context2.t0;
                 case 22:
-                  _context.prev = 22;
-                  _context.prev = 23;
+                  _context2.prev = 22;
+                  _context2.prev = 23;
                   if (!(_iteratorAbruptCompletion && _iterator.return != null)) {
-                    _context.next = 27;
+                    _context2.next = 27;
                     break;
                   }
-                  _context.next = 27;
+                  _context2.next = 27;
                   return _iterator.return();
                 case 27:
-                  _context.prev = 27;
+                  _context2.prev = 27;
                   if (!_didIteratorError) {
-                    _context.next = 30;
+                    _context2.next = 30;
                     break;
                   }
                   throw _iteratorError;
                 case 30:
-                  return _context.finish(27);
+                  return _context2.finish(27);
                 case 31:
-                  return _context.finish(22);
+                  return _context2.finish(22);
                 case 32:
                   // collect list of fields with an onChange transformer
                   onChangeFields = Object.keys(newTransformers.onChange || {}).filter(function (fieldName) {
@@ -19601,19 +19648,19 @@
                   idx = 0;
                 case 34:
                   if (!(idx < onChangeFields.length)) {
-                    _context.next = 67;
+                    _context2.next = 67;
                     break;
                   }
                   _iteratorAbruptCompletion2 = false;
                   _didIteratorError2 = false;
-                  _context.prev = 37;
-                  _iterator2 = _asyncIterator(applyTransformers(formName, framework, newFields, newTransformers.onChange[onChangeFields[idx]], defaultValues, onJavascriptError));
+                  _context2.prev = 37;
+                  _iterator2 = _asyncIterator(applyTransformers(formName, framework, newFields, newTransformers.onChange[onChangeFields[idx]], defaultValues, onJavascriptError, currentContext));
                 case 39:
-                  _context.next = 41;
+                  _context2.next = 41;
                   return _iterator2.next();
                 case 41:
-                  if (!(_iteratorAbruptCompletion2 = !(_step2 = _context.sent).done)) {
-                    _context.next = 48;
+                  if (!(_iteratorAbruptCompletion2 = !(_step2 = _context2.sent).done)) {
+                    _context2.next = 48;
                     break;
                   }
                   _newFormFields = _step2.value;
@@ -19621,39 +19668,39 @@
                   setFormFields(_newFormFields);
                 case 45:
                   _iteratorAbruptCompletion2 = false;
-                  _context.next = 39;
+                  _context2.next = 39;
                   break;
                 case 48:
-                  _context.next = 54;
+                  _context2.next = 54;
                   break;
                 case 50:
-                  _context.prev = 50;
-                  _context.t1 = _context["catch"](37);
+                  _context2.prev = 50;
+                  _context2.t1 = _context2["catch"](37);
                   _didIteratorError2 = true;
-                  _iteratorError2 = _context.t1;
+                  _iteratorError2 = _context2.t1;
                 case 54:
-                  _context.prev = 54;
-                  _context.prev = 55;
+                  _context2.prev = 54;
+                  _context2.prev = 55;
                   if (!(_iteratorAbruptCompletion2 && _iterator2.return != null)) {
-                    _context.next = 59;
+                    _context2.next = 59;
                     break;
                   }
-                  _context.next = 59;
+                  _context2.next = 59;
                   return _iterator2.return();
                 case 59:
-                  _context.prev = 59;
+                  _context2.prev = 59;
                   if (!_didIteratorError2) {
-                    _context.next = 62;
+                    _context2.next = 62;
                     break;
                   }
                   throw _iteratorError2;
                 case 62:
-                  return _context.finish(59);
+                  return _context2.finish(59);
                 case 63:
-                  return _context.finish(54);
+                  return _context2.finish(54);
                 case 64:
                   idx++;
-                  _context.next = 34;
+                  _context2.next = 34;
                   break;
                 case 67:
                   setFormName((_form$name2 = form.name) !== null && _form$name2 !== void 0 ? _form$name2 : _uniqueId('form_'));
@@ -19665,9 +19712,9 @@
                   }
                 case 70:
                 case "end":
-                  return _context.stop();
+                  return _context2.stop();
               }
-            }, _callee, null, [[5, 18, 22, 32], [23,, 27, 31], [37, 50, 54, 64], [55,, 59, 63]]);
+            }, _callee2, null, [[5, 18, 22, 32], [23,, 27, 31], [37, 50, 54, 64], [55,, 59, 63]]);
           }));
           return function f() {
             return _ref7.apply(this, arguments);
@@ -19680,13 +19727,13 @@
       );
 
       var onHandleSubmit = React$1.useCallback( /*#__PURE__*/function () {
-        var _ref8 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(data) {
+        var _ref8 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(data) {
           var idx, responses, connector, proxyFetch, response;
-          return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-            while (1) switch (_context2.prev = _context2.next) {
+          return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+            while (1) switch (_context3.prev = _context3.next) {
               case 0:
                 if (!(Array.isArray(connectors) && connectors.length !== 0)) {
-                  _context2.next = 32;
+                  _context3.next = 32;
                   break;
                 }
                 // call onSubmit immediately
@@ -19700,13 +19747,13 @@
                 idx = 0;
               case 5:
                 if (!(idx < connectors.length)) {
-                  _context2.next = 27;
+                  _context3.next = 27;
                   break;
                 }
                 connector = connectors[idx];
                 proxyFetch = ProxyFetch(connector.options); // wrap fetch
-                _context2.prev = 8;
-                _context2.next = 11;
+                _context3.prev = 8;
+                _context3.next = 11;
                 return Connectors[connector.name]({
                   data: data,
                   options: connector.options,
@@ -19716,32 +19763,32 @@
                   }, {})
                 });
               case 11:
-                response = _context2.sent;
+                response = _context3.sent;
                 if (!(response.status >= 400)) {
-                  _context2.next = 16;
+                  _context3.next = 16;
                   break;
                 }
                 if (disableOnSubmit) {
                   setDisabled(false);
                 }
                 onSubmitError(response);
-                return _context2.abrupt("return");
+                return _context3.abrupt("return");
               case 16:
                 responses.push(response);
-                _context2.next = 24;
+                _context3.next = 24;
                 break;
               case 19:
-                _context2.prev = 19;
-                _context2.t0 = _context2["catch"](8);
+                _context3.prev = 19;
+                _context3.t0 = _context3["catch"](8);
                 // if failed call, return the erro, stop the chain and re-enable the form
                 if (disableOnSubmit) {
                   setDisabled(false);
                 }
-                onSubmitError(_context2.t0);
-                return _context2.abrupt("return");
+                onSubmitError(_context3.t0);
+                return _context3.abrupt("return");
               case 24:
                 idx++;
-                _context2.next = 5;
+                _context3.next = 5;
                 break;
               case 27:
                 // re-enable and reset if needed
@@ -19756,16 +19803,16 @@
                 }
                 // finally the callback
                 onSubmitSuccess(responses.length === 1 ? responses[0] : responses);
-                _context2.next = 34;
+                _context3.next = 34;
                 break;
               case 32:
                 setValidationErrors(null);
                 onSubmit(data);
               case 34:
               case "end":
-                return _context2.stop();
+                return _context3.stop();
             }
-          }, _callee2, null, [[8, 19]]);
+          }, _callee3, null, [[8, 19]]);
         }));
         return function (_x) {
           return _ref8.apply(this, arguments);
@@ -19785,33 +19832,33 @@
         onReset();
       }, [defaultValues, reset, onReset]);
       var handleChange = React$1.useCallback( /*#__PURE__*/function () {
-        var _ref9 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(values, fieldName) {
+        var _ref9 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(values, fieldName) {
           var newFields, _iteratorAbruptCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, f, _iteratorAbruptCompletion4, _didIteratorError4, _iteratorError4, _iterator4, _step4, _f;
-          return _regeneratorRuntime().wrap(function _callee3$(_context3) {
-            while (1) switch (_context3.prev = _context3.next) {
+          return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+            while (1) switch (_context4.prev = _context4.next) {
               case 0:
                 if (transformers) {
-                  _context3.next = 2;
+                  _context4.next = 2;
                   break;
                 }
-                return _context3.abrupt("return");
+                return _context4.abrupt("return");
               case 2:
                 // execute main transformer
                 newFields = formFields;
                 if (_isEmpty(transformers.onRender)) {
-                  _context3.next = 33;
+                  _context4.next = 33;
                   break;
                 }
                 _iteratorAbruptCompletion3 = false;
                 _didIteratorError3 = false;
-                _context3.prev = 6;
-                _iterator3 = _asyncIterator(applyTransformers(formName, framework, newFields, transformers.onRender, values, onJavascriptError));
+                _context4.prev = 6;
+                _iterator3 = _asyncIterator(applyTransformers(formName, framework, newFields, transformers.onRender, values, onJavascriptError, currentContext));
               case 8:
-                _context3.next = 10;
+                _context4.next = 10;
                 return _iterator3.next();
               case 10:
-                if (!(_iteratorAbruptCompletion3 = !(_step3 = _context3.sent).done)) {
-                  _context3.next = 17;
+                if (!(_iteratorAbruptCompletion3 = !(_step3 = _context4.sent).done)) {
+                  _context4.next = 17;
                   break;
                 }
                 f = _step3.value;
@@ -19821,52 +19868,52 @@
                 }
               case 14:
                 _iteratorAbruptCompletion3 = false;
-                _context3.next = 8;
+                _context4.next = 8;
                 break;
               case 17:
-                _context3.next = 23;
+                _context4.next = 23;
                 break;
               case 19:
-                _context3.prev = 19;
-                _context3.t0 = _context3["catch"](6);
+                _context4.prev = 19;
+                _context4.t0 = _context4["catch"](6);
                 _didIteratorError3 = true;
-                _iteratorError3 = _context3.t0;
+                _iteratorError3 = _context4.t0;
               case 23:
-                _context3.prev = 23;
-                _context3.prev = 24;
+                _context4.prev = 23;
+                _context4.prev = 24;
                 if (!(_iteratorAbruptCompletion3 && _iterator3.return != null)) {
-                  _context3.next = 28;
+                  _context4.next = 28;
                   break;
                 }
-                _context3.next = 28;
+                _context4.next = 28;
                 return _iterator3.return();
               case 28:
-                _context3.prev = 28;
+                _context4.prev = 28;
                 if (!_didIteratorError3) {
-                  _context3.next = 31;
+                  _context4.next = 31;
                   break;
                 }
                 throw _iteratorError3;
               case 31:
-                return _context3.finish(28);
+                return _context4.finish(28);
               case 32:
-                return _context3.finish(23);
+                return _context4.finish(23);
               case 33:
                 if (!(transformers.onChange != null && !_isEmpty(transformers.onChange[fieldName]))) {
-                  _context3.next = 63;
+                  _context4.next = 63;
                   break;
                 }
                 // execute the async generator transformer
                 _iteratorAbruptCompletion4 = false;
                 _didIteratorError4 = false;
-                _context3.prev = 36;
-                _iterator4 = _asyncIterator(applyTransformers(formName, framework, newFields, transformers.onChange[fieldName], values, onJavascriptError));
+                _context4.prev = 36;
+                _iterator4 = _asyncIterator(applyTransformers(formName, framework, newFields, transformers.onChange[fieldName], values, onJavascriptError, currentContext));
               case 38:
-                _context3.next = 40;
+                _context4.next = 40;
                 return _iterator4.next();
               case 40:
-                if (!(_iteratorAbruptCompletion4 = !(_step4 = _context3.sent).done)) {
-                  _context3.next = 47;
+                if (!(_iteratorAbruptCompletion4 = !(_step4 = _context4.sent).done)) {
+                  _context4.next = 47;
                   break;
                 }
                 _f = _step4.value;
@@ -19876,43 +19923,43 @@
                 }
               case 44:
                 _iteratorAbruptCompletion4 = false;
-                _context3.next = 38;
+                _context4.next = 38;
                 break;
               case 47:
-                _context3.next = 53;
+                _context4.next = 53;
                 break;
               case 49:
-                _context3.prev = 49;
-                _context3.t1 = _context3["catch"](36);
+                _context4.prev = 49;
+                _context4.t1 = _context4["catch"](36);
                 _didIteratorError4 = true;
-                _iteratorError4 = _context3.t1;
+                _iteratorError4 = _context4.t1;
               case 53:
-                _context3.prev = 53;
-                _context3.prev = 54;
+                _context4.prev = 53;
+                _context4.prev = 54;
                 if (!(_iteratorAbruptCompletion4 && _iterator4.return != null)) {
-                  _context3.next = 58;
+                  _context4.next = 58;
                   break;
                 }
-                _context3.next = 58;
+                _context4.next = 58;
                 return _iterator4.return();
               case 58:
-                _context3.prev = 58;
+                _context4.prev = 58;
                 if (!_didIteratorError4) {
-                  _context3.next = 61;
+                  _context4.next = 61;
                   break;
                 }
                 throw _iteratorError4;
               case 61:
-                return _context3.finish(58);
+                return _context4.finish(58);
               case 62:
-                return _context3.finish(53);
+                return _context4.finish(53);
               case 63:
                 onChange(values);
               case 64:
               case "end":
-                return _context3.stop();
+                return _context4.stop();
             }
-          }, _callee3, null, [[6, 19, 23, 33], [24,, 28, 32], [36, 49, 53, 63], [54,, 58, 62]]);
+          }, _callee4, null, [[6, 19, 23, 33], [24,, 28, 32], [36, 49, 53, 63], [54,, 58, 62]]);
         }));
         return function (_x2, _x3) {
           return _ref9.apply(this, arguments);
@@ -19947,11 +19994,7 @@
         console.log("[LetsForm] Render form (".concat(form.name, ")"));
       }
       return /*#__PURE__*/React$1.createElement(FormContext.Provider, {
-        value: {
-          locales: form.locales,
-          locale: locale
-          // ..more
-        }
+        value: currentContext
       }, /*#__PURE__*/React$1.createElement("div", {
         className: classNames('lf-lets-form', {
           'lf-lets-form-edit-mode': demo
@@ -20009,16 +20052,18 @@
       }))), demo && /*#__PURE__*/React$1.createElement("div", {
         className: "label-test-buttons"
       }, "Test buttons")));
-    }, function (prevProps, nextProps) {
+    };
+    var BaseFormGenerator = /*#__PURE__*/React$1.forwardRef(BaseFormGeneratorWithRef);
+    var FormGenerator = /*#__PURE__*/React$1.memo(BaseFormGenerator, function (prevProps, nextProps) {
       {
         var _nextProps$form, _nextProps$form2;
-        console.log("[LetsForm] Form generator ".concat((_nextProps$form = nextProps.form) !== null && _nextProps$form !== void 0 && _nextProps$form.name ? '(' + ((_nextProps$form2 = nextProps.form) === null || _nextProps$form2 === void 0 ? void 0 : _nextProps$form2.name) + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale) + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext) + ' disabled=' + (prevProps.disabled === nextProps.disabled) + ' children=' + (prevProps.children === nextProps.children));
+        console.log("[LetsForm] Form generator ".concat((_nextProps$form = nextProps.form) !== null && _nextProps$form !== void 0 && _nextProps$form.name ? '(' + ((_nextProps$form2 = nextProps.form) === null || _nextProps$form2 === void 0 ? void 0 : _nextProps$form2.name) + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale) + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext) + ' disabled=' + (prevProps.disabled === nextProps.disabled) + ' children=' + (prevProps.children === nextProps.children) + ' custom=' + (prevProps.custom === nextProps.custom) + ' context=' + (prevProps.context === nextProps.context));
       }
-      var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale && prevProps.plaintext === nextProps.plaintext && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children;
-      console.log('Is re-rendering?', !isEqual);
+      var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale && prevProps.plaintext === nextProps.plaintext && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children && prevProps.custom === nextProps.custom && prevProps.context === nextProps.context;
+      console.log("Is re-rendering? ".concat(!isEqual));
       return isEqual;
     });
-    FormGenerator.displayName = 'FormGenerator';
+    FormGenerator.displayName = 'LetsForm';
     return FormGenerator;
   };
 
@@ -20193,14 +20238,23 @@
     Fields: Fields,
     Forms: Forms
   });
-  var LetsForm = function LetsForm(_ref) {
+  var LetsForm = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     _ref.framework;
       var children = _ref.children,
       rest = _objectWithoutProperties(_ref, _excluded$g);
+    var refForm = React$1.useRef();
+    React$1.useImperativeHandle(ref, function () {
+      return {
+        validate: function validate() {
+          return refForm.current.validate();
+        }
+      };
+    });
     return /*#__PURE__*/React$1.createElement(FormGenerator, _extends({
+      ref: refForm,
       framework: "react-material-ui"
     }, rest), children);
-  };
+  });
 
   var _excluded$f = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
 
@@ -22012,6 +22066,15 @@
   exports.FRAMEWORKS_LABELS = FRAMEWORKS_LABELS;
   exports.Fields = Fields;
   exports.Forms = Forms;
+  exports.LfArray = LfArray;
+  exports.LfColumn = LfColumn;
+  exports.LfColumns = LfColumns;
+  exports.LfField = LfField;
+  exports.LfGroup = LfGroup;
+  exports.LfStep = LfStep;
+  exports.LfSteps = LfSteps;
+  exports.LfTab = LfTab;
+  exports.LfTabs = LfTabs;
   exports.addField = addField;
   exports.applyFormRules = applyFormRules;
   exports.applyTransformers = applyTransformers;
@@ -22048,6 +22111,7 @@
   exports.passRest = passRest;
   exports.reduceFields = reduceFields;
   exports.replaceField = replaceField;
+  exports.traverseChildren = traverseChildren;
   exports.validateJSONForm = validateJSONForm;
 
   Object.defineProperty(exports, '__esModule', { value: true });

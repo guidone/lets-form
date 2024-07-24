@@ -1,17 +1,17 @@
-/* LetsForm react-rsuite5 v0.9.3 - UMD */
+/* LetsForm react-rsuite5 v0.9.4 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', 'react-hook-form'], factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-rsuite5"] = {}, global.React$1, global.rsuite, global.reactHookForm));
 })(this, (function (exports, React$1, rsuite, reactHookForm) { 'use strict';
 
-  function _AsyncGenerator$1(gen) {
+  function _AsyncGenerator$2(gen) {
     var front, back;
     function resume(key, arg) {
       try {
         var result = gen[key](arg),
           value = result.value,
-          overloaded = value instanceof _OverloadYield$1;
+          overloaded = value instanceof _OverloadYield$2;
         Promise.resolve(overloaded ? value.v : value).then(function (arg) {
           if (overloaded) {
             var nextKey = "return" === key ? "return" : "next";
@@ -58,31 +58,31 @@
       });
     }, "function" != typeof gen.return && (this.return = void 0);
   }
-  _AsyncGenerator$1.prototype["function" == typeof Symbol && Symbol.asyncIterator || "@@asyncIterator"] = function () {
+  _AsyncGenerator$2.prototype["function" == typeof Symbol && Symbol.asyncIterator || "@@asyncIterator"] = function () {
     return this;
-  }, _AsyncGenerator$1.prototype.next = function (arg) {
+  }, _AsyncGenerator$2.prototype.next = function (arg) {
     return this._invoke("next", arg);
-  }, _AsyncGenerator$1.prototype.throw = function (arg) {
+  }, _AsyncGenerator$2.prototype.throw = function (arg) {
     return this._invoke("throw", arg);
-  }, _AsyncGenerator$1.prototype.return = function (arg) {
+  }, _AsyncGenerator$2.prototype.return = function (arg) {
     return this._invoke("return", arg);
   };
-  function _OverloadYield$1(value, kind) {
+  function _OverloadYield$2(value, kind) {
     this.v = value, this.k = kind;
   }
-  function _asyncIterator$1(iterable) {
+  function _asyncIterator$2(iterable) {
     var method,
       async,
       sync,
       retry = 2;
     for ("undefined" != typeof Symbol && (async = Symbol.asyncIterator, sync = Symbol.iterator); retry--;) {
       if (async && null != (method = iterable[async])) return method.call(iterable);
-      if (sync && null != (method = iterable[sync])) return new AsyncFromSyncIterator$1(method.call(iterable));
+      if (sync && null != (method = iterable[sync])) return new AsyncFromSyncIterator$2(method.call(iterable));
       async = "@@asyncIterator", sync = "@@iterator";
     }
     throw new TypeError("Object is not async iterable");
   }
-  function AsyncFromSyncIterator$1(s) {
+  function AsyncFromSyncIterator$2(s) {
     function AsyncFromSyncIteratorContinuation(r) {
       if (Object(r) !== r) return Promise.reject(new TypeError(r + " is not an object."));
       var done = r.done;
@@ -93,9 +93,9 @@
         };
       });
     }
-    return AsyncFromSyncIterator$1 = function (s) {
+    return AsyncFromSyncIterator$2 = function (s) {
       this.s = s, this.n = s.next;
-    }, AsyncFromSyncIterator$1.prototype = {
+    }, AsyncFromSyncIterator$2.prototype = {
       s: null,
       n: null,
       next: function () {
@@ -112,12 +112,12 @@
         var thr = this.s.return;
         return void 0 === thr ? Promise.reject(value) : AsyncFromSyncIteratorContinuation(thr.apply(this.s, arguments));
       }
-    }, new AsyncFromSyncIterator$1(s);
+    }, new AsyncFromSyncIterator$2(s);
   }
-  function _awaitAsyncGenerator$1(value) {
-    return new _OverloadYield$1(value, 0);
+  function _awaitAsyncGenerator$2(value) {
+    return new _OverloadYield$2(value, 0);
   }
-  function _iterableToArrayLimit$1(arr, i) {
+  function _iterableToArrayLimit$2(arr, i) {
     var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"];
     if (null != _i) {
       var _s,
@@ -144,7 +144,7 @@
       return _arr;
     }
   }
-  function ownKeys$1(object, enumerableOnly) {
+  function ownKeys$2(object, enumerableOnly) {
     var keys = Object.keys(object);
     if (Object.getOwnPropertySymbols) {
       var symbols = Object.getOwnPropertySymbols(object);
@@ -154,19 +154,19 @@
     }
     return keys;
   }
-  function _objectSpread2$1(target) {
+  function _objectSpread2$2(target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = null != arguments[i] ? arguments[i] : {};
-      i % 2 ? ownKeys$1(Object(source), !0).forEach(function (key) {
-        _defineProperty$3(target, key, source[key]);
-      }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys$1(Object(source)).forEach(function (key) {
+      i % 2 ? ownKeys$2(Object(source), !0).forEach(function (key) {
+        _defineProperty$4(target, key, source[key]);
+      }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys$2(Object(source)).forEach(function (key) {
         Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
       });
     }
     return target;
   }
-  function _regeneratorRuntime$1() {
-    _regeneratorRuntime$1 = function () {
+  function _regeneratorRuntime$2() {
+    _regeneratorRuntime$2 = function () {
       return exports;
     };
     var exports = {},
@@ -466,21 +466,21 @@
       }
     }, exports;
   }
-  function _typeof$1(obj) {
+  function _typeof$2(obj) {
     "@babel/helpers - typeof";
 
-    return _typeof$1 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+    return _typeof$2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
       return typeof obj;
     } : function (obj) {
       return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    }, _typeof$1(obj);
+    }, _typeof$2(obj);
   }
-  function _wrapAsyncGenerator$1(fn) {
+  function _wrapAsyncGenerator$2(fn) {
     return function () {
-      return new _AsyncGenerator$1(fn.apply(this, arguments));
+      return new _AsyncGenerator$2(fn.apply(this, arguments));
     };
   }
-  function asyncGeneratorStep$1(gen, resolve, reject, _next, _throw, key, arg) {
+  function asyncGeneratorStep$2(gen, resolve, reject, _next, _throw, key, arg) {
     try {
       var info = gen[key](arg);
       var value = info.value;
@@ -494,24 +494,24 @@
       Promise.resolve(value).then(_next, _throw);
     }
   }
-  function _asyncToGenerator$1(fn) {
+  function _asyncToGenerator$2(fn) {
     return function () {
       var self = this,
         args = arguments;
       return new Promise(function (resolve, reject) {
         var gen = fn.apply(self, args);
         function _next(value) {
-          asyncGeneratorStep$1(gen, resolve, reject, _next, _throw, "next", value);
+          asyncGeneratorStep$2(gen, resolve, reject, _next, _throw, "next", value);
         }
         function _throw(err) {
-          asyncGeneratorStep$1(gen, resolve, reject, _next, _throw, "throw", err);
+          asyncGeneratorStep$2(gen, resolve, reject, _next, _throw, "throw", err);
         }
         _next(undefined);
       });
     };
   }
-  function _defineProperty$3(obj, key, value) {
-    key = _toPropertyKey$1(key);
+  function _defineProperty$4(obj, key, value) {
+    key = _toPropertyKey$2(key);
     if (key in obj) {
       Object.defineProperty(obj, key, {
         value: value,
@@ -524,8 +524,8 @@
     }
     return obj;
   }
-  function _extends$1() {
-    _extends$1 = Object.assign ? Object.assign.bind() : function (target) {
+  function _extends$2() {
+    _extends$2 = Object.assign ? Object.assign.bind() : function (target) {
       for (var i = 1; i < arguments.length; i++) {
         var source = arguments[i];
         for (var key in source) {
@@ -536,9 +536,9 @@
       }
       return target;
     };
-    return _extends$1.apply(this, arguments);
+    return _extends$2.apply(this, arguments);
   }
-  function _objectWithoutPropertiesLoose$1(source, excluded) {
+  function _objectWithoutPropertiesLoose$2(source, excluded) {
     if (source == null) return {};
     var target = {};
     var sourceKeys = Object.keys(source);
@@ -550,9 +550,9 @@
     }
     return target;
   }
-  function _objectWithoutProperties$1(source, excluded) {
+  function _objectWithoutProperties$2(source, excluded) {
     if (source == null) return {};
-    var target = _objectWithoutPropertiesLoose$1(source, excluded);
+    var target = _objectWithoutPropertiesLoose$2(source, excluded);
     var key, i;
     if (Object.getOwnPropertySymbols) {
       var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
@@ -565,41 +565,41 @@
     }
     return target;
   }
-  function _slicedToArray$1(arr, i) {
-    return _arrayWithHoles$1(arr) || _iterableToArrayLimit$1(arr, i) || _unsupportedIterableToArray$1(arr, i) || _nonIterableRest$1();
+  function _slicedToArray$2(arr, i) {
+    return _arrayWithHoles$2(arr) || _iterableToArrayLimit$2(arr, i) || _unsupportedIterableToArray$2(arr, i) || _nonIterableRest$2();
   }
-  function _toConsumableArray$1(arr) {
-    return _arrayWithoutHoles$1(arr) || _iterableToArray$1(arr) || _unsupportedIterableToArray$1(arr) || _nonIterableSpread$1();
+  function _toConsumableArray$2(arr) {
+    return _arrayWithoutHoles$2(arr) || _iterableToArray$2(arr) || _unsupportedIterableToArray$2(arr) || _nonIterableSpread$2();
   }
-  function _arrayWithoutHoles$1(arr) {
-    if (Array.isArray(arr)) return _arrayLikeToArray$1(arr);
+  function _arrayWithoutHoles$2(arr) {
+    if (Array.isArray(arr)) return _arrayLikeToArray$2(arr);
   }
-  function _arrayWithHoles$1(arr) {
+  function _arrayWithHoles$2(arr) {
     if (Array.isArray(arr)) return arr;
   }
-  function _iterableToArray$1(iter) {
+  function _iterableToArray$2(iter) {
     if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
   }
-  function _unsupportedIterableToArray$1(o, minLen) {
+  function _unsupportedIterableToArray$2(o, minLen) {
     if (!o) return;
-    if (typeof o === "string") return _arrayLikeToArray$1(o, minLen);
+    if (typeof o === "string") return _arrayLikeToArray$2(o, minLen);
     var n = Object.prototype.toString.call(o).slice(8, -1);
     if (n === "Object" && o.constructor) n = o.constructor.name;
     if (n === "Map" || n === "Set") return Array.from(o);
-    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray$1(o, minLen);
+    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray$2(o, minLen);
   }
-  function _arrayLikeToArray$1(arr, len) {
+  function _arrayLikeToArray$2(arr, len) {
     if (len == null || len > arr.length) len = arr.length;
     for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
     return arr2;
   }
-  function _nonIterableSpread$1() {
+  function _nonIterableSpread$2() {
     throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
   }
-  function _nonIterableRest$1() {
+  function _nonIterableRest$2() {
     throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
   }
-  function _toPrimitive$1(input, hint) {
+  function _toPrimitive$2(input, hint) {
     if (typeof input !== "object" || input === null) return input;
     var prim = input[Symbol.toPrimitive];
     if (prim !== undefined) {
@@ -609,20 +609,20 @@
     }
     return (hint === "string" ? String : Number)(input);
   }
-  function _toPropertyKey$1(arg) {
-    var key = _toPrimitive$1(arg, "string");
+  function _toPropertyKey$2(arg) {
+    var key = _toPrimitive$2(arg, "string");
     return typeof key === "symbol" ? key : String(key);
   }
 
-  var commonjsGlobal$1 = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+  var commonjsGlobal$2 = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
-  function getDefaultExportFromCjs$1 (x) {
+  function getDefaultExportFromCjs$2 (x) {
   	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
   }
 
   /** Used for built-in method references. */
 
-  var objectProto$t = Object.prototype;
+  var objectProto$u = Object.prototype;
 
   /**
    * Checks if `value` is likely a prototype object.
@@ -631,12 +631,12 @@
    * @param {*} value The value to check.
    * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
    */
-  function isPrototype$9(value) {
+  function isPrototype$a(value) {
     var Ctor = value && value.constructor,
-      proto = typeof Ctor == 'function' && Ctor.prototype || objectProto$t;
+      proto = typeof Ctor == 'function' && Ctor.prototype || objectProto$u;
     return value === proto;
   }
-  var _isPrototype$1 = isPrototype$9;
+  var _isPrototype$2 = isPrototype$a;
 
   /**
    * Creates a unary function that invokes `func` with its argument transformed.
@@ -647,27 +647,27 @@
    * @returns {Function} Returns the new function.
    */
 
-  function overArg$5(func, transform) {
+  function overArg$6(func, transform) {
     return function (arg) {
       return func(transform(arg));
     };
   }
-  var _overArg$1 = overArg$5;
+  var _overArg$2 = overArg$6;
 
-  var overArg$4 = _overArg$1;
+  var overArg$5 = _overArg$2;
 
   /* Built-in method references for those with the same name as other `lodash` methods. */
-  var nativeKeys$3 = overArg$4(Object.keys, Object);
-  var _nativeKeys$1 = nativeKeys$3;
+  var nativeKeys$4 = overArg$5(Object.keys, Object);
+  var _nativeKeys$2 = nativeKeys$4;
 
-  var isPrototype$8 = _isPrototype$1,
-    nativeKeys$2 = _nativeKeys$1;
+  var isPrototype$9 = _isPrototype$2,
+    nativeKeys$3 = _nativeKeys$2;
 
   /** Used for built-in method references. */
-  var objectProto$s = Object.prototype;
+  var objectProto$t = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$n = objectProto$s.hasOwnProperty;
+  var hasOwnProperty$o = objectProto$t.hasOwnProperty;
 
   /**
    * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
@@ -676,57 +676,57 @@
    * @param {Object} object The object to query.
    * @returns {Array} Returns the array of property names.
    */
-  function baseKeys$5(object) {
-    if (!isPrototype$8(object)) {
-      return nativeKeys$2(object);
+  function baseKeys$6(object) {
+    if (!isPrototype$9(object)) {
+      return nativeKeys$3(object);
     }
     var result = [];
     for (var key in Object(object)) {
-      if (hasOwnProperty$n.call(object, key) && key != 'constructor') {
+      if (hasOwnProperty$o.call(object, key) && key != 'constructor') {
         result.push(key);
       }
     }
     return result;
   }
-  var _baseKeys$1 = baseKeys$5;
+  var _baseKeys$2 = baseKeys$6;
 
   /** Detect free variable `global` from Node.js. */
 
-  var freeGlobal$3 = typeof commonjsGlobal$1 == 'object' && commonjsGlobal$1 && commonjsGlobal$1.Object === Object && commonjsGlobal$1;
-  var _freeGlobal$1 = freeGlobal$3;
+  var freeGlobal$4 = typeof commonjsGlobal$2 == 'object' && commonjsGlobal$2 && commonjsGlobal$2.Object === Object && commonjsGlobal$2;
+  var _freeGlobal$2 = freeGlobal$4;
 
-  var freeGlobal$2 = _freeGlobal$1;
+  var freeGlobal$3 = _freeGlobal$2;
 
   /** Detect free variable `self`. */
-  var freeSelf$1 = typeof self == 'object' && self && self.Object === Object && self;
+  var freeSelf$2 = typeof self == 'object' && self && self.Object === Object && self;
 
   /** Used as a reference to the global object. */
-  var root$h = freeGlobal$2 || freeSelf$1 || Function('return this')();
-  var _root$1 = root$h;
+  var root$i = freeGlobal$3 || freeSelf$2 || Function('return this')();
+  var _root$2 = root$i;
 
-  var root$g = _root$1;
+  var root$h = _root$2;
 
   /** Built-in value references. */
-  var Symbol$c = root$g.Symbol;
-  var _Symbol$1 = Symbol$c;
+  var Symbol$c = root$h.Symbol;
+  var _Symbol$2 = Symbol$c;
 
-  var Symbol$b = _Symbol$1;
+  var Symbol$b = _Symbol$2;
 
   /** Used for built-in method references. */
-  var objectProto$r = Object.prototype;
+  var objectProto$s = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$m = objectProto$r.hasOwnProperty;
+  var hasOwnProperty$n = objectProto$s.hasOwnProperty;
 
   /**
    * Used to resolve the
    * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
    * of values.
    */
-  var nativeObjectToString$3 = objectProto$r.toString;
+  var nativeObjectToString$4 = objectProto$s.toString;
 
   /** Built-in value references. */
-  var symToStringTag$3 = Symbol$b ? Symbol$b.toStringTag : undefined;
+  var symToStringTag$4 = Symbol$b ? Symbol$b.toStringTag : undefined;
 
   /**
    * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
@@ -735,35 +735,35 @@
    * @param {*} value The value to query.
    * @returns {string} Returns the raw `toStringTag`.
    */
-  function getRawTag$3(value) {
-    var isOwn = hasOwnProperty$m.call(value, symToStringTag$3),
-      tag = value[symToStringTag$3];
+  function getRawTag$4(value) {
+    var isOwn = hasOwnProperty$n.call(value, symToStringTag$4),
+      tag = value[symToStringTag$4];
     try {
-      value[symToStringTag$3] = undefined;
+      value[symToStringTag$4] = undefined;
       var unmasked = true;
     } catch (e) {}
-    var result = nativeObjectToString$3.call(value);
+    var result = nativeObjectToString$4.call(value);
     if (unmasked) {
       if (isOwn) {
-        value[symToStringTag$3] = tag;
+        value[symToStringTag$4] = tag;
       } else {
-        delete value[symToStringTag$3];
+        delete value[symToStringTag$4];
       }
     }
     return result;
   }
-  var _getRawTag$1 = getRawTag$3;
+  var _getRawTag$2 = getRawTag$4;
 
   /** Used for built-in method references. */
 
-  var objectProto$q = Object.prototype;
+  var objectProto$r = Object.prototype;
 
   /**
    * Used to resolve the
    * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
    * of values.
    */
-  var nativeObjectToString$2 = objectProto$q.toString;
+  var nativeObjectToString$3 = objectProto$r.toString;
 
   /**
    * Converts `value` to a string using `Object.prototype.toString`.
@@ -772,21 +772,21 @@
    * @param {*} value The value to convert.
    * @returns {string} Returns the converted string.
    */
-  function objectToString$3(value) {
-    return nativeObjectToString$2.call(value);
+  function objectToString$4(value) {
+    return nativeObjectToString$3.call(value);
   }
-  var _objectToString$1 = objectToString$3;
+  var _objectToString$2 = objectToString$4;
 
-  var Symbol$a = _Symbol$1,
-    getRawTag$2 = _getRawTag$1,
-    objectToString$2 = _objectToString$1;
+  var Symbol$a = _Symbol$2,
+    getRawTag$3 = _getRawTag$2,
+    objectToString$3 = _objectToString$2;
 
   /** `Object#toString` result references. */
-  var nullTag$1 = '[object Null]',
-    undefinedTag$1 = '[object Undefined]';
+  var nullTag$2 = '[object Null]',
+    undefinedTag$2 = '[object Undefined]';
 
   /** Built-in value references. */
-  var symToStringTag$2 = Symbol$a ? Symbol$a.toStringTag : undefined;
+  var symToStringTag$3 = Symbol$a ? Symbol$a.toStringTag : undefined;
 
   /**
    * The base implementation of `getTag` without fallbacks for buggy environments.
@@ -795,13 +795,13 @@
    * @param {*} value The value to query.
    * @returns {string} Returns the `toStringTag`.
    */
-  function baseGetTag$k(value) {
+  function baseGetTag$l(value) {
     if (value == null) {
-      return value === undefined ? undefinedTag$1 : nullTag$1;
+      return value === undefined ? undefinedTag$2 : nullTag$2;
     }
-    return symToStringTag$2 && symToStringTag$2 in Object(value) ? getRawTag$2(value) : objectToString$2(value);
+    return symToStringTag$3 && symToStringTag$3 in Object(value) ? getRawTag$3(value) : objectToString$3(value);
   }
-  var _baseGetTag$1 = baseGetTag$k;
+  var _baseGetTag$2 = baseGetTag$l;
 
   /**
    * Checks if `value` is the
@@ -829,22 +829,22 @@
    * // => false
    */
 
-  function isObject$d(value) {
+  function isObject$e(value) {
     var type = typeof value;
     return value != null && (type == 'object' || type == 'function');
   }
-  var isObject_1$1 = isObject$d;
+  var isObject_1$2 = isObject$e;
 
-  var _isObject$1 = /*@__PURE__*/getDefaultExportFromCjs$1(isObject_1$1);
+  var _isObject$2 = /*@__PURE__*/getDefaultExportFromCjs$2(isObject_1$2);
 
-  var baseGetTag$j = _baseGetTag$1,
-    isObject$c = isObject_1$1;
+  var baseGetTag$k = _baseGetTag$2,
+    isObject$d = isObject_1$2;
 
   /** `Object#toString` result references. */
-  var asyncTag$1 = '[object AsyncFunction]',
-    funcTag$5 = '[object Function]',
-    genTag$3 = '[object GeneratorFunction]',
-    proxyTag$1 = '[object Proxy]';
+  var asyncTag$2 = '[object AsyncFunction]',
+    funcTag$6 = '[object Function]',
+    genTag$4 = '[object GeneratorFunction]',
+    proxyTag$2 = '[object Proxy]';
 
   /**
    * Checks if `value` is classified as a `Function` object.
@@ -863,30 +863,30 @@
    * _.isFunction(/abc/);
    * // => false
    */
-  function isFunction$5(value) {
-    if (!isObject$c(value)) {
+  function isFunction$6(value) {
+    if (!isObject$d(value)) {
       return false;
     }
     // The use of `Object#toString` avoids issues with the `typeof` operator
     // in Safari 9 which returns 'object' for typed arrays and other constructors.
-    var tag = baseGetTag$j(value);
-    return tag == funcTag$5 || tag == genTag$3 || tag == asyncTag$1 || tag == proxyTag$1;
+    var tag = baseGetTag$k(value);
+    return tag == funcTag$6 || tag == genTag$4 || tag == asyncTag$2 || tag == proxyTag$2;
   }
-  var isFunction_1$1 = isFunction$5;
+  var isFunction_1$2 = isFunction$6;
 
-  var _isFunction$1 = /*@__PURE__*/getDefaultExportFromCjs$1(isFunction_1$1);
+  var _isFunction$2 = /*@__PURE__*/getDefaultExportFromCjs$2(isFunction_1$2);
 
-  var root$f = _root$1;
+  var root$g = _root$2;
 
   /** Used to detect overreaching core-js shims. */
-  var coreJsData$3 = root$f['__core-js_shared__'];
-  var _coreJsData$1 = coreJsData$3;
+  var coreJsData$4 = root$g['__core-js_shared__'];
+  var _coreJsData$2 = coreJsData$4;
 
-  var coreJsData$2 = _coreJsData$1;
+  var coreJsData$3 = _coreJsData$2;
 
   /** Used to detect methods masquerading as native. */
-  var maskSrcKey$1 = function () {
-    var uid = /[^.]+$/.exec(coreJsData$2 && coreJsData$2.keys && coreJsData$2.keys.IE_PROTO || '');
+  var maskSrcKey$2 = function () {
+    var uid = /[^.]+$/.exec(coreJsData$3 && coreJsData$3.keys && coreJsData$3.keys.IE_PROTO || '');
     return uid ? 'Symbol(src)_1.' + uid : '';
   }();
 
@@ -897,17 +897,17 @@
    * @param {Function} func The function to check.
    * @returns {boolean} Returns `true` if `func` is masked, else `false`.
    */
-  function isMasked$3(func) {
-    return !!maskSrcKey$1 && maskSrcKey$1 in func;
+  function isMasked$4(func) {
+    return !!maskSrcKey$2 && maskSrcKey$2 in func;
   }
-  var _isMasked$1 = isMasked$3;
+  var _isMasked$2 = isMasked$4;
 
   /** Used for built-in method references. */
 
-  var funcProto$5 = Function.prototype;
+  var funcProto$6 = Function.prototype;
 
   /** Used to resolve the decompiled source of functions. */
-  var funcToString$5 = funcProto$5.toString;
+  var funcToString$6 = funcProto$6.toString;
 
   /**
    * Converts `func` to its source code.
@@ -916,10 +916,10 @@
    * @param {Function} func The function to convert.
    * @returns {string} Returns the source code.
    */
-  function toSource$5(func) {
+  function toSource$6(func) {
     if (func != null) {
       try {
-        return funcToString$5.call(func);
+        return funcToString$6.call(func);
       } catch (e) {}
       try {
         return func + '';
@@ -927,34 +927,34 @@
     }
     return '';
   }
-  var _toSource$1 = toSource$5;
+  var _toSource$2 = toSource$6;
 
-  var isFunction$4 = isFunction_1$1,
-    isMasked$2 = _isMasked$1,
-    isObject$b = isObject_1$1,
-    toSource$4 = _toSource$1;
+  var isFunction$5 = isFunction_1$2,
+    isMasked$3 = _isMasked$2,
+    isObject$c = isObject_1$2,
+    toSource$5 = _toSource$2;
 
   /**
    * Used to match `RegExp`
    * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
    */
-  var reRegExpChar$1 = /[\\^$.*+?()[\]{}|]/g;
+  var reRegExpChar$2 = /[\\^$.*+?()[\]{}|]/g;
 
   /** Used to detect host constructors (Safari). */
-  var reIsHostCtor$1 = /^\[object .+?Constructor\]$/;
+  var reIsHostCtor$2 = /^\[object .+?Constructor\]$/;
 
   /** Used for built-in method references. */
-  var funcProto$4 = Function.prototype,
-    objectProto$p = Object.prototype;
+  var funcProto$5 = Function.prototype,
+    objectProto$q = Object.prototype;
 
   /** Used to resolve the decompiled source of functions. */
-  var funcToString$4 = funcProto$4.toString;
+  var funcToString$5 = funcProto$5.toString;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$l = objectProto$p.hasOwnProperty;
+  var hasOwnProperty$m = objectProto$q.hasOwnProperty;
 
   /** Used to detect if a method is native. */
-  var reIsNative$1 = RegExp('^' + funcToString$4.call(hasOwnProperty$l).replace(reRegExpChar$1, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
+  var reIsNative$2 = RegExp('^' + funcToString$5.call(hasOwnProperty$m).replace(reRegExpChar$2, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
 
   /**
    * The base implementation of `_.isNative` without bad shim checks.
@@ -964,14 +964,14 @@
    * @returns {boolean} Returns `true` if `value` is a native function,
    *  else `false`.
    */
-  function baseIsNative$3(value) {
-    if (!isObject$b(value) || isMasked$2(value)) {
+  function baseIsNative$4(value) {
+    if (!isObject$c(value) || isMasked$3(value)) {
       return false;
     }
-    var pattern = isFunction$4(value) ? reIsNative$1 : reIsHostCtor$1;
-    return pattern.test(toSource$4(value));
+    var pattern = isFunction$5(value) ? reIsNative$2 : reIsHostCtor$2;
+    return pattern.test(toSource$5(value));
   }
-  var _baseIsNative$1 = baseIsNative$3;
+  var _baseIsNative$2 = baseIsNative$4;
 
   /**
    * Gets the value at `key` of `object`.
@@ -982,13 +982,13 @@
    * @returns {*} Returns the property value.
    */
 
-  function getValue$3(object, key) {
+  function getValue$4(object, key) {
     return object == null ? undefined : object[key];
   }
-  var _getValue$1 = getValue$3;
+  var _getValue$2 = getValue$4;
 
-  var baseIsNative$2 = _baseIsNative$1,
-    getValue$2 = _getValue$1;
+  var baseIsNative$3 = _baseIsNative$2,
+    getValue$3 = _getValue$2;
 
   /**
    * Gets the native function at `key` of `object`.
@@ -998,69 +998,69 @@
    * @param {string} key The key of the method to get.
    * @returns {*} Returns the function if it's native, else `undefined`.
    */
-  function getNative$f(object, key) {
-    var value = getValue$2(object, key);
-    return baseIsNative$2(value) ? value : undefined;
+  function getNative$g(object, key) {
+    var value = getValue$3(object, key);
+    return baseIsNative$3(value) ? value : undefined;
   }
-  var _getNative$1 = getNative$f;
+  var _getNative$2 = getNative$g;
 
-  var getNative$e = _getNative$1,
-    root$e = _root$1;
-
-  /* Built-in method references that are verified to be native. */
-  var DataView$3 = getNative$e(root$e, 'DataView');
-  var _DataView$1 = DataView$3;
-
-  var getNative$d = _getNative$1,
-    root$d = _root$1;
+  var getNative$f = _getNative$2,
+    root$f = _root$2;
 
   /* Built-in method references that are verified to be native. */
-  var Map$7 = getNative$d(root$d, 'Map');
-  var _Map$1 = Map$7;
+  var DataView$4 = getNative$f(root$f, 'DataView');
+  var _DataView$2 = DataView$4;
 
-  var getNative$c = _getNative$1,
-    root$c = _root$1;
-
-  /* Built-in method references that are verified to be native. */
-  var Promise$4 = getNative$c(root$c, 'Promise');
-  var _Promise$1 = Promise$4;
-
-  var getNative$b = _getNative$1,
-    root$b = _root$1;
+  var getNative$e = _getNative$2,
+    root$e = _root$2;
 
   /* Built-in method references that are verified to be native. */
-  var Set$5 = getNative$b(root$b, 'Set');
-  var _Set$1 = Set$5;
+  var Map$8 = getNative$e(root$e, 'Map');
+  var _Map$2 = Map$8;
 
-  var getNative$a = _getNative$1,
-    root$a = _root$1;
+  var getNative$d = _getNative$2,
+    root$d = _root$2;
 
   /* Built-in method references that are verified to be native. */
-  var WeakMap$3 = getNative$a(root$a, 'WeakMap');
-  var _WeakMap$1 = WeakMap$3;
+  var Promise$4 = getNative$d(root$d, 'Promise');
+  var _Promise$2 = Promise$4;
 
-  var DataView$2 = _DataView$1,
-    Map$6 = _Map$1,
-    Promise$3 = _Promise$1,
-    Set$4 = _Set$1,
-    WeakMap$2 = _WeakMap$1,
-    baseGetTag$i = _baseGetTag$1,
-    toSource$3 = _toSource$1;
+  var getNative$c = _getNative$2,
+    root$c = _root$2;
+
+  /* Built-in method references that are verified to be native. */
+  var Set$6 = getNative$c(root$c, 'Set');
+  var _Set$2 = Set$6;
+
+  var getNative$b = _getNative$2,
+    root$b = _root$2;
+
+  /* Built-in method references that are verified to be native. */
+  var WeakMap$4 = getNative$b(root$b, 'WeakMap');
+  var _WeakMap$2 = WeakMap$4;
+
+  var DataView$3 = _DataView$2,
+    Map$7 = _Map$2,
+    Promise$3 = _Promise$2,
+    Set$5 = _Set$2,
+    WeakMap$3 = _WeakMap$2,
+    baseGetTag$j = _baseGetTag$2,
+    toSource$4 = _toSource$2;
 
   /** `Object#toString` result references. */
-  var mapTag$b = '[object Map]',
-    objectTag$7 = '[object Object]',
-    promiseTag$1 = '[object Promise]',
-    setTag$b = '[object Set]',
-    weakMapTag$5 = '[object WeakMap]';
-  var dataViewTag$7 = '[object DataView]';
+  var mapTag$c = '[object Map]',
+    objectTag$8 = '[object Object]',
+    promiseTag$2 = '[object Promise]',
+    setTag$c = '[object Set]',
+    weakMapTag$6 = '[object WeakMap]';
+  var dataViewTag$8 = '[object DataView]';
 
   /** Used to detect maps, sets, and weakmaps. */
-  var dataViewCtorString$1 = toSource$3(DataView$2),
-    mapCtorString$1 = toSource$3(Map$6),
-    promiseCtorString$1 = toSource$3(Promise$3),
-    setCtorString$1 = toSource$3(Set$4),
-    weakMapCtorString$1 = toSource$3(WeakMap$2);
+  var dataViewCtorString$2 = toSource$4(DataView$3),
+    mapCtorString$2 = toSource$4(Map$7),
+    promiseCtorString$2 = toSource$4(Promise$3),
+    setCtorString$2 = toSource$4(Set$5),
+    weakMapCtorString$2 = toSource$4(WeakMap$3);
 
   /**
    * Gets the `toStringTag` of `value`.
@@ -1069,32 +1069,32 @@
    * @param {*} value The value to query.
    * @returns {string} Returns the `toStringTag`.
    */
-  var getTag$9 = baseGetTag$i;
+  var getTag$a = baseGetTag$j;
 
   // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
-  if (DataView$2 && getTag$9(new DataView$2(new ArrayBuffer(1))) != dataViewTag$7 || Map$6 && getTag$9(new Map$6()) != mapTag$b || Promise$3 && getTag$9(Promise$3.resolve()) != promiseTag$1 || Set$4 && getTag$9(new Set$4()) != setTag$b || WeakMap$2 && getTag$9(new WeakMap$2()) != weakMapTag$5) {
-    getTag$9 = function (value) {
-      var result = baseGetTag$i(value),
-        Ctor = result == objectTag$7 ? value.constructor : undefined,
-        ctorString = Ctor ? toSource$3(Ctor) : '';
+  if (DataView$3 && getTag$a(new DataView$3(new ArrayBuffer(1))) != dataViewTag$8 || Map$7 && getTag$a(new Map$7()) != mapTag$c || Promise$3 && getTag$a(Promise$3.resolve()) != promiseTag$2 || Set$5 && getTag$a(new Set$5()) != setTag$c || WeakMap$3 && getTag$a(new WeakMap$3()) != weakMapTag$6) {
+    getTag$a = function (value) {
+      var result = baseGetTag$j(value),
+        Ctor = result == objectTag$8 ? value.constructor : undefined,
+        ctorString = Ctor ? toSource$4(Ctor) : '';
       if (ctorString) {
         switch (ctorString) {
-          case dataViewCtorString$1:
-            return dataViewTag$7;
-          case mapCtorString$1:
-            return mapTag$b;
-          case promiseCtorString$1:
-            return promiseTag$1;
-          case setCtorString$1:
-            return setTag$b;
-          case weakMapCtorString$1:
-            return weakMapTag$5;
+          case dataViewCtorString$2:
+            return dataViewTag$8;
+          case mapCtorString$2:
+            return mapTag$c;
+          case promiseCtorString$2:
+            return promiseTag$2;
+          case setCtorString$2:
+            return setTag$c;
+          case weakMapCtorString$2:
+            return weakMapTag$6;
         }
       }
       return result;
     };
   }
-  var _getTag$1 = getTag$9;
+  var _getTag$2 = getTag$a;
 
   /**
    * Checks if `value` is object-like. A value is object-like if it's not `null`
@@ -1121,16 +1121,16 @@
    * // => false
    */
 
-  function isObjectLike$m(value) {
+  function isObjectLike$n(value) {
     return value != null && typeof value == 'object';
   }
-  var isObjectLike_1$1 = isObjectLike$m;
+  var isObjectLike_1$2 = isObjectLike$n;
 
-  var baseGetTag$h = _baseGetTag$1,
-    isObjectLike$l = isObjectLike_1$1;
+  var baseGetTag$i = _baseGetTag$2,
+    isObjectLike$m = isObjectLike_1$2;
 
   /** `Object#toString` result references. */
-  var argsTag$5 = '[object Arguments]';
+  var argsTag$6 = '[object Arguments]';
 
   /**
    * The base implementation of `_.isArguments`.
@@ -1139,22 +1139,22 @@
    * @param {*} value The value to check.
    * @returns {boolean} Returns `true` if `value` is an `arguments` object,
    */
-  function baseIsArguments$3(value) {
-    return isObjectLike$l(value) && baseGetTag$h(value) == argsTag$5;
+  function baseIsArguments$4(value) {
+    return isObjectLike$m(value) && baseGetTag$i(value) == argsTag$6;
   }
-  var _baseIsArguments$1 = baseIsArguments$3;
+  var _baseIsArguments$2 = baseIsArguments$4;
 
-  var baseIsArguments$2 = _baseIsArguments$1,
-    isObjectLike$k = isObjectLike_1$1;
+  var baseIsArguments$3 = _baseIsArguments$2,
+    isObjectLike$l = isObjectLike_1$2;
 
   /** Used for built-in method references. */
-  var objectProto$o = Object.prototype;
+  var objectProto$p = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$k = objectProto$o.hasOwnProperty;
+  var hasOwnProperty$l = objectProto$p.hasOwnProperty;
 
   /** Built-in value references. */
-  var propertyIsEnumerable$3 = objectProto$o.propertyIsEnumerable;
+  var propertyIsEnumerable$4 = objectProto$p.propertyIsEnumerable;
 
   /**
    * Checks if `value` is likely an `arguments` object.
@@ -1174,12 +1174,12 @@
    * _.isArguments([1, 2, 3]);
    * // => false
    */
-  var isArguments$9 = baseIsArguments$2(function () {
+  var isArguments$a = baseIsArguments$3(function () {
     return arguments;
-  }()) ? baseIsArguments$2 : function (value) {
-    return isObjectLike$k(value) && hasOwnProperty$k.call(value, 'callee') && !propertyIsEnumerable$3.call(value, 'callee');
+  }()) ? baseIsArguments$3 : function (value) {
+    return isObjectLike$l(value) && hasOwnProperty$l.call(value, 'callee') && !propertyIsEnumerable$4.call(value, 'callee');
   };
-  var isArguments_1$1 = isArguments$9;
+  var isArguments_1$2 = isArguments$a;
 
   /**
    * Checks if `value` is classified as an `Array` object.
@@ -1205,14 +1205,14 @@
    * // => false
    */
 
-  var isArray$l = Array.isArray;
-  var isArray_1$1 = isArray$l;
+  var isArray$m = Array.isArray;
+  var isArray_1$2 = isArray$m;
 
-  var _isArray$1 = /*@__PURE__*/getDefaultExportFromCjs$1(isArray_1$1);
+  var _isArray$2 = /*@__PURE__*/getDefaultExportFromCjs$2(isArray_1$2);
 
   /** Used as references for various `Number` constants. */
 
-  var MAX_SAFE_INTEGER$3 = 9007199254740991;
+  var MAX_SAFE_INTEGER$4 = 9007199254740991;
 
   /**
    * Checks if `value` is a valid array-like length.
@@ -1240,13 +1240,13 @@
    * _.isLength('3');
    * // => false
    */
-  function isLength$7(value) {
-    return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER$3;
+  function isLength$8(value) {
+    return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER$4;
   }
-  var isLength_1$1 = isLength$7;
+  var isLength_1$2 = isLength$8;
 
-  var isFunction$3 = isFunction_1$1,
-    isLength$6 = isLength_1$1;
+  var isFunction$4 = isFunction_1$2,
+    isLength$7 = isLength_1$2;
 
   /**
    * Checks if `value` is array-like. A value is considered array-like if it's
@@ -1273,12 +1273,12 @@
    * _.isArrayLike(_.noop);
    * // => false
    */
-  function isArrayLike$7(value) {
-    return value != null && isLength$6(value.length) && !isFunction$3(value);
+  function isArrayLike$8(value) {
+    return value != null && isLength$7(value.length) && !isFunction$4(value);
   }
-  var isArrayLike_1$1 = isArrayLike$7;
+  var isArrayLike_1$2 = isArrayLike$8;
 
-  var isBuffer$7 = {exports: {}};
+  var isBuffer$8 = {exports: {}};
 
   /**
    * This method returns `false`.
@@ -1294,16 +1294,16 @@
    * // => [false, false]
    */
 
-  function stubFalse$1() {
+  function stubFalse$2() {
     return false;
   }
-  var stubFalse_1$1 = stubFalse$1;
+  var stubFalse_1$2 = stubFalse$2;
 
-  isBuffer$7.exports;
+  isBuffer$8.exports;
 
   (function (module, exports) {
-  	var root = _root$1,
-  	  stubFalse = stubFalse_1$1;
+  	var root = _root$2,
+  	  stubFalse = stubFalse_1$2;
 
   	/** Detect free variable `exports`. */
   	var freeExports = exports && !exports.nodeType && exports;
@@ -1339,44 +1339,44 @@
   	 */
   	var isBuffer = nativeIsBuffer || stubFalse;
   	module.exports = isBuffer; 
-  } (isBuffer$7, isBuffer$7.exports));
+  } (isBuffer$8, isBuffer$8.exports));
 
-  var isBufferExports$1 = isBuffer$7.exports;
+  var isBufferExports$2 = isBuffer$8.exports;
 
-  var baseGetTag$g = _baseGetTag$1,
-    isLength$5 = isLength_1$1,
-    isObjectLike$j = isObjectLike_1$1;
+  var baseGetTag$h = _baseGetTag$2,
+    isLength$6 = isLength_1$2,
+    isObjectLike$k = isObjectLike_1$2;
 
   /** `Object#toString` result references. */
-  var argsTag$4 = '[object Arguments]',
-    arrayTag$3 = '[object Array]',
+  var argsTag$5 = '[object Arguments]',
+    arrayTag$4 = '[object Array]',
     boolTag$6 = '[object Boolean]',
-    dateTag$7 = '[object Date]',
-    errorTag$3 = '[object Error]',
-    funcTag$4 = '[object Function]',
-    mapTag$a = '[object Map]',
-    numberTag$7 = '[object Number]',
-    objectTag$6 = '[object Object]',
-    regexpTag$5 = '[object RegExp]',
-    setTag$a = '[object Set]',
-    stringTag$7 = '[object String]',
-    weakMapTag$4 = '[object WeakMap]';
-  var arrayBufferTag$5 = '[object ArrayBuffer]',
-    dataViewTag$6 = '[object DataView]',
-    float32Tag$5 = '[object Float32Array]',
-    float64Tag$5 = '[object Float64Array]',
-    int8Tag$5 = '[object Int8Array]',
-    int16Tag$5 = '[object Int16Array]',
-    int32Tag$5 = '[object Int32Array]',
-    uint8Tag$5 = '[object Uint8Array]',
-    uint8ClampedTag$5 = '[object Uint8ClampedArray]',
-    uint16Tag$5 = '[object Uint16Array]',
-    uint32Tag$5 = '[object Uint32Array]';
+    dateTag$8 = '[object Date]',
+    errorTag$4 = '[object Error]',
+    funcTag$5 = '[object Function]',
+    mapTag$b = '[object Map]',
+    numberTag$8 = '[object Number]',
+    objectTag$7 = '[object Object]',
+    regexpTag$6 = '[object RegExp]',
+    setTag$b = '[object Set]',
+    stringTag$8 = '[object String]',
+    weakMapTag$5 = '[object WeakMap]';
+  var arrayBufferTag$6 = '[object ArrayBuffer]',
+    dataViewTag$7 = '[object DataView]',
+    float32Tag$6 = '[object Float32Array]',
+    float64Tag$6 = '[object Float64Array]',
+    int8Tag$6 = '[object Int8Array]',
+    int16Tag$6 = '[object Int16Array]',
+    int32Tag$6 = '[object Int32Array]',
+    uint8Tag$6 = '[object Uint8Array]',
+    uint8ClampedTag$6 = '[object Uint8ClampedArray]',
+    uint16Tag$6 = '[object Uint16Array]',
+    uint32Tag$6 = '[object Uint32Array]';
 
   /** Used to identify `toStringTag` values of typed arrays. */
-  var typedArrayTags$1 = {};
-  typedArrayTags$1[float32Tag$5] = typedArrayTags$1[float64Tag$5] = typedArrayTags$1[int8Tag$5] = typedArrayTags$1[int16Tag$5] = typedArrayTags$1[int32Tag$5] = typedArrayTags$1[uint8Tag$5] = typedArrayTags$1[uint8ClampedTag$5] = typedArrayTags$1[uint16Tag$5] = typedArrayTags$1[uint32Tag$5] = true;
-  typedArrayTags$1[argsTag$4] = typedArrayTags$1[arrayTag$3] = typedArrayTags$1[arrayBufferTag$5] = typedArrayTags$1[boolTag$6] = typedArrayTags$1[dataViewTag$6] = typedArrayTags$1[dateTag$7] = typedArrayTags$1[errorTag$3] = typedArrayTags$1[funcTag$4] = typedArrayTags$1[mapTag$a] = typedArrayTags$1[numberTag$7] = typedArrayTags$1[objectTag$6] = typedArrayTags$1[regexpTag$5] = typedArrayTags$1[setTag$a] = typedArrayTags$1[stringTag$7] = typedArrayTags$1[weakMapTag$4] = false;
+  var typedArrayTags$2 = {};
+  typedArrayTags$2[float32Tag$6] = typedArrayTags$2[float64Tag$6] = typedArrayTags$2[int8Tag$6] = typedArrayTags$2[int16Tag$6] = typedArrayTags$2[int32Tag$6] = typedArrayTags$2[uint8Tag$6] = typedArrayTags$2[uint8ClampedTag$6] = typedArrayTags$2[uint16Tag$6] = typedArrayTags$2[uint32Tag$6] = true;
+  typedArrayTags$2[argsTag$5] = typedArrayTags$2[arrayTag$4] = typedArrayTags$2[arrayBufferTag$6] = typedArrayTags$2[boolTag$6] = typedArrayTags$2[dataViewTag$7] = typedArrayTags$2[dateTag$8] = typedArrayTags$2[errorTag$4] = typedArrayTags$2[funcTag$5] = typedArrayTags$2[mapTag$b] = typedArrayTags$2[numberTag$8] = typedArrayTags$2[objectTag$7] = typedArrayTags$2[regexpTag$6] = typedArrayTags$2[setTag$b] = typedArrayTags$2[stringTag$8] = typedArrayTags$2[weakMapTag$5] = false;
 
   /**
    * The base implementation of `_.isTypedArray` without Node.js optimizations.
@@ -1385,10 +1385,10 @@
    * @param {*} value The value to check.
    * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
    */
-  function baseIsTypedArray$3(value) {
-    return isObjectLike$j(value) && isLength$5(value.length) && !!typedArrayTags$1[baseGetTag$g(value)];
+  function baseIsTypedArray$4(value) {
+    return isObjectLike$k(value) && isLength$6(value.length) && !!typedArrayTags$2[baseGetTag$h(value)];
   }
-  var _baseIsTypedArray$1 = baseIsTypedArray$3;
+  var _baseIsTypedArray$2 = baseIsTypedArray$4;
 
   /**
    * The base implementation of `_.unary` without support for storing metadata.
@@ -1398,19 +1398,19 @@
    * @returns {Function} Returns the new capped function.
    */
 
-  function baseUnary$9(func) {
+  function baseUnary$a(func) {
     return function (value) {
       return func(value);
     };
   }
-  var _baseUnary$1 = baseUnary$9;
+  var _baseUnary$2 = baseUnary$a;
 
-  var _nodeUtil$1 = {exports: {}};
+  var _nodeUtil$2 = {exports: {}};
 
-  _nodeUtil$1.exports;
+  _nodeUtil$2.exports;
 
   (function (module, exports) {
-  	var freeGlobal = _freeGlobal$1;
+  	var freeGlobal = _freeGlobal$2;
 
   	/** Detect free variable `exports`. */
   	var freeExports = exports && !exports.nodeType && exports;
@@ -1438,16 +1438,16 @@
   	  } catch (e) {}
   	}();
   	module.exports = nodeUtil; 
-  } (_nodeUtil$1, _nodeUtil$1.exports));
+  } (_nodeUtil$2, _nodeUtil$2.exports));
 
-  var _nodeUtilExports$1 = _nodeUtil$1.exports;
+  var _nodeUtilExports$2 = _nodeUtil$2.exports;
 
-  var baseIsTypedArray$2 = _baseIsTypedArray$1,
-    baseUnary$8 = _baseUnary$1,
-    nodeUtil$7 = _nodeUtilExports$1;
+  var baseIsTypedArray$3 = _baseIsTypedArray$2,
+    baseUnary$9 = _baseUnary$2,
+    nodeUtil$8 = _nodeUtilExports$2;
 
   /* Node.js helper references. */
-  var nodeIsTypedArray$1 = nodeUtil$7 && nodeUtil$7.isTypedArray;
+  var nodeIsTypedArray$2 = nodeUtil$8 && nodeUtil$8.isTypedArray;
 
   /**
    * Checks if `value` is classified as a typed array.
@@ -1466,27 +1466,27 @@
    * _.isTypedArray([]);
    * // => false
    */
-  var isTypedArray$5 = nodeIsTypedArray$1 ? baseUnary$8(nodeIsTypedArray$1) : baseIsTypedArray$2;
-  var isTypedArray_1$1 = isTypedArray$5;
+  var isTypedArray$6 = nodeIsTypedArray$2 ? baseUnary$9(nodeIsTypedArray$2) : baseIsTypedArray$3;
+  var isTypedArray_1$2 = isTypedArray$6;
 
-  var baseKeys$4 = _baseKeys$1,
-    getTag$8 = _getTag$1,
-    isArguments$8 = isArguments_1$1,
-    isArray$k = isArray_1$1,
-    isArrayLike$6 = isArrayLike_1$1,
-    isBuffer$6 = isBufferExports$1,
-    isPrototype$7 = _isPrototype$1,
-    isTypedArray$4 = isTypedArray_1$1;
+  var baseKeys$5 = _baseKeys$2,
+    getTag$9 = _getTag$2,
+    isArguments$9 = isArguments_1$2,
+    isArray$l = isArray_1$2,
+    isArrayLike$7 = isArrayLike_1$2,
+    isBuffer$7 = isBufferExports$2,
+    isPrototype$8 = _isPrototype$2,
+    isTypedArray$5 = isTypedArray_1$2;
 
   /** `Object#toString` result references. */
-  var mapTag$9 = '[object Map]',
-    setTag$9 = '[object Set]';
+  var mapTag$a = '[object Map]',
+    setTag$a = '[object Set]';
 
   /** Used for built-in method references. */
-  var objectProto$n = Object.prototype;
+  var objectProto$o = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$j = objectProto$n.hasOwnProperty;
+  var hasOwnProperty$k = objectProto$o.hasOwnProperty;
 
   /**
    * Checks if `value` is an empty object, collection, map, or set.
@@ -1521,38 +1521,38 @@
    * _.isEmpty({ 'a': 1 });
    * // => false
    */
-  function isEmpty$1(value) {
+  function isEmpty$2(value) {
     if (value == null) {
       return true;
     }
-    if (isArrayLike$6(value) && (isArray$k(value) || typeof value == 'string' || typeof value.splice == 'function' || isBuffer$6(value) || isTypedArray$4(value) || isArguments$8(value))) {
+    if (isArrayLike$7(value) && (isArray$l(value) || typeof value == 'string' || typeof value.splice == 'function' || isBuffer$7(value) || isTypedArray$5(value) || isArguments$9(value))) {
       return !value.length;
     }
-    var tag = getTag$8(value);
-    if (tag == mapTag$9 || tag == setTag$9) {
+    var tag = getTag$9(value);
+    if (tag == mapTag$a || tag == setTag$a) {
       return !value.size;
     }
-    if (isPrototype$7(value)) {
-      return !baseKeys$4(value).length;
+    if (isPrototype$8(value)) {
+      return !baseKeys$5(value).length;
     }
     for (var key in value) {
-      if (hasOwnProperty$j.call(value, key)) {
+      if (hasOwnProperty$k.call(value, key)) {
         return false;
       }
     }
     return true;
   }
-  var isEmpty_1$1 = isEmpty$1;
+  var isEmpty_1$2 = isEmpty$2;
 
-  var _isEmpty$1 = /*@__PURE__*/getDefaultExportFromCjs$1(isEmpty_1$1);
+  var _isEmpty$2 = /*@__PURE__*/getDefaultExportFromCjs$2(isEmpty_1$2);
 
-  var getNative$9 = _getNative$1;
+  var getNative$a = _getNative$2;
 
   /* Built-in method references that are verified to be native. */
-  var nativeCreate$9 = getNative$9(Object, 'create');
-  var _nativeCreate$1 = nativeCreate$9;
+  var nativeCreate$a = getNative$a(Object, 'create');
+  var _nativeCreate$2 = nativeCreate$a;
 
-  var nativeCreate$8 = _nativeCreate$1;
+  var nativeCreate$9 = _nativeCreate$2;
 
   /**
    * Removes all key-value entries from the hash.
@@ -1561,11 +1561,11 @@
    * @name clear
    * @memberOf Hash
    */
-  function hashClear$3() {
-    this.__data__ = nativeCreate$8 ? nativeCreate$8(null) : {};
+  function hashClear$4() {
+    this.__data__ = nativeCreate$9 ? nativeCreate$9(null) : {};
     this.size = 0;
   }
-  var _hashClear$1 = hashClear$3;
+  var _hashClear$2 = hashClear$4;
 
   /**
    * Removes `key` and its value from the hash.
@@ -1578,23 +1578,23 @@
    * @returns {boolean} Returns `true` if the entry was removed, else `false`.
    */
 
-  function hashDelete$3(key) {
+  function hashDelete$4(key) {
     var result = this.has(key) && delete this.__data__[key];
     this.size -= result ? 1 : 0;
     return result;
   }
-  var _hashDelete$1 = hashDelete$3;
+  var _hashDelete$2 = hashDelete$4;
 
-  var nativeCreate$7 = _nativeCreate$1;
+  var nativeCreate$8 = _nativeCreate$2;
 
   /** Used to stand-in for `undefined` hash values. */
-  var HASH_UNDEFINED$5 = '__lodash_hash_undefined__';
+  var HASH_UNDEFINED$6 = '__lodash_hash_undefined__';
 
   /** Used for built-in method references. */
-  var objectProto$m = Object.prototype;
+  var objectProto$n = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$i = objectProto$m.hasOwnProperty;
+  var hasOwnProperty$j = objectProto$n.hasOwnProperty;
 
   /**
    * Gets the hash value for `key`.
@@ -1605,23 +1605,23 @@
    * @param {string} key The key of the value to get.
    * @returns {*} Returns the entry value.
    */
-  function hashGet$3(key) {
+  function hashGet$4(key) {
     var data = this.__data__;
-    if (nativeCreate$7) {
+    if (nativeCreate$8) {
       var result = data[key];
-      return result === HASH_UNDEFINED$5 ? undefined : result;
+      return result === HASH_UNDEFINED$6 ? undefined : result;
     }
-    return hasOwnProperty$i.call(data, key) ? data[key] : undefined;
+    return hasOwnProperty$j.call(data, key) ? data[key] : undefined;
   }
-  var _hashGet$1 = hashGet$3;
+  var _hashGet$2 = hashGet$4;
 
-  var nativeCreate$6 = _nativeCreate$1;
+  var nativeCreate$7 = _nativeCreate$2;
 
   /** Used for built-in method references. */
-  var objectProto$l = Object.prototype;
+  var objectProto$m = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$h = objectProto$l.hasOwnProperty;
+  var hasOwnProperty$i = objectProto$m.hasOwnProperty;
 
   /**
    * Checks if a hash value for `key` exists.
@@ -1632,16 +1632,16 @@
    * @param {string} key The key of the entry to check.
    * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
    */
-  function hashHas$3(key) {
+  function hashHas$4(key) {
     var data = this.__data__;
-    return nativeCreate$6 ? data[key] !== undefined : hasOwnProperty$h.call(data, key);
+    return nativeCreate$7 ? data[key] !== undefined : hasOwnProperty$i.call(data, key);
   }
-  var _hashHas$1 = hashHas$3;
+  var _hashHas$2 = hashHas$4;
 
-  var nativeCreate$5 = _nativeCreate$1;
+  var nativeCreate$6 = _nativeCreate$2;
 
   /** Used to stand-in for `undefined` hash values. */
-  var HASH_UNDEFINED$4 = '__lodash_hash_undefined__';
+  var HASH_UNDEFINED$5 = '__lodash_hash_undefined__';
 
   /**
    * Sets the hash `key` to `value`.
@@ -1653,19 +1653,19 @@
    * @param {*} value The value to set.
    * @returns {Object} Returns the hash instance.
    */
-  function hashSet$3(key, value) {
+  function hashSet$4(key, value) {
     var data = this.__data__;
     this.size += this.has(key) ? 0 : 1;
-    data[key] = nativeCreate$5 && value === undefined ? HASH_UNDEFINED$4 : value;
+    data[key] = nativeCreate$6 && value === undefined ? HASH_UNDEFINED$5 : value;
     return this;
   }
-  var _hashSet$1 = hashSet$3;
+  var _hashSet$2 = hashSet$4;
 
-  var hashClear$2 = _hashClear$1,
-    hashDelete$2 = _hashDelete$1,
-    hashGet$2 = _hashGet$1,
-    hashHas$2 = _hashHas$1,
-    hashSet$2 = _hashSet$1;
+  var hashClear$3 = _hashClear$2,
+    hashDelete$3 = _hashDelete$2,
+    hashGet$3 = _hashGet$2,
+    hashHas$3 = _hashHas$2,
+    hashSet$3 = _hashSet$2;
 
   /**
    * Creates a hash object.
@@ -1674,7 +1674,7 @@
    * @constructor
    * @param {Array} [entries] The key-value pairs to cache.
    */
-  function Hash$3(entries) {
+  function Hash$4(entries) {
     var index = -1,
       length = entries == null ? 0 : entries.length;
     this.clear();
@@ -1685,12 +1685,12 @@
   }
 
   // Add methods to `Hash`.
-  Hash$3.prototype.clear = hashClear$2;
-  Hash$3.prototype['delete'] = hashDelete$2;
-  Hash$3.prototype.get = hashGet$2;
-  Hash$3.prototype.has = hashHas$2;
-  Hash$3.prototype.set = hashSet$2;
-  var _Hash$1 = Hash$3;
+  Hash$4.prototype.clear = hashClear$3;
+  Hash$4.prototype['delete'] = hashDelete$3;
+  Hash$4.prototype.get = hashGet$3;
+  Hash$4.prototype.has = hashHas$3;
+  Hash$4.prototype.set = hashSet$3;
+  var _Hash$2 = Hash$4;
 
   /**
    * Removes all key-value entries from the list cache.
@@ -1700,11 +1700,11 @@
    * @memberOf ListCache
    */
 
-  function listCacheClear$3() {
+  function listCacheClear$4() {
     this.__data__ = [];
     this.size = 0;
   }
-  var _listCacheClear$1 = listCacheClear$3;
+  var _listCacheClear$2 = listCacheClear$4;
 
   /**
    * Performs a
@@ -1739,12 +1739,12 @@
    * // => true
    */
 
-  function eq$5(value, other) {
+  function eq$6(value, other) {
     return value === other || value !== value && other !== other;
   }
-  var eq_1$1 = eq$5;
+  var eq_1$2 = eq$6;
 
-  var eq$4 = eq_1$1;
+  var eq$5 = eq_1$2;
 
   /**
    * Gets the index at which the `key` is found in `array` of key-value pairs.
@@ -1754,24 +1754,24 @@
    * @param {*} key The key to search for.
    * @returns {number} Returns the index of the matched value, else `-1`.
    */
-  function assocIndexOf$9(array, key) {
+  function assocIndexOf$a(array, key) {
     var length = array.length;
     while (length--) {
-      if (eq$4(array[length][0], key)) {
+      if (eq$5(array[length][0], key)) {
         return length;
       }
     }
     return -1;
   }
-  var _assocIndexOf$1 = assocIndexOf$9;
+  var _assocIndexOf$2 = assocIndexOf$a;
 
-  var assocIndexOf$8 = _assocIndexOf$1;
+  var assocIndexOf$9 = _assocIndexOf$2;
 
   /** Used for built-in method references. */
-  var arrayProto$1 = Array.prototype;
+  var arrayProto$2 = Array.prototype;
 
   /** Built-in value references. */
-  var splice$1 = arrayProto$1.splice;
+  var splice$2 = arrayProto$2.splice;
 
   /**
    * Removes `key` and its value from the list cache.
@@ -1782,9 +1782,9 @@
    * @param {string} key The key of the value to remove.
    * @returns {boolean} Returns `true` if the entry was removed, else `false`.
    */
-  function listCacheDelete$3(key) {
+  function listCacheDelete$4(key) {
     var data = this.__data__,
-      index = assocIndexOf$8(data, key);
+      index = assocIndexOf$9(data, key);
     if (index < 0) {
       return false;
     }
@@ -1792,14 +1792,14 @@
     if (index == lastIndex) {
       data.pop();
     } else {
-      splice$1.call(data, index, 1);
+      splice$2.call(data, index, 1);
     }
     --this.size;
     return true;
   }
-  var _listCacheDelete$1 = listCacheDelete$3;
+  var _listCacheDelete$2 = listCacheDelete$4;
 
-  var assocIndexOf$7 = _assocIndexOf$1;
+  var assocIndexOf$8 = _assocIndexOf$2;
 
   /**
    * Gets the list cache value for `key`.
@@ -1810,14 +1810,14 @@
    * @param {string} key The key of the value to get.
    * @returns {*} Returns the entry value.
    */
-  function listCacheGet$3(key) {
+  function listCacheGet$4(key) {
     var data = this.__data__,
-      index = assocIndexOf$7(data, key);
+      index = assocIndexOf$8(data, key);
     return index < 0 ? undefined : data[index][1];
   }
-  var _listCacheGet$1 = listCacheGet$3;
+  var _listCacheGet$2 = listCacheGet$4;
 
-  var assocIndexOf$6 = _assocIndexOf$1;
+  var assocIndexOf$7 = _assocIndexOf$2;
 
   /**
    * Checks if a list cache value for `key` exists.
@@ -1828,12 +1828,12 @@
    * @param {string} key The key of the entry to check.
    * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
    */
-  function listCacheHas$3(key) {
-    return assocIndexOf$6(this.__data__, key) > -1;
+  function listCacheHas$4(key) {
+    return assocIndexOf$7(this.__data__, key) > -1;
   }
-  var _listCacheHas$1 = listCacheHas$3;
+  var _listCacheHas$2 = listCacheHas$4;
 
-  var assocIndexOf$5 = _assocIndexOf$1;
+  var assocIndexOf$6 = _assocIndexOf$2;
 
   /**
    * Sets the list cache `key` to `value`.
@@ -1845,9 +1845,9 @@
    * @param {*} value The value to set.
    * @returns {Object} Returns the list cache instance.
    */
-  function listCacheSet$3(key, value) {
+  function listCacheSet$4(key, value) {
     var data = this.__data__,
-      index = assocIndexOf$5(data, key);
+      index = assocIndexOf$6(data, key);
     if (index < 0) {
       ++this.size;
       data.push([key, value]);
@@ -1856,13 +1856,13 @@
     }
     return this;
   }
-  var _listCacheSet$1 = listCacheSet$3;
+  var _listCacheSet$2 = listCacheSet$4;
 
-  var listCacheClear$2 = _listCacheClear$1,
-    listCacheDelete$2 = _listCacheDelete$1,
-    listCacheGet$2 = _listCacheGet$1,
-    listCacheHas$2 = _listCacheHas$1,
-    listCacheSet$2 = _listCacheSet$1;
+  var listCacheClear$3 = _listCacheClear$2,
+    listCacheDelete$3 = _listCacheDelete$2,
+    listCacheGet$3 = _listCacheGet$2,
+    listCacheHas$3 = _listCacheHas$2,
+    listCacheSet$3 = _listCacheSet$2;
 
   /**
    * Creates an list cache object.
@@ -1871,7 +1871,7 @@
    * @constructor
    * @param {Array} [entries] The key-value pairs to cache.
    */
-  function ListCache$9(entries) {
+  function ListCache$a(entries) {
     var index = -1,
       length = entries == null ? 0 : entries.length;
     this.clear();
@@ -1882,16 +1882,16 @@
   }
 
   // Add methods to `ListCache`.
-  ListCache$9.prototype.clear = listCacheClear$2;
-  ListCache$9.prototype['delete'] = listCacheDelete$2;
-  ListCache$9.prototype.get = listCacheGet$2;
-  ListCache$9.prototype.has = listCacheHas$2;
-  ListCache$9.prototype.set = listCacheSet$2;
-  var _ListCache$1 = ListCache$9;
+  ListCache$a.prototype.clear = listCacheClear$3;
+  ListCache$a.prototype['delete'] = listCacheDelete$3;
+  ListCache$a.prototype.get = listCacheGet$3;
+  ListCache$a.prototype.has = listCacheHas$3;
+  ListCache$a.prototype.set = listCacheSet$3;
+  var _ListCache$2 = ListCache$a;
 
-  var Hash$2 = _Hash$1,
-    ListCache$8 = _ListCache$1,
-    Map$5 = _Map$1;
+  var Hash$3 = _Hash$2,
+    ListCache$9 = _ListCache$2,
+    Map$6 = _Map$2;
 
   /**
    * Removes all key-value entries from the map.
@@ -1900,15 +1900,15 @@
    * @name clear
    * @memberOf MapCache
    */
-  function mapCacheClear$3() {
+  function mapCacheClear$4() {
     this.size = 0;
     this.__data__ = {
-      'hash': new Hash$2(),
-      'map': new (Map$5 || ListCache$8)(),
-      'string': new Hash$2()
+      'hash': new Hash$3(),
+      'map': new (Map$6 || ListCache$9)(),
+      'string': new Hash$3()
     };
   }
-  var _mapCacheClear$1 = mapCacheClear$3;
+  var _mapCacheClear$2 = mapCacheClear$4;
 
   /**
    * Checks if `value` is suitable for use as unique object key.
@@ -1918,13 +1918,13 @@
    * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
    */
 
-  function isKeyable$3(value) {
+  function isKeyable$4(value) {
     var type = typeof value;
     return type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean' ? value !== '__proto__' : value === null;
   }
-  var _isKeyable$1 = isKeyable$3;
+  var _isKeyable$2 = isKeyable$4;
 
-  var isKeyable$2 = _isKeyable$1;
+  var isKeyable$3 = _isKeyable$2;
 
   /**
    * Gets the data for `map`.
@@ -1934,13 +1934,13 @@
    * @param {string} key The reference key.
    * @returns {*} Returns the map data.
    */
-  function getMapData$9(map, key) {
+  function getMapData$a(map, key) {
     var data = map.__data__;
-    return isKeyable$2(key) ? data[typeof key == 'string' ? 'string' : 'hash'] : data.map;
+    return isKeyable$3(key) ? data[typeof key == 'string' ? 'string' : 'hash'] : data.map;
   }
-  var _getMapData$1 = getMapData$9;
+  var _getMapData$2 = getMapData$a;
 
-  var getMapData$8 = _getMapData$1;
+  var getMapData$9 = _getMapData$2;
 
   /**
    * Removes `key` and its value from the map.
@@ -1951,14 +1951,14 @@
    * @param {string} key The key of the value to remove.
    * @returns {boolean} Returns `true` if the entry was removed, else `false`.
    */
-  function mapCacheDelete$3(key) {
-    var result = getMapData$8(this, key)['delete'](key);
+  function mapCacheDelete$4(key) {
+    var result = getMapData$9(this, key)['delete'](key);
     this.size -= result ? 1 : 0;
     return result;
   }
-  var _mapCacheDelete$1 = mapCacheDelete$3;
+  var _mapCacheDelete$2 = mapCacheDelete$4;
 
-  var getMapData$7 = _getMapData$1;
+  var getMapData$8 = _getMapData$2;
 
   /**
    * Gets the map value for `key`.
@@ -1969,12 +1969,12 @@
    * @param {string} key The key of the value to get.
    * @returns {*} Returns the entry value.
    */
-  function mapCacheGet$3(key) {
-    return getMapData$7(this, key).get(key);
+  function mapCacheGet$4(key) {
+    return getMapData$8(this, key).get(key);
   }
-  var _mapCacheGet$1 = mapCacheGet$3;
+  var _mapCacheGet$2 = mapCacheGet$4;
 
-  var getMapData$6 = _getMapData$1;
+  var getMapData$7 = _getMapData$2;
 
   /**
    * Checks if a map value for `key` exists.
@@ -1985,12 +1985,12 @@
    * @param {string} key The key of the entry to check.
    * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
    */
-  function mapCacheHas$3(key) {
-    return getMapData$6(this, key).has(key);
+  function mapCacheHas$4(key) {
+    return getMapData$7(this, key).has(key);
   }
-  var _mapCacheHas$1 = mapCacheHas$3;
+  var _mapCacheHas$2 = mapCacheHas$4;
 
-  var getMapData$5 = _getMapData$1;
+  var getMapData$6 = _getMapData$2;
 
   /**
    * Sets the map `key` to `value`.
@@ -2002,20 +2002,20 @@
    * @param {*} value The value to set.
    * @returns {Object} Returns the map cache instance.
    */
-  function mapCacheSet$3(key, value) {
-    var data = getMapData$5(this, key),
+  function mapCacheSet$4(key, value) {
+    var data = getMapData$6(this, key),
       size = data.size;
     data.set(key, value);
     this.size += data.size == size ? 0 : 1;
     return this;
   }
-  var _mapCacheSet$1 = mapCacheSet$3;
+  var _mapCacheSet$2 = mapCacheSet$4;
 
-  var mapCacheClear$2 = _mapCacheClear$1,
-    mapCacheDelete$2 = _mapCacheDelete$1,
-    mapCacheGet$2 = _mapCacheGet$1,
-    mapCacheHas$2 = _mapCacheHas$1,
-    mapCacheSet$2 = _mapCacheSet$1;
+  var mapCacheClear$3 = _mapCacheClear$2,
+    mapCacheDelete$3 = _mapCacheDelete$2,
+    mapCacheGet$3 = _mapCacheGet$2,
+    mapCacheHas$3 = _mapCacheHas$2,
+    mapCacheSet$3 = _mapCacheSet$2;
 
   /**
    * Creates a map cache object to store key-value pairs.
@@ -2024,7 +2024,7 @@
    * @constructor
    * @param {Array} [entries] The key-value pairs to cache.
    */
-  function MapCache$7(entries) {
+  function MapCache$8(entries) {
     var index = -1,
       length = entries == null ? 0 : entries.length;
     this.clear();
@@ -2035,16 +2035,16 @@
   }
 
   // Add methods to `MapCache`.
-  MapCache$7.prototype.clear = mapCacheClear$2;
-  MapCache$7.prototype['delete'] = mapCacheDelete$2;
-  MapCache$7.prototype.get = mapCacheGet$2;
-  MapCache$7.prototype.has = mapCacheHas$2;
-  MapCache$7.prototype.set = mapCacheSet$2;
-  var _MapCache$1 = MapCache$7;
+  MapCache$8.prototype.clear = mapCacheClear$3;
+  MapCache$8.prototype['delete'] = mapCacheDelete$3;
+  MapCache$8.prototype.get = mapCacheGet$3;
+  MapCache$8.prototype.has = mapCacheHas$3;
+  MapCache$8.prototype.set = mapCacheSet$3;
+  var _MapCache$2 = MapCache$8;
 
   /** Used to stand-in for `undefined` hash values. */
 
-  var HASH_UNDEFINED$3 = '__lodash_hash_undefined__';
+  var HASH_UNDEFINED$4 = '__lodash_hash_undefined__';
 
   /**
    * Adds `value` to the array cache.
@@ -2056,11 +2056,11 @@
    * @param {*} value The value to cache.
    * @returns {Object} Returns the cache instance.
    */
-  function setCacheAdd$3(value) {
-    this.__data__.set(value, HASH_UNDEFINED$3);
+  function setCacheAdd$4(value) {
+    this.__data__.set(value, HASH_UNDEFINED$4);
     return this;
   }
-  var _setCacheAdd$1 = setCacheAdd$3;
+  var _setCacheAdd$2 = setCacheAdd$4;
 
   /**
    * Checks if `value` is in the array cache.
@@ -2072,14 +2072,14 @@
    * @returns {number} Returns `true` if `value` is found, else `false`.
    */
 
-  function setCacheHas$3(value) {
+  function setCacheHas$4(value) {
     return this.__data__.has(value);
   }
-  var _setCacheHas$1 = setCacheHas$3;
+  var _setCacheHas$2 = setCacheHas$4;
 
-  var MapCache$6 = _MapCache$1,
-    setCacheAdd$2 = _setCacheAdd$1,
-    setCacheHas$2 = _setCacheHas$1;
+  var MapCache$7 = _MapCache$2,
+    setCacheAdd$3 = _setCacheAdd$2,
+    setCacheHas$3 = _setCacheHas$2;
 
   /**
    *
@@ -2089,19 +2089,19 @@
    * @constructor
    * @param {Array} [values] The values to cache.
    */
-  function SetCache$3(values) {
+  function SetCache$4(values) {
     var index = -1,
       length = values == null ? 0 : values.length;
-    this.__data__ = new MapCache$6();
+    this.__data__ = new MapCache$7();
     while (++index < length) {
       this.add(values[index]);
     }
   }
 
   // Add methods to `SetCache`.
-  SetCache$3.prototype.add = SetCache$3.prototype.push = setCacheAdd$2;
-  SetCache$3.prototype.has = setCacheHas$2;
-  var _SetCache$1 = SetCache$3;
+  SetCache$4.prototype.add = SetCache$4.prototype.push = setCacheAdd$3;
+  SetCache$4.prototype.has = setCacheHas$3;
+  var _SetCache$2 = SetCache$4;
 
   /**
    * The base implementation of `_.findIndex` and `_.findLastIndex` without
@@ -2115,7 +2115,7 @@
    * @returns {number} Returns the index of the matched value, else `-1`.
    */
 
-  function baseFindIndex$3(array, predicate, fromIndex, fromRight) {
+  function baseFindIndex$4(array, predicate, fromIndex, fromRight) {
     var length = array.length,
       index = fromIndex + (fromRight ? 1 : -1);
     while (fromRight ? index-- : ++index < length) {
@@ -2125,7 +2125,7 @@
     }
     return -1;
   }
-  var _baseFindIndex$1 = baseFindIndex$3;
+  var _baseFindIndex$2 = baseFindIndex$4;
 
   /**
    * The base implementation of `_.isNaN` without support for number objects.
@@ -2135,10 +2135,10 @@
    * @returns {boolean} Returns `true` if `value` is `NaN`, else `false`.
    */
 
-  function baseIsNaN$3(value) {
+  function baseIsNaN$4(value) {
     return value !== value;
   }
-  var _baseIsNaN$1 = baseIsNaN$3;
+  var _baseIsNaN$2 = baseIsNaN$4;
 
   /**
    * A specialized version of `_.indexOf` which performs strict equality
@@ -2151,7 +2151,7 @@
    * @returns {number} Returns the index of the matched value, else `-1`.
    */
 
-  function strictIndexOf$3(array, value, fromIndex) {
+  function strictIndexOf$4(array, value, fromIndex) {
     var index = fromIndex - 1,
       length = array.length;
     while (++index < length) {
@@ -2161,11 +2161,11 @@
     }
     return -1;
   }
-  var _strictIndexOf$1 = strictIndexOf$3;
+  var _strictIndexOf$2 = strictIndexOf$4;
 
-  var baseFindIndex$2 = _baseFindIndex$1,
-    baseIsNaN$2 = _baseIsNaN$1,
-    strictIndexOf$2 = _strictIndexOf$1;
+  var baseFindIndex$3 = _baseFindIndex$2,
+    baseIsNaN$3 = _baseIsNaN$2,
+    strictIndexOf$3 = _strictIndexOf$2;
 
   /**
    * The base implementation of `_.indexOf` without `fromIndex` bounds checks.
@@ -2176,12 +2176,12 @@
    * @param {number} fromIndex The index to search from.
    * @returns {number} Returns the index of the matched value, else `-1`.
    */
-  function baseIndexOf$7(array, value, fromIndex) {
-    return value === value ? strictIndexOf$2(array, value, fromIndex) : baseFindIndex$2(array, baseIsNaN$2, fromIndex);
+  function baseIndexOf$8(array, value, fromIndex) {
+    return value === value ? strictIndexOf$3(array, value, fromIndex) : baseFindIndex$3(array, baseIsNaN$3, fromIndex);
   }
-  var _baseIndexOf$1 = baseIndexOf$7;
+  var _baseIndexOf$2 = baseIndexOf$8;
 
-  var baseIndexOf$6 = _baseIndexOf$1;
+  var baseIndexOf$7 = _baseIndexOf$2;
 
   /**
    * A specialized version of `_.includes` for arrays without support for
@@ -2192,11 +2192,11 @@
    * @param {*} target The value to search for.
    * @returns {boolean} Returns `true` if `target` is found, else `false`.
    */
-  function arrayIncludes$3(array, value) {
+  function arrayIncludes$4(array, value) {
     var length = array == null ? 0 : array.length;
-    return !!length && baseIndexOf$6(array, value, 0) > -1;
+    return !!length && baseIndexOf$7(array, value, 0) > -1;
   }
-  var _arrayIncludes$1 = arrayIncludes$3;
+  var _arrayIncludes$2 = arrayIncludes$4;
 
   /**
    * This function is like `arrayIncludes` except that it accepts a comparator.
@@ -2208,7 +2208,7 @@
    * @returns {boolean} Returns `true` if `target` is found, else `false`.
    */
 
-  function arrayIncludesWith$3(array, value, comparator) {
+  function arrayIncludesWith$4(array, value, comparator) {
     var index = -1,
       length = array == null ? 0 : array.length;
     while (++index < length) {
@@ -2218,7 +2218,7 @@
     }
     return false;
   }
-  var _arrayIncludesWith$1 = arrayIncludesWith$3;
+  var _arrayIncludesWith$2 = arrayIncludesWith$4;
 
   /**
    * Checks if a `cache` value for `key` exists.
@@ -2229,10 +2229,10 @@
    * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
    */
 
-  function cacheHas$3(cache, key) {
+  function cacheHas$4(cache, key) {
     return cache.has(key);
   }
-  var _cacheHas$1 = cacheHas$3;
+  var _cacheHas$2 = cacheHas$4;
 
   /**
    * This method returns `undefined`.
@@ -2247,10 +2247,10 @@
    * // => [undefined, undefined]
    */
 
-  function noop$3() {
+  function noop$4() {
     // No operation performed.
   }
-  var noop_1$1 = noop$3;
+  var noop_1$2 = noop$4;
 
   /**
    * Converts `set` to an array of its values.
@@ -2260,7 +2260,7 @@
    * @returns {Array} Returns the values.
    */
 
-  function setToArray$5(set) {
+  function setToArray$6(set) {
     var index = -1,
       result = Array(set.size);
     set.forEach(function (value) {
@@ -2268,14 +2268,14 @@
     });
     return result;
   }
-  var _setToArray$1 = setToArray$5;
+  var _setToArray$2 = setToArray$6;
 
-  var Set$3 = _Set$1,
-    noop$2 = noop_1$1,
-    setToArray$4 = _setToArray$1;
+  var Set$4 = _Set$2,
+    noop$3 = noop_1$2,
+    setToArray$5 = _setToArray$2;
 
   /** Used as references for various `Number` constants. */
-  var INFINITY$5 = 1 / 0;
+  var INFINITY$6 = 1 / 0;
 
   /**
    * Creates a set object of `values`.
@@ -2284,20 +2284,20 @@
    * @param {Array} values The values to add to the set.
    * @returns {Object} Returns the new set.
    */
-  var createSet$3 = !(Set$3 && 1 / setToArray$4(new Set$3([, -0]))[1] == INFINITY$5) ? noop$2 : function (values) {
-    return new Set$3(values);
+  var createSet$4 = !(Set$4 && 1 / setToArray$5(new Set$4([, -0]))[1] == INFINITY$6) ? noop$3 : function (values) {
+    return new Set$4(values);
   };
-  var _createSet$1 = createSet$3;
+  var _createSet$2 = createSet$4;
 
-  var SetCache$2 = _SetCache$1,
-    arrayIncludes$2 = _arrayIncludes$1,
-    arrayIncludesWith$2 = _arrayIncludesWith$1,
-    cacheHas$2 = _cacheHas$1,
-    createSet$2 = _createSet$1,
-    setToArray$3 = _setToArray$1;
+  var SetCache$3 = _SetCache$2,
+    arrayIncludes$3 = _arrayIncludes$2,
+    arrayIncludesWith$3 = _arrayIncludesWith$2,
+    cacheHas$3 = _cacheHas$2,
+    createSet$3 = _createSet$2,
+    setToArray$4 = _setToArray$2;
 
   /** Used as the size to enable large array optimizations. */
-  var LARGE_ARRAY_SIZE$3 = 200;
+  var LARGE_ARRAY_SIZE$4 = 200;
 
   /**
    * The base implementation of `_.uniqBy` without support for iteratee shorthands.
@@ -2308,24 +2308,24 @@
    * @param {Function} [comparator] The comparator invoked per element.
    * @returns {Array} Returns the new duplicate free array.
    */
-  function baseUniq$3(array, iteratee, comparator) {
+  function baseUniq$4(array, iteratee, comparator) {
     var index = -1,
-      includes = arrayIncludes$2,
+      includes = arrayIncludes$3,
       length = array.length,
       isCommon = true,
       result = [],
       seen = result;
     if (comparator) {
       isCommon = false;
-      includes = arrayIncludesWith$2;
-    } else if (length >= LARGE_ARRAY_SIZE$3) {
-      var set = iteratee ? null : createSet$2(array);
+      includes = arrayIncludesWith$3;
+    } else if (length >= LARGE_ARRAY_SIZE$4) {
+      var set = iteratee ? null : createSet$3(array);
       if (set) {
-        return setToArray$3(set);
+        return setToArray$4(set);
       }
       isCommon = false;
-      includes = cacheHas$2;
-      seen = new SetCache$2();
+      includes = cacheHas$3;
+      seen = new SetCache$3();
     } else {
       seen = iteratee ? [] : result;
     }
@@ -2353,9 +2353,9 @@
     }
     return result;
   }
-  var _baseUniq$1 = baseUniq$3;
+  var _baseUniq$2 = baseUniq$4;
 
-  var baseUniq$2 = _baseUniq$1;
+  var baseUniq$3 = _baseUniq$2;
 
   /**
    * Creates a duplicate-free version of an array, using
@@ -2375,12 +2375,12 @@
    * _.uniq([2, 1, 2]);
    * // => [2, 1]
    */
-  function uniq$1(array) {
-    return array && array.length ? baseUniq$2(array) : [];
+  function uniq$2(array) {
+    return array && array.length ? baseUniq$3(array) : [];
   }
-  var uniq_1$1 = uniq$1;
+  var uniq_1$2 = uniq$2;
 
-  var _uniq$1 = /*@__PURE__*/getDefaultExportFromCjs$1(uniq_1$1);
+  var _uniq$2 = /*@__PURE__*/getDefaultExportFromCjs$2(uniq_1$2);
 
   /**
    * A specialized version of `_.map` for arrays without support for iteratee
@@ -2392,7 +2392,7 @@
    * @returns {Array} Returns the new mapped array.
    */
 
-  function arrayMap$5(array, iteratee) {
+  function arrayMap$6(array, iteratee) {
     var index = -1,
       length = array == null ? 0 : array.length,
       result = Array(length);
@@ -2401,13 +2401,13 @@
     }
     return result;
   }
-  var _arrayMap$1 = arrayMap$5;
+  var _arrayMap$2 = arrayMap$6;
 
-  var baseGetTag$f = _baseGetTag$1,
-    isObjectLike$i = isObjectLike_1$1;
+  var baseGetTag$g = _baseGetTag$2,
+    isObjectLike$j = isObjectLike_1$2;
 
   /** `Object#toString` result references. */
-  var symbolTag$5 = '[object Symbol]';
+  var symbolTag$6 = '[object Symbol]';
 
   /**
    * Checks if `value` is classified as a `Symbol` primitive or object.
@@ -2426,22 +2426,22 @@
    * _.isSymbol('abc');
    * // => false
    */
-  function isSymbol$7(value) {
-    return typeof value == 'symbol' || isObjectLike$i(value) && baseGetTag$f(value) == symbolTag$5;
+  function isSymbol$8(value) {
+    return typeof value == 'symbol' || isObjectLike$j(value) && baseGetTag$g(value) == symbolTag$6;
   }
-  var isSymbol_1$1 = isSymbol$7;
+  var isSymbol_1$2 = isSymbol$8;
 
-  var Symbol$9 = _Symbol$1,
-    arrayMap$4 = _arrayMap$1,
-    isArray$j = isArray_1$1,
-    isSymbol$6 = isSymbol_1$1;
+  var Symbol$9 = _Symbol$2,
+    arrayMap$5 = _arrayMap$2,
+    isArray$k = isArray_1$2,
+    isSymbol$7 = isSymbol_1$2;
 
   /** Used as references for various `Number` constants. */
-  var INFINITY$4 = 1 / 0;
+  var INFINITY$5 = 1 / 0;
 
   /** Used to convert symbols to primitives and strings. */
-  var symbolProto$3 = Symbol$9 ? Symbol$9.prototype : undefined,
-    symbolToString$1 = symbolProto$3 ? symbolProto$3.toString : undefined;
+  var symbolProto$4 = Symbol$9 ? Symbol$9.prototype : undefined,
+    symbolToString$2 = symbolProto$4 ? symbolProto$4.toString : undefined;
 
   /**
    * The base implementation of `_.toString` which doesn't convert nullish
@@ -2451,24 +2451,24 @@
    * @param {*} value The value to process.
    * @returns {string} Returns the string.
    */
-  function baseToString$5(value) {
+  function baseToString$6(value) {
     // Exit early for strings to avoid a performance hit in some environments.
     if (typeof value == 'string') {
       return value;
     }
-    if (isArray$j(value)) {
+    if (isArray$k(value)) {
       // Recursively convert values (susceptible to call stack limits).
-      return arrayMap$4(value, baseToString$5) + '';
+      return arrayMap$5(value, baseToString$6) + '';
     }
-    if (isSymbol$6(value)) {
-      return symbolToString$1 ? symbolToString$1.call(value) : '';
+    if (isSymbol$7(value)) {
+      return symbolToString$2 ? symbolToString$2.call(value) : '';
     }
     var result = value + '';
-    return result == '0' && 1 / value == -INFINITY$4 ? '-0' : result;
+    return result == '0' && 1 / value == -INFINITY$5 ? '-0' : result;
   }
-  var _baseToString$1 = baseToString$5;
+  var _baseToString$2 = baseToString$6;
 
-  var baseToString$4 = _baseToString$1;
+  var baseToString$5 = _baseToString$2;
 
   /**
    * Converts `value` to a string. An empty string is returned for `null`
@@ -2491,15 +2491,15 @@
    * _.toString([1, 2, 3]);
    * // => '1,2,3'
    */
-  function toString$a(value) {
-    return value == null ? '' : baseToString$4(value);
+  function toString$c(value) {
+    return value == null ? '' : baseToString$5(value);
   }
-  var toString_1$1 = toString$a;
+  var toString_1$2 = toString$c;
 
-  var toString$9 = toString_1$1;
+  var toString$b = toString_1$2;
 
   /** Used to generate unique IDs. */
-  var idCounter$1 = 0;
+  var idCounter$2 = 0;
 
   /**
    * Generates a unique ID. If `prefix` is given, the ID is appended to it.
@@ -2518,15 +2518,15 @@
    * _.uniqueId();
    * // => '105'
    */
-  function uniqueId$1(prefix) {
-    var id = ++idCounter$1;
-    return toString$9(prefix) + id;
+  function uniqueId$2(prefix) {
+    var id = ++idCounter$2;
+    return toString$b(prefix) + id;
   }
-  var uniqueId_1$1 = uniqueId$1;
+  var uniqueId_1$2 = uniqueId$2;
 
-  var _uniqueId$1 = /*@__PURE__*/getDefaultExportFromCjs$1(uniqueId_1$1);
+  var _uniqueId$2 = /*@__PURE__*/getDefaultExportFromCjs$2(uniqueId_1$2);
 
-  var ListCache$7 = _ListCache$1;
+  var ListCache$8 = _ListCache$2;
 
   /**
    * Removes all key-value entries from the stack.
@@ -2535,11 +2535,11 @@
    * @name clear
    * @memberOf Stack
    */
-  function stackClear$3() {
-    this.__data__ = new ListCache$7();
+  function stackClear$4() {
+    this.__data__ = new ListCache$8();
     this.size = 0;
   }
-  var _stackClear$1 = stackClear$3;
+  var _stackClear$2 = stackClear$4;
 
   /**
    * Removes `key` and its value from the stack.
@@ -2551,13 +2551,13 @@
    * @returns {boolean} Returns `true` if the entry was removed, else `false`.
    */
 
-  function stackDelete$3(key) {
+  function stackDelete$4(key) {
     var data = this.__data__,
       result = data['delete'](key);
     this.size = data.size;
     return result;
   }
-  var _stackDelete$1 = stackDelete$3;
+  var _stackDelete$2 = stackDelete$4;
 
   /**
    * Gets the stack value for `key`.
@@ -2569,10 +2569,10 @@
    * @returns {*} Returns the entry value.
    */
 
-  function stackGet$3(key) {
+  function stackGet$4(key) {
     return this.__data__.get(key);
   }
-  var _stackGet$1 = stackGet$3;
+  var _stackGet$2 = stackGet$4;
 
   /**
    * Checks if a stack value for `key` exists.
@@ -2584,17 +2584,17 @@
    * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
    */
 
-  function stackHas$3(key) {
+  function stackHas$4(key) {
     return this.__data__.has(key);
   }
-  var _stackHas$1 = stackHas$3;
+  var _stackHas$2 = stackHas$4;
 
-  var ListCache$6 = _ListCache$1,
-    Map$4 = _Map$1,
-    MapCache$5 = _MapCache$1;
+  var ListCache$7 = _ListCache$2,
+    Map$5 = _Map$2,
+    MapCache$6 = _MapCache$2;
 
   /** Used as the size to enable large array optimizations. */
-  var LARGE_ARRAY_SIZE$2 = 200;
+  var LARGE_ARRAY_SIZE$3 = 200;
 
   /**
    * Sets the stack `key` to `value`.
@@ -2606,29 +2606,29 @@
    * @param {*} value The value to set.
    * @returns {Object} Returns the stack cache instance.
    */
-  function stackSet$3(key, value) {
+  function stackSet$4(key, value) {
     var data = this.__data__;
-    if (data instanceof ListCache$6) {
+    if (data instanceof ListCache$7) {
       var pairs = data.__data__;
-      if (!Map$4 || pairs.length < LARGE_ARRAY_SIZE$2 - 1) {
+      if (!Map$5 || pairs.length < LARGE_ARRAY_SIZE$3 - 1) {
         pairs.push([key, value]);
         this.size = ++data.size;
         return this;
       }
-      data = this.__data__ = new MapCache$5(pairs);
+      data = this.__data__ = new MapCache$6(pairs);
     }
     data.set(key, value);
     this.size = data.size;
     return this;
   }
-  var _stackSet$1 = stackSet$3;
+  var _stackSet$2 = stackSet$4;
 
-  var ListCache$5 = _ListCache$1,
-    stackClear$2 = _stackClear$1,
-    stackDelete$2 = _stackDelete$1,
-    stackGet$2 = _stackGet$1,
-    stackHas$2 = _stackHas$1,
-    stackSet$2 = _stackSet$1;
+  var ListCache$6 = _ListCache$2,
+    stackClear$3 = _stackClear$2,
+    stackDelete$3 = _stackDelete$2,
+    stackGet$3 = _stackGet$2,
+    stackHas$3 = _stackHas$2,
+    stackSet$3 = _stackSet$2;
 
   /**
    * Creates a stack cache object to store key-value pairs.
@@ -2637,18 +2637,18 @@
    * @constructor
    * @param {Array} [entries] The key-value pairs to cache.
    */
-  function Stack$3(entries) {
-    var data = this.__data__ = new ListCache$5(entries);
+  function Stack$4(entries) {
+    var data = this.__data__ = new ListCache$6(entries);
     this.size = data.size;
   }
 
   // Add methods to `Stack`.
-  Stack$3.prototype.clear = stackClear$2;
-  Stack$3.prototype['delete'] = stackDelete$2;
-  Stack$3.prototype.get = stackGet$2;
-  Stack$3.prototype.has = stackHas$2;
-  Stack$3.prototype.set = stackSet$2;
-  var _Stack$1 = Stack$3;
+  Stack$4.prototype.clear = stackClear$3;
+  Stack$4.prototype['delete'] = stackDelete$3;
+  Stack$4.prototype.get = stackGet$3;
+  Stack$4.prototype.has = stackHas$3;
+  Stack$4.prototype.set = stackSet$3;
+  var _Stack$2 = Stack$4;
 
   /**
    * A specialized version of `_.forEach` for arrays without support for
@@ -2660,7 +2660,7 @@
    * @returns {Array} Returns `array`.
    */
 
-  function arrayEach$3(array, iteratee) {
+  function arrayEach$4(array, iteratee) {
     var index = -1,
       length = array == null ? 0 : array.length;
     while (++index < length) {
@@ -2670,19 +2670,19 @@
     }
     return array;
   }
-  var _arrayEach$1 = arrayEach$3;
+  var _arrayEach$2 = arrayEach$4;
 
-  var getNative$8 = _getNative$1;
-  var defineProperty$5 = function () {
+  var getNative$9 = _getNative$2;
+  var defineProperty$6 = function () {
     try {
-      var func = getNative$8(Object, 'defineProperty');
+      var func = getNative$9(Object, 'defineProperty');
       func({}, '', {});
       return func;
     } catch (e) {}
   }();
-  var _defineProperty$2 = defineProperty$5;
+  var _defineProperty$3 = defineProperty$6;
 
-  var defineProperty$4 = _defineProperty$2;
+  var defineProperty$5 = _defineProperty$3;
 
   /**
    * The base implementation of `assignValue` and `assignMergeValue` without
@@ -2693,9 +2693,9 @@
    * @param {string} key The key of the property to assign.
    * @param {*} value The value to assign.
    */
-  function baseAssignValue$5(object, key, value) {
-    if (key == '__proto__' && defineProperty$4) {
-      defineProperty$4(object, key, {
+  function baseAssignValue$6(object, key, value) {
+    if (key == '__proto__' && defineProperty$5) {
+      defineProperty$5(object, key, {
         'configurable': true,
         'enumerable': true,
         'value': value,
@@ -2705,16 +2705,16 @@
       object[key] = value;
     }
   }
-  var _baseAssignValue$1 = baseAssignValue$5;
+  var _baseAssignValue$2 = baseAssignValue$6;
 
-  var baseAssignValue$4 = _baseAssignValue$1,
-    eq$3 = eq_1$1;
+  var baseAssignValue$5 = _baseAssignValue$2,
+    eq$4 = eq_1$2;
 
   /** Used for built-in method references. */
-  var objectProto$k = Object.prototype;
+  var objectProto$l = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$g = objectProto$k.hasOwnProperty;
+  var hasOwnProperty$h = objectProto$l.hasOwnProperty;
 
   /**
    * Assigns `value` to `key` of `object` if the existing value is not equivalent
@@ -2726,16 +2726,16 @@
    * @param {string} key The key of the property to assign.
    * @param {*} value The value to assign.
    */
-  function assignValue$7(object, key, value) {
+  function assignValue$8(object, key, value) {
     var objValue = object[key];
-    if (!(hasOwnProperty$g.call(object, key) && eq$3(objValue, value)) || value === undefined && !(key in object)) {
-      baseAssignValue$4(object, key, value);
+    if (!(hasOwnProperty$h.call(object, key) && eq$4(objValue, value)) || value === undefined && !(key in object)) {
+      baseAssignValue$5(object, key, value);
     }
   }
-  var _assignValue$1 = assignValue$7;
+  var _assignValue$2 = assignValue$8;
 
-  var assignValue$6 = _assignValue$1,
-    baseAssignValue$3 = _baseAssignValue$1;
+  var assignValue$7 = _assignValue$2,
+    baseAssignValue$4 = _baseAssignValue$2;
 
   /**
    * Copies properties of `source` to `object`.
@@ -2747,7 +2747,7 @@
    * @param {Function} [customizer] The function to customize copied values.
    * @returns {Object} Returns `object`.
    */
-  function copyObject$b(source, props, object, customizer) {
+  function copyObject$c(source, props, object, customizer) {
     var isNew = !object;
     object || (object = {});
     var index = -1,
@@ -2759,14 +2759,14 @@
         newValue = source[key];
       }
       if (isNew) {
-        baseAssignValue$3(object, key, newValue);
+        baseAssignValue$4(object, key, newValue);
       } else {
-        assignValue$6(object, key, newValue);
+        assignValue$7(object, key, newValue);
       }
     }
     return object;
   }
-  var _copyObject$1 = copyObject$b;
+  var _copyObject$2 = copyObject$c;
 
   /**
    * The base implementation of `_.times` without support for iteratee shorthands
@@ -2778,7 +2778,7 @@
    * @returns {Array} Returns the array of results.
    */
 
-  function baseTimes$3(n, iteratee) {
+  function baseTimes$4(n, iteratee) {
     var index = -1,
       result = Array(n);
     while (++index < n) {
@@ -2786,14 +2786,14 @@
     }
     return result;
   }
-  var _baseTimes$1 = baseTimes$3;
+  var _baseTimes$2 = baseTimes$4;
 
   /** Used as references for various `Number` constants. */
 
-  var MAX_SAFE_INTEGER$2 = 9007199254740991;
+  var MAX_SAFE_INTEGER$3 = 9007199254740991;
 
   /** Used to detect unsigned integer values. */
-  var reIsUint$1 = /^(?:0|[1-9]\d*)$/;
+  var reIsUint$2 = /^(?:0|[1-9]\d*)$/;
 
   /**
    * Checks if `value` is a valid array-like index.
@@ -2803,25 +2803,25 @@
    * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
    * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
    */
-  function isIndex$7(value, length) {
+  function isIndex$8(value, length) {
     var type = typeof value;
-    length = length == null ? MAX_SAFE_INTEGER$2 : length;
-    return !!length && (type == 'number' || type != 'symbol' && reIsUint$1.test(value)) && value > -1 && value % 1 == 0 && value < length;
+    length = length == null ? MAX_SAFE_INTEGER$3 : length;
+    return !!length && (type == 'number' || type != 'symbol' && reIsUint$2.test(value)) && value > -1 && value % 1 == 0 && value < length;
   }
-  var _isIndex$1 = isIndex$7;
+  var _isIndex$2 = isIndex$8;
 
-  var baseTimes$2 = _baseTimes$1,
-    isArguments$7 = isArguments_1$1,
-    isArray$i = isArray_1$1,
-    isBuffer$5 = isBufferExports$1,
-    isIndex$6 = _isIndex$1,
-    isTypedArray$3 = isTypedArray_1$1;
+  var baseTimes$3 = _baseTimes$2,
+    isArguments$8 = isArguments_1$2,
+    isArray$j = isArray_1$2,
+    isBuffer$6 = isBufferExports$2,
+    isIndex$7 = _isIndex$2,
+    isTypedArray$4 = isTypedArray_1$2;
 
   /** Used for built-in method references. */
-  var objectProto$j = Object.prototype;
+  var objectProto$k = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$f = objectProto$j.hasOwnProperty;
+  var hasOwnProperty$g = objectProto$k.hasOwnProperty;
 
   /**
    * Creates an array of the enumerable property names of the array-like `value`.
@@ -2831,16 +2831,16 @@
    * @param {boolean} inherited Specify returning inherited property names.
    * @returns {Array} Returns the array of property names.
    */
-  function arrayLikeKeys$5(value, inherited) {
-    var isArr = isArray$i(value),
-      isArg = !isArr && isArguments$7(value),
-      isBuff = !isArr && !isArg && isBuffer$5(value),
-      isType = !isArr && !isArg && !isBuff && isTypedArray$3(value),
+  function arrayLikeKeys$6(value, inherited) {
+    var isArr = isArray$j(value),
+      isArg = !isArr && isArguments$8(value),
+      isBuff = !isArr && !isArg && isBuffer$6(value),
+      isType = !isArr && !isArg && !isBuff && isTypedArray$4(value),
       skipIndexes = isArr || isArg || isBuff || isType,
-      result = skipIndexes ? baseTimes$2(value.length, String) : [],
+      result = skipIndexes ? baseTimes$3(value.length, String) : [],
       length = result.length;
     for (var key in value) {
-      if ((inherited || hasOwnProperty$f.call(value, key)) && !(skipIndexes && (
+      if ((inherited || hasOwnProperty$g.call(value, key)) && !(skipIndexes && (
       // Safari 9 has enumerable `arguments.length` in strict mode.
       key == 'length' ||
       // Node.js 0.10 has enumerable non-index properties on buffers.
@@ -2848,17 +2848,17 @@
       // PhantomJS 2 has enumerable non-index properties on typed arrays.
       isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset') ||
       // Skip index properties.
-      isIndex$6(key, length)))) {
+      isIndex$7(key, length)))) {
         result.push(key);
       }
     }
     return result;
   }
-  var _arrayLikeKeys$1 = arrayLikeKeys$5;
+  var _arrayLikeKeys$2 = arrayLikeKeys$6;
 
-  var arrayLikeKeys$4 = _arrayLikeKeys$1,
-    baseKeys$3 = _baseKeys$1,
-    isArrayLike$5 = isArrayLike_1$1;
+  var arrayLikeKeys$5 = _arrayLikeKeys$2,
+    baseKeys$4 = _baseKeys$2,
+    isArrayLike$6 = isArrayLike_1$2;
 
   /**
    * Creates an array of the own enumerable property names of `object`.
@@ -2888,15 +2888,15 @@
    * _.keys('hi');
    * // => ['0', '1']
    */
-  function keys$7(object) {
-    return isArrayLike$5(object) ? arrayLikeKeys$4(object) : baseKeys$3(object);
+  function keys$8(object) {
+    return isArrayLike$6(object) ? arrayLikeKeys$5(object) : baseKeys$4(object);
   }
-  var keys_1$1 = keys$7;
+  var keys_1$2 = keys$8;
 
-  var _keys = /*@__PURE__*/getDefaultExportFromCjs$1(keys_1$1);
+  var _keys = /*@__PURE__*/getDefaultExportFromCjs$2(keys_1$2);
 
-  var copyObject$a = _copyObject$1,
-    keys$6 = keys_1$1;
+  var copyObject$b = _copyObject$2,
+    keys$7 = keys_1$2;
 
   /**
    * The base implementation of `_.assign` without support for multiple sources
@@ -2907,10 +2907,10 @@
    * @param {Object} source The source object.
    * @returns {Object} Returns `object`.
    */
-  function baseAssign$3(object, source) {
-    return object && copyObject$a(source, keys$6(source), object);
+  function baseAssign$4(object, source) {
+    return object && copyObject$b(source, keys$7(source), object);
   }
-  var _baseAssign$1 = baseAssign$3;
+  var _baseAssign$2 = baseAssign$4;
 
   /**
    * This function is like
@@ -2922,7 +2922,7 @@
    * @returns {Array} Returns the array of property names.
    */
 
-  function nativeKeysIn$3(object) {
+  function nativeKeysIn$4(object) {
     var result = [];
     if (object != null) {
       for (var key in Object(object)) {
@@ -2931,17 +2931,17 @@
     }
     return result;
   }
-  var _nativeKeysIn$1 = nativeKeysIn$3;
+  var _nativeKeysIn$2 = nativeKeysIn$4;
 
-  var isObject$a = isObject_1$1,
-    isPrototype$6 = _isPrototype$1,
-    nativeKeysIn$2 = _nativeKeysIn$1;
+  var isObject$b = isObject_1$2,
+    isPrototype$7 = _isPrototype$2,
+    nativeKeysIn$3 = _nativeKeysIn$2;
 
   /** Used for built-in method references. */
-  var objectProto$i = Object.prototype;
+  var objectProto$j = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$e = objectProto$i.hasOwnProperty;
+  var hasOwnProperty$f = objectProto$j.hasOwnProperty;
 
   /**
    * The base implementation of `_.keysIn` which doesn't treat sparse arrays as dense.
@@ -2950,24 +2950,24 @@
    * @param {Object} object The object to query.
    * @returns {Array} Returns the array of property names.
    */
-  function baseKeysIn$3(object) {
-    if (!isObject$a(object)) {
-      return nativeKeysIn$2(object);
+  function baseKeysIn$4(object) {
+    if (!isObject$b(object)) {
+      return nativeKeysIn$3(object);
     }
-    var isProto = isPrototype$6(object),
+    var isProto = isPrototype$7(object),
       result = [];
     for (var key in object) {
-      if (!(key == 'constructor' && (isProto || !hasOwnProperty$e.call(object, key)))) {
+      if (!(key == 'constructor' && (isProto || !hasOwnProperty$f.call(object, key)))) {
         result.push(key);
       }
     }
     return result;
   }
-  var _baseKeysIn$1 = baseKeysIn$3;
+  var _baseKeysIn$2 = baseKeysIn$4;
 
-  var arrayLikeKeys$3 = _arrayLikeKeys$1,
-    baseKeysIn$2 = _baseKeysIn$1,
-    isArrayLike$4 = isArrayLike_1$1;
+  var arrayLikeKeys$4 = _arrayLikeKeys$2,
+    baseKeysIn$3 = _baseKeysIn$2,
+    isArrayLike$5 = isArrayLike_1$2;
 
   /**
    * Creates an array of the own and inherited enumerable property names of `object`.
@@ -2992,13 +2992,13 @@
    * _.keysIn(new Foo);
    * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
    */
-  function keysIn$7(object) {
-    return isArrayLike$4(object) ? arrayLikeKeys$3(object, true) : baseKeysIn$2(object);
+  function keysIn$8(object) {
+    return isArrayLike$5(object) ? arrayLikeKeys$4(object, true) : baseKeysIn$3(object);
   }
-  var keysIn_1$1 = keysIn$7;
+  var keysIn_1$2 = keysIn$8;
 
-  var copyObject$9 = _copyObject$1,
-    keysIn$6 = keysIn_1$1;
+  var copyObject$a = _copyObject$2,
+    keysIn$7 = keysIn_1$2;
 
   /**
    * The base implementation of `_.assignIn` without support for multiple sources
@@ -3009,17 +3009,17 @@
    * @param {Object} source The source object.
    * @returns {Object} Returns `object`.
    */
-  function baseAssignIn$3(object, source) {
-    return object && copyObject$9(source, keysIn$6(source), object);
+  function baseAssignIn$4(object, source) {
+    return object && copyObject$a(source, keysIn$7(source), object);
   }
-  var _baseAssignIn$1 = baseAssignIn$3;
+  var _baseAssignIn$2 = baseAssignIn$4;
 
-  var _cloneBuffer$1 = {exports: {}};
+  var _cloneBuffer$2 = {exports: {}};
 
-  _cloneBuffer$1.exports;
+  _cloneBuffer$2.exports;
 
   (function (module, exports) {
-  	var root = _root$1;
+  	var root = _root$2;
 
   	/** Detect free variable `exports`. */
   	var freeExports = exports && !exports.nodeType && exports;
@@ -3052,9 +3052,9 @@
   	  return result;
   	}
   	module.exports = cloneBuffer; 
-  } (_cloneBuffer$1, _cloneBuffer$1.exports));
+  } (_cloneBuffer$2, _cloneBuffer$2.exports));
 
-  var _cloneBufferExports$1 = _cloneBuffer$1.exports;
+  var _cloneBufferExports$2 = _cloneBuffer$2.exports;
 
   /**
    * Copies the values of `source` to `array`.
@@ -3065,7 +3065,7 @@
    * @returns {Array} Returns `array`.
    */
 
-  function copyArray$3(source, array) {
+  function copyArray$4(source, array) {
     var index = -1,
       length = source.length;
     array || (array = Array(length));
@@ -3074,7 +3074,7 @@
     }
     return array;
   }
-  var _copyArray$1 = copyArray$3;
+  var _copyArray$2 = copyArray$4;
 
   /**
    * A specialized version of `_.filter` for arrays without support for
@@ -3086,7 +3086,7 @@
    * @returns {Array} Returns the new filtered array.
    */
 
-  function arrayFilter$3(array, predicate) {
+  function arrayFilter$4(array, predicate) {
     var index = -1,
       length = array == null ? 0 : array.length,
       resIndex = 0,
@@ -3099,7 +3099,7 @@
     }
     return result;
   }
-  var _arrayFilter$1 = arrayFilter$3;
+  var _arrayFilter$2 = arrayFilter$4;
 
   /**
    * This method returns a new empty array.
@@ -3120,22 +3120,22 @@
    * // => false
    */
 
-  function stubArray$5() {
+  function stubArray$6() {
     return [];
   }
-  var stubArray_1$1 = stubArray$5;
+  var stubArray_1$2 = stubArray$6;
 
-  var arrayFilter$2 = _arrayFilter$1,
-    stubArray$4 = stubArray_1$1;
+  var arrayFilter$3 = _arrayFilter$2,
+    stubArray$5 = stubArray_1$2;
 
   /** Used for built-in method references. */
-  var objectProto$h = Object.prototype;
+  var objectProto$i = Object.prototype;
 
   /** Built-in value references. */
-  var propertyIsEnumerable$2 = objectProto$h.propertyIsEnumerable;
+  var propertyIsEnumerable$3 = objectProto$i.propertyIsEnumerable;
 
   /* Built-in method references for those with the same name as other `lodash` methods. */
-  var nativeGetSymbols$3 = Object.getOwnPropertySymbols;
+  var nativeGetSymbols$4 = Object.getOwnPropertySymbols;
 
   /**
    * Creates an array of the own enumerable symbols of `object`.
@@ -3144,19 +3144,19 @@
    * @param {Object} object The object to query.
    * @returns {Array} Returns the array of symbols.
    */
-  var getSymbols$7 = !nativeGetSymbols$3 ? stubArray$4 : function (object) {
+  var getSymbols$8 = !nativeGetSymbols$4 ? stubArray$5 : function (object) {
     if (object == null) {
       return [];
     }
     object = Object(object);
-    return arrayFilter$2(nativeGetSymbols$3(object), function (symbol) {
-      return propertyIsEnumerable$2.call(object, symbol);
+    return arrayFilter$3(nativeGetSymbols$4(object), function (symbol) {
+      return propertyIsEnumerable$3.call(object, symbol);
     });
   };
-  var _getSymbols$1 = getSymbols$7;
+  var _getSymbols$2 = getSymbols$8;
 
-  var copyObject$8 = _copyObject$1,
-    getSymbols$6 = _getSymbols$1;
+  var copyObject$9 = _copyObject$2,
+    getSymbols$7 = _getSymbols$2;
 
   /**
    * Copies own symbols of `source` to `object`.
@@ -3166,10 +3166,10 @@
    * @param {Object} [object={}] The object to copy symbols to.
    * @returns {Object} Returns `object`.
    */
-  function copySymbols$3(source, object) {
-    return copyObject$8(source, getSymbols$6(source), object);
+  function copySymbols$4(source, object) {
+    return copyObject$9(source, getSymbols$7(source), object);
   }
-  var _copySymbols$1 = copySymbols$3;
+  var _copySymbols$2 = copySymbols$4;
 
   /**
    * Appends the elements of `values` to `array`.
@@ -3180,7 +3180,7 @@
    * @returns {Array} Returns `array`.
    */
 
-  function arrayPush$7(array, values) {
+  function arrayPush$8(array, values) {
     var index = -1,
       length = values.length,
       offset = array.length;
@@ -3189,21 +3189,21 @@
     }
     return array;
   }
-  var _arrayPush$1 = arrayPush$7;
+  var _arrayPush$2 = arrayPush$8;
 
-  var overArg$3 = _overArg$1;
+  var overArg$4 = _overArg$2;
 
   /** Built-in value references. */
-  var getPrototype$7 = overArg$3(Object.getPrototypeOf, Object);
-  var _getPrototype$1 = getPrototype$7;
+  var getPrototype$8 = overArg$4(Object.getPrototypeOf, Object);
+  var _getPrototype$2 = getPrototype$8;
 
-  var arrayPush$6 = _arrayPush$1,
-    getPrototype$6 = _getPrototype$1,
-    getSymbols$5 = _getSymbols$1,
-    stubArray$3 = stubArray_1$1;
+  var arrayPush$7 = _arrayPush$2,
+    getPrototype$7 = _getPrototype$2,
+    getSymbols$6 = _getSymbols$2,
+    stubArray$4 = stubArray_1$2;
 
   /* Built-in method references for those with the same name as other `lodash` methods. */
-  var nativeGetSymbols$2 = Object.getOwnPropertySymbols;
+  var nativeGetSymbols$3 = Object.getOwnPropertySymbols;
 
   /**
    * Creates an array of the own and inherited enumerable symbols of `object`.
@@ -3212,18 +3212,18 @@
    * @param {Object} object The object to query.
    * @returns {Array} Returns the array of symbols.
    */
-  var getSymbolsIn$5 = !nativeGetSymbols$2 ? stubArray$3 : function (object) {
+  var getSymbolsIn$6 = !nativeGetSymbols$3 ? stubArray$4 : function (object) {
     var result = [];
     while (object) {
-      arrayPush$6(result, getSymbols$5(object));
-      object = getPrototype$6(object);
+      arrayPush$7(result, getSymbols$6(object));
+      object = getPrototype$7(object);
     }
     return result;
   };
-  var _getSymbolsIn$1 = getSymbolsIn$5;
+  var _getSymbolsIn$2 = getSymbolsIn$6;
 
-  var copyObject$7 = _copyObject$1,
-    getSymbolsIn$4 = _getSymbolsIn$1;
+  var copyObject$8 = _copyObject$2,
+    getSymbolsIn$5 = _getSymbolsIn$2;
 
   /**
    * Copies own and inherited symbols of `source` to `object`.
@@ -3233,13 +3233,13 @@
    * @param {Object} [object={}] The object to copy symbols to.
    * @returns {Object} Returns `object`.
    */
-  function copySymbolsIn$3(source, object) {
-    return copyObject$7(source, getSymbolsIn$4(source), object);
+  function copySymbolsIn$4(source, object) {
+    return copyObject$8(source, getSymbolsIn$5(source), object);
   }
-  var _copySymbolsIn$1 = copySymbolsIn$3;
+  var _copySymbolsIn$2 = copySymbolsIn$4;
 
-  var arrayPush$5 = _arrayPush$1,
-    isArray$h = isArray_1$1;
+  var arrayPush$6 = _arrayPush$2,
+    isArray$i = isArray_1$2;
 
   /**
    * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
@@ -3252,15 +3252,15 @@
    * @param {Function} symbolsFunc The function to get the symbols of `object`.
    * @returns {Array} Returns the array of property names and symbols.
    */
-  function baseGetAllKeys$5(object, keysFunc, symbolsFunc) {
+  function baseGetAllKeys$6(object, keysFunc, symbolsFunc) {
     var result = keysFunc(object);
-    return isArray$h(object) ? result : arrayPush$5(result, symbolsFunc(object));
+    return isArray$i(object) ? result : arrayPush$6(result, symbolsFunc(object));
   }
-  var _baseGetAllKeys$1 = baseGetAllKeys$5;
+  var _baseGetAllKeys$2 = baseGetAllKeys$6;
 
-  var baseGetAllKeys$4 = _baseGetAllKeys$1,
-    getSymbols$4 = _getSymbols$1,
-    keys$5 = keys_1$1;
+  var baseGetAllKeys$5 = _baseGetAllKeys$2,
+    getSymbols$5 = _getSymbols$2,
+    keys$6 = keys_1$2;
 
   /**
    * Creates an array of own enumerable property names and symbols of `object`.
@@ -3269,14 +3269,14 @@
    * @param {Object} object The object to query.
    * @returns {Array} Returns the array of property names and symbols.
    */
-  function getAllKeys$3(object) {
-    return baseGetAllKeys$4(object, keys$5, getSymbols$4);
+  function getAllKeys$4(object) {
+    return baseGetAllKeys$5(object, keys$6, getSymbols$5);
   }
-  var _getAllKeys$1 = getAllKeys$3;
+  var _getAllKeys$2 = getAllKeys$4;
 
-  var baseGetAllKeys$3 = _baseGetAllKeys$1,
-    getSymbolsIn$3 = _getSymbolsIn$1,
-    keysIn$5 = keysIn_1$1;
+  var baseGetAllKeys$4 = _baseGetAllKeys$2,
+    getSymbolsIn$4 = _getSymbolsIn$2,
+    keysIn$6 = keysIn_1$2;
 
   /**
    * Creates an array of own and inherited enumerable property names and
@@ -3286,17 +3286,17 @@
    * @param {Object} object The object to query.
    * @returns {Array} Returns the array of property names and symbols.
    */
-  function getAllKeysIn$5(object) {
-    return baseGetAllKeys$3(object, keysIn$5, getSymbolsIn$3);
+  function getAllKeysIn$6(object) {
+    return baseGetAllKeys$4(object, keysIn$6, getSymbolsIn$4);
   }
-  var _getAllKeysIn$1 = getAllKeysIn$5;
+  var _getAllKeysIn$2 = getAllKeysIn$6;
 
   /** Used for built-in method references. */
 
-  var objectProto$g = Object.prototype;
+  var objectProto$h = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$d = objectProto$g.hasOwnProperty;
+  var hasOwnProperty$e = objectProto$h.hasOwnProperty;
 
   /**
    * Initializes an array clone.
@@ -3305,26 +3305,26 @@
    * @param {Array} array The array to clone.
    * @returns {Array} Returns the initialized clone.
    */
-  function initCloneArray$3(array) {
+  function initCloneArray$4(array) {
     var length = array.length,
       result = new array.constructor(length);
 
     // Add properties assigned by `RegExp#exec`.
-    if (length && typeof array[0] == 'string' && hasOwnProperty$d.call(array, 'index')) {
+    if (length && typeof array[0] == 'string' && hasOwnProperty$e.call(array, 'index')) {
       result.index = array.index;
       result.input = array.input;
     }
     return result;
   }
-  var _initCloneArray$1 = initCloneArray$3;
+  var _initCloneArray$2 = initCloneArray$4;
 
-  var root$9 = _root$1;
+  var root$a = _root$2;
 
   /** Built-in value references. */
-  var Uint8Array$3 = root$9.Uint8Array;
-  var _Uint8Array$1 = Uint8Array$3;
+  var Uint8Array$4 = root$a.Uint8Array;
+  var _Uint8Array$2 = Uint8Array$4;
 
-  var Uint8Array$2 = _Uint8Array$1;
+  var Uint8Array$3 = _Uint8Array$2;
 
   /**
    * Creates a clone of `arrayBuffer`.
@@ -3333,14 +3333,14 @@
    * @param {ArrayBuffer} arrayBuffer The array buffer to clone.
    * @returns {ArrayBuffer} Returns the cloned array buffer.
    */
-  function cloneArrayBuffer$7(arrayBuffer) {
+  function cloneArrayBuffer$8(arrayBuffer) {
     var result = new arrayBuffer.constructor(arrayBuffer.byteLength);
-    new Uint8Array$2(result).set(new Uint8Array$2(arrayBuffer));
+    new Uint8Array$3(result).set(new Uint8Array$3(arrayBuffer));
     return result;
   }
-  var _cloneArrayBuffer$1 = cloneArrayBuffer$7;
+  var _cloneArrayBuffer$2 = cloneArrayBuffer$8;
 
-  var cloneArrayBuffer$6 = _cloneArrayBuffer$1;
+  var cloneArrayBuffer$7 = _cloneArrayBuffer$2;
 
   /**
    * Creates a clone of `dataView`.
@@ -3350,15 +3350,15 @@
    * @param {boolean} [isDeep] Specify a deep clone.
    * @returns {Object} Returns the cloned data view.
    */
-  function cloneDataView$3(dataView, isDeep) {
-    var buffer = isDeep ? cloneArrayBuffer$6(dataView.buffer) : dataView.buffer;
+  function cloneDataView$4(dataView, isDeep) {
+    var buffer = isDeep ? cloneArrayBuffer$7(dataView.buffer) : dataView.buffer;
     return new dataView.constructor(buffer, dataView.byteOffset, dataView.byteLength);
   }
-  var _cloneDataView$1 = cloneDataView$3;
+  var _cloneDataView$2 = cloneDataView$4;
 
   /** Used to match `RegExp` flags from their coerced string values. */
 
-  var reFlags$1 = /\w*$/;
+  var reFlags$2 = /\w*$/;
 
   /**
    * Creates a clone of `regexp`.
@@ -3367,18 +3367,18 @@
    * @param {Object} regexp The regexp to clone.
    * @returns {Object} Returns the cloned regexp.
    */
-  function cloneRegExp$3(regexp) {
-    var result = new regexp.constructor(regexp.source, reFlags$1.exec(regexp));
+  function cloneRegExp$4(regexp) {
+    var result = new regexp.constructor(regexp.source, reFlags$2.exec(regexp));
     result.lastIndex = regexp.lastIndex;
     return result;
   }
-  var _cloneRegExp$1 = cloneRegExp$3;
+  var _cloneRegExp$2 = cloneRegExp$4;
 
-  var Symbol$8 = _Symbol$1;
+  var Symbol$8 = _Symbol$2;
 
   /** Used to convert symbols to primitives and strings. */
-  var symbolProto$2 = Symbol$8 ? Symbol$8.prototype : undefined,
-    symbolValueOf$1 = symbolProto$2 ? symbolProto$2.valueOf : undefined;
+  var symbolProto$3 = Symbol$8 ? Symbol$8.prototype : undefined,
+    symbolValueOf$2 = symbolProto$3 ? symbolProto$3.valueOf : undefined;
 
   /**
    * Creates a clone of the `symbol` object.
@@ -3387,12 +3387,12 @@
    * @param {Object} symbol The symbol object to clone.
    * @returns {Object} Returns the cloned symbol object.
    */
-  function cloneSymbol$3(symbol) {
-    return symbolValueOf$1 ? Object(symbolValueOf$1.call(symbol)) : {};
+  function cloneSymbol$4(symbol) {
+    return symbolValueOf$2 ? Object(symbolValueOf$2.call(symbol)) : {};
   }
-  var _cloneSymbol$1 = cloneSymbol$3;
+  var _cloneSymbol$2 = cloneSymbol$4;
 
-  var cloneArrayBuffer$5 = _cloneArrayBuffer$1;
+  var cloneArrayBuffer$6 = _cloneArrayBuffer$2;
 
   /**
    * Creates a clone of `typedArray`.
@@ -3402,38 +3402,38 @@
    * @param {boolean} [isDeep] Specify a deep clone.
    * @returns {Object} Returns the cloned typed array.
    */
-  function cloneTypedArray$3(typedArray, isDeep) {
-    var buffer = isDeep ? cloneArrayBuffer$5(typedArray.buffer) : typedArray.buffer;
+  function cloneTypedArray$4(typedArray, isDeep) {
+    var buffer = isDeep ? cloneArrayBuffer$6(typedArray.buffer) : typedArray.buffer;
     return new typedArray.constructor(buffer, typedArray.byteOffset, typedArray.length);
   }
-  var _cloneTypedArray$1 = cloneTypedArray$3;
+  var _cloneTypedArray$2 = cloneTypedArray$4;
 
-  var cloneArrayBuffer$4 = _cloneArrayBuffer$1,
-    cloneDataView$2 = _cloneDataView$1,
-    cloneRegExp$2 = _cloneRegExp$1,
-    cloneSymbol$2 = _cloneSymbol$1,
-    cloneTypedArray$2 = _cloneTypedArray$1;
+  var cloneArrayBuffer$5 = _cloneArrayBuffer$2,
+    cloneDataView$3 = _cloneDataView$2,
+    cloneRegExp$3 = _cloneRegExp$2,
+    cloneSymbol$3 = _cloneSymbol$2,
+    cloneTypedArray$3 = _cloneTypedArray$2;
 
   /** `Object#toString` result references. */
   var boolTag$5 = '[object Boolean]',
-    dateTag$6 = '[object Date]',
-    mapTag$8 = '[object Map]',
-    numberTag$6 = '[object Number]',
-    regexpTag$4 = '[object RegExp]',
-    setTag$8 = '[object Set]',
-    stringTag$6 = '[object String]',
-    symbolTag$4 = '[object Symbol]';
-  var arrayBufferTag$4 = '[object ArrayBuffer]',
-    dataViewTag$5 = '[object DataView]',
-    float32Tag$4 = '[object Float32Array]',
-    float64Tag$4 = '[object Float64Array]',
-    int8Tag$4 = '[object Int8Array]',
-    int16Tag$4 = '[object Int16Array]',
-    int32Tag$4 = '[object Int32Array]',
-    uint8Tag$4 = '[object Uint8Array]',
-    uint8ClampedTag$4 = '[object Uint8ClampedArray]',
-    uint16Tag$4 = '[object Uint16Array]',
-    uint32Tag$4 = '[object Uint32Array]';
+    dateTag$7 = '[object Date]',
+    mapTag$9 = '[object Map]',
+    numberTag$7 = '[object Number]',
+    regexpTag$5 = '[object RegExp]',
+    setTag$9 = '[object Set]',
+    stringTag$7 = '[object String]',
+    symbolTag$5 = '[object Symbol]';
+  var arrayBufferTag$5 = '[object ArrayBuffer]',
+    dataViewTag$6 = '[object DataView]',
+    float32Tag$5 = '[object Float32Array]',
+    float64Tag$5 = '[object Float64Array]',
+    int8Tag$5 = '[object Int8Array]',
+    int16Tag$5 = '[object Int16Array]',
+    int32Tag$5 = '[object Int32Array]',
+    uint8Tag$5 = '[object Uint8Array]',
+    uint8ClampedTag$5 = '[object Uint8ClampedArray]',
+    uint16Tag$5 = '[object Uint16Array]',
+    uint32Tag$5 = '[object Uint32Array]';
 
   /**
    * Initializes an object clone based on its `toStringTag`.
@@ -3447,45 +3447,45 @@
    * @param {boolean} [isDeep] Specify a deep clone.
    * @returns {Object} Returns the initialized clone.
    */
-  function initCloneByTag$3(object, tag, isDeep) {
+  function initCloneByTag$4(object, tag, isDeep) {
     var Ctor = object.constructor;
     switch (tag) {
-      case arrayBufferTag$4:
-        return cloneArrayBuffer$4(object);
+      case arrayBufferTag$5:
+        return cloneArrayBuffer$5(object);
       case boolTag$5:
-      case dateTag$6:
+      case dateTag$7:
         return new Ctor(+object);
-      case dataViewTag$5:
-        return cloneDataView$2(object, isDeep);
-      case float32Tag$4:
-      case float64Tag$4:
-      case int8Tag$4:
-      case int16Tag$4:
-      case int32Tag$4:
-      case uint8Tag$4:
-      case uint8ClampedTag$4:
-      case uint16Tag$4:
-      case uint32Tag$4:
-        return cloneTypedArray$2(object, isDeep);
-      case mapTag$8:
+      case dataViewTag$6:
+        return cloneDataView$3(object, isDeep);
+      case float32Tag$5:
+      case float64Tag$5:
+      case int8Tag$5:
+      case int16Tag$5:
+      case int32Tag$5:
+      case uint8Tag$5:
+      case uint8ClampedTag$5:
+      case uint16Tag$5:
+      case uint32Tag$5:
+        return cloneTypedArray$3(object, isDeep);
+      case mapTag$9:
         return new Ctor();
-      case numberTag$6:
-      case stringTag$6:
+      case numberTag$7:
+      case stringTag$7:
         return new Ctor(object);
-      case regexpTag$4:
-        return cloneRegExp$2(object);
-      case setTag$8:
+      case regexpTag$5:
+        return cloneRegExp$3(object);
+      case setTag$9:
         return new Ctor();
-      case symbolTag$4:
-        return cloneSymbol$2(object);
+      case symbolTag$5:
+        return cloneSymbol$3(object);
     }
   }
-  var _initCloneByTag$1 = initCloneByTag$3;
+  var _initCloneByTag$2 = initCloneByTag$4;
 
-  var isObject$9 = isObject_1$1;
+  var isObject$a = isObject_1$2;
 
   /** Built-in value references. */
-  var objectCreate$1 = Object.create;
+  var objectCreate$2 = Object.create;
 
   /**
    * The base implementation of `_.create` without support for assigning
@@ -3495,14 +3495,14 @@
    * @param {Object} proto The object to inherit from.
    * @returns {Object} Returns the new object.
    */
-  var baseCreate$3 = function () {
+  var baseCreate$4 = function () {
     function object() {}
     return function (proto) {
-      if (!isObject$9(proto)) {
+      if (!isObject$a(proto)) {
         return {};
       }
-      if (objectCreate$1) {
-        return objectCreate$1(proto);
+      if (objectCreate$2) {
+        return objectCreate$2(proto);
       }
       object.prototype = proto;
       var result = new object();
@@ -3510,11 +3510,11 @@
       return result;
     };
   }();
-  var _baseCreate$1 = baseCreate$3;
+  var _baseCreate$2 = baseCreate$4;
 
-  var baseCreate$2 = _baseCreate$1,
-    getPrototype$5 = _getPrototype$1,
-    isPrototype$5 = _isPrototype$1;
+  var baseCreate$3 = _baseCreate$2,
+    getPrototype$6 = _getPrototype$2,
+    isPrototype$6 = _isPrototype$2;
 
   /**
    * Initializes an object clone.
@@ -3523,16 +3523,16 @@
    * @param {Object} object The object to clone.
    * @returns {Object} Returns the initialized clone.
    */
-  function initCloneObject$3(object) {
-    return typeof object.constructor == 'function' && !isPrototype$5(object) ? baseCreate$2(getPrototype$5(object)) : {};
+  function initCloneObject$4(object) {
+    return typeof object.constructor == 'function' && !isPrototype$6(object) ? baseCreate$3(getPrototype$6(object)) : {};
   }
-  var _initCloneObject$1 = initCloneObject$3;
+  var _initCloneObject$2 = initCloneObject$4;
 
-  var getTag$7 = _getTag$1,
-    isObjectLike$h = isObjectLike_1$1;
+  var getTag$8 = _getTag$2,
+    isObjectLike$i = isObjectLike_1$2;
 
   /** `Object#toString` result references. */
-  var mapTag$7 = '[object Map]';
+  var mapTag$8 = '[object Map]';
 
   /**
    * The base implementation of `_.isMap` without Node.js optimizations.
@@ -3541,17 +3541,17 @@
    * @param {*} value The value to check.
    * @returns {boolean} Returns `true` if `value` is a map, else `false`.
    */
-  function baseIsMap$3(value) {
-    return isObjectLike$h(value) && getTag$7(value) == mapTag$7;
+  function baseIsMap$4(value) {
+    return isObjectLike$i(value) && getTag$8(value) == mapTag$8;
   }
-  var _baseIsMap$1 = baseIsMap$3;
+  var _baseIsMap$2 = baseIsMap$4;
 
-  var baseIsMap$2 = _baseIsMap$1,
-    baseUnary$7 = _baseUnary$1,
-    nodeUtil$6 = _nodeUtilExports$1;
+  var baseIsMap$3 = _baseIsMap$2,
+    baseUnary$8 = _baseUnary$2,
+    nodeUtil$7 = _nodeUtilExports$2;
 
   /* Node.js helper references. */
-  var nodeIsMap$1 = nodeUtil$6 && nodeUtil$6.isMap;
+  var nodeIsMap$2 = nodeUtil$7 && nodeUtil$7.isMap;
 
   /**
    * Checks if `value` is classified as a `Map` object.
@@ -3570,14 +3570,14 @@
    * _.isMap(new WeakMap);
    * // => false
    */
-  var isMap$3 = nodeIsMap$1 ? baseUnary$7(nodeIsMap$1) : baseIsMap$2;
-  var isMap_1$1 = isMap$3;
+  var isMap$4 = nodeIsMap$2 ? baseUnary$8(nodeIsMap$2) : baseIsMap$3;
+  var isMap_1$2 = isMap$4;
 
-  var getTag$6 = _getTag$1,
-    isObjectLike$g = isObjectLike_1$1;
+  var getTag$7 = _getTag$2,
+    isObjectLike$h = isObjectLike_1$2;
 
   /** `Object#toString` result references. */
-  var setTag$7 = '[object Set]';
+  var setTag$8 = '[object Set]';
 
   /**
    * The base implementation of `_.isSet` without Node.js optimizations.
@@ -3586,17 +3586,17 @@
    * @param {*} value The value to check.
    * @returns {boolean} Returns `true` if `value` is a set, else `false`.
    */
-  function baseIsSet$3(value) {
-    return isObjectLike$g(value) && getTag$6(value) == setTag$7;
+  function baseIsSet$4(value) {
+    return isObjectLike$h(value) && getTag$7(value) == setTag$8;
   }
-  var _baseIsSet$1 = baseIsSet$3;
+  var _baseIsSet$2 = baseIsSet$4;
 
-  var baseIsSet$2 = _baseIsSet$1,
-    baseUnary$6 = _baseUnary$1,
-    nodeUtil$5 = _nodeUtilExports$1;
+  var baseIsSet$3 = _baseIsSet$2,
+    baseUnary$7 = _baseUnary$2,
+    nodeUtil$6 = _nodeUtilExports$2;
 
   /* Node.js helper references. */
-  var nodeIsSet$1 = nodeUtil$5 && nodeUtil$5.isSet;
+  var nodeIsSet$2 = nodeUtil$6 && nodeUtil$6.isSet;
 
   /**
    * Checks if `value` is classified as a `Set` object.
@@ -3615,69 +3615,69 @@
    * _.isSet(new WeakSet);
    * // => false
    */
-  var isSet$3 = nodeIsSet$1 ? baseUnary$6(nodeIsSet$1) : baseIsSet$2;
-  var isSet_1$1 = isSet$3;
+  var isSet$4 = nodeIsSet$2 ? baseUnary$7(nodeIsSet$2) : baseIsSet$3;
+  var isSet_1$2 = isSet$4;
 
-  var Stack$2 = _Stack$1,
-    arrayEach$2 = _arrayEach$1,
-    assignValue$5 = _assignValue$1,
-    baseAssign$2 = _baseAssign$1,
-    baseAssignIn$2 = _baseAssignIn$1,
-    cloneBuffer$1 = _cloneBufferExports$1,
-    copyArray$2 = _copyArray$1,
-    copySymbols$2 = _copySymbols$1,
-    copySymbolsIn$2 = _copySymbolsIn$1,
-    getAllKeys$2 = _getAllKeys$1,
-    getAllKeysIn$4 = _getAllKeysIn$1,
-    getTag$5 = _getTag$1,
-    initCloneArray$2 = _initCloneArray$1,
-    initCloneByTag$2 = _initCloneByTag$1,
-    initCloneObject$2 = _initCloneObject$1,
-    isArray$g = isArray_1$1,
-    isBuffer$4 = isBufferExports$1,
-    isMap$2 = isMap_1$1,
-    isObject$8 = isObject_1$1,
-    isSet$2 = isSet_1$1,
-    keys$4 = keys_1$1,
-    keysIn$4 = keysIn_1$1;
+  var Stack$3 = _Stack$2,
+    arrayEach$3 = _arrayEach$2,
+    assignValue$6 = _assignValue$2,
+    baseAssign$3 = _baseAssign$2,
+    baseAssignIn$3 = _baseAssignIn$2,
+    cloneBuffer$2 = _cloneBufferExports$2,
+    copyArray$3 = _copyArray$2,
+    copySymbols$3 = _copySymbols$2,
+    copySymbolsIn$3 = _copySymbolsIn$2,
+    getAllKeys$3 = _getAllKeys$2,
+    getAllKeysIn$5 = _getAllKeysIn$2,
+    getTag$6 = _getTag$2,
+    initCloneArray$3 = _initCloneArray$2,
+    initCloneByTag$3 = _initCloneByTag$2,
+    initCloneObject$3 = _initCloneObject$2,
+    isArray$h = isArray_1$2,
+    isBuffer$5 = isBufferExports$2,
+    isMap$3 = isMap_1$2,
+    isObject$9 = isObject_1$2,
+    isSet$3 = isSet_1$2,
+    keys$5 = keys_1$2,
+    keysIn$5 = keysIn_1$2;
 
   /** Used to compose bitmasks for cloning. */
-  var CLONE_DEEP_FLAG$3 = 1,
-    CLONE_FLAT_FLAG$3 = 2,
-    CLONE_SYMBOLS_FLAG$5 = 4;
+  var CLONE_DEEP_FLAG$4 = 1,
+    CLONE_FLAT_FLAG$4 = 2,
+    CLONE_SYMBOLS_FLAG$6 = 4;
 
   /** `Object#toString` result references. */
-  var argsTag$3 = '[object Arguments]',
-    arrayTag$2 = '[object Array]',
+  var argsTag$4 = '[object Arguments]',
+    arrayTag$3 = '[object Array]',
     boolTag$4 = '[object Boolean]',
-    dateTag$5 = '[object Date]',
-    errorTag$2 = '[object Error]',
-    funcTag$3 = '[object Function]',
-    genTag$2 = '[object GeneratorFunction]',
-    mapTag$6 = '[object Map]',
-    numberTag$5 = '[object Number]',
-    objectTag$5 = '[object Object]',
-    regexpTag$3 = '[object RegExp]',
-    setTag$6 = '[object Set]',
-    stringTag$5 = '[object String]',
-    symbolTag$3 = '[object Symbol]',
-    weakMapTag$3 = '[object WeakMap]';
-  var arrayBufferTag$3 = '[object ArrayBuffer]',
-    dataViewTag$4 = '[object DataView]',
-    float32Tag$3 = '[object Float32Array]',
-    float64Tag$3 = '[object Float64Array]',
-    int8Tag$3 = '[object Int8Array]',
-    int16Tag$3 = '[object Int16Array]',
-    int32Tag$3 = '[object Int32Array]',
-    uint8Tag$3 = '[object Uint8Array]',
-    uint8ClampedTag$3 = '[object Uint8ClampedArray]',
-    uint16Tag$3 = '[object Uint16Array]',
-    uint32Tag$3 = '[object Uint32Array]';
+    dateTag$6 = '[object Date]',
+    errorTag$3 = '[object Error]',
+    funcTag$4 = '[object Function]',
+    genTag$3 = '[object GeneratorFunction]',
+    mapTag$7 = '[object Map]',
+    numberTag$6 = '[object Number]',
+    objectTag$6 = '[object Object]',
+    regexpTag$4 = '[object RegExp]',
+    setTag$7 = '[object Set]',
+    stringTag$6 = '[object String]',
+    symbolTag$4 = '[object Symbol]',
+    weakMapTag$4 = '[object WeakMap]';
+  var arrayBufferTag$4 = '[object ArrayBuffer]',
+    dataViewTag$5 = '[object DataView]',
+    float32Tag$4 = '[object Float32Array]',
+    float64Tag$4 = '[object Float64Array]',
+    int8Tag$4 = '[object Int8Array]',
+    int16Tag$4 = '[object Int16Array]',
+    int32Tag$4 = '[object Int32Array]',
+    uint8Tag$4 = '[object Uint8Array]',
+    uint8ClampedTag$4 = '[object Uint8ClampedArray]',
+    uint16Tag$4 = '[object Uint16Array]',
+    uint32Tag$4 = '[object Uint32Array]';
 
   /** Used to identify `toStringTag` values supported by `_.clone`. */
-  var cloneableTags$1 = {};
-  cloneableTags$1[argsTag$3] = cloneableTags$1[arrayTag$2] = cloneableTags$1[arrayBufferTag$3] = cloneableTags$1[dataViewTag$4] = cloneableTags$1[boolTag$4] = cloneableTags$1[dateTag$5] = cloneableTags$1[float32Tag$3] = cloneableTags$1[float64Tag$3] = cloneableTags$1[int8Tag$3] = cloneableTags$1[int16Tag$3] = cloneableTags$1[int32Tag$3] = cloneableTags$1[mapTag$6] = cloneableTags$1[numberTag$5] = cloneableTags$1[objectTag$5] = cloneableTags$1[regexpTag$3] = cloneableTags$1[setTag$6] = cloneableTags$1[stringTag$5] = cloneableTags$1[symbolTag$3] = cloneableTags$1[uint8Tag$3] = cloneableTags$1[uint8ClampedTag$3] = cloneableTags$1[uint16Tag$3] = cloneableTags$1[uint32Tag$3] = true;
-  cloneableTags$1[errorTag$2] = cloneableTags$1[funcTag$3] = cloneableTags$1[weakMapTag$3] = false;
+  var cloneableTags$2 = {};
+  cloneableTags$2[argsTag$4] = cloneableTags$2[arrayTag$3] = cloneableTags$2[arrayBufferTag$4] = cloneableTags$2[dataViewTag$5] = cloneableTags$2[boolTag$4] = cloneableTags$2[dateTag$6] = cloneableTags$2[float32Tag$4] = cloneableTags$2[float64Tag$4] = cloneableTags$2[int8Tag$4] = cloneableTags$2[int16Tag$4] = cloneableTags$2[int32Tag$4] = cloneableTags$2[mapTag$7] = cloneableTags$2[numberTag$6] = cloneableTags$2[objectTag$6] = cloneableTags$2[regexpTag$4] = cloneableTags$2[setTag$7] = cloneableTags$2[stringTag$6] = cloneableTags$2[symbolTag$4] = cloneableTags$2[uint8Tag$4] = cloneableTags$2[uint8ClampedTag$4] = cloneableTags$2[uint16Tag$4] = cloneableTags$2[uint32Tag$4] = true;
+  cloneableTags$2[errorTag$3] = cloneableTags$2[funcTag$4] = cloneableTags$2[weakMapTag$4] = false;
 
   /**
    * The base implementation of `_.clone` and `_.cloneDeep` which tracks
@@ -3695,80 +3695,80 @@
    * @param {Object} [stack] Tracks traversed objects and their clone counterparts.
    * @returns {*} Returns the cloned value.
    */
-  function baseClone$5(value, bitmask, customizer, key, object, stack) {
+  function baseClone$6(value, bitmask, customizer, key, object, stack) {
     var result,
-      isDeep = bitmask & CLONE_DEEP_FLAG$3,
-      isFlat = bitmask & CLONE_FLAT_FLAG$3,
-      isFull = bitmask & CLONE_SYMBOLS_FLAG$5;
+      isDeep = bitmask & CLONE_DEEP_FLAG$4,
+      isFlat = bitmask & CLONE_FLAT_FLAG$4,
+      isFull = bitmask & CLONE_SYMBOLS_FLAG$6;
     if (customizer) {
       result = object ? customizer(value, key, object, stack) : customizer(value);
     }
     if (result !== undefined) {
       return result;
     }
-    if (!isObject$8(value)) {
+    if (!isObject$9(value)) {
       return value;
     }
-    var isArr = isArray$g(value);
+    var isArr = isArray$h(value);
     if (isArr) {
-      result = initCloneArray$2(value);
+      result = initCloneArray$3(value);
       if (!isDeep) {
-        return copyArray$2(value, result);
+        return copyArray$3(value, result);
       }
     } else {
-      var tag = getTag$5(value),
-        isFunc = tag == funcTag$3 || tag == genTag$2;
-      if (isBuffer$4(value)) {
-        return cloneBuffer$1(value, isDeep);
+      var tag = getTag$6(value),
+        isFunc = tag == funcTag$4 || tag == genTag$3;
+      if (isBuffer$5(value)) {
+        return cloneBuffer$2(value, isDeep);
       }
-      if (tag == objectTag$5 || tag == argsTag$3 || isFunc && !object) {
-        result = isFlat || isFunc ? {} : initCloneObject$2(value);
+      if (tag == objectTag$6 || tag == argsTag$4 || isFunc && !object) {
+        result = isFlat || isFunc ? {} : initCloneObject$3(value);
         if (!isDeep) {
-          return isFlat ? copySymbolsIn$2(value, baseAssignIn$2(result, value)) : copySymbols$2(value, baseAssign$2(result, value));
+          return isFlat ? copySymbolsIn$3(value, baseAssignIn$3(result, value)) : copySymbols$3(value, baseAssign$3(result, value));
         }
       } else {
-        if (!cloneableTags$1[tag]) {
+        if (!cloneableTags$2[tag]) {
           return object ? value : {};
         }
-        result = initCloneByTag$2(value, tag, isDeep);
+        result = initCloneByTag$3(value, tag, isDeep);
       }
     }
     // Check for circular references and return its corresponding clone.
-    stack || (stack = new Stack$2());
+    stack || (stack = new Stack$3());
     var stacked = stack.get(value);
     if (stacked) {
       return stacked;
     }
     stack.set(value, result);
-    if (isSet$2(value)) {
+    if (isSet$3(value)) {
       value.forEach(function (subValue) {
-        result.add(baseClone$5(subValue, bitmask, customizer, subValue, value, stack));
+        result.add(baseClone$6(subValue, bitmask, customizer, subValue, value, stack));
       });
-    } else if (isMap$2(value)) {
+    } else if (isMap$3(value)) {
       value.forEach(function (subValue, key) {
-        result.set(key, baseClone$5(subValue, bitmask, customizer, key, value, stack));
+        result.set(key, baseClone$6(subValue, bitmask, customizer, key, value, stack));
       });
     }
-    var keysFunc = isFull ? isFlat ? getAllKeysIn$4 : getAllKeys$2 : isFlat ? keysIn$4 : keys$4;
+    var keysFunc = isFull ? isFlat ? getAllKeysIn$5 : getAllKeys$3 : isFlat ? keysIn$5 : keys$5;
     var props = isArr ? undefined : keysFunc(value);
-    arrayEach$2(props || value, function (subValue, key) {
+    arrayEach$3(props || value, function (subValue, key) {
       if (props) {
         key = subValue;
         subValue = value[key];
       }
       // Recursively populate clone (susceptible to call stack limits).
-      assignValue$5(result, key, baseClone$5(subValue, bitmask, customizer, key, value, stack));
+      assignValue$6(result, key, baseClone$6(subValue, bitmask, customizer, key, value, stack));
     });
     return result;
   }
-  var _baseClone$1 = baseClone$5;
+  var _baseClone$2 = baseClone$6;
 
-  var isArray$f = isArray_1$1,
-    isSymbol$5 = isSymbol_1$1;
+  var isArray$g = isArray_1$2,
+    isSymbol$6 = isSymbol_1$2;
 
   /** Used to match property names within property paths. */
-  var reIsDeepProp$1 = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
-    reIsPlainProp$1 = /^\w*$/;
+  var reIsDeepProp$2 = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+    reIsPlainProp$2 = /^\w*$/;
 
   /**
    * Checks if `value` is a property name and not a property path.
@@ -3778,22 +3778,22 @@
    * @param {Object} [object] The object to query keys on.
    * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
    */
-  function isKey$3(value, object) {
-    if (isArray$f(value)) {
+  function isKey$4(value, object) {
+    if (isArray$g(value)) {
       return false;
     }
     var type = typeof value;
-    if (type == 'number' || type == 'symbol' || type == 'boolean' || value == null || isSymbol$5(value)) {
+    if (type == 'number' || type == 'symbol' || type == 'boolean' || value == null || isSymbol$6(value)) {
       return true;
     }
-    return reIsPlainProp$1.test(value) || !reIsDeepProp$1.test(value) || object != null && value in Object(object);
+    return reIsPlainProp$2.test(value) || !reIsDeepProp$2.test(value) || object != null && value in Object(object);
   }
-  var _isKey$1 = isKey$3;
+  var _isKey$2 = isKey$4;
 
-  var MapCache$4 = _MapCache$1;
+  var MapCache$5 = _MapCache$2;
 
   /** Error message constants. */
-  var FUNC_ERROR_TEXT$1 = 'Expected a function';
+  var FUNC_ERROR_TEXT$2 = 'Expected a function';
 
   /**
    * Creates a function that memoizes the result of `func`. If `resolver` is
@@ -3839,9 +3839,9 @@
    * // Replace `_.memoize.Cache`.
    * _.memoize.Cache = WeakMap;
    */
-  function memoize$3(func, resolver) {
+  function memoize$4(func, resolver) {
     if (typeof func != 'function' || resolver != null && typeof resolver != 'function') {
-      throw new TypeError(FUNC_ERROR_TEXT$1);
+      throw new TypeError(FUNC_ERROR_TEXT$2);
     }
     var memoized = function () {
       var args = arguments,
@@ -3854,18 +3854,18 @@
       memoized.cache = cache.set(key, result) || cache;
       return result;
     };
-    memoized.cache = new (memoize$3.Cache || MapCache$4)();
+    memoized.cache = new (memoize$4.Cache || MapCache$5)();
     return memoized;
   }
 
   // Expose `MapCache`.
-  memoize$3.Cache = MapCache$4;
-  var memoize_1$1 = memoize$3;
+  memoize$4.Cache = MapCache$5;
+  var memoize_1$2 = memoize$4;
 
-  var memoize$2 = memoize_1$1;
+  var memoize$3 = memoize_1$2;
 
   /** Used as the maximum memoize cache size. */
-  var MAX_MEMOIZE_SIZE$1 = 500;
+  var MAX_MEMOIZE_SIZE$2 = 500;
 
   /**
    * A specialized version of `_.memoize` which clears the memoized function's
@@ -3875,9 +3875,9 @@
    * @param {Function} func The function to have its output memoized.
    * @returns {Function} Returns the new memoized function.
    */
-  function memoizeCapped$3(func) {
-    var result = memoize$2(func, function (key) {
-      if (cache.size === MAX_MEMOIZE_SIZE$1) {
+  function memoizeCapped$4(func) {
+    var result = memoize$3(func, function (key) {
+      if (cache.size === MAX_MEMOIZE_SIZE$2) {
         cache.clear();
       }
       return key;
@@ -3885,15 +3885,15 @@
     var cache = result.cache;
     return result;
   }
-  var _memoizeCapped$1 = memoizeCapped$3;
+  var _memoizeCapped$2 = memoizeCapped$4;
 
-  var memoizeCapped$2 = _memoizeCapped$1;
+  var memoizeCapped$3 = _memoizeCapped$2;
 
   /** Used to match property names within property paths. */
-  var rePropName$1 = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+  var rePropName$2 = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
 
   /** Used to match backslashes in property paths. */
-  var reEscapeChar$1 = /\\(\\)?/g;
+  var reEscapeChar$2 = /\\(\\)?/g;
 
   /**
    * Converts `string` to a property path array.
@@ -3902,22 +3902,22 @@
    * @param {string} string The string to convert.
    * @returns {Array} Returns the property path array.
    */
-  var stringToPath$3 = memoizeCapped$2(function (string) {
+  var stringToPath$4 = memoizeCapped$3(function (string) {
     var result = [];
     if (string.charCodeAt(0) === 46 /* . */) {
       result.push('');
     }
-    string.replace(rePropName$1, function (match, number, quote, subString) {
-      result.push(quote ? subString.replace(reEscapeChar$1, '$1') : number || match);
+    string.replace(rePropName$2, function (match, number, quote, subString) {
+      result.push(quote ? subString.replace(reEscapeChar$2, '$1') : number || match);
     });
     return result;
   });
-  var _stringToPath$1 = stringToPath$3;
+  var _stringToPath$2 = stringToPath$4;
 
-  var isArray$e = isArray_1$1,
-    isKey$2 = _isKey$1,
-    stringToPath$2 = _stringToPath$1,
-    toString$8 = toString_1$1;
+  var isArray$f = isArray_1$2,
+    isKey$3 = _isKey$2,
+    stringToPath$3 = _stringToPath$2,
+    toString$a = toString_1$2;
 
   /**
    * Casts `value` to a path array if it's not one.
@@ -3927,13 +3927,13 @@
    * @param {Object} [object] The object to query keys on.
    * @returns {Array} Returns the cast property path array.
    */
-  function castPath$d(value, object) {
-    if (isArray$e(value)) {
+  function castPath$e(value, object) {
+    if (isArray$f(value)) {
       return value;
     }
-    return isKey$2(value, object) ? [value] : stringToPath$2(toString$8(value));
+    return isKey$3(value, object) ? [value] : stringToPath$3(toString$a(value));
   }
-  var _castPath$1 = castPath$d;
+  var _castPath$2 = castPath$e;
 
   /**
    * Gets the last element of `array`.
@@ -3950,16 +3950,16 @@
    * // => 3
    */
 
-  function last$3(array) {
+  function last$4(array) {
     var length = array == null ? 0 : array.length;
     return length ? array[length - 1] : undefined;
   }
-  var last_1$1 = last$3;
+  var last_1$2 = last$4;
 
-  var isSymbol$4 = isSymbol_1$1;
+  var isSymbol$5 = isSymbol_1$2;
 
   /** Used as references for various `Number` constants. */
-  var INFINITY$3 = 1 / 0;
+  var INFINITY$4 = 1 / 0;
 
   /**
    * Converts `value` to a string key if it's not a string or symbol.
@@ -3968,17 +3968,17 @@
    * @param {*} value The value to inspect.
    * @returns {string|symbol} Returns the key.
    */
-  function toKey$9(value) {
-    if (typeof value == 'string' || isSymbol$4(value)) {
+  function toKey$a(value) {
+    if (typeof value == 'string' || isSymbol$5(value)) {
       return value;
     }
     var result = value + '';
-    return result == '0' && 1 / value == -INFINITY$3 ? '-0' : result;
+    return result == '0' && 1 / value == -INFINITY$4 ? '-0' : result;
   }
-  var _toKey$1 = toKey$9;
+  var _toKey$2 = toKey$a;
 
-  var castPath$c = _castPath$1,
-    toKey$8 = _toKey$1;
+  var castPath$d = _castPath$2,
+    toKey$9 = _toKey$2;
 
   /**
    * The base implementation of `_.get` without support for default values.
@@ -3988,16 +3988,16 @@
    * @param {Array|string} path The path of the property to get.
    * @returns {*} Returns the resolved value.
    */
-  function baseGet$5(object, path) {
-    path = castPath$c(path, object);
+  function baseGet$6(object, path) {
+    path = castPath$d(path, object);
     var index = 0,
       length = path.length;
     while (object != null && index < length) {
-      object = object[toKey$8(path[index++])];
+      object = object[toKey$9(path[index++])];
     }
     return index && index == length ? object : undefined;
   }
-  var _baseGet$1 = baseGet$5;
+  var _baseGet$2 = baseGet$6;
 
   /**
    * The base implementation of `_.slice` without an iteratee call guard.
@@ -4009,7 +4009,7 @@
    * @returns {Array} Returns the slice of `array`.
    */
 
-  function baseSlice$5(array, start, end) {
+  function baseSlice$6(array, start, end) {
     var index = -1,
       length = array.length;
     if (start < 0) {
@@ -4027,10 +4027,10 @@
     }
     return result;
   }
-  var _baseSlice$1 = baseSlice$5;
+  var _baseSlice$2 = baseSlice$6;
 
-  var baseGet$4 = _baseGet$1,
-    baseSlice$4 = _baseSlice$1;
+  var baseGet$5 = _baseGet$2,
+    baseSlice$5 = _baseSlice$2;
 
   /**
    * Gets the parent value at `path` of `object`.
@@ -4040,15 +4040,15 @@
    * @param {Array} path The path to get the parent value of.
    * @returns {*} Returns the parent value.
    */
-  function parent$3(object, path) {
-    return path.length < 2 ? object : baseGet$4(object, baseSlice$4(path, 0, -1));
+  function parent$4(object, path) {
+    return path.length < 2 ? object : baseGet$5(object, baseSlice$5(path, 0, -1));
   }
-  var _parent$1 = parent$3;
+  var _parent$2 = parent$4;
 
-  var castPath$b = _castPath$1,
-    last$2 = last_1$1,
-    parent$2 = _parent$1,
-    toKey$7 = _toKey$1;
+  var castPath$c = _castPath$2,
+    last$3 = last_1$2,
+    parent$3 = _parent$2,
+    toKey$8 = _toKey$2;
 
   /**
    * The base implementation of `_.unset`.
@@ -4058,32 +4058,32 @@
    * @param {Array|string} path The property path to unset.
    * @returns {boolean} Returns `true` if the property is deleted, else `false`.
    */
-  function baseUnset$3(object, path) {
-    path = castPath$b(path, object);
-    object = parent$2(object, path);
-    return object == null || delete object[toKey$7(last$2(path))];
+  function baseUnset$4(object, path) {
+    path = castPath$c(path, object);
+    object = parent$3(object, path);
+    return object == null || delete object[toKey$8(last$3(path))];
   }
-  var _baseUnset$1 = baseUnset$3;
+  var _baseUnset$2 = baseUnset$4;
 
-  var baseGetTag$e = _baseGetTag$1,
-    getPrototype$4 = _getPrototype$1,
-    isObjectLike$f = isObjectLike_1$1;
+  var baseGetTag$f = _baseGetTag$2,
+    getPrototype$5 = _getPrototype$2,
+    isObjectLike$g = isObjectLike_1$2;
 
   /** `Object#toString` result references. */
-  var objectTag$4 = '[object Object]';
+  var objectTag$5 = '[object Object]';
 
   /** Used for built-in method references. */
-  var funcProto$3 = Function.prototype,
-    objectProto$f = Object.prototype;
+  var funcProto$4 = Function.prototype,
+    objectProto$g = Object.prototype;
 
   /** Used to resolve the decompiled source of functions. */
-  var funcToString$3 = funcProto$3.toString;
+  var funcToString$4 = funcProto$4.toString;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$c = objectProto$f.hasOwnProperty;
+  var hasOwnProperty$d = objectProto$g.hasOwnProperty;
 
   /** Used to infer the `Object` constructor. */
-  var objectCtorString$1 = funcToString$3.call(Object);
+  var objectCtorString$2 = funcToString$4.call(Object);
 
   /**
    * Checks if `value` is a plain object, that is, an object created by the
@@ -4113,20 +4113,20 @@
    * _.isPlainObject(Object.create(null));
    * // => true
    */
-  function isPlainObject$3(value) {
-    if (!isObjectLike$f(value) || baseGetTag$e(value) != objectTag$4) {
+  function isPlainObject$4(value) {
+    if (!isObjectLike$g(value) || baseGetTag$f(value) != objectTag$5) {
       return false;
     }
-    var proto = getPrototype$4(value);
+    var proto = getPrototype$5(value);
     if (proto === null) {
       return true;
     }
-    var Ctor = hasOwnProperty$c.call(proto, 'constructor') && proto.constructor;
-    return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString$3.call(Ctor) == objectCtorString$1;
+    var Ctor = hasOwnProperty$d.call(proto, 'constructor') && proto.constructor;
+    return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString$4.call(Ctor) == objectCtorString$2;
   }
-  var isPlainObject_1$1 = isPlainObject$3;
+  var isPlainObject_1$2 = isPlainObject$4;
 
-  var isPlainObject$2 = isPlainObject_1$1;
+  var isPlainObject$3 = isPlainObject_1$2;
 
   /**
    * Used by `_.omit` to customize its `_.cloneDeep` use to only clone plain
@@ -4137,17 +4137,17 @@
    * @param {string} key The key of the property to inspect.
    * @returns {*} Returns the uncloned value or `undefined` to defer cloning to `_.cloneDeep`.
    */
-  function customOmitClone$3(value) {
-    return isPlainObject$2(value) ? undefined : value;
+  function customOmitClone$4(value) {
+    return isPlainObject$3(value) ? undefined : value;
   }
-  var _customOmitClone$1 = customOmitClone$3;
+  var _customOmitClone$2 = customOmitClone$4;
 
-  var Symbol$7 = _Symbol$1,
-    isArguments$6 = isArguments_1$1,
-    isArray$d = isArray_1$1;
+  var Symbol$7 = _Symbol$2,
+    isArguments$7 = isArguments_1$2,
+    isArray$e = isArray_1$2;
 
   /** Built-in value references. */
-  var spreadableSymbol$1 = Symbol$7 ? Symbol$7.isConcatSpreadable : undefined;
+  var spreadableSymbol$2 = Symbol$7 ? Symbol$7.isConcatSpreadable : undefined;
 
   /**
    * Checks if `value` is a flattenable `arguments` object or array.
@@ -4156,13 +4156,13 @@
    * @param {*} value The value to check.
    * @returns {boolean} Returns `true` if `value` is flattenable, else `false`.
    */
-  function isFlattenable$3(value) {
-    return isArray$d(value) || isArguments$6(value) || !!(spreadableSymbol$1 && value && value[spreadableSymbol$1]);
+  function isFlattenable$4(value) {
+    return isArray$e(value) || isArguments$7(value) || !!(spreadableSymbol$2 && value && value[spreadableSymbol$2]);
   }
-  var _isFlattenable$1 = isFlattenable$3;
+  var _isFlattenable$2 = isFlattenable$4;
 
-  var arrayPush$4 = _arrayPush$1,
-    isFlattenable$2 = _isFlattenable$1;
+  var arrayPush$5 = _arrayPush$2,
+    isFlattenable$3 = _isFlattenable$2;
 
   /**
    * The base implementation of `_.flatten` with support for restricting flattening.
@@ -4175,19 +4175,19 @@
    * @param {Array} [result=[]] The initial result value.
    * @returns {Array} Returns the new flattened array.
    */
-  function baseFlatten$3(array, depth, predicate, isStrict, result) {
+  function baseFlatten$4(array, depth, predicate, isStrict, result) {
     var index = -1,
       length = array.length;
-    predicate || (predicate = isFlattenable$2);
+    predicate || (predicate = isFlattenable$3);
     result || (result = []);
     while (++index < length) {
       var value = array[index];
       if (depth > 0 && predicate(value)) {
         if (depth > 1) {
           // Recursively flatten arrays (susceptible to call stack limits).
-          baseFlatten$3(value, depth - 1, predicate, isStrict, result);
+          baseFlatten$4(value, depth - 1, predicate, isStrict, result);
         } else {
-          arrayPush$4(result, value);
+          arrayPush$5(result, value);
         }
       } else if (!isStrict) {
         result[result.length] = value;
@@ -4195,9 +4195,9 @@
     }
     return result;
   }
-  var _baseFlatten$1 = baseFlatten$3;
+  var _baseFlatten$2 = baseFlatten$4;
 
-  var baseFlatten$2 = _baseFlatten$1;
+  var baseFlatten$3 = _baseFlatten$2;
 
   /**
    * Flattens `array` a single level deep.
@@ -4213,13 +4213,13 @@
    * _.flatten([1, [2, [3, [4]], 5]]);
    * // => [1, 2, [3, [4]], 5]
    */
-  function flatten$3(array) {
+  function flatten$4(array) {
     var length = array == null ? 0 : array.length;
-    return length ? baseFlatten$2(array, 1) : [];
+    return length ? baseFlatten$3(array, 1) : [];
   }
-  var flatten_1$1 = flatten$3;
+  var flatten_1$2 = flatten$4;
 
-  var _flatten$1 = /*@__PURE__*/getDefaultExportFromCjs$1(flatten_1$1);
+  var _flatten$2 = /*@__PURE__*/getDefaultExportFromCjs$2(flatten_1$2);
 
   /**
    * A faster alternative to `Function#apply`, this function invokes `func`
@@ -4232,7 +4232,7 @@
    * @returns {*} Returns the result of `func`.
    */
 
-  function apply$3(func, thisArg, args) {
+  function apply$4(func, thisArg, args) {
     switch (args.length) {
       case 0:
         return func.call(thisArg);
@@ -4245,12 +4245,12 @@
     }
     return func.apply(thisArg, args);
   }
-  var _apply$1 = apply$3;
+  var _apply$2 = apply$4;
 
-  var apply$2 = _apply$1;
+  var apply$3 = _apply$2;
 
   /* Built-in method references for those with the same name as other `lodash` methods. */
-  var nativeMax$1 = Math.max;
+  var nativeMax$2 = Math.max;
 
   /**
    * A specialized version of `baseRest` which transforms the rest array.
@@ -4261,12 +4261,12 @@
    * @param {Function} transform The rest array transform.
    * @returns {Function} Returns the new function.
    */
-  function overRest$3(func, start, transform) {
-    start = nativeMax$1(start === undefined ? func.length - 1 : start, 0);
+  function overRest$4(func, start, transform) {
+    start = nativeMax$2(start === undefined ? func.length - 1 : start, 0);
     return function () {
       var args = arguments,
         index = -1,
-        length = nativeMax$1(args.length - start, 0),
+        length = nativeMax$2(args.length - start, 0),
         array = Array(length);
       while (++index < length) {
         array[index] = args[start + index];
@@ -4277,10 +4277,10 @@
         otherArgs[index] = args[index];
       }
       otherArgs[start] = transform(array);
-      return apply$2(func, this, otherArgs);
+      return apply$3(func, this, otherArgs);
     };
   }
-  var _overRest$1 = overRest$3;
+  var _overRest$2 = overRest$4;
 
   /**
    * Creates a function that returns `value`.
@@ -4302,12 +4302,12 @@
    * // => true
    */
 
-  function constant$3(value) {
+  function constant$4(value) {
     return function () {
       return value;
     };
   }
-  var constant_1$1 = constant$3;
+  var constant_1$2 = constant$4;
 
   /**
    * This method returns the first argument it receives.
@@ -4326,14 +4326,14 @@
    * // => true
    */
 
-  function identity$3(value) {
+  function identity$4(value) {
     return value;
   }
-  var identity_1$1 = identity$3;
+  var identity_1$2 = identity$4;
 
-  var constant$2 = constant_1$1,
-    defineProperty$3 = _defineProperty$2,
-    identity$2 = identity_1$1;
+  var constant$3 = constant_1$2,
+    defineProperty$4 = _defineProperty$3,
+    identity$3 = identity_1$2;
 
   /**
    * The base implementation of `setToString` without support for hot loop shorting.
@@ -4343,23 +4343,23 @@
    * @param {Function} string The `toString` result.
    * @returns {Function} Returns `func`.
    */
-  var baseSetToString$3 = !defineProperty$3 ? identity$2 : function (func, string) {
-    return defineProperty$3(func, 'toString', {
+  var baseSetToString$4 = !defineProperty$4 ? identity$3 : function (func, string) {
+    return defineProperty$4(func, 'toString', {
       'configurable': true,
       'enumerable': false,
-      'value': constant$2(string),
+      'value': constant$3(string),
       'writable': true
     });
   };
-  var _baseSetToString$1 = baseSetToString$3;
+  var _baseSetToString$2 = baseSetToString$4;
 
   /** Used to detect hot functions by number of calls within a span of milliseconds. */
 
-  var HOT_COUNT$1 = 800,
-    HOT_SPAN$1 = 16;
+  var HOT_COUNT$2 = 800,
+    HOT_SPAN$2 = 16;
 
   /* Built-in method references for those with the same name as other `lodash` methods. */
-  var nativeNow$1 = Date.now;
+  var nativeNow$2 = Date.now;
 
   /**
    * Creates a function that'll short out and invoke `identity` instead
@@ -4370,15 +4370,15 @@
    * @param {Function} func The function to restrict.
    * @returns {Function} Returns the new shortable function.
    */
-  function shortOut$3(func) {
+  function shortOut$4(func) {
     var count = 0,
       lastCalled = 0;
     return function () {
-      var stamp = nativeNow$1(),
-        remaining = HOT_SPAN$1 - (stamp - lastCalled);
+      var stamp = nativeNow$2(),
+        remaining = HOT_SPAN$2 - (stamp - lastCalled);
       lastCalled = stamp;
       if (remaining > 0) {
-        if (++count >= HOT_COUNT$1) {
+        if (++count >= HOT_COUNT$2) {
           return arguments[0];
         }
       } else {
@@ -4387,10 +4387,10 @@
       return func.apply(undefined, arguments);
     };
   }
-  var _shortOut$1 = shortOut$3;
+  var _shortOut$2 = shortOut$4;
 
-  var baseSetToString$2 = _baseSetToString$1,
-    shortOut$2 = _shortOut$1;
+  var baseSetToString$3 = _baseSetToString$2,
+    shortOut$3 = _shortOut$2;
 
   /**
    * Sets the `toString` method of `func` to return `string`.
@@ -4400,12 +4400,12 @@
    * @param {Function} string The `toString` result.
    * @returns {Function} Returns `func`.
    */
-  var setToString$3 = shortOut$2(baseSetToString$2);
-  var _setToString$1 = setToString$3;
+  var setToString$4 = shortOut$3(baseSetToString$3);
+  var _setToString$2 = setToString$4;
 
-  var flatten$2 = flatten_1$1,
-    overRest$2 = _overRest$1,
-    setToString$2 = _setToString$1;
+  var flatten$3 = flatten_1$2,
+    overRest$3 = _overRest$2,
+    setToString$3 = _setToString$2;
 
   /**
    * A specialized version of `baseRest` which flattens the rest array.
@@ -4414,24 +4414,24 @@
    * @param {Function} func The function to apply a rest parameter to.
    * @returns {Function} Returns the new function.
    */
-  function flatRest$5(func) {
-    return setToString$2(overRest$2(func, undefined, flatten$2), func + '');
+  function flatRest$6(func) {
+    return setToString$3(overRest$3(func, undefined, flatten$3), func + '');
   }
-  var _flatRest$1 = flatRest$5;
+  var _flatRest$2 = flatRest$6;
 
-  var arrayMap$3 = _arrayMap$1,
-    baseClone$4 = _baseClone$1,
-    baseUnset$2 = _baseUnset$1,
-    castPath$a = _castPath$1,
-    copyObject$6 = _copyObject$1,
-    customOmitClone$2 = _customOmitClone$1,
-    flatRest$4 = _flatRest$1,
-    getAllKeysIn$3 = _getAllKeysIn$1;
+  var arrayMap$4 = _arrayMap$2,
+    baseClone$5 = _baseClone$2,
+    baseUnset$3 = _baseUnset$2,
+    castPath$b = _castPath$2,
+    copyObject$7 = _copyObject$2,
+    customOmitClone$3 = _customOmitClone$2,
+    flatRest$5 = _flatRest$2,
+    getAllKeysIn$4 = _getAllKeysIn$2;
 
   /** Used to compose bitmasks for cloning. */
-  var CLONE_DEEP_FLAG$2 = 1,
-    CLONE_FLAT_FLAG$2 = 2,
-    CLONE_SYMBOLS_FLAG$4 = 4;
+  var CLONE_DEEP_FLAG$3 = 1,
+    CLONE_FLAT_FLAG$3 = 2,
+    CLONE_SYMBOLS_FLAG$5 = 4;
 
   /**
    * The opposite of `_.pick`; this method creates an object composed of the
@@ -4453,32 +4453,32 @@
    * _.omit(object, ['a', 'c']);
    * // => { 'b': '2' }
    */
-  var omit$1 = flatRest$4(function (object, paths) {
+  var omit$2 = flatRest$5(function (object, paths) {
     var result = {};
     if (object == null) {
       return result;
     }
     var isDeep = false;
-    paths = arrayMap$3(paths, function (path) {
-      path = castPath$a(path, object);
+    paths = arrayMap$4(paths, function (path) {
+      path = castPath$b(path, object);
       isDeep || (isDeep = path.length > 1);
       return path;
     });
-    copyObject$6(object, getAllKeysIn$3(object), result);
+    copyObject$7(object, getAllKeysIn$4(object), result);
     if (isDeep) {
-      result = baseClone$4(result, CLONE_DEEP_FLAG$2 | CLONE_FLAT_FLAG$2 | CLONE_SYMBOLS_FLAG$4, customOmitClone$2);
+      result = baseClone$5(result, CLONE_DEEP_FLAG$3 | CLONE_FLAT_FLAG$3 | CLONE_SYMBOLS_FLAG$5, customOmitClone$3);
     }
     var length = paths.length;
     while (length--) {
-      baseUnset$2(result, paths[length]);
+      baseUnset$3(result, paths[length]);
     }
     return result;
   });
-  var omit_1$1 = omit$1;
+  var omit_1$2 = omit$2;
 
-  var _omit$1 = /*@__PURE__*/getDefaultExportFromCjs$1(omit_1$1);
+  var _omit$2 = /*@__PURE__*/getDefaultExportFromCjs$2(omit_1$2);
 
-  var classnames$1 = {exports: {}};
+  var classnames$2 = {exports: {}};
 
   /*!
   	Copyright (c) 2018 Jed Watson.
@@ -4528,17 +4528,17 @@
   	    window.classNames = classNames;
   	  }
   	})(); 
-  } (classnames$1));
+  } (classnames$2));
 
-  var classnamesExports$1 = classnames$1.exports;
-  var classNames$1 = /*@__PURE__*/getDefaultExportFromCjs$1(classnamesExports$1);
+  var classnamesExports$2 = classnames$2.exports;
+  var classNames$2 = /*@__PURE__*/getDefaultExportFromCjs$2(classnamesExports$2);
 
-  var baseGetTag$d = _baseGetTag$1,
-    isArray$c = isArray_1$1,
-    isObjectLike$e = isObjectLike_1$1;
+  var baseGetTag$e = _baseGetTag$2,
+    isArray$d = isArray_1$2,
+    isObjectLike$f = isObjectLike_1$2;
 
   /** `Object#toString` result references. */
-  var stringTag$4 = '[object String]';
+  var stringTag$5 = '[object String]';
 
   /**
    * Checks if `value` is classified as a `String` primitive or object.
@@ -4557,14 +4557,14 @@
    * _.isString(1);
    * // => false
    */
-  function isString$1(value) {
-    return typeof value == 'string' || !isArray$c(value) && isObjectLike$e(value) && baseGetTag$d(value) == stringTag$4;
+  function isString$2(value) {
+    return typeof value == 'string' || !isArray$d(value) && isObjectLike$f(value) && baseGetTag$e(value) == stringTag$5;
   }
-  var isString_1$1 = isString$1;
+  var isString_1$2 = isString$2;
 
-  var _isString$1 = /*@__PURE__*/getDefaultExportFromCjs$1(isString_1$1);
+  var _isString$2 = /*@__PURE__*/getDefaultExportFromCjs$2(isString_1$2);
 
-  function styleInject$1(css, ref) {
+  function styleInject$2(css, ref) {
     if (ref === void 0) ref = {};
     var insertAt = ref.insertAt;
     if (!css || typeof document === 'undefined') {
@@ -4589,16 +4589,16 @@
     }
   }
 
-  var css_248z$I = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
-  styleInject$1(css_248z$I);
+  var css_248z$X = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
+  styleInject$2(css_248z$X);
 
-  var tx$1 = function tx(str, locale) {
-    if (_isString$1(str)) {
+  var tx$2 = function tx(str, locale) {
+    if (_isString$2(str)) {
       return str;
-    } else if (_isObject$1(str)) {
-      if (!_isEmpty$1(str[locale])) {
+    } else if (_isObject$2(str)) {
+      if (!_isEmpty$2(str[locale])) {
         return str[locale];
-      } else if (!_isEmpty$1(str['en-US'])) {
+      } else if (!_isEmpty$2(str['en-US'])) {
         return str['en-US'];
       } else if (Object.keys(str).length !== 0) {
         return str[Object.keys(str)[0]];
@@ -4607,18 +4607,18 @@
       }
     }
   };
-  var ValidationErrors$1 = function ValidationErrors(_ref) {
+  var ValidationErrors$2 = function ValidationErrors(_ref) {
     var _ref$errors = _ref.errors,
       errors = _ref$errors === void 0 ? {} : _ref$errors,
       className = _ref.className,
       locale = _ref.locale;
     var keys = Object.keys(errors);
     return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames$1('lf-validation-errors', className)
+      className: classNames$2('lf-validation-errors', className)
     }, keys.map(function (fieldName) {
       var label = fieldName;
       if (errors[fieldName] && errors[fieldName].ref && errors[fieldName].ref.label) {
-        label = tx$1(errors[fieldName].ref.label, locale);
+        label = tx$2(errors[fieldName].ref.label, locale);
       }
       return /*#__PURE__*/React$1.createElement("div", {
         key: fieldName
@@ -4626,7 +4626,7 @@
     }));
   };
 
-  var PlusCircle$1 = function PlusCircle(_ref) {
+  var PlusCircle$2 = function PlusCircle(_ref) {
     var _ref$width = _ref.width,
       width = _ref$width === void 0 ? 24 : _ref$width,
       _ref$height = _ref.height,
@@ -4646,7 +4646,7 @@
     }));
   };
 
-  var MinusCircle$1 = function MinusCircle(_ref) {
+  var MinusCircle$2 = function MinusCircle(_ref) {
     var _ref$width = _ref.width,
       width = _ref$width === void 0 ? 24 : _ref$width,
       _ref$height = _ref.height,
@@ -4667,7 +4667,7 @@
     }));
   };
 
-  var ChevronDown$1 = function ChevronDown(_ref) {
+  var ChevronDown$2 = function ChevronDown(_ref) {
     var _ref$width = _ref.width,
       width = _ref$width === void 0 ? 24 : _ref$width,
       _ref$height = _ref.height,
@@ -4685,7 +4685,7 @@
     }));
   };
 
-  var ChevronUp$1 = function ChevronUp(_ref) {
+  var ChevronUp$2 = function ChevronUp(_ref) {
     var _ref$width = _ref.width,
       width = _ref$width === void 0 ? 24 : _ref$width,
       _ref$height = _ref.height,
@@ -4703,7 +4703,7 @@
     }));
   };
 
-  var Asterisk$1 = function Asterisk(_ref) {
+  var Asterisk$2 = function Asterisk(_ref) {
     var _ref$width = _ref.width,
       width = _ref$width === void 0 ? 24 : _ref$width,
       _ref$height = _ref.height,
@@ -4728,7 +4728,7 @@
     })));
   };
 
-  var Warning$1 = function Warning(_ref) {
+  var Warning$2 = function Warning(_ref) {
     var _ref$width = _ref.width,
       width = _ref$width === void 0 ? 24 : _ref$width,
       _ref$height = _ref.height,
@@ -4747,7 +4747,7 @@
     }));
   };
 
-  var CrossCirle$1 = function CrossCirle(_ref) {
+  var CrossCirle$2 = function CrossCirle(_ref) {
     var _ref$width = _ref.width,
       width = _ref$width === void 0 ? 24 : _ref$width,
       _ref$height = _ref.height,
@@ -4771,7 +4771,7 @@
     }));
   };
 
-  var IconCheck$1 = function IconCheck(_ref) {
+  var IconCheck$2 = function IconCheck(_ref) {
     var _ref$width = _ref.width,
       width = _ref$width === void 0 ? 24 : _ref$width,
       _ref$height = _ref.height,
@@ -4794,8 +4794,8 @@
     })));
   };
 
-  var RequiredIcon$1 = function RequiredIcon() {
-    return /*#__PURE__*/React$1.createElement(Asterisk$1, {
+  var RequiredIcon$2 = function RequiredIcon() {
+    return /*#__PURE__*/React$1.createElement(Asterisk$2, {
       color: "#ff6633",
       width: 12,
       height: 12,
@@ -4812,14 +4812,14 @@
    * @param {*} predicate 
    * @returns 
    */
-  var processFieldsHash$1 = function processFieldsHash(field, predicate) {
+  var processFieldsHash$2 = function processFieldsHash(field, predicate) {
     var newField = field;
     var subkeys = Object.keys(field.fields);
     subkeys.forEach(function (subkey) {
-      var newFields = mapFields$1(field.fields[subkey], predicate);
+      var newFields = mapFields$2(field.fields[subkey], predicate);
       if (newFields !== field.fields[subkey]) {
-        newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
-          fields: _objectSpread2$1(_objectSpread2$1({}, newField.fields), {}, _defineProperty$3({}, subkey, newFields))
+        newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
+          fields: _objectSpread2$2(_objectSpread2$2({}, newField.fields), {}, _defineProperty$4({}, subkey, newFields))
         });
       }
     });
@@ -4835,7 +4835,7 @@
    * @param {Function} predicate Take a field as paramenter and return a field object
    * @returns
    */
-  var mapFields$1 = function mapFields(fields) {
+  var mapFields$2 = function mapFields(fields) {
     var predicate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (obj) {
       return obj;
     };
@@ -4854,65 +4854,65 @@
       if (field.component === 'group') {
         var _newFields = mapFields(field.fields, predicate);
         if (_newFields !== field.fields) {
-          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
             fields: _newFields
           });
         }
       } else if (field.component === 'array') {
         var _newFields2 = mapFields(field.fields, predicate);
         if (_newFields2 !== field.fields) {
-          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
             fields: _newFields2
           });
         }
       } else if (field.component === 'two-columns') {
         var newLeftFields = mapFields(field.leftFields, predicate);
         if (newLeftFields !== field.leftFields) {
-          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
             leftFields: newLeftFields
           });
         }
         var newRightFields = mapFields(field.rightFields, predicate);
         if (newRightFields !== field.rightFields) {
-          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
             rightFields: newRightFields
           });
         }
       } else if (field.component === 'three-columns') {
         var _newLeftFields = mapFields(field.leftFields, predicate);
         if (_newLeftFields !== field.leftFields) {
-          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
             leftFields: _newLeftFields
           });
         }
         var newCenterFields = mapFields(field.centerFields, predicate);
         if (newCenterFields !== field.centerFields) {
-          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
             centerFields: newCenterFields
           });
         }
         var _newRightFields = mapFields(field.rightFields, predicate);
         if (_newRightFields !== field.rightFields) {
-          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
             rightFields: _newRightFields
           });
         }
-      } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject$1(field.fields) && !_isArray$1(field.fields)) {
+      } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject$2(field.fields) && !_isArray$2(field.fields)) {
         // Problem here: the new field can be an array because the map field, can return an array with 
         // additional field to be put somewhere in the mapping, of those only the one of type "tab" need to be
         // mapped, the other one must be left untouched since they where added by the helper method
-        if (_isArray$1(newField)) {
+        if (_isArray$2(newField)) {
           // if an array is returned, then it's already changed, we don't need to worry too much about
           // referential integrity
           // here only process the original field
           newField = newField.map(function (fieldToProcess) {
             if (fieldToProcess === field) {
-              return processFieldsHash$1(fieldToProcess, predicate);
+              return processFieldsHash$2(fieldToProcess, predicate);
             }
             return fieldToProcess;
           });
         } else {
-          newField = processFieldsHash$1(newField, predicate);
+          newField = processFieldsHash$2(newField, predicate);
         }
       }
       return newField;
@@ -4920,7 +4920,7 @@
     var hasChanges;
     if (needsFlatten) {
       // if needs to be flattened, for sure is changed
-      newFields = _flatten$1(newFields);
+      newFields = _flatten$2(newFields);
       hasChanges = true;
     } else {
       // check if some element of the array is changed, keep instance consistency otherwise
@@ -4932,8 +4932,8 @@
   };
 
   var replaceField = function replaceField(form, field) {
-    return _objectSpread2$1(_objectSpread2$1({}, form), {}, {
-      fields: mapFields$1(form.fields, function (currentField) {
+    return _objectSpread2$2(_objectSpread2$2({}, form), {}, {
+      fields: mapFields$2(form.fields, function (currentField) {
         if (currentField.id === field.id) {
           return field;
         }
@@ -4965,58 +4965,58 @@
       if (field.component === 'group') {
         var _newFields = filterFields(field.fields, predicate);
         if (_newFields !== field.fields) {
-          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
             fields: _newFields
           });
         }
       } else if (field.component === 'array') {
         var _newFields2 = filterFields(field.fields, predicate);
         if (_newFields2 !== field.fields) {
-          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
             fields: _newFields2
           });
         }
       } else if (field.component === 'two-columns') {
         var newLeftFields = filterFields(field.leftFields, predicate);
         if (newLeftFields !== field.leftFields) {
-          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
             leftFields: newLeftFields
           });
         }
         var newRightFields = filterFields(field.rightFields, predicate);
         if (newRightFields !== field.rightFields) {
-          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
             rightFields: newRightFields
           });
         }
       } else if (field.component === 'three-columns') {
         var _newLeftFields = filterFields(field.leftFields, predicate);
         if (_newLeftFields !== field.leftFields) {
-          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
             leftFields: _newLeftFields
           });
         }
         var newCenterFields = filterFields(field.centerFields, predicate);
         if (newCenterFields !== field.centerFields) {
-          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
             centerFields: newCenterFields
           });
         }
         var _newRightFields = filterFields(field.rightFields, predicate);
         if (_newRightFields !== field.rightFields) {
-          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
             rightFields: _newRightFields
           });
         }
-      } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject$1(field.fields) && !_isArray$1(field.fields)) {
+      } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject$2(field.fields) && !_isArray$2(field.fields)) {
         var subkeys = Object.keys(field.fields);
         // scan all keys of fields and reapply, if different instance, create a new instance
         // of new field
         subkeys.forEach(function (subkey) {
           var newFields = filterFields(field.fields[subkey], predicate);
           if (newFields !== field.fields[subkey]) {
-            newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
-              fields: _objectSpread2$1(_objectSpread2$1({}, newField.fields), {}, _defineProperty$3({}, subkey, newFields))
+            newField = _objectSpread2$2(_objectSpread2$2({}, newField), {}, {
+              fields: _objectSpread2$2(_objectSpread2$2({}, newField.fields), {}, _defineProperty$4({}, subkey, newFields))
             });
           }
         });
@@ -5032,20 +5032,20 @@
   };
 
   var deleteField = function deleteField(form, field) {
-    return _objectSpread2$1(_objectSpread2$1({}, form), {}, {
+    return _objectSpread2$2(_objectSpread2$2({}, form), {}, {
       fields: filterFields(form.fields, function (currentField) {
         return currentField.id !== field.id;
       })
     });
   };
 
-  var fillIds$1 = function fillIds(fields) {
+  var fillIds$2 = function fillIds(fields) {
     var namespace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-    return mapFields$1(fields, function (field) {
+    return mapFields$2(fields, function (field) {
       // if not id, then create it
       if (!field.id) {
-        return _objectSpread2$1({
-          id: _uniqueId$1(namespace)
+        return _objectSpread2$2({
+          id: _uniqueId$2(namespace)
         }, field);
       }
       // special case of array
@@ -5056,11 +5056,11 @@
     });
   };
 
-  var assignValue$4 = _assignValue$1,
-    castPath$9 = _castPath$1,
-    isIndex$5 = _isIndex$1,
-    isObject$7 = isObject_1$1,
-    toKey$6 = _toKey$1;
+  var assignValue$5 = _assignValue$2,
+    castPath$a = _castPath$2,
+    isIndex$6 = _isIndex$2,
+    isObject$8 = isObject_1$2,
+    toKey$7 = _toKey$2;
 
   /**
    * The base implementation of `_.set`.
@@ -5072,17 +5072,17 @@
    * @param {Function} [customizer] The function to customize path creation.
    * @returns {Object} Returns `object`.
    */
-  function baseSet$3(object, path, value, customizer) {
-    if (!isObject$7(object)) {
+  function baseSet$4(object, path, value, customizer) {
+    if (!isObject$8(object)) {
       return object;
     }
-    path = castPath$9(path, object);
+    path = castPath$a(path, object);
     var index = -1,
       length = path.length,
       lastIndex = length - 1,
       nested = object;
     while (nested != null && ++index < length) {
-      var key = toKey$6(path[index]),
+      var key = toKey$7(path[index]),
         newValue = value;
       if (key === '__proto__' || key === 'constructor' || key === 'prototype') {
         return object;
@@ -5091,19 +5091,19 @@
         var objValue = nested[key];
         newValue = customizer ? customizer(objValue, key, nested) : undefined;
         if (newValue === undefined) {
-          newValue = isObject$7(objValue) ? objValue : isIndex$5(path[index + 1]) ? [] : {};
+          newValue = isObject$8(objValue) ? objValue : isIndex$6(path[index + 1]) ? [] : {};
         }
       }
-      assignValue$4(nested, key, newValue);
+      assignValue$5(nested, key, newValue);
       nested = nested[key];
     }
     return object;
   }
-  var _baseSet$1 = baseSet$3;
+  var _baseSet$2 = baseSet$4;
 
-  var baseGet$3 = _baseGet$1,
-    baseSet$2 = _baseSet$1,
-    castPath$8 = _castPath$1;
+  var baseGet$4 = _baseGet$2,
+    baseSet$3 = _baseSet$2,
+    castPath$9 = _castPath$2;
 
   /**
    * The base implementation of  `_.pickBy` without support for iteratee shorthands.
@@ -5114,20 +5114,20 @@
    * @param {Function} predicate The function invoked per property.
    * @returns {Object} Returns the new object.
    */
-  function basePickBy$3(object, paths, predicate) {
+  function basePickBy$4(object, paths, predicate) {
     var index = -1,
       length = paths.length,
       result = {};
     while (++index < length) {
       var path = paths[index],
-        value = baseGet$3(object, path);
+        value = baseGet$4(object, path);
       if (predicate(value, path)) {
-        baseSet$2(result, castPath$8(path, object), value);
+        baseSet$3(result, castPath$9(path, object), value);
       }
     }
     return result;
   }
-  var _basePickBy$1 = basePickBy$3;
+  var _basePickBy$2 = basePickBy$4;
 
   /**
    * The base implementation of `_.hasIn` without support for deep paths.
@@ -5138,17 +5138,17 @@
    * @returns {boolean} Returns `true` if `key` exists, else `false`.
    */
 
-  function baseHasIn$3(object, key) {
+  function baseHasIn$4(object, key) {
     return object != null && key in Object(object);
   }
-  var _baseHasIn$1 = baseHasIn$3;
+  var _baseHasIn$2 = baseHasIn$4;
 
-  var castPath$7 = _castPath$1,
-    isArguments$5 = isArguments_1$1,
-    isArray$b = isArray_1$1,
-    isIndex$4 = _isIndex$1,
-    isLength$4 = isLength_1$1,
-    toKey$5 = _toKey$1;
+  var castPath$8 = _castPath$2,
+    isArguments$6 = isArguments_1$2,
+    isArray$c = isArray_1$2,
+    isIndex$5 = _isIndex$2,
+    isLength$5 = isLength_1$2,
+    toKey$6 = _toKey$2;
 
   /**
    * Checks if `path` exists on `object`.
@@ -5159,13 +5159,13 @@
    * @param {Function} hasFunc The function to check properties.
    * @returns {boolean} Returns `true` if `path` exists, else `false`.
    */
-  function hasPath$3(object, path, hasFunc) {
-    path = castPath$7(path, object);
+  function hasPath$4(object, path, hasFunc) {
+    path = castPath$8(path, object);
     var index = -1,
       length = path.length,
       result = false;
     while (++index < length) {
-      var key = toKey$5(path[index]);
+      var key = toKey$6(path[index]);
       if (!(result = object != null && hasFunc(object, key))) {
         break;
       }
@@ -5175,12 +5175,12 @@
       return result;
     }
     length = object == null ? 0 : object.length;
-    return !!length && isLength$4(length) && isIndex$4(key, length) && (isArray$b(object) || isArguments$5(object));
+    return !!length && isLength$5(length) && isIndex$5(key, length) && (isArray$c(object) || isArguments$6(object));
   }
-  var _hasPath$1 = hasPath$3;
+  var _hasPath$2 = hasPath$4;
 
-  var baseHasIn$2 = _baseHasIn$1,
-    hasPath$2 = _hasPath$1;
+  var baseHasIn$3 = _baseHasIn$2,
+    hasPath$3 = _hasPath$2;
 
   /**
    * Checks if `path` is a direct or inherited property of `object`.
@@ -5208,13 +5208,13 @@
    * _.hasIn(object, 'b');
    * // => false
    */
-  function hasIn$3(object, path) {
-    return object != null && hasPath$2(object, path, baseHasIn$2);
+  function hasIn$4(object, path) {
+    return object != null && hasPath$3(object, path, baseHasIn$3);
   }
-  var hasIn_1$1 = hasIn$3;
+  var hasIn_1$2 = hasIn$4;
 
-  var basePickBy$2 = _basePickBy$1,
-    hasIn$2 = hasIn_1$1;
+  var basePickBy$3 = _basePickBy$2,
+    hasIn$3 = hasIn_1$2;
 
   /**
    * The base implementation of `_.pick` without support for individual
@@ -5225,15 +5225,15 @@
    * @param {string[]} paths The property paths to pick.
    * @returns {Object} Returns the new object.
    */
-  function basePick$3(object, paths) {
-    return basePickBy$2(object, paths, function (value, path) {
-      return hasIn$2(object, path);
+  function basePick$4(object, paths) {
+    return basePickBy$3(object, paths, function (value, path) {
+      return hasIn$3(object, path);
     });
   }
-  var _basePick$1 = basePick$3;
+  var _basePick$2 = basePick$4;
 
-  var basePick$2 = _basePick$1,
-    flatRest$3 = _flatRest$1;
+  var basePick$3 = _basePick$2,
+    flatRest$4 = _flatRest$2;
 
   /**
    * Creates an object composed of the picked `object` properties.
@@ -5252,18 +5252,18 @@
    * _.pick(object, ['a', 'c']);
    * // => { 'a': 1, 'c': 3 }
    */
-  var pick$1 = flatRest$3(function (object, paths) {
-    return object == null ? {} : basePick$2(object, paths);
+  var pick$2 = flatRest$4(function (object, paths) {
+    return object == null ? {} : basePick$3(object, paths);
   });
-  var pick_1$1 = pick$1;
+  var pick_1$2 = pick$2;
 
-  var _pick$1 = /*@__PURE__*/getDefaultExportFromCjs$1(pick_1$1);
+  var _pick$2 = /*@__PURE__*/getDefaultExportFromCjs$2(pick_1$2);
 
-  var baseGetTag$c = _baseGetTag$1,
-    isObjectLike$d = isObjectLike_1$1;
+  var baseGetTag$d = _baseGetTag$2,
+    isObjectLike$e = isObjectLike_1$2;
 
   /** `Object#toString` result references. */
-  var numberTag$4 = '[object Number]';
+  var numberTag$5 = '[object Number]';
 
   /**
    * Checks if `value` is classified as a `Number` primitive or object.
@@ -5291,15 +5291,15 @@
    * _.isNumber('3');
    * // => false
    */
-  function isNumber$1(value) {
-    return typeof value == 'number' || isObjectLike$d(value) && baseGetTag$c(value) == numberTag$4;
+  function isNumber$2(value) {
+    return typeof value == 'number' || isObjectLike$e(value) && baseGetTag$d(value) == numberTag$5;
   }
-  var isNumber_1$1 = isNumber$1;
+  var isNumber_1$2 = isNumber$2;
 
-  var _isNumber$1 = /*@__PURE__*/getDefaultExportFromCjs$1(isNumber_1$1);
+  var _isNumber$2 = /*@__PURE__*/getDefaultExportFromCjs$2(isNumber_1$2);
 
-  var baseGetTag$b = _baseGetTag$1,
-    isObjectLike$c = isObjectLike_1$1;
+  var baseGetTag$c = _baseGetTag$2,
+    isObjectLike$d = isObjectLike_1$2;
 
   /** `Object#toString` result references. */
   var boolTag = '[object Boolean]';
@@ -5322,39 +5322,39 @@
    * // => false
    */
   function isBoolean(value) {
-    return value === true || value === false || isObjectLike$c(value) && baseGetTag$b(value) == boolTag;
+    return value === true || value === false || isObjectLike$d(value) && baseGetTag$c(value) == boolTag;
   }
   var isBoolean_1 = isBoolean;
 
-  var _isBoolean = /*@__PURE__*/getDefaultExportFromCjs$1(isBoolean_1);
+  var _isBoolean = /*@__PURE__*/getDefaultExportFromCjs$2(isBoolean_1);
 
-  var FRAMEWORKS$1 = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd', 'react-mantine'];
+  var FRAMEWORKS$2 = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd', 'react-mantine'];
   var FRAMEWORKS_LABELS = ['React', 'React + RSuite5', 'React + MaterialUI', 'React + Bootstrap', 'React + Ant Design', 'React + Mantine'];
   var FIELDS_KEY = ['fields', 'leftFields', 'rightField', 'centerFields'];
 
-  var isI18n$1 = function isI18n(obj) {
-    return _isObject$1(obj) && Object.keys(obj).every(function (key) {
+  var isI18n$2 = function isI18n(obj) {
+    return _isObject$2(obj) && Object.keys(obj).every(function (key) {
       return key.length === 2 || key.length === 5 && key[2] === '-';
     });
   };
 
   var collectEmptyKeys = function collectEmptyKeys(obj) {
     return _keys(obj).filter(function (key) {
-      return _isEmpty$1(obj[key]) && !(_isBoolean(obj[key]) || _isNumber$1(obj[key]));
+      return _isEmpty$2(obj[key]) && !(_isBoolean(obj[key]) || _isNumber$2(obj[key]));
     });
   };
   var removeEmptyKeys = function removeEmptyKeys(obj) {
     // collect all empty keys
     var emptyKeys = collectEmptyKeys(obj);
     // clone and remove id and empty keys
-    return _omit$1(obj, emptyKeys);
+    return _omit$2(obj, emptyKeys);
   };
   var removeUnusedLocalesFromI18n = function removeUnusedLocalesFromI18n(obj, locales) {
-    if (_isArray$1(locales) && !_isEmpty$1(locales)) {
+    if (_isArray$2(locales) && !_isEmpty$2(locales)) {
       var keysToRemove = Object.keys(obj).filter(function (key) {
         return !locales.includes(key);
       });
-      var cleaned = !_isEmpty$1(keysToRemove) ? _omit$1(obj, keysToRemove) : obj;
+      var cleaned = !_isEmpty$2(keysToRemove) ? _omit$2(obj, keysToRemove) : obj;
       if (Object.keys(cleaned).length !== 0) {
         return cleaned;
       }
@@ -5372,16 +5372,16 @@
     }
   };
   var removeUnusedLocalesFromObj = function removeUnusedLocalesFromObj(obj, locales) {
-    var cloned = _objectSpread2$1({}, obj);
+    var cloned = _objectSpread2$2({}, obj);
     Object.keys(obj || {}).forEach(function (key) {
-      if (_isArray$1(cloned[key])) {
+      if (_isArray$2(cloned[key])) {
         cloned[key] = cloned[key].map(function (item) {
           return removeUnusedLocalesFromObj(item, locales);
         });
-      } else if (isI18n$1(cloned[key])) {
+      } else if (isI18n$2(cloned[key])) {
         cloned[key] = removeUnusedLocalesFromI18n(cloned[key], locales);
-      } else if (key === 'validation' && isI18n$1(cloned.validation.message)) {
-        cloned.validation = _objectSpread2$1(_objectSpread2$1({}, cloned.validation), {}, {
+      } else if (key === 'validation' && isI18n$2(cloned.validation.message)) {
+        cloned.validation = _objectSpread2$2(_objectSpread2$2({}, cloned.validation), {}, {
           message: removeUnusedLocalesFromI18n(cloned.validation.message, locales)
         });
       }
@@ -5390,8 +5390,8 @@
   };
   var removeUnusedTabs = function removeUnusedTabs(obj) {
     if (obj.component === 'tabs') {
-      return _objectSpread2$1(_objectSpread2$1({}, obj), {}, {
-        fields: _pick$1(obj.fields, (obj.tabs || []).map(function (tab) {
+      return _objectSpread2$2(_objectSpread2$2({}, obj), {}, {
+        fields: _pick$2(obj.fields, (obj.tabs || []).map(function (tab) {
           return tab.value;
         }))
       });
@@ -5406,25 +5406,25 @@
    * @returns
    */
   var cleanUp = function cleanUp(json, framework) {
-    var cloned = _objectSpread2$1({}, json);
+    var cloned = _objectSpread2$2({}, json);
 
     // remove unused locales
-    if (cloned.labelSubmit && isI18n$1(cloned.labelSubmit)) {
+    if (cloned.labelSubmit && isI18n$2(cloned.labelSubmit)) {
       cloned.labelSubmit = removeUnusedLocalesFromI18n(cloned.labelSubmit, json.locales);
     }
-    if (cloned.labelCancel && isI18n$1(cloned.labelCancel)) {
+    if (cloned.labelCancel && isI18n$2(cloned.labelCancel)) {
       cloned.labelCancel = removeUnusedLocalesFromI18n(cloned.labelCancel, json.locales);
     }
     var emptyKeys = _keys(cloned).filter(function (key) {
-      return _isEmpty$1(cloned[key]) && !(_isBoolean(cloned[key]) || _isNumber$1(cloned[key]));
+      return _isEmpty$2(cloned[key]) && !(_isBoolean(cloned[key]) || _isNumber$2(cloned[key]));
     });
-    var cleanedUp = _omit$1(cloned, emptyKeys);
-    var newForm = _objectSpread2$1(_objectSpread2$1({}, cleanedUp), {}, {
-      fields: mapFields$1(json.fields, function (field) {
+    var cleanedUp = _omit$2(cloned, emptyKeys);
+    var newForm = _objectSpread2$2(_objectSpread2$2({}, cleanedUp), {}, {
+      fields: mapFields$2(json.fields, function (field) {
         // clone and remove id
-        var cloned = _omit$1(field, 'id');
+        var cloned = _omit$2(field, 'id');
         // clean all platform subkeys
-        FRAMEWORKS$1.forEach(function (key) {
+        FRAMEWORKS$2.forEach(function (key) {
           if (cloned[key]) {
             cloned[key] = removeEmptyKeys(cloned[key]);
             // remove if empty after cleaning
@@ -5435,7 +5435,7 @@
         });
         // remove all other frameworks if one is specified
         if (framework) {
-          FRAMEWORKS$1.filter(function (s) {
+          FRAMEWORKS$2.filter(function (s) {
             return s !== framework;
           }).forEach(function (framework) {
             return delete cloned[framework];
@@ -5466,34 +5466,34 @@
     var target = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'fields';
     var subtarget = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : null;
     // can add multiple fields at once
-    var toAdd = _isArray$1(newField) ? newField : [newField];
+    var toAdd = _isArray$2(newField) ? newField : [newField];
     if (id != null) {
-      return _objectSpread2$1(_objectSpread2$1({}, form), {}, {
-        fields: mapFields$1(form.fields,
+      return _objectSpread2$2(_objectSpread2$2({}, form), {}, {
+        fields: mapFields$2(form.fields,
         // if right field id, append to fields
         function (field) {
           if (field.id === id) {
             if (subtarget != null) {
-              return _objectSpread2$1(_objectSpread2$1({}, field), {}, _defineProperty$3({}, target, _objectSpread2$1(_objectSpread2$1({}, field[target] || []), {}, _defineProperty$3({}, subtarget, [].concat(_toConsumableArray$1(field[target] && field[target][subtarget] ? field[target][subtarget] : []), _toConsumableArray$1(toAdd))))));
+              return _objectSpread2$2(_objectSpread2$2({}, field), {}, _defineProperty$4({}, target, _objectSpread2$2(_objectSpread2$2({}, field[target] || []), {}, _defineProperty$4({}, subtarget, [].concat(_toConsumableArray$2(field[target] && field[target][subtarget] ? field[target][subtarget] : []), _toConsumableArray$2(toAdd))))));
             } else {
               // old way
-              return _objectSpread2$1(_objectSpread2$1({}, field), {}, _defineProperty$3({}, target, [].concat(_toConsumableArray$1(field[target] || []), _toConsumableArray$1(toAdd))));
+              return _objectSpread2$2(_objectSpread2$2({}, field), {}, _defineProperty$4({}, target, [].concat(_toConsumableArray$2(field[target] || []), _toConsumableArray$2(toAdd))));
             }
           }
           return field;
         })
       });
     } else {
-      return _objectSpread2$1(_objectSpread2$1({}, form), {}, {
-        fields: [].concat(_toConsumableArray$1(form.fields), _toConsumableArray$1(toAdd))
+      return _objectSpread2$2(_objectSpread2$2({}, form), {}, {
+        fields: [].concat(_toConsumableArray$2(form.fields), _toConsumableArray$2(toAdd))
       });
     }
   };
 
-  var baseClone$3 = _baseClone$1;
+  var baseClone$4 = _baseClone$2;
 
   /** Used to compose bitmasks for cloning. */
-  var CLONE_SYMBOLS_FLAG$3 = 4;
+  var CLONE_SYMBOLS_FLAG$4 = 4;
 
   /**
    * Creates a shallow clone of `value`.
@@ -5521,26 +5521,26 @@
    * console.log(shallow[0] === objects[0]);
    * // => true
    */
-  function clone$1(value) {
-    return baseClone$3(value, CLONE_SYMBOLS_FLAG$3);
+  function clone$2(value) {
+    return baseClone$4(value, CLONE_SYMBOLS_FLAG$4);
   }
-  var clone_1$1 = clone$1;
+  var clone_1$2 = clone$2;
 
-  var _clone$1 = /*@__PURE__*/getDefaultExportFromCjs$1(clone_1$1);
+  var _clone$2 = /*@__PURE__*/getDefaultExportFromCjs$2(clone_1$2);
 
-  var reduceFields$1 = function reduceFields(fields, predicate) {
+  var reduceFields$2 = function reduceFields(fields, predicate) {
     var accumulator = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
     var opts = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
-    var options = _objectSpread2$1({
+    var options = _objectSpread2$2({
       'group': true,
       'array': true,
       'two-columns': true,
       'three-columns': true
     }, opts);
-    if (_isEmpty$1(fields) || !_isArray$1(fields)) {
+    if (_isEmpty$2(fields) || !_isArray$2(fields)) {
       return accumulator;
     }
-    var result = _clone$1(accumulator);
+    var result = _clone$2(accumulator);
     fields.forEach(function (field) {
       if (!field) {
         return;
@@ -5557,7 +5557,7 @@
         result = reduceFields(field.leftFields, predicate, result, opts);
         result = reduceFields(field.centerFields, predicate, result, opts);
         result = reduceFields(field.rightFields, predicate, result, opts);
-      } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject$1(field.fields) && !_isArray$1(field.fields)) {
+      } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject$2(field.fields) && !_isArray$2(field.fields)) {
         var subkeys = Object.keys(field.fields);
         subkeys.forEach(function (subkey) {
           result = reduceFields(field.fields[subkey], predicate, result, opts);
@@ -5568,10 +5568,10 @@
   };
 
   var createEmptyField = function createEmptyField(Manifests, fields, component, framework) {
-    var countFields = reduceFields$1(fields, function (field, accumulator) {
+    var countFields = reduceFields$2(fields, function (field, accumulator) {
       return accumulator + 1;
     }, 0);
-    var newId = _uniqueId$1("field_".concat(countFields + 1, "_"));
+    var newId = _uniqueId$2("field_".concat(countFields + 1, "_"));
     var newName = "field_".concat(countFields + 1);
     var retries = 0;
     var exists = fieldExists(fields, function (field) {
@@ -5597,17 +5597,17 @@
     if (Manifests[component] && Manifests[component].defaultValues) {
       // apply all defaults for all platforms
       Object.keys(Manifests[component].defaultValues).forEach(function (framework) {
-        newField = _objectSpread2$1(_objectSpread2$1({}, newField), Manifests[component].defaultValues[framework]);
+        newField = _objectSpread2$2(_objectSpread2$2({}, newField), Manifests[component].defaultValues[framework]);
       });
       // be sure to apply the current framework as last one (in case it includes non framework specific values)
       if (Manifests[component].defaultValues[framework]) {
-        newField = _objectSpread2$1(_objectSpread2$1({}, newField), Manifests[component].defaultValues[framework]);
+        newField = _objectSpread2$2(_objectSpread2$2({}, newField), Manifests[component].defaultValues[framework]);
       }
     }
     return newField;
   };
-  var findField$1 = function findField(fields, predicate) {
-    if (_isEmpty$1(fields) || !_isArray$1(fields)) {
+  var findField$2 = function findField(fields, predicate) {
+    if (_isEmpty$2(fields) || !_isArray$2(fields)) {
       return null;
     }
     var found = fields.find(predicate);
@@ -5619,7 +5619,7 @@
           found = findField(field.leftFields, predicate) || findField(field.rightFields, predicate);
         } else if (field.component === 'three-columns') {
           found = findField(field.leftFields, predicate) || findField(field.centerFields, predicate) || findField(field.rightFields, predicate);
-        } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject$1(field.fields) && !_isArray$1(field.fields)) {
+        } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject$2(field.fields) && !_isArray$2(field.fields)) {
           var subkeys = Object.keys(field.fields);
           subkeys.forEach(function (subkey) {
             if (!found) {
@@ -5635,35 +5635,35 @@
     return found;
   };
   var getFieldById = function getFieldById(fields, id) {
-    return findField$1(fields, function (field) {
+    return findField$2(fields, function (field) {
       return field.id === id;
     });
   };
   var fieldExists = function fieldExists(fields, predicate) {
-    return findField$1(fields, predicate) != null;
+    return findField$2(fields, predicate) != null;
   };
 
   var testCondition = function testCondition(condition) {
     var values = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-    if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'checked' && !_isEmpty$1(condition === null || condition === void 0 ? void 0 : condition.field) && values[condition.field] === true) {
+    if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'checked' && !_isEmpty$2(condition === null || condition === void 0 ? void 0 : condition.field) && values[condition.field] === true) {
       return true;
-    } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'unchecked' && !_isEmpty$1(condition === null || condition === void 0 ? void 0 : condition.field) && values[condition.field] === false) {
+    } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'unchecked' && !_isEmpty$2(condition === null || condition === void 0 ? void 0 : condition.field) && values[condition.field] === false) {
       return true;
-    } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'eq' && !_isEmpty$1(condition === null || condition === void 0 ? void 0 : condition.field) && condition !== null && condition !== void 0 && condition.value &&
+    } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'eq' && !_isEmpty$2(condition === null || condition === void 0 ? void 0 : condition.field) && condition !== null && condition !== void 0 && condition.value &&
     // could be anything
     // eslint-disable-next-line eqeqeq
     values[condition.field] == condition.value) {
       return true;
-    } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'neq' && !_isEmpty$1(condition === null || condition === void 0 ? void 0 : condition.field) && condition !== null && condition !== void 0 && condition.value &&
+    } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'neq' && !_isEmpty$2(condition === null || condition === void 0 ? void 0 : condition.field) && condition !== null && condition !== void 0 && condition.value &&
     // could be anything
     // eslint-disable-next-line eqeqeq
     values[condition.field] != condition.value) {
       return true;
-    } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'not_empty' && !_isEmpty$1(condition === null || condition === void 0 ? void 0 : condition.field) &&
+    } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'not_empty' && !_isEmpty$2(condition === null || condition === void 0 ? void 0 : condition.field) &&
     // eslint-disable-next-line eqeqeq
     values[condition.field] != null && values[condition.field] !== '') {
       return true;
-    } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'empty' && !_isEmpty$1(condition === null || condition === void 0 ? void 0 : condition.field) && (
+    } else if ((condition === null || condition === void 0 ? void 0 : condition.type) === 'empty' && !_isEmpty$2(condition === null || condition === void 0 ? void 0 : condition.field) && (
     // eslint-disable-next-line eqeqeq
     values[condition.field] == null || values[condition.field] === '')) {
       return true;
@@ -5671,8 +5671,8 @@
     return false;
   };
   var testConditions = function testConditions(conditions, values) {
-    if (_isArray$1(conditions)) {
-      if (!_isEmpty$1(conditions)) {
+    if (_isArray$2(conditions)) {
+      if (!_isEmpty$2(conditions)) {
         return conditions.every(function (condition) {
           return testCondition(condition, values);
         });
@@ -5685,7 +5685,7 @@
     enable: function enable(names) {
       return function (field) {
         if (names.indexOf(field.name) !== -1) {
-          return _objectSpread2$1(_objectSpread2$1({}, field), {}, {
+          return _objectSpread2$2(_objectSpread2$2({}, field), {}, {
             disabled: false
           });
         }
@@ -5695,7 +5695,7 @@
     disable: function disable(names) {
       return function (field) {
         if (names.indexOf(field.name) !== -1) {
-          return _objectSpread2$1(_objectSpread2$1({}, field), {}, {
+          return _objectSpread2$2(_objectSpread2$2({}, field), {}, {
             disabled: true
           });
         }
@@ -5705,7 +5705,7 @@
     show: function show(names) {
       return function (field) {
         if (names.indexOf(field.name) !== -1) {
-          return _objectSpread2$1(_objectSpread2$1({}, field), {}, {
+          return _objectSpread2$2(_objectSpread2$2({}, field), {}, {
             hidden: false
           });
         }
@@ -5715,7 +5715,7 @@
     hide: function hide(names) {
       return function (field) {
         if (names.indexOf(field.name) !== -1) {
-          return _objectSpread2$1(_objectSpread2$1({}, field), {}, {
+          return _objectSpread2$2(_objectSpread2$2({}, field), {}, {
             hidden: true
           });
         }
@@ -5724,8 +5724,8 @@
     },
     setValue: function setValue(names, object, condition, values) {
       return function (field) {
-        if (names.indexOf(field.name) !== -1 && _isObject$1(object) && !_isEmpty$1(object.key) && !_isEmpty$1(object.value)) {
-          return _objectSpread2$1(_objectSpread2$1({}, field), {}, _defineProperty$3({}, object.key, evaluateValue(object.value, {
+        if (names.indexOf(field.name) !== -1 && _isObject$2(object) && !_isEmpty$2(object.key) && !_isEmpty$2(object.value)) {
+          return _objectSpread2$2(_objectSpread2$2({}, field), {}, _defineProperty$4({}, object.key, evaluateValue(object.value, {
             values: values,
             condition: condition
           })));
@@ -5765,7 +5765,7 @@
       if (testConditions(rule.condition, values)) {
         // if there's a verb for it, then apply it
         if (PREDICATES[rule.verb]) {
-          newFields = mapFields$1(newFields, PREDICATES[rule.verb](rule.names, rule.object, rule.condition, values));
+          newFields = mapFields$2(newFields, PREDICATES[rule.verb](rule.names, rule.object, rule.condition, values));
         }
       }
     });
@@ -5774,7 +5774,7 @@
 
   var DAYJS_VALID_TOKENS = ['YY', 'YYYY', 'M', 'MM', 'MMM', 'MMMM', 'D', 'DD', 'Do', 'd', 'dd', 'ddd', 'dddd', 'A', 'a', 'H', 'HH', 'h', 'hh', 'm', 'mm', 's', 'ss'];
   var isValidDayjsFormat = function isValidDayjsFormat(str) {
-    if (_isString$1(str) && !_isEmpty$1(str)) {
+    if (_isString$2(str) && !_isEmpty$2(str)) {
       var tokens = str.match(/([A-Za-z0-9]{1,})/gm);
       var isValid = tokens.every(function (t) {
         return DAYJS_VALID_TOKENS.includes(t);
@@ -5787,7 +5787,7 @@
     return false;
   };
 
-  var LOCALES$1 = {
+  var LOCALES$2 = {
     "primary-dialects": {
       "af": "af-ZA",
       "ar": "ar",
@@ -5894,22 +5894,22 @@
     }
   };
 
-  var LANGUAGES_OPTIONS$4 = Object.keys(LOCALES$1['language-names']).map(function (lang) {
+  var LANGUAGES_OPTIONS$6 = Object.keys(LOCALES$2['language-names']).map(function (lang) {
     return {
       code: lang,
-      name: LOCALES$1['language-names'][lang][1],
-      label: "".concat(LOCALES$1['language-names'][lang][1])
+      name: LOCALES$2['language-names'][lang][1],
+      label: "".concat(LOCALES$2['language-names'][lang][1])
     };
   });
   var getLocales = function getLocales() {
-    return LANGUAGES_OPTIONS$4;
+    return LANGUAGES_OPTIONS$6;
   };
 
-  var i18n$1 = function i18n(value, locale) {
-    if (_isString$1(value)) {
+  var i18n$2 = function i18n(value, locale) {
+    if (_isString$2(value)) {
       // if string, then return it
       return value;
-    } else if (_isObject$1(value)) {
+    } else if (_isObject$2(value)) {
       var language = (locale || 'en-US').substr(0, 2);
       // if exact match of the locale
       if (locale && value[locale]) {
@@ -5942,7 +5942,7 @@
     return value;
   };
 
-  var EXCLUDED_LETSFORM_FIELDS$1 = ['lfFramework', 'lfComponent', 'lfLocale', 'lfOnEnter', 'transformer', 'script'];
+  var EXCLUDED_LETSFORM_FIELDS$2 = ['lfFramework', 'lfComponent', 'lfLocale', 'lfOnEnter', 'transformer', 'script'];
 
   /**
    * passRest
@@ -5951,14 +5951,14 @@
    * @param {*} additional 
    * @returns 
    */
-  var passRest$1 = function passRest(props) {
+  var passRest$2 = function passRest(props) {
     var additional = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
-    return _omit$1(props, [].concat(EXCLUDED_LETSFORM_FIELDS$1, _toConsumableArray$1(_isArray$1(additional) ? additional : [additional])));
+    return _omit$2(props, [].concat(EXCLUDED_LETSFORM_FIELDS$2, _toConsumableArray$2(_isArray$2(additional) ? additional : [additional])));
   };
 
-  var filterOptions$1 = function filterOptions(options, filterValue) {
+  var filterOptions$2 = function filterOptions(options, filterValue) {
     var filterKey = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'value';
-    if (_isArray$1(options) && !_isEmpty$1(filterKey) && !_isEmpty$1(filterValue)) {
+    if (_isArray$2(options) && !_isEmpty$2(filterKey) && !_isEmpty$2(filterValue)) {
       return options.filter(function (item) {
         return item[filterKey] === filterValue;
       });
@@ -7718,7 +7718,7 @@
   	name: null,
   	info: null
   };
-  var FIELD_MAPPINGS$1 = {
+  var FIELD_MAPPINGS$2 = {
   	"input-text": {
   	name: null,
   	label: null,
@@ -8466,7 +8466,7 @@
   	hidden: hidden$2
   };
 
-  var translateValidationKey$1 = function translateValidationKey(str) {
+  var translateValidationKey$2 = function translateValidationKey(str) {
     if (str.startsWith('validation')) {
       str = str.replace(/^validation/, '');
       if (str.length !== 0) {
@@ -8477,10 +8477,10 @@
       return str;
     }
   };
-  var ApiFactory$1 = function ApiFactory(formName, framework, formFields, currenValues) {
+  var ApiFactory$2 = function ApiFactory(formName, framework, formFields, currenValues, formContext) {
     var _fields = formFields;
     var fieldExists = function fieldExists(name) {
-      if (findField$1(_fields, function (field) {
+      if (findField$2(_fields, function (field) {
         return field.name === name;
       }) != null) {
         return true;
@@ -8488,9 +8488,12 @@
         throw new Error("Field \"".concat(name, "\" doesn't exist in the form"));
       }
     };
-    return {
+    var methods = {
       fields: function fields() {
         return _fields;
+      },
+      context: function context(key) {
+        return formContext ? formContext[key] : null;
       },
       element: function element(name) {
         if (!fieldExists(name)) {
@@ -8511,9 +8514,9 @@
         if (form) {
           var element = form.querySelector("[data-lf-field-name=".concat(name, "]"));
           if (element) {
-            if (_isString$1(prop)) {
+            if (_isString$2(prop)) {
               element.style[prop] = value;
-            } else if (_isObject$1(prop)) {
+            } else if (_isObject$2(prop)) {
               Object.keys(prop).forEach(function (key) {
                 return element.style[key] = prop[key];
               });
@@ -8526,37 +8529,46 @@
         var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
         if (form) {
           var element = form.querySelector(className);
-          if (element && _isObject$1(obj)) {
+          if (element && _isObject$2(obj)) {
             Object.keys(obj).forEach(function (key) {
               return element.style[key] = obj[key];
             });
           }
         }
       },
+      toggle: function toggle(name, key) {
+        var field = findField$2(_fields, function (field) {
+          return field.name === name;
+        });
+        if (!field) {
+          return;
+        }
+        methods.setValue(name, key, !field[key]);
+      },
       setValue: function setValue(name, key, value) {
         if (!fieldExists(name)) {
           return;
         }
-        _fields = mapFields$1(_fields, function (field) {
+        _fields = mapFields$2(_fields, function (field) {
           if (field.name === name) {
             // check if the field exists in the manifest mapping
             // and if needs to be added in a framework sub set
-            if (FIELD_MAPPINGS$1[field.component] && FIELD_MAPPINGS$1[field.component][key] !== undefined) {
-              if (FIELD_MAPPINGS$1[field.component][key] === null) {
+            if (FIELD_MAPPINGS$2[field.component] && FIELD_MAPPINGS$2[field.component][key] !== undefined) {
+              if (FIELD_MAPPINGS$2[field.component][key] === null) {
                 // key property exists but it's just common property to all frameworks
-                return _objectSpread2$1(_objectSpread2$1({}, field), {}, _defineProperty$3({}, key, value));
-              } else if (FIELD_MAPPINGS$1[field.component][key] === 'validation') {
+                return _objectSpread2$2(_objectSpread2$2({}, field), {}, _defineProperty$4({}, key, value));
+              } else if (FIELD_MAPPINGS$2[field.component][key] === 'validation') {
                 var _field$validation;
                 // handle special case of validation fields
-                return _objectSpread2$1(_objectSpread2$1({}, field), {}, {
-                  validation: _objectSpread2$1(_objectSpread2$1({}, (_field$validation = field.validation) !== null && _field$validation !== void 0 ? _field$validation : {}), {}, _defineProperty$3({}, translateValidationKey$1(key), value))
+                return _objectSpread2$2(_objectSpread2$2({}, field), {}, {
+                  validation: _objectSpread2$2(_objectSpread2$2({}, (_field$validation = field.validation) !== null && _field$validation !== void 0 ? _field$validation : {}), {}, _defineProperty$4({}, translateValidationKey$2(key), value))
                 });
                 // handle special case of validation
-              } else if (_isArray$1(FIELD_MAPPINGS$1[field.component][key]) && FIELD_MAPPINGS$1[field.component][key].includes(framework)) {
+              } else if (_isArray$2(FIELD_MAPPINGS$2[field.component][key]) && FIELD_MAPPINGS$2[field.component][key].includes(framework)) {
                 var _field$framework;
                 // key property it's a framework specific key, belongs to one or more frameworks, so it must be
                 // set in the specific subset, use the current framework so set it
-                return _objectSpread2$1(_objectSpread2$1({}, field), {}, _defineProperty$3({}, framework, _objectSpread2$1(_objectSpread2$1({}, (_field$framework = field[framework]) !== null && _field$framework !== void 0 ? _field$framework : {}), {}, _defineProperty$3({}, key, value))));
+                return _objectSpread2$2(_objectSpread2$2({}, field), {}, _defineProperty$4({}, framework, _objectSpread2$2(_objectSpread2$2({}, (_field$framework = field[framework]) !== null && _field$framework !== void 0 ? _field$framework : {}), {}, _defineProperty$4({}, key, value))));
               } else {
                 console.warning("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\" in framework \"").concat(framework, "\""));
               }
@@ -8571,9 +8583,9 @@
         if (!fieldExists(name)) {
           return;
         }
-        _fields = mapFields$1(_fields, function (field) {
+        _fields = mapFields$2(_fields, function (field) {
           if (field.name === name) {
-            return _objectSpread2$1(_objectSpread2$1({}, field), {}, {
+            return _objectSpread2$2(_objectSpread2$2({}, field), {}, {
               disabled: false
             });
           }
@@ -8584,9 +8596,9 @@
         if (!fieldExists(name)) {
           return;
         }
-        _fields = mapFields$1(_fields, function (field) {
+        _fields = mapFields$2(_fields, function (field) {
           if (field.name === name) {
-            return _objectSpread2$1(_objectSpread2$1({}, field), {}, {
+            return _objectSpread2$2(_objectSpread2$2({}, field), {}, {
               disabled: true
             });
           }
@@ -8597,9 +8609,9 @@
         if (!fieldExists(name)) {
           return;
         }
-        _fields = mapFields$1(_fields, function (field) {
+        _fields = mapFields$2(_fields, function (field) {
           if (field.name === name) {
-            return _objectSpread2$1(_objectSpread2$1({}, field), {}, {
+            return _objectSpread2$2(_objectSpread2$2({}, field), {}, {
               hidden: false
             });
           }
@@ -8610,9 +8622,9 @@
         if (!fieldExists(name)) {
           return;
         }
-        _fields = mapFields$1(_fields, function (field) {
+        _fields = mapFields$2(_fields, function (field) {
           if (field.name === name) {
-            return _objectSpread2$1(_objectSpread2$1({}, field), {}, {
+            return _objectSpread2$2(_objectSpread2$2({}, field), {}, {
               hidden: true
             });
           }
@@ -8631,31 +8643,32 @@
         if (!fieldExists(arrayName)) {
           return;
         }
-        _fields = mapFields$1(_fields, function (arrayField) {
+        _fields = mapFields$2(_fields, function (arrayField) {
           if (arrayField.component === 'array' && arrayField.name === arrayName) {
-            var newFields = mapFields$1(arrayField.fields, function (field) {
+            var newFields = mapFields$2(arrayField.fields, function (field) {
               if (field.name === arrayFieldName) {
-                return _objectSpread2$1(_objectSpread2$1({}, field), {}, _defineProperty$3({}, key, value));
+                return _objectSpread2$2(_objectSpread2$2({}, field), {}, _defineProperty$4({}, key, value));
               }
               return field;
             });
-            return _objectSpread2$1(_objectSpread2$1({}, arrayField), {}, {
+            return _objectSpread2$2(_objectSpread2$2({}, arrayField), {}, {
               fields: newFields
             });
           }
           return arrayField;
         });
       },
-      values: Object.freeze(_objectSpread2$1({}, currenValues))
+      values: Object.freeze(_objectSpread2$2({}, currenValues))
     };
+    return methods;
   };
-  var applyTransformers$1 = /*#__PURE__*/function () {
-    var _ref = _wrapAsyncGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(formName, framework, fields, transformers, values, onJavascriptError) {
+  var applyTransformers$2 = /*#__PURE__*/function () {
+    var _ref = _wrapAsyncGenerator$2( /*#__PURE__*/_regeneratorRuntime$2().mark(function _callee(formName, framework, fields, transformers, values, onJavascriptError, formContext) {
       var newFields, txs, idx, api, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _iterator, _step, f, error;
-      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+      return _regeneratorRuntime$2().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            if (!(_isArray$1(transformers) && !_isEmpty$1(transformers))) {
+            if (!(_isArray$2(transformers) && !_isEmpty$2(transformers))) {
               _context.next = 52;
               break;
             }
@@ -8668,17 +8681,15 @@
               _context.next = 48;
               break;
             }
-            api = new ApiFactory$1(formName, framework, newFields, values);
+            api = new ApiFactory$2(formName, framework, newFields, values, formContext);
             _context.prev = 6;
-            //newFields = await txs[idx](api);
-            //console.log('sto per chiamare', txs[idx])
             _iteratorAbruptCompletion = false;
             _didIteratorError = false;
             _context.prev = 9;
-            _iterator = _asyncIterator$1(txs[idx](api));
+            _iterator = _asyncIterator$2(txs[idx](api));
           case 11:
             _context.next = 13;
-            return _awaitAsyncGenerator$1(_iterator.next());
+            return _awaitAsyncGenerator$2(_iterator.next());
           case 13:
             if (!(_iteratorAbruptCompletion = !(_step = _context.sent).done)) {
               _context.next = 21;
@@ -8708,7 +8719,7 @@
               break;
             }
             _context.next = 32;
-            return _awaitAsyncGenerator$1(_iterator.return());
+            return _awaitAsyncGenerator$2(_iterator.return());
           case 32:
             _context.prev = 32;
             if (!_didIteratorError) {
@@ -8751,36 +8762,36 @@
         }
       }, _callee, null, [[6, 39], [9, 23, 27, 37], [28,, 32, 36]]);
     }));
-    return function applyTransformers(_x, _x2, _x3, _x4, _x5, _x6) {
+    return function applyTransformers(_x, _x2, _x3, _x4, _x5, _x6, _x7) {
       return _ref.apply(this, arguments);
     };
   }();
 
-  var isUrl$1 = function isUrl(url) {
-    return _isString$1(url) && url.match(/^http[s]{0,1}:\/\//);
+  var isUrl$2 = function isUrl(url) {
+    return _isString$2(url) && url.match(/^http[s]{0,1}:\/\//);
   };
 
-  var makeWidthStyle$1 = function makeWidthStyle(fullWidth, width) {
+  var makeWidthStyle$2 = function makeWidthStyle(fullWidth, width) {
     var style = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
     if (fullWidth) {
-      return _objectSpread2$1(_objectSpread2$1({}, style), {}, {
+      return _objectSpread2$2(_objectSpread2$2({}, style), {}, {
         width: '100%'
       });
     } else if (width) {
-      return _objectSpread2$1(_objectSpread2$1({}, style), {}, {
+      return _objectSpread2$2(_objectSpread2$2({}, style), {}, {
         width: "".concat(parseInt(width, 10), "px")
       });
     }
-    return _objectSpread2$1(_objectSpread2$1({}, style), {}, {
+    return _objectSpread2$2(_objectSpread2$2({}, style), {}, {
       width: 'auto'
     });
   };
 
-  var collectNames$1 = function collectNames(form) {
-    if (form && _isArray$1(form.fields) && !_isEmpty$1(form.fields)) {
-      return reduceFields$1(form.fields, function (field, accumulator) {
+  var collectNames$2 = function collectNames(form) {
+    if (form && _isArray$2(form.fields) && !_isEmpty$2(form.fields)) {
+      return reduceFields$2(form.fields, function (field, accumulator) {
         if (!accumulator.includes(field.name)) {
-          return [].concat(_toConsumableArray$1(accumulator), [field.name]);
+          return [].concat(_toConsumableArray$2(accumulator), [field.name]);
         }
         return accumulator;
       }, []);
@@ -8795,14 +8806,14 @@
    * @param {} d 
    * @returns 
    */
-  var isValidDate$1 = function isValidDate(d) {
+  var isValidDate$2 = function isValidDate(d) {
     return d instanceof Date && !isNaN(d);
   };
 
-  var lfLog$1 = function lfLog(s) {
+  var lfLog$2 = function lfLog(s) {
     return console.log('%cLF%c ' + s, 'background: #3498ff; color: #ffffff; padding: 2px; border-radius: 3px', '');
   };
-  var lfError$1 = function lfError(s, e) {
+  var lfError$2 = function lfError(s, e) {
     return console.log('%cLF%c Error: ' + s, 'background: #E44D2E; color: #ffffff; padding: 2px; border-radius: 3px', '', e !== null && e !== void 0 ? e : '');
   };
 
@@ -16153,14 +16164,14 @@
   	hidden: hidden
   };
 
-  var HttpCall$1 = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+  var HttpCall$2 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$2( /*#__PURE__*/_regeneratorRuntime$2().mark(function _callee(_ref) {
       var data, options, fetch, opts, headers, hash;
-      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+      return _regeneratorRuntime$2().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             data = _ref.data, options = _ref.options, fetch = _ref.fetch;
-            opts = _objectSpread2$1({
+            opts = _objectSpread2$2({
               method: 'POST'
             }, options);
             headers = {
@@ -16192,14 +16203,14 @@
     };
   }();
 
-  var GetFormIo$1 = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+  var GetFormIo$2 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$2( /*#__PURE__*/_regeneratorRuntime$2().mark(function _callee(_ref) {
       var data, _ref$options, options, fetch, opts, formData;
-      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+      return _regeneratorRuntime$2().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             data = _ref.data, _ref$options = _ref.options, options = _ref$options === void 0 ? {} : _ref$options, fetch = _ref.fetch;
-            opts = _objectSpread2$1({
+            opts = _objectSpread2$2({
               url: null
             }, options);
             formData = new FormData();
@@ -16227,10 +16238,10 @@
     };
   }();
 
-  var IFTT$1 = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+  var IFTT$2 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$2( /*#__PURE__*/_regeneratorRuntime$2().mark(function _callee(_ref) {
       var data, options, opts;
-      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+      return _regeneratorRuntime$2().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             data = _ref.data, options = _ref.options;
@@ -16262,7 +16273,7 @@
   }();
 
   var LAYOUT_FIELDS$2 = ['group', 'two-columns', 'three-columns', 'steps', 'tabs'];
-  var defaultBlockProperty$1 = function defaultBlockProperty(s) {
+  var defaultBlockProperty$2 = function defaultBlockProperty(s) {
     return {
       rich_text: [{
         text: {
@@ -16271,7 +16282,7 @@
       }]
     };
   };
-  var NotionMappings$1 = {
+  var NotionMappings$2 = {
     'input-number': 'number',
     'toggle': function toggle(b) {
       return {
@@ -16321,10 +16332,10 @@
       };
     }
   };
-  var Notion$1 = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+  var Notion$2 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$2( /*#__PURE__*/_regeneratorRuntime$2().mark(function _callee(_ref) {
       var data, options, fetch, fields, opts, notionProperties;
-      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+      return _regeneratorRuntime$2().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             data = _ref.data, options = _ref.options, fetch = _ref.fetch, fields = _ref.fields;
@@ -16338,14 +16349,14 @@
               return !LAYOUT_FIELDS$2.includes(key);
             }).reduce(function (acc, key) {
               var newValue;
-              if (typeof NotionMappings$1[fields[key]] === 'function') {
-                newValue = NotionMappings$1[fields[key]](data[key]);
-              } else if (NotionMappings$1[fields[key]]) {
-                newValue = _defineProperty$3({}, NotionMappings$1[fields[key]], data[key]);
+              if (typeof NotionMappings$2[fields[key]] === 'function') {
+                newValue = NotionMappings$2[fields[key]](data[key]);
+              } else if (NotionMappings$2[fields[key]]) {
+                newValue = _defineProperty$4({}, NotionMappings$2[fields[key]], data[key]);
               } else {
-                newValue = defaultBlockProperty$1(data[key]);
+                newValue = defaultBlockProperty$2(data[key]);
               }
-              return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$3({}, key, newValue));
+              return _objectSpread2$2(_objectSpread2$2({}, acc), {}, _defineProperty$4({}, key, newValue));
             }, {});
             _context.next = 5;
             return fetch('https://api.notion.com/v1/pages', {
@@ -16375,10 +16386,10 @@
     };
   }();
 
-  var Zapier$1 = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+  var Zapier$2 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$2( /*#__PURE__*/_regeneratorRuntime$2().mark(function _callee(_ref) {
       var data, options, fetch, opts;
-      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+      return _regeneratorRuntime$2().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             data = _ref.data, options = _ref.options, fetch = _ref.fetch;
@@ -16407,14 +16418,14 @@
     };
   }();
 
-  var FormSparkIo$1 = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+  var FormSparkIo$2 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$2( /*#__PURE__*/_regeneratorRuntime$2().mark(function _callee(_ref) {
       var data, _ref$options, options, fetch, opts;
-      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+      return _regeneratorRuntime$2().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             data = _ref.data, _ref$options = _ref.options, options = _ref$options === void 0 ? {} : _ref$options, fetch = _ref.fetch;
-            opts = _objectSpread2$1({
+            opts = _objectSpread2$2({
               formId: null
             }, options);
             _context.next = 4;
@@ -16439,14 +16450,14 @@
     };
   }();
 
-  var AirTable$1 = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+  var AirTable$2 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$2( /*#__PURE__*/_regeneratorRuntime$2().mark(function _callee(_ref) {
       var data, _ref$options, options, fetch, opts;
-      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+      return _regeneratorRuntime$2().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             data = _ref.data, _ref$options = _ref.options, options = _ref$options === void 0 ? {} : _ref$options, fetch = _ref.fetch;
-            opts = _objectSpread2$1({
+            opts = _objectSpread2$2({
               webhookUrl: null
             }, options);
             return _context.abrupt("return", fetch(opts.webhookUrl, {
@@ -16467,14 +16478,14 @@
     };
   }();
 
-  var FormCarry$1 = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+  var FormCarry$2 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$2( /*#__PURE__*/_regeneratorRuntime$2().mark(function _callee(_ref) {
       var data, options, fetch, opts;
-      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+      return _regeneratorRuntime$2().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             data = _ref.data, options = _ref.options, fetch = _ref.fetch;
-            opts = _objectSpread2$1({
+            opts = _objectSpread2$2({
               url: null
             }, options);
             _context.next = 4;
@@ -16499,53 +16510,53 @@
     };
   }();
 
-  var Connectors$1 = /*#__PURE__*/Object.freeze({
+  var Connectors$2 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    AirTable: AirTable$1,
-    FormCarry: FormCarry$1,
-    FormSparkIo: FormSparkIo$1,
-    GetFormIo: GetFormIo$1,
-    HttpCall: HttpCall$1,
-    IFTT: IFTT$1,
-    Notion: Notion$1,
-    Zapier: Zapier$1
+    AirTable: AirTable$2,
+    FormCarry: FormCarry$2,
+    FormSparkIo: FormSparkIo$2,
+    GetFormIo: GetFormIo$2,
+    HttpCall: HttpCall$2,
+    IFTT: IFTT$2,
+    Notion: Notion$2,
+    Zapier: Zapier$2
   });
 
-  var CONNECTOR_NAMES = Object.keys(Connectors$1);
+  var CONNECTOR_NAMES = Object.keys(Connectors$2);
   var AVAILABLE_COMPONENTS = Object.keys(Manifests);
   var LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns', 'steps', 'tabs'];
   var validateJSONForm = function validateJSONForm(json) {
-    if (!_isObject$1(json)) {
+    if (!_isObject$2(json)) {
       return 'Not a valid JSON object';
     }
-    if (!json.version || !_isNumber$1(json.version)) {
+    if (!json.version || !_isNumber$2(json.version)) {
       return 'Not a valid LetsForm object, missing "version" value';
     }
-    if (_isEmpty$1(json.fields)) {
+    if (_isEmpty$2(json.fields)) {
       return 'Missing or empty "fields" value';
     }
 
     // check that all fields have component key
     var missingComponentFields = filterFields(json.fields, function (field) {
-      return _isEmpty$1(field.component);
+      return _isEmpty$2(field.component);
     });
-    if (!_isEmpty$1(missingComponentFields)) {
+    if (!_isEmpty$2(missingComponentFields)) {
       return 'All fields must includes a "component" key (' + missingComponentFields.length + ' incorrect json objects) ';
     }
 
     // check all non layouts fields have "name" key
     var missingNameFields = filterFields(json.fields, function (field) {
-      return !LAYOUT_FIELDS.includes(field.component) && _isEmpty$1(field.name);
+      return !LAYOUT_FIELDS.includes(field.component) && _isEmpty$2(field.name);
     });
-    if (!_isEmpty$1(missingNameFields)) {
-      return 'Fields (excepts layouts fields like "group") must have a "name" key, check these fields/components: ' + _uniq$1(missingNameFields.map(function (field) {
+    if (!_isEmpty$2(missingNameFields)) {
+      return 'Fields (excepts layouts fields like "group") must have a "name" key, check these fields/components: ' + _uniq$2(missingNameFields.map(function (field) {
         return field.component;
       }));
     }
 
     // collect all component names and check they exists
-    var usedComponets = _uniq$1(reduceFields$1(json.fields, function (field, acc) {
-      return [].concat(_toConsumableArray$1(acc), [field.component]);
+    var usedComponets = _uniq$2(reduceFields$2(json.fields, function (field, acc) {
+      return [].concat(_toConsumableArray$2(acc), [field.component]);
     }, []));
     var unknownCommponents = usedComponets.filter(function (component) {
       return !AVAILABLE_COMPONENTS.includes(component);
@@ -16570,28 +16581,28 @@
     return null;
   };
   var isValidConnector = function isValidConnector(c) {
-    return _typeof$1(c) === 'object' && c.name && CONNECTOR_NAMES.includes(c.name);
+    return _typeof$2(c) === 'object' && c.name && CONNECTOR_NAMES.includes(c.name);
   };
   var isValidForm = function isValidForm(form) {
     return validateJSONForm(form) == null;
   };
   var isValidField = function isValidField(obj) {
-    return _typeof$1(obj) === 'object' && obj.component && obj.name && AVAILABLE_COMPONENTS.includes(obj.component);
+    return _typeof$2(obj) === 'object' && obj.component && obj.name && AVAILABLE_COMPONENTS.includes(obj.component);
   };
   var isValidArrayOfFields = function isValidArrayOfFields(obj) {
     return Array.isArray(obj) && obj.every(isValidField);
   };
 
   var formHelper = function formHelper(_form2) {
-    var _form = _form2 ? _objectSpread2$1({}, _form2) : {};
-    var _fields = _form2 !== null && _form2 !== void 0 && _form2.fields ? _toConsumableArray$1(_form2.fields) : [];
+    var _form = _form2 ? _objectSpread2$2({}, _form2) : {};
+    var _fields = _form2 !== null && _form2 !== void 0 && _form2.fields ? _toConsumableArray$2(_form2.fields) : [];
     var _skip = false;
     var makeHelper = function makeHelper(params) {
       return function (fieldName) {
         var fieldNames = Array.isArray(fieldName) ? fieldName : [fieldName];
-        _fields = mapFields$1(_fields, function (field) {
+        _fields = mapFields$2(_fields, function (field) {
           if (fieldNames.includes(field.name)) {
-            return _objectSpread2$1(_objectSpread2$1({}, field), params);
+            return _objectSpread2$2(_objectSpread2$2({}, field), params);
           }
           return field;
         });
@@ -16605,12 +16616,12 @@
       },
       debug: function debug() {
         var s = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-        lfLog$1("FormHelper: ".concat(s));
+        lfLog$2("FormHelper: ".concat(s));
         return obj;
       },
       dump: function dump() {
-        lfLog$1('FormHelper: current form');
-        console.log(_objectSpread2$1(_objectSpread2$1({}, _form), {}, {
+        lfLog$2('FormHelper: current form');
+        console.log(_objectSpread2$2(_objectSpread2$2({}, _form), {}, {
           fields: _fields
         }));
         return obj;
@@ -16632,7 +16643,7 @@
         return obj;
       },
       map: function map(predicate) {
-        _fields = mapFields$1(_fields, predicate);
+        _fields = mapFields$2(_fields, predicate);
         return obj;
       },
       skip: function skip(_skip2) {
@@ -16643,30 +16654,30 @@
         // do nothing if null
         if (item) {
           if (isValidForm(item)) {
-            _fields = [].concat(_toConsumableArray$1(_fields), _toConsumableArray$1(item.fields));
+            _fields = [].concat(_toConsumableArray$2(_fields), _toConsumableArray$2(item.fields));
           } else if (isValidArrayOfFields(item)) {
-            _fields = [].concat(_toConsumableArray$1(_fields), _toConsumableArray$1(item));
+            _fields = [].concat(_toConsumableArray$2(_fields), _toConsumableArray$2(item));
           } else if (isValidField(item)) {
-            _fields = [].concat(_toConsumableArray$1(_fields), [item]);
+            _fields = [].concat(_toConsumableArray$2(_fields), [item]);
           } else {
-            lfError$1('FormHelper: invalid item to append');
+            lfError$2('FormHelper: invalid item to append');
             console.error(item);
           }
         }
         return obj;
       },
       setField: function setField(fieldName, key, value) {
-        var toReplace = _isObject$1(key) ? key : _defineProperty$3({}, key, value);
-        _fields = mapFields$1(_fields, function (field) {
+        var toReplace = _isObject$2(key) ? key : _defineProperty$4({}, key, value);
+        _fields = mapFields$2(_fields, function (field) {
           if (field.name === fieldName) {
-            return _objectSpread2$1(_objectSpread2$1({}, field), toReplace);
+            return _objectSpread2$2(_objectSpread2$2({}, field), toReplace);
           }
           return field;
         });
         return obj;
       },
       setValue: function setValue(key, value) {
-        _form = _objectSpread2$1(_objectSpread2$1({}, _form), {}, _defineProperty$3({}, key, value));
+        _form = _objectSpread2$2(_objectSpread2$2({}, _form), {}, _defineProperty$4({}, key, value));
         return obj;
       },
       form: function form() {
@@ -16674,7 +16685,7 @@
         if (_skip) {
           return _form2;
         }
-        return _objectSpread2$1(_objectSpread2$1({}, _form), {}, {
+        return _objectSpread2$2(_objectSpread2$2({}, _form), {}, {
           fields: _fields
         });
       },
@@ -16685,11 +16696,11 @@
     return obj;
   };
 
-  var i18nOptions$1 = function i18nOptions(value, i18n) {
+  var i18nOptions$2 = function i18nOptions(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
     }).map(function (value) {
-      return _objectSpread2$1(_objectSpread2$1({}, value), {}, {
+      return _objectSpread2$2(_objectSpread2$2({}, value), {}, {
         label: i18n(value.label),
         description: i18n(value.description)
       });
@@ -16697,9 +16708,9 @@
   };
 
   var collectIds = function collectIds(fields) {
-    return reduceFields$1(fields || [], function (field, accumulator) {
+    return reduceFields$2(fields || [], function (field, accumulator) {
       if (!accumulator.includes(field.id)) {
-        return [].concat(_toConsumableArray$1(accumulator), [field.id]);
+        return [].concat(_toConsumableArray$2(accumulator), [field.id]);
       }
       return accumulator;
     }, []);
@@ -16714,18 +16725,18 @@
    * @returns 
    */
   var isChildrenOf = function isChildrenOf(fieldId, parentFieldId, fields) {
-    if (_isEmpty$1(parentFieldId) || _isEmpty$1(fieldId)) {
+    if (_isEmpty$2(parentFieldId) || _isEmpty$2(fieldId)) {
       return false;
     }
     // for each fields, collect all subIds
-    var obj = reduceFields$1(fields, function (field, accumulator) {
+    var obj = reduceFields$2(fields, function (field, accumulator) {
       if (field.fields || field.leftFields || field.rightFields || field.centerFields) {
-        accumulator = _objectSpread2$1(_objectSpread2$1({}, accumulator), {}, _defineProperty$3({}, field.id, collectIds([field])));
+        accumulator = _objectSpread2$2(_objectSpread2$2({}, accumulator), {}, _defineProperty$4({}, field.id, collectIds([field])));
       }
       return accumulator;
     }, {});
     // then check if parentFieldIs contains as subfield with this id
-    if (obj && _isArray$1(obj[parentFieldId])) {
+    if (obj && _isArray$2(obj[parentFieldId])) {
       return obj[parentFieldId].includes(fieldId);
     }
     return false;
@@ -16733,7 +16744,7 @@
 
   var formHasComponents = function formHasComponents(form, component) {
     var components = Array.isArray(component) ? component : [component];
-    var result = reduceFields$1(form.fields, function (field, accumulator) {
+    var result = reduceFields$2(form.fields, function (field, accumulator) {
       return components.includes(field.component) ? accumulator + 1 : accumulator;
     }, 0);
     return result !== 0;
@@ -16745,7 +16756,7 @@
    * @param {} d Time string (i.e. 12:12:00)
    * @returns
    */
-  var isValidTime$1 = function isValidTime(d) {
+  var isValidTime$2 = function isValidTime(d) {
     return typeof d === 'string' && d.match(/^[0-9]{1,2}:[0-9]{2,2}(:[0-9]{2,2}){0,1}$/) != null;
   };
 
@@ -16757,7 +16768,7 @@
     });
   };
 
-  var I18N$1 = function I18N(Component) {
+  var I18N$2 = function I18N(Component) {
     var propNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
     var funcPropNames = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
     return function (props) {
@@ -16765,15 +16776,15 @@
       var newProps = Object.keys(props).reduce(function (acc, propName) {
         // translate simpe field
         if (propNames.includes(propName)) {
-          return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$3({}, propName, i18n$1(props[propName], lfLocale)));
-        } else if (_isFunction$1(funcPropNames[propName])) {
+          return _objectSpread2$2(_objectSpread2$2({}, acc), {}, _defineProperty$4({}, propName, i18n$2(props[propName], lfLocale)));
+        } else if (_isFunction$2(funcPropNames[propName])) {
           // pass the value trough the mapper
           var translated = funcPropNames[propName](props[propName], function (string) {
-            return i18n$1(string, lfLocale);
+            return i18n$2(string, lfLocale);
           });
-          return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$3({}, propName, translated));
+          return _objectSpread2$2(_objectSpread2$2({}, acc), {}, _defineProperty$4({}, propName, translated));
         }
-        return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$3({}, propName, props[propName]));
+        return _objectSpread2$2(_objectSpread2$2({}, acc), {}, _defineProperty$4({}, propName, props[propName]));
       }, {});
       return /*#__PURE__*/React$1.createElement(Component, newProps);
     };
@@ -16785,23 +16796,23 @@
    * @param {Object} params
    * @returns
    */
-  var ProxyFetch$1 = function ProxyFetch(params) {
+  var ProxyFetch$2 = function ProxyFetch(params) {
     return /*#__PURE__*/function () {
-      var _ref = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(url, options) {
+      var _ref = _asyncToGenerator$2( /*#__PURE__*/_regeneratorRuntime$2().mark(function _callee(url, options) {
         var proxyUrl, proxyOptions, _proxyOptions$headers;
-        return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+        return _regeneratorRuntime$2().wrap(function _callee$(_context) {
           while (1) switch (_context.prev = _context.next) {
             case 0:
               proxyUrl = url;
-              proxyOptions = _objectSpread2$1({}, options);
+              proxyOptions = _objectSpread2$2({}, options);
               if (params.proxy === 'cors-lol') {
                 proxyUrl = 'https://api.cors.lol/?url=' + encodeURIComponent(url);
               } else if (params.proxy === 'just-cors') {
                 proxyUrl = params.justCorsUrl + url;
               } else if (params.proxy === 'proxy-cors-sh') {
                 proxyUrl = 'https://proxy.cors.sh/' + url;
-                proxyOptions = _objectSpread2$1(_objectSpread2$1({}, proxyOptions), {}, {
-                  headers: _objectSpread2$1(_objectSpread2$1({}, (_proxyOptions$headers = proxyOptions.headers) !== null && _proxyOptions$headers !== void 0 ? _proxyOptions$headers : {}), {}, {
+                proxyOptions = _objectSpread2$2(_objectSpread2$2({}, proxyOptions), {}, {
+                  headers: _objectSpread2$2(_objectSpread2$2({}, (_proxyOptions$headers = proxyOptions.headers) !== null && _proxyOptions$headers !== void 0 ? _proxyOptions$headers : {}), {}, {
                     'x-cors-api-key': params.corsShApiKey
                   })
                 });
@@ -16831,18 +16842,18 @@
     }();
   };
 
-  var FormContext$1 = /*#__PURE__*/React$1.createContext();
+  var FormContext$2 = /*#__PURE__*/React$1.createContext();
 
-  var useFormContext$1 = function useFormContext() {
-    var context = React$1.useContext(FormContext$1);
+  var useFormContext$2 = function useFormContext() {
+    var context = React$1.useContext(FormContext$2);
 
     // put here some defaults
 
     return context;
   };
-  var useStylesheet$1 = function useStylesheet(id, css) {
+  var useStylesheet$2 = function useStylesheet(id, css) {
     React$1.useEffect(function () {
-      if (!_isEmpty$1(css)) {
+      if (!_isEmpty$2(css)) {
         var head = document.head;
         var style = document.createElement("style");
         style.id = "letsform-sheet-".concat(id);
@@ -16850,7 +16861,7 @@
         head.appendChild(style);
       }
       return function () {
-        if (!_isEmpty$1(css)) {
+        if (!_isEmpty$2(css)) {
           var _document$querySelect;
           (_document$querySelect = document.querySelector("#letsform-sheet-".concat(id))) === null || _document$querySelect === void 0 ? void 0 : _document$querySelect.remove();
         }
@@ -16858,11 +16869,11 @@
     }, [css, id]);
   };
 
-  var baseGetTag$1 = _baseGetTag$1,
-    isObjectLike$1 = isObjectLike_1$1;
+  var baseGetTag$b = _baseGetTag$2,
+    isObjectLike$c = isObjectLike_1$2;
 
   /** `Object#toString` result references. */
-  var dateTag$4 = '[object Date]';
+  var dateTag$5 = '[object Date]';
 
   /**
    * The base implementation of `_.isDate` without Node.js optimizations.
@@ -16871,17 +16882,17 @@
    * @param {*} value The value to check.
    * @returns {boolean} Returns `true` if `value` is a date object, else `false`.
    */
-  function baseIsDate$3(value) {
-    return isObjectLike$1(value) && baseGetTag$1(value) == dateTag$4;
+  function baseIsDate$4(value) {
+    return isObjectLike$c(value) && baseGetTag$b(value) == dateTag$5;
   }
-  var _baseIsDate$1 = baseIsDate$3;
+  var _baseIsDate$2 = baseIsDate$4;
 
-  var baseIsDate$2 = _baseIsDate$1,
-    baseUnary$5 = _baseUnary$1,
-    nodeUtil$4 = _nodeUtilExports$1;
+  var baseIsDate$3 = _baseIsDate$2,
+    baseUnary$6 = _baseUnary$2,
+    nodeUtil$5 = _nodeUtilExports$2;
 
   /* Node.js helper references. */
-  var nodeIsDate$1 = nodeUtil$4 && nodeUtil$4.isDate;
+  var nodeIsDate$2 = nodeUtil$5 && nodeUtil$5.isDate;
 
   /**
    * Checks if `value` is classified as a `Date` object.
@@ -16900,18 +16911,18 @@
    * _.isDate('Mon April 23 2012');
    * // => false
    */
-  var isDate$1 = nodeIsDate$1 ? baseUnary$5(nodeIsDate$1) : baseIsDate$2;
-  var isDate_1$1 = isDate$1;
+  var isDate$2 = nodeIsDate$2 ? baseUnary$6(nodeIsDate$2) : baseIsDate$3;
+  var isDate_1$2 = isDate$2;
 
-  var _isDate$1 = /*@__PURE__*/getDefaultExportFromCjs$1(isDate_1$1);
+  var _isDate$2 = /*@__PURE__*/getDefaultExportFromCjs$2(isDate_1$2);
 
-  var ar$9 = "نعم";
-  var eu$9 = "Bai";
-  var la$9 = "Sic";
-  var YesLabel$1 = {
+  var ar$a = "نعم";
+  var eu$a = "Bai";
+  var la$a = "Sic";
+  var YesLabel$2 = {
   	"en-US": "Yes",
   	"af-ZA": "Ja",
-  	ar: ar$9,
+  	ar: ar$a,
   	"bg-BG": "Да",
   	"ca-AD": "Sí",
   	"cs-CZ": "Ano",
@@ -16926,7 +16937,7 @@
   	"es-ES": "Sí",
   	"es-MX": "Sí",
   	"et-EE": "Jah",
-  	eu: eu$9,
+  	eu: eu$a,
   	"fa-IR": "آره",
   	"fi-FI": "Joo",
   	"fr-CA": "Oui",
@@ -16941,7 +16952,7 @@
   	"ja-JP": "はい",
   	"km-KH": "បាត",
   	"ko-KR": "예",
-  	la: la$9,
+  	la: la$a,
   	"lt-LT": "Taip",
   	"lv-LV": "Jā",
   	"mn-MN": "Мон",
@@ -16964,13 +16975,13 @@
   	"zh-TW": "是的"
   };
 
-  var ar$8 = "لا";
-  var eu$8 = "Ez-";
-  var la$8 = "Non";
-  var NoLabel$1 = {
+  var ar$9 = "لا";
+  var eu$9 = "Ez-";
+  var la$9 = "Non";
+  var NoLabel$2 = {
   	"en-US": "No",
   	"af-ZA": "Geen",
-  	ar: ar$8,
+  	ar: ar$9,
   	"bg-BG": "Не",
   	"ca-AD": "No",
   	"cs-CZ": "Ne",
@@ -16985,7 +16996,7 @@
   	"es-ES": "No",
   	"es-MX": "No",
   	"et-EE": "Mitte",
-  	eu: eu$8,
+  	eu: eu$9,
   	"fa-IR": "هیچ",
   	"fi-FI": "Ei",
   	"fr-CA": "Non",
@@ -17000,7 +17011,7 @@
   	"ja-JP": "いいえ",
   	"km-KH": "ដេលក្ផាន",
   	"ko-KR": "아니요",
-  	la: la$8,
+  	la: la$9,
   	"lt-LT": "Ne",
   	"lv-LV": "Nē",
   	"mn-MN": "-Гүй / -битгий",
@@ -17023,13 +17034,13 @@
   	"zh-TW": "不"
   };
 
-  var ar$7 = "عنصر";
-  var eu$7 = "osagai";
-  var la$7 = "elementum";
-  var ElementLabel$1 = {
+  var ar$8 = "عنصر";
+  var eu$8 = "osagai";
+  var la$8 = "elementum";
+  var ElementLabel$2 = {
   	"en-US": "element",
   	"af-ZA": "element",
-  	ar: ar$7,
+  	ar: ar$8,
   	"bg-BG": "Елемент",
   	"ca-AD": "element",
   	"cs-CZ": "živel",
@@ -17044,7 +17055,7 @@
   	"es-ES": "elemento",
   	"es-MX": "elemento",
   	"et-EE": "element",
-  	eu: eu$7,
+  	eu: eu$8,
   	"fa-IR": "عنصر",
   	"fi-FI": "elementti",
   	"fr-CA": "élément",
@@ -17059,7 +17070,7 @@
   	"ja-JP": "エレメント",
   	"km-KH": "ធាតុ",
   	"ko-KR": "요소",
-  	la: la$7,
+  	la: la$8,
   	"lt-LT": "elementas",
   	"lv-LV": "elements",
   	"mn-MN": "бүрэлдэхүүн",
@@ -17082,13 +17093,13 @@
   	"zh-TW": "元素"
   };
 
-  var ar$6 = "عناصر";
-  var eu$6 = "elementuak";
-  var la$6 = "elementa";
-  var ElementsLabel$1 = {
+  var ar$7 = "عناصر";
+  var eu$7 = "elementuak";
+  var la$7 = "elementa";
+  var ElementsLabel$2 = {
   	"en-US": "elements",
   	"af-ZA": "elemente",
-  	ar: ar$6,
+  	ar: ar$7,
   	"bg-BG": "елементи",
   	"ca-AD": "elements",
   	"cs-CZ": "Prvky",
@@ -17103,7 +17114,7 @@
   	"es-ES": "elementos",
   	"es-MX": "elementos",
   	"et-EE": "elemendid",
-  	eu: eu$6,
+  	eu: eu$7,
   	"fa-IR": "عناصر",
   	"fi-FI": "elementit",
   	"fr-CA": "éléments",
@@ -17118,7 +17129,7 @@
   	"ja-JP": "要素",
   	"km-KH": "ធាតុ",
   	"ko-KR": "강요",
-  	la: la$6,
+  	la: la$7,
   	"lt-LT": "elementai",
   	"lv-LV": "elementi",
   	"mn-MN": "Элэглэлт",
@@ -17141,13 +17152,13 @@
   	"zh-TW": "元素"
   };
 
-  var ar$5 = "لا عناصر";
-  var eu$5 = "Elementurik ez";
-  var la$5 = "Nulla elementa";
-  var NoElementsLabel$1 = {
+  var ar$6 = "لا عناصر";
+  var eu$6 = "Elementurik ez";
+  var la$6 = "Nulla elementa";
+  var NoElementsLabel$2 = {
   	"en-US": "No elements",
   	"af-ZA": "Geen elemente nie",
-  	ar: ar$5,
+  	ar: ar$6,
   	"bg-BG": "Без елементи",
   	"ca-AD": "Sense elements",
   	"cs-CZ": "Žádné prvky",
@@ -17162,7 +17173,7 @@
   	"es-ES": "Sin elementos",
   	"es-MX": "Sin elementos",
   	"et-EE": "Elemente pole",
-  	eu: eu$5,
+  	eu: eu$6,
   	"fa-IR": "بدون عنصر",
   	"fi-FI": "Ei elementtejä",
   	"fr-CA": "Pas d'éléments",
@@ -17177,7 +17188,7 @@
   	"ja-JP": "要素はありません",
   	"km-KH": "គ្មានធាតុ",
   	"ko-KR": "요소가 없습니다",
-  	la: la$5,
+  	la: la$6,
   	"lt-LT": "Jokių elementų",
   	"lv-LV": "Nav elementu",
   	"mn-MN": "элемент байхгүй",
@@ -17200,7 +17211,7 @@
   	"zh-TW": "没有元素"
   };
 
-  var Plaintext$1 = function Plaintext(_ref) {
+  var Plaintext$2 = function Plaintext(_ref) {
     var value = _ref.value,
       component = _ref.component,
       options = _ref.options,
@@ -17219,18 +17230,18 @@
           className: "plaintext-value"
         }, value);
       case 'date':
-        if (_isDate$1(value)) {
+        if (_isDate$2(value)) {
           d = value;
-        } else if (_isString$1(value) && isValidDate$1(new Date(value))) {
+        } else if (_isString$2(value) && isValidDate$2(new Date(value))) {
           d = new Date(value);
         }
         return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, d ? d.toLocaleDateString() : '');
       case 'datetime':
-        if (_isDate$1(value)) {
+        if (_isDate$2(value)) {
           d = value;
-        } else if (_isString$1(value) && isValidDate$1(new Date(value))) {
+        } else if (_isString$2(value) && isValidDate$2(new Date(value))) {
           d = new Date(value);
         }
         return /*#__PURE__*/React$1.createElement("div", {
@@ -17241,11 +17252,11 @@
         if (value === true || value === 1) {
           return /*#__PURE__*/React$1.createElement("div", {
             className: "plaintext-value"
-          }, i18n$1(YesLabel$1, locale));
+          }, i18n$2(YesLabel$2, locale));
         } else if (value === false || value === 0) {
           return /*#__PURE__*/React$1.createElement("div", {
             className: "plaintext-value"
-          }, i18n$1(NoLabel$1, locale));
+          }, i18n$2(NoLabel$2, locale));
         }
         return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
@@ -17258,8 +17269,8 @@
         });
         var label = '';
         if (found) {
-          if (isI18n$1(found.label)) {
-            label = i18n$1(found.label, locale);
+          if (isI18n$2(found.label)) {
+            label = i18n$2(found.label, locale);
           } else {
             label = found.label;
           }
@@ -17273,17 +17284,17 @@
           return (value !== null && value !== void 0 ? value : []).includes(option.value);
         });
         var founds = selectedOptions.map(function (option) {
-          return isI18n$1(option.label) ? i18n$1(option.label, locale) : option.label;
+          return isI18n$2(option.label) ? i18n$2(option.label, locale) : option.label;
         });
         return /*#__PURE__*/React$1.createElement("div", null, founds.join(', '));
       case 'array':
-        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, _isArray$1(value) && /*#__PURE__*/React$1.createElement("div", {
+        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, _isArray$2(value) && /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, /*#__PURE__*/React$1.createElement("span", {
           className: "count"
-        }, value.length), ' ', value.length > 1 ? i18n$1(ElementsLabel$1, locale) : i18n$1(ElementLabel$1, locale)), !_isArray$1(value) && /*#__PURE__*/React$1.createElement("div", {
+        }, value.length), ' ', value.length > 1 ? i18n$2(ElementsLabel$2, locale) : i18n$2(ElementLabel$2, locale)), !_isArray$2(value) && /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
-        }, i18n$1(NoElementsLabel$1, locale)));
+        }, i18n$2(NoElementsLabel$2, locale)));
       case 'textarea':
         return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value",
@@ -17297,12 +17308,12 @@
       default:
         return /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
-        }, _typeof$1(value) !== 'object' ? value : '');
+        }, _typeof$2(value) !== 'object' ? value : '');
     }
   };
 
   /* eslint-disable no-loop-func */
-  var microdown$1 = function () {
+  var microdown$2 = function () {
     var _this = this;
     /*
      * tag helper
@@ -17480,18 +17491,18 @@
     };
   }();
 
-  var css_248z$H = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
-  styleInject$1(css_248z$H);
+  var css_248z$W = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
+  styleInject$2(css_248z$W);
 
-  var Placeholder$1 = function Placeholder(_ref) {
+  var Placeholder$2 = function Placeholder(_ref) {
     var text = _ref.text,
       name = _ref.name;
-    if (!_isEmpty$1(text)) {
+    if (!_isEmpty$2(text)) {
       return /*#__PURE__*/React$1.createElement("div", {
         className: "lf-control-placeholder",
         "data-lf-field-name": name,
         dangerouslySetInnerHTML: {
-          __html: microdown$1.parse(text)
+          __html: microdown$2.parse(text)
         }
       });
     } else {
@@ -17499,9 +17510,10693 @@
     }
   };
 
-  var css_248z$G = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
-  styleInject$1(css_248z$G);
+  var css_248z$V = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
+  styleInject$2(css_248z$V);
 
+  var ThreeColumns$2 = function ThreeColumns(_ref) {
+    var name = _ref.name,
+      layout = _ref.layout,
+      children = _ref.children,
+      leftAlignment = _ref.leftAlignment,
+      centerAlignment = _ref.centerAlignment,
+      rightAlignment = _ref.rightAlignment;
+    return /*#__PURE__*/React$1.createElement("div", {
+      "data-lf-field-name": name,
+      className: classNames$2('lf-control-three-columns', layout)
+    }, /*#__PURE__*/React$1.createElement("div", {
+      className: "left",
+      style: {
+        alignSelf: leftAlignment ? leftAlignment : undefined
+      }
+    }, _isFunction$2(children) && children('left')), /*#__PURE__*/React$1.createElement("div", {
+      className: "center",
+      style: {
+        alignSelf: centerAlignment ? centerAlignment : undefined
+      }
+    }, _isFunction$2(children) && children('center')), /*#__PURE__*/React$1.createElement("div", {
+      className: "right",
+      style: {
+        alignSelf: rightAlignment ? rightAlignment : undefined
+      }
+    }, _isFunction$2(children) && children('right')));
+  };
+
+  var css_248z$U = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
+  styleInject$2(css_248z$U);
+
+  var TwoColumns$2 = function TwoColumns(_ref) {
+    var name = _ref.name,
+      children = _ref.children,
+      layout = _ref.layout,
+      leftAlignment = _ref.leftAlignment,
+      rightAlignment = _ref.rightAlignment;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: classNames$2('lf-control-two-columns', layout),
+      "data-lf-field-name": name
+    }, /*#__PURE__*/React$1.createElement("div", {
+      className: "left",
+      style: {
+        alignSelf: leftAlignment ? leftAlignment : undefined
+      }
+    }, _isFunction$2(children) && children('left')), /*#__PURE__*/React$1.createElement("div", {
+      className: "right",
+      style: {
+        alignSelf: rightAlignment ? rightAlignment : undefined
+      }
+    }, _isFunction$2(children) && children('right')));
+  };
+
+  var css_248z$T = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject$2(css_248z$T);
+
+  var Group$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$open = _ref.open,
+      open = _ref$open === void 0 ? true : _ref$open,
+      _ref$collapsible = _ref.collapsible,
+      collapsible = _ref$collapsible === void 0 ? true : _ref$collapsible,
+      _ref$border = _ref.border,
+      border = _ref$border === void 0 ? 'top' : _ref$border,
+      align = _ref.align,
+      children = _ref.children;
+    var _useState = React$1.useState(open),
+      _useState2 = _slicedToArray$2(_useState, 2),
+      isOpen = _useState2[0],
+      setIsOpen = _useState2[1];
+    var handleClick = React$1.useCallback(function (event) {
+      event.preventDefault();
+      setIsOpen(!isOpen);
+    }, [isOpen]);
+    // if open changes, then change status
+    React$1.useEffect(function () {
+      setIsOpen(open);
+    }, [open]);
+    return /*#__PURE__*/React$1.createElement("div", {
+      "data-lf-field-name": name,
+      className: classNames$2('lf-control-group', "lf-border-".concat(border), {
+        'open': isOpen,
+        'close': !isOpen
+      })
+    }, /*#__PURE__*/React$1.createElement("div", {
+      role: "separator",
+      className: classNames$2('header', align)
+    }, /*#__PURE__*/React$1.createElement("span", {
+      className: "inner-text"
+    }, label, collapsible && /*#__PURE__*/React$1.createElement("a", {
+      href: "#",
+      className: "lf-btn-collapse",
+      disabled: disabled,
+      appearance: "link",
+      onClick: handleClick
+    }, isOpen ? /*#__PURE__*/React$1.createElement(ChevronUp$2, {
+      color: "#3498ff"
+    }) : /*#__PURE__*/React$1.createElement(ChevronDown$2, {
+      color: "#3498ff"
+    })))), (isOpen || !collapsible) && /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-group-content"
+    }, children));
+  }, ['label']);
+
+  var css_248z$S = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
+  styleInject$2(css_248z$S);
+
+  var PlaceholderImage$2 = function PlaceholderImage(_ref) {
+    var url = _ref.url,
+      label = _ref.label,
+      name = _ref.name,
+      maxWidth = _ref.maxWidth,
+      maxHeight = _ref.maxHeight,
+      marginTop = _ref.marginTop,
+      marginBottom = _ref.marginBottom,
+      align = _ref.align;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-placeholder-image",
+      "data-lf-field-name": name,
+      style: {
+        textAlign: align ? align : undefined
+      }
+    }, url && /*#__PURE__*/React$1.createElement("img", {
+      src: url,
+      alt: label || name,
+      style: {
+        marginTop: marginTop ? marginTop : undefined,
+        marginBottom: marginBottom ? marginBottom : undefined,
+        maxWidth: maxWidth ? maxWidth : '100%',
+        maxHeight: maxHeight ? maxHeight : '100%',
+        textAlign: align ? align : undefined
+      }
+    }));
+  };
+
+  var TextOrIcon$2 = function TextOrIcon(str) {
+    if (isUrl$2(str)) {
+      return /*#__PURE__*/React$1.createElement("img", {
+        className: "lf-prefix-icon",
+        src: str,
+        alt: "icon"
+      });
+    } else if (str) {
+      return /*#__PURE__*/React$1.createElement("span", null, str);
+    }
+  };
+
+  var css_248z$R = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
+  styleInject$2(css_248z$R);
+
+  var Divider$2 = function Divider(_ref) {
+    var name = _ref.name,
+      size = _ref.size,
+      color = _ref.color;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-divider",
+      "data-lf-field-name": name
+    }, /*#__PURE__*/React$1.createElement("div", {
+      className: "bar",
+      style: {
+        height: "".concat(size, "px"),
+        backgroundColor: color
+      }
+    }, "&npsb;"));
+  };
+  lfLog$2('Loaded Common.Divider');
+
+  var index$B = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Divider$2
+  });
+
+  var _excluded$1f = ["name", "view"];
+  var ReactView$2 = function ReactView(_ref) {
+    var name = _ref.name,
+      view = _ref.view,
+      rest = _objectWithoutProperties$2(_ref, _excluded$1f);
+    var View = view;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-react-view",
+      "data-lf-field-name": name
+    }, View && /*#__PURE__*/React$1.createElement(View, _extends$2({
+      name: name
+    }, rest)));
+  };
+
+  var isEmptyItem$2 = function isEmptyItem(obj) {
+    return Object.keys(obj).filter(function (key) {
+      return key !== 'id';
+    }).every(function (key) {
+      return obj[key] === null || obj[key] === undefined || obj[key] === '';
+    });
+  };
+
+  var baseSlice$4 = _baseSlice$2;
+
+  /**
+   * Casts `array` to a slice if it's needed.
+   *
+   * @private
+   * @param {Array} array The array to inspect.
+   * @param {number} start The start position.
+   * @param {number} [end=array.length] The end position.
+   * @returns {Array} Returns the cast slice.
+   */
+  function castSlice$7(array, start, end) {
+    var length = array.length;
+    end = end === undefined ? length : end;
+    return !start && end >= length ? array : baseSlice$4(array, start, end);
+  }
+  var _castSlice$2 = castSlice$7;
+
+  /** Used to compose unicode character classes. */
+
+  var rsAstralRange$4 = '\\ud800-\\udfff',
+    rsComboMarksRange$4 = '\\u0300-\\u036f',
+    reComboHalfMarksRange$4 = '\\ufe20-\\ufe2f',
+    rsComboSymbolsRange$4 = '\\u20d0-\\u20ff',
+    rsComboRange$4 = rsComboMarksRange$4 + reComboHalfMarksRange$4 + rsComboSymbolsRange$4,
+    rsVarRange$4 = '\\ufe0e\\ufe0f';
+
+  /** Used to compose unicode capture groups. */
+  var rsZWJ$4 = '\\u200d';
+
+  /** Used to detect strings with [zero-width joiners or code points from the astral planes](http://eev.ee/blog/2015/09/12/dark-corners-of-unicode/). */
+  var reHasUnicode$2 = RegExp('[' + rsZWJ$4 + rsAstralRange$4 + rsComboRange$4 + rsVarRange$4 + ']');
+
+  /**
+   * Checks if `string` contains Unicode symbols.
+   *
+   * @private
+   * @param {string} string The string to inspect.
+   * @returns {boolean} Returns `true` if a symbol is found, else `false`.
+   */
+  function hasUnicode$7(string) {
+    return reHasUnicode$2.test(string);
+  }
+  var _hasUnicode$2 = hasUnicode$7;
+
+  /**
+   * Converts an ASCII `string` to an array.
+   *
+   * @private
+   * @param {string} string The string to convert.
+   * @returns {Array} Returns the converted array.
+   */
+
+  function asciiToArray$4(string) {
+    return string.split('');
+  }
+  var _asciiToArray$2 = asciiToArray$4;
+
+  /** Used to compose unicode character classes. */
+
+  var rsAstralRange$3 = '\\ud800-\\udfff',
+    rsComboMarksRange$3 = '\\u0300-\\u036f',
+    reComboHalfMarksRange$3 = '\\ufe20-\\ufe2f',
+    rsComboSymbolsRange$3 = '\\u20d0-\\u20ff',
+    rsComboRange$3 = rsComboMarksRange$3 + reComboHalfMarksRange$3 + rsComboSymbolsRange$3,
+    rsVarRange$3 = '\\ufe0e\\ufe0f';
+
+  /** Used to compose unicode capture groups. */
+  var rsAstral$2 = '[' + rsAstralRange$3 + ']',
+    rsCombo$2 = '[' + rsComboRange$3 + ']',
+    rsFitz$2 = '\\ud83c[\\udffb-\\udfff]',
+    rsModifier$2 = '(?:' + rsCombo$2 + '|' + rsFitz$2 + ')',
+    rsNonAstral$2 = '[^' + rsAstralRange$3 + ']',
+    rsRegional$2 = '(?:\\ud83c[\\udde6-\\uddff]){2}',
+    rsSurrPair$2 = '[\\ud800-\\udbff][\\udc00-\\udfff]',
+    rsZWJ$3 = '\\u200d';
+
+  /** Used to compose unicode regexes. */
+  var reOptMod$2 = rsModifier$2 + '?',
+    rsOptVar$2 = '[' + rsVarRange$3 + ']?',
+    rsOptJoin$2 = '(?:' + rsZWJ$3 + '(?:' + [rsNonAstral$2, rsRegional$2, rsSurrPair$2].join('|') + ')' + rsOptVar$2 + reOptMod$2 + ')*',
+    rsSeq$2 = rsOptVar$2 + reOptMod$2 + rsOptJoin$2,
+    rsSymbol$2 = '(?:' + [rsNonAstral$2 + rsCombo$2 + '?', rsCombo$2, rsRegional$2, rsSurrPair$2, rsAstral$2].join('|') + ')';
+
+  /** Used to match [string symbols](https://mathiasbynens.be/notes/javascript-unicode). */
+  var reUnicode$2 = RegExp(rsFitz$2 + '(?=' + rsFitz$2 + ')|' + rsSymbol$2 + rsSeq$2, 'g');
+
+  /**
+   * Converts a Unicode `string` to an array.
+   *
+   * @private
+   * @param {string} string The string to convert.
+   * @returns {Array} Returns the converted array.
+   */
+  function unicodeToArray$4(string) {
+    return string.match(reUnicode$2) || [];
+  }
+  var _unicodeToArray$2 = unicodeToArray$4;
+
+  var asciiToArray$3 = _asciiToArray$2,
+    hasUnicode$6 = _hasUnicode$2,
+    unicodeToArray$3 = _unicodeToArray$2;
+
+  /**
+   * Converts `string` to an array.
+   *
+   * @private
+   * @param {string} string The string to convert.
+   * @returns {Array} Returns the converted array.
+   */
+  function stringToArray$7(string) {
+    return hasUnicode$6(string) ? unicodeToArray$3(string) : asciiToArray$3(string);
+  }
+  var _stringToArray$2 = stringToArray$7;
+
+  var castSlice$6 = _castSlice$2,
+    hasUnicode$5 = _hasUnicode$2,
+    stringToArray$6 = _stringToArray$2,
+    toString$9 = toString_1$2;
+
+  /**
+   * Creates a function like `_.lowerFirst`.
+   *
+   * @private
+   * @param {string} methodName The name of the `String` case method to use.
+   * @returns {Function} Returns the new case function.
+   */
+  function createCaseFirst$4(methodName) {
+    return function (string) {
+      string = toString$9(string);
+      var strSymbols = hasUnicode$5(string) ? stringToArray$6(string) : undefined;
+      var chr = strSymbols ? strSymbols[0] : string.charAt(0);
+      var trailing = strSymbols ? castSlice$6(strSymbols, 1).join('') : string.slice(1);
+      return chr[methodName]() + trailing;
+    };
+  }
+  var _createCaseFirst$2 = createCaseFirst$4;
+
+  var createCaseFirst$3 = _createCaseFirst$2;
+
+  /**
+   * Converts the first character of `string` to upper case.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category String
+   * @param {string} [string=''] The string to convert.
+   * @returns {string} Returns the converted string.
+   * @example
+   *
+   * _.upperFirst('fred');
+   * // => 'Fred'
+   *
+   * _.upperFirst('FRED');
+   * // => 'FRED'
+   */
+  var upperFirst$4 = createCaseFirst$3('toUpperCase');
+  var upperFirst_1$2 = upperFirst$4;
+
+  var toString$8 = toString_1$2,
+    upperFirst$3 = upperFirst_1$2;
+
+  /**
+   * Converts the first character of `string` to upper case and the remaining
+   * to lower case.
+   *
+   * @static
+   * @memberOf _
+   * @since 3.0.0
+   * @category String
+   * @param {string} [string=''] The string to capitalize.
+   * @returns {string} Returns the capitalized string.
+   * @example
+   *
+   * _.capitalize('FRED');
+   * // => 'Fred'
+   */
+  function capitalize$2(string) {
+    return upperFirst$3(toString$8(string).toLowerCase());
+  }
+  var capitalize_1$2 = capitalize$2;
+
+  var _capitalize$2 = /*@__PURE__*/getDefaultExportFromCjs$2(capitalize_1$2);
+
+  var IconButton$2 = function IconButton(_ref) {
+    var _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      className = _ref.className,
+      Icon = _ref.icon,
+      onClick = _ref.onClick;
+    var handleClick = React$1.useCallback(function (e) {
+      e.preventDefault();
+      if (!disabled) {
+        onClick();
+      }
+    }, [disabled, onClick]);
+    return /*#__PURE__*/React$1.createElement("a", {
+      href: "#",
+      className: classNames$2('lf-icon-button', className, {
+        disabled: disabled
+      }),
+      onClick: handleClick
+    }, Icon);
+  };
+  var ArrayItem$2 = function ArrayItem(_ref2) {
+    var children = _ref2.children,
+      item = _ref2.item,
+      disabled = _ref2.disabled,
+      readOnly = _ref2.readOnly,
+      _ref2$onAdd = _ref2.onAdd,
+      onAdd = _ref2$onAdd === void 0 ? function () {} : _ref2$onAdd,
+      _ref2$onRemove = _ref2.onRemove,
+      onRemove = _ref2$onRemove === void 0 ? function () {} : _ref2$onRemove,
+      _ref2$disableAdd = _ref2.disableAdd,
+      disableAdd = _ref2$disableAdd === void 0 ? false : _ref2$disableAdd,
+      _ref2$showAdd = _ref2.showAdd,
+      showAdd = _ref2$showAdd === void 0 ? false : _ref2$showAdd,
+      align = _ref2.align,
+      alignOffset = _ref2.alignOffset;
+    var handleRemove = React$1.useCallback(function () {
+      return onRemove(item);
+    }, [item, onRemove]);
+    var style;
+    if ((align === 'top' || align === 'bottom') && _isNumber$2(alignOffset) && alignOffset > 0) {
+      style = _defineProperty$4({}, "margin".concat(_capitalize$2(align)), "".concat(alignOffset, "px"));
+    }
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-common-array-item"
+    }, /*#__PURE__*/React$1.createElement("div", {
+      className: "inner-form"
+    }, children), /*#__PURE__*/React$1.createElement("div", {
+      className: "buttons",
+      style: style
+    }, showAdd && /*#__PURE__*/React$1.createElement(IconButton$2, {
+      disabled: disableAdd || disabled || readOnly,
+      className: "arrow",
+      appearance: "link",
+      icon: /*#__PURE__*/React$1.createElement(PlusCircle$2, {
+        height: 16,
+        width: 16,
+        color: "#3498ff"
+      }),
+      size: "sm",
+      onClick: onAdd
+    }), !showAdd && /*#__PURE__*/React$1.createElement(IconButton$2, {
+      className: "arrow",
+      disabled: disabled || readOnly,
+      appearance: "link",
+      icon: /*#__PURE__*/React$1.createElement(MinusCircle$2, {
+        height: 16,
+        width: 16,
+        color: "#3498ff"
+      }),
+      size: "sm",
+      onClick: handleRemove
+    })));
+  };
+
+  var css_248z$Q = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
+  styleInject$2(css_248z$Q);
+
+  var randomId$2 = function randomId() {
+    var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
+    return Math.random().toString(36).substring(2, length + 2);
+  };
+
+  /**
+   * Check if object is empty or all the keys are empty
+   * @param {*} obj
+   * @returns
+   */
+  var isEmptyObject$2 = function isEmptyObject(obj) {
+    return _isEmpty$2(obj) || Object.keys(obj).every(function (key) {
+      return _isEmpty$2(obj[key]);
+    });
+  };
+
+  /**
+   * flatArrayOfString
+   * If an array of object can be flattned (one keuy), then return a flat array, otherwise raise expection
+   * @param {*} a
+   * @returns
+   */
+  var flatArrayOfString$2 = function flatArrayOfString(a) {
+    var canBeFlat = a.every(function (obj) {
+      return Object.keys(obj).length === 1;
+    });
+    if (!canBeFlat) {
+      throw new Error("Cannot be flattened");
+    }
+    return a.map(function (obj) {
+      return obj[Object.keys(obj)[0]];
+    });
+  };
+  var formatArray$2 = function formatArray(a) {
+    var arrayType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'arrayOfObject';
+    var cleaned = a.map(function (i) {
+      return _omit$2(i, 'id');
+    }).filter(function (i) {
+      return !isEmptyObject$2(i);
+    });
+    try {
+      var flattened = flatArrayOfString$2(cleaned);
+      if (arrayType === 'arrayOfString') {
+        return flattened;
+      } else if (arrayType === 'commaSeparated') {
+        return flattened.join(',');
+      }
+    } catch (e) {
+      // do nothing, return as is
+    }
+    return cleaned;
+  };
+  var makeDefaultValue$5 = function makeDefaultValue(defaultValue, arrayType, form) {
+    if (arrayType === 'arrayOfString') {
+      var isArrayOfString = _isArray$2(defaultValue) && defaultValue.every(function (s) {
+        return _isString$2(s);
+      });
+      var names = collectNames$2(form);
+      // if it's an array of string
+      if (isArrayOfString && names.length === 1) {
+        return defaultValue.map(function (s) {
+          return _defineProperty$4({
+            id: randomId$2()
+          }, names[0], s);
+        });
+      }
+      return [{
+        id: randomId$2()
+      }];
+    } else if (arrayType === 'commaSeparated') {
+      var _names = collectNames$2(form);
+      if (_names.length === 1 && _isString$2(defaultValue) && !_isEmpty$2(defaultValue)) {
+        return defaultValue.split(',').map(function (s) {
+          return _defineProperty$4({
+            id: randomId$2()
+          }, _names[0], s);
+        });
+      }
+      return [{
+        id: randomId$2()
+      }];
+    } else {
+      return _isArray$2(defaultValue) && !_isEmpty$2(defaultValue) ? fillIds$2(defaultValue) : [{
+        id: randomId$2()
+      }];
+    }
+  };
+  var ListArray$2 = function ListArray(_ref3) {
+    var LetsFormComponent = _ref3.LetsFormComponent,
+      value = _ref3.value,
+      _ref3$onChange = _ref3.onChange,
+      onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
+      _ref3$disabled = _ref3.disabled,
+      disabled = _ref3$disabled === void 0 ? false : _ref3$disabled,
+      _ref3$readOnly = _ref3.readOnly,
+      readOnly = _ref3$readOnly === void 0 ? false : _ref3$readOnly,
+      fields = _ref3.fields,
+      _ref3$layout = _ref3.layout,
+      layout = _ref3$layout === void 0 ? 'vertical' : _ref3$layout,
+      maxHeight = _ref3.maxHeight,
+      lfLocale = _ref3.lfLocale,
+      _ref3$leftMargin = _ref3.leftMargin,
+      leftMargin = _ref3$leftMargin === void 0 ? 0 : _ref3$leftMargin,
+      children = _ref3.children,
+      _ref3$arrayType = _ref3.arrayType,
+      arrayType = _ref3$arrayType === void 0 ? 'arrayOfObject' : _ref3$arrayType,
+      _ref3$align = _ref3.align,
+      align = _ref3$align === void 0 ? 'top' : _ref3$align,
+      _ref3$alignOffset = _ref3.alignOffset,
+      alignOffset = _ref3$alignOffset === void 0 ? 0 : _ref3$alignOffset;
+    var _useFormContext = useFormContext$2(),
+      locales = _useFormContext.locales;
+    var form = {
+      layout: layout,
+      fluid: true,
+      locales: locales,
+      // copy the locales from the main form
+      fields: fields
+    };
+    var _useState = React$1.useState(makeDefaultValue$5(value, arrayType, form)),
+      _useState2 = _slicedToArray$2(_useState, 2),
+      items = _useState2[0],
+      setItems = _useState2[1];
+    var style = {};
+    if (maxHeight) {
+      //style.maxHeigth = _.isNumber(maxHeigth) ? `${maxHeigth}px` : maxHeigth;
+      style = {
+        maxHeight: "".concat(maxHeight, "px"),
+        overflowY: 'scroll'
+      };
+    }
+    if (leftMargin != null) {
+      style.marginLeft = _isNumber$2(leftMargin) ? "".concat(leftMargin, "px") : leftMargin;
+    }
+    var handleAdd = React$1.useCallback(function () {
+      setItems(function (items) {
+        return [].concat(_toConsumableArray$2(items), [{
+          id: randomId$2()
+        }]);
+      });
+    }, []);
+    var handleChange = React$1.useCallback(function (value) {
+      var newItems = items.map(function (i) {
+        return i.id === value.id ? value : i;
+      });
+      setItems(newItems);
+      onChange(formatArray$2(newItems, arrayType));
+    }, [items, onChange, arrayType]);
+    var handleRemove = React$1.useCallback(function (item) {
+      var newItems = items.filter(function (i) {
+        return i.id !== item.id;
+      });
+      setItems(newItems);
+      onChange(formatArray$2(newItems, arrayType));
+    }, [items, onChange, arrayType]);
+    if (children) {
+      return /*#__PURE__*/React$1.createElement("div", {
+        style: {
+          padding: '0px 10px 1px 10px'
+        }
+      }, children);
+    }
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: classNames$2('lf-control-common-array', align ? "lf-".concat(align) : undefined),
+      style: style
+    }, (_isArray$2(items) ? items : []).map(function (item, idx) {
+      var canAdd = idx === items.length - 1 && !isEmptyItem$2(item);
+      var showAdd = idx === items.length - 1 || items.length === 1;
+      return /*#__PURE__*/React$1.createElement(ArrayItem$2, {
+        key: item.id,
+        item: item,
+        disabled: disabled,
+        readOnly: readOnly,
+        disableAdd: !canAdd,
+        showAdd: showAdd,
+        onAdd: handleAdd,
+        onRemove: handleRemove,
+        align: align,
+        alignOffset: alignOffset
+      }, /*#__PURE__*/React$1.createElement(LetsFormComponent, {
+        form: form,
+        locale: lfLocale,
+        disabled: disabled,
+        readOnly: readOnly,
+        defaultValues: item,
+        onlyFields: true,
+        onChange: handleChange
+      }));
+    }));
+  };
+
+  var css_248z$P = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
+  styleInject$2(css_248z$P);
+
+  var _excluded$1e = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var GenericButton$2 = function GenericButton(_ref) {
+    var ButtonComponent = _ref.ButtonComponent,
+      OnStateProps = _ref.OnStateProps,
+      OffStateProps = _ref.OffStateProps,
+      _ref$LinkProps = _ref.LinkProps,
+      LinkProps = _ref$LinkProps === void 0 ? {} : _ref$LinkProps,
+      name = _ref.name,
+      labelOn = _ref.labelOn,
+      labelOff = _ref.labelOff,
+      labelLink = _ref.labelLink,
+      iconOn = _ref.iconOn,
+      iconOff = _ref.iconOff,
+      iconLink = _ref.iconLink,
+      size = _ref.size,
+      href = _ref.href,
+      appearance = _ref.appearance,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      value = _ref.value,
+      buttonType = _ref.buttonType,
+      hint = _ref.hint,
+      initialValue = _ref.initialValue,
+      className = _ref.className,
+      rest = _objectWithoutProperties$2(_ref, _excluded$1e);
+    var _useState = React$1.useState(value || initialValue),
+      _useState2 = _slicedToArray$2(_useState, 2),
+      checked = _useState2[0],
+      setChecked = _useState2[1];
+    var handleClick = React$1.useCallback(function () {
+      var newValue = !checked;
+      setChecked(!checked);
+      onChange(newValue, name);
+    }, [onChange, checked, name]);
+    var inner;
+    if (buttonType === 'toggle') {
+      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends$2({
+        size: size,
+        onClick: handleClick,
+        onBlur: onBlur,
+        icon: checked ? iconOn : iconOff,
+        label: checked ? labelOn : labelOff,
+        hint: hint,
+        style: makeWidthStyle$2(fullWidth, width)
+      }, passRest$2(_omit$2(rest, 'label')), checked ? OnStateProps : OffStateProps));
+    } else if (buttonType === 'link') {
+      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends$2({
+        size: size,
+        onBlur: onBlur,
+        appearance: appearance,
+        hint: hint,
+        label: labelLink,
+        icon: iconLink,
+        href: href,
+        target: "_blank",
+        style: makeWidthStyle$2(fullWidth, width)
+      }, passRest$2(_omit$2(rest, 'label')), LinkProps));
+    }
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: classNames$2('lf-control-button', className, _defineProperty$4({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
+      "data-lf-field-name": name
+    }, inner);
+  };
+  var MakeButton$2 = function MakeButton(ButtonComponent, OnStateProps, OffStateProps, LinkProps) {
+    return function (props) {
+      return /*#__PURE__*/React$1.createElement(GenericButton$2, _extends$2({
+        ButtonComponent: ButtonComponent,
+        OnStateProps: _isFunction$2(OnStateProps) ? OnStateProps(props) : OnStateProps,
+        OffStateProps: _isFunction$2(OffStateProps) ? OffStateProps(props) : OffStateProps,
+        LinkProps: _isFunction$2(LinkProps) ? LinkProps(props) : LinkProps
+      }, props));
+    };
+  };
+
+  var css_248z$O = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
+  styleInject$2(css_248z$O);
+
+  var getInitialValue$2 = function getInitialValue(value, multiple) {
+    return multiple ? (_isArray$2(value) ? value : []).reduce(function (acc, value) {
+      return _objectSpread2$2(_objectSpread2$2({}, acc), {}, _defineProperty$4({}, value, true));
+    }, {}) : _defineProperty$4({}, value, true);
+  };
+  var ButtonsToggleGroup$2 = function ButtonsToggleGroup(_ref2) {
+    var value = _ref2.value,
+      options = _ref2.options,
+      onChange = _ref2.onChange,
+      size = _ref2.size,
+      _ref2$multiple = _ref2.multiple,
+      multiple = _ref2$multiple === void 0 ? false : _ref2$multiple,
+      disabled = _ref2.disabled,
+      ButtonComponent = _ref2.ButtonComponent,
+      fullWidth = _ref2.fullWidth,
+      justifyContent = _ref2.justifyContent;
+    var _useState = React$1.useState(getInitialValue$2(value, multiple)),
+      _useState2 = _slicedToArray$2(_useState, 2),
+      values = _useState2[0],
+      setValues = _useState2[1];
+    console.log('options', options);
+    var handleClick = React$1.useCallback(function (value, name) {
+      var newValues = multiple ? _objectSpread2$2(_objectSpread2$2({}, values), {}, _defineProperty$4({}, name, value)) : _defineProperty$4({}, name, value);
+      setValues(newValues);
+      var newValue = options.reduce(function (acc, option) {
+        return newValues[option.value] ? [].concat(_toConsumableArray$2(acc), [option.value]) : acc;
+      }, []);
+      onChange(multiple ? newValue : newValue[0]);
+    }, [onChange, options, values, multiple]);
+    var style = {};
+    if (fullWidth) {
+      style.display = 'flex';
+    }
+    if (!_isEmpty$2(justifyContent)) {
+      style.display = 'flex';
+      style.justifyContent = justifyContent;
+    }
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-button-toggle-group-container",
+      style: style
+    }, (options !== null && options !== void 0 ? options : []).map(function (_ref4) {
+      var value = _ref4.value,
+        label = _ref4.label,
+        image = _ref4.image;
+      return /*#__PURE__*/React$1.createElement(ButtonComponent, {
+        key: value + values[value],
+        buttonType: "toggle",
+        labelOn: label,
+        name: value,
+        initialValue: values[value],
+        labelOff: label,
+        size: size,
+        disabled: disabled,
+        icon: image,
+        onChange: handleClick,
+        className: classNames$2({
+          'lf-full-width': fullWidth
+        })
+      });
+    }));
+  };
+
+  var css_248z$N = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
+  styleInject$2(css_248z$N);
+
+  var PlaintextLabel$2 = function PlaintextLabel(_ref) {
+    var children = _ref.children;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-plaintext-field-label"
+    }, children);
+  };
+  var renderFields$2 = function renderFields(fields, locale, framework) {
+    var currentValues = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+    return (fields || []).map(function (field) {
+      if (field.component === 'group') {
+        return /*#__PURE__*/React$1.createElement(Group$2, _extends$2({
+          key: field.name,
+          collapsible: false,
+          label: field.label
+        }, _pick$2(field, ['bottomBorder', 'align'])), renderFields(field.fields, locale, framework, currentValues));
+      } else if (field.component === 'two-columns') {
+        return /*#__PURE__*/React$1.createElement(TwoColumns$2, _extends$2({
+          key: field.name
+        }, _pick$2(field, ['layout', 'leftAlignment', 'rightAlignment'])), function (column) {
+          if (column === 'left') {
+            return renderFields(field.leftFields, locale, framework, currentValues);
+          } else if (column === 'right') {
+            return renderFields(field.rightFields, locale, framework, currentValues);
+          }
+        });
+      } else if (field.component === 'three-columns') {
+        return /*#__PURE__*/React$1.createElement(ThreeColumns$2, _extends$2({
+          key: field.name
+        }, _pick$2(field, ['layout', 'leftAlignment', 'centerAlignment', 'rightAlignment'])), function (column) {
+          if (column === 'left') {
+            return renderFields(field.leftFields, locale, framework, currentValues);
+          } else if (column === 'center') {
+            return renderFields(field.centerFields, locale, framework, currentValues);
+          } else if (column === 'right') {
+            return renderFields(field.rightFields, locale, framework, currentValues);
+          }
+        });
+      } else if (field.component === 'tabs' || field.component === 'steps') {
+        var subkeys = Object.keys(field.fields);
+        var _fields = subkeys.map(function (subkey) {
+          return renderFields(field.fields[subkey], locale, framework, currentValues);
+        });
+        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, _fields);
+      }
+      return /*#__PURE__*/React$1.createElement("div", {
+        key: field.name,
+        className: "lf-plaintext-field lf-control-".concat(field.component)
+      }, /*#__PURE__*/React$1.createElement(PlaintextLabel$2, null, isI18n$2(field.label) ? i18n$2(field.label, locale) : field.label), /*#__PURE__*/React$1.createElement(Plaintext$2, {
+        component: field.component,
+        locale: locale,
+        value: currentValues[field.name],
+        options: field.options
+      }));
+    });
+  };
+  var PlaintextForm$2 = function PlaintextForm(_ref2) {
+    var form = _ref2.form,
+      locale = _ref2.locale,
+      framework = _ref2.framework,
+      currentValues = _ref2.currentValues;
+    var fields = form.fields;
+    if (_isEmpty$2(fields)) {
+      return /*#__PURE__*/React$1.createElement("span", null);
+    }
+    console.log('plaintext--->', currentValues);
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-form lf-form-plaintext"
+    }, renderFields$2(fields, locale, framework, currentValues));
+  };
+
+  var enrichWithLabels$2 = function enrichWithLabels(validationErrors, fields) {
+    var result = _objectSpread2$2({}, validationErrors);
+    var collectLabels = reduceFields$2(fields, function (field, accumulator) {
+      return field.label ? _objectSpread2$2(_objectSpread2$2({}, accumulator), {}, _defineProperty$4({}, field.name, field.label)) : accumulator;
+    }, {});
+    Object.keys(result).forEach(function (key) {
+      if (result[key] && result[key].ref && collectLabels[result[key].ref.name]) {
+        result[key].ref.label = collectLabels[result[key].ref.name];
+      }
+    });
+    return result;
+  };
+
+  /** Used to match a single whitespace character. */
+
+  var reWhitespace$2 = /\s/;
+
+  /**
+   * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
+   * character of `string`.
+   *
+   * @private
+   * @param {string} string The string to inspect.
+   * @returns {number} Returns the index of the last non-whitespace character.
+   */
+  function trimmedEndIndex$4(string) {
+    var index = string.length;
+    while (index-- && reWhitespace$2.test(string.charAt(index))) {}
+    return index;
+  }
+  var _trimmedEndIndex$2 = trimmedEndIndex$4;
+
+  var trimmedEndIndex$3 = _trimmedEndIndex$2;
+
+  /** Used to match leading whitespace. */
+  var reTrimStart$2 = /^\s+/;
+
+  /**
+   * The base implementation of `_.trim`.
+   *
+   * @private
+   * @param {string} string The string to trim.
+   * @returns {string} Returns the trimmed string.
+   */
+  function baseTrim$4(string) {
+    return string ? string.slice(0, trimmedEndIndex$3(string) + 1).replace(reTrimStart$2, '') : string;
+  }
+  var _baseTrim$2 = baseTrim$4;
+
+  var baseIndexOf$6 = _baseIndexOf$2;
+
+  /**
+   * Used by `_.trim` and `_.trimEnd` to get the index of the last string symbol
+   * that is not found in the character symbols.
+   *
+   * @private
+   * @param {Array} strSymbols The string symbols to inspect.
+   * @param {Array} chrSymbols The character symbols to find.
+   * @returns {number} Returns the index of the last unmatched string symbol.
+   */
+  function charsEndIndex$4(strSymbols, chrSymbols) {
+    var index = strSymbols.length;
+    while (index-- && baseIndexOf$6(chrSymbols, strSymbols[index], 0) > -1) {}
+    return index;
+  }
+  var _charsEndIndex$2 = charsEndIndex$4;
+
+  var baseIndexOf$5 = _baseIndexOf$2;
+
+  /**
+   * Used by `_.trim` and `_.trimStart` to get the index of the first string symbol
+   * that is not found in the character symbols.
+   *
+   * @private
+   * @param {Array} strSymbols The string symbols to inspect.
+   * @param {Array} chrSymbols The character symbols to find.
+   * @returns {number} Returns the index of the first unmatched string symbol.
+   */
+  function charsStartIndex$4(strSymbols, chrSymbols) {
+    var index = -1,
+      length = strSymbols.length;
+    while (++index < length && baseIndexOf$5(chrSymbols, strSymbols[index], 0) > -1) {}
+    return index;
+  }
+  var _charsStartIndex$2 = charsStartIndex$4;
+
+  var baseToString$4 = _baseToString$2,
+    baseTrim$3 = _baseTrim$2,
+    castSlice$5 = _castSlice$2,
+    charsEndIndex$3 = _charsEndIndex$2,
+    charsStartIndex$3 = _charsStartIndex$2,
+    stringToArray$5 = _stringToArray$2,
+    toString$7 = toString_1$2;
+
+  /**
+   * Removes leading and trailing whitespace or specified characters from `string`.
+   *
+   * @static
+   * @memberOf _
+   * @since 3.0.0
+   * @category String
+   * @param {string} [string=''] The string to trim.
+   * @param {string} [chars=whitespace] The characters to trim.
+   * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+   * @returns {string} Returns the trimmed string.
+   * @example
+   *
+   * _.trim('  abc  ');
+   * // => 'abc'
+   *
+   * _.trim('-_-abc-_-', '_-');
+   * // => 'abc'
+   *
+   * _.map(['  foo  ', '  bar  '], _.trim);
+   * // => ['foo', 'bar']
+   */
+  function trim$2(string, chars, guard) {
+    string = toString$7(string);
+    if (string && (guard || chars === undefined)) {
+      return baseTrim$3(string);
+    }
+    if (!string || !(chars = baseToString$4(chars))) {
+      return string;
+    }
+    var strSymbols = stringToArray$5(string),
+      chrSymbols = stringToArray$5(chars),
+      start = charsStartIndex$3(strSymbols, chrSymbols),
+      end = charsEndIndex$3(strSymbols, chrSymbols) + 1;
+    return castSlice$5(strSymbols, start, end).join('');
+  }
+  var trim_1$2 = trim$2;
+
+  var _trim$2 = /*@__PURE__*/getDefaultExportFromCjs$2(trim_1$2);
+
+  var translateValidation$2 = function translateValidation(validation, locale, onJavascriptError) {
+    // if any validation object
+    if (validation != null) {
+      var errorMessage;
+      if (_isString$2(validation.message)) {
+        errorMessage = validation.message;
+      } else if (isI18n$2(validation.message)) {
+        var _i18n;
+        errorMessage = (_i18n = i18n$2(validation.message, locale)) !== null && _i18n !== void 0 ? _i18n : 'Field is required';
+      } else {
+        errorMessage = 'Field is required';
+      }
+      var result = {};
+      if (validation.required) {
+        result.required = errorMessage;
+      }
+      // min / max validation
+      ['min', 'max', 'minLength', 'maxLength'].forEach(function (key) {
+        if (validation[key] != null) {
+          result[key] = {
+            value: validation[key],
+            message: errorMessage
+          };
+        }
+      });
+      // validation with regex
+      if (validation.pattern) {
+        result.pattern = {
+          value: new RegExp(validation.pattern),
+          message: errorMessage
+        };
+      }
+      if (!_isEmpty$2(_trim$2(validation.validate))) {
+        try {
+          var validator = new Function('value', 'formValues', validation.validate);
+          // wrap the validator function, if returns strictly false then re-use
+          // the provided message, if it's a string return the string, but it will not i18n
+          result.validate = function (value, formValues) {
+            var v;
+            try {
+              v = validator(value, formValues);
+            } catch (e) {
+              console.error("[LetsForm] Error executing validate function: ", e);
+              var error = new Error('Error compiling validate function: ' + e.message, {
+                cause: e
+              });
+              error.sourceCode = validation.validate;
+              error.errorType = 'runtime';
+              onJavascriptError(error);
+            }
+            if (v === true) {
+              return true;
+            } else if (v === false) {
+              return errorMessage;
+            } else if (_isString$2(v)) {
+              return v;
+            } else if (isI18n$2(v)) {
+              return i18n$2(v, locale);
+            }
+            return true;
+          };
+        } catch (e) {
+          console.error("[LetsForm] Invalid validate function: ", e);
+          var error = new Error('Error compiling validate function: ' + e.message, {
+            cause: e
+          });
+          error.sourceCode = validation.validate;
+          error.errorType = 'compile';
+          onJavascriptError(error);
+        }
+      } else {
+        result.validate = undefined;
+      }
+      return result;
+    }
+    return validation;
+  };
+
+  // Use eval to get the contructor since RCA polyfill this and returns a normal function constructor
+  // eslint-disable-next-line no-eval
+  var AsyncGeneratorFunction$2 = eval('(() => async function* () {}.constructor)()');
+  var makeTransformer$2 = function makeTransformer(str, fieldList) {
+    if (_isEmpty$2(str)) {
+      return null;
+    }
+    // yielding is manual
+    var yieldedStr = str.replaceAll("yield();", 'yield Promise.resolve(api.fields());\n');
+    try {
+      var spreadVars = '';
+      if (!_isEmpty$2(fieldList)) {
+        spreadVars = 'const { ' + fieldList.join(', ') + ' } = values;\n';
+      }
+      var tx = new AsyncGeneratorFunction$2('api', "const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue, context, toggle } = api;\n" + spreadVars + yieldedStr + '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
+      );
+
+      return tx;
+    } catch (e) {
+      console.error("[LetsForm] Invalid JavaScript code for rules", e);
+      console.error("[LetsForm] Script: ", yieldedStr);
+      throw e;
+    }
+  };
+
+  var collectTransformers$2 = function collectTransformers(fields, formScript, onJavascriptError) {
+    var transformers = {};
+
+    // collect all fieldlist needed to compile the transformer
+    var fieldList = reduceFields$2(fields, function (field, accumulator) {
+      if (field.component !== 'group' && field.component !== 'two-columns' && field.component !== 'three-columns') {
+        return [].concat(_toConsumableArray$2(accumulator), [field.name]);
+      }
+      return accumulator;
+    }, [], {
+      array: false
+    } // don't include array
+    );
+
+    // compile transformer of the form
+    try {
+      if (formScript) {
+        transformers.onRender = [makeTransformer$2(formScript, fieldList)];
+      }
+    } catch (e) {
+      var error = new Error('Error compiling main form script: ' + e.message, {
+        cause: e
+      });
+      error.sourceCode = formScript;
+      error.errorType = 'compile';
+      onJavascriptError(error);
+    }
+
+    // collect transformers for each field and put it onChange
+    transformers = reduceFields$2(fields, function (field, acc) {
+      if (field.script || field.transformer) {
+        var transformer;
+        try {
+          transformer = makeTransformer$2(field.script || field.transformer, fieldList);
+        } catch (e) {
+          var _error = new Error('Error compiling script. ' + e.message, {
+            cause: e
+          });
+          _error.sourceCode = field.script || field.transformer;
+          _error.errorType = 'compile';
+          onJavascriptError(_error);
+        }
+        // push into the onChange list of txs
+        if (transformer != null) {
+          if (acc.onChange == null) {
+            acc.onChange = {};
+          }
+          acc.onChange[field.name] = [transformer];
+        }
+      }
+      return acc;
+    }, transformers, {
+      array: false
+    } // don't include array
+    );
+
+    return transformers;
+  };
+
+  var errorToString$2 = function errorToString(error) {
+    if (error) {
+      if (error.message) {
+        return error.message;
+      } else if (error.type === 'required') {
+        return 'This field is required';
+      } else if (error.type === 'minLength') {
+        return 'Text is too short';
+      } else if (error.type === 'maxLength') {
+        return 'Text is too long';
+      } else if (error.type === 'max') {
+        return 'Value is too big';
+      } else if (error.type === 'min') {
+        return 'Value is too small';
+      }
+      return 'Invalid value';
+    }
+    return undefined;
+  };
+
+  /**
+   * Merge additional components to the main library
+   * @param {*} main
+   * @param {*} additional
+   * @returns
+   */
+  var mergeComponents$2 = function mergeComponents(main, additional) {
+    // if not empty, then merge, overwriting is ok
+    if (!_isEmpty$2(additional) && Object.keys(additional).length !== 0) {
+      Object.keys(additional).forEach(function (componentName) {
+        if (main[componentName] == null) {
+          main[componentName] = additional[componentName];
+        } else {
+          main[componentName] = _objectSpread2$2(_objectSpread2$2({}, main[componentName]), additional[componentName]);
+        }
+      });
+    }
+    return main;
+  };
+
+  var MissingComponent$2 = function MissingComponent(_ref) {
+    var lfComponent = _ref.lfComponent,
+      label = _ref.label,
+      lfFramework = _ref.lfFramework;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-missing-component"
+    }, /*#__PURE__*/React$1.createElement("div", {
+      className: "icon"
+    }, /*#__PURE__*/React$1.createElement(Warning$2, {
+      color: "#ff6633",
+      height: 16
+    })), /*#__PURE__*/React$1.createElement("div", {
+      className: "message"
+    }, "The component ", /*#__PURE__*/React$1.createElement("span", {
+      className: "tag-component"
+    }, lfComponent), " (", /*#__PURE__*/React$1.createElement("em", null, "\"", _isString$2(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/React$1.createElement("b", null, lfFramework), ")"));
+  };
+
+  // create blank elements for the DSL
+  var LfField$2 = function LfField() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfGroup$2 = function LfGroup() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfColumns$2 = function LfColumns() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfColumn$2 = function LfColumn() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfArray$2 = function LfArray() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfTabs$2 = function LfTabs() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfTab$2 = function LfTab() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfSteps$2 = function LfSteps() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var LfStep$2 = function LfStep() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
+  var elementToString$2 = function elementToString(el) {
+    return "type: ".concat(typeToString$2(el.type)).concat(cleanupProperties$2(el.props));
+  };
+  var typeToString$2 = function typeToString(type) {
+    if (type === LfField$2) {
+      return '<LfField>';
+    } else if (type === LfGroup$2) {
+      return '<LfGroup>';
+    } else if (type === LfColumns$2) {
+      return '<LfColumns>';
+    } else if (type === LfColumn$2) {
+      return '<LfColumn>';
+    } else if (type === LfArray$2) {
+      return '<LfArray>';
+    } else if (type === LfTabs$2) {
+      return '<LfTabs>';
+    } else if (type === LfTab$2) {
+      return '<LfTab>';
+    } else if (type === LfSteps$2) {
+      return '<LfSteps>';
+    } else if (type === LfStep$2) {
+      return '<LfStep>';
+    } else {
+      return 'unknown';
+    }
+  };
+  var typesToString$2 = function typesToString(types) {
+    return types.map(typeToString$2).join(', ');
+  };
+  var cleanupProperties$2 = function cleanupProperties(props) {
+    var cleaned = Object.keys(props).reduce(function (acc, key) {
+      if (typeof props[key] === 'string' || typeof props[key] === 'number') {
+        return _objectSpread2$2(_objectSpread2$2({}, acc), {}, _defineProperty$4({}, key, props[key]));
+      }
+      return acc;
+    }, {});
+    if (Object.keys(cleaned).length !== 0) {
+      return ' - ' + JSON.stringify(cleaned);
+    }
+    return '';
+  };
+
+  /**
+   * elementOf
+   * Check if element is one of the type
+   * @param {obj} element
+   * @param {ReactElement,[ReactElement]} types
+   */
+  var elementOf$2 = function elementOf(element, types) {
+    var checkTypes = Array.isArray(types) ? types : [types];
+    return checkTypes.some(function (type) {
+      return element.type === type;
+    });
+  };
+  var assertElementsOf$2 = function assertElementsOf(elements, types) {
+    var quiet = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+    var checkTypes = Array.isArray(types) ? types : [types];
+    var checkElements = Array.isArray(elements) ? elements : [elements];
+    return checkElements.every(function (element) {
+      if (!elementOf$2(element, checkTypes)) {
+        if (!quiet) {
+          throw new Error('LetsForm DSL error, element ' + elementToString$2(element) + ' should be one of these components: ' + typesToString$2(checkTypes));
+        }
+        return false;
+      }
+      return true;
+    });
+  };
+  var assertElementsOfElements$2 = function assertElementsOfElements(elements, types) {
+    var checkTypes = Array.isArray(types) ? types : [types];
+    var checkElements = Array.isArray(elements) ? elements : [elements];
+    return checkElements.every(function (element) {
+      if (!assertElementsOf$2(element.props.children, checkTypes, true)) {
+        throw new Error('LetsForm DSL error, element ' + elementToString$2(element) + ' should only have childrenbe of these components: ' + typesToString$2(checkTypes));
+      }
+      return true;
+    });
+  };
+
+  /**
+   * assertElementName
+   * Assert element has name property or raise error
+   */
+  var assertElementName$2 = function assertElementName(element) {
+    if (_.isEmpty(element.props.name)) {
+      throw new Error('LetsForm DSL error, element ' + elementToString$2(element) + ' missing "name" property ');
+    }
+    return true;
+  };
+
+  /**
+   * assertElementComponent
+   * Assert element has component prop, or raise error
+   */
+  var assertElementComponent$2 = function assertElementComponent(element) {
+    var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+      components = _ref.components,
+      framework = _ref.framework;
+    if (_.isEmpty(element.props.component)) {
+      throw new Error('LetsForm DSL error, element ' + elementToString$2(element) + ' missing "component" property ');
+    }
+    if (components && framework) {
+      if (!components[element.props.component] || !components[element.props.component][framework]) {
+        throw new Error('LetsForm DSL error, element ' + elementToString$2(element) + " invalid component property \"".concat(element.props.component, "\" for framework \"").concat(framework, "\""));
+      }
+    }
+    return true;
+  };
+  var traverseChildren$2 = function traverseChildren(children) {
+    var _ref2 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+      components = _ref2.components,
+      framework = _ref2.framework;
+    var elements = [];
+    if (children) {
+      elements = Array.isArray(children) ? children : [children];
+    }
+    return elements.map(function (element) {
+      if (elementOf$2(element, LfField$2) && assertElementName$2(element) && assertElementComponent$2(element, {
+        components: components,
+        framework: framework
+      })) {
+        return _objectSpread2$2({}, element.props);
+      } else if (elementOf$2(element, LfGroup$2)) {
+        return _objectSpread2$2(_objectSpread2$2({}, _.omit(element.props, 'children')), {}, {
+          component: 'group',
+          fields: traverseChildren(element.props.children, {
+            components: components,
+            framework: framework
+          })
+        });
+      } else if (elementOf$2(element, LfColumns$2) && Array.isArray(element.props.children) && element.props.children.length == 2 && assertElementsOf$2(element.props.children, LfColumn$2)) {
+        return _objectSpread2$2(_objectSpread2$2({
+          component: 'two-columns'
+        }, _.omit(element.props, 'children')), {}, {
+          leftFields: traverseChildren(element.props.children[0].props.children, {
+            components: components,
+            framework: framework
+          }),
+          rightFields: traverseChildren(element.props.children[1].props.children, {
+            components: components,
+            framework: framework
+          })
+        });
+      } else if (element.type === LfColumns$2 && Array.isArray(element.props.children) && element.props.children.length == 3 && assertElementsOf$2(element.props.children, [LfColumn$2])) {
+        return _objectSpread2$2(_objectSpread2$2({
+          component: 'three-columns'
+        }, _.omit(element.props, 'children')), {}, {
+          leftFields: traverseChildren(element.props.children[0].props.children, {
+            components: components,
+            framework: framework
+          }),
+          centerFields: traverseChildren(element.props.children[1].props.children, {
+            components: components,
+            framework: framework
+          }),
+          rightFields: traverseChildren(element.props.children[2].props.children, {
+            components: components,
+            framework: framework
+          })
+        });
+      } else if (element.type === LfArray$2 && assertElementsOf$2(element.props.children, [LfField$2, LfGroup$2, LfColumns$2])) {
+        return _objectSpread2$2(_objectSpread2$2({}, _.omit(element.props, 'children')), {}, {
+          component: 'array',
+          fields: traverseChildren(element.props.children, {
+            components: components,
+            framework: framework
+          })
+        });
+      } else if (element.type === LfTabs$2 && assertElementsOf$2(element.props.children, [LfTab$2]) && assertElementsOfElements$2(element.props.children, [LfField$2, LfGroup$2, LfColumns$2, LfArray$2])) {
+        return _objectSpread2$2(_objectSpread2$2({
+          name: _.uniqueId('lf_name_'),
+          component: 'tabs'
+        }, _.omit(element.props, 'children')), {}, {
+          tabs: element.props.children.map(function (el) {
+            return _.omit(el.props, 'children');
+          }),
+          fields: element.props.children.reduce(function (acc, tabElement) {
+            return _objectSpread2$2(_objectSpread2$2({}, acc), {}, _defineProperty$4({}, tabElement.props.value, traverseChildren(tabElement.props.children, {
+              components: components,
+              framework: framework
+            })));
+          }, {})
+        });
+      } else if (element.type === LfSteps$2 && assertElementsOf$2(element.props.children, [LfStep$2]) && assertElementsOfElements$2(element.props.children, [LfField$2, LfGroup$2, LfColumns$2, LfArray$2])) {
+        return _objectSpread2$2(_objectSpread2$2({
+          name: _.uniqueId('lf_name_'),
+          component: 'steps'
+        }, _.omit(element.props, 'children')), {}, {
+          steps: element.props.children.map(function (el) {
+            return _.omit(el.props, 'children');
+          }),
+          fields: element.props.children.reduce(function (acc, tabElement) {
+            return _objectSpread2$2(_objectSpread2$2({}, acc), {}, _defineProperty$4({}, tabElement.props.value, traverseChildren(tabElement.props.children, {
+              components: components,
+              framework: framework
+            })));
+          }, {})
+        });
+      } else {
+        // othwerwise wrap in react-view component
+        return {
+          name: _.uniqueId('lf_name_'),
+          component: 'react-view',
+          view: function view() {
+            return /*#__PURE__*/React.createElement(React.Fragment, null, element);
+          }
+        };
+      }
+    }).filter(Boolean);
+  };
+
+  var css_248z$M = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
+  styleInject$2(css_248z$M);
+
+  var _excluded$1d = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableOnSubmit", "resetAfterSubmit", "context"];
+  var DEFAULT_FORM$2 = {
+    version: 1,
+    fields: []
+  };
+  var GenerateGenerator$2 = function GenerateGenerator(_ref) {
+    var Forms = _ref.Forms,
+      Fields = _ref.Fields;
+    var renderFields = function renderFields(_ref2) {
+      var fields = _ref2.fields,
+        control = _ref2.control,
+        framework = _ref2.framework,
+        _onChange = _ref2.onChange,
+        onEnter = _ref2.onEnter,
+        getValues = _ref2.getValues,
+        Wrapper = _ref2.Wrapper,
+        GroupWrapper = _ref2.GroupWrapper,
+        BottomView = _ref2.BottomView,
+        PlaceholderWrapper = _ref2.PlaceholderWrapper;
+        _ref2.debug;
+        var disabled = _ref2.disabled,
+        readOnly = _ref2.readOnly,
+        plaintext = _ref2.plaintext,
+        errors = _ref2.errors,
+        showErrors = _ref2.showErrors,
+        _ref2$level = _ref2.level,
+        level = _ref2$level === void 0 ? 1 : _ref2$level,
+        locale = _ref2.locale,
+        onJavascriptError = _ref2.onJavascriptError,
+        Components = _ref2.Components,
+        prependView = _ref2.prependView;
+      var renderedFields = (fields || []).filter(function (field) {
+        return Wrapper || field.component !== 'hidden';
+      }) // skip hidden type field (not in design mode)
+      .filter(function (field) {
+        return Wrapper || field.hidden !== true;
+      }) // skip fields with "hidden" attribute (not in design mode)
+      .map(function (field, index) {
+        var Component;
+        if (Components[field.component] && Components[field.component][framework]) {
+          Component = Components[field.component][framework];
+        } else if (Components[field.component] && Components[field.component]['*']) {
+          Component = Components[field.component]['*'];
+        } else {
+          Component = MissingComponent$2;
+        }
+        // remove mandatory fields and platform specific fields
+        var additionalFields = _omit$2(field, ['id', 'name', 'label', 'hint', 'disabled', 'readOnly', 'plaintext', 'size', 'placeholder', 'component'].concat(_toConsumableArray$2(FRAMEWORKS$2)));
+
+        // special case of group
+        if (field.component === 'group') {
+          var component = /*#__PURE__*/React$1.createElement(Component, _extends$2({
+            key: field.name,
+            lfComponent: field.component,
+            lfFramework: framework,
+            lfLocale: locale,
+            name: field.name,
+            label: field.label,
+            hint: field.hint,
+            disabled: field.disabled
+          }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
+            Wrapper: Wrapper,
+            GroupWrapper: GroupWrapper,
+            PlaceholderWrapper: PlaceholderWrapper,
+            BottomView: BottomView,
+            onChange: _onChange,
+            onEnter: onEnter,
+            fields: field.fields,
+            control: control,
+            framework: framework,
+            getValues: getValues,
+            disabled: field.disabled ? true : disabled,
+            // pass disabled status to inner components
+            readOnly: readOnly,
+            plaintext: plaintext,
+            errors: errors,
+            showErrors: showErrors,
+            level: level + 1,
+            locale: locale,
+            onJavascriptError: onJavascriptError,
+            Components: Components,
+            prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+              key: "wrapper_top_field",
+              parentField: field,
+              parentFieldTarget: "fields",
+              nextField: field.fields && field.fields.length ? field.fields[0] : null
+            })
+          }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+            context: "group",
+            key: "bottom_view_".concat(field.name),
+            field: field,
+            target: "fields"
+          })));
+          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
+            key: "wrapper_".concat(field.name),
+            field: field,
+            level: level,
+            index: index,
+            className: "group"
+          }, component) : component;
+        } else if (field.component === 'tabs') {
+          return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
+            key: "field_".concat(field.name),
+            name: field.name,
+            control: control,
+            render: function render(_ref3) {
+              var _values$field$name;
+              var fieldInfo = _ref3.field;
+              var values = getValues();
+              var component = /*#__PURE__*/React$1.createElement(Component, _extends$2({
+                key: field.name,
+                lfComponent: field.component,
+                lfFramework: framework,
+                lfLocale: locale,
+                name: field.name,
+                label: field.label,
+                hint: field.hint,
+                disabled: field.disabled,
+                value: (_values$field$name = values[field.name]) !== null && _values$field$name !== void 0 ? _values$field$name : undefined,
+                onChange: function onChange(value, opts) {
+                  // TODO use callback
+                  fieldInfo.onChange(value);
+                  _onChange(_objectSpread2$2(_objectSpread2$2({}, getValues()), {}, _defineProperty$4({}, field.name, value)), field.name);
+                }
+              }, additionalFields, field[framework]), function (tab) {
+                return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
+                  Wrapper: Wrapper,
+                  GroupWrapper: GroupWrapper,
+                  PlaceholderWrapper: PlaceholderWrapper,
+                  BottomView: BottomView,
+                  onChange: _onChange,
+                  onEnter: onEnter,
+                  fields: field.fields && _isArray$2(field.fields[tab]) ? field.fields[tab] : [],
+                  control: control,
+                  framework: framework,
+                  getValues: getValues,
+                  disabled: field.disabled ? true : disabled,
+                  // pass disabled status to inner components
+                  readOnly: readOnly,
+                  plaintext: plaintext,
+                  errors: errors,
+                  showErrors: showErrors,
+                  level: level + 1,
+                  locale: locale,
+                  onJavascriptError: onJavascriptError,
+                  Components: Components,
+                  prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+                    key: "wrapper_top_field",
+                    parentField: field,
+                    parentFieldTarget: "fields",
+                    parentFieldSubTarget: tab,
+                    nextField: field.fields && field.fields.length ? field.fields[0] : null
+                  })
+                }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+                  context: "tabs",
+                  key: "bottom_view_".concat(field.name),
+                  field: field,
+                  target: "fields",
+                  subtarget: tab
+                }));
+              });
+              return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
+                key: "wrapper_".concat(field.name),
+                field: field,
+                level: level,
+                index: index,
+                className: "tabs"
+              }, component) : component;
+            }
+          });
+        } else if (field.component === 'steps') {
+          return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
+            key: "field_".concat(field.name),
+            name: field.name,
+            control: control,
+            render: function render(_ref4) {
+              var _values$field$name2;
+              var fieldInfo = _ref4.field;
+              var values = getValues();
+              var component = /*#__PURE__*/React$1.createElement(Component, _extends$2({
+                key: field.name,
+                lfComponent: field.component,
+                lfFramework: framework,
+                lfLocale: locale,
+                name: field.name,
+                label: field.label,
+                hint: field.hint,
+                disabled: field.disabled,
+                value: (_values$field$name2 = values[field.name]) !== null && _values$field$name2 !== void 0 ? _values$field$name2 : undefined,
+                onChange: function onChange(value, opts) {
+                  // TODO use callback
+                  fieldInfo.onChange(value);
+                  _onChange(_objectSpread2$2(_objectSpread2$2({}, getValues()), {}, _defineProperty$4({}, field.name, value)), field.name);
+                }
+              }, additionalFields, field[framework]), function (step) {
+                return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
+                  Wrapper: Wrapper,
+                  GroupWrapper: GroupWrapper,
+                  PlaceholderWrapper: PlaceholderWrapper,
+                  BottomView: BottomView,
+                  onChange: _onChange,
+                  onEnter: onEnter,
+                  fields: field.fields && _isArray$2(field.fields[step]) ? field.fields[step] : [],
+                  control: control,
+                  framework: framework,
+                  getValues: getValues,
+                  disabled: field.disabled ? true : disabled,
+                  // pass disabled status to inner components
+                  readOnly: readOnly,
+                  plaintext: plaintext,
+                  errors: errors,
+                  showErrors: showErrors,
+                  level: level + 1,
+                  locale: locale,
+                  onJavascriptError: onJavascriptError,
+                  Components: Components,
+                  prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+                    key: "wrapper_top_field",
+                    parentField: field,
+                    parentFieldTarget: "fields",
+                    parentFieldSubTarget: step,
+                    nextField: field.fields && field.fields.length ? field.fields[0] : null
+                  })
+                }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+                  context: "tabs",
+                  key: "bottom_view_".concat(field.name),
+                  field: field,
+                  target: "fields",
+                  subtarget: step
+                }));
+              });
+              return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
+                key: "wrapper_".concat(field.name),
+                field: field,
+                level: level,
+                index: index,
+                className: "tabs"
+              }, component) : component;
+            }
+          });
+        } else if (field.component === 'array' && GroupWrapper) {
+          var _component = /*#__PURE__*/React$1.createElement(Component, _extends$2({
+            key: field.name,
+            lfComponent: field.component,
+            lfFramework: framework,
+            lfLocale: locale,
+            name: field.name,
+            label: field.label,
+            hint: field.hint,
+            disabled: field.disabled
+          }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
+            Wrapper: Wrapper,
+            GroupWrapper: GroupWrapper,
+            PlaceholderWrapper: PlaceholderWrapper,
+            BottomView: BottomView,
+            onChange: _onChange,
+            onEnter: onEnter,
+            fields: field.fields,
+            control: control,
+            framework: framework,
+            getValues: getValues,
+            disabled: field.disabled ? true : disabled,
+            // pass disabled status to inner components
+            readOnly: readOnly,
+            plaintext: plaintext,
+            errors: errors,
+            showErrors: showErrors,
+            level: level + 1,
+            locale: locale,
+            onJavascriptError: onJavascriptError,
+            Components: Components,
+            prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+              key: "wrapper_top_field",
+              parentField: field,
+              parentFieldTarget: "fields",
+              nextField: field.fields && field.fields.length ? field.fields[0] : null
+            })
+          }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+            context: "array",
+            key: "bottom_view_".concat(field.name),
+            field: field,
+            target: "fields"
+          })));
+          return /*#__PURE__*/React$1.createElement(GroupWrapper, {
+            key: "wrapper_".concat(field.name),
+            field: field,
+            level: level,
+            index: index,
+            className: "array"
+          }, _component);
+        } else if (field.component === 'two-columns') {
+          var _component2 = /*#__PURE__*/React$1.createElement(Component, _extends$2({
+            key: field.name,
+            lfComponent: field.component,
+            lfFramework: framework,
+            lfLocale: locale,
+            name: field.name
+          }, additionalFields), function (column) {
+            if (column === 'left') {
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
+                Wrapper: Wrapper,
+                GroupWrapper: GroupWrapper,
+                PlaceholderWrapper: PlaceholderWrapper,
+                BottomView: BottomView,
+                onChange: _onChange,
+                onEnter: onEnter,
+                fields: field.leftFields,
+                control: control,
+                framework: framework,
+                getValues: getValues,
+                disabled: field.disabled ? true : disabled,
+                // pass disabled status to inner components
+                readOnly: readOnly,
+                plaintext: plaintext,
+                errors: errors,
+                showErrors: showErrors,
+                level: level + 1,
+                locale: locale,
+                onJavascriptError: onJavascriptError,
+                Components: Components,
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+                  key: "wrapper_top_field",
+                  parentField: field,
+                  parentFieldTarget: "leftFields",
+                  nextField: field.leftFields && field.leftFields.length ? field.leftFields[0] : null
+                })
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+                context: "two-columns",
+                key: "bottom_view_".concat(field.name),
+                field: field,
+                target: "leftFields"
+              }));
+            } else if (column === 'right') {
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
+                Wrapper: Wrapper,
+                GroupWrapper: GroupWrapper,
+                PlaceholderWrapper: PlaceholderWrapper,
+                BottomView: BottomView,
+                onChange: _onChange,
+                onEnter: onEnter,
+                fields: field.rightFields,
+                control: control,
+                framework: framework,
+                getValues: getValues,
+                disabled: field.disabled ? true : disabled,
+                // pass disabled status to inner components
+                readOnly: readOnly,
+                plaintext: plaintext,
+                errors: errors,
+                showErrors: showErrors,
+                level: level + 1,
+                locale: locale,
+                onJavascriptError: onJavascriptError,
+                Components: Components,
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+                  key: "wrapper_top_field",
+                  parentField: field,
+                  parentFieldTarget: "rightFields",
+                  nextField: field.rightFields && field.rightFields.length ? field.rightFields[0] : null
+                })
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+                context: "two-columns",
+                key: "bottom_view_".concat(field.name),
+                field: field,
+                target: "rightFields"
+              }));
+            }
+          });
+          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
+            key: "wrapper_".concat(field.name),
+            className: "two-columns",
+            level: level,
+            field: field,
+            index: index
+          }, _component2) : _component2;
+        } else if (field.component === 'three-columns') {
+          var _component3 = /*#__PURE__*/React$1.createElement(Component, _extends$2({
+            key: "three-columns-".concat(field.name),
+            name: field.name,
+            lfComponent: field.component,
+            lfFramework: framework,
+            lfLocale: locale
+          }, additionalFields), function (column) {
+            if (column === 'left') {
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
+                Wrapper: Wrapper,
+                GroupWrapper: GroupWrapper,
+                PlaceholderWrapper: PlaceholderWrapper,
+                BottomView: BottomView,
+                onChange: _onChange,
+                onEnter: onEnter,
+                fields: field.leftFields,
+                control: control,
+                framework: framework,
+                getValues: getValues,
+                disabled: field.disabled ? true : disabled,
+                // pass disabled status to inner components
+                readOnly: readOnly,
+                plaintext: plaintext,
+                errors: errors,
+                showErrors: showErrors,
+                level: level + 1,
+                locale: locale,
+                onJavascriptError: onJavascriptError,
+                Components: Components,
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+                  key: "wrapper_top_field",
+                  parentField: field,
+                  parentFieldTarget: "leftFields",
+                  nextField: field.leftFields && field.leftFields.length ? field.leftFields[0] : null
+                })
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+                context: "three-columns",
+                key: "bottom_view_".concat(field.name),
+                field: field,
+                target: "leftFields"
+              }));
+            } else if (column === 'center') {
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
+                Wrapper: Wrapper,
+                GroupWrapper: GroupWrapper,
+                PlaceholderWrapper: PlaceholderWrapper,
+                BottomView: BottomView,
+                onChange: _onChange,
+                onEnter: onEnter,
+                fields: field.centerFields,
+                control: control,
+                framework: framework,
+                getValues: getValues,
+                disabled: field.disabled ? true : disabled,
+                // pass disabled status to inner components
+                readOnly: readOnly,
+                plaintext: plaintext,
+                errors: errors,
+                showErrors: showErrors,
+                level: level + 1,
+                locale: locale,
+                onJavascriptError: onJavascriptError,
+                Components: Components,
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+                  key: "wrapper_top_field",
+                  parentField: field,
+                  parentFieldTarget: "centerFields",
+                  nextField: field.centerFields && field.centerFields.length ? field.centerFields[0] : null
+                })
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+                context: "three-columns",
+                key: "bottom_view_".concat(field.name),
+                field: field,
+                target: "centerFields"
+              }));
+            } else if (column === 'right') {
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
+                Wrapper: Wrapper,
+                GroupWrapper: GroupWrapper,
+                PlaceholderWrapper: PlaceholderWrapper,
+                BottomView: BottomView,
+                onChange: _onChange,
+                onEnter: onEnter,
+                fields: field.rightFields,
+                control: control,
+                framework: framework,
+                getValues: getValues,
+                disabled: field.disabled ? true : disabled,
+                // pass disabled status to inner components
+                readOnly: readOnly,
+                plaintext: plaintext,
+                errors: errors,
+                showErrors: showErrors,
+                level: level + 1,
+                locale: locale,
+                onJavascriptError: onJavascriptError,
+                Components: Components,
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+                  key: "wrapper_top_field",
+                  parentField: field,
+                  parentFieldTarget: "rightFields",
+                  nextField: field.rightFields && field.rightFields.length ? field.rightFields[0] : null
+                })
+              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+                context: "three-columns",
+                key: "bottom_view_".concat(field.name),
+                field: field,
+                target: "rightFields"
+              }));
+            }
+          });
+          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
+            key: "wrapper_".concat(field.name),
+            className: "three-columns",
+            field: field,
+            level: level,
+            index: index
+          }, _component3) : _component3;
+        }
+
+        // generate the validation rule, takes into account react-hook-form
+        // validation format and i18n strings
+        var rules = translateValidation$2(_objectSpread2$2({
+          required: field.required
+        }, field.validation), locale, onJavascriptError);
+        return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
+          key: "field_".concat(field.name),
+          name: field.name,
+          rules: rules,
+          control: control,
+          render: function render(_ref5) {
+            var fieldInfo = _ref5.field;
+            var component = /*#__PURE__*/React$1.createElement(Component
+            // not sure about this, not passing the ref
+            , _extends$2({
+              name: fieldInfo.name,
+              value: fieldInfo.value,
+              onBlur: fieldInfo.onBlur,
+              key: "field_".concat(field.name),
+              lfComponent: field.component,
+              lfFramework: framework,
+              lfLocale: locale,
+              lfOnEnter: onEnter,
+              label: field.label,
+              hint: field.hint,
+              disabled: disabled || field.disabled,
+              readOnly: readOnly || field.readOnly,
+              plaintext: plaintext,
+              size: field.size,
+              placeholder: field.placeholder,
+              error: errors && errors[field.name] ? showErrors === 'inline' ? errorToString$2(errors[field.name]) : true : undefined
+            }, additionalFields, field[framework], {
+              onChange: function onChange(value, opts) {
+                // TODO use callback
+                fieldInfo.onChange(value);
+                _onChange(_objectSpread2$2(_objectSpread2$2({}, getValues()), {}, _defineProperty$4({}, field.name, value)), field.name);
+              }
+            }));
+            return Wrapper ? /*#__PURE__*/React$1.createElement(Wrapper, {
+              key: "wrapper_".concat(field.name),
+              field: field,
+              level: level,
+              index: index
+            }, component) : component;
+          }
+        });
+      });
+      return prependView ? [prependView].concat(_toConsumableArray$2(renderedFields)) : renderedFields;
+    };
+    var BaseFormGeneratorWithRef = function BaseFormGeneratorWithRef(_ref6, ref) {
+      var _form$name, _form$fields, _form$labelSubmit, _form$labelCancel;
+      var framework = _ref6.framework,
+        _ref6$form = _ref6.form,
+        form = _ref6$form === void 0 ? DEFAULT_FORM$2 : _ref6$form,
+        _ref6$onChange = _ref6.onChange,
+        onChange = _ref6$onChange === void 0 ? function () {} : _ref6$onChange,
+        _ref6$onSubmit = _ref6.onSubmit,
+        onSubmit = _ref6$onSubmit === void 0 ? function () {} : _ref6$onSubmit,
+        _ref6$onSubmitSuccess = _ref6.onSubmitSuccess,
+        onSubmitSuccess = _ref6$onSubmitSuccess === void 0 ? function () {} : _ref6$onSubmitSuccess,
+        _ref6$onSubmitError = _ref6.onSubmitError,
+        onSubmitError = _ref6$onSubmitError === void 0 ? function () {} : _ref6$onSubmitError,
+        _ref6$onReset = _ref6.onReset,
+        onReset = _ref6$onReset === void 0 ? function () {} : _ref6$onReset,
+        _ref6$onError = _ref6.onError,
+        onError = _ref6$onError === void 0 ? function () {} : _ref6$onError,
+        _ref6$onEnter = _ref6.onEnter,
+        onEnter = _ref6$onEnter === void 0 ? function () {} : _ref6$onEnter,
+        _ref6$onJavascriptErr = _ref6.onJavascriptError,
+        onJavascriptError = _ref6$onJavascriptErr === void 0 ? function () {} : _ref6$onJavascriptErr,
+        locale = _ref6.locale,
+        wrapper = _ref6.wrapper,
+        groupWrapper = _ref6.groupWrapper,
+        placeholderWrapper = _ref6.placeholderWrapper,
+        bottomView = _ref6.bottomView,
+        _ref6$defaultValues = _ref6.defaultValues,
+        defaultValues = _ref6$defaultValues === void 0 ? {} : _ref6$defaultValues,
+        _ref6$onlyFields = _ref6.onlyFields,
+        onlyFields = _ref6$onlyFields === void 0 ? false : _ref6$onlyFields,
+        _ref6$debug = _ref6.debug,
+        debug = _ref6$debug === void 0 ? false : _ref6$debug,
+        _ref6$disabled = _ref6.disabled,
+        disabledProp = _ref6$disabled === void 0 ? false : _ref6$disabled,
+        _ref6$readOnly = _ref6.readOnly,
+        readOnly = _ref6$readOnly === void 0 ? false : _ref6$readOnly,
+        _ref6$plaintext = _ref6.plaintext,
+        plaintext = _ref6$plaintext === void 0 ? false : _ref6$plaintext,
+        _ref6$hideToolbar = _ref6.hideToolbar,
+        hideToolbar = _ref6$hideToolbar === void 0 ? false : _ref6$hideToolbar,
+        Loader = _ref6.loader,
+        _ref6$prealoadCompone = _ref6.prealoadComponents,
+        prealoadComponents = _ref6$prealoadCompone === void 0 ? true : _ref6$prealoadCompone,
+        custom = _ref6.custom,
+        children = _ref6.children,
+        components = _ref6.components,
+        className = _ref6.className,
+        hideCancel = _ref6.hideCancel,
+        labelCancel = _ref6.labelCancel,
+        labelSubmit = _ref6.labelSubmit,
+        hideSubmit = _ref6.hideSubmit,
+        _ref6$demo = _ref6.demo,
+        demo = _ref6$demo === void 0 ? false : _ref6$demo,
+        footer = _ref6.footer,
+        _ref6$disableOnSubmit = _ref6.disableOnSubmit,
+        disableOnSubmit = _ref6$disableOnSubmit === void 0 ? true : _ref6$disableOnSubmit,
+        _ref6$resetAfterSubmi = _ref6.resetAfterSubmit,
+        resetAfterSubmit = _ref6$resetAfterSubmi === void 0 ? true : _ref6$resetAfterSubmi,
+        formContext = _ref6.context,
+        rest = _objectWithoutProperties$2(_ref6, _excluded$1d);
+      var showErrors = form.showErrors,
+        connectors = form.connectors;
+      var _useState = React$1.useState((_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : _uniqueId$2('form_')),
+        _useState2 = _slicedToArray$2(_useState, 2),
+        formName = _useState2[0],
+        setFormName = _useState2[1];
+      useStylesheet$2(formName, form.css);
+      var _useState3 = React$1.useState(null),
+        _useState4 = _slicedToArray$2(_useState3, 2),
+        transformers = _useState4[0],
+        setTransformers = _useState4[1];
+      var _useState5 = React$1.useState(prealoadComponents),
+        _useState6 = _slicedToArray$2(_useState5, 2),
+        preloading = _useState6[0],
+        setPreloading = _useState6[1];
+      var _useState7 = React$1.useState(false),
+        _useState8 = _slicedToArray$2(_useState7, 2),
+        stateDisabled = _useState8[0],
+        setDisabled = _useState8[1];
+      var _useState9 = React$1.useState(1),
+        _useState10 = _slicedToArray$2(_useState9, 2),
+        version = _useState10[0],
+        setVersion = _useState10[1];
+      var _useState11 = React$1.useState(_objectSpread2$2({
+          locales: form.locales,
+          locale: locale
+        }, formContext)),
+        _useState12 = _slicedToArray$2(_useState11, 2),
+        currentContext = _useState12[0],
+        setCurrentContext = _useState12[1];
+      var _useForm = reactHookForm.useForm({
+          defaultValues: defaultValues,
+          mode: form.validationMode
+        }),
+        handleSubmit = _useForm.handleSubmit,
+        _useForm$formState = _useForm.formState,
+        errors = _useForm$formState.errors,
+        isValid = _useForm$formState.isValid,
+        reset = _useForm.reset,
+        control = _useForm.control,
+        getValues = _useForm.getValues,
+        trigger = _useForm.trigger;
+      React$1.useImperativeHandle(ref, function () {
+        return {
+          validate: function () {
+            var _validate = _asyncToGenerator$2( /*#__PURE__*/_regeneratorRuntime$2().mark(function _callee() {
+              return _regeneratorRuntime$2().wrap(function _callee$(_context) {
+                while (1) switch (_context.prev = _context.next) {
+                  case 0:
+                    return _context.abrupt("return", trigger());
+                  case 1:
+                  case "end":
+                    return _context.stop();
+                }
+              }, _callee);
+            }));
+            function validate() {
+              return _validate.apply(this, arguments);
+            }
+            return validate;
+          }()
+        };
+      });
+      var _useState13 = React$1.useState(),
+        _useState14 = _slicedToArray$2(_useState13, 2),
+        validationErrors = _useState14[0],
+        setValidationErrors = _useState14[1];
+      // store form fields, apply immediately transformers (collected from all fields)
+      var _useState15 = React$1.useState(null),
+        _useState16 = _slicedToArray$2(_useState15, 2),
+        formFields = _useState16[0],
+        setFormFields = _useState16[1];
+      var MergedComponents = mergeComponents$2(Fields, components);
+      var disabled = stateDisabled || disabledProp;
+      // it's the combination of the fields from the form schema and those specified
+      // with the DSL, from now on every func should reference this (not form.fields)
+      var actualFields = [].concat(_toConsumableArray$2((_form$fields = form.fields) !== null && _form$fields !== void 0 ? _form$fields : []), _toConsumableArray$2(traverseChildren$2(children, {
+        components: MergedComponents,
+        framework: framework
+      })));
+      if (!framework) {
+        lfError$2('missing "framework" prop');
+        return;
+      }
+
+      // listen to changes of context, re-render just in case
+      React$1.useEffect(function () {
+        if (formContext) {
+          setCurrentContext(formContext);
+        }
+      }, [formContext]);
+
+      // preload components of the form
+      React$1.useEffect(function () {
+        if (prealoadComponents) {
+          var _components = _uniq$2(reduceFields$2(actualFields, function (field, acc) {
+            return [].concat(_toConsumableArray$2(acc), [field.component]);
+          }, []));
+          lfLog$2('Preloading components: ' + _components.join(', '));
+          var loaders = _components.map(function (component) {
+            if (MergedComponents[component] && MergedComponents[component][framework] && _isFunction$2(MergedComponents[component][framework].preload)) {
+              return MergedComponents[component][framework].preload();
+            }
+          }).filter(Boolean);
+          // if preloader exist, also add form
+          if (_isFunction$2(Forms[framework].preload)) {
+            loaders.push(Forms[framework].preload());
+          }
+          // when everything is loaded (including the form)
+          Promise.all(loaders).then(function () {
+            return setPreloading(false);
+          }).catch(function (e) {
+            lfError$2('loading component', e);
+            throw e;
+          });
+        }
+      }, []);
+
+      // update internal state if form changes
+      React$1.useEffect(function () {
+        var f = /*#__PURE__*/function () {
+          var _ref7 = _asyncToGenerator$2( /*#__PURE__*/_regeneratorRuntime$2().mark(function _callee2() {
+            var _form$name2;
+            var newTransformers, newFields, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _iterator, _step, newFormFields, onChangeFields, idx, _iteratorAbruptCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, _newFormFields;
+            return _regeneratorRuntime$2().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
+                case 0:
+                  newTransformers = collectTransformers$2(actualFields, form.transformer || form.script, onJavascriptError); // initial fields values
+                  newFields = actualFields; // apply onRender transformers
+                  if (_isEmpty$2(newTransformers.onRender)) {
+                    _context2.next = 32;
+                    break;
+                  }
+                  _iteratorAbruptCompletion = false;
+                  _didIteratorError = false;
+                  _context2.prev = 5;
+                  _iterator = _asyncIterator$2(applyTransformers$2(formName, framework, newFields, newTransformers.onRender, defaultValues, onJavascriptError, currentContext));
+                case 7:
+                  _context2.next = 9;
+                  return _iterator.next();
+                case 9:
+                  if (!(_iteratorAbruptCompletion = !(_step = _context2.sent).done)) {
+                    _context2.next = 16;
+                    break;
+                  }
+                  newFormFields = _step.value;
+                  newFields = newFormFields;
+                  setFormFields(newFormFields);
+                case 13:
+                  _iteratorAbruptCompletion = false;
+                  _context2.next = 7;
+                  break;
+                case 16:
+                  _context2.next = 22;
+                  break;
+                case 18:
+                  _context2.prev = 18;
+                  _context2.t0 = _context2["catch"](5);
+                  _didIteratorError = true;
+                  _iteratorError = _context2.t0;
+                case 22:
+                  _context2.prev = 22;
+                  _context2.prev = 23;
+                  if (!(_iteratorAbruptCompletion && _iterator.return != null)) {
+                    _context2.next = 27;
+                    break;
+                  }
+                  _context2.next = 27;
+                  return _iterator.return();
+                case 27:
+                  _context2.prev = 27;
+                  if (!_didIteratorError) {
+                    _context2.next = 30;
+                    break;
+                  }
+                  throw _iteratorError;
+                case 30:
+                  return _context2.finish(27);
+                case 31:
+                  return _context2.finish(22);
+                case 32:
+                  // collect list of fields with an onChange transformer
+                  onChangeFields = Object.keys(newTransformers.onChange || {}).filter(function (fieldName) {
+                    return !_isEmpty$2(newTransformers.onChange[fieldName]);
+                  }); // execute all onChange transformers at the bootstrap of the form
+                  idx = 0;
+                case 34:
+                  if (!(idx < onChangeFields.length)) {
+                    _context2.next = 67;
+                    break;
+                  }
+                  _iteratorAbruptCompletion2 = false;
+                  _didIteratorError2 = false;
+                  _context2.prev = 37;
+                  _iterator2 = _asyncIterator$2(applyTransformers$2(formName, framework, newFields, newTransformers.onChange[onChangeFields[idx]], defaultValues, onJavascriptError, currentContext));
+                case 39:
+                  _context2.next = 41;
+                  return _iterator2.next();
+                case 41:
+                  if (!(_iteratorAbruptCompletion2 = !(_step2 = _context2.sent).done)) {
+                    _context2.next = 48;
+                    break;
+                  }
+                  _newFormFields = _step2.value;
+                  newFields = _newFormFields;
+                  setFormFields(_newFormFields);
+                case 45:
+                  _iteratorAbruptCompletion2 = false;
+                  _context2.next = 39;
+                  break;
+                case 48:
+                  _context2.next = 54;
+                  break;
+                case 50:
+                  _context2.prev = 50;
+                  _context2.t1 = _context2["catch"](37);
+                  _didIteratorError2 = true;
+                  _iteratorError2 = _context2.t1;
+                case 54:
+                  _context2.prev = 54;
+                  _context2.prev = 55;
+                  if (!(_iteratorAbruptCompletion2 && _iterator2.return != null)) {
+                    _context2.next = 59;
+                    break;
+                  }
+                  _context2.next = 59;
+                  return _iterator2.return();
+                case 59:
+                  _context2.prev = 59;
+                  if (!_didIteratorError2) {
+                    _context2.next = 62;
+                    break;
+                  }
+                  throw _iteratorError2;
+                case 62:
+                  return _context2.finish(59);
+                case 63:
+                  return _context2.finish(54);
+                case 64:
+                  idx++;
+                  _context2.next = 34;
+                  break;
+                case 67:
+                  setFormName((_form$name2 = form.name) !== null && _form$name2 !== void 0 ? _form$name2 : _uniqueId$2('form_'));
+                  setTransformers(newTransformers);
+
+                  // if transformed fields different than current one, then save
+                  if (newFields !== formFields) {
+                    setFormFields(newFields);
+                  }
+                case 70:
+                case "end":
+                  return _context2.stop();
+              }
+            }, _callee2, null, [[5, 18, 22, 32], [23,, 27, 31], [37, 50, 54, 64], [55,, 59, 63]]);
+          }));
+          return function f() {
+            return _ref7.apply(this, arguments);
+          };
+        }();
+        f();
+      },
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      [form, framework, children] // don't put defaultValues here
+      );
+
+      var onHandleSubmit = React$1.useCallback( /*#__PURE__*/function () {
+        var _ref8 = _asyncToGenerator$2( /*#__PURE__*/_regeneratorRuntime$2().mark(function _callee3(data) {
+          var idx, responses, connector, proxyFetch, response;
+          return _regeneratorRuntime$2().wrap(function _callee3$(_context3) {
+            while (1) switch (_context3.prev = _context3.next) {
+              case 0:
+                if (!(Array.isArray(connectors) && connectors.length !== 0)) {
+                  _context3.next = 32;
+                  break;
+                }
+                // call onSubmit immediately
+                onSubmit(data);
+                // disable if needed
+                if (disableOnSubmit) {
+                  setDisabled(true);
+                }
+                // loop over connectors
+                responses = [];
+                idx = 0;
+              case 5:
+                if (!(idx < connectors.length)) {
+                  _context3.next = 27;
+                  break;
+                }
+                connector = connectors[idx];
+                proxyFetch = ProxyFetch$2(connector.options); // wrap fetch
+                _context3.prev = 8;
+                _context3.next = 11;
+                return Connectors$2[connector.name]({
+                  data: data,
+                  options: connector.options,
+                  fetch: proxyFetch,
+                  fields: reduceFields$2(formFields, function (field, acc) {
+                    return _objectSpread2$2(_objectSpread2$2({}, acc), {}, _defineProperty$4({}, field.name, field.component));
+                  }, {})
+                });
+              case 11:
+                response = _context3.sent;
+                if (!(response.status >= 400)) {
+                  _context3.next = 16;
+                  break;
+                }
+                if (disableOnSubmit) {
+                  setDisabled(false);
+                }
+                onSubmitError(response);
+                return _context3.abrupt("return");
+              case 16:
+                responses.push(response);
+                _context3.next = 24;
+                break;
+              case 19:
+                _context3.prev = 19;
+                _context3.t0 = _context3["catch"](8);
+                // if failed call, return the erro, stop the chain and re-enable the form
+                if (disableOnSubmit) {
+                  setDisabled(false);
+                }
+                onSubmitError(_context3.t0);
+                return _context3.abrupt("return");
+              case 24:
+                idx++;
+                _context3.next = 5;
+                break;
+              case 27:
+                // re-enable and reset if needed
+                if (disableOnSubmit) {
+                  setDisabled(false);
+                }
+                if (resetAfterSubmit) {
+                  reset(defaultValues);
+                  setVersion(function (version) {
+                    return version + 1;
+                  });
+                }
+                // finally the callback
+                onSubmitSuccess(responses.length === 1 ? responses[0] : responses);
+                _context3.next = 34;
+                break;
+              case 32:
+                setValidationErrors(null);
+                onSubmit(data);
+              case 34:
+              case "end":
+                return _context3.stop();
+            }
+          }, _callee3, null, [[8, 19]]);
+        }));
+        return function (_x) {
+          return _ref8.apply(this, arguments);
+        };
+      }(), [onSubmit, onSubmitSuccess, formFields]);
+      var onHandleError = React$1.useCallback(function (data) {
+        setValidationErrors(data);
+        onError(data);
+      }, [onError]);
+      var handleReset = React$1.useCallback(function () {
+        setValidationErrors(null);
+        reset(defaultValues);
+        // not proud of this
+        setVersion(function (version) {
+          return version + 1;
+        });
+        onReset();
+      }, [defaultValues, reset, onReset]);
+      var handleChange = React$1.useCallback( /*#__PURE__*/function () {
+        var _ref9 = _asyncToGenerator$2( /*#__PURE__*/_regeneratorRuntime$2().mark(function _callee4(values, fieldName) {
+          var newFields, _iteratorAbruptCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, f, _iteratorAbruptCompletion4, _didIteratorError4, _iteratorError4, _iterator4, _step4, _f;
+          return _regeneratorRuntime$2().wrap(function _callee4$(_context4) {
+            while (1) switch (_context4.prev = _context4.next) {
+              case 0:
+                if (transformers) {
+                  _context4.next = 2;
+                  break;
+                }
+                return _context4.abrupt("return");
+              case 2:
+                // execute main transformer
+                newFields = formFields;
+                if (_isEmpty$2(transformers.onRender)) {
+                  _context4.next = 33;
+                  break;
+                }
+                _iteratorAbruptCompletion3 = false;
+                _didIteratorError3 = false;
+                _context4.prev = 6;
+                _iterator3 = _asyncIterator$2(applyTransformers$2(formName, framework, newFields, transformers.onRender, values, onJavascriptError, currentContext));
+              case 8:
+                _context4.next = 10;
+                return _iterator3.next();
+              case 10:
+                if (!(_iteratorAbruptCompletion3 = !(_step3 = _context4.sent).done)) {
+                  _context4.next = 17;
+                  break;
+                }
+                f = _step3.value;
+                newFields = f;
+                if (f !== formFields) {
+                  setFormFields(f);
+                }
+              case 14:
+                _iteratorAbruptCompletion3 = false;
+                _context4.next = 8;
+                break;
+              case 17:
+                _context4.next = 23;
+                break;
+              case 19:
+                _context4.prev = 19;
+                _context4.t0 = _context4["catch"](6);
+                _didIteratorError3 = true;
+                _iteratorError3 = _context4.t0;
+              case 23:
+                _context4.prev = 23;
+                _context4.prev = 24;
+                if (!(_iteratorAbruptCompletion3 && _iterator3.return != null)) {
+                  _context4.next = 28;
+                  break;
+                }
+                _context4.next = 28;
+                return _iterator3.return();
+              case 28:
+                _context4.prev = 28;
+                if (!_didIteratorError3) {
+                  _context4.next = 31;
+                  break;
+                }
+                throw _iteratorError3;
+              case 31:
+                return _context4.finish(28);
+              case 32:
+                return _context4.finish(23);
+              case 33:
+                if (!(transformers.onChange != null && !_isEmpty$2(transformers.onChange[fieldName]))) {
+                  _context4.next = 63;
+                  break;
+                }
+                // execute the async generator transformer
+                _iteratorAbruptCompletion4 = false;
+                _didIteratorError4 = false;
+                _context4.prev = 36;
+                _iterator4 = _asyncIterator$2(applyTransformers$2(formName, framework, newFields, transformers.onChange[fieldName], values, onJavascriptError, currentContext));
+              case 38:
+                _context4.next = 40;
+                return _iterator4.next();
+              case 40:
+                if (!(_iteratorAbruptCompletion4 = !(_step4 = _context4.sent).done)) {
+                  _context4.next = 47;
+                  break;
+                }
+                _f = _step4.value;
+                newFields = _f;
+                if (_f !== formFields) {
+                  setFormFields(_f);
+                }
+              case 44:
+                _iteratorAbruptCompletion4 = false;
+                _context4.next = 38;
+                break;
+              case 47:
+                _context4.next = 53;
+                break;
+              case 49:
+                _context4.prev = 49;
+                _context4.t1 = _context4["catch"](36);
+                _didIteratorError4 = true;
+                _iteratorError4 = _context4.t1;
+              case 53:
+                _context4.prev = 53;
+                _context4.prev = 54;
+                if (!(_iteratorAbruptCompletion4 && _iterator4.return != null)) {
+                  _context4.next = 58;
+                  break;
+                }
+                _context4.next = 58;
+                return _iterator4.return();
+              case 58:
+                _context4.prev = 58;
+                if (!_didIteratorError4) {
+                  _context4.next = 61;
+                  break;
+                }
+                throw _iteratorError4;
+              case 61:
+                return _context4.finish(58);
+              case 62:
+                return _context4.finish(53);
+              case 63:
+                onChange(values);
+              case 64:
+              case "end":
+                return _context4.stop();
+            }
+          }, _callee4, null, [[6, 19, 23, 33], [24,, 28, 32], [36, 49, 53, 63], [54,, 58, 62]]);
+        }));
+        return function (_x2, _x3) {
+          return _ref9.apply(this, arguments);
+        };
+      }(), [onChange, formFields, formName, transformers, framework, onJavascriptError]);
+      var handleEnter = React$1.useCallback(function () {
+        handleSubmit(onHandleSubmit, onHandleError)();
+        onEnter();
+      }, [handleSubmit, onEnter, onHandleError, onHandleSubmit]);
+      if (debug) {
+        console.log('[LetsForm] Validation', errors);
+      }
+      var Form = Forms[framework];
+      var Wrapper = wrapper;
+      var GroupWrapper = groupWrapper;
+      var BottomView = bottomView;
+      var PlaceholderWrapper = placeholderWrapper;
+      if (preloading) {
+        return Loader ? /*#__PURE__*/React$1.createElement(Loader, null) : /*#__PURE__*/React$1.createElement("div", null, "Loading...");
+      }
+      if (plaintext) {
+        return /*#__PURE__*/React$1.createElement(PlaintextForm$2, {
+          form: form,
+          locale: locale,
+          framework: framework,
+          currentValues: getValues()
+        });
+      }
+      // get errors from state or from hook, perhaps state is not needed
+      var formErrors = !_isEmpty$2(errors) ? errors : validationErrors;
+      if (debug) {
+        console.log("[LetsForm] Render form (".concat(form.name, ")"));
+      }
+      return /*#__PURE__*/React$1.createElement(FormContext$2.Provider, {
+        value: currentContext
+      }, /*#__PURE__*/React$1.createElement("div", {
+        className: classNames$2('lf-lets-form', {
+          'lf-lets-form-edit-mode': demo
+        }, className)
+      }, formErrors && showErrors === 'groupedTop' && /*#__PURE__*/React$1.createElement(ValidationErrors$2, {
+        className: "top",
+        locale: locale,
+        errors: enrichWithLabels$2(formErrors, formFields)
+      }), /*#__PURE__*/React$1.createElement(React$1.Suspense, {
+        fallback: Loader ? /*#__PURE__*/React$1.createElement(Loader, null) : /*#__PURE__*/React$1.createElement("div", null, "Loading...")
+      }, /*#__PURE__*/React$1.createElement(Form, _extends$2({
+        key: "lf_".concat(version),
+        onSubmit: handleSubmit(onHandleSubmit, onHandleError),
+        name: formName,
+        defaultValues: defaultValues,
+        onlyFields: onlyFields,
+        hideToolbar: hideToolbar,
+        onReset: handleReset,
+        disabled: disabled,
+        disabledSubmit: form.disableSubmitOnError && !isValid,
+        readOnly: readOnly,
+        plaintext: plaintext,
+        locale: locale
+      }, _omit$2(form, 'id', 'fields', 'version'), {
+        labelSubmit: i18n$2((_form$labelSubmit = form.labelSubmit) !== null && _form$labelSubmit !== void 0 ? _form$labelSubmit : labelSubmit, locale) || 'Submit',
+        labelCancel: i18n$2((_form$labelCancel = form.labelCancel) !== null && _form$labelCancel !== void 0 ? _form$labelCancel : labelCancel, locale) || 'Reset',
+        hideCancel: hideCancel,
+        hideSubmit: hideSubmit,
+        custom: custom
+      }, rest), renderFields({
+        Wrapper: Wrapper,
+        GroupWrapper: GroupWrapper,
+        PlaceholderWrapper: PlaceholderWrapper,
+        BottomView: BottomView,
+        onChange: handleChange,
+        onEnter: handleEnter,
+        fields: formFields,
+        // take from state
+        control: control,
+        framework: framework,
+        getValues: getValues,
+        debug: debug,
+        errors: errors,
+        disabled: disabled || form.disabled,
+        readOnly: readOnly || form.readOnly,
+        plaintext: plaintext || form.plaintext,
+        showErrors: showErrors,
+        locale: locale,
+        onJavascriptError: onJavascriptError,
+        Components: MergedComponents
+      }), footer, formErrors && (showErrors === 'groupedBottom' || _isEmpty$2(showErrors)) && /*#__PURE__*/React$1.createElement(ValidationErrors$2, {
+        className: "bottom",
+        locale: locale,
+        errors: enrichWithLabels$2(formErrors, formFields)
+      }))), demo && /*#__PURE__*/React$1.createElement("div", {
+        className: "label-test-buttons"
+      }, "Test buttons")));
+    };
+    var BaseFormGenerator = /*#__PURE__*/React$1.forwardRef(BaseFormGeneratorWithRef);
+    var FormGenerator = /*#__PURE__*/React$1.memo(BaseFormGenerator, function (prevProps, nextProps) {
+      {
+        var _nextProps$form, _nextProps$form2;
+        console.log("[LetsForm] Form generator ".concat((_nextProps$form = nextProps.form) !== null && _nextProps$form !== void 0 && _nextProps$form.name ? '(' + ((_nextProps$form2 = nextProps.form) === null || _nextProps$form2 === void 0 ? void 0 : _nextProps$form2.name) + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale) + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext) + ' disabled=' + (prevProps.disabled === nextProps.disabled) + ' children=' + (prevProps.children === nextProps.children) + ' custom=' + (prevProps.custom === nextProps.custom) + ' context=' + (prevProps.context === nextProps.context));
+      }
+      var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale && prevProps.plaintext === nextProps.plaintext && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children && prevProps.custom === nextProps.custom && prevProps.context === nextProps.context;
+      console.log("Is re-rendering? ".concat(!isEqual));
+      return isEqual;
+    });
+    FormGenerator.displayName = 'LetsForm';
+    return FormGenerator;
+  };
+
+  function lazyPreload$2(factory) {
+    var ReactLazyComponent = /*#__PURE__*/React$1.lazy(factory);
+    var PreloadedComponent;
+    var factoryPromise;
+    var Component = /*#__PURE__*/React$1.forwardRef(function LazyWithPreload(props, ref) {
+      var _PreloadedComponent;
+      // Once one of these is chosen, we must ensure that it continues to be
+      // used for all subsequent renders, otherwise it can cause the
+      // underlying component to be unmounted and remounted.
+      var ComponentToRender = React$1.useRef((_PreloadedComponent = PreloadedComponent) !== null && _PreloadedComponent !== void 0 ? _PreloadedComponent : ReactLazyComponent);
+      return /*#__PURE__*/React$1.createElement(ComponentToRender.current, Object.assign(ref ? {
+        ref: ref
+      } : {}, props));
+    });
+    var LazyWithPreload = Component;
+    LazyWithPreload.preload = function () {
+      if (!factoryPromise) {
+        factoryPromise = factory().then(function (module) {
+          PreloadedComponent = module.default;
+          return PreloadedComponent;
+        }, function (e) {
+          console.log('Error preloading', e);
+        });
+      }
+      return factoryPromise;
+    };
+    return LazyWithPreload;
+  }
+
+  var _excluded$1c = ["framework", "children"];
+  var Fields$2 = {
+    'input-text': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$A; });
+      })
+    },
+    'toggle': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$z; });
+      })
+    },
+    'select': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$y; });
+      })
+    },
+    'group': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$x; });
+      })
+    },
+    'array': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$w; });
+      })
+    },
+    'two-columns': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$v; });
+      })
+    },
+    'three-columns': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$u; });
+      })
+    },
+    'input-number': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$s; });
+      })
+    },
+    'date': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$r; });
+      })
+    },
+    'checkbox': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$q; });
+      })
+    },
+    'checkbox-group': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$p; });
+      })
+    },
+    'slider': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$o; });
+      })
+    },
+    'radio-group': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$n; });
+      })
+    },
+    'input-tag': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$m; });
+      })
+    },
+    'input-mask': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$l; });
+      })
+    },
+    'textarea': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$k; });
+      })
+    },
+    'rate': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$j; });
+      })
+    },
+    'placeholder': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$i; });
+      })
+    },
+    'multiselect': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$h; });
+      })
+    },
+    'multiselect-language': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$g; });
+      })
+    },
+    'input-text-i18n': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$f; });
+      })
+    },
+    'placeholder-image': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$e; });
+      })
+    },
+    'button': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$d; });
+      })
+    },
+    'divider': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$B; });
+      })
+    },
+    'react-view': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$c; });
+      })
+    },
+    'datetime': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$b; });
+      })
+    },
+    'tabs': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$a; });
+      })
+    },
+    'radio-tile': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$9; });
+      })
+    },
+    'upload': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$8; });
+      })
+    },
+    'buttons-toggle-group': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$7; });
+      })
+    },
+    'steps': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$6; });
+      })
+    },
+    'esm-module': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$5; });
+      })
+    },
+    'time': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$4; });
+      })
+    },
+    'hidden': {
+      'react-rsuite5': lazyPreload$2(function () {
+        return Promise.resolve().then(function () { return index$3; });
+      })
+    }
+  };
+  var Forms$2 = {
+    'react-rsuite5': lazyPreload$2(function () {
+      return Promise.resolve().then(function () { return index$2; });
+    })
+  };
+  var FormGenerator$2 = GenerateGenerator$2({
+    Fields: Fields$2,
+    Forms: Forms$2
+  });
+  var LetsForm$2 = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
+    _ref.framework;
+      var children = _ref.children,
+      rest = _objectWithoutProperties$2(_ref, _excluded$1c);
+    var refForm = React$1.useRef();
+    React$1.useImperativeHandle(ref, function () {
+      return {
+        validate: function validate() {
+          return refForm.current.validate();
+        }
+      };
+    });
+    return /*#__PURE__*/React$1.createElement(FormGenerator$2, _extends$2({
+      ref: refForm,
+      framework: "react-rsuite5"
+    }, rest), children);
+  });
+
+  var POPOVER_STYLE$2 = {
+    padding: '6px',
+    color: '#ff6633'
+  };
+  var RSuite5FieldControl$2 = function RSuite5FieldControl(_ref) {
+    var errorMessage = _ref.errorMessage,
+      children = _ref.children;
+    var triggerRef = React$1.useRef();
+    React$1.useEffect(function () {
+      if (errorMessage) {
+        triggerRef.current.open();
+      } else {
+        triggerRef.current.close();
+      }
+    }, [errorMessage]);
+    return /*#__PURE__*/React$1.createElement(rsuite.Whisper, {
+      placement: "bottomStart",
+      ref: triggerRef,
+      trigger: "none",
+      speaker: /*#__PURE__*/React$1.createElement(rsuite.Popover, {
+        style: POPOVER_STYLE$2,
+        visible: !!errorMessage,
+        className: "lf-react-rsuite5-error-popover"
+      }, /*#__PURE__*/React$1.createElement("div", null, errorMessage))
+    }, children);
+  };
+
+  var css_248z$L = ".lf-control-input-text .rs-form-control-wrapper > .rs-input, .lf-control-input-text .rs-form-control-wrapper > .rs-input-number {\n  width: 100%;\n}\n.lf-control-input-text.lf-full-width .rs-input-group {\n  width: 100%;\n}\n.lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-control-input-text.lf-size-lg .lf-prefix-icon {\n  max-height: 22px;\n}\n.lf-control-input-text.lf-size-md .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-control-input-text.lf-size-sm .lf-prefix-icon {\n  max-height: 10px;\n}\n.lf-control-input-text.lf-size-xs .lf-prefix-icon {\n  max-height: 4px;\n}";
+  styleInject$2(css_248z$L);
+
+  var _excluded$1b = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "lfOnEnter"];
+  var TextInput$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      placeholder = _ref.placeholder,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      _ref$submitOnEnter = _ref.submitOnEnter,
+      submitOnEnter = _ref$submitOnEnter === void 0 ? false : _ref$submitOnEnter,
+      error = _ref.error,
+      prefix = _ref.prefix,
+      postfix = _ref.postfix,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      _ref$fullWidth = _ref.fullWidth,
+      fullWidth = _ref$fullWidth === void 0 ? true : _ref$fullWidth,
+      width = _ref.width,
+      autocomplete = _ref.autocomplete,
+      inputMode = _ref.inputMode,
+      inputType = _ref.inputType,
+      _ref$inside = _ref.inside,
+      inside = _ref$inside === void 0 ? false : _ref$inside,
+      _ref$lfOnEnter = _ref.lfOnEnter,
+      lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
+      rest = _objectWithoutProperties$2(_ref, _excluded$1b);
+    var handleKeyUp = React$1.useCallback(function (e) {
+      return e.keyCode === 13 && lfOnEnter();
+    }, [lfOnEnter]);
+    var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _isString$2(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.Input, _extends$2({
+      accepter: rsuite.Input,
+      defaultValue: value,
+      onChange: onChange,
+      onBlur: onBlur,
+      onKeyUp: submitOnEnter ? handleKeyUp : undefined,
+      disabled: disabled,
+      autoComplete: autocomplete,
+      inputMode: inputMode,
+      type: inputType,
+      size: size,
+      placeholder: placeholder,
+      readOnly: readOnly,
+      style: makeWidthStyle$2(fullWidth, width),
+      className: classNames$2({
+        'lf-full-width': fullWidth || width != null
+      })
+    }, passRest$2(rest))));
+    var needsGroup = postfix || prefix;
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      className: classNames$2('lf-control-input-text', _defineProperty$4({}, "lf-size-".concat(size), size != null)),
+      "data-lf-field-name": name
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/React$1.createElement(rsuite.InputGroup, {
+      inside: inside
+    }, prefix && /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, TextOrIcon$2(prefix)), inner, postfix && /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, TextOrIcon$2(postfix))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog$2('Loaded RSuite.InputText');
+
+  var index$A = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: TextInput$2
+  });
+
+  var ToggleInput$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      onChange = _ref.onChange,
+      checkedChildren = _ref.checkedChildren,
+      unCheckedChildren = _ref.unCheckedChildren,
+      error = _ref.error;
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      controlId: name,
+      className: "lf-control-toggle"
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _isString$2(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.Toggle, {
+      name: name,
+      checked: value,
+      onChange: onChange,
+      disabled: disabled,
+      unCheckedChildren: unCheckedChildren && unCheckedChildren !== '' ? unCheckedChildren : undefined,
+      checkedChildren: checkedChildren && checkedChildren !== '' ? checkedChildren : undefined,
+      errorMessage: _isString$2(error) ? error : undefined,
+      size: size
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
+  lfLog$2('Loaded RSuite5.ToggleInput');
+
+  var index$z = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ToggleInput$2
+  });
+
+  var css_248z$K = ".lf-control-select-option-rsuite5 img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  margin-right: 6px;\n  margin-top: -4px;\n  display: inline-block;\n}";
+  styleInject$2(css_248z$K);
+
+  var _excluded$1a = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions", "fullWidth", "width"];
+  var menuItem$2 = function menuItem(_value, item) {
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-select-option-rsuite5"
+    }, item.image && /*#__PURE__*/React$1.createElement("img", {
+      src: item.image,
+      alt: item.label
+    }), /*#__PURE__*/React$1.createElement("span", null, item.label));
+  };
+  var Select$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      placeholder = _ref.placeholder;
+      _ref.lfLocale;
+      var options = _ref.options,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      _ref$block = _ref.block,
+      block = _ref$block === void 0 ? false : _ref$block,
+      _ref$searchable = _ref.searchable,
+      searchable = _ref$searchable === void 0 ? false : _ref$searchable,
+      _ref$cleanable = _ref.cleanable,
+      cleanable = _ref$cleanable === void 0 ? false : _ref$cleanable,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      placement = _ref.placement,
+      appearance = _ref.appearance,
+      filterKey = _ref.filterKey,
+      filterValue = _ref.filterValue,
+      showImageOptions = _ref.showImageOptions,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      rest = _objectWithoutProperties$2(_ref, _excluded$1a);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      className: "lf-control-select",
+      controlId: name,
+      style: makeWidthStyle$2(fullWidth, width)
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _isString$2(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.SelectPicker, _extends$2({
+      appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
+      name: name,
+      value: value,
+      onChange: onChange,
+      readOnly: readOnly,
+      onBlur: onBlur,
+      placement: placement,
+      errorMessage: _isString$2(error) ? error : undefined,
+      disabled: disabled,
+      size: size,
+      placeholder: placeholder,
+      renderMenuItem: showImageOptions ? menuItem$2 : undefined,
+      renderValue: showImageOptions ? menuItem$2 : undefined,
+      data: filterOptions$2(options, filterValue, filterKey) || [],
+      block: block || fullWidth || width != null,
+      searchable: searchable,
+      cleanable: cleanable
+    }, passRest$2(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder'], {
+    options: i18nOptions$2
+  });
+  lfLog$2('Loaded RSuite5.Select');
+
+  var index$y = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Select$2
+  });
+
+  lfLog$2('Loaded RSuite5.Group');
+
+  var index$x = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Group$2
+  });
+
+  var _excluded$19 = ["hint", "required", "tooltip", "name", "label"];
+  var ListArrayRSuite5$2 = I18N$2(function (_ref) {
+    var hint = _ref.hint,
+      required = _ref.required,
+      tooltip = _ref.tooltip,
+      name = _ref.name,
+      label = _ref.label,
+      rest = _objectWithoutProperties$2(_ref, _excluded$19);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-array"
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(ListArray$2, _extends$2({
+      LetsFormComponent: LetsForm$2
+    }, passRest$2(rest))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint']);
+  lfLog$2('Loaded RSuite5.ListArray');
+
+  var index$w = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ListArrayRSuite5$2
+  });
+
+  lfLog$2('Loaded RSuite5.TwoColumns');
+
+  var index$v = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: TwoColumns$2
+  });
+
+  lfLog$2('Loaded RSuite5.ThreeColumns');
+
+  var index$u = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ThreeColumns$2
+  });
+
+  var css_248z$J = ".lf-form-react-rsuite5 .lf-control-input-number.rs-form-group .rs-input-group {\n  width: auto;\n}";
+  styleInject$2(css_248z$J);
+
+  function _AsyncGenerator$1(gen) {
+    var front, back;
+    function resume(key, arg) {
+      try {
+        var result = gen[key](arg),
+          value = result.value,
+          overloaded = value instanceof _OverloadYield$1;
+        Promise.resolve(overloaded ? value.v : value).then(function (arg) {
+          if (overloaded) {
+            var nextKey = "return" === key ? "return" : "next";
+            if (!value.k || arg.done) return resume(nextKey, arg);
+            arg = gen[nextKey](arg).value;
+          }
+          settle(result.done ? "return" : "normal", arg);
+        }, function (err) {
+          resume("throw", err);
+        });
+      } catch (err) {
+        settle("throw", err);
+      }
+    }
+    function settle(type, value) {
+      switch (type) {
+        case "return":
+          front.resolve({
+            value: value,
+            done: !0
+          });
+          break;
+        case "throw":
+          front.reject(value);
+          break;
+        default:
+          front.resolve({
+            value: value,
+            done: !1
+          });
+      }
+      (front = front.next) ? resume(front.key, front.arg) : back = null;
+    }
+    this._invoke = function (key, arg) {
+      return new Promise(function (resolve, reject) {
+        var request = {
+          key: key,
+          arg: arg,
+          resolve: resolve,
+          reject: reject,
+          next: null
+        };
+        back ? back = back.next = request : (front = back = request, resume(key, arg));
+      });
+    }, "function" != typeof gen.return && (this.return = void 0);
+  }
+  _AsyncGenerator$1.prototype["function" == typeof Symbol && Symbol.asyncIterator || "@@asyncIterator"] = function () {
+    return this;
+  }, _AsyncGenerator$1.prototype.next = function (arg) {
+    return this._invoke("next", arg);
+  }, _AsyncGenerator$1.prototype.throw = function (arg) {
+    return this._invoke("throw", arg);
+  }, _AsyncGenerator$1.prototype.return = function (arg) {
+    return this._invoke("return", arg);
+  };
+  function _OverloadYield$1(value, kind) {
+    this.v = value, this.k = kind;
+  }
+  function _asyncIterator$1(iterable) {
+    var method,
+      async,
+      sync,
+      retry = 2;
+    for ("undefined" != typeof Symbol && (async = Symbol.asyncIterator, sync = Symbol.iterator); retry--;) {
+      if (async && null != (method = iterable[async])) return method.call(iterable);
+      if (sync && null != (method = iterable[sync])) return new AsyncFromSyncIterator$1(method.call(iterable));
+      async = "@@asyncIterator", sync = "@@iterator";
+    }
+    throw new TypeError("Object is not async iterable");
+  }
+  function AsyncFromSyncIterator$1(s) {
+    function AsyncFromSyncIteratorContinuation(r) {
+      if (Object(r) !== r) return Promise.reject(new TypeError(r + " is not an object."));
+      var done = r.done;
+      return Promise.resolve(r.value).then(function (value) {
+        return {
+          value: value,
+          done: done
+        };
+      });
+    }
+    return AsyncFromSyncIterator$1 = function AsyncFromSyncIterator(s) {
+      this.s = s, this.n = s.next;
+    }, AsyncFromSyncIterator$1.prototype = {
+      s: null,
+      n: null,
+      next: function next() {
+        return AsyncFromSyncIteratorContinuation(this.n.apply(this.s, arguments));
+      },
+      return: function _return(value) {
+        var ret = this.s.return;
+        return void 0 === ret ? Promise.resolve({
+          value: value,
+          done: !0
+        }) : AsyncFromSyncIteratorContinuation(ret.apply(this.s, arguments));
+      },
+      throw: function _throw(value) {
+        var thr = this.s.return;
+        return void 0 === thr ? Promise.reject(value) : AsyncFromSyncIteratorContinuation(thr.apply(this.s, arguments));
+      }
+    }, new AsyncFromSyncIterator$1(s);
+  }
+  function _awaitAsyncGenerator$1(value) {
+    return new _OverloadYield$1(value, 0);
+  }
+  function _iterableToArrayLimit$1(arr, i) {
+    var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"];
+    if (null != _i) {
+      var _s,
+        _e,
+        _x,
+        _r,
+        _arr = [],
+        _n = !0,
+        _d = !1;
+      try {
+        if (_x = (_i = _i.call(arr)).next, 0 === i) {
+          if (Object(_i) !== _i) return;
+          _n = !1;
+        } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0);
+      } catch (err) {
+        _d = !0, _e = err;
+      } finally {
+        try {
+          if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return;
+        } finally {
+          if (_d) throw _e;
+        }
+      }
+      return _arr;
+    }
+  }
+  function ownKeys$1(object, enumerableOnly) {
+    var keys = Object.keys(object);
+    if (Object.getOwnPropertySymbols) {
+      var symbols = Object.getOwnPropertySymbols(object);
+      enumerableOnly && (symbols = symbols.filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+      })), keys.push.apply(keys, symbols);
+    }
+    return keys;
+  }
+  function _objectSpread2$1(target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = null != arguments[i] ? arguments[i] : {};
+      i % 2 ? ownKeys$1(Object(source), !0).forEach(function (key) {
+        _defineProperty$1$1(target, key, source[key]);
+      }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys$1(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+    return target;
+  }
+  function _regeneratorRuntime$1() {
+    _regeneratorRuntime$1 = function _regeneratorRuntime() {
+      return exports;
+    };
+    var exports = {},
+      Op = Object.prototype,
+      hasOwn = Op.hasOwnProperty,
+      defineProperty = Object.defineProperty || function (obj, key, desc) {
+        obj[key] = desc.value;
+      },
+      $Symbol = "function" == typeof Symbol ? Symbol : {},
+      iteratorSymbol = $Symbol.iterator || "@@iterator",
+      asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator",
+      toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+    function define(obj, key, value) {
+      return Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+      }), obj[key];
+    }
+    try {
+      define({}, "");
+    } catch (err) {
+      define = function define(obj, key, value) {
+        return obj[key] = value;
+      };
+    }
+    function wrap(innerFn, outerFn, self, tryLocsList) {
+      var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator,
+        generator = Object.create(protoGenerator.prototype),
+        context = new Context(tryLocsList || []);
+      return defineProperty(generator, "_invoke", {
+        value: makeInvokeMethod(innerFn, self, context)
+      }), generator;
+    }
+    function tryCatch(fn, obj, arg) {
+      try {
+        return {
+          type: "normal",
+          arg: fn.call(obj, arg)
+        };
+      } catch (err) {
+        return {
+          type: "throw",
+          arg: err
+        };
+      }
+    }
+    exports.wrap = wrap;
+    var ContinueSentinel = {};
+    function Generator() {}
+    function GeneratorFunction() {}
+    function GeneratorFunctionPrototype() {}
+    var IteratorPrototype = {};
+    define(IteratorPrototype, iteratorSymbol, function () {
+      return this;
+    });
+    var getProto = Object.getPrototypeOf,
+      NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+    NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype);
+    var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
+    function defineIteratorMethods(prototype) {
+      ["next", "throw", "return"].forEach(function (method) {
+        define(prototype, method, function (arg) {
+          return this._invoke(method, arg);
+        });
+      });
+    }
+    function AsyncIterator(generator, PromiseImpl) {
+      function invoke(method, arg, resolve, reject) {
+        var record = tryCatch(generator[method], generator, arg);
+        if ("throw" !== record.type) {
+          var result = record.arg,
+            value = result.value;
+          return value && "object" == _typeof$2(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) {
+            invoke("next", value, resolve, reject);
+          }, function (err) {
+            invoke("throw", err, resolve, reject);
+          }) : PromiseImpl.resolve(value).then(function (unwrapped) {
+            result.value = unwrapped, resolve(result);
+          }, function (error) {
+            return invoke("throw", error, resolve, reject);
+          });
+        }
+        reject(record.arg);
+      }
+      var previousPromise;
+      defineProperty(this, "_invoke", {
+        value: function value(method, arg) {
+          function callInvokeWithMethodAndArg() {
+            return new PromiseImpl(function (resolve, reject) {
+              invoke(method, arg, resolve, reject);
+            });
+          }
+          return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
+        }
+      });
+    }
+    function makeInvokeMethod(innerFn, self, context) {
+      var state = "suspendedStart";
+      return function (method, arg) {
+        if ("executing" === state) throw new Error("Generator is already running");
+        if ("completed" === state) {
+          if ("throw" === method) throw arg;
+          return doneResult();
+        }
+        for (context.method = method, context.arg = arg;;) {
+          var delegate = context.delegate;
+          if (delegate) {
+            var delegateResult = maybeInvokeDelegate(delegate, context);
+            if (delegateResult) {
+              if (delegateResult === ContinueSentinel) continue;
+              return delegateResult;
+            }
+          }
+          if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) {
+            if ("suspendedStart" === state) throw state = "completed", context.arg;
+            context.dispatchException(context.arg);
+          } else "return" === context.method && context.abrupt("return", context.arg);
+          state = "executing";
+          var record = tryCatch(innerFn, self, context);
+          if ("normal" === record.type) {
+            if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue;
+            return {
+              value: record.arg,
+              done: context.done
+            };
+          }
+          "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg);
+        }
+      };
+    }
+    function maybeInvokeDelegate(delegate, context) {
+      var methodName = context.method,
+        method = delegate.iterator[methodName];
+      if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator.return && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel;
+      var record = tryCatch(method, delegate.iterator, context.arg);
+      if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel;
+      var info = record.arg;
+      return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel);
+    }
+    function pushTryEntry(locs) {
+      var entry = {
+        tryLoc: locs[0]
+      };
+      1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry);
+    }
+    function resetTryEntry(entry) {
+      var record = entry.completion || {};
+      record.type = "normal", delete record.arg, entry.completion = record;
+    }
+    function Context(tryLocsList) {
+      this.tryEntries = [{
+        tryLoc: "root"
+      }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0);
+    }
+    function values(iterable) {
+      if (iterable) {
+        var iteratorMethod = iterable[iteratorSymbol];
+        if (iteratorMethod) return iteratorMethod.call(iterable);
+        if ("function" == typeof iterable.next) return iterable;
+        if (!isNaN(iterable.length)) {
+          var i = -1,
+            next = function next() {
+              for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next;
+              return next.value = undefined, next.done = !0, next;
+            };
+          return next.next = next;
+        }
+      }
+      return {
+        next: doneResult
+      };
+    }
+    function doneResult() {
+      return {
+        value: undefined,
+        done: !0
+      };
+    }
+    return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", {
+      value: GeneratorFunctionPrototype,
+      configurable: !0
+    }), defineProperty(GeneratorFunctionPrototype, "constructor", {
+      value: GeneratorFunction,
+      configurable: !0
+    }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) {
+      var ctor = "function" == typeof genFun && genFun.constructor;
+      return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name));
+    }, exports.mark = function (genFun) {
+      return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun;
+    }, exports.awrap = function (arg) {
+      return {
+        __await: arg
+      };
+    }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
+      return this;
+    }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+      void 0 === PromiseImpl && (PromiseImpl = Promise);
+      var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl);
+      return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) {
+        return result.done ? result.value : iter.next();
+      });
+    }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () {
+      return this;
+    }), define(Gp, "toString", function () {
+      return "[object Generator]";
+    }), exports.keys = function (val) {
+      var object = Object(val),
+        keys = [];
+      for (var key in object) keys.push(key);
+      return keys.reverse(), function next() {
+        for (; keys.length;) {
+          var key = keys.pop();
+          if (key in object) return next.value = key, next.done = !1, next;
+        }
+        return next.done = !0, next;
+      };
+    }, exports.values = values, Context.prototype = {
+      constructor: Context,
+      reset: function reset(skipTempReset) {
+        if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined);
+      },
+      stop: function stop() {
+        this.done = !0;
+        var rootRecord = this.tryEntries[0].completion;
+        if ("throw" === rootRecord.type) throw rootRecord.arg;
+        return this.rval;
+      },
+      dispatchException: function dispatchException(exception) {
+        if (this.done) throw exception;
+        var context = this;
+        function handle(loc, caught) {
+          return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught;
+        }
+        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+          var entry = this.tryEntries[i],
+            record = entry.completion;
+          if ("root" === entry.tryLoc) return handle("end");
+          if (entry.tryLoc <= this.prev) {
+            var hasCatch = hasOwn.call(entry, "catchLoc"),
+              hasFinally = hasOwn.call(entry, "finallyLoc");
+            if (hasCatch && hasFinally) {
+              if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+              if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+            } else if (hasCatch) {
+              if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0);
+            } else {
+              if (!hasFinally) throw new Error("try statement without catch or finally");
+              if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc);
+            }
+          }
+        }
+      },
+      abrupt: function abrupt(type, arg) {
+        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+          var entry = this.tryEntries[i];
+          if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
+            var finallyEntry = entry;
+            break;
+          }
+        }
+        finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null);
+        var record = finallyEntry ? finallyEntry.completion : {};
+        return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record);
+      },
+      complete: function complete(record, afterLoc) {
+        if ("throw" === record.type) throw record.arg;
+        return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel;
+      },
+      finish: function finish(finallyLoc) {
+        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+          var entry = this.tryEntries[i];
+          if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel;
+        }
+      },
+      catch: function _catch(tryLoc) {
+        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+          var entry = this.tryEntries[i];
+          if (entry.tryLoc === tryLoc) {
+            var record = entry.completion;
+            if ("throw" === record.type) {
+              var thrown = record.arg;
+              resetTryEntry(entry);
+            }
+            return thrown;
+          }
+        }
+        throw new Error("illegal catch attempt");
+      },
+      delegateYield: function delegateYield(iterable, resultName, nextLoc) {
+        return this.delegate = {
+          iterator: values(iterable),
+          resultName: resultName,
+          nextLoc: nextLoc
+        }, "next" === this.method && (this.arg = undefined), ContinueSentinel;
+      }
+    }, exports;
+  }
+  function _typeof$1(obj) {
+    "@babel/helpers - typeof";
+
+    return _typeof$1 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+      return typeof obj;
+    } : function (obj) {
+      return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    }, _typeof$1(obj);
+  }
+  function _wrapAsyncGenerator$1(fn) {
+    return function () {
+      return new _AsyncGenerator$1(fn.apply(this, arguments));
+    };
+  }
+  function asyncGeneratorStep$1(gen, resolve, reject, _next, _throw, key, arg) {
+    try {
+      var info = gen[key](arg);
+      var value = info.value;
+    } catch (error) {
+      reject(error);
+      return;
+    }
+    if (info.done) {
+      resolve(value);
+    } else {
+      Promise.resolve(value).then(_next, _throw);
+    }
+  }
+  function _asyncToGenerator$1(fn) {
+    return function () {
+      var self = this,
+        args = arguments;
+      return new Promise(function (resolve, reject) {
+        var gen = fn.apply(self, args);
+        function _next(value) {
+          asyncGeneratorStep$1(gen, resolve, reject, _next, _throw, "next", value);
+        }
+        function _throw(err) {
+          asyncGeneratorStep$1(gen, resolve, reject, _next, _throw, "throw", err);
+        }
+        _next(undefined);
+      });
+    };
+  }
+  function _defineProperty$1$1(obj, key, value) {
+    key = _toPropertyKey$1(key);
+    if (key in obj) {
+      Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      });
+    } else {
+      obj[key] = value;
+    }
+    return obj;
+  }
+  function _extends$1() {
+    _extends$1 = Object.assign ? Object.assign.bind() : function (target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+    return _extends$1.apply(this, arguments);
+  }
+  function _objectWithoutPropertiesLoose$1(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for (i = 0; i < sourceKeys.length; i++) {
+      key = sourceKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      target[key] = source[key];
+    }
+    return target;
+  }
+  function _objectWithoutProperties$1(source, excluded) {
+    if (source == null) return {};
+    var target = _objectWithoutPropertiesLoose$1(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+      var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+      for (i = 0; i < sourceSymbolKeys.length; i++) {
+        key = sourceSymbolKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+        target[key] = source[key];
+      }
+    }
+    return target;
+  }
+  function _slicedToArray$1(arr, i) {
+    return _arrayWithHoles$1(arr) || _iterableToArrayLimit$1(arr, i) || _unsupportedIterableToArray$1(arr, i) || _nonIterableRest$1();
+  }
+  function _toConsumableArray$1(arr) {
+    return _arrayWithoutHoles$1(arr) || _iterableToArray$1(arr) || _unsupportedIterableToArray$1(arr) || _nonIterableSpread$1();
+  }
+  function _arrayWithoutHoles$1(arr) {
+    if (Array.isArray(arr)) return _arrayLikeToArray$1(arr);
+  }
+  function _arrayWithHoles$1(arr) {
+    if (Array.isArray(arr)) return arr;
+  }
+  function _iterableToArray$1(iter) {
+    if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
+  }
+  function _unsupportedIterableToArray$1(o, minLen) {
+    if (!o) return;
+    if (typeof o === "string") return _arrayLikeToArray$1(o, minLen);
+    var n = Object.prototype.toString.call(o).slice(8, -1);
+    if (n === "Object" && o.constructor) n = o.constructor.name;
+    if (n === "Map" || n === "Set") return Array.from(o);
+    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray$1(o, minLen);
+  }
+  function _arrayLikeToArray$1(arr, len) {
+    if (len == null || len > arr.length) len = arr.length;
+    for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+    return arr2;
+  }
+  function _nonIterableSpread$1() {
+    throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+  function _nonIterableRest$1() {
+    throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+  function _toPrimitive$1(input, hint) {
+    if (_typeof$2(input) !== "object" || input === null) return input;
+    var prim = input[Symbol.toPrimitive];
+    if (prim !== undefined) {
+      var res = prim.call(input, hint || "default");
+      if (_typeof$2(res) !== "object") return res;
+      throw new TypeError("@@toPrimitive must return a primitive value.");
+    }
+    return (hint === "string" ? String : Number)(input);
+  }
+  function _toPropertyKey$1(arg) {
+    var key = _toPrimitive$1(arg, "string");
+    return _typeof$2(key) === "symbol" ? key : String(key);
+  }
+  var commonjsGlobal$1 = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+  function getDefaultExportFromCjs$1(x) {
+    return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
+  }
+
+  /** Used for built-in method references. */
+
+  var objectProto$e$1 = Object.prototype;
+
+  /**
+   * Checks if `value` is likely a prototype object.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+   */
+  function isPrototype$4$1(value) {
+    var Ctor = value && value.constructor,
+      proto = typeof Ctor == 'function' && Ctor.prototype || objectProto$e$1;
+    return value === proto;
+  }
+  var _isPrototype$1 = isPrototype$4$1;
+
+  /**
+   * Creates a unary function that invokes `func` with its argument transformed.
+   *
+   * @private
+   * @param {Function} func The function to wrap.
+   * @param {Function} transform The argument transform.
+   * @returns {Function} Returns the new function.
+   */
+
+  function overArg$2$1(func, transform) {
+    return function (arg) {
+      return func(transform(arg));
+    };
+  }
+  var _overArg$1 = overArg$2$1;
+  var overArg$1$1 = _overArg$1;
+
+  /* Built-in method references for those with the same name as other `lodash` methods. */
+  var nativeKeys$1$1 = overArg$1$1(Object.keys, Object);
+  var _nativeKeys$1 = nativeKeys$1$1;
+  var isPrototype$3$1 = _isPrototype$1,
+    nativeKeys$2 = _nativeKeys$1;
+
+  /** Used for built-in method references. */
+  var objectProto$d$1 = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$b$1 = objectProto$d$1.hasOwnProperty;
+
+  /**
+   * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @returns {Array} Returns the array of property names.
+   */
+  function baseKeys$2$1(object) {
+    if (!isPrototype$3$1(object)) {
+      return nativeKeys$2(object);
+    }
+    var result = [];
+    for (var key in Object(object)) {
+      if (hasOwnProperty$b$1.call(object, key) && key != 'constructor') {
+        result.push(key);
+      }
+    }
+    return result;
+  }
+  var _baseKeys$1 = baseKeys$2$1;
+
+  /** Detect free variable `global` from Node.js. */
+
+  var freeGlobal$1$1 = _typeof$2(commonjsGlobal$1) == 'object' && commonjsGlobal$1 && commonjsGlobal$1.Object === Object && commonjsGlobal$1;
+  var _freeGlobal$1 = freeGlobal$1$1;
+  var freeGlobal$2 = _freeGlobal$1;
+
+  /** Detect free variable `self`. */
+  var freeSelf$1 = (typeof self === "undefined" ? "undefined" : _typeof$2(self)) == 'object' && self && self.Object === Object && self;
+
+  /** Used as a reference to the global object. */
+  var root$8$1 = freeGlobal$2 || freeSelf$1 || Function('return this')();
+  var _root$1 = root$8$1;
+  var root$7$1 = _root$1;
+
+  /** Built-in value references. */
+  var Symbol$6$1 = root$7$1.Symbol;
+  var _Symbol$1 = Symbol$6$1;
+  var Symbol$5$1 = _Symbol$1;
+
+  /** Used for built-in method references. */
+  var objectProto$c$1 = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$a$1 = objectProto$c$1.hasOwnProperty;
+
+  /**
+   * Used to resolve the
+   * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+   * of values.
+   */
+  var nativeObjectToString$1$1 = objectProto$c$1.toString;
+
+  /** Built-in value references. */
+  var symToStringTag$1$1 = Symbol$5$1 ? Symbol$5$1.toStringTag : undefined;
+
+  /**
+   * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+   *
+   * @private
+   * @param {*} value The value to query.
+   * @returns {string} Returns the raw `toStringTag`.
+   */
+  function getRawTag$1$1(value) {
+    var isOwn = hasOwnProperty$a$1.call(value, symToStringTag$1$1),
+      tag = value[symToStringTag$1$1];
+    try {
+      value[symToStringTag$1$1] = undefined;
+      var unmasked = true;
+    } catch (e) {}
+    var result = nativeObjectToString$1$1.call(value);
+    if (unmasked) {
+      if (isOwn) {
+        value[symToStringTag$1$1] = tag;
+      } else {
+        delete value[symToStringTag$1$1];
+      }
+    }
+    return result;
+  }
+  var _getRawTag$1 = getRawTag$1$1;
+
+  /** Used for built-in method references. */
+
+  var objectProto$b$1 = Object.prototype;
+
+  /**
+   * Used to resolve the
+   * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+   * of values.
+   */
+  var nativeObjectToString$2 = objectProto$b$1.toString;
+
+  /**
+   * Converts `value` to a string using `Object.prototype.toString`.
+   *
+   * @private
+   * @param {*} value The value to convert.
+   * @returns {string} Returns the converted string.
+   */
+  function objectToString$1$1(value) {
+    return nativeObjectToString$2.call(value);
+  }
+  var _objectToString$1 = objectToString$1$1;
+  var Symbol$4$1 = _Symbol$1,
+    getRawTag$2 = _getRawTag$1,
+    objectToString$2 = _objectToString$1;
+
+  /** `Object#toString` result references. */
+  var nullTag$1 = '[object Null]',
+    undefinedTag$1 = '[object Undefined]';
+
+  /** Built-in value references. */
+  var symToStringTag$2 = Symbol$4$1 ? Symbol$4$1.toStringTag : undefined;
+
+  /**
+   * The base implementation of `getTag` without fallbacks for buggy environments.
+   *
+   * @private
+   * @param {*} value The value to query.
+   * @returns {string} Returns the `toStringTag`.
+   */
+  function baseGetTag$a$1(value) {
+    if (value == null) {
+      return value === undefined ? undefinedTag$1 : nullTag$1;
+    }
+    return symToStringTag$2 && symToStringTag$2 in Object(value) ? getRawTag$2(value) : objectToString$2(value);
+  }
+  var _baseGetTag$1 = baseGetTag$a$1;
+
+  /**
+   * Checks if `value` is the
+   * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+   * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+   * @example
+   *
+   * _.isObject({});
+   * // => true
+   *
+   * _.isObject([1, 2, 3]);
+   * // => true
+   *
+   * _.isObject(_.noop);
+   * // => true
+   *
+   * _.isObject(null);
+   * // => false
+   */
+
+  function isObject$6$1(value) {
+    var type = _typeof$2(value);
+    return value != null && (type == 'object' || type == 'function');
+  }
+  var isObject_1$1 = isObject$6$1;
+  var _isObject$1 = /*@__PURE__*/getDefaultExportFromCjs$1(isObject_1$1);
+  var baseGetTag$9$1 = _baseGetTag$1,
+    isObject$5$1 = isObject_1$1;
+
+  /** `Object#toString` result references. */
+  var asyncTag$1 = '[object AsyncFunction]',
+    funcTag$2$1 = '[object Function]',
+    genTag$1$1 = '[object GeneratorFunction]',
+    proxyTag$1 = '[object Proxy]';
+
+  /**
+   * Checks if `value` is classified as a `Function` object.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+   * @example
+   *
+   * _.isFunction(_);
+   * // => true
+   *
+   * _.isFunction(/abc/);
+   * // => false
+   */
+  function isFunction$2$1(value) {
+    if (!isObject$5$1(value)) {
+      return false;
+    }
+    // The use of `Object#toString` avoids issues with the `typeof` operator
+    // in Safari 9 which returns 'object' for typed arrays and other constructors.
+    var tag = baseGetTag$9$1(value);
+    return tag == funcTag$2$1 || tag == genTag$1$1 || tag == asyncTag$1 || tag == proxyTag$1;
+  }
+  var isFunction_1$1 = isFunction$2$1;
+  var _isFunction$1 = /*@__PURE__*/getDefaultExportFromCjs$1(isFunction_1$1);
+  var root$6$1 = _root$1;
+
+  /** Used to detect overreaching core-js shims. */
+  var coreJsData$1$1 = root$6$1['__core-js_shared__'];
+  var _coreJsData$1 = coreJsData$1$1;
+  var coreJsData$2 = _coreJsData$1;
+
+  /** Used to detect methods masquerading as native. */
+  var maskSrcKey$1 = function () {
+    var uid = /[^.]+$/.exec(coreJsData$2 && coreJsData$2.keys && coreJsData$2.keys.IE_PROTO || '');
+    return uid ? 'Symbol(src)_1.' + uid : '';
+  }();
+
+  /**
+   * Checks if `func` has its source masked.
+   *
+   * @private
+   * @param {Function} func The function to check.
+   * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+   */
+  function isMasked$1$1(func) {
+    return !!maskSrcKey$1 && maskSrcKey$1 in func;
+  }
+  var _isMasked$1 = isMasked$1$1;
+
+  /** Used for built-in method references. */
+
+  var funcProto$2$1 = Function.prototype;
+
+  /** Used to resolve the decompiled source of functions. */
+  var funcToString$2$1 = funcProto$2$1.toString;
+
+  /**
+   * Converts `func` to its source code.
+   *
+   * @private
+   * @param {Function} func The function to convert.
+   * @returns {string} Returns the source code.
+   */
+  function toSource$2$1(func) {
+    if (func != null) {
+      try {
+        return funcToString$2$1.call(func);
+      } catch (e) {}
+      try {
+        return func + '';
+      } catch (e) {}
+    }
+    return '';
+  }
+  var _toSource$1 = toSource$2$1;
+  var isFunction$1$1 = isFunction_1$1,
+    isMasked$2 = _isMasked$1,
+    isObject$4$1 = isObject_1$1,
+    toSource$1$1 = _toSource$1;
+
+  /**
+   * Used to match `RegExp`
+   * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+   */
+  var reRegExpChar$1 = /[\\^$.*+?()[\]{}|]/g;
+
+  /** Used to detect host constructors (Safari). */
+  var reIsHostCtor$1 = /^\[object .+?Constructor\]$/;
+
+  /** Used for built-in method references. */
+  var funcProto$1$1 = Function.prototype,
+    objectProto$a$1 = Object.prototype;
+
+  /** Used to resolve the decompiled source of functions. */
+  var funcToString$1$1 = funcProto$1$1.toString;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$9$1 = objectProto$a$1.hasOwnProperty;
+
+  /** Used to detect if a method is native. */
+  var reIsNative$1 = RegExp('^' + funcToString$1$1.call(hasOwnProperty$9$1).replace(reRegExpChar$1, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
+
+  /**
+   * The base implementation of `_.isNative` without bad shim checks.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a native function,
+   *  else `false`.
+   */
+  function baseIsNative$1$1(value) {
+    if (!isObject$4$1(value) || isMasked$2(value)) {
+      return false;
+    }
+    var pattern = isFunction$1$1(value) ? reIsNative$1 : reIsHostCtor$1;
+    return pattern.test(toSource$1$1(value));
+  }
+  var _baseIsNative$1 = baseIsNative$1$1;
+
+  /**
+   * Gets the value at `key` of `object`.
+   *
+   * @private
+   * @param {Object} [object] The object to query.
+   * @param {string} key The key of the property to get.
+   * @returns {*} Returns the property value.
+   */
+
+  function getValue$1$1(object, key) {
+    return object == null ? undefined : object[key];
+  }
+  var _getValue$1 = getValue$1$1;
+  var baseIsNative$2 = _baseIsNative$1,
+    getValue$2 = _getValue$1;
+
+  /**
+   * Gets the native function at `key` of `object`.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @param {string} key The key of the method to get.
+   * @returns {*} Returns the function if it's native, else `undefined`.
+   */
+  function getNative$7$1(object, key) {
+    var value = getValue$2(object, key);
+    return baseIsNative$2(value) ? value : undefined;
+  }
+  var _getNative$1 = getNative$7$1;
+  var getNative$6$1 = _getNative$1,
+    root$5$1 = _root$1;
+
+  /* Built-in method references that are verified to be native. */
+  var DataView$1$1 = getNative$6$1(root$5$1, 'DataView');
+  var _DataView$1 = DataView$1$1;
+  var getNative$5$1 = _getNative$1,
+    root$4$1 = _root$1;
+
+  /* Built-in method references that are verified to be native. */
+  var Map$3$1 = getNative$5$1(root$4$1, 'Map');
+  var _Map$1 = Map$3$1;
+  var getNative$4$1 = _getNative$1,
+    root$3$1 = _root$1;
+
+  /* Built-in method references that are verified to be native. */
+  var Promise$2$1 = getNative$4$1(root$3$1, 'Promise');
+  var _Promise$1 = Promise$2$1;
+  var getNative$3$1 = _getNative$1,
+    root$2$1 = _root$1;
+
+  /* Built-in method references that are verified to be native. */
+  var Set$2$1 = getNative$3$1(root$2$1, 'Set');
+  var _Set$1 = Set$2$1;
+  var getNative$2$1 = _getNative$1,
+    root$1$1 = _root$1;
+
+  /* Built-in method references that are verified to be native. */
+  var WeakMap$1$1 = getNative$2$1(root$1$1, 'WeakMap');
+  var _WeakMap$1 = WeakMap$1$1;
+  var DataView$2 = _DataView$1,
+    Map$2$1 = _Map$1,
+    Promise$1$1 = _Promise$1,
+    Set$1$1 = _Set$1,
+    WeakMap$2 = _WeakMap$1,
+    baseGetTag$8$1 = _baseGetTag$1,
+    toSource$3 = _toSource$1;
+
+  /** `Object#toString` result references. */
+  var mapTag$5$1 = '[object Map]',
+    objectTag$3$1 = '[object Object]',
+    promiseTag$1 = '[object Promise]',
+    setTag$5$1 = '[object Set]',
+    weakMapTag$2$1 = '[object WeakMap]';
+  var dataViewTag$3$1 = '[object DataView]';
+
+  /** Used to detect maps, sets, and weakmaps. */
+  var dataViewCtorString$1 = toSource$3(DataView$2),
+    mapCtorString$1 = toSource$3(Map$2$1),
+    promiseCtorString$1 = toSource$3(Promise$1$1),
+    setCtorString$1 = toSource$3(Set$1$1),
+    weakMapCtorString$1 = toSource$3(WeakMap$2);
+
+  /**
+   * Gets the `toStringTag` of `value`.
+   *
+   * @private
+   * @param {*} value The value to query.
+   * @returns {string} Returns the `toStringTag`.
+   */
+  var getTag$4$1 = baseGetTag$8$1;
+
+  // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
+  if (DataView$2 && getTag$4$1(new DataView$2(new ArrayBuffer(1))) != dataViewTag$3$1 || Map$2$1 && getTag$4$1(new Map$2$1()) != mapTag$5$1 || Promise$1$1 && getTag$4$1(Promise$1$1.resolve()) != promiseTag$1 || Set$1$1 && getTag$4$1(new Set$1$1()) != setTag$5$1 || WeakMap$2 && getTag$4$1(new WeakMap$2()) != weakMapTag$2$1) {
+    getTag$4$1 = function getTag$4(value) {
+      var result = baseGetTag$8$1(value),
+        Ctor = result == objectTag$3$1 ? value.constructor : undefined,
+        ctorString = Ctor ? toSource$3(Ctor) : '';
+      if (ctorString) {
+        switch (ctorString) {
+          case dataViewCtorString$1:
+            return dataViewTag$3$1;
+          case mapCtorString$1:
+            return mapTag$5$1;
+          case promiseCtorString$1:
+            return promiseTag$1;
+          case setCtorString$1:
+            return setTag$5$1;
+          case weakMapCtorString$1:
+            return weakMapTag$2$1;
+        }
+      }
+      return result;
+    };
+  }
+  var _getTag$1 = getTag$4$1;
+
+  /**
+   * Checks if `value` is object-like. A value is object-like if it's not `null`
+   * and has a `typeof` result of "object".
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+   * @example
+   *
+   * _.isObjectLike({});
+   * // => true
+   *
+   * _.isObjectLike([1, 2, 3]);
+   * // => true
+   *
+   * _.isObjectLike(_.noop);
+   * // => false
+   *
+   * _.isObjectLike(null);
+   * // => false
+   */
+
+  function isObjectLike$b$1(value) {
+    return value != null && _typeof$2(value) == 'object';
+  }
+  var isObjectLike_1$1 = isObjectLike$b$1;
+  var baseGetTag$7$1 = _baseGetTag$1,
+    isObjectLike$a$1 = isObjectLike_1$1;
+
+  /** `Object#toString` result references. */
+  var argsTag$2$1 = '[object Arguments]';
+
+  /**
+   * The base implementation of `_.isArguments`.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+   */
+  function baseIsArguments$1$1(value) {
+    return isObjectLike$a$1(value) && baseGetTag$7$1(value) == argsTag$2$1;
+  }
+  var _baseIsArguments$1 = baseIsArguments$1$1;
+  var baseIsArguments$2 = _baseIsArguments$1,
+    isObjectLike$9$1 = isObjectLike_1$1;
+
+  /** Used for built-in method references. */
+  var objectProto$9$1 = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$8$1 = objectProto$9$1.hasOwnProperty;
+
+  /** Built-in value references. */
+  var propertyIsEnumerable$1$1 = objectProto$9$1.propertyIsEnumerable;
+
+  /**
+   * Checks if `value` is likely an `arguments` object.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+   *  else `false`.
+   * @example
+   *
+   * _.isArguments(function() { return arguments; }());
+   * // => true
+   *
+   * _.isArguments([1, 2, 3]);
+   * // => false
+   */
+  var isArguments$4$1 = baseIsArguments$2(function () {
+    return arguments;
+  }()) ? baseIsArguments$2 : function (value) {
+    return isObjectLike$9$1(value) && hasOwnProperty$8$1.call(value, 'callee') && !propertyIsEnumerable$1$1.call(value, 'callee');
+  };
+  var isArguments_1$1 = isArguments$4$1;
+
+  /**
+   * Checks if `value` is classified as an `Array` object.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+   * @example
+   *
+   * _.isArray([1, 2, 3]);
+   * // => true
+   *
+   * _.isArray(document.body.children);
+   * // => false
+   *
+   * _.isArray('abc');
+   * // => false
+   *
+   * _.isArray(_.noop);
+   * // => false
+   */
+
+  var isArray$a$1 = Array.isArray;
+  var isArray_1$1 = isArray$a$1;
+  var _isArray$1 = /*@__PURE__*/getDefaultExportFromCjs$1(isArray_1$1);
+
+  /** Used as references for various `Number` constants. */
+
+  var MAX_SAFE_INTEGER$1$1 = 9007199254740991;
+
+  /**
+   * Checks if `value` is a valid array-like length.
+   *
+   * **Note:** This method is loosely based on
+   * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+   * @example
+   *
+   * _.isLength(3);
+   * // => true
+   *
+   * _.isLength(Number.MIN_VALUE);
+   * // => false
+   *
+   * _.isLength(Infinity);
+   * // => false
+   *
+   * _.isLength('3');
+   * // => false
+   */
+  function isLength$3$1(value) {
+    return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER$1$1;
+  }
+  var isLength_1$1 = isLength$3$1;
+  var isFunction$3 = isFunction_1$1,
+    isLength$2$1 = isLength_1$1;
+
+  /**
+   * Checks if `value` is array-like. A value is considered array-like if it's
+   * not a function and has a `value.length` that's an integer greater than or
+   * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+   * @example
+   *
+   * _.isArrayLike([1, 2, 3]);
+   * // => true
+   *
+   * _.isArrayLike(document.body.children);
+   * // => true
+   *
+   * _.isArrayLike('abc');
+   * // => true
+   *
+   * _.isArrayLike(_.noop);
+   * // => false
+   */
+  function isArrayLike$3$1(value) {
+    return value != null && isLength$2$1(value.length) && !isFunction$3(value);
+  }
+  var isArrayLike_1$1 = isArrayLike$3$1;
+  var isBuffer$3$1 = {
+    exports: {}
+  };
+
+  /**
+   * This method returns `false`.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.13.0
+   * @category Util
+   * @returns {boolean} Returns `false`.
+   * @example
+   *
+   * _.times(2, _.stubFalse);
+   * // => [false, false]
+   */
+
+  function stubFalse$1() {
+    return false;
+  }
+  var stubFalse_1$1 = stubFalse$1;
+  isBuffer$3$1.exports;
+  (function (module, exports) {
+    var root = _root$1,
+      stubFalse = stubFalse_1$1;
+
+    /** Detect free variable `exports`. */
+    var freeExports = exports && !exports.nodeType && exports;
+
+    /** Detect free variable `module`. */
+    var freeModule = freeExports && 'object' == 'object' && module && !module.nodeType && module;
+
+    /** Detect the popular CommonJS extension `module.exports`. */
+    var moduleExports = freeModule && freeModule.exports === freeExports;
+
+    /** Built-in value references. */
+    var Buffer = moduleExports ? root.Buffer : undefined;
+
+    /* Built-in method references for those with the same name as other `lodash` methods. */
+    var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
+
+    /**
+     * Checks if `value` is a buffer.
+     *
+     * @static
+     * @memberOf _
+     * @since 4.3.0
+     * @category Lang
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+     * @example
+     *
+     * _.isBuffer(new Buffer(2));
+     * // => true
+     *
+     * _.isBuffer(new Uint8Array(2));
+     * // => false
+     */
+    var isBuffer = nativeIsBuffer || stubFalse;
+    module.exports = isBuffer;
+  })(isBuffer$3$1, isBuffer$3$1.exports);
+  var isBufferExports$1 = isBuffer$3$1.exports;
+  var baseGetTag$6$1 = _baseGetTag$1,
+    isLength$1$1 = isLength_1$1,
+    isObjectLike$8$1 = isObjectLike_1$1;
+
+  /** `Object#toString` result references. */
+  var argsTag$1$1 = '[object Arguments]',
+    arrayTag$1$1 = '[object Array]',
+    boolTag$3$1 = '[object Boolean]',
+    dateTag$3$1 = '[object Date]',
+    errorTag$1$1 = '[object Error]',
+    funcTag$1$1 = '[object Function]',
+    mapTag$4$1 = '[object Map]',
+    numberTag$3$1 = '[object Number]',
+    objectTag$2$1 = '[object Object]',
+    regexpTag$2$1 = '[object RegExp]',
+    setTag$4$1 = '[object Set]',
+    stringTag$3$1 = '[object String]',
+    weakMapTag$1$1 = '[object WeakMap]';
+  var arrayBufferTag$2$1 = '[object ArrayBuffer]',
+    dataViewTag$2$1 = '[object DataView]',
+    float32Tag$2$1 = '[object Float32Array]',
+    float64Tag$2$1 = '[object Float64Array]',
+    int8Tag$2$1 = '[object Int8Array]',
+    int16Tag$2$1 = '[object Int16Array]',
+    int32Tag$2$1 = '[object Int32Array]',
+    uint8Tag$2$1 = '[object Uint8Array]',
+    uint8ClampedTag$2$1 = '[object Uint8ClampedArray]',
+    uint16Tag$2$1 = '[object Uint16Array]',
+    uint32Tag$2$1 = '[object Uint32Array]';
+
+  /** Used to identify `toStringTag` values of typed arrays. */
+  var typedArrayTags$1 = {};
+  typedArrayTags$1[float32Tag$2$1] = typedArrayTags$1[float64Tag$2$1] = typedArrayTags$1[int8Tag$2$1] = typedArrayTags$1[int16Tag$2$1] = typedArrayTags$1[int32Tag$2$1] = typedArrayTags$1[uint8Tag$2$1] = typedArrayTags$1[uint8ClampedTag$2$1] = typedArrayTags$1[uint16Tag$2$1] = typedArrayTags$1[uint32Tag$2$1] = true;
+  typedArrayTags$1[argsTag$1$1] = typedArrayTags$1[arrayTag$1$1] = typedArrayTags$1[arrayBufferTag$2$1] = typedArrayTags$1[boolTag$3$1] = typedArrayTags$1[dataViewTag$2$1] = typedArrayTags$1[dateTag$3$1] = typedArrayTags$1[errorTag$1$1] = typedArrayTags$1[funcTag$1$1] = typedArrayTags$1[mapTag$4$1] = typedArrayTags$1[numberTag$3$1] = typedArrayTags$1[objectTag$2$1] = typedArrayTags$1[regexpTag$2$1] = typedArrayTags$1[setTag$4$1] = typedArrayTags$1[stringTag$3$1] = typedArrayTags$1[weakMapTag$1$1] = false;
+
+  /**
+   * The base implementation of `_.isTypedArray` without Node.js optimizations.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+   */
+  function baseIsTypedArray$1$1(value) {
+    return isObjectLike$8$1(value) && isLength$1$1(value.length) && !!typedArrayTags$1[baseGetTag$6$1(value)];
+  }
+  var _baseIsTypedArray$1 = baseIsTypedArray$1$1;
+
+  /**
+   * The base implementation of `_.unary` without support for storing metadata.
+   *
+   * @private
+   * @param {Function} func The function to cap arguments for.
+   * @returns {Function} Returns the new capped function.
+   */
+
+  function baseUnary$4$1(func) {
+    return function (value) {
+      return func(value);
+    };
+  }
+  var _baseUnary$1 = baseUnary$4$1;
+  var _nodeUtil$1 = {
+    exports: {}
+  };
+  _nodeUtil$1.exports;
+  (function (module, exports) {
+    var freeGlobal = _freeGlobal$1;
+
+    /** Detect free variable `exports`. */
+    var freeExports = exports && !exports.nodeType && exports;
+
+    /** Detect free variable `module`. */
+    var freeModule = freeExports && 'object' == 'object' && module && !module.nodeType && module;
+
+    /** Detect the popular CommonJS extension `module.exports`. */
+    var moduleExports = freeModule && freeModule.exports === freeExports;
+
+    /** Detect free variable `process` from Node.js. */
+    var freeProcess = moduleExports && freeGlobal.process;
+
+    /** Used to access faster Node.js helpers. */
+    var nodeUtil = function () {
+      try {
+        // Use `util.types` for Node.js 10+.
+        var types = freeModule && freeModule.require && freeModule.require('util').types;
+        if (types) {
+          return types;
+        }
+
+        // Legacy `process.binding('util')` for Node.js < 10.
+        return freeProcess && freeProcess.binding && freeProcess.binding('util');
+      } catch (e) {}
+    }();
+    module.exports = nodeUtil;
+  })(_nodeUtil$1, _nodeUtil$1.exports);
+  var _nodeUtilExports$1 = _nodeUtil$1.exports;
+  var baseIsTypedArray$2 = _baseIsTypedArray$1,
+    baseUnary$3$1 = _baseUnary$1,
+    nodeUtil$3$1 = _nodeUtilExports$1;
+
+  /* Node.js helper references. */
+  var nodeIsTypedArray$1 = nodeUtil$3$1 && nodeUtil$3$1.isTypedArray;
+
+  /**
+   * Checks if `value` is classified as a typed array.
+   *
+   * @static
+   * @memberOf _
+   * @since 3.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+   * @example
+   *
+   * _.isTypedArray(new Uint8Array);
+   * // => true
+   *
+   * _.isTypedArray([]);
+   * // => false
+   */
+  var isTypedArray$2$1 = nodeIsTypedArray$1 ? baseUnary$3$1(nodeIsTypedArray$1) : baseIsTypedArray$2;
+  var isTypedArray_1$1 = isTypedArray$2$1;
+  var baseKeys$1$1 = _baseKeys$1,
+    getTag$3$1 = _getTag$1,
+    isArguments$3$1 = isArguments_1$1,
+    isArray$9$1 = isArray_1$1,
+    isArrayLike$2$1 = isArrayLike_1$1,
+    isBuffer$2$1 = isBufferExports$1,
+    isPrototype$2$1 = _isPrototype$1,
+    isTypedArray$1$1 = isTypedArray_1$1;
+
+  /** `Object#toString` result references. */
+  var mapTag$3$1 = '[object Map]',
+    setTag$3$1 = '[object Set]';
+
+  /** Used for built-in method references. */
+  var objectProto$8$1 = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$7$1 = objectProto$8$1.hasOwnProperty;
+
+  /**
+   * Checks if `value` is an empty object, collection, map, or set.
+   *
+   * Objects are considered empty if they have no own enumerable string keyed
+   * properties.
+   *
+   * Array-like values such as `arguments` objects, arrays, buffers, strings, or
+   * jQuery-like collections are considered empty if they have a `length` of `0`.
+   * Similarly, maps and sets are considered empty if they have a `size` of `0`.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is empty, else `false`.
+   * @example
+   *
+   * _.isEmpty(null);
+   * // => true
+   *
+   * _.isEmpty(true);
+   * // => true
+   *
+   * _.isEmpty(1);
+   * // => true
+   *
+   * _.isEmpty([1, 2, 3]);
+   * // => false
+   *
+   * _.isEmpty({ 'a': 1 });
+   * // => false
+   */
+  function isEmpty$1(value) {
+    if (value == null) {
+      return true;
+    }
+    if (isArrayLike$2$1(value) && (isArray$9$1(value) || typeof value == 'string' || typeof value.splice == 'function' || isBuffer$2$1(value) || isTypedArray$1$1(value) || isArguments$3$1(value))) {
+      return !value.length;
+    }
+    var tag = getTag$3$1(value);
+    if (tag == mapTag$3$1 || tag == setTag$3$1) {
+      return !value.size;
+    }
+    if (isPrototype$2$1(value)) {
+      return !baseKeys$1$1(value).length;
+    }
+    for (var key in value) {
+      if (hasOwnProperty$7$1.call(value, key)) {
+        return false;
+      }
+    }
+    return true;
+  }
+  var isEmpty_1$1 = isEmpty$1;
+  var _isEmpty$1 = /*@__PURE__*/getDefaultExportFromCjs$1(isEmpty_1$1);
+  var getNative$1$1 = _getNative$1;
+
+  /* Built-in method references that are verified to be native. */
+  var nativeCreate$4$1 = getNative$1$1(Object, 'create');
+  var _nativeCreate$1 = nativeCreate$4$1;
+  var nativeCreate$3$1 = _nativeCreate$1;
+
+  /**
+   * Removes all key-value entries from the hash.
+   *
+   * @private
+   * @name clear
+   * @memberOf Hash
+   */
+  function hashClear$1$1() {
+    this.__data__ = nativeCreate$3$1 ? nativeCreate$3$1(null) : {};
+    this.size = 0;
+  }
+  var _hashClear$1 = hashClear$1$1;
+
+  /**
+   * Removes `key` and its value from the hash.
+   *
+   * @private
+   * @name delete
+   * @memberOf Hash
+   * @param {Object} hash The hash to modify.
+   * @param {string} key The key of the value to remove.
+   * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+   */
+
+  function hashDelete$1$1(key) {
+    var result = this.has(key) && delete this.__data__[key];
+    this.size -= result ? 1 : 0;
+    return result;
+  }
+  var _hashDelete$1 = hashDelete$1$1;
+  var nativeCreate$2$1 = _nativeCreate$1;
+
+  /** Used to stand-in for `undefined` hash values. */
+  var HASH_UNDEFINED$2$1 = '__lodash_hash_undefined__';
+
+  /** Used for built-in method references. */
+  var objectProto$7$1 = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$6$1 = objectProto$7$1.hasOwnProperty;
+
+  /**
+   * Gets the hash value for `key`.
+   *
+   * @private
+   * @name get
+   * @memberOf Hash
+   * @param {string} key The key of the value to get.
+   * @returns {*} Returns the entry value.
+   */
+  function hashGet$1$1(key) {
+    var data = this.__data__;
+    if (nativeCreate$2$1) {
+      var result = data[key];
+      return result === HASH_UNDEFINED$2$1 ? undefined : result;
+    }
+    return hasOwnProperty$6$1.call(data, key) ? data[key] : undefined;
+  }
+  var _hashGet$1 = hashGet$1$1;
+  var nativeCreate$1$1 = _nativeCreate$1;
+
+  /** Used for built-in method references. */
+  var objectProto$6$1 = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$5$1 = objectProto$6$1.hasOwnProperty;
+
+  /**
+   * Checks if a hash value for `key` exists.
+   *
+   * @private
+   * @name has
+   * @memberOf Hash
+   * @param {string} key The key of the entry to check.
+   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+   */
+  function hashHas$1$1(key) {
+    var data = this.__data__;
+    return nativeCreate$1$1 ? data[key] !== undefined : hasOwnProperty$5$1.call(data, key);
+  }
+  var _hashHas$1 = hashHas$1$1;
+  var nativeCreate$5 = _nativeCreate$1;
+
+  /** Used to stand-in for `undefined` hash values. */
+  var HASH_UNDEFINED$1$1 = '__lodash_hash_undefined__';
+
+  /**
+   * Sets the hash `key` to `value`.
+   *
+   * @private
+   * @name set
+   * @memberOf Hash
+   * @param {string} key The key of the value to set.
+   * @param {*} value The value to set.
+   * @returns {Object} Returns the hash instance.
+   */
+  function hashSet$1$1(key, value) {
+    var data = this.__data__;
+    this.size += this.has(key) ? 0 : 1;
+    data[key] = nativeCreate$5 && value === undefined ? HASH_UNDEFINED$1$1 : value;
+    return this;
+  }
+  var _hashSet$1 = hashSet$1$1;
+  var hashClear$2 = _hashClear$1,
+    hashDelete$2 = _hashDelete$1,
+    hashGet$2 = _hashGet$1,
+    hashHas$2 = _hashHas$1,
+    hashSet$2 = _hashSet$1;
+
+  /**
+   * Creates a hash object.
+   *
+   * @private
+   * @constructor
+   * @param {Array} [entries] The key-value pairs to cache.
+   */
+  function Hash$1$1(entries) {
+    var index = -1,
+      length = entries == null ? 0 : entries.length;
+    this.clear();
+    while (++index < length) {
+      var entry = entries[index];
+      this.set(entry[0], entry[1]);
+    }
+  }
+
+  // Add methods to `Hash`.
+  Hash$1$1.prototype.clear = hashClear$2;
+  Hash$1$1.prototype['delete'] = hashDelete$2;
+  Hash$1$1.prototype.get = hashGet$2;
+  Hash$1$1.prototype.has = hashHas$2;
+  Hash$1$1.prototype.set = hashSet$2;
+  var _Hash$1 = Hash$1$1;
+
+  /**
+   * Removes all key-value entries from the list cache.
+   *
+   * @private
+   * @name clear
+   * @memberOf ListCache
+   */
+
+  function listCacheClear$1$1() {
+    this.__data__ = [];
+    this.size = 0;
+  }
+  var _listCacheClear$1 = listCacheClear$1$1;
+
+  /**
+   * Performs a
+   * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+   * comparison between two values to determine if they are equivalent.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to compare.
+   * @param {*} other The other value to compare.
+   * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+   * @example
+   *
+   * var object = { 'a': 1 };
+   * var other = { 'a': 1 };
+   *
+   * _.eq(object, object);
+   * // => true
+   *
+   * _.eq(object, other);
+   * // => false
+   *
+   * _.eq('a', 'a');
+   * // => true
+   *
+   * _.eq('a', Object('a'));
+   * // => false
+   *
+   * _.eq(NaN, NaN);
+   * // => true
+   */
+
+  function eq$2$1(value, other) {
+    return value === other || value !== value && other !== other;
+  }
+  var eq_1$1 = eq$2$1;
+  var eq$1$1 = eq_1$1;
+
+  /**
+   * Gets the index at which the `key` is found in `array` of key-value pairs.
+   *
+   * @private
+   * @param {Array} array The array to inspect.
+   * @param {*} key The key to search for.
+   * @returns {number} Returns the index of the matched value, else `-1`.
+   */
+  function assocIndexOf$4$1(array, key) {
+    var length = array.length;
+    while (length--) {
+      if (eq$1$1(array[length][0], key)) {
+        return length;
+      }
+    }
+    return -1;
+  }
+  var _assocIndexOf$1 = assocIndexOf$4$1;
+  var assocIndexOf$3$1 = _assocIndexOf$1;
+
+  /** Used for built-in method references. */
+  var arrayProto$1 = Array.prototype;
+
+  /** Built-in value references. */
+  var splice$1 = arrayProto$1.splice;
+
+  /**
+   * Removes `key` and its value from the list cache.
+   *
+   * @private
+   * @name delete
+   * @memberOf ListCache
+   * @param {string} key The key of the value to remove.
+   * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+   */
+  function listCacheDelete$1$1(key) {
+    var data = this.__data__,
+      index = assocIndexOf$3$1(data, key);
+    if (index < 0) {
+      return false;
+    }
+    var lastIndex = data.length - 1;
+    if (index == lastIndex) {
+      data.pop();
+    } else {
+      splice$1.call(data, index, 1);
+    }
+    --this.size;
+    return true;
+  }
+  var _listCacheDelete$1 = listCacheDelete$1$1;
+  var assocIndexOf$2$1 = _assocIndexOf$1;
+
+  /**
+   * Gets the list cache value for `key`.
+   *
+   * @private
+   * @name get
+   * @memberOf ListCache
+   * @param {string} key The key of the value to get.
+   * @returns {*} Returns the entry value.
+   */
+  function listCacheGet$1$1(key) {
+    var data = this.__data__,
+      index = assocIndexOf$2$1(data, key);
+    return index < 0 ? undefined : data[index][1];
+  }
+  var _listCacheGet$1 = listCacheGet$1$1;
+  var assocIndexOf$1$1 = _assocIndexOf$1;
+
+  /**
+   * Checks if a list cache value for `key` exists.
+   *
+   * @private
+   * @name has
+   * @memberOf ListCache
+   * @param {string} key The key of the entry to check.
+   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+   */
+  function listCacheHas$1$1(key) {
+    return assocIndexOf$1$1(this.__data__, key) > -1;
+  }
+  var _listCacheHas$1 = listCacheHas$1$1;
+  var assocIndexOf$5 = _assocIndexOf$1;
+
+  /**
+   * Sets the list cache `key` to `value`.
+   *
+   * @private
+   * @name set
+   * @memberOf ListCache
+   * @param {string} key The key of the value to set.
+   * @param {*} value The value to set.
+   * @returns {Object} Returns the list cache instance.
+   */
+  function listCacheSet$1$1(key, value) {
+    var data = this.__data__,
+      index = assocIndexOf$5(data, key);
+    if (index < 0) {
+      ++this.size;
+      data.push([key, value]);
+    } else {
+      data[index][1] = value;
+    }
+    return this;
+  }
+  var _listCacheSet$1 = listCacheSet$1$1;
+  var listCacheClear$2 = _listCacheClear$1,
+    listCacheDelete$2 = _listCacheDelete$1,
+    listCacheGet$2 = _listCacheGet$1,
+    listCacheHas$2 = _listCacheHas$1,
+    listCacheSet$2 = _listCacheSet$1;
+
+  /**
+   * Creates an list cache object.
+   *
+   * @private
+   * @constructor
+   * @param {Array} [entries] The key-value pairs to cache.
+   */
+  function ListCache$4$1(entries) {
+    var index = -1,
+      length = entries == null ? 0 : entries.length;
+    this.clear();
+    while (++index < length) {
+      var entry = entries[index];
+      this.set(entry[0], entry[1]);
+    }
+  }
+
+  // Add methods to `ListCache`.
+  ListCache$4$1.prototype.clear = listCacheClear$2;
+  ListCache$4$1.prototype['delete'] = listCacheDelete$2;
+  ListCache$4$1.prototype.get = listCacheGet$2;
+  ListCache$4$1.prototype.has = listCacheHas$2;
+  ListCache$4$1.prototype.set = listCacheSet$2;
+  var _ListCache$1 = ListCache$4$1;
+  var Hash$2 = _Hash$1,
+    ListCache$3$1 = _ListCache$1,
+    Map$1$1 = _Map$1;
+
+  /**
+   * Removes all key-value entries from the map.
+   *
+   * @private
+   * @name clear
+   * @memberOf MapCache
+   */
+  function mapCacheClear$1$1() {
+    this.size = 0;
+    this.__data__ = {
+      'hash': new Hash$2(),
+      'map': new (Map$1$1 || ListCache$3$1)(),
+      'string': new Hash$2()
+    };
+  }
+  var _mapCacheClear$1 = mapCacheClear$1$1;
+
+  /**
+   * Checks if `value` is suitable for use as unique object key.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+   */
+
+  function isKeyable$1$1(value) {
+    var type = _typeof$2(value);
+    return type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean' ? value !== '__proto__' : value === null;
+  }
+  var _isKeyable$1 = isKeyable$1$1;
+  var isKeyable$2 = _isKeyable$1;
+
+  /**
+   * Gets the data for `map`.
+   *
+   * @private
+   * @param {Object} map The map to query.
+   * @param {string} key The reference key.
+   * @returns {*} Returns the map data.
+   */
+  function getMapData$4$1(map, key) {
+    var data = map.__data__;
+    return isKeyable$2(key) ? data[typeof key == 'string' ? 'string' : 'hash'] : data.map;
+  }
+  var _getMapData$1 = getMapData$4$1;
+  var getMapData$3$1 = _getMapData$1;
+
+  /**
+   * Removes `key` and its value from the map.
+   *
+   * @private
+   * @name delete
+   * @memberOf MapCache
+   * @param {string} key The key of the value to remove.
+   * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+   */
+  function mapCacheDelete$1$1(key) {
+    var result = getMapData$3$1(this, key)['delete'](key);
+    this.size -= result ? 1 : 0;
+    return result;
+  }
+  var _mapCacheDelete$1 = mapCacheDelete$1$1;
+  var getMapData$2$1 = _getMapData$1;
+
+  /**
+   * Gets the map value for `key`.
+   *
+   * @private
+   * @name get
+   * @memberOf MapCache
+   * @param {string} key The key of the value to get.
+   * @returns {*} Returns the entry value.
+   */
+  function mapCacheGet$1$1(key) {
+    return getMapData$2$1(this, key).get(key);
+  }
+  var _mapCacheGet$1 = mapCacheGet$1$1;
+  var getMapData$1$1 = _getMapData$1;
+
+  /**
+   * Checks if a map value for `key` exists.
+   *
+   * @private
+   * @name has
+   * @memberOf MapCache
+   * @param {string} key The key of the entry to check.
+   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+   */
+  function mapCacheHas$1$1(key) {
+    return getMapData$1$1(this, key).has(key);
+  }
+  var _mapCacheHas$1 = mapCacheHas$1$1;
+  var getMapData$5 = _getMapData$1;
+
+  /**
+   * Sets the map `key` to `value`.
+   *
+   * @private
+   * @name set
+   * @memberOf MapCache
+   * @param {string} key The key of the value to set.
+   * @param {*} value The value to set.
+   * @returns {Object} Returns the map cache instance.
+   */
+  function mapCacheSet$1$1(key, value) {
+    var data = getMapData$5(this, key),
+      size = data.size;
+    data.set(key, value);
+    this.size += data.size == size ? 0 : 1;
+    return this;
+  }
+  var _mapCacheSet$1 = mapCacheSet$1$1;
+  var mapCacheClear$2 = _mapCacheClear$1,
+    mapCacheDelete$2 = _mapCacheDelete$1,
+    mapCacheGet$2 = _mapCacheGet$1,
+    mapCacheHas$2 = _mapCacheHas$1,
+    mapCacheSet$2 = _mapCacheSet$1;
+
+  /**
+   * Creates a map cache object to store key-value pairs.
+   *
+   * @private
+   * @constructor
+   * @param {Array} [entries] The key-value pairs to cache.
+   */
+  function MapCache$3$1(entries) {
+    var index = -1,
+      length = entries == null ? 0 : entries.length;
+    this.clear();
+    while (++index < length) {
+      var entry = entries[index];
+      this.set(entry[0], entry[1]);
+    }
+  }
+
+  // Add methods to `MapCache`.
+  MapCache$3$1.prototype.clear = mapCacheClear$2;
+  MapCache$3$1.prototype['delete'] = mapCacheDelete$2;
+  MapCache$3$1.prototype.get = mapCacheGet$2;
+  MapCache$3$1.prototype.has = mapCacheHas$2;
+  MapCache$3$1.prototype.set = mapCacheSet$2;
+  var _MapCache$1 = MapCache$3$1;
+
+  /** Used to stand-in for `undefined` hash values. */
+
+  var HASH_UNDEFINED$3 = '__lodash_hash_undefined__';
+
+  /**
+   * Adds `value` to the array cache.
+   *
+   * @private
+   * @name add
+   * @memberOf SetCache
+   * @alias push
+   * @param {*} value The value to cache.
+   * @returns {Object} Returns the cache instance.
+   */
+  function setCacheAdd$1$1(value) {
+    this.__data__.set(value, HASH_UNDEFINED$3);
+    return this;
+  }
+  var _setCacheAdd$1 = setCacheAdd$1$1;
+
+  /**
+   * Checks if `value` is in the array cache.
+   *
+   * @private
+   * @name has
+   * @memberOf SetCache
+   * @param {*} value The value to search for.
+   * @returns {number} Returns `true` if `value` is found, else `false`.
+   */
+
+  function setCacheHas$1$1(value) {
+    return this.__data__.has(value);
+  }
+  var _setCacheHas$1 = setCacheHas$1$1;
+  var MapCache$2$1 = _MapCache$1,
+    setCacheAdd$2 = _setCacheAdd$1,
+    setCacheHas$2 = _setCacheHas$1;
+
+  /**
+   *
+   * Creates an array cache object to store unique values.
+   *
+   * @private
+   * @constructor
+   * @param {Array} [values] The values to cache.
+   */
+  function SetCache$1$1(values) {
+    var index = -1,
+      length = values == null ? 0 : values.length;
+    this.__data__ = new MapCache$2$1();
+    while (++index < length) {
+      this.add(values[index]);
+    }
+  }
+
+  // Add methods to `SetCache`.
+  SetCache$1$1.prototype.add = SetCache$1$1.prototype.push = setCacheAdd$2;
+  SetCache$1$1.prototype.has = setCacheHas$2;
+  var _SetCache$1 = SetCache$1$1;
+
+  /**
+   * The base implementation of `_.findIndex` and `_.findLastIndex` without
+   * support for iteratee shorthands.
+   *
+   * @private
+   * @param {Array} array The array to inspect.
+   * @param {Function} predicate The function invoked per iteration.
+   * @param {number} fromIndex The index to search from.
+   * @param {boolean} [fromRight] Specify iterating from right to left.
+   * @returns {number} Returns the index of the matched value, else `-1`.
+   */
+
+  function baseFindIndex$1$1(array, predicate, fromIndex, fromRight) {
+    var length = array.length,
+      index = fromIndex + (fromRight ? 1 : -1);
+    while (fromRight ? index-- : ++index < length) {
+      if (predicate(array[index], index, array)) {
+        return index;
+      }
+    }
+    return -1;
+  }
+  var _baseFindIndex$1 = baseFindIndex$1$1;
+
+  /**
+   * The base implementation of `_.isNaN` without support for number objects.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is `NaN`, else `false`.
+   */
+
+  function baseIsNaN$1$1(value) {
+    return value !== value;
+  }
+  var _baseIsNaN$1 = baseIsNaN$1$1;
+
+  /**
+   * A specialized version of `_.indexOf` which performs strict equality
+   * comparisons of values, i.e. `===`.
+   *
+   * @private
+   * @param {Array} array The array to inspect.
+   * @param {*} value The value to search for.
+   * @param {number} fromIndex The index to search from.
+   * @returns {number} Returns the index of the matched value, else `-1`.
+   */
+
+  function strictIndexOf$1$1(array, value, fromIndex) {
+    var index = fromIndex - 1,
+      length = array.length;
+    while (++index < length) {
+      if (array[index] === value) {
+        return index;
+      }
+    }
+    return -1;
+  }
+  var _strictIndexOf$1 = strictIndexOf$1$1;
+  var baseFindIndex$2 = _baseFindIndex$1,
+    baseIsNaN$2 = _baseIsNaN$1,
+    strictIndexOf$2 = _strictIndexOf$1;
+
+  /**
+   * The base implementation of `_.indexOf` without `fromIndex` bounds checks.
+   *
+   * @private
+   * @param {Array} array The array to inspect.
+   * @param {*} value The value to search for.
+   * @param {number} fromIndex The index to search from.
+   * @returns {number} Returns the index of the matched value, else `-1`.
+   */
+  function baseIndexOf$3$1(array, value, fromIndex) {
+    return value === value ? strictIndexOf$2(array, value, fromIndex) : baseFindIndex$2(array, baseIsNaN$2, fromIndex);
+  }
+  var _baseIndexOf$1 = baseIndexOf$3$1;
+  var baseIndexOf$2$1 = _baseIndexOf$1;
+
+  /**
+   * A specialized version of `_.includes` for arrays without support for
+   * specifying an index to search from.
+   *
+   * @private
+   * @param {Array} [array] The array to inspect.
+   * @param {*} target The value to search for.
+   * @returns {boolean} Returns `true` if `target` is found, else `false`.
+   */
+  function arrayIncludes$1$1(array, value) {
+    var length = array == null ? 0 : array.length;
+    return !!length && baseIndexOf$2$1(array, value, 0) > -1;
+  }
+  var _arrayIncludes$1 = arrayIncludes$1$1;
+
+  /**
+   * This function is like `arrayIncludes` except that it accepts a comparator.
+   *
+   * @private
+   * @param {Array} [array] The array to inspect.
+   * @param {*} target The value to search for.
+   * @param {Function} comparator The comparator invoked per element.
+   * @returns {boolean} Returns `true` if `target` is found, else `false`.
+   */
+
+  function arrayIncludesWith$1$1(array, value, comparator) {
+    var index = -1,
+      length = array == null ? 0 : array.length;
+    while (++index < length) {
+      if (comparator(value, array[index])) {
+        return true;
+      }
+    }
+    return false;
+  }
+  var _arrayIncludesWith$1 = arrayIncludesWith$1$1;
+
+  /**
+   * Checks if a `cache` value for `key` exists.
+   *
+   * @private
+   * @param {Object} cache The cache to query.
+   * @param {string} key The key of the entry to check.
+   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+   */
+
+  function cacheHas$1$1(cache, key) {
+    return cache.has(key);
+  }
+  var _cacheHas$1 = cacheHas$1$1;
+
+  /**
+   * This method returns `undefined`.
+   *
+   * @static
+   * @memberOf _
+   * @since 2.3.0
+   * @category Util
+   * @example
+   *
+   * _.times(2, _.noop);
+   * // => [undefined, undefined]
+   */
+
+  function noop$1$1() {
+    // No operation performed.
+  }
+  var noop_1$1 = noop$1$1;
+
+  /**
+   * Converts `set` to an array of its values.
+   *
+   * @private
+   * @param {Object} set The set to convert.
+   * @returns {Array} Returns the values.
+   */
+
+  function setToArray$2$1(set) {
+    var index = -1,
+      result = Array(set.size);
+    set.forEach(function (value) {
+      result[++index] = value;
+    });
+    return result;
+  }
+  var _setToArray$1 = setToArray$2$1;
+  var Set$3 = _Set$1,
+    noop$2 = noop_1$1,
+    setToArray$1$1 = _setToArray$1;
+
+  /** Used as references for various `Number` constants. */
+  var INFINITY$2$1 = 1 / 0;
+
+  /**
+   * Creates a set object of `values`.
+   *
+   * @private
+   * @param {Array} values The values to add to the set.
+   * @returns {Object} Returns the new set.
+   */
+  var createSet$1$1 = !(Set$3 && 1 / setToArray$1$1(new Set$3([, -0]))[1] == INFINITY$2$1) ? noop$2 : function (values) {
+    return new Set$3(values);
+  };
+  var _createSet$1 = createSet$1$1;
+  var SetCache$2 = _SetCache$1,
+    arrayIncludes$2 = _arrayIncludes$1,
+    arrayIncludesWith$2 = _arrayIncludesWith$1,
+    cacheHas$2 = _cacheHas$1,
+    createSet$2 = _createSet$1,
+    setToArray$3 = _setToArray$1;
+
+  /** Used as the size to enable large array optimizations. */
+  var LARGE_ARRAY_SIZE$1$1 = 200;
+
+  /**
+   * The base implementation of `_.uniqBy` without support for iteratee shorthands.
+   *
+   * @private
+   * @param {Array} array The array to inspect.
+   * @param {Function} [iteratee] The iteratee invoked per element.
+   * @param {Function} [comparator] The comparator invoked per element.
+   * @returns {Array} Returns the new duplicate free array.
+   */
+  function baseUniq$1$1(array, iteratee, comparator) {
+    var index = -1,
+      includes = arrayIncludes$2,
+      length = array.length,
+      isCommon = true,
+      result = [],
+      seen = result;
+    if (comparator) {
+      isCommon = false;
+      includes = arrayIncludesWith$2;
+    } else if (length >= LARGE_ARRAY_SIZE$1$1) {
+      var set = iteratee ? null : createSet$2(array);
+      if (set) {
+        return setToArray$3(set);
+      }
+      isCommon = false;
+      includes = cacheHas$2;
+      seen = new SetCache$2();
+    } else {
+      seen = iteratee ? [] : result;
+    }
+    outer: while (++index < length) {
+      var value = array[index],
+        computed = iteratee ? iteratee(value) : value;
+      value = comparator || value !== 0 ? value : 0;
+      if (isCommon && computed === computed) {
+        var seenIndex = seen.length;
+        while (seenIndex--) {
+          if (seen[seenIndex] === computed) {
+            continue outer;
+          }
+        }
+        if (iteratee) {
+          seen.push(computed);
+        }
+        result.push(value);
+      } else if (!includes(seen, computed, comparator)) {
+        if (seen !== result) {
+          seen.push(computed);
+        }
+        result.push(value);
+      }
+    }
+    return result;
+  }
+  var _baseUniq$1 = baseUniq$1$1;
+  var baseUniq$2 = _baseUniq$1;
+
+  /**
+   * Creates a duplicate-free version of an array, using
+   * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+   * for equality comparisons, in which only the first occurrence of each element
+   * is kept. The order of result values is determined by the order they occur
+   * in the array.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Array
+   * @param {Array} array The array to inspect.
+   * @returns {Array} Returns the new duplicate free array.
+   * @example
+   *
+   * _.uniq([2, 1, 2]);
+   * // => [2, 1]
+   */
+  function uniq$1(array) {
+    return array && array.length ? baseUniq$2(array) : [];
+  }
+  var uniq_1$1 = uniq$1;
+  var _uniq$1 = /*@__PURE__*/getDefaultExportFromCjs$1(uniq_1$1);
+
+  /**
+   * A specialized version of `_.map` for arrays without support for iteratee
+   * shorthands.
+   *
+   * @private
+   * @param {Array} [array] The array to iterate over.
+   * @param {Function} iteratee The function invoked per iteration.
+   * @returns {Array} Returns the new mapped array.
+   */
+
+  function arrayMap$2$1(array, iteratee) {
+    var index = -1,
+      length = array == null ? 0 : array.length,
+      result = Array(length);
+    while (++index < length) {
+      result[index] = iteratee(array[index], index, array);
+    }
+    return result;
+  }
+  var _arrayMap$1 = arrayMap$2$1;
+  var baseGetTag$5$1 = _baseGetTag$1,
+    isObjectLike$7$1 = isObjectLike_1$1;
+
+  /** `Object#toString` result references. */
+  var symbolTag$2$1 = '[object Symbol]';
+
+  /**
+   * Checks if `value` is classified as a `Symbol` primitive or object.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+   * @example
+   *
+   * _.isSymbol(Symbol.iterator);
+   * // => true
+   *
+   * _.isSymbol('abc');
+   * // => false
+   */
+  function isSymbol$3$1(value) {
+    return _typeof$2(value) == 'symbol' || isObjectLike$7$1(value) && baseGetTag$5$1(value) == symbolTag$2$1;
+  }
+  var isSymbol_1$1 = isSymbol$3$1;
+  var Symbol$3$1 = _Symbol$1,
+    arrayMap$1$1 = _arrayMap$1,
+    isArray$8$1 = isArray_1$1,
+    isSymbol$2$1 = isSymbol_1$1;
+
+  /** Used as references for various `Number` constants. */
+  var INFINITY$1$1 = 1 / 0;
+
+  /** Used to convert symbols to primitives and strings. */
+  var symbolProto$1$1 = Symbol$3$1 ? Symbol$3$1.prototype : undefined,
+    symbolToString$1 = symbolProto$1$1 ? symbolProto$1$1.toString : undefined;
+
+  /**
+   * The base implementation of `_.toString` which doesn't convert nullish
+   * values to empty strings.
+   *
+   * @private
+   * @param {*} value The value to process.
+   * @returns {string} Returns the string.
+   */
+  function baseToString$2$1(value) {
+    // Exit early for strings to avoid a performance hit in some environments.
+    if (typeof value == 'string') {
+      return value;
+    }
+    if (isArray$8$1(value)) {
+      // Recursively convert values (susceptible to call stack limits).
+      return arrayMap$1$1(value, baseToString$2$1) + '';
+    }
+    if (isSymbol$2$1(value)) {
+      return symbolToString$1 ? symbolToString$1.call(value) : '';
+    }
+    var result = value + '';
+    return result == '0' && 1 / value == -INFINITY$1$1 ? '-0' : result;
+  }
+  var _baseToString$1 = baseToString$2$1;
+  var baseToString$1$1 = _baseToString$1;
+
+  /**
+   * Converts `value` to a string. An empty string is returned for `null`
+   * and `undefined` values. The sign of `-0` is preserved.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to convert.
+   * @returns {string} Returns the converted string.
+   * @example
+   *
+   * _.toString(null);
+   * // => ''
+   *
+   * _.toString(-0);
+   * // => '-0'
+   *
+   * _.toString([1, 2, 3]);
+   * // => '1,2,3'
+   */
+  function toString$3$1(value) {
+    return value == null ? '' : baseToString$1$1(value);
+  }
+  var toString_1$1 = toString$3$1;
+  var toString$2$1 = toString_1$1;
+
+  /** Used to generate unique IDs. */
+  var idCounter$1 = 0;
+
+  /**
+   * Generates a unique ID. If `prefix` is given, the ID is appended to it.
+   *
+   * @static
+   * @since 0.1.0
+   * @memberOf _
+   * @category Util
+   * @param {string} [prefix=''] The value to prefix the ID with.
+   * @returns {string} Returns the unique ID.
+   * @example
+   *
+   * _.uniqueId('contact_');
+   * // => 'contact_104'
+   *
+   * _.uniqueId();
+   * // => '105'
+   */
+  function uniqueId$1(prefix) {
+    var id = ++idCounter$1;
+    return toString$2$1(prefix) + id;
+  }
+  var uniqueId_1$1 = uniqueId$1;
+  var _uniqueId$1 = /*@__PURE__*/getDefaultExportFromCjs$1(uniqueId_1$1);
+  var ListCache$2$1 = _ListCache$1;
+
+  /**
+   * Removes all key-value entries from the stack.
+   *
+   * @private
+   * @name clear
+   * @memberOf Stack
+   */
+  function stackClear$1$1() {
+    this.__data__ = new ListCache$2$1();
+    this.size = 0;
+  }
+  var _stackClear$1 = stackClear$1$1;
+
+  /**
+   * Removes `key` and its value from the stack.
+   *
+   * @private
+   * @name delete
+   * @memberOf Stack
+   * @param {string} key The key of the value to remove.
+   * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+   */
+
+  function stackDelete$1$1(key) {
+    var data = this.__data__,
+      result = data['delete'](key);
+    this.size = data.size;
+    return result;
+  }
+  var _stackDelete$1 = stackDelete$1$1;
+
+  /**
+   * Gets the stack value for `key`.
+   *
+   * @private
+   * @name get
+   * @memberOf Stack
+   * @param {string} key The key of the value to get.
+   * @returns {*} Returns the entry value.
+   */
+
+  function stackGet$1$1(key) {
+    return this.__data__.get(key);
+  }
+  var _stackGet$1 = stackGet$1$1;
+
+  /**
+   * Checks if a stack value for `key` exists.
+   *
+   * @private
+   * @name has
+   * @memberOf Stack
+   * @param {string} key The key of the entry to check.
+   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+   */
+
+  function stackHas$1$1(key) {
+    return this.__data__.has(key);
+  }
+  var _stackHas$1 = stackHas$1$1;
+  var ListCache$1$1 = _ListCache$1,
+    Map$4 = _Map$1,
+    MapCache$1$1 = _MapCache$1;
+
+  /** Used as the size to enable large array optimizations. */
+  var LARGE_ARRAY_SIZE$2 = 200;
+
+  /**
+   * Sets the stack `key` to `value`.
+   *
+   * @private
+   * @name set
+   * @memberOf Stack
+   * @param {string} key The key of the value to set.
+   * @param {*} value The value to set.
+   * @returns {Object} Returns the stack cache instance.
+   */
+  function stackSet$1$1(key, value) {
+    var data = this.__data__;
+    if (data instanceof ListCache$1$1) {
+      var pairs = data.__data__;
+      if (!Map$4 || pairs.length < LARGE_ARRAY_SIZE$2 - 1) {
+        pairs.push([key, value]);
+        this.size = ++data.size;
+        return this;
+      }
+      data = this.__data__ = new MapCache$1$1(pairs);
+    }
+    data.set(key, value);
+    this.size = data.size;
+    return this;
+  }
+  var _stackSet$1 = stackSet$1$1;
+  var ListCache$5 = _ListCache$1,
+    stackClear$2 = _stackClear$1,
+    stackDelete$2 = _stackDelete$1,
+    stackGet$2 = _stackGet$1,
+    stackHas$2 = _stackHas$1,
+    stackSet$2 = _stackSet$1;
+
+  /**
+   * Creates a stack cache object to store key-value pairs.
+   *
+   * @private
+   * @constructor
+   * @param {Array} [entries] The key-value pairs to cache.
+   */
+  function Stack$1$1(entries) {
+    var data = this.__data__ = new ListCache$5(entries);
+    this.size = data.size;
+  }
+
+  // Add methods to `Stack`.
+  Stack$1$1.prototype.clear = stackClear$2;
+  Stack$1$1.prototype['delete'] = stackDelete$2;
+  Stack$1$1.prototype.get = stackGet$2;
+  Stack$1$1.prototype.has = stackHas$2;
+  Stack$1$1.prototype.set = stackSet$2;
+  var _Stack$1 = Stack$1$1;
+
+  /**
+   * A specialized version of `_.forEach` for arrays without support for
+   * iteratee shorthands.
+   *
+   * @private
+   * @param {Array} [array] The array to iterate over.
+   * @param {Function} iteratee The function invoked per iteration.
+   * @returns {Array} Returns `array`.
+   */
+
+  function arrayEach$1$1(array, iteratee) {
+    var index = -1,
+      length = array == null ? 0 : array.length;
+    while (++index < length) {
+      if (iteratee(array[index], index, array) === false) {
+        break;
+      }
+    }
+    return array;
+  }
+  var _arrayEach$1 = arrayEach$1$1;
+  var getNative$8 = _getNative$1;
+  var defineProperty$2$1 = function () {
+    try {
+      var func = getNative$8(Object, 'defineProperty');
+      func({}, '', {});
+      return func;
+    } catch (e) {}
+  }();
+  var _defineProperty$2 = defineProperty$2$1;
+  var defineProperty$1$1 = _defineProperty$2;
+
+  /**
+   * The base implementation of `assignValue` and `assignMergeValue` without
+   * value checks.
+   *
+   * @private
+   * @param {Object} object The object to modify.
+   * @param {string} key The key of the property to assign.
+   * @param {*} value The value to assign.
+   */
+  function baseAssignValue$2$1(object, key, value) {
+    if (key == '__proto__' && defineProperty$1$1) {
+      defineProperty$1$1(object, key, {
+        'configurable': true,
+        'enumerable': true,
+        'value': value,
+        'writable': true
+      });
+    } else {
+      object[key] = value;
+    }
+  }
+  var _baseAssignValue$1 = baseAssignValue$2$1;
+  var baseAssignValue$1$1 = _baseAssignValue$1,
+    eq$3 = eq_1$1;
+
+  /** Used for built-in method references. */
+  var objectProto$5$1 = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$4$1 = objectProto$5$1.hasOwnProperty;
+
+  /**
+   * Assigns `value` to `key` of `object` if the existing value is not equivalent
+   * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+   * for equality comparisons.
+   *
+   * @private
+   * @param {Object} object The object to modify.
+   * @param {string} key The key of the property to assign.
+   * @param {*} value The value to assign.
+   */
+  function assignValue$3$1(object, key, value) {
+    var objValue = object[key];
+    if (!(hasOwnProperty$4$1.call(object, key) && eq$3(objValue, value)) || value === undefined && !(key in object)) {
+      baseAssignValue$1$1(object, key, value);
+    }
+  }
+  var _assignValue$1 = assignValue$3$1;
+  var assignValue$2$1 = _assignValue$1,
+    baseAssignValue$3 = _baseAssignValue$1;
+
+  /**
+   * Copies properties of `source` to `object`.
+   *
+   * @private
+   * @param {Object} source The object to copy properties from.
+   * @param {Array} props The property identifiers to copy.
+   * @param {Object} [object={}] The object to copy properties to.
+   * @param {Function} [customizer] The function to customize copied values.
+   * @returns {Object} Returns `object`.
+   */
+  function copyObject$5$1(source, props, object, customizer) {
+    var isNew = !object;
+    object || (object = {});
+    var index = -1,
+      length = props.length;
+    while (++index < length) {
+      var key = props[index];
+      var newValue = customizer ? customizer(object[key], source[key], key, object, source) : undefined;
+      if (newValue === undefined) {
+        newValue = source[key];
+      }
+      if (isNew) {
+        baseAssignValue$3(object, key, newValue);
+      } else {
+        assignValue$2$1(object, key, newValue);
+      }
+    }
+    return object;
+  }
+  var _copyObject$1 = copyObject$5$1;
+
+  /**
+   * The base implementation of `_.times` without support for iteratee shorthands
+   * or max array length checks.
+   *
+   * @private
+   * @param {number} n The number of times to invoke `iteratee`.
+   * @param {Function} iteratee The function invoked per iteration.
+   * @returns {Array} Returns the array of results.
+   */
+
+  function baseTimes$1$1(n, iteratee) {
+    var index = -1,
+      result = Array(n);
+    while (++index < n) {
+      result[index] = iteratee(index);
+    }
+    return result;
+  }
+  var _baseTimes$1 = baseTimes$1$1;
+
+  /** Used as references for various `Number` constants. */
+
+  var MAX_SAFE_INTEGER$2 = 9007199254740991;
+
+  /** Used to detect unsigned integer values. */
+  var reIsUint$1 = /^(?:0|[1-9]\d*)$/;
+
+  /**
+   * Checks if `value` is a valid array-like index.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+   * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+   */
+  function isIndex$3$1(value, length) {
+    var type = _typeof$2(value);
+    length = length == null ? MAX_SAFE_INTEGER$2 : length;
+    return !!length && (type == 'number' || type != 'symbol' && reIsUint$1.test(value)) && value > -1 && value % 1 == 0 && value < length;
+  }
+  var _isIndex$1 = isIndex$3$1;
+  var baseTimes$2 = _baseTimes$1,
+    isArguments$2$1 = isArguments_1$1,
+    isArray$7$1 = isArray_1$1,
+    isBuffer$1$1 = isBufferExports$1,
+    isIndex$2$1 = _isIndex$1,
+    isTypedArray$3 = isTypedArray_1$1;
+
+  /** Used for built-in method references. */
+  var objectProto$4$1 = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$3$1 = objectProto$4$1.hasOwnProperty;
+
+  /**
+   * Creates an array of the enumerable property names of the array-like `value`.
+   *
+   * @private
+   * @param {*} value The value to query.
+   * @param {boolean} inherited Specify returning inherited property names.
+   * @returns {Array} Returns the array of property names.
+   */
+  function arrayLikeKeys$2$1(value, inherited) {
+    var isArr = isArray$7$1(value),
+      isArg = !isArr && isArguments$2$1(value),
+      isBuff = !isArr && !isArg && isBuffer$1$1(value),
+      isType = !isArr && !isArg && !isBuff && isTypedArray$3(value),
+      skipIndexes = isArr || isArg || isBuff || isType,
+      result = skipIndexes ? baseTimes$2(value.length, String) : [],
+      length = result.length;
+    for (var key in value) {
+      if ((inherited || hasOwnProperty$3$1.call(value, key)) && !(skipIndexes && (
+      // Safari 9 has enumerable `arguments.length` in strict mode.
+      key == 'length' ||
+      // Node.js 0.10 has enumerable non-index properties on buffers.
+      isBuff && (key == 'offset' || key == 'parent') ||
+      // PhantomJS 2 has enumerable non-index properties on typed arrays.
+      isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset') ||
+      // Skip index properties.
+      isIndex$2$1(key, length)))) {
+        result.push(key);
+      }
+    }
+    return result;
+  }
+  var _arrayLikeKeys$1 = arrayLikeKeys$2$1;
+  var arrayLikeKeys$1$1 = _arrayLikeKeys$1,
+    baseKeys$3 = _baseKeys$1,
+    isArrayLike$1$1 = isArrayLike_1$1;
+
+  /**
+   * Creates an array of the own enumerable property names of `object`.
+   *
+   * **Note:** Non-object values are coerced to objects. See the
+   * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+   * for more details.
+   *
+   * @static
+   * @since 0.1.0
+   * @memberOf _
+   * @category Object
+   * @param {Object} object The object to query.
+   * @returns {Array} Returns the array of property names.
+   * @example
+   *
+   * function Foo() {
+   *   this.a = 1;
+   *   this.b = 2;
+   * }
+   *
+   * Foo.prototype.c = 3;
+   *
+   * _.keys(new Foo);
+   * // => ['a', 'b'] (iteration order is not guaranteed)
+   *
+   * _.keys('hi');
+   * // => ['0', '1']
+   */
+  function keys$3$1(object) {
+    return isArrayLike$1$1(object) ? arrayLikeKeys$1$1(object) : baseKeys$3(object);
+  }
+  var keys_1$1 = keys$3$1;
+  var copyObject$4$1 = _copyObject$1,
+    keys$2$1 = keys_1$1;
+
+  /**
+   * The base implementation of `_.assign` without support for multiple sources
+   * or `customizer` functions.
+   *
+   * @private
+   * @param {Object} object The destination object.
+   * @param {Object} source The source object.
+   * @returns {Object} Returns `object`.
+   */
+  function baseAssign$1$1(object, source) {
+    return object && copyObject$4$1(source, keys$2$1(source), object);
+  }
+  var _baseAssign$1 = baseAssign$1$1;
+
+  /**
+   * This function is like
+   * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+   * except that it includes inherited enumerable properties.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @returns {Array} Returns the array of property names.
+   */
+
+  function nativeKeysIn$1$1(object) {
+    var result = [];
+    if (object != null) {
+      for (var key in Object(object)) {
+        result.push(key);
+      }
+    }
+    return result;
+  }
+  var _nativeKeysIn$1 = nativeKeysIn$1$1;
+  var isObject$3$1 = isObject_1$1,
+    isPrototype$1$1 = _isPrototype$1,
+    nativeKeysIn$2 = _nativeKeysIn$1;
+
+  /** Used for built-in method references. */
+  var objectProto$3$1 = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$2$1 = objectProto$3$1.hasOwnProperty;
+
+  /**
+   * The base implementation of `_.keysIn` which doesn't treat sparse arrays as dense.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @returns {Array} Returns the array of property names.
+   */
+  function baseKeysIn$1$1(object) {
+    if (!isObject$3$1(object)) {
+      return nativeKeysIn$2(object);
+    }
+    var isProto = isPrototype$1$1(object),
+      result = [];
+    for (var key in object) {
+      if (!(key == 'constructor' && (isProto || !hasOwnProperty$2$1.call(object, key)))) {
+        result.push(key);
+      }
+    }
+    return result;
+  }
+  var _baseKeysIn$1 = baseKeysIn$1$1;
+  var arrayLikeKeys$3 = _arrayLikeKeys$1,
+    baseKeysIn$2 = _baseKeysIn$1,
+    isArrayLike$4 = isArrayLike_1$1;
+
+  /**
+   * Creates an array of the own and inherited enumerable property names of `object`.
+   *
+   * **Note:** Non-object values are coerced to objects.
+   *
+   * @static
+   * @memberOf _
+   * @since 3.0.0
+   * @category Object
+   * @param {Object} object The object to query.
+   * @returns {Array} Returns the array of property names.
+   * @example
+   *
+   * function Foo() {
+   *   this.a = 1;
+   *   this.b = 2;
+   * }
+   *
+   * Foo.prototype.c = 3;
+   *
+   * _.keysIn(new Foo);
+   * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
+   */
+  function keysIn$3$1(object) {
+    return isArrayLike$4(object) ? arrayLikeKeys$3(object, true) : baseKeysIn$2(object);
+  }
+  var keysIn_1$1 = keysIn$3$1;
+  var copyObject$3$1 = _copyObject$1,
+    keysIn$2$1 = keysIn_1$1;
+
+  /**
+   * The base implementation of `_.assignIn` without support for multiple sources
+   * or `customizer` functions.
+   *
+   * @private
+   * @param {Object} object The destination object.
+   * @param {Object} source The source object.
+   * @returns {Object} Returns `object`.
+   */
+  function baseAssignIn$1$1(object, source) {
+    return object && copyObject$3$1(source, keysIn$2$1(source), object);
+  }
+  var _baseAssignIn$1 = baseAssignIn$1$1;
+  var _cloneBuffer$1 = {
+    exports: {}
+  };
+  _cloneBuffer$1.exports;
+  (function (module, exports) {
+    var root = _root$1;
+
+    /** Detect free variable `exports`. */
+    var freeExports = exports && !exports.nodeType && exports;
+
+    /** Detect free variable `module`. */
+    var freeModule = freeExports && 'object' == 'object' && module && !module.nodeType && module;
+
+    /** Detect the popular CommonJS extension `module.exports`. */
+    var moduleExports = freeModule && freeModule.exports === freeExports;
+
+    /** Built-in value references. */
+    var Buffer = moduleExports ? root.Buffer : undefined,
+      allocUnsafe = Buffer ? Buffer.allocUnsafe : undefined;
+
+    /**
+     * Creates a clone of  `buffer`.
+     *
+     * @private
+     * @param {Buffer} buffer The buffer to clone.
+     * @param {boolean} [isDeep] Specify a deep clone.
+     * @returns {Buffer} Returns the cloned buffer.
+     */
+    function cloneBuffer(buffer, isDeep) {
+      if (isDeep) {
+        return buffer.slice();
+      }
+      var length = buffer.length,
+        result = allocUnsafe ? allocUnsafe(length) : new buffer.constructor(length);
+      buffer.copy(result);
+      return result;
+    }
+    module.exports = cloneBuffer;
+  })(_cloneBuffer$1, _cloneBuffer$1.exports);
+  var _cloneBufferExports$1 = _cloneBuffer$1.exports;
+
+  /**
+   * Copies the values of `source` to `array`.
+   *
+   * @private
+   * @param {Array} source The array to copy values from.
+   * @param {Array} [array=[]] The array to copy values to.
+   * @returns {Array} Returns `array`.
+   */
+
+  function copyArray$1$1(source, array) {
+    var index = -1,
+      length = source.length;
+    array || (array = Array(length));
+    while (++index < length) {
+      array[index] = source[index];
+    }
+    return array;
+  }
+  var _copyArray$1 = copyArray$1$1;
+
+  /**
+   * A specialized version of `_.filter` for arrays without support for
+   * iteratee shorthands.
+   *
+   * @private
+   * @param {Array} [array] The array to iterate over.
+   * @param {Function} predicate The function invoked per iteration.
+   * @returns {Array} Returns the new filtered array.
+   */
+
+  function arrayFilter$1$1(array, predicate) {
+    var index = -1,
+      length = array == null ? 0 : array.length,
+      resIndex = 0,
+      result = [];
+    while (++index < length) {
+      var value = array[index];
+      if (predicate(value, index, array)) {
+        result[resIndex++] = value;
+      }
+    }
+    return result;
+  }
+  var _arrayFilter$1 = arrayFilter$1$1;
+
+  /**
+   * This method returns a new empty array.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.13.0
+   * @category Util
+   * @returns {Array} Returns the new empty array.
+   * @example
+   *
+   * var arrays = _.times(2, _.stubArray);
+   *
+   * console.log(arrays);
+   * // => [[], []]
+   *
+   * console.log(arrays[0] === arrays[1]);
+   * // => false
+   */
+
+  function stubArray$2$1() {
+    return [];
+  }
+  var stubArray_1$1 = stubArray$2$1;
+  var arrayFilter$2 = _arrayFilter$1,
+    stubArray$1$1 = stubArray_1$1;
+
+  /** Used for built-in method references. */
+  var objectProto$2$1 = Object.prototype;
+
+  /** Built-in value references. */
+  var propertyIsEnumerable$2 = objectProto$2$1.propertyIsEnumerable;
+
+  /* Built-in method references for those with the same name as other `lodash` methods. */
+  var nativeGetSymbols$1$1 = Object.getOwnPropertySymbols;
+
+  /**
+   * Creates an array of the own enumerable symbols of `object`.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @returns {Array} Returns the array of symbols.
+   */
+  var getSymbols$3$1 = !nativeGetSymbols$1$1 ? stubArray$1$1 : function (object) {
+    if (object == null) {
+      return [];
+    }
+    object = Object(object);
+    return arrayFilter$2(nativeGetSymbols$1$1(object), function (symbol) {
+      return propertyIsEnumerable$2.call(object, symbol);
+    });
+  };
+  var _getSymbols$1 = getSymbols$3$1;
+  var copyObject$2$1 = _copyObject$1,
+    getSymbols$2$1 = _getSymbols$1;
+
+  /**
+   * Copies own symbols of `source` to `object`.
+   *
+   * @private
+   * @param {Object} source The object to copy symbols from.
+   * @param {Object} [object={}] The object to copy symbols to.
+   * @returns {Object} Returns `object`.
+   */
+  function copySymbols$1$1(source, object) {
+    return copyObject$2$1(source, getSymbols$2$1(source), object);
+  }
+  var _copySymbols$1 = copySymbols$1$1;
+
+  /**
+   * Appends the elements of `values` to `array`.
+   *
+   * @private
+   * @param {Array} array The array to modify.
+   * @param {Array} values The values to append.
+   * @returns {Array} Returns `array`.
+   */
+
+  function arrayPush$3$1(array, values) {
+    var index = -1,
+      length = values.length,
+      offset = array.length;
+    while (++index < length) {
+      array[offset + index] = values[index];
+    }
+    return array;
+  }
+  var _arrayPush$1 = arrayPush$3$1;
+  var overArg$3 = _overArg$1;
+
+  /** Built-in value references. */
+  var getPrototype$3$1 = overArg$3(Object.getPrototypeOf, Object);
+  var _getPrototype$1 = getPrototype$3$1;
+  var arrayPush$2$1 = _arrayPush$1,
+    getPrototype$2$1 = _getPrototype$1,
+    getSymbols$1$1 = _getSymbols$1,
+    stubArray$3 = stubArray_1$1;
+
+  /* Built-in method references for those with the same name as other `lodash` methods. */
+  var nativeGetSymbols$2 = Object.getOwnPropertySymbols;
+
+  /**
+   * Creates an array of the own and inherited enumerable symbols of `object`.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @returns {Array} Returns the array of symbols.
+   */
+  var getSymbolsIn$2$1 = !nativeGetSymbols$2 ? stubArray$3 : function (object) {
+    var result = [];
+    while (object) {
+      arrayPush$2$1(result, getSymbols$1$1(object));
+      object = getPrototype$2$1(object);
+    }
+    return result;
+  };
+  var _getSymbolsIn$1 = getSymbolsIn$2$1;
+  var copyObject$1$1 = _copyObject$1,
+    getSymbolsIn$1$1 = _getSymbolsIn$1;
+
+  /**
+   * Copies own and inherited symbols of `source` to `object`.
+   *
+   * @private
+   * @param {Object} source The object to copy symbols from.
+   * @param {Object} [object={}] The object to copy symbols to.
+   * @returns {Object} Returns `object`.
+   */
+  function copySymbolsIn$1$1(source, object) {
+    return copyObject$1$1(source, getSymbolsIn$1$1(source), object);
+  }
+  var _copySymbolsIn$1 = copySymbolsIn$1$1;
+  var arrayPush$1$1 = _arrayPush$1,
+    isArray$6$1 = isArray_1$1;
+
+  /**
+   * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
+   * `keysFunc` and `symbolsFunc` to get the enumerable property names and
+   * symbols of `object`.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @param {Function} keysFunc The function to get the keys of `object`.
+   * @param {Function} symbolsFunc The function to get the symbols of `object`.
+   * @returns {Array} Returns the array of property names and symbols.
+   */
+  function baseGetAllKeys$2$1(object, keysFunc, symbolsFunc) {
+    var result = keysFunc(object);
+    return isArray$6$1(object) ? result : arrayPush$1$1(result, symbolsFunc(object));
+  }
+  var _baseGetAllKeys$1 = baseGetAllKeys$2$1;
+  var baseGetAllKeys$1$1 = _baseGetAllKeys$1,
+    getSymbols$4 = _getSymbols$1,
+    keys$1$1 = keys_1$1;
+
+  /**
+   * Creates an array of own enumerable property names and symbols of `object`.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @returns {Array} Returns the array of property names and symbols.
+   */
+  function getAllKeys$1$1(object) {
+    return baseGetAllKeys$1$1(object, keys$1$1, getSymbols$4);
+  }
+  var _getAllKeys$1 = getAllKeys$1$1;
+  var baseGetAllKeys$3 = _baseGetAllKeys$1,
+    getSymbolsIn$3 = _getSymbolsIn$1,
+    keysIn$1$1 = keysIn_1$1;
+
+  /**
+   * Creates an array of own and inherited enumerable property names and
+   * symbols of `object`.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @returns {Array} Returns the array of property names and symbols.
+   */
+  function getAllKeysIn$2$1(object) {
+    return baseGetAllKeys$3(object, keysIn$1$1, getSymbolsIn$3);
+  }
+  var _getAllKeysIn$1 = getAllKeysIn$2$1;
+
+  /** Used for built-in method references. */
+
+  var objectProto$1$1 = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$1$1 = objectProto$1$1.hasOwnProperty;
+
+  /**
+   * Initializes an array clone.
+   *
+   * @private
+   * @param {Array} array The array to clone.
+   * @returns {Array} Returns the initialized clone.
+   */
+  function initCloneArray$1$1(array) {
+    var length = array.length,
+      result = new array.constructor(length);
+
+    // Add properties assigned by `RegExp#exec`.
+    if (length && typeof array[0] == 'string' && hasOwnProperty$1$1.call(array, 'index')) {
+      result.index = array.index;
+      result.input = array.input;
+    }
+    return result;
+  }
+  var _initCloneArray$1 = initCloneArray$1$1;
+  var root$9 = _root$1;
+
+  /** Built-in value references. */
+  var Uint8Array$1$1 = root$9.Uint8Array;
+  var _Uint8Array$1 = Uint8Array$1$1;
+  var Uint8Array$2 = _Uint8Array$1;
+
+  /**
+   * Creates a clone of `arrayBuffer`.
+   *
+   * @private
+   * @param {ArrayBuffer} arrayBuffer The array buffer to clone.
+   * @returns {ArrayBuffer} Returns the cloned array buffer.
+   */
+  function cloneArrayBuffer$3$1(arrayBuffer) {
+    var result = new arrayBuffer.constructor(arrayBuffer.byteLength);
+    new Uint8Array$2(result).set(new Uint8Array$2(arrayBuffer));
+    return result;
+  }
+  var _cloneArrayBuffer$1 = cloneArrayBuffer$3$1;
+  var cloneArrayBuffer$2$1 = _cloneArrayBuffer$1;
+
+  /**
+   * Creates a clone of `dataView`.
+   *
+   * @private
+   * @param {Object} dataView The data view to clone.
+   * @param {boolean} [isDeep] Specify a deep clone.
+   * @returns {Object} Returns the cloned data view.
+   */
+  function cloneDataView$1$1(dataView, isDeep) {
+    var buffer = isDeep ? cloneArrayBuffer$2$1(dataView.buffer) : dataView.buffer;
+    return new dataView.constructor(buffer, dataView.byteOffset, dataView.byteLength);
+  }
+  var _cloneDataView$1 = cloneDataView$1$1;
+
+  /** Used to match `RegExp` flags from their coerced string values. */
+
+  var reFlags$1 = /\w*$/;
+
+  /**
+   * Creates a clone of `regexp`.
+   *
+   * @private
+   * @param {Object} regexp The regexp to clone.
+   * @returns {Object} Returns the cloned regexp.
+   */
+  function cloneRegExp$1$1(regexp) {
+    var result = new regexp.constructor(regexp.source, reFlags$1.exec(regexp));
+    result.lastIndex = regexp.lastIndex;
+    return result;
+  }
+  var _cloneRegExp$1 = cloneRegExp$1$1;
+  var Symbol$2$1 = _Symbol$1;
+
+  /** Used to convert symbols to primitives and strings. */
+  var symbolProto$2 = Symbol$2$1 ? Symbol$2$1.prototype : undefined,
+    symbolValueOf$1 = symbolProto$2 ? symbolProto$2.valueOf : undefined;
+
+  /**
+   * Creates a clone of the `symbol` object.
+   *
+   * @private
+   * @param {Object} symbol The symbol object to clone.
+   * @returns {Object} Returns the cloned symbol object.
+   */
+  function cloneSymbol$1$1(symbol) {
+    return symbolValueOf$1 ? Object(symbolValueOf$1.call(symbol)) : {};
+  }
+  var _cloneSymbol$1 = cloneSymbol$1$1;
+  var cloneArrayBuffer$1$1 = _cloneArrayBuffer$1;
+
+  /**
+   * Creates a clone of `typedArray`.
+   *
+   * @private
+   * @param {Object} typedArray The typed array to clone.
+   * @param {boolean} [isDeep] Specify a deep clone.
+   * @returns {Object} Returns the cloned typed array.
+   */
+  function cloneTypedArray$1$1(typedArray, isDeep) {
+    var buffer = isDeep ? cloneArrayBuffer$1$1(typedArray.buffer) : typedArray.buffer;
+    return new typedArray.constructor(buffer, typedArray.byteOffset, typedArray.length);
+  }
+  var _cloneTypedArray$1 = cloneTypedArray$1$1;
+  var cloneArrayBuffer$4 = _cloneArrayBuffer$1,
+    cloneDataView$2 = _cloneDataView$1,
+    cloneRegExp$2 = _cloneRegExp$1,
+    cloneSymbol$2 = _cloneSymbol$1,
+    cloneTypedArray$2 = _cloneTypedArray$1;
+
+  /** `Object#toString` result references. */
+  var boolTag$2$1 = '[object Boolean]',
+    dateTag$2$1 = '[object Date]',
+    mapTag$2$1 = '[object Map]',
+    numberTag$2$1 = '[object Number]',
+    regexpTag$1$1 = '[object RegExp]',
+    setTag$2$1 = '[object Set]',
+    stringTag$2$1 = '[object String]',
+    symbolTag$1$1 = '[object Symbol]';
+  var arrayBufferTag$1$1 = '[object ArrayBuffer]',
+    dataViewTag$1$1 = '[object DataView]',
+    float32Tag$1$1 = '[object Float32Array]',
+    float64Tag$1$1 = '[object Float64Array]',
+    int8Tag$1$1 = '[object Int8Array]',
+    int16Tag$1$1 = '[object Int16Array]',
+    int32Tag$1$1 = '[object Int32Array]',
+    uint8Tag$1$1 = '[object Uint8Array]',
+    uint8ClampedTag$1$1 = '[object Uint8ClampedArray]',
+    uint16Tag$1$1 = '[object Uint16Array]',
+    uint32Tag$1$1 = '[object Uint32Array]';
+
+  /**
+   * Initializes an object clone based on its `toStringTag`.
+   *
+   * **Note:** This function only supports cloning values with tags of
+   * `Boolean`, `Date`, `Error`, `Map`, `Number`, `RegExp`, `Set`, or `String`.
+   *
+   * @private
+   * @param {Object} object The object to clone.
+   * @param {string} tag The `toStringTag` of the object to clone.
+   * @param {boolean} [isDeep] Specify a deep clone.
+   * @returns {Object} Returns the initialized clone.
+   */
+  function initCloneByTag$1$1(object, tag, isDeep) {
+    var Ctor = object.constructor;
+    switch (tag) {
+      case arrayBufferTag$1$1:
+        return cloneArrayBuffer$4(object);
+      case boolTag$2$1:
+      case dateTag$2$1:
+        return new Ctor(+object);
+      case dataViewTag$1$1:
+        return cloneDataView$2(object, isDeep);
+      case float32Tag$1$1:
+      case float64Tag$1$1:
+      case int8Tag$1$1:
+      case int16Tag$1$1:
+      case int32Tag$1$1:
+      case uint8Tag$1$1:
+      case uint8ClampedTag$1$1:
+      case uint16Tag$1$1:
+      case uint32Tag$1$1:
+        return cloneTypedArray$2(object, isDeep);
+      case mapTag$2$1:
+        return new Ctor();
+      case numberTag$2$1:
+      case stringTag$2$1:
+        return new Ctor(object);
+      case regexpTag$1$1:
+        return cloneRegExp$2(object);
+      case setTag$2$1:
+        return new Ctor();
+      case symbolTag$1$1:
+        return cloneSymbol$2(object);
+    }
+  }
+  var _initCloneByTag$1 = initCloneByTag$1$1;
+  var isObject$2$1 = isObject_1$1;
+
+  /** Built-in value references. */
+  var objectCreate$1 = Object.create;
+
+  /**
+   * The base implementation of `_.create` without support for assigning
+   * properties to the created object.
+   *
+   * @private
+   * @param {Object} proto The object to inherit from.
+   * @returns {Object} Returns the new object.
+   */
+  var baseCreate$1$1 = function () {
+    function object() {}
+    return function (proto) {
+      if (!isObject$2$1(proto)) {
+        return {};
+      }
+      if (objectCreate$1) {
+        return objectCreate$1(proto);
+      }
+      object.prototype = proto;
+      var result = new object();
+      object.prototype = undefined;
+      return result;
+    };
+  }();
+  var _baseCreate$1 = baseCreate$1$1;
+  var baseCreate$2 = _baseCreate$1,
+    getPrototype$1$1 = _getPrototype$1,
+    isPrototype$5 = _isPrototype$1;
+
+  /**
+   * Initializes an object clone.
+   *
+   * @private
+   * @param {Object} object The object to clone.
+   * @returns {Object} Returns the initialized clone.
+   */
+  function initCloneObject$1$1(object) {
+    return typeof object.constructor == 'function' && !isPrototype$5(object) ? baseCreate$2(getPrototype$1$1(object)) : {};
+  }
+  var _initCloneObject$1 = initCloneObject$1$1;
+  var getTag$2$1 = _getTag$1,
+    isObjectLike$6$1 = isObjectLike_1$1;
+
+  /** `Object#toString` result references. */
+  var mapTag$1$1 = '[object Map]';
+
+  /**
+   * The base implementation of `_.isMap` without Node.js optimizations.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a map, else `false`.
+   */
+  function baseIsMap$1$1(value) {
+    return isObjectLike$6$1(value) && getTag$2$1(value) == mapTag$1$1;
+  }
+  var _baseIsMap$1 = baseIsMap$1$1;
+  var baseIsMap$2 = _baseIsMap$1,
+    baseUnary$2$1 = _baseUnary$1,
+    nodeUtil$2$1 = _nodeUtilExports$1;
+
+  /* Node.js helper references. */
+  var nodeIsMap$1 = nodeUtil$2$1 && nodeUtil$2$1.isMap;
+
+  /**
+   * Checks if `value` is classified as a `Map` object.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.3.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a map, else `false`.
+   * @example
+   *
+   * _.isMap(new Map);
+   * // => true
+   *
+   * _.isMap(new WeakMap);
+   * // => false
+   */
+  var isMap$1$1 = nodeIsMap$1 ? baseUnary$2$1(nodeIsMap$1) : baseIsMap$2;
+  var isMap_1$1 = isMap$1$1;
+  var getTag$1$1 = _getTag$1,
+    isObjectLike$5$1 = isObjectLike_1$1;
+
+  /** `Object#toString` result references. */
+  var setTag$1$1 = '[object Set]';
+
+  /**
+   * The base implementation of `_.isSet` without Node.js optimizations.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a set, else `false`.
+   */
+  function baseIsSet$1$1(value) {
+    return isObjectLike$5$1(value) && getTag$1$1(value) == setTag$1$1;
+  }
+  var _baseIsSet$1 = baseIsSet$1$1;
+  var baseIsSet$2 = _baseIsSet$1,
+    baseUnary$1$1 = _baseUnary$1,
+    nodeUtil$1$1 = _nodeUtilExports$1;
+
+  /* Node.js helper references. */
+  var nodeIsSet$1 = nodeUtil$1$1 && nodeUtil$1$1.isSet;
+
+  /**
+   * Checks if `value` is classified as a `Set` object.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.3.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a set, else `false`.
+   * @example
+   *
+   * _.isSet(new Set);
+   * // => true
+   *
+   * _.isSet(new WeakSet);
+   * // => false
+   */
+  var isSet$1$1 = nodeIsSet$1 ? baseUnary$1$1(nodeIsSet$1) : baseIsSet$2;
+  var isSet_1$1 = isSet$1$1;
+  var Stack$2 = _Stack$1,
+    arrayEach$2 = _arrayEach$1,
+    assignValue$1$1 = _assignValue$1,
+    baseAssign$2 = _baseAssign$1,
+    baseAssignIn$2 = _baseAssignIn$1,
+    cloneBuffer$1 = _cloneBufferExports$1,
+    copyArray$2 = _copyArray$1,
+    copySymbols$2 = _copySymbols$1,
+    copySymbolsIn$2 = _copySymbolsIn$1,
+    getAllKeys$2 = _getAllKeys$1,
+    getAllKeysIn$1$1 = _getAllKeysIn$1,
+    getTag$5 = _getTag$1,
+    initCloneArray$2 = _initCloneArray$1,
+    initCloneByTag$2 = _initCloneByTag$1,
+    initCloneObject$2 = _initCloneObject$1,
+    isArray$5$1 = isArray_1$1,
+    isBuffer$4 = isBufferExports$1,
+    isMap$2 = isMap_1$1,
+    isObject$1$1 = isObject_1$1,
+    isSet$2 = isSet_1$1,
+    keys$4 = keys_1$1,
+    keysIn$4 = keysIn_1$1;
+
+  /** Used to compose bitmasks for cloning. */
+  var CLONE_DEEP_FLAG$1$1 = 1,
+    CLONE_FLAT_FLAG$1$1 = 2,
+    CLONE_SYMBOLS_FLAG$2$1 = 4;
+
+  /** `Object#toString` result references. */
+  var argsTag$3 = '[object Arguments]',
+    arrayTag$2 = '[object Array]',
+    boolTag$1$1 = '[object Boolean]',
+    dateTag$1$1 = '[object Date]',
+    errorTag$2 = '[object Error]',
+    funcTag$3 = '[object Function]',
+    genTag$2 = '[object GeneratorFunction]',
+    mapTag$6 = '[object Map]',
+    numberTag$1$1 = '[object Number]',
+    objectTag$1$1 = '[object Object]',
+    regexpTag$3 = '[object RegExp]',
+    setTag$6 = '[object Set]',
+    stringTag$1$1 = '[object String]',
+    symbolTag$3 = '[object Symbol]',
+    weakMapTag$3 = '[object WeakMap]';
+  var arrayBufferTag$3 = '[object ArrayBuffer]',
+    dataViewTag$4 = '[object DataView]',
+    float32Tag$3 = '[object Float32Array]',
+    float64Tag$3 = '[object Float64Array]',
+    int8Tag$3 = '[object Int8Array]',
+    int16Tag$3 = '[object Int16Array]',
+    int32Tag$3 = '[object Int32Array]',
+    uint8Tag$3 = '[object Uint8Array]',
+    uint8ClampedTag$3 = '[object Uint8ClampedArray]',
+    uint16Tag$3 = '[object Uint16Array]',
+    uint32Tag$3 = '[object Uint32Array]';
+
+  /** Used to identify `toStringTag` values supported by `_.clone`. */
+  var cloneableTags$1 = {};
+  cloneableTags$1[argsTag$3] = cloneableTags$1[arrayTag$2] = cloneableTags$1[arrayBufferTag$3] = cloneableTags$1[dataViewTag$4] = cloneableTags$1[boolTag$1$1] = cloneableTags$1[dateTag$1$1] = cloneableTags$1[float32Tag$3] = cloneableTags$1[float64Tag$3] = cloneableTags$1[int8Tag$3] = cloneableTags$1[int16Tag$3] = cloneableTags$1[int32Tag$3] = cloneableTags$1[mapTag$6] = cloneableTags$1[numberTag$1$1] = cloneableTags$1[objectTag$1$1] = cloneableTags$1[regexpTag$3] = cloneableTags$1[setTag$6] = cloneableTags$1[stringTag$1$1] = cloneableTags$1[symbolTag$3] = cloneableTags$1[uint8Tag$3] = cloneableTags$1[uint8ClampedTag$3] = cloneableTags$1[uint16Tag$3] = cloneableTags$1[uint32Tag$3] = true;
+  cloneableTags$1[errorTag$2] = cloneableTags$1[funcTag$3] = cloneableTags$1[weakMapTag$3] = false;
+
+  /**
+   * The base implementation of `_.clone` and `_.cloneDeep` which tracks
+   * traversed objects.
+   *
+   * @private
+   * @param {*} value The value to clone.
+   * @param {boolean} bitmask The bitmask flags.
+   *  1 - Deep clone
+   *  2 - Flatten inherited properties
+   *  4 - Clone symbols
+   * @param {Function} [customizer] The function to customize cloning.
+   * @param {string} [key] The key of `value`.
+   * @param {Object} [object] The parent object of `value`.
+   * @param {Object} [stack] Tracks traversed objects and their clone counterparts.
+   * @returns {*} Returns the cloned value.
+   */
+  function baseClone$2$1(value, bitmask, customizer, key, object, stack) {
+    var result,
+      isDeep = bitmask & CLONE_DEEP_FLAG$1$1,
+      isFlat = bitmask & CLONE_FLAT_FLAG$1$1,
+      isFull = bitmask & CLONE_SYMBOLS_FLAG$2$1;
+    if (customizer) {
+      result = object ? customizer(value, key, object, stack) : customizer(value);
+    }
+    if (result !== undefined) {
+      return result;
+    }
+    if (!isObject$1$1(value)) {
+      return value;
+    }
+    var isArr = isArray$5$1(value);
+    if (isArr) {
+      result = initCloneArray$2(value);
+      if (!isDeep) {
+        return copyArray$2(value, result);
+      }
+    } else {
+      var tag = getTag$5(value),
+        isFunc = tag == funcTag$3 || tag == genTag$2;
+      if (isBuffer$4(value)) {
+        return cloneBuffer$1(value, isDeep);
+      }
+      if (tag == objectTag$1$1 || tag == argsTag$3 || isFunc && !object) {
+        result = isFlat || isFunc ? {} : initCloneObject$2(value);
+        if (!isDeep) {
+          return isFlat ? copySymbolsIn$2(value, baseAssignIn$2(result, value)) : copySymbols$2(value, baseAssign$2(result, value));
+        }
+      } else {
+        if (!cloneableTags$1[tag]) {
+          return object ? value : {};
+        }
+        result = initCloneByTag$2(value, tag, isDeep);
+      }
+    }
+    // Check for circular references and return its corresponding clone.
+    stack || (stack = new Stack$2());
+    var stacked = stack.get(value);
+    if (stacked) {
+      return stacked;
+    }
+    stack.set(value, result);
+    if (isSet$2(value)) {
+      value.forEach(function (subValue) {
+        result.add(baseClone$2$1(subValue, bitmask, customizer, subValue, value, stack));
+      });
+    } else if (isMap$2(value)) {
+      value.forEach(function (subValue, key) {
+        result.set(key, baseClone$2$1(subValue, bitmask, customizer, key, value, stack));
+      });
+    }
+    var keysFunc = isFull ? isFlat ? getAllKeysIn$1$1 : getAllKeys$2 : isFlat ? keysIn$4 : keys$4;
+    var props = isArr ? undefined : keysFunc(value);
+    arrayEach$2(props || value, function (subValue, key) {
+      if (props) {
+        key = subValue;
+        subValue = value[key];
+      }
+      // Recursively populate clone (susceptible to call stack limits).
+      assignValue$1$1(result, key, baseClone$2$1(subValue, bitmask, customizer, key, value, stack));
+    });
+    return result;
+  }
+  var _baseClone$1 = baseClone$2$1;
+  var isArray$4$1 = isArray_1$1,
+    isSymbol$1$1 = isSymbol_1$1;
+
+  /** Used to match property names within property paths. */
+  var reIsDeepProp$1 = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+    reIsPlainProp$1 = /^\w*$/;
+
+  /**
+   * Checks if `value` is a property name and not a property path.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @param {Object} [object] The object to query keys on.
+   * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+   */
+  function isKey$1$1(value, object) {
+    if (isArray$4$1(value)) {
+      return false;
+    }
+    var type = _typeof$2(value);
+    if (type == 'number' || type == 'symbol' || type == 'boolean' || value == null || isSymbol$1$1(value)) {
+      return true;
+    }
+    return reIsPlainProp$1.test(value) || !reIsDeepProp$1.test(value) || object != null && value in Object(object);
+  }
+  var _isKey$1 = isKey$1$1;
+  var MapCache$4 = _MapCache$1;
+
+  /** Error message constants. */
+  var FUNC_ERROR_TEXT$1 = 'Expected a function';
+
+  /**
+   * Creates a function that memoizes the result of `func`. If `resolver` is
+   * provided, it determines the cache key for storing the result based on the
+   * arguments provided to the memoized function. By default, the first argument
+   * provided to the memoized function is used as the map cache key. The `func`
+   * is invoked with the `this` binding of the memoized function.
+   *
+   * **Note:** The cache is exposed as the `cache` property on the memoized
+   * function. Its creation may be customized by replacing the `_.memoize.Cache`
+   * constructor with one whose instances implement the
+   * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
+   * method interface of `clear`, `delete`, `get`, `has`, and `set`.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Function
+   * @param {Function} func The function to have its output memoized.
+   * @param {Function} [resolver] The function to resolve the cache key.
+   * @returns {Function} Returns the new memoized function.
+   * @example
+   *
+   * var object = { 'a': 1, 'b': 2 };
+   * var other = { 'c': 3, 'd': 4 };
+   *
+   * var values = _.memoize(_.values);
+   * values(object);
+   * // => [1, 2]
+   *
+   * values(other);
+   * // => [3, 4]
+   *
+   * object.a = 2;
+   * values(object);
+   * // => [1, 2]
+   *
+   * // Modify the result cache.
+   * values.cache.set(object, ['a', 'b']);
+   * values(object);
+   * // => ['a', 'b']
+   *
+   * // Replace `_.memoize.Cache`.
+   * _.memoize.Cache = WeakMap;
+   */
+  function memoize$1$1(func, resolver) {
+    if (typeof func != 'function' || resolver != null && typeof resolver != 'function') {
+      throw new TypeError(FUNC_ERROR_TEXT$1);
+    }
+    var memoized = function memoized() {
+      var args = arguments,
+        key = resolver ? resolver.apply(this, args) : args[0],
+        cache = memoized.cache;
+      if (cache.has(key)) {
+        return cache.get(key);
+      }
+      var result = func.apply(this, args);
+      memoized.cache = cache.set(key, result) || cache;
+      return result;
+    };
+    memoized.cache = new (memoize$1$1.Cache || MapCache$4)();
+    return memoized;
+  }
+
+  // Expose `MapCache`.
+  memoize$1$1.Cache = MapCache$4;
+  var memoize_1$1 = memoize$1$1;
+  var memoize$2 = memoize_1$1;
+
+  /** Used as the maximum memoize cache size. */
+  var MAX_MEMOIZE_SIZE$1 = 500;
+
+  /**
+   * A specialized version of `_.memoize` which clears the memoized function's
+   * cache when it exceeds `MAX_MEMOIZE_SIZE`.
+   *
+   * @private
+   * @param {Function} func The function to have its output memoized.
+   * @returns {Function} Returns the new memoized function.
+   */
+  function memoizeCapped$1$1(func) {
+    var result = memoize$2(func, function (key) {
+      if (cache.size === MAX_MEMOIZE_SIZE$1) {
+        cache.clear();
+      }
+      return key;
+    });
+    var cache = result.cache;
+    return result;
+  }
+  var _memoizeCapped$1 = memoizeCapped$1$1;
+  var memoizeCapped$2 = _memoizeCapped$1;
+
+  /** Used to match property names within property paths. */
+  var rePropName$1 = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+
+  /** Used to match backslashes in property paths. */
+  var reEscapeChar$1 = /\\(\\)?/g;
+
+  /**
+   * Converts `string` to a property path array.
+   *
+   * @private
+   * @param {string} string The string to convert.
+   * @returns {Array} Returns the property path array.
+   */
+  var stringToPath$1$1 = memoizeCapped$2(function (string) {
+    var result = [];
+    if (string.charCodeAt(0) === 46 /* . */) {
+      result.push('');
+    }
+    string.replace(rePropName$1, function (match, number, quote, subString) {
+      result.push(quote ? subString.replace(reEscapeChar$1, '$1') : number || match);
+    });
+    return result;
+  });
+  var _stringToPath$1 = stringToPath$1$1;
+  var isArray$3$1 = isArray_1$1,
+    isKey$2 = _isKey$1,
+    stringToPath$2 = _stringToPath$1,
+    toString$1$3 = toString_1$1;
+
+  /**
+   * Casts `value` to a path array if it's not one.
+   *
+   * @private
+   * @param {*} value The value to inspect.
+   * @param {Object} [object] The object to query keys on.
+   * @returns {Array} Returns the cast property path array.
+   */
+  function castPath$6$1(value, object) {
+    if (isArray$3$1(value)) {
+      return value;
+    }
+    return isKey$2(value, object) ? [value] : stringToPath$2(toString$1$3(value));
+  }
+  var _castPath$1 = castPath$6$1;
+
+  /**
+   * Gets the last element of `array`.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Array
+   * @param {Array} array The array to query.
+   * @returns {*} Returns the last element of `array`.
+   * @example
+   *
+   * _.last([1, 2, 3]);
+   * // => 3
+   */
+
+  function last$1$1(array) {
+    var length = array == null ? 0 : array.length;
+    return length ? array[length - 1] : undefined;
+  }
+  var last_1$1 = last$1$1;
+  var isSymbol$4 = isSymbol_1$1;
+
+  /** Used as references for various `Number` constants. */
+  var INFINITY$3 = 1 / 0;
+
+  /**
+   * Converts `value` to a string key if it's not a string or symbol.
+   *
+   * @private
+   * @param {*} value The value to inspect.
+   * @returns {string|symbol} Returns the key.
+   */
+  function toKey$4$1(value) {
+    if (typeof value == 'string' || isSymbol$4(value)) {
+      return value;
+    }
+    var result = value + '';
+    return result == '0' && 1 / value == -INFINITY$3 ? '-0' : result;
+  }
+  var _toKey$1 = toKey$4$1;
+  var castPath$5$1 = _castPath$1,
+    toKey$3$1 = _toKey$1;
+
+  /**
+   * The base implementation of `_.get` without support for default values.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @param {Array|string} path The path of the property to get.
+   * @returns {*} Returns the resolved value.
+   */
+  function baseGet$2$1(object, path) {
+    path = castPath$5$1(path, object);
+    var index = 0,
+      length = path.length;
+    while (object != null && index < length) {
+      object = object[toKey$3$1(path[index++])];
+    }
+    return index && index == length ? object : undefined;
+  }
+  var _baseGet$1 = baseGet$2$1;
+
+  /**
+   * The base implementation of `_.slice` without an iteratee call guard.
+   *
+   * @private
+   * @param {Array} array The array to slice.
+   * @param {number} [start=0] The start position.
+   * @param {number} [end=array.length] The end position.
+   * @returns {Array} Returns the slice of `array`.
+   */
+
+  function baseSlice$2$1(array, start, end) {
+    var index = -1,
+      length = array.length;
+    if (start < 0) {
+      start = -start > length ? 0 : length + start;
+    }
+    end = end > length ? length : end;
+    if (end < 0) {
+      end += length;
+    }
+    length = start > end ? 0 : end - start >>> 0;
+    start >>>= 0;
+    var result = Array(length);
+    while (++index < length) {
+      result[index] = array[index + start];
+    }
+    return result;
+  }
+  var _baseSlice$1 = baseSlice$2$1;
+  var baseGet$1$1 = _baseGet$1,
+    baseSlice$1$1 = _baseSlice$1;
+
+  /**
+   * Gets the parent value at `path` of `object`.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @param {Array} path The path to get the parent value of.
+   * @returns {*} Returns the parent value.
+   */
+  function parent$1$1(object, path) {
+    return path.length < 2 ? object : baseGet$1$1(object, baseSlice$1$1(path, 0, -1));
+  }
+  var _parent$1 = parent$1$1;
+  var castPath$4$1 = _castPath$1,
+    last$2 = last_1$1,
+    parent$2 = _parent$1,
+    toKey$2$1 = _toKey$1;
+
+  /**
+   * The base implementation of `_.unset`.
+   *
+   * @private
+   * @param {Object} object The object to modify.
+   * @param {Array|string} path The property path to unset.
+   * @returns {boolean} Returns `true` if the property is deleted, else `false`.
+   */
+  function baseUnset$1$1(object, path) {
+    path = castPath$4$1(path, object);
+    object = parent$2(object, path);
+    return object == null || delete object[toKey$2$1(last$2(path))];
+  }
+  var _baseUnset$1 = baseUnset$1$1;
+  var baseGetTag$4$1 = _baseGetTag$1,
+    getPrototype$4 = _getPrototype$1,
+    isObjectLike$4$1 = isObjectLike_1$1;
+
+  /** `Object#toString` result references. */
+  var objectTag$4 = '[object Object]';
+
+  /** Used for built-in method references. */
+  var funcProto$3 = Function.prototype,
+    objectProto$f = Object.prototype;
+
+  /** Used to resolve the decompiled source of functions. */
+  var funcToString$3 = funcProto$3.toString;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$c = objectProto$f.hasOwnProperty;
+
+  /** Used to infer the `Object` constructor. */
+  var objectCtorString$1 = funcToString$3.call(Object);
+
+  /**
+   * Checks if `value` is a plain object, that is, an object created by the
+   * `Object` constructor or one with a `[[Prototype]]` of `null`.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.8.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+   * @example
+   *
+   * function Foo() {
+   *   this.a = 1;
+   * }
+   *
+   * _.isPlainObject(new Foo);
+   * // => false
+   *
+   * _.isPlainObject([1, 2, 3]);
+   * // => false
+   *
+   * _.isPlainObject({ 'x': 0, 'y': 0 });
+   * // => true
+   *
+   * _.isPlainObject(Object.create(null));
+   * // => true
+   */
+  function isPlainObject$1$1(value) {
+    if (!isObjectLike$4$1(value) || baseGetTag$4$1(value) != objectTag$4) {
+      return false;
+    }
+    var proto = getPrototype$4(value);
+    if (proto === null) {
+      return true;
+    }
+    var Ctor = hasOwnProperty$c.call(proto, 'constructor') && proto.constructor;
+    return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString$3.call(Ctor) == objectCtorString$1;
+  }
+  var isPlainObject_1$1 = isPlainObject$1$1;
+  var isPlainObject$2 = isPlainObject_1$1;
+
+  /**
+   * Used by `_.omit` to customize its `_.cloneDeep` use to only clone plain
+   * objects.
+   *
+   * @private
+   * @param {*} value The value to inspect.
+   * @param {string} key The key of the property to inspect.
+   * @returns {*} Returns the uncloned value or `undefined` to defer cloning to `_.cloneDeep`.
+   */
+  function customOmitClone$1$1(value) {
+    return isPlainObject$2(value) ? undefined : value;
+  }
+  var _customOmitClone$1 = customOmitClone$1$1;
+  var Symbol$1$1 = _Symbol$1,
+    isArguments$1$1 = isArguments_1$1,
+    isArray$2$1 = isArray_1$1;
+
+  /** Built-in value references. */
+  var spreadableSymbol$1 = Symbol$1$1 ? Symbol$1$1.isConcatSpreadable : undefined;
+
+  /**
+   * Checks if `value` is a flattenable `arguments` object or array.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is flattenable, else `false`.
+   */
+  function isFlattenable$1$1(value) {
+    return isArray$2$1(value) || isArguments$1$1(value) || !!(spreadableSymbol$1 && value && value[spreadableSymbol$1]);
+  }
+  var _isFlattenable$1 = isFlattenable$1$1;
+  var arrayPush$4 = _arrayPush$1,
+    isFlattenable$2 = _isFlattenable$1;
+
+  /**
+   * The base implementation of `_.flatten` with support for restricting flattening.
+   *
+   * @private
+   * @param {Array} array The array to flatten.
+   * @param {number} depth The maximum recursion depth.
+   * @param {boolean} [predicate=isFlattenable] The function invoked per iteration.
+   * @param {boolean} [isStrict] Restrict to values that pass `predicate` checks.
+   * @param {Array} [result=[]] The initial result value.
+   * @returns {Array} Returns the new flattened array.
+   */
+  function baseFlatten$1$1(array, depth, predicate, isStrict, result) {
+    var index = -1,
+      length = array.length;
+    predicate || (predicate = isFlattenable$2);
+    result || (result = []);
+    while (++index < length) {
+      var value = array[index];
+      if (depth > 0 && predicate(value)) {
+        if (depth > 1) {
+          // Recursively flatten arrays (susceptible to call stack limits).
+          baseFlatten$1$1(value, depth - 1, predicate, isStrict, result);
+        } else {
+          arrayPush$4(result, value);
+        }
+      } else if (!isStrict) {
+        result[result.length] = value;
+      }
+    }
+    return result;
+  }
+  var _baseFlatten$1 = baseFlatten$1$1;
+  var baseFlatten$2 = _baseFlatten$1;
+
+  /**
+   * Flattens `array` a single level deep.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Array
+   * @param {Array} array The array to flatten.
+   * @returns {Array} Returns the new flattened array.
+   * @example
+   *
+   * _.flatten([1, [2, [3, [4]], 5]]);
+   * // => [1, 2, [3, [4]], 5]
+   */
+  function flatten$1$1(array) {
+    var length = array == null ? 0 : array.length;
+    return length ? baseFlatten$2(array, 1) : [];
+  }
+  var flatten_1$1 = flatten$1$1;
+  var _flatten$1 = /*@__PURE__*/getDefaultExportFromCjs$1(flatten_1$1);
+
+  /**
+   * A faster alternative to `Function#apply`, this function invokes `func`
+   * with the `this` binding of `thisArg` and the arguments of `args`.
+   *
+   * @private
+   * @param {Function} func The function to invoke.
+   * @param {*} thisArg The `this` binding of `func`.
+   * @param {Array} args The arguments to invoke `func` with.
+   * @returns {*} Returns the result of `func`.
+   */
+
+  function apply$1$1(func, thisArg, args) {
+    switch (args.length) {
+      case 0:
+        return func.call(thisArg);
+      case 1:
+        return func.call(thisArg, args[0]);
+      case 2:
+        return func.call(thisArg, args[0], args[1]);
+      case 3:
+        return func.call(thisArg, args[0], args[1], args[2]);
+    }
+    return func.apply(thisArg, args);
+  }
+  var _apply$1 = apply$1$1;
+  var apply$2 = _apply$1;
+
+  /* Built-in method references for those with the same name as other `lodash` methods. */
+  var nativeMax$1 = Math.max;
+
+  /**
+   * A specialized version of `baseRest` which transforms the rest array.
+   *
+   * @private
+   * @param {Function} func The function to apply a rest parameter to.
+   * @param {number} [start=func.length-1] The start position of the rest parameter.
+   * @param {Function} transform The rest array transform.
+   * @returns {Function} Returns the new function.
+   */
+  function overRest$1$1(func, start, transform) {
+    start = nativeMax$1(start === undefined ? func.length - 1 : start, 0);
+    return function () {
+      var args = arguments,
+        index = -1,
+        length = nativeMax$1(args.length - start, 0),
+        array = Array(length);
+      while (++index < length) {
+        array[index] = args[start + index];
+      }
+      index = -1;
+      var otherArgs = Array(start + 1);
+      while (++index < start) {
+        otherArgs[index] = args[index];
+      }
+      otherArgs[start] = transform(array);
+      return apply$2(func, this, otherArgs);
+    };
+  }
+  var _overRest$1 = overRest$1$1;
+
+  /**
+   * Creates a function that returns `value`.
+   *
+   * @static
+   * @memberOf _
+   * @since 2.4.0
+   * @category Util
+   * @param {*} value The value to return from the new function.
+   * @returns {Function} Returns the new constant function.
+   * @example
+   *
+   * var objects = _.times(2, _.constant({ 'a': 1 }));
+   *
+   * console.log(objects);
+   * // => [{ 'a': 1 }, { 'a': 1 }]
+   *
+   * console.log(objects[0] === objects[1]);
+   * // => true
+   */
+
+  function constant$1$1(value) {
+    return function () {
+      return value;
+    };
+  }
+  var constant_1$1 = constant$1$1;
+
+  /**
+   * This method returns the first argument it receives.
+   *
+   * @static
+   * @since 0.1.0
+   * @memberOf _
+   * @category Util
+   * @param {*} value Any value.
+   * @returns {*} Returns `value`.
+   * @example
+   *
+   * var object = { 'a': 1 };
+   *
+   * console.log(_.identity(object) === object);
+   * // => true
+   */
+
+  function identity$1$1(value) {
+    return value;
+  }
+  var identity_1$1 = identity$1$1;
+  var constant$2 = constant_1$1,
+    defineProperty$3 = _defineProperty$2,
+    identity$2 = identity_1$1;
+
+  /**
+   * The base implementation of `setToString` without support for hot loop shorting.
+   *
+   * @private
+   * @param {Function} func The function to modify.
+   * @param {Function} string The `toString` result.
+   * @returns {Function} Returns `func`.
+   */
+  var baseSetToString$1$1 = !defineProperty$3 ? identity$2 : function (func, string) {
+    return defineProperty$3(func, 'toString', {
+      'configurable': true,
+      'enumerable': false,
+      'value': constant$2(string),
+      'writable': true
+    });
+  };
+  var _baseSetToString$1 = baseSetToString$1$1;
+
+  /** Used to detect hot functions by number of calls within a span of milliseconds. */
+
+  var HOT_COUNT$1 = 800,
+    HOT_SPAN$1 = 16;
+
+  /* Built-in method references for those with the same name as other `lodash` methods. */
+  var nativeNow$1 = Date.now;
+
+  /**
+   * Creates a function that'll short out and invoke `identity` instead
+   * of `func` when it's called `HOT_COUNT` or more times in `HOT_SPAN`
+   * milliseconds.
+   *
+   * @private
+   * @param {Function} func The function to restrict.
+   * @returns {Function} Returns the new shortable function.
+   */
+  function shortOut$1$1(func) {
+    var count = 0,
+      lastCalled = 0;
+    return function () {
+      var stamp = nativeNow$1(),
+        remaining = HOT_SPAN$1 - (stamp - lastCalled);
+      lastCalled = stamp;
+      if (remaining > 0) {
+        if (++count >= HOT_COUNT$1) {
+          return arguments[0];
+        }
+      } else {
+        count = 0;
+      }
+      return func.apply(undefined, arguments);
+    };
+  }
+  var _shortOut$1 = shortOut$1$1;
+  var baseSetToString$2 = _baseSetToString$1,
+    shortOut$2 = _shortOut$1;
+
+  /**
+   * Sets the `toString` method of `func` to return `string`.
+   *
+   * @private
+   * @param {Function} func The function to modify.
+   * @param {Function} string The `toString` result.
+   * @returns {Function} Returns `func`.
+   */
+  var setToString$1$1 = shortOut$2(baseSetToString$2);
+  var _setToString$1 = setToString$1$1;
+  var flatten$2 = flatten_1$1,
+    overRest$2 = _overRest$1,
+    setToString$2 = _setToString$1;
+
+  /**
+   * A specialized version of `baseRest` which flattens the rest array.
+   *
+   * @private
+   * @param {Function} func The function to apply a rest parameter to.
+   * @returns {Function} Returns the new function.
+   */
+  function flatRest$2$1(func) {
+    return setToString$2(overRest$2(func, undefined, flatten$2), func + '');
+  }
+  var _flatRest$1 = flatRest$2$1;
+  var arrayMap$3 = _arrayMap$1,
+    baseClone$1$1 = _baseClone$1,
+    baseUnset$2 = _baseUnset$1,
+    castPath$3$1 = _castPath$1,
+    copyObject$6 = _copyObject$1,
+    customOmitClone$2 = _customOmitClone$1,
+    flatRest$1$1 = _flatRest$1,
+    getAllKeysIn$3 = _getAllKeysIn$1;
+
+  /** Used to compose bitmasks for cloning. */
+  var CLONE_DEEP_FLAG$2 = 1,
+    CLONE_FLAT_FLAG$2 = 2,
+    CLONE_SYMBOLS_FLAG$1$1 = 4;
+
+  /**
+   * The opposite of `_.pick`; this method creates an object composed of the
+   * own and inherited enumerable property paths of `object` that are not omitted.
+   *
+   * **Note:** This method is considerably slower than `_.pick`.
+   *
+   * @static
+   * @since 0.1.0
+   * @memberOf _
+   * @category Object
+   * @param {Object} object The source object.
+   * @param {...(string|string[])} [paths] The property paths to omit.
+   * @returns {Object} Returns the new object.
+   * @example
+   *
+   * var object = { 'a': 1, 'b': '2', 'c': 3 };
+   *
+   * _.omit(object, ['a', 'c']);
+   * // => { 'b': '2' }
+   */
+  var omit$1 = flatRest$1$1(function (object, paths) {
+    var result = {};
+    if (object == null) {
+      return result;
+    }
+    var isDeep = false;
+    paths = arrayMap$3(paths, function (path) {
+      path = castPath$3$1(path, object);
+      isDeep || (isDeep = path.length > 1);
+      return path;
+    });
+    copyObject$6(object, getAllKeysIn$3(object), result);
+    if (isDeep) {
+      result = baseClone$1$1(result, CLONE_DEEP_FLAG$2 | CLONE_FLAT_FLAG$2 | CLONE_SYMBOLS_FLAG$1$1, customOmitClone$2);
+    }
+    var length = paths.length;
+    while (length--) {
+      baseUnset$2(result, paths[length]);
+    }
+    return result;
+  });
+  var omit_1$1 = omit$1;
+  var _omit$1 = /*@__PURE__*/getDefaultExportFromCjs$1(omit_1$1);
+  var classnames$1 = {
+    exports: {}
+  };
+
+  /*!
+  	Copyright (c) 2018 Jed Watson.
+  	Licensed under the MIT License (MIT), see
+  	http://jedwatson.github.io/classnames
+  */
+
+  (function (module) {
+    /* global define */
+
+    (function () {
+      var hasOwn = {}.hasOwnProperty;
+      function classNames() {
+        var classes = [];
+        for (var i = 0; i < arguments.length; i++) {
+          var arg = arguments[i];
+          if (!arg) continue;
+          var argType = _typeof$2(arg);
+          if (argType === 'string' || argType === 'number') {
+            classes.push(arg);
+          } else if (Array.isArray(arg)) {
+            if (arg.length) {
+              var inner = classNames.apply(null, arg);
+              if (inner) {
+                classes.push(inner);
+              }
+            }
+          } else if (argType === 'object') {
+            if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
+              classes.push(arg.toString());
+              continue;
+            }
+            for (var key in arg) {
+              if (hasOwn.call(arg, key) && arg[key]) {
+                classes.push(key);
+              }
+            }
+          }
+        }
+        return classes.join(' ');
+      }
+      if (module.exports) {
+        classNames.default = classNames;
+        module.exports = classNames;
+      } else {
+        window.classNames = classNames;
+      }
+    })();
+  })(classnames$1);
+  var classnamesExports$1 = classnames$1.exports;
+  var classNames$1 = /*@__PURE__*/getDefaultExportFromCjs$1(classnamesExports$1);
+  var baseGetTag$3$1 = _baseGetTag$1,
+    isArray$1$1 = isArray_1$1,
+    isObjectLike$3$1 = isObjectLike_1$1;
+
+  /** `Object#toString` result references. */
+  var stringTag$4 = '[object String]';
+
+  /**
+   * Checks if `value` is classified as a `String` primitive or object.
+   *
+   * @static
+   * @since 0.1.0
+   * @memberOf _
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a string, else `false`.
+   * @example
+   *
+   * _.isString('abc');
+   * // => true
+   *
+   * _.isString(1);
+   * // => false
+   */
+  function isString$1(value) {
+    return typeof value == 'string' || !isArray$1$1(value) && isObjectLike$3$1(value) && baseGetTag$3$1(value) == stringTag$4;
+  }
+  var isString_1$1 = isString$1;
+  var _isString$1 = /*@__PURE__*/getDefaultExportFromCjs$1(isString_1$1);
+  function styleInject$1(css, ref) {
+    if (ref === void 0) ref = {};
+    var insertAt = ref.insertAt;
+    if (!css || typeof document === 'undefined') {
+      return;
+    }
+    var head = document.head || document.getElementsByTagName('head')[0];
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    if (insertAt === 'top') {
+      if (head.firstChild) {
+        head.insertBefore(style, head.firstChild);
+      } else {
+        head.appendChild(style);
+      }
+    } else {
+      head.appendChild(style);
+    }
+    if (style.styleSheet) {
+      style.styleSheet.cssText = css;
+    } else {
+      style.appendChild(document.createTextNode(css));
+    }
+  }
+  var css_248z$b$2 = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
+  styleInject$1(css_248z$b$2);
+  var tx$1 = function tx(str, locale) {
+    if (_isString$1(str)) {
+      return str;
+    } else if (_isObject$1(str)) {
+      if (!_isEmpty$1(str[locale])) {
+        return str[locale];
+      } else if (!_isEmpty$1(str['en-US'])) {
+        return str['en-US'];
+      } else if (Object.keys(str).length !== 0) {
+        return str[Object.keys(str)[0]];
+      } else {
+        return '';
+      }
+    }
+  };
+  var ValidationErrors$1 = function ValidationErrors(_ref) {
+    var _ref$errors = _ref.errors,
+      errors = _ref$errors === void 0 ? {} : _ref$errors,
+      className = _ref.className,
+      locale = _ref.locale;
+    var keys = Object.keys(errors);
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: classNames$1('lf-validation-errors', className)
+    }, keys.map(function (fieldName) {
+      var label = fieldName;
+      if (errors[fieldName] && errors[fieldName].ref && errors[fieldName].ref.label) {
+        label = tx$1(errors[fieldName].ref.label, locale);
+      }
+      return /*#__PURE__*/React$1.createElement("div", {
+        key: fieldName
+      }, /*#__PURE__*/React$1.createElement("b", null, label, ":"), "\xA0", errors[fieldName].message ? errors[fieldName].message : 'This is required');
+    }));
+  };
+  var ChevronDown$1 = function ChevronDown(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      fill: color,
+      viewBox: "0 0 24 24",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React$1.createElement("path", {
+      d: "M17,8H7a1,1,0,0,0-.768,1.641l5,6a1,1,0,0,0,1.536,0l5-6A1,1,0,0,0,17,8Zm-5,5.438L9.135,10h5.73Z"
+    }));
+  };
+  var ChevronUp$1 = function ChevronUp(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 0 24 24",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React$1.createElement("path", {
+      fill: color,
+      d: "M12.768,8.359a1.035,1.035,0,0,0-1.536,0l-5,6A1,1,0,0,0,7,16H17a1,1,0,0,0,.768-1.641ZM9.135,14,12,10.563,14.865,14Z"
+    }));
+  };
+  var Warning$1 = function Warning(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      fill: color,
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 0 1920 1920",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React$1.createElement("path", {
+      d: "M960 0c530.193 0 960 429.807 960 960s-429.807 960-960 960S0 1490.193 0 960 429.807 0 960 0Zm-9.838 1342.685c-84.47 0-153.19 68.721-153.19 153.19 0 84.47 68.72 153.192 153.19 153.192s153.19-68.721 153.19-153.191-68.72-153.19-153.19-153.19ZM1153.658 320H746.667l99.118 898.623h208.755L1153.658 320Z",
+      fillRule: "evenodd"
+    }));
+  };
+
+  /**
+   * processFieldsHash
+   * Tkae a field and process the "fields" key, which can be ah hash of value / array of fields
+   * @param {*} field 
+   * @param {*} predicate 
+   * @returns 
+   */
+  var processFieldsHash$1 = function processFieldsHash(field, predicate) {
+    var newField = field;
+    var subkeys = Object.keys(field.fields);
+    subkeys.forEach(function (subkey) {
+      var newFields = mapFields$1(field.fields[subkey], predicate);
+      if (newFields !== field.fields[subkey]) {
+        newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+          fields: _objectSpread2$1(_objectSpread2$1({}, newField.fields), {}, _defineProperty$1$1({}, subkey, newFields))
+        });
+      }
+    });
+    return newField;
+  };
+
+  /**
+   * mapFields
+   * Return an array of fields with the only elements changed by the predicate, it takes a field as parameter
+   * and return the same field or a changed one. It recursively iterate over subfields for group, two-columns and
+   * three columns components
+   * @param {Array} fields
+   * @param {Function} predicate Take a field as paramenter and return a field object
+   * @returns
+   */
+  var mapFields$1 = function mapFields(fields) {
+    var predicate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (obj) {
+      return obj;
+    };
+    var needsFlatten = false;
+    if (!fields) {
+      return fields;
+    }
+    // replace with predicated
+    var newFields = fields.filter(Boolean).map(function (field) {
+      var newField = predicate(field);
+      // if returns an array, means the mapping is replacing with two fields
+      // and it will need to be flattened later
+      if (Array.isArray(newField)) {
+        needsFlatten = true;
+      }
+      if (field.component === 'group') {
+        var _newFields = mapFields(field.fields, predicate);
+        if (_newFields !== field.fields) {
+          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+            fields: _newFields
+          });
+        }
+      } else if (field.component === 'array') {
+        var _newFields2 = mapFields(field.fields, predicate);
+        if (_newFields2 !== field.fields) {
+          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+            fields: _newFields2
+          });
+        }
+      } else if (field.component === 'two-columns') {
+        var newLeftFields = mapFields(field.leftFields, predicate);
+        if (newLeftFields !== field.leftFields) {
+          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+            leftFields: newLeftFields
+          });
+        }
+        var newRightFields = mapFields(field.rightFields, predicate);
+        if (newRightFields !== field.rightFields) {
+          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+            rightFields: newRightFields
+          });
+        }
+      } else if (field.component === 'three-columns') {
+        var _newLeftFields = mapFields(field.leftFields, predicate);
+        if (_newLeftFields !== field.leftFields) {
+          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+            leftFields: _newLeftFields
+          });
+        }
+        var newCenterFields = mapFields(field.centerFields, predicate);
+        if (newCenterFields !== field.centerFields) {
+          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+            centerFields: newCenterFields
+          });
+        }
+        var _newRightFields = mapFields(field.rightFields, predicate);
+        if (_newRightFields !== field.rightFields) {
+          newField = _objectSpread2$1(_objectSpread2$1({}, newField), {}, {
+            rightFields: _newRightFields
+          });
+        }
+      } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject$1(field.fields) && !_isArray$1(field.fields)) {
+        // Problem here: the new field can be an array because the map field, can return an array with 
+        // additional field to be put somewhere in the mapping, of those only the one of type "tab" need to be
+        // mapped, the other one must be left untouched since they where added by the helper method
+        if (_isArray$1(newField)) {
+          // if an array is returned, then it's already changed, we don't need to worry too much about
+          // referential integrity
+          // here only process the original field
+          newField = newField.map(function (fieldToProcess) {
+            if (fieldToProcess === field) {
+              return processFieldsHash$1(fieldToProcess, predicate);
+            }
+            return fieldToProcess;
+          });
+        } else {
+          newField = processFieldsHash$1(newField, predicate);
+        }
+      }
+      return newField;
+    });
+    var hasChanges;
+    if (needsFlatten) {
+      // if needs to be flattened, for sure is changed
+      newFields = _flatten$1(newFields);
+      hasChanges = true;
+    } else {
+      // check if some element of the array is changed, keep instance consistency otherwise
+      hasChanges = fields.some(function (field, idx) {
+        return field !== newFields[idx];
+      });
+    }
+    return hasChanges ? newFields : fields;
+  };
+  var fillIds$1 = function fillIds(fields) {
+    var namespace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+    return mapFields$1(fields, function (field) {
+      // if not id, then create it
+      if (!field.id) {
+        return _objectSpread2$1({
+          id: _uniqueId$1(namespace)
+        }, field);
+      }
+      // special case of array
+      //if (field.component === 'array') {
+      //  field.fields = fillIds(field.fields);
+      //}
+      return field;
+    });
+  };
+  var assignValue$4 = _assignValue$1,
+    castPath$2$1 = _castPath$1,
+    isIndex$1$1 = _isIndex$1,
+    isObject$7 = isObject_1$1,
+    toKey$1$1 = _toKey$1;
+
+  /**
+   * The base implementation of `_.set`.
+   *
+   * @private
+   * @param {Object} object The object to modify.
+   * @param {Array|string} path The path of the property to set.
+   * @param {*} value The value to set.
+   * @param {Function} [customizer] The function to customize path creation.
+   * @returns {Object} Returns `object`.
+   */
+  function baseSet$1$1(object, path, value, customizer) {
+    if (!isObject$7(object)) {
+      return object;
+    }
+    path = castPath$2$1(path, object);
+    var index = -1,
+      length = path.length,
+      lastIndex = length - 1,
+      nested = object;
+    while (nested != null && ++index < length) {
+      var key = toKey$1$1(path[index]),
+        newValue = value;
+      if (key === '__proto__' || key === 'constructor' || key === 'prototype') {
+        return object;
+      }
+      if (index != lastIndex) {
+        var objValue = nested[key];
+        newValue = customizer ? customizer(objValue, key, nested) : undefined;
+        if (newValue === undefined) {
+          newValue = isObject$7(objValue) ? objValue : isIndex$1$1(path[index + 1]) ? [] : {};
+        }
+      }
+      assignValue$4(nested, key, newValue);
+      nested = nested[key];
+    }
+    return object;
+  }
+  var _baseSet$1 = baseSet$1$1;
+  var baseGet$3 = _baseGet$1,
+    baseSet$2 = _baseSet$1,
+    castPath$1$1 = _castPath$1;
+
+  /**
+   * The base implementation of  `_.pickBy` without support for iteratee shorthands.
+   *
+   * @private
+   * @param {Object} object The source object.
+   * @param {string[]} paths The property paths to pick.
+   * @param {Function} predicate The function invoked per property.
+   * @returns {Object} Returns the new object.
+   */
+  function basePickBy$1$1(object, paths, predicate) {
+    var index = -1,
+      length = paths.length,
+      result = {};
+    while (++index < length) {
+      var path = paths[index],
+        value = baseGet$3(object, path);
+      if (predicate(value, path)) {
+        baseSet$2(result, castPath$1$1(path, object), value);
+      }
+    }
+    return result;
+  }
+  var _basePickBy$1 = basePickBy$1$1;
+
+  /**
+   * The base implementation of `_.hasIn` without support for deep paths.
+   *
+   * @private
+   * @param {Object} [object] The object to query.
+   * @param {Array|string} key The key to check.
+   * @returns {boolean} Returns `true` if `key` exists, else `false`.
+   */
+
+  function baseHasIn$1$1(object, key) {
+    return object != null && key in Object(object);
+  }
+  var _baseHasIn$1 = baseHasIn$1$1;
+  var castPath$7 = _castPath$1,
+    isArguments$5 = isArguments_1$1,
+    isArray$b = isArray_1$1,
+    isIndex$4 = _isIndex$1,
+    isLength$4 = isLength_1$1,
+    toKey$5 = _toKey$1;
+
+  /**
+   * Checks if `path` exists on `object`.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @param {Array|string} path The path to check.
+   * @param {Function} hasFunc The function to check properties.
+   * @returns {boolean} Returns `true` if `path` exists, else `false`.
+   */
+  function hasPath$1$1(object, path, hasFunc) {
+    path = castPath$7(path, object);
+    var index = -1,
+      length = path.length,
+      result = false;
+    while (++index < length) {
+      var key = toKey$5(path[index]);
+      if (!(result = object != null && hasFunc(object, key))) {
+        break;
+      }
+      object = object[key];
+    }
+    if (result || ++index != length) {
+      return result;
+    }
+    length = object == null ? 0 : object.length;
+    return !!length && isLength$4(length) && isIndex$4(key, length) && (isArray$b(object) || isArguments$5(object));
+  }
+  var _hasPath$1 = hasPath$1$1;
+  var baseHasIn$2 = _baseHasIn$1,
+    hasPath$2 = _hasPath$1;
+
+  /**
+   * Checks if `path` is a direct or inherited property of `object`.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Object
+   * @param {Object} object The object to query.
+   * @param {Array|string} path The path to check.
+   * @returns {boolean} Returns `true` if `path` exists, else `false`.
+   * @example
+   *
+   * var object = _.create({ 'a': _.create({ 'b': 2 }) });
+   *
+   * _.hasIn(object, 'a');
+   * // => true
+   *
+   * _.hasIn(object, 'a.b');
+   * // => true
+   *
+   * _.hasIn(object, ['a', 'b']);
+   * // => true
+   *
+   * _.hasIn(object, 'b');
+   * // => false
+   */
+  function hasIn$1$1(object, path) {
+    return object != null && hasPath$2(object, path, baseHasIn$2);
+  }
+  var hasIn_1$1 = hasIn$1$1;
+  var basePickBy$2 = _basePickBy$1,
+    hasIn$2 = hasIn_1$1;
+
+  /**
+   * The base implementation of `_.pick` without support for individual
+   * property identifiers.
+   *
+   * @private
+   * @param {Object} object The source object.
+   * @param {string[]} paths The property paths to pick.
+   * @returns {Object} Returns the new object.
+   */
+  function basePick$1$1(object, paths) {
+    return basePickBy$2(object, paths, function (value, path) {
+      return hasIn$2(object, path);
+    });
+  }
+  var _basePick$1 = basePick$1$1;
+  var basePick$2 = _basePick$1,
+    flatRest$3 = _flatRest$1;
+
+  /**
+   * Creates an object composed of the picked `object` properties.
+   *
+   * @static
+   * @since 0.1.0
+   * @memberOf _
+   * @category Object
+   * @param {Object} object The source object.
+   * @param {...(string|string[])} [paths] The property paths to pick.
+   * @returns {Object} Returns the new object.
+   * @example
+   *
+   * var object = { 'a': 1, 'b': '2', 'c': 3 };
+   *
+   * _.pick(object, ['a', 'c']);
+   * // => { 'a': 1, 'c': 3 }
+   */
+  var pick$1 = flatRest$3(function (object, paths) {
+    return object == null ? {} : basePick$2(object, paths);
+  });
+  var pick_1$1 = pick$1;
+  var _pick$1 = /*@__PURE__*/getDefaultExportFromCjs$1(pick_1$1);
+  var baseGetTag$2$1 = _baseGetTag$1,
+    isObjectLike$2$1 = isObjectLike_1$1;
+
+  /** `Object#toString` result references. */
+  var numberTag$4 = '[object Number]';
+
+  /**
+   * Checks if `value` is classified as a `Number` primitive or object.
+   *
+   * **Note:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are
+   * classified as numbers, use the `_.isFinite` method.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a number, else `false`.
+   * @example
+   *
+   * _.isNumber(3);
+   * // => true
+   *
+   * _.isNumber(Number.MIN_VALUE);
+   * // => true
+   *
+   * _.isNumber(Infinity);
+   * // => true
+   *
+   * _.isNumber('3');
+   * // => false
+   */
+  function isNumber$1(value) {
+    return typeof value == 'number' || isObjectLike$2$1(value) && baseGetTag$2$1(value) == numberTag$4;
+  }
+  var isNumber_1$1 = isNumber$1;
+  var _isNumber$1 = /*@__PURE__*/getDefaultExportFromCjs$1(isNumber_1$1);
+  var FRAMEWORKS$1 = ['react', 'react-rsuite5', 'react-material-ui', 'react-bootstrap', 'react-antd', 'react-mantine'];
+  var isI18n$1 = function isI18n(obj) {
+    return _isObject$1(obj) && Object.keys(obj).every(function (key) {
+      return key.length === 2 || key.length === 5 && key[2] === '-';
+    });
+  };
+  var baseClone$3 = _baseClone$1;
+
+  /** Used to compose bitmasks for cloning. */
+  var CLONE_SYMBOLS_FLAG$3 = 4;
+
+  /**
+   * Creates a shallow clone of `value`.
+   *
+   * **Note:** This method is loosely based on the
+   * [structured clone algorithm](https://mdn.io/Structured_clone_algorithm)
+   * and supports cloning arrays, array buffers, booleans, date objects, maps,
+   * numbers, `Object` objects, regexes, sets, strings, symbols, and typed
+   * arrays. The own enumerable properties of `arguments` objects are cloned
+   * as plain objects. An empty object is returned for uncloneable values such
+   * as error objects, functions, DOM nodes, and WeakMaps.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to clone.
+   * @returns {*} Returns the cloned value.
+   * @see _.cloneDeep
+   * @example
+   *
+   * var objects = [{ 'a': 1 }, { 'b': 2 }];
+   *
+   * var shallow = _.clone(objects);
+   * console.log(shallow[0] === objects[0]);
+   * // => true
+   */
+  function clone$1(value) {
+    return baseClone$3(value, CLONE_SYMBOLS_FLAG$3);
+  }
+  var clone_1$1 = clone$1;
+  var _clone$1 = /*@__PURE__*/getDefaultExportFromCjs$1(clone_1$1);
+  var reduceFields$1 = function reduceFields(fields, predicate) {
+    var accumulator = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    var opts = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+    var options = _objectSpread2$1({
+      'group': true,
+      'array': true,
+      'two-columns': true,
+      'three-columns': true
+    }, opts);
+    if (_isEmpty$1(fields) || !_isArray$1(fields)) {
+      return accumulator;
+    }
+    var result = _clone$1(accumulator);
+    fields.forEach(function (field) {
+      if (!field) {
+        return;
+      }
+      result = predicate(field, result);
+      if (field.component === 'group' && options.group) {
+        result = reduceFields(field.fields, predicate, result, opts);
+      } else if (field.component === 'array' && options.array) {
+        result = reduceFields(field.fields, predicate, result, opts);
+      } else if (field.component === 'two-columns' && options['two-columns']) {
+        result = reduceFields(field.leftFields, predicate, result, opts);
+        result = reduceFields(field.rightFields, predicate, result, opts);
+      } else if (field.component === 'three-columns' && options['three-columns']) {
+        result = reduceFields(field.leftFields, predicate, result, opts);
+        result = reduceFields(field.centerFields, predicate, result, opts);
+        result = reduceFields(field.rightFields, predicate, result, opts);
+      } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject$1(field.fields) && !_isArray$1(field.fields)) {
+        var subkeys = Object.keys(field.fields);
+        subkeys.forEach(function (subkey) {
+          result = reduceFields(field.fields[subkey], predicate, result, opts);
+        });
+      }
+    });
+    return result;
+  };
+  var findField$1 = function findField(fields, predicate) {
+    if (_isEmpty$1(fields) || !_isArray$1(fields)) {
+      return null;
+    }
+    var found = fields.find(predicate);
+    fields.forEach(function (field) {
+      if (!found) {
+        if (field.component === 'group' || field.component === 'array') {
+          found = findField(field.fields, predicate);
+        } else if (field.component === 'two-columns') {
+          found = findField(field.leftFields, predicate) || findField(field.rightFields, predicate);
+        } else if (field.component === 'three-columns') {
+          found = findField(field.leftFields, predicate) || findField(field.centerFields, predicate) || findField(field.rightFields, predicate);
+        } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject$1(field.fields) && !_isArray$1(field.fields)) {
+          var subkeys = Object.keys(field.fields);
+          subkeys.forEach(function (subkey) {
+            if (!found) {
+              var search = findField(field.fields[subkey], predicate);
+              if (search) {
+                found = search;
+              }
+            }
+          });
+        }
+      }
+    });
+    return found;
+  };
+  var LOCALES$1 = {
+    "primary-dialects": {
+      "af": "af-ZA",
+      "ar": "ar",
+      "bg": "bg-BG",
+      "ca": "ca-AD",
+      "cs": "cs-CZ",
+      "cy": "cy-GB",
+      "da": "da-DK",
+      "de": "de-DE",
+      "el": "el-GR",
+      "en": "en-US",
+      "es": "es-ES",
+      "et": "et-EE",
+      "eu": "eu",
+      "fa": "fa-IR",
+      "fi": "fi-FI",
+      "fr": "fr-FR",
+      "he": "he-IL",
+      "hi": "hi-IN",
+      "hr": "hr-HR",
+      "hu": "hu-HU",
+      "id": "id-ID",
+      "is": "is-IS",
+      "it": "it-IT",
+      "ja": "ja-JP",
+      "km": "km-KH",
+      "ko": "ko-KR",
+      "la": "la",
+      "lt": "lt-LT",
+      "lv": "lv-LV",
+      "mn": "mn-MN",
+      "nb": "nb-NO",
+      "nl": "nl-NL",
+      "nn": "nn-NO",
+      "pl": "pl-PL",
+      "pt": "pt-PT",
+      "ro": "ro-RO",
+      "ru": "ru-RU",
+      "sk": "sk-SK",
+      "sl": "sl-SI",
+      "sr": "sr-RS",
+      "sv": "sv-SE",
+      "th": "th-TH",
+      "tr": "tr-TR",
+      "uk": "uk-UA",
+      "vi": "vi-VN",
+      "zh": "zh-CN"
+    },
+    "language-names": {
+      "af-ZA": ["Afrikaans", "Afrikaans"],
+      "ar": ["العربية", "Arabic"],
+      "bg-BG": ["Български", "Bulgarian"],
+      "ca-AD": ["Català", "Catalan"],
+      "cs-CZ": ["Čeština", "Czech"],
+      "cy-GB": ["Cymraeg", "Welsh"],
+      "da-DK": ["Dansk", "Danish"],
+      "de-AT": ["Deutsch (Österreich)", "German (Austria)"],
+      "de-CH": ["Deutsch (Schweiz)", "German (Switzerland)"],
+      "de-DE": ["Deutsch (Deutschland)", "German (Germany)"],
+      "el-GR": ["Ελληνικά", "Greek"],
+      "en-GB": ["English (UK)", "English (UK)"],
+      "en-US": ["English (US)", "English (US)"],
+      "es-CL": ["Español (Chile)", "Spanish (Chile)"],
+      "es-ES": ["Español (España)", "Spanish (Spain)"],
+      "es-MX": ["Español (México)", "Spanish (Mexico)"],
+      "et-EE": ["Eesti keel", "Estonian"],
+      "eu": ["Euskara", "Basque"],
+      "fa-IR": ["فارسی", "Persian"],
+      "fi-FI": ["Suomi", "Finnish"],
+      "fr-CA": ["Français (Canada)", "French (Canada)"],
+      "fr-FR": ["Français (France)", "French (France)"],
+      "he-IL": ["עברית", "Hebrew"],
+      "hi-IN": ["हिंदी", "Hindi"],
+      "hr-HR": ["Hrvatski", "Croatian"],
+      "hu-HU": ["Magyar", "Hungarian"],
+      "id-ID": ["Bahasa Indonesia", "Indonesian"],
+      "is-IS": ["Íslenska", "Icelandic"],
+      "it-IT": ["Italiano", "Italian"],
+      "ja-JP": ["日本語", "Japanese"],
+      "km-KH": ["ភាសាខ្មែរ", "Khmer"],
+      "ko-KR": ["한국어", "Korean"],
+      "la": ["Latina", "Latin"],
+      "lt-LT": ["Lietuvių kalba", "Lithuanian"],
+      "lv-LV": ["Latviešu", "Latvian"],
+      "mn-MN": ["Монгол", "Mongolian"],
+      "nb-NO": ["Norsk bokmål", "Norwegian (Bokmål)"],
+      "nl-NL": ["Nederlands", "Dutch"],
+      "nn-NO": ["Norsk nynorsk", "Norwegian (Nynorsk)"],
+      "pl-PL": ["Polski", "Polish"],
+      "pt-BR": ["Português (Brasil)", "Portuguese (Brazil)"],
+      "pt-PT": ["Português (Portugal)", "Portuguese (Portugal)"],
+      "ro-RO": ["Română", "Romanian"],
+      "ru-RU": ["Русский", "Russian"],
+      "sk-SK": ["Slovenčina", "Slovak"],
+      "sl-SI": ["Slovenščina", "Slovenian"],
+      "sr-RS": ["Српски / Srpski", "Serbian"],
+      "sv-SE": ["Svenska", "Swedish"],
+      "th-TH": ["ไทย", "Thai"],
+      "tr-TR": ["Türkçe", "Turkish"],
+      "uk-UA": ["Українська", "Ukrainian"],
+      "vi-VN": ["Tiếng Việt", "Vietnamese"],
+      "zh-CN": ["中文 (中国大陆)", "Chinese (PRC)"],
+      "zh-TW": ["中文 (台灣)", "Chinese (Taiwan)"]
+    }
+  };
+  Object.keys(LOCALES$1['language-names']).map(function (lang) {
+    return {
+      code: lang,
+      name: LOCALES$1['language-names'][lang][1],
+      label: "".concat(LOCALES$1['language-names'][lang][1])
+    };
+  });
+  var i18n$1 = function i18n(value, locale) {
+    if (_isString$1(value)) {
+      // if string, then return it
+      return value;
+    } else if (_isObject$1(value)) {
+      var language = (locale || 'en-US').substr(0, 2);
+      // if exact match of the locale
+      if (locale && value[locale]) {
+        return value[locale];
+      }
+      // if there's no dialect, then try with the first two letters
+      if (locale && value[language]) {
+        return value[language];
+      }
+      // then try with another dialect, i.e. there are translations for fr-FR and
+      // the locale is fr-CA, try first with any fr-FR if present
+      var firstDialect = Object.keys(value).find(function (locale) {
+        return locale.startsWith(language);
+      });
+      if (firstDialect) {
+        return value[firstDialect];
+      }
+      // if nothing found, defaults to english but with warning
+      if (value['en'] || value['en-UK'] || value['en-US']) {
+        if (!locale) {
+          console.warn("[LetsForm] missing locale for translation, defaulting to English: ", value);
+        } else {
+          console.warn("[LetsForm] missing translation for ".concat(locale, ", defaulting to English: "), value);
+        }
+        return value['en'] || value['en-UK'] || value['en-US'];
+      }
+      console.warn("[LetsForm] missing translation for ".concat(locale, ": "), value);
+      return '';
+    }
+    return value;
+  };
+  var EXCLUDED_LETSFORM_FIELDS$1 = ['lfFramework', 'lfComponent', 'lfLocale', 'lfOnEnter', 'transformer', 'script'];
+
+  /**
+   * passRest
+   * Help method to filter props passed with the rest props, removing lets-form specific properties
+   * @param {*} props 
+   * @param {*} additional 
+   * @returns 
+   */
+  var passRest$1 = function passRest(props) {
+    var additional = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+    return _omit$1(props, [].concat(EXCLUDED_LETSFORM_FIELDS$1, _toConsumableArray$1(_isArray$1(additional) ? additional : [additional])));
+  };
+  var filterOptions$1 = function filterOptions(options, filterValue) {
+    var filterKey = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'value';
+    if (_isArray$1(options) && !_isEmpty$1(filterKey) && !_isEmpty$1(filterValue)) {
+      return options.filter(function (item) {
+        return item[filterKey] === filterValue;
+      });
+    }
+    return options;
+  };
+  var toggle$1$1 = {
+    name: null,
+    label: null,
+    hint: null,
+    disabled: null,
+    readOnly: null,
+    hidden: null,
+    size: ["react-rsuite5", "react-material-ui", "react-antd", "react-mantine"],
+    checkedChildren: ["react-rsuite5", "react-antd"],
+    unCheckedChildren: ["react-rsuite5", "react-antd"],
+    tooltip: ["react-rsuite5", "react-antd"],
+    color: ["react-material-ui", "react-mantine"],
+    labelPlacement: ["react-material-ui"],
+    disableRipple: ["react-material-ui"],
+    radius: ["react-mantine"],
+    labelPosition: ["react-mantine"],
+    offLabel: ["react-mantine"],
+    onLabel: ["react-mantine"],
+    validationMinLength: "validation",
+    validationMin: "validation",
+    validationMaxLength: "validation",
+    validationMax: "validation",
+    validationPattern: "validation",
+    validationMessage: "validation",
+    required: null
+  };
+  var select$1$1 = {
+    name: null,
+    label: null,
+    hint: null,
+    placeholder: null,
+    options: null,
+    value: null,
+    image: null,
+    showImageOptions: null,
+    filterKey: null,
+    filterValue: null,
+    disabled: null,
+    readOnly: null,
+    hidden: null,
+    fullWidth: ["react", "react-rsuite5", "react-material-ui", "react-antd", "react-mantine"],
+    width: ["react", "react-rsuite5", "react-material-ui", "react-antd", "react-mantine"],
+    placement: ["react-rsuite5", "react-antd"],
+    size: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+    searchable: ["react-rsuite5"],
+    cleanable: ["react-rsuite5"],
+    tooltip: ["react-rsuite5", "react-antd"],
+    appearance: ["react-rsuite5"],
+    autoWidth: ["react-material-ui"],
+    floatingLabel: ["react-material-ui", "react-bootstrap"],
+    variant: ["react-material-ui", "react-antd", "react-mantine"],
+    listHeight: ["react-antd"],
+    allowClear: ["react-antd"],
+    popupMatchSelectWidth: ["react-antd"],
+    showSearch: ["react-antd"],
+    virtual: ["react-antd"],
+    radius: ["react-mantine"],
+    leftSection: ["react-mantine"],
+    rightSection: ["react-mantine"],
+    leftSectionWidth: ["react-mantine"],
+    rightSectionWidth: ["react-mantine"],
+    withCheckIcon: ["react-mantine"],
+    checkIconPosition: ["react-mantine"],
+    allowDeselect: ["react-mantine"],
+    clearable: ["react-mantine"],
+    defaultDropdownOpened: ["react-mantine"],
+    withScrollArea: ["react-mantine"],
+    pointer: ["react-mantine"],
+    withErrorStyles: ["react-mantine"],
+    validationMinLength: "validation",
+    validationMin: "validation",
+    validationMaxLength: "validation",
+    validationMax: "validation",
+    validationPattern: "validation",
+    validationMessage: "validation",
+    required: null
+  };
+  var group$1$1 = {
+    name: null,
+    label: null,
+    hidden: null,
+    align: null,
+    collapsible: null,
+    open: null,
+    border: null
+  };
+  var array$1$1 = {
+    name: null,
+    label: null,
+    hint: null,
+    disabled: null,
+    readOnly: null,
+    hidden: null,
+    align: null,
+    alignOffset: null,
+    arrayType: null,
+    validationMinLength: "validation",
+    validationMin: "validation",
+    validationMaxLength: "validation",
+    validationMax: "validation",
+    validationPattern: "validation",
+    validationMessage: "validation",
+    required: null
+  };
+  var slider$1$1 = {
+    name: null,
+    label: ["react-rsuite5", "react-material-ui", "react-antd", "react-mantine"],
+    hint: null,
+    disabled: null,
+    readOnly: null,
+    hidden: null,
+    tooltip: ["react-rsuite5"],
+    min: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+    step: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+    max: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+    vertical: ["react-rsuite5"],
+    progress: ["react-rsuite5"],
+    showTooltip: ["react-rsuite5"],
+    graduated: ["react-rsuite5"],
+    marks: ["react-rsuite5", "react-antd", "react-mantine"],
+    value: ["react-rsuite5", "react-material-ui", "react-antd", "react-mantine"],
+    size: ["react-material-ui", "react-mantine"],
+    color: ["react-material-ui", "react-mantine"],
+    fullWidth: ["react-material-ui"],
+    width: ["react-material-ui"],
+    valueLabelDisplay: ["react-material-ui"],
+    showMarks: ["react-material-ui"],
+    customMarks: ["react-material-ui"],
+    keyboard: ["react-antd"],
+    dots: ["react-antd"],
+    reverse: ["react-antd"],
+    tooltipOpen: ["react-antd"],
+    tooltipPlacement: ["react-antd"],
+    included: ["react-antd"],
+    radius: ["react-mantine"],
+    precision: ["react-mantine"],
+    inverted: ["react-mantine"],
+    labelAlwaysOn: ["react-mantine"],
+    showLabelOnHover: ["react-mantine"],
+    validationMinLength: "validation",
+    validationMin: "validation",
+    validationMaxLength: "validation",
+    validationMax: "validation",
+    validationPattern: "validation",
+    validationMessage: "validation",
+    required: null
+  };
+  var date$1$1 = {
+    name: null,
+    label: null,
+    hint: null,
+    placeholder: null,
+    disabled: null,
+    readOnly: null,
+    hidden: null,
+    format: ["react-rsuite5", "react-material-ui", "react-antd"],
+    size: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+    appearance: ["react-rsuite5"],
+    placement: ["react-rsuite5", "react-antd"],
+    fullWidth: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+    width: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+    cleanable: ["react-rsuite5"],
+    editable: ["react-rsuite5"],
+    oneTap: ["react-rsuite5"],
+    showMeridian: ["react-rsuite5"],
+    showWeekNumbers: ["react-rsuite5"],
+    isoWeek: ["react-rsuite5"],
+    variant: ["react-material-ui", "react-antd", "react-mantine"],
+    color: ["react-material-ui"],
+    views: ["react-material-ui"],
+    closeOnSelect: ["react-material-ui"],
+    reduceAnimations: ["react-material-ui"],
+    showDaysOutsideCurrentMonth: ["react-material-ui"],
+    floatingLabel: ["react-material-ui", "react-bootstrap"],
+    disableFuture: ["react-material-ui"],
+    disableHighlightToday: ["react-material-ui"],
+    disableOpenPicker: ["react-material-ui"],
+    disablePast: ["react-material-ui"],
+    displayWeekNumber: ["react-material-ui"],
+    loading: ["react-material-ui"],
+    fixedWeekNumber: ["react-material-ui"],
+    formatDensity: ["react-material-ui"],
+    monthsPerRow: ["react-material-ui"],
+    yearsPerRow: ["react-material-ui"],
+    minDate: ["react-material-ui", "react-antd", "react-mantine"],
+    maxDate: ["react-material-ui", "react-antd", "react-mantine"],
+    prefix: ["react-bootstrap"],
+    postfix: ["react-bootstrap"],
+    picker: ["react-antd"],
+    mode: ["react-antd"],
+    showTime: ["react-antd"],
+    showNow: ["react-antd"],
+    showToday: ["react-antd"],
+    preserveInvalidOnBlur: ["react-antd"],
+    inputReadOnly: ["react-antd"],
+    needConfirm: ["react-antd"],
+    allowClear: ["react-antd"],
+    tooltip: ["react-antd"],
+    radius: ["react-mantine"],
+    valueFormat: ["react-mantine"],
+    firstDayOfWeek: ["react-mantine"],
+    hideOutsideDates: ["react-mantine"],
+    labelSeparator: ["react-mantine"],
+    dateType: ["react-mantine"],
+    dropdownType: ["react-mantine"],
+    allowDeselect: ["react-mantine"],
+    clearable: ["react-mantine"],
+    hideWeekdays: ["react-mantine"],
+    defaultLevel: ["react-mantine"],
+    hasNextLevel: ["react-mantine"],
+    maxLevel: ["react-mantine"],
+    numberOfColumns: ["react-mantine"],
+    columnsToScroll: ["react-mantine"],
+    withCellSpacing: ["react-mantine"],
+    pointer: ["react-mantine"],
+    withErrorStyles: ["react-mantine"],
+    leftSection: ["react-mantine"],
+    rightSection: ["react-mantine"],
+    leftSectionWidth: ["react-mantine"],
+    rightSectionWidth: ["react-mantine"],
+    validationMinLength: "validation",
+    validationMin: "validation",
+    validationMaxLength: "validation",
+    validationMax: "validation",
+    validationPattern: "validation",
+    validationMessage: "validation",
+    required: null
+  };
+  var checkbox$1$1 = {
+    name: null,
+    label: null,
+    hint: null,
+    disabled: null,
+    readOnly: null,
+    hidden: null,
+    color: ["react-rsuite5", "react-material-ui", "react-mantine"],
+    indeterminate: ["react-rsuite5", "react-mantine"],
+    tooltip: ["react-rsuite5"],
+    size: ["react-material-ui", "react-mantine"],
+    labelPlacement: ["react-material-ui"],
+    disableRipple: ["react-material-ui"],
+    radius: ["react-mantine"],
+    labelPosition: ["react-mantine"],
+    iconColor: ["react-mantine"],
+    autoContrast: ["react-mantine"],
+    validationMinLength: "validation",
+    validationMin: "validation",
+    validationMaxLength: "validation",
+    validationMax: "validation",
+    validationPattern: "validation",
+    validationMessage: "validation",
+    required: null
+  };
+  var textarea$1$1 = {
+    name: null,
+    label: null,
+    hint: null,
+    placeholder: null,
+    disabled: null,
+    readOnly: null,
+    hidden: null,
+    fullWidth: ["react", "react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+    width: ["react", "react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+    rows: ["react", "react-rsuite5", "react-bootstrap"],
+    size: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+    tooltip: ["react-rsuite5", "react-antd"],
+    variant: ["react-material-ui", "react-antd", "react-mantine"],
+    color: ["react-material-ui"],
+    floatingLabel: ["react-material-ui"],
+    disableUnderline: ["react-material-ui"],
+    maxRows: ["react-material-ui", "react-mantine"],
+    showCount: ["react-antd"],
+    autoSize: ["react-antd"],
+    maxLength: ["react-antd"],
+    allowClear: ["react-antd"],
+    radius: ["react-mantine"],
+    autosize: ["react-mantine"],
+    minRows: ["react-mantine"],
+    leftSection: ["react-mantine"],
+    rightSection: ["react-mantine"],
+    leftSectionWidth: ["react-mantine"],
+    rightSectionWidth: ["react-mantine"],
+    pointer: ["react-mantine"],
+    withErrorStyles: ["react-mantine"],
+    validationMinLength: "validation",
+    validationMin: "validation",
+    validationMaxLength: "validation",
+    validationMax: "validation",
+    validationPattern: "validation",
+    validationMessage: "validation",
+    required: null
+  };
+  var rate$1$1 = {
+    name: null,
+    label: null,
+    hint: null,
+    disabled: null,
+    readOnly: null,
+    hidden: null,
+    allowHalf: ["react-rsuite5", "react-antd"],
+    cleanable: ["react-rsuite5"],
+    vertical: ["react-rsuite5"],
+    max: ["react-rsuite5", "react-material-ui"],
+    color: ["react-rsuite5", "react-mantine"],
+    size: ["react-rsuite5", "react-material-ui", "react-mantine"],
+    tooltip: ["react-rsuite5", "react-antd", "react-antd"],
+    precision: ["react-material-ui"],
+    count: ["react-antd", "react-mantine"],
+    allowClear: ["react-antd"],
+    tooltips: ["react-antd"],
+    fractions: ["react-mantine"],
+    highlightSelectedOnly: ["react-mantine"],
+    validationMinLength: "validation",
+    validationMin: "validation",
+    validationMaxLength: "validation",
+    validationMax: "validation",
+    validationPattern: "validation",
+    validationMessage: "validation",
+    required: null
+  };
+  var placeholder$1$1 = {
+    name: null,
+    label: null,
+    hint: null,
+    text: null,
+    hidden: null,
+    tooltip: ["react-rsuite5", "react-antd"],
+    validationMinLength: "validation",
+    validationMin: "validation",
+    validationMaxLength: "validation",
+    validationMax: "validation",
+    validationPattern: "validation",
+    validationMessage: "validation",
+    required: null
+  };
+  var multiselect$1$1 = {
+    name: null,
+    label: null,
+    hint: null,
+    options: null,
+    value: null,
+    filterKey: null,
+    filterValue: null,
+    placeholder: null,
+    disabled: null,
+    readOnly: null,
+    hidden: null,
+    placement: ["react-rsuite5", "react-antd"],
+    size: ["react-rsuite5", "react-material-ui", "react-antd", "react-mantine"],
+    multiselectMode: ["react-rsuite5"],
+    block: ["react-rsuite5"],
+    searchable: ["react-rsuite5", "react-mantine"],
+    cleanable: ["react-rsuite5"],
+    tooltip: ["react-rsuite5", "react-antd"],
+    preventOverflow: ["react-rsuite5"],
+    autoWidth: ["react-material-ui"],
+    fullWidth: ["react-material-ui", "react-antd", "react-mantine"],
+    width: ["react-material-ui", "react-antd", "react-mantine"],
+    floatingLabel: ["react-material-ui"],
+    variant: ["react-material-ui", "react-antd", "react-mantine"],
+    listHeight: ["react-antd"],
+    allowClear: ["react-antd"],
+    popupMatchSelectWidth: ["react-antd"],
+    showSearch: ["react-antd"],
+    virtual: ["react-antd"],
+    maxTagCount: ["react-antd"],
+    maxTagPlaceholder: ["react-antd"],
+    maxTagTextLength: ["react-antd"],
+    radius: ["react-mantine"],
+    leftSection: ["react-mantine"],
+    rightSection: ["react-mantine"],
+    leftSectionWidth: ["react-mantine"],
+    rightSectionWidth: ["react-mantine"],
+    limit: ["react-mantine"],
+    maxDropdownHeight: ["react-mantine"],
+    maxValues: ["react-mantine"],
+    nothingFoundMessage: ["react-mantine"],
+    clearable: ["react-mantine"],
+    defaultDropdownOpened: ["react-mantine"],
+    hidePickedOptions: ["react-mantine"],
+    pointer: ["react-mantine"],
+    selectFirstOptionOnChange: ["react-mantine"],
+    withCheckIcon: ["react-mantine"],
+    withErrorStyles: ["react-mantine"],
+    withScrollArea: ["react-mantine"],
+    validationMinLength: "validation",
+    validationMin: "validation",
+    validationMaxLength: "validation",
+    validationMax: "validation",
+    validationPattern: "validation",
+    validationMessage: "validation",
+    required: null
+  };
+  var button$1$1 = {
+    name: null,
+    buttonType: null,
+    labelOn: null,
+    iconOn: null,
+    labelOff: null,
+    iconOff: null,
+    initialValue: null,
+    labelLink: null,
+    iconLink: null,
+    href: null,
+    hint: null,
+    fullWidth: null,
+    width: null,
+    hidden: null,
+    size: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+    appearance: ["react-rsuite5"],
+    tooltip: ["react-rsuite5", "react-mantine"],
+    variant: ["react-material-ui", "react-bootstrap", "react-mantine"],
+    color: ["react-material-ui", "react-mantine"],
+    type: ["react-antd"],
+    radius: ["react-mantine"]
+  };
+  var divider$1$1 = {
+    name: null,
+    size: null,
+    color: null,
+    hidden: null,
+    label: ["react-mantine"],
+    labelPosition: ["react-mantine"]
+  };
+  var datetime$1$1 = {
+    name: null,
+    label: null,
+    hint: null,
+    placeholder: null,
+    disabled: null,
+    readOnly: null,
+    hidden: null,
+    format: ["react-rsuite5", "react-material-ui", "react-antd"],
+    size: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+    appearance: ["react-rsuite5"],
+    placement: ["react-rsuite5", "react-antd"],
+    fullWidth: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+    width: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+    cleanable: ["react-rsuite5"],
+    editable: ["react-rsuite5"],
+    oneTap: ["react-rsuite5"],
+    showMeridian: ["react-rsuite5"],
+    isoWeek: ["react-rsuite5"],
+    showWeekNumbers: ["react-rsuite5"],
+    variant: ["react-material-ui", "react-antd", "react-mantine"],
+    color: ["react-material-ui"],
+    views: ["react-material-ui"],
+    closeOnSelect: ["react-material-ui"],
+    reduceAnimations: ["react-material-ui"],
+    showDaysOutsideCurrentMonth: ["react-material-ui"],
+    floatingLabel: ["react-material-ui", "react-bootstrap"],
+    disableFuture: ["react-material-ui"],
+    disableHighlightToday: ["react-material-ui"],
+    disableOpenPicker: ["react-material-ui"],
+    disablePast: ["react-material-ui"],
+    displayWeekNumber: ["react-material-ui"],
+    ampm: ["react-material-ui"],
+    ampmInClock: ["react-material-ui"],
+    forceMobile: ["react-material-ui"],
+    loading: ["react-material-ui"],
+    fixedWeekNumber: ["react-material-ui"],
+    formatDensity: ["react-material-ui", "react-material-ui"],
+    monthsPerRow: ["react-material-ui"],
+    yearsPerRow: ["react-material-ui"],
+    minDate: ["react-material-ui", "react-antd", "react-mantine"],
+    maxDate: ["react-material-ui", "react-antd", "react-mantine"],
+    minDateTime: ["react-material-ui"],
+    maxDateTime: ["react-material-ui"],
+    minutesStep: ["react-material-ui"],
+    timeStepsHours: ["react-material-ui"],
+    timeStepsMinutes: ["react-material-ui"],
+    timeStepsSeconds: ["react-material-ui"],
+    prefix: ["react-bootstrap"],
+    postfix: ["react-bootstrap"],
+    picker: ["react-antd"],
+    mode: ["react-antd"],
+    showTime: ["react-antd"],
+    showNow: ["react-antd"],
+    showToday: ["react-antd"],
+    preserveInvalidOnBlur: ["react-antd"],
+    inputReadOnly: ["react-antd"],
+    needConfirm: ["react-antd"],
+    allowClear: ["react-antd"],
+    tooltip: ["react-antd"],
+    radius: ["react-mantine"],
+    valueFormat: ["react-mantine"],
+    firstDayOfWeek: ["react-mantine"],
+    hideOutsideDates: ["react-mantine"],
+    labelSeparator: ["react-mantine"],
+    withSeconds: ["react-mantine"],
+    dropdownType: ["react-mantine"],
+    allowDeselect: ["react-mantine"],
+    clearable: ["react-mantine"],
+    hideWeekdays: ["react-mantine"],
+    defaultLevel: ["react-mantine"],
+    hasNextLevel: ["react-mantine"],
+    maxLevel: ["react-mantine"],
+    numberOfColumns: ["react-mantine"],
+    columnsToScroll: ["react-mantine"],
+    withCellSpacing: ["react-mantine"],
+    pointer: ["react-mantine"],
+    withErrorStyles: ["react-mantine"],
+    leftSection: ["react-mantine"],
+    rightSection: ["react-mantine"],
+    leftSectionWidth: ["react-mantine"],
+    rightSectionWidth: ["react-mantine"],
+    validationMinLength: "validation",
+    validationMin: "validation",
+    validationMaxLength: "validation",
+    validationMax: "validation",
+    validationPattern: "validation",
+    validationMessage: "validation",
+    required: null
+  };
+  var tabs$1$1 = {
+    name: null,
+    tabs: ["react-mantine"],
+    value: ["react-mantine"],
+    label: ["react-mantine"],
+    hidden: null,
+    appearance: ["react-rsuite5"],
+    reversed: ["react-rsuite5"],
+    justified: ["react-rsuite5"],
+    indicatorColor: ["react-material-ui"],
+    textColor: ["react-material-ui"],
+    centered: ["react-material-ui", "react-antd"],
+    fullWidth: ["react-material-ui"],
+    variant: ["react-bootstrap", "react-mantine"],
+    transition: ["react-bootstrap"],
+    fill: ["react-bootstrap"],
+    justify: ["react-bootstrap", "react-mantine"],
+    size: ["react-antd"],
+    tabType: ["react-antd"],
+    animated: ["react-antd"],
+    color: ["react-mantine", "react-mantine"],
+    leftSection: ["react-mantine"],
+    rightSection: ["react-mantine"],
+    disabled: ["react-mantine"],
+    radius: ["react-mantine"],
+    grow: ["react-mantine"],
+    orientation: ["react-mantine"],
+    placement: ["react-mantine"],
+    activateTabWithKeyboard: ["react-mantine"],
+    allowTabDeactivation: ["react-mantine"],
+    autoContrast: ["react-mantine"],
+    inverted: ["react-mantine"],
+    keepMounted: ["react-mantine"],
+    loop: ["react-mantine"]
+  };
+  var upload$1$1 = {
+    name: null,
+    label: null,
+    hint: null,
+    disabled: null,
+    hidden: null,
+    accept: null,
+    acceptedFile: null,
+    uploadButtonLabel: ["react", "react-rsuite5", "react-material-ui", "react-antd"],
+    multiple: ["react", "react-rsuite5", "react-material-ui", "react-antd", "react-mantine"],
+    listType: ["react-rsuite5", "react-antd"],
+    maxPreviewFileSize: ["react-rsuite5"],
+    tooltip: ["react-rsuite5", "react-antd"],
+    fileListVisible: ["react-rsuite5"],
+    disabledFileItem: ["react-rsuite5"],
+    removable: ["react-rsuite5"],
+    draggable: ["react-rsuite5", "react-antd"],
+    uploadButtonAppearance: ["react-rsuite5", "react-antd"],
+    uploadButtonSize: ["react-rsuite5", "react-material-ui", "react-antd"],
+    draggableText: ["react-rsuite5", "react-antd"],
+    draggableHeight: ["react-rsuite5", "react-antd"],
+    uploadButtonVariant: ["react-material-ui"],
+    color: ["react-material-ui"],
+    uploadButtonIcon: ["react-material-ui"],
+    maxCount: ["react-antd"],
+    showUploadList: ["react-antd"],
+    placeholder: ["react-mantine"],
+    size: ["react-mantine"],
+    radius: ["react-mantine"],
+    variant: ["react-mantine"],
+    fullWidth: ["react-mantine"],
+    width: ["react-mantine"],
+    leftSection: ["react-mantine"],
+    rightSection: ["react-mantine"],
+    leftSectionWidth: ["react-mantine"],
+    rightSectionWidth: ["react-mantine"],
+    clearable: ["react-mantine"],
+    pointer: ["react-mantine"],
+    withErrorStyles: ["react-mantine"],
+    validationMinLength: "validation",
+    validationMin: "validation",
+    validationMaxLength: "validation",
+    validationMax: "validation",
+    validationPattern: "validation",
+    validationMessage: "validation",
+    required: null
+  };
+  var steps$1$1 = {
+    name: null,
+    hidden: null,
+    labelNext: null,
+    labelPrevious: null,
+    align: null,
+    steps: ["react-rsuite5", "react-antd", "react-mantine"],
+    value: ["react-rsuite5", "react-antd", "react-mantine"],
+    label: ["react-rsuite5", "react-antd", "react-mantine"],
+    description: ["react-rsuite5", "react-antd", "react-mantine"],
+    icon: ["react-rsuite5", "react-antd", "react-mantine"],
+    small: ["react-rsuite5", "react-antd"],
+    status: ["react-rsuite5", "react-antd"],
+    subtitle: ["react-antd"],
+    stepsType: ["react-antd"],
+    percent: ["react-antd"],
+    clickable: ["react-antd"],
+    labelPlacement: ["react-antd"],
+    color: ["react-mantine"],
+    radius: ["react-mantine"],
+    size: ["react-mantine"],
+    iconPosition: ["react-mantine"],
+    iconSize: ["react-mantine"],
+    wrap: ["react-mantine"],
+    allowStepClick: ["react-mantine"],
+    allowStepSelect: ["react-mantine"],
+    autoContrast: ["react-mantine"],
+    validationMinLength: "validation",
+    validationMin: "validation",
+    validationMaxLength: "validation",
+    validationMax: "validation",
+    validationPattern: "validation",
+    validationMessage: "validation",
+    required: null
+  };
+  var time$1$1 = {
+    name: null,
+    label: null,
+    hint: null,
+    placeholder: null,
+    disabled: null,
+    readOnly: null,
+    hidden: null,
+    size: ["react-rsuite5", "react-material-ui", "react-antd", "react-mantine"],
+    appearance: ["react-rsuite5"],
+    placement: ["react-rsuite5", "react-antd"],
+    fullWidth: ["react-rsuite5", "react-material-ui", "react-mantine"],
+    width: ["react-rsuite5", "react-material-ui", "react-mantine"],
+    cleanable: ["react-rsuite5"],
+    editable: ["react-rsuite5"],
+    oneTap: ["react-rsuite5"],
+    showMeridian: ["react-rsuite5"],
+    format: ["react-rsuite5", "react-material-ui", "react-antd"],
+    variant: ["react-material-ui", "react-antd", "react-mantine"],
+    color: ["react-material-ui"],
+    views: ["react-material-ui"],
+    floatingLabel: ["react-material-ui"],
+    ampm: ["react-material-ui"],
+    ampmInClock: ["react-material-ui"],
+    forceMobile: ["react-material-ui"],
+    closeOnSelect: ["react-material-ui"],
+    disableFuture: ["react-material-ui"],
+    disableOpenPicker: ["react-material-ui"],
+    disablePast: ["react-material-ui"],
+    minTime: ["react-material-ui", "react-mantine"],
+    maxTime: ["react-material-ui", "react-mantine"],
+    formatDensity: ["react-material-ui"],
+    minutesStep: ["react-material-ui"],
+    timeStepsHours: ["react-material-ui"],
+    timeStepsMinutes: ["react-material-ui"],
+    timeStepsSeconds: ["react-material-ui"],
+    hourStep: ["react-antd"],
+    minuteStep: ["react-antd"],
+    secondStep: ["react-antd"],
+    allowClear: ["react-antd"],
+    hideDisabledOptions: ["react-antd"],
+    inputReadOnly: ["react-antd"],
+    needConfirm: ["react-antd"],
+    showNow: ["react-antd"],
+    use12Hours: ["react-antd"],
+    tooltip: ["react-antd"],
+    radius: ["react-mantine"],
+    withSeconds: ["react-mantine"],
+    pointer: ["react-mantine"],
+    showBrowserPicker: ["react-mantine"],
+    leftSection: ["react-mantine"],
+    rightSection: ["react-mantine"],
+    leftSectionWidth: ["react-mantine"],
+    rightSectionWidth: ["react-mantine"],
+    validationMinLength: "validation",
+    validationMin: "validation",
+    validationMaxLength: "validation",
+    validationMax: "validation",
+    validationPattern: "validation",
+    validationMessage: "validation",
+    required: null
+  };
+  var hidden$1$1 = {
+    name: null,
+    info: null
+  };
+  var FIELD_MAPPINGS$1 = {
+    "input-text": {
+      name: null,
+      label: null,
+      hint: null,
+      placeholder: null,
+      disabled: null,
+      readOnly: null,
+      hidden: null,
+      submitOnEnter: null,
+      fullWidth: ["react", "react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+      width: ["react", "react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+      size: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+      prefix: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd"],
+      inside: ["react-rsuite5"],
+      postfix: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd"],
+      tooltip: ["react-rsuite5", "react-antd"],
+      variant: ["react-material-ui", "react-antd", "react-mantine"],
+      color: ["react-material-ui"],
+      floatingLabel: ["react-material-ui", "react-bootstrap"],
+      disableUnderline: ["react-material-ui"],
+      showCount: ["react-antd"],
+      maxLength: ["react-antd"],
+      allowClear: ["react-antd"],
+      bordered: ["react-antd"],
+      radius: ["react-mantine"],
+      leftSection: ["react-mantine"],
+      rightSection: ["react-mantine"],
+      leftSectionWidth: ["react-mantine"],
+      rightSectionWidth: ["react-mantine"],
+      pointer: ["react-mantine"],
+      withErrorStyles: ["react-mantine"],
+      inputMode: null,
+      autocomplete: null,
+      inputType: null,
+      validationMinLength: "validation",
+      validationMin: "validation",
+      validationMaxLength: "validation",
+      validationMax: "validation",
+      validationPattern: "validation",
+      validationMessage: "validation",
+      required: null
+    },
+    toggle: toggle$1$1,
+    select: select$1$1,
+    group: group$1$1,
+    "two-columns": {
+      name: null,
+      layout: null,
+      leftAlignment: null,
+      rightAlignment: null,
+      hidden: null
+    },
+    "three-columns": {
+      name: null,
+      layout: null,
+      leftAlignment: null,
+      centerAlignment: null,
+      rightAlignment: null,
+      hidden: null
+    },
+    array: array$1$1,
+    "input-number": {
+      name: null,
+      label: null,
+      hint: null,
+      placeholder: null,
+      disabled: null,
+      readOnly: null,
+      hidden: null,
+      min: ["react", "react-rsuite5", "react-bootstrap", "react-antd", "react-mantine"],
+      step: ["react", "react-rsuite5", "react-bootstrap", "react-antd", "react-mantine"],
+      max: ["react", "react-rsuite5", "react-bootstrap", "react-antd", "react-mantine"],
+      fullWidth: ["react", "react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+      width: ["react", "react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+      size: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+      allowClear: ["react-rsuite5"],
+      prefix: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd"],
+      inside: ["react-rsuite5"],
+      postfix: ["react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd"],
+      tooltip: ["react-rsuite5", "react-antd"],
+      variant: ["react-material-ui", "react-antd", "react-mantine"],
+      color: ["react-material-ui"],
+      floatingLabel: ["react-material-ui", "react-bootstrap"],
+      disableUnderline: ["react-material-ui"],
+      showControls: ["react-antd"],
+      stringMode: ["react-antd"],
+      radius: ["react-mantine"],
+      leftSection: ["react-mantine"],
+      rightSection: ["react-mantine"],
+      leftSectionWidth: ["react-mantine"],
+      rightSectionWidth: ["react-mantine"],
+      pointer: ["react-mantine"],
+      withErrorStyles: ["react-mantine"],
+      valueIsNumericString: ["react-mantine"],
+      hideControls: ["react-mantine"],
+      allowLeadingZeros: ["react-mantine"],
+      allowNegative: ["react-mantine"],
+      clampBehavior: ["react-mantine"],
+      startValue: ["react-mantine"],
+      allowDecimal: ["react-mantine"],
+      decimalSeparator: ["react-mantine"],
+      fixedDecimalScale: ["react-mantine"],
+      decimalScale: ["react-mantine"],
+      thousandsGroupStyle: ["react-mantine"],
+      thousandSeparator: ["react-mantine"],
+      validationMinLength: "validation",
+      validationMin: "validation",
+      validationMaxLength: "validation",
+      validationMax: "validation",
+      validationPattern: "validation",
+      validationMessage: "validation",
+      required: null
+    },
+    slider: slider$1$1,
+    date: date$1$1,
+    checkbox: checkbox$1$1,
+    "checkbox-group": {
+      name: null,
+      label: ["react-mantine"],
+      hint: null,
+      options: ["react-mantine"],
+      value: ["react-mantine"],
+      disabled: null,
+      readOnly: null,
+      hidden: null,
+      color: ["react-rsuite5", "react-material-ui", "react-mantine"],
+      inline: ["react-rsuite5", "react-bootstrap"],
+      tooltip: ["react-rsuite5"],
+      size: ["react-material-ui", "react-mantine"],
+      labelPlacement: ["react-material-ui"],
+      reverse: ["react-bootstrap"],
+      description: ["react-mantine"],
+      radius: ["react-mantine"],
+      labelPosition: ["react-mantine"],
+      iconColor: ["react-mantine"],
+      autoContrast: ["react-mantine"],
+      validationMinLength: "validation",
+      validationMin: "validation",
+      validationMaxLength: "validation",
+      validationMax: "validation",
+      validationPattern: "validation",
+      validationMessage: "validation",
+      required: null
+    },
+    "radio-group": {
+      name: null,
+      label: ["react-mantine"],
+      hint: null,
+      options: ["react-mantine"],
+      value: ["react-mantine"],
+      disabled: null,
+      readOnly: null,
+      hidden: null,
+      inline: ["react-rsuite5", "react-bootstrap", "react-antd"],
+      appearance: ["react-rsuite5"],
+      tooltip: ["react-rsuite5", "react-antd"],
+      size: ["react-material-ui", "react-antd", "react-mantine"],
+      color: ["react-material-ui", "react-mantine"],
+      labelPlacement: ["react-material-ui"],
+      row: ["react-material-ui"],
+      reverse: ["react-bootstrap"],
+      optionType: ["react-antd"],
+      description: ["react-mantine"],
+      radius: ["react-mantine"],
+      labelPosition: ["react-mantine"],
+      iconColor: ["react-mantine"],
+      autoContrast: ["react-mantine"],
+      validationMinLength: "validation",
+      validationMin: "validation",
+      validationMaxLength: "validation",
+      validationMax: "validation",
+      validationPattern: "validation",
+      validationMessage: "validation",
+      required: null
+    },
+    "input-tag": {
+      name: null,
+      label: ["react-mantine"],
+      hint: null,
+      disabled: null,
+      readOnly: null,
+      hidden: null,
+      trigger: ["react-rsuite5"],
+      block: ["react-rsuite5"],
+      size: ["react-rsuite5", "react-mantine"],
+      tooltip: ["react-rsuite5"],
+      radius: ["react-mantine"],
+      variant: ["react-mantine"],
+      data: ["react-mantine"],
+      value: ["react-mantine"],
+      leftSection: ["react-mantine"],
+      rightSection: ["react-mantine"],
+      leftSectionWidth: ["react-mantine"],
+      rightSectionWidth: ["react-mantine"],
+      maxTags: ["react-mantine"],
+      maxDropdownHeight: ["react-mantine"],
+      limit: ["react-mantine"],
+      allowDuplicates: ["react-mantine"],
+      clearable: ["react-mantine"],
+      defaultDropdownOpened: ["react-mantine"],
+      pointer: ["react-mantine"],
+      searchable: ["react-mantine"],
+      selectFirstOptionOnChange: ["react-mantine"],
+      withCheckIcon: ["react-mantine"],
+      withErrorStyles: ["react-mantine"],
+      withScrollArea: ["react-mantine"],
+      validationMinLength: "validation",
+      validationMin: "validation",
+      validationMaxLength: "validation",
+      validationMax: "validation",
+      validationPattern: "validation",
+      validationMessage: "validation",
+      required: null
+    },
+    "input-mask": {
+      name: null,
+      label: null,
+      hint: null,
+      placeholder: null,
+      disabled: null,
+      readOnly: null,
+      hidden: null,
+      mask: ["react-rsuite5"],
+      guide: ["react-rsuite5"],
+      keepCharPositions: ["react-rsuite5"],
+      showMask: ["react-rsuite5"],
+      placeholderChar: ["react-rsuite5"],
+      fullWidth: ["react-rsuite5"],
+      width: ["react-rsuite5"],
+      size: ["react-rsuite5"],
+      tooltip: ["react-rsuite5"],
+      prefix: ["react-rsuite5"],
+      inside: ["react-rsuite5"],
+      postfix: ["react-rsuite5"],
+      validationMinLength: "validation",
+      validationMin: "validation",
+      validationMaxLength: "validation",
+      validationMax: "validation",
+      validationPattern: "validation",
+      validationMessage: "validation",
+      required: null
+    },
+    textarea: textarea$1$1,
+    rate: rate$1$1,
+    placeholder: placeholder$1$1,
+    multiselect: multiselect$1$1,
+    "multiselect-language": {
+      name: null,
+      label: null,
+      hint: null,
+      placeholder: null,
+      disabled: null,
+      readOnly: null,
+      hidden: null,
+      placement: ["react-rsuite5"],
+      size: ["react-rsuite5"],
+      tooltip: ["react-rsuite5"],
+      validationMinLength: "validation",
+      validationMin: "validation",
+      validationMaxLength: "validation",
+      validationMax: "validation",
+      validationPattern: "validation",
+      validationMessage: "validation",
+      required: null
+    },
+    "input-text-i18n": {
+      name: null,
+      label: null,
+      hint: null,
+      placeholder: null,
+      disabled: null,
+      readOnly: null,
+      hidden: null,
+      size: ["react-rsuite5"],
+      width: ["react-rsuite5"],
+      textarea: ["react-rsuite5"],
+      rows: ["react-rsuite5"],
+      tooltip: ["react-rsuite5"],
+      validationMinLength: "validation",
+      validationMin: "validation",
+      validationMaxLength: "validation",
+      validationMax: "validation",
+      validationPattern: "validation",
+      validationMessage: "validation",
+      required: null
+    },
+    "placeholder-image": {
+      name: null,
+      url: null,
+      align: null,
+      hidden: null,
+      maxWidth: ["react", "react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+      maxHeight: ["react", "react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+      marginTop: ["react", "react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"],
+      marginBottom: ["react", "react-rsuite5", "react-material-ui", "react-bootstrap", "react-antd", "react-mantine"]
+    },
+    button: button$1$1,
+    divider: divider$1$1,
+    datetime: datetime$1$1,
+    tabs: tabs$1$1,
+    "radio-tile": {
+      name: null,
+      label: null,
+      hint: null,
+      options: null,
+      value: null,
+      description: null,
+      icon: null,
+      initalOption: null,
+      disabled: null,
+      hidden: null,
+      inline: ["react-rsuite5"],
+      iconWidth: ["react-rsuite5"],
+      iconHeight: ["react-rsuite5"],
+      tooltip: ["react-rsuite5"],
+      validationMinLength: "validation",
+      validationMin: "validation",
+      validationMaxLength: "validation",
+      validationMax: "validation",
+      validationPattern: "validation",
+      validationMessage: "validation",
+      required: null
+    },
+    upload: upload$1$1,
+    "buttons-toggle-group": {
+      name: null,
+      label: null,
+      hint: null,
+      options: null,
+      value: null,
+      image: null,
+      showImageOptions: null,
+      multiple: null,
+      disabled: null,
+      readOnly: null,
+      hidden: null,
+      fullWidth: null,
+      justifyContent: null,
+      size: ["react-rsuite5", "react-antd"],
+      validationMinLength: "validation",
+      validationMin: "validation",
+      validationMaxLength: "validation",
+      validationMax: "validation",
+      validationPattern: "validation",
+      validationMessage: "validation",
+      required: null
+    },
+    steps: steps$1$1,
+    "esm-module": {
+      name: null,
+      label: null,
+      hint: null,
+      componentUrl: null,
+      defaultExport: null,
+      exportedKey: null,
+      count: null,
+      placeholder: null,
+      validationMinLength: "validation",
+      validationMin: "validation",
+      validationMaxLength: "validation",
+      validationMax: "validation",
+      validationPattern: "validation",
+      validationMessage: "validation",
+      required: null
+    },
+    time: time$1$1,
+    hidden: hidden$1$1
+  };
+  var translateValidationKey$1 = function translateValidationKey(str) {
+    if (str.startsWith('validation')) {
+      str = str.replace(/^validation/, '');
+      if (str.length !== 0) {
+        str = str[0].toLowerCase() + str.slice(1);
+      }
+      return str;
+    } else {
+      return str;
+    }
+  };
+  var ApiFactory$1 = function ApiFactory(formName, framework, formFields, currenValues) {
+    var _fields = formFields;
+    var fieldExists = function fieldExists(name) {
+      if (findField$1(_fields, function (field) {
+        return field.name === name;
+      }) != null) {
+        return true;
+      } else {
+        throw new Error("Field \"".concat(name, "\" doesn't exist in the form"));
+      }
+    };
+    return {
+      fields: function fields() {
+        return _fields;
+      },
+      element: function element(name) {
+        if (!fieldExists(name)) {
+          return;
+        }
+        var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
+        if (form) {
+          return form.querySelector("[data-lf-field-name=".concat(name, "]"));
+        }
+        return null;
+      },
+      style: function style(name, prop, value) {
+        if (!fieldExists(name)) {
+          return;
+        }
+        // find the form, then the element, then apply the style
+        var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
+        if (form) {
+          var element = form.querySelector("[data-lf-field-name=".concat(name, "]"));
+          if (element) {
+            if (_isString$1(prop)) {
+              element.style[prop] = value;
+            } else if (_isObject$1(prop)) {
+              Object.keys(prop).forEach(function (key) {
+                return element.style[key] = prop[key];
+              });
+            }
+          }
+        }
+      },
+      css: function css(className, obj) {
+        // find the form
+        var form = document.querySelector("[data-lf-form-name=".concat(formName, "]"));
+        if (form) {
+          var element = form.querySelector(className);
+          if (element && _isObject$1(obj)) {
+            Object.keys(obj).forEach(function (key) {
+              return element.style[key] = obj[key];
+            });
+          }
+        }
+      },
+      setValue: function setValue(name, key, value) {
+        if (!fieldExists(name)) {
+          return;
+        }
+        _fields = mapFields$1(_fields, function (field) {
+          if (field.name === name) {
+            // check if the field exists in the manifest mapping
+            // and if needs to be added in a framework sub set
+            if (FIELD_MAPPINGS$1[field.component] && FIELD_MAPPINGS$1[field.component][key] !== undefined) {
+              if (FIELD_MAPPINGS$1[field.component][key] === null) {
+                // key property exists but it's just common property to all frameworks
+                return _objectSpread2$1(_objectSpread2$1({}, field), {}, _defineProperty$1$1({}, key, value));
+              } else if (FIELD_MAPPINGS$1[field.component][key] === 'validation') {
+                var _field$validation;
+                // handle special case of validation fields
+                return _objectSpread2$1(_objectSpread2$1({}, field), {}, {
+                  validation: _objectSpread2$1(_objectSpread2$1({}, (_field$validation = field.validation) !== null && _field$validation !== void 0 ? _field$validation : {}), {}, _defineProperty$1$1({}, translateValidationKey$1(key), value))
+                });
+                // handle special case of validation
+              } else if (_isArray$1(FIELD_MAPPINGS$1[field.component][key]) && FIELD_MAPPINGS$1[field.component][key].includes(framework)) {
+                var _field$framework;
+                // key property it's a framework specific key, belongs to one or more frameworks, so it must be
+                // set in the specific subset, use the current framework so set it
+                return _objectSpread2$1(_objectSpread2$1({}, field), {}, _defineProperty$1$1({}, framework, _objectSpread2$1(_objectSpread2$1({}, (_field$framework = field[framework]) !== null && _field$framework !== void 0 ? _field$framework : {}), {}, _defineProperty$1$1({}, key, value))));
+              } else {
+                console.warning("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\" in framework \"").concat(framework, "\""));
+              }
+            } else {
+              console.error("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\""));
+            }
+          }
+          return field;
+        });
+      },
+      enable: function enable(name) {
+        if (!fieldExists(name)) {
+          return;
+        }
+        _fields = mapFields$1(_fields, function (field) {
+          if (field.name === name) {
+            return _objectSpread2$1(_objectSpread2$1({}, field), {}, {
+              disabled: false
+            });
+          }
+          return field;
+        });
+      },
+      disable: function disable(name) {
+        if (!fieldExists(name)) {
+          return;
+        }
+        _fields = mapFields$1(_fields, function (field) {
+          if (field.name === name) {
+            return _objectSpread2$1(_objectSpread2$1({}, field), {}, {
+              disabled: true
+            });
+          }
+          return field;
+        });
+      },
+      show: function show(name) {
+        if (!fieldExists(name)) {
+          return;
+        }
+        _fields = mapFields$1(_fields, function (field) {
+          if (field.name === name) {
+            return _objectSpread2$1(_objectSpread2$1({}, field), {}, {
+              hidden: false
+            });
+          }
+          return field;
+        });
+      },
+      hide: function hide(name) {
+        if (!fieldExists(name)) {
+          return;
+        }
+        _fields = mapFields$1(_fields, function (field) {
+          if (field.name === name) {
+            return _objectSpread2$1(_objectSpread2$1({}, field), {}, {
+              hidden: true
+            });
+          }
+          return field;
+        });
+      },
+      /**
+       * Change field property inside and array
+       * @param {*} arrayName
+       * @param {*} arrayFieldName
+       * @param {*} key
+       * @param {*} value
+       * @returns
+       */
+      arraySetValue: function arraySetValue(arrayName, arrayFieldName, key, value) {
+        if (!fieldExists(arrayName)) {
+          return;
+        }
+        _fields = mapFields$1(_fields, function (arrayField) {
+          if (arrayField.component === 'array' && arrayField.name === arrayName) {
+            var newFields = mapFields$1(arrayField.fields, function (field) {
+              if (field.name === arrayFieldName) {
+                return _objectSpread2$1(_objectSpread2$1({}, field), {}, _defineProperty$1$1({}, key, value));
+              }
+              return field;
+            });
+            return _objectSpread2$1(_objectSpread2$1({}, arrayField), {}, {
+              fields: newFields
+            });
+          }
+          return arrayField;
+        });
+      },
+      values: Object.freeze(_objectSpread2$1({}, currenValues))
+    };
+  };
+  var applyTransformers$1 = /*#__PURE__*/function () {
+    var _ref = _wrapAsyncGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(formName, framework, fields, transformers, values, onJavascriptError) {
+      var newFields, txs, idx, api, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _iterator, _step, f, error;
+      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            if (!(_isArray$1(transformers) && !_isEmpty$1(transformers))) {
+              _context.next = 52;
+              break;
+            }
+            newFields = fields; // apply all transformers
+            txs = transformers;
+            /*.filter(transformer => _.isFunction(transformer))*/
+            idx = 0;
+          case 4:
+            if (!(idx < txs.length)) {
+              _context.next = 48;
+              break;
+            }
+            api = new ApiFactory$1(formName, framework, newFields, values);
+            _context.prev = 6;
+            //newFields = await txs[idx](api);
+            //console.log('sto per chiamare', txs[idx])
+            _iteratorAbruptCompletion = false;
+            _didIteratorError = false;
+            _context.prev = 9;
+            _iterator = _asyncIterator$1(txs[idx](api));
+          case 11:
+            _context.next = 13;
+            return _awaitAsyncGenerator$1(_iterator.next());
+          case 13:
+            if (!(_iteratorAbruptCompletion = !(_step = _context.sent).done)) {
+              _context.next = 21;
+              break;
+            }
+            f = _step.value;
+            newFields = f;
+            _context.next = 18;
+            return f;
+          case 18:
+            _iteratorAbruptCompletion = false;
+            _context.next = 11;
+            break;
+          case 21:
+            _context.next = 27;
+            break;
+          case 23:
+            _context.prev = 23;
+            _context.t0 = _context["catch"](9);
+            _didIteratorError = true;
+            _iteratorError = _context.t0;
+          case 27:
+            _context.prev = 27;
+            _context.prev = 28;
+            if (!(_iteratorAbruptCompletion && _iterator.return != null)) {
+              _context.next = 32;
+              break;
+            }
+            _context.next = 32;
+            return _awaitAsyncGenerator$1(_iterator.return());
+          case 32:
+            _context.prev = 32;
+            if (!_didIteratorError) {
+              _context.next = 35;
+              break;
+            }
+            throw _iteratorError;
+          case 35:
+            return _context.finish(32);
+          case 36:
+            return _context.finish(27);
+          case 37:
+            _context.next = 45;
+            break;
+          case 39:
+            _context.prev = 39;
+            _context.t1 = _context["catch"](6);
+            console.error('[LetsForm] Error in script: ', _context.t1);
+            error = new Error('Error executing script: ' + _context.t1.message, {
+              cause: _context.t1
+            });
+            error.errorType = 'runtime';
+            onJavascriptError(error);
+          case 45:
+            idx++;
+            _context.next = 4;
+            break;
+          case 48:
+            _context.next = 50;
+            return newFields;
+          case 50:
+            _context.next = 54;
+            break;
+          case 52:
+            _context.next = 54;
+            return fields;
+          case 54:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee, null, [[6, 39], [9, 23, 27, 37], [28,, 32, 36]]);
+    }));
+    return function applyTransformers(_x, _x2, _x3, _x4, _x5, _x6) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+  var isUrl$1 = function isUrl(url) {
+    return _isString$1(url) && url.match(/^http[s]{0,1}:\/\//);
+  };
+  var makeWidthStyle$1 = function makeWidthStyle(fullWidth, width) {
+    var style = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    if (fullWidth) {
+      return _objectSpread2$1(_objectSpread2$1({}, style), {}, {
+        width: '100%'
+      });
+    } else if (width) {
+      return _objectSpread2$1(_objectSpread2$1({}, style), {}, {
+        width: "".concat(parseInt(width, 10), "px")
+      });
+    }
+    return _objectSpread2$1(_objectSpread2$1({}, style), {}, {
+      width: 'auto'
+    });
+  };
+  var collectNames$1 = function collectNames(form) {
+    if (form && _isArray$1(form.fields) && !_isEmpty$1(form.fields)) {
+      return reduceFields$1(form.fields, function (field, accumulator) {
+        if (!accumulator.includes(field.name)) {
+          return [].concat(_toConsumableArray$1(accumulator), [field.name]);
+        }
+        return accumulator;
+      }, []);
+    }
+    return [];
+  };
+
+  /**
+   * isValidDate
+   * _.date() is not enough, it could be a date object but an invalid date, in that
+   * case toISOString will fail
+   * @param {} d 
+   * @returns 
+   */
+  var isValidDate$1 = function isValidDate(d) {
+    return d instanceof Date && !isNaN(d);
+  };
+  var lfLog$1 = function lfLog(s) {
+    return console.log('%cLF%c ' + s, 'background: #3498ff; color: #ffffff; padding: 2px; border-radius: 3px', '');
+  };
+  var lfError$1 = function lfError(s, e) {
+    return console.log('%cLF%c Error: ' + s, 'background: #E44D2E; color: #ffffff; padding: 2px; border-radius: 3px', '', e !== null && e !== void 0 ? e : '');
+  };
+  var HttpCall$1 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+      var data, options, fetch, opts, headers, hash;
+      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, options = _ref.options, fetch = _ref.fetch;
+            opts = _objectSpread2$1({
+              method: 'POST'
+            }, options);
+            headers = {
+              'Content-Type': 'application/json'
+            };
+            if (opts.authorization === 'bearer') {
+              headers.Authorization = "Bearer ".concat(opts.bearerToken);
+            } else if (opts.authorization === 'basic') {
+              hash = btoa(opts.username + ':' + opts.password);
+              headers.Authorization = "Basic ".concat(hash);
+            }
+            _context.next = 6;
+            return fetch(opts.url, {
+              method: opts.method,
+              headers: headers,
+              redirect: 'follow',
+              body: JSON.stringify(data)
+            });
+          case 6:
+            return _context.abrupt("return", _context.sent);
+          case 7:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function HttpCall(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+  var GetFormIo$1 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+      var data, _ref$options, options, fetch, opts, formData;
+      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, _ref$options = _ref.options, options = _ref$options === void 0 ? {} : _ref$options, fetch = _ref.fetch;
+            opts = _objectSpread2$1({
+              url: null
+            }, options);
+            formData = new FormData();
+            Object.keys(data).forEach(function (key) {
+              return formData.append(key, typeof data[key] === 'string' ? data[key] : JSON.stringify(data[key]));
+            });
+            _context.next = 6;
+            return fetch(opts.url, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: formData
+            });
+          case 6:
+            return _context.abrupt("return", _context.sent);
+          case 7:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function GetFormIo(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+  var IFTT$1 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+      var data, options, opts;
+      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, options = _ref.options;
+            opts = Object.assign({
+              key: null,
+              eventName: null
+            }, options);
+            _context.next = 4;
+            return fetch("https://maker.ifttt.com/trigger/".concat(opts.eventName, "/json/with/key/").concat(opts.key), {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              redirect: 'follow',
+              body: JSON.stringify(data),
+              mode: 'no-cors'
+            });
+          case 4:
+            return _context.abrupt("return", _context.sent);
+          case 5:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function IFTT(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+  var LAYOUT_FIELDS$1$1 = ['group', 'two-columns', 'three-columns', 'steps', 'tabs'];
+  var defaultBlockProperty$1 = function defaultBlockProperty(s) {
+    return {
+      rich_text: [{
+        text: {
+          content: s
+        }
+      }]
+    };
+  };
+  var NotionMappings$1 = {
+    'input-number': 'number',
+    'toggle': function toggle(b) {
+      return {
+        'checkbox': !!b
+      };
+    },
+    'checkbox': function checkbox(b) {
+      return {
+        'checkbox': !!b
+      };
+    },
+    'date': function date(d) {
+      return {
+        date: {
+          start: d
+        }
+      };
+    },
+    'datetime': function datetime(d) {
+      return {
+        date: {
+          start: d
+        }
+      };
+    },
+    'select': function select(s) {
+      return {
+        select: {
+          name: s
+        }
+      };
+    },
+    'radio-group': function radioGroup(s) {
+      return {
+        select: {
+          name: s
+        }
+      };
+    },
+    'multiselect': function multiselect(d) {
+      return {
+        'multi_select': (d !== null && d !== void 0 ? d : []).map(function (key) {
+          return {
+            name: key
+          };
+        })
+      };
+    }
+  };
+  var Notion$1 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+      var data, options, fetch, fields, opts, notionProperties;
+      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, options = _ref.options, fetch = _ref.fetch, fields = _ref.fields;
+            opts = Object.assign({
+              secretKey: null,
+              databaseId: null
+            }, options); // translat properties according to this
+            // DOC: https://developers.notion.com/reference/property-value-object
+            // omit all layout fields
+            notionProperties = Object.keys(data).filter(function (key) {
+              return !LAYOUT_FIELDS$1$1.includes(key);
+            }).reduce(function (acc, key) {
+              var newValue;
+              if (typeof NotionMappings$1[fields[key]] === 'function') {
+                newValue = NotionMappings$1[fields[key]](data[key]);
+              } else if (NotionMappings$1[fields[key]]) {
+                newValue = _defineProperty$1$1({}, NotionMappings$1[fields[key]], data[key]);
+              } else {
+                newValue = defaultBlockProperty$1(data[key]);
+              }
+              return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$1$1({}, key, newValue));
+            }, {});
+            _context.next = 5;
+            return fetch('https://api.notion.com/v1/pages', {
+              method: 'POST',
+              headers: new Headers({
+                'Content-Type': 'application/json',
+                'Authorization': "Bearer ".concat(opts.secretKey),
+                'Notion-Version': '2022-06-28'
+              }),
+              body: JSON.stringify({
+                parent: {
+                  database_id: opts.databaseId
+                },
+                properties: notionProperties
+              })
+            });
+          case 5:
+            return _context.abrupt("return", _context.sent);
+          case 6:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function Notion(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+  var Zapier$1 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+      var data, options, fetch, opts;
+      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, options = _ref.options, fetch = _ref.fetch;
+            opts = Object.assign({
+              url: null
+            }, options);
+            _context.next = 4;
+            return fetch(opts.url, {
+              method: 'POST',
+              headers: new Headers({
+                'Content-Type': 'application/json'
+              }),
+              body: JSON.stringify(data)
+              //mode: 'no-cors'
+            });
+
+          case 4:
+            return _context.abrupt("return", _context.sent);
+          case 5:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function Zapier(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+  var FormSparkIo$1 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+      var data, _ref$options, options, fetch, opts;
+      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, _ref$options = _ref.options, options = _ref$options === void 0 ? {} : _ref$options, fetch = _ref.fetch;
+            opts = _objectSpread2$1({
+              formId: null
+            }, options);
+            _context.next = 4;
+            return fetch("https://submit-form.com/".concat(opts.formId), {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(data)
+            });
+          case 4:
+            return _context.abrupt("return", _context.sent);
+          case 5:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function FormSparkIo(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+  var AirTable$1 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+      var data, _ref$options, options, fetch, opts;
+      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, _ref$options = _ref.options, options = _ref$options === void 0 ? {} : _ref$options, fetch = _ref.fetch;
+            opts = _objectSpread2$1({
+              webhookUrl: null
+            }, options);
+            return _context.abrupt("return", fetch(opts.webhookUrl, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            }));
+          case 3:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function AirTable(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+  var FormCarry$1 = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(_ref) {
+      var data, options, fetch, opts;
+      return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            data = _ref.data, options = _ref.options, fetch = _ref.fetch;
+            opts = _objectSpread2$1({
+              url: null
+            }, options);
+            _context.next = 4;
+            return fetch(opts.url, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(data)
+            });
+          case 4:
+            return _context.abrupt("return", _context.sent);
+          case 5:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function FormCarry(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+  var Connectors$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    AirTable: AirTable$1,
+    FormCarry: FormCarry$1,
+    FormSparkIo: FormSparkIo$1,
+    GetFormIo: GetFormIo$1,
+    HttpCall: HttpCall$1,
+    IFTT: IFTT$1,
+    Notion: Notion$1,
+    Zapier: Zapier$1
+  });
+  var i18nOptions$1 = function i18nOptions(value, i18n) {
+    return (value !== null && value !== void 0 ? value : []).filter(function (value) {
+      return value != null;
+    }).map(function (value) {
+      return _objectSpread2$1(_objectSpread2$1({}, value), {}, {
+        label: i18n(value.label),
+        description: i18n(value.description)
+      });
+    });
+  };
+
+  /**
+   * isValidTime
+   *
+   * @param {} d Time string (i.e. 12:12:00)
+   * @returns
+   */
+  var isValidTime$1 = function isValidTime(d) {
+    return typeof d === 'string' && d.match(/^[0-9]{1,2}:[0-9]{2,2}(:[0-9]{2,2}){0,1}$/) != null;
+  };
+  var I18N$1 = function I18N(Component) {
+    var propNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+    var funcPropNames = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    return function (props) {
+      var lfLocale = props.lfLocale;
+      var newProps = Object.keys(props).reduce(function (acc, propName) {
+        // translate simpe field
+        if (propNames.includes(propName)) {
+          return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$1$1({}, propName, i18n$1(props[propName], lfLocale)));
+        } else if (_isFunction$1(funcPropNames[propName])) {
+          // pass the value trough the mapper
+          var translated = funcPropNames[propName](props[propName], function (string) {
+            return i18n$1(string, lfLocale);
+          });
+          return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$1$1({}, propName, translated));
+        }
+        return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$1$1({}, propName, props[propName]));
+      }, {});
+      return /*#__PURE__*/React$1.createElement(Component, newProps);
+    };
+  };
+
+  /**
+   * ProxyFetch
+   * Factory to create a wrapped version of the fetch function to work with predefined CORS proxy
+   * @param {Object} params
+   * @returns
+   */
+  var ProxyFetch$1 = function ProxyFetch(params) {
+    return /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator$1( /*#__PURE__*/_regeneratorRuntime$1().mark(function _callee(url, options) {
+        var proxyUrl, proxyOptions, _proxyOptions$headers;
+        return _regeneratorRuntime$1().wrap(function _callee$(_context) {
+          while (1) switch (_context.prev = _context.next) {
+            case 0:
+              proxyUrl = url;
+              proxyOptions = _objectSpread2$1({}, options);
+              if (params.proxy === 'cors-lol') {
+                proxyUrl = 'https://api.cors.lol/?url=' + encodeURIComponent(url);
+              } else if (params.proxy === 'just-cors') {
+                proxyUrl = params.justCorsUrl + url;
+              } else if (params.proxy === 'proxy-cors-sh') {
+                proxyUrl = 'https://proxy.cors.sh/' + url;
+                proxyOptions = _objectSpread2$1(_objectSpread2$1({}, proxyOptions), {}, {
+                  headers: _objectSpread2$1(_objectSpread2$1({}, (_proxyOptions$headers = proxyOptions.headers) !== null && _proxyOptions$headers !== void 0 ? _proxyOptions$headers : {}), {}, {
+                    'x-cors-api-key': params.corsShApiKey
+                  })
+                });
+              } else if (params.proxy === 'cors-proxy-io') {
+                proxyUrl = 'https://corsproxy.io/?' + url;
+              }
+              _context.prev = 3;
+              _context.next = 6;
+              return fetch(proxyUrl, proxyOptions);
+            case 6:
+              return _context.abrupt("return", _context.sent);
+            case 9:
+              _context.prev = 9;
+              _context.t0 = _context["catch"](3);
+              // capture url
+              _context.t0.url = proxyUrl;
+              throw _context.t0;
+            case 13:
+            case "end":
+              return _context.stop();
+          }
+        }, _callee, null, [[3, 9]]);
+      }));
+      return function (_x, _x2) {
+        return _ref.apply(this, arguments);
+      };
+    }();
+  };
+  var FormContext$1 = /*#__PURE__*/React$1.createContext();
+  var useFormContext$1 = function useFormContext() {
+    var context = React$1.useContext(FormContext$1);
+
+    // put here some defaults
+
+    return context;
+  };
+  var useStylesheet$1 = function useStylesheet(id, css) {
+    React$1.useEffect(function () {
+      if (!_isEmpty$1(css)) {
+        var head = document.head;
+        var style = document.createElement("style");
+        style.id = "letsform-sheet-".concat(id);
+        style.innerHTML = css.replaceAll('.lf-current-form', ".lf-lets-form [data-lf-form-name=".concat(id, "]"));
+        head.appendChild(style);
+      }
+      return function () {
+        if (!_isEmpty$1(css)) {
+          var _document$querySelect;
+          (_document$querySelect = document.querySelector("#letsform-sheet-".concat(id))) === null || _document$querySelect === void 0 ? void 0 : _document$querySelect.remove();
+        }
+      };
+    }, [css, id]);
+  };
+  var baseGetTag$1 = _baseGetTag$1,
+    isObjectLike$1 = isObjectLike_1$1;
+
+  /** `Object#toString` result references. */
+  var dateTag$4 = '[object Date]';
+
+  /**
+   * The base implementation of `_.isDate` without Node.js optimizations.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a date object, else `false`.
+   */
+  function baseIsDate$1$1(value) {
+    return isObjectLike$1(value) && baseGetTag$1(value) == dateTag$4;
+  }
+  var _baseIsDate$1 = baseIsDate$1$1;
+  var baseIsDate$2 = _baseIsDate$1,
+    baseUnary$5 = _baseUnary$1,
+    nodeUtil$4 = _nodeUtilExports$1;
+
+  /* Node.js helper references. */
+  var nodeIsDate$1 = nodeUtil$4 && nodeUtil$4.isDate;
+
+  /**
+   * Checks if `value` is classified as a `Date` object.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a date object, else `false`.
+   * @example
+   *
+   * _.isDate(new Date);
+   * // => true
+   *
+   * _.isDate('Mon April 23 2012');
+   * // => false
+   */
+  var isDate$1 = nodeIsDate$1 ? baseUnary$5(nodeIsDate$1) : baseIsDate$2;
+  var isDate_1$1 = isDate$1;
+  var _isDate$1 = /*@__PURE__*/getDefaultExportFromCjs$1(isDate_1$1);
+  var ar$4$1 = "نعم";
+  var eu$4$1 = "Bai";
+  var la$4$1 = "Sic";
+  var YesLabel$1 = {
+    "en-US": "Yes",
+    "af-ZA": "Ja",
+    ar: ar$4$1,
+    "bg-BG": "Да",
+    "ca-AD": "Sí",
+    "cs-CZ": "Ano",
+    "cy-GB": "Ie",
+    "da-DK": "Ja",
+    "de-AT": "Ja",
+    "de-CH": "Ja",
+    "de-DE": "Ja",
+    "el-GR": "Ναί",
+    "en-GB": "Yes",
+    "es-CL": "Sí",
+    "es-ES": "Sí",
+    "es-MX": "Sí",
+    "et-EE": "Jah",
+    eu: eu$4$1,
+    "fa-IR": "آره",
+    "fi-FI": "Joo",
+    "fr-CA": "Oui",
+    "fr-FR": "Oui",
+    "he-IL": "כן",
+    "hi-IN": "हाँ",
+    "hr-HR": "Da",
+    "hu-HU": "Igen",
+    "id-ID": "Ya",
+    "is-IS": "Já",
+    "it-IT": "Si",
+    "ja-JP": "はい",
+    "km-KH": "បាត",
+    "ko-KR": "예",
+    la: la$4$1,
+    "lt-LT": "Taip",
+    "lv-LV": "Jā",
+    "mn-MN": "Мон",
+    "nb-NO": "Ja",
+    "nl-NL": "Ja",
+    "pl-PL": "Tak",
+    "pt-BR": "Sim",
+    "pt-PT": "Sim",
+    "ro-RO": "da",
+    "ru-RU": "Да",
+    "sk-SK": "Áno",
+    "sl-SI": "DA",
+    "sr-RS": "да",
+    "sv-SE": "Ja",
+    "th-TH": "ใช่",
+    "tr-TR": "Evet",
+    "uk-UA": "Так",
+    "vi-VN": "Đúng",
+    "zh-CN": "是的",
+    "zh-TW": "是的"
+  };
+  var ar$3$1 = "لا";
+  var eu$3$1 = "Ez-";
+  var la$3$1 = "Non";
+  var NoLabel$1 = {
+    "en-US": "No",
+    "af-ZA": "Geen",
+    ar: ar$3$1,
+    "bg-BG": "Не",
+    "ca-AD": "No",
+    "cs-CZ": "Ne",
+    "cy-GB": "Na",
+    "da-DK": "Ingen",
+    "de-AT": "NEIN",
+    "de-CH": "NEIN",
+    "de-DE": "NEIN",
+    "el-GR": "Οχι",
+    "en-GB": "No",
+    "es-CL": "No",
+    "es-ES": "No",
+    "es-MX": "No",
+    "et-EE": "Mitte",
+    eu: eu$3$1,
+    "fa-IR": "هیچ",
+    "fi-FI": "Ei",
+    "fr-CA": "Non",
+    "fr-FR": "Non",
+    "he-IL": "לא",
+    "hi-IN": "नहीं",
+    "hr-HR": "Ne",
+    "hu-HU": "Nem",
+    "id-ID": "TIDAK",
+    "is-IS": "Nei",
+    "it-IT": "No",
+    "ja-JP": "いいえ",
+    "km-KH": "ដេលក្ផាន",
+    "ko-KR": "아니요",
+    la: la$3$1,
+    "lt-LT": "Ne",
+    "lv-LV": "Nē",
+    "mn-MN": "-Гүй / -битгий",
+    "nb-NO": "Nei",
+    "nl-NL": "Nee",
+    "pl-PL": "NIE",
+    "pt-BR": "Não",
+    "pt-PT": "Não",
+    "ro-RO": "Nu",
+    "ru-RU": "Нет",
+    "sk-SK": "Nie",
+    "sl-SI": "Ne",
+    "sr-RS": "Не",
+    "sv-SE": "Nej",
+    "th-TH": "เลขที่",
+    "tr-TR": "HAYIR",
+    "uk-UA": "Немає",
+    "vi-VN": "KHÔNG",
+    "zh-CN": "不",
+    "zh-TW": "不"
+  };
+  var ar$2$1 = "عنصر";
+  var eu$2$1 = "osagai";
+  var la$2$1 = "elementum";
+  var ElementLabel$1 = {
+    "en-US": "element",
+    "af-ZA": "element",
+    ar: ar$2$1,
+    "bg-BG": "Елемент",
+    "ca-AD": "element",
+    "cs-CZ": "živel",
+    "cy-GB": "elfen",
+    "da-DK": "element",
+    "de-AT": "element",
+    "de-CH": "element",
+    "de-DE": "element",
+    "el-GR": "στοιχείο",
+    "en-GB": "element",
+    "es-CL": "elemento",
+    "es-ES": "elemento",
+    "es-MX": "elemento",
+    "et-EE": "element",
+    eu: eu$2$1,
+    "fa-IR": "عنصر",
+    "fi-FI": "elementti",
+    "fr-CA": "élément",
+    "fr-FR": "élément",
+    "he-IL": "אֵלֵמֶנט",
+    "hi-IN": "तत्व",
+    "hr-HR": "element",
+    "hu-HU": "elem",
+    "id-ID": "elemen",
+    "is-IS": "Element",
+    "it-IT": "elemento",
+    "ja-JP": "エレメント",
+    "km-KH": "ធាតុ",
+    "ko-KR": "요소",
+    la: la$2$1,
+    "lt-LT": "elementas",
+    "lv-LV": "elements",
+    "mn-MN": "бүрэлдэхүүн",
+    "nb-NO": "element",
+    "nl-NL": "element",
+    "pl-PL": "element",
+    "pt-BR": "elemento",
+    "pt-PT": "elemento",
+    "ro-RO": "element",
+    "ru-RU": "элемент",
+    "sk-SK": "element",
+    "sl-SI": "element",
+    "sr-RS": "елемент",
+    "sv-SE": "element",
+    "th-TH": "องค์ประกอบ",
+    "tr-TR": "eleman",
+    "uk-UA": "елемент",
+    "vi-VN": "yếu tố",
+    "zh-CN": "元素",
+    "zh-TW": "元素"
+  };
+  var ar$1$1 = "عناصر";
+  var eu$1$1 = "elementuak";
+  var la$1$1 = "elementa";
+  var ElementsLabel$1 = {
+    "en-US": "elements",
+    "af-ZA": "elemente",
+    ar: ar$1$1,
+    "bg-BG": "елементи",
+    "ca-AD": "elements",
+    "cs-CZ": "Prvky",
+    "cy-GB": "elfennau",
+    "da-DK": "elementer",
+    "de-AT": "elemente",
+    "de-CH": "elemente",
+    "de-DE": "elemente",
+    "el-GR": "στοιχεία",
+    "en-GB": "elements",
+    "es-CL": "elementos",
+    "es-ES": "elementos",
+    "es-MX": "elementos",
+    "et-EE": "elemendid",
+    eu: eu$1$1,
+    "fa-IR": "عناصر",
+    "fi-FI": "elementit",
+    "fr-CA": "éléments",
+    "fr-FR": "éléments",
+    "he-IL": "אלמנטים",
+    "hi-IN": "तत्वों",
+    "hr-HR": "elementi",
+    "hu-HU": "elemek",
+    "id-ID": "elemen",
+    "is-IS": "þættir",
+    "it-IT": "elementi",
+    "ja-JP": "要素",
+    "km-KH": "ធាតុ",
+    "ko-KR": "강요",
+    la: la$1$1,
+    "lt-LT": "elementai",
+    "lv-LV": "elementi",
+    "mn-MN": "Элэглэлт",
+    "nb-NO": "elementer",
+    "nl-NL": "elementen",
+    "pl-PL": "elementy",
+    "pt-BR": "elementos",
+    "pt-PT": "elementos",
+    "ro-RO": "elemente",
+    "ru-RU": "элементы",
+    "sk-SK": "prvky",
+    "sl-SI": "elementi",
+    "sr-RS": "елементи",
+    "sv-SE": "element",
+    "th-TH": "องค์ประกอบ",
+    "tr-TR": "elementler",
+    "uk-UA": "елементи",
+    "vi-VN": "các yếu tố",
+    "zh-CN": "元素",
+    "zh-TW": "元素"
+  };
+  var ar$5 = "لا عناصر";
+  var eu$5 = "Elementurik ez";
+  var la$5 = "Nulla elementa";
+  var NoElementsLabel$1 = {
+    "en-US": "No elements",
+    "af-ZA": "Geen elemente nie",
+    ar: ar$5,
+    "bg-BG": "Без елементи",
+    "ca-AD": "Sense elements",
+    "cs-CZ": "Žádné prvky",
+    "cy-GB": "Dim Elfennau",
+    "da-DK": "Ingen elementer",
+    "de-AT": "Keine Elemente",
+    "de-CH": "Keine Elemente",
+    "de-DE": "Keine Elemente",
+    "el-GR": "Χωρίς στοιχεία",
+    "en-GB": "No elements",
+    "es-CL": "Sin elementos",
+    "es-ES": "Sin elementos",
+    "es-MX": "Sin elementos",
+    "et-EE": "Elemente pole",
+    eu: eu$5,
+    "fa-IR": "بدون عنصر",
+    "fi-FI": "Ei elementtejä",
+    "fr-CA": "Pas d'éléments",
+    "fr-FR": "Pas d'éléments",
+    "he-IL": "אין אלמנטים",
+    "hi-IN": "कोई तत्व नहीं",
+    "hr-HR": "Nema elemenata",
+    "hu-HU": "Nincs elem",
+    "id-ID": "tidak ada elemen",
+    "is-IS": "Engir þættir",
+    "it-IT": "Nessun elemento",
+    "ja-JP": "要素はありません",
+    "km-KH": "គ្មានធាតុ",
+    "ko-KR": "요소가 없습니다",
+    la: la$5,
+    "lt-LT": "Jokių elementų",
+    "lv-LV": "Nav elementu",
+    "mn-MN": "элемент байхгүй",
+    "nb-NO": "Ingen elementer",
+    "nl-NL": "Geen elementen",
+    "pl-PL": "bez elementów",
+    "pt-BR": "Sem elementos",
+    "pt-PT": "Sem elementos",
+    "ro-RO": "Fără elemente",
+    "ru-RU": "Нет элементов",
+    "sk-SK": "Žiadne prvky",
+    "sl-SI": "Brez elementov",
+    "sr-RS": "Нема елемената",
+    "sv-SE": "Inga element",
+    "th-TH": "ไม่มีองค์ประกอบ",
+    "tr-TR": "Element Yok",
+    "uk-UA": "немає елементів",
+    "vi-VN": "Không có yếu tố",
+    "zh-CN": "没有元素",
+    "zh-TW": "没有元素"
+  };
+  var Plaintext$1 = function Plaintext(_ref) {
+    var value = _ref.value,
+      component = _ref.component,
+      options = _ref.options,
+      locale = _ref.locale;
+    var d;
+    switch (component) {
+      case 'input-number':
+      case 'rate':
+      case 'slider':
+        return /*#__PURE__*/React$1.createElement("div", {
+          className: "plaintext-value"
+        }, value);
+      case 'input-text':
+      case 'time':
+        return /*#__PURE__*/React$1.createElement("div", {
+          className: "plaintext-value"
+        }, value);
+      case 'date':
+        if (_isDate$1(value)) {
+          d = value;
+        } else if (_isString$1(value) && isValidDate$1(new Date(value))) {
+          d = new Date(value);
+        }
+        return /*#__PURE__*/React$1.createElement("div", {
+          className: "plaintext-value"
+        }, d ? d.toLocaleDateString() : '');
+      case 'datetime':
+        if (_isDate$1(value)) {
+          d = value;
+        } else if (_isString$1(value) && isValidDate$1(new Date(value))) {
+          d = new Date(value);
+        }
+        return /*#__PURE__*/React$1.createElement("div", {
+          className: "plaintext-value"
+        }, d ? d.toLocaleDateString() + ' ' + d.toLocaleTimeString() : '');
+      case 'toggle':
+      case 'checkbox':
+        if (value === true || value === 1) {
+          return /*#__PURE__*/React$1.createElement("div", {
+            className: "plaintext-value"
+          }, i18n$1(YesLabel$1, locale));
+        } else if (value === false || value === 0) {
+          return /*#__PURE__*/React$1.createElement("div", {
+            className: "plaintext-value"
+          }, i18n$1(NoLabel$1, locale));
+        }
+        return /*#__PURE__*/React$1.createElement("div", {
+          className: "plaintext-value"
+        });
+      case 'radio-group':
+      case 'radio-tile':
+      case 'select':
+        var found = (options !== null && options !== void 0 ? options : []).find(function (option) {
+          return option.value === value;
+        });
+        var label = '';
+        if (found) {
+          if (isI18n$1(found.label)) {
+            label = i18n$1(found.label, locale);
+          } else {
+            label = found.label;
+          }
+        }
+        return /*#__PURE__*/React$1.createElement("div", {
+          className: "plaintext-value"
+        }, label);
+      case 'checkbox-group':
+      case 'multiselect':
+        var selectedOptions = (options !== null && options !== void 0 ? options : []).filter(function (option) {
+          return (value !== null && value !== void 0 ? value : []).includes(option.value);
+        });
+        var founds = selectedOptions.map(function (option) {
+          return isI18n$1(option.label) ? i18n$1(option.label, locale) : option.label;
+        });
+        return /*#__PURE__*/React$1.createElement("div", null, founds.join(', '));
+      case 'array':
+        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, _isArray$1(value) && /*#__PURE__*/React$1.createElement("div", {
+          className: "plaintext-value"
+        }, /*#__PURE__*/React$1.createElement("span", {
+          className: "count"
+        }, value.length), ' ', value.length > 1 ? i18n$1(ElementsLabel$1, locale) : i18n$1(ElementLabel$1, locale)), !_isArray$1(value) && /*#__PURE__*/React$1.createElement("div", {
+          className: "plaintext-value"
+        }, i18n$1(NoElementsLabel$1, locale)));
+      case 'textarea':
+        return /*#__PURE__*/React$1.createElement("div", {
+          className: "plaintext-value",
+          dangerouslySetInnerHTML: {
+            __html: (value || '').replaceAll('\n', '<br/>')
+          }
+        });
+      case 'placeholder':
+      case 'placeholder-image':
+        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null);
+      default:
+        return /*#__PURE__*/React$1.createElement("div", {
+          className: "plaintext-value"
+        }, _typeof$1(value) !== 'object' ? value : '');
+    }
+  };
+  var css_248z$a$2 = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
+  styleInject$1(css_248z$a$2);
+  var css_248z$9$2 = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
+  styleInject$1(css_248z$9$2);
   var ThreeColumns$1 = function ThreeColumns(_ref) {
     var name = _ref.name,
       layout = _ref.layout,
@@ -17529,10 +28224,8 @@
       }
     }, _isFunction$1(children) && children('right')));
   };
-
-  var css_248z$F = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
-  styleInject$1(css_248z$F);
-
+  var css_248z$8$2 = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
+  styleInject$1(css_248z$8$2);
   var TwoColumns$1 = function TwoColumns(_ref) {
     var name = _ref.name,
       children = _ref.children,
@@ -17554,10 +28247,8 @@
       }
     }, _isFunction$1(children) && children('right')));
   };
-
-  var css_248z$E = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
-  styleInject$1(css_248z$E);
-
+  var css_248z$7$2 = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject$1(css_248z$7$2);
   var Group$1 = I18N$1(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -17608,53 +28299,10 @@
       className: "lf-group-content"
     }, children));
   }, ['label']);
-
-  var css_248z$D = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
-  styleInject$1(css_248z$D);
-
-  var PlaceholderImage$1 = function PlaceholderImage(_ref) {
-    var url = _ref.url,
-      label = _ref.label,
-      name = _ref.name,
-      maxWidth = _ref.maxWidth,
-      maxHeight = _ref.maxHeight,
-      marginTop = _ref.marginTop,
-      marginBottom = _ref.marginBottom,
-      align = _ref.align;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-placeholder-image",
-      "data-lf-field-name": name,
-      style: {
-        textAlign: align ? align : undefined
-      }
-    }, url && /*#__PURE__*/React$1.createElement("img", {
-      src: url,
-      alt: label || name,
-      style: {
-        marginTop: marginTop ? marginTop : undefined,
-        marginBottom: marginBottom ? marginBottom : undefined,
-        maxWidth: maxWidth ? maxWidth : '100%',
-        maxHeight: maxHeight ? maxHeight : '100%',
-        textAlign: align ? align : undefined
-      }
-    }));
-  };
-
-  var TextOrIcon$1 = function TextOrIcon(str) {
-    if (isUrl$1(str)) {
-      return /*#__PURE__*/React$1.createElement("img", {
-        className: "lf-prefix-icon",
-        src: str,
-        alt: "icon"
-      });
-    } else if (str) {
-      return /*#__PURE__*/React$1.createElement("span", null, str);
-    }
-  };
-
-  var css_248z$C = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
-  styleInject$1(css_248z$C);
-
+  var css_248z$6$2 = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
+  styleInject$1(css_248z$6$2);
+  var css_248z$5$2 = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
+  styleInject$1(css_248z$5$2);
   var Divider$1 = function Divider(_ref) {
     var name = _ref.name,
       size = _ref.size,
@@ -17671,34 +28319,10 @@
     }, "&npsb;"));
   };
   lfLog$1('Loaded Common.Divider');
-
-  var index$z = /*#__PURE__*/Object.freeze({
+  var index$t = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider$1
   });
-
-  var _excluded$S = ["name", "view"];
-  var ReactView$1 = function ReactView(_ref) {
-    var name = _ref.name,
-      view = _ref.view,
-      rest = _objectWithoutProperties$1(_ref, _excluded$S);
-    var View = view;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-react-view",
-      "data-lf-field-name": name
-    }, View && /*#__PURE__*/React$1.createElement(View, _extends$1({
-      name: name
-    }, rest)));
-  };
-
-  var isEmptyItem$1 = function isEmptyItem(obj) {
-    return Object.keys(obj).filter(function (key) {
-      return key !== 'id';
-    }).every(function (key) {
-      return obj[key] === null || obj[key] === undefined || obj[key] === '';
-    });
-  };
-
   var baseSlice$3 = _baseSlice$1;
 
   /**
@@ -17710,27 +28334,27 @@
    * @param {number} [end=array.length] The end position.
    * @returns {Array} Returns the cast slice.
    */
-  function castSlice$5(array, start, end) {
+  function castSlice$1$1(array, start, end) {
     var length = array.length;
     end = end === undefined ? length : end;
     return !start && end >= length ? array : baseSlice$3(array, start, end);
   }
-  var _castSlice$1 = castSlice$5;
+  var _castSlice$1 = castSlice$1$1;
 
   /** Used to compose unicode character classes. */
 
-  var rsAstralRange$3 = '\\ud800-\\udfff',
-    rsComboMarksRange$3 = '\\u0300-\\u036f',
-    reComboHalfMarksRange$3 = '\\ufe20-\\ufe2f',
-    rsComboSymbolsRange$3 = '\\u20d0-\\u20ff',
-    rsComboRange$3 = rsComboMarksRange$3 + reComboHalfMarksRange$3 + rsComboSymbolsRange$3,
-    rsVarRange$3 = '\\ufe0e\\ufe0f';
+  var rsAstralRange$1$1 = "\\ud800-\\udfff",
+    rsComboMarksRange$1$1 = "\\u0300-\\u036f",
+    reComboHalfMarksRange$1$1 = "\\ufe20-\\ufe2f",
+    rsComboSymbolsRange$1$1 = "\\u20d0-\\u20ff",
+    rsComboRange$1$1 = rsComboMarksRange$1$1 + reComboHalfMarksRange$1$1 + rsComboSymbolsRange$1$1,
+    rsVarRange$1$1 = "\\ufe0e\\ufe0f";
 
   /** Used to compose unicode capture groups. */
-  var rsZWJ$3 = '\\u200d';
+  var rsZWJ$1$1 = "\\u200d";
 
   /** Used to detect strings with [zero-width joiners or code points from the astral planes](http://eev.ee/blog/2015/09/12/dark-corners-of-unicode/). */
-  var reHasUnicode$1 = RegExp('[' + rsZWJ$3 + rsAstralRange$3 + rsComboRange$3 + rsVarRange$3 + ']');
+  var reHasUnicode$1 = RegExp('[' + rsZWJ$1$1 + rsAstralRange$1$1 + rsComboRange$1$1 + rsVarRange$1$1 + ']');
 
   /**
    * Checks if `string` contains Unicode symbols.
@@ -17739,10 +28363,10 @@
    * @param {string} string The string to inspect.
    * @returns {boolean} Returns `true` if a symbol is found, else `false`.
    */
-  function hasUnicode$5(string) {
+  function hasUnicode$1$1(string) {
     return reHasUnicode$1.test(string);
   }
-  var _hasUnicode$1 = hasUnicode$5;
+  var _hasUnicode$1 = hasUnicode$1$1;
 
   /**
    * Converts an ASCII `string` to an array.
@@ -17752,29 +28376,29 @@
    * @returns {Array} Returns the converted array.
    */
 
-  function asciiToArray$3(string) {
+  function asciiToArray$1$1(string) {
     return string.split('');
   }
-  var _asciiToArray$1 = asciiToArray$3;
+  var _asciiToArray$1 = asciiToArray$1$1;
 
   /** Used to compose unicode character classes. */
 
-  var rsAstralRange$2 = '\\ud800-\\udfff',
-    rsComboMarksRange$2 = '\\u0300-\\u036f',
-    reComboHalfMarksRange$2 = '\\ufe20-\\ufe2f',
-    rsComboSymbolsRange$2 = '\\u20d0-\\u20ff',
+  var rsAstralRange$2 = "\\ud800-\\udfff",
+    rsComboMarksRange$2 = "\\u0300-\\u036f",
+    reComboHalfMarksRange$2 = "\\ufe20-\\ufe2f",
+    rsComboSymbolsRange$2 = "\\u20d0-\\u20ff",
     rsComboRange$2 = rsComboMarksRange$2 + reComboHalfMarksRange$2 + rsComboSymbolsRange$2,
-    rsVarRange$2 = '\\ufe0e\\ufe0f';
+    rsVarRange$2 = "\\ufe0e\\ufe0f";
 
   /** Used to compose unicode capture groups. */
   var rsAstral$1 = '[' + rsAstralRange$2 + ']',
     rsCombo$1 = '[' + rsComboRange$2 + ']',
-    rsFitz$1 = '\\ud83c[\\udffb-\\udfff]',
+    rsFitz$1 = "\\ud83c[\\udffb-\\udfff]",
     rsModifier$1 = '(?:' + rsCombo$1 + '|' + rsFitz$1 + ')',
     rsNonAstral$1 = '[^' + rsAstralRange$2 + ']',
-    rsRegional$1 = '(?:\\ud83c[\\udde6-\\uddff]){2}',
-    rsSurrPair$1 = '[\\ud800-\\udbff][\\udc00-\\udfff]',
-    rsZWJ$2 = '\\u200d';
+    rsRegional$1 = "(?:\\ud83c[\\udde6-\\uddff]){2}",
+    rsSurrPair$1 = "[\\ud800-\\udbff][\\udc00-\\udfff]",
+    rsZWJ$2 = "\\u200d";
 
   /** Used to compose unicode regexes. */
   var reOptMod$1 = rsModifier$1 + '?',
@@ -17793,11 +28417,10 @@
    * @param {string} string The string to convert.
    * @returns {Array} Returns the converted array.
    */
-  function unicodeToArray$3(string) {
+  function unicodeToArray$1$1(string) {
     return string.match(reUnicode$1) || [];
   }
-  var _unicodeToArray$1 = unicodeToArray$3;
-
+  var _unicodeToArray$1 = unicodeToArray$1$1;
   var asciiToArray$2 = _asciiToArray$1,
     hasUnicode$4 = _hasUnicode$1,
     unicodeToArray$2 = _unicodeToArray$1;
@@ -17809,496 +28432,18 @@
    * @param {string} string The string to convert.
    * @returns {Array} Returns the converted array.
    */
-  function stringToArray$5(string) {
+  function stringToArray$1$1(string) {
     return hasUnicode$4(string) ? unicodeToArray$2(string) : asciiToArray$2(string);
   }
-  var _stringToArray$1 = stringToArray$5;
-
-  var castSlice$4 = _castSlice$1,
-    hasUnicode$3 = _hasUnicode$1,
-    stringToArray$4 = _stringToArray$1,
-    toString$7 = toString_1$1;
-
-  /**
-   * Creates a function like `_.lowerFirst`.
-   *
-   * @private
-   * @param {string} methodName The name of the `String` case method to use.
-   * @returns {Function} Returns the new case function.
-   */
-  function createCaseFirst$3(methodName) {
-    return function (string) {
-      string = toString$7(string);
-      var strSymbols = hasUnicode$3(string) ? stringToArray$4(string) : undefined;
-      var chr = strSymbols ? strSymbols[0] : string.charAt(0);
-      var trailing = strSymbols ? castSlice$4(strSymbols, 1).join('') : string.slice(1);
-      return chr[methodName]() + trailing;
-    };
-  }
-  var _createCaseFirst$1 = createCaseFirst$3;
-
-  var createCaseFirst$2 = _createCaseFirst$1;
-
-  /**
-   * Converts the first character of `string` to upper case.
-   *
-   * @static
-   * @memberOf _
-   * @since 4.0.0
-   * @category String
-   * @param {string} [string=''] The string to convert.
-   * @returns {string} Returns the converted string.
-   * @example
-   *
-   * _.upperFirst('fred');
-   * // => 'Fred'
-   *
-   * _.upperFirst('FRED');
-   * // => 'FRED'
-   */
-  var upperFirst$3 = createCaseFirst$2('toUpperCase');
-  var upperFirst_1$1 = upperFirst$3;
-
-  var toString$6 = toString_1$1,
-    upperFirst$2 = upperFirst_1$1;
-
-  /**
-   * Converts the first character of `string` to upper case and the remaining
-   * to lower case.
-   *
-   * @static
-   * @memberOf _
-   * @since 3.0.0
-   * @category String
-   * @param {string} [string=''] The string to capitalize.
-   * @returns {string} Returns the capitalized string.
-   * @example
-   *
-   * _.capitalize('FRED');
-   * // => 'Fred'
-   */
-  function capitalize$1(string) {
-    return upperFirst$2(toString$6(string).toLowerCase());
-  }
-  var capitalize_1$1 = capitalize$1;
-
-  var _capitalize$1 = /*@__PURE__*/getDefaultExportFromCjs$1(capitalize_1$1);
-
-  var IconButton$1 = function IconButton(_ref) {
-    var _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      className = _ref.className,
-      Icon = _ref.icon,
-      onClick = _ref.onClick;
-    var handleClick = React$1.useCallback(function (e) {
-      e.preventDefault();
-      if (!disabled) {
-        onClick();
-      }
-    }, [disabled, onClick]);
-    return /*#__PURE__*/React$1.createElement("a", {
-      href: "#",
-      className: classNames$1('lf-icon-button', className, {
-        disabled: disabled
-      }),
-      onClick: handleClick
-    }, Icon);
-  };
-  var ArrayItem$1 = function ArrayItem(_ref2) {
-    var children = _ref2.children,
-      item = _ref2.item,
-      disabled = _ref2.disabled,
-      readOnly = _ref2.readOnly,
-      _ref2$onAdd = _ref2.onAdd,
-      onAdd = _ref2$onAdd === void 0 ? function () {} : _ref2$onAdd,
-      _ref2$onRemove = _ref2.onRemove,
-      onRemove = _ref2$onRemove === void 0 ? function () {} : _ref2$onRemove,
-      _ref2$disableAdd = _ref2.disableAdd,
-      disableAdd = _ref2$disableAdd === void 0 ? false : _ref2$disableAdd,
-      _ref2$showAdd = _ref2.showAdd,
-      showAdd = _ref2$showAdd === void 0 ? false : _ref2$showAdd,
-      align = _ref2.align,
-      alignOffset = _ref2.alignOffset;
-    var handleRemove = React$1.useCallback(function () {
-      return onRemove(item);
-    }, [item, onRemove]);
-    var style;
-    if ((align === 'top' || align === 'bottom') && _isNumber$1(alignOffset) && alignOffset > 0) {
-      style = _defineProperty$3({}, "margin".concat(_capitalize$1(align)), "".concat(alignOffset, "px"));
-    }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-common-array-item"
-    }, /*#__PURE__*/React$1.createElement("div", {
-      className: "inner-form"
-    }, children), /*#__PURE__*/React$1.createElement("div", {
-      className: "buttons",
-      style: style
-    }, showAdd && /*#__PURE__*/React$1.createElement(IconButton$1, {
-      disabled: disableAdd || disabled || readOnly,
-      className: "arrow",
-      appearance: "link",
-      icon: /*#__PURE__*/React$1.createElement(PlusCircle$1, {
-        height: 16,
-        width: 16,
-        color: "#3498ff"
-      }),
-      size: "sm",
-      onClick: onAdd
-    }), !showAdd && /*#__PURE__*/React$1.createElement(IconButton$1, {
-      className: "arrow",
-      disabled: disabled || readOnly,
-      appearance: "link",
-      icon: /*#__PURE__*/React$1.createElement(MinusCircle$1, {
-        height: 16,
-        width: 16,
-        color: "#3498ff"
-      }),
-      size: "sm",
-      onClick: handleRemove
-    })));
-  };
-
-  var css_248z$B = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
-  styleInject$1(css_248z$B);
-
-  var randomId$1 = function randomId() {
-    var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
-    return Math.random().toString(36).substring(2, length + 2);
-  };
-
-  /**
-   * Check if object is empty or all the keys are empty
-   * @param {*} obj
-   * @returns
-   */
-  var isEmptyObject$1 = function isEmptyObject(obj) {
-    return _isEmpty$1(obj) || Object.keys(obj).every(function (key) {
-      return _isEmpty$1(obj[key]);
-    });
-  };
-
-  /**
-   * flatArrayOfString
-   * If an array of object can be flattned (one keuy), then return a flat array, otherwise raise expection
-   * @param {*} a
-   * @returns
-   */
-  var flatArrayOfString$1 = function flatArrayOfString(a) {
-    var canBeFlat = a.every(function (obj) {
-      return Object.keys(obj).length === 1;
-    });
-    if (!canBeFlat) {
-      throw new Error("Cannot be flattened");
-    }
-    return a.map(function (obj) {
-      return obj[Object.keys(obj)[0]];
-    });
-  };
-  var formatArray$1 = function formatArray(a) {
-    var arrayType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'arrayOfObject';
-    var cleaned = a.map(function (i) {
-      return _omit$1(i, 'id');
-    }).filter(function (i) {
-      return !isEmptyObject$1(i);
-    });
-    try {
-      var flattened = flatArrayOfString$1(cleaned);
-      if (arrayType === 'arrayOfString') {
-        return flattened;
-      } else if (arrayType === 'commaSeparated') {
-        return flattened.join(',');
-      }
-    } catch (e) {
-      // do nothing, return as is
-    }
-    return cleaned;
-  };
-  var makeDefaultValue$3 = function makeDefaultValue(defaultValue, arrayType, form) {
-    if (arrayType === 'arrayOfString') {
-      var isArrayOfString = _isArray$1(defaultValue) && defaultValue.every(function (s) {
-        return _isString$1(s);
-      });
-      var names = collectNames$1(form);
-      // if it's an array of string
-      if (isArrayOfString && names.length === 1) {
-        return defaultValue.map(function (s) {
-          return _defineProperty$3({
-            id: randomId$1()
-          }, names[0], s);
-        });
-      }
-      return [{
-        id: randomId$1()
-      }];
-    } else if (arrayType === 'commaSeparated') {
-      var _names = collectNames$1(form);
-      if (_names.length === 1 && _isString$1(defaultValue) && !_isEmpty$1(defaultValue)) {
-        return defaultValue.split(',').map(function (s) {
-          return _defineProperty$3({
-            id: randomId$1()
-          }, _names[0], s);
-        });
-      }
-      return [{
-        id: randomId$1()
-      }];
-    } else {
-      return _isArray$1(defaultValue) && !_isEmpty$1(defaultValue) ? fillIds$1(defaultValue) : [{
-        id: randomId$1()
-      }];
-    }
-  };
-  var ListArray$1 = function ListArray(_ref3) {
-    var LetsFormComponent = _ref3.LetsFormComponent,
-      value = _ref3.value,
-      _ref3$onChange = _ref3.onChange,
-      onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
-      _ref3$disabled = _ref3.disabled,
-      disabled = _ref3$disabled === void 0 ? false : _ref3$disabled,
-      _ref3$readOnly = _ref3.readOnly,
-      readOnly = _ref3$readOnly === void 0 ? false : _ref3$readOnly,
-      fields = _ref3.fields,
-      _ref3$layout = _ref3.layout,
-      layout = _ref3$layout === void 0 ? 'vertical' : _ref3$layout,
-      maxHeight = _ref3.maxHeight,
-      lfLocale = _ref3.lfLocale,
-      _ref3$leftMargin = _ref3.leftMargin,
-      leftMargin = _ref3$leftMargin === void 0 ? 0 : _ref3$leftMargin,
-      children = _ref3.children,
-      _ref3$arrayType = _ref3.arrayType,
-      arrayType = _ref3$arrayType === void 0 ? 'arrayOfObject' : _ref3$arrayType,
-      _ref3$align = _ref3.align,
-      align = _ref3$align === void 0 ? 'top' : _ref3$align,
-      _ref3$alignOffset = _ref3.alignOffset,
-      alignOffset = _ref3$alignOffset === void 0 ? 0 : _ref3$alignOffset;
-    var _useFormContext = useFormContext$1(),
-      locales = _useFormContext.locales;
-    var form = {
-      layout: layout,
-      fluid: true,
-      locales: locales,
-      // copy the locales from the main form
-      fields: fields
-    };
-    var _useState = React$1.useState(makeDefaultValue$3(value, arrayType, form)),
-      _useState2 = _slicedToArray$1(_useState, 2),
-      items = _useState2[0],
-      setItems = _useState2[1];
-    var style = {};
-    if (maxHeight) {
-      //style.maxHeigth = _.isNumber(maxHeigth) ? `${maxHeigth}px` : maxHeigth;
-      style = {
-        maxHeight: "".concat(maxHeight, "px"),
-        overflowY: 'scroll'
-      };
-    }
-    if (leftMargin != null) {
-      style.marginLeft = _isNumber$1(leftMargin) ? "".concat(leftMargin, "px") : leftMargin;
-    }
-    var handleAdd = React$1.useCallback(function () {
-      setItems(function (items) {
-        return [].concat(_toConsumableArray$1(items), [{
-          id: randomId$1()
-        }]);
-      });
-    }, []);
-    var handleChange = React$1.useCallback(function (value) {
-      var newItems = items.map(function (i) {
-        return i.id === value.id ? value : i;
-      });
-      setItems(newItems);
-      onChange(formatArray$1(newItems, arrayType));
-    }, [items, onChange, arrayType]);
-    var handleRemove = React$1.useCallback(function (item) {
-      var newItems = items.filter(function (i) {
-        return i.id !== item.id;
-      });
-      setItems(newItems);
-      onChange(formatArray$1(newItems, arrayType));
-    }, [items, onChange, arrayType]);
-    if (children) {
-      return /*#__PURE__*/React$1.createElement("div", {
-        style: {
-          padding: '0px 10px 1px 10px'
-        }
-      }, children);
-    }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames$1('lf-control-common-array', align ? "lf-".concat(align) : undefined),
-      style: style
-    }, (_isArray$1(items) ? items : []).map(function (item, idx) {
-      var canAdd = idx === items.length - 1 && !isEmptyItem$1(item);
-      var showAdd = idx === items.length - 1 || items.length === 1;
-      return /*#__PURE__*/React$1.createElement(ArrayItem$1, {
-        key: item.id,
-        item: item,
-        disabled: disabled,
-        readOnly: readOnly,
-        disableAdd: !canAdd,
-        showAdd: showAdd,
-        onAdd: handleAdd,
-        onRemove: handleRemove,
-        align: align,
-        alignOffset: alignOffset
-      }, /*#__PURE__*/React$1.createElement(LetsFormComponent, {
-        form: form,
-        locale: lfLocale,
-        disabled: disabled,
-        readOnly: readOnly,
-        defaultValues: item,
-        onlyFields: true,
-        onChange: handleChange
-      }));
-    }));
-  };
-
-  var css_248z$A = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
-  styleInject$1(css_248z$A);
-
-  var _excluded$R = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
-  var GenericButton$1 = function GenericButton(_ref) {
-    var ButtonComponent = _ref.ButtonComponent,
-      OnStateProps = _ref.OnStateProps,
-      OffStateProps = _ref.OffStateProps,
-      _ref$LinkProps = _ref.LinkProps,
-      LinkProps = _ref$LinkProps === void 0 ? {} : _ref$LinkProps,
-      name = _ref.name,
-      labelOn = _ref.labelOn,
-      labelOff = _ref.labelOff,
-      labelLink = _ref.labelLink,
-      iconOn = _ref.iconOn,
-      iconOff = _ref.iconOff,
-      iconLink = _ref.iconLink,
-      size = _ref.size,
-      href = _ref.href,
-      appearance = _ref.appearance,
-      fullWidth = _ref.fullWidth,
-      width = _ref.width,
-      onChange = _ref.onChange,
-      onBlur = _ref.onBlur,
-      value = _ref.value,
-      buttonType = _ref.buttonType,
-      hint = _ref.hint,
-      initialValue = _ref.initialValue,
-      className = _ref.className,
-      rest = _objectWithoutProperties$1(_ref, _excluded$R);
-    var _useState = React$1.useState(value || initialValue),
-      _useState2 = _slicedToArray$1(_useState, 2),
-      checked = _useState2[0],
-      setChecked = _useState2[1];
-    var handleClick = React$1.useCallback(function () {
-      var newValue = !checked;
-      setChecked(!checked);
-      onChange(newValue, name);
-    }, [onChange, checked, name]);
-    var inner;
-    if (buttonType === 'toggle') {
-      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends$1({
-        size: size,
-        onClick: handleClick,
-        onBlur: onBlur,
-        icon: checked ? iconOn : iconOff,
-        label: checked ? labelOn : labelOff,
-        hint: hint,
-        style: makeWidthStyle$1(fullWidth, width)
-      }, passRest$1(_omit$1(rest, 'label')), checked ? OnStateProps : OffStateProps));
-    } else if (buttonType === 'link') {
-      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends$1({
-        size: size,
-        onBlur: onBlur,
-        appearance: appearance,
-        hint: hint,
-        label: labelLink,
-        icon: iconLink,
-        href: href,
-        target: "_blank",
-        style: makeWidthStyle$1(fullWidth, width)
-      }, passRest$1(_omit$1(rest, 'label')), LinkProps));
-    }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames$1('lf-control-button', className, _defineProperty$3({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
-      "data-lf-field-name": name
-    }, inner);
-  };
-  var MakeButton$1 = function MakeButton(ButtonComponent, OnStateProps, OffStateProps, LinkProps) {
-    return function (props) {
-      return /*#__PURE__*/React$1.createElement(GenericButton$1, _extends$1({
-        ButtonComponent: ButtonComponent,
-        OnStateProps: _isFunction$1(OnStateProps) ? OnStateProps(props) : OnStateProps,
-        OffStateProps: _isFunction$1(OffStateProps) ? OffStateProps(props) : OffStateProps,
-        LinkProps: _isFunction$1(LinkProps) ? LinkProps(props) : LinkProps
-      }, props));
-    };
-  };
-
-  var css_248z$z = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
-  styleInject$1(css_248z$z);
-
-  var getInitialValue$1 = function getInitialValue(value, multiple) {
-    return multiple ? (_isArray$1(value) ? value : []).reduce(function (acc, value) {
-      return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$3({}, value, true));
-    }, {}) : _defineProperty$3({}, value, true);
-  };
-  var ButtonsToggleGroup$1 = function ButtonsToggleGroup(_ref2) {
-    var value = _ref2.value,
-      options = _ref2.options,
-      onChange = _ref2.onChange,
-      size = _ref2.size,
-      _ref2$multiple = _ref2.multiple,
-      multiple = _ref2$multiple === void 0 ? false : _ref2$multiple,
-      disabled = _ref2.disabled,
-      ButtonComponent = _ref2.ButtonComponent,
-      fullWidth = _ref2.fullWidth,
-      justifyContent = _ref2.justifyContent;
-    var _useState = React$1.useState(getInitialValue$1(value, multiple)),
-      _useState2 = _slicedToArray$1(_useState, 2),
-      values = _useState2[0],
-      setValues = _useState2[1];
-    console.log('options', options);
-    var handleClick = React$1.useCallback(function (value, name) {
-      var newValues = multiple ? _objectSpread2$1(_objectSpread2$1({}, values), {}, _defineProperty$3({}, name, value)) : _defineProperty$3({}, name, value);
-      setValues(newValues);
-      var newValue = options.reduce(function (acc, option) {
-        return newValues[option.value] ? [].concat(_toConsumableArray$1(acc), [option.value]) : acc;
-      }, []);
-      onChange(multiple ? newValue : newValue[0]);
-    }, [onChange, options, values, multiple]);
-    var style = {};
-    if (fullWidth) {
-      style.display = 'flex';
-    }
-    if (!_isEmpty$1(justifyContent)) {
-      style.display = 'flex';
-      style.justifyContent = justifyContent;
-    }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-button-toggle-group-container",
-      style: style
-    }, (options !== null && options !== void 0 ? options : []).map(function (_ref4) {
-      var value = _ref4.value,
-        label = _ref4.label,
-        image = _ref4.image;
-      return /*#__PURE__*/React$1.createElement(ButtonComponent, {
-        key: value + values[value],
-        buttonType: "toggle",
-        labelOn: label,
-        name: value,
-        initialValue: values[value],
-        labelOff: label,
-        size: size,
-        disabled: disabled,
-        icon: image,
-        onChange: handleClick,
-        className: classNames$1({
-          'lf-full-width': fullWidth
-        })
-      });
-    }));
-  };
-
-  var css_248z$y = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
-  styleInject$1(css_248z$y);
-
+  var _stringToArray$1 = stringToArray$1$1;
+  var css_248z$4$2 = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
+  styleInject$1(css_248z$4$2);
+  var css_248z$3$2 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
+  styleInject$1(css_248z$3$2);
+  var css_248z$2$2 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
+  styleInject$1(css_248z$2$2);
+  var css_248z$1$3 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
+  styleInject$1(css_248z$1$3);
   var PlaintextLabel$1 = function PlaintextLabel(_ref) {
     var children = _ref.children;
     return /*#__PURE__*/React$1.createElement("div", {
@@ -18368,11 +28513,10 @@
       className: "lf-form lf-form-plaintext"
     }, renderFields$1(fields, locale, framework, currentValues));
   };
-
   var enrichWithLabels$1 = function enrichWithLabels(validationErrors, fields) {
     var result = _objectSpread2$1({}, validationErrors);
     var collectLabels = reduceFields$1(fields, function (field, accumulator) {
-      return field.label ? _objectSpread2$1(_objectSpread2$1({}, accumulator), {}, _defineProperty$3({}, field.name, field.label)) : accumulator;
+      return field.label ? _objectSpread2$1(_objectSpread2$1({}, accumulator), {}, _defineProperty$1$1({}, field.name, field.label)) : accumulator;
     }, {});
     Object.keys(result).forEach(function (key) {
       if (result[key] && result[key].ref && collectLabels[result[key].ref.name]) {
@@ -18394,13 +28538,12 @@
    * @param {string} string The string to inspect.
    * @returns {number} Returns the index of the last non-whitespace character.
    */
-  function trimmedEndIndex$3(string) {
+  function trimmedEndIndex$1$1(string) {
     var index = string.length;
     while (index-- && reWhitespace$1.test(string.charAt(index))) {}
     return index;
   }
-  var _trimmedEndIndex$1 = trimmedEndIndex$3;
-
+  var _trimmedEndIndex$1 = trimmedEndIndex$1$1;
   var trimmedEndIndex$2 = _trimmedEndIndex$1;
 
   /** Used to match leading whitespace. */
@@ -18413,12 +28556,11 @@
    * @param {string} string The string to trim.
    * @returns {string} Returns the trimmed string.
    */
-  function baseTrim$3(string) {
+  function baseTrim$1$1(string) {
     return string ? string.slice(0, trimmedEndIndex$2(string) + 1).replace(reTrimStart$1, '') : string;
   }
-  var _baseTrim$1 = baseTrim$3;
-
-  var baseIndexOf$5 = _baseIndexOf$1;
+  var _baseTrim$1 = baseTrim$1$1;
+  var baseIndexOf$1$1 = _baseIndexOf$1;
 
   /**
    * Used by `_.trim` and `_.trimEnd` to get the index of the last string symbol
@@ -18429,13 +28571,12 @@
    * @param {Array} chrSymbols The character symbols to find.
    * @returns {number} Returns the index of the last unmatched string symbol.
    */
-  function charsEndIndex$3(strSymbols, chrSymbols) {
+  function charsEndIndex$1$1(strSymbols, chrSymbols) {
     var index = strSymbols.length;
-    while (index-- && baseIndexOf$5(chrSymbols, strSymbols[index], 0) > -1) {}
+    while (index-- && baseIndexOf$1$1(chrSymbols, strSymbols[index], 0) > -1) {}
     return index;
   }
-  var _charsEndIndex$1 = charsEndIndex$3;
-
+  var _charsEndIndex$1 = charsEndIndex$1$1;
   var baseIndexOf$4 = _baseIndexOf$1;
 
   /**
@@ -18447,21 +28588,20 @@
    * @param {Array} chrSymbols The character symbols to find.
    * @returns {number} Returns the index of the first unmatched string symbol.
    */
-  function charsStartIndex$3(strSymbols, chrSymbols) {
+  function charsStartIndex$1$1(strSymbols, chrSymbols) {
     var index = -1,
       length = strSymbols.length;
     while (++index < length && baseIndexOf$4(chrSymbols, strSymbols[index], 0) > -1) {}
     return index;
   }
-  var _charsStartIndex$1 = charsStartIndex$3;
-
+  var _charsStartIndex$1 = charsStartIndex$1$1;
   var baseToString$3 = _baseToString$1,
     baseTrim$2 = _baseTrim$1,
-    castSlice$3 = _castSlice$1,
+    castSlice$4 = _castSlice$1,
     charsEndIndex$2 = _charsEndIndex$1,
     charsStartIndex$2 = _charsStartIndex$1,
-    stringToArray$3 = _stringToArray$1,
-    toString$5 = toString_1$1;
+    stringToArray$4 = _stringToArray$1,
+    toString$6 = toString_1$1;
 
   /**
    * Removes leading and trailing whitespace or specified characters from `string`.
@@ -18486,23 +28626,21 @@
    * // => ['foo', 'bar']
    */
   function trim$1(string, chars, guard) {
-    string = toString$5(string);
+    string = toString$6(string);
     if (string && (guard || chars === undefined)) {
       return baseTrim$2(string);
     }
     if (!string || !(chars = baseToString$3(chars))) {
       return string;
     }
-    var strSymbols = stringToArray$3(string),
-      chrSymbols = stringToArray$3(chars),
+    var strSymbols = stringToArray$4(string),
+      chrSymbols = stringToArray$4(chars),
       start = charsStartIndex$2(strSymbols, chrSymbols),
       end = charsEndIndex$2(strSymbols, chrSymbols) + 1;
-    return castSlice$3(strSymbols, start, end).join('');
+    return castSlice$4(strSymbols, start, end).join('');
   }
   var trim_1$1 = trim$1;
-
   var _trim$1 = /*@__PURE__*/getDefaultExportFromCjs$1(trim_1$1);
-
   var translateValidation$1 = function translateValidation(validation, locale, onJavascriptError) {
     // if any validation object
     if (validation != null) {
@@ -18605,7 +28743,6 @@
       throw e;
     }
   };
-
   var collectTransformers$1 = function collectTransformers(fields, formScript, onJavascriptError) {
     var transformers = {};
 
@@ -18664,7 +28801,6 @@
 
     return transformers;
   };
-
   var errorToString$1 = function errorToString(error) {
     if (error) {
       if (error.message) {
@@ -18704,7 +28840,6 @@
     }
     return main;
   };
-
   var MissingComponent$1 = function MissingComponent(_ref) {
     var lfComponent = _ref.lfComponent,
       label = _ref.label,
@@ -18783,7 +28918,7 @@
   var cleanupProperties$1 = function cleanupProperties(props) {
     var cleaned = Object.keys(props).reduce(function (acc, key) {
       if (typeof props[key] === 'string' || typeof props[key] === 'number') {
-        return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$3({}, key, props[key]));
+        return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$1$1({}, key, props[key]));
       }
       return acc;
     }, {});
@@ -18928,7 +29063,7 @@
             return _.omit(el.props, 'children');
           }),
           fields: element.props.children.reduce(function (acc, tabElement) {
-            return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$3({}, tabElement.props.value, traverseChildren(tabElement.props.children, {
+            return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$1$1({}, tabElement.props.value, traverseChildren(tabElement.props.children, {
               components: components,
               framework: framework
             })));
@@ -18943,7 +29078,7 @@
             return _.omit(el.props, 'children');
           }),
           fields: element.props.children.reduce(function (acc, tabElement) {
-            return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$3({}, tabElement.props.value, traverseChildren(tabElement.props.children, {
+            return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$1$1({}, tabElement.props.value, traverseChildren(tabElement.props.children, {
               components: components,
               framework: framework
             })));
@@ -18961,11 +29096,9 @@
       }
     }).filter(Boolean);
   };
-
-  var css_248z$x = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
-  styleInject$1(css_248z$x);
-
-  var _excluded$Q = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableOnSubmit", "resetAfterSubmit"];
+  var css_248z$I = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
+  styleInject$1(css_248z$I);
+  var _excluded$1$5 = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableOnSubmit", "resetAfterSubmit"];
   var DEFAULT_FORM$1 = {
     version: 1,
     fields: []
@@ -18984,8 +29117,8 @@
         GroupWrapper = _ref2.GroupWrapper,
         BottomView = _ref2.BottomView,
         PlaceholderWrapper = _ref2.PlaceholderWrapper;
-        _ref2.debug;
-        var disabled = _ref2.disabled,
+      _ref2.debug;
+      var disabled = _ref2.disabled,
         readOnly = _ref2.readOnly,
         plaintext = _ref2.plaintext,
         errors = _ref2.errors,
@@ -19087,7 +29220,7 @@
                 onChange: function onChange(value, opts) {
                   // TODO use callback
                   fieldInfo.onChange(value);
-                  _onChange(_objectSpread2$1(_objectSpread2$1({}, getValues()), {}, _defineProperty$3({}, field.name, value)), field.name);
+                  _onChange(_objectSpread2$1(_objectSpread2$1({}, getValues()), {}, _defineProperty$1$1({}, field.name, value)), field.name);
                 }
               }, additionalFields, field[framework]), function (tab) {
                 return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
@@ -19157,7 +29290,7 @@
                 onChange: function onChange(value, opts) {
                   // TODO use callback
                   fieldInfo.onChange(value);
-                  _onChange(_objectSpread2$1(_objectSpread2$1({}, getValues()), {}, _defineProperty$3({}, field.name, value)), field.name);
+                  _onChange(_objectSpread2$1(_objectSpread2$1({}, getValues()), {}, _defineProperty$1$1({}, field.name, value)), field.name);
                 }
               }, additionalFields, field[framework]), function (step) {
                 return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
@@ -19496,7 +29629,7 @@
               onChange: function onChange(value, opts) {
                 // TODO use callback
                 fieldInfo.onChange(value);
-                _onChange(_objectSpread2$1(_objectSpread2$1({}, getValues()), {}, _defineProperty$3({}, field.name, value)), field.name);
+                _onChange(_objectSpread2$1(_objectSpread2$1({}, getValues()), {}, _defineProperty$1$1({}, field.name, value)), field.name);
               }
             }));
             return Wrapper ? /*#__PURE__*/React$1.createElement(Wrapper, {
@@ -19568,7 +29701,7 @@
         disableOnSubmit = _ref6$disableOnSubmit === void 0 ? true : _ref6$disableOnSubmit,
         _ref6$resetAfterSubmi = _ref6.resetAfterSubmit,
         resetAfterSubmit = _ref6$resetAfterSubmi === void 0 ? true : _ref6$resetAfterSubmi,
-        rest = _objectWithoutProperties$1(_ref6, _excluded$Q);
+        rest = _objectWithoutProperties$1(_ref6, _excluded$1$5);
       var showErrors = form.showErrors,
         connectors = form.connectors;
       var _useState = React$1.useState((_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : _uniqueId$1('form_')),
@@ -19833,7 +29966,7 @@
                   options: connector.options,
                   fetch: proxyFetch,
                   fields: reduceFields$1(formFields, function (field, acc) {
-                    return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$3({}, field.name, field.component));
+                    return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$1$1({}, field.name, field.component));
                   }, {})
                 });
               case 11:
@@ -20142,7 +30275,6 @@
     FormGenerator.displayName = 'FormGenerator';
     return FormGenerator;
   };
-
   function lazyPreload$1(factory) {
     var ReactLazyComponent = /*#__PURE__*/React$1.lazy(factory);
     var PreloadedComponent;
@@ -20171,183 +30303,186 @@
     };
     return LazyWithPreload;
   }
-
-  var _excluded$P = ["framework", "children"];
+  var _excluded$18 = ["framework", "children"];
   var Fields$1 = {
     'input-text': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$y; });
+        return Promise.resolve().then(function () { return indexBOnR4HJ3; });
       })
     },
     'toggle': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$x; });
+        return Promise.resolve().then(function () { return indexCYw7RRLS; });
       })
     },
     'select': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$w; });
+        return Promise.resolve().then(function () { return indexCTMFxMaC; });
       })
     },
     'group': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$v; });
+        return Promise.resolve().then(function () { return indexDJbRkqVs; });
       })
     },
     'array': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$u; });
+        return Promise.resolve().then(function () { return indexCxyRDDwj; });
       })
     },
     'two-columns': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$t; });
+        return Promise.resolve().then(function () { return indexBZ7BhEnv; });
       })
     },
     'three-columns': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$s; });
+        return Promise.resolve().then(function () { return indexBqUJegwb; });
       })
     },
     'input-number': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$q; });
+        return Promise.resolve().then(function () { return indexMO_HhniH; }).then(function (n) {
+          return n.M;
+        });
       })
     },
     'date': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$p; });
+        return Promise.resolve().then(function () { return indexBbQHzWwh; });
       })
     },
     'checkbox': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$o; });
+        return Promise.resolve().then(function () { return indexDiI5WbIr; });
       })
     },
     'checkbox-group': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$n; });
+        return Promise.resolve().then(function () { return indexDYHLObU; });
       })
     },
     'slider': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$m; });
+        return Promise.resolve().then(function () { return indexCWsO3ceP; });
       })
     },
     'radio-group': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$l; });
+        return Promise.resolve().then(function () { return indexBCCYqSS7; });
       })
     },
     'input-tag': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$k; });
+        return Promise.resolve().then(function () { return indexCxdIgUrC; });
       })
     },
     'input-mask': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$j; });
+        return Promise.resolve().then(function () { return indexBNsUe2GT; });
       })
     },
     'textarea': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$i; });
+        return Promise.resolve().then(function () { return indexBxFhhynh; });
       })
     },
     'rate': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return indexBPkWkfu2; });
       })
     },
     'placeholder': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return indexI1BZgIJH; });
       })
     },
     'multiselect': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return indexCWmC9LqP; });
       })
     },
     'multiselect-language': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$e; });
+        return Promise.resolve().then(function () { return indexDlESrvwl; });
       })
     },
     'input-text-i18n': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$d; });
+        return Promise.resolve().then(function () { return indexCbPak1NM; });
       })
     },
     'placeholder-image': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$c; });
+        return Promise.resolve().then(function () { return indexC7KWVky4; });
       })
     },
     'button': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$b; });
+        return Promise.resolve().then(function () { return indexDqOfWjc_; });
       })
     },
     'divider': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$z; });
+        return Promise.resolve().then(function () {
+          return index$t;
+        });
       })
     },
     'react-view': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$a; });
+        return Promise.resolve().then(function () { return indexCiWHRfp8; });
       })
     },
     'datetime': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$9; });
+        return Promise.resolve().then(function () { return index1WyMLPyu; });
       })
     },
     'tabs': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$8; });
+        return Promise.resolve().then(function () { return indexBTCZAwU; });
       })
     },
     'radio-tile': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return indexQMv113h_; });
       })
     },
     'upload': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return indexBPMEe6qI; });
       })
     },
     'buttons-toggle-group': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return indexAkTkexq1; });
       })
     },
     'steps': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return indexDnMeBWZj; });
       })
     },
     'esm-module': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return indexCKFWmB_n; });
       })
     },
     'time': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return indexBx1jTh86; });
       })
     },
     'hidden': {
       'react-rsuite5': lazyPreload$1(function () {
-        return Promise.resolve().then(function () { return index$1; });
+        return Promise.resolve().then(function () { return indexMzXq6Gxk; });
       })
     }
   };
   var Forms$1 = {
     'react-rsuite5': lazyPreload$1(function () {
-      return Promise.resolve().then(function () { return index; });
+      return Promise.resolve().then(function () { return indexDioY94XG; });
     })
   };
   var FormGenerator$1 = GenerateGenerator$1({
@@ -20356,13 +30491,1890 @@
   });
   var LetsForm$1 = function LetsForm(_ref) {
     _ref.framework;
-      var children = _ref.children,
-      rest = _objectWithoutProperties$1(_ref, _excluded$P);
+    var children = _ref.children,
+      rest = _objectWithoutProperties$1(_ref, _excluded$18);
     return /*#__PURE__*/React$1.createElement(FormGenerator$1, _extends$1({
       framework: "react-rsuite5"
     }, rest), children);
   };
 
+  var _excluded$17 = ["name", "label", "hint", "value", "size", "placeholder", "min", "max", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "width", "fullWidth", "onChange", "step", "onBlur", "inside", "allowClear"];
+  var hasDecimals$2 = function hasDecimals(f) {
+    return _isString$2(f) && (f.includes(',') || f.includes('.'));
+  };
+  var InputNumberRSuite5$2 = I18N$2(function (_ref) {
+    var _classNames;
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      placeholder = _ref.placeholder,
+      min = _ref.min,
+      max = _ref.max,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      prefix = _ref.prefix,
+      postfix = _ref.postfix,
+      width = _ref.width,
+      fullWidth = _ref.fullWidth,
+      _ref$onChange = _ref.onChange,
+      onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
+      _ref$step = _ref.step,
+      step = _ref$step === void 0 ? 1 : _ref$step,
+      onBlur = _ref.onBlur,
+      _ref$inside = _ref.inside,
+      inside = _ref$inside === void 0 ? false : _ref$inside,
+      allowClear = _ref.allowClear,
+      rest = _objectWithoutProperties$2(_ref, _excluded$17);
+    var _useState = React$1.useState(value !== null && value !== void 0 ? value : null),
+      _useState2 = _slicedToArray$2(_useState, 2),
+      currentValue = _useState2[0],
+      setCurrentValue = _useState2[1];
+    var handleChange = React$1.useCallback(function (value) {
+      var parsed = value;
+      if (_isString$2(value)) {
+        if (value === '') {
+          // void if the user deleted all chars
+          parsed = null;
+        } else if (hasDecimals$2(value)) {
+          parsed = parseFloat(value);
+        } else {
+          parsed = parseInt(value, 10);
+        }
+      }
+      // set the original value again, otherwise never be able to
+      // input a float number i.e. "0.2"
+      setCurrentValue(value);
+      if (!isNaN(parsed)) {
+        onChange(parsed);
+      }
+    }, [onChange]);
+    var handleClear = React$1.useCallback(function (e) {
+      e.preventDefault();
+      onChange(undefined);
+      setCurrentValue(null);
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      "data-lf-field-name": name,
+      className: classNames$2('lf-control-input-number', (_classNames = {}, _defineProperty$4(_classNames, "lf-size-".concat(size), size != null), _defineProperty$4(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
+      style: makeWidthStyle$2(fullWidth, width)
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _isString$2(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.InputNumber, _extends$2({
+      name: name,
+      accepter: rsuite.InputNumber,
+      value: currentValue,
+      onChange: handleChange,
+      onBlur: onBlur,
+      disabled: disabled,
+      size: size,
+      min: min,
+      max: max,
+      step: step,
+      inside: inside,
+      prefix: prefix,
+      postfix: allowClear ? /*#__PURE__*/React$1.createElement("a", {
+        href: "#",
+        onClick: handleClear
+      }, /*#__PURE__*/React$1.createElement(CrossCirle$2, {
+        width: 16,
+        height: 16
+      })) : postfix,
+      placeholder: placeholder,
+      readOnly: readOnly
+    }, passRest$1(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog$2('Loaded RSuite.InputNumber');
+
+  var index$s = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: InputNumberRSuite5$2
+  });
+
+  var css_248z$H = ".lf-control-date.lf-full-width .rs-picker-date {\n  width: 100%;\n}";
+  styleInject$2(css_248z$H);
+
+  var _excluded$16 = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "fullWidth", "width", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"];
+  var RSuiteGenericDate$2 = function RSuiteGenericDate(_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      placeholder = _ref.placeholder,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      appearance = _ref.appearance,
+      format = _ref.format;
+      _ref.lfLocale;
+      var rest = _objectWithoutProperties$2(_ref, _excluded$16);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      "data-lf-field-name": name,
+      className: classNames$2('lf-control-date', {
+        'lf-full-width': fullWidth || width != null
+      }),
+      style: makeWidthStyle$2(fullWidth, width)
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _isString$2(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.DatePicker, _extends$2({
+      appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
+      name: name,
+      format: format || 'yyyy-MM-dd',
+      defaultValue: value,
+      onChange: onChange,
+      readOnly: readOnly,
+      onBlur: onBlur,
+      errorMessage: _isString$2(error) ? error : undefined,
+      disabled: disabled,
+      placeholder: placeholder
+    }, passRest$2(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  };
+
+  var _excluded$15 = ["onChange", "value"];
+  var SelectDate$2 = I18N$2(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties$2(_ref, _excluded$15);
+    // also accepts string dates
+    var currentValue;
+    if (_isDate$2(value)) {
+      currentValue = value;
+    } else if (_isString$2(value)) {
+      var d = new Date(value);
+      if (isValidDate$2(d)) {
+        currentValue = d;
+      }
+    }
+
+    // send always date string in format yyyy-mm-dd
+    var handleChange = React$1.useCallback(function (d) {
+      if (isValidDate$2(d)) {
+        onChange(d.toISOString().split('T')[0]);
+      }
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(RSuiteGenericDate$2, _extends$2({
+      value: currentValue,
+      onChange: handleChange
+    }, passRest$2(rest)));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog$2('Loaded RSuite5.SelectDate');
+
+  var index$r = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: SelectDate$2
+  });
+
+  var css_248z$G = ".lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text {\n  align-items: inherit;\n  margin-top: -1px;\n  display: inline-block;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text svg {\n  margin-top: -2px;\n}";
+  styleInject$2(css_248z$G);
+
+  var _excluded$14 = ["name", "label", "hint", "value", "tooltip", "indeterminate", "error", "onChange"];
+  var CheckboxRSuite$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      indeterminate = _ref.indeterminate,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      rest = _objectWithoutProperties$2(_ref, _excluded$14);
+    var _useState = React$1.useState(value !== null && value !== void 0 ? value : null),
+      _useState2 = _slicedToArray$2(_useState, 2),
+      isChecked = _useState2[0],
+      setIsChecked = _useState2[1];
+    var handleChange = React$1.useCallback(function (valueType, checked) {
+      var newValue;
+      if (isChecked === true) {
+        newValue = false;
+      }
+      if (isChecked === false) {
+        if (indeterminate) {
+          newValue = null;
+        } else {
+          newValue = true;
+        }
+      } else if (isChecked === null) {
+        newValue = true;
+      }
+      onChange(newValue);
+      setIsChecked(newValue);
+    }, [onChange, indeterminate, isChecked]);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      "data-lf-field-name": name,
+      className: "lt-control-checkbox"
+    }, /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _isString$2(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.Checkbox, _extends$2({
+      indeterminate: indeterminate && isChecked === null,
+      name: name,
+      checked: isChecked,
+      onChange: handleChange
+    }, passRest$2(rest)), label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint']);
+  lfLog$2('Loaded RSuite5.Checkbox');
+
+  var index$q = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: CheckboxRSuite$2
+  });
+
+  var _excluded$13 = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "color", "onChange", "onBlur", "options"];
+  var CheckboxGroupRSuite$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly;
+      _ref.required;
+      var error = _ref.error,
+      color = _ref.color,
+      onChange = _ref.onChange;
+      _ref.onBlur;
+      var _ref$options = _ref.options,
+      options = _ref$options === void 0 ? [] : _ref$options,
+      rest = _objectWithoutProperties$2(_ref, _excluded$13);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-checkbox-group"
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _.isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.CheckboxGroup, _extends$2({
+      inline: true,
+      name: name,
+      value: value,
+      onChange: onChange
+    }, passRest$2(rest)), (options !== null && options !== void 0 ? options : []).map(function (_ref2) {
+      var value = _ref2.value,
+        label = _ref2.label;
+      return /*#__PURE__*/React$1.createElement(rsuite.Checkbox, {
+        key: value,
+        value: value,
+        disabled: disabled,
+        readOnly: readOnly,
+        color: color
+      }, label);
+    }))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint'], {
+    options: i18nOptions$2
+  });
+  lfLog$2('Loaded RSuite.CheckboxGroup');
+
+  var index$p = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: CheckboxGroupRSuite$2
+  });
+
+  var css_248z$F = ".lf-form-react-rsuite5 .lf-control-slider .rs-slider {\n  margin-bottom: 40px;\n}";
+  styleInject$2(css_248z$F);
+
+  var _excluded$12 = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks"];
+  var validateMarks$2 = function validateMarks(marks) {
+    return _isArray$2(marks) && marks.every(function (mark) {
+      return _isObject$2(mark) && mark.value && mark.label;
+    });
+  };
+  var SliderRsuite$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      showTooltip = _ref.showTooltip,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      _ref$marks = _ref.marks,
+      marks = _ref$marks === void 0 ? [] : _ref$marks,
+      rest = _objectWithoutProperties$2(_ref, _excluded$12);
+    var handleRenderMark = React$1.useCallback(function (number) {
+      var found = marks.find(function (mark) {
+        return mark && mark.value === number;
+      });
+      return found ? found.label : undefined;
+    }, [marks]);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      controlId: name,
+      className: "lf-control-slider"
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _isString$2(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.Slider, _extends$2({
+      style: {
+        marginTop: '15px',
+        marginBottom: '8px'
+      },
+      name: name,
+      value: value,
+      onChange: onChange,
+      readOnly: readOnly,
+      onBlur: onBlur,
+      renderMark: validateMarks$2(marks) ? handleRenderMark : undefined,
+      errorMessage: _isString$2(error) ? error : undefined,
+      disabled: disabled,
+      tooltip: showTooltip
+    }, passRest$2(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder'], {
+    marks: function marks(value, i18n) {
+      return (Array.isArray(value) ? value : []).map(function (value) {
+        return _objectSpread2$2(_objectSpread2$2({}, value), {}, {
+          label: i18n(value.label)
+        });
+      });
+    }
+  });
+  lfLog$2('Loaded RSuite5.Slider');
+
+  var index$o = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: SliderRsuite$2
+  });
+
+  var _excluded$11 = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options", "appearance"];
+  var RadioGroupRSuite$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value;
+      _ref.placeholder;
+      _ref.plaintext;
+      var _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      onChange = _ref.onChange;
+      _ref.onBlur;
+      var _ref$options = _ref.options,
+      options = _ref$options === void 0 ? [] : _ref$options,
+      appearance = _ref.appearance,
+      rest = _objectWithoutProperties$2(_ref, _excluded$11);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      controlId: name,
+      className: "lf-control-radio-group",
+      "data-lf-field-name": name
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _.isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.RadioGroup, _extends$2({
+      inline: true,
+      name: name,
+      value: value,
+      onChange: onChange,
+      appearance: appearance
+    }, passRest$2(rest)), (options !== null && options !== void 0 ? options : []).map(function (_ref2) {
+      var value = _ref2.value,
+        label = _ref2.label;
+      return /*#__PURE__*/React$1.createElement(rsuite.Radio, {
+        key: value,
+        value: value,
+        disabled: disabled,
+        readOnly: readOnly
+      }, label);
+    }))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder'], {
+    options: i18nOptions$2
+  });
+  lfLog$2('Loaded RSuite.RadioGroup');
+
+  var index$n = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RadioGroupRSuite$2
+  });
+
+  var css_248z$E = ".lf-control-input-tag .rs-picker-input {\n  min-width: 120px;\n}";
+  styleInject$2(css_248z$E);
+
+  var InputTag$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      trigger = _ref.trigger,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur;
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-input-tag"
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _isString$2(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.TagInput, {
+      name: name,
+      value: value,
+      onChange: onChange,
+      onBlur: onBlur,
+      disabled: disabled,
+      size: size,
+      trigger: trigger,
+      readOnly: readOnly,
+      errorMessage: _isString$2(error) ? error : undefined
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog$2('Loaded RSuite5.InputTag');
+
+  var index$m = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: InputTag$2
+  });
+
+  var _excluded$10 = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside", "fullWidth", "width"];
+  var prepareMask$2 = function prepareMask(str) {
+    if (typeof str !== 'string' || str.length === 0) {
+      return [];
+    }
+    var matches = str.match(/\$\{[a-zA-Z0-9]\}|.{1,1}/gm);
+    return matches.map(function (token) {
+      if (token === '${d}') {
+        return /\d/;
+      } else if (token === '${D}') {
+        return /\D/;
+      } else if (token === '${a}') {
+        return /[a-zA-Z]/;
+      } else if (token === '${w}') {
+        return /[a-zA-Z0-9]/;
+      }
+      return token;
+    });
+  };
+  var InputMask$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      placeholder = _ref.placeholder,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      prefix = _ref.prefix,
+      postfix = _ref.postfix,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      _ref$placeholderChar = _ref.placeholderChar,
+      placeholderChar = _ref$placeholderChar === void 0 ? '_' : _ref$placeholderChar,
+      _ref$mask = _ref.mask,
+      mask = _ref$mask === void 0 ? [] : _ref$mask,
+      _ref$inside = _ref.inside,
+      inside = _ref$inside === void 0 ? false : _ref$inside,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      rest = _objectWithoutProperties$2(_ref, _excluded$10);
+    var parsedMask = prepareMask$2(mask);
+    var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _isString$2(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.MaskedInput, _extends$2({
+      name: name,
+      value: value,
+      onChange: onChange,
+      onBlur: onBlur,
+      disabled: disabled,
+      size: size,
+      placeholder: placeholder,
+      readOnly: readOnly,
+      placeholderChar: typeof placeholderChar === 'string' && placeholderChar.length > 0 ? placeholderChar[0] : '_',
+      errorMessage: _isString$2(error) ? error : undefined,
+      mask: parsedMask
+    }, passRest$2(rest))));
+    var needsGroup = postfix || prefix;
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-input-mask",
+      style: makeWidthStyle$2(fullWidth, width)
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/React$1.createElement(rsuite.InputGroup, {
+      inside: inside
+    }, prefix && /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, prefix), inner, postfix && /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, postfix)), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog$2('Loaded RSuite5.InputMask');
+
+  var index$l = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: InputMask$2
+  });
+
+  var _excluded$$ = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows"];
+  var ControlTextare$2 = function ControlTextare(props) {
+    return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends$2({
+      as: "textarea"
+    }, props));
+  };
+  var Textarea$2 = I18N$2(function (_ref) {
+    var _classNames;
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      placeholder = _ref.placeholder,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      _ref$rows = _ref.rows,
+      rows = _ref$rows === void 0 ? 10 : _ref$rows,
+      rest = _objectWithoutProperties$2(_ref, _excluded$$);
+    var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _isString$2(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(ControlTextare$2, _extends$2({
+      name: name,
+      rows: rows,
+      value: value,
+      size: size,
+      onChange: onChange,
+      onBlur: onBlur,
+      disabled: disabled,
+      placeholder: placeholder,
+      readOnly: readOnly,
+      errorMessage: _isString$2(error) ? error : undefined,
+      style: makeWidthStyle$2(fullWidth, width)
+    }, passRest$2(rest))));
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      className: classNames$2('lf-control-textarea', (_classNames = {}, _defineProperty$4(_classNames, "lf-size-".concat(size), size != null), _defineProperty$4(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
+      "data-lf-field-name": name,
+      style: makeWidthStyle$2(fullWidth, width)
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), inner, hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog$2('Loaded RSuite5.Textarea');
+
+  var index$k = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Textarea$2
+  });
+
+  var RateRSuite$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      _ref$allowHalf = _ref.allowHalf,
+      allowHalf = _ref$allowHalf === void 0 ? false : _ref$allowHalf,
+      _ref$cleanable = _ref.cleanable,
+      cleanable = _ref$cleanable === void 0 ? true : _ref$cleanable,
+      max = _ref.max,
+      color = _ref.color,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur;
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      controlId: name,
+      className: "lets-form-input-tag"
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _isString$2(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.Rate, {
+      name: name,
+      value: value,
+      onChange: onChange,
+      onBlur: onBlur,
+      disabled: disabled,
+      size: size,
+      max: max,
+      color: color,
+      allowHalf: allowHalf,
+      cleanable: cleanable,
+      readOnly: readOnly,
+      errorMessage: _isString$2(error) ? error : undefined
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog$2('Loaded RSuite5.Rate');
+
+  var index$j = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RateRSuite$2
+  });
+
+  var PlaceholderRSuite5$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      text = _ref.text,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required;
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-placeholder"
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(Placeholder$2, {
+      text: text
+    }), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'text']);
+  lfLog$2('Loaded RSuite5.Placeholder');
+
+  var index$i = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: PlaceholderRSuite5$2
+  });
+
+  var _excluded$_ = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width"];
+  var Multiselect$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      placeholder = _ref.placeholder,
+      options = _ref.options,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      _ref$block = _ref.block,
+      block = _ref$block === void 0 ? false : _ref$block,
+      _ref$searchable = _ref.searchable,
+      searchable = _ref$searchable === void 0 ? false : _ref$searchable,
+      _ref$cleanable = _ref.cleanable,
+      cleanable = _ref$cleanable === void 0 ? false : _ref$cleanable,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      placement = _ref.placement,
+      appearance = _ref.appearance,
+      fullWidth = _ref.fullWidth,
+      multiselectMode = _ref.multiselectMode,
+      width = _ref.width,
+      rest = _objectWithoutProperties$2(_ref, _excluded$_);
+    var Component = multiselectMode === 'tag' ? rsuite.TagPicker : rsuite.CheckPicker;
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-multiselect",
+      style: makeWidthStyle$2(fullWidth, width)
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _isString$2(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(Component, _extends$2({
+      appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
+      name: name,
+      value: value,
+      onChange: onChange,
+      readOnly: readOnly,
+      onBlur: onBlur,
+      placement: placement,
+      errorMessage: _isString$2(error) ? error : undefined,
+      disabled: disabled,
+      size: size,
+      placeholder: placeholder,
+      data: options || [],
+      block: block,
+      style: makeWidthStyle$2(fullWidth, width),
+      searchable: searchable,
+      cleanable: cleanable
+    }, passRest$2(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder'], {
+    options: i18nOptions$2
+  });
+  lfLog$2('Loaded RSuite5.Multiselect');
+
+  var index$h = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Multiselect$2
+  });
+
+  var css_248z$D = ".lf-control-multiselect-language .btn-add-all {\n  padding-left: 5px;\n  font-size: 12px;\n}";
+  styleInject$2(css_248z$D);
+
+  var _excluded$Z = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "placement", "appearance"];
+  var renderItem$2 = function renderItem(label, item) {
+    return /*#__PURE__*/React$1.createElement("div", null, label, " ", /*#__PURE__*/React$1.createElement("b", null, item.value));
+  };
+  var ALL_LOCALES$2 = Object.keys(LOCALES$2['language-names']);
+  var LANGUAGES_OPTIONS$5 = Object.keys(LOCALES$2['language-names']).map(function (lang) {
+    return {
+      value: lang,
+      name: LOCALES$2['language-names'][lang][1],
+      label: "".concat(LOCALES$2['language-names'][lang][1])
+    };
+  });
+  var MultiselectLanguage$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      placeholder = _ref.placeholder,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      placement = _ref.placement,
+      appearance = _ref.appearance,
+      rest = _objectWithoutProperties$2(_ref, _excluded$Z);
+    var _useState = React$1.useState(value),
+      _useState2 = _slicedToArray$2(_useState, 2),
+      locales = _useState2[0],
+      setLocales = _useState2[1];
+    var handleAddAll = React$1.useCallback(function (e) {
+      e.preventDefault();
+      setLocales(ALL_LOCALES$2);
+      onChange(ALL_LOCALES$2);
+    }, [onChange]);
+    var handleChange = React$1.useCallback(function (value) {
+      setLocales(value);
+      onChange(value);
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-multiselect-language"
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _isString$2(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(rsuite.CheckPicker, _extends$2({
+      appearance: appearance !== null && appearance !== void 0 ? appearance : undefined,
+      name: name,
+      value: locales,
+      onChange: handleChange,
+      readOnly: readOnly,
+      onBlur: onBlur,
+      placement: placement,
+      errorMessage: _isString$2(error) ? error : undefined,
+      disabled: disabled,
+      size: size,
+      placeholder: placeholder,
+      data: LANGUAGES_OPTIONS$5,
+      block: true,
+      renderMenuItem: renderItem$2,
+      searchable: true,
+      cleanable: true
+    }, passRest$2(rest)))), !(Array.isArray(locales) && locales.length === ALL_LOCALES$2.length) && /*#__PURE__*/React$1.createElement("div", {
+      className: "btn-add-all"
+    }, /*#__PURE__*/React$1.createElement("a", {
+      href: "#",
+      onClick: handleAddAll
+    }, "add all locales")), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog$2('Loaded RSuite5.MultiselectLanguage');
+
+  var index$g = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: MultiselectLanguage$2
+  });
+
+  var css_248z$C = ".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n .rs-input-group-addon {\n  padding: 2px 4px !important;\n}\n.lf-input-text-i18n .rs-input-group-addon .status {\n  font-size: 10px;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear {\n  display: inline-block;\n  margin-left: 5px;\n  margin-top: -2px;\n  color: #666666;\n  text-decoration: none;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover {\n  color: #1675e0;\n}\n.lf-input-text-i18n .group-input-select {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-input-text-i18n .group-input-select .translation-control {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  width: unset !important;\n  z-index: 1;\n}\n.lf-input-text-i18n .group-input-select .translation-control .translated {\n  color: #999999;\n}\n.lf-input-text-i18n .group-input-select .select-control {\n  order: 1;\n  flex: 0 0;\n  align-self: center;\n  z-index: 2;\n  margin-left: 5px;\n}\n.lf-input-text-i18n .group-input-select.textarea .select-control {\n  align-self: self-start;\n}";
+  styleInject$2(css_248z$C);
+
+  var _excluded$Y = ["value"];
+  var LANGUAGES_OPTIONS$4 = Object.keys(LOCALES$2['language-names']).map(function (lang) {
+    return {
+      value: lang,
+      name: LOCALES$2['language-names'][lang][1],
+      label: LOCALES$2['language-names'][lang][1]
+    };
+  });
+  var languageMenuItem$2 = function languageMenuItem(label, item) {
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-input-text-i18n-item-locale"
+    }, item.label, " ", /*#__PURE__*/React$1.createElement("b", null, item.value), item.filled && /*#__PURE__*/React$1.createElement(IconCheck$2, {
+      width: 16,
+      height: 16
+    }));
+  };
+  var TextareaAccepter$2 = function TextareaAccepter(_ref) {
+    var value = _ref.value,
+      props = _objectWithoutProperties$2(_ref, _excluded$Y);
+    return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends$2({
+      as: "textarea",
+      value: value
+    }, props));
+  };
+  var defaultOrEnglish$2 = function defaultOrEnglish(obj) {
+    if (isI18n$2(obj)) {
+      if (obj['en-US']) {
+        return obj['en-US'];
+      } else if (obj['en-GB']) {
+        return obj['en-GB'];
+      } else if (Object.keys(obj).length !== 0) {
+        return obj[Object.keys(obj)[0]];
+      }
+      return '';
+    }
+    return obj;
+  };
+  var InputTextI18N$2 = function InputTextI18N(props) {
+    var name = props.name,
+      label = props.label,
+      hint = props.hint,
+      value = props.value,
+      size = props.size,
+      placeholder = props.placeholder,
+      _props$tooltip = props.tooltip,
+      tooltip = _props$tooltip === void 0 ? false : _props$tooltip,
+      _props$disabled = props.disabled,
+      disabled = _props$disabled === void 0 ? false : _props$disabled,
+      _props$readOnly = props.readOnly,
+      readOnly = _props$readOnly === void 0 ? false : _props$readOnly,
+      _props$required = props.required,
+      required = _props$required === void 0 ? false : _props$required,
+      width = props.width,
+      error = props.error,
+      _onChange = props.onChange,
+      onBlur = props.onBlur,
+      defaultLocale = props.defaultLocale,
+      _props$textarea = props.textarea,
+      textarea = _props$textarea === void 0 ? false : _props$textarea,
+      rows = props.rows;
+    var _useContext = React$1.useContext(FormContext$2),
+      _useContext$locales = _useContext.locales,
+      locales = _useContext$locales === void 0 ? [] : _useContext$locales;
+    var preselectedLanguage = null;
+    if (_isObject$2(value)) {
+      // preselect a value in the drop down of the language only if there's a i18n object
+      // in value, otherwise is a simple string and by definition is not associated with any
+      // language
+      if (defaultLocale && locales.includes(defaultLocale)) {
+        preselectedLanguage = defaultLocale;
+      } else if (!_isEmpty$2(locales)) {
+        preselectedLanguage = locales[0];
+      }
+    }
+    var preselectedValue = null;
+    if (_isObject$2(value)) {
+      preselectedValue = preselectedLanguage ? value[preselectedLanguage] : null;
+    } else if (_isString$2(value)) {
+      preselectedValue = value;
+    }
+    var totalLocales = !_isEmpty$2(locales) ? locales.length : LANGUAGES_OPTIONS$4.length;
+    var _useState = React$1.useState(preselectedLanguage),
+      _useState2 = _slicedToArray$2(_useState, 2),
+      currentLanguage = _useState2[0],
+      setCurrentLanguage = _useState2[1];
+    var _useState3 = React$1.useState(value),
+      _useState4 = _slicedToArray$2(_useState3, 2),
+      currentValue = _useState4[0],
+      setCurrentValue = _useState4[1];
+    var _useState5 = React$1.useState(preselectedValue),
+      _useState6 = _slicedToArray$2(_useState5, 2),
+      translation = _useState6[0],
+      setTranslation = _useState6[1];
+    var handleChange = React$1.useCallback(function (value) {
+      // update the UI
+      setTranslation(value);
+      if (_isEmpty$2(value)) {
+        // in case the user entered an empty value...
+        if (_isObject$2(currentValue) && currentLanguage) {
+          // if i18n object and a language is selected, then void the value for that language
+          var newCurrentValue = _omit$2(currentValue, currentLanguage);
+          setCurrentValue(newCurrentValue);
+          _onChange(newCurrentValue);
+        } else if (_isString$2(currentValue)) {
+          setCurrentValue(value);
+          _onChange(value);
+        }
+      } else {
+        // in case the user entered a non empty value...
+        if (currentLanguage) {
+          // if a current language is selected, then the typed text ends up
+          // in a i18n object
+          var _newCurrentValue = _objectSpread2$2(_objectSpread2$2({}, currentValue), {}, _defineProperty$4({}, currentLanguage, value));
+          setCurrentValue(_newCurrentValue);
+          _onChange(_newCurrentValue);
+          //setTranslation(value);
+        } else if (_isObject$2(currentValue)) ; else {
+          // if language not selected and current value is not an object
+          // just set the current value as string
+          //setTranslation(value);
+          setCurrentValue(value);
+          _onChange(value);
+        }
+      }
+    }, [currentLanguage, currentValue, _onChange]);
+
+    // if no locales, then use plain input text, since it's possible the the value is still
+    // a 18n (in case the user switched from a multi language form to a single language form
+    // then put some defaults)
+    if (_isEmpty$2(locales)) {
+      var newProps = _objectSpread2$2(_objectSpread2$2({}, props), {}, {
+        value: defaultOrEnglish$2(value)
+      });
+      return textarea ? /*#__PURE__*/React$1.createElement(Textarea$2, newProps) : /*#__PURE__*/React$1.createElement(TextInput$2, newProps);
+    }
+    // evaluate current translated locales
+    var translatedLocales = _isObject$2(currentValue) ? Object.keys(currentValue).filter(function (locale) {
+      return _isEmpty$2(locales) || locales.includes(locale);
+    }) : [];
+    var multiValuesAndNoLang = _isObject$2(currentValue) && Object.keys(currentValue).length !== 0 && !currentLanguage;
+    var languageData = LANGUAGES_OPTIONS$4.filter(function (item) {
+      return _isEmpty$2(locales) || locales.includes(item.value);
+    }).map(function (item) {
+      return _objectSpread2$2(_objectSpread2$2({}, item), {}, {
+        filled: currentValue && !_isEmpty$2(currentValue[item.value])
+      });
+    });
+    var InputComponent = textarea ? TextareaAccepter$2 : rsuite.Input;
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-input-text-i18n lf-input-text-i18n"
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement("div", {
+      className: classNames$2('group-input-select', {
+        'textarea': textarea
+      })
+    }, /*#__PURE__*/React$1.createElement(rsuite.InputGroup, {
+      className: "translation-control",
+      inside: true
+    }, /*#__PURE__*/React$1.createElement(RSuite5FieldControl$2, {
+      errorMessage: _isString$2(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(InputComponent, {
+      name: name,
+      rows: rows,
+      style: width ? {
+        width: "".concat(width, "px")
+      } : undefined,
+      value: multiValuesAndNoLang ? '<multiple translations>' : translation,
+      readOnly: readOnly || multiValuesAndNoLang,
+      onChange: handleChange,
+      onBlur: onBlur,
+      disabled: disabled,
+      size: size,
+      placeholder: placeholder,
+      errorMessage: _isString$2(error) ? error : undefined
+    })), /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, /*#__PURE__*/React$1.createElement("span", {
+      className: "status"
+    }, /*#__PURE__*/React$1.createElement("span", {
+      className: "translated"
+    }, translatedLocales.length), "\xA0/\xA0", /*#__PURE__*/React$1.createElement("span", null, totalLocales)))), /*#__PURE__*/React$1.createElement("div", {
+      className: "select-control"
+    }, /*#__PURE__*/React$1.createElement(rsuite.SelectPicker, {
+      appearance: "subtle",
+      cleanable: false,
+      size: "xs",
+      readOnly: readOnly,
+      value: currentLanguage,
+      placement: "autoVerticalEnd",
+      placeholder: "no tx",
+      searchable: languageData.length > 20,
+      renderValue: function renderValue(value) {
+        return /*#__PURE__*/React$1.createElement("span", null, value);
+      },
+      renderMenuItem: languageMenuItem$2,
+      onChange: function onChange(value) {
+        if (_isString$2(currentValue) && !_isEmpty$2(currentValue)) {
+          // if currentValue is a string and not empty,
+          setCurrentLanguage(value);
+          var newValue = _defineProperty$4({}, value, currentValue);
+          setCurrentValue(newValue);
+          _onChange(newValue);
+        } else if (_isObject$2(currentValue)) {
+          var _currentValue$value;
+          // it's already a i18n object, just switch the language
+          setCurrentLanguage(value);
+          setTranslation((_currentValue$value = currentValue[value]) !== null && _currentValue$value !== void 0 ? _currentValue$value : '');
+        } else {
+          setCurrentLanguage(value);
+        }
+      },
+      data: languageData
+    }))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  };
+  lfLog$2('Loaded RSuite.InputTextI18N');
+
+  var index$f = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: InputTextI18N$2
+  });
+
+  lfLog$2('Loaded RSuite5.PlaceholderImage');
+
+  var index$e = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: PlaceholderImage$2
+  });
+
+  var css_248z$B = ".lf-form-react-rsuite5 .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-lg .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-xs .lf-icon {\n  max-width: 12px;\n  max-height: 12px;\n}";
+  styleInject$2(css_248z$B);
+
+  var _excluded$X = ["label", "icon", "hint", "tooltip"];
+  var RSuiteButton$2 = function RSuiteButton(_ref) {
+    var label = _ref.label,
+      icon = _ref.icon,
+      hint = _ref.hint,
+      tooltip = _ref.tooltip,
+      rest = _objectWithoutProperties$2(_ref, _excluded$X);
+    var inner;
+    if (!_isEmpty$2(label) && !_isEmpty$2(icon)) {
+      inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends$2({
+        startIcon: /*#__PURE__*/React$1.createElement("img", {
+          className: "lf-icon",
+          src: icon
+        })
+      }, passRest$2(rest)), label);
+    } else if (!_isEmpty$2(label) && _isEmpty$2(icon)) {
+      inner = /*#__PURE__*/React$1.createElement(rsuite.Button, passRest$2(rest), label);
+    } else if (_isEmpty$2(label) && !_isEmpty$2(icon)) {
+      inner = /*#__PURE__*/React$1.createElement(rsuite.IconButton, _extends$2({
+        icon: /*#__PURE__*/React$1.createElement("img", {
+          className: "lf-icon",
+          src: icon
+        })
+      }, passRest$2(rest)));
+    } else {
+      inner = /*#__PURE__*/React$1.createElement(React$1.Fragment, null);
+    }
+    return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, !_isEmpty$2(hint) && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Whisper, {
+      placement: "top",
+      trigger: "hover",
+      speaker: /*#__PURE__*/React$1.createElement(rsuite.Tooltip, null, hint)
+    }, inner), (_isEmpty$2(hint) || !tooltip) && inner, !_isEmpty$2(hint) && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  };
+  var BiStateButton$2 = I18N$2(MakeButton$2(RSuiteButton$2, {
+    appearance: 'primary'
+  }, {
+    appearance: 'ghost'
+  }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
+  lfLog$2('Loaded RSuite5.Button');
+
+  var index$d = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: BiStateButton$2
+  });
+
+  lfLog$2('Loaded RSuite5.ReactView');
+
+  var index$c = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ReactView$2
+  });
+
+  var _excluded$W = ["onChange", "value"];
+  var SelectDatetime$2 = I18N$2(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties$2(_ref, _excluded$W);
+    // also accepts string dates
+    var currentValue;
+    if (_isDate$2(value)) {
+      currentValue = value;
+    } else if (_isString$2(value)) {
+      var d = new Date(value);
+      if (isValidDate$2(d)) {
+        currentValue = d;
+      }
+    }
+
+    // send always date string in iso format
+    var handleChange = React$1.useCallback(function (d) {
+      if (isValidDate$2(d)) {
+        onChange(d.toISOString());
+      }
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(RSuiteGenericDate$2, _extends$2({
+      value: currentValue,
+      onChange: handleChange
+    }, passRest$2(rest)));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog$2('Loaded RSuite5.DateTime');
+
+  var index$b = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: SelectDatetime$2
+  });
+
+  var css_248z$A = ".lf-form-react-rsuite5 .lf-control-tabs .tab-fields {\n  margin-top: 10px;\n}";
+  styleInject$2(css_248z$A);
+
+  var _excluded$V = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight"];
+  var Tabs$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      value = _ref.value,
+      tabs = _ref.tabs,
+      onChange = _ref.onChange,
+      children = _ref.children,
+      appearance = _ref.appearance,
+      reversed = _ref.reversed,
+      justified = _ref.justified,
+      pullRight = _ref.pullRight,
+      rest = _objectWithoutProperties$2(_ref, _excluded$V);
+    var defaultKey = value;
+    if (!defaultKey && !_isEmpty$2(tabs)) {
+      defaultKey = tabs[0].value;
+    }
+    var _useState = React$1.useState(defaultKey),
+      _useState2 = _slicedToArray$2(_useState, 2),
+      active = _useState2[0],
+      setActive = _useState2[1];
+    var handleKey = React$1.useCallback(function (key) {
+      setActive(key);
+      onChange(key);
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-tabs",
+      "data-lf-field-name": name
+    }, /*#__PURE__*/React$1.createElement(rsuite.Nav, _extends$2({
+      appearance: appearance,
+      reversed: reversed,
+      justified: justified,
+      pullRight: pullRight,
+      activeKey: active,
+      onSelect: handleKey
+    }, passRest$2(rest)), (tabs || []).map(function (tab) {
+      return /*#__PURE__*/React$1.createElement(rsuite.Nav.Item, {
+        key: tab.value,
+        eventKey: tab.value
+      }, tab.label);
+    })), _isFunction$2(children) && /*#__PURE__*/React$1.createElement("div", {
+      className: "tab-fields"
+    }, children(active)));
+  }, [], {
+    tabs: i18nOptions$2
+  });
+  lfLog$2('Loaded RSuite.Tabs');
+
+  var index$a = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Tabs$2
+  });
+
+  var _excluded$U = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption"];
+  var RadioTileRSuite$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value;
+      _ref.placeholder;
+      _ref.plaintext;
+      var _ref$inline = _ref.inline,
+      inline = _ref$inline === void 0 ? true : _ref$inline,
+      _ref$iconWidth = _ref.iconWidth,
+      iconWidth = _ref$iconWidth === void 0 ? 24 : _ref$iconWidth,
+      _ref$iconHeight = _ref.iconHeight,
+      iconHeight = _ref$iconHeight === void 0 ? 24 : _ref$iconHeight,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required;
+      _ref.error;
+      var onChange = _ref.onChange;
+      _ref.onBlur;
+      var _ref$options = _ref.options,
+      options = _ref$options === void 0 ? [] : _ref$options,
+      initalOption = _ref.initalOption;
+      _objectWithoutProperties$2(_ref, _excluded$U);
+    var initialValue = value || initalOption;
+    var _useState = React$1.useState(initialValue),
+      _useState2 = _slicedToArray$2(_useState, 2),
+      currentValue = _useState2[0],
+      setCurrentValue = _useState2[1];
+    var handleChange = React$1.useCallback(function (value) {
+      setCurrentValue(value);
+      onChange(value);
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      className: "lf-control-input-text",
+      "data-lf-field-name": name
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(rsuite.RadioTileGroup, {
+      value: currentValue,
+      onChange: handleChange,
+      inline: inline,
+      disabled: disabled
+    }, (options || []).map(function (option) {
+      return /*#__PURE__*/React$1.createElement(rsuite.RadioTile, {
+        key: option.value,
+        label: option.label,
+        value: option.value,
+        icon: option.icon && /*#__PURE__*/React$1.createElement("img", {
+          src: option.icon,
+          width: iconWidth,
+          height: iconHeight
+        })
+      }, option.description);
+    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint'], {
+    options: function options(value, i18n) {
+      return (value !== null && value !== void 0 ? value : []).filter(function (value) {
+        return value != null;
+      }).map(function (value) {
+        return _objectSpread2$2(_objectSpread2$2({}, value), {}, {
+          label: i18n(value.label),
+          description: i18n(value.description)
+        });
+      });
+    }
+  });
+  lfLog$2('Loaded RSuite.RadioTile');
+
+  var index$9 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RadioTileRSuite$2
+  });
+
+  var css_248z$z = ".lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
+  styleInject$2(css_248z$z);
+
+  var _excluded$T = ["superDisabled", "superSize", "disabled", "hint"],
+    _excluded2$2 = ["name", "label", "hint", "tooltip", "required", "onChange", "multiple", "removable", "disabledFileItem", "fileListVisible", "draggable", "disabled", "accept", "defaultValue", "listType", "uploadButtonLabel", "uploadButtonAppearance", "uploadButtonSize", "draggableText", "draggableHeight", "value"];
+  var makeDefaultValue$4 = function makeDefaultValue(defaultValue) {
+    if (_isArray$2(defaultValue)) {
+      return defaultValue;
+    } else if (defaultValue != null) {
+      return [defaultValue];
+    }
+    return [];
+  };
+
+  // shield props component or the uploaded will replace the disabled prop
+  var ShieldedButton$2 = function ShieldedButton(_ref) {
+    var superDisabled = _ref.superDisabled,
+      superSize = _ref.superSize;
+      _ref.disabled;
+      var hint = _ref.hint,
+      rest = _objectWithoutProperties$2(_ref, _excluded$T);
+    var inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends$2({}, rest, {
+      size: superSize,
+      disabled: superDisabled
+    }));
+    if (hint) {
+      return /*#__PURE__*/React$1.createElement("div", {
+        className: "upload-layout"
+      }, /*#__PURE__*/React$1.createElement("div", {
+        className: "upload"
+      }, inner), /*#__PURE__*/React$1.createElement("div", {
+        className: "hint"
+      }, hint));
+    }
+    return inner;
+  };
+  var Upload$2 = I18N$2(function (_ref2) {
+    var name = _ref2.name,
+      label = _ref2.label,
+      hint = _ref2.hint,
+      tooltip = _ref2.tooltip,
+      required = _ref2.required,
+      onChange = _ref2.onChange,
+      multiple = _ref2.multiple,
+      removable = _ref2.removable,
+      disabledFileItem = _ref2.disabledFileItem,
+      fileListVisible = _ref2.fileListVisible,
+      draggable = _ref2.draggable,
+      disabled = _ref2.disabled,
+      accept = _ref2.accept;
+      _ref2.defaultValue;
+      var listType = _ref2.listType,
+      uploadButtonLabel = _ref2.uploadButtonLabel,
+      uploadButtonAppearance = _ref2.uploadButtonAppearance,
+      uploadButtonSize = _ref2.uploadButtonSize,
+      draggableText = _ref2.draggableText,
+      _ref2$draggableHeight = _ref2.draggableHeight,
+      draggableHeight = _ref2$draggableHeight === void 0 ? 200 : _ref2$draggableHeight,
+      value = _ref2.value,
+      rest = _objectWithoutProperties$2(_ref2, _excluded2$2);
+    var _useState = React$1.useState(makeDefaultValue$4(value)),
+      _useState2 = _slicedToArray$2(_useState, 2),
+      currentValue = _useState2[0],
+      setCurrentValue = _useState2[1];
+    var handleChange = React$1.useCallback(function (fileList) {
+      setCurrentValue(fileList);
+      if (multiple) {
+        onChange(fileList);
+      } else {
+        onChange(!_isEmpty$2(fileList) ? fileList[0] : null);
+      }
+    }, [multiple, onChange]);
+    var inner;
+    if (draggable) {
+      inner = /*#__PURE__*/React$1.createElement("div", {
+        style: {
+          height: draggableHeight,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }
+      }, /*#__PURE__*/React$1.createElement("span", null, draggableText || 'Click or Drag files to this area to upload'));
+    } else {
+      inner = /*#__PURE__*/React$1.createElement(ShieldedButton$2, {
+        appearance: uploadButtonAppearance,
+        superSize: uploadButtonSize,
+        superDisabled: disabled || !multiple && !_isEmpty$2(value),
+        hint: !tooltip && hint
+      }, uploadButtonLabel || 'Upload');
+    }
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-upload",
+      "data-lf-field-name": name
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(rsuite.Uploader, _extends$2({
+      autoUpload: false,
+      action: "",
+      accept: _isArray$2(accept) ? accept.join(',') : accept,
+      multiple: multiple,
+      removable: removable,
+      draggable: draggable,
+      disabled: disabled,
+      fileListVisible: fileListVisible,
+      disabledFileItem: disabledFileItem,
+      fileList: currentValue,
+      listType: listType,
+      onChange: handleChange
+    }, passRest$2(rest)), inner), hint && draggable && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
+  lfLog$2('Loaded RSuite.Upload');
+
+  var index$8 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Upload$2
+  });
+
+  var css_248z$y = ".lf-form-react-rsuite5 .lf-control-button-toggle-group .rs-form-control-wrapper {\n  display: block;\n}";
+  styleInject$2(css_248z$y);
+
+  var _excluded$S = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "options"];
+  var RSuiteButtonsToggleGroup$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      size = _ref.size,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      _ref$options = _ref.options,
+      options = _ref$options === void 0 ? [] : _ref$options,
+      rest = _objectWithoutProperties$2(_ref, _excluded$S);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
+      "data-lf-field-name": name,
+      className: "lf-control-button-toggle-group"
+    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon$2, null)), /*#__PURE__*/React$1.createElement(rsuite.Form.Control, _extends$2({
+      ButtonComponent: BiStateButton$2,
+      name: name,
+      accepter: ButtonsToggleGroup$2,
+      value: value,
+      onChange: onChange,
+      options: options,
+      disabled: disabled,
+      size: size,
+      errorMessage: _isString$2(error) ? error : undefined
+    }, passRest$2(rest))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint'], {
+    options: i18nOptions$2
+  });
+  lfLog$2('Loaded RSuite5.ButtonsToggleGroup');
+
+  var index$7 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RSuiteButtonsToggleGroup$2
+  });
+
+  var css_248z$x = ".lf-generic-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-generic-icon.lg {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-generic-icon .xs {\n  max-width: 12px;\n  max-height: 12px;\n}";
+  styleInject$2(css_248z$x);
+
+  var GenericIcon$2 = function GenericIcon(_ref) {
+    var icon = _ref.icon,
+      size = _ref.size;
+    return /*#__PURE__*/React$1.createElement("img", {
+      className: classNames$2("lf-generic-icon", {
+        size: size
+      }),
+      src: icon
+    });
+  };
+
+  var css_248z$w = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
+  styleInject$2(css_248z$w);
+
+  var _excluded$R = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious"];
+  var i18nSteps$2 = function i18nSteps(value, i18n) {
+    return (value !== null && value !== void 0 ? value : []).filter(function (value) {
+      return value != null;
+    }).map(function (value) {
+      return _objectSpread2$2(_objectSpread2$2({}, value), {}, {
+        label: i18n(value.label),
+        description: i18n(value.description)
+      });
+    });
+  };
+  var Rsuite5Steps$2 = I18N$2(function (_ref) {
+    var name = _ref.name,
+      children = _ref.children,
+      value = _ref.value,
+      steps = _ref.steps,
+      _ref$onChange = _ref.onChange,
+      onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
+      align = _ref.align,
+      status = _ref.status,
+      small = _ref.small,
+      labelNext = _ref.labelNext,
+      labelPrevious = _ref.labelPrevious,
+      rest = _objectWithoutProperties$2(_ref, _excluded$R);
+    var defaultStep = value;
+    var defaultStepIdx = (steps || []).findIndex(function (obj) {
+      return obj.value === value;
+    });
+    if (!defaultStep && !_isEmpty$2(steps)) {
+      defaultStepIdx = 0;
+    }
+    var _useState = React$1.useState(defaultStepIdx),
+      _useState2 = _slicedToArray$2(_useState, 2),
+      stepIdx = _useState2[0],
+      setStepIdx = _useState2[1];
+    var step = _isArray$2(steps) && !_isEmpty$2(steps) && stepIdx >= 0 ? steps[stepIdx].value : null;
+    var handleNext = React$1.useCallback(function () {
+      var step = steps[stepIdx + 1].value;
+      setStepIdx(function (value) {
+        return value + 1;
+      });
+      onChange(step);
+    }, [onChange, stepIdx, steps]);
+    var handlePrevious = React$1.useCallback(function () {
+      var step = steps[stepIdx - 1].value;
+      setStepIdx(function (value) {
+        return value - 1;
+      });
+      onChange(step);
+    }, [onChange, stepIdx, steps]);
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-steps",
+      "data-lf-field-name": name
+    }, /*#__PURE__*/React$1.createElement(rsuite.Steps, _extends$2({
+      current: stepIdx,
+      currentStatus: status,
+      small: small
+    }, passRest$2(rest)), (steps || []).map(function (step) {
+      return /*#__PURE__*/React$1.createElement(rsuite.Steps.Item, {
+        key: "step_".concat(step.value),
+        description: step.description || undefined,
+        title: step.label,
+        icon: step.icon && /*#__PURE__*/React$1.createElement(GenericIcon$2, {
+          icon: step.icon
+        })
+      });
+    })), _isFunction$2(children) && /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-step"
+    }, children(step)), /*#__PURE__*/React$1.createElement("div", {
+      className: classNames$2('lf-navigation-buttons', align)
+    }, /*#__PURE__*/React$1.createElement(rsuite.ButtonGroup, null, /*#__PURE__*/React$1.createElement(rsuite.Button, {
+      onClick: handlePrevious,
+      disabled: _isEmpty$2(steps) || stepIdx === 0
+    }, labelPrevious || 'Previous'), /*#__PURE__*/React$1.createElement(rsuite.Button, {
+      onClick: handleNext,
+      disabled: _isEmpty$2(steps) || stepIdx === steps.length - 1
+    }, labelNext || 'Next'))));
+  }, ['labelPrevious', 'labelNext'], {
+    tabs: i18nSteps$2
+  });
+  lfLog$2('Loaded Rsuite5.Steps');
+
+  var index$6 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Rsuite5Steps$2
+  });
+
+  var _excluded$Q = ["name", "componentUrl", "defaultExport", "exportedKey", "onChange"];
+  var makeModuleName$2 = function makeModuleName(name) {
+    return "".concat(name, "Module");
+  };
+  var makeImportMap$2 = function makeImportMap(_ref) {
+    var name = _ref.name,
+      componentUrl = _ref.componentUrl;
+    return "{\n  \"imports\": {\n    \"react\": \"https://esm.sh/react@18.2.0\",\n    \"react-dom\": \"https://esm.sh/react-dom@18.2.0\",\n    \"".concat(makeModuleName$2(name), "\": \"").concat(componentUrl, "\"\n  }\n}");
+  };
+  var makeInstallCode$2 = function makeInstallCode(_ref2) {
+    var eventsContainerId = _ref2.eventsContainerId,
+      containerId = _ref2.containerId,
+      currentProps = _ref2.currentProps,
+      defaultExport = _ref2.defaultExport,
+      name = _ref2.name,
+      exportedKey = _ref2.exportedKey;
+    return "import { createElement } from 'react';\nimport { createRoot } from 'react-dom';\n".concat(defaultExport ? "import MyComponent from '".concat(makeModuleName$2(name), "';") : "import { ".concat(exportedKey, " as MyComponent } from '").concat(makeModuleName$2(name), "';"), "\n\nconst container = document.getElementById('").concat(containerId, "');\nconst eventsContainer = document.getElementById('").concat(eventsContainerId, "');\n\ntry {\n  const root = createRoot(container);\n  const restValues = ").concat(JSON.stringify(currentProps), ";\n  const formElement = createElement(MyComponent, {\n    ...restValues,\n    value: undefined,\n    defaultValue: ").concat(JSON.stringify(currentProps.value) || null, ",\n    onChange: e => {\n      console.log('value....', e.target.value);\n      const event = new CustomEvent('lf_onChange', { detail: { value: e.target.value } });\n      eventsContainer.dispatchEvent(event);\n    }\n  });\n  root.render(formElement);\n\n  eventsContainer.addEventListener(\n    'lf_unmount',\n    () => root.unmount()\n  );\n  eventsContainer.addEventListener(\n    'lf_refresh',\n    e => {\n      if (root && root.render) {\n        root.render(createElement(MyComponent,\n          {\n            ...e.detail,\n            onChange: e => {\n              console.log('value....', e.target.value);\n              const event = new CustomEvent('lf_onChange', { detail: { value: e.target.value } });\n              eventsContainer.dispatchEvent(event);\n            }\n          }\n        ));\n      }\n    }\n  );\n} catch(e) {\n  console.log('errorascio', e);\n}\n");
+  };
+  var ModuleComponent$2 = function ModuleComponent(_ref3) {
+    var name = _ref3.name,
+      componentUrl = _ref3.componentUrl,
+      defaultExport = _ref3.defaultExport,
+      exportedKey = _ref3.exportedKey,
+      _ref3$onChange = _ref3.onChange,
+      onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
+      rest = _objectWithoutProperties$2(_ref3, _excluded$Q);
+    var eventsContainerId = React$1.useId();
+    var containerId = React$1.useId();
+    var _useState = React$1.useState(),
+      _useState2 = _slicedToArray$2(_useState, 2),
+      error = _useState2[0],
+      setError = _useState2[1];
+    var _useState3 = React$1.useState(false),
+      _useState4 = _slicedToArray$2(_useState3, 2);
+      _useState4[0];
+      var setIsLoading = _useState4[1];
+    var _useState5 = React$1.useState(false),
+      _useState6 = _slicedToArray$2(_useState5, 2);
+      _useState6[0];
+      var setIsValid = _useState6[1];
+    var _useState7 = React$1.useState(rest),
+      _useState8 = _slicedToArray$2(_useState7, 2);
+      _useState8[0];
+      _useState8[1];
+    console.log('Render EMS value:', rest);
+    React$1.useEffect(function () {
+      // skip if nothing
+      if (_.isEmpty(componentUrl) || !defaultExport && _.isEmpty(exportedKey)) {
+        setIsValid(false);
+        return;
+      }
+      var scriptImportMap = document.createElement('script');
+      scriptImportMap.type = 'importmap';
+      var importMapCode = makeImportMap$2({
+        name: name,
+        componentUrl: componentUrl
+      });
+      scriptImportMap.innerHTML = importMapCode;
+      document.body.appendChild(scriptImportMap);
+      var scriptMountComponent = document.createElement('script');
+      scriptMountComponent.type = 'module';
+      var installCode = makeInstallCode$2({
+        eventsContainerId: eventsContainerId,
+        containerId: containerId,
+        currentProps: rest,
+        defaultExport: defaultExport,
+        name: name,
+        exportedKey: exportedKey
+      });
+      scriptMountComponent.innerHTML = installCode;
+      document.body.appendChild(scriptMountComponent);
+      setIsLoading(false);
+      setIsValid(true);
+      setError(null);
+      return function () {
+        var eventsContainer = document.getElementById(eventsContainerId);
+        if (eventsContainer) {
+          eventsContainer.dispatchEvent(new CustomEvent('lf_unmount'));
+        }
+        document.body.removeChild(scriptImportMap);
+        document.body.removeChild(scriptMountComponent);
+      };
+    }, [name, componentUrl, defaultExport, exportedKey]);
+
+    // handle change value, separate
+    React$1.useEffect(function () {
+      var eventsContainer = document.getElementById(eventsContainerId);
+      var evt = function evt(e) {
+        return onChange(e.detail.value);
+      };
+      eventsContainer.addEventListener('lf_onChange', evt);
+      return function () {
+        eventsContainer.removeEventListener('lf_onChange', evt);
+      };
+    }, [onChange]);
+    React$1.useEffect(function () {
+      var eventsContainer = document.getElementById(eventsContainerId);
+      var event = new CustomEvent('lf_refresh', {
+        detail: _objectSpread2$2({}, rest)
+      });
+      // needs to be detached from arrive
+      setTimeout(function () {
+        eventsContainer.dispatchEvent(event);
+      }, 10);
+    });
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-module",
+      id: eventsContainerId
+    }, /*#__PURE__*/React$1.createElement("div", {
+      id: containerId
+    }), error && /*#__PURE__*/React$1.createElement("div", null, "some error"));
+  };
+
+  var _excluded$P = ["name", "componentUrl", "onChange", "value", "defaultExport", "exportedKey"];
+  var RSuite5ModuleComponent$2 = function RSuite5ModuleComponent(_ref) {
+    var name = _ref.name,
+      componentUrl = _ref.componentUrl,
+      onChange = _ref.onChange,
+      value = _ref.value,
+      defaultExport = _ref.defaultExport,
+      exportedKey = _ref.exportedKey,
+      rest = _objectWithoutProperties$2(_ref, _excluded$P);
+    return /*#__PURE__*/React$1.createElement(ModuleComponent$2, _extends$2({
+      name: name,
+      onChange: onChange,
+      componentUrl: componentUrl,
+      value: value,
+      defaultExport: defaultExport,
+      exportedKey: exportedKey
+    }, passRest$2(rest)));
+  };
+
+  var index$5 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RSuite5ModuleComponent$2
+  });
+
+  var toInt$2 = function toInt(s) {
+    return !isNaN(parseInt(s, 10)) ? parseInt(s, 10) : undefined;
+  };
+  var todayWithTime$2 = function todayWithTime(s) {
+    if (isValidTime$2(s)) {
+      var _s$split = s.split(':'),
+        _s$split2 = _slicedToArray$2(_s$split, 3),
+        hours = _s$split2[0],
+        minutes = _s$split2[1],
+        seconds = _s$split2[2];
+      var d = new Date();
+      d.setHours(toInt$2(hours), toInt$2(minutes), toInt$2(seconds));
+      return d;
+    }
+    return undefined;
+  };
+
+  var _excluded$O = ["onChange", "value"];
+  var SelectTime$2 = I18N$2(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties$2(_ref, _excluded$O);
+    // also accepts string dates
+    var currentValue;
+    if (_isDate$2(value)) {
+      currentValue = value;
+    } else if (_isString$2(value)) {
+      if (isValidTime$2(value)) {
+        currentValue = todayWithTime$2(value);
+      }
+    }
+
+    // send always time string in iso format
+    var handleChange = React$1.useCallback(function (d) {
+      if (isValidDate$2(d)) {
+        onChange(d.toLocaleTimeString());
+      } else {
+        onChange(null);
+      }
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(RSuiteGenericDate$2, _extends$2({
+      value: currentValue,
+      onChange: handleChange
+    }, passRest$2(rest)));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog$2('Loaded RSuite5.SelectTime');
+
+  var index$4 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: SelectTime$2
+  });
+
+  var Hidden$2 = function Hidden(_ref) {
+    var name = _ref.name;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-hidden",
+      style: {
+        padding: '10px'
+      }
+    }, "Hidden field: ", /*#__PURE__*/React$1.createElement("em", null, name));
+  };
+  lfLog$2('Loaded RSuite5.Hidden');
+
+  var index$3 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Hidden$2
+  });
+
+  var css_248z$v = ".lf-form-react-rsuite5 {\n  /*.lf-buttons {\n    margin-top: 24px;\n  }*/\n}\n.lf-form-react-rsuite5.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {\n  margin-bottom: unset;\n}\n.lf-form-react-rsuite5.rs-form-vertical .rs-form-group .rs-input-group {\n  width: unset;\n}\n.lf-form-react-rsuite5 .rs-form-control-label > .rs-form-help-text.rs-form-help-text-tooltip {\n  margin-top: 0px;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lf-full-width .rs-form-control-wrapper {\n  width: 100%;\n}";
+  styleInject$2(css_248z$v);
+
+  var FormRsuite5$2 = function FormRsuite5(_ref) {
+    var children = _ref.children,
+      name = _ref.name,
+      layout = _ref.layout,
+      _ref$fluid = _ref.fluid,
+      fluid = _ref$fluid === void 0 ? false : _ref$fluid,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$disabledSubmit = _ref.disabledSubmit,
+      disabledSubmit = _ref$disabledSubmit === void 0 ? false : _ref$disabledSubmit,
+      buttonsAlign = _ref.buttonsAlign,
+      _ref$labelSubmit = _ref.labelSubmit,
+      labelSubmit = _ref$labelSubmit === void 0 ? 'Submit' : _ref$labelSubmit,
+      _ref$labelCancel = _ref.labelCancel,
+      labelCancel = _ref$labelCancel === void 0 ? 'Cancel' : _ref$labelCancel,
+      _ref$hideCancel = _ref.hideCancel,
+      hideCancel = _ref$hideCancel === void 0 ? false : _ref$hideCancel,
+      _ref$hideSubmit = _ref.hideSubmit,
+      hideSubmit = _ref$hideSubmit === void 0 ? false : _ref$hideSubmit,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$onlyFields = _ref.onlyFields,
+      onlyFields = _ref$onlyFields === void 0 ? false : _ref$onlyFields,
+      _ref$hideToolbar = _ref.hideToolbar,
+      hideToolbar = _ref$hideToolbar === void 0 ? false : _ref$hideToolbar,
+      _ref$onSubmit = _ref.onSubmit,
+      onSubmit = _ref$onSubmit === void 0 ? function () {} : _ref$onSubmit,
+      _ref$onReset = _ref.onReset,
+      onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset,
+      custom = _ref.custom;
+    if (onlyFields) {
+      var _classNames;
+      // TODO check this
+      return /*#__PURE__*/React$1.createElement("div", {
+        className: classNames$2('rs-form', (_classNames = {}, _defineProperty$4(_classNames, "rs-form-".concat(layout), true), _defineProperty$4(_classNames, 'rs-form-fluid', fluid), _classNames))
+      }, children);
+    }
+    return /*#__PURE__*/React$1.createElement(rsuite.Form, {
+      className: classNames$2('lf-form lf-form-react-rsuite5', _defineProperty$4({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
+      "data-lf-form-name": name,
+      layout: layout,
+      fluid: fluid,
+      readOnly: readOnly,
+      disabled: disabled
+    }, /*#__PURE__*/React$1.createElement("div", null, children), !hideToolbar && /*#__PURE__*/React$1.createElement(rsuite.ButtonToolbar, {
+      className: "lf-buttons"
+    }, !hideSubmit && /*#__PURE__*/React$1.createElement(rsuite.Button, {
+      appearance: "primary",
+      onClick: onSubmit,
+      disabled: disabled || disabledSubmit
+    }, labelSubmit), !hideCancel && /*#__PURE__*/React$1.createElement(rsuite.Button, {
+      onClick: onReset,
+      disabled: disabled
+    }, labelCancel), custom));
+  };
+  lfLog$2('Loaded RSuite5.Form');
+
+  var index$2 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: FormRsuite5$2
+  });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var Asterisk$1 = function Asterisk(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color,
+      style = _ref.style;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      style: style,
+      version: "1.1",
+      id: "_x32_",
+      className: "lf-icon-asterisk",
+      viewBox: "0 0 512 512"
+    }, /*#__PURE__*/React$1.createElement("g", null, /*#__PURE__*/React$1.createElement("polygon", {
+      style: {
+        fill: color
+      },
+      className: "st0",
+      points: "501.539,169.221 453.886,86.7 303.669,173.449 303.669,0 208.365,0 208.365,173.479 58.114,86.73\r 10.461,169.261 160.674,255.99 10.501,342.71 58.154,425.231 208.365,338.482 208.365,512 303.669,512 303.669,338.542\r 453.846,425.271 501.499,342.74 351.267,255.99 \t"
+    })));
+  };
+  var RequiredIcon$1 = function RequiredIcon() {
+    return /*#__PURE__*/React$1.createElement(Asterisk$1, {
+      color: "#ff6633",
+      width: 12,
+      height: 12,
+      style: {
+        marginLeft: '3px'
+      }
+    });
+  };
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   var POPOVER_STYLE$1 = {
     padding: '6px',
     color: '#ff6633'
@@ -20390,10 +32402,21 @@
     }, children);
   };
 
-  var css_248z$w = ".lf-control-input-text .rs-form-control-wrapper > .rs-input, .lf-control-input-text .rs-form-control-wrapper > .rs-input-number {\n  width: 100%;\n}\n.lf-control-input-text.lf-full-width .rs-input-group {\n  width: 100%;\n}\n.lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-control-input-text.lf-size-lg .lf-prefix-icon {\n  max-height: 22px;\n}\n.lf-control-input-text.lf-size-md .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-control-input-text.lf-size-sm .lf-prefix-icon {\n  max-height: 10px;\n}\n.lf-control-input-text.lf-size-xs .lf-prefix-icon {\n  max-height: 4px;\n}";
-  styleInject$1(css_248z$w);
-
-  var _excluded$O = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "lfOnEnter"];
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var TextOrIcon$1 = function TextOrIcon(str) {
+    if (isUrl$1(str)) {
+      return /*#__PURE__*/React$1.createElement("img", {
+        className: "lf-prefix-icon",
+        src: str,
+        alt: "icon"
+      });
+    } else if (str) {
+      return /*#__PURE__*/React$1.createElement("span", null, str);
+    }
+  };
+  var css_248z$u = ".lf-control-input-text .rs-form-control-wrapper > .rs-input, .lf-control-input-text .rs-form-control-wrapper > .rs-input-number {\n  width: 100%;\n}\n.lf-control-input-text.lf-full-width .rs-input-group {\n  width: 100%;\n}\n.lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-control-input-text.lf-size-lg .lf-prefix-icon {\n  max-height: 22px;\n}\n.lf-control-input-text.lf-size-md .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-control-input-text.lf-size-sm .lf-prefix-icon {\n  max-height: 10px;\n}\n.lf-control-input-text.lf-size-xs .lf-prefix-icon {\n  max-height: 4px;\n}";
+  styleInject$1(css_248z$u);
+  var _excluded$N = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "lfOnEnter"];
   var TextInput$1 = I18N$1(function (_ref) {
     var _classNames;
     var name = _ref.name,
@@ -20426,7 +32449,7 @@
       inside = _ref$inside === void 0 ? false : _ref$inside,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties$1(_ref, _excluded$O);
+      rest = _objectWithoutProperties$1(_ref, _excluded$N);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -20448,7 +32471,7 @@
     }, passRest$1(rest))));
     var needsGroup = postfix || prefix;
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      className: classNames$1('lf-control-input-text', (_classNames = {}, _defineProperty$3(_classNames, "lf-size-".concat(size), size != null), _defineProperty$3(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
+      className: classNames$1('lf-control-input-text', (_classNames = {}, _defineProperty$1$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
       "data-lf-field-name": name,
       style: makeWidthStyle$1(fullWidth, width)
     }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
@@ -20459,11 +32482,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog$1('Loaded RSuite.InputText');
 
-  var index$y = /*#__PURE__*/Object.freeze({
+  var indexBOnR4HJ3 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   var ToggleInput$1 = I18N$1(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20500,15 +32524,15 @@
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog$1('Loaded RSuite5.ToggleInput');
 
-  var index$x = /*#__PURE__*/Object.freeze({
+  var indexCYw7RRLS = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ToggleInput$1
   });
 
-  var css_248z$v = ".lf-control-select-option-rsuite5 img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  margin-right: 6px;\n  margin-top: -4px;\n  display: inline-block;\n}";
-  styleInject$1(css_248z$v);
-
-  var _excluded$N = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions", "fullWidth", "width"];
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var css_248z$t = ".lf-control-select-option-rsuite5 img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  margin-right: 6px;\n  margin-top: -4px;\n  display: inline-block;\n}";
+  styleInject$1(css_248z$t);
+  var _excluded$M = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions", "fullWidth", "width"];
   var menuItem$1 = function menuItem(value, item) {
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-select-option-rsuite5"
@@ -20524,8 +32548,8 @@
       value = _ref.value,
       size = _ref.size,
       placeholder = _ref.placeholder;
-      _ref.lfLocale;
-      var options = _ref.options,
+    _ref.lfLocale;
+    var options = _ref.options,
       _ref$tooltip = _ref.tooltip,
       tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
       _ref$disabled = _ref.disabled,
@@ -20550,7 +32574,7 @@
       showImageOptions = _ref.showImageOptions,
       fullWidth = _ref.fullWidth,
       width = _ref.width,
-      rest = _objectWithoutProperties$1(_ref, _excluded$N);
+      rest = _objectWithoutProperties$1(_ref, _excluded$M);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       className: "lf-control-select",
       controlId: name,
@@ -20583,26 +32607,403 @@
   });
   lfLog$1('Loaded RSuite5.Select');
 
-  var index$w = /*#__PURE__*/Object.freeze({
+  var indexCTMFxMaC = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   lfLog$1('Loaded RSuite5.Group');
 
-  var index$v = /*#__PURE__*/Object.freeze({
+  var indexDJbRkqVs = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group$1
   });
 
-  var _excluded$M = ["hint", "required", "tooltip", "name", "label"];
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var PlusCircle$1 = function PlusCircle(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 0 20 20",
+      xmlns: "http://www.w3.org/2000/svg",
+      fill: "none"
+    }, /*#__PURE__*/React$1.createElement("path", {
+      fill: color,
+      fillRule: "evenodd",
+      d: "M10 3a7 7 0 100 14 7 7 0 000-14zm-9 7a9 9 0 1118 0 9 9 0 01-18 0zm14 .069a1 1 0 01-1 1h-2.931V14a1 1 0 11-2 0v-2.931H6a1 1 0 110-2h3.069V6a1 1 0 112 0v3.069H14a1 1 0 011 1z"
+    }));
+  };
+  var MinusCircle$1 = function MinusCircle(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 0 24 24",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React$1.createElement("path", {
+      fill: color,
+      fillRule: "evenodd",
+      clipRule: "evenodd",
+      d: "M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12ZM12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM7 11C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11H7Z"
+    }));
+  };
+  var isEmptyItem$1 = function isEmptyItem(obj) {
+    return Object.keys(obj).filter(function (key) {
+      return key !== 'id';
+    }).every(function (key) {
+      return obj[key] === null || obj[key] === undefined || obj[key] === '';
+    });
+  };
+  var castSlice$3 = _castSlice$1,
+    hasUnicode$3 = _hasUnicode$1,
+    stringToArray$3 = _stringToArray$1,
+    toString$1$2 = toString_1$1;
+
+  /**
+   * Creates a function like `_.lowerFirst`.
+   *
+   * @private
+   * @param {string} methodName The name of the `String` case method to use.
+   * @returns {Function} Returns the new case function.
+   */
+  function createCaseFirst$1$1(methodName) {
+    return function (string) {
+      string = toString$1$2(string);
+      var strSymbols = hasUnicode$3(string) ? stringToArray$3(string) : undefined;
+      var chr = strSymbols ? strSymbols[0] : string.charAt(0);
+      var trailing = strSymbols ? castSlice$3(strSymbols, 1).join('') : string.slice(1);
+      return chr[methodName]() + trailing;
+    };
+  }
+  var _createCaseFirst$1 = createCaseFirst$1$1;
+  var createCaseFirst$2 = _createCaseFirst$1;
+
+  /**
+   * Converts the first character of `string` to upper case.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category String
+   * @param {string} [string=''] The string to convert.
+   * @returns {string} Returns the converted string.
+   * @example
+   *
+   * _.upperFirst('fred');
+   * // => 'Fred'
+   *
+   * _.upperFirst('FRED');
+   * // => 'FRED'
+   */
+  var upperFirst$1$1 = createCaseFirst$2('toUpperCase');
+  var upperFirst_1$1 = upperFirst$1$1;
+  var toString$5 = toString_1$1,
+    upperFirst$2 = upperFirst_1$1;
+
+  /**
+   * Converts the first character of `string` to upper case and the remaining
+   * to lower case.
+   *
+   * @static
+   * @memberOf _
+   * @since 3.0.0
+   * @category String
+   * @param {string} [string=''] The string to capitalize.
+   * @returns {string} Returns the capitalized string.
+   * @example
+   *
+   * _.capitalize('FRED');
+   * // => 'Fred'
+   */
+  function capitalize$1(string) {
+    return upperFirst$2(toString$5(string).toLowerCase());
+  }
+  var capitalize_1$1 = capitalize$1;
+  var _capitalize$1 = /*@__PURE__*/getDefaultExportFromCjs$1(capitalize_1$1);
+  var IconButton$1 = function IconButton(_ref) {
+    var _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      className = _ref.className,
+      Icon = _ref.icon,
+      onClick = _ref.onClick;
+    var handleClick = React$1.useCallback(function (e) {
+      e.preventDefault();
+      if (!disabled) {
+        onClick();
+      }
+    }, [disabled, onClick]);
+    return /*#__PURE__*/React$1.createElement("a", {
+      href: "#",
+      className: classNames$1('lf-icon-button', className, {
+        disabled: disabled
+      }),
+      onClick: handleClick
+    }, Icon);
+  };
+  var ArrayItem$1 = function ArrayItem(_ref2) {
+    var children = _ref2.children,
+      item = _ref2.item,
+      disabled = _ref2.disabled,
+      readOnly = _ref2.readOnly,
+      _ref2$onAdd = _ref2.onAdd,
+      onAdd = _ref2$onAdd === void 0 ? function () {} : _ref2$onAdd,
+      _ref2$onRemove = _ref2.onRemove,
+      onRemove = _ref2$onRemove === void 0 ? function () {} : _ref2$onRemove,
+      _ref2$disableAdd = _ref2.disableAdd,
+      disableAdd = _ref2$disableAdd === void 0 ? false : _ref2$disableAdd,
+      _ref2$showAdd = _ref2.showAdd,
+      showAdd = _ref2$showAdd === void 0 ? false : _ref2$showAdd,
+      align = _ref2.align,
+      alignOffset = _ref2.alignOffset;
+    var handleRemove = React$1.useCallback(function () {
+      return onRemove(item);
+    }, [item, onRemove]);
+    var style;
+    if ((align === 'top' || align === 'bottom') && _isNumber$1(alignOffset) && alignOffset > 0) {
+      style = _defineProperty$1$1({}, "margin".concat(_capitalize$1(align)), "".concat(alignOffset, "px"));
+    }
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-common-array-item"
+    }, /*#__PURE__*/React$1.createElement("div", {
+      className: "inner-form"
+    }, children), /*#__PURE__*/React$1.createElement("div", {
+      className: "buttons",
+      style: style
+    }, showAdd && /*#__PURE__*/React$1.createElement(IconButton$1, {
+      disabled: disableAdd || disabled || readOnly,
+      className: "arrow",
+      appearance: "link",
+      icon: /*#__PURE__*/React$1.createElement(PlusCircle$1, {
+        height: 16,
+        width: 16,
+        color: "#3498ff"
+      }),
+      size: "sm",
+      onClick: onAdd
+    }), !showAdd && /*#__PURE__*/React$1.createElement(IconButton$1, {
+      className: "arrow",
+      disabled: disabled || readOnly,
+      appearance: "link",
+      icon: /*#__PURE__*/React$1.createElement(MinusCircle$1, {
+        height: 16,
+        width: 16,
+        color: "#3498ff"
+      }),
+      size: "sm",
+      onClick: handleRemove
+    })));
+  };
+  var randomId$1 = function randomId() {
+    var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
+    return Math.random().toString(36).substring(2, length + 2);
+  };
+
+  /**
+   * Check if object is empty or all the keys are empty
+   * @param {*} obj
+   * @returns
+   */
+  var isEmptyObject$1 = function isEmptyObject(obj) {
+    return _isEmpty$1(obj) || Object.keys(obj).every(function (key) {
+      return _isEmpty$1(obj[key]);
+    });
+  };
+
+  /**
+   * flatArrayOfString
+   * If an array of object can be flattned (one keuy), then return a flat array, otherwise raise expection
+   * @param {*} a
+   * @returns
+   */
+  var flatArrayOfString$1 = function flatArrayOfString(a) {
+    var canBeFlat = a.every(function (obj) {
+      return Object.keys(obj).length === 1;
+    });
+    if (!canBeFlat) {
+      throw new Error("Cannot be flattened");
+    }
+    return a.map(function (obj) {
+      return obj[Object.keys(obj)[0]];
+    });
+  };
+  var formatArray$1 = function formatArray(a) {
+    var arrayType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'arrayOfObject';
+    var cleaned = a.map(function (i) {
+      return _omit$1(i, 'id');
+    }).filter(function (i) {
+      return !isEmptyObject$1(i);
+    });
+    try {
+      var flattened = flatArrayOfString$1(cleaned);
+      if (arrayType === 'arrayOfString') {
+        return flattened;
+      } else if (arrayType === 'commaSeparated') {
+        return flattened.join(',');
+      }
+    } catch (e) {
+      // do nothing, return as is
+    }
+    return cleaned;
+  };
+  var makeDefaultValue$3 = function makeDefaultValue(defaultValue, arrayType, form) {
+    if (arrayType === 'arrayOfString') {
+      var isArrayOfString = _isArray$1(defaultValue) && defaultValue.every(function (s) {
+        return _isString$1(s);
+      });
+      var names = collectNames$1(form);
+      // if it's an array of string
+      if (isArrayOfString && names.length === 1) {
+        return defaultValue.map(function (s) {
+          return _defineProperty$1$1({
+            id: randomId$1()
+          }, names[0], s);
+        });
+      }
+      return [{
+        id: randomId$1()
+      }];
+    } else if (arrayType === 'commaSeparated') {
+      var _names = collectNames$1(form);
+      if (_names.length === 1 && _isString$1(defaultValue) && !_isEmpty$1(defaultValue)) {
+        return defaultValue.split(',').map(function (s) {
+          return _defineProperty$1$1({
+            id: randomId$1()
+          }, _names[0], s);
+        });
+      }
+      return [{
+        id: randomId$1()
+      }];
+    } else {
+      return _isArray$1(defaultValue) && !_isEmpty$1(defaultValue) ? fillIds$1(defaultValue) : [{
+        id: randomId$1()
+      }];
+    }
+  };
+  var ListArray$1 = function ListArray(_ref3) {
+    var LetsFormComponent = _ref3.LetsFormComponent,
+      value = _ref3.value,
+      _ref3$onChange = _ref3.onChange,
+      onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
+      _ref3$disabled = _ref3.disabled,
+      disabled = _ref3$disabled === void 0 ? false : _ref3$disabled,
+      _ref3$readOnly = _ref3.readOnly,
+      readOnly = _ref3$readOnly === void 0 ? false : _ref3$readOnly,
+      fields = _ref3.fields,
+      _ref3$layout = _ref3.layout,
+      layout = _ref3$layout === void 0 ? 'vertical' : _ref3$layout,
+      maxHeight = _ref3.maxHeight,
+      lfLocale = _ref3.lfLocale,
+      _ref3$leftMargin = _ref3.leftMargin,
+      leftMargin = _ref3$leftMargin === void 0 ? 0 : _ref3$leftMargin,
+      children = _ref3.children,
+      _ref3$arrayType = _ref3.arrayType,
+      arrayType = _ref3$arrayType === void 0 ? 'arrayOfObject' : _ref3$arrayType,
+      _ref3$align = _ref3.align,
+      align = _ref3$align === void 0 ? 'top' : _ref3$align,
+      _ref3$alignOffset = _ref3.alignOffset,
+      alignOffset = _ref3$alignOffset === void 0 ? 0 : _ref3$alignOffset;
+    var _useFormContext = useFormContext$1(),
+      locales = _useFormContext.locales;
+    var form = {
+      layout: layout,
+      fluid: true,
+      locales: locales,
+      // copy the locales from the main form
+      fields: fields
+    };
+    var _useState = React$1.useState(makeDefaultValue$3(value, arrayType, form)),
+      _useState2 = _slicedToArray$1(_useState, 2),
+      items = _useState2[0],
+      setItems = _useState2[1];
+    var style = {};
+    if (maxHeight) {
+      //style.maxHeigth = _.isNumber(maxHeigth) ? `${maxHeigth}px` : maxHeigth;
+      style = {
+        maxHeight: "".concat(maxHeight, "px"),
+        overflowY: 'scroll'
+      };
+    }
+    if (leftMargin != null) {
+      style.marginLeft = _isNumber$1(leftMargin) ? "".concat(leftMargin, "px") : leftMargin;
+    }
+    var handleAdd = React$1.useCallback(function () {
+      setItems(function (items) {
+        return [].concat(_toConsumableArray$1(items), [{
+          id: randomId$1()
+        }]);
+      });
+    }, []);
+    var handleChange = React$1.useCallback(function (value) {
+      var newItems = items.map(function (i) {
+        return i.id === value.id ? value : i;
+      });
+      setItems(newItems);
+      onChange(formatArray$1(newItems, arrayType));
+    }, [items, onChange, arrayType]);
+    var handleRemove = React$1.useCallback(function (item) {
+      var newItems = items.filter(function (i) {
+        return i.id !== item.id;
+      });
+      setItems(newItems);
+      onChange(formatArray$1(newItems, arrayType));
+    }, [items, onChange, arrayType]);
+    if (children) {
+      return /*#__PURE__*/React$1.createElement("div", {
+        style: {
+          padding: '0px 10px 1px 10px'
+        }
+      }, children);
+    }
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: classNames$1('lf-control-common-array', align ? "lf-".concat(align) : undefined),
+      style: style
+    }, (_isArray$1(items) ? items : []).map(function (item, idx) {
+      var canAdd = idx === items.length - 1 && !isEmptyItem$1(item);
+      var showAdd = idx === items.length - 1 || items.length === 1;
+      return /*#__PURE__*/React$1.createElement(ArrayItem$1, {
+        key: item.id,
+        item: item,
+        disabled: disabled,
+        readOnly: readOnly,
+        disableAdd: !canAdd,
+        showAdd: showAdd,
+        onAdd: handleAdd,
+        onRemove: handleRemove,
+        align: align,
+        alignOffset: alignOffset
+      }, /*#__PURE__*/React$1.createElement(LetsFormComponent, {
+        form: form,
+        locale: lfLocale,
+        disabled: disabled,
+        readOnly: readOnly,
+        defaultValues: item,
+        onlyFields: true,
+        onChange: handleChange
+      }));
+    }));
+  };
+  var _excluded$L = ["hint", "required", "tooltip", "name", "label"];
   var ListArrayRSuite5$1 = I18N$1(function (_ref) {
     var hint = _ref.hint,
       required = _ref.required,
       tooltip = _ref.tooltip,
       name = _ref.name,
       label = _ref.label,
-      rest = _objectWithoutProperties$1(_ref, _excluded$M);
+      rest = _objectWithoutProperties$1(_ref, _excluded$L);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-array"
@@ -20614,28 +33015,53 @@
   }, ['label', 'hint']);
   lfLog$1('Loaded RSuite5.ListArray');
 
-  var index$u = /*#__PURE__*/Object.freeze({
+  var indexCxyRDDwj = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayRSuite5$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   lfLog$1('Loaded RSuite5.TwoColumns');
 
-  var index$t = /*#__PURE__*/Object.freeze({
+  var indexBZ7BhEnv = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   lfLog$1('Loaded RSuite5.ThreeColumns');
 
-  var index$s = /*#__PURE__*/Object.freeze({
+  var indexBqUJegwb = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns$1
   });
 
-  var css_248z$u = ".lf-form-react-rsuite5 .lf-control-input-number.rs-form-group .rs-input-group {\n  width: auto;\n}";
-  styleInject$1(css_248z$u);
-
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var CrossCirle$1 = function CrossCirle(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color,
+      _ref$yOffset = _ref.yOffset,
+      yOffset = _ref$yOffset === void 0 ? 0 : _ref$yOffset;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 ".concat(yOffset, " 24 24"),
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React$1.createElement("path", {
+      d: "M16 8L8 16M8.00001 8L16 16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z",
+      stroke: color,
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }));
+  };
+  var css_248z$c$1 = ".lf-form-react-rsuite5 .lf-control-input-number.rs-form-group .rs-input-group {\n  width: auto;\n}";
+  styleInject$1(css_248z$c$1);
   function _AsyncGenerator(gen) {
     var front, back;
     function resume(key, arg) {
@@ -28262,7 +40688,7 @@
     }, "&npsb;"));
   };
   lfLog('Loaded Common.Divider');
-  var index$r = /*#__PURE__*/Object.freeze({
+  var index$1 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
@@ -28385,8 +40811,8 @@
   styleInject(css_248z$3$1);
   var css_248z$2$1 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
   styleInject(css_248z$2$1);
-  var css_248z$1$1 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
-  styleInject(css_248z$1$1);
+  var css_248z$1$2 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
+  styleInject(css_248z$1$2);
   var PlaintextLabel = function PlaintextLabel(_ref) {
     var children = _ref.children;
     return /*#__PURE__*/React$1.createElement("div", {
@@ -29019,8 +41445,8 @@
       }
     }).filter(Boolean);
   };
-  var css_248z$t = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
-  styleInject(css_248z$t);
+  var css_248z$s = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-field-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
+  styleInject(css_248z$s);
   var DEFAULT_FORM = {
     version: 1,
     fields: []
@@ -30219,184 +42645,184 @@
     };
     return LazyWithPreload;
   }
-  var _excluded$L = ["framework", "children"];
+  var _excluded$1$4 = ["framework", "children"];
   var Fields = {
     'input-text': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexBhD8zewT; });
+        return Promise.resolve().then(function () { return indexBhD8zewTEAPaqxjG; });
       })
     },
     'toggle': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexDvMy4JDx; });
+        return Promise.resolve().then(function () { return indexDvMy4JDxCJtRWoC; });
       })
     },
     'select': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexCXgy06wj; });
+        return Promise.resolve().then(function () { return indexCXgy06wjDCS0mTf8; });
       })
     },
     'group': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexB2_7AL_; });
+        return Promise.resolve().then(function () { return indexB2_7AL_Cgw6Fze9; });
       })
     },
     'array': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexC8oMSLI_; });
+        return Promise.resolve().then(function () { return indexC8oMSLI_Dsqcyx93; });
       })
     },
     'two-columns': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexDUaQaDh; });
+        return Promise.resolve().then(function () { return indexDUaQaDhClT_LjHs; });
       })
     },
     'three-columns': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexDGyXswhB; });
+        return Promise.resolve().then(function () { return indexDGyXswhBBqtEEDsx; });
       })
     },
     'input-number': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexDUuoaz_; });
+        return Promise.resolve().then(function () { return indexDUuoaz_DCVj7eBo; });
       })
     },
     'date': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexCiI9PuzA; });
+        return Promise.resolve().then(function () { return indexCiI9PuzAQNFzwmVy; });
       })
     },
     'checkbox': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index9wT45c1i; });
+        return Promise.resolve().then(function () { return index9wT45c1iBiKj1NO3; });
       })
     },
     'checkbox-group': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexDR_sZ3U; });
+        return Promise.resolve().then(function () { return indexDR_sZ3UDvIGO1ux; });
       })
     },
     'slider': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexDpSZs66L; });
+        return Promise.resolve().then(function () { return indexDpSZs66LCHe78L08; });
       })
     },
     'radio-group': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexDsVAyL8h; });
+        return Promise.resolve().then(function () { return indexDsVAyL8hBWUnipG; });
       })
     },
     'input-tag': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexWFlu2xN; });
+        return Promise.resolve().then(function () { return indexWFlu2xNDKCeZNcK; });
       })
     },
     'input-mask': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexDZolNQu; });
+        return Promise.resolve().then(function () { return indexDZolNQuB8TJHxch; });
       })
     },
     'textarea': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexC26GBjjU; });
+        return Promise.resolve().then(function () { return indexC26GBjjU4yFBLm8w; });
       })
     },
     'rate': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexDo7LDhw8; });
+        return Promise.resolve().then(function () { return indexDo7LDhw8BTlD0VSw; });
       })
     },
     'placeholder': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexB7QtJAq; });
+        return Promise.resolve().then(function () { return indexB7QtJAqDnqSR7BU; });
       })
     },
     'multiselect': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexQ2x3bK6S; });
+        return Promise.resolve().then(function () { return indexQ2x3bK6SCu20B9ZF; });
       })
     },
     'multiselect-language': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexBr3EO37u; });
+        return Promise.resolve().then(function () { return indexBr3EO37uC8hnryu_; });
       })
     },
     'input-text-i18n': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexB6WwCAgc; });
+        return Promise.resolve().then(function () { return indexB6WwCAgcSNItGpnZ; });
       })
     },
     'placeholder-image': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexB9XaxKJc; });
+        return Promise.resolve().then(function () { return indexB9XaxKJcBP0KoYuI; });
       })
     },
     'button': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexCl7vYw_A; });
+        return Promise.resolve().then(function () { return indexCl7vYw_ABFcFSMgJ; });
       })
     },
     'divider': {
       'react-rsuite5': lazyPreload(function () {
         return Promise.resolve().then(function () {
-          return index$r;
+          return index$1;
         });
       })
     },
     'react-view': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexCkpW35Se; });
+        return Promise.resolve().then(function () { return indexCkpW35SeBcsqAizi; });
       })
     },
     'datetime': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexC0UfJaE; });
+        return Promise.resolve().then(function () { return indexC0UfJaEBLmTT_Lx; });
       })
     },
     'tabs': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexCrgRncR8; });
+        return Promise.resolve().then(function () { return indexCrgRncR8Dbh5xbcw; });
       })
     },
     'radio-tile': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexCkIe0W_R; });
+        return Promise.resolve().then(function () { return indexCkIe0W_RCW8DQ9K; });
       })
     },
     'upload': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexDmSbf8r_; });
+        return Promise.resolve().then(function () { return indexDmSbf8r_BCD6XpU; });
       })
     },
     'buttons-toggle-group': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexBPALsf62; });
+        return Promise.resolve().then(function () { return indexBPALsf62CPO_9tYi; });
       })
     },
     'steps': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexBXgGKaaF; });
+        return Promise.resolve().then(function () { return indexBXgGKaaFBgrOxD3y; });
       })
     },
     'esm-module': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexDVcvdwLI; });
+        return Promise.resolve().then(function () { return indexDVcvdwLIC1gugh8X; });
       })
     },
     'time': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexG5pFoIt; });
+        return Promise.resolve().then(function () { return indexG5pFoItBmnpJiLO; });
       })
     },
     'hidden': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return indexRx7wfO6x; });
+        return Promise.resolve().then(function () { return indexRx7wfO6xBZomaxbz; });
       })
     }
   };
   var Forms = {
     'react-rsuite5': lazyPreload(function () {
-      return Promise.resolve().then(function () { return indexLahFDBZm; });
+      return Promise.resolve().then(function () { return indexLahFDBZmDRS0LBDC; });
     })
   };
   var FormGenerator = GenerateGenerator({
@@ -30406,12 +42832,11 @@
   var LetsForm = function LetsForm(_ref) {
     _ref.framework;
     var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$L);
+      rest = _objectWithoutProperties(_ref, _excluded$1$4);
     return /*#__PURE__*/React$1.createElement(FormGenerator, _extends({
       framework: "react-rsuite5"
     }, rest), children);
   };
-
   var _excluded$K = ["name", "label", "hint", "value", "size", "placeholder", "min", "max", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "width", "fullWidth", "onChange", "step", "onBlur", "inside", "allowClear"];
   var hasDecimals$1 = function hasDecimals(f) {
     return _isString$1(f) && (f.includes(',') || f.includes('.'));
@@ -30478,7 +42903,7 @@
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
-      className: classNames$1('lf-control-input-number', (_classNames = {}, _defineProperty$3(_classNames, "lf-size-".concat(size), size != null), _defineProperty$3(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
+      className: classNames$1('lf-control-input-number', (_classNames = {}, _defineProperty$1$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
       style: makeWidthStyle$1(fullWidth, width)
     }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
@@ -30509,15 +42934,59 @@
     }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog$1('Loaded RSuite.InputNumber');
-
-  var index$q = /*#__PURE__*/Object.freeze({
+  var index = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumberRSuite5$1
   });
 
-  var css_248z$s = ".lf-control-date.lf-full-width .rs-picker-date {\n  width: 100%;\n}";
-  styleInject$1(css_248z$s);
+  var indexMO_HhniH = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    A: _isDate,
+    B: isValidDate,
+    C: _isObject,
+    D: _objectSpread2,
+    E: LOCALES,
+    F: FormContext,
+    G: Group,
+    H: isI18n,
+    I: I18N,
+    J: _isFunction,
+    K: isValidTime,
+    L: LetsForm,
+    M: index,
+    T: TwoColumns,
+    _: _objectWithoutProperties,
+    a: _isString,
+    get b () { return _extends; },
+    c: classNames,
+    d: _defineProperty$1,
+    e: i18nOptions,
+    f: filterOptions,
+    g: _slicedToArray,
+    h: _isNumber,
+    i: isUrl,
+    j: _toConsumableArray,
+    k: _isArray,
+    l: lfLog,
+    m: makeWidthStyle,
+    n: _omit,
+    o: collectNames,
+    p: passRest,
+    q: _isEmpty,
+    r: fillIds,
+    s: styleInject,
+    t: getDefaultExportFromCjs,
+    u: useFormContext,
+    v: toString_1,
+    w: _castSlice,
+    x: _hasUnicode,
+    y: _stringToArray,
+    z: ThreeColumns
+  });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var css_248z$r = ".lf-control-date.lf-full-width .rs-picker-date {\n  width: 100%;\n}";
+  styleInject$1(css_248z$r);
   var _excluded$J = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "fullWidth", "width", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"];
   var RSuiteGenericDate$1 = function RSuiteGenericDate(_ref) {
     var name = _ref.name,
@@ -30540,8 +43009,8 @@
       onBlur = _ref.onBlur,
       appearance = _ref.appearance,
       format = _ref.format;
-      _ref.lfLocale;
-      var rest = _objectWithoutProperties$1(_ref, _excluded$J);
+    _ref.lfLocale;
+    var rest = _objectWithoutProperties$1(_ref, _excluded$J);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: classNames$1('lf-control-date', {
@@ -30566,6 +43035,7 @@
     }, passRest$1(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   };
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   var _excluded$I = ["onChange", "value"];
   var SelectDate$1 = I18N$1(function (_ref) {
     var onChange = _ref.onChange,
@@ -30595,14 +43065,14 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog$1('Loaded RSuite5.SelectDate');
 
-  var index$p = /*#__PURE__*/Object.freeze({
+  var indexBbQHzWwh = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDate$1
   });
 
-  var css_248z$r = ".lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text {\n  align-items: inherit;\n  margin-top: -1px;\n  display: inline-block;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text svg {\n  margin-top: -2px;\n}";
-  styleInject$1(css_248z$r);
-
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var css_248z$q = ".lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text {\n  align-items: inherit;\n  margin-top: -1px;\n  display: inline-block;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text svg {\n  margin-top: -2px;\n}";
+  styleInject$1(css_248z$q);
   var _excluded$H = ["name", "label", "hint", "value", "tooltip", "indeterminate", "error", "onChange"];
   var CheckboxRSuite$1 = I18N$1(function (_ref) {
     var name = _ref.name,
@@ -30652,11 +43122,12 @@
   }, ['label', 'hint']);
   lfLog$1('Loaded RSuite5.Checkbox');
 
-  var index$o = /*#__PURE__*/Object.freeze({
+  var indexDiI5WbIr = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxRSuite$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   var _excluded$G = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "color", "onChange", "onBlur", "options"];
   var CheckboxGroupRSuite$1 = I18N$1(function (_ref) {
     var name = _ref.name,
@@ -30669,12 +43140,12 @@
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
       _ref$readOnly = _ref.readOnly,
       readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly;
-      _ref.required;
-      var error = _ref.error,
+    _ref.required;
+    var error = _ref.error,
       color = _ref.color,
       onChange = _ref.onChange;
-      _ref.onBlur;
-      var _ref$options = _ref.options,
+    _ref.onBlur;
+    var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       rest = _objectWithoutProperties$1(_ref, _excluded$G);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
@@ -30705,14 +43176,14 @@
   });
   lfLog$1('Loaded RSuite.CheckboxGroup');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var indexDYHLObU = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupRSuite$1
   });
 
-  var css_248z$q = ".lf-form-react-rsuite5 .lf-control-slider .rs-slider {\n  margin-bottom: 40px;\n}";
-  styleInject$1(css_248z$q);
-
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var css_248z$p = ".lf-form-react-rsuite5 .lf-control-slider .rs-slider {\n  margin-bottom: 40px;\n}";
+  styleInject$1(css_248z$p);
   var _excluded$F = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks"];
   var validateMarks$1 = function validateMarks(marks) {
     return _isArray$1(marks) && marks.every(function (mark) {
@@ -30778,20 +43249,21 @@
   });
   lfLog$1('Loaded RSuite5.Slider');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var indexCWsO3ceP = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderRsuite$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   var _excluded$E = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options", "appearance"];
   var RadioGroupRSuite$1 = I18N$1(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
       value = _ref.value;
-      _ref.placeholder;
-      _ref.plaintext;
-      var _ref$tooltip = _ref.tooltip,
+    _ref.placeholder;
+    _ref.plaintext;
+    var _ref$tooltip = _ref.tooltip,
       tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
       _ref$disabled = _ref.disabled,
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
@@ -30801,8 +43273,8 @@
       required = _ref$required === void 0 ? false : _ref$required,
       error = _ref.error,
       onChange = _ref.onChange;
-      _ref.onBlur;
-      var _ref$options = _ref.options,
+    _ref.onBlur;
+    var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       appearance = _ref.appearance,
       rest = _objectWithoutProperties$1(_ref, _excluded$E);
@@ -30835,14 +43307,14 @@
   });
   lfLog$1('Loaded RSuite.RadioGroup');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var indexBCCYqSS7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupRSuite$1
   });
 
-  var css_248z$p = ".lf-control-input-tag .rs-picker-input {\n  min-width: 120px;\n}";
-  styleInject$1(css_248z$p);
-
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var css_248z$o = ".lf-control-input-tag .rs-picker-input {\n  min-width: 120px;\n}";
+  styleInject$1(css_248z$o);
   var InputTag$1 = I18N$1(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -30882,11 +43354,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog$1('Loaded RSuite5.InputTag');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var indexCxdIgUrC = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputTag$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   var _excluded$D = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside", "fullWidth", "width"];
   var prepareMask$1 = function prepareMask(str) {
     if (typeof str !== 'string' || str.length === 0) {
@@ -30964,11 +43437,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog$1('Loaded RSuite5.InputMask');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var indexBNsUe2GT = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputMask$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   var _excluded$C = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows"];
   var ControlTextare$1 = function ControlTextare(props) {
     return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends$1({
@@ -31015,7 +43489,7 @@
       style: makeWidthStyle$1(fullWidth, width)
     }, passRest$1(rest))));
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      className: classNames$1('lf-control-textarea', (_classNames = {}, _defineProperty$3(_classNames, "lf-size-".concat(size), size != null), _defineProperty$3(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
+      className: classNames$1('lf-control-textarea', (_classNames = {}, _defineProperty$1$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
       "data-lf-field-name": name,
       style: makeWidthStyle$1(fullWidth, width)
     }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
@@ -31024,11 +43498,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog$1('Loaded RSuite5.Textarea');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var indexBxFhhynh = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   var RateRSuite$1 = I18N$1(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -31076,11 +43551,206 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog$1('Loaded RSuite5.Rate');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var indexBPkWkfu2 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RateRSuite$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+
+  /* eslint-disable no-loop-func */
+  var microdown$1 = function () {
+    var _this = this;
+    /*
+     * tag helper
+     */
+    var tag = function tag(_tag, text, values) {
+        return "<".concat(_tag + (values ? ' ' + Object.keys(values).map(function (k) {
+          return values[k] ? "".concat(k, "=\"").concat(encode(values[k]) || '', "\"") : '';
+        }).join(' ') : ''), ">").concat(text, "</").concat(_tag, ">");
+      },
+      /**
+       * outdent all rows by first as reference
+       */
+      outdent = function outdent(text) {
+        return text.replace(new RegExp('^' + (text.match(/^\s+/) || '')[0], 'gm'), '');
+      },
+      /**
+       * encode double quotes and HTML tags to entities
+       */
+      encode = function encode(text) {
+        return text ? text.replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
+      },
+      /**
+       * recursive list parser
+       */
+      listR = /(?:(^|\n)([+-]|\d+\.) +(.*(\n[ \t]+.*)*))+/g,
+      list = function list(text, temp) {
+        temp = text.match(/^[+-]/m) ? 'ul' : 'ol';
+        return text ? "<".concat(temp, ">").concat(text.replace(/(?:[+-]|\d+\.) +(.*)\n?(([ \t].*\n?)*)/g, function (match, a, b) {
+          return "<li>".concat(inlineBlock("".concat(a, "\n").concat(outdent(b || '').replace(listR, list))), "</li>");
+        }), "</").concat(temp, ">") : '';
+      },
+      /**
+       * function chain of replacements
+       */
+      chain = function chain(t, regex, replacement, parser) {
+        return function (match, a) {
+          match = match.replace(regex, replacement);
+          return tag(t, parser ? parser(match) : match);
+        };
+      },
+      block = function block(text, options) {
+        return p(text, [
+        // BLOCK STUFF ===============================
+
+        // comments
+        /<!--((.|\n)*?)-->/g, '<!--$1-->',
+        // pre format block
+        /^("""|```)(.*)\n((.*\n)*?)\1/gm, function (match, wrapper, c, text) {
+          return wrapper === '"""' ? tag('div', parse(text, options), {
+            class: c
+          }) : options && options.preCode ? tag('pre', tag('code', encode(text), {
+            class: c
+          })) : tag('pre', encode(text), {
+            class: c
+          });
+        },
+        // blockquotes
+        /(^>.*\n?)+/gm, chain('blockquote', /^> ?(.*)$/gm, '$1', inline),
+        // tables
+        /((^|\n)\|.+)+/g, chain('table', /^.*(\n\|---.*?)?$/gm, function (match, subline) {
+          return chain('tr', /\|(-?)([^|]*)\1(\|$)?/gm, function (match, type, text) {
+            return tag(type || subline ? 'th' : 'td', inlineBlock(text));
+          })(match.slice(0, match.length - (subline || '').length));
+        }),
+        // lists
+        listR, list,
+        //anchor
+        /#\[([^\]]+?)]/g, '<a name="$1"></a>',
+        // headlines
+        /^(#+) +(.*)(?:$)/gm, function (match, h, text) {
+          return tag('h' + h.length, inlineBlock(text));
+        },
+        // horizontal rule
+        /^(===+|---+)(?=\s*$)/gm, '<hr>'], parse, options);
+      },
+      inlineBlock = function inlineBlock(text, dontInline) {
+        var temp = [],
+          injectInlineBlock = function injectInlineBlock(text) {
+            return text.replace(/\\(\d+)/g, function (match, code) {
+              return injectInlineBlock(temp[Number.parseInt(code) - 1]);
+            });
+          };
+        text = (text || '').trim()
+        // inline code block
+        .replace(/`([^`]*)`/g, function (match, text) {
+          return '\\' + temp.push(tag('code', encode(text)));
+        })
+        // inline media (a / img / iframe)
+        .replace(/[!&]?\[([!&]?\[.*?\)|[^\]]*?)]\((.*?)( .*?)?\)|(\w+:\/\/[$\-.+!*'()/,\w]+)/g, function (match, text, href, title, link) {
+          if (link) {
+            return dontInline ? match : '\\' + temp.push(tag('a', link, {
+              target: '_blank'
+            }));
+          }
+          if (match[0] === '&') {
+            text = text.match(/^(.+),(.+),([^ \]]+)( ?.+?)?$/);
+            return '\\' + temp.push(tag('iframe', '', {
+              width: text[1],
+              height: text[2],
+              frameborder: text[3],
+              class: text[4],
+              src: href,
+              title: title
+            }));
+          }
+          return '\\' + temp.push(match[0] === '!' ? tag('img', '', {
+            src: href,
+            alt: text,
+            title: title
+          }) : tag('a', inlineBlock(text, 1), {
+            href: href,
+            title: title,
+            target: '_blank'
+          }));
+        });
+        text = injectInlineBlock(dontInline ? text : inline(text));
+        return text;
+      },
+      inline = function inline(text) {
+        return p(text, [
+        // bold, italic, bold & italic
+        /([*_]{1,3})((.|\n)+?)\1/g, function (match, k, text) {
+          k = k.length;
+          text = inline(text);
+          if (k > 1) text = tag('strong', text);
+          if (k % 2) text = tag('em', text);
+          return text;
+        },
+        // strike through
+        /(~{1,3})((.|\n)+?)\1/g,
+        // eslint-disable-next-line no-sparse-arrays
+        function (match, k, text) {
+          return tag([, 'u', 's', 'del'][k.length], inline(text));
+        },
+        // replace remaining newlines with a <br>
+        // eslint-disable-next-line no-regex-spaces
+        /  \n|\n  /g, '<br>'], inline);
+      },
+      p = function p(text, rules, parse, options) {
+        var i = 0,
+          f;
+        while (i < rules.length) {
+          // eslint-disable-next-line no-cond-assign
+          if (f = rules[i++].exec(text)) {
+            return parse(text.slice(0, f.index), options) + (typeof rules[i] === 'string' ? rules[i].replace(/\$(\d)/g, function (m, d) {
+              return f[d];
+            }) : rules[i].apply(_this, f)) + parse(text.slice(f.index + f[0].length), options);
+          }
+          i++;
+        }
+        return text;
+      },
+      parse = function parse(text, options) {
+        // clean input
+        text = text.replace(/[\r\v\b\f]/g, '').replace(/\\./g, function (match) {
+          return "&#".concat(match.charCodeAt(1), ";");
+        });
+        var temp = block(text, options);
+        if (temp === text && !temp.match(/^[\s\n]*$/i)) {
+          temp = inlineBlock(temp)
+          // handle paragraphs
+          .replace(/((.|\n)+?)(\n\n+|$)/g, function (match, text) {
+            return tag('p', text);
+          });
+        }
+        return temp.replace(/&#(\d+);/g, function (match, code) {
+          return String.fromCharCode(parseInt(code));
+        });
+      };
+    return {
+      parse: parse,
+      block: block,
+      inline: inline,
+      inlineBlock: inlineBlock
+    };
+  }();
+  var Placeholder$1 = function Placeholder(_ref) {
+    var text = _ref.text,
+      name = _ref.name;
+    if (!_isEmpty$1(text)) {
+      return /*#__PURE__*/React$1.createElement("div", {
+        className: "lf-control-placeholder",
+        "data-lf-field-name": name,
+        dangerouslySetInnerHTML: {
+          __html: microdown$1.parse(text)
+        }
+      });
+    } else {
+      return /*#__PURE__*/React$1.createElement("div", null);
+    }
+  };
   var PlaceholderRSuite5$1 = I18N$1(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -31101,11 +43771,12 @@
   }, ['label', 'hint', 'text']);
   lfLog$1('Loaded RSuite5.Placeholder');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var indexI1BZgIJH = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderRSuite5$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   var _excluded$B = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width"];
   var Multiselect$1 = I18N$1(function (_ref) {
     var name = _ref.name,
@@ -31170,14 +43841,14 @@
   });
   lfLog$1('Loaded RSuite5.Multiselect');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var indexCWmC9LqP = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect$1
   });
 
-  var css_248z$o = ".lf-control-multiselect-language .btn-add-all {\n  padding-left: 5px;\n  font-size: 12px;\n}";
-  styleInject$1(css_248z$o);
-
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var css_248z$n = ".lf-control-multiselect-language .btn-add-all {\n  padding-left: 5px;\n  font-size: 12px;\n}";
+  styleInject$1(css_248z$n);
   var _excluded$A = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "placement", "appearance"];
   var renderItem$1 = function renderItem(label, item) {
     return /*#__PURE__*/React$1.createElement("div", null, label, " ", /*#__PURE__*/React$1.createElement("b", null, item.value));
@@ -31257,14 +43928,36 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog$1('Loaded RSuite5.MultiselectLanguage');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var indexDlESrvwl = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MultiselectLanguage$1
   });
 
-  var css_248z$n = ".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n .rs-input-group-addon {\n  padding: 2px 4px !important;\n}\n.lf-input-text-i18n .rs-input-group-addon .status {\n  font-size: 10px;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear {\n  display: inline-block;\n  margin-left: 5px;\n  margin-top: -2px;\n  color: #666666;\n  text-decoration: none;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover {\n  color: #1675e0;\n}\n.lf-input-text-i18n .group-input-select {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-input-text-i18n .group-input-select .translation-control {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  width: unset !important;\n  z-index: 1;\n}\n.lf-input-text-i18n .group-input-select .translation-control .translated {\n  color: #999999;\n}\n.lf-input-text-i18n .group-input-select .select-control {\n  order: 1;\n  flex: 0 0;\n  align-self: center;\n  z-index: 2;\n  margin-left: 5px;\n}\n.lf-input-text-i18n .group-input-select.textarea .select-control {\n  align-self: self-start;\n}";
-  styleInject$1(css_248z$n);
-
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var IconCheck$1 = function IconCheck(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height;
+    return /*#__PURE__*/React.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 0 24 24",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React.createElement("g", {
+      id: "Interface / Check"
+    }, /*#__PURE__*/React.createElement("path", {
+      id: "Vector",
+      d: "M6 12L10.2426 16.2426L18.727 7.75732",
+      stroke: "#000000",
+      strokeWidth: "2",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })));
+  };
+  var css_248z$m = ".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n .rs-input-group-addon {\n  padding: 2px 4px !important;\n}\n.lf-input-text-i18n .rs-input-group-addon .status {\n  font-size: 10px;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear {\n  display: inline-block;\n  margin-left: 5px;\n  margin-top: -2px;\n  color: #666666;\n  text-decoration: none;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover {\n  color: #1675e0;\n}\n.lf-input-text-i18n .group-input-select {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-input-text-i18n .group-input-select .translation-control {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  width: unset !important;\n  z-index: 1;\n}\n.lf-input-text-i18n .group-input-select .translation-control .translated {\n  color: #999999;\n}\n.lf-input-text-i18n .group-input-select .select-control {\n  order: 1;\n  flex: 0 0;\n  align-self: center;\n  z-index: 2;\n  margin-left: 5px;\n}\n.lf-input-text-i18n .group-input-select.textarea .select-control {\n  align-self: self-start;\n}";
+  styleInject$1(css_248z$m);
   var _excluded$z = ["value"];
   var LANGUAGES_OPTIONS$2 = Object.keys(LOCALES$1['language-names']).map(function (lang) {
     return {
@@ -31377,11 +44070,11 @@
         if (currentLanguage) {
           // if a current language is selected, then the typed text ends up
           // in a i18n object
-          var _newCurrentValue = _objectSpread2$1(_objectSpread2$1({}, currentValue), {}, _defineProperty$3({}, currentLanguage, value));
+          var _newCurrentValue = _objectSpread2$1(_objectSpread2$1({}, currentValue), {}, _defineProperty$1$1({}, currentLanguage, value));
           setCurrentValue(_newCurrentValue);
           _onChange(_newCurrentValue);
           //setTranslation(value);
-        } else if (_isObject$1(currentValue)) ; else {
+        } else if (_isObject$1(currentValue)) ;else {
           // if language not selected and current value is not an object
           // just set the current value as string
           //setTranslation(value);
@@ -31464,7 +44157,7 @@
         if (_isString$1(currentValue) && !_isEmpty$1(currentValue)) {
           // if currentValue is a string and not empty,
           setCurrentLanguage(value);
-          var newValue = _defineProperty$3({}, value, currentValue);
+          var newValue = _defineProperty$1$1({}, value, currentValue);
           setCurrentValue(newValue);
           _onChange(newValue);
         } else if (_isObject$1(currentValue)) {
@@ -31481,21 +44174,124 @@
   };
   lfLog$1('Loaded RSuite.InputTextI18N');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var indexCbPak1NM = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputTextI18N$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var PlaceholderImage$1 = function PlaceholderImage(_ref) {
+    var url = _ref.url,
+      label = _ref.label,
+      name = _ref.name,
+      maxWidth = _ref.maxWidth,
+      maxHeight = _ref.maxHeight,
+      marginTop = _ref.marginTop,
+      marginBottom = _ref.marginBottom,
+      align = _ref.align;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-placeholder-image",
+      "data-lf-field-name": name,
+      style: {
+        textAlign: align ? align : undefined
+      }
+    }, url && /*#__PURE__*/React$1.createElement("img", {
+      src: url,
+      alt: label || name,
+      style: {
+        marginTop: marginTop ? marginTop : undefined,
+        marginBottom: marginBottom ? marginBottom : undefined,
+        maxWidth: maxWidth ? maxWidth : '100%',
+        maxHeight: maxHeight ? maxHeight : '100%',
+        textAlign: align ? align : undefined
+      }
+    }));
+  };
   lfLog$1('Loaded RSuite5.PlaceholderImage');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var indexC7KWVky4 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage$1
   });
 
-  var css_248z$m = ".lf-form-react-rsuite5 .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-lg .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-xs .lf-icon {\n  max-width: 12px;\n  max-height: 12px;\n}";
-  styleInject$1(css_248z$m);
-
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var _excluded$1$3 = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var GenericButton$1 = function GenericButton(_ref) {
+    var ButtonComponent = _ref.ButtonComponent,
+      OnStateProps = _ref.OnStateProps,
+      OffStateProps = _ref.OffStateProps,
+      _ref$LinkProps = _ref.LinkProps,
+      LinkProps = _ref$LinkProps === void 0 ? {} : _ref$LinkProps,
+      name = _ref.name,
+      labelOn = _ref.labelOn,
+      labelOff = _ref.labelOff,
+      labelLink = _ref.labelLink,
+      iconOn = _ref.iconOn,
+      iconOff = _ref.iconOff,
+      iconLink = _ref.iconLink,
+      size = _ref.size,
+      href = _ref.href,
+      appearance = _ref.appearance,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      value = _ref.value,
+      buttonType = _ref.buttonType,
+      hint = _ref.hint,
+      initialValue = _ref.initialValue,
+      className = _ref.className,
+      rest = _objectWithoutProperties$1(_ref, _excluded$1$3);
+    var _useState = React$1.useState(value || initialValue),
+      _useState2 = _slicedToArray$1(_useState, 2),
+      checked = _useState2[0],
+      setChecked = _useState2[1];
+    var handleClick = React$1.useCallback(function () {
+      var newValue = !checked;
+      setChecked(!checked);
+      onChange(newValue, name);
+    }, [onChange, checked, name]);
+    var inner;
+    if (buttonType === 'toggle') {
+      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends$1({
+        size: size,
+        onClick: handleClick,
+        onBlur: onBlur,
+        icon: checked ? iconOn : iconOff,
+        label: checked ? labelOn : labelOff,
+        hint: hint,
+        style: makeWidthStyle$1(fullWidth, width)
+      }, passRest$1(_omit$1(rest, 'label')), checked ? OnStateProps : OffStateProps));
+    } else if (buttonType === 'link') {
+      inner = /*#__PURE__*/React$1.createElement(ButtonComponent, _extends$1({
+        size: size,
+        onBlur: onBlur,
+        appearance: appearance,
+        hint: hint,
+        label: labelLink,
+        icon: iconLink,
+        href: href,
+        target: "_blank",
+        style: makeWidthStyle$1(fullWidth, width)
+      }, passRest$1(_omit$1(rest, 'label')), LinkProps));
+    }
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: classNames$1('lf-control-button', className, _defineProperty$1$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
+      "data-lf-field-name": name
+    }, inner);
+  };
+  var MakeButton$1 = function MakeButton(ButtonComponent, OnStateProps, OffStateProps, LinkProps) {
+    return function (props) {
+      return /*#__PURE__*/React$1.createElement(GenericButton$1, _extends$1({
+        ButtonComponent: ButtonComponent,
+        OnStateProps: _isFunction$1(OnStateProps) ? OnStateProps(props) : OnStateProps,
+        OffStateProps: _isFunction$1(OffStateProps) ? OffStateProps(props) : OffStateProps,
+        LinkProps: _isFunction$1(LinkProps) ? LinkProps(props) : LinkProps
+      }, props));
+    };
+  };
+  var css_248z$l = ".lf-form-react-rsuite5 .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-lg .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-xs .lf-icon {\n  max-width: 12px;\n  max-height: 12px;\n}";
+  styleInject$1(css_248z$l);
   var _excluded$y = ["label", "icon", "hint", "tooltip"];
   var RSuiteButton$1 = function RSuiteButton(_ref) {
     var label = _ref.label,
@@ -31536,23 +44332,38 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog$1('Loaded RSuite5.Button');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var indexDqOfWjc_ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var _excluded$x = ["name", "view"];
+  var ReactView$1 = function ReactView(_ref) {
+    var name = _ref.name,
+      view = _ref.view,
+      rest = _objectWithoutProperties$1(_ref, _excluded$x);
+    var View = view;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-react-view",
+      "data-lf-field-name": name
+    }, View && /*#__PURE__*/React$1.createElement(View, _extends$1({
+      name: name
+    }, rest)));
+  };
   lfLog$1('Loaded RSuite5.ReactView');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var indexCiWHRfp8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView$1
   });
 
-  var _excluded$x = ["onChange", "value"];
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var _excluded$w = ["onChange", "value"];
   var SelectDatetime$1 = I18N$1(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties$1(_ref, _excluded$x);
+      rest = _objectWithoutProperties$1(_ref, _excluded$w);
     // also accepts string dates
     var currentValue;
     if (_isDate$1(value)) {
@@ -31577,15 +44388,15 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog$1('Loaded RSuite5.DateTime');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index1WyMLPyu = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDatetime$1
   });
 
-  var css_248z$l = ".lf-form-react-rsuite5 .lf-control-tabs .tab-fields {\n  margin-top: 10px;\n}";
-  styleInject$1(css_248z$l);
-
-  var _excluded$w = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight"];
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var css_248z$k = ".lf-form-react-rsuite5 .lf-control-tabs .tab-fields {\n  margin-top: 10px;\n}";
+  styleInject$1(css_248z$k);
+  var _excluded$v = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight"];
   var Tabs$1 = I18N$1(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -31596,7 +44407,7 @@
       reversed = _ref.reversed,
       justified = _ref.justified,
       pullRight = _ref.pullRight,
-      rest = _objectWithoutProperties$1(_ref, _excluded$w);
+      rest = _objectWithoutProperties$1(_ref, _excluded$v);
     var defaultKey = value;
     if (!defaultKey && !_isEmpty$1(tabs)) {
       defaultKey = tabs[0].value;
@@ -31632,20 +44443,21 @@
   });
   lfLog$1('Loaded RSuite.Tabs');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var indexBTCZAwU = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Tabs$1
   });
 
-  var _excluded$v = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption"];
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var _excluded$u = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption"];
   var RadioTileRSuite$1 = I18N$1(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
       value = _ref.value;
-      _ref.placeholder;
-      _ref.plaintext;
-      var _ref$inline = _ref.inline,
+    _ref.placeholder;
+    _ref.plaintext;
+    var _ref$inline = _ref.inline,
       inline = _ref$inline === void 0 ? true : _ref$inline,
       _ref$iconWidth = _ref.iconWidth,
       iconWidth = _ref$iconWidth === void 0 ? 24 : _ref$iconWidth,
@@ -31657,13 +44469,13 @@
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
       _ref$required = _ref.required,
       required = _ref$required === void 0 ? false : _ref$required;
-      _ref.error;
-      var onChange = _ref.onChange;
-      _ref.onBlur;
-      var _ref$options = _ref.options,
+    _ref.error;
+    var onChange = _ref.onChange;
+    _ref.onBlur;
+    var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       initalOption = _ref.initalOption;
-      _objectWithoutProperties$1(_ref, _excluded$v);
+    _objectWithoutProperties$1(_ref, _excluded$u);
     var initialValue = value || initalOption;
     var _useState = React$1.useState(initialValue),
       _useState2 = _slicedToArray$1(_useState, 2),
@@ -31709,15 +44521,15 @@
   });
   lfLog$1('Loaded RSuite.RadioTile');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var indexQMv113h_ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioTileRSuite$1
   });
 
-  var css_248z$k = ".lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
-  styleInject$1(css_248z$k);
-
-  var _excluded$u = ["superDisabled", "superSize", "disabled", "hint"],
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var css_248z$j = ".lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
+  styleInject$1(css_248z$j);
+  var _excluded$t = ["superDisabled", "superSize", "disabled", "hint"],
     _excluded2$1 = ["name", "label", "hint", "tooltip", "required", "onChange", "multiple", "removable", "disabledFileItem", "fileListVisible", "draggable", "disabled", "accept", "defaultValue", "listType", "uploadButtonLabel", "uploadButtonAppearance", "uploadButtonSize", "draggableText", "draggableHeight", "value"];
   var makeDefaultValue$2 = function makeDefaultValue(defaultValue) {
     if (_isArray$1(defaultValue)) {
@@ -31732,9 +44544,9 @@
   var ShieldedButton$1 = function ShieldedButton(_ref) {
     var superDisabled = _ref.superDisabled,
       superSize = _ref.superSize;
-      _ref.disabled;
-      var hint = _ref.hint,
-      rest = _objectWithoutProperties$1(_ref, _excluded$u);
+    _ref.disabled;
+    var hint = _ref.hint,
+      rest = _objectWithoutProperties$1(_ref, _excluded$t);
     var inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends$1({}, rest, {
       size: superSize,
       disabled: superDisabled
@@ -31764,8 +44576,8 @@
       draggable = _ref2.draggable,
       disabled = _ref2.disabled,
       accept = _ref2.accept;
-      _ref2.defaultValue;
-      var listType = _ref2.listType,
+    _ref2.defaultValue;
+    var listType = _ref2.listType,
       uploadButtonLabel = _ref2.uploadButtonLabel,
       uploadButtonAppearance = _ref2.uploadButtonAppearance,
       uploadButtonSize = _ref2.uploadButtonSize,
@@ -31826,15 +44638,76 @@
   }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
   lfLog$1('Loaded RSuite.Upload');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var indexBPMEe6qI = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload$1
   });
 
-  var css_248z$j = ".lf-form-react-rsuite5 .lf-control-button-toggle-group .rs-form-control-wrapper {\n  display: block;\n}";
-  styleInject$1(css_248z$j);
-
-  var _excluded$t = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "options"];
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var getInitialValue$1 = function getInitialValue(value, multiple) {
+    return multiple ? (_isArray$1(value) ? value : []).reduce(function (acc, value) {
+      return _objectSpread2$1(_objectSpread2$1({}, acc), {}, _defineProperty$1$1({}, value, true));
+    }, {}) : _defineProperty$1$1({}, value, true);
+  };
+  var ButtonsToggleGroup$1 = function ButtonsToggleGroup(_ref2) {
+    var value = _ref2.value,
+      options = _ref2.options,
+      onChange = _ref2.onChange,
+      size = _ref2.size,
+      _ref2$multiple = _ref2.multiple,
+      multiple = _ref2$multiple === void 0 ? false : _ref2$multiple,
+      disabled = _ref2.disabled,
+      ButtonComponent = _ref2.ButtonComponent,
+      fullWidth = _ref2.fullWidth,
+      justifyContent = _ref2.justifyContent;
+    var _useState = React$1.useState(getInitialValue$1(value, multiple)),
+      _useState2 = _slicedToArray$1(_useState, 2),
+      values = _useState2[0],
+      setValues = _useState2[1];
+    console.log('options', options);
+    var handleClick = React$1.useCallback(function (value, name) {
+      var newValues = multiple ? _objectSpread2$1(_objectSpread2$1({}, values), {}, _defineProperty$1$1({}, name, value)) : _defineProperty$1$1({}, name, value);
+      setValues(newValues);
+      var newValue = options.reduce(function (acc, option) {
+        return newValues[option.value] ? [].concat(_toConsumableArray$1(acc), [option.value]) : acc;
+      }, []);
+      onChange(multiple ? newValue : newValue[0]);
+    }, [onChange, options, values, multiple]);
+    var style = {};
+    if (fullWidth) {
+      style.display = 'flex';
+    }
+    if (!_isEmpty$1(justifyContent)) {
+      style.display = 'flex';
+      style.justifyContent = justifyContent;
+    }
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-button-toggle-group-container",
+      style: style
+    }, (options !== null && options !== void 0 ? options : []).map(function (_ref4) {
+      var value = _ref4.value,
+        label = _ref4.label,
+        image = _ref4.image;
+      return /*#__PURE__*/React$1.createElement(ButtonComponent, {
+        key: value + values[value],
+        buttonType: "toggle",
+        labelOn: label,
+        name: value,
+        initialValue: values[value],
+        labelOff: label,
+        size: size,
+        disabled: disabled,
+        icon: image,
+        onChange: handleClick,
+        className: classNames$1({
+          'lf-full-width': fullWidth
+        })
+      });
+    }));
+  };
+  var css_248z$i = ".lf-form-react-rsuite5 .lf-control-button-toggle-group .rs-form-control-wrapper {\n  display: block;\n}";
+  styleInject$1(css_248z$i);
+  var _excluded$s = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "options"];
   var RSuiteButtonsToggleGroup$1 = I18N$1(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -31851,7 +44724,7 @@
       onChange = _ref.onChange,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties$1(_ref, _excluded$t);
+      rest = _objectWithoutProperties$1(_ref, _excluded$s);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
       "data-lf-field-name": name,
       className: "lf-control-button-toggle-group"
@@ -31873,14 +44746,14 @@
   });
   lfLog$1('Loaded RSuite5.ButtonsToggleGroup');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var indexAkTkexq1 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RSuiteButtonsToggleGroup$1
   });
 
-  var css_248z$i = ".lf-generic-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-generic-icon.lg {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-generic-icon .xs {\n  max-width: 12px;\n  max-height: 12px;\n}";
-  styleInject$1(css_248z$i);
-
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var css_248z$1$1 = ".lf-generic-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-generic-icon.lg {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-generic-icon .xs {\n  max-width: 12px;\n  max-height: 12px;\n}";
+  styleInject$1(css_248z$1$1);
   var GenericIcon$1 = function GenericIcon(_ref) {
     var icon = _ref.icon,
       size = _ref.size;
@@ -31891,11 +44764,9 @@
       src: icon
     });
   };
-
   var css_248z$h = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
   styleInject$1(css_248z$h);
-
-  var _excluded$s = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious"];
+  var _excluded$r = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious"];
   var i18nSteps$1 = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -31918,7 +44789,7 @@
       small = _ref.small,
       labelNext = _ref.labelNext,
       labelPrevious = _ref.labelPrevious,
-      rest = _objectWithoutProperties$1(_ref, _excluded$s);
+      rest = _objectWithoutProperties$1(_ref, _excluded$r);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
       return obj.value === value;
@@ -31977,12 +44848,13 @@
   });
   lfLog$1('Loaded Rsuite5.Steps');
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var indexDnMeBWZj = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Rsuite5Steps$1
   });
 
-  var _excluded$r = ["name", "componentUrl", "defaultExport", "exportedKey", "onChange"];
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+  var _excluded$1$2 = ["name", "componentUrl", "defaultExport", "exportedKey", "onChange"];
   var makeModuleName$1 = function makeModuleName(name) {
     return "".concat(name, "Module");
   };
@@ -32007,7 +44879,7 @@
       exportedKey = _ref3.exportedKey,
       _ref3$onChange = _ref3.onChange,
       onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
-      rest = _objectWithoutProperties$1(_ref3, _excluded$r);
+      rest = _objectWithoutProperties$1(_ref3, _excluded$1$2);
     var eventsContainerId = React$1.useId();
     var containerId = React$1.useId();
     var _useState = React$1.useState(),
@@ -32016,16 +44888,16 @@
       setError = _useState2[1];
     var _useState3 = React$1.useState(false),
       _useState4 = _slicedToArray$1(_useState3, 2);
-      _useState4[0];
-      var setIsLoading = _useState4[1];
+    _useState4[0];
+    var setIsLoading = _useState4[1];
     var _useState5 = React$1.useState(false),
       _useState6 = _slicedToArray$1(_useState5, 2);
-      _useState6[0];
-      var setIsValid = _useState6[1];
+    _useState6[0];
+    var setIsValid = _useState6[1];
     var _useState7 = React$1.useState(rest),
       _useState8 = _slicedToArray$1(_useState7, 2);
-      _useState8[0];
-      _useState8[1];
+    _useState8[0];
+    _useState8[1];
     console.log('Render EMS value:', rest);
     React$1.useEffect(function () {
       // skip if nothing
@@ -32094,7 +44966,6 @@
       id: containerId
     }), error && /*#__PURE__*/React$1.createElement("div", null, "some error"));
   };
-
   var _excluded$q = ["name", "componentUrl", "onChange", "value", "defaultExport", "exportedKey"];
   var RSuite5ModuleComponent$1 = function RSuite5ModuleComponent(_ref) {
     var name = _ref.name,
@@ -32114,11 +44985,12 @@
     }, passRest$1(rest)));
   };
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var indexCKFWmB_n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RSuite5ModuleComponent$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   var toInt$1 = function toInt(s) {
     return !isNaN(parseInt(s, 10)) ? parseInt(s, 10) : undefined;
   };
@@ -32135,7 +45007,6 @@
     }
     return undefined;
   };
-
   var _excluded$p = ["onChange", "value"];
   var SelectTime$1 = I18N$1(function (_ref) {
     var onChange = _ref.onChange,
@@ -32166,11 +45037,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog$1('Loaded RSuite5.SelectTime');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var indexBx1jTh86 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectTime$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   var Hidden$1 = function Hidden(_ref) {
     var name = _ref.name;
     return /*#__PURE__*/React$1.createElement("div", {
@@ -32182,14 +45054,14 @@
   };
   lfLog$1('Loaded RSuite5.Hidden');
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var indexMzXq6Gxk = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Hidden$1
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
   var css_248z$g = ".lf-form-react-rsuite5.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {\n  margin-bottom: unset;\n}\n.lf-form-react-rsuite5.rs-form-vertical .rs-form-group .rs-input-group {\n  width: unset;\n}\n.lf-form-react-rsuite5 .lf-buttons {\n  margin-top: 24px;\n}\n.lf-form-react-rsuite5 .rs-form-control-label > .rs-form-help-text.rs-form-help-text-tooltip {\n  margin-top: 0px;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lf-full-width .rs-form-control-wrapper {\n  width: 100%;\n}";
   styleInject$1(css_248z$g);
-
   var FormRsuite5$1 = function FormRsuite5(_ref) {
     var children = _ref.children,
       name = _ref.name,
@@ -32224,11 +45096,11 @@
       var _classNames;
       // TODO check this
       return /*#__PURE__*/React$1.createElement("div", {
-        className: classNames$1('rs-form', (_classNames = {}, _defineProperty$3(_classNames, "rs-form-".concat(layout), true), _defineProperty$3(_classNames, 'rs-form-fluid', fluid), _classNames))
+        className: classNames$1('rs-form', (_classNames = {}, _defineProperty$1$1(_classNames, "rs-form-".concat(layout), true), _defineProperty$1$1(_classNames, 'rs-form-fluid', fluid), _classNames))
       }, children);
     }
     return /*#__PURE__*/React$1.createElement(rsuite.Form, {
-      className: classNames$1('lf-form lf-form-react-rsuite5', _defineProperty$3({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
+      className: classNames$1('lf-form lf-form-react-rsuite5', _defineProperty$1$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name,
       layout: layout,
       fluid: fluid,
@@ -32247,10 +45119,12 @@
   };
   lfLog$1('Loaded RSuite5.Form');
 
-  var index = /*#__PURE__*/Object.freeze({
+  var indexDioY94XG = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormRsuite5$1
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var Asterisk = function Asterisk(_ref) {
@@ -32288,6 +45162,8 @@
     });
   };
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var POPOVER_STYLE = {
     padding: '6px',
@@ -32315,6 +45191,8 @@
       }, /*#__PURE__*/React$1.createElement("div", null, errorMessage))
     }, children);
   };
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var TextOrIcon = function TextOrIcon(str) {
@@ -32396,10 +45274,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.InputText');
 
-  var indexBhD8zewT = /*#__PURE__*/Object.freeze({
+  var indexBhD8zewTEAPaqxjG = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var ToggleInput = I18N(function (_ref) {
@@ -32438,10 +45318,12 @@
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded RSuite5.ToggleInput');
 
-  var indexDvMy4JDx = /*#__PURE__*/Object.freeze({
+  var indexDvMy4JDxCJtRWoC = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ToggleInput
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var css_248z$e = ".lf-control-select-option-rsuite5 img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  margin-right: 6px;\n  margin-top: -4px;\n  display: inline-block;\n}";
@@ -32521,18 +45403,22 @@
   });
   lfLog('Loaded RSuite5.Select');
 
-  var indexCXgy06wj = /*#__PURE__*/Object.freeze({
+  var indexCXgy06wjDCS0mTf8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   lfLog('Loaded RSuite5.Group');
 
-  var indexB2_7AL_ = /*#__PURE__*/Object.freeze({
+  var indexB2_7AL_Cgw6Fze9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var PlusCircle = function PlusCircle(_ref) {
@@ -32929,26 +45815,32 @@
   }, ['label', 'hint']);
   lfLog('Loaded RSuite5.ListArray');
 
-  var indexC8oMSLI_ = /*#__PURE__*/Object.freeze({
+  var indexC8oMSLI_Dsqcyx93 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayRSuite5
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   lfLog('Loaded RSuite5.TwoColumns');
 
-  var indexDUaQaDh = /*#__PURE__*/Object.freeze({
+  var indexDUaQaDhClT_LjHs = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   lfLog('Loaded RSuite5.ThreeColumns');
 
-  var indexDGyXswhB = /*#__PURE__*/Object.freeze({
+  var indexDGyXswhBBqtEEDsx = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var CrossCirle = function CrossCirle(_ref) {
@@ -33074,10 +45966,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.InputNumber');
 
-  var indexDUuoaz_ = /*#__PURE__*/Object.freeze({
+  var indexDUuoaz_DCVj7eBo = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumberRSuite5
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var css_248z$c = ".lf-control-date.lf-full-width .rs-picker-date {\n  width: 100%;\n}";
@@ -33130,6 +46024,8 @@
     }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   };
 
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
+
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var _excluded$k = ["onChange", "value"];
   var SelectDate = I18N(function (_ref) {
@@ -33160,10 +46056,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.SelectDate');
 
-  var indexCiI9PuzA = /*#__PURE__*/Object.freeze({
+  var indexCiI9PuzAQNFzwmVy = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDate
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var css_248z$b = ".lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text {\n  align-items: inherit;\n  margin-top: -1px;\n  display: inline-block;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text svg {\n  margin-top: -2px;\n}";
@@ -33217,10 +46115,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded RSuite5.Checkbox');
 
-  var index9wT45c1i = /*#__PURE__*/Object.freeze({
+  var index9wT45c1iBiKj1NO3 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxRSuite
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var _excluded$i = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "color", "onChange", "onBlur", "options"];
@@ -33271,10 +46171,12 @@
   });
   lfLog('Loaded RSuite.CheckboxGroup');
 
-  var indexDR_sZ3U = /*#__PURE__*/Object.freeze({
+  var indexDR_sZ3UDvIGO1ux = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupRSuite
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var css_248z$a = ".lf-form-react-rsuite5 .lf-control-slider .rs-slider {\n  margin-bottom: 40px;\n}";
@@ -33344,10 +46246,12 @@
   });
   lfLog('Loaded RSuite5.Slider');
 
-  var indexDpSZs66L = /*#__PURE__*/Object.freeze({
+  var indexDpSZs66LCHe78L08 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderRsuite
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var _excluded$g = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options", "appearance"];
@@ -33402,10 +46306,12 @@
   });
   lfLog('Loaded RSuite.RadioGroup');
 
-  var indexDsVAyL8h = /*#__PURE__*/Object.freeze({
+  var indexDsVAyL8hBWUnipG = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupRSuite
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var css_248z$9 = ".lf-control-input-tag .rs-picker-input {\n  min-width: 120px;\n}";
@@ -33449,10 +46355,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputTag');
 
-  var indexWFlu2xN = /*#__PURE__*/Object.freeze({
+  var indexWFlu2xNDKCeZNcK = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputTag
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var _excluded$f = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside", "fullWidth", "width"];
@@ -33532,10 +46440,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputMask');
 
-  var indexDZolNQu = /*#__PURE__*/Object.freeze({
+  var indexDZolNQuB8TJHxch = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputMask
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var _excluded$e = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows"];
@@ -33593,10 +46503,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Textarea');
 
-  var indexC26GBjjU = /*#__PURE__*/Object.freeze({
+  var indexC26GBjjU4yFBLm8w = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var RateRSuite = I18N(function (_ref) {
@@ -33646,10 +46558,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Rate');
 
-  var indexDo7LDhw8 = /*#__PURE__*/Object.freeze({
+  var indexDo7LDhw8BTlD0VSw = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RateRSuite
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
 
@@ -33866,10 +46780,12 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded RSuite5.Placeholder');
 
-  var indexB7QtJAq = /*#__PURE__*/Object.freeze({
+  var indexB7QtJAqDnqSR7BU = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderRSuite5
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var _excluded$d = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width"];
@@ -33936,10 +46852,12 @@
   });
   lfLog('Loaded RSuite5.Multiselect');
 
-  var indexQ2x3bK6S = /*#__PURE__*/Object.freeze({
+  var indexQ2x3bK6SCu20B9ZF = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var css_248z$8 = ".lf-control-multiselect-language .btn-add-all {\n  padding-left: 5px;\n  font-size: 12px;\n}";
@@ -34023,10 +46941,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.MultiselectLanguage');
 
-  var indexBr3EO37u = /*#__PURE__*/Object.freeze({
+  var indexBr3EO37uC8hnryu_ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MultiselectLanguage
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var IconCheck = function IconCheck(_ref) {
@@ -34269,10 +47189,12 @@
   };
   lfLog('Loaded RSuite.InputTextI18N');
 
-  var indexB6WwCAgc = /*#__PURE__*/Object.freeze({
+  var indexB6WwCAgcSNItGpnZ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputTextI18N
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var PlaceholderImage = function PlaceholderImage(_ref) {
@@ -34304,10 +47226,12 @@
   };
   lfLog('Loaded RSuite5.PlaceholderImage');
 
-  var indexB9XaxKJc = /*#__PURE__*/Object.freeze({
+  var indexB9XaxKJcBP0KoYuI = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var _excluded$1$1 = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
@@ -34427,10 +47351,12 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded RSuite5.Button');
 
-  var indexCl7vYw_A = /*#__PURE__*/Object.freeze({
+  var indexCl7vYw_ABFcFSMgJ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var _excluded$9 = ["name", "view"];
@@ -34448,10 +47374,12 @@
   };
   lfLog('Loaded RSuite5.ReactView');
 
-  var indexCkpW35Se = /*#__PURE__*/Object.freeze({
+  var indexCkpW35SeBcsqAizi = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var _excluded$8 = ["onChange", "value"];
@@ -34483,10 +47411,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.DateTime');
 
-  var indexC0UfJaE = /*#__PURE__*/Object.freeze({
+  var indexC0UfJaEBLmTT_Lx = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDatetime
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var css_248z$5 = ".lf-form-react-rsuite5 .lf-control-tabs .tab-fields {\n  margin-top: 10px;\n}";
@@ -34538,10 +47468,12 @@
   });
   lfLog('Loaded RSuite.Tabs');
 
-  var indexCrgRncR8 = /*#__PURE__*/Object.freeze({
+  var indexCrgRncR8Dbh5xbcw = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Tabs
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var _excluded$6 = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption"];
@@ -34616,10 +47548,12 @@
   });
   lfLog('Loaded RSuite.RadioTile');
 
-  var indexCkIe0W_R = /*#__PURE__*/Object.freeze({
+  var indexCkIe0W_RCW8DQ9K = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioTileRSuite
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var css_248z$4 = ".lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
@@ -34733,10 +47667,12 @@
   }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
   lfLog('Loaded RSuite.Upload');
 
-  var indexDmSbf8r_ = /*#__PURE__*/Object.freeze({
+  var indexDmSbf8r_BCD6XpU = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var getInitialValue = function getInitialValue(value, multiple) {
@@ -34841,10 +47777,12 @@
   });
   lfLog('Loaded RSuite5.ButtonsToggleGroup');
 
-  var indexBPALsf62 = /*#__PURE__*/Object.freeze({
+  var indexBPALsf62CPO_9tYi = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RSuiteButtonsToggleGroup
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var css_248z$1 = ".lf-generic-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-generic-icon.lg {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-generic-icon .xs {\n  max-width: 12px;\n  max-height: 12px;\n}";
@@ -34943,10 +47881,12 @@
   });
   lfLog('Loaded Rsuite5.Steps');
 
-  var indexBXgGKaaF = /*#__PURE__*/Object.freeze({
+  var indexBXgGKaaFBgrOxD3y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Rsuite5Steps
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var _excluded$1 = ["name", "componentUrl", "defaultExport", "exportedKey", "onChange"];
@@ -35080,10 +48020,12 @@
     }, passRest(rest)));
   };
 
-  var indexDVcvdwLI = /*#__PURE__*/Object.freeze({
+  var indexDVcvdwLIC1gugh8X = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RSuite5ModuleComponent
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var toInt = function toInt(s) {
@@ -35132,10 +48074,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.SelectTime');
 
-  var indexG5pFoIt = /*#__PURE__*/Object.freeze({
+  var indexG5pFoItBmnpJiLO = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectTime
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var Hidden = function Hidden(_ref) {
@@ -35149,10 +48093,12 @@
   };
   lfLog('Loaded RSuite5.Hidden');
 
-  var indexRx7wfO6x = /*#__PURE__*/Object.freeze({
+  var indexRx7wfO6xBZomaxbz = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Hidden
   });
+
+  /* LetsForm react-rsuite5 v0.9.3 - ESM */
 
   /* LetsForm react-rsuite5 v0.9.1 - ESM */
   var css_248z = ".lf-form-react-rsuite5.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {\n  margin-bottom: unset;\n}\n.lf-form-react-rsuite5.rs-form-vertical .rs-form-group .rs-input-group {\n  width: unset;\n}\n.lf-form-react-rsuite5 .lf-buttons {\n  margin-top: 24px;\n}\n.lf-form-react-rsuite5 .rs-form-control-label > .rs-form-help-text.rs-form-help-text-tooltip {\n  margin-top: 0px;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lf-full-width .rs-form-control-wrapper {\n  width: 100%;\n}";
@@ -35214,53 +48160,63 @@
   };
   lfLog('Loaded RSuite5.Form');
 
-  var indexLahFDBZm = /*#__PURE__*/Object.freeze({
+  var indexLahFDBZmDRS0LBDC = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormRsuite5
   });
 
-  exports.Connectors = Connectors$1;
+  exports.Connectors = Connectors$2;
   exports.FIELDS_KEY = FIELDS_KEY;
-  exports.FRAMEWORKS = FRAMEWORKS$1;
+  exports.FRAMEWORKS = FRAMEWORKS$2;
   exports.FRAMEWORKS_LABELS = FRAMEWORKS_LABELS;
-  exports.Fields = Fields$1;
-  exports.Forms = Forms$1;
+  exports.Fields = Fields$2;
+  exports.Forms = Forms$2;
+  exports.LfArray = LfArray$2;
+  exports.LfColumn = LfColumn$2;
+  exports.LfColumns = LfColumns$2;
+  exports.LfField = LfField$2;
+  exports.LfGroup = LfGroup$2;
+  exports.LfStep = LfStep$2;
+  exports.LfSteps = LfSteps$2;
+  exports.LfTab = LfTab$2;
+  exports.LfTabs = LfTabs$2;
   exports.addField = addField;
   exports.applyFormRules = applyFormRules;
-  exports.applyTransformers = applyTransformers$1;
+  exports.applyTransformers = applyTransformers$2;
   exports.cleanUp = cleanUp;
   exports.collectIds = collectIds;
-  exports.collectNames = collectNames$1;
+  exports.collectNames = collectNames$2;
   exports.createEmptyField = createEmptyField;
-  exports.default = LetsForm$1;
+  exports.default = LetsForm$2;
   exports.deleteField = deleteField;
-  exports.fillIds = fillIds$1;
+  exports.fillIds = fillIds$2;
   exports.filterFields = filterFields;
-  exports.filterOptions = filterOptions$1;
-  exports.findField = findField$1;
+  exports.filterOptions = filterOptions$2;
+  exports.findField = findField$2;
   exports.formHasComponents = formHasComponents;
   exports.formHelper = formHelper;
   exports.getFieldById = getFieldById;
   exports.getLocales = getLocales;
-  exports.i18n = i18n$1;
-  exports.i18nOptions = i18nOptions$1;
+  exports.i18n = i18n$2;
+  exports.i18nOptions = i18nOptions$2;
   exports.isChildrenOf = isChildrenOf;
   exports.isEmptyForm = isEmptyForm;
-  exports.isI18n = isI18n$1;
-  exports.isUrl = isUrl$1;
+  exports.isI18n = isI18n$2;
+  exports.isUrl = isUrl$2;
   exports.isValidArrayOfFields = isValidArrayOfFields;
   exports.isValidConnector = isValidConnector;
-  exports.isValidDate = isValidDate$1;
+  exports.isValidDate = isValidDate$2;
   exports.isValidDayjsFormat = isValidDayjsFormat;
   exports.isValidField = isValidField;
   exports.isValidForm = isValidForm;
-  exports.isValidTime = isValidTime$1;
-  exports.makeWidthStyle = makeWidthStyle$1;
-  exports.mapFields = mapFields$1;
+  exports.isValidTime = isValidTime$2;
+  exports.makeWidthStyle = makeWidthStyle$2;
+  exports.mapFields = mapFields$2;
   exports.omitFields = omitFields;
-  exports.passRest = passRest$1;
-  exports.reduceFields = reduceFields$1;
+  exports.passRest = passRest$2;
+  exports.reduceFields = reduceFields$2;
   exports.replaceField = replaceField;
+  exports.traverseChildren = traverseChildren$2;
   exports.validateJSONForm = validateJSONForm;
 
   Object.defineProperty(exports, '__esModule', { value: true });
