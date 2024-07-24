@@ -1,5 +1,14 @@
 # LetsForm Changelog
 
+## v0.9.5
+- added `context` property
+- added `--lf-buttons-margin` css variable
+- expose `validate` method
+- fix: expose DSL tags in all builds
+- fix: full width in RSuite input-text
+- fix: re-render form if custom prop changes
+- fix: hide submit button
+
 ## v0.9.4
 - fixed DSL
 
