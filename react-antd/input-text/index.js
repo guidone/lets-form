@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { I18N } from '../../components';
 import { passRest, makeWidthStyle } from '../../helpers';
-import { TextOrIcon } from '../../common';
+import { TextOrIcon } from '../../common/text-or-icon';
 import { lfLog } from '../../helpers/lf-log';
 
 import './input-text.scss';
