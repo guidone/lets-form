@@ -4,6 +4,7 @@ import { Form, InputNumber } from 'antd';
 import { I18N } from '../../components/i18n';
 import { passRest } from '../../helpers/pass-rest';
 import { makeWidthStyle } from '../../helpers/make-width-style';
+import { TextOrIcon } from '../../common/text-or-icon';
 import { lfLog } from '../../helpers/lf-log';
 
 const InputNumberAntd = I18N(
@@ -22,6 +23,8 @@ const InputNumberAntd = I18N(
     width,
     fullWidth,
     showControl,
+    prefix,
+    postfix,
     ...rest
   }) => {
     return (
@@ -42,6 +45,8 @@ const InputNumberAntd = I18N(
           defaultValue={value}
           controls={showControl}
           style={makeWidthStyle(fullWidth, width)}
+          prefix={TextOrIcon(prefix)}
+          suffix={TextOrIcon(postfix)}
           {...passRest(rest)}
         />
       </Form.Item>
