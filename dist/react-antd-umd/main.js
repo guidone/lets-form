@@ -1,4 +1,4 @@
-/* LetsForm react-antd v0.9.4 - UMD */
+/* LetsForm react-antd v0.9.5 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('antd'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'antd', 'react-hook-form'], factory) :
@@ -21133,7 +21133,7 @@
     default: PlaceholderImage
   });
 
-  var _excluded$b = ["name", "label", "hint", "value", "showCount", "tooltip", "required", "maxLength", "error", "onChange", "onBlur", "width", "fullWidth", "showControl"];
+  var _excluded$b = ["name", "label", "hint", "value", "showCount", "tooltip", "required", "maxLength", "error", "onChange", "onBlur", "width", "fullWidth", "showControl", "prefix", "postfix"];
   var InputNumberAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -21151,6 +21151,8 @@
       width = _ref.width,
       fullWidth = _ref.fullWidth,
       showControl = _ref.showControl,
+      prefix = _ref.prefix,
+      postfix = _ref.postfix,
       rest = _objectWithoutProperties(_ref, _excluded$b);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
       label: label,
@@ -21167,7 +21169,9 @@
       onBlur: onBlur,
       defaultValue: value,
       controls: showControl,
-      style: makeWidthStyle(fullWidth, width)
+      style: makeWidthStyle(fullWidth, width),
+      prefix: TextOrIcon(prefix),
+      suffix: TextOrIcon(postfix)
     }, passRest(rest))));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputNumber');
