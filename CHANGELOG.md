@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.9.6
+- [fix](https://github.com/guidone/lets-form/issues/30): AntD postfix for input-number
+
 ## v0.9.5
 - added `context` property
 - added `--lf-buttons-margin` css variable
