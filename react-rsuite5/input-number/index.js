@@ -10,9 +10,9 @@ import { CrossCirle } from '../../assets/icons/cross-circle';
 import { makeWidthStyle } from '../../helpers/make-width-style';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
+import { passRest } from '../../helpers';
 
 import './index.scss';
-import { passRest } from 'lets-form/react-rsuite5';
 
 const hasDecimals = f => _.isString(f) && (f.includes(',') || f.includes('.'));
 

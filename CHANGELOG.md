@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.9.7
+- fix: RSuite input-number imports
+
 ## v0.9.6
 - [fix](https://github.com/guidone/lets-form/issues/30): AntD postfix for input-number
 
