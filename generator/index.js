@@ -587,7 +587,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           const transformersToRun = Object.keys(newTransformers.onChange || {})
             .filter(fieldName => !_.isEmpty(newTransformers.onChange[fieldName]))
             .reduce(
-              (acc, transformer) => [...acc, transformer],
+              (acc, fieldName) => [...acc, newTransformers.onChange[fieldName]],
               !_.isEmpty(newTransformers.onRender) ? [newTransformers.onRender] : []
             );
 
@@ -625,7 +625,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         f();
       },
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      [form, framework, children] // don't put defaultValues here
+      [form, framework, children, formContext] // don't put defaultValues here
     );
 
     const onHandleSubmit = useCallback(
@@ -726,7 +726,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
         // execute main transformer
         let newFields = formFields;
-
         for(let idx = 0; idx < transformersToRun.length; idx++) {
           // execute the async generator transformer
           for await(const transformResult of applyTransformers(
