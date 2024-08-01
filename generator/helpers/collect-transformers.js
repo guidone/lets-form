@@ -11,7 +11,7 @@ export const collectTransformers = (fields, formScript, onJavascriptError) => {
   const fieldList = reduceFields(
     fields,
     (field, accumulator) => {
-      if (field.component !== 'group' && field.component !== 'two-columns' && field.component !== 'three-columns') {
+      if (field.component !== 'group' && field.component !== 'two-columns' && field.component !== 'three-columns' && field.component !== 'columns') {
         return [...accumulator, field.name];
       }
       return accumulator;
