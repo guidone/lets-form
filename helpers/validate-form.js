@@ -8,7 +8,7 @@ import { filterFields } from './filter-fields';
 
 const CONNECTOR_NAMES = Object.keys(Connectors);
 const AVAILABLE_COMPONENTS = Object.keys(Manifests);
-const LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns', 'steps', 'tabs'];
+const LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns', 'steps', 'tabs', 'columns'];
 
 const validateJSONForm = json => {
   if (!_.isObject(json)) {
