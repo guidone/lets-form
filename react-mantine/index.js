@@ -37,6 +37,9 @@ const Fields = {
   'three-columns': {
     'react-mantine': lazy(() => import('./three-columns'))
   },
+  'columns': {
+    'react-mantine': lazy(() => import('./columns'))
+  },
   'group': {
     'react-mantine': lazy(() => import('./group'))
   },
