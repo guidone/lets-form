@@ -1,4 +1,5 @@
 import { mapFields } from '../../helpers';
+import { lfWarn } from '../../helpers/lf-log';
 
 const upgradeFields = (fields, version) => {
   if (version === 1) {
@@ -6,6 +7,7 @@ const upgradeFields = (fields, version) => {
       fields,
       field => {
         if (field.component === 'two-columns') {
+          lfWarn(`Component 'two-columns' is deprecated, use 'columns' instead`);
           const [_match, oneSize, twoSize] = (field.layout || '').match(/layout-([0-9])-([0-9])/) ?? [];
 
           return {
@@ -29,6 +31,7 @@ const upgradeFields = (fields, version) => {
             }
           };
         } else if (field.component === 'three-columns') {
+          lfWarn(`Component 'three-columns' is deprecated, use 'columns' instead`);
           const [_match, oneSize, twoSize, threeSize] = (field.layout || '').match(/layout-([0-9])-([0-9])-([0-9])/) ?? [];
 
           return {
