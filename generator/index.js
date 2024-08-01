@@ -1,5 +1,5 @@
 /* eslint-disable no-new-func */
-import React, { useCallback, useState, useEffect, Suspense, forwardRef, useImperativeHandle } from 'react';
+import React, { useCallback, useState, useEffect, Suspense, forwardRef, useImperativeHandle, useRef } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -22,12 +22,21 @@ import { errorToString } from './helpers/error-to-string';
 import { mergeComponents } from './helpers/merge-components';
 import { MissingComponent } from './helpers/missing-component';
 import { traverseChildren } from './helpers/dsl';
+import { upgradeFields } from './helpers/upgrade-fields';
 
 import './index.scss';
 
 const DEBUG_RENDER = true;
-const DEFAULT_FORM = { version: 1, fields: [] };
+const DEFAULT_FORM = { version: 2, fields: [] };
 
+
+const mergeReRenders = (currentReRenders, newReRenders) => {
+  if (newReRenders) {
+    Object.keys(newReRenders)
+      .forEach(key => currentReRenders[key] = currentReRenders[key] ?
+        currentReRenders[key] + newReRenders[key] : newReRenders[key]);
+  };
+};
 
 const GenerateGenerator = ({ Forms, Fields }) => {
 
@@ -38,6 +47,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     onChange,
     onEnter,
     getValues,
+    setValue,
+    register,
     Wrapper,
     GroupWrapper,
     BottomView,
@@ -52,8 +63,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     locale,
     onJavascriptError,
     Components,
-    prependView
+    prependView,
+    rerenders
   }) => {
+
+
     const renderedFields = (fields || [])
       .filter(field => Wrapper || field.component !== 'hidden') // skip hidden type field (not in design mode)
       .filter(field => Wrapper || field.hidden !== true) // skip fields with "hidden" attribute (not in design mode)
@@ -68,9 +82,31 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         }
         // remove mandatory fields and platform specific fields
         const additionalFields = _.omit(field, [
-          'id', 'name', 'label', 'hint', 'disabled', 'readOnly', 'plaintext', 'size', 'placeholder', 'component',
+          'id', 'name', 'label', /*'hint',*/ 'disabled', 'readOnly', 'plaintext', /*'size', 'placeholder',*/ 'component',
           ...FRAMEWORKS
         ]);
+
+        const renderFieldsParams = {
+          Wrapper,
+          GroupWrapper,
+          PlaceholderWrapper,
+          BottomView,
+          onChange,
+          onEnter,
+          control,
+          framework,
+          getValues,
+          setValue,
+          readOnly,
+          plaintext,
+          errors,
+          showErrors,
+          level: level + 1,
+          locale,
+          onJavascriptError,
+          Components,
+          rerenders
+        };
 
         // special case of group
         if (field.component === 'group') {
@@ -88,25 +124,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             >
               <>
                 {renderFields({
-                  Wrapper,
-                  GroupWrapper,
-                  PlaceholderWrapper,
-                  BottomView,
-                  onChange,
-                  onEnter,
+                  ...renderFieldsParams,
                   fields: field.fields,
-                  control,
-                  framework,
-                  getValues,
                   disabled: field.disabled ? true : disabled, // pass disabled status to inner components
-                  readOnly,
-                  plaintext,
-                  errors,
-                  showErrors,
-                  level: level + 1,
-                  locale,
-                  onJavascriptError,
-                  Components,
                   prependView: PlaceholderWrapper && (
                     <PlaceholderWrapper
                       key={`wrapper_top_field`}
@@ -127,6 +147,57 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               level={level}
               index={index}
               className="group"
+            >{component}</GroupWrapper> : component;
+        } else if (field.component === 'columns') {
+          const component = (
+            <Component
+              key={field.name}
+              lfComponent={field.component}
+              lfFramework={framework}
+              lfLocale={locale}
+              name={field.name}
+              label={field.label}
+              hint={field.hint}
+              disabled={field.disabled}
+              {...additionalFields}
+            >
+              {column => {
+                return (
+                <>
+                  {renderFields({
+                    ...renderFieldsParams,
+                    fields: field.fields && _.isArray(field.fields[column]) ? field.fields[column] : [],
+                    disabled: field.disabled ? true : disabled, // pass disabled status to inner components
+                    prependView: PlaceholderWrapper && (
+                      <PlaceholderWrapper
+                        key={`wrapper_top_field`}
+                        parentField={field}
+                        parentFieldTarget="fields"
+                        parentFieldSubTarget={column}
+                        nextField={field.fields && field.fields.length ? field.fields[0] : null}
+                      />
+                    )
+                  })}
+                  {BottomView && (
+                    <BottomView
+                      context="columns"
+                      key={`bottom_view_${field.name}`}
+                      field={field}
+                      target="fields"
+                      subtarget={column}
+                    />
+                  )}
+                </>
+              );}}
+            </Component>
+          );
+          return GroupWrapper ?
+            <GroupWrapper
+              key={`wrapper_${field.name}`}
+              field={field}
+              level={level}
+              index={index}
+              className="columns"
             >{component}</GroupWrapper> : component;
         } else if (field.component === 'tabs') {
           return (
@@ -159,25 +230,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       return (
                       <>
                         {renderFields({
-                          Wrapper,
-                          GroupWrapper,
-                          PlaceholderWrapper,
-                          BottomView,
-                          onChange,
-                          onEnter,
+                          ...renderFieldsParams,
                           fields: field.fields && _.isArray(field.fields[tab]) ? field.fields[tab] : [],
-                          control,
-                          framework,
-                          getValues,
                           disabled: field.disabled ? true : disabled, // pass disabled status to inner components
-                          readOnly,
-                          plaintext,
-                          errors,
-                          showErrors,
-                          level: level + 1,
-                          locale,
-                          onJavascriptError,
-                          Components,
                           prependView: PlaceholderWrapper && (
                             <PlaceholderWrapper
                               key={`wrapper_top_field`}
@@ -212,7 +267,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               }}
             />
           );
-
         } else if (field.component === 'steps') {
           return (
             <Controller
@@ -244,25 +298,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                       return (
                       <>
                         {renderFields({
-                          Wrapper,
-                          GroupWrapper,
-                          PlaceholderWrapper,
-                          BottomView,
-                          onChange,
-                          onEnter,
+                          ...renderFieldsParams,
                           fields: field.fields && _.isArray(field.fields[step]) ? field.fields[step] : [],
-                          control,
-                          framework,
-                          getValues,
                           disabled: field.disabled ? true : disabled, // pass disabled status to inner components
-                          readOnly,
-                          plaintext,
-                          errors,
-                          showErrors,
-                          level: level + 1,
-                          locale,
-                          onJavascriptError,
-                          Components,
                           prependView: PlaceholderWrapper && (
                             <PlaceholderWrapper
                               key={`wrapper_top_field`}
@@ -313,25 +351,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             >
               <>
                 {renderFields({
-                  Wrapper,
-                  GroupWrapper,
-                  PlaceholderWrapper,
-                  BottomView,
-                  onChange,
-                  onEnter,
+                  ...renderFieldsParams,
                   fields: field.fields,
-                  control,
-                  framework,
-                  getValues,
                   disabled: field.disabled ? true : disabled, // pass disabled status to inner components
-                  readOnly,
-                  plaintext,
-                  errors,
-                  showErrors,
-                  level: level + 1,
-                  locale,
-                  onJavascriptError,
-                  Components,
                   prependView: PlaceholderWrapper && (
                     <PlaceholderWrapper
                       key={`wrapper_top_field`}
@@ -354,227 +376,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               index={index}
               className="array"
             >{component}</GroupWrapper>);
-        } else if (field.component === 'two-columns') {
-          const component = (
-            <Component
-              key={field.name}
-              lfComponent={field.component}
-              lfFramework={framework}
-              lfLocale={locale}
-              name={field.name}
-              {...additionalFields}
-            >
-            {column => {
-              if (column === 'left') {
-                return (
-                  <>
-                    {renderFields({
-                      Wrapper,
-                      GroupWrapper,
-                      PlaceholderWrapper,
-                      BottomView,
-                      onChange,
-                      onEnter,
-                      fields: field.leftFields,
-                      control,
-                      framework,
-                      getValues,
-                      disabled: field.disabled ? true : disabled, // pass disabled status to inner components
-                      readOnly,
-                      plaintext,
-                      errors,
-                      showErrors,
-                      level: level + 1,
-                      locale,
-                      onJavascriptError,
-                      Components,
-                      prependView: PlaceholderWrapper && (
-                        <PlaceholderWrapper
-                          key={`wrapper_top_field`}
-                          parentField={field}
-                          parentFieldTarget="leftFields"
-                          nextField={field.leftFields && field.leftFields.length ? field.leftFields[0] : null}
-                        />
-                      )
-                    })}
-                    {BottomView && <BottomView context="two-columns" key={`bottom_view_${field.name}`} field={field} target="leftFields" />}
-                  </>
-                )
-              } else if (column === 'right') {
-                return (
-                  <>
-                    {renderFields({
-                      Wrapper,
-                      GroupWrapper,
-                      PlaceholderWrapper,
-                      BottomView,
-                      onChange,
-                      onEnter,
-                      fields: field.rightFields,
-                      control,
-                      framework,
-                      getValues,
-                      disabled: field.disabled ? true : disabled, // pass disabled status to inner components
-                      readOnly,
-                      plaintext,
-                      errors,
-                      showErrors,
-                      level: level + 1,
-                      locale,
-                      onJavascriptError,
-                      Components,
-                      prependView: PlaceholderWrapper && (
-                        <PlaceholderWrapper
-                          key={`wrapper_top_field`}
-                          parentField={field}
-                          parentFieldTarget="rightFields"
-                          nextField={field.rightFields && field.rightFields.length ? field.rightFields[0] : null}
-                        />
-                      )
-                    })}
-                    {BottomView && <BottomView context="two-columns" key={`bottom_view_${field.name}`} field={field} target="rightFields" />}
-                  </>
-                )
-              }
-            }}
-            </Component>
-          );
-          return GroupWrapper ?
-            <GroupWrapper
-              key={`wrapper_${field.name}`}
-              className="two-columns"
-              level={level}
-              field={field}
-              index={index}
-            >{component}</GroupWrapper> : component;
-        } else if (field.component === 'three-columns') {
-          const component = (
-            <Component
-              key={`three-columns-${field.name}`}
-              name={field.name}
-              lfComponent={field.component}
-              lfFramework={framework}
-              lfLocale={locale}
-              {...additionalFields}
-            >
-            {column => {
-              if (column === 'left') {
-                return (
-                  <>
-                    {renderFields({
-                      Wrapper,
-                      GroupWrapper,
-                      PlaceholderWrapper,
-                      BottomView,
-                      onChange,
-                      onEnter,
-                      fields: field.leftFields,
-                      control,
-                      framework,
-                      getValues,
-                      disabled: field.disabled ? true : disabled, // pass disabled status to inner components
-                      readOnly,
-                      plaintext,
-                      errors,
-                      showErrors,
-                      level: level + 1,
-                      locale,
-                      onJavascriptError,
-                      Components,
-                      prependView: PlaceholderWrapper && (
-                        <PlaceholderWrapper
-                          key={`wrapper_top_field`}
-                          parentField={field}
-                          parentFieldTarget="leftFields"
-                          nextField={field.leftFields && field.leftFields.length ? field.leftFields[0] : null}
-                        />
-                      )
-                    })}
-                    {BottomView && <BottomView context="three-columns" key={`bottom_view_${field.name}`} field={field} target="leftFields" />}
-                  </>
-                )
-              } else if (column === 'center') {
-                return (
-                  <>
-                    {renderFields({
-                      Wrapper,
-                      GroupWrapper,
-                      PlaceholderWrapper,
-                      BottomView,
-                      onChange,
-                      onEnter,
-                      fields: field.centerFields,
-                      control,
-                      framework,
-                      getValues,
-                      disabled: field.disabled ? true : disabled, // pass disabled status to inner components
-                      readOnly,
-                      plaintext,
-                      errors,
-                      showErrors,
-                      level: level + 1,
-                      locale,
-                      onJavascriptError,
-                      Components,
-                      prependView: PlaceholderWrapper && (
-                        <PlaceholderWrapper
-                          key={`wrapper_top_field`}
-                          parentField={field}
-                          parentFieldTarget="centerFields"
-                          nextField={field.centerFields && field.centerFields.length ? field.centerFields[0] : null}
-                        />
-                      )
-                    })}
-                    {BottomView && <BottomView context="three-columns" key={`bottom_view_${field.name}`} field={field} target="centerFields" />}
-                  </>
-                )
-              } else if (column === 'right') {
-                return (
-                  <>
-                    {renderFields({
-                      Wrapper,
-                      GroupWrapper,
-                      PlaceholderWrapper,
-                      BottomView,
-                      onChange,
-                      onEnter,
-                      fields: field.rightFields,
-                      control,
-                      framework,
-                      getValues,
-                      disabled: field.disabled ? true : disabled, // pass disabled status to inner components
-                      readOnly,
-                      plaintext,
-                      errors,
-                      showErrors,
-                      level: level + 1,
-                      locale,
-                      onJavascriptError,
-                      Components,
-                      prependView: PlaceholderWrapper && (
-                        <PlaceholderWrapper
-                          key={`wrapper_top_field`}
-                          parentField={field}
-                          parentFieldTarget="rightFields"
-                          nextField={field.rightFields && field.rightFields.length ? field.rightFields[0] : null}
-                        />
-                      )
-                    })}
-                    {BottomView && <BottomView context="three-columns" key={`bottom_view_${field.name}`} field={field} target="rightFields" />}
-                  </>
-                )
-              }
-            }}
-            </Component>
-          );
-          return GroupWrapper ?
-            <GroupWrapper
-              key={`wrapper_${field.name}`}
-              className="three-columns"
-              field={field}
-              level={level}
-              index={index}
-            >{component}</GroupWrapper> : component;
         }
 
         // generate the validation rule, takes into account react-hook-form
@@ -600,27 +401,23 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 name={fieldInfo.name}
                 value={fieldInfo.value}
                 onBlur={fieldInfo.onBlur}
-                key={`field_${field.name}`}
+                key={`field_${field.name}${rerenders[field.name] ? '_' + rerenders[field.name] : ''}`}
                 lfComponent={field.component}
                 lfFramework={framework}
                 lfLocale={locale}
                 lfOnEnter={onEnter}
                 label={field.label}
-                hint={field.hint}
                 disabled={disabled || field.disabled}
                 readOnly={readOnly || field.readOnly}
                 plaintext={plaintext}
-                size={field.size}
-                placeholder={field.placeholder}
                 error={errors && errors[field.name] ?
                   (showErrors === 'inline' ? errorToString(errors[field.name]) : true)
                   : undefined
                 }
                 {...additionalFields}
                 {...field[framework]}
-                onChange={(value, opts) => {
-                  // TODO use callback
-                  fieldInfo.onChange(value);
+                onChange={value => {
+                  setValue(field.name, value);
                   onChange({ ...getValues(), [field.name]: value }, field.name);
                 }}
               />;
@@ -690,14 +487,17 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [transformers, setTransformers] = useState(null);
     const [preloading, setPreloading] = useState(prealoadComponents);
     const [stateDisabled, setDisabled] = useState(false);
+    // force re-render of the form
     const [version, setVersion] = useState(1);
+    // keep track of components to be re-rendered, update it without re-render the component
+    const rerenders = useRef({});
     const [currentContext, setCurrentContext] = useState({
       locales: form.locales,
       locale: locale,
       ...formContext
     });
 
-    const { handleSubmit, formState: { errors, isValid }, reset, control, getValues, trigger } = useForm({
+    const { handleSubmit, formState: { errors, isValid }, reset, control, getValues, setValue, trigger, register } = useForm({
       defaultValues,
       mode: form.validationMode
     });
@@ -712,10 +512,14 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const disabled = stateDisabled || disabledProp;
     // it's the combination of the fields from the form schema and those specified
     // with the DSL, from now on every func should reference this (not form.fields)
-    const actualFields = [
-      ...(form.fields ?? []),
-      ...traverseChildren(children, { components: MergedComponents, framework })
-    ];
+    // also upgrade fields if older version of the form
+    const actualFields = upgradeFields(
+      [
+        ...(form.fields ?? []),
+        ...traverseChildren(children, { components: MergedComponents, framework })
+      ],
+      form.version
+    );
 
     if (!framework) {
       lfError('missing "framework" prop');
@@ -778,38 +582,35 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
           // initial fields values
           let newFields = actualFields;
-          // apply onRender transformers
-          if (!_.isEmpty(newTransformers.onRender)) {
-            for await(const newFormFields of applyTransformers(
-              formName,
-              framework,
-              newFields,
-              newTransformers.onRender,
-              defaultValues,
-              onJavascriptError,
-              currentContext
-            )) {
-              newFields = newFormFields;
-              setFormFields(newFormFields);
-            }
-          }
-          // collect list of fields with an onChange transformer
-          const onChangeFields = Object.keys(newTransformers.onChange || {})
+
+          // collect all transformers to be executed
+          const transformersToRun = Object.keys(newTransformers.onChange || {})
             .filter(fieldName => !_.isEmpty(newTransformers.onChange[fieldName]))
+            .reduce(
+              (acc, transformer) => [...acc, transformer],
+              !_.isEmpty(newTransformers.onRender) ? [newTransformers.onRender] : []
+            );
 
           // execute all onChange transformers at the bootstrap of the form
-          for(let idx = 0; idx < onChangeFields.length; idx++) {
-            for await(const newFormFields of applyTransformers(
+          for(let idx = 0; idx < transformersToRun.length; idx++) {
+            for await(const transformResult of applyTransformers(
               formName,
               framework,
               newFields,
-              newTransformers.onChange[onChangeFields[idx]],
+              transformersToRun[idx],
               defaultValues,
               onJavascriptError,
               currentContext
             )) {
-              newFields = newFormFields;
-              setFormFields(newFormFields);
+              const { fields: newFormFields, rerenders: newReRenders, changes } = transformResult;
+              mergeReRenders(rerenders.current, newReRenders);
+              if (newFormFields !== newFields) {
+                newFields = newFormFields
+                setFormFields(newFormFields);
+              }
+              if (changes) {
+                Object.keys(changes).forEach(key => setValue(key, changes[key]));
+              }
             }
           }
 
@@ -915,39 +716,43 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         if (!transformers) {
           return;
         }
-        // execute main transformer
-        let newFields = formFields;
-        if (!_.isEmpty(transformers.onRender)) {
-          for await(const f of applyTransformers(
-            formName,
-            framework,
-            newFields,
-            transformers.onRender,
-            values,
-            onJavascriptError,
-            currentContext
-          )) {
-            newFields = f;
-            if (f !== formFields) {
-              setFormFields(f);
-            }
-          }
-        }
+
+        const transformersToRun = !_.isEmpty(transformers.onRender) ? [transformers.onRender] : [];
+
         // if the changed field has a transformer
         if (transformers.onChange != null && !_.isEmpty(transformers.onChange[fieldName])) {
+          transformersToRun.push(transformers.onChange[fieldName]);
+        }
+
+        // execute main transformer
+        let newFields = formFields;
+
+        for(let idx = 0; idx < transformersToRun.length; idx++) {
           // execute the async generator transformer
-          for await(const f of applyTransformers(
+          for await(const transformResult of applyTransformers(
             formName,
             framework,
             newFields,
-            transformers.onChange[fieldName],
+            transformersToRun[idx],
             values,
             onJavascriptError,
             currentContext
           )) {
-            newFields = f;
-            if (f !== formFields) {
-              setFormFields(f);
+            const { fields: newFormFields, rerenders: newReRenders, changes } = transformResult;
+            // merge re-renders request to the current ones, in a useRef, must per persisted like a state
+            // but doesnt' have to trigger a new render
+            mergeReRenders(rerenders.current, newReRenders);
+            // if different instances, then fields descriptions are changed, set it, this will cause a
+            // form re-render
+            if (newFormFields !== newFields) {
+              newFields = newFormFields
+              setFormFields(newFormFields);
+            }
+            // if there are form value changes, apply it, this will cause the specific field to be refreshed
+            // and un-mounted / re-mounted if the component is statefull and needs to be reset completely
+            // at this point the re-renders request are already collected
+            if (changes) {
+              Object.keys(changes).forEach(key => setValue(key, changes[key]));
             }
           }
         }
@@ -1041,6 +846,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 control,
                 framework,
                 getValues,
+                setValue,
+                register,
                 debug,
                 errors,
                 disabled: disabled || form.disabled,
@@ -1049,7 +856,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 showErrors,
                 locale,
                 onJavascriptError,
-                Components: MergedComponents
+                Components: MergedComponents,
+                rerenders: rerenders.current
               })}
               {footer}
               {formErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (
