@@ -72,4 +72,18 @@ const upgradeFields = (fields, version) => {
   return fields;
 };
 
-export { upgradeFields };
+/**
+ * upgradeForm
+ * Upgrade form to the latest version
+ * @param {Object} form
+ * @returns
+ */
+const upgradeForm = form => {
+  return {
+    ...form,
+    version: 2,
+    fields: upgradeFields(form.fields, form.version)
+  };
+};
+
+export { upgradeFields, upgradeForm };
