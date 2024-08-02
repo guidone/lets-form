@@ -142,26 +142,25 @@ export const traverseChildren = (children, { components, framework } = {}) => {
         };
       } else if (elementOf(element, LfColumns) &&
         Array.isArray(element.props.children) &&
-        element.props.children.length == 2 &&
         assertElementsOf(element.props.children, LfColumn)
       ) {
+        const columns = element.props.children.map(el => ({
+          name: _.uniqueId('lf_column_name_'),
+          ...(_.omit(el.props, 'children'))
+        }));
+
         return {
-          component: 'two-columns',
+          name: _.uniqueId('lf_field_name_'),
+          component: 'columns',
+          columns,
           ..._.omit(element.props, 'children'),
-          leftFields: traverseChildren(element.props.children[0].props.children, { components, framework }),
-          rightFields: traverseChildren(element.props.children[1].props.children, { components, framework })
-        }
-      } else if (element.type === LfColumns &&
-        Array.isArray(element.props.children) &&
-        element.props.children.length == 3 &&
-        assertElementsOf(element.props.children, [LfColumn])
-      ) {
-        return {
-          component: 'three-columns',
-          ..._.omit(element.props, 'children'),
-          leftFields: traverseChildren(element.props.children[0].props.children, { components, framework }),
-          centerFields: traverseChildren(element.props.children[1].props.children, { components, framework }),
-          rightFields: traverseChildren(element.props.children[2].props.children, { components, framework })
+          fields: columns.reduce(
+            (acc, column, idx) => ({
+              ...acc,
+              [column.name]: traverseChildren(element.props.children[idx].props.children, { components, framework })
+            }),
+            {}
+          )
         };
       } else if (element.type === LfArray &&
         assertElementsOf(element.props.children, [LfField, LfGroup, LfColumns])
@@ -175,42 +174,50 @@ export const traverseChildren = (children, { components, framework } = {}) => {
         assertElementsOf(element.props.children, [LfTab]) &&
         assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray])
       ) {
+        const tabs = element.props.children.map(el => ({
+          name: _.uniqueId('lf_tab_name_'),
+          ...(_.omit(el.props, 'children'))
+        }));
+
         return {
-          name: _.uniqueId('lf_name_'),
+          name: _.uniqueId('lf_field_name_'),
           component: 'tabs',
           ..._.omit(element.props, 'children'),
-          tabs: element.props.children.map(el => (_.omit(el.props, 'children'))),
-          fields: element.props.children
-            .reduce(
-              (acc, tabElement) => ({
-                ...acc,
-                [tabElement.props.value]: traverseChildren(tabElement.props.children, { components, framework })
-              }),
-              {}
-            )
+          tabs,
+          fields: tabs.reduce(
+            (acc, column, idx) => ({
+              ...acc,
+              [column.name]: traverseChildren(element.props.children[idx].props.children, { components, framework })
+            }),
+            {}
+          )
         };
       } else if (element.type === LfSteps &&
         assertElementsOf(element.props.children, [LfStep]) &&
         assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray])
       ) {
+        const steps = element.props.children.map(el => ({
+          name: _.uniqueId('lf_step_name_'),
+          ...(_.omit(el.props, 'children'))
+        }));
+
         return {
-          name: _.uniqueId('lf_name_'),
+          name: _.uniqueId('lf_field_name_'),
           component: 'steps',
           ..._.omit(element.props, 'children'),
-          steps: element.props.children.map(el => (_.omit(el.props, 'children'))),
-          fields: element.props.children
-            .reduce(
-              (acc, tabElement) => ({
-                ...acc,
-                [tabElement.props.value]: traverseChildren(tabElement.props.children, { components, framework })
-              }),
-              {}
-            )
+          steps,
+          fields: steps.reduce(
+            (acc, column, idx) => ({
+              ...acc,
+              [column.name]: traverseChildren(element.props.children[idx].props.children, { components, framework })
+            }),
+            {}
+          )
         };
       } else {
         // othwerwise wrap in react-view component
         return {
-          name: _.uniqueId('lf_name_'),
+          name: _.uniqueId('lf_field_name_'),
           component: 'react-view',
           view: () => (<>{element}</>)
         };

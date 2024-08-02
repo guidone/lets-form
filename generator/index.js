@@ -22,7 +22,7 @@ import { errorToString } from './helpers/error-to-string';
 import { mergeComponents } from './helpers/merge-components';
 import { MissingComponent } from './helpers/missing-component';
 import { traverseChildren } from './helpers/dsl';
-import { upgradeFields } from './helpers/upgrade-fields';
+import { upgradeFields, upgradeForm } from './helpers/upgrade-fields';
 
 import './index.scss';
 
@@ -914,3 +914,4 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
 export { GenerateGenerator };
 export * from './helpers/dsl';
+export { upgradeForm };
