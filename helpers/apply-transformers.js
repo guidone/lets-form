@@ -2,6 +2,7 @@ import _ from 'lodash';
 
 import { mapFields } from './map-fields';
 import { findField } from './find-field';
+import { lfWarn } from './lf-log';
 
 // cannot import manifest, need to stay in the other repo
 // this is going open source, while the manifests are ip
@@ -23,6 +24,8 @@ const translateValidationKey = str => {
 
 const ApiFactory = function(formName, framework, formFields, currenValues, formContext) {
   let fields = formFields;
+  const rerenders = {}; // store re-render requests after field change
+  const scheduledChanges = {};
 
   const fieldExists = name => {
     if (findField(fields, field => field.name === name) != null) {
@@ -40,6 +43,18 @@ const ApiFactory = function(formName, framework, formFields, currenValues, formC
     context: key => {
       return formContext ? formContext[key] : null
     },
+
+    setFieldValue: (name, value) => {
+      // set the field to be re-rendered if it's uncontrolled
+      rerenders[name] = rerenders[name] ? rerenders[name] + 1 : 1;
+      // schedule a field change and differ it, otherwise setValue will trigger the re-design of the component
+      // before the information or re-render reaches it
+      scheduledChanges[name] = value;
+    },
+
+    getReRenders: () => rerenders,
+
+    getScheduledChanges: () => scheduledChanges,
 
     element: name => {
       if (!fieldExists(name)) {
@@ -88,10 +103,10 @@ const ApiFactory = function(formName, framework, formFields, currenValues, formC
         return;
       }
 
-      methods.setValue(name, key, !field[key]);
+      methods.setParam(name, key, !field[key]);
     },
 
-    setValue: (name, key, value) => {
+    setParam: (name, key, value) => {
       if (!fieldExists(name)) {
         return;
       }
@@ -139,6 +154,12 @@ const ApiFactory = function(formName, framework, formFields, currenValues, formC
         }
       );
     },
+
+    setValue: (name, key, value) => {
+      lfWarn('LetsForm Script .setValue() is deprecated, use .setParam() instead');
+      return methods.setParam(name, key, value);
+    },
+
     enable: (name) => {
       if (!fieldExists(name)) {
         return;
@@ -253,6 +274,18 @@ const ApiFactory = function(formName, framework, formFields, currenValues, formC
   return methods;
 };
 
+/**
+ * applyTransformers
+ * Apply a list of transformers
+ * @param {*} formName
+ * @param {*} framework
+ * @param {*} fields
+ * @param {*} transformers
+ * @param {*} values
+ * @param {*} onJavascriptError
+ * @param {*} formContext
+ * @param {*} setValue
+ */
 const applyTransformers = async function*(
   formName,
   framework,
@@ -275,7 +308,11 @@ const applyTransformers = async function*(
       try {
         for await (const f of txs[idx](api)) {
           newFields = f;
-          yield f;
+          yield {
+            fields: f,
+            rerenders: api.getReRenders(),
+            changes: api.getScheduledChanges()
+          };
         }
       } catch(e) {
         console.error('[LetsForm] Error in script: ', e);
@@ -285,9 +322,9 @@ const applyTransformers = async function*(
       }
     }
 
-    yield newFields;
+    yield { fields: newFields };
   } else {
-    yield fields;
+    yield { fields };
   }
 };
 
