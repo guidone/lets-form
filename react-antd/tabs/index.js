@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import _ from 'lodash';
 import { Tabs } from 'antd';
 
@@ -21,19 +21,14 @@ const TabsAntd = I18N(
     tabType,
     ...rest
   }) => {
-    let defaultKey = value;
-    if (!defaultKey && !_.isEmpty(tabs)) {
-      defaultKey = tabs[0].value;
+    let active;
+    if (value) {
+      active = value;
+    } else {
+      if (!_.isEmpty(tabs)) {
+        active = tabs[0].value;
+      }
     }
-    const [active, setActive] = useState(defaultKey);
-
-    const handleKey = useCallback(
-      key => {
-        setActive(key);
-        onChange(key);
-      },
-      [onChange]
-    );
 
     return (
       <div
@@ -50,7 +45,7 @@ const TabsAntd = I18N(
             key: tab.value,
             label: tab.label
           }))}
-          onChange={handleKey}
+          onChange={onChange}
           {...passRest(rest)}
         />
         {_.isFunction(children) && (

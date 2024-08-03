@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import _ from 'lodash';
 import { Tabs } from '@mantine/core';
 import classNames from 'classnames';
@@ -24,19 +24,14 @@ const MantineTabs = I18N(
     placement,
     ...rest
   }) => {
-    let defaultKey = value;
-    if (!defaultKey && !_.isEmpty(tabs)) {
-      defaultKey = tabs[0].value;
+    let active;
+    if (value) {
+      active = value;
+    } else {
+      if (!_.isEmpty(tabs)) {
+        active = tabs[0].value;
+      }
     }
-    const [active, setActive] = useState(defaultKey);
-
-    const handleChange = useCallback(
-      active => {
-        setActive(active);
-        onChange(active);
-      },
-      [onChange]
-    );
 
     return (
       <div
@@ -48,7 +43,7 @@ const MantineTabs = I18N(
       >
         <Tabs
           value={active}
-          onChange={handleChange}
+          onChange={onChange}
           orientation={orientation}
           placement={placement}
           {...passRest(rest)}

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import _ from 'lodash';
 import { Nav } from 'rsuite';
 
@@ -22,19 +22,14 @@ const Tabs = I18N(
     pullRight,
     ...rest
   }) => {
-    let defaultKey = value;
-    if (!defaultKey && !_.isEmpty(tabs)) {
-      defaultKey = tabs[0].value;
+    let active;
+    if (value) {
+      active = value;
+    } else {
+      if (!_.isEmpty(tabs)) {
+        active = tabs[0].value;
+      }
     }
-    const [active, setActive] = useState(defaultKey);
-
-    const handleKey = useCallback(
-      key => {
-        setActive(key);
-        onChange(key);
-      },
-      [onChange]
-    );
 
     return (
       <div
@@ -47,7 +42,7 @@ const Tabs = I18N(
           justified={justified}
           pullRight={pullRight}
           activeKey={active}
-          onSelect={handleKey}
+          onSelect={onChange}
           {...passRest(rest)}
         >
           {(tabs || []).map(tab => (
