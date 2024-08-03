@@ -29,7 +29,6 @@ import './index.scss';
 const DEBUG_RENDER = true;
 const DEFAULT_FORM = { version: 2, fields: [] };
 
-
 const mergeReRenders = (currentReRenders, newReRenders) => {
   if (newReRenders) {
     Object.keys(newReRenders)
@@ -491,10 +490,13 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [version, setVersion] = useState(1);
     // keep track of components to be re-rendered, update it without re-render the component
     const rerenders = useRef({});
-    const [currentContext, setCurrentContext] = useState({
-      locales: form.locales,
-      locale: locale,
-      ...formContext
+
+    const mutableState = useRef({
+      currentContext: {
+        locales: form.locales,
+        locale: locale,
+        ...formContext
+      }
     });
 
     const { handleSubmit, formState: { errors, isValid }, reset, control, getValues, setValue, trigger, register } = useForm({
@@ -525,16 +527,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       lfError('missing "framework" prop');
       return;
     };
-
-    // listen to changes of context, re-render just in case
-    useEffect(
-      () => {
-        if (formContext) {
-          setCurrentContext(formContext);
-        }
-      },
-      [formContext]
-    );
 
     // preload components of the form
     useEffect(
@@ -578,6 +570,12 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     useEffect(
       () => {
         const f = async () => {
+
+          mutableState.current.currentContext = {
+            ...mutableState.current.currentContext,
+            formContext
+          };
+
           const newTransformers = collectTransformers(actualFields, form.transformer || form.script, onJavascriptError);
 
           // initial fields values
@@ -600,7 +598,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               transformersToRun[idx],
               defaultValues,
               onJavascriptError,
-              currentContext
+              mutableState.current.currentContext
             )) {
               const { fields: newFormFields, rerenders: newReRenders, changes } = transformResult;
               mergeReRenders(rerenders.current, newReRenders);
@@ -735,7 +733,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             transformersToRun[idx],
             values,
             onJavascriptError,
-            currentContext
+            mutableState.current.currentContext
           )) {
             const { fields: newFormFields, rerenders: newReRenders, changes } = transformResult;
             // merge re-renders request to the current ones, in a useRef, must per persisted like a state
@@ -801,7 +799,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     }
 
     return (
-      <FormContext.Provider value={currentContext}>
+      <FormContext.Provider value={mutableState.current.currentContext}>
         <div
           className={classNames('lf-lets-form', { 'lf-lets-form-edit-mode': demo }, className)}
         >
