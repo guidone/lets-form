@@ -78,6 +78,36 @@ const assertElementsOf = (elements, types, quiet= false) => {
   });
 };
 
+const assertValidSteps = elements => {
+  const checkElements = Array.isArray(elements) ? elements : [elements];
+  return checkElements.every(element => {
+    if (_.isEmpty(element.props.value)) {
+      throw new Error('LetsForm DSL error, LfStep ' + elementToString(element) +
+        ' must have a "value" property (the internal name of the step)');
+    }
+    if (_.isEmpty(element.props.label)) {
+      throw new Error('LetsForm DSL error, LfStep ' + elementToString(element) +
+        ' must have a "label" property');
+    }
+    return true;
+  });
+};
+
+const assertValidTabs = elements => {
+  const checkElements = Array.isArray(elements) ? elements : [elements];
+  return checkElements.every(element => {
+    if (_.isEmpty(element.props.value)) {
+      throw new Error('LetsForm DSL error, LfTab ' + elementToString(element) +
+        ' must have a "value" property (the internal name of the tab)');
+    }
+    if (_.isEmpty(element.props.label)) {
+      throw new Error('LetsForm DSL error, LfStep ' + elementToString(element) +
+        ' must have a "label" property');
+    }
+    return true;
+  });
+};
+
 const assertElementsOfElements = (elements, types) => {
   const checkTypes = Array.isArray(types) ? types : [types];
   const checkElements = Array.isArray(elements) ? elements : [elements];
@@ -172,7 +202,8 @@ export const traverseChildren = (children, { components, framework } = {}) => {
         };
       } else if (element.type === LfTabs &&
         assertElementsOf(element.props.children, [LfTab]) &&
-        assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray])
+        assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray]) &&
+        assertValidTabs(element.props.children)
       ) {
         const tabs = element.props.children.map(el => ({
           name: _.uniqueId('lf_tab_name_'),
@@ -194,7 +225,8 @@ export const traverseChildren = (children, { components, framework } = {}) => {
         };
       } else if (element.type === LfSteps &&
         assertElementsOf(element.props.children, [LfStep]) &&
-        assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray])
+        assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray]) &&
+        assertValidSteps(element.props.children)
       ) {
         const steps = element.props.children.map(el => ({
           name: _.uniqueId('lf_step_name_'),
