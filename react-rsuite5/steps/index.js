@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import _ from 'lodash';
 import { Steps, ButtonGroup, Button } from 'rsuite';
 
@@ -58,6 +58,18 @@ const Rsuite5Steps = I18N(
       [onChange, stepIdx, steps]
     );
 
+    useEffect(
+      () => {
+        if (value) {
+          let changedStepIdx = (steps || []).findIndex(obj => obj.value === value);
+          if (changedStepIdx !== -1) {
+            setStepIdx(changedStepIdx);
+          }
+        }
+      },
+      [value]
+    );
+
     return (
       <div
         className="lf-control-steps"
@@ -69,14 +81,17 @@ const Rsuite5Steps = I18N(
           small={small}
           {...passRest(rest)}
         >
-          {(steps || []).map(step => (
-            <Steps.Item
-              key={`step_${step.value}`}
-              description={step.description || undefined}
-              title={step.label}
-              icon={step.icon && <GenericIcon icon={step.icon} />}
-            />
-          ))}
+          {(steps || [])
+            //.filter((_step, idx) => idx === stepIdx)
+            .map(step => (
+              <Steps.Item
+                key={`step_${step.value}`}
+                description={step.description || undefined}
+                title={step.label}
+                icon={step.icon && <GenericIcon icon={step.icon} />}
+              />
+            ))
+          }
         </Steps>
         {_.isFunction(children) && (
           <div className="lf-step">
