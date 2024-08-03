@@ -570,10 +570,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     useEffect(
       () => {
         const f = async () => {
-
+          // update the mutable state
           mutableState.current.currentContext = {
             ...mutableState.current.currentContext,
-            formContext
+            ...formContext
           };
 
           const newTransformers = collectTransformers(actualFields, form.transformer || form.script, onJavascriptError);
