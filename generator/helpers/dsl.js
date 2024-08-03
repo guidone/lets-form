@@ -209,7 +209,7 @@ export const traverseChildren = (children, { components, framework } = {}) => {
           fields: steps.reduce(
             (acc, column, idx) => ({
               ...acc,
-              [column.name]: traverseChildren(element.props.children[idx].props.children, { components, framework })
+              [column.value]: traverseChildren(element.props.children[idx].props.children, { components, framework })
             }),
             {}
           )
