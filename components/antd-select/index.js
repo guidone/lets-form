@@ -38,6 +38,7 @@ const AntdGenericSelect = ({
       tooltip={tooltip && hint}
       hasFeedback={error != null}
       validateStatus={error ? 'error': undefined}
+      valuePropName={null}
     >
       <Select
         onChange={onChange}

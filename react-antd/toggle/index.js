@@ -48,6 +48,7 @@ const Toggle = I18N(
         tooltip={tooltip && hint}
         hasFeedback={error != null}
         validateStatus={error ? 'error': undefined}
+        valuePropName={null}
       >
         <Switch
           defaultChecked={value}

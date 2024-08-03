@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import _ from 'lodash';
 import { Button, Steps } from 'antd';
 
@@ -69,6 +69,18 @@ const AntdSteps = I18N(
         onChange(steps[current]);
       },
       [steps]
+    );
+
+    useEffect(
+      () => {
+        if (value) {
+          let changedStepIdx = (steps || []).findIndex(obj => obj.value === value);
+          if (changedStepIdx !== -1) {
+            setStepIdx(changedStepIdx);
+          }
+        }
+      },
+      [value]
     );
 
     const antdSteps = (steps || []).map(step => ({

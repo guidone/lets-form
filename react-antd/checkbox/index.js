@@ -43,6 +43,7 @@ const CheckboxAntd = I18N(
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}
         hasFeedback={error != null}
         validateStatus={error ? 'error': undefined}
+        valuePropName={null}
       >
         <Checkbox
           readOnly={readOnly}
