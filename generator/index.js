@@ -217,9 +217,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                     hint={field.hint}
                     disabled={field.disabled}
                     value={values[field.name] ?? undefined}
-                    onChange={(value, opts) => {
-                      // TODO use callback
-                      fieldInfo.onChange(value);
+                    onChange={(value, _opts) => {
+                      setValue(field.name, value);
                       onChange({ ...getValues(), [field.name]: value }, field.name);
                     }}
                     {...additionalFields}
@@ -285,9 +284,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                     hint={field.hint}
                     disabled={field.disabled}
                     value={values[field.name] ?? undefined}
-                    onChange={(value, opts) => {
-                      // TODO use callback
-                      fieldInfo.onChange(value);
+                    onChange={(value, _opts) => {
+                      setValue(field.name, value);
                       onChange({ ...getValues(), [field.name]: value }, field.name);
                     }}
                     {...additionalFields}
