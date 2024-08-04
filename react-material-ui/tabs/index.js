@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import _ from 'lodash';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -20,20 +20,20 @@ const TabsMui = I18N(
     centered,
     fullWidth,
     indicatorColor,
-    textColor,    
+    textColor,
     ...rest
   }) => {
-    let defaultKey = value;
-    if (!defaultKey && !_.isEmpty(tabs)) {
-      defaultKey = tabs[0].value;
+    let active;
+    if (value) {
+      active = value;
+    } else {
+      if (!_.isEmpty(tabs)) {
+        active = tabs[0].value;
+      }
     }
-    const [active, setActive] = useState(defaultKey);
 
     const handleKey = useCallback(
-      (event, key) => {
-        setActive(key);
-        onChange(key);
-      },
+      (_event, key) => onChange(key),
       [onChange]
     );
 
@@ -43,7 +43,7 @@ const TabsMui = I18N(
         data-lf-field-name={name}
       >
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs 
+          <Tabs
             value={active}
             onChange={handleKey}
             centered={centered ?? undefined}
@@ -54,7 +54,7 @@ const TabsMui = I18N(
           >
             {(tabs || []).map(tab => (
               <Tab key={tab.value} label={tab.label} value={tab.value} />
-            ))}          
+            ))}
           </Tabs>
         </Box>
         {_.isFunction(children) && (

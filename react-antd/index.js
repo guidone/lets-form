@@ -43,6 +43,9 @@ const Fields = {
   'three-columns': {
     'react-antd': lazy(() => import('./three-columns'))
   },
+  'columns': {
+    'react-antd': lazy(() => import('./columns'))
+  },
   'two-columns': {
     'react-antd': lazy(() => import('./two-columns'))
   },

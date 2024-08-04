@@ -19,6 +19,9 @@ const Fields = {
   'three-columns': {
     'react': lazy(() => import('./three-columns'))
   },
+  'columns': {
+    'react': lazy(() => import('./columns'))
+  },
   'two-columns': {
     'react': lazy(() => import('./two-columns'))
   },

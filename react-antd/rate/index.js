@@ -54,6 +54,7 @@ const RateAntd = I18N(
         tooltip={tooltip && hint}
         hasFeedback={error != null}
         validateStatus={error ? 'error': undefined}
+        valuePropName={null}
       >
         <Rate
           defaultValue={value}

@@ -1,4 +1,7 @@
 {
+  "columns": {
+
+  },
   "input-text": {
     "label": "Input Text",
     "category": "general",

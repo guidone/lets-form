@@ -34,6 +34,9 @@ const Fields = {
   'two-columns': {
     'react-material-ui': lazy(() => import('./two-columns'))
   },
+  'columns': {
+    'react-material-ui': lazy(() => import('./columns'))
+  },
   'group': {
     'react-material-ui': lazy(() => import('./group'))
   },

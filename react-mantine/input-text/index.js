@@ -26,12 +26,13 @@ const InputText = I18N(
       [onChange]
     );
 
-    return (      
-      <TextInput 
+    return (
+      <TextInput
         className="lf-control-input-text"
         data-lf-field-name={name}
+        value={value}
         style={makeWidthStyle(fullWidth, width)}
-        description={hint} 
+        description={hint}
         error={_.isString(error) ? error : undefined }
         inputWrapperOrder={['label', 'input', 'description', 'error']}
         onChange={handleChange}
@@ -39,7 +40,7 @@ const InputText = I18N(
         onKeyUp={submitOnEnter ? handleKeyUp : undefined}
         {...passRest(rest)}
       />
-    ); 
+    );
   },
   ['label', 'hint', 'placeholder']
 );

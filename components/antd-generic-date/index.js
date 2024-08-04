@@ -37,6 +37,7 @@ const AntdGenericDate = ({
       tooltip={tooltip && hint}
       hasFeedback={error != null}
       validateStatus={error ? 'error': undefined}
+      valuePropName={null}
     >
       <DatePicker
         key={`${name}-${lfLocale ?? ''}`} // add key or will not re-render if locale is changed

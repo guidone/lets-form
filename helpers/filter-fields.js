@@ -75,7 +75,7 @@ const filterFields = (
             rightFields: newRightFields
           };
         }
-      } else if ((field.component === 'tabs' || field.component === 'steps') && _.isObject(field.fields) && !_.isArray(field.fields)) {      
+      } else if ((field.component === 'tabs' || field.component === 'steps' || field.component === 'columns') && _.isObject(field.fields) && !_.isArray(field.fields)) {
         const subkeys = Object.keys(field.fields);
         // scan all keys of fields and reapply, if different instance, create a new instance
         // of new field

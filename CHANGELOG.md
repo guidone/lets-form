@@ -1,5 +1,16 @@
 # LetsForm Changelog
 
+## v0.10.0
+- deprecated `two-columns` and `three-columns`
+- added `columns` component with up to 12 columns
+- renamed `.setValue()` method to `.setParam()` in Form Scripts
+- added `.setFieldValue()` method in Form Scripts
+- fix: made `steps` and `tabs` controlled for all frameworks
+- fix: fix Mantine `input-text` not showing initial value
+- fix: void AntdD autofill of children inputs for value and defaultValue
+- fix: rerender form on context change
+- fix: DSL for tabs and steps with props check
+
 ## v0.9.7
 - fix: RSuite input-number imports
 

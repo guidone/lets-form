@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import _ from 'lodash';
 import { Stepper, Button, Group } from '@mantine/core';
 
@@ -65,6 +65,18 @@ const MantineSteps = I18N(
         onChange(step);
       },
       [onChange, stepIdx, steps]
+    );
+
+    useEffect(
+      () => {
+        if (value) {
+          let changedStepIdx = (steps || []).findIndex(obj => obj.value === value);
+          if (changedStepIdx !== -1) {
+            setStepIdx(changedStepIdx);
+          }
+        }
+      },
+      [value]
     );
 
     return (

@@ -20,6 +20,7 @@ const PlaceholderAntd = I18N(
         help={hint && !tooltip ? hint : undefined}
         tooltip={tooltip && hint}
         className="lf-control-placeholder"
+        valuePropName={null}
       >
         <Placeholder text={text} />
       </Form.Item>

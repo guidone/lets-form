@@ -25,6 +25,9 @@ const Fields = {
   'three-columns': {
     'react-rsuite5': lazy(() => import('./three-columns'))
   },
+  'columns': {
+    'react-rsuite5': lazy(() => import('./columns'))
+  },
   'input-number': {
     'react-rsuite5': lazy(() => import('./input-number'))
   },

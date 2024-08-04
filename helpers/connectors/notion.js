@@ -1,4 +1,4 @@
-const LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns', 'steps', 'tabs'];
+const LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns', 'columns', 'steps', 'tabs'];
 
 const defaultBlockProperty = s => ({
   rich_text: [

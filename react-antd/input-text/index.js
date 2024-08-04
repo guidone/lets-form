@@ -48,10 +48,11 @@ const TextInput = I18N(
         tooltip={tooltip && hint}
         hasFeedback={error != null}
         validateStatus={error ? 'error': undefined}
+        valuePropName={null}
       >
         <Input
           type={inputType ?? 'text'}
-          inputmode={inputMode}
+          inputMode={inputMode}
           onChange={handleChange}
           onBlur={onBlur}
           onKeyUp={submitOnEnter ? handleKeyUp : undefined}
@@ -60,7 +61,7 @@ const TextInput = I18N(
           prefix={TextOrIcon(prefix)}
           suffix={TextOrIcon(postfix)}
           style={makeWidthStyle(fullWidth, width)}
-          {...passRest(rest)}
+          {...passRest(rest, ['bordered'])}
         />
       </Form.Item>
     )

@@ -1,0 +1,24 @@
+.lf-control-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  min-height: 20px;
+
+  .lf-column {
+    flex: 1 0;
+    align-self: auto;
+    margin-right: var(--lf-field-column-margin);
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    &:first-child:empty {
+      display: none;
+    }
+
+  }
+}

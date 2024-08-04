@@ -12,14 +12,9 @@ const AntdGenericSelect = ({
   label,
   hint,
   value,
-  showCount,
   tooltip = false,
   required = false,
-  maxLength,
   error,
-  prefix,
-  lfLocale,
-  postfix,
   onChange,
   onBlur,
   width,
@@ -28,6 +23,7 @@ const AntdGenericSelect = ({
   filterKey,
   filterValue,
   className,
+  showArrow,
   showImageOptions = false,
   ...rest
 }) => {
@@ -42,13 +38,15 @@ const AntdGenericSelect = ({
       tooltip={tooltip && hint}
       hasFeedback={error != null}
       validateStatus={error ? 'error': undefined}
+      valuePropName={null}
     >
       <Select
         onChange={onChange}
         onBlur={onBlur}
         defaultValue={value}
         style={makeWidthStyle(fullWidth, width)}
-        {...passRest(rest)}
+        suffixIcon={showArrow === false ? null : undefined}
+        {...passRest(rest, ['bordered', ''])}
       >
         {(filterOptions(options, filterValue, filterKey) || [])
           .map(option => (

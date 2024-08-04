@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import _ from 'lodash';
 import { Tabs, Tab } from 'react-bootstrap';
 
@@ -15,26 +15,21 @@ const TabsReactBootstrap = I18N(
     value,
     tabs,
     onChange,
-    children,    
+    children,
     variant,
     transition,
     fill,
     justify,
     ...rest
   }) => {
-    let defaultKey = value;
-    if (!defaultKey && !_.isEmpty(tabs)) {
-      defaultKey = tabs[0].value;
+    let active;
+    if (value) {
+      active = value;
+    } else {
+      if (!_.isEmpty(tabs)) {
+        active = tabs[0].value;
+      }
     }
-    const [active, setActive] = useState(defaultKey);
-
-    const handleKey = useCallback(
-      key => {
-        setActive(key);
-        onChange(key);
-      },
-      [onChange]
-    );
 
     return (
       <div
@@ -42,8 +37,8 @@ const TabsReactBootstrap = I18N(
         data-lf-field-name={name}
       >
         <Tabs
-          activeKey={active}           
-          onSelect={handleKey}
+          activeKey={active}
+          onSelect={onChange}
           variant={variant || 'tabs'}
           transition={transition === false ? false : undefined}
           fill={fill}
@@ -51,7 +46,7 @@ const TabsReactBootstrap = I18N(
           {...passRest(rest)}
         >
           {(tabs || []).map(tab => (
-            <Tab 
+            <Tab
               key={tab.value}
               eventKey={tab.value}
               title={tab.label}
