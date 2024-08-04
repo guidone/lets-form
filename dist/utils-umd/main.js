@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.9.6 - UMD */
+/* LetsForm Utils v0.9.7 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -789,9 +789,9 @@
   /**
    * processFieldsHash
    * Tkae a field and process the "fields" key, which can be ah hash of value / array of fields
-   * @param {*} field 
-   * @param {*} predicate 
-   * @returns 
+   * @param {*} field
+   * @param {*} predicate
+   * @returns
    */
   var processFieldsHash = function processFieldsHash(field, predicate) {
     var newField = field;
@@ -878,8 +878,8 @@
             rightFields: _newRightFields
           });
         }
-      } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject(field.fields) && !_isArray(field.fields)) {
-        // Problem here: the new field can be an array because the map field, can return an array with 
+      } else if ((field.component === 'tabs' || field.component === 'steps' || field.component === 'columns') && _isObject(field.fields) && !_isArray(field.fields)) {
+        // Problem here: the new field can be an array because the map field, can return an array with
         // additional field to be put somewhere in the mapping, of those only the one of type "tab" need to be
         // mapped, the other one must be left untouched since they where added by the helper method
         if (_isArray(newField)) {
@@ -989,7 +989,7 @@
             rightFields: _newRightFields
           });
         }
-      } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject(field.fields) && !_isArray(field.fields)) {
+      } else if ((field.component === 'tabs' || field.component === 'steps' || field.component === 'columns') && _isObject(field.fields) && !_isArray(field.fields)) {
         var subkeys = Object.keys(field.fields);
         // scan all keys of fields and reapply, if different instance, create a new instance
         // of new field
@@ -4670,7 +4670,8 @@
       'group': true,
       'array': true,
       'two-columns': true,
-      'three-columns': true
+      'three-columns': true,
+      'columns': true
     }, opts);
     if (_isEmpty(fields) || !_isArray(fields)) {
       return accumulator;
@@ -4692,7 +4693,7 @@
         result = reduceFields(field.leftFields, predicate, result, opts);
         result = reduceFields(field.centerFields, predicate, result, opts);
         result = reduceFields(field.rightFields, predicate, result, opts);
-      } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject(field.fields) && !_isArray(field.fields)) {
+      } else if ((field.component === 'tabs' || field.component === 'steps' || field.component === 'columns' && options['columns']) && _isObject(field.fields) && !_isArray(field.fields)) {
         var subkeys = Object.keys(field.fields);
         subkeys.forEach(function (subkey) {
           result = reduceFields(field.fields[subkey], predicate, result, opts);
@@ -4754,7 +4755,7 @@
           found = findField(field.leftFields, predicate) || findField(field.rightFields, predicate);
         } else if (field.component === 'three-columns') {
           found = findField(field.leftFields, predicate) || findField(field.centerFields, predicate) || findField(field.rightFields, predicate);
-        } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject(field.fields) && !_isArray(field.fields)) {
+        } else if ((field.component === 'tabs' || field.component === 'steps' || field.component === 'columns') && _isObject(field.fields) && !_isArray(field.fields)) {
           var subkeys = Object.keys(field.fields);
           subkeys.forEach(function (subkey) {
             if (!found) {
@@ -5125,6 +5126,8 @@
 
   var _uniq = /*@__PURE__*/getDefaultExportFromCjs(uniq_1);
 
+  var columns = {
+  };
   var toggle = {
   	label: "Toggle",
   	category: "general",
@@ -10196,6 +10199,7 @@
   	]
   };
   var Manifests = {
+  	columns: columns,
   	"input-text": {
   	label: "Input Text",
   	category: "general",
@@ -12580,7 +12584,7 @@
     };
   }();
 
-  var LAYOUT_FIELDS$1 = ['group', 'two-columns', 'three-columns', 'steps', 'tabs'];
+  var LAYOUT_FIELDS$1 = ['group', 'two-columns', 'three-columns', 'columns', 'steps', 'tabs'];
   var defaultBlockProperty = function defaultBlockProperty(s) {
     return {
       rich_text: [{
@@ -12832,7 +12836,7 @@
 
   var CONNECTOR_NAMES = Object.keys(Connectors);
   var AVAILABLE_COMPONENTS = Object.keys(Manifests);
-  var LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns', 'steps', 'tabs'];
+  var LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns', 'steps', 'tabs', 'columns'];
   var validateJSONForm = function validateJSONForm(json) {
     if (!_isObject(json)) {
       return 'Not a valid JSON object';

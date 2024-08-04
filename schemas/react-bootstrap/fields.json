@@ -51,36 +51,12 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "submitOnEnter": {
-              "type": "boolean"
-            },
             "size": {
               "type": "string",
               "enum": [
                 "lg",
                 "sm"
               ]
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "prefix": {
-              "type": "string"
-            },
-            "postfix": {
-              "type": "string"
             },
             "floatingLabel": {
               "type": "boolean"
@@ -120,15 +96,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
             }
           }
         }
@@ -181,47 +148,16 @@
               "items": {
                 "type": "object",
                 "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  },
                   "image": {
                     "type": "string"
                   }
                 }
               }
             },
-            "value": {
-              "type": "string"
-            },
             "image": {
               "type": "string"
             },
             "showImageOptions": {
-              "type": "boolean"
-            },
-            "filterKey": {
-              "type": "string"
-            },
-            "filterValue": {
-              "type": "string"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
               "type": "boolean"
             },
             "size": {
@@ -261,20 +197,6 @@
               ]
             },
             "hidden": {
-              "type": "boolean"
-            },
-            "align": {
-              "type": "string",
-              "enum": [
-                "left",
-                "center",
-                "right"
-              ]
-            },
-            "collapsible": {
-              "type": "boolean"
-            },
-            "open": {
               "type": "boolean"
             },
             "border": {
@@ -318,46 +240,6 @@
                 "layout-1-0"
               ]
             },
-            "leftAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
-            },
-            "rightAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
-            },
             "hidden": {
               "type": "boolean"
             }
@@ -391,65 +273,31 @@
                 "layout-3-1-1"
               ]
             },
-            "leftAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
+            "hidden": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "columns"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
             },
-            "centerAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
-            },
-            "rightAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {}
+              }
             },
             "hidden": {
               "type": "boolean"
@@ -489,26 +337,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "align": {
-              "type": "string",
-              "enum": [
-                "top",
-                "center",
-                "bottom"
-              ]
-            },
-            "alignOffset": {
-              "type": "integer"
             },
             "arrayType": {
               "type": "string",
@@ -564,21 +392,6 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
             "size": {
               "type": "string",
               "enum": [
@@ -586,23 +399,8 @@
                 "sm"
               ]
             },
-            "prefix": {
-              "type": "string"
-            },
-            "postfix": {
-              "type": "string"
-            },
             "floatingLabel": {
               "type": "boolean"
-            },
-            "min": {
-              "type": "integer"
-            },
-            "step": {
-              "type": "integer"
-            },
-            "max": {
-              "type": "integer"
             }
           }
         }
@@ -639,24 +437,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "min": {
-              "type": "integer"
-            },
-            "step": {
-              "type": "integer"
-            },
-            "max": {
-              "type": "integer"
             }
           }
         }
@@ -704,15 +484,6 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
             "size": {
               "type": "string",
               "enum": [
@@ -720,20 +491,8 @@
                 "sm"
               ]
             },
-            "prefix": {
-              "type": "string"
-            },
-            "postfix": {
-              "type": "string"
-            },
             "floatingLabel": {
               "type": "boolean"
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
             }
           }
         }
@@ -770,15 +529,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
             }
           }
         }
@@ -820,34 +570,8 @@
               "type": "array",
               "items": {
                 "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  }
-                }
+                "properties": {}
               }
-            },
-            "value": {
-              "type": "string"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
             },
             "inline": {
               "type": "boolean"
@@ -895,34 +619,8 @@
               "type": "array",
               "items": {
                 "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  }
-                }
+                "properties": {}
               }
-            },
-            "value": {
-              "type": "string"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
             },
             "inline": {
               "type": "boolean"
@@ -975,31 +673,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "lg",
-                "sm"
-              ]
-            },
-            "rows": {
-              "type": "integer"
             }
           }
         }
@@ -1068,29 +741,6 @@
             },
             "url": {
               "type": "string"
-            },
-            "align": {
-              "type": "string",
-              "enum": [
-                "left",
-                "center",
-                "right"
-              ]
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "maxWidth": {
-              "type": "integer"
-            },
-            "maxHeight": {
-              "type": "integer"
-            },
-            "marginTop": {
-              "type": "integer"
-            },
-            "marginBottom": {
-              "type": "integer"
             }
           }
         }
@@ -1115,47 +765,8 @@
                 "link"
               ]
             },
-            "labelOn": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "iconOn": {
-              "type": "string"
-            },
-            "labelOff": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "iconOff": {
-              "type": "string"
-            },
             "initialValue": {
               "type": "boolean"
-            },
-            "labelLink": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "iconLink": {
-              "type": "string"
             },
             "href": {
               "type": "string"
@@ -1170,35 +781,8 @@
                 }
               ]
             },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
             "hidden": {
               "type": "boolean"
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "primary",
-                "secondary",
-                "success",
-                "warning",
-                "danger",
-                "info",
-                "light",
-                "dark",
-                "link"
-              ]
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "lg",
-                "sm"
-              ]
             }
           }
         }
@@ -1214,12 +798,6 @@
         "then": {
           "properties": {
             "name": {
-              "type": "string"
-            },
-            "size": {
-              "type": "integer"
-            },
-            "color": {
               "type": "string"
             },
             "hidden": {
@@ -1271,15 +849,6 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
             "size": {
               "type": "string",
               "enum": [
@@ -1287,20 +856,8 @@
                 "sm"
               ]
             },
-            "prefix": {
-              "type": "string"
-            },
-            "postfix": {
-              "type": "string"
-            },
             "floatingLabel": {
               "type": "boolean"
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
             }
           }
         }

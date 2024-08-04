@@ -50,62 +50,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "submitOnEnter": {
-              "type": "boolean"
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "filled",
-                "standard"
-              ]
-            },
-            "color": {
-              "type": "string",
-              "enum": [
-                "error",
-                "info",
-                "primary",
-                "secondary",
-                "success",
-                "warning"
-              ]
-            },
-            "floatingLabel": {
-              "type": "boolean"
-            },
-            "disableUnderline": {
-              "type": "boolean"
-            },
-            "prefix": {
-              "type": "string"
-            },
-            "postfix": {
-              "type": "string"
             }
           }
         }
@@ -141,43 +85,6 @@
                 {
                   "$ref": "#/$defs/i18n"
                 }
-              ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium",
-                "large"
-              ]
-            },
-            "color": {
-              "type": "string",
-              "enum": [
-                "error",
-                "info",
-                "primary",
-                "secondary",
-                "success",
-                "warning"
-              ]
-            },
-            "labelPlacement": {
-              "type": "string",
-              "enum": [
-                "top",
-                "start",
-                "bottom",
-                "end"
               ]
             },
             "disableRipple": {
@@ -234,75 +141,17 @@
               "items": {
                 "type": "object",
                 "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  },
                   "image": {
                     "type": "string"
                   }
                 }
               }
             },
-            "value": {
-              "type": "string"
-            },
             "image": {
               "type": "string"
             },
             "showImageOptions": {
               "type": "boolean"
-            },
-            "filterKey": {
-              "type": "string"
-            },
-            "filterValue": {
-              "type": "string"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium"
-              ]
-            },
-            "autoWidth": {
-              "type": "boolean"
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "floatingLabel": {
-              "type": "boolean"
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "filled",
-                "standard"
-              ]
             }
           }
         }
@@ -331,20 +180,6 @@
               ]
             },
             "hidden": {
-              "type": "boolean"
-            },
-            "align": {
-              "type": "string",
-              "enum": [
-                "left",
-                "center",
-                "right"
-              ]
-            },
-            "collapsible": {
-              "type": "boolean"
-            },
-            "open": {
               "type": "boolean"
             },
             "border": {
@@ -388,46 +223,6 @@
                 "layout-1-0"
               ]
             },
-            "leftAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
-            },
-            "rightAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
-            },
             "hidden": {
               "type": "boolean"
             }
@@ -461,65 +256,31 @@
                 "layout-3-1-1"
               ]
             },
-            "leftAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
+            "hidden": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "columns"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
             },
-            "centerAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
-            },
-            "rightAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {}
+              }
             },
             "hidden": {
               "type": "boolean"
@@ -559,26 +320,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "align": {
-              "type": "string",
-              "enum": [
-                "top",
-                "center",
-                "bottom"
-              ]
-            },
-            "alignOffset": {
-              "type": "integer"
             },
             "arrayType": {
               "type": "string",
@@ -633,59 +374,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "filled",
-                "standard"
-              ]
-            },
-            "color": {
-              "type": "string",
-              "enum": [
-                "error",
-                "info",
-                "primary",
-                "secondary",
-                "success",
-                "warning"
-              ]
-            },
-            "floatingLabel": {
-              "type": "boolean"
-            },
-            "disableUnderline": {
-              "type": "boolean"
-            },
-            "prefix": {
-              "type": "string"
-            },
-            "postfix": {
-              "type": "string"
             }
           }
         }
@@ -723,82 +411,12 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium"
-              ]
-            },
-            "color": {
-              "type": "string",
-              "enum": [
-                "error",
-                "info",
-                "primary",
-                "secondary",
-                "success",
-                "warning"
-              ]
-            },
-            "min": {
-              "type": "integer"
-            },
-            "step": {
-              "type": "integer"
-            },
-            "max": {
-              "type": "integer"
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "valueLabelDisplay": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "on",
-                "off"
-              ]
-            },
-            "showMarks": {
-              "type": "boolean"
-            },
             "customMarks": {
               "type": "array",
               "items": {
                 "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "integer"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  }
-                }
+                "properties": {}
               }
-            },
-            "value": {
-              "type": "integer"
             }
           }
         }
@@ -846,113 +464,14 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium",
-                "large"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "filled",
-                "standard"
-              ]
-            },
-            "color": {
-              "type": "string",
-              "enum": [
-                "error",
-                "info",
-                "primary",
-                "secondary",
-                "success",
-                "warning"
-              ]
-            },
             "format": {
               "type": "string"
             },
             "views": {
               "type": "string"
             },
-            "closeOnSelect": {
-              "type": "boolean"
-            },
-            "reduceAnimations": {
-              "type": "boolean"
-            },
-            "showDaysOutsideCurrentMonth": {
-              "type": "boolean"
-            },
-            "floatingLabel": {
-              "type": "boolean"
-            },
-            "disableFuture": {
-              "type": "boolean"
-            },
-            "disableHighlightToday": {
-              "type": "boolean"
-            },
-            "disableOpenPicker": {
-              "type": "boolean"
-            },
-            "disablePast": {
-              "type": "boolean"
-            },
-            "displayWeekNumber": {
-              "type": "boolean"
-            },
             "loading": {
               "type": "boolean"
-            },
-            "fixedWeekNumber": {
-              "type": "integer"
-            },
-            "formatDensity": {
-              "type": "string",
-              "enum": [
-                "dense",
-                "spacious"
-              ]
-            },
-            "monthsPerRow": {
-              "type": "string",
-              "enum": [
-                3,
-                4
-              ]
-            },
-            "yearsPerRow": {
-              "type": "string",
-              "enum": [
-                3,
-                4
-              ]
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "minDate": {
-              "type": "string"
-            },
-            "maxDate": {
-              "type": "string"
             }
           }
         }
@@ -988,43 +507,6 @@
                 {
                   "$ref": "#/$defs/i18n"
                 }
-              ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium",
-                "large"
-              ]
-            },
-            "color": {
-              "type": "string",
-              "enum": [
-                "error",
-                "info",
-                "primary",
-                "secondary",
-                "success",
-                "warning"
-              ]
-            },
-            "labelPlacement": {
-              "type": "string",
-              "enum": [
-                "top",
-                "start",
-                "bottom",
-                "end"
               ]
             },
             "disableRipple": {
@@ -1070,62 +552,8 @@
               "type": "array",
               "items": {
                 "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  }
-                }
+                "properties": {}
               }
-            },
-            "value": {
-              "type": "string"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium",
-                "large"
-              ]
-            },
-            "color": {
-              "type": "string",
-              "enum": [
-                "error",
-                "info",
-                "primary",
-                "secondary",
-                "success",
-                "warning"
-              ]
-            },
-            "labelPlacement": {
-              "type": "string",
-              "enum": [
-                "top",
-                "start",
-                "bottom",
-                "end"
-              ]
             }
           }
         }
@@ -1167,62 +595,8 @@
               "type": "array",
               "items": {
                 "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  }
-                }
+                "properties": {}
               }
-            },
-            "value": {
-              "type": "string"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium",
-                "large"
-              ]
-            },
-            "color": {
-              "type": "string",
-              "enum": [
-                "error",
-                "info",
-                "primary",
-                "secondary",
-                "success",
-                "warning"
-              ]
-            },
-            "labelPlacement": {
-              "type": "string",
-              "enum": [
-                "top",
-                "start",
-                "bottom",
-                "end"
-              ]
             },
             "row": {
               "type": "boolean"
@@ -1272,56 +646,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "filled",
-                "standard"
-              ]
-            },
-            "color": {
-              "type": "string",
-              "enum": [
-                "error",
-                "info",
-                "primary",
-                "secondary",
-                "success",
-                "warning"
-              ]
-            },
-            "floatingLabel": {
-              "type": "boolean"
-            },
-            "disableUnderline": {
-              "type": "boolean"
-            },
-            "maxRows": {
-              "type": "integer"
             }
           }
         }
@@ -1358,35 +682,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium",
-                "large"
-              ]
-            },
-            "precision": {
-              "type": "string",
-              "enum": [
-                0.1,
-                0.2,
-                0.5,
-                1
-              ]
-            },
-            "max": {
-              "type": "integer"
             }
           }
         }
@@ -1477,31 +772,8 @@
               "type": "array",
               "items": {
                 "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  }
-                }
+                "properties": {}
               }
-            },
-            "value": {
-              "type": "string"
-            },
-            "filterKey": {
-              "type": "string"
-            },
-            "filterValue": {
-              "type": "string"
             },
             "placeholder": {
               "anyOf": [
@@ -1511,42 +783,6 @@
                 {
                   "$ref": "#/$defs/i18n"
                 }
-              ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium"
-              ]
-            },
-            "autoWidth": {
-              "type": "boolean"
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "floatingLabel": {
-              "type": "boolean"
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "filled",
-                "standard"
               ]
             }
           }
@@ -1567,29 +803,6 @@
             },
             "url": {
               "type": "string"
-            },
-            "align": {
-              "type": "string",
-              "enum": [
-                "left",
-                "center",
-                "right"
-              ]
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "maxWidth": {
-              "type": "integer"
-            },
-            "maxHeight": {
-              "type": "integer"
-            },
-            "marginTop": {
-              "type": "integer"
-            },
-            "marginBottom": {
-              "type": "integer"
             }
           }
         }
@@ -1614,47 +827,8 @@
                 "link"
               ]
             },
-            "labelOn": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "iconOn": {
-              "type": "string"
-            },
-            "labelOff": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "iconOff": {
-              "type": "string"
-            },
             "initialValue": {
               "type": "boolean"
-            },
-            "labelLink": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "iconLink": {
-              "type": "string"
             },
             "href": {
               "type": "string"
@@ -1669,41 +843,8 @@
                 }
               ]
             },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
             "hidden": {
               "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium",
-                "large"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "filled",
-                "standard"
-              ]
-            },
-            "color": {
-              "type": "string",
-              "enum": [
-                "error",
-                "info",
-                "primary",
-                "secondary",
-                "success",
-                "warning"
-              ]
             }
           }
         }
@@ -1719,12 +860,6 @@
         "then": {
           "properties": {
             "name": {
-              "type": "string"
-            },
-            "size": {
-              "type": "integer"
-            },
-            "color": {
               "type": "string"
             },
             "hidden": {
@@ -1776,140 +911,14 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium",
-                "large"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "filled",
-                "standard"
-              ]
-            },
-            "color": {
-              "type": "string",
-              "enum": [
-                "error",
-                "info",
-                "primary",
-                "secondary",
-                "success",
-                "warning"
-              ]
-            },
             "format": {
               "type": "string"
             },
             "views": {
               "type": "string"
             },
-            "closeOnSelect": {
-              "type": "boolean"
-            },
-            "reduceAnimations": {
-              "type": "boolean"
-            },
-            "showDaysOutsideCurrentMonth": {
-              "type": "boolean"
-            },
-            "floatingLabel": {
-              "type": "boolean"
-            },
-            "disableFuture": {
-              "type": "boolean"
-            },
-            "disableHighlightToday": {
-              "type": "boolean"
-            },
-            "disableOpenPicker": {
-              "type": "boolean"
-            },
-            "disablePast": {
-              "type": "boolean"
-            },
-            "displayWeekNumber": {
-              "type": "boolean"
-            },
-            "ampm": {
-              "type": "boolean"
-            },
-            "ampmInClock": {
-              "type": "boolean"
-            },
-            "forceMobile": {
-              "type": "boolean"
-            },
             "loading": {
               "type": "boolean"
-            },
-            "fixedWeekNumber": {
-              "type": "integer"
-            },
-            "formatDensity": {
-              "type": "string",
-              "enum": [
-                "dense",
-                "spacious"
-              ]
-            },
-            "monthsPerRow": {
-              "type": "string",
-              "enum": [
-                3,
-                4
-              ]
-            },
-            "yearsPerRow": {
-              "type": "string",
-              "enum": [
-                3,
-                4
-              ]
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "minDate": {
-              "type": "string"
-            },
-            "maxDate": {
-              "type": "string"
-            },
-            "minDateTime": {
-              "type": "string"
-            },
-            "maxDateTime": {
-              "type": "string"
-            },
-            "minutesStep": {
-              "type": "integer"
-            },
-            "timeStepsHours": {
-              "type": "integer"
-            },
-            "timeStepsMinutes": {
-              "type": "integer"
-            },
-            "timeStepsSeconds": {
-              "type": "integer"
             }
           }
         }
@@ -1947,12 +956,6 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
             "accept": {
               "type": "array",
               "items": {
@@ -1969,32 +972,6 @@
             },
             "multiple": {
               "type": "boolean"
-            },
-            "uploadButtonLabel": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "uploadButtonVariant": {
-              "type": "string",
-              "enum": [
-                "contained",
-                "outlined",
-                "text"
-              ]
-            },
-            "uploadButtonSize": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium",
-                "large"
-              ]
             },
             "color": {
               "type": "string",
@@ -2056,102 +1033,11 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "medium",
-                "large"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "filled",
-                "standard"
-              ]
-            },
-            "color": {
-              "type": "string",
-              "enum": [
-                "error",
-                "info",
-                "primary",
-                "secondary",
-                "success",
-                "warning"
-              ]
-            },
             "format": {
               "type": "string"
             },
             "views": {
               "type": "string"
-            },
-            "floatingLabel": {
-              "type": "boolean"
-            },
-            "ampm": {
-              "type": "boolean"
-            },
-            "ampmInClock": {
-              "type": "boolean"
-            },
-            "forceMobile": {
-              "type": "boolean"
-            },
-            "closeOnSelect": {
-              "type": "boolean"
-            },
-            "disableFuture": {
-              "type": "boolean"
-            },
-            "disableOpenPicker": {
-              "type": "boolean"
-            },
-            "disablePast": {
-              "type": "boolean"
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "minTime": {
-              "type": "string"
-            },
-            "maxTime": {
-              "type": "string"
-            },
-            "formatDensity": {
-              "type": "string",
-              "enum": [
-                "dense",
-                "spacious"
-              ]
-            },
-            "minutesStep": {
-              "type": "integer"
-            },
-            "timeStepsHours": {
-              "type": "integer"
-            },
-            "timeStepsMinutes": {
-              "type": "integer"
-            },
-            "timeStepsSeconds": {
-              "type": "integer"
             }
           }
         }

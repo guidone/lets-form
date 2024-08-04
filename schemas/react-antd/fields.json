@@ -50,61 +50,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "submitOnEnter": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "borderless",
-                "filled"
-              ]
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "prefix": {
-              "type": "string"
-            },
-            "postfix": {
-              "type": "string"
-            },
-            "showCount": {
-              "type": "boolean"
-            },
-            "maxLength": {
-              "type": "integer"
-            },
-            "allowClear": {
-              "type": "boolean"
-            },
-            "tooltip": {
-              "type": "boolean"
-            },
-            "bordered": {
-              "type": "boolean"
             }
           }
         }
@@ -142,15 +87,6 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
             "size": {
               "type": "string",
               "enum": [
@@ -160,26 +96,6 @@
             },
             "tooltip": {
               "type": "boolean"
-            },
-            "checkedChildren": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "unCheckedChildren": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
             }
           }
         }
@@ -232,96 +148,16 @@
               "items": {
                 "type": "object",
                 "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  },
                   "image": {
                     "type": "string"
                   }
                 }
               }
             },
-            "value": {
-              "type": "string"
-            },
             "image": {
               "type": "string"
             },
             "showImageOptions": {
-              "type": "boolean"
-            },
-            "filterKey": {
-              "type": "string"
-            },
-            "filterValue": {
-              "type": "string"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "borderless",
-                "filled"
-              ]
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "placement": {
-              "type": "string",
-              "enum": [
-                "bottomLeft",
-                "bottomRight",
-                "topLeft",
-                "topRight"
-              ]
-            },
-            "listHeight": {
-              "type": "integer"
-            },
-            "allowClear": {
-              "type": "boolean"
-            },
-            "popupMatchSelectWidth": {
-              "type": "boolean"
-            },
-            "tooltip": {
-              "type": "boolean"
-            },
-            "showSearch": {
-              "type": "boolean"
-            },
-            "virtual": {
               "type": "boolean"
             }
           }
@@ -351,20 +187,6 @@
               ]
             },
             "hidden": {
-              "type": "boolean"
-            },
-            "align": {
-              "type": "string",
-              "enum": [
-                "left",
-                "center",
-                "right"
-              ]
-            },
-            "collapsible": {
-              "type": "boolean"
-            },
-            "open": {
               "type": "boolean"
             },
             "border": {
@@ -408,46 +230,6 @@
                 "layout-1-0"
               ]
             },
-            "leftAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
-            },
-            "rightAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
-            },
             "hidden": {
               "type": "boolean"
             }
@@ -481,65 +263,31 @@
                 "layout-3-1-1"
               ]
             },
-            "leftAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
+            "hidden": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
+              "const": "columns"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
             },
-            "centerAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
-            },
-            "rightAlignment": {
-              "type": "string",
-              "enum": [
-                "auto",
-                "baseline",
-                "center",
-                "end",
-                "flex-end",
-                "flex-start",
-                "inherit",
-                "initial",
-                "normal",
-                "revert",
-                "self-end",
-                "self-start",
-                "start",
-                "stretch",
-                "unset"
-              ]
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {}
+              }
             },
             "hidden": {
               "type": "boolean"
@@ -579,26 +327,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "align": {
-              "type": "string",
-              "enum": [
-                "top",
-                "center",
-                "bottom"
-              ]
-            },
-            "alignOffset": {
-              "type": "integer"
             },
             "arrayType": {
               "type": "string",
@@ -653,61 +381,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "borderless",
-                "filled"
-              ]
-            },
-            "min": {
-              "type": "integer"
-            },
-            "step": {
-              "type": "integer"
-            },
-            "max": {
-              "type": "integer"
-            },
-            "prefix": {
-              "type": "string"
-            },
-            "postfix": {
-              "type": "string"
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "showControls": {
-              "type": "boolean"
-            },
-            "stringMode": {
-              "type": "boolean"
-            },
-            "tooltip": {
-              "type": "boolean"
             }
           }
         }
@@ -745,78 +418,12 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "keyboard": {
-              "type": "boolean"
-            },
-            "dots": {
-              "type": "boolean"
-            },
-            "reverse": {
-              "type": "boolean"
-            },
-            "min": {
-              "type": "integer"
-            },
-            "step": {
-              "type": "integer"
-            },
-            "max": {
-              "type": "integer"
-            },
-            "tooltipOpen": {
-              "type": "boolean"
-            },
-            "tooltipPlacement": {
-              "type": "string",
-              "enum": [
-                "top",
-                "left",
-                "right",
-                "bottom",
-                "topLeft",
-                "topRight",
-                "bottomLeft",
-                "bottomRight",
-                "topLeft",
-                "topRight",
-                "leftTop",
-                "leftBottom",
-                "rightTop",
-                "rightBottom"
-              ]
-            },
             "marks": {
               "type": "array",
               "items": {
                 "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "integer"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  }
-                }
+                "properties": {}
               }
-            },
-            "value": {
-              "type": "integer"
             },
             "included": {
               "type": "boolean"
@@ -867,98 +474,8 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "borderless",
-                "filled"
-              ]
-            },
             "format": {
               "type": "string"
-            },
-            "picker": {
-              "type": "string",
-              "enum": [
-                "date",
-                "week",
-                "month",
-                "quarter",
-                "year"
-              ]
-            },
-            "placement": {
-              "type": "string",
-              "enum": [
-                "bottomLeft",
-                "bottomRight",
-                "topLeft",
-                "topRight"
-              ]
-            },
-            "mode": {
-              "type": "string",
-              "enum": [
-                "time",
-                "date",
-                "month",
-                "year",
-                "decade"
-              ]
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "minDate": {
-              "type": "string"
-            },
-            "maxDate": {
-              "type": "string"
-            },
-            "showTime": {
-              "type": "boolean"
-            },
-            "showNow": {
-              "type": "boolean"
-            },
-            "showToday": {
-              "type": "boolean"
-            },
-            "preserveInvalidOnBlur": {
-              "type": "boolean"
-            },
-            "inputReadOnly": {
-              "type": "boolean"
-            },
-            "needConfirm": {
-              "type": "boolean"
-            },
-            "allowClear": {
-              "type": "boolean"
-            },
-            "tooltip": {
-              "type": "boolean"
             }
           }
         }
@@ -995,15 +512,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
             }
           }
         }
@@ -1045,34 +553,8 @@
               "type": "array",
               "items": {
                 "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  }
-                }
+                "properties": {}
               }
-            },
-            "value": {
-              "type": "string"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
             }
           }
         }
@@ -1114,49 +596,8 @@
               "type": "array",
               "items": {
                 "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  }
-                }
+                "properties": {}
               }
-            },
-            "value": {
-              "type": "string"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "optionType": {
-              "type": "string",
-              "enum": [
-                "default",
-                "button"
-              ]
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
             },
             "inline": {
               "type": "boolean"
@@ -1209,52 +650,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "borderless",
-                "filled"
-              ]
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "showCount": {
-              "type": "boolean"
-            },
-            "autoSize": {
-              "type": "boolean"
-            },
-            "maxLength": {
-              "type": "integer"
-            },
-            "allowClear": {
-              "type": "boolean"
-            },
-            "tooltip": {
-              "type": "boolean"
             }
           }
         }
@@ -1291,24 +686,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "count": {
-              "type": "integer"
-            },
-            "allowHalf": {
-              "type": "boolean"
-            },
-            "allowClear": {
-              "type": "boolean"
             },
             "tooltips": {
               "type": "array",
@@ -1416,31 +793,8 @@
               "type": "array",
               "items": {
                 "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  }
-                }
+                "properties": {}
               }
-            },
-            "value": {
-              "type": "string"
-            },
-            "filterKey": {
-              "type": "string"
-            },
-            "filterValue": {
-              "type": "string"
             },
             "placeholder": {
               "anyOf": [
@@ -1451,73 +805,6 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "borderless",
-                "filled"
-              ]
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "placement": {
-              "type": "string",
-              "enum": [
-                "bottomLeft",
-                "bottomRight",
-                "topLeft",
-                "topRight"
-              ]
-            },
-            "listHeight": {
-              "type": "integer"
-            },
-            "allowClear": {
-              "type": "boolean"
-            },
-            "popupMatchSelectWidth": {
-              "type": "boolean"
-            },
-            "tooltip": {
-              "type": "boolean"
-            },
-            "showSearch": {
-              "type": "boolean"
-            },
-            "virtual": {
-              "type": "boolean"
-            },
-            "maxTagCount": {
-              "type": "integer"
-            },
-            "maxTagPlaceholder": {
-              "type": "string"
-            },
-            "maxTagTextLength": {
-              "type": "integer"
             }
           }
         }
@@ -1537,29 +824,6 @@
             },
             "url": {
               "type": "string"
-            },
-            "align": {
-              "type": "string",
-              "enum": [
-                "left",
-                "center",
-                "right"
-              ]
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "maxWidth": {
-              "type": "integer"
-            },
-            "maxHeight": {
-              "type": "integer"
-            },
-            "marginTop": {
-              "type": "integer"
-            },
-            "marginBottom": {
-              "type": "integer"
             }
           }
         }
@@ -1584,47 +848,8 @@
                 "link"
               ]
             },
-            "labelOn": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "iconOn": {
-              "type": "string"
-            },
-            "labelOff": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "iconOff": {
-              "type": "string"
-            },
             "initialValue": {
               "type": "boolean"
-            },
-            "labelLink": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "iconLink": {
-              "type": "string"
             },
             "href": {
               "type": "string"
@@ -1639,32 +864,8 @@
                 }
               ]
             },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
             "hidden": {
               "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
-            },
-            "type": {
-              "type": "string",
-              "enum": [
-                "primary",
-                "default",
-                "dashed",
-                "text",
-                "link"
-              ]
             }
           }
         }
@@ -1680,12 +881,6 @@
         "then": {
           "properties": {
             "name": {
-              "type": "string"
-            },
-            "size": {
-              "type": "integer"
-            },
-            "color": {
               "type": "string"
             },
             "hidden": {
@@ -1737,98 +932,8 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "borderless",
-                "filled"
-              ]
-            },
             "format": {
               "type": "string"
-            },
-            "picker": {
-              "type": "string",
-              "enum": [
-                "date",
-                "week",
-                "month",
-                "quarter",
-                "year"
-              ]
-            },
-            "placement": {
-              "type": "string",
-              "enum": [
-                "bottomLeft",
-                "bottomRight",
-                "topLeft",
-                "topRight"
-              ]
-            },
-            "mode": {
-              "type": "string",
-              "enum": [
-                "time",
-                "date",
-                "month",
-                "year",
-                "decade"
-              ]
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "minDate": {
-              "type": "string"
-            },
-            "maxDate": {
-              "type": "string"
-            },
-            "showTime": {
-              "type": "boolean"
-            },
-            "showNow": {
-              "type": "boolean"
-            },
-            "showToday": {
-              "type": "boolean"
-            },
-            "preserveInvalidOnBlur": {
-              "type": "boolean"
-            },
-            "inputReadOnly": {
-              "type": "boolean"
-            },
-            "needConfirm": {
-              "type": "boolean"
-            },
-            "allowClear": {
-              "type": "boolean"
-            },
-            "tooltip": {
-              "type": "boolean"
             }
           }
         }
@@ -1850,58 +955,10 @@
               "type": "array",
               "items": {
                 "type": "object",
-                "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  }
-                }
+                "properties": {}
               }
             },
-            "value": {
-              "type": "string"
-            },
-            "label": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
             "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "middle",
-                "large"
-              ]
-            },
-            "tabType": {
-              "type": "string",
-              "enum": [
-                "line",
-                "card"
-              ]
-            },
-            "animated": {
-              "type": "boolean"
-            },
-            "centered": {
               "type": "boolean"
             }
           }
@@ -1940,12 +997,6 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
             "accept": {
               "type": "array",
               "items": {
@@ -1978,49 +1029,8 @@
             "showUploadList": {
               "type": "boolean"
             },
-            "uploadButtonLabel": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "uploadButtonAppearance": {
-              "type": "string",
-              "enum": [
-                "primary",
-                "default",
-                "dashed",
-                "text",
-                "link"
-              ]
-            },
-            "uploadButtonSize": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
-            },
             "draggable": {
               "type": "boolean"
-            },
-            "draggableText": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "draggableHeight": {
-              "type": "integer"
             },
             "tooltip": {
               "type": "boolean"
@@ -2066,27 +1076,11 @@
               "items": {
                 "type": "object",
                 "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  },
                   "image": {
                     "type": "string"
                   }
                 }
               }
-            },
-            "value": {
-              "type": "string"
             },
             "image": {
               "type": "string"
@@ -2096,36 +1090,6 @@
             },
             "multiple": {
               "type": "boolean"
-            },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "fullWidth": {
-              "type": "boolean"
-            },
-            "justifyContent": {
-              "type": "string",
-              "enum": [
-                "center",
-                "flex-start",
-                "flex-end",
-                "space-between",
-                "space-around"
-              ]
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
             }
           }
         }
@@ -2146,26 +1110,6 @@
             "hidden": {
               "type": "boolean"
             },
-            "labelNext": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
-            "labelPrevious": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
-            },
             "align": {
               "type": "string",
               "enum": [
@@ -2179,19 +1123,6 @@
               "items": {
                 "type": "object",
                 "properties": {
-                  "value": {
-                    "type": "string"
-                  },
-                  "label": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/i18n"
-                      }
-                    ]
-                  },
                   "subtitle": {
                     "anyOf": [
                       {
@@ -2217,19 +1148,6 @@
                   }
                 }
               }
-            },
-            "value": {
-              "type": "string"
-            },
-            "label": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/i18n"
-                }
-              ]
             },
             "subtitle": {
               "anyOf": [
@@ -2260,31 +1178,6 @@
                 "default",
                 "navigation",
                 "inline"
-              ]
-            },
-            "status": {
-              "type": "string",
-              "enum": [
-                "finish",
-                "wait",
-                "process",
-                "error"
-              ]
-            },
-            "percent": {
-              "type": "integer"
-            },
-            "small": {
-              "type": "boolean"
-            },
-            "clickable": {
-              "type": "boolean"
-            },
-            "labelPlacement": {
-              "type": "string",
-              "enum": [
-                "horizontal",
-                "vertical"
               ]
             }
           }
@@ -2333,60 +1226,8 @@
                 }
               ]
             },
-            "disabled": {
-              "type": "boolean"
-            },
-            "readOnly": {
-              "type": "boolean"
-            },
-            "hidden": {
-              "type": "boolean"
-            },
-            "size": {
-              "type": "string",
-              "enum": [
-                "small",
-                "default",
-                "large"
-              ]
-            },
-            "variant": {
-              "type": "string",
-              "enum": [
-                "outlined",
-                "borderless",
-                "filled"
-              ]
-            },
             "format": {
               "type": "string"
-            },
-            "hourStep": {
-              "type": "integer"
-            },
-            "minuteStep": {
-              "type": "integer"
-            },
-            "secondStep": {
-              "type": "integer"
-            },
-            "allowClear": {
-              "type": "boolean"
-            },
-            "hideDisabledOptions": {
-              "type": "boolean"
-            },
-            "inputReadOnly": {
-              "type": "boolean"
-            },
-            "needConfirm": {
-              "type": "boolean"
-            },
-            "showNow": {
-              "type": "boolean"
-            },
-            "use12Hours": {
-              "type": "boolean"
             },
             "tooltip": {
               "type": "boolean"

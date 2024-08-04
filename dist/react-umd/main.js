@@ -1,4 +1,4 @@
-/* LetsForm react v0.9.6 - UMD */
+/* LetsForm react v0.9.7 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-hook-form'], factory) :
@@ -128,7 +128,10 @@
         _n = !0,
         _d = !1;
       try {
-        if (_x = (_i = _i.call(arr)).next, 0 === i) ; else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0);
+        if (_x = (_i = _i.call(arr)).next, 0 === i) {
+          if (Object(_i) !== _i) return;
+          _n = !1;
+        } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0);
       } catch (err) {
         _d = !0, _e = err;
       } finally {
@@ -4586,8 +4589,8 @@
     }
   }
 
-  var css_248z$h = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
-  styleInject(css_248z$h);
+  var css_248z$i = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
+  styleInject(css_248z$i);
 
   var tx = function tx(str, locale) {
     if (_isString(str)) {
@@ -4782,9 +4785,9 @@
   /**
    * processFieldsHash
    * Tkae a field and process the "fields" key, which can be ah hash of value / array of fields
-   * @param {*} field 
-   * @param {*} predicate 
-   * @returns 
+   * @param {*} field
+   * @param {*} predicate
+   * @returns
    */
   var processFieldsHash = function processFieldsHash(field, predicate) {
     var newField = field;
@@ -4871,8 +4874,8 @@
             rightFields: _newRightFields
           });
         }
-      } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject(field.fields) && !_isArray(field.fields)) {
-        // Problem here: the new field can be an array because the map field, can return an array with 
+      } else if ((field.component === 'tabs' || field.component === 'steps' || field.component === 'columns') && _isObject(field.fields) && !_isArray(field.fields)) {
+        // Problem here: the new field can be an array because the map field, can return an array with
         // additional field to be put somewhere in the mapping, of those only the one of type "tab" need to be
         // mapped, the other one must be left untouched since they where added by the helper method
         if (_isArray(newField)) {
@@ -4982,7 +4985,7 @@
             rightFields: _newRightFields
           });
         }
-      } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject(field.fields) && !_isArray(field.fields)) {
+      } else if ((field.component === 'tabs' || field.component === 'steps' || field.component === 'columns') && _isObject(field.fields) && !_isArray(field.fields)) {
         var subkeys = Object.keys(field.fields);
         // scan all keys of fields and reapply, if different instance, create a new instance
         // of new field
@@ -5509,7 +5512,8 @@
       'group': true,
       'array': true,
       'two-columns': true,
-      'three-columns': true
+      'three-columns': true,
+      'columns': true
     }, opts);
     if (_isEmpty(fields) || !_isArray(fields)) {
       return accumulator;
@@ -5531,7 +5535,7 @@
         result = reduceFields(field.leftFields, predicate, result, opts);
         result = reduceFields(field.centerFields, predicate, result, opts);
         result = reduceFields(field.rightFields, predicate, result, opts);
-      } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject(field.fields) && !_isArray(field.fields)) {
+      } else if ((field.component === 'tabs' || field.component === 'steps' || field.component === 'columns' && options['columns']) && _isObject(field.fields) && !_isArray(field.fields)) {
         var subkeys = Object.keys(field.fields);
         subkeys.forEach(function (subkey) {
           result = reduceFields(field.fields[subkey], predicate, result, opts);
@@ -5593,7 +5597,7 @@
           found = findField(field.leftFields, predicate) || findField(field.rightFields, predicate);
         } else if (field.component === 'three-columns') {
           found = findField(field.leftFields, predicate) || findField(field.centerFields, predicate) || findField(field.rightFields, predicate);
-        } else if ((field.component === 'tabs' || field.component === 'steps') && _isObject(field.fields) && !_isArray(field.fields)) {
+        } else if ((field.component === 'tabs' || field.component === 'steps' || field.component === 'columns') && _isObject(field.fields) && !_isArray(field.fields)) {
           var subkeys = Object.keys(field.fields);
           subkeys.forEach(function (subkey) {
             if (!found) {
@@ -5942,6 +5946,16 @@
 
   var isEmptyForm = function isEmptyForm(form) {
     return !form || !Array.isArray(form.fields) || form.fields.length === 0;
+  };
+
+  var lfLog = function lfLog(s) {
+    return console.log('%cLF%c ' + s, 'background: #3498ff; color: #ffffff; padding: 2px; border-radius: 3px', '');
+  };
+  var lfError = function lfError(s, e) {
+    return console.log('%cLF%c Error: ' + s, 'background: #E44D2E; color: #ffffff; padding: 2px; border-radius: 3px', '', e !== null && e !== void 0 ? e : '');
+  };
+  var lfWarn = function lfWarn(s, e) {
+    return console.log('%cLF%c Warning: ' + s, 'background: #FFBF00; color: #ffffff; padding: 2px; border-radius: 3px', '', '');
   };
 
   var toggle$1 = {
@@ -8453,6 +8467,8 @@
   };
   var ApiFactory = function ApiFactory(formName, framework, formFields, currenValues, formContext) {
     var _fields = formFields;
+    var rerenders = {}; // store re-render requests after field change
+    var scheduledChanges = {};
     var fieldExists = function fieldExists(name) {
       if (findField(_fields, function (field) {
         return field.name === name;
@@ -8468,6 +8484,19 @@
       },
       context: function context(key) {
         return formContext ? formContext[key] : null;
+      },
+      setFieldValue: function setFieldValue(name, value) {
+        // set the field to be re-rendered if it's uncontrolled
+        rerenders[name] = rerenders[name] ? rerenders[name] + 1 : 1;
+        // schedule a field change and differ it, otherwise setValue will trigger the re-design of the component
+        // before the information or re-render reaches it
+        scheduledChanges[name] = value;
+      },
+      getReRenders: function getReRenders() {
+        return rerenders;
+      },
+      getScheduledChanges: function getScheduledChanges() {
+        return scheduledChanges;
       },
       element: function element(name) {
         if (!fieldExists(name)) {
@@ -8517,9 +8546,9 @@
         if (!field) {
           return;
         }
-        methods.setValue(name, key, !field[key]);
+        methods.setParam(name, key, !field[key]);
       },
-      setValue: function setValue(name, key, value) {
+      setParam: function setParam(name, key, value) {
         if (!fieldExists(name)) {
           return;
         }
@@ -8552,6 +8581,10 @@
           }
           return field;
         });
+      },
+      setValue: function setValue(name, key, value) {
+        lfWarn('LetsForm Script .setValue() is deprecated, use .setParam() instead');
+        return methods.setParam(name, key, value);
       },
       enable: function enable(name) {
         if (!fieldExists(name)) {
@@ -8636,6 +8669,19 @@
     };
     return methods;
   };
+
+  /**
+   * applyTransformers
+   * Apply a list of transformers
+   * @param {*} formName
+   * @param {*} framework
+   * @param {*} fields
+   * @param {*} transformers
+   * @param {*} values
+   * @param {*} onJavascriptError
+   * @param {*} formContext
+   * @param {*} setValue
+   */
   var applyTransformers = /*#__PURE__*/function () {
     var _ref = _wrapAsyncGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(formName, framework, fields, transformers, values, onJavascriptError, formContext) {
       var newFields, txs, idx, api, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _iterator, _step, f, error;
@@ -8672,7 +8718,11 @@
             f = _step.value;
             newFields = f;
             _context.next = 18;
-            return f;
+            return {
+              fields: f,
+              rerenders: api.getReRenders(),
+              changes: api.getScheduledChanges()
+            };
           case 18:
             _iteratorAbruptCompletion = false;
             _context.next = 11;
@@ -8723,13 +8773,17 @@
             break;
           case 48:
             _context.next = 50;
-            return newFields;
+            return {
+              fields: newFields
+            };
           case 50:
             _context.next = 54;
             break;
           case 52:
             _context.next = 54;
-            return fields;
+            return {
+              fields: fields
+            };
           case 54:
           case "end":
             return _context.stop();
@@ -8784,13 +8838,8 @@
     return d instanceof Date && !isNaN(d);
   };
 
-  var lfLog = function lfLog(s) {
-    return console.log('%cLF%c ' + s, 'background: #3498ff; color: #ffffff; padding: 2px; border-radius: 3px', '');
+  var columns = {
   };
-  var lfError = function lfError(s, e) {
-    return console.log('%cLF%c Error: ' + s, 'background: #E44D2E; color: #ffffff; padding: 2px; border-radius: 3px', '', e !== null && e !== void 0 ? e : '');
-  };
-
   var toggle = {
   	label: "Toggle",
   	category: "general",
@@ -13862,6 +13911,7 @@
   	]
   };
   var Manifests = {
+  	columns: columns,
   	"input-text": {
   	label: "Input Text",
   	category: "general",
@@ -16246,7 +16296,7 @@
     };
   }();
 
-  var LAYOUT_FIELDS$1 = ['group', 'two-columns', 'three-columns', 'steps', 'tabs'];
+  var LAYOUT_FIELDS$1 = ['group', 'two-columns', 'three-columns', 'columns', 'steps', 'tabs'];
   var defaultBlockProperty = function defaultBlockProperty(s) {
     return {
       rich_text: [{
@@ -16498,7 +16548,7 @@
 
   var CONNECTOR_NAMES = Object.keys(Connectors);
   var AVAILABLE_COMPONENTS = Object.keys(Manifests);
-  var LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns', 'steps', 'tabs'];
+  var LAYOUT_FIELDS = ['group', 'two-columns', 'three-columns', 'steps', 'tabs', 'columns'];
   var validateJSONForm = function validateJSONForm(json) {
     if (!_isObject(json)) {
       return 'Not a valid JSON object';
@@ -17465,8 +17515,8 @@
     };
   }();
 
-  var css_248z$g = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
-  styleInject(css_248z$g);
+  var css_248z$h = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
+  styleInject(css_248z$h);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
@@ -17484,8 +17534,8 @@
     }
   };
 
-  var css_248z$f = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
-  styleInject(css_248z$f);
+  var css_248z$g = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
+  styleInject(css_248z$g);
 
   var ThreeColumns = function ThreeColumns(_ref) {
     var name = _ref.name,
@@ -17515,8 +17565,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$e = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
-  styleInject(css_248z$e);
+  var css_248z$f = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
+  styleInject(css_248z$f);
 
   var TwoColumns = function TwoColumns(_ref) {
     var name = _ref.name,
@@ -17540,8 +17590,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$d = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
-  styleInject(css_248z$d);
+  var css_248z$e = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject(css_248z$e);
 
   var Group = I18N(function (_ref) {
     var name = _ref.name,
@@ -17594,8 +17644,8 @@
     }, children));
   }, ['label']);
 
-  var css_248z$c = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
-  styleInject(css_248z$c);
+  var css_248z$d = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
+  styleInject(css_248z$d);
 
   var PlaceholderImage = function PlaceholderImage(_ref) {
     var url = _ref.url,
@@ -17625,8 +17675,8 @@
     }));
   };
 
-  var css_248z$b = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
-  styleInject(css_248z$b);
+  var css_248z$c = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
+  styleInject(css_248z$c);
 
   var Divider = function Divider(_ref) {
     var name = _ref.name,
@@ -17645,7 +17695,7 @@
   };
   lfLog('Loaded Common.Divider');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
@@ -17931,8 +17981,8 @@
     })));
   };
 
-  var css_248z$a = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
-  styleInject(css_248z$a);
+  var css_248z$b = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
+  styleInject(css_248z$b);
 
   var randomId = function randomId() {
     var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
@@ -18125,8 +18175,8 @@
     }));
   };
 
-  var css_248z$9 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
-  styleInject(css_248z$9);
+  var css_248z$a = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
+  styleInject(css_248z$a);
 
   var _excluded$e = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
@@ -18204,8 +18254,30 @@
     };
   };
 
-  var css_248z$8 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
+  var css_248z$9 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
+  styleInject(css_248z$9);
+
+  var css_248z$8 = ".lf-control-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-columns .lf-column {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-columns .lf-column:last-child {\n  margin-right: 0px;\n}\n.lf-control-columns .lf-column:first-child:empty {\n  display: none;\n}";
   styleInject(css_248z$8);
+
+  var Columns = function Columns(_ref) {
+    var name = _ref.name,
+      children = _ref.children,
+      columns = _ref.columns;
+    return /*#__PURE__*/React$1.createElement("div", {
+      "data-lf-field-name": name,
+      className: "lf-control-columns"
+    }, (columns || []).map(function (column) {
+      return /*#__PURE__*/React$1.createElement("div", {
+        key: column.name,
+        className: classNames('lf-column', "lf-column-".concat(column.name), column.layout && "layout-".concat(column.layout)),
+        style: {
+          alignSelf: column.alignment ? column.alignment : undefined,
+          flexGrow: column.size != null ? column.size : undefined
+        }
+      }, _isFunction(children) && children(column.name));
+    }));
+  };
 
   var css_248z$7 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
   styleInject(css_248z$7);
@@ -18220,11 +18292,19 @@
     var currentValues = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
     return (fields || []).map(function (field) {
       if (field.component === 'group') {
+        var _field$name;
         return /*#__PURE__*/React$1.createElement(Group, _extends({
-          key: field.name,
+          key: (_field$name = field.name) !== null && _field$name !== void 0 ? _field$name : _uniqueId('lf_group'),
           collapsible: false,
           label: field.label
         }, _pick(field, ['bottomBorder', 'align'])), renderFields(field.fields, locale, framework, currentValues));
+      } else if (field.component === 'columns') {
+        var _field$name2;
+        return /*#__PURE__*/React$1.createElement(Columns, _extends({
+          key: (_field$name2 = field.name) !== null && _field$name2 !== void 0 ? _field$name2 : _uniqueId('lf_columns')
+        }, _omit(field, ['fields', 'name'])), function (column) {
+          return renderFields(field.fields[column], locale, framework, currentValues);
+        });
       } else if (field.component === 'two-columns') {
         return /*#__PURE__*/React$1.createElement(TwoColumns, _extends({
           key: field.name
@@ -18274,7 +18354,6 @@
     if (_isEmpty(fields)) {
       return /*#__PURE__*/React$1.createElement("span", null);
     }
-    console.log('plaintext--->', currentValues);
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-form lf-form-plaintext"
     }, renderFields(fields, locale, framework, currentValues));
@@ -18506,7 +18585,7 @@
       if (!_isEmpty(fieldList)) {
         spreadVars = 'const { ' + fieldList.join(', ') + ' } = values;\n';
       }
-      var tx = new AsyncGeneratorFunction('api', "const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue, context, toggle } = api;\n" + spreadVars + yieldedStr + '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
+      var tx = new AsyncGeneratorFunction('api', "const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue, context, toggle, setFieldValue } = api;\n" + spreadVars + yieldedStr + '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
       );
 
       return tx;
@@ -18522,7 +18601,7 @@
 
     // collect all fieldlist needed to compile the transformer
     var fieldList = reduceFields(fields, function (field, accumulator) {
-      if (field.component !== 'group' && field.component !== 'two-columns' && field.component !== 'three-columns') {
+      if (field.component !== 'group' && field.component !== 'two-columns' && field.component !== 'three-columns' && field.component !== 'columns') {
         return [].concat(_toConsumableArray(accumulator), [field.name]);
       }
       return accumulator;
@@ -18730,6 +18809,30 @@
       return true;
     });
   };
+  var assertValidSteps = function assertValidSteps(elements) {
+    var checkElements = Array.isArray(elements) ? elements : [elements];
+    return checkElements.every(function (element) {
+      if (_.isEmpty(element.props.value)) {
+        throw new Error('LetsForm DSL error, LfStep ' + elementToString(element) + ' must have a "value" property (the internal name of the step)');
+      }
+      if (_.isEmpty(element.props.label)) {
+        throw new Error('LetsForm DSL error, LfStep ' + elementToString(element) + ' must have a "label" property');
+      }
+      return true;
+    });
+  };
+  var assertValidTabs = function assertValidTabs(elements) {
+    var checkElements = Array.isArray(elements) ? elements : [elements];
+    return checkElements.every(function (element) {
+      if (_.isEmpty(element.props.value)) {
+        throw new Error('LetsForm DSL error, LfTab ' + elementToString(element) + ' must have a "value" property (the internal name of the tab)');
+      }
+      if (_.isEmpty(element.props.label)) {
+        throw new Error('LetsForm DSL error, LfStep ' + elementToString(element) + ' must have a "label" property');
+      }
+      return true;
+    });
+  };
   var assertElementsOfElements = function assertElementsOfElements(elements, types) {
     var checkTypes = Array.isArray(types) ? types : [types];
     var checkElements = Array.isArray(elements) ? elements : [elements];
@@ -18792,35 +18895,23 @@
             framework: framework
           })
         });
-      } else if (elementOf(element, LfColumns) && Array.isArray(element.props.children) && element.props.children.length == 2 && assertElementsOf(element.props.children, LfColumn)) {
-        return _objectSpread2(_objectSpread2({
-          component: 'two-columns'
-        }, _.omit(element.props, 'children')), {}, {
-          leftFields: traverseChildren(element.props.children[0].props.children, {
-            components: components,
-            framework: framework
-          }),
-          rightFields: traverseChildren(element.props.children[1].props.children, {
-            components: components,
-            framework: framework
-          })
+      } else if (elementOf(element, LfColumns) && Array.isArray(element.props.children) && assertElementsOf(element.props.children, LfColumn)) {
+        var columns = element.props.children.map(function (el) {
+          return _objectSpread2({
+            name: _.uniqueId('lf_column_name_')
+          }, _.omit(el.props, 'children'));
         });
-      } else if (element.type === LfColumns && Array.isArray(element.props.children) && element.props.children.length == 3 && assertElementsOf(element.props.children, [LfColumn])) {
         return _objectSpread2(_objectSpread2({
-          component: 'three-columns'
+          name: _.uniqueId('lf_field_name_'),
+          component: 'columns',
+          columns: columns
         }, _.omit(element.props, 'children')), {}, {
-          leftFields: traverseChildren(element.props.children[0].props.children, {
-            components: components,
-            framework: framework
-          }),
-          centerFields: traverseChildren(element.props.children[1].props.children, {
-            components: components,
-            framework: framework
-          }),
-          rightFields: traverseChildren(element.props.children[2].props.children, {
-            components: components,
-            framework: framework
-          })
+          fields: columns.reduce(function (acc, column, idx) {
+            return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, column.name, traverseChildren(element.props.children[idx].props.children, {
+              components: components,
+              framework: framework
+            })));
+          }, {})
         });
       } else if (element.type === LfArray && assertElementsOf(element.props.children, [LfField, LfGroup, LfColumns])) {
         return _objectSpread2(_objectSpread2({}, _.omit(element.props, 'children')), {}, {
@@ -18830,31 +18921,37 @@
             framework: framework
           })
         });
-      } else if (element.type === LfTabs && assertElementsOf(element.props.children, [LfTab]) && assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray])) {
+      } else if (element.type === LfTabs && assertElementsOf(element.props.children, [LfTab]) && assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray]) && assertValidTabs(element.props.children)) {
+        var tabs = element.props.children.map(function (el) {
+          return _objectSpread2({
+            name: _.uniqueId('lf_tab_name_')
+          }, _.omit(el.props, 'children'));
+        });
         return _objectSpread2(_objectSpread2({
-          name: _.uniqueId('lf_name_'),
+          name: _.uniqueId('lf_field_name_'),
           component: 'tabs'
         }, _.omit(element.props, 'children')), {}, {
-          tabs: element.props.children.map(function (el) {
-            return _.omit(el.props, 'children');
-          }),
-          fields: element.props.children.reduce(function (acc, tabElement) {
-            return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, tabElement.props.value, traverseChildren(tabElement.props.children, {
+          tabs: tabs,
+          fields: tabs.reduce(function (acc, column, idx) {
+            return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, column.value, traverseChildren(element.props.children[idx].props.children, {
               components: components,
               framework: framework
             })));
           }, {})
         });
-      } else if (element.type === LfSteps && assertElementsOf(element.props.children, [LfStep]) && assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray])) {
+      } else if (element.type === LfSteps && assertElementsOf(element.props.children, [LfStep]) && assertElementsOfElements(element.props.children, [LfField, LfGroup, LfColumns, LfArray]) && assertValidSteps(element.props.children)) {
+        var steps = element.props.children.map(function (el) {
+          return _objectSpread2({
+            name: _.uniqueId('lf_step_name_')
+          }, _.omit(el.props, 'children'));
+        });
         return _objectSpread2(_objectSpread2({
-          name: _.uniqueId('lf_name_'),
+          name: _.uniqueId('lf_field_name_'),
           component: 'steps'
         }, _.omit(element.props, 'children')), {}, {
-          steps: element.props.children.map(function (el) {
-            return _.omit(el.props, 'children');
-          }),
-          fields: element.props.children.reduce(function (acc, tabElement) {
-            return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, tabElement.props.value, traverseChildren(tabElement.props.children, {
+          steps: steps,
+          fields: steps.reduce(function (acc, column, idx) {
+            return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, column.value, traverseChildren(element.props.children[idx].props.children, {
               components: components,
               framework: framework
             })));
@@ -18863,7 +18960,7 @@
       } else {
         // othwerwise wrap in react-view component
         return {
-          name: _.uniqueId('lf_name_'),
+          name: _.uniqueId('lf_field_name_'),
           component: 'react-view',
           view: function view() {
             return /*#__PURE__*/React.createElement(React.Fragment, null, element);
@@ -18873,13 +18970,87 @@
     }).filter(Boolean);
   };
 
+  var upgradeFields = function upgradeFields(fields, version) {
+    if (version === 1) {
+      var upgradedFields = mapFields(fields, function (field) {
+        if (field.component === 'two-columns') {
+          var _match2;
+          lfWarn("Component 'two-columns' is deprecated, use 'columns' instead");
+          var _ref = (_match2 = (field.layout || '').match(/layout-([0-9])-([0-9])/)) !== null && _match2 !== void 0 ? _match2 : [],
+            _ref2 = _slicedToArray(_ref, 3);
+            _ref2[0];
+            var oneSize = _ref2[1],
+            twoSize = _ref2[2];
+          return {
+            component: 'columns',
+            name: field.name,
+            columns: [{
+              name: 'one',
+              alignment: field.leftAlignment,
+              size: oneSize != null ? parseInt(oneSize, 10) : 1
+            }, {
+              name: 'two',
+              alignment: field.rightAlignment,
+              size: twoSize != null ? parseInt(twoSize, 10) : 1
+            }],
+            fields: {
+              one: field.leftFields,
+              two: field.rightFields
+            }
+          };
+        } else if (field.component === 'three-columns') {
+          var _match4;
+          lfWarn("Component 'three-columns' is deprecated, use 'columns' instead");
+          var _ref3 = (_match4 = (field.layout || '').match(/layout-([0-9])-([0-9])-([0-9])/)) !== null && _match4 !== void 0 ? _match4 : [],
+            _ref4 = _slicedToArray(_ref3, 4);
+            _ref4[0];
+            var _oneSize = _ref4[1],
+            _twoSize = _ref4[2],
+            threeSize = _ref4[3];
+          return {
+            component: 'columns',
+            name: field.name,
+            columns: [{
+              name: 'one',
+              alignment: field.leftAlignment,
+              size: _oneSize != null ? parseInt(_oneSize, 10) : 1
+            }, {
+              name: 'two',
+              alignment: field.centerAligment,
+              size: _twoSize != null ? parseInt(_twoSize, 10) : 1
+            }, {
+              name: 'three',
+              alignment: field.rightAlignment,
+              size: threeSize != null ? parseInt(threeSize, 10) : 1
+            }],
+            fields: {
+              one: field.leftFields,
+              two: field.centerFields,
+              three: field.rightFields
+            }
+          };
+        }
+        return field;
+      });
+      return upgradedFields;
+    }
+    return fields;
+  };
+
   var css_248z$6 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
   styleInject(css_248z$6);
 
   var _excluded$d = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableOnSubmit", "resetAfterSubmit", "context"];
   var DEFAULT_FORM = {
-    version: 1,
+    version: 2,
     fields: []
+  };
+  var mergeReRenders = function mergeReRenders(currentReRenders, newReRenders) {
+    if (newReRenders) {
+      Object.keys(newReRenders).forEach(function (key) {
+        return currentReRenders[key] = currentReRenders[key] ? currentReRenders[key] + newReRenders[key] : newReRenders[key];
+      });
+    }
   };
   var GenerateGenerator = function GenerateGenerator(_ref) {
     var Forms = _ref.Forms,
@@ -18891,7 +19062,9 @@
         _onChange = _ref2.onChange,
         onEnter = _ref2.onEnter,
         getValues = _ref2.getValues,
-        Wrapper = _ref2.Wrapper,
+        setValue = _ref2.setValue;
+        _ref2.register;
+        var Wrapper = _ref2.Wrapper,
         GroupWrapper = _ref2.GroupWrapper,
         BottomView = _ref2.BottomView,
         PlaceholderWrapper = _ref2.PlaceholderWrapper;
@@ -18906,7 +19079,8 @@
         locale = _ref2.locale,
         onJavascriptError = _ref2.onJavascriptError,
         Components = _ref2.Components,
-        prependView = _ref2.prependView;
+        prependView = _ref2.prependView,
+        rerenders = _ref2.rerenders;
       var renderedFields = (fields || []).filter(function (field) {
         return Wrapper || field.component !== 'hidden';
       }) // skip hidden type field (not in design mode)
@@ -18923,7 +19097,28 @@
           Component = MissingComponent;
         }
         // remove mandatory fields and platform specific fields
-        var additionalFields = _omit(field, ['id', 'name', 'label', 'hint', 'disabled', 'readOnly', 'plaintext', 'size', 'placeholder', 'component'].concat(_toConsumableArray(FRAMEWORKS)));
+        var additionalFields = _omit(field, ['id', 'name', 'label', /*'hint',*/'disabled', 'readOnly', 'plaintext', /*'size', 'placeholder',*/'component'].concat(_toConsumableArray(FRAMEWORKS)));
+        var renderFieldsParams = {
+          Wrapper: Wrapper,
+          GroupWrapper: GroupWrapper,
+          PlaceholderWrapper: PlaceholderWrapper,
+          BottomView: BottomView,
+          onChange: _onChange,
+          onEnter: onEnter,
+          control: control,
+          framework: framework,
+          getValues: getValues,
+          setValue: setValue,
+          readOnly: readOnly,
+          plaintext: plaintext,
+          errors: errors,
+          showErrors: showErrors,
+          level: level + 1,
+          locale: locale,
+          onJavascriptError: onJavascriptError,
+          Components: Components,
+          rerenders: rerenders
+        };
 
         // special case of group
         if (field.component === 'group') {
@@ -18936,34 +19131,17 @@
             label: field.label,
             hint: field.hint,
             disabled: field.disabled
-          }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
-            Wrapper: Wrapper,
-            GroupWrapper: GroupWrapper,
-            PlaceholderWrapper: PlaceholderWrapper,
-            BottomView: BottomView,
-            onChange: _onChange,
-            onEnter: onEnter,
+          }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
             fields: field.fields,
-            control: control,
-            framework: framework,
-            getValues: getValues,
             disabled: field.disabled ? true : disabled,
             // pass disabled status to inner components
-            readOnly: readOnly,
-            plaintext: plaintext,
-            errors: errors,
-            showErrors: showErrors,
-            level: level + 1,
-            locale: locale,
-            onJavascriptError: onJavascriptError,
-            Components: Components,
             prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
               key: "wrapper_top_field",
               parentField: field,
               parentFieldTarget: "fields",
               nextField: field.fields && field.fields.length ? field.fields[0] : null
             })
-          }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+          })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
             context: "group",
             key: "bottom_view_".concat(field.name),
             field: field,
@@ -18976,6 +19154,43 @@
             index: index,
             className: "group"
           }, component) : component;
+        } else if (field.component === 'columns') {
+          var _component = /*#__PURE__*/React$1.createElement(Component, _extends({
+            key: field.name,
+            lfComponent: field.component,
+            lfFramework: framework,
+            lfLocale: locale,
+            name: field.name,
+            label: field.label,
+            hint: field.hint,
+            disabled: field.disabled
+          }, additionalFields), function (column) {
+            return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
+              fields: field.fields && _isArray(field.fields[column]) ? field.fields[column] : [],
+              disabled: field.disabled ? true : disabled,
+              // pass disabled status to inner components
+              prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+                key: "wrapper_top_field",
+                parentField: field,
+                parentFieldTarget: "fields",
+                parentFieldSubTarget: column,
+                nextField: field.fields && field.fields.length ? field.fields[0] : null
+              })
+            })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+              context: "columns",
+              key: "bottom_view_".concat(field.name),
+              field: field,
+              target: "fields",
+              subtarget: column
+            }));
+          });
+          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
+            key: "wrapper_".concat(field.name),
+            field: field,
+            level: level,
+            index: index,
+            className: "columns"
+          }, _component) : _component;
         } else if (field.component === 'tabs') {
           return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
             key: "field_".concat(field.name),
@@ -18983,7 +19198,7 @@
             control: control,
             render: function render(_ref3) {
               var _values$field$name;
-              var fieldInfo = _ref3.field;
+              _ref3.field;
               var values = getValues();
               var component = /*#__PURE__*/React$1.createElement(Component, _extends({
                 key: field.name,
@@ -18995,33 +19210,15 @@
                 hint: field.hint,
                 disabled: field.disabled,
                 value: (_values$field$name = values[field.name]) !== null && _values$field$name !== void 0 ? _values$field$name : undefined,
-                onChange: function onChange(value, opts) {
-                  // TODO use callback
-                  fieldInfo.onChange(value);
+                onChange: function onChange(value, _opts) {
+                  setValue(field.name, value);
                   _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
                 }
               }, additionalFields, field[framework]), function (tab) {
-                return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
-                  Wrapper: Wrapper,
-                  GroupWrapper: GroupWrapper,
-                  PlaceholderWrapper: PlaceholderWrapper,
-                  BottomView: BottomView,
-                  onChange: _onChange,
-                  onEnter: onEnter,
+                return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
                   fields: field.fields && _isArray(field.fields[tab]) ? field.fields[tab] : [],
-                  control: control,
-                  framework: framework,
-                  getValues: getValues,
                   disabled: field.disabled ? true : disabled,
                   // pass disabled status to inner components
-                  readOnly: readOnly,
-                  plaintext: plaintext,
-                  errors: errors,
-                  showErrors: showErrors,
-                  level: level + 1,
-                  locale: locale,
-                  onJavascriptError: onJavascriptError,
-                  Components: Components,
                   prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                     key: "wrapper_top_field",
                     parentField: field,
@@ -19029,7 +19226,7 @@
                     parentFieldSubTarget: tab,
                     nextField: field.fields && field.fields.length ? field.fields[0] : null
                   })
-                }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+                })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                   context: "tabs",
                   key: "bottom_view_".concat(field.name),
                   field: field,
@@ -19053,7 +19250,7 @@
             control: control,
             render: function render(_ref4) {
               var _values$field$name2;
-              var fieldInfo = _ref4.field;
+              _ref4.field;
               var values = getValues();
               var component = /*#__PURE__*/React$1.createElement(Component, _extends({
                 key: field.name,
@@ -19065,33 +19262,15 @@
                 hint: field.hint,
                 disabled: field.disabled,
                 value: (_values$field$name2 = values[field.name]) !== null && _values$field$name2 !== void 0 ? _values$field$name2 : undefined,
-                onChange: function onChange(value, opts) {
-                  // TODO use callback
-                  fieldInfo.onChange(value);
+                onChange: function onChange(value, _opts) {
+                  setValue(field.name, value);
                   _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
                 }
               }, additionalFields, field[framework]), function (step) {
-                return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
-                  Wrapper: Wrapper,
-                  GroupWrapper: GroupWrapper,
-                  PlaceholderWrapper: PlaceholderWrapper,
-                  BottomView: BottomView,
-                  onChange: _onChange,
-                  onEnter: onEnter,
+                return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
                   fields: field.fields && _isArray(field.fields[step]) ? field.fields[step] : [],
-                  control: control,
-                  framework: framework,
-                  getValues: getValues,
                   disabled: field.disabled ? true : disabled,
                   // pass disabled status to inner components
-                  readOnly: readOnly,
-                  plaintext: plaintext,
-                  errors: errors,
-                  showErrors: showErrors,
-                  level: level + 1,
-                  locale: locale,
-                  onJavascriptError: onJavascriptError,
-                  Components: Components,
                   prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
                     key: "wrapper_top_field",
                     parentField: field,
@@ -19099,7 +19278,7 @@
                     parentFieldSubTarget: step,
                     nextField: field.fields && field.fields.length ? field.fields[0] : null
                   })
-                }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+                })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
                   context: "tabs",
                   key: "bottom_view_".concat(field.name),
                   field: field,
@@ -19117,7 +19296,7 @@
             }
           });
         } else if (field.component === 'array' && GroupWrapper) {
-          var _component = /*#__PURE__*/React$1.createElement(Component, _extends({
+          var _component2 = /*#__PURE__*/React$1.createElement(Component, _extends({
             key: field.name,
             lfComponent: field.component,
             lfFramework: framework,
@@ -19126,34 +19305,17 @@
             label: field.label,
             hint: field.hint,
             disabled: field.disabled
-          }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
-            Wrapper: Wrapper,
-            GroupWrapper: GroupWrapper,
-            PlaceholderWrapper: PlaceholderWrapper,
-            BottomView: BottomView,
-            onChange: _onChange,
-            onEnter: onEnter,
+          }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
             fields: field.fields,
-            control: control,
-            framework: framework,
-            getValues: getValues,
             disabled: field.disabled ? true : disabled,
             // pass disabled status to inner components
-            readOnly: readOnly,
-            plaintext: plaintext,
-            errors: errors,
-            showErrors: showErrors,
-            level: level + 1,
-            locale: locale,
-            onJavascriptError: onJavascriptError,
-            Components: Components,
             prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
               key: "wrapper_top_field",
               parentField: field,
               parentFieldTarget: "fields",
               nextField: field.fields && field.fields.length ? field.fields[0] : null
             })
-          }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+          })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
             context: "array",
             key: "bottom_view_".concat(field.name),
             field: field,
@@ -19165,211 +19327,7 @@
             level: level,
             index: index,
             className: "array"
-          }, _component);
-        } else if (field.component === 'two-columns') {
-          var _component2 = /*#__PURE__*/React$1.createElement(Component, _extends({
-            key: field.name,
-            lfComponent: field.component,
-            lfFramework: framework,
-            lfLocale: locale,
-            name: field.name
-          }, additionalFields), function (column) {
-            if (column === 'left') {
-              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
-                Wrapper: Wrapper,
-                GroupWrapper: GroupWrapper,
-                PlaceholderWrapper: PlaceholderWrapper,
-                BottomView: BottomView,
-                onChange: _onChange,
-                onEnter: onEnter,
-                fields: field.leftFields,
-                control: control,
-                framework: framework,
-                getValues: getValues,
-                disabled: field.disabled ? true : disabled,
-                // pass disabled status to inner components
-                readOnly: readOnly,
-                plaintext: plaintext,
-                errors: errors,
-                showErrors: showErrors,
-                level: level + 1,
-                locale: locale,
-                onJavascriptError: onJavascriptError,
-                Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
-                  key: "wrapper_top_field",
-                  parentField: field,
-                  parentFieldTarget: "leftFields",
-                  nextField: field.leftFields && field.leftFields.length ? field.leftFields[0] : null
-                })
-              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
-                context: "two-columns",
-                key: "bottom_view_".concat(field.name),
-                field: field,
-                target: "leftFields"
-              }));
-            } else if (column === 'right') {
-              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
-                Wrapper: Wrapper,
-                GroupWrapper: GroupWrapper,
-                PlaceholderWrapper: PlaceholderWrapper,
-                BottomView: BottomView,
-                onChange: _onChange,
-                onEnter: onEnter,
-                fields: field.rightFields,
-                control: control,
-                framework: framework,
-                getValues: getValues,
-                disabled: field.disabled ? true : disabled,
-                // pass disabled status to inner components
-                readOnly: readOnly,
-                plaintext: plaintext,
-                errors: errors,
-                showErrors: showErrors,
-                level: level + 1,
-                locale: locale,
-                onJavascriptError: onJavascriptError,
-                Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
-                  key: "wrapper_top_field",
-                  parentField: field,
-                  parentFieldTarget: "rightFields",
-                  nextField: field.rightFields && field.rightFields.length ? field.rightFields[0] : null
-                })
-              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
-                context: "two-columns",
-                key: "bottom_view_".concat(field.name),
-                field: field,
-                target: "rightFields"
-              }));
-            }
-          });
-          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
-            key: "wrapper_".concat(field.name),
-            className: "two-columns",
-            level: level,
-            field: field,
-            index: index
-          }, _component2) : _component2;
-        } else if (field.component === 'three-columns') {
-          var _component3 = /*#__PURE__*/React$1.createElement(Component, _extends({
-            key: "three-columns-".concat(field.name),
-            name: field.name,
-            lfComponent: field.component,
-            lfFramework: framework,
-            lfLocale: locale
-          }, additionalFields), function (column) {
-            if (column === 'left') {
-              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
-                Wrapper: Wrapper,
-                GroupWrapper: GroupWrapper,
-                PlaceholderWrapper: PlaceholderWrapper,
-                BottomView: BottomView,
-                onChange: _onChange,
-                onEnter: onEnter,
-                fields: field.leftFields,
-                control: control,
-                framework: framework,
-                getValues: getValues,
-                disabled: field.disabled ? true : disabled,
-                // pass disabled status to inner components
-                readOnly: readOnly,
-                plaintext: plaintext,
-                errors: errors,
-                showErrors: showErrors,
-                level: level + 1,
-                locale: locale,
-                onJavascriptError: onJavascriptError,
-                Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
-                  key: "wrapper_top_field",
-                  parentField: field,
-                  parentFieldTarget: "leftFields",
-                  nextField: field.leftFields && field.leftFields.length ? field.leftFields[0] : null
-                })
-              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
-                context: "three-columns",
-                key: "bottom_view_".concat(field.name),
-                field: field,
-                target: "leftFields"
-              }));
-            } else if (column === 'center') {
-              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
-                Wrapper: Wrapper,
-                GroupWrapper: GroupWrapper,
-                PlaceholderWrapper: PlaceholderWrapper,
-                BottomView: BottomView,
-                onChange: _onChange,
-                onEnter: onEnter,
-                fields: field.centerFields,
-                control: control,
-                framework: framework,
-                getValues: getValues,
-                disabled: field.disabled ? true : disabled,
-                // pass disabled status to inner components
-                readOnly: readOnly,
-                plaintext: plaintext,
-                errors: errors,
-                showErrors: showErrors,
-                level: level + 1,
-                locale: locale,
-                onJavascriptError: onJavascriptError,
-                Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
-                  key: "wrapper_top_field",
-                  parentField: field,
-                  parentFieldTarget: "centerFields",
-                  nextField: field.centerFields && field.centerFields.length ? field.centerFields[0] : null
-                })
-              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
-                context: "three-columns",
-                key: "bottom_view_".concat(field.name),
-                field: field,
-                target: "centerFields"
-              }));
-            } else if (column === 'right') {
-              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields({
-                Wrapper: Wrapper,
-                GroupWrapper: GroupWrapper,
-                PlaceholderWrapper: PlaceholderWrapper,
-                BottomView: BottomView,
-                onChange: _onChange,
-                onEnter: onEnter,
-                fields: field.rightFields,
-                control: control,
-                framework: framework,
-                getValues: getValues,
-                disabled: field.disabled ? true : disabled,
-                // pass disabled status to inner components
-                readOnly: readOnly,
-                plaintext: plaintext,
-                errors: errors,
-                showErrors: showErrors,
-                level: level + 1,
-                locale: locale,
-                onJavascriptError: onJavascriptError,
-                Components: Components,
-                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
-                  key: "wrapper_top_field",
-                  parentField: field,
-                  parentFieldTarget: "rightFields",
-                  nextField: field.rightFields && field.rightFields.length ? field.rightFields[0] : null
-                })
-              }), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
-                context: "three-columns",
-                key: "bottom_view_".concat(field.name),
-                field: field,
-                target: "rightFields"
-              }));
-            }
-          });
-          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
-            key: "wrapper_".concat(field.name),
-            className: "three-columns",
-            field: field,
-            level: level,
-            index: index
-          }, _component3) : _component3;
+          }, _component2);
         }
 
         // generate the validation rule, takes into account react-hook-form
@@ -19390,23 +19348,19 @@
               name: fieldInfo.name,
               value: fieldInfo.value,
               onBlur: fieldInfo.onBlur,
-              key: "field_".concat(field.name),
+              key: "field_".concat(field.name).concat(rerenders[field.name] ? '_' + rerenders[field.name] : ''),
               lfComponent: field.component,
               lfFramework: framework,
               lfLocale: locale,
               lfOnEnter: onEnter,
               label: field.label,
-              hint: field.hint,
               disabled: disabled || field.disabled,
               readOnly: readOnly || field.readOnly,
               plaintext: plaintext,
-              size: field.size,
-              placeholder: field.placeholder,
               error: errors && errors[field.name] ? showErrors === 'inline' ? errorToString(errors[field.name]) : true : undefined
             }, additionalFields, field[framework], {
-              onChange: function onChange(value, opts) {
-                // TODO use callback
-                fieldInfo.onChange(value);
+              onChange: function onChange(value) {
+                setValue(field.name, value);
                 _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
               }
             }));
@@ -19500,17 +19454,19 @@
         _useState8 = _slicedToArray(_useState7, 2),
         stateDisabled = _useState8[0],
         setDisabled = _useState8[1];
+      // force re-render of the form
       var _useState9 = React$1.useState(1),
         _useState10 = _slicedToArray(_useState9, 2),
         version = _useState10[0],
         setVersion = _useState10[1];
-      var _useState11 = React$1.useState(_objectSpread2({
+      // keep track of components to be re-rendered, update it without re-render the component
+      var rerenders = React$1.useRef({});
+      var mutableState = React$1.useRef({
+        currentContext: _objectSpread2({
           locales: form.locales,
           locale: locale
-        }, formContext)),
-        _useState12 = _slicedToArray(_useState11, 2),
-        currentContext = _useState12[0],
-        setCurrentContext = _useState12[1];
+        }, formContext)
+      });
       var _useForm = reactHookForm.useForm({
           defaultValues: defaultValues,
           mode: form.validationMode
@@ -19522,7 +19478,9 @@
         reset = _useForm.reset,
         control = _useForm.control,
         getValues = _useForm.getValues,
-        trigger = _useForm.trigger;
+        setValue = _useForm.setValue,
+        trigger = _useForm.trigger,
+        register = _useForm.register;
       React$1.useImperativeHandle(ref, function () {
         return {
           validate: function () {
@@ -19544,34 +19502,28 @@
           }()
         };
       });
-      var _useState13 = React$1.useState(),
-        _useState14 = _slicedToArray(_useState13, 2),
-        validationErrors = _useState14[0],
-        setValidationErrors = _useState14[1];
+      var _useState11 = React$1.useState(),
+        _useState12 = _slicedToArray(_useState11, 2),
+        validationErrors = _useState12[0],
+        setValidationErrors = _useState12[1];
       // store form fields, apply immediately transformers (collected from all fields)
-      var _useState15 = React$1.useState(null),
-        _useState16 = _slicedToArray(_useState15, 2),
-        formFields = _useState16[0],
-        setFormFields = _useState16[1];
+      var _useState13 = React$1.useState(null),
+        _useState14 = _slicedToArray(_useState13, 2),
+        formFields = _useState14[0],
+        setFormFields = _useState14[1];
       var MergedComponents = mergeComponents(Fields, components);
       var disabled = stateDisabled || disabledProp;
       // it's the combination of the fields from the form schema and those specified
       // with the DSL, from now on every func should reference this (not form.fields)
-      var actualFields = [].concat(_toConsumableArray((_form$fields = form.fields) !== null && _form$fields !== void 0 ? _form$fields : []), _toConsumableArray(traverseChildren(children, {
+      // also upgrade fields if older version of the form
+      var actualFields = upgradeFields([].concat(_toConsumableArray((_form$fields = form.fields) !== null && _form$fields !== void 0 ? _form$fields : []), _toConsumableArray(traverseChildren(children, {
         components: MergedComponents,
         framework: framework
-      })));
+      }))), form.version);
       if (!framework) {
         lfError('missing "framework" prop');
         return;
       }
-
-      // listen to changes of context, re-render just in case
-      React$1.useEffect(function () {
-        if (formContext) {
-          setCurrentContext(formContext);
-        }
-      }, [formContext]);
 
       // preload components of the form
       React$1.useEffect(function () {
@@ -19604,126 +19556,98 @@
         var f = /*#__PURE__*/function () {
           var _ref7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
             var _form$name2;
-            var newTransformers, newFields, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _iterator, _step, newFormFields, onChangeFields, idx, _iteratorAbruptCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, _newFormFields;
-            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-              while (1) switch (_context2.prev = _context2.next) {
+            var newTransformers, newFields, transformersToRun, idx, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _loop, _iterator, _step;
+            return _regeneratorRuntime().wrap(function _callee2$(_context3) {
+              while (1) switch (_context3.prev = _context3.next) {
                 case 0:
+                  // update the mutable state
+                  mutableState.current.currentContext = _objectSpread2(_objectSpread2({}, mutableState.current.currentContext), formContext);
                   newTransformers = collectTransformers(actualFields, form.transformer || form.script, onJavascriptError); // initial fields values
-                  newFields = actualFields; // apply onRender transformers
-                  if (_isEmpty(newTransformers.onRender)) {
-                    _context2.next = 32;
+                  newFields = actualFields; // collect all transformers to be executed
+                  transformersToRun = Object.keys(newTransformers.onChange || {}).filter(function (fieldName) {
+                    return !_isEmpty(newTransformers.onChange[fieldName]);
+                  }).reduce(function (acc, fieldName) {
+                    return [].concat(_toConsumableArray(acc), [newTransformers.onChange[fieldName]]);
+                  }, !_isEmpty(newTransformers.onRender) ? [newTransformers.onRender] : []); // execute all onChange transformers at the bootstrap of the form
+                  idx = 0;
+                case 5:
+                  if (!(idx < transformersToRun.length)) {
+                    _context3.next = 37;
                     break;
                   }
                   _iteratorAbruptCompletion = false;
                   _didIteratorError = false;
-                  _context2.prev = 5;
-                  _iterator = _asyncIterator(applyTransformers(formName, framework, newFields, newTransformers.onRender, defaultValues, onJavascriptError, currentContext));
-                case 7:
-                  _context2.next = 9;
+                  _context3.prev = 8;
+                  _loop = /*#__PURE__*/_regeneratorRuntime().mark(function _loop() {
+                    var transformResult, newFormFields, newReRenders, changes;
+                    return _regeneratorRuntime().wrap(function _loop$(_context2) {
+                      while (1) switch (_context2.prev = _context2.next) {
+                        case 0:
+                          transformResult = _step.value;
+                          newFormFields = transformResult.fields, newReRenders = transformResult.rerenders, changes = transformResult.changes;
+                          mergeReRenders(rerenders.current, newReRenders);
+                          if (newFormFields !== newFields) {
+                            newFields = newFormFields;
+                            setFormFields(newFormFields);
+                          }
+                          if (changes) {
+                            Object.keys(changes).forEach(function (key) {
+                              return setValue(key, changes[key]);
+                            });
+                          }
+                        case 5:
+                        case "end":
+                          return _context2.stop();
+                      }
+                    }, _loop);
+                  });
+                  _iterator = _asyncIterator(applyTransformers(formName, framework, newFields, transformersToRun[idx], defaultValues, onJavascriptError, mutableState.current.currentContext));
+                case 11:
+                  _context3.next = 13;
                   return _iterator.next();
-                case 9:
-                  if (!(_iteratorAbruptCompletion = !(_step = _context2.sent).done)) {
-                    _context2.next = 16;
+                case 13:
+                  if (!(_iteratorAbruptCompletion = !(_step = _context3.sent).done)) {
+                    _context3.next = 18;
                     break;
                   }
-                  newFormFields = _step.value;
-                  newFields = newFormFields;
-                  setFormFields(newFormFields);
-                case 13:
+                  return _context3.delegateYield(_loop(), "t0", 15);
+                case 15:
                   _iteratorAbruptCompletion = false;
-                  _context2.next = 7;
-                  break;
-                case 16:
-                  _context2.next = 22;
+                  _context3.next = 11;
                   break;
                 case 18:
-                  _context2.prev = 18;
-                  _context2.t0 = _context2["catch"](5);
+                  _context3.next = 24;
+                  break;
+                case 20:
+                  _context3.prev = 20;
+                  _context3.t1 = _context3["catch"](8);
                   _didIteratorError = true;
-                  _iteratorError = _context2.t0;
-                case 22:
-                  _context2.prev = 22;
-                  _context2.prev = 23;
+                  _iteratorError = _context3.t1;
+                case 24:
+                  _context3.prev = 24;
+                  _context3.prev = 25;
                   if (!(_iteratorAbruptCompletion && _iterator.return != null)) {
-                    _context2.next = 27;
+                    _context3.next = 29;
                     break;
                   }
-                  _context2.next = 27;
+                  _context3.next = 29;
                   return _iterator.return();
-                case 27:
-                  _context2.prev = 27;
+                case 29:
+                  _context3.prev = 29;
                   if (!_didIteratorError) {
-                    _context2.next = 30;
+                    _context3.next = 32;
                     break;
                   }
                   throw _iteratorError;
-                case 30:
-                  return _context2.finish(27);
-                case 31:
-                  return _context2.finish(22);
                 case 32:
-                  // collect list of fields with an onChange transformer
-                  onChangeFields = Object.keys(newTransformers.onChange || {}).filter(function (fieldName) {
-                    return !_isEmpty(newTransformers.onChange[fieldName]);
-                  }); // execute all onChange transformers at the bootstrap of the form
-                  idx = 0;
+                  return _context3.finish(29);
+                case 33:
+                  return _context3.finish(24);
                 case 34:
-                  if (!(idx < onChangeFields.length)) {
-                    _context2.next = 67;
-                    break;
-                  }
-                  _iteratorAbruptCompletion2 = false;
-                  _didIteratorError2 = false;
-                  _context2.prev = 37;
-                  _iterator2 = _asyncIterator(applyTransformers(formName, framework, newFields, newTransformers.onChange[onChangeFields[idx]], defaultValues, onJavascriptError, currentContext));
-                case 39:
-                  _context2.next = 41;
-                  return _iterator2.next();
-                case 41:
-                  if (!(_iteratorAbruptCompletion2 = !(_step2 = _context2.sent).done)) {
-                    _context2.next = 48;
-                    break;
-                  }
-                  _newFormFields = _step2.value;
-                  newFields = _newFormFields;
-                  setFormFields(_newFormFields);
-                case 45:
-                  _iteratorAbruptCompletion2 = false;
-                  _context2.next = 39;
-                  break;
-                case 48:
-                  _context2.next = 54;
-                  break;
-                case 50:
-                  _context2.prev = 50;
-                  _context2.t1 = _context2["catch"](37);
-                  _didIteratorError2 = true;
-                  _iteratorError2 = _context2.t1;
-                case 54:
-                  _context2.prev = 54;
-                  _context2.prev = 55;
-                  if (!(_iteratorAbruptCompletion2 && _iterator2.return != null)) {
-                    _context2.next = 59;
-                    break;
-                  }
-                  _context2.next = 59;
-                  return _iterator2.return();
-                case 59:
-                  _context2.prev = 59;
-                  if (!_didIteratorError2) {
-                    _context2.next = 62;
-                    break;
-                  }
-                  throw _iteratorError2;
-                case 62:
-                  return _context2.finish(59);
-                case 63:
-                  return _context2.finish(54);
-                case 64:
                   idx++;
-                  _context2.next = 34;
+                  _context3.next = 5;
                   break;
-                case 67:
+                case 37:
                   setFormName((_form$name2 = form.name) !== null && _form$name2 !== void 0 ? _form$name2 : _uniqueId('form_'));
                   setTransformers(newTransformers);
 
@@ -19731,11 +19655,11 @@
                   if (newFields !== formFields) {
                     setFormFields(newFields);
                   }
-                case 70:
+                case 40:
                 case "end":
-                  return _context2.stop();
+                  return _context3.stop();
               }
-            }, _callee2, null, [[5, 18, 22, 32], [23,, 27, 31], [37, 50, 54, 64], [55,, 59, 63]]);
+            }, _callee2, null, [[8, 20, 24, 34], [25,, 29, 33]]);
           }));
           return function f() {
             return _ref7.apply(this, arguments);
@@ -19744,17 +19668,17 @@
         f();
       },
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      [form, framework, children] // don't put defaultValues here
+      [form, framework, children, formContext] // don't put defaultValues here
       );
 
       var onHandleSubmit = React$1.useCallback( /*#__PURE__*/function () {
         var _ref8 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(data) {
           var idx, responses, connector, proxyFetch, response;
-          return _regeneratorRuntime().wrap(function _callee3$(_context3) {
-            while (1) switch (_context3.prev = _context3.next) {
+          return _regeneratorRuntime().wrap(function _callee3$(_context4) {
+            while (1) switch (_context4.prev = _context4.next) {
               case 0:
                 if (!(Array.isArray(connectors) && connectors.length !== 0)) {
-                  _context3.next = 32;
+                  _context4.next = 32;
                   break;
                 }
                 // call onSubmit immediately
@@ -19768,13 +19692,13 @@
                 idx = 0;
               case 5:
                 if (!(idx < connectors.length)) {
-                  _context3.next = 27;
+                  _context4.next = 27;
                   break;
                 }
                 connector = connectors[idx];
                 proxyFetch = ProxyFetch(connector.options); // wrap fetch
-                _context3.prev = 8;
-                _context3.next = 11;
+                _context4.prev = 8;
+                _context4.next = 11;
                 return Connectors[connector.name]({
                   data: data,
                   options: connector.options,
@@ -19784,32 +19708,32 @@
                   }, {})
                 });
               case 11:
-                response = _context3.sent;
+                response = _context4.sent;
                 if (!(response.status >= 400)) {
-                  _context3.next = 16;
+                  _context4.next = 16;
                   break;
                 }
                 if (disableOnSubmit) {
                   setDisabled(false);
                 }
                 onSubmitError(response);
-                return _context3.abrupt("return");
+                return _context4.abrupt("return");
               case 16:
                 responses.push(response);
-                _context3.next = 24;
+                _context4.next = 24;
                 break;
               case 19:
-                _context3.prev = 19;
-                _context3.t0 = _context3["catch"](8);
+                _context4.prev = 19;
+                _context4.t0 = _context4["catch"](8);
                 // if failed call, return the erro, stop the chain and re-enable the form
                 if (disableOnSubmit) {
                   setDisabled(false);
                 }
-                onSubmitError(_context3.t0);
-                return _context3.abrupt("return");
+                onSubmitError(_context4.t0);
+                return _context4.abrupt("return");
               case 24:
                 idx++;
-                _context3.next = 5;
+                _context4.next = 5;
                 break;
               case 27:
                 // re-enable and reset if needed
@@ -19824,14 +19748,14 @@
                 }
                 // finally the callback
                 onSubmitSuccess(responses.length === 1 ? responses[0] : responses);
-                _context3.next = 34;
+                _context4.next = 34;
                 break;
               case 32:
                 setValidationErrors(null);
                 onSubmit(data);
               case 34:
               case "end":
-                return _context3.stop();
+                return _context4.stop();
             }
           }, _callee3, null, [[8, 19]]);
         }));
@@ -19854,133 +19778,115 @@
       }, [defaultValues, reset, onReset]);
       var handleChange = React$1.useCallback( /*#__PURE__*/function () {
         var _ref9 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(values, fieldName) {
-          var newFields, _iteratorAbruptCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, f, _iteratorAbruptCompletion4, _didIteratorError4, _iteratorError4, _iterator4, _step4, _f;
-          return _regeneratorRuntime().wrap(function _callee4$(_context4) {
-            while (1) switch (_context4.prev = _context4.next) {
+          var transformersToRun, newFields, idx, _iteratorAbruptCompletion2, _didIteratorError2, _iteratorError2, _loop2, _iterator2, _step2;
+          return _regeneratorRuntime().wrap(function _callee4$(_context6) {
+            while (1) switch (_context6.prev = _context6.next) {
               case 0:
                 if (transformers) {
-                  _context4.next = 2;
+                  _context6.next = 2;
                   break;
                 }
-                return _context4.abrupt("return");
+                return _context6.abrupt("return");
               case 2:
+                transformersToRun = !_isEmpty(transformers.onRender) ? [transformers.onRender] : []; // if the changed field has a transformer
+                if (transformers.onChange != null && !_isEmpty(transformers.onChange[fieldName])) {
+                  transformersToRun.push(transformers.onChange[fieldName]);
+                }
+
                 // execute main transformer
                 newFields = formFields;
-                if (_isEmpty(transformers.onRender)) {
-                  _context4.next = 33;
-                  break;
-                }
-                _iteratorAbruptCompletion3 = false;
-                _didIteratorError3 = false;
-                _context4.prev = 6;
-                _iterator3 = _asyncIterator(applyTransformers(formName, framework, newFields, transformers.onRender, values, onJavascriptError, currentContext));
-              case 8:
-                _context4.next = 10;
-                return _iterator3.next();
-              case 10:
-                if (!(_iteratorAbruptCompletion3 = !(_step3 = _context4.sent).done)) {
-                  _context4.next = 17;
-                  break;
-                }
-                f = _step3.value;
-                newFields = f;
-                if (f !== formFields) {
-                  setFormFields(f);
-                }
-              case 14:
-                _iteratorAbruptCompletion3 = false;
-                _context4.next = 8;
-                break;
-              case 17:
-                _context4.next = 23;
-                break;
-              case 19:
-                _context4.prev = 19;
-                _context4.t0 = _context4["catch"](6);
-                _didIteratorError3 = true;
-                _iteratorError3 = _context4.t0;
-              case 23:
-                _context4.prev = 23;
-                _context4.prev = 24;
-                if (!(_iteratorAbruptCompletion3 && _iterator3.return != null)) {
-                  _context4.next = 28;
-                  break;
-                }
-                _context4.next = 28;
-                return _iterator3.return();
-              case 28:
-                _context4.prev = 28;
-                if (!_didIteratorError3) {
-                  _context4.next = 31;
-                  break;
-                }
-                throw _iteratorError3;
-              case 31:
-                return _context4.finish(28);
-              case 32:
-                return _context4.finish(23);
-              case 33:
-                if (!(transformers.onChange != null && !_isEmpty(transformers.onChange[fieldName]))) {
-                  _context4.next = 63;
+                idx = 0;
+              case 6:
+                if (!(idx < transformersToRun.length)) {
+                  _context6.next = 38;
                   break;
                 }
                 // execute the async generator transformer
-                _iteratorAbruptCompletion4 = false;
-                _didIteratorError4 = false;
-                _context4.prev = 36;
-                _iterator4 = _asyncIterator(applyTransformers(formName, framework, newFields, transformers.onChange[fieldName], values, onJavascriptError, currentContext));
+                _iteratorAbruptCompletion2 = false;
+                _didIteratorError2 = false;
+                _context6.prev = 9;
+                _loop2 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop2() {
+                  var transformResult, newFormFields, newReRenders, changes;
+                  return _regeneratorRuntime().wrap(function _loop2$(_context5) {
+                    while (1) switch (_context5.prev = _context5.next) {
+                      case 0:
+                        transformResult = _step2.value;
+                        newFormFields = transformResult.fields, newReRenders = transformResult.rerenders, changes = transformResult.changes; // merge re-renders request to the current ones, in a useRef, must per persisted like a state
+                        // but doesnt' have to trigger a new render
+                        mergeReRenders(rerenders.current, newReRenders);
+                        // if different instances, then fields descriptions are changed, set it, this will cause a
+                        // form re-render
+                        if (newFormFields !== newFields) {
+                          newFields = newFormFields;
+                          setFormFields(newFormFields);
+                        }
+                        // if there are form value changes, apply it, this will cause the specific field to be refreshed
+                        // and un-mounted / re-mounted if the component is statefull and needs to be reset completely
+                        // at this point the re-renders request are already collected
+                        if (changes) {
+                          Object.keys(changes).forEach(function (key) {
+                            return setValue(key, changes[key]);
+                          });
+                        }
+                      case 5:
+                      case "end":
+                        return _context5.stop();
+                    }
+                  }, _loop2);
+                });
+                _iterator2 = _asyncIterator(applyTransformers(formName, framework, newFields, transformersToRun[idx], values, onJavascriptError, mutableState.current.currentContext));
+              case 12:
+                _context6.next = 14;
+                return _iterator2.next();
+              case 14:
+                if (!(_iteratorAbruptCompletion2 = !(_step2 = _context6.sent).done)) {
+                  _context6.next = 19;
+                  break;
+                }
+                return _context6.delegateYield(_loop2(), "t0", 16);
+              case 16:
+                _iteratorAbruptCompletion2 = false;
+                _context6.next = 12;
+                break;
+              case 19:
+                _context6.next = 25;
+                break;
+              case 21:
+                _context6.prev = 21;
+                _context6.t1 = _context6["catch"](9);
+                _didIteratorError2 = true;
+                _iteratorError2 = _context6.t1;
+              case 25:
+                _context6.prev = 25;
+                _context6.prev = 26;
+                if (!(_iteratorAbruptCompletion2 && _iterator2.return != null)) {
+                  _context6.next = 30;
+                  break;
+                }
+                _context6.next = 30;
+                return _iterator2.return();
+              case 30:
+                _context6.prev = 30;
+                if (!_didIteratorError2) {
+                  _context6.next = 33;
+                  break;
+                }
+                throw _iteratorError2;
+              case 33:
+                return _context6.finish(30);
+              case 34:
+                return _context6.finish(25);
+              case 35:
+                idx++;
+                _context6.next = 6;
+                break;
               case 38:
-                _context4.next = 40;
-                return _iterator4.next();
-              case 40:
-                if (!(_iteratorAbruptCompletion4 = !(_step4 = _context4.sent).done)) {
-                  _context4.next = 47;
-                  break;
-                }
-                _f = _step4.value;
-                newFields = _f;
-                if (_f !== formFields) {
-                  setFormFields(_f);
-                }
-              case 44:
-                _iteratorAbruptCompletion4 = false;
-                _context4.next = 38;
-                break;
-              case 47:
-                _context4.next = 53;
-                break;
-              case 49:
-                _context4.prev = 49;
-                _context4.t1 = _context4["catch"](36);
-                _didIteratorError4 = true;
-                _iteratorError4 = _context4.t1;
-              case 53:
-                _context4.prev = 53;
-                _context4.prev = 54;
-                if (!(_iteratorAbruptCompletion4 && _iterator4.return != null)) {
-                  _context4.next = 58;
-                  break;
-                }
-                _context4.next = 58;
-                return _iterator4.return();
-              case 58:
-                _context4.prev = 58;
-                if (!_didIteratorError4) {
-                  _context4.next = 61;
-                  break;
-                }
-                throw _iteratorError4;
-              case 61:
-                return _context4.finish(58);
-              case 62:
-                return _context4.finish(53);
-              case 63:
                 onChange(values);
-              case 64:
+              case 39:
               case "end":
-                return _context4.stop();
+                return _context6.stop();
             }
-          }, _callee4, null, [[6, 19, 23, 33], [24,, 28, 32], [36, 49, 53, 63], [54,, 58, 62]]);
+          }, _callee4, null, [[9, 21, 25, 35], [26,, 30, 34]]);
         }));
         return function (_x2, _x3) {
           return _ref9.apply(this, arguments);
@@ -20015,7 +19921,7 @@
         console.log("[LetsForm] Render form (".concat(form.name, ")"));
       }
       return /*#__PURE__*/React$1.createElement(FormContext.Provider, {
-        value: currentContext
+        value: mutableState.current.currentContext
       }, /*#__PURE__*/React$1.createElement("div", {
         className: classNames('lf-lets-form', {
           'lf-lets-form-edit-mode': demo
@@ -20057,6 +19963,8 @@
         control: control,
         framework: framework,
         getValues: getValues,
+        setValue: setValue,
+        register: register,
         debug: debug,
         errors: errors,
         disabled: disabled || form.disabled,
@@ -20065,7 +19973,8 @@
         showErrors: showErrors,
         locale: locale,
         onJavascriptError: onJavascriptError,
-        Components: MergedComponents
+        Components: MergedComponents,
+        rerenders: rerenders.current
       }), footer, formErrors && (showErrors === 'groupedBottom' || _isEmpty(showErrors)) && /*#__PURE__*/React$1.createElement(ValidationErrors, {
         className: "bottom",
         locale: locale,
@@ -20121,25 +20030,30 @@
   var Fields = {
     'input-text': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
+        return Promise.resolve().then(function () { return index$j; });
       })
     },
     'input-number': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return index$i; });
       })
     },
     'checkbox': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$h; });
       })
     },
     'textarea': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return index$g; });
       })
     },
     'three-columns': {
+      'react': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$f; });
+      })
+    },
+    'columns': {
       'react': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$e; });
       })
@@ -20156,7 +20070,7 @@
     },
     'divider': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
+        return Promise.resolve().then(function () { return index$k; });
       })
     },
     'react-view': {
@@ -20322,7 +20236,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.InputText');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
@@ -20366,7 +20280,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.InputNumber');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumber
   });
@@ -20426,7 +20340,7 @@
   }, ['hint', 'label']);
   lfLog('Loaded React.Checkbox');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Checkbox
   });
@@ -20476,16 +20390,23 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.Textarea');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea
   });
 
   lfLog('Loaded React.ThreeColumns');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
+  });
+
+  lfLog('Loaded RSuite5.Columns');
+
+  var index$e = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Columns
   });
 
   lfLog('Loaded React.TwoColumns');
