@@ -108,6 +108,17 @@
     "disableSubmitOnError": {
       "type": "boolean"
     },
+    "layout": {
+      "type": "string",
+      "enum": [
+        "inline",
+        "horizontal",
+        "vertical"
+      ]
+    },
+    "fluid": {
+      "type": "boolean"
+    },
     "fields": {
       "$ref": "https://https://unpkg.com/lets-form/schemas/react-rsuite5/fields.json"
     }

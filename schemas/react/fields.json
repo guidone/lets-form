@@ -50,6 +50,24 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "submitOnEnter": {
+              "type": "boolean"
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
             }
           }
         }
@@ -102,17 +120,54 @@
               "items": {
                 "type": "object",
                 "properties": {
+                  "value": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "$ref": "#/$defs/i18n"
+                      }
+                    ]
+                  },
                   "image": {
                     "type": "string"
                   }
                 }
               }
             },
+            "value": {
+              "type": "string"
+            },
             "image": {
               "type": "string"
             },
             "showImageOptions": {
               "type": "boolean"
+            },
+            "filterKey": {
+              "type": "string"
+            },
+            "filterValue": {
+              "type": "string"
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
             }
           }
         }
@@ -141,6 +196,20 @@
               ]
             },
             "hidden": {
+              "type": "boolean"
+            },
+            "align": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            "collapsible": {
+              "type": "boolean"
+            },
+            "open": {
               "type": "boolean"
             },
             "border": {
@@ -184,6 +253,46 @@
                 "layout-1-0"
               ]
             },
+            "leftAlignment": {
+              "type": "string",
+              "enum": [
+                "auto",
+                "baseline",
+                "center",
+                "end",
+                "flex-end",
+                "flex-start",
+                "inherit",
+                "initial",
+                "normal",
+                "revert",
+                "self-end",
+                "self-start",
+                "start",
+                "stretch",
+                "unset"
+              ]
+            },
+            "rightAlignment": {
+              "type": "string",
+              "enum": [
+                "auto",
+                "baseline",
+                "center",
+                "end",
+                "flex-end",
+                "flex-start",
+                "inherit",
+                "initial",
+                "normal",
+                "revert",
+                "self-end",
+                "self-start",
+                "start",
+                "stretch",
+                "unset"
+              ]
+            },
             "hidden": {
               "type": "boolean"
             }
@@ -217,6 +326,66 @@
                 "layout-3-1-1"
               ]
             },
+            "leftAlignment": {
+              "type": "string",
+              "enum": [
+                "auto",
+                "baseline",
+                "center",
+                "end",
+                "flex-end",
+                "flex-start",
+                "inherit",
+                "initial",
+                "normal",
+                "revert",
+                "self-end",
+                "self-start",
+                "start",
+                "stretch",
+                "unset"
+              ]
+            },
+            "centerAlignment": {
+              "type": "string",
+              "enum": [
+                "auto",
+                "baseline",
+                "center",
+                "end",
+                "flex-end",
+                "flex-start",
+                "inherit",
+                "initial",
+                "normal",
+                "revert",
+                "self-end",
+                "self-start",
+                "start",
+                "stretch",
+                "unset"
+              ]
+            },
+            "rightAlignment": {
+              "type": "string",
+              "enum": [
+                "auto",
+                "baseline",
+                "center",
+                "end",
+                "flex-end",
+                "flex-start",
+                "inherit",
+                "initial",
+                "normal",
+                "revert",
+                "self-end",
+                "self-start",
+                "start",
+                "stretch",
+                "unset"
+              ]
+            },
             "hidden": {
               "type": "boolean"
             }
@@ -240,8 +409,58 @@
               "type": "array",
               "items": {
                 "type": "object",
-                "properties": {}
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "alignment": {
+                    "type": "string",
+                    "enum": [
+                      "auto",
+                      "baseline",
+                      "center",
+                      "end",
+                      "flex-end",
+                      "flex-start",
+                      "inherit",
+                      "initial",
+                      "normal",
+                      "revert",
+                      "self-end",
+                      "self-start",
+                      "start",
+                      "stretch",
+                      "unset"
+                    ]
+                  },
+                  "size": {
+                    "type": "integer"
+                  }
+                }
               }
+            },
+            "alignment": {
+              "type": "string",
+              "enum": [
+                "auto",
+                "baseline",
+                "center",
+                "end",
+                "flex-end",
+                "flex-start",
+                "inherit",
+                "initial",
+                "normal",
+                "revert",
+                "self-end",
+                "self-start",
+                "start",
+                "stretch",
+                "unset"
+              ]
+            },
+            "size": {
+              "type": "integer"
             },
             "hidden": {
               "type": "boolean"
@@ -281,6 +500,26 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "align": {
+              "type": "string",
+              "enum": [
+                "top",
+                "center",
+                "bottom"
+              ]
+            },
+            "alignOffset": {
+              "type": "integer"
             },
             "arrayType": {
               "type": "string",
@@ -335,6 +574,30 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "min": {
+              "type": "integer"
+            },
+            "step": {
+              "type": "integer"
+            },
+            "max": {
+              "type": "integer"
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
             }
           }
         }
@@ -381,6 +644,15 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
             }
           }
         }
@@ -417,6 +689,15 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
             }
           }
         }
@@ -463,6 +744,24 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "rows": {
+              "type": "integer"
             }
           }
         }
@@ -531,6 +830,29 @@
             },
             "url": {
               "type": "string"
+            },
+            "align": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "maxWidth": {
+              "type": "integer"
+            },
+            "maxHeight": {
+              "type": "integer"
+            },
+            "marginTop": {
+              "type": "integer"
+            },
+            "marginBottom": {
+              "type": "integer"
             }
           }
         }
@@ -555,8 +877,47 @@
                 "link"
               ]
             },
+            "labelOn": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "iconOn": {
+              "type": "string"
+            },
+            "labelOff": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "iconOff": {
+              "type": "string"
+            },
             "initialValue": {
               "type": "boolean"
+            },
+            "labelLink": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "iconLink": {
+              "type": "string"
             },
             "href": {
               "type": "string"
@@ -570,6 +931,12 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
+            },
+            "fullWidth": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
             },
             "hidden": {
               "type": "boolean"
@@ -588,6 +955,12 @@
         "then": {
           "properties": {
             "name": {
+              "type": "string"
+            },
+            "size": {
+              "type": "integer"
+            },
+            "color": {
               "type": "string"
             },
             "hidden": {
@@ -638,6 +1011,15 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
             }
           }
         }
@@ -674,6 +1056,12 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
             },
             "accept": {
               "type": "array",
@@ -747,6 +1135,15 @@
                   "$ref": "#/$defs/i18n"
                 }
               ]
+            },
+            "disabled": {
+              "type": "boolean"
+            },
+            "readOnly": {
+              "type": "boolean"
+            },
+            "hidden": {
+              "type": "boolean"
             }
           }
         }

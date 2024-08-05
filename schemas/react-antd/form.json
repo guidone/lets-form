@@ -108,6 +108,47 @@
     "disableSubmitOnError": {
       "type": "boolean"
     },
+    "labelColSpan": {
+      "type": "integer"
+    },
+    "labelColOffset": {
+      "type": "integer"
+    },
+    "wrapperColSpan": {
+      "type": "integer"
+    },
+    "wrapperColOffset": {
+      "type": "integer"
+    },
+    "size": {
+      "type": "string",
+      "enum": [
+        "small",
+        "default",
+        "large"
+      ]
+    },
+    "layout": {
+      "type": "string",
+      "enum": [
+        "inline",
+        "horizontal",
+        "vertical"
+      ]
+    },
+    "labelAlign": {
+      "type": "string",
+      "enum": [
+        "left",
+        "right"
+      ]
+    },
+    "labelWrap": {
+      "type": "boolean"
+    },
+    "requiredMark": {
+      "type": "boolean"
+    },
     "fields": {
       "$ref": "https://https://unpkg.com/lets-form/schemas/react-antd/fields.json"
     }
