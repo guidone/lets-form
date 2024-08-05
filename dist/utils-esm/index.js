@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.9.7 - ESM */
+/* LetsForm Utils v0.10.0 - ESM */
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -5120,8 +5120,6 @@ var uniq_1 = uniq;
 
 var _uniq = /*@__PURE__*/getDefaultExportFromCjs(uniq_1);
 
-var columns = {
-};
 var toggle = {
 	label: "Toggle",
 	category: "general",
@@ -5148,21 +5146,6 @@ var toggle = {
 			name: "hint",
 			type: "string | i18n",
 			description: "Help text for the field (generally shown below the input box)"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	"react-rsuite5": [
@@ -5178,52 +5161,12 @@ var toggle = {
 			]
 		},
 		{
-			name: "checkedChildren",
-			type: "string | i18n"
-		},
-		{
-			name: "unCheckedChildren",
-			type: "string | i18n"
-		},
-		{
 			name: "tooltip",
 			type: "boolean",
 			description: "Show hint as tooltip next to label"
 		}
 	],
 	"react-material-ui": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium",
-				"large"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"error",
-				"info",
-				"primary",
-				"secondary",
-				"success",
-				"warning"
-			]
-		},
-		{
-			name: "labelPlacement",
-			type: "string",
-			options: [
-				"top",
-				"start",
-				"bottom",
-				"end"
-			]
-		},
 		{
 			name: "disableRipple",
 			type: "boolean",
@@ -5244,58 +5187,9 @@ var toggle = {
 			name: "tooltip",
 			type: "boolean",
 			description: "Show hint as tooltip"
-		},
-		{
-			name: "checkedChildren",
-			type: "string | i18n"
-		},
-		{
-			name: "unCheckedChildren",
-			type: "string | i18n"
 		}
 	],
 	"react-mantine": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "labelPosition",
-			type: "string",
-			options: [
-				"left",
-				"right"
-			]
-		},
-		{
-			name: "offLabel",
-			type: "string",
-			description: "\tInner label when the Switch is in unchecked state"
-		},
-		{
-			name: "onLabel",
-			type: "string",
-			description: "Inner label when the Switch is in checked state"
-		},
 		{
 			name: "color",
 			type: "string",
@@ -5359,97 +5253,11 @@ var select = {
 			name: "showImageOptions",
 			type: "boolean",
 			description: "Show image field for Select options to be displayed in the drop-down"
-		},
-		{
-			name: "filterKey",
-			type: "string"
-		},
-		{
-			name: "filterValue",
-			type: "string"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	react: [
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		}
 	],
 	"react-rsuite5": [
-		{
-			name: "placement",
-			type: "string",
-			options: [
-				"topStart",
-				"topEnd",
-				"leftStart",
-				"rightStart",
-				"leftEnd",
-				"rightEnd",
-				"bottomStart",
-				"bottomEnd",
-				"auto",
-				"autoVerticalStart",
-				"autoVerticalEnd",
-				"autoHorizontalStart",
-				"autoHorizontalEnd"
-			]
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "searchable",
-			type: "boolean"
-		},
-		{
-			name: "cleanable",
-			type: "boolean"
-		},
-		{
-			name: "tooltip",
-			type: "boolean",
-			description: "Show hint as tooltip next to label"
-		},
 		{
 			name: "appearance",
 			type: "string",
@@ -5460,44 +5268,6 @@ var select = {
 		}
 	],
 	"react-material-ui": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium"
-			]
-		},
-		{
-			name: "autoWidth",
-			type: "boolean",
-			description: "If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "floatingLabel",
-			type: "boolean",
-			description: "Show floating label for the control"
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"filled",
-				"standard"
-			]
-		}
 	],
 	"react-bootstrap": [
 		{
@@ -5516,176 +5286,8 @@ var select = {
 		}
 	],
 	"react-antd": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"default",
-				"large"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"borderless",
-				"filled"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "placement",
-			type: "string",
-			options: [
-				"bottomLeft",
-				"bottomRight",
-				"topLeft",
-				"topRight"
-			]
-		},
-		{
-			name: "listHeight",
-			type: "number",
-			description: "Config popup height"
-		},
-		{
-			name: "allowClear",
-			type: "boolean"
-		},
-		{
-			name: "popupMatchSelectWidth",
-			type: "boolean",
-			description: "Determine whether the popup menu and the select input are the same width"
-		},
-		{
-			name: "tooltip",
-			type: "boolean",
-			description: "Show hint as tooltip"
-		},
-		{
-			name: "showSearch",
-			type: "boolean",
-			description: "Whether select is searchable"
-		},
-		{
-			name: "virtual",
-			type: "boolean"
-		}
 	],
 	"react-mantine": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"default",
-				"filled",
-				"unstyled"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "leftSection",
-			type: "string"
-		},
-		{
-			name: "rightSection",
-			type: "string"
-		},
-		{
-			name: "leftSectionWidth",
-			type: "number"
-		},
-		{
-			name: "rightSectionWidth",
-			type: "number"
-		},
-		{
-			name: "withCheckIcon",
-			type: "boolean",
-			description: "Determines whether check icon should be displayed near the selected option label, true by default"
-		},
-		{
-			name: "checkIconPosition",
-			type: "string",
-			options: [
-				"left",
-				"right"
-			]
-		},
-		{
-			name: "allowDeselect",
-			type: "boolean",
-			description: "Determines whether it should be possible to deselect value by clicking on the selected option, true by default"
-		},
-		{
-			name: "clearable",
-			type: "boolean",
-			description: "Determines whether the clear button should be displayed in the right section when the component has value, false by default"
-		},
-		{
-			name: "defaultDropdownOpened",
-			type: "boolean",
-			description: "Uncontrolled dropdown initial opened state"
-		},
-		{
-			name: "withScrollArea",
-			type: "boolean",
-			description: "Determines whether the options should be wrapped with scroll bars, true by default"
-		},
-		{
-			name: "pointer",
-			type: "boolean",
-			description: "Determines whether the input should have cursor: pointer style, false by default"
-		},
-		{
-			name: "withErrorStyles",
-			type: "boolean",
-			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
-		}
 	]
 };
 var group = {
@@ -5717,23 +5319,6 @@ var group = {
 			description: "Hides the field from the form"
 		},
 		{
-			name: "align",
-			type: "string",
-			options: [
-				"left",
-				"center",
-				"right"
-			]
-		},
-		{
-			name: "collapsible",
-			type: "boolean"
-		},
-		{
-			name: "open",
-			type: "boolean"
-		},
-		{
 			name: "border",
 			type: "string",
 			options: [
@@ -5742,6 +5327,35 @@ var group = {
 				"topBottom",
 				"boxed"
 			]
+		}
+	]
+};
+var columns = {
+	label: "Columns",
+	category: "layout",
+	name: "columns",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-material-ui",
+		"react-rsuite5",
+		"react-mantine"
+	],
+	common: [
+		{
+			name: "name",
+			type: "string",
+			description: "The name of the field and the key of the JSON"
+		},
+		{
+			name: "columns",
+			type: "array"
+		},
+		{
+			name: "hidden",
+			type: "boolean",
+			description: "Hides the field from the form"
 		}
 	]
 };
@@ -5774,36 +5388,6 @@ var array = {
 			name: "hint",
 			type: "string | i18n",
 			description: "Help text for the field (generally shown below the input box)"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
-		},
-		{
-			name: "align",
-			type: "string",
-			description: "Vertical alignment of add / remove buttons",
-			options: [
-				"top",
-				"center",
-				"bottom"
-			]
-		},
-		{
-			name: "alignOffset",
-			type: "number",
-			description: "Offset of the add / remove button from the top / bottom (depends on the alignment)"
 		},
 		{
 			name: "arrayType",
@@ -5843,21 +5427,6 @@ var slider = {
 			name: "hint",
 			type: "string | i18n",
 			description: "Help text for the field (generally shown below the input box)"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	"react-rsuite5": [
@@ -5879,20 +5448,6 @@ var slider = {
 			type: "number"
 		},
 		{
-			name: "vertical",
-			type: "boolean"
-		},
-		{
-			name: "progress",
-			type: "boolean",
-			description: "Show sliding progress bar"
-		},
-		{
-			name: "showTooltip",
-			type: "boolean",
-			description: "Whether to show Tooltip when sliding"
-		},
-		{
 			name: "graduated",
 			type: "boolean"
 		},
@@ -5904,135 +5459,14 @@ var slider = {
 	],
 	"react-material-ui": [
 		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"error",
-				"info",
-				"primary",
-				"secondary",
-				"success",
-				"warning"
-			]
-		},
-		{
-			name: "min",
-			type: "number"
-		},
-		{
-			name: "step",
-			type: "number"
-		},
-		{
-			name: "max",
-			type: "number"
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "valueLabelDisplay",
-			type: "string",
-			description: "How to show the value of the label",
-			options: [
-				"auto",
-				"on",
-				"off"
-			]
-		},
-		{
-			name: "showMarks",
-			type: "boolean"
-		},
-		{
 			name: "customMarks",
 			type: "array",
 			description: "Customize labels on the render ruler"
 		}
 	],
 	"react-bootstrap": [
-		{
-			name: "min",
-			type: "number"
-		},
-		{
-			name: "step",
-			type: "number"
-		},
-		{
-			name: "max",
-			type: "number"
-		}
 	],
 	"react-antd": [
-		{
-			name: "keyboard",
-			type: "boolean",
-			description: "Support using keyboard to move handlers"
-		},
-		{
-			name: "dots",
-			type: "boolean",
-			description: "Whether the thumb can drag over tick only"
-		},
-		{
-			name: "reverse",
-			type: "boolean",
-			description: "Reverse the component"
-		},
-		{
-			name: "min",
-			type: "number"
-		},
-		{
-			name: "step",
-			type: "number"
-		},
-		{
-			name: "max",
-			type: "number"
-		},
-		{
-			name: "tooltipOpen",
-			type: "boolean",
-			description: "Tooltip behaviour, checked always open, unchecked always close"
-		},
-		{
-			name: "tooltipPlacement",
-			type: "string",
-			options: [
-				"top",
-				"left",
-				"right",
-				"bottom",
-				"topLeft",
-				"topRight",
-				"bottomLeft",
-				"bottomRight",
-				"topLeft",
-				"topRight",
-				"leftTop",
-				"leftBottom",
-				"rightTop",
-				"rightBottom"
-			]
-		},
 		{
 			name: "marks",
 			type: "array",
@@ -6046,83 +5480,9 @@ var slider = {
 	],
 	"react-mantine": [
 		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"grey",
-				"red",
-				"pink",
-				"grape",
-				"violet",
-				"indigo",
-				"blue",
-				"cyan",
-				"teal",
-				"green",
-				"lime",
-				"yellow",
-				"orange"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "min",
-			type: "number"
-		},
-		{
-			name: "step",
-			type: "number"
-		},
-		{
-			name: "max",
-			type: "number"
-		},
-		{
 			name: "marks",
 			type: "array",
 			description: "Customize labels on the render ruler"
-		},
-		{
-			name: "precision",
-			type: "number",
-			description: "Number of significant digits after the decimal point"
-		},
-		{
-			name: "inverted",
-			type: "boolean",
-			description: "Determines whether track value representation should be inverted, false by default"
-		},
-		{
-			name: "labelAlwaysOn",
-			type: "boolean",
-			description: "Determines whether the label should be visible when the slider is not being dragged or hovered, false by default"
-		},
-		{
-			name: "showLabelOnHover",
-			type: "boolean",
-			description: "Determines whether the label should be displayed when the slider is hovered, true by default"
 		}
 	]
 };
@@ -6213,21 +5573,6 @@ var date = {
 			name: "placeholder",
 			type: "string | i18n",
 			description: "Placeholder text, visibile when the field is empty"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	"react-rsuite5": [
@@ -6235,116 +5580,9 @@ var date = {
 			name: "format",
 			type: "string",
 			description: "Check https://date-fns.org library for available formats"
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		},
-		{
-			name: "appearance",
-			type: "string",
-			options: [
-				"default",
-				"subtle"
-			]
-		},
-		{
-			name: "placement",
-			type: "string",
-			options: [
-				"topStart",
-				"topEnd",
-				"leftStart",
-				"rightStart",
-				"leftEnd",
-				"rightEnd",
-				"bottomStart",
-				"bottomEnd",
-				"auto",
-				"autoVerticalStart",
-				"autoVerticalEnd",
-				"autoHorizontalStart",
-				"autoHorizontalEnd"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "cleanable",
-			type: "boolean"
-		},
-		{
-			name: "editable",
-			type: "boolean",
-			description: "Rendered as an input, the date can be entered via the keyboard"
-		},
-		{
-			name: "oneTap",
-			type: "boolean",
-			description: "One click to complete the selection date"
-		},
-		{
-			name: "showMeridian",
-			type: "boolean",
-			description: "Display hours in 12 format"
-		},
-		{
-			name: "showWeekNumbers",
-			type: "boolean"
-		},
-		{
-			name: "isoWeek",
-			type: "boolean",
-			description: "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
 		}
 	],
 	"react-material-ui": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium",
-				"large"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"filled",
-				"standard"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"error",
-				"info",
-				"primary",
-				"secondary",
-				"success",
-				"warning"
-			]
-		},
 		{
 			name: "format",
 			type: "string",
@@ -6361,104 +5599,9 @@ var date = {
 			]
 		},
 		{
-			name: "closeOnSelect",
-			type: "boolean",
-			description: "If true, the popover or modal will close after submitting the full date"
-		},
-		{
-			name: "reduceAnimations",
-			type: "boolean",
-			description: "If true, disable heavy animations"
-		},
-		{
-			name: "showDaysOutsideCurrentMonth",
-			type: "boolean",
-			description: "If true, days outside the current month are rendered:\n- if fixedWeekNumber is defined, renders days to have the weeks requested.\n- if fixedWeekNumber is not defined, renders day to fill the first and last week of the current month.\n- ignored if calendars equals more than 1 on range pickers"
-		},
-		{
-			name: "floatingLabel",
-			type: "boolean",
-			description: "Show floating label for the control"
-		},
-		{
-			name: "disableFuture",
-			type: "boolean",
-			description: "If true, disable values after the current date for date components, time for time components and both for date time components"
-		},
-		{
-			name: "disableHighlightToday",
-			type: "boolean",
-			description: "If true, today's date is rendering without highlighting with circle"
-		},
-		{
-			name: "disableOpenPicker",
-			type: "boolean",
-			description: "If true, the open picker button will not be rendered (renders only the field)"
-		},
-		{
-			name: "disablePast",
-			type: "boolean",
-			description: "If true, disable values before the current date for date components, time for time components and both for date time components"
-		},
-		{
-			name: "displayWeekNumber",
-			type: "boolean",
-			description: "If true, the week number will be display in the calendar"
-		},
-		{
 			name: "loading",
 			type: "boolean",
 			description: "If true, calls renderLoading instead of rendering the day calendar. Can be used to preload information and show it in calendar"
-		},
-		{
-			name: "fixedWeekNumber",
-			type: "number",
-			description: "The day view will show as many weeks as needed after the end of the current month to match this value. Put it to 6 to have a fixed number of weeks in Gregorian calendars"
-		},
-		{
-			name: "formatDensity",
-			type: "string",
-			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
-			options: [
-				"dense",
-				"spacious"
-			]
-		},
-		{
-			name: "monthsPerRow",
-			type: "string",
-			description: "Months rendered per row",
-			options: [
-				3,
-				4
-			]
-		},
-		{
-			name: "yearsPerRow",
-			type: "string",
-			description: "Years rendered per row",
-			options: [
-				3,
-				4
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "minDate",
-			type: "date"
-		},
-		{
-			name: "maxDate",
-			type: "date"
 		}
 	],
 	"react-bootstrap": [
@@ -6472,322 +5615,23 @@ var date = {
 			]
 		},
 		{
-			name: "prefix",
-			type: "string",
-			description: "Fixed heading text"
-		},
-		{
-			name: "postfix",
-			type: "string",
-			description: "Fixed trailing text"
-		},
-		{
 			name: "floatingLabel",
 			type: "boolean",
 			description: "Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
 		}
 	],
 	"react-antd": [
 		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"default",
-				"large"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"borderless",
-				"filled"
-			]
-		},
-		{
 			name: "format",
 			type: "string",
 			description: "Dayjs format to display input value, \"MMMM D, YYYY\" by default. Check https://day.js.org/docs/en/display/format for reference"
-		},
-		{
-			name: "picker",
-			type: "string",
-			options: [
-				"date",
-				"week",
-				"month",
-				"quarter",
-				"year"
-			]
-		},
-		{
-			name: "placement",
-			type: "string",
-			options: [
-				"bottomLeft",
-				"bottomRight",
-				"topLeft",
-				"topRight"
-			]
-		},
-		{
-			name: "mode",
-			type: "string",
-			options: [
-				"time",
-				"date",
-				"month",
-				"year",
-				"decade"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "minDate",
-			type: "date"
-		},
-		{
-			name: "maxDate",
-			type: "date"
-		},
-		{
-			name: "showTime",
-			type: "boolean"
-		},
-		{
-			name: "showNow",
-			type: "boolean",
-			description: "Show now button"
-		},
-		{
-			name: "showToday",
-			type: "boolean",
-			description: "Show today button"
-		},
-		{
-			name: "preserveInvalidOnBlur",
-			type: "boolean",
-			description: "Not clean input on blur even when the typing is invalidate"
-		},
-		{
-			name: "inputReadOnly",
-			type: "boolean",
-			description: "Set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)"
-		},
-		{
-			name: "needConfirm",
-			type: "boolean",
-			description: "Need click confirm button to trigger value change. Default false when multiple"
-		},
-		{
-			name: "allowClear",
-			type: "boolean"
-		},
-		{
-			name: "tooltip",
-			type: "boolean",
-			description: "Show hint as tooltip"
 		}
 	],
 	"react-mantine": [
 		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"default",
-				"filled",
-				"unstyled"
-			]
-		},
-		{
 			name: "valueFormat",
 			type: "string",
 			description: "Dayjs format to display input value, \"MMMM D, YYYY\" by default. Check https://day.js.org/docs/en/display/format for reference"
-		},
-		{
-			name: "firstDayOfWeek",
-			type: "string",
-			description: "number 0-6, 0 - Sunday, 6 - Saturday, defaults to 1 - Monday",
-			options: [
-				0,
-				1,
-				2,
-				3,
-				4,
-				5,
-				6
-			]
-		},
-		{
-			name: "hideOutsideDates",
-			type: "boolean",
-			description: "Determines whether outside dates should be hidden, defaults to false"
-		},
-		{
-			name: "labelSeparator",
-			type: "string",
-			description: "Separator between range value"
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "dateType",
-			type: "string",
-			options: [
-				"default",
-				"range",
-				"multiple"
-			]
-		},
-		{
-			name: "dropdownType",
-			type: "string",
-			description: "Type of dropdown, defaults to popover",
-			options: [
-				"modal",
-				"popover"
-			]
-		},
-		{
-			name: "allowDeselect",
-			type: "boolean",
-			description: "Determines whether user can deselect the date by clicking on selected item, applicable only when type=\"default\""
-		},
-		{
-			name: "clearable",
-			type: "boolean",
-			description: "Determines whether input value can be cleared, adds clear button to right section, false by default"
-		},
-		{
-			name: "hideWeekdays",
-			type: "boolean",
-			description: "Determines whether weekdays row should be hidden, defaults to false"
-		},
-		{
-			name: "defaultLevel",
-			type: "string",
-			options: [
-				"decade",
-				"month",
-				"year"
-			]
-		},
-		{
-			name: "hasNextLevel",
-			type: "boolean",
-			description: "Determines whether next level button should be enabled, defaults to true"
-		},
-		{
-			name: "maxLevel",
-			type: "string",
-			description: "Max level that user can go up to (decade, year, month), defaults to decade",
-			options: [
-				"decade",
-				"month",
-				"year"
-			]
-		},
-		{
-			name: "numberOfColumns",
-			type: "number",
-			description: "Number of columns to render next to each other"
-		},
-		{
-			name: "columnsToScroll",
-			type: "number",
-			description: "Number of columns to scroll when user clicks next/prev buttons, defaults to numberOfColumns"
-		},
-		{
-			name: "minDate",
-			type: "date"
-		},
-		{
-			name: "maxDate",
-			type: "date"
-		},
-		{
-			name: "withCellSpacing",
-			type: "boolean",
-			description: "Determines whether controls should be separated by spacing, true by default"
-		},
-		{
-			name: "pointer",
-			type: "boolean",
-			description: "Determines whether the input should have cursor: pointer style, false by default"
-		},
-		{
-			name: "withErrorStyles",
-			type: "boolean",
-			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
-		},
-		{
-			name: "leftSection",
-			type: "string"
-		},
-		{
-			name: "rightSection",
-			type: "string"
-		},
-		{
-			name: "leftSectionWidth",
-			type: "number"
-		},
-		{
-			name: "rightSectionWidth",
-			type: "number"
 		}
 	]
 };
@@ -6818,81 +5662,11 @@ var checkbox = {
 			name: "hint",
 			type: "string | i18n",
 			description: "Help text for the field (generally shown below the input box)"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	"react-rsuite5": [
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"red",
-				"orange",
-				"yellow",
-				"green",
-				"cyan",
-				"blue",
-				"violet"
-			]
-		},
-		{
-			name: "indeterminate",
-			type: "boolean",
-			description: "Status can be indeterminate (null), cycle values trough false, inderminate, true"
-		},
-		{
-			name: "tooltip",
-			type: "boolean",
-			description: "Show hint as tooltip next to label"
-		}
 	],
 	"react-material-ui": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium",
-				"large"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"error",
-				"info",
-				"primary",
-				"secondary",
-				"success",
-				"warning"
-			]
-		},
-		{
-			name: "labelPlacement",
-			type: "string",
-			options: [
-				"top",
-				"start",
-				"bottom",
-				"end"
-			]
-		},
 		{
 			name: "disableRipple",
 			type: "boolean",
@@ -6900,80 +5674,6 @@ var checkbox = {
 		}
 	],
 	"react-mantine": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "labelPosition",
-			type: "string",
-			options: [
-				"left",
-				"right"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"grey",
-				"red",
-				"pink",
-				"grape",
-				"violet",
-				"indigo",
-				"blue",
-				"cyan",
-				"teal",
-				"green",
-				"lime",
-				"yellow",
-				"orange"
-			]
-		},
-		{
-			name: "iconColor",
-			type: "string",
-			options: [
-				"grey",
-				"red",
-				"pink",
-				"grape",
-				"violet",
-				"indigo",
-				"blue",
-				"cyan",
-				"teal",
-				"green",
-				"lime",
-				"yellow",
-				"orange"
-			]
-		},
-		{
-			name: "autoContrast",
-			type: "boolean",
-			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
-		},
 		{
 			name: "indeterminate",
 			type: "boolean"
@@ -7012,65 +5712,11 @@ var textarea = {
 			name: "placeholder",
 			type: "string | i18n",
 			description: "Placeholder text, visibile when the field is empty"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	react: [
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "rows",
-			type: "number"
-		}
 	],
 	"react-rsuite5": [
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		},
-		{
-			name: "rows",
-			type: "number"
-		},
 		{
 			name: "tooltip",
 			type: "boolean",
@@ -7078,219 +5724,12 @@ var textarea = {
 		}
 	],
 	"react-material-ui": [
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"filled",
-				"standard"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"error",
-				"info",
-				"primary",
-				"secondary",
-				"success",
-				"warning"
-			]
-		},
-		{
-			name: "floatingLabel",
-			type: "boolean",
-			description: "Show floating label for the control"
-		},
-		{
-			name: "disableUnderline",
-			type: "boolean",
-			description: "Disable underline in \"filled\" and \"standard\" variant"
-		},
-		{
-			name: "maxRows",
-			type: "number"
-		}
 	],
 	"react-bootstrap": [
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"sm"
-			]
-		},
-		{
-			name: "rows",
-			type: "number"
-		}
 	],
 	"react-antd": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"default",
-				"large"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"borderless",
-				"filled"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "showCount",
-			type: "boolean"
-		},
-		{
-			name: "autoSize",
-			type: "boolean"
-		},
-		{
-			name: "maxLength",
-			type: "number"
-		},
-		{
-			name: "allowClear",
-			type: "boolean"
-		},
-		{
-			name: "tooltip",
-			type: "boolean",
-			description: "Show hint as tooltip"
-		}
 	],
 	"react-mantine": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"default",
-				"filled",
-				"unstyled"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "autosize",
-			type: "boolean"
-		},
-		{
-			name: "minRows",
-			type: "number"
-		},
-		{
-			name: "maxRows",
-			type: "number"
-		},
-		{
-			name: "leftSection",
-			type: "string"
-		},
-		{
-			name: "rightSection",
-			type: "string"
-		},
-		{
-			name: "leftSectionWidth",
-			type: "number"
-		},
-		{
-			name: "rightSectionWidth",
-			type: "number"
-		},
-		{
-			name: "pointer",
-			type: "boolean",
-			description: "Determines whether the input should have cursor: pointer style, false by default"
-		},
-		{
-			name: "withErrorStyles",
-			type: "boolean",
-			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
-		}
 	]
 };
 var rate = {
@@ -7319,65 +5758,9 @@ var rate = {
 			name: "hint",
 			type: "string | i18n",
 			description: "Help text for the field (generally shown below the input box)"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	"react-rsuite5": [
-		{
-			name: "allowHalf",
-			type: "boolean"
-		},
-		{
-			name: "cleanable",
-			type: "boolean"
-		},
-		{
-			name: "vertical",
-			type: "boolean",
-			description: "Vertical direction when half selected"
-		},
-		{
-			name: "max",
-			type: "number"
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"red",
-				"orange",
-				"yellow",
-				"green",
-				"cyan",
-				"blue",
-				"violet"
-			]
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		},
 		{
 			name: "tooltip",
 			type: "boolean",
@@ -7385,46 +5768,8 @@ var rate = {
 		}
 	],
 	"react-material-ui": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium",
-				"large"
-			]
-		},
-		{
-			name: "precision",
-			type: "string",
-			description: "The minimum increment value change allowed",
-			options: [
-				0.1,
-				0.2,
-				0.5,
-				1
-			]
-		},
-		{
-			name: "max",
-			type: "number"
-		}
 	],
 	"react-antd": [
-		{
-			name: "count",
-			type: "number"
-		},
-		{
-			name: "allowHalf",
-			type: "boolean",
-			description: "Allow half votes"
-		},
-		{
-			name: "allowClear",
-			type: "boolean"
-		},
 		{
 			name: "tooltips",
 			type: "array",
@@ -7437,52 +5782,6 @@ var rate = {
 		}
 	],
 	"react-mantine": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"grey",
-				"red",
-				"pink",
-				"grape",
-				"violet",
-				"indigo",
-				"blue",
-				"cyan",
-				"teal",
-				"green",
-				"lime",
-				"yellow",
-				"orange"
-			]
-		},
-		{
-			name: "count",
-			type: "number",
-			description: "Number of controls, 5 by default"
-		},
-		{
-			name: "fractions",
-			type: "number",
-			description: "Number of fractions each item can be divided into, 1 by default"
-		},
-		{
-			name: "highlightSelectedOnly",
-			type: "boolean",
-			description: "If set, only the selected symbol changes to full symbol when selected, false by default"
-		}
 	]
 };
 var placeholder = {
@@ -7571,346 +5870,18 @@ var multiselect = {
 			type: "array"
 		},
 		{
-			name: "filterKey",
-			type: "string"
-		},
-		{
-			name: "filterValue",
-			type: "string"
-		},
-		{
 			name: "placeholder",
 			type: "string | i18n",
 			description: "Placeholder text, visibile when the field is empty"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	"react-rsuite5": [
-		{
-			name: "placement",
-			type: "string",
-			options: [
-				"topStart",
-				"topEnd",
-				"leftStart",
-				"rightStart",
-				"leftEnd",
-				"rightEnd",
-				"bottomStart",
-				"bottomEnd",
-				"auto",
-				"autoVerticalStart",
-				"autoVerticalEnd",
-				"autoHorizontalStart",
-				"autoHorizontalEnd"
-			]
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		},
-		{
-			name: "multiselectMode",
-			type: "string",
-			description: "Show the selected values as tag element or plain string",
-			options: [
-				"tag",
-				"plain"
-			]
-		},
-		{
-			name: "block",
-			type: "boolean",
-			description: "Only in fluid layout"
-		},
-		{
-			name: "searchable",
-			type: "boolean"
-		},
-		{
-			name: "cleanable",
-			type: "boolean"
-		},
-		{
-			name: "tooltip",
-			type: "boolean",
-			description: "Show hint as tooltip next to label"
-		},
-		{
-			name: "preventOverflow",
-			type: "boolean",
-			description: "Prevent floating element overflow"
-		}
 	],
 	"react-material-ui": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium"
-			]
-		},
-		{
-			name: "autoWidth",
-			type: "boolean",
-			description: "If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input."
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "floatingLabel",
-			type: "boolean",
-			description: "Show floating label for the control"
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"filled",
-				"standard"
-			]
-		}
 	],
 	"react-antd": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"default",
-				"large"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"borderless",
-				"filled"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "placement",
-			type: "string",
-			options: [
-				"bottomLeft",
-				"bottomRight",
-				"topLeft",
-				"topRight"
-			]
-		},
-		{
-			name: "listHeight",
-			type: "number",
-			description: "Config popup height"
-		},
-		{
-			name: "allowClear",
-			type: "boolean"
-		},
-		{
-			name: "popupMatchSelectWidth",
-			type: "boolean",
-			description: "Determine whether the popup menu and the select input are the same width"
-		},
-		{
-			name: "tooltip",
-			type: "boolean",
-			description: "Show hint as tooltip"
-		},
-		{
-			name: "showSearch",
-			type: "boolean",
-			description: "Whether select is searchable"
-		},
-		{
-			name: "virtual",
-			type: "boolean"
-		},
-		{
-			name: "maxTagCount",
-			type: "number",
-			description: "Maximum number of selectable elements"
-		},
-		{
-			name: "maxTagPlaceholder",
-			type: "string",
-			description: "Placeholder to show when max number of element is reached"
-		},
-		{
-			name: "maxTagTextLength",
-			type: "number",
-			description: "Maximum length of text tags"
-		}
 	],
 	"react-mantine": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"default",
-				"filled",
-				"unstyled"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "leftSection",
-			type: "string"
-		},
-		{
-			name: "rightSection",
-			type: "string"
-		},
-		{
-			name: "leftSectionWidth",
-			type: "number"
-		},
-		{
-			name: "rightSectionWidth",
-			type: "number"
-		},
-		{
-			name: "limit",
-			type: "number",
-			description: "Maximum number of options displayed at a time, Infinity by default"
-		},
-		{
-			name: "maxDropdownHeight",
-			type: "number",
-			description: "max-height of the dropdown, only applicable when withScrollArea prop is true, 250 by default"
-		},
-		{
-			name: "maxValues",
-			type: "number",
-			description: "Maximum number of values, Infinity by default"
-		},
-		{
-			name: "searchable",
-			type: "boolean",
-			description: "Determines whether the select should be searchable, false by default"
-		},
-		{
-			name: "nothingFoundMessage",
-			type: "string | i18n",
-			description: "Message displayed when no option matched current search query, only applicable when searchable prop is set"
-		},
-		{
-			name: "clearable",
-			type: "boolean",
-			description: "Determines whether the clear button should be displayed in the right section when the component has value, false by default"
-		},
-		{
-			name: "defaultDropdownOpened",
-			type: "boolean",
-			description: "Uncontrolled dropdown initial opened state"
-		},
-		{
-			name: "hidePickedOptions",
-			type: "boolean",
-			description: "Determines whether picked options should be removed from the options list, false by default"
-		},
-		{
-			name: "pointer",
-			type: "boolean",
-			description: "Determines whether the input should have cursor: pointer style, false by default"
-		},
-		{
-			name: "selectFirstOptionOnChange",
-			type: "boolean",
-			description: "Determines whether the first option should be selected when value changes, false by default"
-		},
-		{
-			name: "withCheckIcon",
-			type: "boolean",
-			description: "Determines whether check icon should be displayed near the selected option label, true by default"
-		},
-		{
-			name: "withErrorStyles",
-			type: "boolean",
-			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
-		},
-		{
-			name: "withScrollArea",
-			type: "boolean",
-			description: "Determines whether the options should be wrapped with scroll bars, true by default"
-		}
 	]
 };
 var button = {
@@ -7942,32 +5913,8 @@ var button = {
 			]
 		},
 		{
-			name: "labelOn",
-			type: "string | i18n"
-		},
-		{
-			name: "iconOn",
-			type: "string"
-		},
-		{
-			name: "labelOff",
-			type: "string | i18n"
-		},
-		{
-			name: "iconOff",
-			type: "string"
-		},
-		{
 			name: "initialValue",
 			type: "boolean"
-		},
-		{
-			name: "labelLink",
-			type: "string | i18n"
-		},
-		{
-			name: "iconLink",
-			type: "string"
 		},
 		{
 			name: "href",
@@ -7979,16 +5926,6 @@ var button = {
 			description: "Show hint in a tooltip"
 		},
 		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
 			name: "hidden",
 			type: "boolean",
 			description: "Hides the field from the form"
@@ -7996,184 +5933,18 @@ var button = {
 	],
 	"react-rsuite5": [
 		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		},
-		{
-			name: "appearance",
-			type: "string",
-			description: "Only available for link-type buttons",
-			options: [
-				"default",
-				"primary",
-				"subtle",
-				"link",
-				"ghost"
-			]
-		},
-		{
 			name: "tooltip",
 			type: "boolean",
 			description: "Show hint as tooltip next to label"
 		}
 	],
 	"react-material-ui": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium",
-				"large"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"filled",
-				"standard"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"error",
-				"info",
-				"primary",
-				"secondary",
-				"success",
-				"warning"
-			]
-		}
 	],
 	"react-bootstrap": [
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"primary",
-				"secondary",
-				"success",
-				"warning",
-				"danger",
-				"info",
-				"light",
-				"dark",
-				"link"
-			]
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"sm"
-			]
-		}
 	],
 	"react-antd": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"default",
-				"large"
-			]
-		},
-		{
-			name: "type",
-			type: "string",
-			description: "Only available for link-type buttons",
-			options: [
-				"primary",
-				"default",
-				"dashed",
-				"text",
-				"link"
-			]
-		}
 	],
 	"react-mantine": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"compact-xs",
-				"sm",
-				"compact-sm",
-				"md",
-				"compact-md",
-				"lg",
-				"compact-lg",
-				"xl",
-				"compact-xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			description: "Only available for link-type buttons",
-			options: [
-				"default",
-				"filled",
-				"light",
-				"outline",
-				"subtle",
-				"transparent",
-				"white"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"grey",
-				"red",
-				"pink",
-				"grape",
-				"violet",
-				"indigo",
-				"blue",
-				"cyan",
-				"teal",
-				"green",
-				"lime",
-				"yellow",
-				"orange"
-			]
-		},
-		{
-			name: "tooltip",
-			type: "boolean",
-			description: "Show hint as tooltip next to label"
-		}
 	]
 };
 var divider = {
@@ -8194,15 +5965,6 @@ var divider = {
 			name: "name",
 			type: "string",
 			description: "The name of the field and the key of the JSON"
-		},
-		{
-			name: "size",
-			type: "number",
-			description: "Thickness of the divider"
-		},
-		{
-			name: "color",
-			type: "string"
 		},
 		{
 			name: "hidden",
@@ -8313,21 +6075,6 @@ var datetime = {
 			name: "placeholder",
 			type: "string | i18n",
 			description: "Placeholder text, visibile when the field is empty"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	"react-rsuite5": [
@@ -8335,116 +6082,9 @@ var datetime = {
 			name: "format",
 			type: "string",
 			description: "Check https://date-fns.org library for available formats"
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		},
-		{
-			name: "appearance",
-			type: "string",
-			options: [
-				"default",
-				"subtle"
-			]
-		},
-		{
-			name: "placement",
-			type: "string",
-			options: [
-				"topStart",
-				"topEnd",
-				"leftStart",
-				"rightStart",
-				"leftEnd",
-				"rightEnd",
-				"bottomStart",
-				"bottomEnd",
-				"auto",
-				"autoVerticalStart",
-				"autoVerticalEnd",
-				"autoHorizontalStart",
-				"autoHorizontalEnd"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "cleanable",
-			type: "boolean"
-		},
-		{
-			name: "editable",
-			type: "boolean",
-			description: "Rendered as an input, the date can be entered via the keyboard"
-		},
-		{
-			name: "oneTap",
-			type: "boolean",
-			description: "One click to complete the selection date"
-		},
-		{
-			name: "showMeridian",
-			type: "boolean",
-			description: "Display hours in 12 format"
-		},
-		{
-			name: "isoWeek",
-			type: "boolean",
-			description: "ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day"
-		},
-		{
-			name: "showWeekNumbers",
-			type: "boolean"
 		}
 	],
 	"react-material-ui": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium",
-				"large"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"filled",
-				"standard"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"error",
-				"info",
-				"primary",
-				"secondary",
-				"success",
-				"warning"
-			]
-		},
 		{
 			name: "format",
 			type: "string",
@@ -8463,152 +6103,9 @@ var datetime = {
 			]
 		},
 		{
-			name: "closeOnSelect",
-			type: "boolean",
-			description: "If true, the popover or modal will close after submitting the full date"
-		},
-		{
-			name: "reduceAnimations",
-			type: "boolean",
-			description: "If true, disable heavy animations"
-		},
-		{
-			name: "showDaysOutsideCurrentMonth",
-			type: "boolean",
-			description: "If true, days outside the current month are rendered:\n- if fixedWeekNumber is defined, renders days to have the weeks requested.\n- if fixedWeekNumber is not defined, renders day to fill the first and last week of the current month.\n- ignored if calendars equals more than 1 on range pickers"
-		},
-		{
-			name: "floatingLabel",
-			type: "boolean",
-			description: "Show floating label for the control"
-		},
-		{
-			name: "disableFuture",
-			type: "boolean",
-			description: "If true, disable values after the current date for date components, time for time components and both for date time components"
-		},
-		{
-			name: "disableHighlightToday",
-			type: "boolean",
-			description: "If true, today's date is rendering without highlighting with circle"
-		},
-		{
-			name: "disableOpenPicker",
-			type: "boolean",
-			description: "If true, the open picker button will not be rendered (renders only the field)"
-		},
-		{
-			name: "disablePast",
-			type: "boolean",
-			description: "If true, disable values before the current date for date components, time for time components and both for date time components"
-		},
-		{
-			name: "displayWeekNumber",
-			type: "boolean",
-			description: "If true, the week number will be display in the calendar"
-		},
-		{
-			name: "ampm",
-			type: "boolean",
-			description: "12h/24h view for hour selection clock"
-		},
-		{
-			name: "ampmInClock",
-			type: "boolean",
-			description: "Display ampm controls under the clock (instead of in the toolbar)"
-		},
-		{
-			name: "forceMobile",
-			type: "boolean",
-			description: "Force mobile component"
-		},
-		{
 			name: "loading",
 			type: "boolean",
 			description: "If true, calls renderLoading instead of rendering the day calendar. Can be used to preload information and show it in calendar"
-		},
-		{
-			name: "fixedWeekNumber",
-			type: "number",
-			description: "The day view will show as many weeks as needed after the end of the current month to match this value. Put it to 6 to have a fixed number of weeks in Gregorian calendars"
-		},
-		{
-			name: "formatDensity",
-			type: "string",
-			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
-			options: [
-				"dense",
-				"spacious"
-			]
-		},
-		{
-			name: "monthsPerRow",
-			type: "string",
-			description: "Months rendered per row",
-			options: [
-				3,
-				4
-			]
-		},
-		{
-			name: "yearsPerRow",
-			type: "string",
-			description: "Years rendered per row",
-			options: [
-				3,
-				4
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "minDate",
-			type: "date"
-		},
-		{
-			name: "maxDate",
-			type: "date"
-		},
-		{
-			name: "minDateTime"
-		},
-		{
-			name: "maxDateTime"
-		},
-		{
-			name: "formatDensity",
-			type: "string",
-			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
-			options: [
-				"dense",
-				"spacious"
-			]
-		},
-		{
-			name: "minutesStep",
-			type: "number",
-			description: "Step over minutes"
-		},
-		{
-			name: "timeStepsHours",
-			type: "number",
-			description: "The time steps between two time unit options. For example, if timeStep.minutes = 8, then the available minute options will be [0, 8, 16, 24, 32, 40, 48, 56]"
-		},
-		{
-			name: "timeStepsMinutes",
-			type: "number"
-		},
-		{
-			name: "timeStepsSeconds",
-			type: "number"
 		}
 	],
 	"react-bootstrap": [
@@ -8622,317 +6119,23 @@ var datetime = {
 			]
 		},
 		{
-			name: "prefix",
-			type: "string",
-			description: "Fixed heading text"
-		},
-		{
-			name: "postfix",
-			type: "string",
-			description: "Fixed trailing text"
-		},
-		{
 			name: "floatingLabel",
 			type: "boolean",
 			description: "Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
 		}
 	],
 	"react-antd": [
 		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"default",
-				"large"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"borderless",
-				"filled"
-			]
-		},
-		{
 			name: "format",
 			type: "string",
 			description: "Dayjs format to display input value, \"MMMM D, YYYY\" by default. Check https://day.js.org/docs/en/display/format for reference"
-		},
-		{
-			name: "picker",
-			type: "string",
-			options: [
-				"date",
-				"week",
-				"month",
-				"quarter",
-				"year"
-			]
-		},
-		{
-			name: "placement",
-			type: "string",
-			options: [
-				"bottomLeft",
-				"bottomRight",
-				"topLeft",
-				"topRight"
-			]
-		},
-		{
-			name: "mode",
-			type: "string",
-			options: [
-				"time",
-				"date",
-				"month",
-				"year",
-				"decade"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "minDate",
-			type: "date"
-		},
-		{
-			name: "maxDate",
-			type: "date"
-		},
-		{
-			name: "showTime",
-			type: "boolean"
-		},
-		{
-			name: "showNow",
-			type: "boolean",
-			description: "Show now button"
-		},
-		{
-			name: "showToday",
-			type: "boolean",
-			description: "Show today button"
-		},
-		{
-			name: "preserveInvalidOnBlur",
-			type: "boolean",
-			description: "Not clean input on blur even when the typing is invalidate"
-		},
-		{
-			name: "inputReadOnly",
-			type: "boolean",
-			description: "Set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)"
-		},
-		{
-			name: "needConfirm",
-			type: "boolean",
-			description: "Need click confirm button to trigger value change. Default false when multiple"
-		},
-		{
-			name: "allowClear",
-			type: "boolean"
-		},
-		{
-			name: "tooltip",
-			type: "boolean",
-			description: "Show hint as tooltip"
 		}
 	],
 	"react-mantine": [
 		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"default",
-				"filled",
-				"unstyled"
-			]
-		},
-		{
 			name: "valueFormat",
 			type: "string",
 			description: "Dayjs format to display input value, \"DD/MM/YYYY HH:mm\" by default. Check https://day.js.org/docs/en/display/format for reference"
-		},
-		{
-			name: "firstDayOfWeek",
-			type: "string",
-			description: "number 0-6, 0 - Sunday, 6 - Saturday, defaults to 1 - Monday",
-			options: [
-				0,
-				1,
-				2,
-				3,
-				4,
-				5,
-				6
-			]
-		},
-		{
-			name: "hideOutsideDates",
-			type: "boolean",
-			description: "Determines whether outside dates should be hidden, defaults to false"
-		},
-		{
-			name: "labelSeparator",
-			type: "string",
-			description: "Separator between range value"
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "withSeconds",
-			type: "boolean"
-		},
-		{
-			name: "dropdownType",
-			type: "string",
-			description: "Type of dropdown, defaults to popover",
-			options: [
-				"modal",
-				"popover"
-			]
-		},
-		{
-			name: "allowDeselect",
-			type: "boolean",
-			description: "Determines whether user can deselect the date by clicking on selected item, applicable only when type=\"default\""
-		},
-		{
-			name: "clearable",
-			type: "boolean",
-			description: "Determines whether input value can be cleared, adds clear button to right section, false by default"
-		},
-		{
-			name: "hideWeekdays",
-			type: "boolean",
-			description: "Determines whether weekdays row should be hidden, defaults to false"
-		},
-		{
-			name: "defaultLevel",
-			type: "string",
-			options: [
-				"decade",
-				"month",
-				"year"
-			]
-		},
-		{
-			name: "hasNextLevel",
-			type: "boolean",
-			description: "Determines whether next level button should be enabled, defaults to true"
-		},
-		{
-			name: "maxLevel",
-			type: "string",
-			description: "Max level that user can go up to (decade, year, month), defaults to decade",
-			options: [
-				"decade",
-				"month",
-				"year"
-			]
-		},
-		{
-			name: "numberOfColumns",
-			type: "number",
-			description: "Number of columns to render next to each other"
-		},
-		{
-			name: "columnsToScroll",
-			type: "number",
-			description: "Number of columns to scroll when user clicks next/prev buttons, defaults to numberOfColumns"
-		},
-		{
-			name: "minDate",
-			type: "date"
-		},
-		{
-			name: "maxDate",
-			type: "date"
-		},
-		{
-			name: "withCellSpacing",
-			type: "boolean",
-			description: "Determines whether controls should be separated by spacing, true by default"
-		},
-		{
-			name: "pointer",
-			type: "boolean",
-			description: "Determines whether the input should have cursor: pointer style, false by default"
-		},
-		{
-			name: "withErrorStyles",
-			type: "boolean",
-			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
-		},
-		{
-			name: "leftSection",
-			type: "string"
-		},
-		{
-			name: "rightSection",
-			type: "string"
-		},
-		{
-			name: "leftSectionWidth",
-			type: "number"
-		},
-		{
-			name: "rightSectionWidth",
-			type: "number"
 		}
 	]
 };
@@ -8971,44 +6174,9 @@ var tabs = {
 				"tabs",
 				"subtle"
 			]
-		},
-		{
-			name: "reversed",
-			type: "boolean"
-		},
-		{
-			name: "justified",
-			type: "boolean"
 		}
 	],
 	"react-material-ui": [
-		{
-			name: "indicatorColor",
-			type: "string",
-			options: [
-				"primary",
-				"secondary"
-			]
-		},
-		{
-			name: "textColor",
-			type: "string",
-			options: [
-				"primary",
-				"secondary",
-				"inherit"
-			]
-		},
-		{
-			name: "centered",
-			type: "boolean",
-			description: "If true, the tabs are centered. This prop is intended for large views"
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Will make the tabs grow to use all the available space"
-		}
 	],
 	"react-bootstrap": [
 		{
@@ -9019,155 +6187,14 @@ var tabs = {
 				"pills",
 				"underline"
 			]
-		},
-		{
-			name: "transition",
-			type: "boolean",
-			description: "Sets a default animation strategy for all children"
-		},
-		{
-			name: "fill",
-			type: "boolean",
-			description: "Have all Tabss proportionately fill all available width"
-		},
-		{
-			name: "justify",
-			type: "boolean",
-			description: "Have all Tabs evenly fill all available width"
 		}
 	],
 	"react-antd": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"middle",
-				"large"
-			]
-		},
-		{
-			name: "tabType",
-			type: "string",
-			options: [
-				"line",
-				"card"
-			]
-		},
-		{
-			name: "animated",
-			type: "boolean"
-		},
-		{
-			name: "centered",
-			type: "boolean"
-		}
 	],
 	"react-mantine": [
 		{
 			name: "tabs",
 			type: "array"
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"grey",
-				"red",
-				"pink",
-				"grape",
-				"violet",
-				"indigo",
-				"blue",
-				"cyan",
-				"teal",
-				"green",
-				"lime",
-				"yellow",
-				"orange"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"default",
-				"outline",
-				"pills"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "grow",
-			type: "boolean",
-			description: "Determines whether tabs should take all available space, false by default"
-		},
-		{
-			name: "justify",
-			type: "string",
-			options: [
-				"flex-start",
-				"center",
-				"flex-end",
-				"space-between"
-			]
-		},
-		{
-			name: "orientation",
-			type: "string",
-			options: [
-				"horizontal",
-				"vertical"
-			]
-		},
-		{
-			name: "placement",
-			type: "string",
-			options: [
-				"left",
-				"right"
-			]
-		},
-		{
-			name: "activateTabWithKeyboard",
-			type: "boolean",
-			description: "Determines whether tab should be activated with arrow key press, true by default"
-		},
-		{
-			name: "allowTabDeactivation",
-			type: "boolean",
-			description: "Determines whether tab can be deactivated, false by default"
-		},
-		{
-			name: "autoContrast",
-			type: "boolean",
-			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
-		},
-		{
-			name: "inverted",
-			type: "boolean",
-			description: "Determines whether tabs should have inverted styles, false by default"
-		},
-		{
-			name: "keepMounted",
-			type: "boolean",
-			description: "If set to false, Tabs.Panel content will be unmounted when the associated tab is not active, true by default"
-		},
-		{
-			name: "loop",
-			type: "boolean",
-			description: "Determines whether arrow key presses should loop though items (first to last and last to first), true by default"
 		}
 	]
 };
@@ -9200,16 +6227,6 @@ var upload = {
 			description: "Help text for the field (generally shown below the input box)"
 		},
 		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
-		},
-		{
 			name: "accept",
 			type: "array",
 			description: "Accepted files, file extension or mime type: .doc, .pdf, video/*, image/png, etc. "
@@ -9227,107 +6244,12 @@ var upload = {
 		}
 	],
 	"react-rsuite5": [
-		{
-			name: "listType",
-			type: "string",
-			options: [
-				"text",
-				"picture-text",
-				"picture"
-			]
-		},
-		{
-			name: "maxPreviewFileSize",
-			type: "number",
-			description: "Set the maximum limit for preview files"
-		},
-		{
-			name: "tooltip",
-			type: "boolean",
-			description: "Show hint as tooltip next to label"
-		},
-		{
-			name: "fileListVisible",
-			type: "boolean"
-		},
-		{
-			name: "disabledFileItem",
-			type: "boolean"
-		},
-		{
-			name: "multiple",
-			type: "boolean",
-			description: "Allow selecting multiple files"
-		},
-		{
-			name: "removable",
-			type: "boolean"
-		},
-		{
-			name: "draggable",
-			type: "boolean"
-		},
-		{
-			name: "uploadButtonLabel",
-			type: "string | i18n"
-		},
-		{
-			name: "uploadButtonAppearance",
-			type: "string",
-			options: [
-				"default",
-				"primary",
-				"subtle",
-				"link",
-				"ghost"
-			]
-		},
-		{
-			name: "uploadButtonSize",
-			type: "string",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		},
-		{
-			name: "draggableText",
-			type: "string | i18n"
-		},
-		{
-			name: "draggableHeight",
-			type: "number"
-		}
 	],
 	"react-material-ui": [
 		{
 			name: "multiple",
 			type: "boolean",
 			description: "Allow selecting multiple files"
-		},
-		{
-			name: "uploadButtonLabel",
-			type: "string | i18n"
-		},
-		{
-			name: "uploadButtonVariant",
-			type: "string",
-			options: [
-				"contained",
-				"outlined",
-				"text"
-			]
-		},
-		{
-			name: "uploadButtonSize",
-			type: "string",
-			options: [
-				"small",
-				"medium",
-				"large"
-			]
 		},
 		{
 			name: "color",
@@ -9372,40 +6294,8 @@ var upload = {
 			type: "boolean"
 		},
 		{
-			name: "uploadButtonLabel",
-			type: "string | i18n"
-		},
-		{
-			name: "uploadButtonAppearance",
-			type: "string",
-			options: [
-				"primary",
-				"default",
-				"dashed",
-				"text",
-				"link"
-			]
-		},
-		{
-			name: "uploadButtonSize",
-			type: "string",
-			options: [
-				"small",
-				"default",
-				"large"
-			]
-		},
-		{
 			name: "draggable",
 			type: "boolean"
-		},
-		{
-			name: "draggableText",
-			type: "string | i18n"
-		},
-		{
-			name: "draggableHeight",
-			type: "number"
 		},
 		{
 			name: "tooltip",
@@ -9418,83 +6308,6 @@ var upload = {
 			name: "placeholder",
 			type: "string | i18n",
 			description: "Placeholder text, visibile when the field is empty"
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"default",
-				"filled",
-				"unstyled"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "leftSection",
-			type: "string"
-		},
-		{
-			name: "rightSection",
-			type: "string"
-		},
-		{
-			name: "leftSectionWidth",
-			type: "number"
-		},
-		{
-			name: "rightSectionWidth",
-			type: "number"
-		},
-		{
-			name: "clearable",
-			type: "boolean"
-		},
-		{
-			name: "multiple",
-			type: "boolean",
-			description: "Determines whether user can pick more than one file, false by default"
-		},
-		{
-			name: "pointer",
-			type: "boolean",
-			description: "Determines whether the input should have cursor: pointer style, false by default"
-		},
-		{
-			name: "withErrorStyles",
-			type: "boolean",
-			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
 		}
 	]
 };
@@ -9518,14 +6331,6 @@ var steps = {
 			name: "hidden",
 			type: "boolean",
 			description: "Hides the field from the form"
-		},
-		{
-			name: "labelNext",
-			type: "string | i18n"
-		},
-		{
-			name: "labelPrevious",
-			type: "string | i18n"
 		},
 		{
 			name: "align",
@@ -9571,120 +6376,12 @@ var steps = {
 				"navigation",
 				"inline"
 			]
-		},
-		{
-			name: "status",
-			type: "string",
-			options: [
-				"finish",
-				"wait",
-				"process",
-				"error"
-			]
-		},
-		{
-			name: "percent",
-			type: "number",
-			description: "Completion percentage of current step"
-		},
-		{
-			name: "small",
-			type: "boolean"
-		},
-		{
-			name: "clickable",
-			type: "boolean",
-			description: "Make steps clickable"
-		},
-		{
-			name: "labelPlacement",
-			type: "string",
-			options: [
-				"horizontal",
-				"vertical"
-			]
 		}
 	],
 	"react-mantine": [
 		{
 			name: "steps",
 			type: "array"
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"grey",
-				"red",
-				"pink",
-				"grape",
-				"violet",
-				"indigo",
-				"blue",
-				"cyan",
-				"teal",
-				"green",
-				"lime",
-				"yellow",
-				"orange"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "iconPosition",
-			type: "string",
-			description: "Icon position relative to the step body, \"left\" by default",
-			options: [
-				"left",
-				"right"
-			]
-		},
-		{
-			name: "iconSize",
-			type: "number",
-			description: "Determines whether steps should wrap to the next line if no space is available, true by default"
-		},
-		{
-			name: "wrap",
-			type: "boolean",
-			description: "Determines whether steps should wrap to the next line if no space is available, true by default"
-		},
-		{
-			name: "allowStepClick",
-			type: "boolean",
-			description: "Set to false to disable clicks on step"
-		},
-		{
-			name: "allowStepSelect",
-			type: "boolean",
-			description: "Should step selection be allowed"
-		},
-		{
-			name: "autoContrast",
-			type: "boolean",
-			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
 		}
 	]
 };
@@ -9774,91 +6471,9 @@ var time = {
 			name: "placeholder",
 			type: "string | i18n",
 			description: "Placeholder text, visibile when the field is empty"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	"react-rsuite5": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		},
-		{
-			name: "appearance",
-			type: "string",
-			options: [
-				"default",
-				"subtle"
-			]
-		},
-		{
-			name: "placement",
-			type: "string",
-			options: [
-				"topStart",
-				"topEnd",
-				"leftStart",
-				"rightStart",
-				"leftEnd",
-				"rightEnd",
-				"bottomStart",
-				"bottomEnd",
-				"auto",
-				"autoVerticalStart",
-				"autoVerticalEnd",
-				"autoHorizontalStart",
-				"autoHorizontalEnd"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "cleanable",
-			type: "boolean"
-		},
-		{
-			name: "editable",
-			type: "boolean",
-			description: "Rendered as an input, the date can be entered via the keyboard"
-		},
-		{
-			name: "oneTap",
-			type: "boolean",
-			description: "One click to complete the selection date"
-		},
-		{
-			name: "showMeridian",
-			type: "boolean",
-			description: "Display hours in 12 format"
-		},
 		{
 			name: "format",
 			type: "string",
@@ -9872,37 +6487,6 @@ var time = {
 	],
 	"react-material-ui": [
 		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium",
-				"large"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"filled",
-				"standard"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"error",
-				"info",
-				"primary",
-				"secondary",
-				"success",
-				"warning"
-			]
-		},
-		{
 			name: "format",
 			type: "string",
 			description: "Check https://date-fns.org library for available formats"
@@ -9915,161 +6499,13 @@ var time = {
 				"minutes",
 				"seconds"
 			]
-		},
-		{
-			name: "floatingLabel",
-			type: "boolean",
-			description: "Show floating label for the control"
-		},
-		{
-			name: "ampm",
-			type: "boolean",
-			description: "12h/24h view for hour selection clock"
-		},
-		{
-			name: "ampmInClock",
-			type: "boolean",
-			description: "Display ampm controls under the clock (instead of in the toolbar)"
-		},
-		{
-			name: "forceMobile",
-			type: "boolean",
-			description: "Force mobile component"
-		},
-		{
-			name: "closeOnSelect",
-			type: "boolean",
-			description: "If true, the popover or modal will close after submitting the full date."
-		},
-		{
-			name: "disableFuture",
-			type: "boolean",
-			description: "If true, disable values after the current date for date components, time for time components and both for date time components."
-		},
-		{
-			name: "disableOpenPicker",
-			type: "boolean",
-			description: "If true, the open picker button will not be rendered (renders only the field)"
-		},
-		{
-			name: "disablePast",
-			type: "boolean",
-			description: "If true, disable values before the current date for date components, time for time components and both for date time components"
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "minTime",
-			type: "string"
-		},
-		{
-			name: "maxTime",
-			type: "string"
-		},
-		{
-			name: "formatDensity",
-			type: "string",
-			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
-			options: [
-				"dense",
-				"spacious"
-			]
-		},
-		{
-			name: "minutesStep",
-			type: "number",
-			description: "Step over minutes"
-		},
-		{
-			name: "timeStepsHours",
-			type: "number",
-			description: "The time steps between two time unit options. For example, if timeStep.minutes = 8, then the available minute options will be [0, 8, 16, 24, 32, 40, 48, 56]"
-		},
-		{
-			name: "timeStepsMinutes",
-			type: "number"
-		},
-		{
-			name: "timeStepsSeconds",
-			type: "number"
 		}
 	],
 	"react-antd": [
 		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"default",
-				"large"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"borderless",
-				"filled"
-			]
-		},
-		{
 			name: "format",
 			type: "string",
 			description: "Dayjs format to display input value, \"HH:mm:ss\" by default. Check https://day.js.org/docs/en/display/format for reference"
-		},
-		{
-			name: "hourStep",
-			type: "number",
-			description: "Interval between hours in picker"
-		},
-		{
-			name: "minuteStep",
-			type: "number",
-			description: "Interval between minutes in picker"
-		},
-		{
-			name: "secondStep",
-			type: "number",
-			description: "Interval between seconds in picker"
-		},
-		{
-			name: "allowClear",
-			type: "boolean"
-		},
-		{
-			name: "hideDisabledOptions",
-			type: "boolean",
-			description: "Whether hide the options that can not be selected"
-		},
-		{
-			name: "inputReadOnly",
-			type: "boolean",
-			description: "Set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)"
-		},
-		{
-			name: "needConfirm",
-			type: "boolean",
-			description: "Need click confirm button to trigger value change"
-		},
-		{
-			name: "showNow",
-			type: "boolean",
-			description: "Whether to show Now button on panel"
-		},
-		{
-			name: "use12Hours",
-			type: "boolean",
-			description: "Display as 12 hours format, with default format h:mm:ss a"
 		},
 		{
 			name: "tooltip",
@@ -10088,87 +6524,6 @@ var time = {
 		}
 	],
 	"react-mantine": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"default",
-				"filled",
-				"unstyled"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "minTime",
-			type: "string"
-		},
-		{
-			name: "maxTime",
-			type: "string"
-		},
-		{
-			name: "withSeconds",
-			type: "boolean",
-			description: "Determines whether seconds input should be rendered"
-		},
-		{
-			name: "pointer",
-			type: "boolean",
-			description: "Determines whether the input should have cursor: pointer style, false by default"
-		},
-		{
-			name: "showBrowserPicker",
-			type: "boolean",
-			description: "Show browser native picker (if supported)"
-		},
-		{
-			name: "leftSection",
-			type: "string"
-		},
-		{
-			name: "rightSection",
-			type: "string"
-		},
-		{
-			name: "leftSectionWidth",
-			type: "number"
-		},
-		{
-			name: "rightSectionWidth",
-			type: "number"
-		}
 	]
 };
 var hidden = {
@@ -10193,7 +6548,6 @@ var hidden = {
 	]
 };
 var Manifests = {
-	columns: columns,
 	"input-text": {
 	label: "Input Text",
 	category: "general",
@@ -10227,180 +6581,11 @@ var Manifests = {
 			name: "placeholder",
 			type: "string | i18n",
 			description: "Placeholder text, visibile when the field is empty"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
-		},
-		{
-			name: "submitOnEnter",
-			type: "boolean",
-			description: "Trigger onSubmit / onError if the user hits Enter key"
-		},
-		{
-			name: "inputMode",
-			type: "string",
-			options: [
-				"none",
-				"text",
-				"decimal",
-				"numeric",
-				"tel",
-				"search",
-				"email",
-				"url"
-			]
-		},
-		{
-			name: "autocomplete",
-			type: "string",
-			options: [
-				"off",
-				"on",
-				"name",
-				"honorific-prefix",
-				"given-name",
-				"additional-name",
-				"family-name",
-				"honorific-suffix",
-				"nickname",
-				"email",
-				"username",
-				"new-password",
-				"current-password",
-				"one-time-code",
-				"organization-title",
-				"organization",
-				"street-address",
-				"address-line1",
-				"address-line2",
-				"address-line3",
-				"address-level4",
-				"address-level3",
-				"address-level2",
-				"address-level1",
-				"country",
-				"country-name",
-				"postal-code",
-				"cc-name",
-				"cc-given-name",
-				"cc-additional-name",
-				"cc-family-name",
-				"cc-number",
-				"cc-exp",
-				"cc-exp-month",
-				"cc-exp-year",
-				"cc-csc",
-				"cc-type",
-				"transaction-currency",
-				"transaction-amount",
-				"language",
-				"bday",
-				"bday-day",
-				"bday-month",
-				"bday-year",
-				"sex",
-				"tel",
-				"tel-country-code",
-				"tel-national",
-				"tel-area-code",
-				"tel-local",
-				"tel-extension",
-				"impp",
-				"url",
-				"photo"
-			]
-		},
-		{
-			name: "inputType",
-			type: "string",
-			description: "Set the HTML 5 input type, some framework may have specific components for some of these type",
-			options: [
-				"button",
-				"checkbox",
-				"color",
-				"date",
-				"datetime-local",
-				"email",
-				"file",
-				"hidden",
-				"image",
-				"month",
-				"number",
-				"password",
-				"radio",
-				"range",
-				"reset",
-				"search",
-				"submit",
-				"tel",
-				"text",
-				"time",
-				"url",
-				"week"
-			]
 		}
 	],
 	react: [
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		}
 	],
 	"react-rsuite5": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "prefix",
-			type: "string",
-			description: "Fixed heading text"
-		},
-		{
-			name: "inside",
-			type: "boolean",
-			description: "Show prefix and postfix inside the input box"
-		},
-		{
-			name: "postfix",
-			type: "string",
-			description: "Fixed trailing text"
-		},
 		{
 			name: "tooltip",
 			type: "boolean",
@@ -10408,66 +6593,6 @@ var Manifests = {
 		}
 	],
 	"react-material-ui": [
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"filled",
-				"standard"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"error",
-				"info",
-				"primary",
-				"secondary",
-				"success",
-				"warning"
-			]
-		},
-		{
-			name: "floatingLabel",
-			type: "boolean",
-			description: "Show floating label for the control"
-		},
-		{
-			name: "disableUnderline",
-			type: "boolean",
-			description: "Disable underline in \"filled\" and \"standard\" variant"
-		},
-		{
-			name: "prefix",
-			type: "string",
-			description: "Fixed heading text"
-		},
-		{
-			name: "postfix",
-			type: "string",
-			description: "Fixed trailing text"
-		}
 	],
 	"react-bootstrap": [
 		{
@@ -10480,162 +6605,14 @@ var Manifests = {
 			]
 		},
 		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "prefix",
-			type: "string",
-			description: "Fixed heading text"
-		},
-		{
-			name: "postfix",
-			type: "string",
-			description: "Fixed trailing text"
-		},
-		{
 			name: "floatingLabel",
 			type: "boolean",
 			description: "Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"
 		}
 	],
 	"react-antd": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"default",
-				"large"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"borderless",
-				"filled"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "prefix",
-			type: "string",
-			description: "Fixed heading text"
-		},
-		{
-			name: "postfix",
-			type: "string",
-			description: "Fixed trailing text"
-		},
-		{
-			name: "showCount",
-			type: "boolean"
-		},
-		{
-			name: "maxLength",
-			type: "number"
-		},
-		{
-			name: "allowClear",
-			type: "boolean"
-		},
-		{
-			name: "tooltip",
-			type: "boolean",
-			description: "Show hint as tooltip"
-		},
-		{
-			name: "bordered",
-			type: "boolean"
-		}
 	],
 	"react-mantine": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"default",
-				"filled",
-				"unstyled"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "leftSection",
-			type: "string"
-		},
-		{
-			name: "rightSection",
-			type: "string"
-		},
-		{
-			name: "leftSectionWidth",
-			type: "number"
-		},
-		{
-			name: "rightSectionWidth",
-			type: "number"
-		},
-		{
-			name: "pointer",
-			type: "boolean",
-			description: "Determines whether the input should have cursor: pointer style, false by default"
-		},
-		{
-			name: "withErrorStyles",
-			type: "boolean",
-			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
-		}
 	]
 },
 	toggle: toggle,
@@ -10645,6 +6622,7 @@ var Manifests = {
 	label: "Two Columns",
 	category: "layout",
 	name: "two-columns",
+	hidden: true,
 	frameworks: [
 		"react-antd",
 		"react",
@@ -10677,50 +6655,6 @@ var Manifests = {
 			]
 		},
 		{
-			name: "leftAlignment",
-			type: "string",
-			description: "Flex \"align-self\" attribute for the column",
-			options: [
-				"auto",
-				"baseline",
-				"center",
-				"end",
-				"flex-end",
-				"flex-start",
-				"inherit",
-				"initial",
-				"normal",
-				"revert",
-				"self-end",
-				"self-start",
-				"start",
-				"stretch",
-				"unset"
-			]
-		},
-		{
-			name: "rightAlignment",
-			type: "string",
-			description: "Flex \"align-self\" attribute for the column",
-			options: [
-				"auto",
-				"baseline",
-				"center",
-				"end",
-				"flex-end",
-				"flex-start",
-				"inherit",
-				"initial",
-				"normal",
-				"revert",
-				"self-end",
-				"self-start",
-				"start",
-				"stretch",
-				"unset"
-			]
-		},
-		{
 			name: "hidden",
 			type: "boolean",
 			description: "Hides the field from the form"
@@ -10731,6 +6665,7 @@ var Manifests = {
 	label: "Three Columns",
 	category: "layout",
 	name: "three-columns",
+	hidden: true,
 	frameworks: [
 		"react-antd",
 		"react",
@@ -10761,78 +6696,13 @@ var Manifests = {
 			]
 		},
 		{
-			name: "leftAlignment",
-			type: "string",
-			description: "Flex \"align-self\" attribute for the column",
-			options: [
-				"auto",
-				"baseline",
-				"center",
-				"end",
-				"flex-end",
-				"flex-start",
-				"inherit",
-				"initial",
-				"normal",
-				"revert",
-				"self-end",
-				"self-start",
-				"start",
-				"stretch",
-				"unset"
-			]
-		},
-		{
-			name: "centerAlignment",
-			type: "string",
-			description: "Flex \"align-self\" attribute for the column",
-			options: [
-				"auto",
-				"baseline",
-				"center",
-				"end",
-				"flex-end",
-				"flex-start",
-				"inherit",
-				"initial",
-				"normal",
-				"revert",
-				"self-end",
-				"self-start",
-				"start",
-				"stretch",
-				"unset"
-			]
-		},
-		{
-			name: "rightAlignment",
-			type: "string",
-			description: "Flex \"align-self\" attribute for the column",
-			options: [
-				"auto",
-				"baseline",
-				"center",
-				"end",
-				"flex-end",
-				"flex-start",
-				"inherit",
-				"initial",
-				"normal",
-				"revert",
-				"self-end",
-				"self-start",
-				"start",
-				"stretch",
-				"unset"
-			]
-		},
-		{
 			name: "hidden",
 			type: "boolean",
 			description: "Hides the field from the form"
 		}
 	]
 },
+	columns: columns,
 	array: array,
 	"input-number": {
 	label: "Input Number",
@@ -10867,69 +6737,11 @@ var Manifests = {
 			name: "placeholder",
 			type: "string | i18n",
 			description: "Placeholder text, visibile when the field is empty"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	react: [
-		{
-			name: "min",
-			type: "number"
-		},
-		{
-			name: "step",
-			type: "number"
-		},
-		{
-			name: "max",
-			type: "number"
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		}
 	],
 	"react-rsuite5": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
 		{
 			name: "allowClear",
 			type: "boolean"
@@ -10947,99 +6759,14 @@ var Manifests = {
 			type: "number"
 		},
 		{
-			name: "prefix",
-			type: "string",
-			description: "Fixed heading text"
-		},
-		{
-			name: "inside",
-			type: "boolean",
-			description: "Show prefix and postfix inside the input box"
-		},
-		{
-			name: "postfix",
-			type: "string",
-			description: "Fixed trailing text"
-		},
-		{
 			name: "tooltip",
 			type: "boolean",
 			description: "Show hint as tooltip next to label"
 		}
 	],
 	"react-material-ui": [
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"filled",
-				"standard"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"error",
-				"info",
-				"primary",
-				"secondary",
-				"success",
-				"warning"
-			]
-		},
-		{
-			name: "floatingLabel",
-			type: "boolean",
-			description: "Show floating label for the control"
-		},
-		{
-			name: "disableUnderline",
-			type: "boolean",
-			description: "Disable underline in \"filled\" and \"standard\" variant"
-		},
-		{
-			name: "prefix",
-			type: "string",
-			description: "Fixed heading text"
-		},
-		{
-			name: "postfix",
-			type: "string",
-			description: "Fixed trailing text"
-		}
 	],
 	"react-bootstrap": [
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
 		{
 			name: "size",
 			type: "string",
@@ -11050,249 +6777,14 @@ var Manifests = {
 			]
 		},
 		{
-			name: "prefix",
-			type: "string",
-			description: "Fixed heading text"
-		},
-		{
-			name: "postfix",
-			type: "string",
-			description: "Fixed trailing text"
-		},
-		{
 			name: "floatingLabel",
 			type: "boolean",
 			description: "Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"
-		},
-		{
-			name: "min",
-			type: "number"
-		},
-		{
-			name: "step",
-			type: "number"
-		},
-		{
-			name: "max",
-			type: "number"
 		}
 	],
 	"react-antd": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"default",
-				"large"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"outlined",
-				"borderless",
-				"filled"
-			]
-		},
-		{
-			name: "min",
-			type: "number"
-		},
-		{
-			name: "step",
-			type: "number"
-		},
-		{
-			name: "max",
-			type: "number"
-		},
-		{
-			name: "prefix",
-			type: "string",
-			description: "Fixed heading text"
-		},
-		{
-			name: "postfix",
-			type: "string",
-			description: "Fixed trailing text"
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "showControls",
-			type: "boolean",
-			description: "Whether to show +- controls, or set custom arrows icon"
-		},
-		{
-			name: "stringMode",
-			type: "boolean",
-			description: "Set value as string to support high precision decimals. Will return string value by onChange"
-		},
-		{
-			name: "tooltip",
-			type: "boolean",
-			description: "Show hint as tooltip"
-		}
 	],
 	"react-mantine": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"default",
-				"filled",
-				"unstyled"
-			]
-		},
-		{
-			name: "min",
-			type: "number"
-		},
-		{
-			name: "step",
-			type: "number"
-		},
-		{
-			name: "max",
-			type: "number"
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "leftSection",
-			type: "string"
-		},
-		{
-			name: "rightSection",
-			type: "string"
-		},
-		{
-			name: "leftSectionWidth",
-			type: "number"
-		},
-		{
-			name: "rightSectionWidth",
-			type: "number"
-		},
-		{
-			name: "pointer",
-			type: "boolean",
-			description: "Determines whether the input should have cursor: pointer style, false by default"
-		},
-		{
-			name: "withErrorStyles",
-			type: "boolean",
-			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
-		},
-		{
-			name: "valueIsNumericString",
-			type: "boolean",
-			description: "If value is passed as string representation of numbers (unformatted) and number is used in any format props like in prefix or suffix in numeric format and format prop in pattern format then this should be passed as true. false by default"
-		},
-		{
-			name: "hideControls",
-			type: "boolean"
-		},
-		{
-			name: "allowLeadingZeros",
-			type: "boolean"
-		},
-		{
-			name: "allowNegative",
-			type: "boolean"
-		},
-		{
-			name: "clampBehavior",
-			type: "string",
-			description: "Controls how value is clamped, strict – user is not allowed to enter values that are not in [min, max] range, blur – user is allowed to enter any values, but the value is clamped when the input loses focus (default behavior), none – lifts all restrictions, [min, max] range is applied only for controls and up/down keys",
-			options: [
-				"none",
-				"blur",
-				"strict"
-			]
-		},
-		{
-			name: "startValue",
-			type: "number",
-			description: "Value set to the input when increment/decrement buttons are clicked or up/down arrows pressed if the input is empty, 0 by default"
-		},
-		{
-			name: "allowDecimal",
-			type: "boolean"
-		},
-		{
-			name: "decimalSeparator",
-			type: "string",
-			description: "Character used as a decimal separator, \".\" by default"
-		},
-		{
-			name: "fixedDecimalScale",
-			type: "boolean",
-			description: "If set, 0s are added after decimalSeparator to match given decimalScale. false by default"
-		},
-		{
-			name: "decimalScale",
-			type: "number",
-			description: "Limits the number of digits that can be entered after the decimal point"
-		},
-		{
-			name: "thousandsGroupStyle",
-			type: "string",
-			description: "Defines the thousand grouping style",
-			options: [
-				"none",
-				"thousand",
-				"lakh",
-				"wan"
-			]
-		},
-		{
-			name: "thousandSeparator",
-			type: "string",
-			description: "A character used to separate thousands"
-		}
 	]
 },
 	slider: slider,
@@ -11328,80 +6820,11 @@ var Manifests = {
 		{
 			name: "options",
 			type: "array"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	"react-rsuite5": [
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"red",
-				"orange",
-				"yellow",
-				"green",
-				"cyan",
-				"blue",
-				"violet"
-			]
-		},
-		{
-			name: "inline",
-			type: "boolean"
-		},
-		{
-			name: "tooltip",
-			type: "boolean",
-			description: "Show hint as tooltip next to label"
-		}
 	],
 	"react-material-ui": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium",
-				"large"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"error",
-				"info",
-				"primary",
-				"secondary",
-				"success",
-				"warning"
-			]
-		},
-		{
-			name: "labelPlacement",
-			type: "string",
-			options: [
-				"top",
-				"start",
-				"bottom",
-				"end"
-			]
-		}
 	],
 	"react-bootstrap": [
 		{
@@ -11417,80 +6840,6 @@ var Manifests = {
 		{
 			name: "options",
 			type: "array"
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "labelPosition",
-			type: "string",
-			options: [
-				"left",
-				"right"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"grey",
-				"red",
-				"pink",
-				"grape",
-				"violet",
-				"indigo",
-				"blue",
-				"cyan",
-				"teal",
-				"green",
-				"lime",
-				"yellow",
-				"orange"
-			]
-		},
-		{
-			name: "iconColor",
-			type: "string",
-			options: [
-				"grey",
-				"red",
-				"pink",
-				"grape",
-				"violet",
-				"indigo",
-				"blue",
-				"cyan",
-				"teal",
-				"green",
-				"lime",
-				"yellow",
-				"orange"
-			]
-		},
-		{
-			name: "autoContrast",
-			type: "boolean",
-			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
 		}
 	]
 },
@@ -11524,37 +6873,9 @@ var Manifests = {
 		{
 			name: "options",
 			type: "array"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	"react-rsuite5": [
-		{
-			name: "inline",
-			type: "boolean"
-		},
-		{
-			name: "appearance",
-			type: "string",
-			description: "Show as default radio control or stacked buttons",
-			options: [
-				"default",
-				"picker"
-			]
-		},
 		{
 			name: "tooltip",
 			type: "boolean",
@@ -11562,38 +6883,6 @@ var Manifests = {
 		}
 	],
 	"react-material-ui": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"medium",
-				"large"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"error",
-				"info",
-				"primary",
-				"secondary",
-				"success",
-				"warning"
-			]
-		},
-		{
-			name: "labelPlacement",
-			type: "string",
-			options: [
-				"top",
-				"start",
-				"bottom",
-				"end"
-			]
-		},
 		{
 			name: "row",
 			type: "boolean"
@@ -11611,24 +6900,6 @@ var Manifests = {
 	],
 	"react-antd": [
 		{
-			name: "optionType",
-			type: "string",
-			options: [
-				"default",
-				"button"
-			]
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"default",
-				"large"
-			]
-		},
-		{
 			name: "inline",
 			type: "boolean"
 		},
@@ -11642,80 +6913,6 @@ var Manifests = {
 		{
 			name: "options",
 			type: "array"
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "labelPosition",
-			type: "string",
-			options: [
-				"left",
-				"right"
-			]
-		},
-		{
-			name: "color",
-			type: "string",
-			options: [
-				"grey",
-				"red",
-				"pink",
-				"grape",
-				"violet",
-				"indigo",
-				"blue",
-				"cyan",
-				"teal",
-				"green",
-				"lime",
-				"yellow",
-				"orange"
-			]
-		},
-		{
-			name: "iconColor",
-			type: "string",
-			options: [
-				"grey",
-				"red",
-				"pink",
-				"grape",
-				"violet",
-				"indigo",
-				"blue",
-				"cyan",
-				"teal",
-				"green",
-				"lime",
-				"yellow",
-				"orange"
-			]
-		},
-		{
-			name: "autoContrast",
-			type: "boolean",
-			description: "Determines whether icon color with filled variant should depend on background-color. If luminosity of the color prop is less than theme.luminosityThreshold, then theme.white will be used for text color, otherwise theme.black. Overrides theme.autoContrast."
 		}
 	]
 },
@@ -11743,21 +6940,6 @@ var Manifests = {
 			name: "hint",
 			type: "string | i18n",
 			description: "Help text for the field (generally shown below the input box)"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	"react-rsuite5": [
@@ -11772,22 +6954,6 @@ var Manifests = {
 			]
 		},
 		{
-			name: "block",
-			type: "boolean",
-			description: "Only in fluid layout"
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		},
-		{
 			name: "tooltip",
 			type: "boolean",
 			description: "Show hint as tooltip next to label"
@@ -11795,114 +6961,9 @@ var Manifests = {
 	],
 	"react-mantine": [
 		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "radius",
-			type: "string",
-			options: [
-				"xs",
-				"sm",
-				"md",
-				"lg",
-				"xl"
-			]
-		},
-		{
-			name: "variant",
-			type: "string",
-			options: [
-				"default",
-				"filled",
-				"unstyled"
-			]
-		},
-		{
 			name: "data",
 			type: "array",
 			description: "Data displayed in the dropdown"
-		},
-		{
-			name: "leftSection",
-			type: "string"
-		},
-		{
-			name: "rightSection",
-			type: "string"
-		},
-		{
-			name: "leftSectionWidth",
-			type: "number"
-		},
-		{
-			name: "rightSectionWidth",
-			type: "number"
-		},
-		{
-			name: "maxTags",
-			type: "number",
-			description: "Maximum number of tags, Infinity by default"
-		},
-		{
-			name: "maxDropdownHeight",
-			type: "number",
-			description: "Max-height of the dropdown, only applicable when withScrollArea prop is true, 250 by default"
-		},
-		{
-			name: "limit",
-			type: "number",
-			description: "Maximum number of options displayed at a time, Infinity by default"
-		},
-		{
-			name: "allowDuplicates",
-			type: "boolean"
-		},
-		{
-			name: "clearable",
-			type: "boolean"
-		},
-		{
-			name: "defaultDropdownOpened",
-			type: "boolean"
-		},
-		{
-			name: "pointer",
-			type: "boolean",
-			description: "Determines whether the input should have cursor: pointer style, false by default"
-		},
-		{
-			name: "searchable",
-			type: "boolean",
-			description: "Determines whether the select should be searchable, false by default"
-		},
-		{
-			name: "selectFirstOptionOnChange",
-			type: "boolean",
-			description: "Determines whether the first option should be selected when value changes, false by default"
-		},
-		{
-			name: "withCheckIcon",
-			type: "boolean",
-			description: "Determines whether check icon should be displayed near the selected option label, true by default"
-		},
-		{
-			name: "withErrorStyles",
-			type: "boolean",
-			description: "Determines whether the input should have red border and red text color when the error prop is set, true by default"
-		},
-		{
-			name: "withScrollArea",
-			type: "boolean",
-			description: "Determines whether the options should be wrapped with scroll bars, true by default"
 		}
 	]
 },
@@ -11934,21 +6995,6 @@ var Manifests = {
 			name: "placeholder",
 			type: "string | i18n",
 			description: "Placeholder text, visibile when the field is empty"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	"react-rsuite5": [
@@ -11958,64 +7004,14 @@ var Manifests = {
 			description: "Use ${d} - digits, ${D} - any non digits, ${a} - any non alpha chars, ${w} - any word chars "
 		},
 		{
-			name: "guide",
-			type: "boolean"
-		},
-		{
-			name: "keepCharPositions",
-			type: "boolean",
-			description: "When true, adding or deleting characters will not affect the position of existing characters"
-		},
-		{
-			name: "showMask",
-			type: "boolean",
-			description: "When the input value is empty, the mask is displayed as a placeholder instead of a regular placeholder"
-		},
-		{
 			name: "placeholderChar",
 			type: "string",
 			description: "The placeholder character represents the fillable spot in the mask"
 		},
 		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the field to 100% of the enclosing container"
-		},
-		{
-			name: "width",
-			type: "number",
-			description: "Set the width (in pixel) of the field"
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		},
-		{
 			name: "tooltip",
 			type: "boolean",
 			description: "Show hint as tooltip next to label"
-		},
-		{
-			name: "prefix",
-			type: "string",
-			description: "Fixed heading text"
-		},
-		{
-			name: "inside",
-			type: "boolean",
-			description: "Show prefix and postfix inside the input box"
-		},
-		{
-			name: "postfix",
-			type: "string",
-			description: "Fixed trailing text"
 		}
 	]
 },
@@ -12048,54 +7044,9 @@ var Manifests = {
 			name: "placeholder",
 			type: "string | i18n",
 			description: "Placeholder text, visibile when the field is empty"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	"react-rsuite5": [
-		{
-			name: "placement",
-			type: "string",
-			options: [
-				"topStart",
-				"topEnd",
-				"leftStart",
-				"rightStart",
-				"leftEnd",
-				"rightEnd",
-				"bottomStart",
-				"bottomEnd",
-				"auto",
-				"autoVerticalStart",
-				"autoVerticalEnd",
-				"autoHorizontalStart",
-				"autoHorizontalEnd"
-			]
-		},
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		},
 		{
 			name: "tooltip",
 			type: "boolean",
@@ -12126,129 +7077,19 @@ var Manifests = {
 		{
 			name: "url",
 			type: "string"
-		},
-		{
-			name: "align",
-			type: "string",
-			options: [
-				"left",
-				"center",
-				"right"
-			]
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	react: [
-		{
-			name: "maxWidth",
-			type: "number"
-		},
-		{
-			name: "maxHeight",
-			type: "number"
-		},
-		{
-			name: "marginTop",
-			type: "number"
-		},
-		{
-			name: "marginBottom",
-			type: "number"
-		}
 	],
 	"react-rsuite5": [
-		{
-			name: "maxWidth",
-			type: "number"
-		},
-		{
-			name: "maxHeight",
-			type: "number"
-		},
-		{
-			name: "marginTop",
-			type: "number"
-		},
-		{
-			name: "marginBottom",
-			type: "number"
-		}
 	],
 	"react-material-ui": [
-		{
-			name: "maxWidth",
-			type: "number"
-		},
-		{
-			name: "maxHeight",
-			type: "number"
-		},
-		{
-			name: "marginTop",
-			type: "number"
-		},
-		{
-			name: "marginBottom",
-			type: "number"
-		}
 	],
 	"react-bootstrap": [
-		{
-			name: "maxWidth",
-			type: "number"
-		},
-		{
-			name: "maxHeight",
-			type: "number"
-		},
-		{
-			name: "marginTop",
-			type: "number"
-		},
-		{
-			name: "marginBottom",
-			type: "number"
-		}
 	],
 	"react-antd": [
-		{
-			name: "maxWidth",
-			type: "number"
-		},
-		{
-			name: "maxHeight",
-			type: "number"
-		},
-		{
-			name: "marginTop",
-			type: "number"
-		},
-		{
-			name: "marginBottom",
-			type: "number"
-		}
 	],
 	"react-mantine": [
-		{
-			name: "maxWidth",
-			type: "number"
-		},
-		{
-			name: "maxHeight",
-			type: "number"
-		},
-		{
-			name: "marginTop",
-			type: "number"
-		},
-		{
-			name: "marginBottom",
-			type: "number"
-		}
 	]
 },
 	button: button,
@@ -12286,16 +7127,6 @@ var Manifests = {
 		{
 			name: "initalOption",
 			type: "string"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
 		}
 	],
 	"react-rsuite5": [
@@ -12303,14 +7134,6 @@ var Manifests = {
 			name: "inline",
 			type: "boolean",
 			description: "Use inline layout"
-		},
-		{
-			name: "iconWidth",
-			type: "number"
-		},
-		{
-			name: "iconHeight",
-			type: "number"
 		},
 		{
 			name: "tooltip",
@@ -12358,63 +7181,11 @@ var Manifests = {
 			name: "multiple",
 			type: "boolean",
 			description: "Allow to select multiple values"
-		},
-		{
-			name: "disabled",
-			type: "boolean",
-			description: "Disables and greys out the field"
-		},
-		{
-			name: "readOnly",
-			type: "boolean",
-			description: "Put the field in read only mode"
-		},
-		{
-			name: "hidden",
-			type: "boolean",
-			description: "Hides the field from the form"
-		},
-		{
-			name: "fullWidth",
-			type: "boolean",
-			description: "Set the width of the container field to 100%"
-		},
-		{
-			name: "justifyContent",
-			type: "string",
-			options: [
-				"center",
-				"flex-start",
-				"flex-end",
-				"space-between",
-				"space-around"
-			]
 		}
 	],
 	"react-rsuite5": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"lg",
-				"md",
-				"sm",
-				"xs"
-			]
-		}
 	],
 	"react-antd": [
-		{
-			name: "size",
-			type: "string",
-			description: "Size of the field",
-			options: [
-				"small",
-				"default",
-				"large"
-			]
-		}
 	]
 },
 	steps: steps,
@@ -12445,15 +7216,6 @@ var Manifests = {
 		{
 			name: "componentUrl",
 			type: "string"
-		},
-		{
-			name: "defaultExport",
-			type: "boolean"
-		},
-		{
-			name: "exportedKey",
-			type: "string",
-			description: "The exported key from the ESM module"
 		},
 		{
 			name: "count",
