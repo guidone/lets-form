@@ -1,0 +1,9 @@
+/* LetsForm Generator v0.10.2 - ESM */
+import 'react';
+import { l as lfLog } from './index-BLtO_gT8.js';
+import { P as PlaceholderImage } from './index-JBs2aksR.js';
+import 'react-hook-form';
+
+lfLog('Loaded ReactBootrap.PlaceholderImage');
+
+export { PlaceholderImage as default };
