@@ -1,4 +1,4 @@
-const VALIDATION_PROPS = ['validationMaxLength', 'validationMinLength', 'validationMin', 'validationMmax', 'validationPattern', 'validate', 'errorMessage'];
+const VALIDATION_PROPS = ['validationMaxLength', 'validationMinLength', 'validationMin', 'validationMax', 'validationPattern', 'validate', 'errorMessage'];
 
 // create blank elements for the DSL
 export const LfField = () => (<></>);
