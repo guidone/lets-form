@@ -1,5 +1,9 @@
 # LetsForm Changelog
 
+## v0.10.3
+- support for async functions in `validate`
+- fix: AntD date showing incorrect default date
+
 ## v0.10.0
 - deprecated `two-columns` and `three-columns`
 - added `columns` component with up to 12 columns

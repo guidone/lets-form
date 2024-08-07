@@ -2,6 +2,8 @@ import _ from 'lodash';
 
 import { isI18n, i18n } from '../../helpers';
 
+const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor;
+
 export const translateValidation = (validation, locale, onJavascriptError) => {
   // if any validation object
   if (validation != null) {
@@ -38,17 +40,18 @@ export const translateValidation = (validation, locale, onJavascriptError) => {
 
     if (!_.isEmpty(_.trim(validation.validate))) {
       try {
-        const validator = new Function(
+        const validator = new AsyncFunction(
           'value',
           'formValues',
           validation.validate
         );
+
         // wrap the validator function, if returns strictly false then re-use
         // the provided message, if it's a string return the string, but it will not i18n
-        result.validate = (value, formValues) => {
+        result.validate = async (value, formValues) => {
           let v;
           try {
-            v = validator(value, formValues);
+            v = await validator(value, formValues);
           } catch(e) {
             console.error(`[LetsForm] Error executing validate function: `, e);
             const error = new Error('Error compiling validate function: ' + e.message, { cause: e });
@@ -81,4 +84,4 @@ export const translateValidation = (validation, locale, onJavascriptError) => {
     return result;
   }
   return validation;
-}
+};

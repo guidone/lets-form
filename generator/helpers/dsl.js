@@ -1,3 +1,4 @@
+const VALIDATION_PROPS = ['validationMaxLength', 'validationMinLength', 'validationMin', 'validationMmax', 'validationPattern', 'validate', 'errorMessage'];
 
 // create blank elements for the DSL
 export const LfField = () => (<></>);
@@ -148,6 +149,45 @@ const assertElementComponent = (element, { components, framework } = {}) => {
   return true;
 };
 
+
+const spreadValidationFields = (props) => {
+  const newProps = _.omit(props, VALIDATION_PROPS);
+
+  // if any validation prop
+  if (VALIDATION_PROPS.some(prop => props[prop] != null)) {
+    const validation = VALIDATION_PROPS
+      .reduce(
+        (acc, prop) => {
+          if (props[prop] != null) {
+            if (prop.startsWith('validation')) {
+              return {
+                ...acc,
+                [prop.replace('validation', '')]: props[prop]
+              };
+            } else if (prop === 'errorMessage') {
+              return {
+                ...acc,
+                message: props[prop]
+              };
+            } else {
+              return {
+                ...acc,
+                [prop]: props[prop]
+              };
+            }
+          }
+          return acc;
+        },
+        {}
+      );
+    newProps.validation = validation;
+  }
+
+  console.log('new Prop', newProps)
+
+  return newProps;
+}
+
 export const traverseChildren = (children, { components, framework } = {}) => {
 
   let elements = [];
@@ -162,7 +202,7 @@ export const traverseChildren = (children, { components, framework } = {}) => {
         && assertElementComponent(element, { components, framework })
       ) {
         return {
-          ...element.props
+          ...spreadValidationFields(element.props)
         };
       } else if (elementOf(element, LfGroup)) {
         return {

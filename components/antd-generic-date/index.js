@@ -20,7 +20,7 @@ const AntdGenericDate = ({
   ...rest
 }) => {
   // set locale for dates
-  let defaultValue = dayjs(value);
+  let defaultValue = value != null ? dayjs(value) : undefined;
   if (defaultValue && lfLocale) {
     defaultValue = defaultValue.locale(lfLocale);
   }
@@ -43,7 +43,7 @@ const AntdGenericDate = ({
         key={`${name}-${lfLocale ?? ''}`} // add key or will not re-render if locale is changed
         defaultValue={defaultValue}
         style={makeWidthStyle(fullWidth, width)}
-        {...passRest(rest)}
+        {...passRest(rest, ['bordered'])}
       />
     </Form.Item>
   );
