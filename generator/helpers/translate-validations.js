@@ -2,6 +2,13 @@ import _ from 'lodash';
 
 import { isI18n, i18n } from '../../helpers';
 
+// Use eval to get the contructor since RCA polyfill this and returns a normal function constructor
+// eslint-disable-next-line no-eval
+const AsyncGeneratorFunction = eval('(() => async function* () {}.constructor)()');
+
+
+const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor;
+
 export const translateValidation = (validation, locale, onJavascriptError) => {
   // if any validation object
   if (validation != null) {
@@ -38,17 +45,25 @@ export const translateValidation = (validation, locale, onJavascriptError) => {
 
     if (!_.isEmpty(_.trim(validation.validate))) {
       try {
-        const validator = new Function(
+        /*const validator = new Function(
+          'value',
+          'formValues',
+          validation.validate
+        );*/
+
+        const validator = new AsyncFunction(
           'value',
           'formValues',
           validation.validate
         );
+        //console.log('computed validator', validator('cacca', { field_1: 'cacca '}).then(c => console.log(c)))
+
         // wrap the validator function, if returns strictly false then re-use
         // the provided message, if it's a string return the string, but it will not i18n
-        result.validate = (value, formValues) => {
+        result.validate = async (value, formValues) => {
           let v;
           try {
-            v = validator(value, formValues);
+            v = await validator(value, formValues);
           } catch(e) {
             console.error(`[LetsForm] Error executing validate function: `, e);
             const error = new Error('Error compiling validate function: ' + e.message, { cause: e });
