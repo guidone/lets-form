@@ -1,5 +1,20 @@
 # LetsForm Designer Changelog
 
+## v0.9.0
+- new plugin architecture and UI cleanup
+- beta: publish forms
+- deprecated `two-columns` and `three-columns`
+- added `columns` component with up to 12 columns
+- renamed `.setValue()` method to `.setParam()` in Form Scripts
+- added `.setFieldValue()` method in Form Scripts
+- support for async functions in `validate`
+- fix: AntD date showing incorrect default date
+- fix: made `steps` and `tabs` controlled for all frameworks
+- fix: fix Mantine `input-text` not showing initial value
+- fix: void AntdD autofill of children inputs for value and defaultValue
+- fix: rerender form on context change
+- fix: DSL for tabs and steps with props check
+
 ## v0.8.24
 - updated PostHog library
 - fixed export to LetsForm DSL
