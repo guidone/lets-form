@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.9.1
+- minor CSS fixes
+
 ## v0.9.0
 - new plugin architecture and UI cleanup
 - beta: publish forms
