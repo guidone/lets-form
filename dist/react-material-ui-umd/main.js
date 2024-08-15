@@ -1,4 +1,4 @@
-/* LetsForm react-material-ui v0.10.2 - UMD */
+/* LetsForm react-material-ui v0.10.3 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('react-hook-form'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', 'react-hook-form', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack'], factory) :
@@ -18636,6 +18636,8 @@
     return validation;
   };
 
+  var CLASH_FIELD_NAMES = ['setValue', 'enable', 'disable', 'values', 'show', 'hide', 'css', 'element', 'style', 'arraySetValue', 'context', 'toggle', 'setFieldValue'];
+
   // Use eval to get the contructor since RCA polyfill this and returns a normal function constructor
   // eslint-disable-next-line no-eval
   var AsyncGeneratorFunction = eval('(() => async function* () {}.constructor)()');
@@ -18648,7 +18650,10 @@
     try {
       var spreadVars = '';
       if (!_isEmpty(fieldList)) {
-        spreadVars = 'const { ' + fieldList.join(', ') + ' } = values;\n';
+        // spread field names, remove all field names same as reserved words, still accessible through "values"
+        spreadVars = 'const { ' + fieldList.filter(function (f) {
+          return !CLASH_FIELD_NAMES.includes(f);
+        }).join(', ') + ' } = values;\n';
       }
       var tx = new AsyncGeneratorFunction('api', "const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue, context, toggle, setFieldValue } = api;\n" + spreadVars + yieldedStr + '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
       );
@@ -18778,7 +18783,7 @@
     }, lfComponent), " (", /*#__PURE__*/React$1.createElement("em", null, "\"", _isString(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/React$1.createElement("b", null, lfFramework), ")"));
   };
 
-  var VALIDATION_PROPS = ['validationMaxLength', 'validationMinLength', 'validationMin', 'validationMmax', 'validationPattern', 'validate', 'errorMessage'];
+  var VALIDATION_PROPS = ['validationMaxLength', 'validationMinLength', 'validationMin', 'validationMax', 'validationPattern', 'validate', 'errorMessage'];
 
   // create blank elements for the DSL
   var LfField = function LfField() {
