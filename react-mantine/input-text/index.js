@@ -38,7 +38,9 @@ const InputText = I18N(
         onChange={handleChange}
         onBlur={onBlur}
         onKeyUp={submitOnEnter ? handleKeyUp : undefined}
-        {...passRest(rest)}
+        type={rest.inputType ? rest.inputType : undefined}
+        inputmode={rest.inputMode ? rest.inputMode : undefined}
+        {...passRest(_.omit(rest, 'inputType', 'inputMode'))}
       />
     );
   },
