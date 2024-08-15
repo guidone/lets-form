@@ -1,13 +1,15 @@
 # LetsForm Designer Changelog
 
-## v0.9.1
+## v0.9.2
 - added preview for templates gallery
-- fix: minor CSS fixes
 - fix: edit custom CSS for a form
 - fix: Mantine `input-text` type and mode
 - fix: Mantine `button` in icon-only mode
 - fix: AntD `select` label not visible without an icon
 - fix: clash of field names using reserved words
+
+## v0.9.1
+- fix: minor CSS fixes
 
 ## v0.9.0
 - new plugin architecture and UI cleanup
