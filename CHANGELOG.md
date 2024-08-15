@@ -1,5 +1,11 @@
 # LetsForm Changelog
 
+## v0.10.4
+- fix: Mantine `input-text` type and mode
+- fix: Mantine `button` in icon-only mode
+- fix: AntD `select` label not visible without an icon
+- fix: clash of field names using reserved words
+
 ## v0.10.3
 - support for async functions in `validate`
 - fix: AntD date showing incorrect default date
