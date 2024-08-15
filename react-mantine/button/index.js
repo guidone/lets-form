@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import { Button, Tooltip, Input } from '@mantine/core';
+import { Button, Tooltip, Input, ActionIcon } from '@mantine/core';
 import _ from 'lodash';
 
 import { I18N } from '../../components';
@@ -26,10 +26,12 @@ const MantineButton = ({ label, icon, hint, tooltip, ...rest }) => {
     )
   } else if (_.isEmpty(label) && !_.isEmpty(icon)) {
     inner = (
-      <Button
-        leftSection={<img className="lf-icon" src={icon} />}
+      <ActionIcon
         {...rest}
-      />
+        size={rest.size ? `input-${rest.size}` : undefined}
+      >
+        <img className="lf-icon" src={icon} />
+      </ActionIcon>
     );
   } else {
     inner = <></>;
