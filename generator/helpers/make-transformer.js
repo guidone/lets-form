@@ -1,5 +1,21 @@
 import _ from 'lodash';
 
+const CLASH_FIELD_NAMES = [
+  'setValue',
+  'enable',
+  'disable',
+  'values',
+  'show',
+  'hide',
+  'css',
+  'element',
+  'style',
+  'arraySetValue',
+  'context',
+  'toggle',
+  'setFieldValue'
+];
+
 // Use eval to get the contructor since RCA polyfill this and returns a normal function constructor
 // eslint-disable-next-line no-eval
 const AsyncGeneratorFunction = eval('(() => async function* () {}.constructor)()');
@@ -17,7 +33,8 @@ export const makeTransformer = (str, fieldList) => {
   try {
     let spreadVars = '';
     if (!_.isEmpty(fieldList)) {
-      spreadVars = 'const { ' + fieldList.join(', ') + ' } = values;\n';
+      // spread field names, remove all field names same as reserved words, still accessible through "values"
+      spreadVars = 'const { ' + fieldList.filter(f => !CLASH_FIELD_NAMES.includes(f)).join(', ') + ' } = values;\n';
     }
     const tx = new AsyncGeneratorFunction(
       'api',
