@@ -60,6 +60,9 @@ const AntdGenericSelect = ({
                   {option.label}
                 </Space>
               )}
+              {!(option.image && showImageOptions) && (
+                option.label
+              )}
             </Select.Option>
           ))
         }
