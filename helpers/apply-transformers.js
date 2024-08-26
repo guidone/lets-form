@@ -144,7 +144,7 @@ const ApiFactory = function(formName, framework, formFields, currenValues, formC
                   }
                 };
               } else {
-                console.warning(`[LetsForm] cannot set key "${key}" for component "${field.component}" in framework "${framework}"`);
+                console.warn(`[LetsForm] cannot set key "${key}" for component "${field.component}" in framework "${framework}"`);
               }
             } else {
               console.error(`[LetsForm] cannot set key "${key}" for component "${field.component}"`);
@@ -230,6 +230,11 @@ const ApiFactory = function(formName, framework, formFields, currenValues, formC
       );
     },
 
+    arraySetValue: (name, key, value) => {
+      lfWarn('LetsForm Script .arraySetValue() is deprecated, use .arraySetParam() instead');
+      return methods.arraySetParam(name, key, value);
+    },
+
     /**
      * Change field property inside and array
      * @param {*} arrayName
@@ -238,7 +243,7 @@ const ApiFactory = function(formName, framework, formFields, currenValues, formC
      * @param {*} value
      * @returns
      */
-    arraySetValue: (arrayName, arrayFieldName, key, value) => {
+    arraySetParam: (arrayName, arrayFieldName, key, value) => {
       if (!fieldExists(arrayName)) {
         return;
       }
