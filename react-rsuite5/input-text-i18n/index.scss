@@ -51,6 +51,17 @@
     }
 
     &.textarea {
+      // put remaining tokens on top
+      .rs-input-group-addon {
+        position: absolute;
+        right: 2px;
+        top: 3px;
+      }
+      // hide resize
+      textarea {
+        resize: none;
+      }
+
       .select-control {
         align-self: self-start;
       }

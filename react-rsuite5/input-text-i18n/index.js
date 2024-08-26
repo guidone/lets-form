@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React, { useState, useContext, useCallback } from 'react';
+import React, { useState, useContext, useCallback, forwardRef } from 'react';
 import { Form, Input, InputGroup, SelectPicker } from 'rsuite';
 import _ from 'lodash';
 import classNames from 'classnames';
@@ -33,15 +33,16 @@ const languageMenuItem = (label, item) => {
   )
 };
 
-const TextareaAccepter = ({ value, ...props }) => {
+const TextareaAccepter = forwardRef(({ value, ...props }, ref) => {
   return (
     <Input
+      ref={ref}
       as="textarea"
       value={value}
       {...props}
     />
   );
-};
+});
 
 const defaultOrEnglish = (obj) => {
   if (isI18n(obj)) {
