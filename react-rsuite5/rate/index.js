@@ -46,7 +46,6 @@ const RateRSuite = I18N(
             allowHalf={allowHalf}
             cleanable={cleanable}
             readOnly={readOnly}
-            errorMessage={_.isString(error) ? error : undefined }
           />
         </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}

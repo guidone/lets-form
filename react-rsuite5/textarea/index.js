@@ -36,7 +36,6 @@ const Textarea = I18N(
       <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
         <ControlTextare
           name={name}
-
           rows={rows}
           value={value}
           size={size}
@@ -45,7 +44,6 @@ const Textarea = I18N(
           disabled={disabled}
           placeholder={placeholder}
           readOnly={readOnly}
-          errorMessage={_.isString(error) ? error : undefined }
           style={makeWidthStyle(fullWidth, width)}
           {...passRest(rest)}
         />

@@ -42,7 +42,6 @@ const InputTag = I18N(
             size={size}
             trigger={trigger}
             readOnly={readOnly}
-            errorMessage={_.isString(error) ? error : undefined }
           />
         </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}

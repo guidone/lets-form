@@ -59,7 +59,6 @@ const SliderRsuite = I18N(
             readOnly={readOnly}
             onBlur={onBlur}
             renderMark={validateMarks(marks) ? handleRenderMark : undefined}
-            errorMessage={_.isString(error) ? error : undefined }
             disabled={disabled}
             tooltip={showTooltip}
             {...passRest(rest)}

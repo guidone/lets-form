@@ -71,7 +71,6 @@ const InputMask = I18N(
           placeholder={placeholder}
           readOnly={readOnly}
           placeholderChar={typeof placeholderChar === 'string' && placeholderChar.length > 0 ? placeholderChar[0] : '_'}
-          errorMessage={_.isString(error) ? error : undefined }
           mask={parsedMask}
           {...passRest(rest)}
         />

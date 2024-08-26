@@ -39,7 +39,6 @@ const ToggleInput = I18N(
             disabled={disabled}
             unCheckedChildren={unCheckedChildren && unCheckedChildren !== '' ? unCheckedChildren : undefined}
             checkedChildren={checkedChildren && checkedChildren !== '' ? checkedChildren : undefined}
-            errorMessage={_.isString(error) ? error : undefined }
             size={size}
           />
         </RSuite5FieldControl>

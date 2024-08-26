@@ -54,7 +54,6 @@ const RSuiteGenericDate = ({
           onChange={onChange}
           readOnly={readOnly}
           onBlur={onBlur}
-          errorMessage={_.isString(error) ? error : undefined }
           disabled={disabled}
           placeholder={placeholder}
           {...passRest(rest)}

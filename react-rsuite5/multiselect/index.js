@@ -60,7 +60,6 @@ const Multiselect = I18N(
             readOnly={readOnly}
             onBlur={onBlur}
             placement={placement}
-            errorMessage={_.isString(error) ? error : undefined }
             disabled={disabled}
             size={size}
             placeholder={placeholder}

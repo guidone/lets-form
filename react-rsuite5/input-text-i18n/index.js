@@ -190,7 +190,6 @@ const InputTextI18N = (props) => {
               disabled={disabled}
               size={size}
               placeholder={placeholder}
-              errorMessage={_.isString(error) ? error : undefined }
             />
           </RSuite5FieldControl>
           <InputGroup.Addon>
