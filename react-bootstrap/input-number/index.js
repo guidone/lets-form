@@ -48,4 +48,4 @@ const InputNumber = I18N(
   ['label', 'hint', 'placeholder']
 );
 
-export { InputNumber };
+export default InputNumber;
