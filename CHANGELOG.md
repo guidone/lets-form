@@ -1,5 +1,11 @@
 # LetsForm Changelog
 
+## v0.10.5
+- feat: auto-detect locale
+- fix: input-text-i18n css and warnings
+- fix: deprecated setArrayValue and fix script error missing setParam
+- fix: "errorMessage" warning
+
 ## v0.10.4
 - fix: Mantine `input-text` type and mode
 - fix: Mantine `button` in icon-only mode
