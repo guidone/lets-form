@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.10.6
+- fix: react-bootstrap input-number
+
 ## v0.10.5
 - feat: auto-detect locale
 - fix: input-text-i18n css and warnings

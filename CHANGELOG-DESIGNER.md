@@ -1,5 +1,12 @@
 # LetsForm Designer Changelog
 
+## v0.9.3
+- improved published forms and connectors
+- feat: auto-detect locale
+- fix: input-text-i18n css and warnings
+- fix: deprecated setArrayValue and fix script error missing setParam
+- fix: "errorMessage" warning
+
 ## v0.9.2
 - added preview for templates gallery
 - fix: edit custom CSS for a form
