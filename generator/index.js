@@ -441,7 +441,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     onError = () => {},
     onEnter = () => {},
     onJavascriptError = () => {},
-    locale,
+    locale: localeProp,
     wrapper,
     groupWrapper,
     placeholderWrapper,
@@ -488,6 +488,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [version, setVersion] = useState(1);
     // keep track of components to be re-rendered, update it without re-render the component
     const rerenders = useRef({});
+    const locale = !localeProp || localeProp === 'auto' ? navigator.language : localeProp;
 
     const mutableState = useRef({
       currentContext: {
