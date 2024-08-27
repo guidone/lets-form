@@ -1,4 +1,4 @@
-/* LetsForm react-rsuite5 v0.10.3 - UMD */
+/* LetsForm react-rsuite5 v0.10.4 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', 'react-hook-form'], factory) :
@@ -8607,7 +8607,7 @@
                 // set in the specific subset, use the current framework so set it
                 return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, framework, _objectSpread2(_objectSpread2({}, (_field$framework = field[framework]) !== null && _field$framework !== void 0 ? _field$framework : {}), {}, _defineProperty$1({}, key, value))));
               } else {
-                console.warning("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\" in framework \"").concat(framework, "\""));
+                console.warn("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\" in framework \"").concat(framework, "\""));
               }
             } else {
               console.error("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\""));
@@ -8672,6 +8672,10 @@
           return field;
         });
       },
+      arraySetValue: function arraySetValue(name, key, value) {
+        lfWarn('LetsForm Script .arraySetValue() is deprecated, use .arraySetParam() instead');
+        return methods.arraySetParam(name, key, value);
+      },
       /**
        * Change field property inside and array
        * @param {*} arrayName
@@ -8680,7 +8684,7 @@
        * @param {*} value
        * @returns
        */
-      arraySetValue: function arraySetValue(arrayName, arrayFieldName, key, value) {
+      arraySetParam: function arraySetParam(arrayName, arrayFieldName, key, value) {
         if (!fieldExists(arrayName)) {
           return;
         }
@@ -18776,7 +18780,7 @@
           return !CLASH_FIELD_NAMES.includes(f);
         }).join(', ') + ' } = values;\n';
       }
-      var tx = new AsyncGeneratorFunction('api', "const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue, context, toggle, setFieldValue } = api;\n" + spreadVars + yieldedStr + '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
+      var tx = new AsyncGeneratorFunction('api', "const { setValue, setParam, enable, disable, values, show, hide, css, element, style, arraySetValue, arraySetParam, context, toggle, setFieldValue } = api;\n" + spreadVars + yieldedStr + '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
       );
 
       return tx;
@@ -19615,7 +19619,7 @@
         onEnter = _ref6$onEnter === void 0 ? function () {} : _ref6$onEnter,
         _ref6$onJavascriptErr = _ref6.onJavascriptError,
         onJavascriptError = _ref6$onJavascriptErr === void 0 ? function () {} : _ref6$onJavascriptErr,
-        locale = _ref6.locale,
+        localeProp = _ref6.locale,
         wrapper = _ref6.wrapper,
         groupWrapper = _ref6.groupWrapper,
         placeholderWrapper = _ref6.placeholderWrapper,
@@ -19680,6 +19684,7 @@
         setVersion = _useState10[1];
       // keep track of components to be re-rendered, update it without re-render the component
       var rerenders = React$1.useRef({});
+      var locale = !localeProp || localeProp === 'auto' ? navigator.language : localeProp;
       var mutableState = React$1.useRef({
         currentContext: _objectSpread2({
           locales: form.locales,
@@ -20584,7 +20589,6 @@
       disabled: disabled,
       unCheckedChildren: unCheckedChildren && unCheckedChildren !== '' ? unCheckedChildren : undefined,
       checkedChildren: checkedChildren && checkedChildren !== '' ? checkedChildren : undefined,
-      errorMessage: _isString(error) ? error : undefined,
       size: size
     })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
@@ -20657,7 +20661,6 @@
       readOnly: readOnly,
       onBlur: onBlur,
       placement: placement,
-      errorMessage: _isString(error) ? error : undefined,
       disabled: disabled,
       size: size,
       placeholder: placeholder,
@@ -20881,7 +20884,6 @@
       onChange: onChange,
       readOnly: readOnly,
       onBlur: onBlur,
-      errorMessage: _isString(error) ? error : undefined,
       disabled: disabled,
       placeholder: placeholder
     }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
@@ -21084,7 +21086,6 @@
       readOnly: readOnly,
       onBlur: onBlur,
       renderMark: validateMarks(marks) ? handleRenderMark : undefined,
-      errorMessage: _isString(error) ? error : undefined,
       disabled: disabled,
       tooltip: showTooltip
     }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
@@ -21197,8 +21198,7 @@
       disabled: disabled,
       size: size,
       trigger: trigger,
-      readOnly: readOnly,
-      errorMessage: _isString(error) ? error : undefined
+      readOnly: readOnly
     })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputTag');
@@ -21269,7 +21269,6 @@
       placeholder: placeholder,
       readOnly: readOnly,
       placeholderChar: typeof placeholderChar === 'string' && placeholderChar.length > 0 ? placeholderChar[0] : '_',
-      errorMessage: _isString(error) ? error : undefined,
       mask: parsedMask
     }, passRest(rest))));
     var needsGroup = postfix || prefix;
@@ -21332,7 +21331,6 @@
       disabled: disabled,
       placeholder: placeholder,
       readOnly: readOnly,
-      errorMessage: _isString(error) ? error : undefined,
       style: makeWidthStyle(fullWidth, width)
     }, passRest(rest))));
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
@@ -21391,8 +21389,7 @@
       color: color,
       allowHalf: allowHalf,
       cleanable: cleanable,
-      readOnly: readOnly,
-      errorMessage: _isString(error) ? error : undefined
+      readOnly: readOnly
     })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Rate');
@@ -21476,7 +21473,6 @@
       readOnly: readOnly,
       onBlur: onBlur,
       placement: placement,
-      errorMessage: _isString(error) ? error : undefined,
       disabled: disabled,
       size: size,
       placeholder: placeholder,
@@ -21560,7 +21556,6 @@
       readOnly: readOnly,
       onBlur: onBlur,
       placement: placement,
-      errorMessage: _isString(error) ? error : undefined,
       disabled: disabled,
       size: size,
       placeholder: placeholder,
@@ -21583,7 +21578,7 @@
     default: MultiselectLanguage
   });
 
-  var css_248z$7 = ".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n .rs-input-group-addon {\n  padding: 2px 4px !important;\n}\n.lf-input-text-i18n .rs-input-group-addon .status {\n  font-size: 10px;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear {\n  display: inline-block;\n  margin-left: 5px;\n  margin-top: -2px;\n  color: #666666;\n  text-decoration: none;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover {\n  color: #1675e0;\n}\n.lf-input-text-i18n .group-input-select {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-input-text-i18n .group-input-select .translation-control {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  width: unset !important;\n  z-index: 1;\n}\n.lf-input-text-i18n .group-input-select .translation-control .translated {\n  color: #999999;\n}\n.lf-input-text-i18n .group-input-select .select-control {\n  order: 1;\n  flex: 0 0;\n  align-self: center;\n  z-index: 2;\n  margin-left: 5px;\n}\n.lf-input-text-i18n .group-input-select.textarea .select-control {\n  align-self: self-start;\n}";
+  var css_248z$7 = ".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n .rs-input-group-addon {\n  padding: 2px 4px !important;\n}\n.lf-input-text-i18n .rs-input-group-addon .status {\n  font-size: 10px;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear {\n  display: inline-block;\n  margin-left: 5px;\n  margin-top: -2px;\n  color: #666666;\n  text-decoration: none;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover {\n  color: #1675e0;\n}\n.lf-input-text-i18n .group-input-select {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-input-text-i18n .group-input-select .translation-control {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  width: unset !important;\n  z-index: 1;\n}\n.lf-input-text-i18n .group-input-select .translation-control .translated {\n  color: #999999;\n}\n.lf-input-text-i18n .group-input-select .select-control {\n  order: 1;\n  flex: 0 0;\n  align-self: center;\n  z-index: 2;\n  margin-left: 5px;\n}\n.lf-input-text-i18n .group-input-select.textarea .rs-input-group-addon {\n  position: absolute;\n  right: 2px;\n  top: 3px;\n}\n.lf-input-text-i18n .group-input-select.textarea textarea {\n  resize: none;\n}\n.lf-input-text-i18n .group-input-select.textarea .select-control {\n  align-self: self-start;\n}";
   styleInject(css_248z$7);
 
   var _excluded$a = ["value"];
@@ -21602,14 +21597,15 @@
       height: 16
     }));
   };
-  var TextareaAccepter = function TextareaAccepter(_ref) {
+  var TextareaAccepter = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     var value = _ref.value,
       props = _objectWithoutProperties(_ref, _excluded$a);
     return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends({
+      ref: ref,
       as: "textarea",
       value: value
     }, props));
-  };
+  });
   var defaultOrEnglish = function defaultOrEnglish(obj) {
     if (isI18n(obj)) {
       if (obj['en-US']) {
@@ -21760,8 +21756,7 @@
       onBlur: onBlur,
       disabled: disabled,
       size: size,
-      placeholder: placeholder,
-      errorMessage: _isString(error) ? error : undefined
+      placeholder: placeholder
     })), /*#__PURE__*/React$1.createElement(rsuite.InputGroup.Addon, null, /*#__PURE__*/React$1.createElement("span", {
       className: "status"
     }, /*#__PURE__*/React$1.createElement("span", {

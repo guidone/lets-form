@@ -1,4 +1,4 @@
-/* LetsForm react-bootstrap v0.10.3 - UMD */
+/* LetsForm react-bootstrap v0.10.4 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-hook-form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-hook-form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button'], factory) :
@@ -8560,7 +8560,7 @@
                 // set in the specific subset, use the current framework so set it
                 return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, framework, _objectSpread2(_objectSpread2({}, (_field$framework = field[framework]) !== null && _field$framework !== void 0 ? _field$framework : {}), {}, _defineProperty$1({}, key, value))));
               } else {
-                console.warning("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\" in framework \"").concat(framework, "\""));
+                console.warn("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\" in framework \"").concat(framework, "\""));
               }
             } else {
               console.error("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\""));
@@ -8625,6 +8625,10 @@
           return field;
         });
       },
+      arraySetValue: function arraySetValue(name, key, value) {
+        lfWarn('LetsForm Script .arraySetValue() is deprecated, use .arraySetParam() instead');
+        return methods.arraySetParam(name, key, value);
+      },
       /**
        * Change field property inside and array
        * @param {*} arrayName
@@ -8633,7 +8637,7 @@
        * @param {*} value
        * @returns
        */
-      arraySetValue: function arraySetValue(arrayName, arrayFieldName, key, value) {
+      arraySetParam: function arraySetParam(arrayName, arrayFieldName, key, value) {
         if (!fieldExists(arrayName)) {
           return;
         }
@@ -18667,7 +18671,7 @@
           return !CLASH_FIELD_NAMES.includes(f);
         }).join(', ') + ' } = values;\n';
       }
-      var tx = new AsyncGeneratorFunction('api', "const { setValue, enable, disable, values, show, hide, css, element, style, arraySetValue, context, toggle, setFieldValue } = api;\n" + spreadVars + yieldedStr + '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
+      var tx = new AsyncGeneratorFunction('api', "const { setValue, setParam, enable, disable, values, show, hide, css, element, style, arraySetValue, arraySetParam, context, toggle, setFieldValue } = api;\n" + spreadVars + yieldedStr + '\nyield Promise.resolve(api.fields());' // leave /n or a comment can void anything
       );
 
       return tx;
@@ -19506,7 +19510,7 @@
         onEnter = _ref6$onEnter === void 0 ? function () {} : _ref6$onEnter,
         _ref6$onJavascriptErr = _ref6.onJavascriptError,
         onJavascriptError = _ref6$onJavascriptErr === void 0 ? function () {} : _ref6$onJavascriptErr,
-        locale = _ref6.locale,
+        localeProp = _ref6.locale,
         wrapper = _ref6.wrapper,
         groupWrapper = _ref6.groupWrapper,
         placeholderWrapper = _ref6.placeholderWrapper,
@@ -19571,6 +19575,7 @@
         setVersion = _useState10[1];
       // keep track of components to be re-rendered, update it without re-render the component
       var rerenders = React$1.useRef({});
+      var locale = !localeProp || localeProp === 'auto' ? navigator.language : localeProp;
       var mutableState = React$1.useRef({
         currentContext: _objectSpread2({
           locales: form.locales,
