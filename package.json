@@ -14,6 +14,9 @@
     "schemas/**",
     "manifest.json"
   ],
+  "bugs": {
+    "url": "https://github.com/guidone/lets-form/issues"
+  },
   "scripts": {
     "prebuild": "npm run unstash",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,8 +28,8 @@
     "unstash": "./scripts/unstash-node-modules.sh",
     "lint": "eslint ./react-mantine/**"
   },
-  "author": "Guido Bellomo",
-  "license": "ISC",
+  "author": "Guido Bellomo <guido.bellomo@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "classnames": "^2.3.2",
     "dayjs": "^1.11.7",
