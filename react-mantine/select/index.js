@@ -6,6 +6,14 @@ import { I18N } from '../../components';
 import { passRest, makeWidthStyle, i18nOptions, filterOptions } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
 
+// Mantine Select breaks if value is null
+const ensureNotNull = options => options.map(option => {
+  if (option.value == null) {
+    return { ...option, value: '', label: option.label ?? '' };
+  }
+  return option;
+})
+
 const MantineSelect = I18N(
   ({
     name,
@@ -29,7 +37,7 @@ const MantineSelect = I18N(
         inputWrapperOrder={['label', 'input', 'description', 'error']}
         value={value}
         name={name}
-        data={filterOptions(options, filterValue, filterKey) || []}
+        data={ensureNotNull(filterOptions(options, filterValue, filterKey) || [])}
         {...passRest(rest)}
       />
     );
