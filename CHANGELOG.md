@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.10.7
+- fix: Mantine Select breaks if value = null
+
 ## v0.10.6
 - fix: react-bootstrap input-number
 
