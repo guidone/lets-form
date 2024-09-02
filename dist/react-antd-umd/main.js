@@ -1,4 +1,4 @@
-/* LetsForm react-antd v0.10.5 - UMD */
+/* LetsForm react-antd v0.10.6 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('antd'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'antd', 'react-hook-form'], factory) :

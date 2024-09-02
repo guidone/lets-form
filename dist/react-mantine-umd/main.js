@@ -1,4 +1,4 @@
-/* LetsForm react-mantine v0.10.5 - UMD */
+/* LetsForm react-mantine v0.10.6 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
@@ -20382,6 +20382,20 @@
   });
 
   var _excluded$h = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
+
+  // Mantine Select breaks if value is null
+  var ensureNotNull = function ensureNotNull(options) {
+    return options.map(function (option) {
+      if (option.value == null) {
+        var _option$label;
+        return _objectSpread2(_objectSpread2({}, option), {}, {
+          value: '',
+          label: (_option$label = option.label) !== null && _option$label !== void 0 ? _option$label : ''
+        });
+      }
+      return option;
+    });
+  };
   var MantineSelect = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -20402,7 +20416,7 @@
       inputWrapperOrder: ['label', 'input', 'description', 'error'],
       value: value,
       name: name,
-      data: filterOptions(options, filterValue, filterKey) || []
+      data: ensureNotNull(filterOptions(options, filterValue, filterKey) || [])
     }, passRest(rest)));
   }, ['label', 'hint', 'placeholder', 'nothingFoundMessage'], {
     options: i18nOptions
