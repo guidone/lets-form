@@ -1,5 +1,10 @@
 # LetsForm Designer Changelog
 
+## v0.9.4
+- fix: support larger forms for packaging into zips
+- fix: support download packages also for Safari, Firefox, Edge
+- fix: use Craco to export MUI
+
 ## v0.9.3
 - improved published forms and connectors
 - feat: auto-detect locale
