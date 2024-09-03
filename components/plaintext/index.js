@@ -58,7 +58,12 @@ const Plaintext = ({ value, component, options, locale }) => {
     case 'array':
       return (
         <>
-          {_.isArray(value) && (
+          {_.isArray(value) && value.every(item => _.keys(item).length === 1) && (
+            <div className="plaintext-value">
+              {value.map(item => item[_.keys(item)[0]]).join(', ')}
+            </div>
+          )}
+          {_.isArray(value) && !value.every(item => _.keys(item).length === 1) && (
             <div className="plaintext-value">
               <span className="count">{value.length}</span>
               {' '}
