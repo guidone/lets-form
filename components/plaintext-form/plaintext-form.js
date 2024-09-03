@@ -98,13 +98,11 @@ const renderFields = (fields, locale, framework, currentValues = {}) => {
 };
 
 const PlaintextForm = ({
-  form,
+  fields,
   locale,
   framework,
   currentValues
 }) => {
-  const fields = form.fields;
-
   if (_.isEmpty(fields)) {
     return <span/>;
   }

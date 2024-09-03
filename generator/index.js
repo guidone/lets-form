@@ -783,7 +783,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     if (plaintext) {
       return (
         <PlaintextForm
-          form={form}
+          fields={actualFields}
           locale={locale}
           framework={framework}
           currentValues={getValues()}

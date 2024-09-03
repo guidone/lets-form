@@ -183,8 +183,6 @@ const spreadValidationFields = (props) => {
     newProps.validation = validation;
   }
 
-  console.log('new Prop', newProps)
-
   return newProps;
 }
 
