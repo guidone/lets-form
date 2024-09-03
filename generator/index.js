@@ -473,6 +473,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     // show demo flag
     demo = false,
     footer,
+    disableButtons = false,
     disableOnSubmit = true,
     resetAfterSubmit = true,
     context: formContext,
@@ -818,7 +819,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               onlyFields={onlyFields}
               hideToolbar={hideToolbar}
               onReset={handleReset}
-              disabled={disabled}
+              disabled={disabled || disableButtons}
               disabledSubmit={form.disableSubmitOnError && !isValid}
               readOnly={readOnly}
               plaintext={plaintext}

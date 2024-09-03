@@ -1,5 +1,10 @@
 # LetsForm Changelog
 
+## v0.10.8
+- fix: plaintext mode in DSL mode
+- fix: plaintext mode shows preview of array of objects (if only has 1 key)
+- feat: added `disableButtons` parameter
+
 ## v0.10.7
 - fix: Mantine Select breaks if value = null
 
