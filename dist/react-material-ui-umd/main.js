@@ -1,4 +1,4 @@
-/* LetsForm react-material-ui v0.10.6 - UMD */
+/* LetsForm react-material-ui v0.10.7 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('react-hook-form'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', 'react-hook-form', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack'], factory) :
@@ -17324,7 +17324,15 @@
         });
         return /*#__PURE__*/React$1.createElement("div", null, founds.join(', '));
       case 'array':
-        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, _isArray(value) && /*#__PURE__*/React$1.createElement("div", {
+        return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, _isArray(value) && value.every(function (item) {
+          return _keys(item).length === 1;
+        }) && /*#__PURE__*/React$1.createElement("div", {
+          className: "plaintext-value"
+        }, value.map(function (item) {
+          return item[_keys(item)[0]];
+        }).join(', ')), _isArray(value) && !value.every(function (item) {
+          return _keys(item).length === 1;
+        }) && /*#__PURE__*/React$1.createElement("div", {
           className: "plaintext-value"
         }, /*#__PURE__*/React$1.createElement("span", {
           className: "count"
@@ -18370,11 +18378,10 @@
     });
   };
   var PlaintextForm = function PlaintextForm(_ref2) {
-    var form = _ref2.form,
+    var fields = _ref2.fields,
       locale = _ref2.locale,
       framework = _ref2.framework,
       currentValues = _ref2.currentValues;
-    var fields = form.fields;
     if (_isEmpty(fields)) {
       return /*#__PURE__*/React$1.createElement("span", null);
     }
@@ -18972,7 +18979,6 @@
       }, {});
       newProps.validation = validation;
     }
-    console.log('new Prop', newProps);
     return newProps;
   };
   var traverseChildren = function traverseChildren(children) {
@@ -19142,7 +19148,7 @@
   var css_248z$5 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
   styleInject(css_248z$5);
 
-  var _excluded$h = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableOnSubmit", "resetAfterSubmit", "context"];
+  var _excluded$h = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context"];
   var DEFAULT_FORM = {
     version: 2,
     fields: []
@@ -19531,6 +19537,8 @@
         _ref6$demo = _ref6.demo,
         demo = _ref6$demo === void 0 ? false : _ref6$demo,
         footer = _ref6.footer,
+        _ref6$disableButtons = _ref6.disableButtons,
+        disableButtons = _ref6$disableButtons === void 0 ? false : _ref6$disableButtons,
         _ref6$disableOnSubmit = _ref6.disableOnSubmit,
         disableOnSubmit = _ref6$disableOnSubmit === void 0 ? true : _ref6$disableOnSubmit,
         _ref6$resetAfterSubmi = _ref6.resetAfterSubmit,
@@ -20012,7 +20020,7 @@
       }
       if (plaintext) {
         return /*#__PURE__*/React$1.createElement(PlaintextForm, {
-          form: form,
+          fields: actualFields,
           locale: locale,
           framework: framework,
           currentValues: getValues()
@@ -20043,7 +20051,7 @@
         onlyFields: onlyFields,
         hideToolbar: hideToolbar,
         onReset: handleReset,
-        disabled: disabled,
+        disabled: disabled || disableButtons,
         disabledSubmit: form.disableSubmitOnError && !isValid,
         readOnly: readOnly,
         plaintext: plaintext,
