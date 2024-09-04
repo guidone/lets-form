@@ -77,7 +77,7 @@ import 'rsuite/dist/rsuite.min.css';
 
 // copied and pasted from LetsForm Designer
 const MY_FORM = {
-  "$schema": "https://unpkg.com/lets-form/schemas/react-rsuite5/form.json",
+  "$schema": "https://cdn.jsdelivr.net/npm/lets-form/schemas/react-rsuite5/form.json",
   "version": 1,
   "layout": "vertical",
   "validationMode": "onSubmit",
