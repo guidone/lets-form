@@ -1,4 +1,4 @@
-/* LetsForm react-mantine v0.10.7 - UMD */
+/* LetsForm react-mantine v0.10.8 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
@@ -21265,7 +21265,7 @@
       disabled: _isEmpty(steps) || stepIdx === steps.length - 1
     }, labelNext || 'Next')));
   }, ['labelPrevious', 'labelNext'], {
-    tabs: i18nSteps
+    steps: i18nSteps
   });
   lfLog('Loaded Mantine.Steps');
 

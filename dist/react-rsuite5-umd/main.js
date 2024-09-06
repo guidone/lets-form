@@ -1,4 +1,4 @@
-/* LetsForm react-rsuite5 v0.10.7 - UMD */
+/* LetsForm react-rsuite5 v0.10.8 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', 'react-hook-form'], factory) :
@@ -22305,7 +22305,7 @@
       disabled: _isEmpty(steps) || stepIdx === steps.length - 1
     }, labelNext || 'Next'))));
   }, ['labelPrevious', 'labelNext'], {
-    tabs: i18nSteps
+    steps: i18nSteps
   });
   lfLog('Loaded Rsuite5.Steps');
 

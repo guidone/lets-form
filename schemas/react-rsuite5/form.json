@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://https://unpkg.com/lets-form/schemas/react-rsuite5/form.json",
+  "$id": "https://cdn.jsdelivr.net/npm/lets-form/schemas/react-rsuite5/form.json",
   "type": "object",
   "properties": {
     "version": {
@@ -21,14 +21,20 @@
           "cs-CZ",
           "cy-GB",
           "da-DK",
+          "de-AT",
+          "de-CH",
           "de-DE",
           "el-GR",
+          "en-GB",
           "en-US",
+          "es-CL",
           "es-ES",
+          "es-MX",
           "et-EE",
           "eu",
           "fa-IR",
           "fi-FI",
+          "fr-CA",
           "fr-FR",
           "he-IL",
           "hi-IN",
@@ -48,6 +54,7 @@
           "nl-NL",
           "nn-NO",
           "pl-PL",
+          "pt-BR",
           "pt-PT",
           "ro-RO",
           "ru-RU",
@@ -59,7 +66,8 @@
           "tr-TR",
           "uk-UA",
           "vi-VN",
-          "zh-CN"
+          "zh-CN",
+          "zh-TW"
         ]
       }
     },
@@ -120,7 +128,7 @@
       "type": "boolean"
     },
     "fields": {
-      "$ref": "https://https://unpkg.com/lets-form/schemas/react-rsuite5/fields.json"
+      "$ref": "https://cdn.jsdelivr.net/npm/lets-form/schemas/react-rsuite5/fields.json"
     }
   }
 }

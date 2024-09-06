@@ -1,4 +1,4 @@
-/* LetsForm react-antd v0.10.7 - UMD */
+/* LetsForm react-antd v0.10.8 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('antd'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'antd', 'react-hook-form'], factory) :
@@ -21952,7 +21952,7 @@
       }
     }, labelNext || 'Next'))));
   }, ['labelPrevious', 'labelNext'], {
-    tabs: i18nSteps
+    steps: i18nSteps
   });
   lfLog('Loaded AntD.Steps');
   var AntdSteps$1 = AntdSteps;
