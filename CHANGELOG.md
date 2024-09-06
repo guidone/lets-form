@@ -1,5 +1,9 @@
 # LetsForm Changelog
 
+## v0.11.0
+- feat: TypeScript support
+- fix: RSuite, Mantine, Antd fix translations for `steps`
+
 ## v0.10.8
 - fix: plaintext mode in DSL mode
 - fix: plaintext mode shows preview of array of objects (if only has 1 key)
