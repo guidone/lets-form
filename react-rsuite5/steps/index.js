@@ -116,7 +116,7 @@ const Rsuite5Steps = I18N(
   },
   ['labelPrevious', 'labelNext'],
   {
-    tabs: i18nSteps
+    steps: i18nSteps
   }
 );
 lfLog('Loaded Rsuite5.Steps');

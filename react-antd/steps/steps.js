@@ -129,7 +129,7 @@ const AntdSteps = I18N(
   },
   ['labelPrevious', 'labelNext'],
   {
-    tabs: i18nSteps
+    steps: i18nSteps
   }
 );
 lfLog('Loaded AntD.Steps');
