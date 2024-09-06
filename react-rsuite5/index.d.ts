@@ -1,6 +1,4 @@
-
-import { ChangeEvent, FunctionComponent } from 'react';
-
+import { FunctionComponent } from 'react';
 
 import {
   LfFieldReactRsuite5Props,
@@ -14,10 +12,7 @@ import {
   LfArrayReactRsuite5Props,
   LetsFormReactRsuite5Props,
   LetsFormSchemaReactRsuite5
-} from "../../../manifest/lets-form-manifests/dist/definitions/react-rsuite5";
-
-
-
+} from '../definitions/react-rsuite5';
 
 declare const LetsForm: FunctionComponent<LetsFormReactRsuite5Props>;
 export default LetsForm;
