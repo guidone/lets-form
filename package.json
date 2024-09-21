@@ -1,7 +1,7 @@
 {
   "name": "lets-form",
   "version": "0.11.0",
-  "description": "JSON to React form generator, supporting multiple frameworks (Bootstrap, Material UI, RSuite, etc)",
+  "description": "JSON to React form generator, supporting multiple frameworks (Bootstrap, Material UI, RSuite, Mantine, etc)",
   "main": "index.js",
   "module": "index.js",
   "type": "module",
@@ -12,7 +12,9 @@
   "files": [
     "dist/**",
     "schemas/**",
-    "manifest.json"
+    "definitions/**",
+    "manifest.json",
+    "*.d.ts"
   ],
   "bugs": {
     "url": "https://github.com/guidone/lets-form/issues"
@@ -37,62 +39,73 @@
   },
   "exports": {
     "./react-bootstrap": {
+      "types": "./react-bootstrap.d.ts",
       "import": "./dist/react-bootstrap-esm/index.js",
       "require": "./dist/react-bootstrap-umd/main.js",
       "default": "./dist/react-bootstrap-esm/index.js"
     },
     "./react-bootstrap/": {
+      "types": "./react-bootstrap.d.ts",
       "import": "./dist/react-bootstrap-esm/",
       "require": "./dist/react-bootstrap-umd/",
       "default": "./dist/react-bootstrap-esm/"
     },
     "./react-mantine": {
+      "types": "./react-mantine.d.ts",
       "import": "./dist/react-mantine-esm/index.js",
       "require": "./dist/react-mantine-umd/main.js",
       "defaul": "./dist/react-mantine-esm/index.js"
     },
     "./react-mantine/": {
-      "import": "./dist/react-mantine-esm/",
+      "types": "./react-mantine.d.ts",
       "browser": "./dist/react-mantine-esm/",
       "require": "./dist/react-mantine-umd/",
       "default": "./dist/react-mantine-esm/"
     },
     "./react-rsuite5": {
+      "types": "./react-rsuite5.d.ts",
       "import": "./dist/react-rsuite5-esm/index.js",
       "require": "./dist/react-rsuite5-umd/main.js",
       "default": "./dist/react-rsuite5-esm/index.js"
     },
     "./react-rsuite5/": {
+      "types": "./react-rsuite5.d.ts",
       "import": "./dist/react-rsuite5-esm/",
       "require": "./dist/react-rsuite5-umd/",
       "default": "./dist/react-rsuite5-esm/"
     },
     "./react-antd": {
+      "types": "./react-antd.d.ts",
       "import": "./dist/react-antd-esm/index.js",
       "require": "./dist/react-antd-umd/main.js",
       "default": "./dist/react-antd-esm/index.js"
     },
     "./react-antd/": {
+      "types": "./react-antd.d.ts",
       "import": "./dist/react-antd-esm/",
       "require": "./dist/react-antd-umd/",
       "default": "./dist/react-antd-esm/"
     },
     "./react-material-ui": {
+      "types": "./react-material-ui.d.ts",
       "import": "./dist/react-material-ui-esm/index.js",
       "require": "./dist/react-material-ui-umd/main.js",
       "default": "./dist/react-material-ui-esm/index.js"
     },
     "./react-material-ui/": {
+      "types": "./react-material-ui.d.ts",
       "import": "./dist/react-material-ui-esm/",
       "require": "./dist/react-material-ui-umd/",
       "default": "./dist/react-material-ui-esm/"
     },
     "./react": {
+      "types": "./react.d.ts",
       "import": "./dist/react-esm/index.js",
       "require": "./dist/react-umd/main.js",
       "default": "./dist/react-esm/index.js"
     },
     "./react/": {
+      "types": "./react.d.ts",
       "import": "./dist/react-esm/",
       "require": "./dist/react-umd/",
       "default": "./dist/react-esm/"
