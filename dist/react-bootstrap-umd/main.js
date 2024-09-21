@@ -1,4 +1,4 @@
-/* LetsForm react-bootstrap v0.10.8 - UMD */
+/* LetsForm react-bootstrap v0.11.0 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-hook-form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-hook-form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button'], factory) :
@@ -7062,7 +7062,6 @@
   		"react-material-ui"
   	],
   	formatDensity: [
-  		"react-material-ui",
   		"react-material-ui"
   	],
   	monthsPerRow: [
@@ -12322,19 +12321,12 @@
   			type: "date"
   		},
   		{
-  			name: "minDateTime"
+  			name: "minDateTime",
+  			type: "date"
   		},
   		{
-  			name: "maxDateTime"
-  		},
-  		{
-  			name: "formatDensity",
-  			type: "string",
-  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
-  			options: [
-  				"dense",
-  				"spacious"
-  			]
+  			name: "maxDateTime",
+  			type: "date"
   		},
   		{
   			name: "minutesStep",

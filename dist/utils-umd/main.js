@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.10.8 - UMD */
+/* LetsForm Utils v0.11.0 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -8619,19 +8619,12 @@
   			type: "date"
   		},
   		{
-  			name: "minDateTime"
+  			name: "minDateTime",
+  			type: "date"
   		},
   		{
-  			name: "maxDateTime"
-  		},
-  		{
-  			name: "formatDensity",
-  			type: "string",
-  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
-  			options: [
-  				"dense",
-  				"spacious"
-  			]
+  			name: "maxDateTime",
+  			type: "date"
   		},
   		{
   			name: "minutesStep",

@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.10.8 - ESM */
+/* LetsForm Utils v0.11.0 - ESM */
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -8613,19 +8613,12 @@ var datetime = {
 			type: "date"
 		},
 		{
-			name: "minDateTime"
+			name: "minDateTime",
+			type: "date"
 		},
 		{
-			name: "maxDateTime"
-		},
-		{
-			name: "formatDensity",
-			type: "string",
-			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
-			options: [
-				"dense",
-				"spacious"
-			]
+			name: "maxDateTime",
+			type: "date"
 		},
 		{
 			name: "minutesStep",

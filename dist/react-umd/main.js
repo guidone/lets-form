@@ -1,4 +1,4 @@
-/* LetsForm react v0.10.8 - UMD */
+/* LetsForm react v0.11.0 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-hook-form'], factory) :
@@ -7086,7 +7086,6 @@
   		"react-material-ui"
   	],
   	formatDensity: [
-  		"react-material-ui",
   		"react-material-ui"
   	],
   	monthsPerRow: [
@@ -12346,19 +12345,12 @@
   			type: "date"
   		},
   		{
-  			name: "minDateTime"
+  			name: "minDateTime",
+  			type: "date"
   		},
   		{
-  			name: "maxDateTime"
-  		},
-  		{
-  			name: "formatDensity",
-  			type: "string",
-  			description: "Density of the format when rendered in the input. Setting formatDensity to \"spacious\" will add a space before and after each /, - and . character",
-  			options: [
-  				"dense",
-  				"spacious"
-  			]
+  			name: "maxDateTime",
+  			type: "date"
   		},
   		{
   			name: "minutesStep",
