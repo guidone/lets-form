@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.11.1
+- fix: expose TypeScript definitions
+
 ## v0.11.0
 - feat: TypeScript support
 - fix: RSuite, Mantine, Antd fix translations for `steps`
