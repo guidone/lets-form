@@ -7,6 +7,7 @@ import './form.scss';
 import { lfLog } from '../../helpers/lf-log';
 
 const MantineForm = ({
+  id,
   name,
   children,
   buttonsAlign,
@@ -24,6 +25,7 @@ const MantineForm = ({
   return (
     <div>
       <form
+        id={id}
         onSubmit={onSubmit}
         className={classNames('lf-form lf-form-react-mantine', {
           [buttonsAlign ? `lf-form-buttons-align-${buttonsAlign}` : undefined]: true
