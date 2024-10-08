@@ -64,9 +64,6 @@ const Fields = {
   'multiselect': {
     'react-rsuite5': lazy(() => import('./multiselect'))
   },
-  'multiselect-language': {
-    'react-rsuite5': lazy(() => import('./multiselect-language'))
-  },
   'input-text-i18n': {
     'react-rsuite5': lazy(() => import('./input-text-i18n'))
   },
