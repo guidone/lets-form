@@ -1,4 +1,4 @@
-/* LetsForm react-mantine v0.11.0 - UMD */
+/* LetsForm react-mantine v0.11.1 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
@@ -21381,6 +21381,7 @@
 
   var MantineForm = function MantineForm() {
     var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+      id = _ref.id,
       name = _ref.name,
       children = _ref.children,
       buttonsAlign = _ref.buttonsAlign,
@@ -21403,6 +21404,7 @@
       onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset,
       custom = _ref.custom;
     return /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement("form", {
+      id: id,
       onSubmit: onSubmit,
       className: classNames('lf-form lf-form-react-mantine', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name

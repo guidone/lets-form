@@ -1,4 +1,4 @@
-/* LetsForm Generator v0.11.0 - UMD */
+/* LetsForm Generator v0.11.1 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button'), require('antd'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button', 'antd', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
@@ -25140,13 +25140,18 @@
   });
 
   var FormMaterialUI = function FormMaterialUI(_ref) {
-    var name = _ref.name,
+    var id = _ref.id,
+      name = _ref.name,
       buttonsAlign = _ref.buttonsAlign,
       children = _ref.children,
       _ref$labelSubmit = _ref.labelSubmit,
       labelSubmit = _ref$labelSubmit === void 0 ? 'Submit' : _ref$labelSubmit,
       _ref$labelCancel = _ref.labelCancel,
       labelCancel = _ref$labelCancel === void 0 ? 'Cancel' : _ref$labelCancel,
+      _ref$hideCancel = _ref.hideCancel,
+      hideCancel = _ref$hideCancel === void 0 ? false : _ref$hideCancel,
+      _ref$hideSubmit = _ref.hideSubmit,
+      hideSubmit = _ref$hideSubmit === void 0 ? false : _ref$hideSubmit,
       _ref$disabled = _ref.disabled,
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
       _ref$disabledSubmit = _ref.disabledSubmit,
@@ -25162,6 +25167,7 @@
       onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset,
       custom = _ref.custom;
     return /*#__PURE__*/React$1.createElement("form", {
+      id: id,
       className: classNames('lf-form lf-form-react-material-ui', _defineProperty$1({
         'lf-form-react-material-ui-plaintext': plaintext
       }, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
@@ -25171,11 +25177,11 @@
       spacing: 2,
       direction: "row",
       className: "lf-buttons"
-    }, /*#__PURE__*/React$1.createElement(Button$1, {
+    }, !hideSubmit && /*#__PURE__*/React$1.createElement(Button$1, {
       onClick: onSubmit,
       variant: "contained",
       disabled: disabled || disabledSubmit
-    }, labelSubmit), /*#__PURE__*/React$1.createElement(Button$1, {
+    }, labelSubmit), !hideCancel && /*#__PURE__*/React$1.createElement(Button$1, {
       onClick: onReset,
       variant: "outlined",
       disabled: disabled
@@ -25882,7 +25888,8 @@
   styleInject(css_248z$i);
 
   var FormReact = function FormReact(_ref) {
-    var name = _ref.name,
+    var id = _ref.id,
+      name = _ref.name,
       children = _ref.children,
       buttonsAlign = _ref.buttonsAlign,
       _ref$hideToolbar = _ref.hideToolbar,
@@ -25904,6 +25911,7 @@
       onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset,
       custom = _ref.custom;
     return /*#__PURE__*/React$1.createElement("form", {
+      id: id,
       onSubmit: onSubmit,
       className: classNames('lf-form lf-form-react lf-form-react-stacked', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name
@@ -29253,6 +29261,7 @@
 
   var MantineForm = function MantineForm() {
     var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+      id = _ref.id,
       name = _ref.name,
       children = _ref.children,
       buttonsAlign = _ref.buttonsAlign,
@@ -29275,6 +29284,7 @@
       onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset,
       custom = _ref.custom;
     return /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement("form", {
+      id: id,
       onSubmit: onSubmit,
       className: classNames('lf-form lf-form-react-mantine', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name

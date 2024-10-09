@@ -1,4 +1,4 @@
-/* LetsForm react v0.11.0 - UMD */
+/* LetsForm react v0.11.1 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-hook-form'], factory) :
@@ -21059,7 +21059,8 @@
   styleInject(css_248z);
 
   var FormReact = function FormReact(_ref) {
-    var name = _ref.name,
+    var id = _ref.id,
+      name = _ref.name,
       children = _ref.children,
       buttonsAlign = _ref.buttonsAlign,
       _ref$hideToolbar = _ref.hideToolbar,
@@ -21081,6 +21082,7 @@
       onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset,
       custom = _ref.custom;
     return /*#__PURE__*/React$1.createElement("form", {
+      id: id,
       onSubmit: onSubmit,
       className: classNames('lf-form lf-form-react lf-form-react-stacked', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name
