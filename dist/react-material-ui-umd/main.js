@@ -1,4 +1,4 @@
-/* LetsForm react-material-ui v0.11.1 - UMD */
+/* LetsForm react-material-ui v0.11.2 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('react-hook-form'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', 'react-hook-form', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack'], factory) :
@@ -5396,16 +5396,17 @@
 
   /**
    * addField
-   * @param {*} form The form to add the field to 
+   * @param {*} form The form to add the field to
    * @param {*} newField The new field { component: '', ... } or array of fields
    * @param {*} id Id of the component to add the field to
    * @param {*} target the fields key of the components: "fields", "tabs", "leftFields", "rightFields", ...
    * @param {*} subtarget the index of the target in case it's an array
-   * @returns 
+   * @returns
    */
   var addField = function addField(form, newField, id) {
     var target = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'fields';
     var subtarget = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : null;
+    var position = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 'end';
     // can add multiple fields at once
     var toAdd = _isArray(newField) ? newField : [newField];
     if (id != null) {
@@ -5414,21 +5415,47 @@
         // if right field id, append to fields
         function (field) {
           if (field.id === id) {
+            // sub target is for columns, steps, tabs
             if (subtarget != null) {
-              return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, target, _objectSpread2(_objectSpread2({}, field[target] || []), {}, _defineProperty$1({}, subtarget, [].concat(_toConsumableArray(field[target] && field[target][subtarget] ? field[target][subtarget] : []), _toConsumableArray(toAdd))))));
+              var what = position === 'start' ? [].concat(_toConsumableArray(toAdd), _toConsumableArray(field[target] && field[target][subtarget] ? field[target][subtarget] : [])) : [].concat(_toConsumableArray(field[target] && field[target][subtarget] ? field[target][subtarget] : []), _toConsumableArray(toAdd));
+              return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, target, _objectSpread2(_objectSpread2({}, field[target] || []), {}, _defineProperty$1({}, subtarget, what))));
             } else {
-              // old way
-              return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, target, [].concat(_toConsumableArray(field[target] || []), _toConsumableArray(toAdd))));
+              // only target is for groups
+              var _what = position === 'start' ? [].concat(_toConsumableArray(toAdd), _toConsumableArray(field[target] || [])) : [].concat(_toConsumableArray(field[target] || []), _toConsumableArray(toAdd));
+              return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, target, _what));
             }
           }
           return field;
         })
       });
     } else {
+      // just add in the main "fields" key
       return _objectSpread2(_objectSpread2({}, form), {}, {
         fields: [].concat(_toConsumableArray(form.fields), _toConsumableArray(toAdd))
       });
     }
+  };
+
+  /**
+   * AddFieldAfter
+   * Add a field (an object with "component" property to a form) after the field with a specific id.
+   * Returns a form
+   * @param {*} form The form to add the field to
+   * @param {*} newField The new field { component: '', ... } or array of fields
+   * @param {*} id Id of the component to add the field after
+   */
+  var AddFieldAfter = function AddFieldAfter(form, newField, id) {
+    var toAdd = _isArray(newField) ? newField : [newField];
+    return _objectSpread2(_objectSpread2({}, form), {}, {
+      fields: mapFields(form.fields,
+      // if right field id, append to fields
+      function (field) {
+        if (field.id === id) {
+          return [field].concat(_toConsumableArray(toAdd));
+        }
+        return field;
+      })
+    });
   };
 
   var baseClone = _baseClone;
@@ -22110,6 +22137,7 @@
     default: FormMaterialUI
   });
 
+  exports.AddFieldAfter = AddFieldAfter;
   exports.Connectors = Connectors;
   exports.FIELDS_KEY = FIELDS_KEY;
   exports.FRAMEWORKS = FRAMEWORKS;
