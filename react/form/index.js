@@ -6,6 +6,7 @@ import { lfLog } from '../../helpers/lf-log';
 import './index.scss';
 
 const FormReact = ({
+  id,
   name,
   children,
   buttonsAlign,
@@ -23,6 +24,7 @@ const FormReact = ({
 
   return (
     <form
+      id={id}
       onSubmit={onSubmit}
       className={classNames('lf-form lf-form-react lf-form-react-stacked', {
         [buttonsAlign ? `lf-form-buttons-align-${buttonsAlign}` : undefined]: true

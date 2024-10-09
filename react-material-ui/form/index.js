@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import { lfLog } from '../../helpers/lf-log';
 
 const FormMaterialUI = ({
+  id,
   name,
   buttonsAlign,
   children,
@@ -25,6 +26,7 @@ const FormMaterialUI = ({
 
   return (
     <form
+      id={id}
       className={classNames('lf-form lf-form-react-material-ui', {
         'lf-form-react-material-ui-plaintext': plaintext,
         [buttonsAlign ? `lf-form-buttons-align-${buttonsAlign}` : undefined]: true
