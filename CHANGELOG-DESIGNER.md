@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.9.6
+- css fixes for for builder
+
 ## v0.9.5
 - feat: preparation for embeddable builder
 - fix: removed `multi-select-language` component
