@@ -1,5 +1,13 @@
 # LetsForm Changelog
 
+## v0.11.3
+- fix: `addField` methdod support `top` and `bottom`
+- fix: removed `multi-select-language` component
+
+## v0.11.2
+- fix: enable passing id to inner form for enabling html5 button form attribute [@butchmarshall]
+- fix: hiding submit and cancel buttons in material-ui [@butchmarshall]
+
 ## v0.11.1
 - fix: expose TypeScript definitions
 

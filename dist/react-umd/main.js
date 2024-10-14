@@ -1,4 +1,4 @@
-/* LetsForm react v0.11.0 - UMD */
+/* LetsForm react v0.11.2 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-hook-form'], factory) :
@@ -5432,16 +5432,17 @@
 
   /**
    * addField
-   * @param {*} form The form to add the field to 
+   * @param {*} form The form to add the field to
    * @param {*} newField The new field { component: '', ... } or array of fields
    * @param {*} id Id of the component to add the field to
    * @param {*} target the fields key of the components: "fields", "tabs", "leftFields", "rightFields", ...
    * @param {*} subtarget the index of the target in case it's an array
-   * @returns 
+   * @returns
    */
   var addField = function addField(form, newField, id) {
     var target = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'fields';
     var subtarget = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : null;
+    var position = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 'end';
     // can add multiple fields at once
     var toAdd = _isArray(newField) ? newField : [newField];
     if (id != null) {
@@ -5450,21 +5451,47 @@
         // if right field id, append to fields
         function (field) {
           if (field.id === id) {
+            // sub target is for columns, steps, tabs
             if (subtarget != null) {
-              return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, target, _objectSpread2(_objectSpread2({}, field[target] || []), {}, _defineProperty$1({}, subtarget, [].concat(_toConsumableArray(field[target] && field[target][subtarget] ? field[target][subtarget] : []), _toConsumableArray(toAdd))))));
+              var what = position === 'start' ? [].concat(_toConsumableArray(toAdd), _toConsumableArray(field[target] && field[target][subtarget] ? field[target][subtarget] : [])) : [].concat(_toConsumableArray(field[target] && field[target][subtarget] ? field[target][subtarget] : []), _toConsumableArray(toAdd));
+              return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, target, _objectSpread2(_objectSpread2({}, field[target] || []), {}, _defineProperty$1({}, subtarget, what))));
             } else {
-              // old way
-              return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, target, [].concat(_toConsumableArray(field[target] || []), _toConsumableArray(toAdd))));
+              // only target is for groups
+              var _what = position === 'start' ? [].concat(_toConsumableArray(toAdd), _toConsumableArray(field[target] || [])) : [].concat(_toConsumableArray(field[target] || []), _toConsumableArray(toAdd));
+              return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, target, _what));
             }
           }
           return field;
         })
       });
     } else {
+      // just add in the main "fields" key
       return _objectSpread2(_objectSpread2({}, form), {}, {
         fields: [].concat(_toConsumableArray(form.fields), _toConsumableArray(toAdd))
       });
     }
+  };
+
+  /**
+   * AddFieldAfter
+   * Add a field (an object with "component" property to a form) after the field with a specific id.
+   * Returns a form
+   * @param {*} form The form to add the field to
+   * @param {*} newField The new field { component: '', ... } or array of fields
+   * @param {*} id Id of the component to add the field after
+   */
+  var AddFieldAfter = function AddFieldAfter(form, newField, id) {
+    var toAdd = _isArray(newField) ? newField : [newField];
+    return _objectSpread2(_objectSpread2({}, form), {}, {
+      fields: mapFields(form.fields,
+      // if right field id, append to fields
+      function (field) {
+        if (field.id === id) {
+          return [field].concat(_toConsumableArray(toAdd));
+        }
+        return field;
+      })
+    });
   };
 
   var baseClone = _baseClone;
@@ -21059,7 +21086,8 @@
   styleInject(css_248z);
 
   var FormReact = function FormReact(_ref) {
-    var name = _ref.name,
+    var id = _ref.id,
+      name = _ref.name,
       children = _ref.children,
       buttonsAlign = _ref.buttonsAlign,
       _ref$hideToolbar = _ref.hideToolbar,
@@ -21081,6 +21109,7 @@
       onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset,
       custom = _ref.custom;
     return /*#__PURE__*/React$1.createElement("form", {
+      id: id,
       onSubmit: onSubmit,
       className: classNames('lf-form lf-form-react lf-form-react-stacked', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
       "data-lf-form-name": name
@@ -21105,6 +21134,7 @@
     default: FormReact
   });
 
+  exports.AddFieldAfter = AddFieldAfter;
   exports.Connectors = Connectors;
   exports.FIELDS_KEY = FIELDS_KEY;
   exports.FRAMEWORKS = FRAMEWORKS;

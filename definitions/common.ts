@@ -80,7 +80,6 @@ export type ValidationProps = {
 };
 
 export type CommonLetsFormProps = {
-  id?: string;
   name?: string;
   locale?: Locale;
   plaintext?: boolean;
