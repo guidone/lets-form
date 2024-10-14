@@ -388,7 +388,7 @@ type LfFieldReactMaterialUiProps =
   | TimeReactMaterialUiProps
   | HiddenReactMaterialUiProps
 
-export { LfFieldReactMaterialUiProps };
+export type { LfFieldReactMaterialUiProps };
 
 export interface LfColumnsReactMaterialUiProps {
   name?: string; // The name of the field and the key of the JSON
