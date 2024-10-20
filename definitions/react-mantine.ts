@@ -488,7 +488,7 @@ type LfFieldReactMantineProps =
   | TimeReactMantineProps
   | HiddenReactMantineProps
 
-export { LfFieldReactMantineProps };
+export type { LfFieldReactMantineProps };
 
 export interface LfColumnsReactMantineProps {
   name?: string; // The name of the field and the key of the JSON

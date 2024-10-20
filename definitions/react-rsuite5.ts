@@ -438,7 +438,7 @@ type LfFieldReactRsuite5Props =
   | TimeReactRsuite5Props
   | HiddenReactRsuite5Props
 
-export { LfFieldReactRsuite5Props };
+export type { LfFieldReactRsuite5Props };
 
 export interface LfColumnsReactRsuite5Props {
   name?: string; // The name of the field and the key of the JSON

@@ -182,7 +182,7 @@ type LfFieldReactProps =
   | TimeReactProps
   | HiddenReactProps
 
-export { LfFieldReactProps };
+export type { LfFieldReactProps };
 
 export interface LfColumnsReactProps {
   name?: string; // The name of the field and the key of the JSON

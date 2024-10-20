@@ -396,7 +396,7 @@ type LfFieldReactAntdProps =
   | TimeReactAntdProps
   | HiddenReactAntdProps
 
-export { LfFieldReactAntdProps };
+export type { LfFieldReactAntdProps };
 
 export interface LfColumnsReactAntdProps {
   name?: string; // The name of the field and the key of the JSON

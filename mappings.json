@@ -1511,31 +1511,6 @@
     "validationMessage": "validation",
     "required": null
   },
-  "multiselect-language": {
-    "name": null,
-    "label": null,
-    "hint": null,
-    "placeholder": null,
-    "disabled": null,
-    "readOnly": null,
-    "hidden": null,
-    "placement": [
-      "react-rsuite5"
-    ],
-    "size": [
-      "react-rsuite5"
-    ],
-    "tooltip": [
-      "react-rsuite5"
-    ],
-    "validationMinLength": "validation",
-    "validationMin": "validation",
-    "validationMaxLength": "validation",
-    "validationMax": "validation",
-    "validationPattern": "validation",
-    "validationMessage": "validation",
-    "required": null
-  },
   "input-text-i18n": {
     "name": null,
     "label": null,

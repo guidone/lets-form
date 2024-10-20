@@ -232,7 +232,7 @@ type LfFieldReactBootstrapProps =
   | DatetimeReactBootstrapProps
   | HiddenReactBootstrapProps
 
-export { LfFieldReactBootstrapProps };
+export type { LfFieldReactBootstrapProps };
 
 export interface LfColumnsReactBootstrapProps {
   name?: string; // The name of the field and the key of the JSON
