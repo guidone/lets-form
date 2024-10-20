@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.11.4
+- fix: Type error: Re-exporting a type when 'isolatedModules' is enabled requires using 'export type'
+
 ## v0.11.3
 - fix: `addField` methdod support `top` and `bottom`
 - fix: removed `multi-select-language` component
