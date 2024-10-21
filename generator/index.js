@@ -854,7 +854,13 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 locale,
                 onJavascriptError,
                 Components: MergedComponents,
-                rerenders: rerenders.current
+                rerenders: rerenders.current,
+                prependView: PlaceholderWrapper && (
+                  <PlaceholderWrapper
+                    key={`wrapper_top_form_field`}
+                    nextField={formFields && formFields.length ? formFields[0] : null}
+                  />
+                )
               })}
               {footer}
               {formErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (
