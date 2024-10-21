@@ -68,10 +68,8 @@ const addField = (
     // just add in the main "fields" key
     return {
       ...form,
-      fields: [
-        ...form.fields,
-        ...toAdd
-      ]
+      fields: position === 'start' ?
+        [...toAdd, ...form.fields] : [...form.fields, ...toAdd]
     };
   }
 }
