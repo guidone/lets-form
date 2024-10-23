@@ -34,6 +34,7 @@ const InputText = I18N(
       >
         <Rating
           onChange={onChange}
+          defaultValue={value}
           {...passRest(rest)}
         />
       </Input.Wrapper>

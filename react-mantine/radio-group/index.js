@@ -48,8 +48,9 @@ const RadioGroup = I18N(
           description={hint}
           withAsterisk={required}
           error={error}
+          defaultValue={value}
           inputWrapperOrder={['label', 'input', 'description', 'error']}
-        >        
+        >
           <Stack gap="xs" style={{ marginTop: 'var(--lf-field-margin-top)', marginBottom: 'var(--lf-field-margin-top)'}}>
             {(options ?? []).map(item => (
               <Radio
