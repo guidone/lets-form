@@ -1,4 +1,4 @@
-/* LetsForm react-mantine v0.11.3 - UMD */
+/* LetsForm react-mantine v0.11.4 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
@@ -5407,7 +5407,7 @@
     } else {
       // just add in the main "fields" key
       return _objectSpread2(_objectSpread2({}, form), {}, {
-        fields: [].concat(_toConsumableArray(form.fields), _toConsumableArray(toAdd))
+        fields: position === 'start' ? [].concat(_toConsumableArray(toAdd), _toConsumableArray(form.fields)) : [].concat(_toConsumableArray(form.fields), _toConsumableArray(toAdd))
       });
     }
   };
@@ -8253,31 +8253,6 @@
   	rate: rate$1,
   	placeholder: placeholder$1,
   	multiselect: multiselect$1,
-  	"multiselect-language": {
-  	name: null,
-  	label: null,
-  	hint: null,
-  	placeholder: null,
-  	disabled: null,
-  	readOnly: null,
-  	hidden: null,
-  	placement: [
-  		"react-rsuite5"
-  	],
-  	size: [
-  		"react-rsuite5"
-  	],
-  	tooltip: [
-  		"react-rsuite5"
-  	],
-  	validationMinLength: "validation",
-  	validationMin: "validation",
-  	validationMaxLength: "validation",
-  	validationMax: "validation",
-  	validationPattern: "validation",
-  	validationMessage: "validation",
-  	required: null
-  },
   	"input-text-i18n": {
   	name: null,
   	label: null,
@@ -15748,88 +15723,6 @@
   	rate: rate,
   	placeholder: placeholder,
   	multiselect: multiselect,
-  	"multiselect-language": {
-  	label: "Locales",
-  	category: "advanced",
-  	description: "Select one or more locales, returns an array (i.e. it-IT, en-GB, ...)",
-  	name: "multiselect-language",
-  	common: [
-  		{
-  			name: "name",
-  			type: "string",
-  			description: "The name of the field and the key of the JSON"
-  		},
-  		{
-  			name: "label",
-  			type: "string | i18n",
-  			description: "Label of the field"
-  		},
-  		{
-  			name: "hint",
-  			type: "string | i18n",
-  			description: "Help text for the field (generally shown below the input box)"
-  		},
-  		{
-  			name: "placeholder",
-  			type: "string | i18n",
-  			description: "Placeholder text, visibile when the field is empty"
-  		},
-  		{
-  			name: "disabled",
-  			type: "boolean",
-  			description: "Disables and greys out the field"
-  		},
-  		{
-  			name: "readOnly",
-  			type: "boolean",
-  			description: "Put the field in read only mode"
-  		},
-  		{
-  			name: "hidden",
-  			type: "boolean",
-  			description: "Hides the field from the form"
-  		}
-  	],
-  	"react-rsuite5": [
-  		{
-  			name: "placement",
-  			type: "string",
-  			options: [
-  				"topStart",
-  				"topEnd",
-  				"leftStart",
-  				"rightStart",
-  				"leftEnd",
-  				"rightEnd",
-  				"bottomStart",
-  				"bottomEnd",
-  				"auto",
-  				"autoVerticalStart",
-  				"autoVerticalEnd",
-  				"autoHorizontalStart",
-  				"autoHorizontalEnd"
-  			]
-  		},
-  		{
-  			name: "size",
-  			type: "string",
-  			description: "Size of the field",
-  			options: [
-  				"lg",
-  				"md",
-  				"sm",
-  				"xs"
-  			]
-  		},
-  		{
-  			name: "tooltip",
-  			type: "boolean",
-  			description: "Show hint as tooltip next to label"
-  		}
-  	],
-  	frameworks: [
-  	]
-  },
   	"placeholder-image": {
   	label: "Placeholder Image",
   	category: "layout",
@@ -20066,7 +19959,11 @@
         locale: locale,
         onJavascriptError: onJavascriptError,
         Components: MergedComponents,
-        rerenders: rerenders.current
+        rerenders: rerenders.current,
+        prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+          key: "wrapper_top_form_field",
+          nextField: formFields && formFields.length ? formFields[0] : null
+        })
       }), footer, formErrors && (showErrors === 'groupedBottom' || _isEmpty(showErrors)) && /*#__PURE__*/React$1.createElement(ValidationErrors, {
         className: "bottom",
         locale: locale,
@@ -20666,6 +20563,7 @@
       description: hint,
       withAsterisk: required,
       error: error,
+      defaultValue: value,
       inputWrapperOrder: ['label', 'input', 'description', 'error']
     }, /*#__PURE__*/React$1.createElement(core.Stack, {
       gap: "xs",
@@ -20867,8 +20765,8 @@
   var _excluded$8 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
   var InputText = I18N(function (_ref) {
     var name = _ref.name,
-      hint = _ref.hint;
-      _ref.value;
+      hint = _ref.hint,
+      value = _ref.value;
       _ref.fullWidth;
       _ref.width;
       _ref.submitOnEnter;
@@ -20888,7 +20786,8 @@
       label: label,
       required: required
     }, /*#__PURE__*/React$1.createElement(core.Rating, _extends({
-      onChange: onChange
+      onChange: onChange,
+      defaultValue: value
     }, passRest(rest))));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Rate');
