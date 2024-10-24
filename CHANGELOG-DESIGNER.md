@@ -1,5 +1,12 @@
 # LetsForm Designer Changelog
 
+## v0.9.7
+- feat: reorganizatiom of the dashboard
+- feat: preparation for LetsForm Builder
+- fix: Mantine rating and radio group not retaining values
+- fix: Type error: Re-exporting a type when 'isolatedModules' is enabled requires using 'export type'
+- fix: `addField` methdod support `top` and `bottom`
+
 ## v0.9.6
 - css fixes for for builder
 
