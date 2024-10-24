@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.11.5
+- fix: Mantine rating and radio group not retaining values
+
 ## v0.11.4
 - fix: Type error: Re-exporting a type when 'isolatedModules' is enabled requires using 'export type'
 
