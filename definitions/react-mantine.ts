@@ -571,6 +571,7 @@ export interface LfArrayReactMantineProps {
 };
 
 export interface LetsFormReactMantineProps extends CommonLetsFormProps {
+  form: LetsFormSchemaReactMantine;
 };
 
 interface GroupReactMantineProps extends LfGroupReactMantineProps {

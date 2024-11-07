@@ -506,6 +506,7 @@ export interface LfArrayReactRsuite5Props {
 export interface LetsFormReactRsuite5Props extends CommonLetsFormProps {
   layout?: "inline" | "horizontal" | "vertical";
   fluid?: boolean; // Allows the form to fill 100% of the container
+  form: LetsFormSchemaReactRsuite5;
 };
 
 interface GroupReactRsuite5Props extends LfGroupReactRsuite5Props {

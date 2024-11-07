@@ -477,6 +477,7 @@ export interface LetsFormReactAntdProps extends CommonLetsFormProps {
   labelAlign?: "left" | "right";
   labelWrap?: boolean;
   requiredMark?: boolean;
+  form: LetsFormSchemaReactAntd;
 };
 
 interface GroupReactAntdProps extends LfGroupReactAntdProps {

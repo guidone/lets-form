@@ -449,6 +449,7 @@ export interface LfArrayReactMaterialUiProps {
 };
 
 export interface LetsFormReactMaterialUiProps extends CommonLetsFormProps {
+  form: LetsFormSchemaReactMaterialUi;
 };
 
 interface GroupReactMaterialUiProps extends LfGroupReactMaterialUiProps {

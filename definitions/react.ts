@@ -239,6 +239,7 @@ export interface LfArrayReactProps {
 };
 
 export interface LetsFormReactProps extends CommonLetsFormProps {
+  form: LetsFormSchemaReact;
 };
 
 interface GroupReactProps extends LfGroupReactProps {

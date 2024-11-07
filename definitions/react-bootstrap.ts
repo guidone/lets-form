@@ -293,6 +293,7 @@ export interface LfArrayReactBootstrapProps {
 };
 
 export interface LetsFormReactBootstrapProps extends CommonLetsFormProps {
+  form: LetsFormSchemaReactBootstrap;
 };
 
 interface GroupReactBootstrapProps extends LfGroupReactBootstrapProps {
