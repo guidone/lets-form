@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.11.6
+- fix: missing `form` prop in TypeScript definitions
+
 ## v0.11.5
 - fix: Mantine rating and radio group not retaining values
 
