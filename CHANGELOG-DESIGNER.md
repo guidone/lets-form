@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.9.8
+- cleanup and rotate keys
+
 ## v0.9.7
 - feat: reorganizatiom of the dashboard
 - feat: preparation for LetsForm Builder
