@@ -22,6 +22,7 @@ import { errorToString } from './helpers/error-to-string';
 import { mergeComponents } from './helpers/merge-components';
 import { MissingComponent } from './helpers/missing-component';
 import { traverseChildren } from './helpers/dsl';
+import { useFormValidation } from './helpers/form-validation';
 import { upgradeFields, upgradeForm } from './helpers/upgrade-fields';
 
 import './index.scss';
@@ -377,20 +378,22 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
         // generate the validation rule, takes into account react-hook-form
         // validation format and i18n strings
-        const rules = translateValidation(
+        /*const rules = translateValidation(
           {
             required: field.required,
             ...field.validation
           },
           locale,
           onJavascriptError
-        );
+        );*/
+
+        console.log('+++++++++++ actual errors', errors)
 
         return (
           <Controller
             key={`field_${field.name}`}
             name={field.name}
-            rules={rules}
+            //rules={rules}
             control={control}
             render={({ field: fieldInfo }) => {
               const component = <Component
@@ -407,8 +410,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 disabled={disabled || field.disabled}
                 readOnly={readOnly || field.readOnly}
                 plaintext={plaintext}
-                error={errors && errors[field.name] ?
-                  (showErrors === 'inline' ? errorToString(errors[field.name]) : true)
+                required={field.required}
+                error={errors && errors[field.name] && errors[field.name].errorMessage ?
+                  (showErrors === 'inline' ? errors[field.name].errorMessage : true)
                   : undefined
                 }
                 {...additionalFields}
@@ -506,7 +510,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     useImperativeHandle(ref, () => ({
       validate: async () => trigger()
     }));
-    const [validationErrors, setValidationErrors] = useState();
+    // const [validationErrors, setValidationErrors] = useState();
+
+
+
+
     // store form fields, apply immediately transformers (collected from all fields)
     const [formFields, setFormFields] = useState(null);
     const MergedComponents = mergeComponents(Fields, components);
@@ -522,6 +530,12 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       ],
       form.version
     );
+
+    const { validate, onHandleError, validationErrors, setValidationErrors } = useFormValidation({
+      onError,
+      fields: actualFields,
+      locale
+    });
 
     if (!framework) {
       lfError('missing "framework" prop');
@@ -628,6 +642,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const onHandleSubmit = useCallback(
       async data => {
+        const validationResult = await validate(data);
+        // stop submit if invalid
+        if (validationResult) {
+          return;
+        }
         // call connectors if any
         if (Array.isArray(connectors) && connectors.length !== 0) {
           // call onSubmit immediately
@@ -689,13 +708,19 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       [onSubmit, onSubmitSuccess, formFields]
     );
 
-    const onHandleError = useCallback(
+    /*const onHandleError = useCallback(
       data => {
+
+        console.log('+++++  validation errors', data)
+
+
         setValidationErrors(data);
         onError(data);
       },
       [onError]
-    );
+    );*/
+
+
 
     const handleReset = useCallback(
       () => {
@@ -846,7 +871,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 setValue,
                 register,
                 debug,
-                errors,
+                errors: validationErrors,
                 disabled: disabled || form.disabled,
                 readOnly: readOnly || form.readOnly,
                 plaintext: plaintext || form.plaintext,

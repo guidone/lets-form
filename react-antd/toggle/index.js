@@ -48,12 +48,12 @@ const Toggle = I18N(
         tooltip={tooltip && hint}
         hasFeedback={error != null}
         validateStatus={error ? 'error': undefined}
-        valuePropName={null}
+        valuePropName="checked"
       >
         <Switch
           defaultChecked={value}
           readOnly={readOnly}
-          onChange={handleChange}
+          //onChange={handleChange}
           onBlur={onBlur}
           disabled={disabled}
           size={size}
