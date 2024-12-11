@@ -3,7 +3,6 @@ import _ from 'lodash';
 
 import { reduceFields, isI18n, i18n } from "../../helpers";
 
-
 const FIELDS_NOT_TO_VALIDATE = ['group', 'placeholder', 'placeholder-image', 'steps', 'tabs', 'columns'];
 
 const isEmpty = value => value === null || value === undefined || value === '';
@@ -34,16 +33,6 @@ const needsValidation = field => {
 
 
 const makeFieldValidationFn = (field, locale) => {
-  // prepare error message
-  /*let errorMessage;
-    if (_.isString(field.validation?.message)) {
-      errorMessage = field.validation.message;
-    } else if (isI18n(field.validation?.message)) {
-      errorMessage = i18n(field.validation.message, locale) ?? 'Field is required';
-    } else {
-      errorMessage = 'Field is required';
-    }*/
-
 
   return async value => {
     //console.log('validating ', field.name, ' for ', value);
@@ -141,7 +130,15 @@ const makeArrayValidationFn = (field, locale) => {
   }
 };
 
-
+/**
+ * makeValidation
+ * Take an array of fields and return a validation function, which takes as argument the values of the form
+ * Returns null or undefined if no validation errors, otherwise an object, keys are the invalid fields, value for
+ * each key is { fieldName, label, errorMessage }
+ * @param {*} fields
+ * @param {*} locale
+ * @returns {function}
+ */
 const makeValidation = (fields, locale) => {
 
   const validationErrors = {};
@@ -191,7 +188,7 @@ const makeValidation = (fields, locale) => {
 
     return Object.keys(validationErrors).length !== 0 ? validationErrors : undefined;
   };
-}
+};
 
 
 
@@ -209,6 +206,27 @@ const useFormValidation = ({ onError, fields, locale }) => {
     [onError]
   );
 
+  /**
+   * clearValidation
+   * Clear validation errors for a field or completely
+   * @param {string} field
+   */
+  const clearValidation = useCallback(
+    field => {
+      if (!_.isEmpty(field)) {
+        setValidationErrors(errors => errors && errors[field] ? { ...errors, [field]: undefined } : errors);
+      } else {
+        setValidationErrors(undefined);
+      }
+    },
+    []
+  );
+
+  /**
+   * validate
+   * Trigger a form validation, also changes the status (validationErrors)
+   * @returns
+   */
   const validate = async data => {
 
     console.log('validate this', data);
@@ -228,7 +246,9 @@ const useFormValidation = ({ onError, fields, locale }) => {
     onHandleError,
     validationErrors,
     setValidationErrors,
-    validate
+    validate,
+    isValid: _.isEmpty(validationErrors),
+    clearValidation
   }
 };
 

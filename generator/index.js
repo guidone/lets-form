@@ -335,6 +335,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           );
 
         } else if (field.component === 'array' && GroupWrapper) {
+          console.log('zio porco errore degli array', errors, errors[field.name])
           const component = (
             <Component
               key={field.name}
@@ -345,6 +346,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
               label={field.label}
               hint={field.hint}
               disabled={field.disabled}
+              errors={errors ? errors[field.name] : null}
               {...additionalFields}
             >
               <>
@@ -376,24 +378,28 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             >{component}</GroupWrapper>);
         }
 
-        // generate the validation rule, takes into account react-hook-form
-        // validation format and i18n strings
-        /*const rules = translateValidation(
-          {
-            required: field.required,
-            ...field.validation
-          },
-          locale,
-          onJavascriptError
-        );*/
 
-        console.log('+++++++++++ actual errors', errors)
+        let error;
+        if (field.component === 'array') {
+          // pass errors down the the array component only if it's "inline"
+          error = errors != null && showErrors === 'inline' ? errors[field.name] : null;
+        } else if (errors && errors[field.name] && errors[field.name].errorMessage) {
+          // if it's inline pass the error messgae, otherwise just a true in order to
+          // highlight the component
+          error = (showErrors === 'inline' ? errors[field.name].errorMessage : true);
+        }
+
+        let perComponentAdditionalFields = {
+          ...additionalFields
+        };
+        if (field.component === 'array') {
+          perComponentAdditionalFields.formShowErrors = showErrors;
+        }
 
         return (
           <Controller
             key={`field_${field.name}`}
             name={field.name}
-            //rules={rules}
             control={control}
             render={({ field: fieldInfo }) => {
               const component = <Component
@@ -411,11 +417,12 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 readOnly={readOnly || field.readOnly}
                 plaintext={plaintext}
                 required={field.required}
-                error={errors && errors[field.name] && errors[field.name].errorMessage ?
+                error={error}
+                /*error={errors && errors[field.name] && errors[field.name].errorMessage ?
                   (showErrors === 'inline' ? errors[field.name].errorMessage : true)
                   : undefined
-                }
-                {...additionalFields}
+                }*/
+                {...perComponentAdditionalFields}
                 {...field[framework]}
                 onChange={value => {
                   setValue(field.name, value);
@@ -481,6 +488,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     disableOnSubmit = true,
     resetAfterSubmit = true,
     context: formContext,
+    // validation errors, supplied externally
+    errors,
     ...rest
   }, ref) => {
     const { showErrors, connectors } = form;
@@ -503,12 +512,12 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       }
     });
 
-    const { handleSubmit, formState: { errors, isValid }, reset, control, getValues, setValue, trigger, register } = useForm({
+    const { handleSubmit, formState: reset, control, getValues, setValue, trigger, register } = useForm({
       defaultValues,
       mode: form.validationMode
     });
     useImperativeHandle(ref, () => ({
-      validate: async () => trigger()
+      validate: async () => validate()
     }));
     // const [validationErrors, setValidationErrors] = useState();
 
@@ -531,7 +540,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       form.version
     );
 
-    const { validate, onHandleError, validationErrors, setValidationErrors } = useFormValidation({
+    const { validate, onHandleError, validationErrors, setValidationErrors, isValid, clearValidation } = useFormValidation({
       onError,
       fields: actualFields,
       locale
@@ -735,6 +744,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const handleChange = useCallback(
       async (values, fieldName) => {
+
+        console.log('cambiato field ----- ', fieldName)
+
         // exit if null
         if (!transformers) {
           return;
@@ -745,6 +757,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         // if the changed field has a transformer
         if (transformers.onChange != null && !_.isEmpty(transformers.onChange[fieldName])) {
           transformersToRun.push(transformers.onChange[fieldName]);
+        }
+
+        // reset the validation error for that field
+        if (!_.isEmpty(fieldName)) {
+          clearValidation(fieldName);
         }
 
         // execute main transformer
@@ -786,6 +803,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const handleEnter = useCallback(
       () => {
+        // TODO fix this
         handleSubmit(onHandleSubmit, onHandleError)();
         onEnter();
       },
@@ -816,7 +834,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         />
       );
     }
-    // get errors from state or from hook, perhaps state is not needed
+    // get errors from state or from props (precedence)
     let formErrors = !_.isEmpty(errors) ? errors : validationErrors;
 
     if (debug) {
@@ -871,7 +889,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 setValue,
                 register,
                 debug,
-                errors: validationErrors,
+                errors: formErrors,
                 disabled: disabled || form.disabled,
                 readOnly: readOnly || form.readOnly,
                 plaintext: plaintext || form.plaintext,

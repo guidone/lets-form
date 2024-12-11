@@ -97,14 +97,17 @@ const ListArray = ({
   children,
   arrayType = 'arrayOfObject',
   align = 'top',
-  alignOffset = 0
+  alignOffset = 0,
+  error,
+  formShowErrors
 }) => {
   const { locales } = useFormContext();
   const form = {
     layout,
     fluid: true,
     locales, // copy the locales from the main form
-    fields
+    fields,
+    showErrors: formShowErrors
   };
   const [items, setItems] = useState(makeDefaultValue(value, arrayType, form));
 
@@ -182,6 +185,8 @@ const ListArray = ({
               defaultValues={item}
               onlyFields={true}
               onChange={handleChange}
+              errors={error != null && error.errorMessages != null && error.errorMessages.length > idx ?
+                error.errorMessages[idx] : undefined}
             />
           </ArrayItem>
         );
