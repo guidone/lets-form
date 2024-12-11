@@ -512,15 +512,13 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       }
     });
 
-    const { handleSubmit, formState: reset, control, getValues, setValue, trigger, register } = useForm({
+    const { handleSubmit, formState: reset, control, getValues, setValue, register } = useForm({
       defaultValues,
       mode: form.validationMode
     });
     useImperativeHandle(ref, () => ({
-      validate: async () => validate()
+      validate: async () => validate(getValues())
     }));
-    // const [validationErrors, setValidationErrors] = useState();
-
 
 
 
@@ -840,6 +838,9 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     if (debug) {
       console.log(`[LetsForm] Render form (${form.name})`);
     }
+
+    console.log('>>>>>> LetsForm refresh ', formErrors)
+
 
     return (
       <FormContext.Provider value={mutableState.current.currentContext}>

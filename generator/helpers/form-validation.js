@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
 
 import { reduceFields, isI18n, i18n } from "../../helpers";
@@ -173,6 +173,7 @@ const makeValidation = (fields, locale) => {
 
   // check all validators
   return async data => {
+    console.log('inside checking validation for ', data)
     // iterate all validators async
     let i;
     const fieldsToValidate = Object.keys(validateFns);
@@ -194,6 +195,8 @@ const makeValidation = (fields, locale) => {
 
 const useFormValidation = ({ onError, fields, locale }) => {
   const [validationErrors, setValidationErrors] = useState();
+  const [validateFn, setValidateFn] = useState(null);
+
   // TODO remove that
   const onHandleError = useCallback(
     data => {
@@ -222,25 +225,42 @@ const useFormValidation = ({ onError, fields, locale }) => {
     []
   );
 
+  useEffect(
+    () => {
+      console.log('+-+-+-+-+-+-+- making new validation function', fields)
+      // cannot store in state a plain function
+      //const mutableState = useRef(makeValidation(fields));
+
+      setValidateFn({
+        validate: makeValidation(fields)
+      });
+    },
+    [/*fields*/]
+  );
+
   /**
    * validate
    * Trigger a form validation, also changes the status (validationErrors)
    * @returns
    */
-  const validate = async data => {
+  const validate = useCallback(
+    async (data = {}) => {
 
-    console.log('validate this', data);
+      console.log('validate this', data, ' for', fields);
 
-    // TODO move into cache
-    const validateFn = makeValidation(fields);
+      const validateFn = makeValidation(fields);
+      // execute validation
+      //const validationErrors = await validateFn.validate(data, locale);
+      const validationErrors = await validateFn(data, locale);
 
-    // execute validation
-    const validationErrors = await validateFn(data, locale);
-    // set status
-    setValidationErrors(validationErrors);
+      console.log('prima del set state validation ', validationErrors)
+      // set status
+      setValidationErrors(validationErrors);
 
-    return validationErrors;
-  };
+      return validationErrors;
+    },
+    [validateFn]
+  );
 
   return {
     onHandleError,
