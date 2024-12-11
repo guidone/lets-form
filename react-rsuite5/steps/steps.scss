@@ -1,16 +1,18 @@
-.lf-control-steps {
-  .lf-step {
-    margin-top: var(--lf-field-margin);
-    margin-bottom: var(--lf-field-margin);
-  }
+.lf-form-react-rsuite5 {
+  .lf-control-steps {
+    .lf-step {
+      margin-top: var(--lf-field-margin);
+      margin-bottom: var(--lf-field-margin);
+    }
 
-  .lf-navigation-buttons.left {
-    text-align: left;
-  }
-  .lf-navigation-buttons.right {
-    text-align: right;
-  }
-  .lf-navigation-buttons.center {
-    text-align: center;
+    .lf-navigation-buttons.left {
+      text-align: left;
+    }
+    .lf-navigation-buttons.right {
+      text-align: right;
+    }
+    .lf-navigation-buttons.center {
+      text-align: center;
+    }
   }
 }

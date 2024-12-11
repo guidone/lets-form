@@ -1,23 +1,25 @@
-.lf-control-upload {
-  .upload-layout {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: stretch;
-    align-items: center;
+.lf-form-react-rsuite5 {
+  .lf-control-upload {
+    .upload-layout {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      align-items: center;
 
-    .upload {
-      order: 0;
-      flex: 0 0 auto;
-      align-self: auto;
-    }
+      .upload {
+        order: 0;
+        flex: 0 0 auto;
+        align-self: auto;
+      }
 
-    .hint {
-      margin-left: var(--lf-field-column-margin);
-      order: 0;
-      flex: 1 0 auto;
-      align-self: auto;
+      .hint {
+        margin-left: var(--lf-field-column-margin);
+        order: 0;
+        flex: 1 0 auto;
+        align-self: auto;
+      }
     }
   }
 }
