@@ -24,8 +24,10 @@ import { MissingComponent } from './helpers/missing-component';
 import { traverseChildren } from './helpers/dsl';
 import { useFormValidation } from './helpers/form-validation';
 import { upgradeFields, upgradeForm } from './helpers/upgrade-fields';
+import { useFormFields } from './helpers/form-fields';
 
 import './index.scss';
+
 
 const DEBUG_RENDER = true;
 const DEFAULT_FORM = { version: 2, fields: [] };
@@ -523,24 +525,33 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
 
     // store form fields, apply immediately transformers (collected from all fields)
-    const [formFields, setFormFields] = useState(null);
+    //const [formFields, setFormFields] = useState(null);
+
     const MergedComponents = mergeComponents(Fields, components);
+
+    const { formFields, setFormFields } = useFormFields({
+      components: MergedComponents,
+      framework,
+      form,
+      children
+    });
+
 
     const disabled = stateDisabled || disabledProp;
     // it's the combination of the fields from the form schema and those specified
     // with the DSL, from now on every func should reference this (not form.fields)
     // also upgrade fields if older version of the form
-    const actualFields = upgradeFields(
+    /*const actualFields = upgradeFields(
       [
         ...(form.fields ?? []),
         ...traverseChildren(children, { components: MergedComponents, framework })
       ],
       form.version
-    );
+    );*/
 
     const { validate, onHandleError, validationErrors, setValidationErrors, isValid, clearValidation } = useFormValidation({
       onError,
-      fields: actualFields,
+      fields: formFields,
       locale
     });
 
@@ -554,7 +565,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       () => {
         if (prealoadComponents) {
           const components = _.uniq(reduceFields(
-            actualFields,
+            //actualFields,
+            formFields,
             (field, acc) => [...acc, field.component],
             []
           ));
@@ -597,10 +609,12 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             ...formContext
           };
 
-          const newTransformers = collectTransformers(actualFields, form.transformer || form.script, onJavascriptError);
+          //const newTransformers = collectTransformers(actualFields, form.transformer || form.script, onJavascriptError);
+          const newTransformers = collectTransformers(formFields, form.transformer || form.script, onJavascriptError);
 
           // initial fields values
-          let newFields = actualFields;
+          //let newFields = actualFields;
+          let newFields = formFields;
 
           // collect all transformers to be executed
           const transformersToRun = Object.keys(newTransformers.onChange || {})
@@ -825,7 +839,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     if (plaintext) {
       return (
         <PlaintextForm
-          fields={actualFields}
+          fields={formFields}
           locale={locale}
           framework={framework}
           currentValues={getValues()}

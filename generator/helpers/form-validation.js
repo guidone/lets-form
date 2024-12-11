@@ -91,12 +91,13 @@ const makeErrorMessage = (field, locale) => {
   };
 };
 
+/**
+ * makeArrayValidationFn
+ * Make the validation function for an array. It checks minLength and maxLength, if no errors
+ * run the same validation in the sub-objects of every single array item
+ */
 const makeArrayValidationFn = (field, locale) => {
-
-
-
   const validateSubFields = makeValidation(field.fields, locale);
-
 
   return async (value) => {
     if (!isEmptyArray(value)) {
@@ -169,11 +170,8 @@ const makeValidation = (fields, locale) => {
     }
   );
 
-  console.log('validateFns', validateFns);
-
   // check all validators
   return async data => {
-    console.log('inside checking validation for ', data)
     // iterate all validators async
     let i;
     const fieldsToValidate = Object.keys(validateFns);
@@ -185,14 +183,21 @@ const makeValidation = (fields, locale) => {
       }
     }
 
-    console.log('final validation', validationErrors)
-
     return Object.keys(validationErrors).length !== 0 ? validationErrors : undefined;
   };
 };
 
 
-
+/**
+ * useValidation
+ * Handle the validation of the form, given the fields creates a validation form and store it
+ * in the state.
+ * Calling validate() executes the validation, returns the validation object and store itin state
+ * See ADR-20
+ * @param {onError} callback
+ * @param {array} fields The form fields
+ * @param {string} locale
+ */
 const useFormValidation = ({ onError, fields, locale }) => {
   const [validationErrors, setValidationErrors] = useState();
   const [validateFn, setValidateFn] = useState(null);
@@ -235,7 +240,7 @@ const useFormValidation = ({ onError, fields, locale }) => {
         validate: makeValidation(fields)
       });
     },
-    [/*fields*/]
+    [fields]
   );
 
   /**
