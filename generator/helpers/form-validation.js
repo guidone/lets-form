@@ -86,7 +86,7 @@ const makeValidateJs = (validateJsSource, onJavascriptError) => {
  * @returns
  */
 const makeFieldValidationFn = (field, locale, onJavascriptError) => {
-
+  // create validation function from script
   let validateJS;
   if (!_.isEmpty(_.trim(field.validation?.validate))) {
     validateJS = makeValidateJs(field.validation.validate, onJavascriptError)
@@ -162,8 +162,13 @@ const makeErrorMessage = (field, locale) => {
  * Make the validation function for an array. It checks minLength and maxLength, if no errors
  * run the same validation in the sub-objects of every single array item
  */
-const makeArrayValidationFn = (field, locale) => {
+const makeArrayValidationFn = (field, locale, onJavascriptError) => {
   const validateSubFields = makeValidation(field.fields, locale);
+  // create validation function from script
+  let validateJS;
+  if (!_.isEmpty(_.trim(field.validation?.validate))) {
+    validateJS = makeValidateJs(field.validation.validate, onJavascriptError)
+  }
 
   return async (value, formValues) => {
 
@@ -174,6 +179,16 @@ const makeArrayValidationFn = (field, locale) => {
       }
       if (isArray(value) && field.validation?.maxLength && value.length > field.validation.maxLength) {
         return makeErrorMessage(field, locale);
+      }
+      // check custom js, if there's js validation function
+      if (_.isFunction(validateJS)) {
+        const errorMessage = await validateJS(value, formValues);
+        if (errorMessage) {
+          return {
+            ...makeErrorMessage(field, locale),
+            errorMessage
+          };
+        }
       }
 
       let i;

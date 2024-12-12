@@ -1,11 +1,10 @@
 /* eslint-disable no-new-func */
 import React, { useCallback, useState, useEffect, Suspense, forwardRef, useImperativeHandle, useRef } from 'react';
-import { useForm, Controller } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import classNames from 'classnames';
 import _ from 'lodash';
 
 import { ValidationErrors } from '../components';
-import { FRAMEWORKS } from '../costants';
 import { reduceFields, applyTransformers, i18n } from '../helpers';
 import { ProxyFetch } from './helpers/proxy-fetch';
 import { useStylesheet } from '../hooks';
@@ -16,19 +15,14 @@ import * as Connectors from '../helpers/connectors';
 import { PlaintextForm } from '../components/plaintext-form';
 
 import { enrichWithLabels } from './helpers/enrich-with-labels';
-import { translateValidation } from './helpers/translate-validations';
 import { collectTransformers } from './helpers/collect-transformers';
-import { errorToString } from './helpers/error-to-string';
 import { mergeComponents } from './helpers/merge-components';
-import { MissingComponent } from './helpers/missing-component';
-import { traverseChildren } from './helpers/dsl';
 import { useFormValidation } from './helpers/form-validation';
-import { upgradeFields, upgradeForm } from './helpers/upgrade-fields';
+import { upgradeForm } from './helpers/upgrade-fields';
 import { useFormFields } from './helpers/form-fields';
 import { renderFields } from './helpers/render-fields';
 
 import './index.scss';
-
 
 const DEBUG_RENDER = true;
 const DEFAULT_FORM = { version: 2, fields: [] };
@@ -42,8 +36,6 @@ const mergeReRenders = (currentReRenders, newReRenders) => {
 };
 
 const GenerateGenerator = ({ Forms, Fields }) => {
-
-  //const renderFields = RenderFields({ Forms, Fields });
 
   const BaseFormGeneratorWithRef = ({
     // UI framework to use, mandatory
@@ -108,7 +100,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     // keep track of components to be re-rendered, update it without re-render the component
     const rerenders = useRef({});
     const locale = !localeProp || localeProp === 'auto' ? navigator.language : localeProp;
-
+    // useRef to store context and not trigger any refresh
     const mutableState = useRef({
       currentContext: {
         locales: form.locales,
@@ -124,11 +116,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     useImperativeHandle(ref, () => ({
       validate: async () => validate(getValues())
     }));
-
-
-
-    // store form fields, apply immediately transformers (collected from all fields)
-    //const [formFields, setFormFields] = useState(null);
 
     const MergedComponents = mergeComponents(Fields, components);
 
@@ -333,20 +320,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       [onSubmit, onSubmitSuccess, formFields]
     );
 
-    /*const onHandleError = useCallback(
-      data => {
-
-        console.log('+++++  validation errors', data)
-
-
-        setValidationErrors(data);
-        onError(data);
-      },
-      [onError]
-    );*/
-
-
-
     const handleReset = useCallback(
       () => {
         setValidationErrors(null);
@@ -360,8 +333,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const handleChange = useCallback(
       async (values, fieldName) => {
-
-        console.log('cambiato field ----- ', fieldName)
 
         // exit if null
         if (!transformers) {
@@ -419,11 +390,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const handleEnter = useCallback(
       () => {
-        // TODO fix this
-        handleSubmit(onHandleSubmit/*, onHandleError*/)();
+        handleSubmit(onHandleSubmit)();
         onEnter();
       },
-      [handleSubmit, onEnter, /*onHandleError,*/ onHandleSubmit]
+      [handleSubmit, onEnter, onHandleSubmit]
     );
 
     if (debug) {
@@ -456,9 +426,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     if (debug) {
       console.log(`[LetsForm] Render form (${form.name})`);
     }
-
-    console.log('>>>>>> LetsForm refresh ', formErrors)
-
 
     return (
       <FormContext.Provider value={mutableState.current.currentContext}>

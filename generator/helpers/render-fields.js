@@ -304,7 +304,6 @@ const renderFields = ({
         );
 
       } else if (field.component === 'array' && GroupWrapper) {
-        console.log('zio porco errore degli array', errors, errors[field.name])
         const component = (
           <Component
             key={field.name}
