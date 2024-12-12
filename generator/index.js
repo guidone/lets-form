@@ -152,7 +152,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       form.version
     );*/
 
-    const { validate, onHandleError, validationErrors, setValidationErrors, isValid, clearValidation } = useFormValidation({
+    const { validate, validationErrors, setValidationErrors, isValid, clearValidation } = useFormValidation({
       onError,
       fields: formFields,
       locale,
@@ -423,7 +423,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         handleSubmit(onHandleSubmit/*, onHandleError*/)();
         onEnter();
       },
-      [handleSubmit, onEnter, onHandleError, onHandleSubmit]
+      [handleSubmit, onEnter, /*onHandleError,*/ onHandleSubmit]
     );
 
     if (debug) {
@@ -475,7 +475,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           <Suspense fallback={Loader ? <Loader /> : <div>Loading...</div>}>
             <Form
               key={`lf_${version}`}
-              onSubmit={handleSubmit(onHandleSubmit, onHandleError)}
+              onSubmit={handleSubmit(onHandleSubmit/*, onHandleError*/)}
               name={formName}
               defaultValues={defaultValues}
               onlyFields={onlyFields}

@@ -33,7 +33,6 @@ const needsValidation = field => {
 }
 
 const makeValidateJs = (validateJsSource, onJavascriptError) => {
-
   try {
     const validator = new AsyncFunction(
       'value',
@@ -74,8 +73,7 @@ const makeValidateJs = (validateJsSource, onJavascriptError) => {
     error.errorType = 'compile';
     onJavascriptError(error);
   }
-
-}
+};
 
 
 
@@ -95,7 +93,6 @@ const makeFieldValidationFn = (field, locale, onJavascriptError) => {
   }
 
   return async (value, formValues) => {
-    //console.log('validating ', field.name, ' for ', value);
     if (!isEmpty(value)) {
       // check min/max length
       if (isString(value) && field.validation?.minLength && value.length < field.validation.minLength) {
@@ -136,7 +133,7 @@ const makeFieldValidationFn = (field, locale, onJavascriptError) => {
           };
         }
       }
-    } else if (field.required) {
+    } else if (isEmpty(value) && field.required) {
       return makeErrorMessage(field, locale);
     }
   }
@@ -168,9 +165,9 @@ const makeErrorMessage = (field, locale) => {
 const makeArrayValidationFn = (field, locale) => {
   const validateSubFields = makeValidation(field.fields, locale);
 
-  return async (value) => {
-    if (!isEmptyArray(value)) {
+  return async (value, formValues) => {
 
+    if (!isEmptyArray(value)) {
       // check min/max length
       if (isArray(value) && field.validation?.minLength && value.length < field.validation.minLength) {
         return makeErrorMessage(field, locale);
@@ -194,7 +191,7 @@ const makeArrayValidationFn = (field, locale) => {
           errorMessages: validationMessages
         };
       }
-    } else if (field.required) {
+    } else if (isEmptyArray(value) && field.required) {
       return makeErrorMessage(field, locale);
     }
   }
@@ -210,7 +207,6 @@ const makeArrayValidationFn = (field, locale) => {
  * @returns {function}
  */
 const makeValidation = (fields, locale, onJavascriptError) => {
-  const validationErrors = {};
   // collect all validatre functions per field
   const validateFns = reduceFields(
     fields,
@@ -240,6 +236,7 @@ const makeValidation = (fields, locale, onJavascriptError) => {
 
   // check all validators
   return async data => {
+    const validationErrors = {};
     // iterate all validators async
     let i;
     const fieldsToValidate = Object.keys(validateFns);
@@ -256,6 +253,7 @@ const makeValidation = (fields, locale, onJavascriptError) => {
   };
 };
 
+let globaloneFn;
 
 /**
  * useValidation
@@ -270,18 +268,7 @@ const makeValidation = (fields, locale, onJavascriptError) => {
 const useFormValidation = ({ onError, fields, locale, onJavascriptError }) => {
   const [validationErrors, setValidationErrors] = useState();
   const [validateFn, setValidateFn] = useState(null);
-
-  // TODO remove that
-  const onHandleError = useCallback(
-    data => {
-
-      console.log('+++++  validation errors da RHC', data)
-
-      setValidationErrors(data);
-      onError(data);
-    },
-    [onError]
-  );
+  const mutableState = useRef();
 
   /**
    * clearValidation
@@ -301,13 +288,8 @@ const useFormValidation = ({ onError, fields, locale, onJavascriptError }) => {
 
   useEffect(
     () => {
-      console.log('+-+-+-+-+-+-+- making new validation function', fields)
-      // cannot store in state a plain function
-      //const mutableState = useRef(makeValidation(fields));
-
-      setValidateFn({
-        validate: makeValidation(fields, locale, onJavascriptError)
-      });
+      // store in a useRef to avoid re-render
+      mutableState.current = makeValidation(fields, locale, onJavascriptError);
     },
     [fields, locale]
   );
@@ -322,12 +304,8 @@ const useFormValidation = ({ onError, fields, locale, onJavascriptError }) => {
 
       console.log('validate this', data, ' for', fields);
 
-      const validateFn = makeValidation(fields, locale, onJavascriptError);
       // execute validation
-      //const validationErrors = await validateFn.validate(data, locale);
-      const validationErrors = await validateFn(data, locale);
-
-      console.log('prima del set state validation ', validationErrors)
+      const validationErrors = await mutableState.current(data, locale);
       // set status
       setValidationErrors(validationErrors);
       // callback errors
@@ -339,7 +317,6 @@ const useFormValidation = ({ onError, fields, locale, onJavascriptError }) => {
   );
 
   return {
-    onHandleError,
     validationErrors,
     setValidationErrors,
     validate,
