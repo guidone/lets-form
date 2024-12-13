@@ -16,6 +16,16 @@ const mergeReRenders = (currentReRenders, newReRenders) => {
 };
 
 
+const collectFields = ({ form, children, framework, components }) => {
+  const fields = form.fields;
+  const traversedFields = traverseChildren(children, { components, framework });
+
+  const combinedFields = !_.isEmpty(traversedFields) ?
+    [...(fields ?? []), ...traverseChildren(children, { components, framework })] : fields;
+
+  return upgradeFields(combinedFields, form.version);
+};
+
 /**
  * useFormFields
  * Handle the concern of the current fields of the form. Fields may come from json or the DSL, also some
@@ -44,15 +54,15 @@ const useFormFields = ({
   // it's the combination of the fields from the form schema and those specified
   // with the DSL, from now on every func should reference this (not form.fields)
   // also upgrade fields if older version of the form
-  const initialFields = upgradeFields(
+  /*const initialFields = upgradeFields(
     [
       ...(form.fields ?? []),
       ...traverseChildren(children, { components, framework })
     ],
     form.version
-  );
+  );*/
   // state form fields
-  const [formFields, setFormFields] = useState(initialFields);
+  const [formFields, setFormFields] = useState(collectFields({ form, children, framework, components }));
   // store transformers
   const [transformers, setTransformers] = useState(null);
 
@@ -77,7 +87,7 @@ const useFormFields = ({
         //let newFields = formFields;
 
         // TODO move this!!!
-        let newFields = form.fields;
+        let newFields = collectFields({ form, children, framework });
 
         //const newTransformers = collectTransformers(actualFields, form.transformer || form.script, onJavascriptError);
         const newTransformers = collectTransformers(newFields, form.transformer || form.script, onJavascriptError);
