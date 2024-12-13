@@ -15,7 +15,6 @@ import * as Connectors from '../helpers/connectors';
 import { PlaintextForm } from '../components/plaintext-form';
 
 import { enrichWithLabels } from './helpers/enrich-with-labels';
-import { collectTransformers } from './helpers/collect-transformers';
 import { mergeComponents } from './helpers/merge-components';
 import { useFormValidation } from './helpers/form-validation';
 import { upgradeForm } from './helpers/upgrade-fields';
@@ -27,6 +26,7 @@ import './index.scss';
 const DEBUG_RENDER = true;
 const DEFAULT_FORM = { version: 2, fields: [] };
 
+// TODO duplicated, remove
 const mergeReRenders = (currentReRenders, newReRenders) => {
   if (newReRenders) {
     Object.keys(newReRenders)
@@ -92,7 +92,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const { showErrors, connectors } = form;
     const [formName, setFormName] = useState(form.name ?? _.uniqueId('form_'));
     useStylesheet(formName, form.css)
-    const [transformers, setTransformers] = useState(null);
+    //const [transformers, setTransformers] = useState(null);
     const [preloading, setPreloading] = useState(prealoadComponents);
     const [stateDisabled, setDisabled] = useState(false);
     // force re-render of the form
@@ -119,25 +119,25 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const MergedComponents = mergeComponents(Fields, components);
 
-    const { formFields, setFormFields } = useFormFields({
+    const { formFields, transformers, setFormFields } = useFormFields({
       components: MergedComponents,
       framework,
       form,
-      children
+      children,
+      onJavascriptError,
+      defaultValues,
+
+      // TODO refactor this
+      formContext,
+      mutableState,
+      rerenders,
+      setFormName,
+      formName,
+      setValue
     });
 
-
     const disabled = stateDisabled || disabledProp;
-    // it's the combination of the fields from the form schema and those specified
-    // with the DSL, from now on every func should reference this (not form.fields)
-    // also upgrade fields if older version of the form
-    /*const actualFields = upgradeFields(
-      [
-        ...(form.fields ?? []),
-        ...traverseChildren(children, { components: MergedComponents, framework })
-      ],
-      form.version
-    );*/
+
 
     const { validate, validationErrors, setValidationErrors, isValid, clearValidation } = useFormValidation({
       onError,
@@ -188,68 +188,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         }
       },
       []
-    );
-
-    // update internal state if form changes
-    useEffect(
-      () => {
-        const f = async () => {
-          // update the mutable state
-          mutableState.current.currentContext = {
-            ...mutableState.current.currentContext,
-            ...formContext
-          };
-
-          //const newTransformers = collectTransformers(actualFields, form.transformer || form.script, onJavascriptError);
-          const newTransformers = collectTransformers(formFields, form.transformer || form.script, onJavascriptError);
-
-          // initial fields values
-          //let newFields = actualFields;
-          let newFields = formFields;
-
-          // collect all transformers to be executed
-          const transformersToRun = Object.keys(newTransformers.onChange || {})
-            .filter(fieldName => !_.isEmpty(newTransformers.onChange[fieldName]))
-            .reduce(
-              (acc, fieldName) => [...acc, newTransformers.onChange[fieldName]],
-              !_.isEmpty(newTransformers.onRender) ? [newTransformers.onRender] : []
-            );
-
-          // execute all onChange transformers at the bootstrap of the form
-          for(let idx = 0; idx < transformersToRun.length; idx++) {
-            for await(const transformResult of applyTransformers(
-              formName,
-              framework,
-              newFields,
-              transformersToRun[idx],
-              defaultValues,
-              onJavascriptError,
-              mutableState.current.currentContext
-            )) {
-              const { fields: newFormFields, rerenders: newReRenders, changes } = transformResult;
-              mergeReRenders(rerenders.current, newReRenders);
-              if (newFormFields !== newFields) {
-                newFields = newFormFields
-                setFormFields(newFormFields);
-              }
-              if (changes) {
-                Object.keys(changes).forEach(key => setValue(key, changes[key]));
-              }
-            }
-          }
-
-          setFormName(form.name ?? _.uniqueId('form_'));
-          setTransformers(newTransformers);
-
-          // if transformed fields different than current one, then save
-          if (newFields !== formFields) {
-            setFormFields(newFields);
-          }
-        }
-        f();
-      },
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      [form, framework, children, formContext] // don't put defaultValues here
     );
 
     const onHandleSubmit = useCallback(

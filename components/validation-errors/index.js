@@ -14,15 +14,21 @@ const RawValidationErrors = ({
     <>
       {keys.map(fieldName => {
         const errorObj = errors[fieldName];
-        if (_.isArray(errorObj.errorMessages)) {
-          return errorObj.errorMessages.map((errorMessage, idx) => (
-            <RawValidationErrors
-              errors={errorMessage}
-              scope={`${fieldName}(${idx+1}) - `}
-            />
-          ))
+        if (errorObj && _.isArray(errorObj.errorMessages)) {
+          return errorObj.errorMessages
+            .map((errorMessage, idx) => {
+              if (errorMessage) {
+                return (
+                  <RawValidationErrors
+                    key={errorObj.label || fieldName}
+                    errors={errorMessage}
+                    scope={`${errorObj.label || fieldName}(${idx+1}) - `}
+                  />
+                );
+              }
+            })
 
-        } else if (_.isString(errorObj.errorMessage)) {
+        } else if (errorObj && _.isString(errorObj.errorMessage)) {
           return (
             <div key={fieldName}>
               <b>{scope}{errorObj.label}:</b>
@@ -42,7 +48,11 @@ const ValidationErrors = ({
   className,
   scope = ''
 }) => {
-  const keys = Object.keys(errors);
+  const keys = Object.keys(errors).filter(key => errors[key]);
+
+  if (keys.length === 0) {
+    return;
+  }
 
   return (
     <div className={classNames('lf-validation-errors', className)}>

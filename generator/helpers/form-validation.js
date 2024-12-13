@@ -54,7 +54,7 @@ const makeValidateJs = (validateJsSource, onJavascriptError) => {
         onJavascriptError(error);
       }
       if (v === true) {
-        return true;
+        return null;
       } else if (v === false) {
         return errorMessage;
       } else if (_.isString(v)) {
@@ -62,7 +62,7 @@ const makeValidateJs = (validateJsSource, onJavascriptError) => {
       } else if (isI18n(v)) {
         return i18n(v, locale);
       }
-      return true;
+      return null;
     }
 
     return validateJS;
@@ -171,7 +171,6 @@ const makeArrayValidationFn = (field, locale, onJavascriptError) => {
   }
 
   return async (value, formValues) => {
-
     if (!isEmptyArray(value)) {
       // check min/max length
       if (isArray(value) && field.validation?.minLength && value.length < field.validation.minLength) {
@@ -196,8 +195,6 @@ const makeArrayValidationFn = (field, locale, onJavascriptError) => {
       for (i = 0; i < value.length; i++) {
         validationMessages[i] = await validateSubFields(value[i]);
       }
-
-      // TODO implement js validator
 
       if (validationMessages.some(o => o != null)) {
         return {
@@ -259,6 +256,7 @@ const makeValidation = (fields, locale, onJavascriptError) => {
       const currentFieldName = fieldsToValidate[i];
       // pass the single value to check but also the all values
       const validationResult = await validateFns[currentFieldName](data[currentFieldName], data);
+      console.log('inner validation', currentFieldName, validationResult)
       if (validationResult) {
         validationErrors[currentFieldName] = validationResult;
       }
