@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
 
 import { upgradeFields } from './upgrade-fields';
@@ -15,7 +15,14 @@ const mergeReRenders = (currentReRenders, newReRenders) => {
   };
 };
 
-
+/**
+ * collectFields
+ * it's the combination of the fields from the form schema and those specified
+ * with the DSL, from now on every func should reference this (not form.fields)
+ * also upgrade fields if older version of the form
+ * @param {*} param0
+ * @returns
+ */
 const collectFields = ({ form, children, framework, components }) => {
   const fields = form.fields;
   const traversedFields = traverseChildren(children, { components, framework });
@@ -42,56 +49,41 @@ const useFormFields = ({
   children,
   onJavascriptError,
   defaultValues,
+  formContext,
+  locale,
 
   // refactor below
-  formContext,
-  mutableState,
-  setFormName,
-  formName,
   setValue,
   rerenders // TODO move this
 }) => {
-  // it's the combination of the fields from the form schema and those specified
-  // with the DSL, from now on every func should reference this (not form.fields)
-  // also upgrade fields if older version of the form
-  /*const initialFields = upgradeFields(
-    [
-      ...(form.fields ?? []),
-      ...traverseChildren(children, { components, framework })
-    ],
-    form.version
-  );*/
   // state form fields
   const [formFields, setFormFields] = useState(collectFields({ form, children, framework, components }));
   // store transformers
   const [transformers, setTransformers] = useState(null);
 
+  const mutableState = useRef({
+    currentFormContext: {
+      locales: form.locales,
+      locale: locale,
+      formName: form.name ?? _.uniqueId('form_'),
+      ...formContext
+    }
+  });
 
   useEffect(
     () => {
-
-      console.log('--------- creating new fields')
-
       const f = async () => {
 
-
-        // update the mutable state
+        // update the mutable state, will be used inside transformers
         mutableState.current.currentContext = {
           ...mutableState.current.currentContext,
           ...formContext
         };
 
-        // initial fields values
-        // TODO here is the problem
-        //let newFields = actualFields;
-        //let newFields = formFields;
-
-        // TODO move this!!!
+        // collect fields from json and dsl
         let newFields = collectFields({ form, children, framework });
-
-        //const newTransformers = collectTransformers(actualFields, form.transformer || form.script, onJavascriptError);
+        const formName = mutableState.current.currentContext?.formName;
         const newTransformers = collectTransformers(newFields, form.transformer || form.script, onJavascriptError);
-        //console.log('newTransformers', newTransformers, 'from', newFields)
 
         // collect all transformers to be executed
         const transformersToRun = Object.keys(newTransformers.onChange || {})
@@ -100,8 +92,6 @@ const useFormFields = ({
             (acc, fieldName) => [...acc, newTransformers.onChange[fieldName]],
             !_.isEmpty(newTransformers.onRender) ? [newTransformers.onRender] : []
           );
-
-        //  console.log('transformersToRun', transformersToRun)
 
         // execute all onChange transformers at the bootstrap of the form
         for(let idx = 0; idx < transformersToRun.length; idx++) {
@@ -126,7 +116,8 @@ const useFormFields = ({
           }
         }
 
-        setFormName(form.name ?? _.uniqueId('form_'));
+        // set new form name
+        mutableState.current.currentContext = form.name ?? _.uniqueId('form_');
         setTransformers(newTransformers);
 
         // if transformed fields different than current one, then save
@@ -140,12 +131,12 @@ const useFormFields = ({
     [form, framework, children, formContext] // don't put defaultValues here
   );
 
-
-
   return {
     formFields,
     transformers,
-    setFormFields
+    setFormFields,
+    currentFormContext: mutableState.current.currentFormContext,
+    formName: mutableState.current.currentFormContext?.formName
   };
 };
 
