@@ -2,11 +2,14 @@ import React from 'react';
 import classNames from 'classnames';
 import _ from 'lodash';
 
+import { reduceFields, isI18n, i18n } from '../../helpers';
+
 import './index.scss';
 
 const RawValidationErrors = ({
   errors = {},
-  scope = ''
+  scope = '',
+  locale
 }) => {
   const keys = Object.keys(errors);
 
@@ -18,22 +21,25 @@ const RawValidationErrors = ({
           return errorObj.errorMessages
             .map((errorMessage, idx) => {
               if (errorMessage) {
+                const label = i18n(errorObj.label, locale);
                 return (
                   <RawValidationErrors
-                    key={errorObj.label || fieldName}
+                    key={label || fieldName}
                     errors={errorMessage}
-                    scope={`${errorObj.label || fieldName}(${idx+1}) - `}
+                    scope={`${label || fieldName}(${idx+1}) - `}
                   />
                 );
               }
             })
 
         } else if (errorObj && _.isString(errorObj.errorMessage)) {
+          const label = i18n(errorObj.label, locale);
+          const errorMessage = errorObj.errorMessage ? i18n(errorObj.errorMessage, locale) : 'This is required';
           return (
             <div key={fieldName}>
-              <b>{scope}{errorObj.label}:</b>
+              <b>{scope}{label}:</b>
               &nbsp;
-              {errorObj.errorMessage ? errorObj.errorMessage : 'This is required' }
+              {errorMessage}
             </div>
           );
         }
@@ -46,7 +52,8 @@ const RawValidationErrors = ({
 const ValidationErrors = ({
   errors = {},
   className,
-  scope = ''
+  scope = '',
+  locale
 }) => {
   const keys = Object.keys(errors).filter(key => errors[key]);
 
@@ -56,7 +63,7 @@ const ValidationErrors = ({
 
   return (
     <div className={classNames('lf-validation-errors', className)}>
-      <RawValidationErrors scope={scope} errors={errors}/>
+      <RawValidationErrors scope={scope} errors={errors} locale={locale}/>
     </div>
   );
 };

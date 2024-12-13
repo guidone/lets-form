@@ -1,7 +1,7 @@
 import { useCallback, useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
 
-import { reduceFields, isI18n, i18n } from "../../helpers";
+import { reduceFields, isI18n, i18n } from '../../helpers';
 
 const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor;
 
@@ -32,12 +32,12 @@ const needsValidation = field => {
   return true;
 }
 
-const makeValidateJs = (validateJsSource, onJavascriptError) => {
+const makeValidateJs = (validation, locale, onJavascriptError) => {
   try {
     const validator = new AsyncFunction(
       'value',
       'formValues',
-      validateJsSource
+      validation.validate
     );
 
     // wrap the validator function, if returns strictly false then re-use
@@ -56,7 +56,7 @@ const makeValidateJs = (validateJsSource, onJavascriptError) => {
       if (v === true) {
         return null;
       } else if (v === false) {
-        return errorMessage;
+        return i18n(validation.errorMessage, locale);
       } else if (_.isString(v)) {
         return v;
       } else if (isI18n(v)) {
@@ -89,7 +89,7 @@ const makeFieldValidationFn = (field, locale, onJavascriptError) => {
   // create validation function from script
   let validateJS;
   if (!_.isEmpty(_.trim(field.validation?.validate))) {
-    validateJS = makeValidateJs(field.validation.validate, onJavascriptError)
+    validateJS = makeValidateJs(field.validation, locale, onJavascriptError);
   }
 
   return async (value, formValues) => {
@@ -167,7 +167,7 @@ const makeArrayValidationFn = (field, locale, onJavascriptError) => {
   // create validation function from script
   let validateJS;
   if (!_.isEmpty(_.trim(field.validation?.validate))) {
-    validateJS = makeValidateJs(field.validation.validate, onJavascriptError)
+    validateJS = makeValidateJs(field.validation, locale, onJavascriptError);
   }
 
   return async (value, formValues) => {
