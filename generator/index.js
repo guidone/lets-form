@@ -14,7 +14,6 @@ import FormContext from '../form-context';
 import * as Connectors from '../helpers/connectors';
 import { PlaintextForm } from '../components/plaintext-form';
 
-import { enrichWithLabels } from './helpers/enrich-with-labels';
 import { mergeComponents } from './helpers/merge-components';
 import { useFormValidation } from './helpers/form-validation';
 import { upgradeForm } from './helpers/upgrade-fields';
@@ -313,6 +312,12 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           }
         }
 
+        // if validation on change, then trigger it
+        if (form.validationMode === 'onChange') {
+          const validationErrors = await validate(getValues());
+          onError(validationErrors);
+        }
+
         onChange(values);
       },
       [onChange, formFields, formName, transformers, framework, onJavascriptError]
@@ -366,7 +371,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             <ValidationErrors
               className="top"
               locale={locale}
-              errors={enrichWithLabels(formErrors, formFields)}
+              errors={formErrors}
             />
           )}
           <Suspense fallback={Loader ? <Loader /> : <div>Loading...</div>}>
@@ -426,7 +431,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 <ValidationErrors
                   className="bottom"
                   locale={locale}
-                  errors={enrichWithLabels(formErrors, formFields)}
+                  errors={formErrors}
                 />
               )}
             </Form>
