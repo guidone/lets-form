@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import _ from 'lodash';
 
-import { reduceFields, isI18n, i18n } from '../../helpers';
+import { i18n } from '../../helpers';
 
 import './index.scss';
 

@@ -6,6 +6,7 @@ import { reduceFields, isI18n, i18n } from '../../helpers';
 const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor;
 
 const FIELDS_NOT_TO_VALIDATE = ['group', 'placeholder', 'placeholder-image', 'steps', 'tabs', 'columns'];
+const DEFAULT_ERROR_MESSAGE = 'Field is required';
 
 const isEmpty = value => value === null || value === undefined || value === '';
 const isString = value => typeof value === 'string';
@@ -56,7 +57,7 @@ const makeValidateJs = (validation, locale, onJavascriptError) => {
       if (v === true) {
         return null;
       } else if (v === false) {
-        return i18n(validation.errorMessage, locale);
+        return i18n(validation.message, locale) ?? DEFAULT_ERROR_MESSAGE;
       } else if (_.isString(v)) {
         return v;
       } else if (isI18n(v)) {
@@ -145,9 +146,9 @@ const makeErrorMessage = (field, locale) => {
   if (_.isString(field.validation?.message)) {
     errorMessage = field.validation.message;
   } else if (isI18n(field.validation?.message)) {
-    errorMessage = i18n(field.validation.message, locale) ?? 'Field is required';
+    errorMessage = i18n(field.validation.message, locale) ?? DEFAULT_ERROR_MESSAGE;
   } else {
-    errorMessage = 'Field is required';
+    errorMessage = DEFAULT_ERROR_MESSAGE;
   }
 
   return {
