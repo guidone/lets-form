@@ -47,6 +47,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     onReset = () => {},
     onError = () => {},
     onEnter = () => {},
+    onBlur = () => {},
     onJavascriptError = () => {},
     locale: localeProp,
     wrapper,
@@ -260,6 +261,16 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       [defaultValues, reset, onReset]
     );
 
+    const handleBlur = useCallback(
+      async () => {
+        if (form.validationMode === 'onBlur' || form.validationMode === 'all') {
+          const validationErrors = await validate(getValues());
+          onError(validationErrors);
+        }
+      },
+      [onBlur]
+    );
+
     const handleChange = useCallback(
       async (values, fieldName) => {
 
@@ -313,7 +324,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         }
 
         // if validation on change, then trigger it
-        if (form.validationMode === 'onChange') {
+        if (form.validationMode === 'onChange' || form.validationMode === 'all') {
           const validationErrors = await validate(getValues());
           onError(validationErrors);
         }
@@ -377,7 +388,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           <Suspense fallback={Loader ? <Loader /> : <div>Loading...</div>}>
             <Form
               key={`lf_${version}`}
-              onSubmit={handleSubmit(onHandleSubmit/*, onHandleError*/)}
+              onSubmit={handleSubmit(onHandleSubmit)}
+              onBlur={handleBlur}
               name={formName}
               defaultValues={defaultValues}
               onlyFields={onlyFields}
