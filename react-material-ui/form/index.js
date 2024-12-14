@@ -21,6 +21,7 @@ const FormMaterialUI = ({
   hideToolbar = false,
   onSubmit = () => {},
   onReset = () => {},
+  onBlur = () => {},
   custom
 }) => {
 
@@ -33,6 +34,7 @@ const FormMaterialUI = ({
       })}
       data-lf-form-name={name}
       onSubmit={onSubmit}
+      onBlur={onBlur}
     >
       {children}
       {!onlyFields && !hideToolbar && !plaintext && (

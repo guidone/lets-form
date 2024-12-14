@@ -20,6 +20,7 @@ const FormBootstrap = ({
   plaintext,
   labelSubmit = 'Submit',
   labelCancel = 'Cancel',
+  onBlur = () => {},
   custom
 }) => {
 
@@ -30,6 +31,7 @@ const FormBootstrap = ({
       })}
       data-lf-form-name={name}
       onSubmit={onSubmit}
+      onBlur={onBlur}
     >
       <div>
         {children}
