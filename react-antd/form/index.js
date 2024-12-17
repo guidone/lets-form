@@ -23,6 +23,7 @@ const FormAntD = ({
   buttonsAlign,
   onReset = () => {},
   onSubmit = () => {},
+  onBlur = () => {},
   labelWrap,
   labelAlign,
   requiredMark,
@@ -50,11 +51,11 @@ const FormAntD = ({
         'lf-form-react-antd-plaintext': plaintext,
         [buttonsAlign ? `lf-form-buttons-align-${buttonsAlign}` : undefined]: true
       })}
+      onBlur={onBlur}
       data-lf-form-name={name}
       layout={layout}
       labelAlign={labelAlign}
       labelWrap={labelWrap}
-      disabled={disabled}
       readOnly={readOnly}
       requiredMark={requiredMark}
       labelCol={buildColObject(labelColSpan, labelColOffset)}

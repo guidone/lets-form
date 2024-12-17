@@ -1,41 +1,44 @@
-.lf-control-input-text {
+.lf-form-react-rsuite5 {
+  .lf-control-input-text {
 
-  .rs-form-control-wrapper>.rs-input, .rs-form-control-wrapper>.rs-input-number {
-    width: 100%;
-  }
-
-  &.lf-full-width {
-    .rs-input-group {
+    .rs-form-control-wrapper>.rs-input,
+    .rs-form-control-wrapper>.rs-input-number {
       width: 100%;
     }
-  }
 
-  // this ensure the icon is centered vertically
-  .lf-prefix-icon {
-    max-height: 16px;
-  }
-
-  &.lf-size-lg {
-    .lf-prefix-icon {
-      max-height: 22px;
+    &.lf-full-width {
+      .rs-input-group {
+        width: 100%;
+      }
     }
-  }
 
-  &.lf-size-md {
+    // this ensure the icon is centered vertically
     .lf-prefix-icon {
       max-height: 16px;
     }
-  }
 
-  &.lf-size-sm {
-    .lf-prefix-icon {
-      max-height: 10px;
+    &.lf-size-lg {
+      .lf-prefix-icon {
+        max-height: 22px;
+      }
     }
-  }
 
-  &.lf-size-xs {
-    .lf-prefix-icon {
-      max-height: 4px;
+    &.lf-size-md {
+      .lf-prefix-icon {
+        max-height: 16px;
+      }
+    }
+
+    &.lf-size-sm {
+      .lf-prefix-icon {
+        max-height: 10px;
+      }
+    }
+
+    &.lf-size-xs {
+      .lf-prefix-icon {
+        max-height: 4px;
+      }
     }
   }
 }

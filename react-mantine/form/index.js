@@ -20,6 +20,7 @@ const MantineForm = ({
   labelCancel = 'Cancel',
   onSubmit = () => {},
   onReset = () => {},
+  onBlur = () => {},
   custom
 } = {}) => {
   return (
@@ -31,6 +32,7 @@ const MantineForm = ({
           [buttonsAlign ? `lf-form-buttons-align-${buttonsAlign}` : undefined]: true
         })}
         data-lf-form-name={name}
+        onBlur={onBlur}
       >
         {children}
         {!hideToolbar && !onlyFields && !plaintext && (

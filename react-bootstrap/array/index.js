@@ -14,7 +14,6 @@ const ListArrayBootstrap = I18N(
     tooltip,
     name,
     label,
-    error,
     ...rest
   }) => {
     return (
@@ -32,9 +31,9 @@ const ListArrayBootstrap = I18N(
           LetsFormComponent={LetsForm}
           {...rest}
         />
-        {hint && !error && <Form.Text>{hint}</Form.Text>}
-        {_.isString(error) && !_.isEmpty(error) && (
-          <Form.Control.Feedback type="invalid">{error}</Form.Control.Feedback>
+        {hint && !rest.error?.errorMessage && <Form.Text>{hint}</Form.Text>}
+        {_.isString(rest.error?.errorMessage) && !_.isEmpty(rest.error.errorMessage) && (
+          <Form.Control.Feedback type="invalid">{rest.error.errorMessage}</Form.Control.Feedback>
         )}
       </Form.Group>
     );

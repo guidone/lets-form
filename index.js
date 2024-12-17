@@ -29,9 +29,6 @@ const Forms = {
 
 const FormGenerator = GenerateGenerator({ Fields, Forms });
 
-
-
-
 export default FormGenerator ;
 export * from './helpers';
 export * from './costants';

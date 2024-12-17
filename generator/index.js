@@ -1,11 +1,10 @@
 /* eslint-disable no-new-func */
 import React, { useCallback, useState, useEffect, Suspense, forwardRef, useImperativeHandle, useRef } from 'react';
-import { useForm, Controller } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import classNames from 'classnames';
 import _ from 'lodash';
 
 import { ValidationErrors } from '../components';
-import { FRAMEWORKS } from '../costants';
 import { reduceFields, applyTransformers, i18n } from '../helpers';
 import { ProxyFetch } from './helpers/proxy-fetch';
 import { useStylesheet } from '../hooks';
@@ -15,20 +14,18 @@ import FormContext from '../form-context';
 import * as Connectors from '../helpers/connectors';
 import { PlaintextForm } from '../components/plaintext-form';
 
-import { enrichWithLabels } from './helpers/enrich-with-labels';
-import { translateValidation } from './helpers/translate-validations';
-import { collectTransformers } from './helpers/collect-transformers';
-import { errorToString } from './helpers/error-to-string';
 import { mergeComponents } from './helpers/merge-components';
-import { MissingComponent } from './helpers/missing-component';
-import { traverseChildren } from './helpers/dsl';
-import { upgradeFields, upgradeForm } from './helpers/upgrade-fields';
+import { useFormValidation } from './helpers/form-validation';
+import { upgradeForm } from './helpers/upgrade-fields';
+import { useFormFields } from './helpers/form-fields';
+import { renderFields } from './helpers/render-fields';
 
 import './index.scss';
 
 const DEBUG_RENDER = true;
 const DEFAULT_FORM = { version: 2, fields: [] };
 
+// TODO duplicated, remove
 const mergeReRenders = (currentReRenders, newReRenders) => {
   if (newReRenders) {
     Object.keys(newReRenders)
@@ -38,396 +35,6 @@ const mergeReRenders = (currentReRenders, newReRenders) => {
 };
 
 const GenerateGenerator = ({ Forms, Fields }) => {
-
-  const renderFields = ({
-    fields,
-    control,
-    framework,
-    onChange,
-    onEnter,
-    getValues,
-    setValue,
-    register,
-    Wrapper,
-    GroupWrapper,
-    BottomView,
-    PlaceholderWrapper,
-    debug,
-    disabled,
-    readOnly,
-    plaintext,
-    errors,
-    showErrors,
-    level = 1,
-    locale,
-    onJavascriptError,
-    Components,
-    prependView,
-    rerenders
-  }) => {
-
-
-    const renderedFields = (fields || [])
-      .filter(field => Wrapper || field.component !== 'hidden') // skip hidden type field (not in design mode)
-      .filter(field => Wrapper || field.hidden !== true) // skip fields with "hidden" attribute (not in design mode)
-      .map((field, index) => {
-        let Component;
-        if (Components[field.component] && Components[field.component][framework]) {
-          Component = Components[field.component][framework];
-        } else if (Components[field.component] && Components[field.component]['*']) {
-          Component = Components[field.component]['*'];
-        } else {
-          Component = MissingComponent;
-        }
-        // remove mandatory fields and platform specific fields
-        const additionalFields = _.omit(field, [
-          'id', 'name', 'label', /*'hint',*/ 'disabled', 'readOnly', 'plaintext', /*'size', 'placeholder',*/ 'component',
-          ...FRAMEWORKS
-        ]);
-
-        const renderFieldsParams = {
-          Wrapper,
-          GroupWrapper,
-          PlaceholderWrapper,
-          BottomView,
-          onChange,
-          onEnter,
-          control,
-          framework,
-          getValues,
-          setValue,
-          readOnly,
-          plaintext,
-          errors,
-          showErrors,
-          level: level + 1,
-          locale,
-          onJavascriptError,
-          Components,
-          rerenders
-        };
-
-        // special case of group
-        if (field.component === 'group') {
-          const component = (
-            <Component
-              key={field.name}
-              lfComponent={field.component}
-              lfFramework={framework}
-              lfLocale={locale}
-              name={field.name}
-              label={field.label}
-              hint={field.hint}
-              disabled={field.disabled}
-              {...additionalFields}
-            >
-              <>
-                {renderFields({
-                  ...renderFieldsParams,
-                  fields: field.fields,
-                  disabled: field.disabled ? true : disabled, // pass disabled status to inner components
-                  prependView: PlaceholderWrapper && (
-                    <PlaceholderWrapper
-                      key={`wrapper_top_field`}
-                      parentField={field}
-                      parentFieldTarget="fields"
-                      nextField={field.fields && field.fields.length ? field.fields[0] : null}
-                    />
-                  )
-                })}
-                {BottomView && <BottomView context="group" key={`bottom_view_${field.name}`} field={field} target="fields" />}
-              </>
-            </Component>
-          );
-          return GroupWrapper ?
-            <GroupWrapper
-              key={`wrapper_${field.name}`}
-              field={field}
-              level={level}
-              index={index}
-              className="group"
-            >{component}</GroupWrapper> : component;
-        } else if (field.component === 'columns') {
-          const component = (
-            <Component
-              key={field.name}
-              lfComponent={field.component}
-              lfFramework={framework}
-              lfLocale={locale}
-              name={field.name}
-              label={field.label}
-              hint={field.hint}
-              disabled={field.disabled}
-              {...additionalFields}
-            >
-              {column => {
-                return (
-                <>
-                  {renderFields({
-                    ...renderFieldsParams,
-                    fields: field.fields && _.isArray(field.fields[column]) ? field.fields[column] : [],
-                    disabled: field.disabled ? true : disabled, // pass disabled status to inner components
-                    prependView: PlaceholderWrapper && (
-                      <PlaceholderWrapper
-                        key={`wrapper_top_field`}
-                        parentField={field}
-                        parentFieldTarget="fields"
-                        parentFieldSubTarget={column}
-                        nextField={field.fields && field.fields.length ? field.fields[0] : null}
-                      />
-                    )
-                  })}
-                  {BottomView && (
-                    <BottomView
-                      context="columns"
-                      key={`bottom_view_${field.name}`}
-                      field={field}
-                      target="fields"
-                      subtarget={column}
-                    />
-                  )}
-                </>
-              );}}
-            </Component>
-          );
-          return GroupWrapper ?
-            <GroupWrapper
-              key={`wrapper_${field.name}`}
-              field={field}
-              level={level}
-              index={index}
-              className="columns"
-            >{component}</GroupWrapper> : component;
-        } else if (field.component === 'tabs') {
-          return (
-            <Controller
-              key={`field_${field.name}`}
-              name={field.name}
-              control={control}
-              render={({ field: fieldInfo }) => {
-                const values = getValues();
-                const component = (
-                  <Component
-                    key={field.name}
-                    lfComponent={field.component}
-                    lfFramework={framework}
-                    lfLocale={locale}
-                    name={field.name}
-                    label={field.label}
-                    hint={field.hint}
-                    disabled={field.disabled}
-                    value={values[field.name] ?? undefined}
-                    onChange={(value, _opts) => {
-                      setValue(field.name, value);
-                      onChange({ ...getValues(), [field.name]: value }, field.name);
-                    }}
-                    {...additionalFields}
-                    {...field[framework]}
-                  >
-                    {tab => {
-                      return (
-                      <>
-                        {renderFields({
-                          ...renderFieldsParams,
-                          fields: field.fields && _.isArray(field.fields[tab]) ? field.fields[tab] : [],
-                          disabled: field.disabled ? true : disabled, // pass disabled status to inner components
-                          prependView: PlaceholderWrapper && (
-                            <PlaceholderWrapper
-                              key={`wrapper_top_field`}
-                              parentField={field}
-                              parentFieldTarget="fields"
-                              parentFieldSubTarget={tab}
-                              nextField={field.fields && field.fields.length ? field.fields[0] : null}
-                            />
-                          )
-                        })}
-                        {BottomView && (
-                          <BottomView
-                            context="tabs"
-                            key={`bottom_view_${field.name}`}
-                            field={field}
-                            target="fields"
-                            subtarget={tab}
-                          />
-                        )}
-                      </>
-                    );}}
-                  </Component>
-                );
-                return GroupWrapper ?
-                  <GroupWrapper
-                    key={`wrapper_${field.name}`}
-                    field={field}
-                    level={level}
-                    index={index}
-                    className="tabs"
-                  >{component}</GroupWrapper> : component;
-              }}
-            />
-          );
-        } else if (field.component === 'steps') {
-          return (
-            <Controller
-              key={`field_${field.name}`}
-              name={field.name}
-              control={control}
-              render={({ field: fieldInfo }) => {
-                const values = getValues();
-                const component = (
-                  <Component
-                    key={field.name}
-                    lfComponent={field.component}
-                    lfFramework={framework}
-                    lfLocale={locale}
-                    name={field.name}
-                    label={field.label}
-                    hint={field.hint}
-                    disabled={field.disabled}
-                    value={values[field.name] ?? undefined}
-                    onChange={(value, _opts) => {
-                      setValue(field.name, value);
-                      onChange({ ...getValues(), [field.name]: value }, field.name);
-                    }}
-                    {...additionalFields}
-                    {...field[framework]}
-                  >
-                    {step => {
-                      return (
-                      <>
-                        {renderFields({
-                          ...renderFieldsParams,
-                          fields: field.fields && _.isArray(field.fields[step]) ? field.fields[step] : [],
-                          disabled: field.disabled ? true : disabled, // pass disabled status to inner components
-                          prependView: PlaceholderWrapper && (
-                            <PlaceholderWrapper
-                              key={`wrapper_top_field`}
-                              parentField={field}
-                              parentFieldTarget="fields"
-                              parentFieldSubTarget={step}
-                              nextField={field.fields && field.fields.length ? field.fields[0] : null}
-                            />
-                          )
-                        })}
-                        {BottomView && (
-                          <BottomView
-                            context="tabs"
-                            key={`bottom_view_${field.name}`}
-                            field={field}
-                            target="fields"
-                            subtarget={step}
-                          />
-                        )}
-                      </>
-                    );}}
-                  </Component>
-                );
-                return GroupWrapper ?
-                  <GroupWrapper
-                    key={`wrapper_${field.name}`}
-                    field={field}
-                    level={level}
-                    index={index}
-                    className="tabs"
-                  >{component}</GroupWrapper> : component;
-              }}
-            />
-          );
-
-        } else if (field.component === 'array' && GroupWrapper) {
-          const component = (
-            <Component
-              key={field.name}
-              lfComponent={field.component}
-              lfFramework={framework}
-              lfLocale={locale}
-              name={field.name}
-              label={field.label}
-              hint={field.hint}
-              disabled={field.disabled}
-              {...additionalFields}
-            >
-              <>
-                {renderFields({
-                  ...renderFieldsParams,
-                  fields: field.fields,
-                  disabled: field.disabled ? true : disabled, // pass disabled status to inner components
-                  prependView: PlaceholderWrapper && (
-                    <PlaceholderWrapper
-                      key={`wrapper_top_field`}
-                      parentField={field}
-                      parentFieldTarget="fields"
-                      nextField={field.fields && field.fields.length ? field.fields[0] : null}
-                    />
-                  )
-                })}
-                {BottomView && <BottomView context="array" key={`bottom_view_${field.name}`} field={field} target="fields" />}
-              </>
-            </Component>
-          );
-
-          return (
-            <GroupWrapper
-              key={`wrapper_${field.name}`}
-              field={field}
-              level={level}
-              index={index}
-              className="array"
-            >{component}</GroupWrapper>);
-        }
-
-        // generate the validation rule, takes into account react-hook-form
-        // validation format and i18n strings
-        const rules = translateValidation(
-          {
-            required: field.required,
-            ...field.validation
-          },
-          locale,
-          onJavascriptError
-        );
-
-        return (
-          <Controller
-            key={`field_${field.name}`}
-            name={field.name}
-            rules={rules}
-            control={control}
-            render={({ field: fieldInfo }) => {
-              const component = <Component
-                // not sure about this, not passing the ref
-                name={fieldInfo.name}
-                value={fieldInfo.value}
-                onBlur={fieldInfo.onBlur}
-                key={`field_${field.name}${rerenders[field.name] ? '_' + rerenders[field.name] : ''}`}
-                lfComponent={field.component}
-                lfFramework={framework}
-                lfLocale={locale}
-                lfOnEnter={onEnter}
-                label={field.label}
-                disabled={disabled || field.disabled}
-                readOnly={readOnly || field.readOnly}
-                plaintext={plaintext}
-                error={errors && errors[field.name] ?
-                  (showErrors === 'inline' ? errorToString(errors[field.name]) : true)
-                  : undefined
-                }
-                {...additionalFields}
-                {...field[framework]}
-                onChange={value => {
-                  setValue(field.name, value);
-                  onChange({ ...getValues(), [field.name]: value }, field.name);
-                }}
-              />;
-
-              return Wrapper ? <Wrapper key={`wrapper_${field.name}`} field={field} level={level} index={index}>{component}</Wrapper> : component;
-              }
-            }
-          />
-        );
-      });
-
-    return prependView ? [prependView, ...renderedFields] : renderedFields;
-  }
 
   const BaseFormGeneratorWithRef = ({
     // UI framework to use, mandatory
@@ -440,6 +47,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     onReset = () => {},
     onError = () => {},
     onEnter = () => {},
+    onBlur = () => {},
     onJavascriptError = () => {},
     locale: localeProp,
     wrapper,
@@ -477,12 +85,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     disableOnSubmit = true,
     resetAfterSubmit = true,
     context: formContext,
+    // validation errors, supplied externally
+    errors,
     ...rest
   }, ref) => {
     const { showErrors, connectors } = form;
-    const [formName, setFormName] = useState(form.name ?? _.uniqueId('form_'));
-    useStylesheet(formName, form.css)
-    const [transformers, setTransformers] = useState(null);
     const [preloading, setPreloading] = useState(prealoadComponents);
     const [stateDisabled, setDisabled] = useState(false);
     // force re-render of the form
@@ -491,37 +98,45 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const rerenders = useRef({});
     const locale = !localeProp || localeProp === 'auto' ? navigator.language : localeProp;
 
-    const mutableState = useRef({
-      currentContext: {
-        locales: form.locales,
-        locale: locale,
-        ...formContext
-      }
-    });
-
-    const { handleSubmit, formState: { errors, isValid }, reset, control, getValues, setValue, trigger, register } = useForm({
+    const { handleSubmit, formState: reset, control, getValues, setValue, register } = useForm({
       defaultValues,
       mode: form.validationMode
     });
     useImperativeHandle(ref, () => ({
-      validate: async () => trigger()
+      validate: async () => validate(getValues())
     }));
-    const [validationErrors, setValidationErrors] = useState();
-    // store form fields, apply immediately transformers (collected from all fields)
-    const [formFields, setFormFields] = useState(null);
+
     const MergedComponents = mergeComponents(Fields, components);
 
+    const {
+      formFields,
+      transformers,
+      setFormFields,
+      formName,
+      currentFormContext
+    } = useFormFields({
+      components: MergedComponents,
+      framework,
+      form,
+      children,
+      onJavascriptError,
+      defaultValues,
+      formContext,
+      locale,
+      // TODO refactor this
+      rerenders,
+      setValue
+    });
+    useStylesheet(formName, form.css);
     const disabled = stateDisabled || disabledProp;
-    // it's the combination of the fields from the form schema and those specified
-    // with the DSL, from now on every func should reference this (not form.fields)
-    // also upgrade fields if older version of the form
-    const actualFields = upgradeFields(
-      [
-        ...(form.fields ?? []),
-        ...traverseChildren(children, { components: MergedComponents, framework })
-      ],
-      form.version
-    );
+
+
+    const { validate, validationErrors, setValidationErrors, isValid, clearValidation } = useFormValidation({
+      onError,
+      fields: formFields,
+      locale,
+      onJavascriptError
+    });
 
     if (!framework) {
       lfError('missing "framework" prop');
@@ -533,7 +148,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       () => {
         if (prealoadComponents) {
           const components = _.uniq(reduceFields(
-            actualFields,
+            //actualFields,
+            formFields,
             (field, acc) => [...acc, field.component],
             []
           ));
@@ -566,68 +182,13 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       []
     );
 
-    // update internal state if form changes
-    useEffect(
-      () => {
-        const f = async () => {
-          // update the mutable state
-          mutableState.current.currentContext = {
-            ...mutableState.current.currentContext,
-            ...formContext
-          };
-
-          const newTransformers = collectTransformers(actualFields, form.transformer || form.script, onJavascriptError);
-
-          // initial fields values
-          let newFields = actualFields;
-
-          // collect all transformers to be executed
-          const transformersToRun = Object.keys(newTransformers.onChange || {})
-            .filter(fieldName => !_.isEmpty(newTransformers.onChange[fieldName]))
-            .reduce(
-              (acc, fieldName) => [...acc, newTransformers.onChange[fieldName]],
-              !_.isEmpty(newTransformers.onRender) ? [newTransformers.onRender] : []
-            );
-
-          // execute all onChange transformers at the bootstrap of the form
-          for(let idx = 0; idx < transformersToRun.length; idx++) {
-            for await(const transformResult of applyTransformers(
-              formName,
-              framework,
-              newFields,
-              transformersToRun[idx],
-              defaultValues,
-              onJavascriptError,
-              mutableState.current.currentContext
-            )) {
-              const { fields: newFormFields, rerenders: newReRenders, changes } = transformResult;
-              mergeReRenders(rerenders.current, newReRenders);
-              if (newFormFields !== newFields) {
-                newFields = newFormFields
-                setFormFields(newFormFields);
-              }
-              if (changes) {
-                Object.keys(changes).forEach(key => setValue(key, changes[key]));
-              }
-            }
-          }
-
-          setFormName(form.name ?? _.uniqueId('form_'));
-          setTransformers(newTransformers);
-
-          // if transformed fields different than current one, then save
-          if (newFields !== formFields) {
-            setFormFields(newFields);
-          }
-        }
-        f();
-      },
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      [form, framework, children, formContext] // don't put defaultValues here
-    );
-
     const onHandleSubmit = useCallback(
       async data => {
+        const validationResult = await validate(data);
+        // stop submit if invalid
+        if (validationResult) {
+          return;
+        }
         // call connectors if any
         if (Array.isArray(connectors) && connectors.length !== 0) {
           // call onSubmit immediately
@@ -689,14 +250,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       [onSubmit, onSubmitSuccess, formFields]
     );
 
-    const onHandleError = useCallback(
-      data => {
-        setValidationErrors(data);
-        onError(data);
-      },
-      [onError]
-    );
-
     const handleReset = useCallback(
       () => {
         setValidationErrors(null);
@@ -708,8 +261,19 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       [defaultValues, reset, onReset]
     );
 
+    const handleBlur = useCallback(
+      async () => {
+        if (form.validationMode === 'onBlur' || form.validationMode === 'all') {
+          const validationErrors = await validate(getValues());
+          onError(validationErrors);
+        }
+      },
+      [onBlur]
+    );
+
     const handleChange = useCallback(
       async (values, fieldName) => {
+
         // exit if null
         if (!transformers) {
           return;
@@ -720,6 +284,11 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         // if the changed field has a transformer
         if (transformers.onChange != null && !_.isEmpty(transformers.onChange[fieldName])) {
           transformersToRun.push(transformers.onChange[fieldName]);
+        }
+
+        // reset the validation error for that field
+        if (!_.isEmpty(fieldName)) {
+          clearValidation(fieldName);
         }
 
         // execute main transformer
@@ -733,7 +302,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             transformersToRun[idx],
             values,
             onJavascriptError,
-            mutableState.current.currentContext
+            currentFormContext
           )) {
             const { fields: newFormFields, rerenders: newReRenders, changes } = transformResult;
             // merge re-renders request to the current ones, in a useRef, must per persisted like a state
@@ -754,6 +323,12 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           }
         }
 
+        // if validation on change, then trigger it
+        if (form.validationMode === 'onChange' || form.validationMode === 'all') {
+          const validationErrors = await validate(getValues());
+          onError(validationErrors);
+        }
+
         onChange(values);
       },
       [onChange, formFields, formName, transformers, framework, onJavascriptError]
@@ -761,10 +336,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const handleEnter = useCallback(
       () => {
-        handleSubmit(onHandleSubmit, onHandleError)();
+        handleSubmit(onHandleSubmit)();
         onEnter();
       },
-      [handleSubmit, onEnter, onHandleError, onHandleSubmit]
+      [handleSubmit, onEnter, onHandleSubmit]
     );
 
     if (debug) {
@@ -784,14 +359,14 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     if (plaintext) {
       return (
         <PlaintextForm
-          fields={actualFields}
+          fields={formFields}
           locale={locale}
           framework={framework}
           currentValues={getValues()}
         />
       );
     }
-    // get errors from state or from hook, perhaps state is not needed
+    // get errors from state or from props (precedence)
     let formErrors = !_.isEmpty(errors) ? errors : validationErrors;
 
     if (debug) {
@@ -799,7 +374,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     }
 
     return (
-      <FormContext.Provider value={mutableState.current.currentContext}>
+      <FormContext.Provider value={currentFormContext}>
         <div
           className={classNames('lf-lets-form', { 'lf-lets-form-edit-mode': demo }, className)}
         >
@@ -807,13 +382,14 @@ const GenerateGenerator = ({ Forms, Fields }) => {
             <ValidationErrors
               className="top"
               locale={locale}
-              errors={enrichWithLabels(formErrors, formFields)}
+              errors={formErrors}
             />
           )}
           <Suspense fallback={Loader ? <Loader /> : <div>Loading...</div>}>
             <Form
               key={`lf_${version}`}
-              onSubmit={handleSubmit(onHandleSubmit, onHandleError)}
+              onSubmit={handleSubmit(onHandleSubmit)}
+              onBlur={handleBlur}
               name={formName}
               defaultValues={defaultValues}
               onlyFields={onlyFields}
@@ -846,7 +422,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 setValue,
                 register,
                 debug,
-                errors,
+                errors: formErrors,
                 disabled: disabled || form.disabled,
                 readOnly: readOnly || form.readOnly,
                 plaintext: plaintext || form.plaintext,
@@ -867,7 +443,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                 <ValidationErrors
                   className="bottom"
                   locale={locale}
-                  errors={enrichWithLabels(formErrors, formFields)}
+                  errors={formErrors}
                 />
               )}
             </Form>

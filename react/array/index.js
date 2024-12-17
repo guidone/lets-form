@@ -15,10 +15,9 @@ const ListArrayReact = I18N(
     tooltip,
     name,
     label,
-    error,
     ...rest
   }) => {
-    const hasError = error && _.isString(error);
+    const hasError = rest.error && _.isString(rest.error?.errorMessage) && rest.error?.errorMessage;
 
     return (
       <div
@@ -34,7 +33,7 @@ const ListArrayReact = I18N(
           {...rest}
         />
         {hint && !hasError && <div className="lf-form-react-message">{hint}</div>}
-        {hasError && <div className="lf-form-react-error-message">{error}</div>}
+        {hasError && <div className="lf-form-react-error-message">{rest.error?.errorMessage}</div>}
       </div>
     );
   },

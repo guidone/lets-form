@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import { Input } from '@mantine/core';
 
 import { I18N } from '../../components';
@@ -14,7 +15,6 @@ const MantineListArray = I18N(
     tooltip,
     name,
     label,
-    error,
     ...rest
   }) => {
     return (
@@ -25,7 +25,7 @@ const MantineListArray = I18N(
           {...passRest(rest)}
         />
         {hint && <Input.Description>{hint}</Input.Description>}
-        {error && <Input.Error>{error}</Input.Error>}
+        {_.isString(rest.error?.errorMessage) && <Input.Error>{rest.error?.errorMessage}</Input.Error>}
       </div>
     );
   },

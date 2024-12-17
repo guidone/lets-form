@@ -23,6 +23,7 @@ const FormRsuite5 = ({
   hideToolbar = false,
   onSubmit = () => {},
   onReset = () => {},
+  onBlur = () => {},
   custom
 }) => {
   if (onlyFields) {
@@ -47,6 +48,7 @@ const FormRsuite5 = ({
       fluid={fluid}
       readOnly={readOnly}
       disabled={disabled}
+      onBlur={onBlur}
     >
       <div>
         {children}

@@ -8,6 +8,8 @@ import LetsForm from '../../react-rsuite5';
 import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
 
+import './list-array.scss';
+
 const ListArrayRSuite5 = I18N(
   ({
     hint,
@@ -31,8 +33,10 @@ const ListArrayRSuite5 = I18N(
         )}
         <ListArray
           LetsFormComponent={LetsForm}
+          name={name}
           {...passRest(rest)}
         />
+        {_.isString(rest.error?.errorMessage) && <Form.HelpText className="array-error-message">{rest.error.errorMessage}</Form.HelpText>}
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}
       </Form.Group>
     );
