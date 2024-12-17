@@ -1,5 +1,13 @@
 # LetsForm Designer Changelog
 
+## v0.9.9
+- feat: improved validation messages
+- feat: nested validation for arrays
+- refactored validation library
+- fix: RSuite scoped styles
+- fix: AntD toggle
+- updted AntD, MUI, RSuite and Mantine
+
 ## v0.9.8
 - cleanup and rotate keys
 
