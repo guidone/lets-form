@@ -1,5 +1,12 @@
 # LetsForm Changelog
 
+## v0.12.0
+- feat: improved validation messages
+- feat: nested validation for arrays
+- refactored validation library
+- fix: RSuite scoped styles
+- fix: AntD toggle
+
 ## v0.11.6
 - fix: missing `form` prop in TypeScript definitions
 
