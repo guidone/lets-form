@@ -18,10 +18,9 @@ const ListArrayMui = I18N(
     tooltip,
     name,
     label,
-    error,
     ...rest
   }) => {
-    const hasError = error && _.isString(error);
+    const hasError = rest.error && _.isString(rest.error?.errorMessage) && rest.error?.errorMessage;
     const controlId = useId();
 
     return (
@@ -36,8 +35,8 @@ const ListArrayMui = I18N(
             LetsFormComponent={LetsForm}
             {...rest}
           />
-          {hint && !error && <FormHelperText>{hint}</FormHelperText>}
-          {error && <FormHelperText>{error}</FormHelperText>}
+          {hint && !hasError && <FormHelperText>{hint}</FormHelperText>}
+          {hasError && <FormHelperText>{rest.error?.errorMessage}</FormHelperText>}
         </FormControl>
       </div>
     );

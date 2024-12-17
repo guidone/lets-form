@@ -33,6 +33,7 @@ const ListArrayRSuite5 = I18N(
         )}
         <ListArray
           LetsFormComponent={LetsForm}
+          name={name}
           {...passRest(rest)}
         />
         {_.isString(rest.error?.errorMessage) && <Form.HelpText className="array-error-message">{rest.error.errorMessage}</Form.HelpText>}

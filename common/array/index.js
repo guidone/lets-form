@@ -86,6 +86,7 @@ const makeDefaultValue = (defaultValue, arrayType, form) => {
 const ListArray = ({
   LetsFormComponent,
   value,
+  name,
   onChange = () => {},
   disabled = false,
   readOnly = false,
@@ -107,6 +108,7 @@ const ListArray = ({
     fluid: true,
     locales, // copy the locales from the main form
     fields,
+    name: 'Array form ' + name,
     showErrors: formShowErrors
   };
   const [items, setItems] = useState(makeDefaultValue(value, arrayType, form));
@@ -135,20 +137,26 @@ const ListArray = ({
 
   const handleChange = useCallback(
     value => {
-      const newItems = items.map(i => i.id === value.id ? value : i);
-      setItems(newItems);
-      onChange(formatArray(newItems, arrayType));
+      setItems(items => {
+        const newItems = items.map(i => i.id === value.id ? value : i);
+        onChange(formatArray(newItems, arrayType));
+        return newItems;
+      })
     },
-    [items, onChange, arrayType]
+    [onChange, arrayType]
   );
 
   const handleRemove = useCallback(
     (item) => {
-      const newItems = items.filter(i => i.id !== item.id);
-      setItems(newItems);
-      onChange(formatArray(newItems, arrayType));
+      setItems(
+        items => {
+          const newItems = items.filter(i => i.id !== item.id);
+          onChange(formatArray(newItems, arrayType));
+          return newItems;
+        }
+      );
     },
-    [items, onChange, arrayType]
+    [onChange, arrayType]
   );
 
   if (children) {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form } from 'antd';
+import _ from 'lodash';
 
 import { ListArray } from '../../common';
 import LetsForm from '../../react-antd';
@@ -15,7 +16,6 @@ const ListArrayAntd = I18N(
     tooltip,
     name,
     label,
-    error,
     ...rest
   }) => {
     return (
@@ -24,11 +24,13 @@ const ListArrayAntd = I18N(
         data-lf-field-name={name}
         label={label}
         name={name}
-        help={error != null ? error : (hint && !tooltip ? hint : undefined)}
+        help={_.isString(rest.error?.errorMessage) && rest.error?.errorMessage ?
+          rest.error.errorMessage : (hint && !tooltip ? hint : undefined)
+        }
         required={required}
         tooltip={tooltip && hint}
-        hasFeedback={error != null}
-        validateStatus={error ? 'error': undefined}
+        hasFeedback={_.isString(rest.error?.errorMessage) && rest.error?.errorMessage}
+        validateStatus={rest.error ? 'error': undefined}
         valuePropName={null}
       >
         <ListArray

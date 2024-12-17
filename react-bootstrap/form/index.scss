@@ -7,4 +7,8 @@
     }
   }
 
+  .invalid-feedback {
+    // no reason why it's hidden
+    display: inherit !important;
+  }
 }
