@@ -100,7 +100,6 @@
         "all",
         "onBlur",
         "onChange",
-        "onTouched",
         "onSubmit"
       ]
     },
