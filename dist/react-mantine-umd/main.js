@@ -1,4 +1,4 @@
-/* LetsForm react-mantine v0.11.5 - UMD */
+/* LetsForm react-mantine v0.11.6 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
@@ -620,1077 +620,26 @@
   	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
   }
 
-  /** Used for built-in method references. */
-
-  var objectProto$e = Object.prototype;
-
   /**
-   * Checks if `value` is likely a prototype object.
+   * A specialized version of `_.map` for arrays without support for iteratee
+   * shorthands.
    *
    * @private
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
-   */
-  function isPrototype$4(value) {
-    var Ctor = value && value.constructor,
-      proto = typeof Ctor == 'function' && Ctor.prototype || objectProto$e;
-    return value === proto;
-  }
-  var _isPrototype = isPrototype$4;
-
-  /**
-   * Creates a unary function that invokes `func` with its argument transformed.
-   *
-   * @private
-   * @param {Function} func The function to wrap.
-   * @param {Function} transform The argument transform.
-   * @returns {Function} Returns the new function.
+   * @param {Array} [array] The array to iterate over.
+   * @param {Function} iteratee The function invoked per iteration.
+   * @returns {Array} Returns the new mapped array.
    */
 
-  function overArg$2(func, transform) {
-    return function (arg) {
-      return func(transform(arg));
-    };
-  }
-  var _overArg = overArg$2;
-
-  var overArg$1 = _overArg;
-
-  /* Built-in method references for those with the same name as other `lodash` methods. */
-  var nativeKeys$1 = overArg$1(Object.keys, Object);
-  var _nativeKeys = nativeKeys$1;
-
-  var isPrototype$3 = _isPrototype,
-    nativeKeys = _nativeKeys;
-
-  /** Used for built-in method references. */
-  var objectProto$d = Object.prototype;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty$b = objectProto$d.hasOwnProperty;
-
-  /**
-   * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
-   *
-   * @private
-   * @param {Object} object The object to query.
-   * @returns {Array} Returns the array of property names.
-   */
-  function baseKeys$2(object) {
-    if (!isPrototype$3(object)) {
-      return nativeKeys(object);
-    }
-    var result = [];
-    for (var key in Object(object)) {
-      if (hasOwnProperty$b.call(object, key) && key != 'constructor') {
-        result.push(key);
-      }
-    }
-    return result;
-  }
-  var _baseKeys = baseKeys$2;
-
-  /** Detect free variable `global` from Node.js. */
-
-  var freeGlobal$1 = typeof commonjsGlobal == 'object' && commonjsGlobal && commonjsGlobal.Object === Object && commonjsGlobal;
-  var _freeGlobal = freeGlobal$1;
-
-  var freeGlobal = _freeGlobal;
-
-  /** Detect free variable `self`. */
-  var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-
-  /** Used as a reference to the global object. */
-  var root$8 = freeGlobal || freeSelf || Function('return this')();
-  var _root = root$8;
-
-  var root$7 = _root;
-
-  /** Built-in value references. */
-  var Symbol$6 = root$7.Symbol;
-  var _Symbol = Symbol$6;
-
-  var Symbol$5 = _Symbol;
-
-  /** Used for built-in method references. */
-  var objectProto$c = Object.prototype;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty$a = objectProto$c.hasOwnProperty;
-
-  /**
-   * Used to resolve the
-   * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
-   * of values.
-   */
-  var nativeObjectToString$1 = objectProto$c.toString;
-
-  /** Built-in value references. */
-  var symToStringTag$1 = Symbol$5 ? Symbol$5.toStringTag : undefined;
-
-  /**
-   * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
-   *
-   * @private
-   * @param {*} value The value to query.
-   * @returns {string} Returns the raw `toStringTag`.
-   */
-  function getRawTag$1(value) {
-    var isOwn = hasOwnProperty$a.call(value, symToStringTag$1),
-      tag = value[symToStringTag$1];
-    try {
-      value[symToStringTag$1] = undefined;
-      var unmasked = true;
-    } catch (e) {}
-    var result = nativeObjectToString$1.call(value);
-    if (unmasked) {
-      if (isOwn) {
-        value[symToStringTag$1] = tag;
-      } else {
-        delete value[symToStringTag$1];
-      }
-    }
-    return result;
-  }
-  var _getRawTag = getRawTag$1;
-
-  /** Used for built-in method references. */
-
-  var objectProto$b = Object.prototype;
-
-  /**
-   * Used to resolve the
-   * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
-   * of values.
-   */
-  var nativeObjectToString = objectProto$b.toString;
-
-  /**
-   * Converts `value` to a string using `Object.prototype.toString`.
-   *
-   * @private
-   * @param {*} value The value to convert.
-   * @returns {string} Returns the converted string.
-   */
-  function objectToString$1(value) {
-    return nativeObjectToString.call(value);
-  }
-  var _objectToString = objectToString$1;
-
-  var Symbol$4 = _Symbol,
-    getRawTag = _getRawTag,
-    objectToString = _objectToString;
-
-  /** `Object#toString` result references. */
-  var nullTag = '[object Null]',
-    undefinedTag = '[object Undefined]';
-
-  /** Built-in value references. */
-  var symToStringTag = Symbol$4 ? Symbol$4.toStringTag : undefined;
-
-  /**
-   * The base implementation of `getTag` without fallbacks for buggy environments.
-   *
-   * @private
-   * @param {*} value The value to query.
-   * @returns {string} Returns the `toStringTag`.
-   */
-  function baseGetTag$a(value) {
-    if (value == null) {
-      return value === undefined ? undefinedTag : nullTag;
-    }
-    return symToStringTag && symToStringTag in Object(value) ? getRawTag(value) : objectToString(value);
-  }
-  var _baseGetTag = baseGetTag$a;
-
-  /**
-   * Checks if `value` is the
-   * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
-   * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is an object, else `false`.
-   * @example
-   *
-   * _.isObject({});
-   * // => true
-   *
-   * _.isObject([1, 2, 3]);
-   * // => true
-   *
-   * _.isObject(_.noop);
-   * // => true
-   *
-   * _.isObject(null);
-   * // => false
-   */
-
-  function isObject$6(value) {
-    var type = typeof value;
-    return value != null && (type == 'object' || type == 'function');
-  }
-  var isObject_1 = isObject$6;
-
-  var _isObject = /*@__PURE__*/getDefaultExportFromCjs(isObject_1);
-
-  var baseGetTag$9 = _baseGetTag,
-    isObject$5 = isObject_1;
-
-  /** `Object#toString` result references. */
-  var asyncTag = '[object AsyncFunction]',
-    funcTag$2 = '[object Function]',
-    genTag$1 = '[object GeneratorFunction]',
-    proxyTag = '[object Proxy]';
-
-  /**
-   * Checks if `value` is classified as a `Function` object.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a function, else `false`.
-   * @example
-   *
-   * _.isFunction(_);
-   * // => true
-   *
-   * _.isFunction(/abc/);
-   * // => false
-   */
-  function isFunction$2(value) {
-    if (!isObject$5(value)) {
-      return false;
-    }
-    // The use of `Object#toString` avoids issues with the `typeof` operator
-    // in Safari 9 which returns 'object' for typed arrays and other constructors.
-    var tag = baseGetTag$9(value);
-    return tag == funcTag$2 || tag == genTag$1 || tag == asyncTag || tag == proxyTag;
-  }
-  var isFunction_1 = isFunction$2;
-
-  var _isFunction = /*@__PURE__*/getDefaultExportFromCjs(isFunction_1);
-
-  var root$6 = _root;
-
-  /** Used to detect overreaching core-js shims. */
-  var coreJsData$1 = root$6['__core-js_shared__'];
-  var _coreJsData = coreJsData$1;
-
-  var coreJsData = _coreJsData;
-
-  /** Used to detect methods masquerading as native. */
-  var maskSrcKey = function () {
-    var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
-    return uid ? 'Symbol(src)_1.' + uid : '';
-  }();
-
-  /**
-   * Checks if `func` has its source masked.
-   *
-   * @private
-   * @param {Function} func The function to check.
-   * @returns {boolean} Returns `true` if `func` is masked, else `false`.
-   */
-  function isMasked$1(func) {
-    return !!maskSrcKey && maskSrcKey in func;
-  }
-  var _isMasked = isMasked$1;
-
-  /** Used for built-in method references. */
-
-  var funcProto$2 = Function.prototype;
-
-  /** Used to resolve the decompiled source of functions. */
-  var funcToString$2 = funcProto$2.toString;
-
-  /**
-   * Converts `func` to its source code.
-   *
-   * @private
-   * @param {Function} func The function to convert.
-   * @returns {string} Returns the source code.
-   */
-  function toSource$2(func) {
-    if (func != null) {
-      try {
-        return funcToString$2.call(func);
-      } catch (e) {}
-      try {
-        return func + '';
-      } catch (e) {}
-    }
-    return '';
-  }
-  var _toSource = toSource$2;
-
-  var isFunction$1 = isFunction_1,
-    isMasked = _isMasked,
-    isObject$4 = isObject_1,
-    toSource$1 = _toSource;
-
-  /**
-   * Used to match `RegExp`
-   * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
-   */
-  var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
-
-  /** Used to detect host constructors (Safari). */
-  var reIsHostCtor = /^\[object .+?Constructor\]$/;
-
-  /** Used for built-in method references. */
-  var funcProto$1 = Function.prototype,
-    objectProto$a = Object.prototype;
-
-  /** Used to resolve the decompiled source of functions. */
-  var funcToString$1 = funcProto$1.toString;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty$9 = objectProto$a.hasOwnProperty;
-
-  /** Used to detect if a method is native. */
-  var reIsNative = RegExp('^' + funcToString$1.call(hasOwnProperty$9).replace(reRegExpChar, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
-
-  /**
-   * The base implementation of `_.isNative` without bad shim checks.
-   *
-   * @private
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a native function,
-   *  else `false`.
-   */
-  function baseIsNative$1(value) {
-    if (!isObject$4(value) || isMasked(value)) {
-      return false;
-    }
-    var pattern = isFunction$1(value) ? reIsNative : reIsHostCtor;
-    return pattern.test(toSource$1(value));
-  }
-  var _baseIsNative = baseIsNative$1;
-
-  /**
-   * Gets the value at `key` of `object`.
-   *
-   * @private
-   * @param {Object} [object] The object to query.
-   * @param {string} key The key of the property to get.
-   * @returns {*} Returns the property value.
-   */
-
-  function getValue$1(object, key) {
-    return object == null ? undefined : object[key];
-  }
-  var _getValue = getValue$1;
-
-  var baseIsNative = _baseIsNative,
-    getValue = _getValue;
-
-  /**
-   * Gets the native function at `key` of `object`.
-   *
-   * @private
-   * @param {Object} object The object to query.
-   * @param {string} key The key of the method to get.
-   * @returns {*} Returns the function if it's native, else `undefined`.
-   */
-  function getNative$7(object, key) {
-    var value = getValue(object, key);
-    return baseIsNative(value) ? value : undefined;
-  }
-  var _getNative = getNative$7;
-
-  var getNative$6 = _getNative,
-    root$5 = _root;
-
-  /* Built-in method references that are verified to be native. */
-  var DataView$1 = getNative$6(root$5, 'DataView');
-  var _DataView = DataView$1;
-
-  var getNative$5 = _getNative,
-    root$4 = _root;
-
-  /* Built-in method references that are verified to be native. */
-  var Map$3 = getNative$5(root$4, 'Map');
-  var _Map = Map$3;
-
-  var getNative$4 = _getNative,
-    root$3 = _root;
-
-  /* Built-in method references that are verified to be native. */
-  var Promise$2 = getNative$4(root$3, 'Promise');
-  var _Promise = Promise$2;
-
-  var getNative$3 = _getNative,
-    root$2 = _root;
-
-  /* Built-in method references that are verified to be native. */
-  var Set$2 = getNative$3(root$2, 'Set');
-  var _Set = Set$2;
-
-  var getNative$2 = _getNative,
-    root$1 = _root;
-
-  /* Built-in method references that are verified to be native. */
-  var WeakMap$1 = getNative$2(root$1, 'WeakMap');
-  var _WeakMap = WeakMap$1;
-
-  var DataView = _DataView,
-    Map$2 = _Map,
-    Promise$1 = _Promise,
-    Set$1 = _Set,
-    WeakMap = _WeakMap,
-    baseGetTag$8 = _baseGetTag,
-    toSource = _toSource;
-
-  /** `Object#toString` result references. */
-  var mapTag$5 = '[object Map]',
-    objectTag$3 = '[object Object]',
-    promiseTag = '[object Promise]',
-    setTag$5 = '[object Set]',
-    weakMapTag$2 = '[object WeakMap]';
-  var dataViewTag$3 = '[object DataView]';
-
-  /** Used to detect maps, sets, and weakmaps. */
-  var dataViewCtorString = toSource(DataView),
-    mapCtorString = toSource(Map$2),
-    promiseCtorString = toSource(Promise$1),
-    setCtorString = toSource(Set$1),
-    weakMapCtorString = toSource(WeakMap);
-
-  /**
-   * Gets the `toStringTag` of `value`.
-   *
-   * @private
-   * @param {*} value The value to query.
-   * @returns {string} Returns the `toStringTag`.
-   */
-  var getTag$4 = baseGetTag$8;
-
-  // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
-  if (DataView && getTag$4(new DataView(new ArrayBuffer(1))) != dataViewTag$3 || Map$2 && getTag$4(new Map$2()) != mapTag$5 || Promise$1 && getTag$4(Promise$1.resolve()) != promiseTag || Set$1 && getTag$4(new Set$1()) != setTag$5 || WeakMap && getTag$4(new WeakMap()) != weakMapTag$2) {
-    getTag$4 = function (value) {
-      var result = baseGetTag$8(value),
-        Ctor = result == objectTag$3 ? value.constructor : undefined,
-        ctorString = Ctor ? toSource(Ctor) : '';
-      if (ctorString) {
-        switch (ctorString) {
-          case dataViewCtorString:
-            return dataViewTag$3;
-          case mapCtorString:
-            return mapTag$5;
-          case promiseCtorString:
-            return promiseTag;
-          case setCtorString:
-            return setTag$5;
-          case weakMapCtorString:
-            return weakMapTag$2;
-        }
-      }
-      return result;
-    };
-  }
-  var _getTag = getTag$4;
-
-  /**
-   * Checks if `value` is object-like. A value is object-like if it's not `null`
-   * and has a `typeof` result of "object".
-   *
-   * @static
-   * @memberOf _
-   * @since 4.0.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
-   * @example
-   *
-   * _.isObjectLike({});
-   * // => true
-   *
-   * _.isObjectLike([1, 2, 3]);
-   * // => true
-   *
-   * _.isObjectLike(_.noop);
-   * // => false
-   *
-   * _.isObjectLike(null);
-   * // => false
-   */
-
-  function isObjectLike$b(value) {
-    return value != null && typeof value == 'object';
-  }
-  var isObjectLike_1 = isObjectLike$b;
-
-  var baseGetTag$7 = _baseGetTag,
-    isObjectLike$a = isObjectLike_1;
-
-  /** `Object#toString` result references. */
-  var argsTag$2 = '[object Arguments]';
-
-  /**
-   * The base implementation of `_.isArguments`.
-   *
-   * @private
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is an `arguments` object,
-   */
-  function baseIsArguments$1(value) {
-    return isObjectLike$a(value) && baseGetTag$7(value) == argsTag$2;
-  }
-  var _baseIsArguments = baseIsArguments$1;
-
-  var baseIsArguments = _baseIsArguments,
-    isObjectLike$9 = isObjectLike_1;
-
-  /** Used for built-in method references. */
-  var objectProto$9 = Object.prototype;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty$8 = objectProto$9.hasOwnProperty;
-
-  /** Built-in value references. */
-  var propertyIsEnumerable$1 = objectProto$9.propertyIsEnumerable;
-
-  /**
-   * Checks if `value` is likely an `arguments` object.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is an `arguments` object,
-   *  else `false`.
-   * @example
-   *
-   * _.isArguments(function() { return arguments; }());
-   * // => true
-   *
-   * _.isArguments([1, 2, 3]);
-   * // => false
-   */
-  var isArguments$4 = baseIsArguments(function () {
-    return arguments;
-  }()) ? baseIsArguments : function (value) {
-    return isObjectLike$9(value) && hasOwnProperty$8.call(value, 'callee') && !propertyIsEnumerable$1.call(value, 'callee');
-  };
-  var isArguments_1 = isArguments$4;
-
-  /**
-   * Checks if `value` is classified as an `Array` object.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is an array, else `false`.
-   * @example
-   *
-   * _.isArray([1, 2, 3]);
-   * // => true
-   *
-   * _.isArray(document.body.children);
-   * // => false
-   *
-   * _.isArray('abc');
-   * // => false
-   *
-   * _.isArray(_.noop);
-   * // => false
-   */
-
-  var isArray$a = Array.isArray;
-  var isArray_1 = isArray$a;
-
-  var _isArray = /*@__PURE__*/getDefaultExportFromCjs(isArray_1);
-
-  /** Used as references for various `Number` constants. */
-
-  var MAX_SAFE_INTEGER$1 = 9007199254740991;
-
-  /**
-   * Checks if `value` is a valid array-like length.
-   *
-   * **Note:** This method is loosely based on
-   * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
-   *
-   * @static
-   * @memberOf _
-   * @since 4.0.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
-   * @example
-   *
-   * _.isLength(3);
-   * // => true
-   *
-   * _.isLength(Number.MIN_VALUE);
-   * // => false
-   *
-   * _.isLength(Infinity);
-   * // => false
-   *
-   * _.isLength('3');
-   * // => false
-   */
-  function isLength$3(value) {
-    return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER$1;
-  }
-  var isLength_1 = isLength$3;
-
-  var isFunction = isFunction_1,
-    isLength$2 = isLength_1;
-
-  /**
-   * Checks if `value` is array-like. A value is considered array-like if it's
-   * not a function and has a `value.length` that's an integer greater than or
-   * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
-   *
-   * @static
-   * @memberOf _
-   * @since 4.0.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
-   * @example
-   *
-   * _.isArrayLike([1, 2, 3]);
-   * // => true
-   *
-   * _.isArrayLike(document.body.children);
-   * // => true
-   *
-   * _.isArrayLike('abc');
-   * // => true
-   *
-   * _.isArrayLike(_.noop);
-   * // => false
-   */
-  function isArrayLike$3(value) {
-    return value != null && isLength$2(value.length) && !isFunction(value);
-  }
-  var isArrayLike_1 = isArrayLike$3;
-
-  var isBuffer$3 = {exports: {}};
-
-  /**
-   * This method returns `false`.
-   *
-   * @static
-   * @memberOf _
-   * @since 4.13.0
-   * @category Util
-   * @returns {boolean} Returns `false`.
-   * @example
-   *
-   * _.times(2, _.stubFalse);
-   * // => [false, false]
-   */
-
-  function stubFalse() {
-    return false;
-  }
-  var stubFalse_1 = stubFalse;
-
-  isBuffer$3.exports;
-
-  (function (module, exports) {
-  	var root = _root,
-  	  stubFalse = stubFalse_1;
-
-  	/** Detect free variable `exports`. */
-  	var freeExports = exports && !exports.nodeType && exports;
-
-  	/** Detect free variable `module`. */
-  	var freeModule = freeExports && 'object' == 'object' && module && !module.nodeType && module;
-
-  	/** Detect the popular CommonJS extension `module.exports`. */
-  	var moduleExports = freeModule && freeModule.exports === freeExports;
-
-  	/** Built-in value references. */
-  	var Buffer = moduleExports ? root.Buffer : undefined;
-
-  	/* Built-in method references for those with the same name as other `lodash` methods. */
-  	var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
-
-  	/**
-  	 * Checks if `value` is a buffer.
-  	 *
-  	 * @static
-  	 * @memberOf _
-  	 * @since 4.3.0
-  	 * @category Lang
-  	 * @param {*} value The value to check.
-  	 * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
-  	 * @example
-  	 *
-  	 * _.isBuffer(new Buffer(2));
-  	 * // => true
-  	 *
-  	 * _.isBuffer(new Uint8Array(2));
-  	 * // => false
-  	 */
-  	var isBuffer = nativeIsBuffer || stubFalse;
-  	module.exports = isBuffer; 
-  } (isBuffer$3, isBuffer$3.exports));
-
-  var isBufferExports = isBuffer$3.exports;
-
-  var baseGetTag$6 = _baseGetTag,
-    isLength$1 = isLength_1,
-    isObjectLike$8 = isObjectLike_1;
-
-  /** `Object#toString` result references. */
-  var argsTag$1 = '[object Arguments]',
-    arrayTag$1 = '[object Array]',
-    boolTag$3 = '[object Boolean]',
-    dateTag$3 = '[object Date]',
-    errorTag$1 = '[object Error]',
-    funcTag$1 = '[object Function]',
-    mapTag$4 = '[object Map]',
-    numberTag$3 = '[object Number]',
-    objectTag$2 = '[object Object]',
-    regexpTag$2 = '[object RegExp]',
-    setTag$4 = '[object Set]',
-    stringTag$3 = '[object String]',
-    weakMapTag$1 = '[object WeakMap]';
-  var arrayBufferTag$2 = '[object ArrayBuffer]',
-    dataViewTag$2 = '[object DataView]',
-    float32Tag$2 = '[object Float32Array]',
-    float64Tag$2 = '[object Float64Array]',
-    int8Tag$2 = '[object Int8Array]',
-    int16Tag$2 = '[object Int16Array]',
-    int32Tag$2 = '[object Int32Array]',
-    uint8Tag$2 = '[object Uint8Array]',
-    uint8ClampedTag$2 = '[object Uint8ClampedArray]',
-    uint16Tag$2 = '[object Uint16Array]',
-    uint32Tag$2 = '[object Uint32Array]';
-
-  /** Used to identify `toStringTag` values of typed arrays. */
-  var typedArrayTags = {};
-  typedArrayTags[float32Tag$2] = typedArrayTags[float64Tag$2] = typedArrayTags[int8Tag$2] = typedArrayTags[int16Tag$2] = typedArrayTags[int32Tag$2] = typedArrayTags[uint8Tag$2] = typedArrayTags[uint8ClampedTag$2] = typedArrayTags[uint16Tag$2] = typedArrayTags[uint32Tag$2] = true;
-  typedArrayTags[argsTag$1] = typedArrayTags[arrayTag$1] = typedArrayTags[arrayBufferTag$2] = typedArrayTags[boolTag$3] = typedArrayTags[dataViewTag$2] = typedArrayTags[dateTag$3] = typedArrayTags[errorTag$1] = typedArrayTags[funcTag$1] = typedArrayTags[mapTag$4] = typedArrayTags[numberTag$3] = typedArrayTags[objectTag$2] = typedArrayTags[regexpTag$2] = typedArrayTags[setTag$4] = typedArrayTags[stringTag$3] = typedArrayTags[weakMapTag$1] = false;
-
-  /**
-   * The base implementation of `_.isTypedArray` without Node.js optimizations.
-   *
-   * @private
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
-   */
-  function baseIsTypedArray$1(value) {
-    return isObjectLike$8(value) && isLength$1(value.length) && !!typedArrayTags[baseGetTag$6(value)];
-  }
-  var _baseIsTypedArray = baseIsTypedArray$1;
-
-  /**
-   * The base implementation of `_.unary` without support for storing metadata.
-   *
-   * @private
-   * @param {Function} func The function to cap arguments for.
-   * @returns {Function} Returns the new capped function.
-   */
-
-  function baseUnary$4(func) {
-    return function (value) {
-      return func(value);
-    };
-  }
-  var _baseUnary = baseUnary$4;
-
-  var _nodeUtil = {exports: {}};
-
-  _nodeUtil.exports;
-
-  (function (module, exports) {
-  	var freeGlobal = _freeGlobal;
-
-  	/** Detect free variable `exports`. */
-  	var freeExports = exports && !exports.nodeType && exports;
-
-  	/** Detect free variable `module`. */
-  	var freeModule = freeExports && 'object' == 'object' && module && !module.nodeType && module;
-
-  	/** Detect the popular CommonJS extension `module.exports`. */
-  	var moduleExports = freeModule && freeModule.exports === freeExports;
-
-  	/** Detect free variable `process` from Node.js. */
-  	var freeProcess = moduleExports && freeGlobal.process;
-
-  	/** Used to access faster Node.js helpers. */
-  	var nodeUtil = function () {
-  	  try {
-  	    // Use `util.types` for Node.js 10+.
-  	    var types = freeModule && freeModule.require && freeModule.require('util').types;
-  	    if (types) {
-  	      return types;
-  	    }
-
-  	    // Legacy `process.binding('util')` for Node.js < 10.
-  	    return freeProcess && freeProcess.binding && freeProcess.binding('util');
-  	  } catch (e) {}
-  	}();
-  	module.exports = nodeUtil; 
-  } (_nodeUtil, _nodeUtil.exports));
-
-  var _nodeUtilExports = _nodeUtil.exports;
-
-  var baseIsTypedArray = _baseIsTypedArray,
-    baseUnary$3 = _baseUnary,
-    nodeUtil$3 = _nodeUtilExports;
-
-  /* Node.js helper references. */
-  var nodeIsTypedArray = nodeUtil$3 && nodeUtil$3.isTypedArray;
-
-  /**
-   * Checks if `value` is classified as a typed array.
-   *
-   * @static
-   * @memberOf _
-   * @since 3.0.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
-   * @example
-   *
-   * _.isTypedArray(new Uint8Array);
-   * // => true
-   *
-   * _.isTypedArray([]);
-   * // => false
-   */
-  var isTypedArray$2 = nodeIsTypedArray ? baseUnary$3(nodeIsTypedArray) : baseIsTypedArray;
-  var isTypedArray_1 = isTypedArray$2;
-
-  var baseKeys$1 = _baseKeys,
-    getTag$3 = _getTag,
-    isArguments$3 = isArguments_1,
-    isArray$9 = isArray_1,
-    isArrayLike$2 = isArrayLike_1,
-    isBuffer$2 = isBufferExports,
-    isPrototype$2 = _isPrototype,
-    isTypedArray$1 = isTypedArray_1;
-
-  /** `Object#toString` result references. */
-  var mapTag$3 = '[object Map]',
-    setTag$3 = '[object Set]';
-
-  /** Used for built-in method references. */
-  var objectProto$8 = Object.prototype;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty$7 = objectProto$8.hasOwnProperty;
-
-  /**
-   * Checks if `value` is an empty object, collection, map, or set.
-   *
-   * Objects are considered empty if they have no own enumerable string keyed
-   * properties.
-   *
-   * Array-like values such as `arguments` objects, arrays, buffers, strings, or
-   * jQuery-like collections are considered empty if they have a `length` of `0`.
-   * Similarly, maps and sets are considered empty if they have a `size` of `0`.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is empty, else `false`.
-   * @example
-   *
-   * _.isEmpty(null);
-   * // => true
-   *
-   * _.isEmpty(true);
-   * // => true
-   *
-   * _.isEmpty(1);
-   * // => true
-   *
-   * _.isEmpty([1, 2, 3]);
-   * // => false
-   *
-   * _.isEmpty({ 'a': 1 });
-   * // => false
-   */
-  function isEmpty(value) {
-    if (value == null) {
-      return true;
-    }
-    if (isArrayLike$2(value) && (isArray$9(value) || typeof value == 'string' || typeof value.splice == 'function' || isBuffer$2(value) || isTypedArray$1(value) || isArguments$3(value))) {
-      return !value.length;
-    }
-    var tag = getTag$3(value);
-    if (tag == mapTag$3 || tag == setTag$3) {
-      return !value.size;
-    }
-    if (isPrototype$2(value)) {
-      return !baseKeys$1(value).length;
-    }
-    for (var key in value) {
-      if (hasOwnProperty$7.call(value, key)) {
-        return false;
-      }
-    }
-    return true;
-  }
-  var isEmpty_1 = isEmpty;
-
-  var _isEmpty = /*@__PURE__*/getDefaultExportFromCjs(isEmpty_1);
-
-  var getNative$1 = _getNative;
-
-  /* Built-in method references that are verified to be native. */
-  var nativeCreate$4 = getNative$1(Object, 'create');
-  var _nativeCreate = nativeCreate$4;
-
-  var nativeCreate$3 = _nativeCreate;
-
-  /**
-   * Removes all key-value entries from the hash.
-   *
-   * @private
-   * @name clear
-   * @memberOf Hash
-   */
-  function hashClear$1() {
-    this.__data__ = nativeCreate$3 ? nativeCreate$3(null) : {};
-    this.size = 0;
-  }
-  var _hashClear = hashClear$1;
-
-  /**
-   * Removes `key` and its value from the hash.
-   *
-   * @private
-   * @name delete
-   * @memberOf Hash
-   * @param {Object} hash The hash to modify.
-   * @param {string} key The key of the value to remove.
-   * @returns {boolean} Returns `true` if the entry was removed, else `false`.
-   */
-
-  function hashDelete$1(key) {
-    var result = this.has(key) && delete this.__data__[key];
-    this.size -= result ? 1 : 0;
-    return result;
-  }
-  var _hashDelete = hashDelete$1;
-
-  var nativeCreate$2 = _nativeCreate;
-
-  /** Used to stand-in for `undefined` hash values. */
-  var HASH_UNDEFINED$2 = '__lodash_hash_undefined__';
-
-  /** Used for built-in method references. */
-  var objectProto$7 = Object.prototype;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty$6 = objectProto$7.hasOwnProperty;
-
-  /**
-   * Gets the hash value for `key`.
-   *
-   * @private
-   * @name get
-   * @memberOf Hash
-   * @param {string} key The key of the value to get.
-   * @returns {*} Returns the entry value.
-   */
-  function hashGet$1(key) {
-    var data = this.__data__;
-    if (nativeCreate$2) {
-      var result = data[key];
-      return result === HASH_UNDEFINED$2 ? undefined : result;
-    }
-    return hasOwnProperty$6.call(data, key) ? data[key] : undefined;
-  }
-  var _hashGet = hashGet$1;
-
-  var nativeCreate$1 = _nativeCreate;
-
-  /** Used for built-in method references. */
-  var objectProto$6 = Object.prototype;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty$5 = objectProto$6.hasOwnProperty;
-
-  /**
-   * Checks if a hash value for `key` exists.
-   *
-   * @private
-   * @name has
-   * @memberOf Hash
-   * @param {string} key The key of the entry to check.
-   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
-   */
-  function hashHas$1(key) {
-    var data = this.__data__;
-    return nativeCreate$1 ? data[key] !== undefined : hasOwnProperty$5.call(data, key);
-  }
-  var _hashHas = hashHas$1;
-
-  var nativeCreate = _nativeCreate;
-
-  /** Used to stand-in for `undefined` hash values. */
-  var HASH_UNDEFINED$1 = '__lodash_hash_undefined__';
-
-  /**
-   * Sets the hash `key` to `value`.
-   *
-   * @private
-   * @name set
-   * @memberOf Hash
-   * @param {string} key The key of the value to set.
-   * @param {*} value The value to set.
-   * @returns {Object} Returns the hash instance.
-   */
-  function hashSet$1(key, value) {
-    var data = this.__data__;
-    this.size += this.has(key) ? 0 : 1;
-    data[key] = nativeCreate && value === undefined ? HASH_UNDEFINED$1 : value;
-    return this;
-  }
-  var _hashSet = hashSet$1;
-
-  var hashClear = _hashClear,
-    hashDelete = _hashDelete,
-    hashGet = _hashGet,
-    hashHas = _hashHas,
-    hashSet = _hashSet;
-
-  /**
-   * Creates a hash object.
-   *
-   * @private
-   * @constructor
-   * @param {Array} [entries] The key-value pairs to cache.
-   */
-  function Hash$1(entries) {
+  function arrayMap$2(array, iteratee) {
     var index = -1,
-      length = entries == null ? 0 : entries.length;
-    this.clear();
+      length = array == null ? 0 : array.length,
+      result = Array(length);
     while (++index < length) {
-      var entry = entries[index];
-      this.set(entry[0], entry[1]);
+      result[index] = iteratee(array[index], index, array);
     }
+    return result;
   }
-
-  // Add methods to `Hash`.
-  Hash$1.prototype.clear = hashClear;
-  Hash$1.prototype['delete'] = hashDelete;
-  Hash$1.prototype.get = hashGet;
-  Hash$1.prototype.has = hashHas;
-  Hash$1.prototype.set = hashSet;
-  var _Hash = Hash$1;
+  var _arrayMap = arrayMap$2;
 
   /**
    * Removes all key-value entries from the list cache.
@@ -1889,9 +838,539 @@
   ListCache$4.prototype.set = listCacheSet;
   var _ListCache = ListCache$4;
 
+  var ListCache$3 = _ListCache;
+
+  /**
+   * Removes all key-value entries from the stack.
+   *
+   * @private
+   * @name clear
+   * @memberOf Stack
+   */
+  function stackClear$1() {
+    this.__data__ = new ListCache$3();
+    this.size = 0;
+  }
+  var _stackClear = stackClear$1;
+
+  /**
+   * Removes `key` and its value from the stack.
+   *
+   * @private
+   * @name delete
+   * @memberOf Stack
+   * @param {string} key The key of the value to remove.
+   * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+   */
+
+  function stackDelete$1(key) {
+    var data = this.__data__,
+      result = data['delete'](key);
+    this.size = data.size;
+    return result;
+  }
+  var _stackDelete = stackDelete$1;
+
+  /**
+   * Gets the stack value for `key`.
+   *
+   * @private
+   * @name get
+   * @memberOf Stack
+   * @param {string} key The key of the value to get.
+   * @returns {*} Returns the entry value.
+   */
+
+  function stackGet$1(key) {
+    return this.__data__.get(key);
+  }
+  var _stackGet = stackGet$1;
+
+  /**
+   * Checks if a stack value for `key` exists.
+   *
+   * @private
+   * @name has
+   * @memberOf Stack
+   * @param {string} key The key of the entry to check.
+   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+   */
+
+  function stackHas$1(key) {
+    return this.__data__.has(key);
+  }
+  var _stackHas = stackHas$1;
+
+  /** Detect free variable `global` from Node.js. */
+
+  var freeGlobal$1 = typeof commonjsGlobal == 'object' && commonjsGlobal && commonjsGlobal.Object === Object && commonjsGlobal;
+  var _freeGlobal = freeGlobal$1;
+
+  var freeGlobal = _freeGlobal;
+
+  /** Detect free variable `self`. */
+  var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+  /** Used as a reference to the global object. */
+  var root$8 = freeGlobal || freeSelf || Function('return this')();
+  var _root = root$8;
+
+  var root$7 = _root;
+
+  /** Built-in value references. */
+  var Symbol$6 = root$7.Symbol;
+  var _Symbol = Symbol$6;
+
+  var Symbol$5 = _Symbol;
+
+  /** Used for built-in method references. */
+  var objectProto$e = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$b = objectProto$e.hasOwnProperty;
+
+  /**
+   * Used to resolve the
+   * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+   * of values.
+   */
+  var nativeObjectToString$1 = objectProto$e.toString;
+
+  /** Built-in value references. */
+  var symToStringTag$1 = Symbol$5 ? Symbol$5.toStringTag : undefined;
+
+  /**
+   * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+   *
+   * @private
+   * @param {*} value The value to query.
+   * @returns {string} Returns the raw `toStringTag`.
+   */
+  function getRawTag$1(value) {
+    var isOwn = hasOwnProperty$b.call(value, symToStringTag$1),
+      tag = value[symToStringTag$1];
+    try {
+      value[symToStringTag$1] = undefined;
+      var unmasked = true;
+    } catch (e) {}
+    var result = nativeObjectToString$1.call(value);
+    if (unmasked) {
+      if (isOwn) {
+        value[symToStringTag$1] = tag;
+      } else {
+        delete value[symToStringTag$1];
+      }
+    }
+    return result;
+  }
+  var _getRawTag = getRawTag$1;
+
+  /** Used for built-in method references. */
+
+  var objectProto$d = Object.prototype;
+
+  /**
+   * Used to resolve the
+   * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+   * of values.
+   */
+  var nativeObjectToString = objectProto$d.toString;
+
+  /**
+   * Converts `value` to a string using `Object.prototype.toString`.
+   *
+   * @private
+   * @param {*} value The value to convert.
+   * @returns {string} Returns the converted string.
+   */
+  function objectToString$1(value) {
+    return nativeObjectToString.call(value);
+  }
+  var _objectToString = objectToString$1;
+
+  var Symbol$4 = _Symbol,
+    getRawTag = _getRawTag,
+    objectToString = _objectToString;
+
+  /** `Object#toString` result references. */
+  var nullTag = '[object Null]',
+    undefinedTag = '[object Undefined]';
+
+  /** Built-in value references. */
+  var symToStringTag = Symbol$4 ? Symbol$4.toStringTag : undefined;
+
+  /**
+   * The base implementation of `getTag` without fallbacks for buggy environments.
+   *
+   * @private
+   * @param {*} value The value to query.
+   * @returns {string} Returns the `toStringTag`.
+   */
+  function baseGetTag$a(value) {
+    if (value == null) {
+      return value === undefined ? undefinedTag : nullTag;
+    }
+    return symToStringTag && symToStringTag in Object(value) ? getRawTag(value) : objectToString(value);
+  }
+  var _baseGetTag = baseGetTag$a;
+
+  /**
+   * Checks if `value` is the
+   * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+   * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+   * @example
+   *
+   * _.isObject({});
+   * // => true
+   *
+   * _.isObject([1, 2, 3]);
+   * // => true
+   *
+   * _.isObject(_.noop);
+   * // => true
+   *
+   * _.isObject(null);
+   * // => false
+   */
+
+  function isObject$6(value) {
+    var type = typeof value;
+    return value != null && (type == 'object' || type == 'function');
+  }
+  var isObject_1 = isObject$6;
+
+  var _isObject = /*@__PURE__*/getDefaultExportFromCjs(isObject_1);
+
+  var baseGetTag$9 = _baseGetTag,
+    isObject$5 = isObject_1;
+
+  /** `Object#toString` result references. */
+  var asyncTag = '[object AsyncFunction]',
+    funcTag$2 = '[object Function]',
+    genTag$1 = '[object GeneratorFunction]',
+    proxyTag = '[object Proxy]';
+
+  /**
+   * Checks if `value` is classified as a `Function` object.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+   * @example
+   *
+   * _.isFunction(_);
+   * // => true
+   *
+   * _.isFunction(/abc/);
+   * // => false
+   */
+  function isFunction$2(value) {
+    if (!isObject$5(value)) {
+      return false;
+    }
+    // The use of `Object#toString` avoids issues with the `typeof` operator
+    // in Safari 9 which returns 'object' for typed arrays and other constructors.
+    var tag = baseGetTag$9(value);
+    return tag == funcTag$2 || tag == genTag$1 || tag == asyncTag || tag == proxyTag;
+  }
+  var isFunction_1 = isFunction$2;
+
+  var _isFunction = /*@__PURE__*/getDefaultExportFromCjs(isFunction_1);
+
+  var root$6 = _root;
+
+  /** Used to detect overreaching core-js shims. */
+  var coreJsData$1 = root$6['__core-js_shared__'];
+  var _coreJsData = coreJsData$1;
+
+  var coreJsData = _coreJsData;
+
+  /** Used to detect methods masquerading as native. */
+  var maskSrcKey = function () {
+    var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+    return uid ? 'Symbol(src)_1.' + uid : '';
+  }();
+
+  /**
+   * Checks if `func` has its source masked.
+   *
+   * @private
+   * @param {Function} func The function to check.
+   * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+   */
+  function isMasked$1(func) {
+    return !!maskSrcKey && maskSrcKey in func;
+  }
+  var _isMasked = isMasked$1;
+
+  /** Used for built-in method references. */
+
+  var funcProto$2 = Function.prototype;
+
+  /** Used to resolve the decompiled source of functions. */
+  var funcToString$2 = funcProto$2.toString;
+
+  /**
+   * Converts `func` to its source code.
+   *
+   * @private
+   * @param {Function} func The function to convert.
+   * @returns {string} Returns the source code.
+   */
+  function toSource$2(func) {
+    if (func != null) {
+      try {
+        return funcToString$2.call(func);
+      } catch (e) {}
+      try {
+        return func + '';
+      } catch (e) {}
+    }
+    return '';
+  }
+  var _toSource = toSource$2;
+
+  var isFunction$1 = isFunction_1,
+    isMasked = _isMasked,
+    isObject$4 = isObject_1,
+    toSource$1 = _toSource;
+
+  /**
+   * Used to match `RegExp`
+   * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+   */
+  var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+  /** Used to detect host constructors (Safari). */
+  var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+  /** Used for built-in method references. */
+  var funcProto$1 = Function.prototype,
+    objectProto$c = Object.prototype;
+
+  /** Used to resolve the decompiled source of functions. */
+  var funcToString$1 = funcProto$1.toString;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$a = objectProto$c.hasOwnProperty;
+
+  /** Used to detect if a method is native. */
+  var reIsNative = RegExp('^' + funcToString$1.call(hasOwnProperty$a).replace(reRegExpChar, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
+
+  /**
+   * The base implementation of `_.isNative` without bad shim checks.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a native function,
+   *  else `false`.
+   */
+  function baseIsNative$1(value) {
+    if (!isObject$4(value) || isMasked(value)) {
+      return false;
+    }
+    var pattern = isFunction$1(value) ? reIsNative : reIsHostCtor;
+    return pattern.test(toSource$1(value));
+  }
+  var _baseIsNative = baseIsNative$1;
+
+  /**
+   * Gets the value at `key` of `object`.
+   *
+   * @private
+   * @param {Object} [object] The object to query.
+   * @param {string} key The key of the property to get.
+   * @returns {*} Returns the property value.
+   */
+
+  function getValue$1(object, key) {
+    return object == null ? undefined : object[key];
+  }
+  var _getValue = getValue$1;
+
+  var baseIsNative = _baseIsNative,
+    getValue = _getValue;
+
+  /**
+   * Gets the native function at `key` of `object`.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @param {string} key The key of the method to get.
+   * @returns {*} Returns the function if it's native, else `undefined`.
+   */
+  function getNative$7(object, key) {
+    var value = getValue(object, key);
+    return baseIsNative(value) ? value : undefined;
+  }
+  var _getNative = getNative$7;
+
+  var getNative$6 = _getNative,
+    root$5 = _root;
+
+  /* Built-in method references that are verified to be native. */
+  var Map$3 = getNative$6(root$5, 'Map');
+  var _Map = Map$3;
+
+  var getNative$5 = _getNative;
+
+  /* Built-in method references that are verified to be native. */
+  var nativeCreate$4 = getNative$5(Object, 'create');
+  var _nativeCreate = nativeCreate$4;
+
+  var nativeCreate$3 = _nativeCreate;
+
+  /**
+   * Removes all key-value entries from the hash.
+   *
+   * @private
+   * @name clear
+   * @memberOf Hash
+   */
+  function hashClear$1() {
+    this.__data__ = nativeCreate$3 ? nativeCreate$3(null) : {};
+    this.size = 0;
+  }
+  var _hashClear = hashClear$1;
+
+  /**
+   * Removes `key` and its value from the hash.
+   *
+   * @private
+   * @name delete
+   * @memberOf Hash
+   * @param {Object} hash The hash to modify.
+   * @param {string} key The key of the value to remove.
+   * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+   */
+
+  function hashDelete$1(key) {
+    var result = this.has(key) && delete this.__data__[key];
+    this.size -= result ? 1 : 0;
+    return result;
+  }
+  var _hashDelete = hashDelete$1;
+
+  var nativeCreate$2 = _nativeCreate;
+
+  /** Used to stand-in for `undefined` hash values. */
+  var HASH_UNDEFINED$2 = '__lodash_hash_undefined__';
+
+  /** Used for built-in method references. */
+  var objectProto$b = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$9 = objectProto$b.hasOwnProperty;
+
+  /**
+   * Gets the hash value for `key`.
+   *
+   * @private
+   * @name get
+   * @memberOf Hash
+   * @param {string} key The key of the value to get.
+   * @returns {*} Returns the entry value.
+   */
+  function hashGet$1(key) {
+    var data = this.__data__;
+    if (nativeCreate$2) {
+      var result = data[key];
+      return result === HASH_UNDEFINED$2 ? undefined : result;
+    }
+    return hasOwnProperty$9.call(data, key) ? data[key] : undefined;
+  }
+  var _hashGet = hashGet$1;
+
+  var nativeCreate$1 = _nativeCreate;
+
+  /** Used for built-in method references. */
+  var objectProto$a = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$8 = objectProto$a.hasOwnProperty;
+
+  /**
+   * Checks if a hash value for `key` exists.
+   *
+   * @private
+   * @name has
+   * @memberOf Hash
+   * @param {string} key The key of the entry to check.
+   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+   */
+  function hashHas$1(key) {
+    var data = this.__data__;
+    return nativeCreate$1 ? data[key] !== undefined : hasOwnProperty$8.call(data, key);
+  }
+  var _hashHas = hashHas$1;
+
+  var nativeCreate = _nativeCreate;
+
+  /** Used to stand-in for `undefined` hash values. */
+  var HASH_UNDEFINED$1 = '__lodash_hash_undefined__';
+
+  /**
+   * Sets the hash `key` to `value`.
+   *
+   * @private
+   * @name set
+   * @memberOf Hash
+   * @param {string} key The key of the value to set.
+   * @param {*} value The value to set.
+   * @returns {Object} Returns the hash instance.
+   */
+  function hashSet$1(key, value) {
+    var data = this.__data__;
+    this.size += this.has(key) ? 0 : 1;
+    data[key] = nativeCreate && value === undefined ? HASH_UNDEFINED$1 : value;
+    return this;
+  }
+  var _hashSet = hashSet$1;
+
+  var hashClear = _hashClear,
+    hashDelete = _hashDelete,
+    hashGet = _hashGet,
+    hashHas = _hashHas,
+    hashSet = _hashSet;
+
+  /**
+   * Creates a hash object.
+   *
+   * @private
+   * @constructor
+   * @param {Array} [entries] The key-value pairs to cache.
+   */
+  function Hash$1(entries) {
+    var index = -1,
+      length = entries == null ? 0 : entries.length;
+    this.clear();
+    while (++index < length) {
+      var entry = entries[index];
+      this.set(entry[0], entry[1]);
+    }
+  }
+
+  // Add methods to `Hash`.
+  Hash$1.prototype.clear = hashClear;
+  Hash$1.prototype['delete'] = hashDelete;
+  Hash$1.prototype.get = hashGet;
+  Hash$1.prototype.has = hashHas;
+  Hash$1.prototype.set = hashSet;
+  var _Hash = Hash$1;
+
   var Hash = _Hash,
-    ListCache$3 = _ListCache,
-    Map$1 = _Map;
+    ListCache$2 = _ListCache,
+    Map$2 = _Map;
 
   /**
    * Removes all key-value entries from the map.
@@ -1904,7 +1383,7 @@
     this.size = 0;
     this.__data__ = {
       'hash': new Hash(),
-      'map': new (Map$1 || ListCache$3)(),
+      'map': new (Map$2 || ListCache$2)(),
       'string': new Hash()
     };
   }
@@ -2042,559 +1521,12 @@
   MapCache$3.prototype.set = mapCacheSet;
   var _MapCache = MapCache$3;
 
-  /** Used to stand-in for `undefined` hash values. */
-
-  var HASH_UNDEFINED = '__lodash_hash_undefined__';
-
-  /**
-   * Adds `value` to the array cache.
-   *
-   * @private
-   * @name add
-   * @memberOf SetCache
-   * @alias push
-   * @param {*} value The value to cache.
-   * @returns {Object} Returns the cache instance.
-   */
-  function setCacheAdd$1(value) {
-    this.__data__.set(value, HASH_UNDEFINED);
-    return this;
-  }
-  var _setCacheAdd = setCacheAdd$1;
-
-  /**
-   * Checks if `value` is in the array cache.
-   *
-   * @private
-   * @name has
-   * @memberOf SetCache
-   * @param {*} value The value to search for.
-   * @returns {number} Returns `true` if `value` is found, else `false`.
-   */
-
-  function setCacheHas$1(value) {
-    return this.__data__.has(value);
-  }
-  var _setCacheHas = setCacheHas$1;
-
-  var MapCache$2 = _MapCache,
-    setCacheAdd = _setCacheAdd,
-    setCacheHas = _setCacheHas;
-
-  /**
-   *
-   * Creates an array cache object to store unique values.
-   *
-   * @private
-   * @constructor
-   * @param {Array} [values] The values to cache.
-   */
-  function SetCache$1(values) {
-    var index = -1,
-      length = values == null ? 0 : values.length;
-    this.__data__ = new MapCache$2();
-    while (++index < length) {
-      this.add(values[index]);
-    }
-  }
-
-  // Add methods to `SetCache`.
-  SetCache$1.prototype.add = SetCache$1.prototype.push = setCacheAdd;
-  SetCache$1.prototype.has = setCacheHas;
-  var _SetCache = SetCache$1;
-
-  /**
-   * The base implementation of `_.findIndex` and `_.findLastIndex` without
-   * support for iteratee shorthands.
-   *
-   * @private
-   * @param {Array} array The array to inspect.
-   * @param {Function} predicate The function invoked per iteration.
-   * @param {number} fromIndex The index to search from.
-   * @param {boolean} [fromRight] Specify iterating from right to left.
-   * @returns {number} Returns the index of the matched value, else `-1`.
-   */
-
-  function baseFindIndex$1(array, predicate, fromIndex, fromRight) {
-    var length = array.length,
-      index = fromIndex + (fromRight ? 1 : -1);
-    while (fromRight ? index-- : ++index < length) {
-      if (predicate(array[index], index, array)) {
-        return index;
-      }
-    }
-    return -1;
-  }
-  var _baseFindIndex = baseFindIndex$1;
-
-  /**
-   * The base implementation of `_.isNaN` without support for number objects.
-   *
-   * @private
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is `NaN`, else `false`.
-   */
-
-  function baseIsNaN$1(value) {
-    return value !== value;
-  }
-  var _baseIsNaN = baseIsNaN$1;
-
-  /**
-   * A specialized version of `_.indexOf` which performs strict equality
-   * comparisons of values, i.e. `===`.
-   *
-   * @private
-   * @param {Array} array The array to inspect.
-   * @param {*} value The value to search for.
-   * @param {number} fromIndex The index to search from.
-   * @returns {number} Returns the index of the matched value, else `-1`.
-   */
-
-  function strictIndexOf$1(array, value, fromIndex) {
-    var index = fromIndex - 1,
-      length = array.length;
-    while (++index < length) {
-      if (array[index] === value) {
-        return index;
-      }
-    }
-    return -1;
-  }
-  var _strictIndexOf = strictIndexOf$1;
-
-  var baseFindIndex = _baseFindIndex,
-    baseIsNaN = _baseIsNaN,
-    strictIndexOf = _strictIndexOf;
-
-  /**
-   * The base implementation of `_.indexOf` without `fromIndex` bounds checks.
-   *
-   * @private
-   * @param {Array} array The array to inspect.
-   * @param {*} value The value to search for.
-   * @param {number} fromIndex The index to search from.
-   * @returns {number} Returns the index of the matched value, else `-1`.
-   */
-  function baseIndexOf$3(array, value, fromIndex) {
-    return value === value ? strictIndexOf(array, value, fromIndex) : baseFindIndex(array, baseIsNaN, fromIndex);
-  }
-  var _baseIndexOf = baseIndexOf$3;
-
-  var baseIndexOf$2 = _baseIndexOf;
-
-  /**
-   * A specialized version of `_.includes` for arrays without support for
-   * specifying an index to search from.
-   *
-   * @private
-   * @param {Array} [array] The array to inspect.
-   * @param {*} target The value to search for.
-   * @returns {boolean} Returns `true` if `target` is found, else `false`.
-   */
-  function arrayIncludes$1(array, value) {
-    var length = array == null ? 0 : array.length;
-    return !!length && baseIndexOf$2(array, value, 0) > -1;
-  }
-  var _arrayIncludes = arrayIncludes$1;
-
-  /**
-   * This function is like `arrayIncludes` except that it accepts a comparator.
-   *
-   * @private
-   * @param {Array} [array] The array to inspect.
-   * @param {*} target The value to search for.
-   * @param {Function} comparator The comparator invoked per element.
-   * @returns {boolean} Returns `true` if `target` is found, else `false`.
-   */
-
-  function arrayIncludesWith$1(array, value, comparator) {
-    var index = -1,
-      length = array == null ? 0 : array.length;
-    while (++index < length) {
-      if (comparator(value, array[index])) {
-        return true;
-      }
-    }
-    return false;
-  }
-  var _arrayIncludesWith = arrayIncludesWith$1;
-
-  /**
-   * Checks if a `cache` value for `key` exists.
-   *
-   * @private
-   * @param {Object} cache The cache to query.
-   * @param {string} key The key of the entry to check.
-   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
-   */
-
-  function cacheHas$1(cache, key) {
-    return cache.has(key);
-  }
-  var _cacheHas = cacheHas$1;
-
-  /**
-   * This method returns `undefined`.
-   *
-   * @static
-   * @memberOf _
-   * @since 2.3.0
-   * @category Util
-   * @example
-   *
-   * _.times(2, _.noop);
-   * // => [undefined, undefined]
-   */
-
-  function noop$1() {
-    // No operation performed.
-  }
-  var noop_1 = noop$1;
-
-  /**
-   * Converts `set` to an array of its values.
-   *
-   * @private
-   * @param {Object} set The set to convert.
-   * @returns {Array} Returns the values.
-   */
-
-  function setToArray$2(set) {
-    var index = -1,
-      result = Array(set.size);
-    set.forEach(function (value) {
-      result[++index] = value;
-    });
-    return result;
-  }
-  var _setToArray = setToArray$2;
-
-  var Set = _Set,
-    noop = noop_1,
-    setToArray$1 = _setToArray;
-
-  /** Used as references for various `Number` constants. */
-  var INFINITY$2 = 1 / 0;
-
-  /**
-   * Creates a set object of `values`.
-   *
-   * @private
-   * @param {Array} values The values to add to the set.
-   * @returns {Object} Returns the new set.
-   */
-  var createSet$1 = !(Set && 1 / setToArray$1(new Set([, -0]))[1] == INFINITY$2) ? noop : function (values) {
-    return new Set(values);
-  };
-  var _createSet = createSet$1;
-
-  var SetCache = _SetCache,
-    arrayIncludes = _arrayIncludes,
-    arrayIncludesWith = _arrayIncludesWith,
-    cacheHas = _cacheHas,
-    createSet = _createSet,
-    setToArray = _setToArray;
+  var ListCache$1 = _ListCache,
+    Map$1 = _Map,
+    MapCache$2 = _MapCache;
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE$1 = 200;
-
-  /**
-   * The base implementation of `_.uniqBy` without support for iteratee shorthands.
-   *
-   * @private
-   * @param {Array} array The array to inspect.
-   * @param {Function} [iteratee] The iteratee invoked per element.
-   * @param {Function} [comparator] The comparator invoked per element.
-   * @returns {Array} Returns the new duplicate free array.
-   */
-  function baseUniq$1(array, iteratee, comparator) {
-    var index = -1,
-      includes = arrayIncludes,
-      length = array.length,
-      isCommon = true,
-      result = [],
-      seen = result;
-    if (comparator) {
-      isCommon = false;
-      includes = arrayIncludesWith;
-    } else if (length >= LARGE_ARRAY_SIZE$1) {
-      var set = iteratee ? null : createSet(array);
-      if (set) {
-        return setToArray(set);
-      }
-      isCommon = false;
-      includes = cacheHas;
-      seen = new SetCache();
-    } else {
-      seen = iteratee ? [] : result;
-    }
-    outer: while (++index < length) {
-      var value = array[index],
-        computed = iteratee ? iteratee(value) : value;
-      value = comparator || value !== 0 ? value : 0;
-      if (isCommon && computed === computed) {
-        var seenIndex = seen.length;
-        while (seenIndex--) {
-          if (seen[seenIndex] === computed) {
-            continue outer;
-          }
-        }
-        if (iteratee) {
-          seen.push(computed);
-        }
-        result.push(value);
-      } else if (!includes(seen, computed, comparator)) {
-        if (seen !== result) {
-          seen.push(computed);
-        }
-        result.push(value);
-      }
-    }
-    return result;
-  }
-  var _baseUniq = baseUniq$1;
-
-  var baseUniq = _baseUniq;
-
-  /**
-   * Creates a duplicate-free version of an array, using
-   * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
-   * for equality comparisons, in which only the first occurrence of each element
-   * is kept. The order of result values is determined by the order they occur
-   * in the array.
-   *
-   * @static
-   * @memberOf _
-   * @since 0.1.0
-   * @category Array
-   * @param {Array} array The array to inspect.
-   * @returns {Array} Returns the new duplicate free array.
-   * @example
-   *
-   * _.uniq([2, 1, 2]);
-   * // => [2, 1]
-   */
-  function uniq(array) {
-    return array && array.length ? baseUniq(array) : [];
-  }
-  var uniq_1 = uniq;
-
-  var _uniq = /*@__PURE__*/getDefaultExportFromCjs(uniq_1);
-
-  /**
-   * A specialized version of `_.map` for arrays without support for iteratee
-   * shorthands.
-   *
-   * @private
-   * @param {Array} [array] The array to iterate over.
-   * @param {Function} iteratee The function invoked per iteration.
-   * @returns {Array} Returns the new mapped array.
-   */
-
-  function arrayMap$2(array, iteratee) {
-    var index = -1,
-      length = array == null ? 0 : array.length,
-      result = Array(length);
-    while (++index < length) {
-      result[index] = iteratee(array[index], index, array);
-    }
-    return result;
-  }
-  var _arrayMap = arrayMap$2;
-
-  var baseGetTag$5 = _baseGetTag,
-    isObjectLike$7 = isObjectLike_1;
-
-  /** `Object#toString` result references. */
-  var symbolTag$2 = '[object Symbol]';
-
-  /**
-   * Checks if `value` is classified as a `Symbol` primitive or object.
-   *
-   * @static
-   * @memberOf _
-   * @since 4.0.0
-   * @category Lang
-   * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
-   * @example
-   *
-   * _.isSymbol(Symbol.iterator);
-   * // => true
-   *
-   * _.isSymbol('abc');
-   * // => false
-   */
-  function isSymbol$3(value) {
-    return typeof value == 'symbol' || isObjectLike$7(value) && baseGetTag$5(value) == symbolTag$2;
-  }
-  var isSymbol_1 = isSymbol$3;
-
-  var Symbol$3 = _Symbol,
-    arrayMap$1 = _arrayMap,
-    isArray$8 = isArray_1,
-    isSymbol$2 = isSymbol_1;
-
-  /** Used as references for various `Number` constants. */
-  var INFINITY$1 = 1 / 0;
-
-  /** Used to convert symbols to primitives and strings. */
-  var symbolProto$1 = Symbol$3 ? Symbol$3.prototype : undefined,
-    symbolToString = symbolProto$1 ? symbolProto$1.toString : undefined;
-
-  /**
-   * The base implementation of `_.toString` which doesn't convert nullish
-   * values to empty strings.
-   *
-   * @private
-   * @param {*} value The value to process.
-   * @returns {string} Returns the string.
-   */
-  function baseToString$2(value) {
-    // Exit early for strings to avoid a performance hit in some environments.
-    if (typeof value == 'string') {
-      return value;
-    }
-    if (isArray$8(value)) {
-      // Recursively convert values (susceptible to call stack limits).
-      return arrayMap$1(value, baseToString$2) + '';
-    }
-    if (isSymbol$2(value)) {
-      return symbolToString ? symbolToString.call(value) : '';
-    }
-    var result = value + '';
-    return result == '0' && 1 / value == -INFINITY$1 ? '-0' : result;
-  }
-  var _baseToString = baseToString$2;
-
-  var baseToString$1 = _baseToString;
-
-  /**
-   * Converts `value` to a string. An empty string is returned for `null`
-   * and `undefined` values. The sign of `-0` is preserved.
-   *
-   * @static
-   * @memberOf _
-   * @since 4.0.0
-   * @category Lang
-   * @param {*} value The value to convert.
-   * @returns {string} Returns the converted string.
-   * @example
-   *
-   * _.toString(null);
-   * // => ''
-   *
-   * _.toString(-0);
-   * // => '-0'
-   *
-   * _.toString([1, 2, 3]);
-   * // => '1,2,3'
-   */
-  function toString$5(value) {
-    return value == null ? '' : baseToString$1(value);
-  }
-  var toString_1 = toString$5;
-
-  var toString$4 = toString_1;
-
-  /** Used to generate unique IDs. */
-  var idCounter = 0;
-
-  /**
-   * Generates a unique ID. If `prefix` is given, the ID is appended to it.
-   *
-   * @static
-   * @since 0.1.0
-   * @memberOf _
-   * @category Util
-   * @param {string} [prefix=''] The value to prefix the ID with.
-   * @returns {string} Returns the unique ID.
-   * @example
-   *
-   * _.uniqueId('contact_');
-   * // => 'contact_104'
-   *
-   * _.uniqueId();
-   * // => '105'
-   */
-  function uniqueId(prefix) {
-    var id = ++idCounter;
-    return toString$4(prefix) + id;
-  }
-  var uniqueId_1 = uniqueId;
-
-  var _uniqueId = /*@__PURE__*/getDefaultExportFromCjs(uniqueId_1);
-
-  var ListCache$2 = _ListCache;
-
-  /**
-   * Removes all key-value entries from the stack.
-   *
-   * @private
-   * @name clear
-   * @memberOf Stack
-   */
-  function stackClear$1() {
-    this.__data__ = new ListCache$2();
-    this.size = 0;
-  }
-  var _stackClear = stackClear$1;
-
-  /**
-   * Removes `key` and its value from the stack.
-   *
-   * @private
-   * @name delete
-   * @memberOf Stack
-   * @param {string} key The key of the value to remove.
-   * @returns {boolean} Returns `true` if the entry was removed, else `false`.
-   */
-
-  function stackDelete$1(key) {
-    var data = this.__data__,
-      result = data['delete'](key);
-    this.size = data.size;
-    return result;
-  }
-  var _stackDelete = stackDelete$1;
-
-  /**
-   * Gets the stack value for `key`.
-   *
-   * @private
-   * @name get
-   * @memberOf Stack
-   * @param {string} key The key of the value to get.
-   * @returns {*} Returns the entry value.
-   */
-
-  function stackGet$1(key) {
-    return this.__data__.get(key);
-  }
-  var _stackGet = stackGet$1;
-
-  /**
-   * Checks if a stack value for `key` exists.
-   *
-   * @private
-   * @name has
-   * @memberOf Stack
-   * @param {string} key The key of the entry to check.
-   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
-   */
-
-  function stackHas$1(key) {
-    return this.__data__.has(key);
-  }
-  var _stackHas = stackHas$1;
-
-  var ListCache$1 = _ListCache,
-    Map = _Map,
-    MapCache$1 = _MapCache;
-
-  /** Used as the size to enable large array optimizations. */
-  var LARGE_ARRAY_SIZE = 200;
 
   /**
    * Sets the stack `key` to `value`.
@@ -2610,12 +1542,12 @@
     var data = this.__data__;
     if (data instanceof ListCache$1) {
       var pairs = data.__data__;
-      if (!Map || pairs.length < LARGE_ARRAY_SIZE - 1) {
+      if (!Map$1 || pairs.length < LARGE_ARRAY_SIZE$1 - 1) {
         pairs.push([key, value]);
         this.size = ++data.size;
         return this;
       }
-      data = this.__data__ = new MapCache$1(pairs);
+      data = this.__data__ = new MapCache$2(pairs);
     }
     data.set(key, value);
     this.size = data.size;
@@ -2672,10 +1604,10 @@
   }
   var _arrayEach = arrayEach$1;
 
-  var getNative = _getNative;
+  var getNative$4 = _getNative;
   var defineProperty$2 = function () {
     try {
-      var func = getNative(Object, 'defineProperty');
+      var func = getNative$4(Object, 'defineProperty');
       func({}, '', {});
       return func;
     } catch (e) {}
@@ -2711,10 +1643,10 @@
     eq = eq_1;
 
   /** Used for built-in method references. */
-  var objectProto$5 = Object.prototype;
+  var objectProto$9 = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$4 = objectProto$5.hasOwnProperty;
+  var hasOwnProperty$7 = objectProto$9.hasOwnProperty;
 
   /**
    * Assigns `value` to `key` of `object` if the existing value is not equivalent
@@ -2728,7 +1660,7 @@
    */
   function assignValue$3(object, key, value) {
     var objValue = object[key];
-    if (!(hasOwnProperty$4.call(object, key) && eq(objValue, value)) || value === undefined && !(key in object)) {
+    if (!(hasOwnProperty$7.call(object, key) && eq(objValue, value)) || value === undefined && !(key in object)) {
       baseAssignValue$1(object, key, value);
     }
   }
@@ -2788,9 +1720,188 @@
   }
   var _baseTimes = baseTimes$1;
 
+  /**
+   * Checks if `value` is object-like. A value is object-like if it's not `null`
+   * and has a `typeof` result of "object".
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+   * @example
+   *
+   * _.isObjectLike({});
+   * // => true
+   *
+   * _.isObjectLike([1, 2, 3]);
+   * // => true
+   *
+   * _.isObjectLike(_.noop);
+   * // => false
+   *
+   * _.isObjectLike(null);
+   * // => false
+   */
+
+  function isObjectLike$b(value) {
+    return value != null && typeof value == 'object';
+  }
+  var isObjectLike_1 = isObjectLike$b;
+
+  var baseGetTag$8 = _baseGetTag,
+    isObjectLike$a = isObjectLike_1;
+
+  /** `Object#toString` result references. */
+  var argsTag$2 = '[object Arguments]';
+
+  /**
+   * The base implementation of `_.isArguments`.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+   */
+  function baseIsArguments$1(value) {
+    return isObjectLike$a(value) && baseGetTag$8(value) == argsTag$2;
+  }
+  var _baseIsArguments = baseIsArguments$1;
+
+  var baseIsArguments = _baseIsArguments,
+    isObjectLike$9 = isObjectLike_1;
+
+  /** Used for built-in method references. */
+  var objectProto$8 = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$6 = objectProto$8.hasOwnProperty;
+
+  /** Built-in value references. */
+  var propertyIsEnumerable$1 = objectProto$8.propertyIsEnumerable;
+
+  /**
+   * Checks if `value` is likely an `arguments` object.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+   *  else `false`.
+   * @example
+   *
+   * _.isArguments(function() { return arguments; }());
+   * // => true
+   *
+   * _.isArguments([1, 2, 3]);
+   * // => false
+   */
+  var isArguments$4 = baseIsArguments(function () {
+    return arguments;
+  }()) ? baseIsArguments : function (value) {
+    return isObjectLike$9(value) && hasOwnProperty$6.call(value, 'callee') && !propertyIsEnumerable$1.call(value, 'callee');
+  };
+  var isArguments_1 = isArguments$4;
+
+  /**
+   * Checks if `value` is classified as an `Array` object.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+   * @example
+   *
+   * _.isArray([1, 2, 3]);
+   * // => true
+   *
+   * _.isArray(document.body.children);
+   * // => false
+   *
+   * _.isArray('abc');
+   * // => false
+   *
+   * _.isArray(_.noop);
+   * // => false
+   */
+
+  var isArray$b = Array.isArray;
+  var isArray_1 = isArray$b;
+
+  var _isArray = /*@__PURE__*/getDefaultExportFromCjs(isArray_1);
+
+  var isBuffer$3 = {exports: {}};
+
+  /**
+   * This method returns `false`.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.13.0
+   * @category Util
+   * @returns {boolean} Returns `false`.
+   * @example
+   *
+   * _.times(2, _.stubFalse);
+   * // => [false, false]
+   */
+
+  function stubFalse() {
+    return false;
+  }
+  var stubFalse_1 = stubFalse;
+
+  isBuffer$3.exports;
+
+  (function (module, exports) {
+  	var root = _root,
+  	  stubFalse = stubFalse_1;
+
+  	/** Detect free variable `exports`. */
+  	var freeExports = exports && !exports.nodeType && exports;
+
+  	/** Detect free variable `module`. */
+  	var freeModule = freeExports && 'object' == 'object' && module && !module.nodeType && module;
+
+  	/** Detect the popular CommonJS extension `module.exports`. */
+  	var moduleExports = freeModule && freeModule.exports === freeExports;
+
+  	/** Built-in value references. */
+  	var Buffer = moduleExports ? root.Buffer : undefined;
+
+  	/* Built-in method references for those with the same name as other `lodash` methods. */
+  	var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
+
+  	/**
+  	 * Checks if `value` is a buffer.
+  	 *
+  	 * @static
+  	 * @memberOf _
+  	 * @since 4.3.0
+  	 * @category Lang
+  	 * @param {*} value The value to check.
+  	 * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+  	 * @example
+  	 *
+  	 * _.isBuffer(new Buffer(2));
+  	 * // => true
+  	 *
+  	 * _.isBuffer(new Uint8Array(2));
+  	 * // => false
+  	 */
+  	var isBuffer = nativeIsBuffer || stubFalse;
+  	module.exports = isBuffer; 
+  } (isBuffer$3, isBuffer$3.exports));
+
+  var isBufferExports = isBuffer$3.exports;
+
   /** Used as references for various `Number` constants. */
 
-  var MAX_SAFE_INTEGER = 9007199254740991;
+  var MAX_SAFE_INTEGER$1 = 9007199254740991;
 
   /** Used to detect unsigned integer values. */
   var reIsUint = /^(?:0|[1-9]\d*)$/;
@@ -2805,23 +1916,184 @@
    */
   function isIndex$3(value, length) {
     var type = typeof value;
-    length = length == null ? MAX_SAFE_INTEGER : length;
+    length = length == null ? MAX_SAFE_INTEGER$1 : length;
     return !!length && (type == 'number' || type != 'symbol' && reIsUint.test(value)) && value > -1 && value % 1 == 0 && value < length;
   }
   var _isIndex = isIndex$3;
 
+  /** Used as references for various `Number` constants. */
+
+  var MAX_SAFE_INTEGER = 9007199254740991;
+
+  /**
+   * Checks if `value` is a valid array-like length.
+   *
+   * **Note:** This method is loosely based on
+   * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+   * @example
+   *
+   * _.isLength(3);
+   * // => true
+   *
+   * _.isLength(Number.MIN_VALUE);
+   * // => false
+   *
+   * _.isLength(Infinity);
+   * // => false
+   *
+   * _.isLength('3');
+   * // => false
+   */
+  function isLength$3(value) {
+    return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+  }
+  var isLength_1 = isLength$3;
+
+  var baseGetTag$7 = _baseGetTag,
+    isLength$2 = isLength_1,
+    isObjectLike$8 = isObjectLike_1;
+
+  /** `Object#toString` result references. */
+  var argsTag$1 = '[object Arguments]',
+    arrayTag$1 = '[object Array]',
+    boolTag$3 = '[object Boolean]',
+    dateTag$3 = '[object Date]',
+    errorTag$1 = '[object Error]',
+    funcTag$1 = '[object Function]',
+    mapTag$5 = '[object Map]',
+    numberTag$3 = '[object Number]',
+    objectTag$3 = '[object Object]',
+    regexpTag$2 = '[object RegExp]',
+    setTag$5 = '[object Set]',
+    stringTag$3 = '[object String]',
+    weakMapTag$2 = '[object WeakMap]';
+  var arrayBufferTag$2 = '[object ArrayBuffer]',
+    dataViewTag$3 = '[object DataView]',
+    float32Tag$2 = '[object Float32Array]',
+    float64Tag$2 = '[object Float64Array]',
+    int8Tag$2 = '[object Int8Array]',
+    int16Tag$2 = '[object Int16Array]',
+    int32Tag$2 = '[object Int32Array]',
+    uint8Tag$2 = '[object Uint8Array]',
+    uint8ClampedTag$2 = '[object Uint8ClampedArray]',
+    uint16Tag$2 = '[object Uint16Array]',
+    uint32Tag$2 = '[object Uint32Array]';
+
+  /** Used to identify `toStringTag` values of typed arrays. */
+  var typedArrayTags = {};
+  typedArrayTags[float32Tag$2] = typedArrayTags[float64Tag$2] = typedArrayTags[int8Tag$2] = typedArrayTags[int16Tag$2] = typedArrayTags[int32Tag$2] = typedArrayTags[uint8Tag$2] = typedArrayTags[uint8ClampedTag$2] = typedArrayTags[uint16Tag$2] = typedArrayTags[uint32Tag$2] = true;
+  typedArrayTags[argsTag$1] = typedArrayTags[arrayTag$1] = typedArrayTags[arrayBufferTag$2] = typedArrayTags[boolTag$3] = typedArrayTags[dataViewTag$3] = typedArrayTags[dateTag$3] = typedArrayTags[errorTag$1] = typedArrayTags[funcTag$1] = typedArrayTags[mapTag$5] = typedArrayTags[numberTag$3] = typedArrayTags[objectTag$3] = typedArrayTags[regexpTag$2] = typedArrayTags[setTag$5] = typedArrayTags[stringTag$3] = typedArrayTags[weakMapTag$2] = false;
+
+  /**
+   * The base implementation of `_.isTypedArray` without Node.js optimizations.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+   */
+  function baseIsTypedArray$1(value) {
+    return isObjectLike$8(value) && isLength$2(value.length) && !!typedArrayTags[baseGetTag$7(value)];
+  }
+  var _baseIsTypedArray = baseIsTypedArray$1;
+
+  /**
+   * The base implementation of `_.unary` without support for storing metadata.
+   *
+   * @private
+   * @param {Function} func The function to cap arguments for.
+   * @returns {Function} Returns the new capped function.
+   */
+
+  function baseUnary$4(func) {
+    return function (value) {
+      return func(value);
+    };
+  }
+  var _baseUnary = baseUnary$4;
+
+  var _nodeUtil = {exports: {}};
+
+  _nodeUtil.exports;
+
+  (function (module, exports) {
+  	var freeGlobal = _freeGlobal;
+
+  	/** Detect free variable `exports`. */
+  	var freeExports = exports && !exports.nodeType && exports;
+
+  	/** Detect free variable `module`. */
+  	var freeModule = freeExports && 'object' == 'object' && module && !module.nodeType && module;
+
+  	/** Detect the popular CommonJS extension `module.exports`. */
+  	var moduleExports = freeModule && freeModule.exports === freeExports;
+
+  	/** Detect free variable `process` from Node.js. */
+  	var freeProcess = moduleExports && freeGlobal.process;
+
+  	/** Used to access faster Node.js helpers. */
+  	var nodeUtil = function () {
+  	  try {
+  	    // Use `util.types` for Node.js 10+.
+  	    var types = freeModule && freeModule.require && freeModule.require('util').types;
+  	    if (types) {
+  	      return types;
+  	    }
+
+  	    // Legacy `process.binding('util')` for Node.js < 10.
+  	    return freeProcess && freeProcess.binding && freeProcess.binding('util');
+  	  } catch (e) {}
+  	}();
+  	module.exports = nodeUtil; 
+  } (_nodeUtil, _nodeUtil.exports));
+
+  var _nodeUtilExports = _nodeUtil.exports;
+
+  var baseIsTypedArray = _baseIsTypedArray,
+    baseUnary$3 = _baseUnary,
+    nodeUtil$3 = _nodeUtilExports;
+
+  /* Node.js helper references. */
+  var nodeIsTypedArray = nodeUtil$3 && nodeUtil$3.isTypedArray;
+
+  /**
+   * Checks if `value` is classified as a typed array.
+   *
+   * @static
+   * @memberOf _
+   * @since 3.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+   * @example
+   *
+   * _.isTypedArray(new Uint8Array);
+   * // => true
+   *
+   * _.isTypedArray([]);
+   * // => false
+   */
+  var isTypedArray$2 = nodeIsTypedArray ? baseUnary$3(nodeIsTypedArray) : baseIsTypedArray;
+  var isTypedArray_1 = isTypedArray$2;
+
   var baseTimes = _baseTimes,
-    isArguments$2 = isArguments_1,
-    isArray$7 = isArray_1,
-    isBuffer$1 = isBufferExports,
+    isArguments$3 = isArguments_1,
+    isArray$a = isArray_1,
+    isBuffer$2 = isBufferExports,
     isIndex$2 = _isIndex,
-    isTypedArray = isTypedArray_1;
+    isTypedArray$1 = isTypedArray_1;
 
   /** Used for built-in method references. */
-  var objectProto$4 = Object.prototype;
+  var objectProto$7 = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$3 = objectProto$4.hasOwnProperty;
+  var hasOwnProperty$5 = objectProto$7.hasOwnProperty;
 
   /**
    * Creates an array of the enumerable property names of the array-like `value`.
@@ -2832,15 +2104,15 @@
    * @returns {Array} Returns the array of property names.
    */
   function arrayLikeKeys$2(value, inherited) {
-    var isArr = isArray$7(value),
-      isArg = !isArr && isArguments$2(value),
-      isBuff = !isArr && !isArg && isBuffer$1(value),
-      isType = !isArr && !isArg && !isBuff && isTypedArray(value),
+    var isArr = isArray$a(value),
+      isArg = !isArr && isArguments$3(value),
+      isBuff = !isArr && !isArg && isBuffer$2(value),
+      isType = !isArr && !isArg && !isBuff && isTypedArray$1(value),
       skipIndexes = isArr || isArg || isBuff || isType,
       result = skipIndexes ? baseTimes(value.length, String) : [],
       length = result.length;
     for (var key in value) {
-      if ((inherited || hasOwnProperty$3.call(value, key)) && !(skipIndexes && (
+      if ((inherited || hasOwnProperty$5.call(value, key)) && !(skipIndexes && (
       // Safari 9 has enumerable `arguments.length` in strict mode.
       key == 'length' ||
       // Node.js 0.10 has enumerable non-index properties on buffers.
@@ -2856,9 +2128,112 @@
   }
   var _arrayLikeKeys = arrayLikeKeys$2;
 
+  /** Used for built-in method references. */
+
+  var objectProto$6 = Object.prototype;
+
+  /**
+   * Checks if `value` is likely a prototype object.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+   */
+  function isPrototype$4(value) {
+    var Ctor = value && value.constructor,
+      proto = typeof Ctor == 'function' && Ctor.prototype || objectProto$6;
+    return value === proto;
+  }
+  var _isPrototype = isPrototype$4;
+
+  /**
+   * Creates a unary function that invokes `func` with its argument transformed.
+   *
+   * @private
+   * @param {Function} func The function to wrap.
+   * @param {Function} transform The argument transform.
+   * @returns {Function} Returns the new function.
+   */
+
+  function overArg$2(func, transform) {
+    return function (arg) {
+      return func(transform(arg));
+    };
+  }
+  var _overArg = overArg$2;
+
+  var overArg$1 = _overArg;
+
+  /* Built-in method references for those with the same name as other `lodash` methods. */
+  var nativeKeys$1 = overArg$1(Object.keys, Object);
+  var _nativeKeys = nativeKeys$1;
+
+  var isPrototype$3 = _isPrototype,
+    nativeKeys = _nativeKeys;
+
+  /** Used for built-in method references. */
+  var objectProto$5 = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty$4 = objectProto$5.hasOwnProperty;
+
+  /**
+   * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+   *
+   * @private
+   * @param {Object} object The object to query.
+   * @returns {Array} Returns the array of property names.
+   */
+  function baseKeys$2(object) {
+    if (!isPrototype$3(object)) {
+      return nativeKeys(object);
+    }
+    var result = [];
+    for (var key in Object(object)) {
+      if (hasOwnProperty$4.call(object, key) && key != 'constructor') {
+        result.push(key);
+      }
+    }
+    return result;
+  }
+  var _baseKeys = baseKeys$2;
+
+  var isFunction = isFunction_1,
+    isLength$1 = isLength_1;
+
+  /**
+   * Checks if `value` is array-like. A value is considered array-like if it's
+   * not a function and has a `value.length` that's an integer greater than or
+   * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+   * @example
+   *
+   * _.isArrayLike([1, 2, 3]);
+   * // => true
+   *
+   * _.isArrayLike(document.body.children);
+   * // => true
+   *
+   * _.isArrayLike('abc');
+   * // => true
+   *
+   * _.isArrayLike(_.noop);
+   * // => false
+   */
+  function isArrayLike$3(value) {
+    return value != null && isLength$1(value.length) && !isFunction(value);
+  }
+  var isArrayLike_1 = isArrayLike$3;
+
   var arrayLikeKeys$1 = _arrayLikeKeys,
-    baseKeys = _baseKeys,
-    isArrayLike$1 = isArrayLike_1;
+    baseKeys$1 = _baseKeys,
+    isArrayLike$2 = isArrayLike_1;
 
   /**
    * Creates an array of the own enumerable property names of `object`.
@@ -2889,7 +2264,7 @@
    * // => ['0', '1']
    */
   function keys$3(object) {
-    return isArrayLike$1(object) ? arrayLikeKeys$1(object) : baseKeys(object);
+    return isArrayLike$2(object) ? arrayLikeKeys$1(object) : baseKeys$1(object);
   }
   var keys_1 = keys$3;
 
@@ -2934,14 +2309,14 @@
   var _nativeKeysIn = nativeKeysIn$1;
 
   var isObject$3 = isObject_1,
-    isPrototype$1 = _isPrototype,
+    isPrototype$2 = _isPrototype,
     nativeKeysIn = _nativeKeysIn;
 
   /** Used for built-in method references. */
-  var objectProto$3 = Object.prototype;
+  var objectProto$4 = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$2 = objectProto$3.hasOwnProperty;
+  var hasOwnProperty$3 = objectProto$4.hasOwnProperty;
 
   /**
    * The base implementation of `_.keysIn` which doesn't treat sparse arrays as dense.
@@ -2954,10 +2329,10 @@
     if (!isObject$3(object)) {
       return nativeKeysIn(object);
     }
-    var isProto = isPrototype$1(object),
+    var isProto = isPrototype$2(object),
       result = [];
     for (var key in object) {
-      if (!(key == 'constructor' && (isProto || !hasOwnProperty$2.call(object, key)))) {
+      if (!(key == 'constructor' && (isProto || !hasOwnProperty$3.call(object, key)))) {
         result.push(key);
       }
     }
@@ -2967,7 +2342,7 @@
 
   var arrayLikeKeys = _arrayLikeKeys,
     baseKeysIn = _baseKeysIn,
-    isArrayLike = isArrayLike_1;
+    isArrayLike$1 = isArrayLike_1;
 
   /**
    * Creates an array of the own and inherited enumerable property names of `object`.
@@ -2993,7 +2368,7 @@
    * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
    */
   function keysIn$3(object) {
-    return isArrayLike(object) ? arrayLikeKeys(object, true) : baseKeysIn(object);
+    return isArrayLike$1(object) ? arrayLikeKeys(object, true) : baseKeysIn(object);
   }
   var keysIn_1 = keysIn$3;
 
@@ -3129,10 +2504,10 @@
     stubArray$1 = stubArray_1;
 
   /** Used for built-in method references. */
-  var objectProto$2 = Object.prototype;
+  var objectProto$3 = Object.prototype;
 
   /** Built-in value references. */
-  var propertyIsEnumerable = objectProto$2.propertyIsEnumerable;
+  var propertyIsEnumerable = objectProto$3.propertyIsEnumerable;
 
   /* Built-in method references for those with the same name as other `lodash` methods. */
   var nativeGetSymbols$1 = Object.getOwnPropertySymbols;
@@ -3239,7 +2614,7 @@
   var _copySymbolsIn = copySymbolsIn$1;
 
   var arrayPush$1 = _arrayPush,
-    isArray$6 = isArray_1;
+    isArray$9 = isArray_1;
 
   /**
    * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
@@ -3254,7 +2629,7 @@
    */
   function baseGetAllKeys$2(object, keysFunc, symbolsFunc) {
     var result = keysFunc(object);
-    return isArray$6(object) ? result : arrayPush$1(result, symbolsFunc(object));
+    return isArray$9(object) ? result : arrayPush$1(result, symbolsFunc(object));
   }
   var _baseGetAllKeys = baseGetAllKeys$2;
 
@@ -3291,12 +2666,97 @@
   }
   var _getAllKeysIn = getAllKeysIn$2;
 
+  var getNative$3 = _getNative,
+    root$4 = _root;
+
+  /* Built-in method references that are verified to be native. */
+  var DataView$1 = getNative$3(root$4, 'DataView');
+  var _DataView = DataView$1;
+
+  var getNative$2 = _getNative,
+    root$3 = _root;
+
+  /* Built-in method references that are verified to be native. */
+  var Promise$2 = getNative$2(root$3, 'Promise');
+  var _Promise = Promise$2;
+
+  var getNative$1 = _getNative,
+    root$2 = _root;
+
+  /* Built-in method references that are verified to be native. */
+  var Set$2 = getNative$1(root$2, 'Set');
+  var _Set = Set$2;
+
+  var getNative = _getNative,
+    root$1 = _root;
+
+  /* Built-in method references that are verified to be native. */
+  var WeakMap$1 = getNative(root$1, 'WeakMap');
+  var _WeakMap = WeakMap$1;
+
+  var DataView = _DataView,
+    Map = _Map,
+    Promise$1 = _Promise,
+    Set$1 = _Set,
+    WeakMap = _WeakMap,
+    baseGetTag$6 = _baseGetTag,
+    toSource = _toSource;
+
+  /** `Object#toString` result references. */
+  var mapTag$4 = '[object Map]',
+    objectTag$2 = '[object Object]',
+    promiseTag = '[object Promise]',
+    setTag$4 = '[object Set]',
+    weakMapTag$1 = '[object WeakMap]';
+  var dataViewTag$2 = '[object DataView]';
+
+  /** Used to detect maps, sets, and weakmaps. */
+  var dataViewCtorString = toSource(DataView),
+    mapCtorString = toSource(Map),
+    promiseCtorString = toSource(Promise$1),
+    setCtorString = toSource(Set$1),
+    weakMapCtorString = toSource(WeakMap);
+
+  /**
+   * Gets the `toStringTag` of `value`.
+   *
+   * @private
+   * @param {*} value The value to query.
+   * @returns {string} Returns the `toStringTag`.
+   */
+  var getTag$4 = baseGetTag$6;
+
+  // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
+  if (DataView && getTag$4(new DataView(new ArrayBuffer(1))) != dataViewTag$2 || Map && getTag$4(new Map()) != mapTag$4 || Promise$1 && getTag$4(Promise$1.resolve()) != promiseTag || Set$1 && getTag$4(new Set$1()) != setTag$4 || WeakMap && getTag$4(new WeakMap()) != weakMapTag$1) {
+    getTag$4 = function (value) {
+      var result = baseGetTag$6(value),
+        Ctor = result == objectTag$2 ? value.constructor : undefined,
+        ctorString = Ctor ? toSource(Ctor) : '';
+      if (ctorString) {
+        switch (ctorString) {
+          case dataViewCtorString:
+            return dataViewTag$2;
+          case mapCtorString:
+            return mapTag$4;
+          case promiseCtorString:
+            return promiseTag;
+          case setCtorString:
+            return setTag$4;
+          case weakMapCtorString:
+            return weakMapTag$1;
+        }
+      }
+      return result;
+    };
+  }
+  var _getTag = getTag$4;
+
   /** Used for built-in method references. */
 
-  var objectProto$1 = Object.prototype;
+  var objectProto$2 = Object.prototype;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty$1 = objectProto$1.hasOwnProperty;
+  var hasOwnProperty$2 = objectProto$2.hasOwnProperty;
 
   /**
    * Initializes an array clone.
@@ -3310,7 +2770,7 @@
       result = new array.constructor(length);
 
     // Add properties assigned by `RegExp#exec`.
-    if (length && typeof array[0] == 'string' && hasOwnProperty$1.call(array, 'index')) {
+    if (length && typeof array[0] == 'string' && hasOwnProperty$2.call(array, 'index')) {
       result.index = array.index;
       result.input = array.input;
     }
@@ -3374,11 +2834,11 @@
   }
   var _cloneRegExp = cloneRegExp$1;
 
-  var Symbol$2 = _Symbol;
+  var Symbol$3 = _Symbol;
 
   /** Used to convert symbols to primitives and strings. */
-  var symbolProto = Symbol$2 ? Symbol$2.prototype : undefined,
-    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
+  var symbolProto$1 = Symbol$3 ? Symbol$3.prototype : undefined,
+    symbolValueOf = symbolProto$1 ? symbolProto$1.valueOf : undefined;
 
   /**
    * Creates a clone of the `symbol` object.
@@ -3417,12 +2877,12 @@
   /** `Object#toString` result references. */
   var boolTag$2 = '[object Boolean]',
     dateTag$2 = '[object Date]',
-    mapTag$2 = '[object Map]',
+    mapTag$3 = '[object Map]',
     numberTag$2 = '[object Number]',
     regexpTag$1 = '[object RegExp]',
-    setTag$2 = '[object Set]',
+    setTag$3 = '[object Set]',
     stringTag$2 = '[object String]',
-    symbolTag$1 = '[object Symbol]';
+    symbolTag$2 = '[object Symbol]';
   var arrayBufferTag$1 = '[object ArrayBuffer]',
     dataViewTag$1 = '[object DataView]',
     float32Tag$1 = '[object Float32Array]',
@@ -3467,16 +2927,16 @@
       case uint16Tag$1:
       case uint32Tag$1:
         return cloneTypedArray(object, isDeep);
-      case mapTag$2:
+      case mapTag$3:
         return new Ctor();
       case numberTag$2:
       case stringTag$2:
         return new Ctor(object);
       case regexpTag$1:
         return cloneRegExp(object);
-      case setTag$2:
+      case setTag$3:
         return new Ctor();
-      case symbolTag$1:
+      case symbolTag$2:
         return cloneSymbol(object);
     }
   }
@@ -3514,7 +2974,7 @@
 
   var baseCreate = _baseCreate,
     getPrototype$1 = _getPrototype,
-    isPrototype = _isPrototype;
+    isPrototype$1 = _isPrototype;
 
   /**
    * Initializes an object clone.
@@ -3524,15 +2984,15 @@
    * @returns {Object} Returns the initialized clone.
    */
   function initCloneObject$1(object) {
-    return typeof object.constructor == 'function' && !isPrototype(object) ? baseCreate(getPrototype$1(object)) : {};
+    return typeof object.constructor == 'function' && !isPrototype$1(object) ? baseCreate(getPrototype$1(object)) : {};
   }
   var _initCloneObject = initCloneObject$1;
 
-  var getTag$2 = _getTag,
-    isObjectLike$6 = isObjectLike_1;
+  var getTag$3 = _getTag,
+    isObjectLike$7 = isObjectLike_1;
 
   /** `Object#toString` result references. */
-  var mapTag$1 = '[object Map]';
+  var mapTag$2 = '[object Map]';
 
   /**
    * The base implementation of `_.isMap` without Node.js optimizations.
@@ -3542,7 +3002,7 @@
    * @returns {boolean} Returns `true` if `value` is a map, else `false`.
    */
   function baseIsMap$1(value) {
-    return isObjectLike$6(value) && getTag$2(value) == mapTag$1;
+    return isObjectLike$7(value) && getTag$3(value) == mapTag$2;
   }
   var _baseIsMap = baseIsMap$1;
 
@@ -3573,11 +3033,11 @@
   var isMap$1 = nodeIsMap ? baseUnary$2(nodeIsMap) : baseIsMap;
   var isMap_1 = isMap$1;
 
-  var getTag$1 = _getTag,
-    isObjectLike$5 = isObjectLike_1;
+  var getTag$2 = _getTag,
+    isObjectLike$6 = isObjectLike_1;
 
   /** `Object#toString` result references. */
-  var setTag$1 = '[object Set]';
+  var setTag$2 = '[object Set]';
 
   /**
    * The base implementation of `_.isSet` without Node.js optimizations.
@@ -3587,7 +3047,7 @@
    * @returns {boolean} Returns `true` if `value` is a set, else `false`.
    */
   function baseIsSet$1(value) {
-    return isObjectLike$5(value) && getTag$1(value) == setTag$1;
+    return isObjectLike$6(value) && getTag$2(value) == setTag$2;
   }
   var _baseIsSet = baseIsSet$1;
 
@@ -3629,12 +3089,12 @@
     copySymbolsIn = _copySymbolsIn,
     getAllKeys = _getAllKeys,
     getAllKeysIn$1 = _getAllKeysIn,
-    getTag = _getTag,
+    getTag$1 = _getTag,
     initCloneArray = _initCloneArray,
     initCloneByTag = _initCloneByTag,
     initCloneObject = _initCloneObject,
-    isArray$5 = isArray_1,
-    isBuffer = isBufferExports,
+    isArray$8 = isArray_1,
+    isBuffer$1 = isBufferExports,
     isMap = isMap_1,
     isObject$1 = isObject_1,
     isSet = isSet_1,
@@ -3654,13 +3114,13 @@
     errorTag = '[object Error]',
     funcTag = '[object Function]',
     genTag = '[object GeneratorFunction]',
-    mapTag = '[object Map]',
+    mapTag$1 = '[object Map]',
     numberTag$1 = '[object Number]',
     objectTag$1 = '[object Object]',
     regexpTag = '[object RegExp]',
-    setTag = '[object Set]',
+    setTag$1 = '[object Set]',
     stringTag$1 = '[object String]',
-    symbolTag = '[object Symbol]',
+    symbolTag$1 = '[object Symbol]',
     weakMapTag = '[object WeakMap]';
   var arrayBufferTag = '[object ArrayBuffer]',
     dataViewTag = '[object DataView]',
@@ -3676,7 +3136,7 @@
 
   /** Used to identify `toStringTag` values supported by `_.clone`. */
   var cloneableTags = {};
-  cloneableTags[argsTag] = cloneableTags[arrayTag] = cloneableTags[arrayBufferTag] = cloneableTags[dataViewTag] = cloneableTags[boolTag$1] = cloneableTags[dateTag$1] = cloneableTags[float32Tag] = cloneableTags[float64Tag] = cloneableTags[int8Tag] = cloneableTags[int16Tag] = cloneableTags[int32Tag] = cloneableTags[mapTag] = cloneableTags[numberTag$1] = cloneableTags[objectTag$1] = cloneableTags[regexpTag] = cloneableTags[setTag] = cloneableTags[stringTag$1] = cloneableTags[symbolTag] = cloneableTags[uint8Tag] = cloneableTags[uint8ClampedTag] = cloneableTags[uint16Tag] = cloneableTags[uint32Tag] = true;
+  cloneableTags[argsTag] = cloneableTags[arrayTag] = cloneableTags[arrayBufferTag] = cloneableTags[dataViewTag] = cloneableTags[boolTag$1] = cloneableTags[dateTag$1] = cloneableTags[float32Tag] = cloneableTags[float64Tag] = cloneableTags[int8Tag] = cloneableTags[int16Tag] = cloneableTags[int32Tag] = cloneableTags[mapTag$1] = cloneableTags[numberTag$1] = cloneableTags[objectTag$1] = cloneableTags[regexpTag] = cloneableTags[setTag$1] = cloneableTags[stringTag$1] = cloneableTags[symbolTag$1] = cloneableTags[uint8Tag] = cloneableTags[uint8ClampedTag] = cloneableTags[uint16Tag] = cloneableTags[uint32Tag] = true;
   cloneableTags[errorTag] = cloneableTags[funcTag] = cloneableTags[weakMapTag] = false;
 
   /**
@@ -3709,16 +3169,16 @@
     if (!isObject$1(value)) {
       return value;
     }
-    var isArr = isArray$5(value);
+    var isArr = isArray$8(value);
     if (isArr) {
       result = initCloneArray(value);
       if (!isDeep) {
         return copyArray(value, result);
       }
     } else {
-      var tag = getTag(value),
+      var tag = getTag$1(value),
         isFunc = tag == funcTag || tag == genTag;
-      if (isBuffer(value)) {
+      if (isBuffer$1(value)) {
         return cloneBuffer(value, isDeep);
       }
       if (tag == objectTag$1 || tag == argsTag || isFunc && !object) {
@@ -3763,8 +3223,36 @@
   }
   var _baseClone = baseClone$2;
 
-  var isArray$4 = isArray_1,
-    isSymbol$1 = isSymbol_1;
+  var baseGetTag$5 = _baseGetTag,
+    isObjectLike$5 = isObjectLike_1;
+
+  /** `Object#toString` result references. */
+  var symbolTag = '[object Symbol]';
+
+  /**
+   * Checks if `value` is classified as a `Symbol` primitive or object.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+   * @example
+   *
+   * _.isSymbol(Symbol.iterator);
+   * // => true
+   *
+   * _.isSymbol('abc');
+   * // => false
+   */
+  function isSymbol$3(value) {
+    return typeof value == 'symbol' || isObjectLike$5(value) && baseGetTag$5(value) == symbolTag;
+  }
+  var isSymbol_1 = isSymbol$3;
+
+  var isArray$7 = isArray_1,
+    isSymbol$2 = isSymbol_1;
 
   /** Used to match property names within property paths. */
   var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
@@ -3779,18 +3267,18 @@
    * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
    */
   function isKey$1(value, object) {
-    if (isArray$4(value)) {
+    if (isArray$7(value)) {
       return false;
     }
     var type = typeof value;
-    if (type == 'number' || type == 'symbol' || type == 'boolean' || value == null || isSymbol$1(value)) {
+    if (type == 'number' || type == 'symbol' || type == 'boolean' || value == null || isSymbol$2(value)) {
       return true;
     }
     return reIsPlainProp.test(value) || !reIsDeepProp.test(value) || object != null && value in Object(object);
   }
   var _isKey = isKey$1;
 
-  var MapCache = _MapCache;
+  var MapCache$1 = _MapCache;
 
   /** Error message constants. */
   var FUNC_ERROR_TEXT = 'Expected a function';
@@ -3854,12 +3342,12 @@
       memoized.cache = cache.set(key, result) || cache;
       return result;
     };
-    memoized.cache = new (memoize$1.Cache || MapCache)();
+    memoized.cache = new (memoize$1.Cache || MapCache$1)();
     return memoized;
   }
 
   // Expose `MapCache`.
-  memoize$1.Cache = MapCache;
+  memoize$1.Cache = MapCache$1;
   var memoize_1 = memoize$1;
 
   var memoize = memoize_1;
@@ -3914,10 +3402,75 @@
   });
   var _stringToPath = stringToPath$1;
 
-  var isArray$3 = isArray_1,
+  var Symbol$2 = _Symbol,
+    arrayMap$1 = _arrayMap,
+    isArray$6 = isArray_1,
+    isSymbol$1 = isSymbol_1;
+
+  /** Used as references for various `Number` constants. */
+  var INFINITY$2 = 1 / 0;
+
+  /** Used to convert symbols to primitives and strings. */
+  var symbolProto = Symbol$2 ? Symbol$2.prototype : undefined,
+    symbolToString = symbolProto ? symbolProto.toString : undefined;
+
+  /**
+   * The base implementation of `_.toString` which doesn't convert nullish
+   * values to empty strings.
+   *
+   * @private
+   * @param {*} value The value to process.
+   * @returns {string} Returns the string.
+   */
+  function baseToString$2(value) {
+    // Exit early for strings to avoid a performance hit in some environments.
+    if (typeof value == 'string') {
+      return value;
+    }
+    if (isArray$6(value)) {
+      // Recursively convert values (susceptible to call stack limits).
+      return arrayMap$1(value, baseToString$2) + '';
+    }
+    if (isSymbol$1(value)) {
+      return symbolToString ? symbolToString.call(value) : '';
+    }
+    var result = value + '';
+    return result == '0' && 1 / value == -INFINITY$2 ? '-0' : result;
+  }
+  var _baseToString = baseToString$2;
+
+  var baseToString$1 = _baseToString;
+
+  /**
+   * Converts `value` to a string. An empty string is returned for `null`
+   * and `undefined` values. The sign of `-0` is preserved.
+   *
+   * @static
+   * @memberOf _
+   * @since 4.0.0
+   * @category Lang
+   * @param {*} value The value to convert.
+   * @returns {string} Returns the converted string.
+   * @example
+   *
+   * _.toString(null);
+   * // => ''
+   *
+   * _.toString(-0);
+   * // => '-0'
+   *
+   * _.toString([1, 2, 3]);
+   * // => '1,2,3'
+   */
+  function toString$5(value) {
+    return value == null ? '' : baseToString$1(value);
+  }
+  var toString_1 = toString$5;
+
+  var isArray$5 = isArray_1,
     isKey = _isKey,
     stringToPath = _stringToPath,
-    toString$3 = toString_1;
+    toString$4 = toString_1;
 
   /**
    * Casts `value` to a path array if it's not one.
@@ -3928,10 +3481,10 @@
    * @returns {Array} Returns the cast property path array.
    */
   function castPath$6(value, object) {
-    if (isArray$3(value)) {
+    if (isArray$5(value)) {
       return value;
     }
-    return isKey(value, object) ? [value] : stringToPath(toString$3(value));
+    return isKey(value, object) ? [value] : stringToPath(toString$4(value));
   }
   var _castPath = castPath$6;
 
@@ -3959,7 +3512,7 @@
   var isSymbol = isSymbol_1;
 
   /** Used as references for various `Number` constants. */
-  var INFINITY = 1 / 0;
+  var INFINITY$1 = 1 / 0;
 
   /**
    * Converts `value` to a string key if it's not a string or symbol.
@@ -3973,7 +3526,7 @@
       return value;
     }
     var result = value + '';
-    return result == '0' && 1 / value == -INFINITY ? '-0' : result;
+    return result == '0' && 1 / value == -INFINITY$1 ? '-0' : result;
   }
   var _toKey = toKey$4;
 
@@ -4074,13 +3627,13 @@
 
   /** Used for built-in method references. */
   var funcProto = Function.prototype,
-    objectProto = Object.prototype;
+    objectProto$1 = Object.prototype;
 
   /** Used to resolve the decompiled source of functions. */
   var funcToString = funcProto.toString;
 
   /** Used to check objects for own properties. */
-  var hasOwnProperty = objectProto.hasOwnProperty;
+  var hasOwnProperty$1 = objectProto$1.hasOwnProperty;
 
   /** Used to infer the `Object` constructor. */
   var objectCtorString = funcToString.call(Object);
@@ -4121,7 +3674,7 @@
     if (proto === null) {
       return true;
     }
-    var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+    var Ctor = hasOwnProperty$1.call(proto, 'constructor') && proto.constructor;
     return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
   }
   var isPlainObject_1 = isPlainObject$1;
@@ -4143,8 +3696,8 @@
   var _customOmitClone = customOmitClone$1;
 
   var Symbol$1 = _Symbol,
-    isArguments$1 = isArguments_1,
-    isArray$2 = isArray_1;
+    isArguments$2 = isArguments_1,
+    isArray$4 = isArray_1;
 
   /** Built-in value references. */
   var spreadableSymbol = Symbol$1 ? Symbol$1.isConcatSpreadable : undefined;
@@ -4157,7 +3710,7 @@
    * @returns {boolean} Returns `true` if `value` is flattenable, else `false`.
    */
   function isFlattenable$1(value) {
-    return isArray$2(value) || isArguments$1(value) || !!(spreadableSymbol && value && value[spreadableSymbol]);
+    return isArray$4(value) || isArguments$2(value) || !!(spreadableSymbol && value && value[spreadableSymbol]);
   }
   var _isFlattenable = isFlattenable$1;
 
@@ -4478,6 +4031,423 @@
 
   var _omit = /*@__PURE__*/getDefaultExportFromCjs(omit_1);
 
+  var baseKeys = _baseKeys,
+    getTag = _getTag,
+    isArguments$1 = isArguments_1,
+    isArray$3 = isArray_1,
+    isArrayLike = isArrayLike_1,
+    isBuffer = isBufferExports,
+    isPrototype = _isPrototype,
+    isTypedArray = isTypedArray_1;
+
+  /** `Object#toString` result references. */
+  var mapTag = '[object Map]',
+    setTag = '[object Set]';
+
+  /** Used for built-in method references. */
+  var objectProto = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty = objectProto.hasOwnProperty;
+
+  /**
+   * Checks if `value` is an empty object, collection, map, or set.
+   *
+   * Objects are considered empty if they have no own enumerable string keyed
+   * properties.
+   *
+   * Array-like values such as `arguments` objects, arrays, buffers, strings, or
+   * jQuery-like collections are considered empty if they have a `length` of `0`.
+   * Similarly, maps and sets are considered empty if they have a `size` of `0`.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Lang
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is empty, else `false`.
+   * @example
+   *
+   * _.isEmpty(null);
+   * // => true
+   *
+   * _.isEmpty(true);
+   * // => true
+   *
+   * _.isEmpty(1);
+   * // => true
+   *
+   * _.isEmpty([1, 2, 3]);
+   * // => false
+   *
+   * _.isEmpty({ 'a': 1 });
+   * // => false
+   */
+  function isEmpty$1(value) {
+    if (value == null) {
+      return true;
+    }
+    if (isArrayLike(value) && (isArray$3(value) || typeof value == 'string' || typeof value.splice == 'function' || isBuffer(value) || isTypedArray(value) || isArguments$1(value))) {
+      return !value.length;
+    }
+    var tag = getTag(value);
+    if (tag == mapTag || tag == setTag) {
+      return !value.size;
+    }
+    if (isPrototype(value)) {
+      return !baseKeys(value).length;
+    }
+    for (var key in value) {
+      if (hasOwnProperty.call(value, key)) {
+        return false;
+      }
+    }
+    return true;
+  }
+  var isEmpty_1 = isEmpty$1;
+
+  var _isEmpty = /*@__PURE__*/getDefaultExportFromCjs(isEmpty_1);
+
+  /** Used to stand-in for `undefined` hash values. */
+
+  var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+  /**
+   * Adds `value` to the array cache.
+   *
+   * @private
+   * @name add
+   * @memberOf SetCache
+   * @alias push
+   * @param {*} value The value to cache.
+   * @returns {Object} Returns the cache instance.
+   */
+  function setCacheAdd$1(value) {
+    this.__data__.set(value, HASH_UNDEFINED);
+    return this;
+  }
+  var _setCacheAdd = setCacheAdd$1;
+
+  /**
+   * Checks if `value` is in the array cache.
+   *
+   * @private
+   * @name has
+   * @memberOf SetCache
+   * @param {*} value The value to search for.
+   * @returns {number} Returns `true` if `value` is found, else `false`.
+   */
+
+  function setCacheHas$1(value) {
+    return this.__data__.has(value);
+  }
+  var _setCacheHas = setCacheHas$1;
+
+  var MapCache = _MapCache,
+    setCacheAdd = _setCacheAdd,
+    setCacheHas = _setCacheHas;
+
+  /**
+   *
+   * Creates an array cache object to store unique values.
+   *
+   * @private
+   * @constructor
+   * @param {Array} [values] The values to cache.
+   */
+  function SetCache$1(values) {
+    var index = -1,
+      length = values == null ? 0 : values.length;
+    this.__data__ = new MapCache();
+    while (++index < length) {
+      this.add(values[index]);
+    }
+  }
+
+  // Add methods to `SetCache`.
+  SetCache$1.prototype.add = SetCache$1.prototype.push = setCacheAdd;
+  SetCache$1.prototype.has = setCacheHas;
+  var _SetCache = SetCache$1;
+
+  /**
+   * The base implementation of `_.findIndex` and `_.findLastIndex` without
+   * support for iteratee shorthands.
+   *
+   * @private
+   * @param {Array} array The array to inspect.
+   * @param {Function} predicate The function invoked per iteration.
+   * @param {number} fromIndex The index to search from.
+   * @param {boolean} [fromRight] Specify iterating from right to left.
+   * @returns {number} Returns the index of the matched value, else `-1`.
+   */
+
+  function baseFindIndex$1(array, predicate, fromIndex, fromRight) {
+    var length = array.length,
+      index = fromIndex + (fromRight ? 1 : -1);
+    while (fromRight ? index-- : ++index < length) {
+      if (predicate(array[index], index, array)) {
+        return index;
+      }
+    }
+    return -1;
+  }
+  var _baseFindIndex = baseFindIndex$1;
+
+  /**
+   * The base implementation of `_.isNaN` without support for number objects.
+   *
+   * @private
+   * @param {*} value The value to check.
+   * @returns {boolean} Returns `true` if `value` is `NaN`, else `false`.
+   */
+
+  function baseIsNaN$1(value) {
+    return value !== value;
+  }
+  var _baseIsNaN = baseIsNaN$1;
+
+  /**
+   * A specialized version of `_.indexOf` which performs strict equality
+   * comparisons of values, i.e. `===`.
+   *
+   * @private
+   * @param {Array} array The array to inspect.
+   * @param {*} value The value to search for.
+   * @param {number} fromIndex The index to search from.
+   * @returns {number} Returns the index of the matched value, else `-1`.
+   */
+
+  function strictIndexOf$1(array, value, fromIndex) {
+    var index = fromIndex - 1,
+      length = array.length;
+    while (++index < length) {
+      if (array[index] === value) {
+        return index;
+      }
+    }
+    return -1;
+  }
+  var _strictIndexOf = strictIndexOf$1;
+
+  var baseFindIndex = _baseFindIndex,
+    baseIsNaN = _baseIsNaN,
+    strictIndexOf = _strictIndexOf;
+
+  /**
+   * The base implementation of `_.indexOf` without `fromIndex` bounds checks.
+   *
+   * @private
+   * @param {Array} array The array to inspect.
+   * @param {*} value The value to search for.
+   * @param {number} fromIndex The index to search from.
+   * @returns {number} Returns the index of the matched value, else `-1`.
+   */
+  function baseIndexOf$3(array, value, fromIndex) {
+    return value === value ? strictIndexOf(array, value, fromIndex) : baseFindIndex(array, baseIsNaN, fromIndex);
+  }
+  var _baseIndexOf = baseIndexOf$3;
+
+  var baseIndexOf$2 = _baseIndexOf;
+
+  /**
+   * A specialized version of `_.includes` for arrays without support for
+   * specifying an index to search from.
+   *
+   * @private
+   * @param {Array} [array] The array to inspect.
+   * @param {*} target The value to search for.
+   * @returns {boolean} Returns `true` if `target` is found, else `false`.
+   */
+  function arrayIncludes$1(array, value) {
+    var length = array == null ? 0 : array.length;
+    return !!length && baseIndexOf$2(array, value, 0) > -1;
+  }
+  var _arrayIncludes = arrayIncludes$1;
+
+  /**
+   * This function is like `arrayIncludes` except that it accepts a comparator.
+   *
+   * @private
+   * @param {Array} [array] The array to inspect.
+   * @param {*} target The value to search for.
+   * @param {Function} comparator The comparator invoked per element.
+   * @returns {boolean} Returns `true` if `target` is found, else `false`.
+   */
+
+  function arrayIncludesWith$1(array, value, comparator) {
+    var index = -1,
+      length = array == null ? 0 : array.length;
+    while (++index < length) {
+      if (comparator(value, array[index])) {
+        return true;
+      }
+    }
+    return false;
+  }
+  var _arrayIncludesWith = arrayIncludesWith$1;
+
+  /**
+   * Checks if a `cache` value for `key` exists.
+   *
+   * @private
+   * @param {Object} cache The cache to query.
+   * @param {string} key The key of the entry to check.
+   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+   */
+
+  function cacheHas$1(cache, key) {
+    return cache.has(key);
+  }
+  var _cacheHas = cacheHas$1;
+
+  /**
+   * This method returns `undefined`.
+   *
+   * @static
+   * @memberOf _
+   * @since 2.3.0
+   * @category Util
+   * @example
+   *
+   * _.times(2, _.noop);
+   * // => [undefined, undefined]
+   */
+
+  function noop$1() {
+    // No operation performed.
+  }
+  var noop_1 = noop$1;
+
+  /**
+   * Converts `set` to an array of its values.
+   *
+   * @private
+   * @param {Object} set The set to convert.
+   * @returns {Array} Returns the values.
+   */
+
+  function setToArray$2(set) {
+    var index = -1,
+      result = Array(set.size);
+    set.forEach(function (value) {
+      result[++index] = value;
+    });
+    return result;
+  }
+  var _setToArray = setToArray$2;
+
+  var Set = _Set,
+    noop = noop_1,
+    setToArray$1 = _setToArray;
+
+  /** Used as references for various `Number` constants. */
+  var INFINITY = 1 / 0;
+
+  /**
+   * Creates a set object of `values`.
+   *
+   * @private
+   * @param {Array} values The values to add to the set.
+   * @returns {Object} Returns the new set.
+   */
+  var createSet$1 = !(Set && 1 / setToArray$1(new Set([, -0]))[1] == INFINITY) ? noop : function (values) {
+    return new Set(values);
+  };
+  var _createSet = createSet$1;
+
+  var SetCache = _SetCache,
+    arrayIncludes = _arrayIncludes,
+    arrayIncludesWith = _arrayIncludesWith,
+    cacheHas = _cacheHas,
+    createSet = _createSet,
+    setToArray = _setToArray;
+
+  /** Used as the size to enable large array optimizations. */
+  var LARGE_ARRAY_SIZE = 200;
+
+  /**
+   * The base implementation of `_.uniqBy` without support for iteratee shorthands.
+   *
+   * @private
+   * @param {Array} array The array to inspect.
+   * @param {Function} [iteratee] The iteratee invoked per element.
+   * @param {Function} [comparator] The comparator invoked per element.
+   * @returns {Array} Returns the new duplicate free array.
+   */
+  function baseUniq$1(array, iteratee, comparator) {
+    var index = -1,
+      includes = arrayIncludes,
+      length = array.length,
+      isCommon = true,
+      result = [],
+      seen = result;
+    if (comparator) {
+      isCommon = false;
+      includes = arrayIncludesWith;
+    } else if (length >= LARGE_ARRAY_SIZE) {
+      var set = iteratee ? null : createSet(array);
+      if (set) {
+        return setToArray(set);
+      }
+      isCommon = false;
+      includes = cacheHas;
+      seen = new SetCache();
+    } else {
+      seen = iteratee ? [] : result;
+    }
+    outer: while (++index < length) {
+      var value = array[index],
+        computed = iteratee ? iteratee(value) : value;
+      value = comparator || value !== 0 ? value : 0;
+      if (isCommon && computed === computed) {
+        var seenIndex = seen.length;
+        while (seenIndex--) {
+          if (seen[seenIndex] === computed) {
+            continue outer;
+          }
+        }
+        if (iteratee) {
+          seen.push(computed);
+        }
+        result.push(value);
+      } else if (!includes(seen, computed, comparator)) {
+        if (seen !== result) {
+          seen.push(computed);
+        }
+        result.push(value);
+      }
+    }
+    return result;
+  }
+  var _baseUniq = baseUniq$1;
+
+  var baseUniq = _baseUniq;
+
+  /**
+   * Creates a duplicate-free version of an array, using
+   * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+   * for equality comparisons, in which only the first occurrence of each element
+   * is kept. The order of result values is determined by the order they occur
+   * in the array.
+   *
+   * @static
+   * @memberOf _
+   * @since 0.1.0
+   * @category Array
+   * @param {Array} array The array to inspect.
+   * @returns {Array} Returns the new duplicate free array.
+   * @example
+   *
+   * _.uniq([2, 1, 2]);
+   * // => [2, 1]
+   */
+  function uniq(array) {
+    return array && array.length ? baseUniq(array) : [];
+  }
+  var uniq_1 = uniq;
+
+  var _uniq = /*@__PURE__*/getDefaultExportFromCjs(uniq_1);
+
   var classnames = {exports: {}};
 
   /*!
@@ -4534,7 +4504,7 @@
   var classNames = /*@__PURE__*/getDefaultExportFromCjs(classnamesExports);
 
   var baseGetTag$3 = _baseGetTag,
-    isArray$1 = isArray_1,
+    isArray$2 = isArray_1,
     isObjectLike$3 = isObjectLike_1;
 
   /** `Object#toString` result references. */
@@ -4557,170 +4527,12 @@
    * _.isString(1);
    * // => false
    */
-  function isString(value) {
-    return typeof value == 'string' || !isArray$1(value) && isObjectLike$3(value) && baseGetTag$3(value) == stringTag;
+  function isString$1(value) {
+    return typeof value == 'string' || !isArray$2(value) && isObjectLike$3(value) && baseGetTag$3(value) == stringTag;
   }
-  var isString_1 = isString;
+  var isString_1 = isString$1;
 
   var _isString = /*@__PURE__*/getDefaultExportFromCjs(isString_1);
-
-  function styleInject(css, ref) {
-    if (ref === void 0) ref = {};
-    var insertAt = ref.insertAt;
-    if (!css || typeof document === 'undefined') {
-      return;
-    }
-    var head = document.head || document.getElementsByTagName('head')[0];
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    if (insertAt === 'top') {
-      if (head.firstChild) {
-        head.insertBefore(style, head.firstChild);
-      } else {
-        head.appendChild(style);
-      }
-    } else {
-      head.appendChild(style);
-    }
-    if (style.styleSheet) {
-      style.styleSheet.cssText = css;
-    } else {
-      style.appendChild(document.createTextNode(css));
-    }
-  }
-
-  var css_248z$h = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
-  styleInject(css_248z$h);
-
-  var tx = function tx(str, locale) {
-    if (_isString(str)) {
-      return str;
-    } else if (_isObject(str)) {
-      if (!_isEmpty(str[locale])) {
-        return str[locale];
-      } else if (!_isEmpty(str['en-US'])) {
-        return str['en-US'];
-      } else if (Object.keys(str).length !== 0) {
-        return str[Object.keys(str)[0]];
-      } else {
-        return '';
-      }
-    }
-  };
-  var ValidationErrors = function ValidationErrors(_ref) {
-    var _ref$errors = _ref.errors,
-      errors = _ref$errors === void 0 ? {} : _ref$errors,
-      className = _ref.className,
-      locale = _ref.locale;
-    var keys = Object.keys(errors);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-validation-errors', className)
-    }, keys.map(function (fieldName) {
-      var label = fieldName;
-      if (errors[fieldName] && errors[fieldName].ref && errors[fieldName].ref.label) {
-        label = tx(errors[fieldName].ref.label, locale);
-      }
-      return /*#__PURE__*/React$1.createElement("div", {
-        key: fieldName
-      }, /*#__PURE__*/React$1.createElement("b", null, label, ":"), "\xA0", errors[fieldName].message ? errors[fieldName].message : 'This is required');
-    }));
-  };
-
-  var PlusCircle = function PlusCircle(_ref) {
-    var _ref$width = _ref.width,
-      width = _ref$width === void 0 ? 24 : _ref$width,
-      _ref$height = _ref.height,
-      height = _ref$height === void 0 ? 24 : _ref$height,
-      _ref$color = _ref.color,
-      color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React$1.createElement("svg", {
-      width: "".concat(width, "px"),
-      height: "".concat(height, "px"),
-      viewBox: "0 0 20 20",
-      xmlns: "http://www.w3.org/2000/svg",
-      fill: "none"
-    }, /*#__PURE__*/React$1.createElement("path", {
-      fill: color,
-      fillRule: "evenodd",
-      d: "M10 3a7 7 0 100 14 7 7 0 000-14zm-9 7a9 9 0 1118 0 9 9 0 01-18 0zm14 .069a1 1 0 01-1 1h-2.931V14a1 1 0 11-2 0v-2.931H6a1 1 0 110-2h3.069V6a1 1 0 112 0v3.069H14a1 1 0 011 1z"
-    }));
-  };
-
-  var MinusCircle = function MinusCircle(_ref) {
-    var _ref$width = _ref.width,
-      width = _ref$width === void 0 ? 24 : _ref$width,
-      _ref$height = _ref.height,
-      height = _ref$height === void 0 ? 24 : _ref$height,
-      _ref$color = _ref.color,
-      color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React$1.createElement("svg", {
-      width: "".concat(width, "px"),
-      height: "".concat(height, "px"),
-      viewBox: "0 0 24 24",
-      fill: "none",
-      xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React$1.createElement("path", {
-      fill: color,
-      fillRule: "evenodd",
-      clipRule: "evenodd",
-      d: "M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12ZM12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM7 11C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11H7Z"
-    }));
-  };
-
-  var ChevronDown = function ChevronDown(_ref) {
-    var _ref$width = _ref.width,
-      width = _ref$width === void 0 ? 24 : _ref$width,
-      _ref$height = _ref.height,
-      height = _ref$height === void 0 ? 24 : _ref$height,
-      _ref$color = _ref.color,
-      color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React$1.createElement("svg", {
-      width: "".concat(width, "px"),
-      height: "".concat(height, "px"),
-      fill: color,
-      viewBox: "0 0 24 24",
-      xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React$1.createElement("path", {
-      d: "M17,8H7a1,1,0,0,0-.768,1.641l5,6a1,1,0,0,0,1.536,0l5-6A1,1,0,0,0,17,8Zm-5,5.438L9.135,10h5.73Z"
-    }));
-  };
-
-  var ChevronUp = function ChevronUp(_ref) {
-    var _ref$width = _ref.width,
-      width = _ref$width === void 0 ? 24 : _ref$width,
-      _ref$height = _ref.height,
-      height = _ref$height === void 0 ? 24 : _ref$height,
-      _ref$color = _ref.color,
-      color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React$1.createElement("svg", {
-      width: "".concat(width, "px"),
-      height: "".concat(height, "px"),
-      viewBox: "0 0 24 24",
-      xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React$1.createElement("path", {
-      fill: color,
-      d: "M12.768,8.359a1.035,1.035,0,0,0-1.536,0l-5,6A1,1,0,0,0,7,16H17a1,1,0,0,0,.768-1.641ZM9.135,14,12,10.563,14.865,14Z"
-    }));
-  };
-
-  var Warning = function Warning(_ref) {
-    var _ref$width = _ref.width,
-      width = _ref$width === void 0 ? 24 : _ref$width,
-      _ref$height = _ref.height,
-      height = _ref$height === void 0 ? 24 : _ref$height,
-      _ref$color = _ref.color,
-      color = _ref$color === void 0 ? '#000000' : _ref$color;
-    return /*#__PURE__*/React$1.createElement("svg", {
-      fill: color,
-      width: "".concat(width, "px"),
-      height: "".concat(height, "px"),
-      viewBox: "0 0 1920 1920",
-      xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/React$1.createElement("path", {
-      d: "M960 0c530.193 0 960 429.807 960 960s-429.807 960-960 960S0 1490.193 0 960 429.807 0 960 0Zm-9.838 1342.685c-84.47 0-153.19 68.721-153.19 153.19 0 84.47 68.72 153.192 153.19 153.192s153.19-68.721 153.19-153.191-68.72-153.19-153.19-153.19ZM1153.658 320H746.667l99.118 898.623h208.755L1153.658 320Z",
-      fillRule: "evenodd"
-    }));
-  };
 
   /**
    * processFieldsHash
@@ -4956,6 +4768,36 @@
     });
   };
 
+  var toString$3 = toString_1;
+
+  /** Used to generate unique IDs. */
+  var idCounter = 0;
+
+  /**
+   * Generates a unique ID. If `prefix` is given, the ID is appended to it.
+   *
+   * @static
+   * @since 0.1.0
+   * @memberOf _
+   * @category Util
+   * @param {string} [prefix=''] The value to prefix the ID with.
+   * @returns {string} Returns the unique ID.
+   * @example
+   *
+   * _.uniqueId('contact_');
+   * // => 'contact_104'
+   *
+   * _.uniqueId();
+   * // => '105'
+   */
+  function uniqueId(prefix) {
+    var id = ++idCounter;
+    return toString$3(prefix) + id;
+  }
+  var uniqueId_1 = uniqueId;
+
+  var _uniqueId = /*@__PURE__*/getDefaultExportFromCjs(uniqueId_1);
+
   var fillIds = function fillIds(fields) {
     var namespace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
     return mapFields(fields, function (field) {
@@ -5062,7 +4904,7 @@
 
   var castPath = _castPath,
     isArguments = isArguments_1,
-    isArray = isArray_1,
+    isArray$1 = isArray_1,
     isIndex = _isIndex,
     isLength = isLength_1,
     toKey = _toKey;
@@ -5092,7 +4934,7 @@
       return result;
     }
     length = object == null ? 0 : object.length;
-    return !!length && isLength(length) && isIndex(key, length) && (isArray(object) || isArguments(object));
+    return !!length && isLength(length) && isIndex(key, length) && (isArray$1(object) || isArguments(object));
   }
   var _hasPath = hasPath$1;
 
@@ -5208,10 +5050,10 @@
    * _.isNumber('3');
    * // => false
    */
-  function isNumber(value) {
+  function isNumber$1(value) {
     return typeof value == 'number' || isObjectLike$2(value) && baseGetTag$2(value) == numberTag;
   }
-  var isNumber_1 = isNumber;
+  var isNumber_1 = isNumber$1;
 
   var _isNumber = /*@__PURE__*/getDefaultExportFromCjs(isNumber_1);
 
@@ -16692,6 +16534,181 @@
     });
   };
 
+  function styleInject(css, ref) {
+    if (ref === void 0) ref = {};
+    var insertAt = ref.insertAt;
+    if (!css || typeof document === 'undefined') {
+      return;
+    }
+    var head = document.head || document.getElementsByTagName('head')[0];
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    if (insertAt === 'top') {
+      if (head.firstChild) {
+        head.insertBefore(style, head.firstChild);
+      } else {
+        head.appendChild(style);
+      }
+    } else {
+      head.appendChild(style);
+    }
+    if (style.styleSheet) {
+      style.styleSheet.cssText = css;
+    } else {
+      style.appendChild(document.createTextNode(css));
+    }
+  }
+
+  var css_248z$h = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
+  styleInject(css_248z$h);
+
+  var RawValidationErrors = function RawValidationErrors(_ref) {
+    var _ref$errors = _ref.errors,
+      errors = _ref$errors === void 0 ? {} : _ref$errors,
+      _ref$scope = _ref.scope,
+      scope = _ref$scope === void 0 ? '' : _ref$scope,
+      locale = _ref.locale;
+    var keys = Object.keys(errors);
+    return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, keys.map(function (fieldName) {
+      var errorObj = errors[fieldName];
+      if (errorObj && _isArray(errorObj.errorMessages)) {
+        return errorObj.errorMessages.map(function (errorMessage, idx) {
+          if (errorMessage) {
+            var label = i18n(errorObj.label, locale);
+            return /*#__PURE__*/React$1.createElement(RawValidationErrors, {
+              key: label || fieldName,
+              errors: errorMessage,
+              scope: "".concat(label || fieldName, "(").concat(idx + 1, ") - ")
+            });
+          }
+        });
+      } else if (errorObj && _isString(errorObj.errorMessage)) {
+        var label = i18n(errorObj.label, locale);
+        var errorMessage = errorObj.errorMessage ? i18n(errorObj.errorMessage, locale) : 'This is required';
+        return /*#__PURE__*/React$1.createElement("div", {
+          key: fieldName
+        }, /*#__PURE__*/React$1.createElement("b", null, scope, label, ":"), "\xA0", errorMessage);
+      }
+    }));
+  };
+  var ValidationErrors = function ValidationErrors(_ref2) {
+    var _ref2$errors = _ref2.errors,
+      errors = _ref2$errors === void 0 ? {} : _ref2$errors,
+      className = _ref2.className,
+      _ref2$scope = _ref2.scope,
+      scope = _ref2$scope === void 0 ? '' : _ref2$scope,
+      locale = _ref2.locale;
+    var keys = Object.keys(errors).filter(function (key) {
+      return errors[key];
+    });
+    if (keys.length === 0) {
+      return;
+    }
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: classNames('lf-validation-errors', className)
+    }, /*#__PURE__*/React$1.createElement(RawValidationErrors, {
+      scope: scope,
+      errors: errors,
+      locale: locale
+    }));
+  };
+
+  var PlusCircle = function PlusCircle(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 0 20 20",
+      xmlns: "http://www.w3.org/2000/svg",
+      fill: "none"
+    }, /*#__PURE__*/React$1.createElement("path", {
+      fill: color,
+      fillRule: "evenodd",
+      d: "M10 3a7 7 0 100 14 7 7 0 000-14zm-9 7a9 9 0 1118 0 9 9 0 01-18 0zm14 .069a1 1 0 01-1 1h-2.931V14a1 1 0 11-2 0v-2.931H6a1 1 0 110-2h3.069V6a1 1 0 112 0v3.069H14a1 1 0 011 1z"
+    }));
+  };
+
+  var MinusCircle = function MinusCircle(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 0 24 24",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React$1.createElement("path", {
+      fill: color,
+      fillRule: "evenodd",
+      clipRule: "evenodd",
+      d: "M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12ZM12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM7 11C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11H7Z"
+    }));
+  };
+
+  var ChevronDown = function ChevronDown(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      fill: color,
+      viewBox: "0 0 24 24",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React$1.createElement("path", {
+      d: "M17,8H7a1,1,0,0,0-.768,1.641l5,6a1,1,0,0,0,1.536,0l5-6A1,1,0,0,0,17,8Zm-5,5.438L9.135,10h5.73Z"
+    }));
+  };
+
+  var ChevronUp = function ChevronUp(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 0 24 24",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React$1.createElement("path", {
+      fill: color,
+      d: "M12.768,8.359a1.035,1.035,0,0,0-1.536,0l-5,6A1,1,0,0,0,7,16H17a1,1,0,0,0,.768-1.641ZM9.135,14,12,10.563,14.865,14Z"
+    }));
+  };
+
+  var Warning = function Warning(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      fill: color,
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      viewBox: "0 0 1920 1920",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/React$1.createElement("path", {
+      d: "M960 0c530.193 0 960 429.807 960 960s-429.807 960-960 960S0 1490.193 0 960 429.807 0 960 0Zm-9.838 1342.685c-84.47 0-153.19 68.721-153.19 153.19 0 84.47 68.72 153.192 153.19 153.192s153.19-68.721 153.19-153.191-68.72-153.19-153.19-153.19ZM1153.658 320H746.667l99.118 898.623h208.755L1153.658 320Z",
+      fillRule: "evenodd"
+    }));
+  };
+
   var I18N = function I18N(Component) {
     var propNames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
     var funcPropNames = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
@@ -17980,6 +17997,7 @@
   var ListArray = function ListArray(_ref3) {
     var LetsFormComponent = _ref3.LetsFormComponent,
       value = _ref3.value,
+      name = _ref3.name,
       _ref3$onChange = _ref3.onChange,
       onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
       _ref3$disabled = _ref3.disabled,
@@ -17999,7 +18017,9 @@
       _ref3$align = _ref3.align,
       align = _ref3$align === void 0 ? 'top' : _ref3$align,
       _ref3$alignOffset = _ref3.alignOffset,
-      alignOffset = _ref3$alignOffset === void 0 ? 0 : _ref3$alignOffset;
+      alignOffset = _ref3$alignOffset === void 0 ? 0 : _ref3$alignOffset,
+      error = _ref3.error,
+      formShowErrors = _ref3.formShowErrors;
     var _useFormContext = useFormContext(),
       locales = _useFormContext.locales;
     var form = {
@@ -18007,7 +18027,9 @@
       fluid: true,
       locales: locales,
       // copy the locales from the main form
-      fields: fields
+      fields: fields,
+      name: 'Array form ' + name,
+      showErrors: formShowErrors
     };
     var _useState = React$1.useState(makeDefaultValue(value, arrayType, form)),
       _useState2 = _slicedToArray(_useState, 2),
@@ -18032,19 +18054,23 @@
       });
     }, []);
     var handleChange = React$1.useCallback(function (value) {
-      var newItems = items.map(function (i) {
-        return i.id === value.id ? value : i;
+      setItems(function (items) {
+        var newItems = items.map(function (i) {
+          return i.id === value.id ? value : i;
+        });
+        onChange(formatArray(newItems, arrayType));
+        return newItems;
       });
-      setItems(newItems);
-      onChange(formatArray(newItems, arrayType));
-    }, [items, onChange, arrayType]);
+    }, [onChange, arrayType]);
     var handleRemove = React$1.useCallback(function (item) {
-      var newItems = items.filter(function (i) {
-        return i.id !== item.id;
+      setItems(function (items) {
+        var newItems = items.filter(function (i) {
+          return i.id !== item.id;
+        });
+        onChange(formatArray(newItems, arrayType));
+        return newItems;
       });
-      setItems(newItems);
-      onChange(formatArray(newItems, arrayType));
-    }, [items, onChange, arrayType]);
+    }, [onChange, arrayType]);
     if (children) {
       return /*#__PURE__*/React$1.createElement("div", {
         style: {
@@ -18076,7 +18102,8 @@
         readOnly: readOnly,
         defaultValues: item,
         onlyFields: true,
-        onChange: handleChange
+        onChange: handleChange,
+        errors: error != null && error.errorMessages != null && error.errorMessages.length > idx ? error.errorMessages[idx] : undefined
       }));
     }));
   };
@@ -18194,7 +18221,7 @@
       className: "lf-plaintext-field-label"
     }, children);
   };
-  var renderFields = function renderFields(fields, locale, framework) {
+  var renderFields$1 = function renderFields(fields, locale, framework) {
     var currentValues = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
     return (fields || []).map(function (field) {
       if (field.component === 'group') {
@@ -18261,20 +18288,27 @@
     }
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-form lf-form-plaintext"
-    }, renderFields(fields, locale, framework, currentValues));
+    }, renderFields$1(fields, locale, framework, currentValues));
   };
 
-  var enrichWithLabels = function enrichWithLabels(validationErrors, fields) {
-    var result = _objectSpread2({}, validationErrors);
-    var collectLabels = reduceFields(fields, function (field, accumulator) {
-      return field.label ? _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, field.name, field.label)) : accumulator;
-    }, {});
-    Object.keys(result).forEach(function (key) {
-      if (result[key] && result[key].ref && collectLabels[result[key].ref.name]) {
-        result[key].ref.label = collectLabels[result[key].ref.name];
-      }
-    });
-    return result;
+  /**
+   * Merge additional components to the main library
+   * @param {*} main
+   * @param {*} additional
+   * @returns
+   */
+  var mergeComponents = function mergeComponents(main, additional) {
+    // if not empty, then merge, overwriting is ok
+    if (!_isEmpty(additional) && Object.keys(additional).length !== 0) {
+      Object.keys(additional).forEach(function (componentName) {
+        if (main[componentName] == null) {
+          main[componentName] = additional[componentName];
+        } else {
+          main[componentName] = _objectSpread2(_objectSpread2({}, main[componentName]), additional[componentName]);
+        }
+      });
+    }
+    return main;
   };
 
   /** Used to match a single whitespace character. */
@@ -18407,118 +18441,556 @@
       }
     }, _callee);
   }))).constructor;
-  var translateValidation = function translateValidation(validation, locale, onJavascriptError) {
-    // if any validation object
-    if (validation != null) {
-      var errorMessage;
-      if (_isString(validation.message)) {
-        errorMessage = validation.message;
-      } else if (isI18n(validation.message)) {
-        var _i18n;
-        errorMessage = (_i18n = i18n(validation.message, locale)) !== null && _i18n !== void 0 ? _i18n : 'Field is required';
+  var FIELDS_NOT_TO_VALIDATE = ['group', 'placeholder', 'placeholder-image', 'steps', 'tabs', 'columns'];
+  var DEFAULT_ERROR_MESSAGE = 'Field is required';
+  var isEmpty = function isEmpty(value) {
+    return value === null || value === undefined || value === '';
+  };
+  var isString = function isString(value) {
+    return typeof value === 'string';
+  };
+  var isNumber = function isNumber(value) {
+    return typeof value === 'number';
+  };
+  var isValidRegEx = function isValidRegEx(str) {
+    try {
+      var re = new RegExp(str);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  };
+  var isArray = function isArray(arr) {
+    return _typeof(arr) === 'object' && arr.length != null;
+  };
+  var isEmptyArray = function isEmptyArray(arr) {
+    return !isArray(arr) || arr.length === 0;
+  }; // null considered an empty array
+
+  var needsValidation = function needsValidation(field) {
+    // doesn't required validation if it's a layout component or has neither required or validation params
+    if (FIELDS_NOT_TO_VALIDATE.includes(field.component) || !field.required && !field.validation) {
+      return false;
+    }
+    return true;
+  };
+  var makeValidateJs = function makeValidateJs(validation, locale, onJavascriptError) {
+    try {
+      var validator = new AsyncFunction('value', 'formValues', validation.validate);
+
+      // wrap the validator function, if returns strictly false then re-use
+      // the provided message, if it's a string return the string, but it will not i18n
+      var validateJS = /*#__PURE__*/function () {
+        var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(value, formValues) {
+          var v, error, _i18n;
+          return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+            while (1) switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.prev = 0;
+                _context2.next = 3;
+                return validator(value, formValues);
+              case 3:
+                v = _context2.sent;
+                _context2.next = 13;
+                break;
+              case 6:
+                _context2.prev = 6;
+                _context2.t0 = _context2["catch"](0);
+                console.error("[LetsForm] Error executing validate function: ", _context2.t0);
+                error = new Error('Error compiling validate function: ' + _context2.t0.message, {
+                  cause: _context2.t0
+                });
+                error.sourceCode = validation.validate;
+                error.errorType = 'runtime';
+                onJavascriptError(error);
+              case 13:
+                if (!(v === true)) {
+                  _context2.next = 17;
+                  break;
+                }
+                return _context2.abrupt("return", null);
+              case 17:
+                if (!(v === false)) {
+                  _context2.next = 21;
+                  break;
+                }
+                return _context2.abrupt("return", (_i18n = i18n(validation.message, locale)) !== null && _i18n !== void 0 ? _i18n : DEFAULT_ERROR_MESSAGE);
+              case 21:
+                if (!_isString(v)) {
+                  _context2.next = 25;
+                  break;
+                }
+                return _context2.abrupt("return", v);
+              case 25:
+                if (!isI18n(v)) {
+                  _context2.next = 27;
+                  break;
+                }
+                return _context2.abrupt("return", i18n(v, locale));
+              case 27:
+                return _context2.abrupt("return", null);
+              case 28:
+              case "end":
+                return _context2.stop();
+            }
+          }, _callee2, null, [[0, 6]]);
+        }));
+        return function validateJS(_x, _x2) {
+          return _ref2.apply(this, arguments);
+        };
+      }();
+      return validateJS;
+    } catch (e) {
+      console.error("[LetsForm] Invalid validate function: ", e);
+      var error = new Error('Error compiling validate function: ' + e.message, {
+        cause: e
+      });
+      error.sourceCode = validation.validate;
+      error.errorType = 'compile';
+      onJavascriptError(error);
+    }
+  };
+
+  /**
+   * makeFieldValidationFn
+   * Make a validation function for a field, checks min, max, minLength, maxLength, pattern
+   * @param {*} field
+   * @param {*} locale
+   * @param {*} onJavascriptError
+   * @returns
+   */
+  var makeFieldValidationFn = function makeFieldValidationFn(field, locale, onJavascriptError) {
+    var _field$validation;
+    // create validation function from script
+    var validateJS;
+    if (!_isEmpty(_trim((_field$validation = field.validation) === null || _field$validation === void 0 ? void 0 : _field$validation.validate))) {
+      validateJS = makeValidateJs(field.validation, locale, onJavascriptError);
+    }
+    return /*#__PURE__*/function () {
+      var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(value, formValues) {
+        var _field$validation2, _field$validation3, _field$validation4, _field$validation5, _field$validation6, regexp, errorMessage;
+        return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+          while (1) switch (_context3.prev = _context3.next) {
+            case 0:
+              if (isEmpty(value)) {
+                _context3.next = 30;
+                break;
+              }
+              if (!(isString(value) && (_field$validation2 = field.validation) !== null && _field$validation2 !== void 0 && _field$validation2.minLength && value.length < field.validation.minLength)) {
+                _context3.next = 4;
+                break;
+              }
+              return _context3.abrupt("return", makeErrorMessage(field, locale));
+            case 4:
+              if (!(isString(value) && (_field$validation3 = field.validation) !== null && _field$validation3 !== void 0 && _field$validation3.maxLength && value.length > field.validation.maxLength)) {
+                _context3.next = 7;
+                break;
+              }
+              return _context3.abrupt("return", makeErrorMessage(field, locale));
+            case 7:
+              if (!(isNumber(value) && (_field$validation4 = field.validation) !== null && _field$validation4 !== void 0 && _field$validation4.min && value < field.validation.min)) {
+                _context3.next = 10;
+                break;
+              }
+              return _context3.abrupt("return", makeErrorMessage(field, locale));
+            case 10:
+              if (!(isNumber(value) && (_field$validation5 = field.validation) !== null && _field$validation5 !== void 0 && _field$validation5.max && value > field.validation.max)) {
+                _context3.next = 13;
+                break;
+              }
+              return _context3.abrupt("return", makeErrorMessage(field, locale));
+            case 13:
+              if (!(isString(value) && (_field$validation6 = field.validation) !== null && _field$validation6 !== void 0 && _field$validation6.pattern)) {
+                _context3.next = 22;
+                break;
+              }
+              if (!isValidRegEx(field.validation.pattern)) {
+                _context3.next = 21;
+                break;
+              }
+              regexp = new RegExp(field.validation.pattern);
+              if (regexp.test(value)) {
+                _context3.next = 19;
+                break;
+              }
+              return _context3.abrupt("return", makeErrorMessage(field, locale));
+            case 19:
+              _context3.next = 22;
+              break;
+            case 21:
+              return _context3.abrupt("return", _objectSpread2(_objectSpread2({}, makeErrorMessage(field, locale)), {}, {
+                errorMessage: 'Invalid RegExp for field "' + field.name + '"'
+              }));
+            case 22:
+              if (!_isFunction(validateJS)) {
+                _context3.next = 28;
+                break;
+              }
+              _context3.next = 25;
+              return validateJS(value, formValues);
+            case 25:
+              errorMessage = _context3.sent;
+              if (!errorMessage) {
+                _context3.next = 28;
+                break;
+              }
+              return _context3.abrupt("return", _objectSpread2(_objectSpread2({}, makeErrorMessage(field, locale)), {}, {
+                errorMessage: errorMessage
+              }));
+            case 28:
+              _context3.next = 32;
+              break;
+            case 30:
+              if (!(isEmpty(value) && field.required)) {
+                _context3.next = 32;
+                break;
+              }
+              return _context3.abrupt("return", makeErrorMessage(field, locale));
+            case 32:
+            case "end":
+              return _context3.stop();
+          }
+        }, _callee3);
+      }));
+      return function (_x3, _x4) {
+        return _ref3.apply(this, arguments);
+      };
+    }();
+  };
+  var makeErrorMessage = function makeErrorMessage(field, locale) {
+    var _field$validation7, _field$validation8, _field$label;
+    // prepare error message
+    var errorMessage;
+    if (_isString((_field$validation7 = field.validation) === null || _field$validation7 === void 0 ? void 0 : _field$validation7.message)) {
+      errorMessage = field.validation.message;
+    } else if (isI18n((_field$validation8 = field.validation) === null || _field$validation8 === void 0 ? void 0 : _field$validation8.message)) {
+      var _i18n2;
+      errorMessage = (_i18n2 = i18n(field.validation.message, locale)) !== null && _i18n2 !== void 0 ? _i18n2 : DEFAULT_ERROR_MESSAGE;
+    } else {
+      errorMessage = DEFAULT_ERROR_MESSAGE;
+    }
+    return {
+      name: field.name,
+      label: (_field$label = field.label) !== null && _field$label !== void 0 ? _field$label : field.name,
+      errorMessage: errorMessage
+    };
+  };
+
+  /**
+   * makeArrayValidationFn
+   * Make the validation function for an array. It checks minLength and maxLength, if no errors
+   * run the same validation in the sub-objects of every single array item
+   */
+  var makeArrayValidationFn = function makeArrayValidationFn(field, locale, onJavascriptError) {
+    var _field$validation9;
+    var validateSubFields = makeValidation(field.fields, locale);
+    // create validation function from script
+    var validateJS;
+    if (!_isEmpty(_trim((_field$validation9 = field.validation) === null || _field$validation9 === void 0 ? void 0 : _field$validation9.validate))) {
+      validateJS = makeValidateJs(field.validation, locale, onJavascriptError);
+    }
+    return /*#__PURE__*/function () {
+      var _ref4 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(value, formValues) {
+        var _field$validation10, _field$validation11, errorMessage, i, validationMessages;
+        return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+          while (1) switch (_context4.prev = _context4.next) {
+            case 0:
+              if (isEmptyArray(value)) {
+                _context4.next = 24;
+                break;
+              }
+              if (!(isArray(value) && (_field$validation10 = field.validation) !== null && _field$validation10 !== void 0 && _field$validation10.minLength && value.length < field.validation.minLength)) {
+                _context4.next = 3;
+                break;
+              }
+              return _context4.abrupt("return", makeErrorMessage(field, locale));
+            case 3:
+              if (!(isArray(value) && (_field$validation11 = field.validation) !== null && _field$validation11 !== void 0 && _field$validation11.maxLength && value.length > field.validation.maxLength)) {
+                _context4.next = 5;
+                break;
+              }
+              return _context4.abrupt("return", makeErrorMessage(field, locale));
+            case 5:
+              if (!_isFunction(validateJS)) {
+                _context4.next = 11;
+                break;
+              }
+              _context4.next = 8;
+              return validateJS(value, formValues);
+            case 8:
+              errorMessage = _context4.sent;
+              if (!errorMessage) {
+                _context4.next = 11;
+                break;
+              }
+              return _context4.abrupt("return", _objectSpread2(_objectSpread2({}, makeErrorMessage(field, locale)), {}, {
+                errorMessage: errorMessage
+              }));
+            case 11:
+              validationMessages = [];
+              i = 0;
+            case 13:
+              if (!(i < value.length)) {
+                _context4.next = 20;
+                break;
+              }
+              _context4.next = 16;
+              return validateSubFields(value[i]);
+            case 16:
+              validationMessages[i] = _context4.sent;
+            case 17:
+              i++;
+              _context4.next = 13;
+              break;
+            case 20:
+              if (!validationMessages.some(function (o) {
+                return o != null;
+              })) {
+                _context4.next = 22;
+                break;
+              }
+              return _context4.abrupt("return", _objectSpread2(_objectSpread2({}, makeErrorMessage(field, locale)), {}, {
+                errorMessage: undefined,
+                errorMessages: validationMessages
+              }));
+            case 22:
+              _context4.next = 26;
+              break;
+            case 24:
+              if (!(isEmptyArray(value) && field.required)) {
+                _context4.next = 26;
+                break;
+              }
+              return _context4.abrupt("return", makeErrorMessage(field, locale));
+            case 26:
+            case "end":
+              return _context4.stop();
+          }
+        }, _callee4);
+      }));
+      return function (_x5, _x6) {
+        return _ref4.apply(this, arguments);
+      };
+    }();
+  };
+
+  /**
+   * makeValidation
+   * Take an array of fields and return a validation function, which takes as argument the values of the form
+   * Returns null or undefined if no validation errors, otherwise an object, keys are the invalid fields, value for
+   * each key is { fieldName, label, errorMessage }
+   * @param {*} fields
+   * @param {*} locale
+   * @returns {function}
+   */
+  var makeValidation = function makeValidation(fields, locale, onJavascriptError) {
+    // collect all validatre functions per field
+    var validateFns = reduceFields(fields, function (field, accumulator) {
+      // skip if not required
+      if (!needsValidation(field)) {
+        return accumulator;
+      }
+      // special validation for array, otherwise field
+      if (field.component === 'array') {
+        return _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, field.name, makeArrayValidationFn(field, locale, onJavascriptError)));
       } else {
-        errorMessage = 'Field is required';
+        return _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, field.name, makeFieldValidationFn(field, locale, onJavascriptError)));
       }
-      var result = {};
-      if (validation.required) {
-        result.required = errorMessage;
+    }, {}, {
+      array: false // don't collect here fields inside arrays
+    });
+
+    // check all validators
+    return /*#__PURE__*/function () {
+      var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(data) {
+        var validationErrors, i, fieldsToValidate, currentFieldName, validationResult;
+        return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+          while (1) switch (_context5.prev = _context5.next) {
+            case 0:
+              validationErrors = {}; // iterate all validators async
+              fieldsToValidate = Object.keys(validateFns);
+              i = 0;
+            case 3:
+              if (!(i < fieldsToValidate.length)) {
+                _context5.next = 13;
+                break;
+              }
+              currentFieldName = fieldsToValidate[i]; // pass the single value to check but also the all values
+              _context5.next = 7;
+              return validateFns[currentFieldName](data[currentFieldName], data);
+            case 7:
+              validationResult = _context5.sent;
+              console.log('inner validation', currentFieldName, validationResult);
+              if (validationResult) {
+                validationErrors[currentFieldName] = validationResult;
+              }
+            case 10:
+              i++;
+              _context5.next = 3;
+              break;
+            case 13:
+              return _context5.abrupt("return", Object.keys(validationErrors).length !== 0 ? validationErrors : undefined);
+            case 14:
+            case "end":
+              return _context5.stop();
+          }
+        }, _callee5);
+      }));
+      return function (_x7) {
+        return _ref5.apply(this, arguments);
+      };
+    }();
+  };
+
+  /**
+   * useValidation
+   * Handle the validation of the form, given the fields creates a validation form and store it
+   * in the state.
+   * Calling validate() executes the validation, returns the validation object and store itin state
+   * See ADR-20
+   * @param {onError} callback
+   * @param {array} fields The form fields
+   * @param {string} locale
+   */
+  var useFormValidation = function useFormValidation(_ref6) {
+    var onError = _ref6.onError,
+      fields = _ref6.fields,
+      locale = _ref6.locale,
+      onJavascriptError = _ref6.onJavascriptError;
+    var _useState = React$1.useState(),
+      _useState2 = _slicedToArray(_useState, 2),
+      validationErrors = _useState2[0],
+      setValidationErrors = _useState2[1];
+    var _useState3 = React$1.useState(null),
+      _useState4 = _slicedToArray(_useState3, 2),
+      validateFn = _useState4[0];
+      _useState4[1];
+    var mutableState = React$1.useRef();
+
+    /**
+     * clearValidation
+     * Clear validation errors for a field or completely
+     * @param {string} field
+     */
+    var clearValidation = React$1.useCallback(function (field) {
+      if (!_isEmpty(field)) {
+        setValidationErrors(function (errors) {
+          return errors && errors[field] ? _objectSpread2(_objectSpread2({}, errors), {}, _defineProperty$1({}, field, undefined)) : errors;
+        });
+      } else {
+        setValidationErrors(undefined);
       }
-      // min / max validation
-      ['min', 'max', 'minLength', 'maxLength'].forEach(function (key) {
-        if (validation[key] != null) {
-          result[key] = {
-            value: validation[key],
-            message: errorMessage
+    }, []);
+    React$1.useEffect(function () {
+      // store in a useRef to avoid re-render
+      mutableState.current = makeValidation(fields, locale, onJavascriptError);
+    }, [fields, locale]);
+
+    /**
+     * validate
+     * Trigger a form validation, also changes the status (validationErrors)
+     * @returns
+     */
+    var validate = React$1.useCallback( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
+      var data,
+        validationErrors,
+        _args6 = arguments;
+      return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+        while (1) switch (_context6.prev = _context6.next) {
+          case 0:
+            data = _args6.length > 0 && _args6[0] !== undefined ? _args6[0] : {};
+            console.log('validate this', data, ' for', fields);
+
+            // execute validation
+            _context6.next = 4;
+            return mutableState.current(data, locale);
+          case 4:
+            validationErrors = _context6.sent;
+            // set status
+            setValidationErrors(validationErrors);
+            // callback errors
+            onError(validationErrors);
+            return _context6.abrupt("return", validationErrors);
+          case 8:
+          case "end":
+            return _context6.stop();
+        }
+      }, _callee6);
+    })), [validateFn]);
+    return {
+      validationErrors: validationErrors,
+      setValidationErrors: setValidationErrors,
+      validate: validate,
+      isValid: _isEmpty(validationErrors),
+      clearValidation: clearValidation
+    };
+  };
+
+  var upgradeFields = function upgradeFields(fields, version) {
+    if (version === 1) {
+      var upgradedFields = mapFields(fields, function (field) {
+        if (field.component === 'two-columns') {
+          var _match2;
+          lfWarn("Component 'two-columns' is deprecated, use 'columns' instead");
+          var _ref = (_match2 = (field.layout || '').match(/layout-([0-9])-([0-9])/)) !== null && _match2 !== void 0 ? _match2 : [],
+            _ref2 = _slicedToArray(_ref, 3);
+            _ref2[0];
+            var oneSize = _ref2[1],
+            twoSize = _ref2[2];
+          return {
+            component: 'columns',
+            name: field.name,
+            columns: [{
+              name: 'one',
+              alignment: field.leftAlignment,
+              size: oneSize != null ? parseInt(oneSize, 10) : 1
+            }, {
+              name: 'two',
+              alignment: field.rightAlignment,
+              size: twoSize != null ? parseInt(twoSize, 10) : 1
+            }],
+            fields: {
+              one: field.leftFields,
+              two: field.rightFields
+            }
+          };
+        } else if (field.component === 'three-columns') {
+          var _match4;
+          lfWarn("Component 'three-columns' is deprecated, use 'columns' instead");
+          var _ref3 = (_match4 = (field.layout || '').match(/layout-([0-9])-([0-9])-([0-9])/)) !== null && _match4 !== void 0 ? _match4 : [],
+            _ref4 = _slicedToArray(_ref3, 4);
+            _ref4[0];
+            var _oneSize = _ref4[1],
+            _twoSize = _ref4[2],
+            threeSize = _ref4[3];
+          return {
+            component: 'columns',
+            name: field.name,
+            columns: [{
+              name: 'one',
+              alignment: field.leftAlignment,
+              size: _oneSize != null ? parseInt(_oneSize, 10) : 1
+            }, {
+              name: 'two',
+              alignment: field.centerAligment,
+              size: _twoSize != null ? parseInt(_twoSize, 10) : 1
+            }, {
+              name: 'three',
+              alignment: field.rightAlignment,
+              size: threeSize != null ? parseInt(threeSize, 10) : 1
+            }],
+            fields: {
+              one: field.leftFields,
+              two: field.centerFields,
+              three: field.rightFields
+            }
           };
         }
+        return field;
       });
-      // validation with regex
-      if (validation.pattern) {
-        result.pattern = {
-          value: new RegExp(validation.pattern),
-          message: errorMessage
-        };
-      }
-      if (!_isEmpty(_trim(validation.validate))) {
-        try {
-          var validator = new AsyncFunction('value', 'formValues', validation.validate);
-
-          // wrap the validator function, if returns strictly false then re-use
-          // the provided message, if it's a string return the string, but it will not i18n
-          result.validate = /*#__PURE__*/function () {
-            var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(value, formValues) {
-              var v, error;
-              return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-                while (1) switch (_context2.prev = _context2.next) {
-                  case 0:
-                    _context2.prev = 0;
-                    _context2.next = 3;
-                    return validator(value, formValues);
-                  case 3:
-                    v = _context2.sent;
-                    _context2.next = 13;
-                    break;
-                  case 6:
-                    _context2.prev = 6;
-                    _context2.t0 = _context2["catch"](0);
-                    console.error("[LetsForm] Error executing validate function: ", _context2.t0);
-                    error = new Error('Error compiling validate function: ' + _context2.t0.message, {
-                      cause: _context2.t0
-                    });
-                    error.sourceCode = validation.validate;
-                    error.errorType = 'runtime';
-                    onJavascriptError(error);
-                  case 13:
-                    if (!(v === true)) {
-                      _context2.next = 17;
-                      break;
-                    }
-                    return _context2.abrupt("return", true);
-                  case 17:
-                    if (!(v === false)) {
-                      _context2.next = 21;
-                      break;
-                    }
-                    return _context2.abrupt("return", errorMessage);
-                  case 21:
-                    if (!_isString(v)) {
-                      _context2.next = 25;
-                      break;
-                    }
-                    return _context2.abrupt("return", v);
-                  case 25:
-                    if (!isI18n(v)) {
-                      _context2.next = 27;
-                      break;
-                    }
-                    return _context2.abrupt("return", i18n(v, locale));
-                  case 27:
-                    return _context2.abrupt("return", true);
-                  case 28:
-                  case "end":
-                    return _context2.stop();
-                }
-              }, _callee2, null, [[0, 6]]);
-            }));
-            return function (_x, _x2) {
-              return _ref2.apply(this, arguments);
-            };
-          }();
-        } catch (e) {
-          console.error("[LetsForm] Invalid validate function: ", e);
-          var error = new Error('Error compiling validate function: ' + e.message, {
-            cause: e
-          });
-          error.sourceCode = validation.validate;
-          error.errorType = 'compile';
-          onJavascriptError(error);
-        }
-      } else {
-        result.validate = undefined;
-      }
-      return result;
+      return upgradedFields;
     }
-    return validation;
+    return fields;
   };
 
   var CLASH_FIELD_NAMES = ['setValue', 'enable', 'disable', 'values', 'show', 'hide', 'css', 'element', 'style', 'arraySetValue', 'context', 'toggle', 'setFieldValue'];
@@ -18608,64 +19080,6 @@
     );
 
     return transformers;
-  };
-
-  var errorToString = function errorToString(error) {
-    if (error) {
-      if (error.message) {
-        return error.message;
-      } else if (error.type === 'required') {
-        return 'This field is required';
-      } else if (error.type === 'minLength') {
-        return 'Text is too short';
-      } else if (error.type === 'maxLength') {
-        return 'Text is too long';
-      } else if (error.type === 'max') {
-        return 'Value is too big';
-      } else if (error.type === 'min') {
-        return 'Value is too small';
-      }
-      return 'Invalid value';
-    }
-    return undefined;
-  };
-
-  /**
-   * Merge additional components to the main library
-   * @param {*} main
-   * @param {*} additional
-   * @returns
-   */
-  var mergeComponents = function mergeComponents(main, additional) {
-    // if not empty, then merge, overwriting is ok
-    if (!_isEmpty(additional) && Object.keys(additional).length !== 0) {
-      Object.keys(additional).forEach(function (componentName) {
-        if (main[componentName] == null) {
-          main[componentName] = additional[componentName];
-        } else {
-          main[componentName] = _objectSpread2(_objectSpread2({}, main[componentName]), additional[componentName]);
-        }
-      });
-    }
-    return main;
-  };
-
-  var MissingComponent = function MissingComponent(_ref) {
-    var lfComponent = _ref.lfComponent,
-      label = _ref.label,
-      lfFramework = _ref.lfFramework;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-missing-component"
-    }, /*#__PURE__*/React$1.createElement("div", {
-      className: "icon"
-    }, /*#__PURE__*/React$1.createElement(Warning, {
-      color: "#ff6633",
-      height: 16
-    })), /*#__PURE__*/React$1.createElement("div", {
-      className: "message"
-    }, "The component ", /*#__PURE__*/React$1.createElement("span", {
-      className: "tag-component"
-    }, lfComponent), " (", /*#__PURE__*/React$1.createElement("em", null, "\"", _isString(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/React$1.createElement("b", null, lfFramework), ")"));
   };
 
   var VALIDATION_PROPS = ['validationMaxLength', 'validationMinLength', 'validationMin', 'validationMax', 'validationPattern', 'validate', 'errorMessage'];
@@ -18952,81 +19366,580 @@
     }).filter(Boolean);
   };
 
-  var upgradeFields = function upgradeFields(fields, version) {
-    if (version === 1) {
-      var upgradedFields = mapFields(fields, function (field) {
-        if (field.component === 'two-columns') {
-          var _match2;
-          lfWarn("Component 'two-columns' is deprecated, use 'columns' instead");
-          var _ref = (_match2 = (field.layout || '').match(/layout-([0-9])-([0-9])/)) !== null && _match2 !== void 0 ? _match2 : [],
-            _ref2 = _slicedToArray(_ref, 3);
-            _ref2[0];
-            var oneSize = _ref2[1],
-            twoSize = _ref2[2];
-          return {
-            component: 'columns',
-            name: field.name,
-            columns: [{
-              name: 'one',
-              alignment: field.leftAlignment,
-              size: oneSize != null ? parseInt(oneSize, 10) : 1
-            }, {
-              name: 'two',
-              alignment: field.rightAlignment,
-              size: twoSize != null ? parseInt(twoSize, 10) : 1
-            }],
-            fields: {
-              one: field.leftFields,
-              two: field.rightFields
-            }
-          };
-        } else if (field.component === 'three-columns') {
-          var _match4;
-          lfWarn("Component 'three-columns' is deprecated, use 'columns' instead");
-          var _ref3 = (_match4 = (field.layout || '').match(/layout-([0-9])-([0-9])-([0-9])/)) !== null && _match4 !== void 0 ? _match4 : [],
-            _ref4 = _slicedToArray(_ref3, 4);
-            _ref4[0];
-            var _oneSize = _ref4[1],
-            _twoSize = _ref4[2],
-            threeSize = _ref4[3];
-          return {
-            component: 'columns',
-            name: field.name,
-            columns: [{
-              name: 'one',
-              alignment: field.leftAlignment,
-              size: _oneSize != null ? parseInt(_oneSize, 10) : 1
-            }, {
-              name: 'two',
-              alignment: field.centerAligment,
-              size: _twoSize != null ? parseInt(_twoSize, 10) : 1
-            }, {
-              name: 'three',
-              alignment: field.rightAlignment,
-              size: threeSize != null ? parseInt(threeSize, 10) : 1
-            }],
-            fields: {
-              one: field.leftFields,
-              two: field.centerFields,
-              three: field.rightFields
-            }
-          };
-        }
-        return field;
+  // TODO move
+  var mergeReRenders$1 = function mergeReRenders(currentReRenders, newReRenders) {
+    if (newReRenders) {
+      Object.keys(newReRenders).forEach(function (key) {
+        return currentReRenders[key] = currentReRenders[key] ? currentReRenders[key] + newReRenders[key] : newReRenders[key];
       });
-      return upgradedFields;
     }
-    return fields;
+  };
+
+  /**
+   * collectFields
+   * it's the combination of the fields from the form schema and those specified
+   * with the DSL, from now on every func should reference this (not form.fields)
+   * also upgrade fields if older version of the form
+   * @param {*} param0
+   * @returns
+   */
+  var collectFields = function collectFields(_ref) {
+    var form = _ref.form,
+      children = _ref.children,
+      framework = _ref.framework,
+      components = _ref.components;
+    var fields = form.fields;
+    var traversedFields = traverseChildren(children, {
+      components: components,
+      framework: framework
+    });
+    var combinedFields = !_isEmpty(traversedFields) ? [].concat(_toConsumableArray(fields !== null && fields !== void 0 ? fields : []), _toConsumableArray(traverseChildren(children, {
+      components: components,
+      framework: framework
+    }))) : fields;
+    return upgradeFields(combinedFields, form.version);
+  };
+
+  /**
+   * useFormFields
+   * Handle the concern of the current fields of the form. Fields may come from json or the DSL, also some
+   * props may be changed by a Form Script.
+   * This makes "formFields" referentially stable
+   *
+   * @param {*} param0
+   * @returns
+   */
+  var useFormFields = function useFormFields(_ref2) {
+    var _form$name, _mutableState$current2;
+    var components = _ref2.components,
+      framework = _ref2.framework,
+      form = _ref2.form,
+      children = _ref2.children,
+      onJavascriptError = _ref2.onJavascriptError,
+      defaultValues = _ref2.defaultValues,
+      formContext = _ref2.formContext,
+      locale = _ref2.locale,
+      setValue = _ref2.setValue,
+      rerenders = _ref2.rerenders;
+    // state form fields
+    var _useState = React$1.useState(collectFields({
+        form: form,
+        children: children,
+        framework: framework,
+        components: components
+      })),
+      _useState2 = _slicedToArray(_useState, 2),
+      formFields = _useState2[0],
+      setFormFields = _useState2[1];
+    // store transformers
+    var _useState3 = React$1.useState(null),
+      _useState4 = _slicedToArray(_useState3, 2),
+      transformers = _useState4[0],
+      setTransformers = _useState4[1];
+    var mutableState = React$1.useRef({
+      currentFormContext: _objectSpread2({
+        locales: form.locales,
+        locale: locale,
+        formName: (_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : _uniqueId('form_')
+      }, formContext)
+    });
+    React$1.useEffect(function () {
+      var f = /*#__PURE__*/function () {
+        var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+          var _mutableState$current, _form$name2;
+          var newFields, formName, newTransformers, transformersToRun, idx, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _loop, _iterator, _step;
+          return _regeneratorRuntime().wrap(function _callee$(_context2) {
+            while (1) switch (_context2.prev = _context2.next) {
+              case 0:
+                // update the mutable state, will be used inside transformers
+                mutableState.current.currentContext = _objectSpread2(_objectSpread2({}, mutableState.current.currentContext), formContext);
+
+                // collect fields from json and dsl
+                newFields = collectFields({
+                  form: form,
+                  children: children,
+                  framework: framework
+                });
+                formName = (_mutableState$current = mutableState.current.currentContext) === null || _mutableState$current === void 0 ? void 0 : _mutableState$current.formName;
+                newTransformers = collectTransformers(newFields, form.transformer || form.script, onJavascriptError); // collect all transformers to be executed
+                transformersToRun = Object.keys(newTransformers.onChange || {}).filter(function (fieldName) {
+                  return !_isEmpty(newTransformers.onChange[fieldName]);
+                }).reduce(function (acc, fieldName) {
+                  return [].concat(_toConsumableArray(acc), [newTransformers.onChange[fieldName]]);
+                }, !_isEmpty(newTransformers.onRender) ? [newTransformers.onRender] : []); // execute all onChange transformers at the bootstrap of the form
+                idx = 0;
+              case 6:
+                if (!(idx < transformersToRun.length)) {
+                  _context2.next = 38;
+                  break;
+                }
+                _iteratorAbruptCompletion = false;
+                _didIteratorError = false;
+                _context2.prev = 9;
+                _loop = /*#__PURE__*/_regeneratorRuntime().mark(function _loop() {
+                  var transformResult, newFormFields, newReRenders, changes;
+                  return _regeneratorRuntime().wrap(function _loop$(_context) {
+                    while (1) switch (_context.prev = _context.next) {
+                      case 0:
+                        transformResult = _step.value;
+                        newFormFields = transformResult.fields, newReRenders = transformResult.rerenders, changes = transformResult.changes;
+                        mergeReRenders$1(rerenders.current, newReRenders);
+                        if (newFormFields !== newFields) {
+                          newFields = newFormFields;
+                          setFormFields(newFormFields);
+                        }
+                        if (changes) {
+                          Object.keys(changes).forEach(function (key) {
+                            return setValue(key, changes[key]);
+                          });
+                        }
+                      case 5:
+                      case "end":
+                        return _context.stop();
+                    }
+                  }, _loop);
+                });
+                _iterator = _asyncIterator(applyTransformers(formName, framework, newFields, transformersToRun[idx], defaultValues, onJavascriptError, mutableState.current.currentContext));
+              case 12:
+                _context2.next = 14;
+                return _iterator.next();
+              case 14:
+                if (!(_iteratorAbruptCompletion = !(_step = _context2.sent).done)) {
+                  _context2.next = 19;
+                  break;
+                }
+                return _context2.delegateYield(_loop(), "t0", 16);
+              case 16:
+                _iteratorAbruptCompletion = false;
+                _context2.next = 12;
+                break;
+              case 19:
+                _context2.next = 25;
+                break;
+              case 21:
+                _context2.prev = 21;
+                _context2.t1 = _context2["catch"](9);
+                _didIteratorError = true;
+                _iteratorError = _context2.t1;
+              case 25:
+                _context2.prev = 25;
+                _context2.prev = 26;
+                if (!(_iteratorAbruptCompletion && _iterator.return != null)) {
+                  _context2.next = 30;
+                  break;
+                }
+                _context2.next = 30;
+                return _iterator.return();
+              case 30:
+                _context2.prev = 30;
+                if (!_didIteratorError) {
+                  _context2.next = 33;
+                  break;
+                }
+                throw _iteratorError;
+              case 33:
+                return _context2.finish(30);
+              case 34:
+                return _context2.finish(25);
+              case 35:
+                idx++;
+                _context2.next = 6;
+                break;
+              case 38:
+                // set new form name
+                mutableState.current.currentContext = (_form$name2 = form.name) !== null && _form$name2 !== void 0 ? _form$name2 : _uniqueId('form_');
+                setTransformers(newTransformers);
+
+                // if transformed fields different than current one, then save
+                if (newFields !== formFields) {
+                  setFormFields(newFields);
+                }
+              case 41:
+              case "end":
+                return _context2.stop();
+            }
+          }, _callee, null, [[9, 21, 25, 35], [26,, 30, 34]]);
+        }));
+        return function f() {
+          return _ref3.apply(this, arguments);
+        };
+      }();
+      f();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [form, framework, children, formContext] // don't put defaultValues here
+    );
+
+    return {
+      formFields: formFields,
+      transformers: transformers,
+      setFormFields: setFormFields,
+      currentFormContext: mutableState.current.currentFormContext,
+      formName: (_mutableState$current2 = mutableState.current.currentFormContext) === null || _mutableState$current2 === void 0 ? void 0 : _mutableState$current2.formName
+    };
+  };
+
+  var MissingComponent = function MissingComponent(_ref) {
+    var lfComponent = _ref.lfComponent,
+      label = _ref.label,
+      lfFramework = _ref.lfFramework;
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-missing-component"
+    }, /*#__PURE__*/React$1.createElement("div", {
+      className: "icon"
+    }, /*#__PURE__*/React$1.createElement(Warning, {
+      color: "#ff6633",
+      height: 16
+    })), /*#__PURE__*/React$1.createElement("div", {
+      className: "message"
+    }, "The component ", /*#__PURE__*/React$1.createElement("span", {
+      className: "tag-component"
+    }, lfComponent), " (", /*#__PURE__*/React$1.createElement("em", null, "\"", _isString(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/React$1.createElement("b", null, lfFramework), ")"));
+  };
+
+  var renderFields = function renderFields(_ref) {
+    var fields = _ref.fields,
+      control = _ref.control,
+      framework = _ref.framework,
+      _onChange = _ref.onChange,
+      onEnter = _ref.onEnter,
+      getValues = _ref.getValues,
+      setValue = _ref.setValue;
+      _ref.register;
+      var Wrapper = _ref.Wrapper,
+      GroupWrapper = _ref.GroupWrapper,
+      BottomView = _ref.BottomView,
+      PlaceholderWrapper = _ref.PlaceholderWrapper;
+      _ref.debug;
+      var disabled = _ref.disabled,
+      readOnly = _ref.readOnly,
+      plaintext = _ref.plaintext,
+      errors = _ref.errors,
+      showErrors = _ref.showErrors,
+      _ref$level = _ref.level,
+      level = _ref$level === void 0 ? 1 : _ref$level,
+      locale = _ref.locale,
+      onJavascriptError = _ref.onJavascriptError,
+      Components = _ref.Components,
+      prependView = _ref.prependView,
+      rerenders = _ref.rerenders;
+    var renderedFields = (fields || []).filter(function (field) {
+      return Wrapper || field.component !== 'hidden';
+    }) // skip hidden type field (not in design mode)
+    .filter(function (field) {
+      return Wrapper || field.hidden !== true;
+    }) // skip fields with "hidden" attribute (not in design mode)
+    .map(function (field, index) {
+      var Component;
+      if (Components[field.component] && Components[field.component][framework]) {
+        Component = Components[field.component][framework];
+      } else if (Components[field.component] && Components[field.component]['*']) {
+        Component = Components[field.component]['*'];
+      } else {
+        Component = MissingComponent;
+      }
+      // remove mandatory fields and platform specific fields
+      var additionalFields = _.omit(field, ['id', 'name', 'label', /*'hint',*/'disabled', 'readOnly', 'plaintext', /*'size', 'placeholder',*/'component'].concat(_toConsumableArray(FRAMEWORKS)));
+      var renderFieldsParams = {
+        Wrapper: Wrapper,
+        GroupWrapper: GroupWrapper,
+        PlaceholderWrapper: PlaceholderWrapper,
+        BottomView: BottomView,
+        onChange: _onChange,
+        onEnter: onEnter,
+        control: control,
+        framework: framework,
+        getValues: getValues,
+        setValue: setValue,
+        readOnly: readOnly,
+        plaintext: plaintext,
+        errors: errors,
+        showErrors: showErrors,
+        level: level + 1,
+        locale: locale,
+        onJavascriptError: onJavascriptError,
+        Components: Components,
+        rerenders: rerenders
+      };
+
+      // special case of group
+      if (field.component === 'group') {
+        var component = /*#__PURE__*/React$1.createElement(Component, _extends({
+          key: field.name,
+          lfComponent: field.component,
+          lfFramework: framework,
+          lfLocale: locale,
+          name: field.name,
+          label: field.label,
+          hint: field.hint,
+          disabled: field.disabled
+        }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
+          fields: field.fields,
+          disabled: field.disabled ? true : disabled,
+          // pass disabled status to inner components
+          prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+            key: "wrapper_top_field",
+            parentField: field,
+            parentFieldTarget: "fields",
+            nextField: field.fields && field.fields.length ? field.fields[0] : null
+          })
+        })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+          context: "group",
+          key: "bottom_view_".concat(field.name),
+          field: field,
+          target: "fields"
+        })));
+        return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
+          field: field,
+          level: level,
+          index: index,
+          className: "group"
+        }, component) : component;
+      } else if (field.component === 'columns') {
+        var _component = /*#__PURE__*/React$1.createElement(Component, _extends({
+          key: field.name,
+          lfComponent: field.component,
+          lfFramework: framework,
+          lfLocale: locale,
+          name: field.name,
+          label: field.label,
+          hint: field.hint,
+          disabled: field.disabled
+        }, additionalFields), function (column) {
+          return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
+            fields: field.fields && _.isArray(field.fields[column]) ? field.fields[column] : [],
+            disabled: field.disabled ? true : disabled,
+            // pass disabled status to inner components
+            prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+              key: "wrapper_top_field",
+              parentField: field,
+              parentFieldTarget: "fields",
+              parentFieldSubTarget: column,
+              nextField: field.fields && field.fields.length ? field.fields[0] : null
+            })
+          })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+            context: "columns",
+            key: "bottom_view_".concat(field.name),
+            field: field,
+            target: "fields",
+            subtarget: column
+          }));
+        });
+        return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
+          field: field,
+          level: level,
+          index: index,
+          className: "columns"
+        }, _component) : _component;
+      } else if (field.component === 'tabs') {
+        return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
+          key: "field_".concat(field.name),
+          name: field.name,
+          control: control,
+          render: function render(_ref2) {
+            var _values$field$name;
+            _ref2.field;
+            var values = getValues();
+            var component = /*#__PURE__*/React$1.createElement(Component, _extends({
+              key: field.name,
+              lfComponent: field.component,
+              lfFramework: framework,
+              lfLocale: locale,
+              name: field.name,
+              label: field.label,
+              hint: field.hint,
+              disabled: field.disabled,
+              value: (_values$field$name = values[field.name]) !== null && _values$field$name !== void 0 ? _values$field$name : undefined,
+              onChange: function onChange(value, _opts) {
+                setValue(field.name, value);
+                _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
+              }
+            }, additionalFields, field[framework]), function (tab) {
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
+                fields: field.fields && _.isArray(field.fields[tab]) ? field.fields[tab] : [],
+                disabled: field.disabled ? true : disabled,
+                // pass disabled status to inner components
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+                  key: "wrapper_top_field",
+                  parentField: field,
+                  parentFieldTarget: "fields",
+                  parentFieldSubTarget: tab,
+                  nextField: field.fields && field.fields.length ? field.fields[0] : null
+                })
+              })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+                context: "tabs",
+                key: "bottom_view_".concat(field.name),
+                field: field,
+                target: "fields",
+                subtarget: tab
+              }));
+            });
+            return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
+              key: "wrapper_".concat(field.name),
+              field: field,
+              level: level,
+              index: index,
+              className: "tabs"
+            }, component) : component;
+          }
+        });
+      } else if (field.component === 'steps') {
+        return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
+          key: "field_".concat(field.name),
+          name: field.name,
+          control: control,
+          render: function render(_ref3) {
+            var _values$field$name2;
+            _ref3.field;
+            var values = getValues();
+            var component = /*#__PURE__*/React$1.createElement(Component, _extends({
+              key: field.name,
+              lfComponent: field.component,
+              lfFramework: framework,
+              lfLocale: locale,
+              name: field.name,
+              label: field.label,
+              hint: field.hint,
+              disabled: field.disabled,
+              value: (_values$field$name2 = values[field.name]) !== null && _values$field$name2 !== void 0 ? _values$field$name2 : undefined,
+              onChange: function onChange(value, _opts) {
+                setValue(field.name, value);
+                _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
+              }
+            }, additionalFields, field[framework]), function (step) {
+              return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
+                fields: field.fields && _.isArray(field.fields[step]) ? field.fields[step] : [],
+                disabled: field.disabled ? true : disabled,
+                // pass disabled status to inner components
+                prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+                  key: "wrapper_top_field",
+                  parentField: field,
+                  parentFieldTarget: "fields",
+                  parentFieldSubTarget: step,
+                  nextField: field.fields && field.fields.length ? field.fields[0] : null
+                })
+              })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+                context: "tabs",
+                key: "bottom_view_".concat(field.name),
+                field: field,
+                target: "fields",
+                subtarget: step
+              }));
+            });
+            return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
+              key: "wrapper_".concat(field.name),
+              field: field,
+              level: level,
+              index: index,
+              className: "tabs"
+            }, component) : component;
+          }
+        });
+      } else if (field.component === 'array' && GroupWrapper) {
+        var _component2 = /*#__PURE__*/React$1.createElement(Component, _extends({
+          key: field.name,
+          lfComponent: field.component,
+          lfFramework: framework,
+          lfLocale: locale,
+          name: field.name,
+          label: field.label,
+          hint: field.hint,
+          disabled: field.disabled,
+          errors: errors ? errors[field.name] : null
+        }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
+          fields: field.fields,
+          disabled: field.disabled ? true : disabled,
+          // pass disabled status to inner components
+          prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+            key: "wrapper_top_field",
+            parentField: field,
+            parentFieldTarget: "fields",
+            nextField: field.fields && field.fields.length ? field.fields[0] : null
+          })
+        })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+          context: "array",
+          key: "bottom_view_".concat(field.name),
+          field: field,
+          target: "fields"
+        })));
+        return /*#__PURE__*/React$1.createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
+          field: field,
+          level: level,
+          index: index,
+          className: "array"
+        }, _component2);
+      }
+      var error;
+      if (field.component === 'array') {
+        // pass errors down the the array component only if it's "inline"
+        error = errors != null && showErrors === 'inline' ? errors[field.name] : null;
+      } else if (errors && errors[field.name] && errors[field.name].errorMessage) {
+        // if it's inline pass the error messgae, otherwise just a true in order to
+        // highlight the component
+        error = showErrors === 'inline' ? errors[field.name].errorMessage : true;
+      }
+      var perComponentAdditionalFields = _objectSpread2({}, additionalFields);
+      if (field.component === 'array') {
+        perComponentAdditionalFields.formShowErrors = showErrors;
+      }
+      return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
+        key: "field_".concat(field.name),
+        name: field.name,
+        control: control,
+        render: function render(_ref4) {
+          var fieldInfo = _ref4.field;
+          var component = /*#__PURE__*/React$1.createElement(Component
+          // not sure about this, not passing the ref
+          , _extends({
+            name: fieldInfo.name,
+            value: fieldInfo.value,
+            onBlur: fieldInfo.onBlur,
+            key: "field_".concat(field.name).concat(rerenders[field.name] ? '_' + rerenders[field.name] : ''),
+            lfComponent: field.component,
+            lfFramework: framework,
+            lfLocale: locale,
+            lfOnEnter: onEnter,
+            label: field.label,
+            disabled: disabled || field.disabled,
+            readOnly: readOnly || field.readOnly,
+            plaintext: plaintext,
+            required: field.required,
+            error: error
+            /*error={errors && errors[field.name] && errors[field.name].errorMessage ?
+              (showErrors === 'inline' ? errors[field.name].errorMessage : true)
+              : undefined
+            }*/
+          }, perComponentAdditionalFields, field[framework], {
+            onChange: function onChange(value) {
+              setValue(field.name, value);
+              _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
+            }
+          }));
+          return Wrapper ? /*#__PURE__*/React$1.createElement(Wrapper, {
+            key: "wrapper_".concat(field.name),
+            field: field,
+            level: level,
+            index: index
+          }, component) : component;
+        }
+      });
+    });
+    return prependView ? [prependView].concat(_toConsumableArray(renderedFields)) : renderedFields;
   };
 
   var css_248z$5 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
   styleInject(css_248z$5);
 
-  var _excluded$m = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context"];
+  var _excluded$m = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
   var DEFAULT_FORM = {
     version: 2,
     fields: []
   };
+
+  // TODO duplicated, remove
   var mergeReRenders = function mergeReRenders(currentReRenders, newReRenders) {
     if (newReRenders) {
       Object.keys(newReRenders).forEach(function (key) {
@@ -19037,443 +19950,107 @@
   var GenerateGenerator = function GenerateGenerator(_ref) {
     var Forms = _ref.Forms,
       Fields = _ref.Fields;
-    var renderFields = function renderFields(_ref2) {
-      var fields = _ref2.fields,
-        control = _ref2.control,
-        framework = _ref2.framework,
-        _onChange = _ref2.onChange,
-        onEnter = _ref2.onEnter,
-        getValues = _ref2.getValues,
-        setValue = _ref2.setValue;
-        _ref2.register;
-        var Wrapper = _ref2.Wrapper,
-        GroupWrapper = _ref2.GroupWrapper,
-        BottomView = _ref2.BottomView,
-        PlaceholderWrapper = _ref2.PlaceholderWrapper;
-        _ref2.debug;
-        var disabled = _ref2.disabled,
-        readOnly = _ref2.readOnly,
-        plaintext = _ref2.plaintext,
+    var BaseFormGeneratorWithRef = function BaseFormGeneratorWithRef(_ref2, ref) {
+      var _form$labelSubmit, _form$labelCancel;
+      var framework = _ref2.framework,
+        _ref2$form = _ref2.form,
+        form = _ref2$form === void 0 ? DEFAULT_FORM : _ref2$form,
+        _ref2$onChange = _ref2.onChange,
+        onChange = _ref2$onChange === void 0 ? function () {} : _ref2$onChange,
+        _ref2$onSubmit = _ref2.onSubmit,
+        onSubmit = _ref2$onSubmit === void 0 ? function () {} : _ref2$onSubmit,
+        _ref2$onSubmitSuccess = _ref2.onSubmitSuccess,
+        onSubmitSuccess = _ref2$onSubmitSuccess === void 0 ? function () {} : _ref2$onSubmitSuccess,
+        _ref2$onSubmitError = _ref2.onSubmitError,
+        onSubmitError = _ref2$onSubmitError === void 0 ? function () {} : _ref2$onSubmitError,
+        _ref2$onReset = _ref2.onReset,
+        onReset = _ref2$onReset === void 0 ? function () {} : _ref2$onReset,
+        _ref2$onError = _ref2.onError,
+        onError = _ref2$onError === void 0 ? function () {} : _ref2$onError,
+        _ref2$onEnter = _ref2.onEnter,
+        onEnter = _ref2$onEnter === void 0 ? function () {} : _ref2$onEnter,
+        _ref2$onBlur = _ref2.onBlur,
+        onBlur = _ref2$onBlur === void 0 ? function () {} : _ref2$onBlur,
+        _ref2$onJavascriptErr = _ref2.onJavascriptError,
+        onJavascriptError = _ref2$onJavascriptErr === void 0 ? function () {} : _ref2$onJavascriptErr,
+        localeProp = _ref2.locale,
+        wrapper = _ref2.wrapper,
+        groupWrapper = _ref2.groupWrapper,
+        placeholderWrapper = _ref2.placeholderWrapper,
+        bottomView = _ref2.bottomView,
+        _ref2$defaultValues = _ref2.defaultValues,
+        defaultValues = _ref2$defaultValues === void 0 ? {} : _ref2$defaultValues,
+        _ref2$onlyFields = _ref2.onlyFields,
+        onlyFields = _ref2$onlyFields === void 0 ? false : _ref2$onlyFields,
+        _ref2$debug = _ref2.debug,
+        debug = _ref2$debug === void 0 ? false : _ref2$debug,
+        _ref2$disabled = _ref2.disabled,
+        disabledProp = _ref2$disabled === void 0 ? false : _ref2$disabled,
+        _ref2$readOnly = _ref2.readOnly,
+        readOnly = _ref2$readOnly === void 0 ? false : _ref2$readOnly,
+        _ref2$plaintext = _ref2.plaintext,
+        plaintext = _ref2$plaintext === void 0 ? false : _ref2$plaintext,
+        _ref2$hideToolbar = _ref2.hideToolbar,
+        hideToolbar = _ref2$hideToolbar === void 0 ? false : _ref2$hideToolbar,
+        Loader = _ref2.loader,
+        _ref2$prealoadCompone = _ref2.prealoadComponents,
+        prealoadComponents = _ref2$prealoadCompone === void 0 ? true : _ref2$prealoadCompone,
+        custom = _ref2.custom,
+        children = _ref2.children,
+        components = _ref2.components,
+        className = _ref2.className,
+        hideCancel = _ref2.hideCancel,
+        labelCancel = _ref2.labelCancel,
+        labelSubmit = _ref2.labelSubmit,
+        hideSubmit = _ref2.hideSubmit,
+        _ref2$demo = _ref2.demo,
+        demo = _ref2$demo === void 0 ? false : _ref2$demo,
+        footer = _ref2.footer,
+        _ref2$disableButtons = _ref2.disableButtons,
+        disableButtons = _ref2$disableButtons === void 0 ? false : _ref2$disableButtons,
+        _ref2$disableOnSubmit = _ref2.disableOnSubmit,
+        disableOnSubmit = _ref2$disableOnSubmit === void 0 ? true : _ref2$disableOnSubmit,
+        _ref2$resetAfterSubmi = _ref2.resetAfterSubmit,
+        resetAfterSubmit = _ref2$resetAfterSubmi === void 0 ? true : _ref2$resetAfterSubmi,
+        formContext = _ref2.context,
         errors = _ref2.errors,
-        showErrors = _ref2.showErrors,
-        _ref2$level = _ref2.level,
-        level = _ref2$level === void 0 ? 1 : _ref2$level,
-        locale = _ref2.locale,
-        onJavascriptError = _ref2.onJavascriptError,
-        Components = _ref2.Components,
-        prependView = _ref2.prependView,
-        rerenders = _ref2.rerenders;
-      var renderedFields = (fields || []).filter(function (field) {
-        return Wrapper || field.component !== 'hidden';
-      }) // skip hidden type field (not in design mode)
-      .filter(function (field) {
-        return Wrapper || field.hidden !== true;
-      }) // skip fields with "hidden" attribute (not in design mode)
-      .map(function (field, index) {
-        var Component;
-        if (Components[field.component] && Components[field.component][framework]) {
-          Component = Components[field.component][framework];
-        } else if (Components[field.component] && Components[field.component]['*']) {
-          Component = Components[field.component]['*'];
-        } else {
-          Component = MissingComponent;
-        }
-        // remove mandatory fields and platform specific fields
-        var additionalFields = _omit(field, ['id', 'name', 'label', /*'hint',*/'disabled', 'readOnly', 'plaintext', /*'size', 'placeholder',*/'component'].concat(_toConsumableArray(FRAMEWORKS)));
-        var renderFieldsParams = {
-          Wrapper: Wrapper,
-          GroupWrapper: GroupWrapper,
-          PlaceholderWrapper: PlaceholderWrapper,
-          BottomView: BottomView,
-          onChange: _onChange,
-          onEnter: onEnter,
-          control: control,
-          framework: framework,
-          getValues: getValues,
-          setValue: setValue,
-          readOnly: readOnly,
-          plaintext: plaintext,
-          errors: errors,
-          showErrors: showErrors,
-          level: level + 1,
-          locale: locale,
-          onJavascriptError: onJavascriptError,
-          Components: Components,
-          rerenders: rerenders
-        };
-
-        // special case of group
-        if (field.component === 'group') {
-          var component = /*#__PURE__*/React$1.createElement(Component, _extends({
-            key: field.name,
-            lfComponent: field.component,
-            lfFramework: framework,
-            lfLocale: locale,
-            name: field.name,
-            label: field.label,
-            hint: field.hint,
-            disabled: field.disabled
-          }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
-            fields: field.fields,
-            disabled: field.disabled ? true : disabled,
-            // pass disabled status to inner components
-            prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
-              key: "wrapper_top_field",
-              parentField: field,
-              parentFieldTarget: "fields",
-              nextField: field.fields && field.fields.length ? field.fields[0] : null
-            })
-          })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
-            context: "group",
-            key: "bottom_view_".concat(field.name),
-            field: field,
-            target: "fields"
-          })));
-          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
-            key: "wrapper_".concat(field.name),
-            field: field,
-            level: level,
-            index: index,
-            className: "group"
-          }, component) : component;
-        } else if (field.component === 'columns') {
-          var _component = /*#__PURE__*/React$1.createElement(Component, _extends({
-            key: field.name,
-            lfComponent: field.component,
-            lfFramework: framework,
-            lfLocale: locale,
-            name: field.name,
-            label: field.label,
-            hint: field.hint,
-            disabled: field.disabled
-          }, additionalFields), function (column) {
-            return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
-              fields: field.fields && _isArray(field.fields[column]) ? field.fields[column] : [],
-              disabled: field.disabled ? true : disabled,
-              // pass disabled status to inner components
-              prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
-                key: "wrapper_top_field",
-                parentField: field,
-                parentFieldTarget: "fields",
-                parentFieldSubTarget: column,
-                nextField: field.fields && field.fields.length ? field.fields[0] : null
-              })
-            })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
-              context: "columns",
-              key: "bottom_view_".concat(field.name),
-              field: field,
-              target: "fields",
-              subtarget: column
-            }));
-          });
-          return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
-            key: "wrapper_".concat(field.name),
-            field: field,
-            level: level,
-            index: index,
-            className: "columns"
-          }, _component) : _component;
-        } else if (field.component === 'tabs') {
-          return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
-            key: "field_".concat(field.name),
-            name: field.name,
-            control: control,
-            render: function render(_ref3) {
-              var _values$field$name;
-              _ref3.field;
-              var values = getValues();
-              var component = /*#__PURE__*/React$1.createElement(Component, _extends({
-                key: field.name,
-                lfComponent: field.component,
-                lfFramework: framework,
-                lfLocale: locale,
-                name: field.name,
-                label: field.label,
-                hint: field.hint,
-                disabled: field.disabled,
-                value: (_values$field$name = values[field.name]) !== null && _values$field$name !== void 0 ? _values$field$name : undefined,
-                onChange: function onChange(value, _opts) {
-                  setValue(field.name, value);
-                  _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
-                }
-              }, additionalFields, field[framework]), function (tab) {
-                return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
-                  fields: field.fields && _isArray(field.fields[tab]) ? field.fields[tab] : [],
-                  disabled: field.disabled ? true : disabled,
-                  // pass disabled status to inner components
-                  prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
-                    key: "wrapper_top_field",
-                    parentField: field,
-                    parentFieldTarget: "fields",
-                    parentFieldSubTarget: tab,
-                    nextField: field.fields && field.fields.length ? field.fields[0] : null
-                  })
-                })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
-                  context: "tabs",
-                  key: "bottom_view_".concat(field.name),
-                  field: field,
-                  target: "fields",
-                  subtarget: tab
-                }));
-              });
-              return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
-                key: "wrapper_".concat(field.name),
-                field: field,
-                level: level,
-                index: index,
-                className: "tabs"
-              }, component) : component;
-            }
-          });
-        } else if (field.component === 'steps') {
-          return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
-            key: "field_".concat(field.name),
-            name: field.name,
-            control: control,
-            render: function render(_ref4) {
-              var _values$field$name2;
-              _ref4.field;
-              var values = getValues();
-              var component = /*#__PURE__*/React$1.createElement(Component, _extends({
-                key: field.name,
-                lfComponent: field.component,
-                lfFramework: framework,
-                lfLocale: locale,
-                name: field.name,
-                label: field.label,
-                hint: field.hint,
-                disabled: field.disabled,
-                value: (_values$field$name2 = values[field.name]) !== null && _values$field$name2 !== void 0 ? _values$field$name2 : undefined,
-                onChange: function onChange(value, _opts) {
-                  setValue(field.name, value);
-                  _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
-                }
-              }, additionalFields, field[framework]), function (step) {
-                return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
-                  fields: field.fields && _isArray(field.fields[step]) ? field.fields[step] : [],
-                  disabled: field.disabled ? true : disabled,
-                  // pass disabled status to inner components
-                  prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
-                    key: "wrapper_top_field",
-                    parentField: field,
-                    parentFieldTarget: "fields",
-                    parentFieldSubTarget: step,
-                    nextField: field.fields && field.fields.length ? field.fields[0] : null
-                  })
-                })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
-                  context: "tabs",
-                  key: "bottom_view_".concat(field.name),
-                  field: field,
-                  target: "fields",
-                  subtarget: step
-                }));
-              });
-              return GroupWrapper ? /*#__PURE__*/React$1.createElement(GroupWrapper, {
-                key: "wrapper_".concat(field.name),
-                field: field,
-                level: level,
-                index: index,
-                className: "tabs"
-              }, component) : component;
-            }
-          });
-        } else if (field.component === 'array' && GroupWrapper) {
-          var _component2 = /*#__PURE__*/React$1.createElement(Component, _extends({
-            key: field.name,
-            lfComponent: field.component,
-            lfFramework: framework,
-            lfLocale: locale,
-            name: field.name,
-            label: field.label,
-            hint: field.hint,
-            disabled: field.disabled
-          }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
-            fields: field.fields,
-            disabled: field.disabled ? true : disabled,
-            // pass disabled status to inner components
-            prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
-              key: "wrapper_top_field",
-              parentField: field,
-              parentFieldTarget: "fields",
-              nextField: field.fields && field.fields.length ? field.fields[0] : null
-            })
-          })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
-            context: "array",
-            key: "bottom_view_".concat(field.name),
-            field: field,
-            target: "fields"
-          })));
-          return /*#__PURE__*/React$1.createElement(GroupWrapper, {
-            key: "wrapper_".concat(field.name),
-            field: field,
-            level: level,
-            index: index,
-            className: "array"
-          }, _component2);
-        }
-
-        // generate the validation rule, takes into account react-hook-form
-        // validation format and i18n strings
-        var rules = translateValidation(_objectSpread2({
-          required: field.required
-        }, field.validation), locale, onJavascriptError);
-        return /*#__PURE__*/React$1.createElement(reactHookForm.Controller, {
-          key: "field_".concat(field.name),
-          name: field.name,
-          rules: rules,
-          control: control,
-          render: function render(_ref5) {
-            var fieldInfo = _ref5.field;
-            var component = /*#__PURE__*/React$1.createElement(Component
-            // not sure about this, not passing the ref
-            , _extends({
-              name: fieldInfo.name,
-              value: fieldInfo.value,
-              onBlur: fieldInfo.onBlur,
-              key: "field_".concat(field.name).concat(rerenders[field.name] ? '_' + rerenders[field.name] : ''),
-              lfComponent: field.component,
-              lfFramework: framework,
-              lfLocale: locale,
-              lfOnEnter: onEnter,
-              label: field.label,
-              disabled: disabled || field.disabled,
-              readOnly: readOnly || field.readOnly,
-              plaintext: plaintext,
-              error: errors && errors[field.name] ? showErrors === 'inline' ? errorToString(errors[field.name]) : true : undefined
-            }, additionalFields, field[framework], {
-              onChange: function onChange(value) {
-                setValue(field.name, value);
-                _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
-              }
-            }));
-            return Wrapper ? /*#__PURE__*/React$1.createElement(Wrapper, {
-              key: "wrapper_".concat(field.name),
-              field: field,
-              level: level,
-              index: index
-            }, component) : component;
-          }
-        });
-      });
-      return prependView ? [prependView].concat(_toConsumableArray(renderedFields)) : renderedFields;
-    };
-    var BaseFormGeneratorWithRef = function BaseFormGeneratorWithRef(_ref6, ref) {
-      var _form$name, _form$fields, _form$labelSubmit, _form$labelCancel;
-      var framework = _ref6.framework,
-        _ref6$form = _ref6.form,
-        form = _ref6$form === void 0 ? DEFAULT_FORM : _ref6$form,
-        _ref6$onChange = _ref6.onChange,
-        onChange = _ref6$onChange === void 0 ? function () {} : _ref6$onChange,
-        _ref6$onSubmit = _ref6.onSubmit,
-        onSubmit = _ref6$onSubmit === void 0 ? function () {} : _ref6$onSubmit,
-        _ref6$onSubmitSuccess = _ref6.onSubmitSuccess,
-        onSubmitSuccess = _ref6$onSubmitSuccess === void 0 ? function () {} : _ref6$onSubmitSuccess,
-        _ref6$onSubmitError = _ref6.onSubmitError,
-        onSubmitError = _ref6$onSubmitError === void 0 ? function () {} : _ref6$onSubmitError,
-        _ref6$onReset = _ref6.onReset,
-        onReset = _ref6$onReset === void 0 ? function () {} : _ref6$onReset,
-        _ref6$onError = _ref6.onError,
-        onError = _ref6$onError === void 0 ? function () {} : _ref6$onError,
-        _ref6$onEnter = _ref6.onEnter,
-        onEnter = _ref6$onEnter === void 0 ? function () {} : _ref6$onEnter,
-        _ref6$onJavascriptErr = _ref6.onJavascriptError,
-        onJavascriptError = _ref6$onJavascriptErr === void 0 ? function () {} : _ref6$onJavascriptErr,
-        localeProp = _ref6.locale,
-        wrapper = _ref6.wrapper,
-        groupWrapper = _ref6.groupWrapper,
-        placeholderWrapper = _ref6.placeholderWrapper,
-        bottomView = _ref6.bottomView,
-        _ref6$defaultValues = _ref6.defaultValues,
-        defaultValues = _ref6$defaultValues === void 0 ? {} : _ref6$defaultValues,
-        _ref6$onlyFields = _ref6.onlyFields,
-        onlyFields = _ref6$onlyFields === void 0 ? false : _ref6$onlyFields,
-        _ref6$debug = _ref6.debug,
-        debug = _ref6$debug === void 0 ? false : _ref6$debug,
-        _ref6$disabled = _ref6.disabled,
-        disabledProp = _ref6$disabled === void 0 ? false : _ref6$disabled,
-        _ref6$readOnly = _ref6.readOnly,
-        readOnly = _ref6$readOnly === void 0 ? false : _ref6$readOnly,
-        _ref6$plaintext = _ref6.plaintext,
-        plaintext = _ref6$plaintext === void 0 ? false : _ref6$plaintext,
-        _ref6$hideToolbar = _ref6.hideToolbar,
-        hideToolbar = _ref6$hideToolbar === void 0 ? false : _ref6$hideToolbar,
-        Loader = _ref6.loader,
-        _ref6$prealoadCompone = _ref6.prealoadComponents,
-        prealoadComponents = _ref6$prealoadCompone === void 0 ? true : _ref6$prealoadCompone,
-        custom = _ref6.custom,
-        children = _ref6.children,
-        components = _ref6.components,
-        className = _ref6.className,
-        hideCancel = _ref6.hideCancel,
-        labelCancel = _ref6.labelCancel,
-        labelSubmit = _ref6.labelSubmit,
-        hideSubmit = _ref6.hideSubmit,
-        _ref6$demo = _ref6.demo,
-        demo = _ref6$demo === void 0 ? false : _ref6$demo,
-        footer = _ref6.footer,
-        _ref6$disableButtons = _ref6.disableButtons,
-        disableButtons = _ref6$disableButtons === void 0 ? false : _ref6$disableButtons,
-        _ref6$disableOnSubmit = _ref6.disableOnSubmit,
-        disableOnSubmit = _ref6$disableOnSubmit === void 0 ? true : _ref6$disableOnSubmit,
-        _ref6$resetAfterSubmi = _ref6.resetAfterSubmit,
-        resetAfterSubmit = _ref6$resetAfterSubmi === void 0 ? true : _ref6$resetAfterSubmi,
-        formContext = _ref6.context,
-        rest = _objectWithoutProperties(_ref6, _excluded$m);
+        rest = _objectWithoutProperties(_ref2, _excluded$m);
       var showErrors = form.showErrors,
         connectors = form.connectors;
-      var _useState = React$1.useState((_form$name = form.name) !== null && _form$name !== void 0 ? _form$name : _uniqueId('form_')),
+      var _useState = React$1.useState(prealoadComponents),
         _useState2 = _slicedToArray(_useState, 2),
-        formName = _useState2[0],
-        setFormName = _useState2[1];
-      useStylesheet(formName, form.css);
-      var _useState3 = React$1.useState(null),
+        preloading = _useState2[0],
+        setPreloading = _useState2[1];
+      var _useState3 = React$1.useState(false),
         _useState4 = _slicedToArray(_useState3, 2),
-        transformers = _useState4[0],
-        setTransformers = _useState4[1];
-      var _useState5 = React$1.useState(prealoadComponents),
-        _useState6 = _slicedToArray(_useState5, 2),
-        preloading = _useState6[0],
-        setPreloading = _useState6[1];
-      var _useState7 = React$1.useState(false),
-        _useState8 = _slicedToArray(_useState7, 2),
-        stateDisabled = _useState8[0],
-        setDisabled = _useState8[1];
+        stateDisabled = _useState4[0],
+        setDisabled = _useState4[1];
       // force re-render of the form
-      var _useState9 = React$1.useState(1),
-        _useState10 = _slicedToArray(_useState9, 2),
-        version = _useState10[0],
-        setVersion = _useState10[1];
+      var _useState5 = React$1.useState(1),
+        _useState6 = _slicedToArray(_useState5, 2),
+        version = _useState6[0],
+        setVersion = _useState6[1];
       // keep track of components to be re-rendered, update it without re-render the component
       var rerenders = React$1.useRef({});
       var locale = !localeProp || localeProp === 'auto' ? navigator.language : localeProp;
-      var mutableState = React$1.useRef({
-        currentContext: _objectSpread2({
-          locales: form.locales,
-          locale: locale
-        }, formContext)
-      });
       var _useForm = reactHookForm.useForm({
           defaultValues: defaultValues,
           mode: form.validationMode
         }),
         handleSubmit = _useForm.handleSubmit,
-        _useForm$formState = _useForm.formState,
-        errors = _useForm$formState.errors,
-        isValid = _useForm$formState.isValid,
-        reset = _useForm.reset,
+        reset = _useForm.formState,
         control = _useForm.control,
         getValues = _useForm.getValues,
         setValue = _useForm.setValue,
-        trigger = _useForm.trigger,
         register = _useForm.register;
       React$1.useImperativeHandle(ref, function () {
         return {
           validate: function () {
-            var _validate = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+            var _validate2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
               return _regeneratorRuntime().wrap(function _callee$(_context) {
                 while (1) switch (_context.prev = _context.next) {
                   case 0:
-                    return _context.abrupt("return", trigger());
+                    return _context.abrupt("return", _validate(getValues()));
                   case 1:
                   case "end":
                     return _context.stop();
@@ -19481,30 +20058,44 @@
               }, _callee);
             }));
             function validate() {
-              return _validate.apply(this, arguments);
+              return _validate2.apply(this, arguments);
             }
             return validate;
           }()
         };
       });
-      var _useState11 = React$1.useState(),
-        _useState12 = _slicedToArray(_useState11, 2),
-        validationErrors = _useState12[0],
-        setValidationErrors = _useState12[1];
-      // store form fields, apply immediately transformers (collected from all fields)
-      var _useState13 = React$1.useState(null),
-        _useState14 = _slicedToArray(_useState13, 2),
-        formFields = _useState14[0],
-        setFormFields = _useState14[1];
       var MergedComponents = mergeComponents(Fields, components);
+      var _useFormFields = useFormFields({
+          components: MergedComponents,
+          framework: framework,
+          form: form,
+          children: children,
+          onJavascriptError: onJavascriptError,
+          defaultValues: defaultValues,
+          formContext: formContext,
+          locale: locale,
+          // TODO refactor this
+          rerenders: rerenders,
+          setValue: setValue
+        }),
+        formFields = _useFormFields.formFields,
+        transformers = _useFormFields.transformers,
+        setFormFields = _useFormFields.setFormFields,
+        formName = _useFormFields.formName,
+        currentFormContext = _useFormFields.currentFormContext;
+      useStylesheet(formName, form.css);
       var disabled = stateDisabled || disabledProp;
-      // it's the combination of the fields from the form schema and those specified
-      // with the DSL, from now on every func should reference this (not form.fields)
-      // also upgrade fields if older version of the form
-      var actualFields = upgradeFields([].concat(_toConsumableArray((_form$fields = form.fields) !== null && _form$fields !== void 0 ? _form$fields : []), _toConsumableArray(traverseChildren(children, {
-        components: MergedComponents,
-        framework: framework
-      }))), form.version);
+      var _useFormValidation = useFormValidation({
+          onError: onError,
+          fields: formFields,
+          locale: locale,
+          onJavascriptError: onJavascriptError
+        }),
+        _validate = _useFormValidation.validate,
+        validationErrors = _useFormValidation.validationErrors,
+        setValidationErrors = _useFormValidation.setValidationErrors,
+        isValid = _useFormValidation.isValid,
+        clearValidation = _useFormValidation.clearValidation;
       if (!framework) {
         lfError('missing "framework" prop');
         return;
@@ -19513,7 +20104,9 @@
       // preload components of the form
       React$1.useEffect(function () {
         if (prealoadComponents) {
-          var _components = _uniq(reduceFields(actualFields, function (field, acc) {
+          var _components = _uniq(reduceFields(
+          //actualFields,
+          formFields, function (field, acc) {
             return [].concat(_toConsumableArray(acc), [field.component]);
           }, []));
           lfLog('Preloading components: ' + _components.join(', '));
@@ -19535,135 +20128,24 @@
           });
         }
       }, []);
-
-      // update internal state if form changes
-      React$1.useEffect(function () {
-        var f = /*#__PURE__*/function () {
-          var _ref7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-            var _form$name2;
-            var newTransformers, newFields, transformersToRun, idx, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _loop, _iterator, _step;
-            return _regeneratorRuntime().wrap(function _callee2$(_context3) {
-              while (1) switch (_context3.prev = _context3.next) {
-                case 0:
-                  // update the mutable state
-                  mutableState.current.currentContext = _objectSpread2(_objectSpread2({}, mutableState.current.currentContext), formContext);
-                  newTransformers = collectTransformers(actualFields, form.transformer || form.script, onJavascriptError); // initial fields values
-                  newFields = actualFields; // collect all transformers to be executed
-                  transformersToRun = Object.keys(newTransformers.onChange || {}).filter(function (fieldName) {
-                    return !_isEmpty(newTransformers.onChange[fieldName]);
-                  }).reduce(function (acc, fieldName) {
-                    return [].concat(_toConsumableArray(acc), [newTransformers.onChange[fieldName]]);
-                  }, !_isEmpty(newTransformers.onRender) ? [newTransformers.onRender] : []); // execute all onChange transformers at the bootstrap of the form
-                  idx = 0;
-                case 5:
-                  if (!(idx < transformersToRun.length)) {
-                    _context3.next = 37;
-                    break;
-                  }
-                  _iteratorAbruptCompletion = false;
-                  _didIteratorError = false;
-                  _context3.prev = 8;
-                  _loop = /*#__PURE__*/_regeneratorRuntime().mark(function _loop() {
-                    var transformResult, newFormFields, newReRenders, changes;
-                    return _regeneratorRuntime().wrap(function _loop$(_context2) {
-                      while (1) switch (_context2.prev = _context2.next) {
-                        case 0:
-                          transformResult = _step.value;
-                          newFormFields = transformResult.fields, newReRenders = transformResult.rerenders, changes = transformResult.changes;
-                          mergeReRenders(rerenders.current, newReRenders);
-                          if (newFormFields !== newFields) {
-                            newFields = newFormFields;
-                            setFormFields(newFormFields);
-                          }
-                          if (changes) {
-                            Object.keys(changes).forEach(function (key) {
-                              return setValue(key, changes[key]);
-                            });
-                          }
-                        case 5:
-                        case "end":
-                          return _context2.stop();
-                      }
-                    }, _loop);
-                  });
-                  _iterator = _asyncIterator(applyTransformers(formName, framework, newFields, transformersToRun[idx], defaultValues, onJavascriptError, mutableState.current.currentContext));
-                case 11:
-                  _context3.next = 13;
-                  return _iterator.next();
-                case 13:
-                  if (!(_iteratorAbruptCompletion = !(_step = _context3.sent).done)) {
-                    _context3.next = 18;
-                    break;
-                  }
-                  return _context3.delegateYield(_loop(), "t0", 15);
-                case 15:
-                  _iteratorAbruptCompletion = false;
-                  _context3.next = 11;
-                  break;
-                case 18:
-                  _context3.next = 24;
-                  break;
-                case 20:
-                  _context3.prev = 20;
-                  _context3.t1 = _context3["catch"](8);
-                  _didIteratorError = true;
-                  _iteratorError = _context3.t1;
-                case 24:
-                  _context3.prev = 24;
-                  _context3.prev = 25;
-                  if (!(_iteratorAbruptCompletion && _iterator.return != null)) {
-                    _context3.next = 29;
-                    break;
-                  }
-                  _context3.next = 29;
-                  return _iterator.return();
-                case 29:
-                  _context3.prev = 29;
-                  if (!_didIteratorError) {
-                    _context3.next = 32;
-                    break;
-                  }
-                  throw _iteratorError;
-                case 32:
-                  return _context3.finish(29);
-                case 33:
-                  return _context3.finish(24);
-                case 34:
-                  idx++;
-                  _context3.next = 5;
-                  break;
-                case 37:
-                  setFormName((_form$name2 = form.name) !== null && _form$name2 !== void 0 ? _form$name2 : _uniqueId('form_'));
-                  setTransformers(newTransformers);
-
-                  // if transformed fields different than current one, then save
-                  if (newFields !== formFields) {
-                    setFormFields(newFields);
-                  }
-                case 40:
-                case "end":
-                  return _context3.stop();
-              }
-            }, _callee2, null, [[8, 20, 24, 34], [25,, 29, 33]]);
-          }));
-          return function f() {
-            return _ref7.apply(this, arguments);
-          };
-        }();
-        f();
-      },
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      [form, framework, children, formContext] // don't put defaultValues here
-      );
-
       var onHandleSubmit = React$1.useCallback( /*#__PURE__*/function () {
-        var _ref8 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(data) {
-          var idx, responses, connector, proxyFetch, response;
-          return _regeneratorRuntime().wrap(function _callee3$(_context4) {
-            while (1) switch (_context4.prev = _context4.next) {
+        var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(data) {
+          var validationResult, idx, responses, connector, proxyFetch, response;
+          return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+            while (1) switch (_context2.prev = _context2.next) {
               case 0:
+                _context2.next = 2;
+                return _validate(data);
+              case 2:
+                validationResult = _context2.sent;
+                if (!validationResult) {
+                  _context2.next = 5;
+                  break;
+                }
+                return _context2.abrupt("return");
+              case 5:
                 if (!(Array.isArray(connectors) && connectors.length !== 0)) {
-                  _context4.next = 32;
+                  _context2.next = 37;
                   break;
                 }
                 // call onSubmit immediately
@@ -19675,15 +20157,15 @@
                 // loop over connectors
                 responses = [];
                 idx = 0;
-              case 5:
+              case 10:
                 if (!(idx < connectors.length)) {
-                  _context4.next = 27;
+                  _context2.next = 32;
                   break;
                 }
                 connector = connectors[idx];
                 proxyFetch = ProxyFetch(connector.options); // wrap fetch
-                _context4.prev = 8;
-                _context4.next = 11;
+                _context2.prev = 13;
+                _context2.next = 16;
                 return Connectors[connector.name]({
                   data: data,
                   options: connector.options,
@@ -19692,35 +20174,35 @@
                     return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, field.name, field.component));
                   }, {})
                 });
-              case 11:
-                response = _context4.sent;
+              case 16:
+                response = _context2.sent;
                 if (!(response.status >= 400)) {
-                  _context4.next = 16;
+                  _context2.next = 21;
                   break;
                 }
                 if (disableOnSubmit) {
                   setDisabled(false);
                 }
                 onSubmitError(response);
-                return _context4.abrupt("return");
-              case 16:
+                return _context2.abrupt("return");
+              case 21:
                 responses.push(response);
-                _context4.next = 24;
+                _context2.next = 29;
                 break;
-              case 19:
-                _context4.prev = 19;
-                _context4.t0 = _context4["catch"](8);
+              case 24:
+                _context2.prev = 24;
+                _context2.t0 = _context2["catch"](13);
                 // if failed call, return the erro, stop the chain and re-enable the form
                 if (disableOnSubmit) {
                   setDisabled(false);
                 }
-                onSubmitError(_context4.t0);
-                return _context4.abrupt("return");
-              case 24:
+                onSubmitError(_context2.t0);
+                return _context2.abrupt("return");
+              case 29:
                 idx++;
-                _context4.next = 5;
+                _context2.next = 10;
                 break;
-              case 27:
+              case 32:
                 // re-enable and reset if needed
                 if (disableOnSubmit) {
                   setDisabled(false);
@@ -19733,25 +20215,21 @@
                 }
                 // finally the callback
                 onSubmitSuccess(responses.length === 1 ? responses[0] : responses);
-                _context4.next = 34;
+                _context2.next = 39;
                 break;
-              case 32:
+              case 37:
                 setValidationErrors(null);
                 onSubmit(data);
-              case 34:
+              case 39:
               case "end":
-                return _context4.stop();
+                return _context2.stop();
             }
-          }, _callee3, null, [[8, 19]]);
+          }, _callee2, null, [[13, 24]]);
         }));
         return function (_x) {
-          return _ref8.apply(this, arguments);
+          return _ref3.apply(this, arguments);
         };
       }(), [onSubmit, onSubmitSuccess, formFields]);
-      var onHandleError = React$1.useCallback(function (data) {
-        setValidationErrors(data);
-        onError(data);
-      }, [onError]);
       var handleReset = React$1.useCallback(function () {
         setValidationErrors(null);
         reset(defaultValues);
@@ -19761,41 +20239,66 @@
         });
         onReset();
       }, [defaultValues, reset, onReset]);
+      var handleBlur = React$1.useCallback( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+        var _validationErrors;
+        return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+          while (1) switch (_context3.prev = _context3.next) {
+            case 0:
+              if (!(form.validationMode === 'onBlur' || form.validationMode === 'all')) {
+                _context3.next = 5;
+                break;
+              }
+              _context3.next = 3;
+              return _validate(getValues());
+            case 3:
+              _validationErrors = _context3.sent;
+              onError(_validationErrors);
+            case 5:
+            case "end":
+              return _context3.stop();
+          }
+        }, _callee3);
+      })), [onBlur]);
       var handleChange = React$1.useCallback( /*#__PURE__*/function () {
-        var _ref9 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(values, fieldName) {
-          var transformersToRun, newFields, idx, _iteratorAbruptCompletion2, _didIteratorError2, _iteratorError2, _loop2, _iterator2, _step2;
-          return _regeneratorRuntime().wrap(function _callee4$(_context6) {
-            while (1) switch (_context6.prev = _context6.next) {
+        var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(values, fieldName) {
+          var transformersToRun, newFields, idx, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _loop, _iterator, _step, _validationErrors2;
+          return _regeneratorRuntime().wrap(function _callee4$(_context5) {
+            while (1) switch (_context5.prev = _context5.next) {
               case 0:
                 if (transformers) {
-                  _context6.next = 2;
+                  _context5.next = 2;
                   break;
                 }
-                return _context6.abrupt("return");
+                return _context5.abrupt("return");
               case 2:
                 transformersToRun = !_isEmpty(transformers.onRender) ? [transformers.onRender] : []; // if the changed field has a transformer
                 if (transformers.onChange != null && !_isEmpty(transformers.onChange[fieldName])) {
                   transformersToRun.push(transformers.onChange[fieldName]);
                 }
 
+                // reset the validation error for that field
+                if (!_isEmpty(fieldName)) {
+                  clearValidation(fieldName);
+                }
+
                 // execute main transformer
                 newFields = formFields;
                 idx = 0;
-              case 6:
+              case 7:
                 if (!(idx < transformersToRun.length)) {
-                  _context6.next = 38;
+                  _context5.next = 39;
                   break;
                 }
                 // execute the async generator transformer
-                _iteratorAbruptCompletion2 = false;
-                _didIteratorError2 = false;
-                _context6.prev = 9;
-                _loop2 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop2() {
+                _iteratorAbruptCompletion = false;
+                _didIteratorError = false;
+                _context5.prev = 10;
+                _loop = /*#__PURE__*/_regeneratorRuntime().mark(function _loop() {
                   var transformResult, newFormFields, newReRenders, changes;
-                  return _regeneratorRuntime().wrap(function _loop2$(_context5) {
-                    while (1) switch (_context5.prev = _context5.next) {
+                  return _regeneratorRuntime().wrap(function _loop$(_context4) {
+                    while (1) switch (_context4.prev = _context4.next) {
                       case 0:
-                        transformResult = _step2.value;
+                        transformResult = _step.value;
                         newFormFields = transformResult.fields, newReRenders = transformResult.rerenders, changes = transformResult.changes; // merge re-renders request to the current ones, in a useRef, must per persisted like a state
                         // but doesnt' have to trigger a new render
                         mergeReRenders(rerenders.current, newReRenders);
@@ -19815,72 +20318,82 @@
                         }
                       case 5:
                       case "end":
-                        return _context5.stop();
+                        return _context4.stop();
                     }
-                  }, _loop2);
+                  }, _loop);
                 });
-                _iterator2 = _asyncIterator(applyTransformers(formName, framework, newFields, transformersToRun[idx], values, onJavascriptError, mutableState.current.currentContext));
-              case 12:
-                _context6.next = 14;
-                return _iterator2.next();
-              case 14:
-                if (!(_iteratorAbruptCompletion2 = !(_step2 = _context6.sent).done)) {
-                  _context6.next = 19;
+                _iterator = _asyncIterator(applyTransformers(formName, framework, newFields, transformersToRun[idx], values, onJavascriptError, currentFormContext));
+              case 13:
+                _context5.next = 15;
+                return _iterator.next();
+              case 15:
+                if (!(_iteratorAbruptCompletion = !(_step = _context5.sent).done)) {
+                  _context5.next = 20;
                   break;
                 }
-                return _context6.delegateYield(_loop2(), "t0", 16);
-              case 16:
-                _iteratorAbruptCompletion2 = false;
-                _context6.next = 12;
+                return _context5.delegateYield(_loop(), "t0", 17);
+              case 17:
+                _iteratorAbruptCompletion = false;
+                _context5.next = 13;
                 break;
-              case 19:
-                _context6.next = 25;
+              case 20:
+                _context5.next = 26;
                 break;
-              case 21:
-                _context6.prev = 21;
-                _context6.t1 = _context6["catch"](9);
-                _didIteratorError2 = true;
-                _iteratorError2 = _context6.t1;
-              case 25:
-                _context6.prev = 25;
-                _context6.prev = 26;
-                if (!(_iteratorAbruptCompletion2 && _iterator2.return != null)) {
-                  _context6.next = 30;
+              case 22:
+                _context5.prev = 22;
+                _context5.t1 = _context5["catch"](10);
+                _didIteratorError = true;
+                _iteratorError = _context5.t1;
+              case 26:
+                _context5.prev = 26;
+                _context5.prev = 27;
+                if (!(_iteratorAbruptCompletion && _iterator.return != null)) {
+                  _context5.next = 31;
                   break;
                 }
-                _context6.next = 30;
-                return _iterator2.return();
-              case 30:
-                _context6.prev = 30;
-                if (!_didIteratorError2) {
-                  _context6.next = 33;
+                _context5.next = 31;
+                return _iterator.return();
+              case 31:
+                _context5.prev = 31;
+                if (!_didIteratorError) {
+                  _context5.next = 34;
                   break;
                 }
-                throw _iteratorError2;
-              case 33:
-                return _context6.finish(30);
+                throw _iteratorError;
               case 34:
-                return _context6.finish(25);
+                return _context5.finish(31);
               case 35:
+                return _context5.finish(26);
+              case 36:
                 idx++;
-                _context6.next = 6;
+                _context5.next = 7;
                 break;
-              case 38:
-                onChange(values);
               case 39:
+                if (!(form.validationMode === 'onChange' || form.validationMode === 'all')) {
+                  _context5.next = 44;
+                  break;
+                }
+                _context5.next = 42;
+                return _validate(getValues());
+              case 42:
+                _validationErrors2 = _context5.sent;
+                onError(_validationErrors2);
+              case 44:
+                onChange(values);
+              case 45:
               case "end":
-                return _context6.stop();
+                return _context5.stop();
             }
-          }, _callee4, null, [[9, 21, 25, 35], [26,, 30, 34]]);
+          }, _callee4, null, [[10, 22, 26, 36], [27,, 31, 35]]);
         }));
         return function (_x2, _x3) {
-          return _ref9.apply(this, arguments);
+          return _ref5.apply(this, arguments);
         };
       }(), [onChange, formFields, formName, transformers, framework, onJavascriptError]);
       var handleEnter = React$1.useCallback(function () {
-        handleSubmit(onHandleSubmit, onHandleError)();
+        handleSubmit(onHandleSubmit)();
         onEnter();
-      }, [handleSubmit, onEnter, onHandleError, onHandleSubmit]);
+      }, [handleSubmit, onEnter, onHandleSubmit]);
       if (debug) {
         console.log('[LetsForm] Validation', errors);
       }
@@ -19894,19 +20407,19 @@
       }
       if (plaintext) {
         return /*#__PURE__*/React$1.createElement(PlaintextForm, {
-          fields: actualFields,
+          fields: formFields,
           locale: locale,
           framework: framework,
           currentValues: getValues()
         });
       }
-      // get errors from state or from hook, perhaps state is not needed
+      // get errors from state or from props (precedence)
       var formErrors = !_isEmpty(errors) ? errors : validationErrors;
       if (debug) {
         console.log("[LetsForm] Render form (".concat(form.name, ")"));
       }
       return /*#__PURE__*/React$1.createElement(FormContext.Provider, {
-        value: mutableState.current.currentContext
+        value: currentFormContext
       }, /*#__PURE__*/React$1.createElement("div", {
         className: classNames('lf-lets-form', {
           'lf-lets-form-edit-mode': demo
@@ -19914,12 +20427,13 @@
       }, formErrors && showErrors === 'groupedTop' && /*#__PURE__*/React$1.createElement(ValidationErrors, {
         className: "top",
         locale: locale,
-        errors: enrichWithLabels(formErrors, formFields)
+        errors: formErrors
       }), /*#__PURE__*/React$1.createElement(React$1.Suspense, {
         fallback: Loader ? /*#__PURE__*/React$1.createElement(Loader, null) : /*#__PURE__*/React$1.createElement("div", null, "Loading...")
       }, /*#__PURE__*/React$1.createElement(Form, _extends({
         key: "lf_".concat(version),
-        onSubmit: handleSubmit(onHandleSubmit, onHandleError),
+        onSubmit: handleSubmit(onHandleSubmit),
+        onBlur: handleBlur,
         name: formName,
         defaultValues: defaultValues,
         onlyFields: onlyFields,
@@ -19951,7 +20465,7 @@
         setValue: setValue,
         register: register,
         debug: debug,
-        errors: errors,
+        errors: formErrors,
         disabled: disabled || form.disabled,
         readOnly: readOnly || form.readOnly,
         plaintext: plaintext || form.plaintext,
@@ -19967,7 +20481,7 @@
       }), footer, formErrors && (showErrors === 'groupedBottom' || _isEmpty(showErrors)) && /*#__PURE__*/React$1.createElement(ValidationErrors, {
         className: "bottom",
         locale: locale,
-        errors: enrichWithLabels(formErrors, formFields)
+        errors: formErrors
       }))), demo && /*#__PURE__*/React$1.createElement("div", {
         className: "label-test-buttons"
       }, "Test buttons")));
@@ -20412,14 +20926,14 @@
     default: MantineToggle
   });
 
-  var _excluded$e = ["hint", "required", "tooltip", "name", "label", "error"];
+  var _excluded$e = ["hint", "required", "tooltip", "name", "label"];
   var MantineListArray = I18N(function (_ref) {
+    var _rest$error, _rest$error2;
     var hint = _ref.hint,
       required = _ref.required;
       _ref.tooltip;
       var name = _ref.name,
       label = _ref.label,
-      error = _ref.error,
       rest = _objectWithoutProperties(_ref, _excluded$e);
     return /*#__PURE__*/React$1.createElement("div", {
       "data-lf-field-name": name,
@@ -20428,7 +20942,7 @@
       required: required
     }, label), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm
-    }, passRest(rest))), hint && /*#__PURE__*/React$1.createElement(core.Input.Description, null, hint), error && /*#__PURE__*/React$1.createElement(core.Input.Error, null, error));
+    }, passRest(rest))), hint && /*#__PURE__*/React$1.createElement(core.Input.Description, null, hint), _isString((_rest$error = rest.error) === null || _rest$error === void 0 ? void 0 : _rest$error.errorMessage) && /*#__PURE__*/React$1.createElement(core.Input.Error, null, (_rest$error2 = rest.error) === null || _rest$error2 === void 0 ? void 0 : _rest$error2.errorMessage));
   }, ['label', 'hint']);
   lfLog('Loaded Mantine.ListArray');
 
@@ -21328,12 +21842,15 @@
       onSubmit = _ref$onSubmit === void 0 ? function () {} : _ref$onSubmit,
       _ref$onReset = _ref.onReset,
       onReset = _ref$onReset === void 0 ? function () {} : _ref$onReset,
+      _ref$onBlur = _ref.onBlur,
+      onBlur = _ref$onBlur === void 0 ? function () {} : _ref$onBlur,
       custom = _ref.custom;
     return /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement("form", {
       id: id,
       onSubmit: onSubmit,
       className: classNames('lf-form lf-form-react-mantine', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
-      "data-lf-form-name": name
+      "data-lf-form-name": name,
+      onBlur: onBlur
     }, children, !hideToolbar && !onlyFields && !plaintext && /*#__PURE__*/React$1.createElement(core.Group, {
       className: "lf-buttons",
       align: buttonsAlign
