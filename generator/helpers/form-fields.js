@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import _ from 'lodash';
 
 import { upgradeFields } from './upgrade-fields';
@@ -6,7 +6,12 @@ import { collectTransformers } from './collect-transformers';
 import { traverseChildren } from './dsl';
 import { applyTransformers } from '../../helpers/apply-transformers';
 
-// TODO move
+/**
+ * mergeReRenders
+ * Merge re-renders schedule
+ * @param {*} currentReRenders
+ * @param {*} newReRenders
+ */
 const mergeReRenders = (currentReRenders, newReRenders) => {
   if (newReRenders) {
     Object.keys(newReRenders)
@@ -51,15 +56,14 @@ const useFormFields = ({
   defaultValues,
   formContext,
   locale,
-
-  // refactor below
-  setValue,
-  rerenders // TODO move this
+  setValue
 }) => {
   // state form fields
   const [formFields, setFormFields] = useState(collectFields({ form, children, framework, components }));
   // store transformers
   const [transformers, setTransformers] = useState(null);
+  // keep track of components to be re-rendered, update it without re-render the component
+  const rerenders = useRef({});
 
   const mutableState = useRef({
     currentFormContext: {
@@ -131,12 +135,75 @@ const useFormFields = ({
     [form, framework, children, formContext] // don't put defaultValues here
   );
 
+  const hasTransformer = useCallback(
+    fieldName => {
+      return transformers && transformers.onChange != null && !_.isEmpty(transformers.onChange[fieldName]);
+    },
+    [transformers]
+  );
+
+  const executeTransformer = useCallback(
+    async (transformer, values, { followTransformers = true } = {}) => {
+      // store current instance of fields
+      let newFields = formFields;
+      const formName = mutableState.current.currentFormContext?.formName;
+      const currentFormContext = mutableState.current.currentContext;
+
+      // execute the async generator transformer
+      for await(const transformResult of applyTransformers(
+        formName,
+        framework,
+        newFields,
+        transformer,
+        values,
+        onJavascriptError,
+        currentFormContext
+      )) {
+        const { fields: newFormFields, rerenders: newReRenders, changes } = transformResult;
+
+        // merge re-renders request to the current ones, in a useRef, must per persisted like a state
+        // but doesnt' have to trigger a new render
+        mergeReRenders(rerenders.current, newReRenders);
+
+        // if there are form value changes, apply it, this will cause the specific field to be refreshed
+        // and un-mounted / re-mounted if the component is statefull and needs to be reset completely
+        // at this point the re-renders request are already collected
+        if (changes) {
+          let idx, changedFields = Object.keys(changes);
+          for(idx = 0; idx < changedFields.length; idx++) {
+            const fieldToChange = changedFields[idx];
+            setValue(changedFields[idx], changes[changedFields[idx]]);
+            // if the changed field has a transformer, then execute it
+            // don't go beyond second level to avoid infinte loops
+            if (hasTransformer(fieldToChange) && followTransformers) {
+              await executeTransformer(
+                transformers.onChange[fieldToChange],
+                { ...values, ...changes }
+              );
+            }
+          }
+        }
+
+        // if different instances, then fields descriptions are changed, set it, this will cause a
+        // form re-render
+        if (newFormFields !== newFields) {
+          newFields = newFormFields
+          setFormFields(newFormFields);
+        }
+      }
+    },
+    [transformers]
+  );
+
   return {
     formFields,
     transformers,
     setFormFields,
     currentFormContext: mutableState.current.currentFormContext,
-    formName: mutableState.current.currentFormContext?.formName
+    formName: mutableState.current.currentFormContext?.formName,
+    hasTransformer,
+    executeTransformer,
+    rerenders
   };
 };
 
