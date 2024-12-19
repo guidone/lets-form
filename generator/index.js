@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import _ from 'lodash';
 
 import { ValidationErrors } from '../components';
-import { reduceFields, applyTransformers, i18n } from '../helpers';
+import { reduceFields, i18n } from '../helpers';
 import { ProxyFetch } from './helpers/proxy-fetch';
 import { useStylesheet } from '../hooks';
 import { lfLog, lfError } from '../helpers/lf-log';
@@ -24,15 +24,6 @@ import './index.scss';
 
 const DEBUG_RENDER = true;
 const DEFAULT_FORM = { version: 2, fields: [] };
-
-// TODO duplicated, remove
-const mergeReRenders = (currentReRenders, newReRenders) => {
-  if (newReRenders) {
-    Object.keys(newReRenders)
-      .forEach(key => currentReRenders[key] = currentReRenders[key] ?
-        currentReRenders[key] + newReRenders[key] : newReRenders[key]);
-  };
-};
 
 const GenerateGenerator = ({ Forms, Fields }) => {
 
@@ -94,8 +85,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [stateDisabled, setDisabled] = useState(false);
     // force re-render of the form
     const [version, setVersion] = useState(1);
-    // keep track of components to be re-rendered, update it without re-render the component
-    const rerenders = useRef({});
     const locale = !localeProp || localeProp === 'auto' ? navigator.language : localeProp;
 
     const { handleSubmit, formState: reset, control, getValues, setValue, register } = useForm({
@@ -113,7 +102,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       transformers,
       setFormFields,
       formName,
-      currentFormContext
+      currentFormContext,
+      hasTransformer,
+      executeTransformer,
+      rerenders
     } = useFormFields({
       components: MergedComponents,
       framework,
@@ -124,7 +116,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       formContext,
       locale,
       // TODO refactor this
-      rerenders,
+      //rerenders,
       setValue
     });
     useStylesheet(formName, form.css);
@@ -273,62 +265,24 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const handleChange = useCallback(
       async (values, fieldName) => {
-
-        // exit if null
-        if (!transformers) {
-          return;
-        }
-
-        const transformersToRun = !_.isEmpty(transformers.onRender) ? [transformers.onRender] : [];
-
-        // if the changed field has a transformer
-        if (transformers.onChange != null && !_.isEmpty(transformers.onChange[fieldName])) {
-          transformersToRun.push(transformers.onChange[fieldName]);
-        }
-
         // reset the validation error for that field
         if (!_.isEmpty(fieldName)) {
           clearValidation(fieldName);
         }
-
-        // execute main transformer
-        let newFields = formFields;
-        for(let idx = 0; idx < transformersToRun.length; idx++) {
-          // execute the async generator transformer
-          for await(const transformResult of applyTransformers(
-            formName,
-            framework,
-            newFields,
-            transformersToRun[idx],
-            values,
-            onJavascriptError,
-            currentFormContext
-          )) {
-            const { fields: newFormFields, rerenders: newReRenders, changes } = transformResult;
-            // merge re-renders request to the current ones, in a useRef, must per persisted like a state
-            // but doesnt' have to trigger a new render
-            mergeReRenders(rerenders.current, newReRenders);
-            // if different instances, then fields descriptions are changed, set it, this will cause a
-            // form re-render
-            if (newFormFields !== newFields) {
-              newFields = newFormFields
-              setFormFields(newFormFields);
-            }
-            // if there are form value changes, apply it, this will cause the specific field to be refreshed
-            // and un-mounted / re-mounted if the component is statefull and needs to be reset completely
-            // at this point the re-renders request are already collected
-            if (changes) {
-              Object.keys(changes).forEach(key => setValue(key, changes[key]));
-            }
-          }
-        }
-
         // if validation on change, then trigger it
         if (form.validationMode === 'onChange' || form.validationMode === 'all') {
           const validationErrors = await validate(getValues());
           onError(validationErrors);
         }
-
+        // if form level transformer
+        if (!_.isEmpty(transformers.onRender)) {
+          await executeTransformer(transformers.onRender, values);
+        }
+        // if field transformer, then execute it
+        if (hasTransformer(fieldName)) {
+          await executeTransformer(transformers.onChange[fieldName], values);
+        }
+        // propagate onChange values
         onChange(values);
       },
       [onChange, formFields, formName, transformers, framework, onJavascriptError]
