@@ -87,7 +87,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const [version, setVersion] = useState(1);
     const locale = !localeProp || localeProp === 'auto' ? navigator.language : localeProp;
 
-    const { handleSubmit, formState: reset, control, getValues, setValue, register } = useForm({
+    const { handleSubmit, reset, control, getValues, setValue, register } = useForm({
       defaultValues,
       mode: form.validationMode
     });
