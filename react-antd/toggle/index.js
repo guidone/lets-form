@@ -32,11 +32,6 @@ const Toggle = I18N(
     unCheckedChildren,
     ...rest
   }) => {
-    const handleChange = useCallback(
-      checked => onChange(checked),
-      [onChange]
-    );
-
     return (
       <Form.Item
         data-lf-field-name={name}
@@ -53,7 +48,7 @@ const Toggle = I18N(
         <Switch
           defaultChecked={value}
           readOnly={readOnly}
-          //onChange={handleChange}
+          onChange={onChange}
           onBlur={onBlur}
           disabled={disabled}
           size={size}
