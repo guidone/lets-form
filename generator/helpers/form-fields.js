@@ -192,7 +192,7 @@ const useFormFields = ({
         }
       }
     },
-    [transformers]
+    [transformers, formFields]
   );
 
   return {
