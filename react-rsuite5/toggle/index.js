@@ -23,7 +23,10 @@ const ToggleInput = I18N(
     error
   }) => {
     return (
-      <Form.Group controlId={name} className="lf-control-toggle">
+      <Form.Group
+        controlId={name}
+        className="lf-control-toggle"
+        data-lf-field-name={name}>
         {label && (
           <Form.ControlLabel>
             {label}

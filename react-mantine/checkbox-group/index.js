@@ -30,12 +30,12 @@ const CheckboxGroup = I18N(
     ...rest
   }) => {
     const [selected, setSelected] = useState(
-      _.isArray(value) ? 
+      _.isArray(value) ?
         value : (value ? String().split(',') : [])
     )
     const handleChange = useCallback(
       (e) => {
-        let newValue; 
+        let newValue;
         if (e.target.checked) {
           newValue = [...selected, e.target.value];
         } else {
@@ -67,9 +67,7 @@ const CheckboxGroup = I18N(
               iconColor={iconColor}
               labelPosition={labelPosition}
               {...passRest(rest, ['description'])}
-            >
-              {label}
-            </Checkbox>
+            />
           ))}
         </Stack>
         {hint && <Input.Description>{hint}</Input.Description>}
