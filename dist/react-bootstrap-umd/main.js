@@ -1,4 +1,4 @@
-/* LetsForm react-bootstrap v0.11.6 - UMD */
+/* LetsForm react-bootstrap v0.12.0 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-hook-form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-hook-form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button'], factory) :
@@ -19416,8 +19416,13 @@
     }).filter(Boolean);
   };
 
-  // TODO move
-  var mergeReRenders$1 = function mergeReRenders(currentReRenders, newReRenders) {
+  /**
+   * mergeReRenders
+   * Merge re-renders schedule
+   * @param {*} currentReRenders
+   * @param {*} newReRenders
+   */
+  var mergeReRenders = function mergeReRenders(currentReRenders, newReRenders) {
     if (newReRenders) {
       Object.keys(newReRenders).forEach(function (key) {
         return currentReRenders[key] = currentReRenders[key] ? currentReRenders[key] + newReRenders[key] : newReRenders[key];
@@ -19460,7 +19465,7 @@
    * @returns
    */
   var useFormFields = function useFormFields(_ref2) {
-    var _form$name, _mutableState$current2;
+    var _form$name, _mutableState$current3;
     var components = _ref2.components,
       framework = _ref2.framework,
       form = _ref2.form,
@@ -19469,8 +19474,7 @@
       defaultValues = _ref2.defaultValues,
       formContext = _ref2.formContext,
       locale = _ref2.locale,
-      setValue = _ref2.setValue,
-      rerenders = _ref2.rerenders;
+      setValue = _ref2.setValue;
     // state form fields
     var _useState = React$1.useState(collectFields({
         form: form,
@@ -19486,6 +19490,8 @@
       _useState4 = _slicedToArray(_useState3, 2),
       transformers = _useState4[0],
       setTransformers = _useState4[1];
+    // keep track of components to be re-rendered, update it without re-render the component
+    var rerenders = React$1.useRef({});
     var mutableState = React$1.useRef({
       currentFormContext: _objectSpread2({
         locales: form.locales,
@@ -19533,7 +19539,7 @@
                       case 0:
                         transformResult = _step.value;
                         newFormFields = transformResult.fields, newReRenders = transformResult.rerenders, changes = transformResult.changes;
-                        mergeReRenders$1(rerenders.current, newReRenders);
+                        mergeReRenders(rerenders.current, newReRenders);
                         if (newFormFields !== newFields) {
                           newFields = newFormFields;
                           setFormFields(newFormFields);
@@ -19620,12 +19626,142 @@
     [form, framework, children, formContext] // don't put defaultValues here
     );
 
+    var hasTransformer = React$1.useCallback(function (fieldName) {
+      return transformers && transformers.onChange != null && !_isEmpty(transformers.onChange[fieldName]);
+    }, [transformers]);
+    var executeTransformer = React$1.useCallback( /*#__PURE__*/function () {
+      var _ref4 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(transformer, values) {
+        var _mutableState$current2;
+        var _ref5,
+          _ref5$followTransform,
+          followTransformers,
+          newFields,
+          formName,
+          currentFormContext,
+          _iteratorAbruptCompletion2,
+          _didIteratorError2,
+          _iteratorError2,
+          _iterator2,
+          _step2,
+          transformResult,
+          newFormFields,
+          newReRenders,
+          changes,
+          idx,
+          changedFields,
+          fieldToChange,
+          _args3 = arguments;
+        return _regeneratorRuntime().wrap(function _callee2$(_context3) {
+          while (1) switch (_context3.prev = _context3.next) {
+            case 0:
+              _ref5 = _args3.length > 2 && _args3[2] !== undefined ? _args3[2] : {}, _ref5$followTransform = _ref5.followTransformers, followTransformers = _ref5$followTransform === void 0 ? true : _ref5$followTransform;
+              // store current instance of fields
+              newFields = formFields;
+              formName = (_mutableState$current2 = mutableState.current.currentFormContext) === null || _mutableState$current2 === void 0 ? void 0 : _mutableState$current2.formName;
+              currentFormContext = mutableState.current.currentContext; // execute the async generator transformer
+              _iteratorAbruptCompletion2 = false;
+              _didIteratorError2 = false;
+              _context3.prev = 6;
+              _iterator2 = _asyncIterator(applyTransformers(formName, framework, newFields, transformer, values, onJavascriptError, currentFormContext));
+            case 8:
+              _context3.next = 10;
+              return _iterator2.next();
+            case 10:
+              if (!(_iteratorAbruptCompletion2 = !(_step2 = _context3.sent).done)) {
+                _context3.next = 30;
+                break;
+              }
+              transformResult = _step2.value;
+              newFormFields = transformResult.fields, newReRenders = transformResult.rerenders, changes = transformResult.changes; // merge re-renders request to the current ones, in a useRef, must per persisted like a state
+              // but doesnt' have to trigger a new render
+              mergeReRenders(rerenders.current, newReRenders);
+
+              // if there are form value changes, apply it, this will cause the specific field to be refreshed
+              // and un-mounted / re-mounted if the component is statefull and needs to be reset completely
+              // at this point the re-renders request are already collected
+              if (!changes) {
+                _context3.next = 26;
+                break;
+              }
+              idx = void 0, changedFields = Object.keys(changes);
+              idx = 0;
+            case 17:
+              if (!(idx < changedFields.length)) {
+                _context3.next = 26;
+                break;
+              }
+              fieldToChange = changedFields[idx];
+              setValue(changedFields[idx], changes[changedFields[idx]]);
+              // if the changed field has a transformer, then execute it
+              // don't go beyond second level to avoid infinte loops
+              if (!(hasTransformer(fieldToChange) && followTransformers)) {
+                _context3.next = 23;
+                break;
+              }
+              _context3.next = 23;
+              return executeTransformer(transformers.onChange[fieldToChange], _objectSpread2(_objectSpread2({}, values), changes));
+            case 23:
+              idx++;
+              _context3.next = 17;
+              break;
+            case 26:
+              // if different instances, then fields descriptions are changed, set it, this will cause a
+              // form re-render
+              if (newFormFields !== newFields) {
+                newFields = newFormFields;
+                setFormFields(newFormFields);
+              }
+            case 27:
+              _iteratorAbruptCompletion2 = false;
+              _context3.next = 8;
+              break;
+            case 30:
+              _context3.next = 36;
+              break;
+            case 32:
+              _context3.prev = 32;
+              _context3.t0 = _context3["catch"](6);
+              _didIteratorError2 = true;
+              _iteratorError2 = _context3.t0;
+            case 36:
+              _context3.prev = 36;
+              _context3.prev = 37;
+              if (!(_iteratorAbruptCompletion2 && _iterator2.return != null)) {
+                _context3.next = 41;
+                break;
+              }
+              _context3.next = 41;
+              return _iterator2.return();
+            case 41:
+              _context3.prev = 41;
+              if (!_didIteratorError2) {
+                _context3.next = 44;
+                break;
+              }
+              throw _iteratorError2;
+            case 44:
+              return _context3.finish(41);
+            case 45:
+              return _context3.finish(36);
+            case 46:
+            case "end":
+              return _context3.stop();
+          }
+        }, _callee2, null, [[6, 32, 36, 46], [37,, 41, 45]]);
+      }));
+      return function (_x, _x2) {
+        return _ref4.apply(this, arguments);
+      };
+    }(), [transformers, formFields]);
     return {
       formFields: formFields,
       transformers: transformers,
       setFormFields: setFormFields,
       currentFormContext: mutableState.current.currentFormContext,
-      formName: (_mutableState$current2 = mutableState.current.currentFormContext) === null || _mutableState$current2 === void 0 ? void 0 : _mutableState$current2.formName
+      formName: (_mutableState$current3 = mutableState.current.currentFormContext) === null || _mutableState$current3 === void 0 ? void 0 : _mutableState$current3.formName,
+      hasTransformer: hasTransformer,
+      executeTransformer: executeTransformer,
+      rerenders: rerenders
     };
   };
 
@@ -19988,15 +20124,6 @@
     version: 2,
     fields: []
   };
-
-  // TODO duplicated, remove
-  var mergeReRenders = function mergeReRenders(currentReRenders, newReRenders) {
-    if (newReRenders) {
-      Object.keys(newReRenders).forEach(function (key) {
-        return currentReRenders[key] = currentReRenders[key] ? currentReRenders[key] + newReRenders[key] : newReRenders[key];
-      });
-    }
-  };
   var GenerateGenerator = function GenerateGenerator(_ref) {
     var Forms = _ref.Forms,
       Fields = _ref.Fields;
@@ -20080,15 +20207,13 @@
         _useState6 = _slicedToArray(_useState5, 2),
         version = _useState6[0],
         setVersion = _useState6[1];
-      // keep track of components to be re-rendered, update it without re-render the component
-      var rerenders = React$1.useRef({});
       var locale = !localeProp || localeProp === 'auto' ? navigator.language : localeProp;
       var _useForm = reactHookForm.useForm({
           defaultValues: defaultValues,
           mode: form.validationMode
         }),
         handleSubmit = _useForm.handleSubmit,
-        reset = _useForm.formState,
+        reset = _useForm.reset,
         control = _useForm.control,
         getValues = _useForm.getValues,
         setValue = _useForm.setValue,
@@ -20125,14 +20250,16 @@
           formContext: formContext,
           locale: locale,
           // TODO refactor this
-          rerenders: rerenders,
+          //rerenders,
           setValue: setValue
         }),
         formFields = _useFormFields.formFields,
         transformers = _useFormFields.transformers,
-        setFormFields = _useFormFields.setFormFields,
         formName = _useFormFields.formName,
-        currentFormContext = _useFormFields.currentFormContext;
+        currentFormContext = _useFormFields.currentFormContext,
+        hasTransformer = _useFormFields.hasTransformer,
+        executeTransformer = _useFormFields.executeTransformer,
+        rerenders = _useFormFields.rerenders;
       useStylesheet(formName, form.css);
       var disabled = stateDisabled || disabledProp;
       var _useFormValidation = useFormValidation({
@@ -20311,130 +20438,46 @@
       })), [onBlur]);
       var handleChange = React$1.useCallback( /*#__PURE__*/function () {
         var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(values, fieldName) {
-          var transformersToRun, newFields, idx, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _loop, _iterator, _step, _validationErrors2;
-          return _regeneratorRuntime().wrap(function _callee4$(_context5) {
-            while (1) switch (_context5.prev = _context5.next) {
+          var _validationErrors2;
+          return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+            while (1) switch (_context4.prev = _context4.next) {
               case 0:
-                if (transformers) {
-                  _context5.next = 2;
-                  break;
-                }
-                return _context5.abrupt("return");
-              case 2:
-                transformersToRun = !_isEmpty(transformers.onRender) ? [transformers.onRender] : []; // if the changed field has a transformer
-                if (transformers.onChange != null && !_isEmpty(transformers.onChange[fieldName])) {
-                  transformersToRun.push(transformers.onChange[fieldName]);
-                }
-
                 // reset the validation error for that field
                 if (!_isEmpty(fieldName)) {
                   clearValidation(fieldName);
                 }
-
-                // execute main transformer
-                newFields = formFields;
-                idx = 0;
-              case 7:
-                if (!(idx < transformersToRun.length)) {
-                  _context5.next = 39;
-                  break;
-                }
-                // execute the async generator transformer
-                _iteratorAbruptCompletion = false;
-                _didIteratorError = false;
-                _context5.prev = 10;
-                _loop = /*#__PURE__*/_regeneratorRuntime().mark(function _loop() {
-                  var transformResult, newFormFields, newReRenders, changes;
-                  return _regeneratorRuntime().wrap(function _loop$(_context4) {
-                    while (1) switch (_context4.prev = _context4.next) {
-                      case 0:
-                        transformResult = _step.value;
-                        newFormFields = transformResult.fields, newReRenders = transformResult.rerenders, changes = transformResult.changes; // merge re-renders request to the current ones, in a useRef, must per persisted like a state
-                        // but doesnt' have to trigger a new render
-                        mergeReRenders(rerenders.current, newReRenders);
-                        // if different instances, then fields descriptions are changed, set it, this will cause a
-                        // form re-render
-                        if (newFormFields !== newFields) {
-                          newFields = newFormFields;
-                          setFormFields(newFormFields);
-                        }
-                        // if there are form value changes, apply it, this will cause the specific field to be refreshed
-                        // and un-mounted / re-mounted if the component is statefull and needs to be reset completely
-                        // at this point the re-renders request are already collected
-                        if (changes) {
-                          Object.keys(changes).forEach(function (key) {
-                            return setValue(key, changes[key]);
-                          });
-                        }
-                      case 5:
-                      case "end":
-                        return _context4.stop();
-                    }
-                  }, _loop);
-                });
-                _iterator = _asyncIterator(applyTransformers(formName, framework, newFields, transformersToRun[idx], values, onJavascriptError, currentFormContext));
-              case 13:
-                _context5.next = 15;
-                return _iterator.next();
-              case 15:
-                if (!(_iteratorAbruptCompletion = !(_step = _context5.sent).done)) {
-                  _context5.next = 20;
-                  break;
-                }
-                return _context5.delegateYield(_loop(), "t0", 17);
-              case 17:
-                _iteratorAbruptCompletion = false;
-                _context5.next = 13;
-                break;
-              case 20:
-                _context5.next = 26;
-                break;
-              case 22:
-                _context5.prev = 22;
-                _context5.t1 = _context5["catch"](10);
-                _didIteratorError = true;
-                _iteratorError = _context5.t1;
-              case 26:
-                _context5.prev = 26;
-                _context5.prev = 27;
-                if (!(_iteratorAbruptCompletion && _iterator.return != null)) {
-                  _context5.next = 31;
-                  break;
-                }
-                _context5.next = 31;
-                return _iterator.return();
-              case 31:
-                _context5.prev = 31;
-                if (!_didIteratorError) {
-                  _context5.next = 34;
-                  break;
-                }
-                throw _iteratorError;
-              case 34:
-                return _context5.finish(31);
-              case 35:
-                return _context5.finish(26);
-              case 36:
-                idx++;
-                _context5.next = 7;
-                break;
-              case 39:
+                // if validation on change, then trigger it
                 if (!(form.validationMode === 'onChange' || form.validationMode === 'all')) {
-                  _context5.next = 44;
+                  _context4.next = 6;
                   break;
                 }
-                _context5.next = 42;
+                _context4.next = 4;
                 return _validate(getValues());
-              case 42:
-                _validationErrors2 = _context5.sent;
+              case 4:
+                _validationErrors2 = _context4.sent;
                 onError(_validationErrors2);
-              case 44:
+              case 6:
+                if (_isEmpty(transformers.onRender)) {
+                  _context4.next = 9;
+                  break;
+                }
+                _context4.next = 9;
+                return executeTransformer(transformers.onRender, values);
+              case 9:
+                if (!hasTransformer(fieldName)) {
+                  _context4.next = 12;
+                  break;
+                }
+                _context4.next = 12;
+                return executeTransformer(transformers.onChange[fieldName], values);
+              case 12:
+                // propagate onChange values
                 onChange(values);
-              case 45:
+              case 13:
               case "end":
-                return _context5.stop();
+                return _context4.stop();
             }
-          }, _callee4, null, [[10, 22, 26, 36], [27,, 31, 35]]);
+          }, _callee4);
         }));
         return function (_x2, _x3) {
           return _ref5.apply(this, arguments);
