@@ -1,5 +1,12 @@
 # LetsForm Designer Changelog
 
+## v0.9.10
+- fix: form reset
+- fix: Mantine checkbox group
+- fix: Antd not firing onChange
+- fix: cascading invocation of form scripts on `setFieldValue()`
+- fixed labels
+
 ## v0.9.9
 - feat: improved validation messages
 - feat: nested validation for arrays
