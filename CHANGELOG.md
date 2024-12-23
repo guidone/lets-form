@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.12.2
+- fix: inconsistent styling in columns
+
 ## v0.12.1
 - fix: form reset
 - fix: Mantine checkbox group
