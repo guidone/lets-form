@@ -1,4 +1,4 @@
-/* LetsForm react-mantine v0.12.0 - UMD */
+/* LetsForm react-mantine v0.12.1 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
@@ -18190,7 +18190,7 @@
   var css_248z$8 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
   styleInject(css_248z$8);
 
-  var css_248z$7 = ".lf-control-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-columns .lf-column {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-columns .lf-column:last-child {\n  margin-right: 0px;\n}\n.lf-control-columns .lf-column:first-child:empty {\n  display: none;\n}";
+  var css_248z$7 = ".lf-control-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n}\n.lf-control-columns .lf-column {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-columns .lf-column:last-child {\n  margin-right: 0px;\n}";
   styleInject(css_248z$7);
 
   var Columns = function Columns(_ref) {

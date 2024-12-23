@@ -1,4 +1,4 @@
-/* LetsForm react-rsuite5 v0.12.0 - UMD */
+/* LetsForm react-rsuite5 v0.12.1 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', 'react-hook-form'], factory) :
@@ -18349,7 +18349,7 @@
     }));
   };
 
-  var css_248z$i = ".lf-control-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-columns .lf-column {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-columns .lf-column:last-child {\n  margin-right: 0px;\n}\n.lf-control-columns .lf-column:first-child:empty {\n  display: none;\n}";
+  var css_248z$i = ".lf-control-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n}\n.lf-control-columns .lf-column {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-columns .lf-column:last-child {\n  margin-right: 0px;\n}";
   styleInject(css_248z$i);
 
   var Columns = function Columns(_ref) {
