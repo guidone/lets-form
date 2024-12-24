@@ -9,6 +9,7 @@ import { makeWidthStyle } from '../../helpers/make-width-style';
 import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const ControlTextare = (props) => <Input as="textarea" {...props} />
 
@@ -30,6 +31,7 @@ const Textarea = I18N(
     fullWidth,
     width,
     rows = 10,
+    className,
     ...rest
   }) => {
     const inner = (
@@ -52,13 +54,10 @@ const Textarea = I18N(
 
     return (
       <Form.Group
-        className={classNames(
-          'lf-control-textarea', {
-            [`lf-size-${size}`]: size != null,
-            'lf-full-width': fullWidth || width != null
-          }
-        )}
-        data-lf-field-name={name}
+        {...makeClassName('textarea', name, className, {
+          [`lf-size-${size}`]: size != null,
+          'lf-full-width': fullWidth || width != null
+        })}
         style={makeWidthStyle(fullWidth, width)}
       >
         {label && <Form.ControlLabel>

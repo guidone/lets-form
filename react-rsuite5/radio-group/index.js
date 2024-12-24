@@ -7,6 +7,7 @@ import { passRest } from '../../helpers/pass-rest';
 import { i18nOptions } from '../../helpers/i18n-options';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const RadioGroupRSuite = I18N(
   ({
@@ -25,14 +26,11 @@ const RadioGroupRSuite = I18N(
     onBlur,
     options = [],
     appearance,
+    className,
     ...rest
   }) => {
     return (
-      <Form.Group
-        controlId={name}
-        className="lf-control-radio-group"
-        data-lf-field-name={name}
-      >
+      <Form.Group controlId={name} {...makeClassName('radio-group', name, className)}>
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}

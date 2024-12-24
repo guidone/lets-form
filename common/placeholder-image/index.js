@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { makeClassName } from '../../helpers/make-class-name';
+
 import './placeholder-image.scss';
 
 const PlaceholderImage = ({
@@ -10,12 +12,12 @@ const PlaceholderImage = ({
   maxHeight,
   marginTop,
   marginBottom,
+  className,
   align
 }) => {
   return (
     <div
-      className="lf-control-placeholder-image"
-      data-lf-field-name={name}
+      {...makeClassName('placeholder-image', name, className)}
       style={{
         textAlign: align ? align : undefined
       }}

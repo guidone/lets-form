@@ -6,6 +6,7 @@ import { I18N } from '../../components/i18n';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './index.scss';
 
@@ -19,6 +20,7 @@ const CheckboxRSuite = I18N(
     indeterminate,
     error,
     onChange,
+    className,
     ...rest
   }) => {
     const [isChecked, setIsChecked] = useState(value ?? null);
@@ -43,7 +45,7 @@ const CheckboxRSuite = I18N(
     );
 
     return (
-      <Form.Group data-lf-field-name={name} className="lt-control-checkbox">
+      <Form.Group {...makeClassName('checkbox', name, className)}>
         <RSuite5FieldControl errorMessage={_.isString(error) ? error : undefined }>
           <Checkbox
             indeterminate={indeterminate && isChecked === null}

@@ -9,6 +9,7 @@ import { RequiredIcon } from '../../components/required-icon';
 import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './select.scss';
 import { makeWidthStyle } from '../../helpers';
@@ -49,11 +50,12 @@ const Select = I18N(
     showImageOptions,
     fullWidth,
     width,
+    className,
     ...rest
   }) => {
     return (
       <Form.Group
-        className="lf-control-select"
+        {...makeClassName('select', name, className)}
         controlId={name}
         style={makeWidthStyle(fullWidth, width)}
       >

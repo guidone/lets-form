@@ -5,6 +5,7 @@ import { RequiredIcon } from '../../components/required-icon';
 import { I18N } from '../../components/i18n';
 import { Placeholder } from '../../common/placeholder';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const PlaceholderRSuite5 = I18N(
   ({
@@ -13,10 +14,11 @@ const PlaceholderRSuite5 = I18N(
     hint,
     tooltip = false,
     text,
-    required = false
+    required = false,
+    className
   }) => {
     return (
-      <Form.Group data-lf-field-name={name} className="lf-control-placeholder">
+      <Form.Group {...makeClassName('placeholder', name, className)}>
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}

@@ -5,6 +5,8 @@ import { Form, RadioTile, RadioTileGroup } from 'rsuite';
 import { I18N } from '../../components/i18n';
 import { RequiredIcon } from '../../components/required-icon';
 import { lfLog } from '../../helpers/lf-log';
+import { passRest } from '../../helpers';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const RadioTileRSuite = I18N(
   ({
@@ -25,6 +27,7 @@ const RadioTileRSuite = I18N(
     onBlur,
     options = [],
     initalOption,
+    className,
     ...rest
   }) => {
     const initialValue = value || initalOption;
@@ -39,10 +42,7 @@ const RadioTileRSuite = I18N(
     );
 
     return (
-      <Form.Group
-        className="lf-control-input-text"
-        data-lf-field-name={name}
-      >
+      <Form.Group {...makeClassName('radio-tile', name, className)}>
         {label && (
           <Form.ControlLabel>
             {label}
@@ -55,6 +55,7 @@ const RadioTileRSuite = I18N(
           onChange={handleChange}
           inline={inline}
           disabled={disabled}
+          {...passRest(rest)}
         >
           {(options || []).map(option => (
             <RadioTile

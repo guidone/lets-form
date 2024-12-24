@@ -28,12 +28,12 @@ const RSuiteGenericDate = ({
   appearance,
   format,
   lfLocale,
+  className,
   ...rest
 }) => {
   return (
     <Form.Group
-      data-lf-field-name={name}
-      className={classNames('lf-control-date', {
+      {...makeClassName('date', name, className, {
         'lf-full-width': fullWidth || width != null
       })}
       style={makeWidthStyle(fullWidth, width)}

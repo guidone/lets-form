@@ -9,6 +9,7 @@ import { makeWidthStyle } from '../../helpers/make-width-style';
 import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const Multiselect = I18N(
   ({
@@ -34,14 +35,14 @@ const Multiselect = I18N(
     fullWidth,
     multiselectMode,
     width,
+    className,
     ...rest
   }) => {
     const Component = multiselectMode === 'tag' ? TagPicker : CheckPicker;
 
     return (
       <Form.Group
-        data-lf-field-name={name}
-        className="lf-control-multiselect"
+        {...makeClassName('checkbox-multiselect', name, className)}
         style={makeWidthStyle(fullWidth, width)}
       >
         {label && (

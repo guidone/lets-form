@@ -4,7 +4,8 @@ import React, { useState, useCallback, useEffect } from 'react';
 import classNames from 'classnames';
 
 import { ChevronUp, ChevronDown } from '../../assets/icons';
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './group.scss';
 
@@ -37,11 +38,12 @@ const Group = I18N(
 
     return (
       <div
-        data-lf-field-name={name}
-        className={classNames('lf-control-group', `lf-border-${border}`, {
-          'open': isOpen,
-          'close': !isOpen
-        })}
+        {...makeClassName(
+          'group',
+          name,
+          `lf-border-${border}`,
+          { 'open': isOpen, 'close': !isOpen }
+        )}
       >
         <div
           role="separator"

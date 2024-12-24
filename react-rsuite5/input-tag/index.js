@@ -6,6 +6,7 @@ import { RequiredIcon } from '../../components/required-icon';
 import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './index.scss';
 
@@ -23,10 +24,11 @@ const InputTag = I18N(
     error,
     trigger,
     onChange,
-    onBlur
+    onBlur,
+    className
   }) => {
     return (
-      <Form.Group data-lf-field-name={name} className="lf-control-input-tag">
+      <Form.Group {...makeClassName('input-tag', name, className)}>
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}

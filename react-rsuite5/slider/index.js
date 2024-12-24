@@ -7,6 +7,7 @@ import { I18N } from '../../components/i18n';
 import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './index.scss';
 
@@ -30,6 +31,7 @@ const SliderRsuite = I18N(
     onChange,
     onBlur,
     marks = [],
+    className,
     ...rest
   }) => {
 
@@ -42,7 +44,7 @@ const SliderRsuite = I18N(
     );
 
     return (
-      <Form.Group controlId={name} className="lf-control-slider">
+      <Form.Group controlId={name} {...makeClassName('slider', name, className)}>
         {label && (
           <Form.ControlLabel>
             {label}

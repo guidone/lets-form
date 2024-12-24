@@ -3,13 +3,15 @@ import React from 'react';
 import './divider.scss';
 import { lfLog } from '../../helpers/lf-log';
 
+import { makeClassName } from '../../helpers/make-class-name';
+
 const Divider = ({
   name,
   size,
   color
 }) => {
   return (
-    <div className="lf-control-divider" data-lf-field-name={name}>
+    <div {...makeClassName('divider', name)}>
       <div
         className="bar"
         style={{

@@ -9,6 +9,7 @@ import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 import { passRest } from '../../helpers/pass-rest';
 import { makeWidthStyle } from '../../helpers/make-width-style';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const prepareMask = str => {
   if (typeof str !== 'string' || str.length === 0) {
@@ -55,6 +56,7 @@ const InputMask = I18N(
     inside = false,
     fullWidth,
     width,
+    className,
     ...rest
   }) => {
     const parsedMask = prepareMask(mask);
@@ -81,8 +83,7 @@ const InputMask = I18N(
 
     return (
       <Form.Group
-        data-lf-field-name={name}
-        className="lf-control-input-mask"
+        {...makeClassName('input-mask', name, className)}
         style={makeWidthStyle(fullWidth, width)}
       >
         {label && <Form.ControlLabel>
