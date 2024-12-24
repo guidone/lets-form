@@ -18,12 +18,11 @@ const ListArrayRSuite5 = I18N(
     tooltip,
     name,
     label,
+    className,
     ...rest
   }) => {
     return (
-      <Form.Group
-        {...makeClassName('array', name)}
-      >
+      <Form.Group {...makeClassName('array', name, className)}>
         {label && (
           <Form.ControlLabel>
             {label}
