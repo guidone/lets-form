@@ -1,24 +1,26 @@
 import React from 'react';
 import { Input } from '@mantine/core'
 
-import { I18N } from '../../components';
-import { Placeholder } from '../../common';
+import { I18N } from '../../components/i18n';
+import { Placeholder } from '../../common/placeholder';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const PlaceholderMantine = I18N(
   ({
     name,
     label,
     hint,
-    text
+    text,
+    className
   }) => {
     return (
       <Input.Wrapper
-        className="lf-control-rate"
-        data-lf-field-name={name}
+        {...makeClassName('placeholder', name, className)}
         description={hint}
         inputWrapperOrder={['label', 'input', 'description', 'error']}
-        label={label}>
+        label={label}
+      >
         <Placeholder text={text} />
       </Input.Wrapper>
     );

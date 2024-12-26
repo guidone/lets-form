@@ -2,9 +2,11 @@ import React, { useCallback } from 'react';
 import { TextInput } from '@mantine/core';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
-import { passRest, makeWidthStyle } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { passRest } from '../../helpers/pass-rest';
+import { makeWidthStyle } from '../../helpers/make-width-style';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const InputText = I18N(
   ({
@@ -18,6 +20,7 @@ const InputText = I18N(
     onChange,
     onBlur,
     lfOnEnter = () => {},
+    className,
     ...rest
   }) => {
     const handleKeyUp = useCallback(e => e.keyCode === 13 && lfOnEnter(), [lfOnEnter]);
@@ -28,8 +31,7 @@ const InputText = I18N(
 
     return (
       <TextInput
-        className="lf-control-input-text"
-        data-lf-field-name={name}
+        {...makeClassName('input-text', name, className)}
         value={value}
         style={makeWidthStyle(fullWidth, width)}
         description={hint}

@@ -3,9 +3,11 @@ import { TimeInput } from '@mantine/dates';
 import { ActionIcon } from '@mantine/core';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
-import { passRest, makeWidthStyle } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { passRest } from '../../helpers/pass-rest';
+import { makeWidthStyle } from '../../helpers/make-width-style';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import { ClockIcon } from './clock';
 
@@ -31,6 +33,7 @@ const Time = I18N(
     onChange,
     onBlur,
     lfOnEnter = () => {},
+    className,
     showBrowserPicker,
     ...rest
   }) => {
@@ -57,8 +60,7 @@ const Time = I18N(
     return (
       <TimeInput
         ref={ref}
-        className="lf-control-time"
-        data-lf-field-name={name}
+        {...makeClassName('time', name, className)}
         style={makeWidthStyle(fullWidth, width)}
         description={hint}
         error={_.isString(error) ? error : undefined }

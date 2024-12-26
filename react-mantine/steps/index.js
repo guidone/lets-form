@@ -2,10 +2,11 @@ import React, { useState, useCallback, useEffect } from 'react';
 import _ from 'lodash';
 import { Stepper, Button, Group } from '@mantine/core';
 
-import { passRest } from '../../helpers';
-import { I18N } from '../../components';
+import { passRest } from '../../helpers/pass-rest';
+import { I18N } from '../../components/i18n';
 import { GenericIcon } from '../../components/generic-icon';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './steps.scss';
 
@@ -30,6 +31,7 @@ const MantineSteps = I18N(
     labelPrevious,
     allowStepClick,
     allowStepSelect,
+    className,
     ...rest
   }) => {
     let defaultStep = value;
@@ -80,10 +82,7 @@ const MantineSteps = I18N(
     );
 
     return (
-      <div
-        className="lf-control-steps"
-        data-lf-field-name={name}
-      >
+      <div {...makeClassName('steps', name, className)}>
         <Stepper
           active={stepIdx}
           onStepClick={handleStepClick}

@@ -2,9 +2,13 @@ import React from 'react';
 import { MultiSelect } from '@mantine/core';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
-import { passRest, makeWidthStyle, i18nOptions, filterOptions } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { passRest } from '../../helpers/pass-rest';
+import { makeWidthStyle } from '../../helpers/make-width-style';
+import { i18nOptions } from '../../helpers/i18n-options';
+import { filterOptions } from '../../helpers/filter-options';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const MantineMultiSelect = I18N(
   ({
@@ -17,15 +21,15 @@ const MantineMultiSelect = I18N(
     options,
     filterValue,
     filterKey,
+    className,
     ...rest
   }) => {
     return (
       <MultiSelect
+        {...makeClassName('multiselect', name, className)}
         value={value}
         name={name}
         data={filterOptions(options, filterValue, filterKey) || []}
-        className="lf-control-select"
-        data-lf-field-name={name}
         style={makeWidthStyle(fullWidth, width)}
         description={hint}
         error={_.isString(error) ? error : undefined }

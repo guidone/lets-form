@@ -6,8 +6,9 @@ import classNames from 'classnames';
 import { i18nOptions } from '../../helpers/i18n-options';
 import { passRest } from '../../helpers/pass-rest';
 import { TextOrIcon } from '../../common/text-or-icon';
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './tabs.scss';
 
@@ -22,6 +23,7 @@ const MantineTabs = I18N(
     justify,
     orientation,
     placement,
+    className,
     ...rest
   }) => {
     let active;
@@ -35,11 +37,10 @@ const MantineTabs = I18N(
 
     return (
       <div
-        className={classNames('lf-control-tabs', {
+        {...makeClassName('tabs', name, className, {
           [`orientation-${orientation}`]: orientation != null,
           [`placement-${placement}`]: placement != null
         })}
-        data-lf-field-name={name}
       >
         <Tabs
           value={active}

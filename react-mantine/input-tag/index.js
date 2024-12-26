@@ -7,6 +7,7 @@ import { makeWidthStyle } from '../../helpers/make-width-style';
 import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
 import { i18nOptions } from '../../helpers/i18n-options';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const MantineTags = I18N(
   ({
@@ -17,12 +18,12 @@ const MantineTags = I18N(
     fullWidth,
     width,
     data,
+    className,
     ...rest
   }) => {
     return (
       <TagsInput
-        className="lf-control-input-tag"
-        data-lf-field-name={name}
+        {...makeClassName('input-tag', name, className)}
         style={makeWidthStyle(fullWidth, width)}
         value={value}
         name={name}
