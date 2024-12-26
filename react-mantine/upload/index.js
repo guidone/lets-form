@@ -2,9 +2,11 @@ import React, { useCallback } from 'react';
 import { FileInput } from '@mantine/core';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
-import { passRest, makeWidthStyle } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { passRest } from '../../helpers/pass-rest';
+import { makeWidthStyle } from '../../helpers/make-width-style';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const MantineUpload = I18N(
   ({
@@ -17,6 +19,7 @@ const MantineUpload = I18N(
     onBlur,
     lfOnEnter = () => {},
     accept,
+    className,
     ...rest
   }) => {
     const handleChange = useCallback(
@@ -26,8 +29,7 @@ const MantineUpload = I18N(
 
     return (
       <FileInput
-        className="lf-control-upload"
-        data-lf-field-name={name}
+        {...makeClassName('upload', name, className)}
         style={makeWidthStyle(fullWidth, width)}
         description={hint}
         error={_.isString(error) ? error : undefined }

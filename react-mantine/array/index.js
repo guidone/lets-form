@@ -7,6 +7,7 @@ import { ListArray } from '../../common';
 import LetsForm from '../../react-mantine';
 import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const MantineListArray = I18N(
   ({
@@ -15,10 +16,11 @@ const MantineListArray = I18N(
     tooltip,
     name,
     label,
+    className,
     ...rest
   }) => {
     return (
-      <div data-lf-field-name={name} className="lf-control-array">
+      <div {...makeClassName('array', name, className)}>
         {label && <Input.Label required={required}>{label}</Input.Label>}
         <ListArray
           LetsFormComponent={LetsForm}

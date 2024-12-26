@@ -2,9 +2,11 @@ import React, { useCallback } from 'react';
 import { Textarea } from '@mantine/core';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
-import { passRest, makeWidthStyle } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { passRest } from '../../helpers/pass-rest';
+import { makeWidthStyle } from '../../helpers/make-width-style';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const MantineTextarea = I18N(
   ({
@@ -17,6 +19,7 @@ const MantineTextarea = I18N(
     fullWidth,
     width,
     inputType,
+    className,
     lfOnEnter = () => {},
     ...rest
   }) => {
@@ -27,13 +30,12 @@ const MantineTextarea = I18N(
     );
 
     return (
-      <Textarea 
-        className="lf-control-textarea"
-        data-lf-field-name={name}
+      <Textarea
+        {...makeClassName('textarea', name, className)}
         name={name}
         style={makeWidthStyle(fullWidth, width)}
-        label={label} 
-        description={hint} 
+        label={label}
+        description={hint}
         error={_.isString(error) ? error : undefined }
         inputWrapperOrder={['label', 'input', 'description', 'error']}
         onChange={handleChange}
@@ -41,7 +43,7 @@ const MantineTextarea = I18N(
         type={inputType}
         {...passRest(rest)}
       />
-    ); 
+    );
   },
   ['label', 'hint', 'placeholder']
 );
