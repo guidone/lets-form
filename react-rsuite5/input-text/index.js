@@ -70,15 +70,9 @@ const TextInput = I18N(
     const needsGroup = postfix || prefix;
     return (
       <Form.Group
-        className={classNames(
-          makeClassName('input-text', name),
-          {
-            [`lf-size-${size}`]: size != null
-
-          }
-        )}
-        data-lf-field-name={name}
-
+        {...makeClassName('input-text', name, {
+          [`lf-size-${size}`]: size != null
+        })}
       >
         {label && <Form.ControlLabel>
           {label}
