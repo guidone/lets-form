@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.9.11
+- fix: setFieldValue may not work properly #60
+
 ## v0.9.10
 - fix: form reset
 - fix: Mantine checkbox group
