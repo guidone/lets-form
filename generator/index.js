@@ -265,6 +265,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
 
     const handleChange = useCallback(
       async (values, fieldName) => {
+
+
         // reset the validation error for that field
         if (!_.isEmpty(fieldName)) {
           clearValidation(fieldName);
@@ -276,14 +278,14 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         }
         // if form level transformer
         if (!_.isEmpty(transformers.onRender)) {
-          await executeTransformer(transformers.onRender, values);
+          await executeTransformer(transformers.onRender, getValues());
         }
         // if field transformer, then execute it
         if (hasTransformer(fieldName)) {
-          await executeTransformer(transformers.onChange[fieldName], values);
+          await executeTransformer(transformers.onChange[fieldName], getValues());
         }
         // propagate onChange values
-        onChange(values);
+        onChange(getValues());
       },
       [onChange, formFields, formName, transformers, framework, onJavascriptError]
     );
