@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.12.1 - ESM */
+/* LetsForm Utils v0.12.2 - ESM */
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {

@@ -1,4 +1,4 @@
-/* LetsForm react-mantine v0.12.1 - UMD */
+/* LetsForm react-mantine v0.12.2 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
@@ -20412,17 +20412,17 @@
                   break;
                 }
                 _context4.next = 9;
-                return executeTransformer(transformers.onRender, values);
+                return executeTransformer(transformers.onRender, getValues());
               case 9:
                 if (!hasTransformer(fieldName)) {
                   _context4.next = 12;
                   break;
                 }
                 _context4.next = 12;
-                return executeTransformer(transformers.onChange[fieldName], values);
+                return executeTransformer(transformers.onChange[fieldName], getValues());
               case 12:
                 // propagate onChange values
-                onChange(values);
+                onChange(getValues());
               case 13:
               case "end":
                 return _context4.stop();
