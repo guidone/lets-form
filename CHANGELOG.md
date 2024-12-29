@@ -1,7 +1,7 @@
 # LetsForm Changelog
 
 ## v0.12.3
-- dix: setFieldValue may not work properly
+- fix: setFieldValue may not work properly
 
 ## v0.12.2
 - fix: inconsistent styling in columns
