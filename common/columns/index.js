@@ -20,7 +20,8 @@ const Columns = ({
           className={classNames(
             'lf-column',
             `lf-column-${column.name}`,
-            column.layout && `layout-${column.layout}`
+            column.layout && `layout-${column.layout}`,
+            column.hidden && 'lf-column-hidden'
           )}
           style={{
             alignSelf: column.alignment ? column.alignment : undefined,
