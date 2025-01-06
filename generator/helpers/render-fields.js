@@ -15,12 +15,10 @@ const renderFields = ({
   onEnter,
   getValues,
   setValue,
-  register,
   Wrapper,
   GroupWrapper,
   BottomView,
   PlaceholderWrapper,
-  debug,
   disabled,
   readOnly,
   plaintext,
@@ -33,10 +31,10 @@ const renderFields = ({
   prependView,
   rerenders
 }) => {
-
+  const isEditMode = Wrapper != null;
   const renderedFields = (fields || [])
-    .filter(field => Wrapper || field.component !== 'hidden') // skip hidden type field (not in design mode)
-    .filter(field => Wrapper || field.hidden !== true) // skip fields with "hidden" attribute (not in design mode)
+    .filter(field => isEditMode || field.component !== 'hidden') // skip hidden type field (not in design mode)
+    .filter(field => isEditMode || field.hidden !== true) // skip fields with "hidden" attribute (not in design mode)
     .map((field, index) => {
       let Component;
       if (Components[field.component] && Components[field.component][framework]) {
@@ -126,6 +124,13 @@ const renderFields = ({
             hint={field.hint}
             disabled={field.disabled}
             {...additionalFields}
+            // in edit mode, columns should be visible, grayed out
+            columns={!isEditMode ?
+              field.columns : field.columns.map(column => ({
+                ...column,
+                hidden: false,
+                className: column.hidden ? 'lf-column-hidden' : undefined
+              }))}
           >
             {column => {
               return (
