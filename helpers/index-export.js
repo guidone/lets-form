@@ -2,7 +2,6 @@ export * from './replace-field';
 export * from './map-fields';
 export * from './fill-ids';
 export * from './cleanup';
-export * from './add-field';
 export * from './find-field';
 export * from './filter-fields';
 export * from './form-helper';
