@@ -590,6 +590,9 @@
                   },
                   "size": {
                     "type": "integer"
+                  },
+                  "hidden": {
+                    "type": "string"
                   }
                 }
               }

@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.12.2 - UMD */
+/* LetsForm Utils v0.12.3 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -919,103 +919,6 @@
           return field;
         }
         return currentField;
-      })
-    });
-  };
-
-  /**
-   * filterFields
-   * Filter field calling recursively fields in group, two-columns, three columns
-   * @param {Array} fields
-   * @param {Function} predicate Take a field as paramenter and return a field object
-   * @returns
-   */
-  var filterFields = function filterFields(fields) {
-    var predicate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (obj) {
-      return obj;
-    };
-    if (!fields) {
-      return fields;
-    }
-    // replace with predicated
-    var newFields = fields.map(function (field) {
-      if (!predicate(field)) {
-        return null;
-      }
-      var newField = field;
-      if (field.component === 'group') {
-        var _newFields = filterFields(field.fields, predicate);
-        if (_newFields !== field.fields) {
-          newField = _objectSpread2(_objectSpread2({}, newField), {}, {
-            fields: _newFields
-          });
-        }
-      } else if (field.component === 'array') {
-        var _newFields2 = filterFields(field.fields, predicate);
-        if (_newFields2 !== field.fields) {
-          newField = _objectSpread2(_objectSpread2({}, newField), {}, {
-            fields: _newFields2
-          });
-        }
-      } else if (field.component === 'two-columns') {
-        var newLeftFields = filterFields(field.leftFields, predicate);
-        if (newLeftFields !== field.leftFields) {
-          newField = _objectSpread2(_objectSpread2({}, newField), {}, {
-            leftFields: newLeftFields
-          });
-        }
-        var newRightFields = filterFields(field.rightFields, predicate);
-        if (newRightFields !== field.rightFields) {
-          newField = _objectSpread2(_objectSpread2({}, newField), {}, {
-            rightFields: newRightFields
-          });
-        }
-      } else if (field.component === 'three-columns') {
-        var _newLeftFields = filterFields(field.leftFields, predicate);
-        if (_newLeftFields !== field.leftFields) {
-          newField = _objectSpread2(_objectSpread2({}, newField), {}, {
-            leftFields: _newLeftFields
-          });
-        }
-        var newCenterFields = filterFields(field.centerFields, predicate);
-        if (newCenterFields !== field.centerFields) {
-          newField = _objectSpread2(_objectSpread2({}, newField), {}, {
-            centerFields: newCenterFields
-          });
-        }
-        var _newRightFields = filterFields(field.rightFields, predicate);
-        if (_newRightFields !== field.rightFields) {
-          newField = _objectSpread2(_objectSpread2({}, newField), {}, {
-            rightFields: _newRightFields
-          });
-        }
-      } else if ((field.component === 'tabs' || field.component === 'steps' || field.component === 'columns') && _isObject(field.fields) && !_isArray(field.fields)) {
-        var subkeys = Object.keys(field.fields);
-        // scan all keys of fields and reapply, if different instance, create a new instance
-        // of new field
-        subkeys.forEach(function (subkey) {
-          var newFields = filterFields(field.fields[subkey], predicate);
-          if (newFields !== field.fields[subkey]) {
-            newField = _objectSpread2(_objectSpread2({}, newField), {}, {
-              fields: _objectSpread2(_objectSpread2({}, newField.fields), {}, _defineProperty$1({}, subkey, newFields))
-            });
-          }
-        });
-      }
-      return newField;
-    }).filter(Boolean);
-
-    // check if some element of the array is changed, keep instance consistency otherwise
-    var hasChanges = fields.length !== newFields.length || fields.some(function (field, idx) {
-      return field !== newFields[idx];
-    });
-    return hasChanges ? newFields : fields;
-  };
-
-  var deleteField = function deleteField(form, field) {
-    return _objectSpread2(_objectSpread2({}, form), {}, {
-      fields: filterFields(form.fields, function (currentField) {
-        return currentField.id !== field.id;
       })
     });
   };
@@ -4588,70 +4491,6 @@
     return newForm;
   };
 
-  /**
-   * addField
-   * @param {*} form The form to add the field to
-   * @param {*} newField The new field { component: '', ... } or array of fields
-   * @param {*} id Id of the component to add the field to
-   * @param {*} target the fields key of the components: "fields", "tabs", "leftFields", "rightFields", ...
-   * @param {*} subtarget the index of the target in case it's an array
-   * @returns
-   */
-  var addField = function addField(form, newField, id) {
-    var target = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'fields';
-    var subtarget = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : null;
-    var position = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 'end';
-    // can add multiple fields at once
-    var toAdd = _isArray(newField) ? newField : [newField];
-    if (id != null) {
-      return _objectSpread2(_objectSpread2({}, form), {}, {
-        fields: mapFields(form.fields,
-        // if right field id, append to fields
-        function (field) {
-          if (field.id === id) {
-            // sub target is for columns, steps, tabs
-            if (subtarget != null) {
-              var what = position === 'start' ? [].concat(_toConsumableArray(toAdd), _toConsumableArray(field[target] && field[target][subtarget] ? field[target][subtarget] : [])) : [].concat(_toConsumableArray(field[target] && field[target][subtarget] ? field[target][subtarget] : []), _toConsumableArray(toAdd));
-              return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, target, _objectSpread2(_objectSpread2({}, field[target] || []), {}, _defineProperty$1({}, subtarget, what))));
-            } else {
-              // only target is for groups
-              var _what = position === 'start' ? [].concat(_toConsumableArray(toAdd), _toConsumableArray(field[target] || [])) : [].concat(_toConsumableArray(field[target] || []), _toConsumableArray(toAdd));
-              return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, target, _what));
-            }
-          }
-          return field;
-        })
-      });
-    } else {
-      // just add in the main "fields" key
-      return _objectSpread2(_objectSpread2({}, form), {}, {
-        fields: position === 'start' ? [].concat(_toConsumableArray(toAdd), _toConsumableArray(form.fields)) : [].concat(_toConsumableArray(form.fields), _toConsumableArray(toAdd))
-      });
-    }
-  };
-
-  /**
-   * AddFieldAfter
-   * Add a field (an object with "component" property to a form) after the field with a specific id.
-   * Returns a form
-   * @param {*} form The form to add the field to
-   * @param {*} newField The new field { component: '', ... } or array of fields
-   * @param {*} id Id of the component to add the field after
-   */
-  var AddFieldAfter = function AddFieldAfter(form, newField, id) {
-    var toAdd = _isArray(newField) ? newField : [newField];
-    return _objectSpread2(_objectSpread2({}, form), {}, {
-      fields: mapFields(form.fields,
-      // if right field id, append to fields
-      function (field) {
-        if (field.id === id) {
-          return [field].concat(_toConsumableArray(toAdd));
-        }
-        return field;
-      })
-    });
-  };
-
   var baseClone = _baseClone;
 
   /** Used to compose bitmasks for cloning. */
@@ -4730,45 +4569,6 @@
     return result;
   };
 
-  var createEmptyField = function createEmptyField(Manifests, fields, component, framework) {
-    var countFields = reduceFields(fields, function (field, accumulator) {
-      return accumulator + 1;
-    }, 0);
-    var newId = _uniqueId("field_".concat(countFields + 1, "_"));
-    var newName = "field_".concat(countFields + 1);
-    var retries = 0;
-    var exists = fieldExists(fields, function (field) {
-      return field.name === newName || field.id === newId;
-    });
-    while (exists && retries < 100) {
-      newId = newId + '_1';
-      newName = newName + '_1';
-      // eslint-disable-next-line no-loop-func
-      exists = fieldExists(fields, function (field) {
-        return field.name === newName || field.id === newId;
-      });
-      ++retries;
-    }
-    var newField = {
-      component: component,
-      label: "Field ".concat(countFields + 1),
-      name: newName,
-      id: newId
-    };
-
-    // if component has default values
-    if (Manifests[component] && Manifests[component].defaultValues) {
-      // apply all defaults for all platforms
-      Object.keys(Manifests[component].defaultValues).forEach(function (framework) {
-        newField = _objectSpread2(_objectSpread2({}, newField), Manifests[component].defaultValues[framework]);
-      });
-      // be sure to apply the current framework as last one (in case it includes non framework specific values)
-      if (Manifests[component].defaultValues[framework]) {
-        newField = _objectSpread2(_objectSpread2({}, newField), Manifests[component].defaultValues[framework]);
-      }
-    }
-    return newField;
-  };
   var findField = function findField(fields, predicate) {
     if (_isEmpty(fields) || !_isArray(fields)) {
       return null;
@@ -4802,8 +4602,94 @@
       return field.id === id;
     });
   };
-  var fieldExists = function fieldExists(fields, predicate) {
-    return findField(fields, predicate) != null;
+
+  /**
+   * filterFields
+   * Filter field calling recursively fields in group, two-columns, three columns
+   * @param {Array} fields
+   * @param {Function} predicate Take a field as paramenter and return a field object
+   * @returns
+   */
+  var filterFields = function filterFields(fields) {
+    var predicate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (obj) {
+      return obj;
+    };
+    if (!fields) {
+      return fields;
+    }
+    // replace with predicated
+    var newFields = fields.map(function (field) {
+      if (!predicate(field)) {
+        return null;
+      }
+      var newField = field;
+      if (field.component === 'group') {
+        var _newFields = filterFields(field.fields, predicate);
+        if (_newFields !== field.fields) {
+          newField = _objectSpread2(_objectSpread2({}, newField), {}, {
+            fields: _newFields
+          });
+        }
+      } else if (field.component === 'array') {
+        var _newFields2 = filterFields(field.fields, predicate);
+        if (_newFields2 !== field.fields) {
+          newField = _objectSpread2(_objectSpread2({}, newField), {}, {
+            fields: _newFields2
+          });
+        }
+      } else if (field.component === 'two-columns') {
+        var newLeftFields = filterFields(field.leftFields, predicate);
+        if (newLeftFields !== field.leftFields) {
+          newField = _objectSpread2(_objectSpread2({}, newField), {}, {
+            leftFields: newLeftFields
+          });
+        }
+        var newRightFields = filterFields(field.rightFields, predicate);
+        if (newRightFields !== field.rightFields) {
+          newField = _objectSpread2(_objectSpread2({}, newField), {}, {
+            rightFields: newRightFields
+          });
+        }
+      } else if (field.component === 'three-columns') {
+        var _newLeftFields = filterFields(field.leftFields, predicate);
+        if (_newLeftFields !== field.leftFields) {
+          newField = _objectSpread2(_objectSpread2({}, newField), {}, {
+            leftFields: _newLeftFields
+          });
+        }
+        var newCenterFields = filterFields(field.centerFields, predicate);
+        if (newCenterFields !== field.centerFields) {
+          newField = _objectSpread2(_objectSpread2({}, newField), {}, {
+            centerFields: newCenterFields
+          });
+        }
+        var _newRightFields = filterFields(field.rightFields, predicate);
+        if (_newRightFields !== field.rightFields) {
+          newField = _objectSpread2(_objectSpread2({}, newField), {}, {
+            rightFields: _newRightFields
+          });
+        }
+      } else if ((field.component === 'tabs' || field.component === 'steps' || field.component === 'columns') && _isObject(field.fields) && !_isArray(field.fields)) {
+        var subkeys = Object.keys(field.fields);
+        // scan all keys of fields and reapply, if different instance, create a new instance
+        // of new field
+        subkeys.forEach(function (subkey) {
+          var newFields = filterFields(field.fields[subkey], predicate);
+          if (newFields !== field.fields[subkey]) {
+            newField = _objectSpread2(_objectSpread2({}, newField), {}, {
+              fields: _objectSpread2(_objectSpread2({}, newField.fields), {}, _defineProperty$1({}, subkey, newFields))
+            });
+          }
+        });
+      }
+      return newField;
+    }).filter(Boolean);
+
+    // check if some element of the array is changed, keep instance consistency otherwise
+    var hasChanges = fields.length !== newFields.length || fields.some(function (field, idx) {
+      return field !== newFields[idx];
+    });
+    return hasChanges ? newFields : fields;
   };
 
   var lfLog = function lfLog(s) {
@@ -12987,11 +12873,7 @@
     return result !== 0;
   };
 
-  exports.AddFieldAfter = AddFieldAfter;
-  exports.addField = addField;
   exports.cleanUp = cleanUp;
-  exports.createEmptyField = createEmptyField;
-  exports.deleteField = deleteField;
   exports.fillIds = fillIds;
   exports.filterFields = filterFields;
   exports.findField = findField;
