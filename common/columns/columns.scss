@@ -11,10 +11,6 @@
     align-self: auto;
     margin-right: var(--lf-field-column-margin);
 
-    &.lf-column-hidden {
-      display: none;
-    }
-
     &:last-child {
       margin-right: 0px;
     }

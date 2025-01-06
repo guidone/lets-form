@@ -14,23 +14,25 @@ const Columns = ({
       data-lf-field-name={name}
       className="lf-control-columns"
     >
-      {(columns || []).map(column => (
-        <div
-          key={column.name}
-          className={classNames(
-            'lf-column',
-            `lf-column-${column.name}`,
-            column.layout && `layout-${column.layout}`,
-            column.hidden && 'lf-column-hidden'
-          )}
-          style={{
-            alignSelf: column.alignment ? column.alignment : undefined,
-            flexGrow: column.size != null ? column.size : undefined
-          }}
-        >
-          {_.isFunction(children) && children(column.name)}
-        </div>
-      ))}
+      {(columns || [])
+        .filter(column => column.hidden !== true)
+        .map(column => (
+          <div
+            key={column.name}
+            className={classNames(
+              'lf-column',
+              `lf-column-${column.name}`,
+              column.className,
+              column.layout && `layout-${column.layout}`
+            )}
+            style={{
+              alignSelf: column.alignment ? column.alignment : undefined,
+              flexGrow: column.size != null ? column.size : undefined
+            }}
+          >
+            {_.isFunction(children) && children(column.name)}
+          </div>
+        ))}
     </div>
   );
 };
