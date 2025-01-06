@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.9.12
+- feat: add `hide` column param
+
 ## v0.9.11
 - fix: setFieldValue may not work properly #60
 
