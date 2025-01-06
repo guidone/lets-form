@@ -1,10 +1,10 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
 
-import { fillIds, collectNames } from '../../helpers';
 import { useFormContext } from '../../hooks';
-
 import { isEmptyItem } from './helpers/is-empty-item';
+import { fillIds } from '../../helpers/fill-ids';
+import { collectNames } from '../../helpers/collect-names';
 import { ArrayItem } from './views/array-item';
 
 import './list-array.scss';
