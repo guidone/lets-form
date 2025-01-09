@@ -8,6 +8,8 @@
   &nbsp;|&nbsp;
   <a href="https://designer.letsform.dev">Try LetsForm Designer</a>
   &nbsp;|&nbsp;
+  <a href="https://join.slack.com/t/letsform/shared_invite/zt-2xk4z93h0-M29z7Fpd05nz2DJYqiQWUg">Slack discussions</a>
+  &nbsp;|&nbsp;
   <a href="https://www.javascript-jedi.com/LetsForm-Roadmap-f09f7f46fcb14e7a860cd3a88b781bec">Roadmap</a>
   &nbsp;|&nbsp;
   <a href="https://www.javascript-jedi.com">Blog</a>
