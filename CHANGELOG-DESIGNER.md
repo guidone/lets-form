@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.9.13
+- feat: add Slack channel link
+
 ## v0.9.12
 - feat: add `hide` column param
 
