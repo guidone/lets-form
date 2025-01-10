@@ -7,6 +7,7 @@ import { ListArray } from '../../common/array';
 import LetsForm from '../../react-rsuite5';
 import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './list-array.scss';
 
@@ -21,8 +22,7 @@ const ListArrayRSuite5 = I18N(
   }) => {
     return (
       <Form.Group
-        data-lf-field-name={name}
-        className="lf-control-array"
+        {...makeClassName('array', name)}
       >
         {label && (
           <Form.ControlLabel>

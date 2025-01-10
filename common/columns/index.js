@@ -2,6 +2,8 @@ import React from 'react';
 import _ from 'lodash';
 import classNames from 'classnames';
 
+import { makeClassName } from '../../helpers/make-class-name';
+
 import './columns.scss';
 
 const Columns = ({
@@ -10,10 +12,7 @@ const Columns = ({
   columns
 }) => {
   return (
-    <div
-      data-lf-field-name={name}
-      className="lf-control-columns"
-    >
+    <div {...makeClassName('columns', name)}>
       {(columns || [])
         .filter(column => column.hidden !== true)
         .map(column => (

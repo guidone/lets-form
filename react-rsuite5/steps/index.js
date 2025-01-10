@@ -6,6 +6,7 @@ import { passRest } from '../../helpers/pass-rest';
 import { I18N } from '../../components/i18n';
 import { GenericIcon } from '../../components/generic-icon';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './steps.scss';
 import classNames from 'classnames';
@@ -29,6 +30,7 @@ const Rsuite5Steps = I18N(
     small,
     labelNext,
     labelPrevious,
+    className,
     ...rest
   }) => {
     let defaultStep = value;
@@ -71,10 +73,7 @@ const Rsuite5Steps = I18N(
     );
 
     return (
-      <div
-        className="lf-control-steps"
-        data-lf-field-name={name}
-      >
+      <div {...makeClassName('steps', name, className)}>
         <Steps
           current={stepIdx}
           currentStatus={status}

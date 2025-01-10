@@ -2,7 +2,6 @@
 import React, { useCallback, useState } from 'react';
 import { Form, InputNumber } from 'rsuite';
 import _ from 'lodash';
-import classNames from 'classnames';
 
 import { RequiredIcon } from '../../components/required-icon';
 import { I18N } from '../../components/i18n';
@@ -11,6 +10,7 @@ import { makeWidthStyle } from '../../helpers/make-width-style';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
 import { passRest } from '../../helpers';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './index.scss';
 
@@ -40,6 +40,7 @@ const InputNumberRSuite5 = I18N(
     onBlur,
     inside = false,
     allowClear,
+    className,
     ...rest
   }) => {
     const [currentValue, setCurrentValue] = useState(value ?? null);
@@ -77,13 +78,10 @@ const InputNumberRSuite5 = I18N(
 
     return (
       <Form.Group
-        data-lf-field-name={name}
-        className={classNames(
-          'lf-control-input-number', {
-            [`lf-size-${size}`]: size != null,
-            'lf-full-width': fullWidth || width != null
-          }
-        )}
+        {...makeClassName('input-number', name, className, {
+          [`lf-size-${size}`]: size != null,
+          'lf-full-width': fullWidth || width != null
+        })}
         style={makeWidthStyle(fullWidth, width)}
       >
         {label && <Form.ControlLabel>

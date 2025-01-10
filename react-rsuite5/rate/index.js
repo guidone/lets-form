@@ -6,6 +6,8 @@ import { RequiredIcon } from '../../components/required-icon';
 import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
+import { passRest } from '../../helpers';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const RateRSuite = I18N(
   ({
@@ -24,10 +26,12 @@ const RateRSuite = I18N(
     max,
     color,
     onChange,
-    onBlur
+    onBlur,
+    className,
+    ...rest
   }) => {
     return (
-      <Form.Group controlId={name} className="lets-form-input-tag">
+      <Form.Group controlId={name} {...makeClassName('rate', name, className)}>
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}
@@ -46,6 +50,7 @@ const RateRSuite = I18N(
             allowHalf={allowHalf}
             cleanable={cleanable}
             readOnly={readOnly}
+            {...passRest(rest)}
           />
         </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}

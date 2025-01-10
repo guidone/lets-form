@@ -1,15 +1,16 @@
 import React from 'react';
 import isEmpty from 'lodash/isEmpty';
+
 import { microdown } from '../../libs/micro-down';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './placeholder.scss';
 
-const Placeholder = ({ text, name }) => {
+const Placeholder = ({ text, name, className }) => {
   if (!isEmpty(text)) {
     return (
       <div
-        className="lf-control-placeholder"
-        data-lf-field-name={name}
+        {...makeClassName('placeholder', name, className)}
         dangerouslySetInnerHTML={{ __html: microdown.parse(text) }}
       />
     );

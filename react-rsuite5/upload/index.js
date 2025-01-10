@@ -6,6 +6,7 @@ import { lfLog } from '../../helpers/lf-log';
 import { RequiredIcon } from '../../components/required-icon';
 import { I18N } from '../../components/i18n';
 import { passRest } from '../../helpers';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './upload.scss';
 
@@ -66,6 +67,7 @@ const Upload = I18N(
     draggableText,
     draggableHeight = 200,
     value,
+    className,
     ...rest
   }) => {
     const [currentValue, setCurrentValue] = useState(makeDefaultValue(value));
@@ -103,10 +105,7 @@ const Upload = I18N(
     }
 
     return (
-      <div
-        className="lf-control-upload"
-        data-lf-field-name={name}
-      >
+      <div {...makeClassName('upload', name, className)}>
         {label && (
           <Form.ControlLabel>
             {label}

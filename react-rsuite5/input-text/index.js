@@ -10,6 +10,7 @@ import { TextOrIcon } from '../../common/text-or-icon';
 import { passRest } from '../../helpers/pass-rest';
 import { makeWidthStyle } from '../../helpers/make-width-style';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './input-text.scss';
 
@@ -70,7 +71,8 @@ const TextInput = I18N(
     return (
       <Form.Group
         className={classNames(
-          'lf-control-input-text', {
+          makeClassName('input-text', name),
+          {
             [`lf-size-${size}`]: size != null
 
           }

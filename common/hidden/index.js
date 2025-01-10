@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const Hidden = ({ name }) => (
   <div
-    className="lf-control-hidden"
+    {...makeClassName('hidden', name)}
     style={{ padding: '10px' }}
   >Hidden field: <em>{name}</em></div>
 );
