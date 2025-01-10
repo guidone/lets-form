@@ -2,12 +2,13 @@
 import React, { useCallback, useState, useId } from 'react';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { CrossCirle } from '../../assets/icons/cross-circle';
 import { formatBytes } from '../../helpers/format-bytes';
 import { lfLog } from '../../helpers/lf-log';
 import { RequiredIcon } from '../../components/required-icon';
 import { LetfDotsWithFixedRight } from '../../components/left-dots-with-fixed-right';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './upload.scss';
 import { FileItem } from './file-item';
@@ -74,10 +75,7 @@ const Upload = I18N(
     );
 
     return (
-      <div
-        className="lf-control-upload"
-        data-lf-field-name={name}
-      >
+      <div {...makeClassName('upload', name, 'lf-form-react-control-group', className)} >
         {label && (
           <label for={name}>
             {label}

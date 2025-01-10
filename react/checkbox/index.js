@@ -17,7 +17,6 @@ const Checkbox = I18N(
     return (
       <ReactGenericCheckbox
         inputType="checkbox"
-        className="lf-control-checkbox"
         onChange={handleChange}
         {...rest}
       />

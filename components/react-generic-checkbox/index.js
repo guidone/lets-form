@@ -1,9 +1,9 @@
 import React from 'react';
 import _ from 'lodash';
-import classNames from 'classnames';
 
 import { RequiredIcon } from '../../components';
 import { passRest } from '../../helpers';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const ReactGenericCheckbox = ({
   name,
@@ -25,10 +25,7 @@ const ReactGenericCheckbox = ({
   const hasError = error && _.isString(error);
 
   return (
-    <div
-      className={classNames(className, 'lf-form-react-control-group')}
-      data-lf-field-name={name}
-    >
+    <div {...makeClassName('checkbox', name, 'lf-form-react-control-group', className)}>
       <label for={name} className="lf-form-react-checkbox">
         <input
           type={inputType}
