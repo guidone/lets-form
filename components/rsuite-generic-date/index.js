@@ -6,7 +6,7 @@ import { RequiredIcon } from '../../components';
 import { passRest } from '../../helpers';
 import { RSuite5FieldControl } from '../rsuite-field-control';
 import { makeWidthStyle } from '../../helpers/make-width-style';
-import classNames from 'classnames';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './rsuite-generic-date.scss';
 
@@ -29,11 +29,12 @@ const RSuiteGenericDate = ({
   format,
   lfLocale,
   className,
+  component,
   ...rest
 }) => {
   return (
     <Form.Group
-      {...makeClassName('date', name, className, {
+      {...makeClassName(component, name, className, {
         'lf-full-width': fullWidth || width != null
       })}
       style={makeWidthStyle(fullWidth, width)}

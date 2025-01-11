@@ -41,6 +41,7 @@ const SelectTime = I18N(
       <RSuiteGenericDate
         value={currentValue}
         onChange={handleChange}
+        component="time"
         {...passRest(rest)}
       />
     )

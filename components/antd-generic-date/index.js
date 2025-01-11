@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 
 import { passRest } from '../../helpers/pass-rest';
 import { makeWidthStyle } from '../../helpers/make-width-style';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const AntdGenericDate = ({
   name,
@@ -28,10 +29,9 @@ const AntdGenericDate = ({
   return (
     <Form.Item
       label={label}
-      className={className}
+      {...makeClassName(component, name, className)}
       // not needed, breaks in case date is set
       //name={name}
-      data-lf-field-name={name}
       help={error != null ? error : (hint && !tooltip ? hint : undefined)}
       required={required}
       tooltip={tooltip && hint}
