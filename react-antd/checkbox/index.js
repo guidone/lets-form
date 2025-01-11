@@ -1,8 +1,10 @@
 import React, { useCallback } from 'react';
 import { Checkbox, Form } from 'antd';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { passRest } from '../../helpers/pass-rest';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const CheckboxAntd = I18N(
   ({
@@ -28,6 +30,7 @@ const CheckboxAntd = I18N(
     width,
     checkedChildren,
     unCheckedChildren,
+    className,
     ...rest
   }) => {
     const handleChange = useCallback(
@@ -37,8 +40,7 @@ const CheckboxAntd = I18N(
 
     return (
       <Form.Item
-        name={name}
-        className="lt-control-checkbox"
+        {...makeClassName('checkbox', name, className)}
         data-lf-field-name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}
         hasFeedback={error != null}
@@ -51,6 +53,7 @@ const CheckboxAntd = I18N(
           onBlur={onBlur}
           checked={value}
           disabled={disabled}
+          {...passRest(rest)}
         >
           {label}
         </Checkbox>

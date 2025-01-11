@@ -2,10 +2,11 @@ import React from 'react';
 import { Form } from 'antd';
 import _ from 'lodash';
 
-import { ListArray } from '../../common';
+import { ListArray } from '../../common/array';
 import LetsForm from '../../react-antd';
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './array.scss';
 
@@ -16,12 +17,12 @@ const ListArrayAntd = I18N(
     tooltip,
     name,
     label,
+    className,
     ...rest
   }) => {
     return (
       <Form.Item
-        className="lf-control-array"
-        data-lf-field-name={name}
+        {...makeClassName('array', name, className)}
         label={label}
         name={name}
         help={_.isString(rest.error?.errorMessage) && rest.error?.errorMessage ?

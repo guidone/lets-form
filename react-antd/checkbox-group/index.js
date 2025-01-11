@@ -1,10 +1,11 @@
 import React from 'react';
-import classNames from 'classnames';
 import { Form, Checkbox } from 'antd';
 
-import { I18N } from '../../components';
-import { i18nOptions, passRest } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { i18nOptions } from '../../helpers/i18n-options';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const CheckboxGroupRSuite = I18N(
   ({
@@ -27,8 +28,7 @@ const CheckboxGroupRSuite = I18N(
   }) => {
     return (
       <Form.Item
-        className={classNames('lf-control-checkbox-group', className)}
-        data-lf-field-name={name}
+        {...makeClassName('checkbox-group', name, className)}
         label={label}
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}

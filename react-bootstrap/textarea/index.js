@@ -2,9 +2,12 @@ import React, { useCallback } from 'react';
 import _ from 'lodash';
 import Form from 'react-bootstrap/Form';
 
-import { RequiredIcon, I18N } from '../../components';
-import { passRest, makeWidthStyle } from '../../helpers';
+import { RequiredIcon } from '../../components/required-icon';
+import { I18N } from '../../components/i18n';
+import { makeWidthStyle } from '../../helpers/make-width-style';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -25,6 +28,7 @@ const Textarea = I18N(
     placeholder,
     width,
     fullWidth,
+    className,
     ...rest
   }) => {
 
@@ -36,10 +40,7 @@ const Textarea = I18N(
     );
 
     return (
-      <Form.Group
-        className="lf-control-input-text"
-        data-lf-field-name={name}
-      >
+      <Form.Group {...makeClassName('textarea', name, className)}>
         <Form.Label>
           {label}
           {required && <RequiredIcon />}

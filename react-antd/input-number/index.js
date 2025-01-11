@@ -6,6 +6,7 @@ import { passRest } from '../../helpers/pass-rest';
 import { makeWidthStyle } from '../../helpers/make-width-style';
 import { TextOrIcon } from '../../common/text-or-icon';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const InputNumberAntd = I18N(
   ({
@@ -25,14 +26,14 @@ const InputNumberAntd = I18N(
     showControl,
     prefix,
     postfix,
+    className,
     ...rest
   }) => {
     return (
       <Form.Item
         label={label}
         name={name}
-        data-lf-field-name={name}
-        className="lf-control-input-number"
+        {...makeClassName('input-number', name, className)}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}
         required={required}
         tooltip={tooltip && hint}

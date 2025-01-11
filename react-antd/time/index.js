@@ -7,6 +7,7 @@ import { lfLog } from '../../helpers/lf-log';
 import { passRest } from '../../helpers/pass-rest';
 import { isValidTime } from '../../helpers/is-valid-time';
 import { timeToDayJSTime } from '../../helpers/time-to-dayjs-time';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const Time = I18N(
   ({
@@ -18,6 +19,7 @@ const Time = I18N(
     tooltip,
     onChange,
     value,
+    className,
     ...rest
   }) => {
     // default value
@@ -36,8 +38,7 @@ const Time = I18N(
 
     return (
       <Form.Item
-        className="lf-control-date"
-        data-lf-field-name={name}
+        {...makeClassName('time', name, className)}
         label={label}
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}

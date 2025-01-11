@@ -4,9 +4,11 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
-import { RequiredIcon } from '../../components';
-import { passRest, makeWidthStyle } from '../../helpers';
-import { TextOrIcon } from '../../common';
+import { RequiredIcon } from '../../components/required-icon';
+import { passRest } from '../../helpers/pass-rest';
+import { makeWidthStyle } from '../../helpers/make-width-style';
+import { TextOrIcon } from '../../common/text-or-icon';
+import { makeClassName } from '../../helpers/make-class-name';
 
 // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -77,10 +79,7 @@ const BootstrapGenericInput = ({
   const useFloatingLabels = floatingLabel && !needsGroup;
 
   return (
-    <Form.Group
-      className={className}
-      data-lf-field-name={name}
-    >
+    <Form.Group {...makeClassName(component, name, className)}>
       {useFloatingLabels && label && (
         <FloatingLabel
           label={label}

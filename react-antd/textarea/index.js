@@ -5,6 +5,7 @@ import { I18N } from '../../components/i18n';
 import { makeWidthStyle } from '../../helpers/make-width-style';
 import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const TextareaAntd = I18N(
   ({
@@ -19,6 +20,7 @@ const TextareaAntd = I18N(
     onBlur,
     width,
     fullWidth,
+    className,
     ...rest
   }) => {
     const handleChange = useCallback(
@@ -28,8 +30,7 @@ const TextareaAntd = I18N(
 
     return (
       <Form.Item
-        data-lf-field-name={name}
-        className="lf-control-textarea"
+        {...makeClassName('textarea', name, className)}
         label={label}
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}
@@ -47,7 +48,7 @@ const TextareaAntd = I18N(
           {...passRest(rest)}
         />
       </Form.Item>
-    )
+    );
   },
   ['label', 'hint', 'placeholder']
 );

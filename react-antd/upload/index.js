@@ -3,9 +3,10 @@ import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
 import { Button, Form, Upload } from 'antd';
 
-import { passRest } from '../../helpers';
-import { I18N } from '../../components';
+import { passRest } from '../../helpers/pass-rest';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './upload.scss';
 
@@ -78,6 +79,7 @@ const AntDUpload = I18N(
     uploadButtonSize,
     uploadButtonAppearance,
     onChange = () => {},
+    className,
     ...rest
   }) => {
     const [currentValue, setCurrentValue] = useState(makeDefaultValue(value));
@@ -165,8 +167,7 @@ const AntDUpload = I18N(
 
     return (
       <Form.Item
-          className="lf-control-upload"
-          data-lf-field-name={name}
+          {...makeClassName('upload', name, className)}
           listType={listType}
           label={label}
           name={name}

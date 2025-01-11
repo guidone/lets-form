@@ -2,10 +2,12 @@ import React, { useCallback } from 'react';
 import { Form, Input } from 'antd';
 import classNames from 'classnames';
 
-import { I18N } from '../../components';
-import { passRest, makeWidthStyle } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { passRest } from '../../helpers/pass-rest';
+import { makeWidthStyle } from '../../helpers/make-width-style';
 import { TextOrIcon } from '../../common/text-or-icon';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './input-text.scss';
 
@@ -29,6 +31,7 @@ const TextInput = I18N(
     inputType,
     inputMode,
     lfOnEnter = () => {},
+    className,
     ...rest
   }) => {
     const handleChange = useCallback(
@@ -39,8 +42,7 @@ const TextInput = I18N(
 
     return (
       <Form.Item
-        className={classNames('lf-control-input-text', `lf-size-${size}`)}
-        data-lf-field-name={name}
+        {...makeClassName('input-text', name, className, `lf-size-${size}`)}
         label={label}
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}

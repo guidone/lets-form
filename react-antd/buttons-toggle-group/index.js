@@ -1,12 +1,13 @@
 import React from 'react';
 import { Form } from 'antd';
 
-import { I18N } from '../../components';
-import { i18nOptions, passRest } from '../../helpers';
-
+import { I18N } from '../../components/i18n';
+import { i18nOptions } from '../../helpers/i18n-options';
+import { passRest } from '../../helpers/pass-rest';
 import Button from '../button';
-import { ButtonsToggleGroup } from '../../common';
+import { ButtonsToggleGroup } from '../../common/buttons-toggle-group';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const AntdButtonsToggleGroup = I18N(
   ({
@@ -22,12 +23,12 @@ const AntdButtonsToggleGroup = I18N(
     onChange,
     multiple,
     options = [],
+    className,
     ...rest
   }) => {
     return (
       <Form.Item
-        className="lf-control-button-toggle-group"
-        data-lf-field-name={name}
+        {...makeClassName('button-toggle-group', name, className)}
         label={label}
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}

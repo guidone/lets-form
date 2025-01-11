@@ -2,8 +2,10 @@ import React, { useCallback } from 'react';
 import _ from 'lodash';
 import Form from 'react-bootstrap/Form';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
+import { passRest } from '../../helpers/pass-rest';
 
 const Toggle = I18N(
   ({
@@ -23,6 +25,7 @@ const Toggle = I18N(
     appearance,
     locale,
     format,
+    className,
     ...rest
   }) => {
     const handleChange = useCallback(
@@ -33,16 +36,14 @@ const Toggle = I18N(
     );
 
     return (
-      <Form.Group
-        className="lf-control-checkbox"
-        data-lf-field-name={name}
-      >
+      <Form.Group {...makeClassName('checkbox', name, className)}>
         <Form.Check type="switch">
           <Form.Check.Input
             onChange={handleChange}
             onBlur={onBlur}
             disabled={disabled}
             isInvalid={error != null}
+            {...passRest(rest)}
           />
           {label && <Form.Check.Label>{label}</Form.Check.Label>}
           {_.isString(error) && !_.isEmpty(error) && (

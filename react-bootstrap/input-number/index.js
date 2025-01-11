@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { BootstrapGenericInput } from '../../components/bootstrap-generic-input';
 
 const hasDecimals = f => _.isString(f) && (f.includes(',') || f.includes('.'));
@@ -36,7 +36,6 @@ const InputNumber = I18N(
 
     return (
       <BootstrapGenericInput
-        className="lf-control-input-number"
         component="input-number"
         onChange={handleChange}
         inputType="number"

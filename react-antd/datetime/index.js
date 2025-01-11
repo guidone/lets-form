@@ -5,6 +5,7 @@ import { I18N } from '../../components/i18n';
 import { AntdGenericDate } from '../../components/antd-generic-date';
 import { lfLog } from '../../helpers/lf-log';
 import { isValidDate } from '../../helpers/is-valid-date';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const Datetime = I18N(
   ({
@@ -37,8 +38,7 @@ const Datetime = I18N(
     return (
       <AntdGenericDate
         value={currentValue}
-        className="lf-control-datetime"
-        component="datetime"
+        {...makeClassName('datetime', name, className)}
         onChange={handleChange}
         {...rest}
         showTime={true}
