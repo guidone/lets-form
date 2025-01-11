@@ -2,7 +2,8 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import _ from 'lodash';
 
-import { RequiredIcon, I18N } from '../../components/i18n';
+import { I18N } from '../../components/i18n';
+import { RequiredIcon } from '../../components/required-icon';
 import { ListArray } from '../../common/array';
 import LetsForm from '../../react-bootstrap';
 import { lfLog } from '../../helpers/lf-log';
