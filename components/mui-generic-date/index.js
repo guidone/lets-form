@@ -11,6 +11,7 @@ import { isValidDayjsFormat } from '../../helpers/is-valid-dayjs-format';
 import { passRest } from '../../helpers/pass-rest';
 import { makeWidthStyle } from '../../helpers/make-width-style';
 import { tryParseDateDayJs } from '../../helpers/try-parse-date-dayjs';
+import { makeClassName } from '../../helpers/make-class-name';
 
 // DOC: https://mui.com/x/api/date-pickers/date-picker/
 //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -65,10 +66,7 @@ const MuiGenericDate = ({
   const parsedMaxDateTime = tryParseDateDayJs(maxDateTime);
 
   return (
-    <div
-      data-lf-field-name={name}
-      className={className}
-    >
+    <div {...makeClassName(component, name, className)}>
       <FormControl
         required={required}
         error={error != null}

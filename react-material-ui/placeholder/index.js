@@ -3,24 +3,23 @@ import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
 
-import { Placeholder } from '../../common';
-import { I18N } from '../../components';
+import { Placeholder } from '../../common/placeholder';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const PlaceholderMUI = I18N(
   ({
     hint,
     text,
     name,
-    label
+    label,
+    className
   }) => {
     const controlId = useId();
 
     return (
-      <FormControl
-        className="lf-control-placeholder"
-        data-lf-field-name={name}
-      >
+      <FormControl {...makeClassName('placeholder', name, className)}>
         {label && (
           <FormLabel id={controlId}>{label}</FormLabel>
         )}

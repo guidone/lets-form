@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { MuiGenericSelect } from '../../components/mui-select';
-import { i18nOptions } from '../../helpers';
+import { i18nOptions } from '../../helpers/i18n-options';
 import { lfLog } from '../../helpers/lf-log';
 
 const MuiSelect = I18N(
@@ -18,7 +18,6 @@ const MuiSelect = I18N(
 
     return (
       <MuiGenericSelect
-        className="lf-control-select"
         component="select"
         value={value}
         onChange={handleChange}

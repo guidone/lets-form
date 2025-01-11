@@ -3,8 +3,10 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import Switch from '@mui/material/Switch';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
+import { passRest } from '../../helpers/pass-rest';
 
 const Toggle = I18N(
   ({
@@ -18,7 +20,9 @@ const Toggle = I18N(
     labelPlacement,
     onBlur,
     required,
-    disableRipple
+    disableRipple,
+    className,
+    ...rest
   }) => {
 
     const handleChange = useCallback(
@@ -38,14 +42,12 @@ const Toggle = I18N(
         size={size || undefined}
         required={required}
         disableRipple={disableRipple}
+        {...passRest(rest)}
       />
     );
 
     return (
-      <FormGroup
-        data-lf-field-name={name}
-        className="lf-control-toggle"
-      >
+      <FormGroup {...makeClassName('toggle', name, className)}>
         {label && (
           <FormControlLabel
             labelPlacement={labelPlacement || undefined}

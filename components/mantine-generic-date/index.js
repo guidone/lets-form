@@ -31,12 +31,13 @@ const MantineGenericDate = ({
   withTime = false,
   className,
   name,
+  component,
   ...rest
 }) => {
   const Component = withTime ? DateTimePicker : DatePickerInput;
   return (
     <Component
-    {...makeClassName('date', name, className)}
+      {...makeClassName(component, name, className)}
       style={makeWidthStyle(fullWidth, width)}
       description={hint}
       error={_.isString(error) ? error : undefined }

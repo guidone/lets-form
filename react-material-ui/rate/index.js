@@ -5,8 +5,10 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormLabel from '@mui/material/FormLabel';
 import FormHelperText from '@mui/material/FormHelperText';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
+import { passRest } from '../../helpers/pass-rest';
 
 // DOC: https://mui.com/material-ui/api/rating/
 
@@ -26,7 +28,9 @@ const Rate = I18N(
     precision,
     color,
     labelPlacement,
-    error
+    error,
+    className,
+    ...rest
   }) => {
     const handleChange = useCallback(
       event => {
@@ -47,14 +51,12 @@ const Rate = I18N(
         onChange={handleChange}
         onBlur={onBlur}
         disabled={disabled}
+        {...passRest(rest)}
       />
     );
 
     return (
-      <div
-        className="lf-control-rate"
-        data-lf-field-name={name}
-      >
+      <div {...makeClassName('rate', name, className)}>
         <FormControl
           required={required}
           error={error != null}

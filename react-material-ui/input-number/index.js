@@ -35,7 +35,6 @@ const InputNumber = I18N(
 
     return (
       <MuiGenericInput
-        className="lf-control-input-number"
         component="input-number"
         onChange={handleChange}
         inputType="number"

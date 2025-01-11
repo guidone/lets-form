@@ -17,7 +17,6 @@ const TextInput = I18N(
 
     return (
       <MuiGenericInput
-        className="lf-control-input-text"
         component="input-text"
         onChange={handleChange}
         {...rest}

@@ -5,11 +5,12 @@ import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { CrossCirle } from '../../assets/icons/cross-circle';
 import { formatBytes } from '../../helpers/format-bytes';
 import { lfLog } from '../../helpers/lf-log';
 import { LetfDotsWithFixedRight } from '../../components/left-dots-with-fixed-right';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './upload.scss';
 
@@ -30,7 +31,8 @@ const Upload = I18N(
     onChange,
     multiple,
     required,
-    value
+    value,
+    className
   }) => {
     const controlId = useId();
     const [currentFile, setCurrentFile] = useState(
@@ -80,10 +82,7 @@ const Upload = I18N(
     );
 
     return (
-      <div
-        className="lf-control-upload"
-        data-lf-field-name={name}
-      >
+      <div {...makeClassName('upload', name, className)}>
         {label && (
           <FormLabel id={controlId} required={required}>{label}</FormLabel>
         )}

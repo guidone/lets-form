@@ -4,10 +4,11 @@ import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormLabel from '@mui/material/FormLabel';
 
-import { ListArray } from '../../common';
+import { ListArray } from '../../common/array';
 import LetsForm from '../../react-material-ui';
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './array.scss';
 
@@ -18,13 +19,14 @@ const ListArrayMui = I18N(
     tooltip,
     name,
     label,
+    className,
     ...rest
   }) => {
     const hasError = rest.error && _.isString(rest.error?.errorMessage) && rest.error?.errorMessage;
     const controlId = useId();
 
     return (
-      <div data-lf-field-name={name} className="lf-control-array">
+      <div {...makeClassName('array', name, className)}>
         <FormControl
           required={required}
           error={hasError}
