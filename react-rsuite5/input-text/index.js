@@ -38,6 +38,7 @@ const TextInput = I18N(
     inputMode,
     inputType,
     inside = false,
+    className,
     lfOnEnter = () => {},
     ...rest
   }) => {
@@ -70,7 +71,7 @@ const TextInput = I18N(
     const needsGroup = postfix || prefix;
     return (
       <Form.Group
-        {...makeClassName('input-text', name, {
+        {...makeClassName('input-text', name, className, {
           [`lf-size-${size}`]: size != null
         })}
       >
