@@ -18,6 +18,7 @@ const AntdGenericDate = ({
   width,
   lfLocale,
   className,
+  component,
   ...rest
 }) => {
   // set locale for dates

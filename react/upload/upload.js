@@ -24,7 +24,8 @@ const Upload = I18N(
     onChange,
     multiple,
     value,
-    required
+    required,
+    className
   }) => {
     const uploadButtonId = useId();
     const [currentFile, setCurrentFile] = useState(

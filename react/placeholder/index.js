@@ -10,7 +10,8 @@ const PlaceholderReact = I18N(
     name,
     label,
     hint,
-    text
+    text,
+    className
   }) => {
     return (
       <div {...makeClassName('placeholder', name, 'lf-form-react-control-group', className)}>
