@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { BootstrapGenericInput } from '../../components/bootstrap-generic-input';
 import { lfLog } from '../../helpers/lf-log';
 import { isValidDate } from '../../helpers/is-valid-date';
@@ -28,7 +28,6 @@ const Date = I18N(
 
     return (
       <BootstrapGenericInput
-        className="lf-control-date"
         inputType="date"
         component="date"
         value={currentDate}

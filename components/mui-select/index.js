@@ -10,7 +10,9 @@ import Checkbox from '@mui/material/Checkbox';
 import ListItemText from '@mui/material/ListItemText';
 import FormLabel from '@mui/material/FormLabel';
 
-import { passRest, filterOptions } from '../../helpers';
+import { passRest } from '../../helpers/pass-rest';
+import { filterOptions } from '../../helpers/filter-options';
+import { makeClassName } from '../../helpers/make-class-name';
 
 // DOC: https://mui.com/material-ui/api/select/
 
@@ -65,10 +67,7 @@ const MuiGenericSelect = ({
   // ma siccome lo spazio non se lo crea da solo, devi mettere la label anche nel componente select
   // altrimenti nella variante outlined vedi la label tagliata dalla riga del bordo.
   return (
-    <div
-      className={className}
-      data-lf-field-name={name}
-    >
+    <div {...makeClassName(component, name, className)}>
       <FormControl
         size={size}
         disabled={disabled}

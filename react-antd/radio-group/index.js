@@ -2,9 +2,11 @@ import React, { useCallback } from 'react';
 import _ from 'lodash';
 import { Form, Radio, Space } from 'antd';
 
-import { I18N } from '../../components';
-import { i18nOptions } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { i18nOptions } from '../../helpers/i18n-options';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
+import { passRest } from '../../helpers/pass-rest';
 
 const RadioGroup = I18N(
   ({
@@ -31,6 +33,7 @@ const RadioGroup = I18N(
     onBlur,
     width,
     optionType,
+    className,
     ...rest
   }) => {
     const handleChange = useCallback(
@@ -49,7 +52,7 @@ const RadioGroup = I18N(
           options={options}
           optionType={optionType}
           size={size}
-          {...(_.omit(rest, 'lfFramework', 'lfComponent'))}
+          {...passRest(rest)}
         />
       );
     } else {
@@ -61,7 +64,7 @@ const RadioGroup = I18N(
           readOnly={readOnly}
           optionType={optionType}
           size={size}
-          {...(_.omit(rest, 'lfFramework', 'lfComponent'))}
+          {...passRest(rest)}
         >
           <Space direction="vertical">
             {(options ?? []).map(({ value, label}) => (
@@ -79,8 +82,7 @@ const RadioGroup = I18N(
 
     return (
       <Form.Item
-        data-lf-field-name={name}
-        className="lf-control-radio-group"
+        {...makeClassName('radio-group', name, className)}
         label={label}
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}

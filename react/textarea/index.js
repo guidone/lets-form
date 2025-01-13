@@ -1,9 +1,12 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
 
-import { RequiredIcon, I18N } from '../../components';
-import { passRest, makeWidthStyle } from '../../helpers';
+import { RequiredIcon } from '../../components/required-icon';
+import { I18N } from '../../components/i18n';
+import { passRest } from '../../helpers/pass-rest';
+import { makeWidthStyle } from '../../helpers/make-width-style';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const Textarea = I18N(
   ({
@@ -21,6 +24,7 @@ const Textarea = I18N(
     rows,
     width,
     fullWidth,
+    className,
     ...rest
   }) => {
     const hasError = error && _.isString(error);
@@ -30,10 +34,7 @@ const Textarea = I18N(
     );
 
     return (
-      <div
-        className="lf-control-textarea lf-form-react-control-group"
-        data-lf-field-name={name}
-      >
+      <div {...makeClassName('textarea', name, 'lf-form-react-control-group', className)}>
         <label for={name}>
           {label}
           {required && <RequiredIcon />}

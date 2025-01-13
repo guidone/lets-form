@@ -2,9 +2,10 @@ import React, { useCallback } from 'react';
 import { Switch } from '@mantine/core';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
-import { passRest } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const MantineToggle = I18N(
   ({
@@ -14,26 +15,26 @@ const MantineToggle = I18N(
     onChange,
     error,
     description,
+    className,
     ...rest
-  }) => {    
+  }) => {
     const handleChange = useCallback(
       (event) => onChange(event.currentTarget.checked),
       [onChange]
     );
 
-    return (      
-      <Switch 
-        className="lf-control-checkbox"
-        data-lf-field-name={name}
+    return (
+      <Switch
+        {...makeClassName('toggle', name, className)}
         checked={value}
         name={name}
         onChange={handleChange}
-        description={hint}         
+        description={hint}
         error={_.isString(error) ? error : undefined }
         inputWrapperOrder={['label', 'input', 'description', 'error']}
         {...passRest(rest)}
       />
-    ); 
+    );
   },
   ['label', 'hint', 'placeholder']
 );

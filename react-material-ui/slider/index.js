@@ -5,8 +5,10 @@ import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
+import { passRest } from '../../helpers/pass-rest';
 
 // DOCS: https://mui.com/material-ui/api/slider/
 
@@ -30,7 +32,9 @@ const SliderMui = I18N(
     showMarks,
     customMarks,
     width,
-    fullWidth
+    fullWidth,
+    className,
+    ...rest
   }) => {
     const handleChange = useCallback(
       e => {
@@ -40,10 +44,7 @@ const SliderMui = I18N(
     );
 
     return (
-      <div
-        className="lf-control-slider"
-        data-lf-field-name={name}
-      >
+      <div {...makeClassName('slider', name, className)}>
         <FormControl
           required={required}
           error={error != null}
@@ -65,6 +66,7 @@ const SliderMui = I18N(
             step={step}
             size={size}
             valueLabelDisplay={valueLabelDisplay}
+            {...passRest(rest)}
           />
           {hint && !error && <FormHelperText>{hint}</FormHelperText>}
           {error && <FormHelperText>{error}</FormHelperText>}

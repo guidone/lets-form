@@ -3,9 +3,13 @@ import _ from 'lodash';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 
-import { RequiredIcon, I18N } from '../../components';
-import { passRest, filterOptions, i18nOptions } from '../../helpers';
+import { RequiredIcon } from '../../components/required-icon';
+import { I18N } from '../../components/i18n';
+import { passRest } from '../../helpers/pass-rest';
+import { filterOptions } from '../../helpers/filter-options';
+import { i18nOptions } from '../../helpers/i18n-options';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const Select = I18N(
   ({
@@ -25,6 +29,7 @@ const Select = I18N(
     floatingLabel = false,
     filterKey,
     filterValue,
+    className,
     ...rest
   }) => {
     const handleChange = useCallback(
@@ -56,11 +61,7 @@ const Select = I18N(
     );
 
     return (
-      <Form.Group
-        className="lf-control-input-text"
-        data-lf-field-name={name}
-      >
-
+      <Form.Group {...makeClassName('select', name, className)}>
         {!floatingLabel && (
           <Form.Label>
             {label}

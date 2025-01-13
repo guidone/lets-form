@@ -2,7 +2,10 @@ import React from 'react';
 import { DatePickerInput, DateTimePicker } from '@mantine/dates';
 import _ from 'lodash';
 
-import { passRest, makeWidthStyle, isValidDate } from '../../helpers';
+import { passRest } from '../../helpers/pass-rest';
+import { makeWidthStyle } from '../../helpers/make-width-style';
+import { isValidDate } from '../../helpers/is-valid-date';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const tryDate = value => {
   if (_.isDate(value)) {
@@ -26,15 +29,17 @@ const MantineGenericDate = ({
   width,
   lfLocale,
   withTime = false,
+  className,
+  name,
+  component,
   ...rest
 }) => {
   const Component = withTime ? DateTimePicker : DatePickerInput;
-  return (      
-    <Component 
-      className="lf-control-date"
-      data-lf-field-name={name}
-      style={makeWidthStyle(fullWidth, width)} 
-      description={hint} 
+  return (
+    <Component
+      {...makeClassName(component, name, className)}
+      style={makeWidthStyle(fullWidth, width)}
+      description={hint}
       error={_.isString(error) ? error : undefined }
       inputWrapperOrder={['label', 'input', 'description', 'error']}
       locale={lfLocale}
@@ -42,7 +47,7 @@ const MantineGenericDate = ({
       maxDate={tryDate(maxDate)}
       {...passRest(rest)}
     />
-  ); 
+  );
 }
 
 export { MantineGenericDate };

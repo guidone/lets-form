@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { MuiGenericInput } from '../../components/mui-generic-input';
 import { lfLog } from '../../helpers/lf-log';
 
@@ -18,7 +18,6 @@ const Textarea = I18N(
 
     return (
       <MuiGenericInput
-        className="lf-control-textarea"
         component="textarea"
         onChange={handleChange}
         multiline

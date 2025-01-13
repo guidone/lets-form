@@ -6,8 +6,9 @@ import FormHelperText from '@mui/material/FormHelperText';
 import InputAdornment from '@mui/material/InputAdornment';
 import FormLabel from '@mui/material/FormLabel';
 
-import { passRest } from '../../helpers';
-import { TextOrIcon } from '../../common';
+import { passRest } from '../../helpers/pass-rest';
+import { TextOrIcon } from '../../common/text-or-icon';
+import { makeClassName } from '../../helpers/make-class-name';
 
 // DOC: https://mui.com/material-ui/api/input/
 
@@ -45,10 +46,7 @@ const MuiGenericInput = ({
   const controlId = useId();
 
   return (
-    <div
-      data-lf-field-name={name}
-      className={className}
-    >
+    <div {...makeClassName(component, name, className)}>
       <FormControl
         required={required}
         error={error != null}

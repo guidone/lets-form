@@ -6,6 +6,7 @@ import { i18nOptions } from '../../helpers/i18n-options';
 import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const CheckboxGroupRSuite = I18N(
   ({
@@ -22,10 +23,11 @@ const CheckboxGroupRSuite = I18N(
     onChange,
     onBlur,
     options = [],
+    className,
     ...rest
   }) => {
     return (
-      <Form.Group data-lf-field-name={name} className="lf-control-checkbox-group">
+      <Form.Group {...makeClassName('checkbox-group', name, className)}>
         {label && <Form.ControlLabel>
           {label}
           {hint && tooltip && <Form.HelpText tooltip>{hint}</Form.HelpText>}

@@ -6,6 +6,7 @@ import { i18nOptions } from '../../helpers/i18n-options';
 import { passRest } from '../../helpers/pass-rest';
 import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './tabs.scss';
 
@@ -20,6 +21,7 @@ const Tabs = I18N(
     reversed,
     justified,
     pullRight,
+    className,
     ...rest
   }) => {
     let active;
@@ -32,10 +34,7 @@ const Tabs = I18N(
     }
 
     return (
-      <div
-        className="lf-control-tabs"
-        data-lf-field-name={name}
-      >
+      <div {...makeClassName('tabs', name, className)}>
         <Nav
           appearance={appearance}
           reversed={reversed}

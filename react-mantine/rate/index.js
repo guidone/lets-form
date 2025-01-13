@@ -3,8 +3,9 @@ import { Rating, Input } from '@mantine/core';
 import _ from 'lodash';
 
 import { I18N } from '../../components/i18n';
-import { passRest } from '../../helpers';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const InputText = I18N(
   ({
@@ -20,12 +21,12 @@ const InputText = I18N(
     label,
     required,
     lfOnEnter = () => {},
+    className,
     ...rest
   }) => {
     return (
       <Input.Wrapper
-        className="lf-control-rate"
-        data-lf-field-name={name}
+        {...makeClassName('rate', name, className)}
         description={hint}
         error={_.isString(error) ? error : undefined }
         inputWrapperOrder={['label', 'input', 'description', 'error']}

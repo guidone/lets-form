@@ -2,11 +2,12 @@ import React, { useCallback, useState } from 'react';
 import { Radio, Stack, Input } from '@mantine/core';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
-import { i18nOptions, passRest } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { i18nOptions } from '../../helpers/i18n-options';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
-// TODO broken preview in mantine, add ensureframework
 
 const RadioGroup = I18N(
   ({
@@ -29,6 +30,7 @@ const RadioGroup = I18N(
     iconColor,
     labelPosition,
     options = [],
+    className,
     ...rest
   }) => {
     const [selected, setSelected] = useState(value);
@@ -41,7 +43,7 @@ const RadioGroup = I18N(
     );
 
     return (
-      <div data-lf-field-name={name} className="lf-control-radio-group">
+      <div {...makeClassName('radio-group', name, className)}>
         <Radio.Group
           name={name}
           label={label}

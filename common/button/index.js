@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
-import classNames from 'classnames';
 
 import { passRest } from '../../helpers/pass-rest';
 import { makeWidthStyle } from '../../helpers/make-width-style';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const GenericButton = ({
   ButtonComponent,
@@ -76,9 +76,7 @@ const GenericButton = ({
   }
 
   return (
-    <div
-      className={classNames('lf-control-button', className, { [`lf-control-button-${size ?? ''}`]: true })}
-      data-lf-field-name={name}>
+    <div {...makeClassName('button', name, className, { [`lf-control-button-${size ?? ''}`]: true })}>
       {inner}
     </div>
   );

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Form } from 'antd';
 
-import { Placeholder } from '../../common';
-import { I18N } from '../../components';
+import { Placeholder } from '../../common/placeholder';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const PlaceholderAntd = I18N(
   ({
@@ -11,15 +12,15 @@ const PlaceholderAntd = I18N(
     hint,
     text,
     tooltip,
-    label
+    label,
+    className
   }) => {
     return (
       <Form.Item
+        {...makeClassName('placeholder', name, className)}
         label={label}
-        data-lf-field-name={name}
         help={hint && !tooltip ? hint : undefined}
         tooltip={tooltip && hint}
-        className="lf-control-placeholder"
         valuePropName={null}
       >
         <Placeholder text={text} />

@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { ReactGenericInput } from '../../components/react-generic-input';
 import { lfLog } from '../../helpers/lf-log';
 import { isValidDate } from '../../helpers/is-valid-date';
@@ -24,7 +24,6 @@ const DateInput = I18N(
       <ReactGenericInput
         inputType="date"
         component="date"
-        className="lf-control-date"
         value={currentDate}
         onChange={handleChange}
         {...rest}

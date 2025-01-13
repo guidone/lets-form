@@ -6,6 +6,8 @@ import { RequiredIcon } from '../../components/required-icon';
 import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
 import { RSuite5FieldControl } from '../../components/rsuite-field-control';
+import { passRest } from '../../helpers';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const ToggleInput = I18N(
   ({
@@ -20,13 +22,12 @@ const ToggleInput = I18N(
     onChange,
     checkedChildren,
     unCheckedChildren,
-    error
+    className,
+    error,
+    ...rest
   }) => {
     return (
-      <Form.Group
-        controlId={name}
-        className="lf-control-toggle"
-        data-lf-field-name={name}>
+      <Form.Group controlId={name} {...makeClassName('toggle', name, className)}>
         {label && (
           <Form.ControlLabel>
             {label}
@@ -43,6 +44,7 @@ const ToggleInput = I18N(
             unCheckedChildren={unCheckedChildren && unCheckedChildren !== '' ? unCheckedChildren : undefined}
             checkedChildren={checkedChildren && checkedChildren !== '' ? checkedChildren : undefined}
             size={size}
+            {...passRest(rest)}
           />
         </RSuite5FieldControl>
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}

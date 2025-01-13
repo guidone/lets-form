@@ -1,9 +1,9 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
-import classNames from 'classnames';
 
 import { RequiredIcon } from '../required-icon';
 import { makeWidthStyle, passRest } from '../../helpers';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const ReactGenericInput = ({
   name,
@@ -34,10 +34,7 @@ const ReactGenericInput = ({
   const handleKeyUp = useCallback(e => e.keyCode === 13 && lfOnEnter(), [lfOnEnter]);
 
   return (
-    <div
-      className={classNames(className, 'lf-form-react-control-group')}
-      data-lf-field-name={name}
-    >
+    <div {...makeClassName('date', name, 'lf-form-react-control-group', className)}>
       <label for={name}>
         {label}
         {required && <RequiredIcon />}

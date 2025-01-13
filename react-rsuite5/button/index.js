@@ -7,6 +7,7 @@ import { I18N } from '../../components';
 import { MakeButton } from '../../common';
 import { passRest } from '../../helpers';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './button.scss';
 

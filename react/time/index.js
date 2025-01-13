@@ -28,7 +28,6 @@ const Time = I18N(
     return (
       <ReactGenericInput
         inputType="time"
-        className="lf-control-time"
         value={currentDate}
         onChange={handleChange}
         {...rest}

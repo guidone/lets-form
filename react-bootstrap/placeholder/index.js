@@ -1,22 +1,21 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 
-import { Placeholder } from '../../common';
-import { I18N } from '../../components';
+import { Placeholder } from '../../common/placeholder';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const PlaceholderBootstrap = I18N(
   ({
     label,
     hint,
     text,
-    name
+    name,
+    className
   }) => {
     return (
-      <Form.Group
-        className="lf-control-placeholder"
-        data-lf-field-name={name}
-      >
+      <Form.Group {...makeClassName('placeholder', name, className)}>
         {label && (
           <Form.Label>
             {label}

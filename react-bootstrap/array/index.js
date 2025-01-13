@@ -2,10 +2,12 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import _ from 'lodash';
 
-import { RequiredIcon, I18N } from '../../components';
-import { ListArray } from '../../common';
+import { I18N } from '../../components/i18n';
+import { RequiredIcon } from '../../components/required-icon';
+import { ListArray } from '../../common/array';
 import LetsForm from '../../react-bootstrap';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const ListArrayBootstrap = I18N(
   ({
@@ -14,13 +16,11 @@ const ListArrayBootstrap = I18N(
     tooltip,
     name,
     label,
+    className,
     ...rest
   }) => {
     return (
-      <Form.Group
-        data-lf-field-name={name}
-        className="lf-control-array"
-      >
+      <Form.Group {...makeClassName('array', name, className)}>
         {label && (
           <Form.Label>
             {label}

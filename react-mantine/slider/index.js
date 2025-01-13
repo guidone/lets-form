@@ -15,14 +15,14 @@ const SliderMantine = I18N(
     onBlur,
     label,
     required,
+    className,
     lfOnEnter = () => {},
     ...rest
   }) => {
 
     return (
       <Input.Wrapper
-        className="lf-control-slider"
-        data-lf-field-name={name}
+        {...makeClassName('slider', name, className)}
         description={hint}
         error={_.isString(error) ? error : undefined }
         inputWrapperOrder={['label', 'input', 'description', 'error']}

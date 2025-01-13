@@ -2,8 +2,9 @@ import React from 'react';
 import _ from 'lodash';
 import { Form, Slider } from 'antd';
 
-import { I18N } from '../../components';
-import { i18nOptions, passRest } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { i18nOptions } from '../../helpers/i18n-options';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
 
 const SliderAnt = I18N(
@@ -33,6 +34,7 @@ const SliderAnt = I18N(
     width,
     marks,
     included,
+    className,
     ...rest
   }) => {
     let antdMarks = undefined;
@@ -45,8 +47,7 @@ const SliderAnt = I18N(
 
     return (
       <Form.Item
-        data-lf-field-name={name}
-        className="lf-control-slider"
+        {...makeClassName('slider', name, className)}
         label={label}
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}

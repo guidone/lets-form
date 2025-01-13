@@ -4,6 +4,8 @@ import classNames from 'classnames';
 
 import './buttons-toggle-group.scss';
 
+import { makeClassName } from '../../helpers/make-class-name';
+
 const getInitialValue = (value, multiple) => {
   return multiple ?
     (_.isArray(value) ? value : []).reduce((acc, value) => ({ ...acc, [value]: true }), {}) :
@@ -22,8 +24,6 @@ const ButtonsToggleGroup = ({
   justifyContent
 }) => {
   const [values, setValues] = useState(getInitialValue(value, multiple));
-
-  console.log('options', options)
 
   const handleClick = useCallback(
     (value, name) => {
@@ -48,7 +48,7 @@ const ButtonsToggleGroup = ({
 
   return (
     <div
-      className="lf-control-button-toggle-group-container"
+      {...makeClassName('button-toggle-group-container')}
       style={style}
     >
       {(options ?? []).map(({ value, label, image }) => (

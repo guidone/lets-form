@@ -37,7 +37,6 @@ const Datetime = I18N(
     return (
       <AntdGenericDate
         value={currentValue}
-        className="lf-control-datetime"
         component="datetime"
         onChange={handleChange}
         {...rest}

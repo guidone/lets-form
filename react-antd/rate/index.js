@@ -2,8 +2,10 @@ import React from 'react';
 import { Form, Rate } from 'antd';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
+import { passRest } from '../../helpers/pass-rest';
 
 const RateAntd = I18N(
   ({
@@ -30,6 +32,7 @@ const RateAntd = I18N(
     onBlur,
     width,
     tooltips,
+    className,
     ...rest
   }) => {
     const mappedTooltips = (tooltips ?? [])
@@ -45,8 +48,7 @@ const RateAntd = I18N(
 
     return (
       <Form.Item
-        data-lf-field-name={name}
-        className="lf-control-rate"
+        {...makeClassName('rate', name, className)}
         label={label}
         name={name}
         help={error != null ? error : (hint && !tooltip ? hint : undefined)}
@@ -66,6 +68,7 @@ const RateAntd = I18N(
           onBlur={onBlur}
           count={count}
           tooltips={mappedTooltips}
+          {...passRest(rest)}
         />
       </Form.Item>
     )

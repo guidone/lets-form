@@ -1,18 +1,18 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { ReactGenericInput } from '../../components/react-generic-input';
 import { lfLog } from '../../helpers/lf-log';
 
 const hasDecimals = f => _.isString(f) && (f.includes(',') || f.includes('.'));
 
 const InputNumber = I18N(
-  ({ 
+  ({
     onChange,
     min,
     max,
-    step, 
+    step,
     ...rest
   }) => {
     const handleChange = useCallback(
@@ -40,7 +40,6 @@ const InputNumber = I18N(
       <ReactGenericInput
         inputType="number"
         component="input-number"
-        className="lf-control-input-number"
         min={min}
         max={max}
         step={step}

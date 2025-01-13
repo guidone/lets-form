@@ -10,6 +10,7 @@ import { TextOrIcon } from '../../common/text-or-icon';
 import { passRest } from '../../helpers/pass-rest';
 import { makeWidthStyle } from '../../helpers/make-width-style';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './input-text.scss';
 
@@ -37,6 +38,7 @@ const TextInput = I18N(
     inputMode,
     inputType,
     inside = false,
+    className,
     lfOnEnter = () => {},
     ...rest
   }) => {
@@ -69,14 +71,9 @@ const TextInput = I18N(
     const needsGroup = postfix || prefix;
     return (
       <Form.Group
-        className={classNames(
-          'lf-control-input-text', {
-            [`lf-size-${size}`]: size != null
-
-          }
-        )}
-        data-lf-field-name={name}
-
+        {...makeClassName('input-text', name, className, {
+          [`lf-size-${size}`]: size != null
+        })}
       >
         {label && <Form.ControlLabel>
           {label}

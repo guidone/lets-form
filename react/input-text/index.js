@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { ReactGenericInput } from '../../components/react-generic-input';
 import { lfLog } from '../../helpers/lf-log';
 
@@ -16,7 +16,6 @@ const TextInput = I18N(
     return (
       <ReactGenericInput
         component="input-text"
-        className="lf-control-input-text"
         onChange={handleChange}
         {...rest}
       />

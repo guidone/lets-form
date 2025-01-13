@@ -1,21 +1,20 @@
 import React from 'react';
 
-import { Placeholder } from '../../common';
-import { I18N } from '../../components';
+import { Placeholder } from '../../common/placeholder';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const PlaceholderReact = I18N(
   ({
     name,
     label,
     hint,
-    text
+    text,
+    className
   }) => {
     return (
-      <div
-        className="lf-form-react-control-group lf-control-placeholder"
-        data-lf-field-name={name}
-      >
+      <div {...makeClassName('placeholder', name, 'lf-form-react-control-group', className)}>
         {label && (
           <label for={name}>
             {label}

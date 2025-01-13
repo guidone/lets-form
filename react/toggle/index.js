@@ -17,7 +17,6 @@ const Toggle = I18N(
     return (
       <ReactGenericCheckbox
         inputType="range"
-        className="lf-control-toggle"
         onChange={handleChange}
         min={0}
         max={1}

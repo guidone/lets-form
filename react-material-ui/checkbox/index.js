@@ -3,8 +3,10 @@ import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
+import { passRest } from '../../helpers/pass-rest';
 
 // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -20,7 +22,9 @@ const CheckboxMUI = I18N(
     labelPlacement,
     onBlur,
     required,
-    disableRipple
+    disableRipple,
+    className,
+    ...rest
   }) => {
 
     const handleChange = useCallback(
@@ -40,14 +44,12 @@ const CheckboxMUI = I18N(
         size={size}
         required={required}
         disableRipple={disableRipple}
+        {...passRest(rest)}
       />
     );
 
     return (
-      <FormGroup
-        data-lf-field-name={name}
-        className="lf-control-checkbox"
-      >
+      <FormGroup {...makeClassName('checkbox', name, className)}>
         {label && (
           <FormControlLabel
             labelPlacement={labelPlacement ? labelPlacement : undefined}

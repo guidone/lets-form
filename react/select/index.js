@@ -1,9 +1,14 @@
 import React, { useCallback } from 'react';
 import _ from 'lodash';
 
-import { I18N, RequiredIcon } from '../../components';
-import { makeWidthStyle, passRest, filterOptions, i18nOptions } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { RequiredIcon } from '../../components/required-icon';
+import { makeWidthStyle } from '../../helpers/make-width-style';
+import { i18nOptions } from '../../helpers/i18n-options';
+import { filterOptions } from '../../helpers/filter-options';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const Select = I18N(
   ({
@@ -25,7 +30,7 @@ const Select = I18N(
     options,
     filterValue,
     filterKey,
-
+    className,
     ...rest
   }) => {
     const hasError = error && _.isString(error);
@@ -43,10 +48,7 @@ const Select = I18N(
     }
 
     return (
-      <div
-        className="lf-control-select lf-form-react-control-group"
-        data-lf-field-name={name}
-      >
+      <div {...makeClassName('select', name, 'lf-form-react-control-group', className)}>
         <label for={name}>
           {label}
           {required && <RequiredIcon />}

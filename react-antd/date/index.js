@@ -10,6 +10,7 @@ const AntdDate = I18N(
   ({
     onChange,
     value,
+    className,
     ...rest
   }) => {
 
@@ -37,7 +38,6 @@ const AntdDate = I18N(
     return (
       <AntdGenericDate
         value={currentValue}
-        className="lf-control-date"
         component="date"
         onChange={handleChange}
         {...rest}

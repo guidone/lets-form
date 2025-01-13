@@ -29,7 +29,7 @@ const SelectDatTime = I18N(
       }
     }
     const [currentValue, setCurrentValue] = useState(initialValue);
-    
+
     // send always date string in format yyyy-mm-dd
     const handleChange = useCallback(
       d => {
@@ -49,6 +49,7 @@ const SelectDatTime = I18N(
         value={currentValue}
         onChange={handleChange}
         lfLocale={lfLocale}
+        component="datetime"
         {...passRest(rest)}
         withTime={true}
       />

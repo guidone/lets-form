@@ -1,8 +1,8 @@
 import React, { useCallback, useMemo } from 'react';
 
-import { I18N } from '../../components';
+import { I18N } from '../../components/i18n';
 import { MuiGenericSelect } from '../../components/mui-select';
-import { i18nOptions } from '../../helpers';
+import { i18nOptions } from '../../helpers/i18n-options';
 import { lfLog } from '../../helpers/lf-log';
 
 const Multiselect = I18N(
@@ -34,7 +34,6 @@ const Multiselect = I18N(
 
     return (
       <MuiGenericSelect
-        className="lf-control-multiselect"
         component="multiselect"
         onChange={handleChange}
         renderValue={renderValue}
@@ -42,7 +41,7 @@ const Multiselect = I18N(
         value={value || []}
         {...rest}
       />
-    )
+    );
   },
   ['label', 'hint', 'placeholder'],
   {

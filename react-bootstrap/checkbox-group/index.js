@@ -2,9 +2,11 @@ import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
 import Form from 'react-bootstrap/Form';
 
-import { RequiredIcon, I18N } from '../../components';
-import { i18nOptions } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { RequiredIcon } from '../../components/required-icon';
+import { i18nOptions } from '../../helpers/i18n-options';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 const CheckboxGroupBootstrap = I18N(
   ({
@@ -21,6 +23,7 @@ const CheckboxGroupBootstrap = I18N(
     onChange,
     onBlur,
     options = [],
+    className,
     ...rest
   }) => {
     const [values, setValues] = useState(value ?? []);
@@ -40,10 +43,7 @@ const CheckboxGroupBootstrap = I18N(
     );
 
     return (
-      <Form.Group
-        className="lf-control-checkbox-group"
-        data-lf-field-name={name}
-      >
+      <Form.Group {...makeClassName('checkbox-group', name, className)}>
         <Form.Label>
           {label}
           {required && <RequiredIcon />}

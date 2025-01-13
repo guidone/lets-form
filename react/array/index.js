@@ -5,6 +5,7 @@ import { ListArray } from '../../common';
 import LetsForm from '../../react/index';
 import { RequiredIcon, I18N } from '../../components';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 import './array.scss';
 
@@ -15,15 +16,13 @@ const ListArrayReact = I18N(
     tooltip,
     name,
     label,
+    className,
     ...rest
   }) => {
     const hasError = rest.error && _.isString(rest.error?.errorMessage) && rest.error?.errorMessage;
 
     return (
-      <div
-        className="lf-control-array lf-form-react-control-group"
-        data-lf-field-name={name}
-      >
+      <div {...makeClassName('array', name, 'lf-form-react-control-group', className)}>
         <label for={name}>
           {label}
           {required && <RequiredIcon />}

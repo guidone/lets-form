@@ -8,7 +8,7 @@ import { DesktopTimePicker } from '@mui/x-date-pickers/DesktopTimePicker';
 import { I18N } from '../../components/i18n';
 import { lfLog } from '../../helpers/lf-log';
 import { passRest } from '../../helpers/pass-rest';
-
+import { makeClassName } from '../../helpers/make-class-name';
 import { isValidTime } from '../../helpers/is-valid-time';
 import { timeToDayJSTime } from '../../helpers/time-to-dayjs-time';
 import { makeWidthStyle } from '../../helpers/make-width-style';
@@ -77,10 +77,7 @@ const Time = I18N(
     }
 
     return (
-      <div
-        data-lf-field-name={name}
-        className={className}
-      >
+      <div {...makeClassName('time', name, className)}>
         <FormControl
           required={required}
           error={error != null}

@@ -7,9 +7,11 @@ import FormGroup from '@mui/material/FormGroup';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { I18N } from '../../components';
-import { i18nOptions, passRest } from '../../helpers';
+import { I18N } from '../../components/i18n';
+import { i18nOptions } from '../../helpers/i18n-options';
+import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
+import { makeClassName } from '../../helpers/make-class-name';
 
 // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -30,6 +32,7 @@ const CheckboxGroup = I18N(
     readOnly,
     onBlur,
     required,
+    className,
     ...rest
   }) => {
     const [currentValue, setCurrentValue] = useState(_.isArray(value) ? value : [])
@@ -51,8 +54,7 @@ const CheckboxGroup = I18N(
 
     return (
       <FormControl
-        data-lf-field-name={name}
-        className="lf-control-radio-group"
+        {...makeClassName('radio-group', name, className)}
         required={required}
         error={error != null}
       >
