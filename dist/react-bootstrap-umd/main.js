@@ -1,4 +1,4 @@
-/* LetsForm react-bootstrap v0.12.4 - UMD */
+/* LetsForm react-bootstrap v0.12.5 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-hook-form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-hook-form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button'], factory) :
@@ -19711,7 +19711,7 @@
         Component = MissingComponent;
       }
       // remove mandatory fields and platform specific fields
-      var additionalFields = _.omit(field, ['id', 'name', 'label', /*'hint',*/'disabled', 'readOnly', 'plaintext', /*'size', 'placeholder',*/'component'].concat(_toConsumableArray(FRAMEWORKS)));
+      var additionalFields = _omit(field, ['id', 'name', 'label', /*'hint',*/'disabled', 'readOnly', 'plaintext', /*'size', 'placeholder',*/'component'].concat(_toConsumableArray(FRAMEWORKS)));
       var renderFieldsParams = {
         Wrapper: Wrapper,
         GroupWrapper: GroupWrapper,
@@ -19788,7 +19788,7 @@
           })
         }), function (column) {
           return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
-            fields: field.fields && _.isArray(field.fields[column]) ? field.fields[column] : [],
+            fields: field.fields && _isArray(field.fields[column]) ? field.fields[column] : [],
             disabled: field.disabled ? true : disabled,
             // pass disabled status to inner components
             prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
@@ -19838,7 +19838,7 @@
               }
             }, additionalFields, field[framework]), function (tab) {
               return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
-                fields: field.fields && _.isArray(field.fields[tab]) ? field.fields[tab] : [],
+                fields: field.fields && _isArray(field.fields[tab]) ? field.fields[tab] : [],
                 disabled: field.disabled ? true : disabled,
                 // pass disabled status to inner components
                 prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
@@ -19890,7 +19890,7 @@
               }
             }, additionalFields, field[framework]), function (step) {
               return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
-                fields: field.fields && _.isArray(field.fields[step]) ? field.fields[step] : [],
+                fields: field.fields && _isArray(field.fields[step]) ? field.fields[step] : [],
                 disabled: field.disabled ? true : disabled,
                 // pass disabled status to inner components
                 prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
