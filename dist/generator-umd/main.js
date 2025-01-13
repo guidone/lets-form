@@ -1,4 +1,4 @@
-/* LetsForm Generator v0.12.3 - UMD */
+/* LetsForm Generator v0.12.4 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button'), require('antd'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button', 'antd', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
@@ -567,6 +567,9 @@
   }
   function _slicedToArray(arr, i) {
     return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+  }
+  function _toArray(arr) {
+    return _arrayWithHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableRest();
   }
   function _toConsumableArray(arr) {
     return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
@@ -17409,20 +17412,31 @@
     };
   }();
 
+  var makeClassName$1 = function makeClassName() {
+    var _Array$from = Array.from(arguments),
+      _Array$from2 = _toArray(_Array$from),
+      component = _Array$from2[0],
+      name = _Array$from2[1],
+      rest = _Array$from2.slice(2);
+    return {
+      className: classNames.apply(void 0, ["lf-control-".concat(component), "lf-field-".concat(name)].concat(_toConsumableArray(rest !== null && rest !== void 0 ? rest : []))),
+      'data-lf-field-name': name
+    };
+  };
+
   var css_248z$T = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
   styleInject(css_248z$T);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
-      name = _ref.name;
+      name = _ref.name,
+      className = _ref.className;
     if (!_isEmpty(text)) {
-      return /*#__PURE__*/React$1.createElement("div", {
-        className: "lf-control-placeholder",
-        "data-lf-field-name": name,
+      return /*#__PURE__*/React$1.createElement("div", _extends({}, makeClassName$1('placeholder', name, className), {
         dangerouslySetInnerHTML: {
           __html: microdown.parse(text)
         }
-      });
+      }));
     } else {
       return /*#__PURE__*/React$1.createElement("div", null);
     }
@@ -17512,13 +17526,10 @@
     React$1.useEffect(function () {
       setIsOpen(open);
     }, [open]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: classNames('lf-control-group', "lf-border-".concat(border), {
-        'open': isOpen,
-        'close': !isOpen
-      })
-    }, /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('group', name, "lf-border-".concat(border), {
+      'open': isOpen,
+      'close': !isOpen
+    }), /*#__PURE__*/React$1.createElement("div", {
       role: "separator",
       className: classNames('header', align)
     }, /*#__PURE__*/React$1.createElement("span", {
@@ -17549,14 +17560,13 @@
       maxHeight = _ref.maxHeight,
       marginTop = _ref.marginTop,
       marginBottom = _ref.marginBottom,
+      className = _ref.className,
       align = _ref.align;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-placeholder-image",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement("div", _extends({}, makeClassName$1('placeholder-image', name, className), {
       style: {
         textAlign: align ? align : undefined
       }
-    }, url && /*#__PURE__*/React$1.createElement("img", {
+    }), url && /*#__PURE__*/React$1.createElement("img", {
       src: url,
       alt: label || name,
       style: {
@@ -17588,10 +17598,7 @@
     var name = _ref.name,
       size = _ref.size,
       color = _ref.color;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-divider",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('divider', name), /*#__PURE__*/React$1.createElement("div", {
       className: "bar",
       style: {
         height: "".concat(size, "px"),
@@ -17606,16 +17613,14 @@
     default: Divider
   });
 
-  var _excluded$1P = ["name", "view"];
+  var _excluded$1W = ["name", "view", "className"];
   var ReactView = function ReactView(_ref) {
     var name = _ref.name,
       view = _ref.view,
-      rest = _objectWithoutProperties(_ref, _excluded$1P);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1W);
     var View = view;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-react-view",
-      "data-lf-field-name": name
-    }, View && /*#__PURE__*/React$1.createElement(View, _extends({
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('react-view', name, className), View && /*#__PURE__*/React$1.createElement(View, _extends({
       name: name
     }, rest)));
   };
@@ -18094,7 +18099,7 @@
   var css_248z$M = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$M);
 
-  var _excluded$1O = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$1V = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -18120,7 +18125,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$1O);
+      rest = _objectWithoutProperties(_ref, _excluded$1V);
     var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -18154,10 +18159,7 @@
         style: makeWidthStyle(fullWidth, width)
       }, passRest(_omit(rest, 'label')), LinkProps));
     }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-control-button', className, _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
-      "data-lf-field-name": name
-    }, inner);
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('button', name, className, _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)), inner);
   };
   var MakeButton = function MakeButton(ButtonComponent, OnStateProps, OffStateProps, LinkProps) {
     return function (props) {
@@ -18193,7 +18195,6 @@
       _useState2 = _slicedToArray(_useState, 2),
       values = _useState2[0],
       setValues = _useState2[1];
-    console.log('options', options);
     var handleClick = React$1.useCallback(function (value, name) {
       var newValues = multiple ? _objectSpread2(_objectSpread2({}, values), {}, _defineProperty$1({}, name, value)) : _defineProperty$1({}, name, value);
       setValues(newValues);
@@ -18210,10 +18211,9 @@
       style.display = 'flex';
       style.justifyContent = justifyContent;
     }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-button-toggle-group-container",
+    return /*#__PURE__*/React$1.createElement("div", _extends({}, makeClassName$1('button-toggle-group-container'), {
       style: style
-    }, (options !== null && options !== void 0 ? options : []).map(function (_ref4) {
+    }), (options !== null && options !== void 0 ? options : []).map(function (_ref4) {
       var value = _ref4.value,
         label = _ref4.label,
         image = _ref4.image;
@@ -18242,10 +18242,7 @@
     var name = _ref.name,
       children = _ref.children,
       columns = _ref.columns;
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-columns"
-    }, (columns || []).filter(function (column) {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('columns', name), (columns || []).filter(function (column) {
       return column.hidden !== true;
     }).map(function (column) {
       return /*#__PURE__*/React$1.createElement("div", {
@@ -20123,7 +20120,7 @@
   var css_248z$I = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
   styleInject(css_248z$I);
 
-  var _excluded$1N = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
+  var _excluded$1U = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
   var DEFAULT_FORM = {
     version: 2,
     fields: []
@@ -20195,7 +20192,7 @@
         resetAfterSubmit = _ref2$resetAfterSubmi === void 0 ? true : _ref2$resetAfterSubmi,
         formContext = _ref2.context,
         errors = _ref2.errors,
-        rest = _objectWithoutProperties(_ref2, _excluded$1N);
+        rest = _objectWithoutProperties(_ref2, _excluded$1U);
       var showErrors = form.showErrors,
         connectors = form.connectors;
       var _useState = React$1.useState(prealoadComponents),
@@ -20626,7 +20623,7 @@
     return LazyWithPreload;
   }
 
-  var _excluded$1M = ["framework", "children"];
+  var _excluded$1T = ["framework", "children"];
   var Fields$6 = {
     'input-text': {
       'react-rsuite5': lazyPreload(function () {
@@ -20811,7 +20808,7 @@
   var LetsForm$5 = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1M);
+      rest = _objectWithoutProperties(_ref, _excluded$1T);
     var refForm = React$1.useRef();
     React$1.useImperativeHandle(ref, function () {
       return {
@@ -20826,7 +20823,7 @@
     }, rest), children);
   });
 
-  var _excluded$1L = ["framework", "children"];
+  var _excluded$1S = ["framework", "children"];
   var Fields$5 = {
     'input-text': {
       'react-material-ui': lazyPreload(function () {
@@ -20976,7 +20973,7 @@
   var LetsForm$4 = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1L);
+      rest = _objectWithoutProperties(_ref, _excluded$1S);
     var refForm = React$1.useRef();
     React$1.useImperativeHandle(ref, function () {
       return {
@@ -20991,7 +20988,7 @@
     }, rest), children);
   });
 
-  var _excluded$1K = ["framework", "children"];
+  var _excluded$1R = ["framework", "children"];
   var Fields$4 = {
     'input-text': {
       'react': lazyPreload(function () {
@@ -21111,7 +21108,7 @@
   var LetsForm$3 = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1K);
+      rest = _objectWithoutProperties(_ref, _excluded$1R);
     var refForm = React$1.useRef();
     React$1.useImperativeHandle(ref, function () {
       return {
@@ -21126,7 +21123,7 @@
     }, rest), children);
   });
 
-  var _excluded$1J = ["framework", "children"];
+  var _excluded$1Q = ["framework", "children"];
   var Fields$3 = {
     'input-text': {
       'react-bootstrap': lazyPreload(function () {
@@ -21256,7 +21253,7 @@
   var LetsForm$2 = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1J);
+      rest = _objectWithoutProperties(_ref, _excluded$1Q);
     var refForm = React$1.useRef();
     React$1.useImperativeHandle(ref, function () {
       return {
@@ -21271,7 +21268,7 @@
     }, rest), children);
   });
 
-  var _excluded$1I = ["framework", "children"];
+  var _excluded$1P = ["framework", "children"];
   var Fields$2 = {
     'input-text': {
       'react-antd': lazyPreload(function () {
@@ -21431,7 +21428,7 @@
   var LetsForm$1 = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1I);
+      rest = _objectWithoutProperties(_ref, _excluded$1P);
     var refForm = React$1.useRef();
     React$1.useImperativeHandle(ref, function () {
       return {
@@ -21446,7 +21443,7 @@
     }, rest), children);
   });
 
-  var _excluded$1H = ["framework", "children"];
+  var _excluded$1O = ["framework", "children"];
   var Fields$1 = {
     'input-text': {
       'react-mantine': lazyPreload(function () {
@@ -21601,7 +21598,7 @@
   var LetsForm = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$1H);
+      rest = _objectWithoutProperties(_ref, _excluded$1O);
     var refForm = React$1.useRef();
     React$1.useImperativeHandle(ref, function () {
       return {
@@ -21674,7 +21671,7 @@
   var css_248z$H = ".lf-form-react-rsuite5 .lf-control-input-text .rs-form-control-wrapper > .rs-input,\n.lf-form-react-rsuite5 .lf-control-input-text .rs-form-control-wrapper > .rs-input-number {\n  width: 100%;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-full-width .rs-input-group {\n  width: 100%;\n}\n.lf-form-react-rsuite5 .lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-lg .lf-prefix-icon {\n  max-height: 22px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-md .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-sm .lf-prefix-icon {\n  max-height: 10px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-xs .lf-prefix-icon {\n  max-height: 4px;\n}";
   styleInject(css_248z$H);
 
-  var _excluded$1G = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "lfOnEnter"];
+  var _excluded$1N = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "className", "lfOnEnter"];
   var TextInput$4 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -21705,9 +21702,10 @@
       inputType = _ref.inputType,
       _ref$inside = _ref.inside,
       inside = _ref$inside === void 0 ? false : _ref$inside,
+      className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$1G);
+      rest = _objectWithoutProperties(_ref, _excluded$1N);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -21732,10 +21730,7 @@
       })
     }, passRest(rest))));
     var needsGroup = postfix || prefix;
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      className: classNames('lf-control-input-text', _defineProperty$1({}, "lf-size-".concat(size), size != null)),
-      "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, makeClassName$1('input-text', name, className, _defineProperty$1({}, "lf-size-".concat(size), size != null)), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/React$1.createElement(rsuite.InputGroup, {
       inside: inside
@@ -21748,6 +21743,7 @@
     default: TextInput$4
   });
 
+  var _excluded$1M = ["name", "label", "hint", "value", "size", "tooltip", "disabled", "required", "onChange", "checkedChildren", "unCheckedChildren", "className", "error"];
   var ToggleInput = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -21763,16 +21759,16 @@
       onChange = _ref.onChange,
       checkedChildren = _ref.checkedChildren,
       unCheckedChildren = _ref.unCheckedChildren,
-      error = _ref.error;
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      controlId: name,
-      className: "lf-control-toggle",
-      "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      className = _ref.className,
+      error = _ref.error,
+      rest = _objectWithoutProperties(_ref, _excluded$1M);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({
+      controlId: name
+    }, makeClassName$1('toggle', name, className)), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(rsuite.Toggle, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.Toggle, _extends({
       name: name,
       checked: value,
       onChange: onChange,
@@ -21780,7 +21776,7 @@
       unCheckedChildren: unCheckedChildren && unCheckedChildren !== '' ? unCheckedChildren : undefined,
       checkedChildren: checkedChildren && checkedChildren !== '' ? checkedChildren : undefined,
       size: size
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded RSuite5.ToggleInput');
 
@@ -21792,7 +21788,7 @@
   var css_248z$G = ".lf-control-select-option-rsuite5 img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  margin-right: 6px;\n  margin-top: -4px;\n  display: inline-block;\n}";
   styleInject(css_248z$G);
 
-  var _excluded$1F = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions", "fullWidth", "width"];
+  var _excluded$1L = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions", "fullWidth", "width", "className"];
   var menuItem = function menuItem(_value, item) {
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-select-option-rsuite5"
@@ -21834,12 +21830,12 @@
       showImageOptions = _ref.showImageOptions,
       fullWidth = _ref.fullWidth,
       width = _ref.width,
-      rest = _objectWithoutProperties(_ref, _excluded$1F);
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      className: "lf-control-select",
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1L);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({}, makeClassName$1('select', name, className), {
       controlId: name,
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+    }), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
@@ -21881,7 +21877,7 @@
   var css_248z$F = ".lf-form-react-rsuite5 .lf-control-array .array-error-message {\n  color: #ff6633;\n}";
   styleInject(css_248z$F);
 
-  var _excluded$1E = ["hint", "required", "tooltip", "name", "label"];
+  var _excluded$1K = ["hint", "required", "tooltip", "name", "label", "className"];
   var ListArrayRSuite5 = I18N(function (_ref) {
     var _rest$error;
     var hint = _ref.hint,
@@ -21889,11 +21885,9 @@
       tooltip = _ref.tooltip,
       name = _ref.name,
       label = _ref.label,
-      rest = _objectWithoutProperties(_ref, _excluded$1E);
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      "data-lf-field-name": name,
-      className: "lf-control-array"
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1K);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, makeClassName$1('array', name, className), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm$5,
@@ -21933,12 +21927,12 @@
   var css_248z$E = ".lf-form-react-rsuite5 .lf-control-input-number.rs-form-group .rs-input-group {\n  width: auto;\n}";
   styleInject(css_248z$E);
 
-  var _excluded$1D = ["name", "label", "hint", "value", "size", "placeholder", "min", "max", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "width", "fullWidth", "onChange", "step", "onBlur", "inside", "allowClear"];
+  var _excluded$1J = ["name", "label", "hint", "value", "size", "placeholder", "min", "max", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "width", "fullWidth", "onChange", "step", "onBlur", "inside", "allowClear", "className"];
   var hasDecimals$3 = function hasDecimals(f) {
     return _isString(f) && (f.includes(',') || f.includes('.'));
   };
   var InputNumberRSuite5 = I18N(function (_ref) {
-    var _classNames;
+    var _makeClassName;
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
@@ -21968,7 +21962,8 @@
       _ref$inside = _ref.inside,
       inside = _ref$inside === void 0 ? false : _ref$inside,
       allowClear = _ref.allowClear,
-      rest = _objectWithoutProperties(_ref, _excluded$1D);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1J);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : null),
       _useState2 = _slicedToArray(_useState, 2),
       currentValue = _useState2[0],
@@ -21997,11 +21992,9 @@
       onChange(undefined);
       setCurrentValue(null);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      "data-lf-field-name": name,
-      className: classNames('lf-control-input-number', (_classNames = {}, _defineProperty$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({}, makeClassName$1('input-number', name, className, (_makeClassName = {}, _defineProperty$1(_makeClassName, "lf-size-".concat(size), size != null), _defineProperty$1(_makeClassName, 'lf-full-width', fullWidth || width != null), _makeClassName)), {
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+    }), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
@@ -22039,7 +22032,7 @@
   var css_248z$D = ".lf-control-date.lf-full-width .rs-picker-date {\n  width: 100%;\n}";
   styleInject(css_248z$D);
 
-  var _excluded$1C = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "fullWidth", "width", "error", "onChange", "onBlur", "appearance", "format", "lfLocale"];
+  var _excluded$1I = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "fullWidth", "width", "error", "onChange", "onBlur", "appearance", "format", "lfLocale", "className", "component"];
   var RSuiteGenericDate = function RSuiteGenericDate(_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -22062,14 +22055,14 @@
       appearance = _ref.appearance,
       format = _ref.format;
       _ref.lfLocale;
-      var rest = _objectWithoutProperties(_ref, _excluded$1C);
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      "data-lf-field-name": name,
-      className: classNames('lf-control-date', {
-        'lf-full-width': fullWidth || width != null
-      }),
+      var className = _ref.className,
+      component = _ref.component,
+      rest = _objectWithoutProperties(_ref, _excluded$1I);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({}, makeClassName$1(component, name, className, {
+      'lf-full-width': fullWidth || width != null
+    }), {
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+    }), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
@@ -22086,11 +22079,11 @@
     }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   };
 
-  var _excluded$1B = ["onChange", "value"];
+  var _excluded$1H = ["onChange", "value"];
   var SelectDate$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1B);
+      rest = _objectWithoutProperties(_ref, _excluded$1H);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -22109,6 +22102,7 @@
       }
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(RSuiteGenericDate, _extends({
+      component: "date",
       value: currentValue,
       onChange: handleChange
     }, passRest(rest)));
@@ -22120,10 +22114,10 @@
     default: SelectDate$1
   });
 
-  var css_248z$C = ".lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text {\n  align-items: inherit;\n  margin-top: -1px;\n  display: inline-block;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lt-control-checkbox .rs-form-help-text svg {\n  margin-top: -2px;\n}";
+  var css_248z$C = ".lf-form-react-rsuite5 .lf-control-checkbox .rs-form-help-text {\n  align-items: inherit;\n  margin-top: -1px;\n  display: inline-block;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lf-control-checkbox .rs-form-help-text svg {\n  margin-top: -2px;\n}";
   styleInject(css_248z$C);
 
-  var _excluded$1A = ["name", "label", "hint", "value", "tooltip", "indeterminate", "error", "onChange"];
+  var _excluded$1G = ["name", "label", "hint", "value", "tooltip", "indeterminate", "error", "onChange", "className"];
   var CheckboxRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -22134,7 +22128,8 @@
       indeterminate = _ref.indeterminate,
       error = _ref.error,
       onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$1A);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1G);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : null),
       _useState2 = _slicedToArray(_useState, 2),
       isChecked = _useState2[0],
@@ -22156,10 +22151,7 @@
       onChange(newValue);
       setIsChecked(newValue);
     }, [onChange, indeterminate, isChecked]);
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      "data-lf-field-name": name,
-      className: "lt-control-checkbox"
-    }, /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, makeClassName$1('checkbox', name, className), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
     }, /*#__PURE__*/React$1.createElement(rsuite.Checkbox, _extends({
       indeterminate: indeterminate && isChecked === null,
@@ -22177,7 +22169,7 @@
     default: CheckboxRSuite
   });
 
-  var _excluded$1z = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "color", "onChange", "onBlur", "options"];
+  var _excluded$1F = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "color", "onChange", "onBlur", "options", "className"];
   var CheckboxGroupRSuite$1 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -22196,11 +22188,9 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$1z);
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      "data-lf-field-name": name,
-      className: "lf-control-checkbox-group"
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1F);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, makeClassName$1('checkbox-group', name, className), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _.isString(error) ? error : undefined
@@ -22233,7 +22223,7 @@
   var css_248z$B = ".lf-form-react-rsuite5 .lf-control-slider .rs-slider {\n  margin-bottom: 40px;\n}";
   styleInject(css_248z$B);
 
-  var _excluded$1y = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks"];
+  var _excluded$1E = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks", "className"];
   var validateMarks = function validateMarks(marks) {
     return _isArray(marks) && marks.every(function (mark) {
       return _isObject(mark) && mark.value && mark.label;
@@ -22258,17 +22248,17 @@
       onBlur = _ref.onBlur,
       _ref$marks = _ref.marks,
       marks = _ref$marks === void 0 ? [] : _ref$marks,
-      rest = _objectWithoutProperties(_ref, _excluded$1y);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1E);
     var handleRenderMark = React$1.useCallback(function (number) {
       var found = marks.find(function (mark) {
         return mark && mark.value === number;
       });
       return found ? found.label : undefined;
     }, [marks]);
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      controlId: name,
-      className: "lf-control-slider"
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({
+      controlId: name
+    }, makeClassName$1('slider', name, className)), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
@@ -22302,7 +22292,7 @@
     default: SliderRsuite
   });
 
-  var _excluded$1x = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options", "appearance"];
+  var _excluded$1D = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options", "appearance", "className"];
   var RadioGroupRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -22324,12 +22314,11 @@
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       appearance = _ref.appearance,
-      rest = _objectWithoutProperties(_ref, _excluded$1x);
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      controlId: name,
-      className: "lf-control-radio-group",
-      "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1D);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({
+      controlId: name
+    }, makeClassName$1('radio-group', name, className)), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _.isString(error) ? error : undefined
@@ -22379,11 +22368,9 @@
       error = _ref.error,
       trigger = _ref.trigger,
       onChange = _ref.onChange,
-      onBlur = _ref.onBlur;
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      "data-lf-field-name": name,
-      className: "lf-control-input-tag"
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      onBlur = _ref.onBlur,
+      className = _ref.className;
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, makeClassName$1('input-tag', name, className), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
@@ -22405,7 +22392,7 @@
     default: InputTag
   });
 
-  var _excluded$1w = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside", "fullWidth", "width"];
+  var _excluded$1C = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside", "fullWidth", "width", "className"];
   var prepareMask = function prepareMask(str) {
     if (typeof str !== 'string' || str.length === 0) {
       return [];
@@ -22452,7 +22439,8 @@
       inside = _ref$inside === void 0 ? false : _ref$inside,
       fullWidth = _ref.fullWidth,
       width = _ref.width,
-      rest = _objectWithoutProperties(_ref, _excluded$1w);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1C);
     var parsedMask = prepareMask(mask);
     var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
@@ -22469,11 +22457,9 @@
       mask: parsedMask
     }, passRest(rest))));
     var needsGroup = postfix || prefix;
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      "data-lf-field-name": name,
-      className: "lf-control-input-mask",
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({}, makeClassName$1('input-mask', name, className), {
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+    }), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !needsGroup && inner, needsGroup && /*#__PURE__*/React$1.createElement(rsuite.InputGroup, {
       inside: inside
@@ -22486,14 +22472,14 @@
     default: InputMask
   });
 
-  var _excluded$1v = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows"];
+  var _excluded$1B = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows", "className"];
   var ControlTextare = function ControlTextare(props) {
     return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends({
       as: "textarea"
     }, props));
   };
   var Textarea$3 = I18N(function (_ref) {
-    var _classNames;
+    var _makeClassName;
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
@@ -22515,7 +22501,8 @@
       width = _ref.width,
       _ref$rows = _ref.rows,
       rows = _ref$rows === void 0 ? 10 : _ref$rows,
-      rest = _objectWithoutProperties(_ref, _excluded$1v);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1B);
     var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
     }, /*#__PURE__*/React$1.createElement(ControlTextare, _extends({
@@ -22530,11 +22517,9 @@
       readOnly: readOnly,
       style: makeWidthStyle(fullWidth, width)
     }, passRest(rest))));
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      className: classNames('lf-control-textarea', (_classNames = {}, _defineProperty$1(_classNames, "lf-size-".concat(size), size != null), _defineProperty$1(_classNames, 'lf-full-width', fullWidth || width != null), _classNames)),
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({}, makeClassName$1('textarea', name, className, (_makeClassName = {}, _defineProperty$1(_makeClassName, "lf-size-".concat(size), size != null), _defineProperty$1(_makeClassName, 'lf-full-width', fullWidth || width != null), _makeClassName)), {
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+    }), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), inner, hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
@@ -22545,6 +22530,7 @@
     default: Textarea$3
   });
 
+  var _excluded$1A = ["name", "label", "hint", "value", "size", "tooltip", "disabled", "readOnly", "required", "error", "allowHalf", "cleanable", "max", "color", "onChange", "onBlur", "className"];
   var RateRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -22567,15 +22553,16 @@
       max = _ref.max,
       color = _ref.color,
       onChange = _ref.onChange,
-      onBlur = _ref.onBlur;
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      controlId: name,
-      className: "lets-form-input-tag"
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      onBlur = _ref.onBlur,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1A);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({
+      controlId: name
+    }, makeClassName$1('rate', name, className)), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
-    }, /*#__PURE__*/React$1.createElement(rsuite.Rate, {
+    }, /*#__PURE__*/React$1.createElement(rsuite.Rate, _extends({
       name: name,
       value: value,
       onChange: onChange,
@@ -22587,7 +22574,7 @@
       allowHalf: allowHalf,
       cleanable: cleanable,
       readOnly: readOnly
-    })), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Rate');
 
@@ -22604,11 +22591,9 @@
       tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
       text = _ref.text,
       _ref$required = _ref.required,
-      required = _ref$required === void 0 ? false : _ref$required;
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      "data-lf-field-name": name,
-      className: "lf-control-placeholder"
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      required = _ref$required === void 0 ? false : _ref$required,
+      className = _ref.className;
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, makeClassName$1('placeholder', name, className), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Placeholder, {
       text: text
@@ -22621,7 +22606,7 @@
     default: PlaceholderRSuite5
   });
 
-  var _excluded$1u = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width"];
+  var _excluded$1z = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width", "className"];
   var Multiselect$2 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -22652,13 +22637,12 @@
       fullWidth = _ref.fullWidth,
       multiselectMode = _ref.multiselectMode,
       width = _ref.width,
-      rest = _objectWithoutProperties(_ref, _excluded$1u);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1z);
     var Component = multiselectMode === 'tag' ? rsuite.TagPicker : rsuite.CheckPicker;
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      "data-lf-field-name": name,
-      className: "lf-control-multiselect",
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({}, makeClassName$1('checkbox-multiselect', name, className), {
       style: makeWidthStyle(fullWidth, width)
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+    }), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
@@ -22692,7 +22676,7 @@
   var css_248z$z = ".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n .rs-input-group-addon {\n  padding: 2px 4px !important;\n}\n.lf-input-text-i18n .rs-input-group-addon .status {\n  font-size: 10px;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear {\n  display: inline-block;\n  margin-left: 5px;\n  margin-top: -2px;\n  color: #666666;\n  text-decoration: none;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover {\n  color: #1675e0;\n}\n.lf-input-text-i18n .group-input-select {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-input-text-i18n .group-input-select .translation-control {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  width: unset !important;\n  z-index: 1;\n}\n.lf-input-text-i18n .group-input-select .translation-control .translated {\n  color: #999999;\n}\n.lf-input-text-i18n .group-input-select .select-control {\n  order: 1;\n  flex: 0 0;\n  align-self: center;\n  z-index: 2;\n  margin-left: 5px;\n}\n.lf-input-text-i18n .group-input-select.textarea .rs-input-group-addon {\n  position: absolute;\n  right: 2px;\n  top: 3px;\n}\n.lf-input-text-i18n .group-input-select.textarea textarea {\n  resize: none;\n}\n.lf-input-text-i18n .group-input-select.textarea .select-control {\n  align-self: self-start;\n}";
   styleInject(css_248z$z);
 
-  var _excluded$1t = ["value"];
+  var _excluded$1y = ["value"];
   var LANGUAGES_OPTIONS = Object.keys(LOCALES['language-names']).map(function (lang) {
     return {
       value: lang,
@@ -22710,7 +22694,7 @@
   };
   var TextareaAccepter = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     var value = _ref.value,
-      props = _objectWithoutProperties(_ref, _excluded$1t);
+      props = _objectWithoutProperties(_ref, _excluded$1y);
     return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends({
       ref: ref,
       as: "textarea",
@@ -22923,13 +22907,13 @@
   var css_248z$y = ".lf-form-react-rsuite5 .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-lg .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-xs .lf-icon {\n  max-width: 12px;\n  max-height: 12px;\n}";
   styleInject(css_248z$y);
 
-  var _excluded$1s = ["label", "icon", "hint", "tooltip"];
+  var _excluded$1x = ["label", "icon", "hint", "tooltip"];
   var RSuiteButton = function RSuiteButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint,
       tooltip = _ref.tooltip,
-      rest = _objectWithoutProperties(_ref, _excluded$1s);
+      rest = _objectWithoutProperties(_ref, _excluded$1x);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends({
@@ -22975,11 +22959,11 @@
     default: ReactView
   });
 
-  var _excluded$1r = ["onChange", "value"];
+  var _excluded$1w = ["onChange", "value"];
   var SelectDatetime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1r);
+      rest = _objectWithoutProperties(_ref, _excluded$1w);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -22999,7 +22983,8 @@
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(RSuiteGenericDate, _extends({
       value: currentValue,
-      onChange: handleChange
+      onChange: handleChange,
+      component: "datetime"
     }, passRest(rest)));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.DateTime');
@@ -23012,7 +22997,7 @@
   var css_248z$x = ".lf-form-react-rsuite5 .lf-control-tabs .tab-fields {\n  margin-top: 10px;\n}";
   styleInject(css_248z$x);
 
-  var _excluded$1q = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight"];
+  var _excluded$1v = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight", "className"];
   var Tabs = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -23023,7 +23008,8 @@
       reversed = _ref.reversed,
       justified = _ref.justified,
       pullRight = _ref.pullRight,
-      rest = _objectWithoutProperties(_ref, _excluded$1q);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1v);
     var active;
     if (value) {
       active = value;
@@ -23032,10 +23018,7 @@
         active = tabs[0].value;
       }
     }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-tabs",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(rsuite.Nav, _extends({
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('tabs', name, className), /*#__PURE__*/React$1.createElement(rsuite.Nav, _extends({
       appearance: appearance,
       reversed: reversed,
       justified: justified,
@@ -23060,7 +23043,7 @@
     default: Tabs
   });
 
-  var _excluded$1p = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption"];
+  var _excluded$1u = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption", "className"];
   var RadioTileRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23085,8 +23068,9 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      initalOption = _ref.initalOption;
-      _objectWithoutProperties(_ref, _excluded$1p);
+      initalOption = _ref.initalOption,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1u);
     var initialValue = value || initalOption;
     var _useState = React$1.useState(initialValue),
       _useState2 = _slicedToArray(_useState, 2),
@@ -23096,17 +23080,14 @@
       setCurrentValue(value);
       onChange(value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      className: "lf-control-input-text",
-      "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, makeClassName$1('radio-tile', name, className), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
-    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(rsuite.RadioTileGroup, {
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(rsuite.RadioTileGroup, _extends({
       value: currentValue,
       onChange: handleChange,
       inline: inline,
       disabled: disabled
-    }, (options || []).map(function (option) {
+    }, passRest(rest)), (options || []).map(function (option) {
       return /*#__PURE__*/React$1.createElement(rsuite.RadioTile, {
         key: option.value,
         label: option.label,
@@ -23140,8 +23121,8 @@
   var css_248z$w = ".lf-form-react-rsuite5 .lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-form-react-rsuite5 .lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-form-react-rsuite5 .lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
   styleInject(css_248z$w);
 
-  var _excluded$1o = ["superDisabled", "superSize", "disabled", "hint"],
-    _excluded2$1 = ["name", "label", "hint", "tooltip", "required", "onChange", "multiple", "removable", "disabledFileItem", "fileListVisible", "draggable", "disabled", "accept", "defaultValue", "listType", "uploadButtonLabel", "uploadButtonAppearance", "uploadButtonSize", "draggableText", "draggableHeight", "value"];
+  var _excluded$1t = ["superDisabled", "superSize", "disabled", "hint"],
+    _excluded2$1 = ["name", "label", "hint", "tooltip", "required", "onChange", "multiple", "removable", "disabledFileItem", "fileListVisible", "draggable", "disabled", "accept", "defaultValue", "listType", "uploadButtonLabel", "uploadButtonAppearance", "uploadButtonSize", "draggableText", "draggableHeight", "value", "className"];
   var makeDefaultValue$1 = function makeDefaultValue(defaultValue) {
     if (_isArray(defaultValue)) {
       return defaultValue;
@@ -23157,7 +23138,7 @@
       superSize = _ref.superSize;
       _ref.disabled;
       var hint = _ref.hint,
-      rest = _objectWithoutProperties(_ref, _excluded$1o);
+      rest = _objectWithoutProperties(_ref, _excluded$1t);
     var inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends({}, rest, {
       size: superSize,
       disabled: superDisabled
@@ -23196,6 +23177,7 @@
       _ref2$draggableHeight = _ref2.draggableHeight,
       draggableHeight = _ref2$draggableHeight === void 0 ? 200 : _ref2$draggableHeight,
       value = _ref2.value,
+      className = _ref2.className,
       rest = _objectWithoutProperties(_ref2, _excluded2$1);
     var _useState = React$1.useState(makeDefaultValue$1(value)),
       _useState2 = _slicedToArray(_useState, 2),
@@ -23227,10 +23209,7 @@
         hint: !tooltip && hint
       }, uploadButtonLabel || 'Upload');
     }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-upload",
-      "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('upload', name, className), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(rsuite.Uploader, _extends({
       autoUpload: false,
@@ -23257,7 +23236,7 @@
   var css_248z$v = ".lf-form-react-rsuite5 .lf-control-button-toggle-group .rs-form-control-wrapper {\n  display: block;\n}";
   styleInject(css_248z$v);
 
-  var _excluded$1n = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "options"];
+  var _excluded$1s = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "options", "className"];
   var RSuiteButtonsToggleGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23274,11 +23253,9 @@
       onChange = _ref.onChange,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$1n);
-    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, {
-      "data-lf-field-name": name,
-      className: "lf-control-button-toggle-group"
-    }, label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1s);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, makeClassName$1('button-toggle-group', name, className), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(rsuite.Form.Control, _extends({
       ButtonComponent: BiStateButton$5,
@@ -23318,7 +23295,7 @@
   var css_248z$t = ".lf-form-react-rsuite5 .lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-form-react-rsuite5 .lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-form-react-rsuite5 .lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-form-react-rsuite5 .lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
   styleInject(css_248z$t);
 
-  var _excluded$1m = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious"];
+  var _excluded$1r = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "className"];
   var i18nSteps$2 = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -23341,7 +23318,8 @@
       small = _ref.small,
       labelNext = _ref.labelNext,
       labelPrevious = _ref.labelPrevious,
-      rest = _objectWithoutProperties(_ref, _excluded$1m);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1r);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
       return obj.value === value;
@@ -23378,10 +23356,7 @@
         }
       }
     }, [value]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-steps",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(rsuite.Steps, _extends({
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('steps', name, className), /*#__PURE__*/React$1.createElement(rsuite.Steps, _extends({
       current: stepIdx,
       currentStatus: status,
       small: small
@@ -23417,7 +23392,7 @@
     default: Rsuite5Steps
   });
 
-  var _excluded$1l = ["name", "componentUrl", "defaultExport", "exportedKey", "onChange"];
+  var _excluded$1q = ["name", "componentUrl", "defaultExport", "exportedKey", "onChange"];
   var makeModuleName = function makeModuleName(name) {
     return "".concat(name, "Module");
   };
@@ -23442,7 +23417,7 @@
       exportedKey = _ref3.exportedKey,
       _ref3$onChange = _ref3.onChange,
       onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
-      rest = _objectWithoutProperties(_ref3, _excluded$1l);
+      rest = _objectWithoutProperties(_ref3, _excluded$1q);
     var eventsContainerId = React$1.useId();
     var containerId = React$1.useId();
     var _useState = React$1.useState(),
@@ -23530,7 +23505,7 @@
     }), error && /*#__PURE__*/React$1.createElement("div", null, "some error"));
   };
 
-  var _excluded$1k = ["name", "componentUrl", "onChange", "value", "defaultExport", "exportedKey"];
+  var _excluded$1p = ["name", "componentUrl", "onChange", "value", "defaultExport", "exportedKey"];
   var RSuite5ModuleComponent = function RSuite5ModuleComponent(_ref) {
     var name = _ref.name,
       componentUrl = _ref.componentUrl,
@@ -23538,7 +23513,7 @@
       value = _ref.value,
       defaultExport = _ref.defaultExport,
       exportedKey = _ref.exportedKey,
-      rest = _objectWithoutProperties(_ref, _excluded$1k);
+      rest = _objectWithoutProperties(_ref, _excluded$1p);
     return /*#__PURE__*/React$1.createElement(ModuleComponent, _extends({
       name: name,
       onChange: onChange,
@@ -23571,11 +23546,11 @@
     return undefined;
   };
 
-  var _excluded$1j = ["onChange", "value"];
+  var _excluded$1o = ["onChange", "value"];
   var SelectTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1j);
+      rest = _objectWithoutProperties(_ref, _excluded$1o);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -23596,7 +23571,8 @@
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(RSuiteGenericDate, _extends({
       value: currentValue,
-      onChange: handleChange
+      onChange: handleChange,
+      component: "time"
     }, passRest(rest)));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.SelectTime');
@@ -23608,12 +23584,11 @@
 
   var Hidden = function Hidden(_ref) {
     var name = _ref.name;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-hidden",
+    return /*#__PURE__*/React$1.createElement("div", _extends({}, makeClassName$1('hidden', name), {
       style: {
         padding: '10px'
       }
-    }, "Hidden field: ", /*#__PURE__*/React$1.createElement("em", null, name));
+    }), "Hidden field: ", /*#__PURE__*/React$1.createElement("em", null, name));
   };
   lfLog('Loaded RSuite5.Hidden');
 
@@ -23690,7 +23665,7 @@
     default: FormRsuite5
   });
 
-  var _excluded$1i = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
+  var _excluded$1n = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
 
   // DOC: https://mui.com/material-ui/api/input/
 
@@ -23721,21 +23696,18 @@
       color = _ref.color,
       width = _ref.width,
       prefix = _ref.prefix,
-      postfix = _ref.postfix;
-      _ref.component;
-      var disableUnderline = _ref.disableUnderline,
+      postfix = _ref.postfix,
+      component = _ref.component,
+      disableUnderline = _ref.disableUnderline,
       className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$1i);
+      rest = _objectWithoutProperties(_ref, _excluded$1n);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
     var controlId = React$1.useId();
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: className
-    }, /*#__PURE__*/React$1.createElement(FormControl, {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1(component, name, className), /*#__PURE__*/React$1.createElement(FormControl, {
       required: required,
       error: error != null,
       variant: variant !== null && variant !== void 0 ? variant : undefined,
@@ -23772,17 +23744,16 @@
     }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$1h = ["onChange"];
+  var _excluded$1m = ["onChange"];
   // DOC: https://mui.com/material-ui/api/input/
 
   var TextInput$3 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$1h);
+      rest = _objectWithoutProperties(_ref, _excluded$1m);
     var handleChange = React$1.useCallback(function (event) {
       onChange(event.target.value);
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(MuiGenericInput, _extends({
-      className: "lf-control-input-text",
       component: "input-text",
       onChange: handleChange
     }, rest));
@@ -23794,7 +23765,7 @@
     default: TextInput$3
   });
 
-  var _excluded$1g = ["name", "label", "hint", "value", "placeholder", "options", "filterKey", "filterValue", "component", "disabled", "readOnly", "required", "error", "multiple", "fullWidth", "width", "floatingLabel", "autoWidth", "size", "variant", "onChange", "onBlur", "className", "children"];
+  var _excluded$1l = ["name", "label", "hint", "value", "placeholder", "options", "filterKey", "filterValue", "component", "disabled", "readOnly", "required", "error", "multiple", "fullWidth", "width", "floatingLabel", "autoWidth", "size", "variant", "onChange", "onBlur", "className", "children"];
 
   // DOC: https://mui.com/material-ui/api/select/
 
@@ -23806,9 +23777,9 @@
       _ref.placeholder;
       var options = _ref.options,
       filterKey = _ref.filterKey,
-      filterValue = _ref.filterValue;
-      _ref.component;
-      var _ref$disabled = _ref.disabled,
+      filterValue = _ref.filterValue,
+      component = _ref.component,
+      _ref$disabled = _ref.disabled,
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
       _ref$readOnly = _ref.readOnly,
       readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
@@ -23827,7 +23798,7 @@
       onBlur = _ref.onBlur,
       className = _ref.className;
       _ref.children;
-      var rest = _objectWithoutProperties(_ref, _excluded$1g);
+      var rest = _objectWithoutProperties(_ref, _excluded$1l);
     var filteredOptions = filterOptions(options, filterValue, filterKey);
     var controlId = React$1.useId();
     var items;
@@ -23857,10 +23828,7 @@
     // si sposta e quando non e' in focus va a coprire il componente, se focus si sposta in alto
     // ma siccome lo spazio non se lo crea da solo, devi mettere la label anche nel componente select
     // altrimenti nella variante outlined vedi la label tagliata dalla riga del bordo.
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: className,
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(FormControl, {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1(component, name, className), /*#__PURE__*/React$1.createElement(FormControl, {
       size: size,
       disabled: disabled,
       required: required,
@@ -23890,16 +23858,15 @@
     }, passRest(rest)), items), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$1f = ["onChange", "value"];
+  var _excluded$1k = ["onChange", "value"];
   var MuiSelect = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1f);
+      rest = _objectWithoutProperties(_ref, _excluded$1k);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(MuiGenericSelect, _extends({
-      className: "lf-control-select",
       component: "select",
       value: value,
       onChange: handleChange
@@ -23914,6 +23881,7 @@
     default: MuiSelect
   });
 
+  var _excluded$1j = ["name", "label", "value", "disabled", "color", "onChange", "size", "labelPlacement", "onBlur", "required", "disableRipple", "className"];
   var Toggle$2 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23926,11 +23894,13 @@
       labelPlacement = _ref.labelPlacement,
       onBlur = _ref.onBlur,
       required = _ref.required,
-      disableRipple = _ref.disableRipple;
+      disableRipple = _ref.disableRipple,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1j);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
-    var switchCtrl = /*#__PURE__*/React$1.createElement(Switch, {
+    var switchCtrl = /*#__PURE__*/React$1.createElement(Switch, _extends({
       checked: value,
       onChange: handleChange,
       disabled: disabled,
@@ -23939,11 +23909,8 @@
       size: size || undefined,
       required: required,
       disableRipple: disableRipple
-    });
-    return /*#__PURE__*/React$1.createElement(FormGroup, {
-      "data-lf-field-name": name,
-      className: "lf-control-toggle"
-    }, label && /*#__PURE__*/React$1.createElement(FormControlLabel, {
+    }, passRest(rest)));
+    return /*#__PURE__*/React$1.createElement(FormGroup, makeClassName$1('toggle', name, className), label && /*#__PURE__*/React$1.createElement(FormControlLabel, {
       labelPlacement: labelPlacement || undefined,
       disabled: disabled,
       label: label,
@@ -23956,6 +23923,8 @@
     __proto__: null,
     default: Toggle$2
   });
+
+  var _excluded$1i = ["name", "label", "value", "disabled", "color", "onChange", "size", "labelPlacement", "onBlur", "required", "disableRipple", "className"];
 
   // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -23971,11 +23940,13 @@
       labelPlacement = _ref.labelPlacement,
       onBlur = _ref.onBlur,
       required = _ref.required,
-      disableRipple = _ref.disableRipple;
+      disableRipple = _ref.disableRipple,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1i);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
-    var checkboxCtrl = /*#__PURE__*/React$1.createElement(Checkbox$2, {
+    var checkboxCtrl = /*#__PURE__*/React$1.createElement(Checkbox$2, _extends({
       checked: value,
       onChange: handleChange,
       disabled: disabled,
@@ -23984,11 +23955,8 @@
       size: size,
       required: required,
       disableRipple: disableRipple
-    });
-    return /*#__PURE__*/React$1.createElement(FormGroup, {
-      "data-lf-field-name": name,
-      className: "lf-control-checkbox"
-    }, label && /*#__PURE__*/React$1.createElement(FormControlLabel, {
+    }, passRest(rest)));
+    return /*#__PURE__*/React$1.createElement(FormGroup, makeClassName$1('checkbox', name, className), label && /*#__PURE__*/React$1.createElement(FormControlLabel, {
       labelPlacement: labelPlacement ? labelPlacement : undefined,
       disabled: disabled,
       label: label,
@@ -24001,6 +23969,8 @@
     __proto__: null,
     default: CheckboxMUI
   });
+
+  var _excluded$1h = ["name", "label", "value", "disabled", "required", "color", "onChange", "size", "valueLabelDisplay", "onBlur", "error", "min", "max", "step", "hint", "showMarks", "customMarks", "width", "fullWidth", "className"];
 
   // DOCS: https://mui.com/material-ui/api/slider/
 
@@ -24024,21 +23994,20 @@
       showMarks = _ref.showMarks,
       customMarks = _ref.customMarks,
       width = _ref.width,
-      fullWidth = _ref.fullWidth;
+      fullWidth = _ref.fullWidth,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1h);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-slider",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(FormControl, {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('slider', name, className), /*#__PURE__*/React$1.createElement(FormControl, {
       required: required,
       error: error != null,
       fullWidth: fullWidth,
       sx: {
         mt: 2
       }
-    }, label && /*#__PURE__*/React$1.createElement(FormLabel, null, label), /*#__PURE__*/React$1.createElement(Slider$1, {
+    }, label && /*#__PURE__*/React$1.createElement(FormLabel, null, label), /*#__PURE__*/React$1.createElement(Slider$1, _extends({
       name: name,
       marks: customMarks ? customMarks : showMarks,
       value: value,
@@ -24054,7 +24023,7 @@
       step: step,
       size: size,
       valueLabelDisplay: valueLabelDisplay
-    }), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
+    }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   }, ['label', 'hint'], {
     customMarks: function customMarks(value, i18n) {
       return (Array.isArray(value) ? value : []).map(function (value) {
@@ -24075,12 +24044,10 @@
     var hint = _ref.hint,
       text = _ref.text,
       name = _ref.name,
-      label = _ref.label;
+      label = _ref.label,
+      className = _ref.className;
     var controlId = React$1.useId();
-    return /*#__PURE__*/React$1.createElement(FormControl, {
-      className: "lf-control-placeholder",
-      "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(FormLabel, {
+    return /*#__PURE__*/React$1.createElement(FormControl, makeClassName$1('placeholder', name, className), label && /*#__PURE__*/React$1.createElement(FormLabel, {
       id: controlId
     }, label), /*#__PURE__*/React$1.createElement(Placeholder, {
       text: text
@@ -24092,6 +24059,8 @@
     __proto__: null,
     default: PlaceholderMUI
   });
+
+  var _excluded$1g = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "disabled", "readOnly", "required", "max", "precision", "color", "labelPlacement", "error", "className"];
 
   // DOC: https://mui.com/material-ui/api/rating/
 
@@ -24112,11 +24081,13 @@
       precision = _ref.precision,
       color = _ref.color,
       labelPlacement = _ref.labelPlacement,
-      error = _ref.error;
+      error = _ref.error,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1g);
     var handleChange = React$1.useCallback(function (event) {
       onChange(parseFloat(event.target.value));
     }, [onChange]);
-    var ctrl = /*#__PURE__*/React$1.createElement(Rating, {
+    var ctrl = /*#__PURE__*/React$1.createElement(Rating, _extends({
       size: size !== null && size !== void 0 ? size : undefined,
       max: max,
       precision: precision !== null && precision !== void 0 ? precision : 1,
@@ -24127,11 +24098,8 @@
       onChange: handleChange,
       onBlur: onBlur,
       disabled: disabled
-    });
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-rate",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(FormControl, {
+    }, passRest(rest)));
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('rate', name, className), /*#__PURE__*/React$1.createElement(FormControl, {
       required: required,
       error: error != null,
       sx: {
@@ -24484,7 +24452,7 @@
     return undefined;
   };
 
-  var _excluded$1e = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "className", "size", "variant", "color", "readOnly", "required", "fullWidth", "placeholder", "floatingLabel", "width", "displayWeekNumber", "format", "maxDate", "minDate", "maxDateTime", "minDateTime", "lfLocale", "datetime", "views", "component"];
+  var _excluded$1f = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "className", "size", "variant", "color", "readOnly", "required", "fullWidth", "placeholder", "floatingLabel", "width", "displayWeekNumber", "format", "maxDate", "minDate", "maxDateTime", "minDateTime", "lfLocale", "datetime", "views", "component"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -24518,9 +24486,9 @@
       lfLocale = _ref.lfLocale,
       _ref$datetime = _ref.datetime,
       datetime = _ref$datetime === void 0 ? false : _ref$datetime,
-      views = _ref.views;
-      _ref.component;
-      var rest = _objectWithoutProperties(_ref, _excluded$1e);
+      views = _ref.views,
+      component = _ref.component,
+      rest = _objectWithoutProperties(_ref, _excluded$1f);
     var controlId = React$1.useId();
     var localeCode = lfLocale && _isString(lfLocale) ? lfLocale.split('-')[0] : undefined;
     var Component = datetime ? DateTimePicker.DateTimePicker : DatePicker.DatePicker;
@@ -24539,10 +24507,7 @@
     var parsedMaxDate = tryParseDateDayJs(maxDate);
     var parsedMinDateTime = tryParseDateDayJs(minDateTime);
     var parsedMaxDateTime = tryParseDateDayJs(maxDateTime);
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: className
-    }, /*#__PURE__*/React$1.createElement(FormControl, {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1(component, name, className), /*#__PURE__*/React$1.createElement(FormControl, {
       required: required,
       error: error != null,
       fullWidth: fullWidth,
@@ -24576,7 +24541,7 @@
     }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$1d = ["onChange", "value"];
+  var _excluded$1e = ["onChange", "value"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -24584,7 +24549,7 @@
   var MuiDate = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1d);
+      rest = _objectWithoutProperties(_ref, _excluded$1e);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -24658,7 +24623,7 @@
     default: ReactView
   });
 
-  var _excluded$1c = ["onChange", "value"];
+  var _excluded$1d = ["onChange", "value"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -24666,7 +24631,7 @@
   var MuiDateTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$1c);
+      rest = _objectWithoutProperties(_ref, _excluded$1d);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -24702,7 +24667,7 @@
   var css_248z$r = ".lf-form.lf-form-react-material-ui .lf-control-common-array [class^=lf-control]:not(:last-child) {\n  margin-bottom: 10px;\n}";
   styleInject(css_248z$r);
 
-  var _excluded$1b = ["hint", "required", "tooltip", "name", "label"];
+  var _excluded$1c = ["hint", "required", "tooltip", "name", "label", "className"];
   var ListArrayMui = I18N(function (_ref) {
     var _rest$error, _rest$error2, _rest$error3;
     var hint = _ref.hint,
@@ -24710,13 +24675,11 @@
       _ref.tooltip;
       var name = _ref.name,
       label = _ref.label,
-      rest = _objectWithoutProperties(_ref, _excluded$1b);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$1c);
     var hasError = rest.error && _isString((_rest$error = rest.error) === null || _rest$error === void 0 ? void 0 : _rest$error.errorMessage) && ((_rest$error2 = rest.error) === null || _rest$error2 === void 0 ? void 0 : _rest$error2.errorMessage);
     var controlId = React$1.useId();
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-array"
-    }, /*#__PURE__*/React$1.createElement(FormControl, {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('array', name, className), /*#__PURE__*/React$1.createElement(FormControl, {
       required: required,
       error: hasError,
       fullWidth: true
@@ -24733,18 +24696,17 @@
     default: ListArrayMui
   });
 
-  var _excluded$1a = ["onChange"];
+  var _excluded$1b = ["onChange"];
 
   // DOC: https://mui.com/material-ui/api/input/
 
   var Textarea$2 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$1a);
+      rest = _objectWithoutProperties(_ref, _excluded$1b);
     var handleChange = React$1.useCallback(function (event) {
       onChange(event.target.value);
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(MuiGenericInput, _extends({
-      className: "lf-control-textarea",
       component: "textarea",
       onChange: handleChange,
       multiline: true
@@ -24757,11 +24719,11 @@
     default: Textarea$2
   });
 
-  var _excluded$19 = ["onChange", "value"];
+  var _excluded$1a = ["onChange", "value"];
   var Multiselect$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$19);
+      rest = _objectWithoutProperties(_ref, _excluded$1a);
     var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       onChange(typeof value === 'string' ? value.split(',') : value);
@@ -24777,7 +24739,6 @@
       };
     }, [rest.options]);
     return /*#__PURE__*/React$1.createElement(MuiGenericSelect, _extends({
-      className: "lf-control-multiselect",
       component: "multiselect",
       onChange: handleChange,
       renderValue: renderValue,
@@ -24794,7 +24755,7 @@
     default: Multiselect$1
   });
 
-  var _excluded$18 = ["onChange"];
+  var _excluded$19 = ["onChange"];
 
   // DOC: https://mui.com/material-ui/api/input/
 
@@ -24803,7 +24764,7 @@
   };
   var InputNumber$2 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$18);
+      rest = _objectWithoutProperties(_ref, _excluded$19);
     var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       var parsed;
@@ -24822,7 +24783,6 @@
       }
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(MuiGenericInput, _extends({
-      className: "lf-control-input-number",
       component: "input-number",
       onChange: handleChange,
       inputType: "number"
@@ -24835,7 +24795,7 @@
     default: InputNumber$2
   });
 
-  var _excluded$17 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "onBlur", "required"];
+  var _excluded$18 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "onBlur", "required", "className"];
 
   // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -24855,16 +24815,15 @@
       labelPlacement = _ref.labelPlacement,
       onBlur = _ref.onBlur,
       required = _ref.required,
-      rest = _objectWithoutProperties(_ref, _excluded$17);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$18);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(FormControl, {
-      "data-lf-field-name": name,
-      className: "lf-control-radio-group",
+    return /*#__PURE__*/React$1.createElement(FormControl, _extends({}, makeClassName$1('radio-group', name, className), {
       required: required,
       error: error != null
-    }, /*#__PURE__*/React$1.createElement(FormLabel, {
+    }), /*#__PURE__*/React$1.createElement(FormLabel, {
       id: "lf-control-radio-group-".concat(name)
     }, label), /*#__PURE__*/React$1.createElement(RadioGroup$2, _extends({
       "aria-labelledby": "lf-control-radio-group-".concat(name),
@@ -24904,7 +24863,7 @@
     default: RadioGroupMUI
   });
 
-  var _excluded$16 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "readOnly", "onBlur", "required"];
+  var _excluded$17 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "readOnly", "onBlur", "required", "className"];
 
   // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -24925,7 +24884,8 @@
       readOnly = _ref.readOnly;
       _ref.onBlur;
       var required = _ref.required,
-      rest = _objectWithoutProperties(_ref, _excluded$16);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$17);
     var _useState = React$1.useState(_isArray(value) ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
       currentValue = _useState2[0],
@@ -24942,12 +24902,10 @@
       setCurrentValue(newValue);
       onChange(newValue);
     }, [currentValue, onChange]);
-    return /*#__PURE__*/React$1.createElement(FormControl, {
-      "data-lf-field-name": name,
-      className: "lf-control-radio-group",
+    return /*#__PURE__*/React$1.createElement(FormControl, _extends({}, makeClassName$1('radio-group', name, className), {
       required: required,
       error: error != null
-    }, /*#__PURE__*/React$1.createElement(FormLabel, {
+    }), /*#__PURE__*/React$1.createElement(FormLabel, {
       id: "lf-control-radio-group-".concat(name)
     }, label), /*#__PURE__*/React$1.createElement(FormGroup, {
       "aria-labelledby": "lf-control-radio-group-".concat(name)
@@ -24988,7 +24946,7 @@
   var css_248z$q = ".lf-form-react-material-ui .lf-control-tabs .tab-fields {\n  padding-top: var(--lf-field-margin);\n}";
   styleInject(css_248z$q);
 
-  var _excluded$15 = ["name", "value", "tabs", "onChange", "children", "centered", "fullWidth", "indicatorColor", "textColor"];
+  var _excluded$16 = ["name", "value", "tabs", "onChange", "children", "centered", "fullWidth", "indicatorColor", "textColor"];
   var TabsMui = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -24999,7 +24957,7 @@
       fullWidth = _ref.fullWidth,
       indicatorColor = _ref.indicatorColor,
       textColor = _ref.textColor,
-      rest = _objectWithoutProperties(_ref, _excluded$15);
+      rest = _objectWithoutProperties(_ref, _excluded$16);
     var active;
     if (value) {
       active = value;
@@ -25048,7 +25006,7 @@
   var css_248z$p = ".lf-form-react-material-ui .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeLarge .lf-icon {\n  max-width: 22px;\n  max-height: 22px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeSmall .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon {\n  min-width: inherit;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon .MuiButton-startIcon {\n  margin-right: 0px !important;\n}";
   styleInject(css_248z$p);
 
-  var _excluded$14 = ["label", "icon", "hint", "tooltip", "variant", "size", "color"];
+  var _excluded$15 = ["label", "icon", "hint", "tooltip", "variant", "size", "color"];
   var MuiButton = function MuiButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
@@ -25057,7 +25015,7 @@
       variant = _ref.variant,
       size = _ref.size,
       color = _ref.color,
-      rest = _objectWithoutProperties(_ref, _excluded$14);
+      rest = _objectWithoutProperties(_ref, _excluded$15);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(Button$1, _extends({
@@ -25212,7 +25170,8 @@
       onChange = _ref.onChange,
       multiple = _ref.multiple,
       required = _ref.required,
-      value = _ref.value;
+      value = _ref.value,
+      className = _ref.className;
     var controlId = React$1.useId();
     var _useState = React$1.useState(multiple && _isArray(value) || !multiple && _isObject(value) ? value : undefined),
       _useState2 = _slicedToArray(_useState, 2),
@@ -25248,10 +25207,7 @@
         onChange(null);
       }
     }, [onChange, multiple, currentFile]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-upload",
-      "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(FormLabel, {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('upload', name, className), label && /*#__PURE__*/React$1.createElement(FormLabel, {
       id: controlId,
       required: required
     }, label), /*#__PURE__*/React$1.createElement("div", {
@@ -25341,7 +25297,7 @@
     return undefined;
   };
 
-  var _excluded$13 = ["name", "label", "hint", "value", "onChange", "onBlur", "fullWidth", "width", "floatingLabel", "disabled", "readOnly", "required", "className", "timeStepsHours", "timeStepsMinutes", "timeStepsSeconds", "size", "variant", "color", "error", "maxTime", "minTime", "forceMobile", "format"];
+  var _excluded$14 = ["name", "label", "hint", "value", "onChange", "onBlur", "fullWidth", "width", "floatingLabel", "disabled", "readOnly", "required", "className", "timeStepsHours", "timeStepsMinutes", "timeStepsSeconds", "size", "variant", "color", "error", "maxTime", "minTime", "forceMobile", "format"];
 
   // DOC: https://mui.com/x/api/date-pickers/time-picker/
 
@@ -25371,7 +25327,7 @@
       forceMobile = _ref.forceMobile,
       _ref$format = _ref.format,
       format = _ref$format === void 0 ? 'HH:mm:ss' : _ref$format,
-      rest = _objectWithoutProperties(_ref, _excluded$13);
+      rest = _objectWithoutProperties(_ref, _excluded$14);
     var controlId = React$1.useId();
     var Component = forceMobile ? MobileTimePicker.MobileTimePicker : DesktopTimePicker.DesktopTimePicker;
     // default value
@@ -25399,10 +25355,7 @@
     if (isValidTime(minTime)) {
       parsedMinTime = timeToDayJSTime(minTime);
     }
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: className
-    }, /*#__PURE__*/React$1.createElement(FormControl, {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('time', name, className), /*#__PURE__*/React$1.createElement(FormControl, {
       required: required,
       error: error != null,
       fullWidth: fullWidth,
@@ -25493,7 +25446,7 @@
     default: FormMaterialUI
   });
 
-  var _excluded$12 = ["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "submitOnEnter", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component", "lfOnEnter"];
+  var _excluded$13 = ["name", "label", "lfLocale", "hint", "value", "onChange", "onBlur", "error", "className", "disabled", "readOnly", "required", "submitOnEnter", "size", "width", "fullWidth", "placeholder", "autocomplete", "inputType", "inputMode", "component", "lfOnEnter"];
   var ReactGenericInput = function ReactGenericInput(_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -25519,15 +25472,12 @@
       _ref.component;
       var _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$12);
+      rest = _objectWithoutProperties(_ref, _excluded$13);
     var hasError = error && _isString(error);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames(className, 'lf-form-react-control-group'),
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement("label", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('date', name, 'lf-form-react-control-group', className), /*#__PURE__*/React$1.createElement("label", {
       for: name
     }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("input", _extends({
       type: inputType,
@@ -25553,16 +25503,15 @@
   var css_248z$m = ".lf-form-react .lf-control-input-text input[type=color] {\n  min-width: 60px;\n}";
   styleInject(css_248z$m);
 
-  var _excluded$11 = ["onChange"];
+  var _excluded$12 = ["onChange"];
   var TextInput$2 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$11);
+      rest = _objectWithoutProperties(_ref, _excluded$12);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
       component: "input-text",
-      className: "lf-control-input-text",
       onChange: handleChange
     }, rest));
   }, ['label', 'hint', 'placeholder']);
@@ -25573,7 +25522,7 @@
     default: TextInput$2
   });
 
-  var _excluded$10 = ["onChange", "min", "max", "step"];
+  var _excluded$11 = ["onChange", "min", "max", "step"];
   var hasDecimals$1 = function hasDecimals(f) {
     return _isString(f) && (f.includes(',') || f.includes('.'));
   };
@@ -25582,7 +25531,7 @@
       min = _ref.min,
       max = _ref.max,
       step = _ref.step,
-      rest = _objectWithoutProperties(_ref, _excluded$10);
+      rest = _objectWithoutProperties(_ref, _excluded$11);
     var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       var parsed;
@@ -25603,7 +25552,6 @@
     return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
       inputType: "number",
       component: "input-number",
-      className: "lf-control-input-number",
       min: min,
       max: max,
       step: step,
@@ -25617,7 +25565,7 @@
     default: InputNumber$1
   });
 
-  var _excluded$$ = ["name", "label", "lfLocale", "className", "inputType", "hint", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"];
+  var _excluded$10 = ["name", "label", "lfLocale", "className", "inputType", "hint", "value", "defaultValue", "onChange", "onBlur", "error", "disabled", "readOnly", "required"];
   var ReactGenericCheckbox = function ReactGenericCheckbox(_ref) {
     var name = _ref.name,
       label = _ref.label;
@@ -25633,12 +25581,9 @@
       disabled = _ref.disabled,
       readOnly = _ref.readOnly,
       required = _ref.required,
-      rest = _objectWithoutProperties(_ref, _excluded$$);
+      rest = _objectWithoutProperties(_ref, _excluded$10);
     var hasError = error && _isString(error);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames(className, 'lf-form-react-control-group'),
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement("label", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('checkbox', name, 'lf-form-react-control-group', className), /*#__PURE__*/React$1.createElement("label", {
       for: name,
       className: "lf-form-react-checkbox"
     }, /*#__PURE__*/React$1.createElement("input", _extends({
@@ -25657,16 +25602,15 @@
     }, error));
   };
 
-  var _excluded$_ = ["onChange"];
+  var _excluded$$ = ["onChange"];
   var Checkbox$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$_);
+      rest = _objectWithoutProperties(_ref, _excluded$$);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(ReactGenericCheckbox, _extends({
       inputType: "checkbox",
-      className: "lf-control-checkbox",
       onChange: handleChange
     }, rest));
   }, ['hint', 'label']);
@@ -25677,7 +25621,7 @@
     default: Checkbox$1
   });
 
-  var _excluded$Z = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "readOnly", "required", "size", "rows", "width", "fullWidth"];
+  var _excluded$_ = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "readOnly", "required", "size", "rows", "width", "fullWidth", "className"];
   var Textarea$1 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -25693,15 +25637,13 @@
       rows = _ref.rows,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
-      rest = _objectWithoutProperties(_ref, _excluded$Z);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$_);
     var hasError = error && _isString(error);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-textarea lf-form-react-control-group",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement("label", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('textarea', name, 'lf-form-react-control-group', className), /*#__PURE__*/React$1.createElement("label", {
       for: name
     }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("textarea", _extends({
       type: "text",
@@ -25766,11 +25708,9 @@
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
-      text = _ref.text;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-form-react-control-group lf-control-placeholder",
-      "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement("label", {
+      text = _ref.text,
+      className = _ref.className;
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('placeholder', name, 'lf-form-react-control-group', className), label && /*#__PURE__*/React$1.createElement("label", {
       for: name
     }, label), /*#__PURE__*/React$1.createElement(Placeholder, {
       text: text
@@ -25785,7 +25725,7 @@
     default: PlaceholderReact
   });
 
-  var _excluded$Y = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey"];
+  var _excluded$Z = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey", "className"];
   var Select$1 = I18N(function (_ref) {
     var _filterOptions;
     var name = _ref.name;
@@ -25806,7 +25746,8 @@
       options = _ref.options,
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
-      rest = _objectWithoutProperties(_ref, _excluded$Y);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$Z);
     var hasError = error && _isString(error);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value === '' ? null : e.target.value);
@@ -25818,10 +25759,7 @@
         label: placeholder
       }].concat(_toConsumableArray(opts));
     }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-select lf-form-react-control-group",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement("label", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('select', name, 'lf-form-react-control-group', className), /*#__PURE__*/React$1.createElement("label", {
       for: name
     }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("select", _extends({
       id: name,
@@ -25852,11 +25790,11 @@
     default: Select$1
   });
 
-  var _excluded$X = ["onChange", "value"];
+  var _excluded$Y = ["onChange", "value"];
   var DateInput = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$X);
+      rest = _objectWithoutProperties(_ref, _excluded$Y);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -25868,7 +25806,6 @@
     return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
       inputType: "date",
       component: "date",
-      className: "lf-control-date",
       value: currentDate,
       onChange: handleChange
     }, rest));
@@ -25880,8 +25817,38 @@
     default: DateInput
   });
 
-  var _excluded$W = ["onChange", "value"];
+  var _excluded$X = ["onChange", "value"];
   var DateTime$1 = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties(_ref, _excluded$X);
+    var handleChange = React$1.useCallback(function (e) {
+      onChange(e.target.value);
+    }, [onChange]);
+    var currentDate = value;
+    if (isValidDate(value)) {
+      // only keep iso up to the minutes digits
+      var match = value.toISOString().match(/(.*?T[0-9]{1,2}:[0-9]{1,2})/gm);
+      if (match != null) {
+        currentDate = match[0];
+      }
+    }
+    return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
+      inputType: "datetime-local",
+      component: "datetime",
+      value: currentDate,
+      onChange: handleChange
+    }, rest));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded React.DateTime');
+
+  var index$1j = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: DateTime$1
+  });
+
+  var _excluded$W = ["onChange", "value"];
+  var Time$2 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
       rest = _objectWithoutProperties(_ref, _excluded$W);
@@ -25897,39 +25864,7 @@
       }
     }
     return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
-      inputType: "datetime-local",
-      component: "datetime",
-      className: "lf-control-datetime",
-      value: currentDate,
-      onChange: handleChange
-    }, rest));
-  }, ['label', 'hint', 'placeholder']);
-  lfLog('Loaded React.DateTime');
-
-  var index$1j = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: DateTime$1
-  });
-
-  var _excluded$V = ["onChange", "value"];
-  var Time$2 = I18N(function (_ref) {
-    var onChange = _ref.onChange,
-      value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$V);
-    var handleChange = React$1.useCallback(function (e) {
-      onChange(e.target.value);
-    }, [onChange]);
-    var currentDate = value;
-    if (isValidDate(value)) {
-      // only keep iso up to the minutes digits
-      var match = value.toISOString().match(/(.*?T[0-9]{1,2}:[0-9]{1,2})/gm);
-      if (match != null) {
-        currentDate = match[0];
-      }
-    }
-    return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
       inputType: "time",
-      className: "lf-control-time",
       value: currentDate,
       onChange: handleChange
     }, rest));
@@ -25944,7 +25879,7 @@
   var css_248z$l = ".lf-form-react .lf-control-common-array-item {\n  padding-bottom: 5px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-two-columns:last-child {\n  margin-bottom: 0px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-three-columns:last-child {\n  margin-bottom: 0px;\n}";
   styleInject(css_248z$l);
 
-  var _excluded$U = ["hint", "required", "tooltip", "name", "label"];
+  var _excluded$V = ["hint", "required", "tooltip", "name", "label", "className"];
   var ListArrayReact = I18N(function (_ref) {
     var _rest$error, _rest$error2, _rest$error3;
     var hint = _ref.hint,
@@ -25952,12 +25887,10 @@
       _ref.tooltip;
       var name = _ref.name,
       label = _ref.label,
-      rest = _objectWithoutProperties(_ref, _excluded$U);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$V);
     var hasError = rest.error && _isString((_rest$error = rest.error) === null || _rest$error === void 0 ? void 0 : _rest$error.errorMessage) && ((_rest$error2 = rest.error) === null || _rest$error2 === void 0 ? void 0 : _rest$error2.errorMessage);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-array lf-form-react-control-group",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement("label", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('array', name, 'lf-form-react-control-group', className), /*#__PURE__*/React$1.createElement("label", {
       for: name
     }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm$3
@@ -25984,12 +25917,12 @@
   var css_248z$k = ".lf-form-react .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n  margin-top: -2px;\n  margin-right: 5px;\n}\n.lf-form-react .lf-control-button .btn-lg .lf-icon {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-form-react .lf-control-button .btn-sm .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}";
   styleInject(css_248z$k);
 
-  var _excluded$T = ["label", "icon", "hint"];
+  var _excluded$U = ["label", "icon", "hint"];
   var ReactButton = function ReactButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint,
-      rest = _objectWithoutProperties(_ref, _excluded$T);
+      rest = _objectWithoutProperties(_ref, _excluded$U);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement("button", rest, /*#__PURE__*/React$1.createElement("img", {
@@ -26078,7 +26011,8 @@
       onChange = _ref.onChange,
       multiple = _ref.multiple,
       value = _ref.value,
-      required = _ref.required;
+      required = _ref.required,
+      className = _ref.className;
     var uploadButtonId = React$1.useId();
     var _useState = React$1.useState(multiple && _isArray(value) || !multiple && _isObject(value) ? value : undefined),
       _useState2 = _slicedToArray(_useState, 2),
@@ -26115,10 +26049,7 @@
         onChange(null);
       }
     }, [onChange, multiple, currentFile]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-upload",
-      "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement("label", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('upload', name, 'lf-form-react-control-group', className), label && /*#__PURE__*/React$1.createElement("label", {
       for: name
     }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", {
       className: "lf-upload-button-layout"
@@ -26238,7 +26169,7 @@
     default: FormReact
   });
 
-  var _excluded$S = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "className", "inputType", "inputMode", "autocomplete", "lfLocale", "disabled", "readOnly", "plaintext", "error", "component", "required", "submitOnEnter", "prefix", "postfix", "placeholder", "fullWidth", "width", "floatingLabel", "lfOnEnter"];
+  var _excluded$T = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "className", "inputType", "inputMode", "autocomplete", "lfLocale", "disabled", "readOnly", "plaintext", "error", "component", "required", "submitOnEnter", "prefix", "postfix", "placeholder", "fullWidth", "width", "floatingLabel", "lfOnEnter"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -26261,9 +26192,9 @@
       readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
       _ref$plaintext = _ref.plaintext,
       plaintext = _ref$plaintext === void 0 ? false : _ref$plaintext,
-      error = _ref.error;
-      _ref.component;
-      var required = _ref.required,
+      error = _ref.error,
+      component = _ref.component,
+      required = _ref.required,
       _ref$submitOnEnter = _ref.submitOnEnter,
       submitOnEnter = _ref$submitOnEnter === void 0 ? false : _ref$submitOnEnter,
       prefix = _ref.prefix,
@@ -26275,7 +26206,7 @@
       floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$S);
+      rest = _objectWithoutProperties(_ref, _excluded$T);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -26302,28 +26233,24 @@
       innerGroup = /*#__PURE__*/React$1.createElement(InputGroup, null, prefix && /*#__PURE__*/React$1.createElement(InputGroup.Text, null, TextOrIcon(prefix)), inner, postfix && /*#__PURE__*/React$1.createElement(InputGroup.Text, null, TextOrIcon(postfix)));
     }
     var useFloatingLabels = floatingLabel && !needsGroup;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: className,
-      "data-lf-field-name": name
-    }, useFloatingLabels && label && /*#__PURE__*/React$1.createElement(FloatingLabel, {
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1(component, name, className), useFloatingLabels && label && /*#__PURE__*/React$1.createElement(FloatingLabel, {
       label: label
     }, innerGroup), !useFloatingLabels && label && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !useFloatingLabels && innerGroup, hint && !error && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
       type: "invalid"
     }, error));
   };
 
-  var _excluded$R = ["onChange"];
+  var _excluded$S = ["onChange"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var TextInput$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$R);
+      rest = _objectWithoutProperties(_ref, _excluded$S);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
-      className: "lf-control-input-text",
       component: "input-text",
       onChange: handleChange
     }, rest));
@@ -26335,7 +26262,7 @@
     default: TextInput$1
   });
 
-  var _excluded$Q = ["name", "label", "hint", "value", "size", "placeholder", "options", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "floatingLabel", "filterKey", "filterValue"];
+  var _excluded$R = ["name", "label", "hint", "value", "size", "placeholder", "options", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "floatingLabel", "filterKey", "filterValue", "className"];
   var Select = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -26357,7 +26284,8 @@
       floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
       filterKey = _ref.filterKey,
       filterValue = _ref.filterValue,
-      rest = _objectWithoutProperties(_ref, _excluded$Q);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$R);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value !== placeholder ? e.target.value : undefined);
     }, [onChange, placeholder]);
@@ -26380,10 +26308,7 @@
         key: value
       }, label);
     }));
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-input-text",
-      "data-lf-field-name": name
-    }, !floatingLabel && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !floatingLabel && inner, floatingLabel && /*#__PURE__*/React$1.createElement(FloatingLabel, {
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('select', name, className), !floatingLabel && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !floatingLabel && inner, floatingLabel && /*#__PURE__*/React$1.createElement(FloatingLabel, {
       label: label
     }, inner), hint && !error && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
       type: "invalid"
@@ -26398,7 +26323,7 @@
     default: Select
   });
 
-  var _excluded$P = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format"];
+  var _excluded$Q = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format", "className"];
   var Checkbox = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -26416,22 +26341,20 @@
       _ref.appearance;
       _ref.locale;
       _ref.format;
-      _objectWithoutProperties(_ref, _excluded$P);
+      var className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$Q);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-checkbox",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Form.Check, {
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('checkbox', name, className), /*#__PURE__*/React$1.createElement(Form.Check, {
       type: "checkbox"
-    }, /*#__PURE__*/React$1.createElement(Form.Check.Input, {
+    }, /*#__PURE__*/React$1.createElement(Form.Check.Input, _extends({
       onChange: handleChange,
       onBlur: onBlur,
       disabled: disabled,
       isInvalid: error != null,
       checked: value
-    }), label && /*#__PURE__*/React$1.createElement(Form.Check.Label, null, label), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+    }, passRest(rest))), label && /*#__PURE__*/React$1.createElement(Form.Check.Label, null, label), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
       type: "invalid"
     }, error)), hint && /*#__PURE__*/React$1.createElement(Form.Text, null, hint));
   }, ['label', 'hint']);
@@ -26442,7 +26365,7 @@
     default: Checkbox
   });
 
-  var _excluded$O = ["name", "label", "hint", "value", "placeholder", "lfLocale", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format"];
+  var _excluded$P = ["name", "label", "hint", "value", "placeholder", "lfLocale", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format", "className"];
   var Toggle$1 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -26461,21 +26384,19 @@
       _ref.appearance;
       _ref.locale;
       _ref.format;
-      _objectWithoutProperties(_ref, _excluded$O);
+      var className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$P);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-checkbox",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Form.Check, {
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('checkbox', name, className), /*#__PURE__*/React$1.createElement(Form.Check, {
       type: "switch"
-    }, /*#__PURE__*/React$1.createElement(Form.Check.Input, {
+    }, /*#__PURE__*/React$1.createElement(Form.Check.Input, _extends({
       onChange: handleChange,
       onBlur: onBlur,
       disabled: disabled,
       isInvalid: error != null
-    }), label && /*#__PURE__*/React$1.createElement(Form.Check.Label, null, label), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+    }, passRest(rest))), label && /*#__PURE__*/React$1.createElement(Form.Check.Label, null, label), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
       type: "invalid"
     }, error)), hint && /*#__PURE__*/React$1.createElement(Form.Text, null, hint));
   }, ['label', 'hint']);
@@ -26486,7 +26407,7 @@
     default: Toggle$1
   });
 
-  var _excluded$N = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options"];
+  var _excluded$O = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options", "className"];
   var CheckboxGroupBootstrap = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -26506,7 +26427,8 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$N);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$O);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
       values = _useState2[0],
@@ -26523,10 +26445,7 @@
       setValues(newValues);
       onChange(newValues);
     }, [onChange, values]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-checkbox-group",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref2, idx) {
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('checkbox-group', name, className), /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref2, idx) {
       var value = _ref2.value,
         label = _ref2.label;
       return /*#__PURE__*/React$1.createElement(Form.Check, {
@@ -26564,11 +26483,9 @@
     var label = _ref.label,
       hint = _ref.hint,
       text = _ref.text,
-      name = _ref.name;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-placeholder",
-      "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(Form.Label, null, label), /*#__PURE__*/React$1.createElement(Placeholder, {
+      name = _ref.name,
+      className = _ref.className;
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('placeholder', name, className), label && /*#__PURE__*/React$1.createElement(Form.Label, null, label), /*#__PURE__*/React$1.createElement(Placeholder, {
       text: text
     }), hint && /*#__PURE__*/React$1.createElement(Form.Text, null, hint));
   }, ['label', 'hint', 'text']);
@@ -26586,14 +26503,14 @@
     default: PlaceholderImage
   });
 
-  var _excluded$M = ["onChange", "value"];
+  var _excluded$N = ["onChange", "value"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var Date$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$M);
+      rest = _objectWithoutProperties(_ref, _excluded$N);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -26603,7 +26520,6 @@
       currentDate = value.toISOString().split('T')[0];
     }
     return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
-      className: "lf-control-date",
       inputType: "date",
       component: "date",
       value: currentDate,
@@ -26617,7 +26533,7 @@
     default: Date$1
   });
 
-  var _excluded$L = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "disabled", "readOnly", "error", "required", "rows", "placeholder", "width", "fullWidth"];
+  var _excluded$M = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "disabled", "readOnly", "error", "required", "rows", "placeholder", "width", "fullWidth", "className"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -26639,14 +26555,12 @@
       placeholder = _ref.placeholder,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
-      rest = _objectWithoutProperties(_ref, _excluded$L);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$M);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-input-text",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form.Control, _extends({
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('textarea', name, className), /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form.Control, _extends({
       name: name,
       as: "textarea",
       rows: rows,
@@ -26670,6 +26584,8 @@
     default: Textarea
   });
 
+  var _excluded$L = ["name", "label", "hint", "value", "onChange", "onBlur", "disabled", "readOnly", "error", "required", "placeholder", "min", "max", "step", "className"];
+
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var Slider = I18N(function (_ref) {
@@ -26688,14 +26604,13 @@
       placeholder = _ref.placeholder,
       min = _ref.min,
       max = _ref.max,
-      step = _ref.step;
+      step = _ref.step,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$L);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-input-text",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form.Range, {
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('slider', name, className), /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form.Range, _extends({
       name: name,
       defaultValue: value,
       onChange: handleChange,
@@ -26707,7 +26622,7 @@
       disabled: disabled,
       readOnly: readOnly,
       isInvalid: error != null
-    }), hint && !error && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+    }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
       type: "invalid"
     }, error));
   }, ['label', 'hint', 'placeholder']);
@@ -26746,7 +26661,7 @@
     default: Group
   });
 
-  var _excluded$K = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options"];
+  var _excluded$K = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options", "className"];
   var RadioGroupBootstrap = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -26766,6 +26681,7 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$K);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
@@ -26783,10 +26699,7 @@
       setValues(newValues);
       onChange(newValues);
     }, [onChange, values]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-radio-group",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref2, idx) {
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('radio-group', name, className), /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref2, idx) {
       var value = _ref2.value,
         label = _ref2.label;
       return /*#__PURE__*/React$1.createElement(Form.Check, {
@@ -26848,7 +26761,6 @@
       }
     }
     return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
-      className: "lf-control-date",
       inputType: "datetime-local",
       component: "datetime",
       value: currentDate,
@@ -26862,7 +26774,7 @@
     default: DateTime
   });
 
-  var _excluded$I = ["hint", "required", "tooltip", "name", "label"];
+  var _excluded$I = ["hint", "required", "tooltip", "name", "label", "className"];
   var ListArrayBootstrap = I18N(function (_ref) {
     var _rest$error, _rest$error2;
     var hint = _ref.hint,
@@ -26870,11 +26782,9 @@
       _ref.tooltip;
       var name = _ref.name,
       label = _ref.label,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$I);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      "data-lf-field-name": name,
-      className: "lf-control-array"
-    }, label && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('array', name, className), label && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm$2
     }, rest)), hint && !((_rest$error = rest.error) !== null && _rest$error !== void 0 && _rest$error.errorMessage) && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString((_rest$error2 = rest.error) === null || _rest$error2 === void 0 ? void 0 : _rest$error2.errorMessage) && !_isEmpty(rest.error.errorMessage) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
       type: "invalid"
@@ -26915,7 +26825,6 @@
       }
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
-      className: "lf-control-input-number",
       component: "input-number",
       onChange: handleChange,
       inputType: "number",
@@ -27073,7 +26982,7 @@
   var css_248z$e = ".lf-form-react-antd .lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-antd .lf-control-input-text.lf-size-small .lf-prefix-icon {\n  max-height: 12px;\n}\n.lf-form-react-antd .lf-control-input-text.lf-size-large .lf-prefix-icon {\n  max-height: 18px;\n}\n.lf-form-react-antd .lf-control-input-text input[type=color] {\n  min-width: 60px;\n}";
   styleInject(css_248z$e);
 
-  var _excluded$E = ["name", "label", "hint", "value", "size", "tooltip", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "inputType", "inputMode", "lfOnEnter"];
+  var _excluded$E = ["name", "label", "hint", "value", "size", "tooltip", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "inputType", "inputMode", "lfOnEnter", "className"];
   var TextInput = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -27097,6 +27006,7 @@
       inputMode = _ref.inputMode,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$E);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
@@ -27104,9 +27014,7 @@
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      className: classNames('lf-control-input-text', "lf-size-".concat(size)),
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('input-text', name, className, "lf-size-".concat(size)), {
       label: label,
       name: name,
       help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -27115,7 +27023,7 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined,
       valuePropName: null
-    }, /*#__PURE__*/React$1.createElement(antd.Input, _extends({
+    }), /*#__PURE__*/React$1.createElement(antd.Input, _extends({
       type: inputType !== null && inputType !== void 0 ? inputType : 'text',
       inputMode: inputMode,
       onChange: handleChange,
@@ -27135,7 +27043,7 @@
     default: TextInput
   });
 
-  var _excluded$D = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "lfLocale", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "checkedChildren", "unCheckedChildren"];
+  var _excluded$D = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "lfLocale", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "checkedChildren", "unCheckedChildren", "className"];
   var Toggle = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -27164,10 +27072,9 @@
       _ref.width;
       var checkedChildren = _ref.checkedChildren,
       unCheckedChildren = _ref.unCheckedChildren,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$D);
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      "data-lf-field-name": name,
-      className: "lf-control-toggle",
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('toggle', name, className), {
       label: label,
       name: name,
       help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -27176,7 +27083,7 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined,
       valuePropName: "checked"
-    }, /*#__PURE__*/React$1.createElement(antd.Switch, _extends({
+    }), /*#__PURE__*/React$1.createElement(antd.Switch, _extends({
       defaultChecked: value,
       readOnly: readOnly,
       onChange: onChange,
@@ -27194,7 +27101,7 @@
     default: Toggle
   });
 
-  var _excluded$C = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "checkedChildren", "unCheckedChildren"];
+  var _excluded$C = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "checkedChildren", "unCheckedChildren", "className"];
   var CheckboxAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -27221,25 +27128,24 @@
       _ref.width;
       _ref.checkedChildren;
       _ref.unCheckedChildren;
-      _objectWithoutProperties(_ref, _excluded$C);
+      var className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$C);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.checked);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      name: name,
-      className: "lt-control-checkbox",
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('checkbox', name, className), {
       "data-lf-field-name": name,
       help: error != null ? error : hint && !tooltip ? hint : undefined,
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined,
       valuePropName: null
-    }, /*#__PURE__*/React$1.createElement(antd.Checkbox, {
+    }), /*#__PURE__*/React$1.createElement(antd.Checkbox, _extends({
       readOnly: readOnly,
       onChange: handleChange,
       onBlur: onBlur,
       checked: value,
       disabled: disabled
-    }, label));
+    }, passRest(rest)), label));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Checkbox');
 
@@ -27248,7 +27154,7 @@
     default: CheckboxAntd
   });
 
-  var _excluded$B = ["name", "label", "hint", "value", "tooltip", "required", "error", "fullWidth", "width", "lfLocale", "className"];
+  var _excluded$B = ["name", "label", "hint", "value", "tooltip", "required", "error", "fullWidth", "width", "lfLocale", "className", "component"];
   var AntdGenericDate = function AntdGenericDate(_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -27263,26 +27169,25 @@
       width = _ref.width,
       lfLocale = _ref.lfLocale,
       className = _ref.className,
+      component = _ref.component,
       rest = _objectWithoutProperties(_ref, _excluded$B);
     // set locale for dates
     var defaultValue = value != null ? dayjs(value) : undefined;
     if (defaultValue && lfLocale) {
       defaultValue = defaultValue.locale(lfLocale);
     }
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      label: label,
-      className: className
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({
+      label: label
+    }, makeClassName$1(component, name, className), {
       // not needed, breaks in case date is set
       //name={name}
-      ,
-      "data-lf-field-name": name,
       help: error != null ? error : hint && !tooltip ? hint : undefined,
       required: required,
       tooltip: tooltip && hint,
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined,
       valuePropName: null
-    }, /*#__PURE__*/React$1.createElement(antd.DatePicker, _extends({
+    }), /*#__PURE__*/React$1.createElement(antd.DatePicker, _extends({
       key: "".concat(name, "-").concat(lfLocale !== null && lfLocale !== void 0 ? lfLocale : '') // add key or will not re-render if locale is changed
       ,
       defaultValue: defaultValue,
@@ -27290,11 +27195,12 @@
     }, passRest(rest, ['bordered']))));
   };
 
-  var _excluded$A = ["onChange", "value"];
+  var _excluded$A = ["onChange", "value", "className"];
   var AntdDate = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$A);
+      value = _ref.value;
+      _ref.className;
+      var rest = _objectWithoutProperties(_ref, _excluded$A);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -27314,7 +27220,6 @@
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(AntdGenericDate, _extends({
       value: currentValue,
-      className: "lf-control-date",
       component: "date",
       onChange: handleChange
     }, rest));
@@ -27385,9 +27290,7 @@
   };
 
   var SelectAntd = I18N(function (props) {
-    return /*#__PURE__*/React$1.createElement(AntdGenericSelect, _extends({
-      className: "lf-control-select"
-    }, props));
+    return /*#__PURE__*/React$1.createElement(AntdGenericSelect, _extends({}, makeClassName$1('select', props.name, props.className), props));
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
@@ -27398,7 +27301,7 @@
     default: SelectAntd
   });
 
-  var _excluded$y = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "options", "maxLength", "inline", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "optionType"];
+  var _excluded$y = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "options", "maxLength", "inline", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "optionType", "className"];
   var RadioGroup$1 = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -27427,6 +27330,7 @@
       _ref.onBlur;
       _ref.width;
       var optionType = _ref.optionType,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$y);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
@@ -27441,7 +27345,7 @@
         options: options,
         optionType: optionType,
         size: size
-      }, _omit(rest, 'lfFramework', 'lfComponent')));
+      }, passRest(rest)));
     } else {
       ctrl = /*#__PURE__*/React$1.createElement(antd.Radio.Group, _extends({
         onChange: handleChange,
@@ -27450,7 +27354,7 @@
         readOnly: readOnly,
         optionType: optionType,
         size: size
-      }, _omit(rest, 'lfFramework', 'lfComponent')), /*#__PURE__*/React$1.createElement(antd.Space, {
+      }, passRest(rest)), /*#__PURE__*/React$1.createElement(antd.Space, {
         direction: "vertical"
       }, (options !== null && options !== void 0 ? options : []).map(function (_ref2) {
         var value = _ref2.value,
@@ -27461,9 +27365,7 @@
         }, label);
       })));
     }
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      "data-lf-field-name": name,
-      className: "lf-control-radio-group",
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('radio-group', name, className), {
       label: label,
       name: name,
       help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -27472,7 +27374,7 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined,
       valuePropName: null
-    }, ctrl);
+    }), ctrl);
   }, ['label', 'hint', 'placeholder'], {
     options: i18nOptions
   });
@@ -27483,7 +27385,7 @@
     default: RadioGroup$1
   });
 
-  var _excluded$x = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "count", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "allowHalf", "bordered", "onChange", "onBlur", "width", "tooltips"];
+  var _excluded$x = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "count", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "allowHalf", "bordered", "onChange", "onBlur", "width", "tooltips", "className"];
   var RateAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -27511,8 +27413,9 @@
       var onChange = _ref.onChange,
       onBlur = _ref.onBlur;
       _ref.width;
-      var tooltips = _ref.tooltips;
-      _objectWithoutProperties(_ref, _excluded$x);
+      var tooltips = _ref.tooltips,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$x);
     var mappedTooltips = (tooltips !== null && tooltips !== void 0 ? tooltips : []).map(function (item) {
       if (_isString(item)) {
         return item;
@@ -27521,9 +27424,7 @@
       }
       return null;
     }).filter(Boolean);
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      "data-lf-field-name": name,
-      className: "lf-control-rate",
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('rate', name, className), {
       label: label,
       name: name,
       help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -27532,7 +27433,7 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined,
       valuePropName: null
-    }, /*#__PURE__*/React$1.createElement(antd.Rate, {
+    }), /*#__PURE__*/React$1.createElement(antd.Rate, _extends({
       defaultValue: value,
       disabled: disabled,
       allowClear: allowClear,
@@ -27542,7 +27443,7 @@
       onBlur: onBlur,
       count: count,
       tooltips: mappedTooltips
-    }));
+    }, passRest(rest))));
   }, ['label', 'hint']);
   lfLog('Loaded AntD.Rate');
 
@@ -27556,15 +27457,14 @@
       hint = _ref.hint,
       text = _ref.text,
       tooltip = _ref.tooltip,
-      label = _ref.label;
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
+      label = _ref.label,
+      className = _ref.className;
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('placeholder', name, className), {
       label: label,
-      "data-lf-field-name": name,
       help: hint && !tooltip ? hint : undefined,
       tooltip: tooltip && hint,
-      className: "lf-control-placeholder",
       valuePropName: null
-    }, /*#__PURE__*/React$1.createElement(Placeholder, {
+    }), /*#__PURE__*/React$1.createElement(Placeholder, {
       text: text
     }));
   }, ['label', 'hint', 'text']);
@@ -27582,7 +27482,7 @@
     default: PlaceholderImage
   });
 
-  var _excluded$w = ["name", "label", "hint", "value", "showCount", "tooltip", "required", "maxLength", "error", "onChange", "onBlur", "width", "fullWidth", "showControl", "prefix", "postfix"];
+  var _excluded$w = ["name", "label", "hint", "value", "showCount", "tooltip", "required", "maxLength", "error", "onChange", "onBlur", "width", "fullWidth", "showControl", "prefix", "postfix", "className"];
   var InputNumberAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -27602,19 +27502,19 @@
       showControl = _ref.showControl,
       prefix = _ref.prefix,
       postfix = _ref.postfix,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$w);
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({
       label: label,
-      name: name,
-      "data-lf-field-name": name,
-      className: "lf-control-input-number",
+      name: name
+    }, makeClassName$1('input-number', name, className), {
       help: error != null ? error : hint && !tooltip ? hint : undefined,
       required: required,
       tooltip: tooltip && hint,
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined,
       valuePropName: null
-    }, /*#__PURE__*/React$1.createElement(antd.InputNumber, _extends({
+    }), /*#__PURE__*/React$1.createElement(antd.InputNumber, _extends({
       onChange: onChange,
       onBlur: onBlur,
       defaultValue: value,
@@ -27631,7 +27531,7 @@
     default: InputNumberAntd
   });
 
-  var _excluded$v = ["name", "label", "hint", "value", "tooltip", "required", "error", "onChange", "onBlur", "width", "fullWidth"];
+  var _excluded$v = ["name", "label", "hint", "value", "tooltip", "required", "error", "onChange", "onBlur", "width", "fullWidth", "className"];
   var TextareaAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -27646,13 +27546,12 @@
       onBlur = _ref.onBlur,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$v);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      "data-lf-field-name": name,
-      className: "lf-control-textarea",
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('textarea', name, className), {
       label: label,
       name: name,
       help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -27661,7 +27560,7 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined,
       valuePropName: null
-    }, /*#__PURE__*/React$1.createElement(antd.Input.TextArea, _extends({
+    }), /*#__PURE__*/React$1.createElement(antd.Input.TextArea, _extends({
       onChange: handleChange,
       onBlur: onBlur,
       defaultValue: value,
@@ -27676,8 +27575,7 @@
   });
 
   var Multiselect = I18N(function (props) {
-    return /*#__PURE__*/React$1.createElement(AntdGenericSelect, _extends({
-      className: "lf-control-multiselect",
+    return /*#__PURE__*/React$1.createElement(AntdGenericSelect, _extends({}, makeClassName$1('multiselect', props.name, props.className), {
       mode: "multiple"
     }, props));
   }, ['label', 'hint', 'placeholder'], {
@@ -27727,7 +27625,7 @@
     default: Group
   });
 
-  var _excluded$u = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "keyboard", "dots", "min", "max", "step", "reverse", "tooltipOpen", "tooltipPlacement", "error", "onChange", "onBlur", "width", "marks", "included"];
+  var _excluded$u = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "keyboard", "dots", "min", "max", "step", "reverse", "tooltipOpen", "tooltipPlacement", "error", "onChange", "onBlur", "width", "marks", "included", "className"];
   var SliderAnt = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -27758,6 +27656,7 @@
       _ref.width;
       var marks = _ref.marks,
       included = _ref.included,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$u);
     var antdMarks = undefined;
     if (_isArray(marks) && !_isEmpty(marks)) {
@@ -27765,9 +27664,7 @@
         return _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, value.value, value.label));
       }, {});
     }
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      "data-lf-field-name": name,
-      className: "lf-control-slider",
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName('slider', name, className), {
       label: label,
       name: name,
       help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -27776,7 +27673,7 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined,
       valuePropName: null
-    }, /*#__PURE__*/React$1.createElement(antd.Slider, _extends({
+    }), /*#__PURE__*/React$1.createElement(antd.Slider, _extends({
       readOnly: readOnly,
       included: included,
       onChange: onChange,
@@ -27836,7 +27733,6 @@
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(AntdGenericDate, _extends({
       value: currentValue,
-      className: "lf-control-datetime",
       component: "datetime",
       onChange: handleChange
     }, rest, {
@@ -27853,7 +27749,7 @@
   var css_248z$9 = ".lf-form-react-antd .lf-control-common-array-item .ant-form-item {\n  margin-bottom: 0px !important;\n}\n.lf-form-react-antd .lf-control-common-array-item {\n  padding-bottom: 5px;\n}\n.lf-form-react-antd .lf-control-two-columns:last-child {\n  margin-bottom: 0px;\n}\n.lf-form-react-antd .lf-control-three-columns:last-child {\n  margin-bottom: 0px;\n}";
   styleInject(css_248z$9);
 
-  var _excluded$s = ["hint", "required", "tooltip", "name", "label"];
+  var _excluded$s = ["hint", "required", "tooltip", "name", "label", "className"];
   var ListArrayAntd = I18N(function (_ref) {
     var _rest$error, _rest$error2, _rest$error3, _rest$error4;
     var hint = _ref.hint,
@@ -27861,10 +27757,9 @@
       tooltip = _ref.tooltip,
       name = _ref.name,
       label = _ref.label,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$s);
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      className: "lf-control-array",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('array', name, className), {
       label: label,
       name: name,
       help: _isString((_rest$error = rest.error) === null || _rest$error === void 0 ? void 0 : _rest$error.errorMessage) && (_rest$error2 = rest.error) !== null && _rest$error2 !== void 0 && _rest$error2.errorMessage ? rest.error.errorMessage : hint && !tooltip ? hint : undefined,
@@ -27873,7 +27768,7 @@
       hasFeedback: _isString((_rest$error3 = rest.error) === null || _rest$error3 === void 0 ? void 0 : _rest$error3.errorMessage) && ((_rest$error4 = rest.error) === null || _rest$error4 === void 0 ? void 0 : _rest$error4.errorMessage),
       validateStatus: rest.error ? 'error' : undefined,
       valuePropName: null
-    }, /*#__PURE__*/React$1.createElement(ListArray, _extends({
+    }), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm$1
     }, rest)));
   }, ['label', 'hint']);
@@ -27952,9 +27847,7 @@
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       rest = _objectWithoutProperties(_ref, _excluded$q);
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      className: classNames('lf-control-checkbox-group', className),
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('checkbox-group', name, className), {
       label: label,
       name: name,
       help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -27963,7 +27856,7 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined,
       valuePropName: null
-    }, /*#__PURE__*/React$1.createElement(antd.Checkbox.Group, _extends({
+    }), /*#__PURE__*/React$1.createElement(antd.Checkbox.Group, _extends({
       options: options,
       disabled: disabled,
       defaultValue: value,
@@ -28035,7 +27928,7 @@
   styleInject(css_248z$6);
 
   var _excluded$o = ["hint"],
-    _excluded2 = ["name", "accept", "draggable", "draggableText", "draggableHeight", "uploadButtonLabel", "error", "label", "hint", "tooltip", "required", "size", "disabled", "value", "multiple", "listType", "maxCount", "showUploadList", "uploadButtonSize", "uploadButtonAppearance", "onChange"];
+    _excluded2 = ["name", "accept", "draggable", "draggableText", "draggableHeight", "uploadButtonLabel", "error", "label", "hint", "tooltip", "required", "size", "disabled", "value", "multiple", "listType", "maxCount", "showUploadList", "uploadButtonSize", "uploadButtonAppearance", "onChange", "className"];
   var Dragger = antd.Upload.Dragger;
   var makeDefaultValue = function makeDefaultValue(defaultValue) {
     if (_isArray(defaultValue)) {
@@ -28096,6 +27989,7 @@
       uploadButtonAppearance = _ref2.uploadButtonAppearance,
       _ref2$onChange = _ref2.onChange,
       onChange = _ref2$onChange === void 0 ? function () {} : _ref2$onChange,
+      className = _ref2.className,
       rest = _objectWithoutProperties(_ref2, _excluded2);
     var _useState = React$1.useState(makeDefaultValue(value)),
       _useState2 = _slicedToArray(_useState, 2),
@@ -28156,9 +28050,7 @@
         hint: !tooltip && hint
       }, uploadButtonLabel || 'Upload'));
     }
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      className: "lf-control-upload",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('upload', name, className), {
       listType: listType,
       label: label,
       name: name,
@@ -28168,7 +28060,7 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined,
       valuePropName: null
-    }, inner);
+    }), inner);
   }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
   lfLog('Loaded AnttD.Upload');
 
@@ -28177,7 +28069,7 @@
     default: AntDUpload
   });
 
-  var _excluded$n = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "multiple", "options"];
+  var _excluded$n = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "multiple", "options", "className"];
   var AntdButtonsToggleGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -28195,10 +28087,9 @@
       multiple = _ref.multiple,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$n);
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      className: "lf-control-button-toggle-group",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('button-toggle-group', name, className), {
       label: label,
       name: name,
       help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -28207,7 +28098,7 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined,
       valuePropName: null
-    }, /*#__PURE__*/React$1.createElement(ButtonsToggleGroup, _extends({
+    }), /*#__PURE__*/React$1.createElement(ButtonsToggleGroup, _extends({
       ButtonComponent: BiStateButton$1,
       name: name,
       multiple: multiple,
@@ -28346,7 +28237,7 @@
     default: AntdSteps$1
   });
 
-  var _excluded$l = ["name", "error", "hint", "required", "label", "tooltip", "onChange", "value"];
+  var _excluded$l = ["name", "error", "hint", "required", "label", "tooltip", "onChange", "value", "className"];
   var Time$1 = I18N(function (_ref) {
     var name = _ref.name,
       error = _ref.error,
@@ -28356,6 +28247,7 @@
       tooltip = _ref.tooltip,
       onChange = _ref.onChange,
       value = _ref.value,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$l);
     // default value
     var defaultValue;
@@ -28368,9 +28260,7 @@
       var _rest$format;
       onChange(d.format((_rest$format = rest.format) !== null && _rest$format !== void 0 ? _rest$format : 'HH:mm'));
     }, [onChange, rest.format]);
-    return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
-      className: "lf-control-date",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('time', name, className), {
       label: label,
       name: name,
       help: error != null ? error : hint && !tooltip ? hint : undefined,
@@ -28379,7 +28269,7 @@
       hasFeedback: error != null,
       validateStatus: error ? 'error' : undefined,
       valuePropName: null
-    }, /*#__PURE__*/React$1.createElement(antd.TimePicker, _extends({
+    }), /*#__PURE__*/React$1.createElement(antd.TimePicker, _extends({
       defaultValue: defaultValue,
       onChange: handleChange
     }, passRest(rest))));
@@ -28475,7 +28365,7 @@
     default: FormAntD
   });
 
-  var _excluded$k = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter"];
+  var _excluded$k = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "className"];
   var InputText$1 = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -28489,6 +28379,7 @@
       onBlur = _ref.onBlur,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$k);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
@@ -28496,9 +28387,7 @@
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.TextInput, _extends({
-      className: "lf-control-input-text",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.TextInput, _extends({}, makeClassName$1('input-text', name, className), {
       value: value,
       style: makeWidthStyle(fullWidth, width),
       description: hint,
@@ -28518,7 +28407,7 @@
     default: InputText$1
   });
 
-  var _excluded$j = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "lfOnEnter"];
+  var _excluded$j = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "className", "lfOnEnter"];
   var MantineNumberInput = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -28528,15 +28417,14 @@
       error = _ref.error,
       fullWidth = _ref.fullWidth,
       width = _ref.width,
+      className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
       rest = _objectWithoutProperties(_ref, _excluded$j);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
-    return /*#__PURE__*/React$1.createElement(core.NumberInput, _extends({
-      className: "lf-control-input-number",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.NumberInput, _extends({}, makeClassName$1('input-number', name, className), {
       style: makeWidthStyle(fullWidth, width),
       value: value,
       name: name,
@@ -28553,7 +28441,7 @@
     default: MantineNumberInput
   });
 
-  var _excluded$i = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "lfOnEnter"];
+  var _excluded$i = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "className", "lfOnEnter"];
   var MantineTextarea = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -28565,6 +28453,7 @@
       fullWidth = _ref.fullWidth,
       width = _ref.width,
       inputType = _ref.inputType,
+      className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
       rest = _objectWithoutProperties(_ref, _excluded$i);
@@ -28574,9 +28463,7 @@
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.Textarea, _extends({
-      className: "lf-control-textarea",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.Textarea, _extends({}, makeClassName$1('textarea', name, className), {
       name: name,
       style: makeWidthStyle(fullWidth, width),
       label: label,
@@ -28595,7 +28482,7 @@
     default: MantineTextarea
   });
 
-  var _excluded$h = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
+  var _excluded$h = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "className"];
 
   // Mantine Select breaks if value is null
   var ensureNotNull = function ensureNotNull(options) {
@@ -28620,10 +28507,9 @@
       options = _ref.options,
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$h);
-    return /*#__PURE__*/React$1.createElement(core.Select, _extends({
-      className: "lf-control-select",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.Select, _extends({}, makeClassName$1('select', name, className), {
       style: makeWidthStyle(fullWidth, width),
       description: hint,
       error: _isString(error) ? error : undefined,
@@ -28642,7 +28528,7 @@
     default: MantineSelect
   });
 
-  var _excluded$g = ["name", "hint", "value", "onChange", "error", "description"];
+  var _excluded$g = ["name", "hint", "value", "onChange", "error", "description", "className"];
   var MantineCheckbox = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -28650,13 +28536,12 @@
       onChange = _ref.onChange,
       error = _ref.error;
       _ref.description;
-      var rest = _objectWithoutProperties(_ref, _excluded$g);
+      var className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$g);
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.Checkbox, _extends({
-      className: "lf-control-checkbox",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.Checkbox, _extends({}, makeClassName$1('checkbox', name, className), {
       checked: value,
       name: name,
       onChange: handleChange,
@@ -28672,7 +28557,7 @@
     default: MantineCheckbox
   });
 
-  var _excluded$f = ["name", "hint", "value", "onChange", "error", "description"];
+  var _excluded$f = ["name", "hint", "value", "onChange", "error", "description", "className"];
   var MantineToggle = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -28680,13 +28565,12 @@
       onChange = _ref.onChange,
       error = _ref.error;
       _ref.description;
-      var rest = _objectWithoutProperties(_ref, _excluded$f);
+      var className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$f);
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.Switch, _extends({
-      className: "lf-control-checkbox",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.Switch, _extends({}, makeClassName$1('toggle', name, className), {
       checked: value,
       name: name,
       onChange: handleChange,
@@ -28702,7 +28586,7 @@
     default: MantineToggle
   });
 
-  var _excluded$e = ["hint", "required", "tooltip", "name", "label"];
+  var _excluded$e = ["hint", "required", "tooltip", "name", "label", "className"];
   var MantineListArray = I18N(function (_ref) {
     var _rest$error, _rest$error2;
     var hint = _ref.hint,
@@ -28710,11 +28594,9 @@
       _ref.tooltip;
       var name = _ref.name,
       label = _ref.label,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$e);
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-array"
-    }, label && /*#__PURE__*/React$1.createElement(core.Input.Label, {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('array', name, className), label && /*#__PURE__*/React$1.createElement(core.Input.Label, {
       required: required
     }, label), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm
@@ -28727,7 +28609,7 @@
     default: MantineListArray
   });
 
-  var _excluded$d = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
+  var _excluded$d = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options", "className"];
   var CheckboxGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -28752,6 +28634,7 @@
       labelPosition = _ref.labelPosition,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$d);
     var _useState = React$1.useState(_isArray(value) ? value : value ? String().split(',') : []),
       _useState2 = _slicedToArray(_useState, 2),
@@ -28769,10 +28652,7 @@
       setSelected(newValue);
       onChange(newValue);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-checkbox-group"
-    }, label && /*#__PURE__*/React$1.createElement(core.Input.Label, {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('checkbox-group', name, className), label && /*#__PURE__*/React$1.createElement(core.Input.Label, {
       required: required
     }, label), /*#__PURE__*/React$1.createElement(core.Stack, {
       gap: "xs",
@@ -28807,10 +28687,7 @@
     default: CheckboxGroup
   });
 
-  var _excluded$c = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
-
-  // TODO broken preview in mantine, add ensureframework
-
+  var _excluded$c = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options", "className"];
   var RadioGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -28835,6 +28712,7 @@
       labelPosition = _ref.labelPosition,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$c);
     var _useState = React$1.useState(value),
       _useState2 = _slicedToArray(_useState, 2);
@@ -28844,10 +28722,7 @@
       setSelected(e.target.value);
       onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-radio-group"
-    }, /*#__PURE__*/React$1.createElement(core.Radio.Group, {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('radio-group', name, className), /*#__PURE__*/React$1.createElement(core.Radio.Group, {
       name: name,
       label: label,
       description: hint,
@@ -28916,7 +28791,7 @@
     default: Group
   });
 
-  var _excluded$b = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime"];
+  var _excluded$b = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime", "className", "name", "component"];
   var tryDate = function tryDate(value) {
     if (_isDate(value)) {
       return value;
@@ -28939,11 +28814,12 @@
       lfLocale = _ref.lfLocale,
       _ref$withTime = _ref.withTime,
       withTime = _ref$withTime === void 0 ? false : _ref$withTime,
+      className = _ref.className,
+      name = _ref.name,
+      component = _ref.component,
       rest = _objectWithoutProperties(_ref, _excluded$b);
     var Component = withTime ? dates.DateTimePicker : dates.DatePickerInput;
-    return /*#__PURE__*/React$1.createElement(Component, _extends({
-      className: "lf-control-date",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(Component, _extends({}, makeClassName$1(component, name, className), {
       style: makeWidthStyle(fullWidth, width),
       description: hint,
       error: _isString(error) ? error : undefined,
@@ -28992,7 +28868,8 @@
     return /*#__PURE__*/React$1.createElement(MantineGenericDate, _extends({
       value: currentValue,
       onChange: handleChange,
-      lfLocale: lfLocale
+      lfLocale: lfLocale,
+      component: "date"
     }, passRest(rest)));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.SelectDate');
@@ -29040,7 +28917,8 @@
     return /*#__PURE__*/React$1.createElement(MantineGenericDate, _extends({
       value: currentValue,
       onChange: handleChange,
-      lfLocale: lfLocale
+      lfLocale: lfLocale,
+      component: "datetime"
     }, passRest(rest), {
       withTime: true
     }));
@@ -29052,7 +28930,7 @@
     default: SelectDatTime
   });
 
-  var _excluded$8 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
+  var _excluded$8 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter", "className"];
   var InputText = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -29066,16 +28944,15 @@
       var label = _ref.label,
       required = _ref.required;
       _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$8);
-    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, {
-      className: "lf-control-rate",
-      "data-lf-field-name": name,
+      var className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$8);
+    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, _extends({}, makeClassName$1('rate', name, className), {
       description: hint,
       error: _isString(error) ? error : undefined,
       inputWrapperOrder: ['label', 'input', 'description', 'error'],
       label: label,
       required: required
-    }, /*#__PURE__*/React$1.createElement(core.Rating, _extends({
+    }), /*#__PURE__*/React$1.createElement(core.Rating, _extends({
       onChange: onChange,
       defaultValue: value
     }, passRest(rest))));
@@ -29091,14 +28968,13 @@
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
-      text = _ref.text;
-    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, {
-      className: "lf-control-rate",
-      "data-lf-field-name": name,
+      text = _ref.text,
+      className = _ref.className;
+    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, _extends({}, makeClassName$1('placeholder', name, className), {
       description: hint,
       inputWrapperOrder: ['label', 'input', 'description', 'error'],
       label: label
-    }, /*#__PURE__*/React$1.createElement(Placeholder, {
+    }), /*#__PURE__*/React$1.createElement(Placeholder, {
       text: text
     }));
   }, ['label', 'hint', 'text']);
@@ -29116,7 +28992,7 @@
     default: PlaceholderImage
   });
 
-  var _excluded$7 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
+  var _excluded$7 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "className", "lfOnEnter"];
   var SliderMantine = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -29124,18 +29000,17 @@
       onChange = _ref.onChange;
       _ref.onBlur;
       var label = _ref.label,
-      required = _ref.required;
+      required = _ref.required,
+      className = _ref.className;
       _ref.lfOnEnter;
       var rest = _objectWithoutProperties(_ref, _excluded$7);
-    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, {
-      className: "lf-control-slider",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, _extends({}, makeClassName('slider', name, className), {
       description: hint,
       error: _isString(error) ? error : undefined,
       inputWrapperOrder: ['label', 'input', 'description', 'error'],
       label: label,
       required: required
-    }, /*#__PURE__*/React$1.createElement(core.Slider, _extends({
+    }), /*#__PURE__*/React$1.createElement(core.Slider, _extends({
       onChange: onChange
     }, passRest(rest))));
   }, ['label', 'hint', 'placeholder'], {
@@ -29154,7 +29029,7 @@
     default: SliderMantine
   });
 
-  var _excluded$6 = ["name", "hint", "value", "error", "fullWidth", "width", "data"];
+  var _excluded$6 = ["name", "hint", "value", "error", "fullWidth", "width", "data", "className"];
   var MantineTags = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -29163,10 +29038,9 @@
       fullWidth = _ref.fullWidth,
       width = _ref.width,
       data = _ref.data,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$6);
-    return /*#__PURE__*/React$1.createElement(core.TagsInput, _extends({
-      className: "lf-control-input-tag",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.TagsInput, _extends({}, makeClassName$1('input-tag', name, className), {
       style: makeWidthStyle(fullWidth, width),
       value: value,
       name: name,
@@ -29188,9 +29062,9 @@
   var css_248z$3 = ".lf-form-react-mantine .lf-control-tabs .lf-prefix-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical .mantine-Tabs-panel, .lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-left .mantine-Tabs-panel {\n  padding-left: var(--lf-field-column-margin);\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-right .mantine-Tabs-panel {\n  padding-right: var(--lf-field-column-margin);\n}";
   styleInject(css_248z$3);
 
-  var _excluded$5 = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement"];
+  var _excluded$5 = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement", "className"];
   var MantineTabs = I18N(function (_ref) {
-    var _classNames;
+    var _makeClassName;
     var name = _ref.name,
       value = _ref.value,
       tabs = _ref.tabs,
@@ -29200,6 +29074,7 @@
       justify = _ref.justify,
       orientation = _ref.orientation,
       placement = _ref.placement,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$5);
     var active;
     if (value) {
@@ -29209,10 +29084,7 @@
         active = tabs[0].value;
       }
     }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-control-tabs', (_classNames = {}, _defineProperty$1(_classNames, "orientation-".concat(orientation), orientation != null), _defineProperty$1(_classNames, "placement-".concat(placement), placement != null), _classNames)),
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(core.Tabs, _extends({
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('tabs', name, className, (_makeClassName = {}, _defineProperty$1(_makeClassName, "orientation-".concat(orientation), orientation != null), _defineProperty$1(_makeClassName, "placement-".concat(placement), placement != null), _makeClassName)), /*#__PURE__*/React$1.createElement(core.Tabs, _extends({
       value: active,
       onChange: onChange,
       orientation: orientation,
@@ -29292,7 +29164,7 @@
     default: BiStateButton
   });
 
-  var _excluded$3 = ["name", "hint", "fullWidth", "width", "error", "onChange", "onBlur", "lfOnEnter", "accept"];
+  var _excluded$3 = ["name", "hint", "fullWidth", "width", "error", "onChange", "onBlur", "lfOnEnter", "accept", "className"];
   var MantineUpload = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -29303,13 +29175,12 @@
       onBlur = _ref.onBlur;
       _ref.lfOnEnter;
       var accept = _ref.accept,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$3);
     var handleChange = React$1.useCallback(function (value) {
       return onChange(value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.FileInput, _extends({
-      className: "lf-control-upload",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.FileInput, _extends({}, makeClassName$1('upload', name, className), {
       style: makeWidthStyle(fullWidth, width),
       description: hint,
       error: _isString(error) ? error : undefined,
@@ -29326,7 +29197,7 @@
     default: MantineUpload
   });
 
-  var _excluded$2 = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
+  var _excluded$2 = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "className"];
   var MantineMultiSelect = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -29337,13 +29208,12 @@
       options = _ref.options,
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$2);
-    return /*#__PURE__*/React$1.createElement(core.MultiSelect, _extends({
+    return /*#__PURE__*/React$1.createElement(core.MultiSelect, _extends({}, makeClassName$1('multiselect', name, className), {
       value: value,
       name: name,
       data: filterOptions(options, filterValue, filterKey) || [],
-      className: "lf-control-select",
-      "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
       description: hint,
       error: _isString(error) ? error : undefined,
@@ -29362,7 +29232,7 @@
   var css_248z$1 = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
   styleInject(css_248z$1);
 
-  var _excluded$1 = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "allowStepClick", "allowStepSelect"];
+  var _excluded$1 = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "allowStepClick", "allowStepSelect", "className"];
   var i18nSteps = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -29387,6 +29257,7 @@
       labelPrevious = _ref.labelPrevious,
       allowStepClick = _ref.allowStepClick,
       allowStepSelect = _ref.allowStepSelect,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$1);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
@@ -29428,10 +29299,7 @@
         }
       }
     }, [value]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-steps",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(core.Stepper, _extends({
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('steps', name, className), /*#__PURE__*/React$1.createElement(core.Stepper, _extends({
       active: stepIdx,
       onStepClick: handleStepClick
     }, passRest(rest)), (steps || []).map(function (step) {
@@ -29494,7 +29362,7 @@
     }));
   };
 
-  var _excluded = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "showBrowserPicker"];
+  var _excluded = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "className", "showBrowserPicker"];
   var MANTINE_ICON_SIZE = {
     xs: 16,
     sm: 20,
@@ -29518,6 +29386,7 @@
       onBlur = _ref.onBlur,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
+      className = _ref.className,
       showBrowserPicker = _ref.showBrowserPicker,
       rest = _objectWithoutProperties(_ref, _excluded);
     var ref = React$1.useRef(null);
@@ -29543,9 +29412,8 @@
       }));
     }
     return /*#__PURE__*/React$1.createElement(dates.TimeInput, _extends({
-      ref: ref,
-      className: "lf-control-time",
-      "data-lf-field-name": name,
+      ref: ref
+    }, makeClassName$1('time', name, className), {
       style: makeWidthStyle(fullWidth, width),
       description: hint,
       error: _isString(error) ? error : undefined,

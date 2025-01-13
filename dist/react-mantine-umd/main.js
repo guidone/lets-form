@@ -1,4 +1,4 @@
-/* LetsForm react-mantine v0.12.3 - UMD */
+/* LetsForm react-mantine v0.12.4 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
@@ -567,6 +567,9 @@
   }
   function _slicedToArray(arr, i) {
     return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+  }
+  function _toArray(arr) {
+    return _arrayWithHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableRest();
   }
   function _toConsumableArray(arr) {
     return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
@@ -17326,20 +17329,31 @@
     };
   }();
 
+  var makeClassName$1 = function makeClassName() {
+    var _Array$from = Array.from(arguments),
+      _Array$from2 = _toArray(_Array$from),
+      component = _Array$from2[0],
+      name = _Array$from2[1],
+      rest = _Array$from2.slice(2);
+    return {
+      className: classNames.apply(void 0, ["lf-control-".concat(component), "lf-field-".concat(name)].concat(_toConsumableArray(rest !== null && rest !== void 0 ? rest : []))),
+      'data-lf-field-name': name
+    };
+  };
+
   var css_248z$g = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
   styleInject(css_248z$g);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
-      name = _ref.name;
+      name = _ref.name,
+      className = _ref.className;
     if (!_isEmpty(text)) {
-      return /*#__PURE__*/React$1.createElement("div", {
-        className: "lf-control-placeholder",
-        "data-lf-field-name": name,
+      return /*#__PURE__*/React$1.createElement("div", _extends({}, makeClassName$1('placeholder', name, className), {
         dangerouslySetInnerHTML: {
           __html: microdown.parse(text)
         }
-      });
+      }));
     } else {
       return /*#__PURE__*/React$1.createElement("div", null);
     }
@@ -17429,13 +17443,10 @@
     React$1.useEffect(function () {
       setIsOpen(open);
     }, [open]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: classNames('lf-control-group', "lf-border-".concat(border), {
-        'open': isOpen,
-        'close': !isOpen
-      })
-    }, /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('group', name, "lf-border-".concat(border), {
+      'open': isOpen,
+      'close': !isOpen
+    }), /*#__PURE__*/React$1.createElement("div", {
       role: "separator",
       className: classNames('header', align)
     }, /*#__PURE__*/React$1.createElement("span", {
@@ -17466,14 +17477,13 @@
       maxHeight = _ref.maxHeight,
       marginTop = _ref.marginTop,
       marginBottom = _ref.marginBottom,
+      className = _ref.className,
       align = _ref.align;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-placeholder-image",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement("div", _extends({}, makeClassName$1('placeholder-image', name, className), {
       style: {
         textAlign: align ? align : undefined
       }
-    }, url && /*#__PURE__*/React$1.createElement("img", {
+    }), url && /*#__PURE__*/React$1.createElement("img", {
       src: url,
       alt: label || name,
       style: {
@@ -17505,10 +17515,7 @@
     var name = _ref.name,
       size = _ref.size,
       color = _ref.color;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-divider",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('divider', name), /*#__PURE__*/React$1.createElement("div", {
       className: "bar",
       style: {
         height: "".concat(size, "px"),
@@ -18057,10 +18064,7 @@
         style: makeWidthStyle(fullWidth, width)
       }, passRest(_omit(rest, 'label')), LinkProps));
     }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-control-button', className, _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
-      "data-lf-field-name": name
-    }, inner);
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('button', name, className, _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)), inner);
   };
   var MakeButton = function MakeButton(ButtonComponent, OnStateProps, OffStateProps, LinkProps) {
     return function (props) {
@@ -18083,10 +18087,7 @@
     var name = _ref.name,
       children = _ref.children,
       columns = _ref.columns;
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-columns"
-    }, (columns || []).filter(function (column) {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('columns', name), (columns || []).filter(function (column) {
       return column.hidden !== true;
     }).map(function (column) {
       return /*#__PURE__*/React$1.createElement("div", {
@@ -20637,7 +20638,7 @@
     }, rest), children);
   });
 
-  var _excluded$k = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter"];
+  var _excluded$k = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "className"];
   var InputText$1 = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -20651,6 +20652,7 @@
       onBlur = _ref.onBlur,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$k);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
@@ -20658,9 +20660,7 @@
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.TextInput, _extends({
-      className: "lf-control-input-text",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.TextInput, _extends({}, makeClassName$1('input-text', name, className), {
       value: value,
       style: makeWidthStyle(fullWidth, width),
       description: hint,
@@ -20680,7 +20680,7 @@
     default: InputText$1
   });
 
-  var _excluded$j = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "lfOnEnter"];
+  var _excluded$j = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "className", "lfOnEnter"];
   var MantineNumberInput = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -20690,15 +20690,14 @@
       error = _ref.error,
       fullWidth = _ref.fullWidth,
       width = _ref.width,
+      className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
       rest = _objectWithoutProperties(_ref, _excluded$j);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
-    return /*#__PURE__*/React$1.createElement(core.NumberInput, _extends({
-      className: "lf-control-input-number",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.NumberInput, _extends({}, makeClassName$1('input-number', name, className), {
       style: makeWidthStyle(fullWidth, width),
       value: value,
       name: name,
@@ -20715,7 +20714,7 @@
     default: MantineNumberInput
   });
 
-  var _excluded$i = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "lfOnEnter"];
+  var _excluded$i = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "className", "lfOnEnter"];
   var MantineTextarea = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20727,6 +20726,7 @@
       fullWidth = _ref.fullWidth,
       width = _ref.width,
       inputType = _ref.inputType,
+      className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
       rest = _objectWithoutProperties(_ref, _excluded$i);
@@ -20736,9 +20736,7 @@
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.Textarea, _extends({
-      className: "lf-control-textarea",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.Textarea, _extends({}, makeClassName$1('textarea', name, className), {
       name: name,
       style: makeWidthStyle(fullWidth, width),
       label: label,
@@ -20757,7 +20755,7 @@
     default: MantineTextarea
   });
 
-  var _excluded$h = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
+  var _excluded$h = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "className"];
 
   // Mantine Select breaks if value is null
   var ensureNotNull = function ensureNotNull(options) {
@@ -20782,10 +20780,9 @@
       options = _ref.options,
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$h);
-    return /*#__PURE__*/React$1.createElement(core.Select, _extends({
-      className: "lf-control-select",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.Select, _extends({}, makeClassName$1('select', name, className), {
       style: makeWidthStyle(fullWidth, width),
       description: hint,
       error: _isString(error) ? error : undefined,
@@ -20804,7 +20801,7 @@
     default: MantineSelect
   });
 
-  var _excluded$g = ["name", "hint", "value", "onChange", "error", "description"];
+  var _excluded$g = ["name", "hint", "value", "onChange", "error", "description", "className"];
   var MantineCheckbox = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -20812,13 +20809,12 @@
       onChange = _ref.onChange,
       error = _ref.error;
       _ref.description;
-      var rest = _objectWithoutProperties(_ref, _excluded$g);
+      var className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$g);
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.Checkbox, _extends({
-      className: "lf-control-checkbox",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.Checkbox, _extends({}, makeClassName$1('checkbox', name, className), {
       checked: value,
       name: name,
       onChange: handleChange,
@@ -20834,7 +20830,7 @@
     default: MantineCheckbox
   });
 
-  var _excluded$f = ["name", "hint", "value", "onChange", "error", "description"];
+  var _excluded$f = ["name", "hint", "value", "onChange", "error", "description", "className"];
   var MantineToggle = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -20842,13 +20838,12 @@
       onChange = _ref.onChange,
       error = _ref.error;
       _ref.description;
-      var rest = _objectWithoutProperties(_ref, _excluded$f);
+      var className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$f);
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.Switch, _extends({
-      className: "lf-control-checkbox",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.Switch, _extends({}, makeClassName$1('toggle', name, className), {
       checked: value,
       name: name,
       onChange: handleChange,
@@ -20864,7 +20859,7 @@
     default: MantineToggle
   });
 
-  var _excluded$e = ["hint", "required", "tooltip", "name", "label"];
+  var _excluded$e = ["hint", "required", "tooltip", "name", "label", "className"];
   var MantineListArray = I18N(function (_ref) {
     var _rest$error, _rest$error2;
     var hint = _ref.hint,
@@ -20872,11 +20867,9 @@
       _ref.tooltip;
       var name = _ref.name,
       label = _ref.label,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$e);
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-array"
-    }, label && /*#__PURE__*/React$1.createElement(core.Input.Label, {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('array', name, className), label && /*#__PURE__*/React$1.createElement(core.Input.Label, {
       required: required
     }, label), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm
@@ -20889,7 +20882,7 @@
     default: MantineListArray
   });
 
-  var _excluded$d = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
+  var _excluded$d = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options", "className"];
   var CheckboxGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20914,6 +20907,7 @@
       labelPosition = _ref.labelPosition,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$d);
     var _useState = React$1.useState(_isArray(value) ? value : value ? String().split(',') : []),
       _useState2 = _slicedToArray(_useState, 2),
@@ -20931,10 +20925,7 @@
       setSelected(newValue);
       onChange(newValue);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-checkbox-group"
-    }, label && /*#__PURE__*/React$1.createElement(core.Input.Label, {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('checkbox-group', name, className), label && /*#__PURE__*/React$1.createElement(core.Input.Label, {
       required: required
     }, label), /*#__PURE__*/React$1.createElement(core.Stack, {
       gap: "xs",
@@ -20969,10 +20960,7 @@
     default: CheckboxGroup
   });
 
-  var _excluded$c = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options"];
-
-  // TODO broken preview in mantine, add ensureframework
-
+  var _excluded$c = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options", "className"];
   var RadioGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20997,6 +20985,7 @@
       labelPosition = _ref.labelPosition,
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$c);
     var _useState = React$1.useState(value),
       _useState2 = _slicedToArray(_useState, 2);
@@ -21006,10 +20995,7 @@
       setSelected(e.target.value);
       onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-radio-group"
-    }, /*#__PURE__*/React$1.createElement(core.Radio.Group, {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('radio-group', name, className), /*#__PURE__*/React$1.createElement(core.Radio.Group, {
       name: name,
       label: label,
       description: hint,
@@ -21078,7 +21064,7 @@
     default: Group
   });
 
-  var _excluded$b = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime"];
+  var _excluded$b = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime", "className", "name", "component"];
   var tryDate = function tryDate(value) {
     if (_isDate(value)) {
       return value;
@@ -21101,11 +21087,12 @@
       lfLocale = _ref.lfLocale,
       _ref$withTime = _ref.withTime,
       withTime = _ref$withTime === void 0 ? false : _ref$withTime,
+      className = _ref.className,
+      name = _ref.name,
+      component = _ref.component,
       rest = _objectWithoutProperties(_ref, _excluded$b);
     var Component = withTime ? dates.DateTimePicker : dates.DatePickerInput;
-    return /*#__PURE__*/React$1.createElement(Component, _extends({
-      className: "lf-control-date",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(Component, _extends({}, makeClassName$1(component, name, className), {
       style: makeWidthStyle(fullWidth, width),
       description: hint,
       error: _isString(error) ? error : undefined,
@@ -21154,7 +21141,8 @@
     return /*#__PURE__*/React$1.createElement(MantineGenericDate, _extends({
       value: currentValue,
       onChange: handleChange,
-      lfLocale: lfLocale
+      lfLocale: lfLocale,
+      component: "date"
     }, passRest(rest)));
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.SelectDate');
@@ -21202,7 +21190,8 @@
     return /*#__PURE__*/React$1.createElement(MantineGenericDate, _extends({
       value: currentValue,
       onChange: handleChange,
-      lfLocale: lfLocale
+      lfLocale: lfLocale,
+      component: "datetime"
     }, passRest(rest), {
       withTime: true
     }));
@@ -21214,7 +21203,7 @@
     default: SelectDatTime
   });
 
-  var _excluded$8 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
+  var _excluded$8 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter", "className"];
   var InputText = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -21228,16 +21217,15 @@
       var label = _ref.label,
       required = _ref.required;
       _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$8);
-    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, {
-      className: "lf-control-rate",
-      "data-lf-field-name": name,
+      var className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$8);
+    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, _extends({}, makeClassName$1('rate', name, className), {
       description: hint,
       error: _isString(error) ? error : undefined,
       inputWrapperOrder: ['label', 'input', 'description', 'error'],
       label: label,
       required: required
-    }, /*#__PURE__*/React$1.createElement(core.Rating, _extends({
+    }), /*#__PURE__*/React$1.createElement(core.Rating, _extends({
       onChange: onChange,
       defaultValue: value
     }, passRest(rest))));
@@ -21253,14 +21241,13 @@
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
-      text = _ref.text;
-    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, {
-      className: "lf-control-rate",
-      "data-lf-field-name": name,
+      text = _ref.text,
+      className = _ref.className;
+    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, _extends({}, makeClassName$1('placeholder', name, className), {
       description: hint,
       inputWrapperOrder: ['label', 'input', 'description', 'error'],
       label: label
-    }, /*#__PURE__*/React$1.createElement(Placeholder, {
+    }), /*#__PURE__*/React$1.createElement(Placeholder, {
       text: text
     }));
   }, ['label', 'hint', 'text']);
@@ -21278,7 +21265,7 @@
     default: PlaceholderImage
   });
 
-  var _excluded$7 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "lfOnEnter"];
+  var _excluded$7 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "className", "lfOnEnter"];
   var SliderMantine = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -21286,18 +21273,17 @@
       onChange = _ref.onChange;
       _ref.onBlur;
       var label = _ref.label,
-      required = _ref.required;
+      required = _ref.required,
+      className = _ref.className;
       _ref.lfOnEnter;
       var rest = _objectWithoutProperties(_ref, _excluded$7);
-    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, {
-      className: "lf-control-slider",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, _extends({}, makeClassName('slider', name, className), {
       description: hint,
       error: _isString(error) ? error : undefined,
       inputWrapperOrder: ['label', 'input', 'description', 'error'],
       label: label,
       required: required
-    }, /*#__PURE__*/React$1.createElement(core.Slider, _extends({
+    }), /*#__PURE__*/React$1.createElement(core.Slider, _extends({
       onChange: onChange
     }, passRest(rest))));
   }, ['label', 'hint', 'placeholder'], {
@@ -21316,7 +21302,7 @@
     default: SliderMantine
   });
 
-  var _excluded$6 = ["name", "hint", "value", "error", "fullWidth", "width", "data"];
+  var _excluded$6 = ["name", "hint", "value", "error", "fullWidth", "width", "data", "className"];
   var MantineTags = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -21325,10 +21311,9 @@
       fullWidth = _ref.fullWidth,
       width = _ref.width,
       data = _ref.data,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$6);
-    return /*#__PURE__*/React$1.createElement(core.TagsInput, _extends({
-      className: "lf-control-input-tag",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.TagsInput, _extends({}, makeClassName$1('input-tag', name, className), {
       style: makeWidthStyle(fullWidth, width),
       value: value,
       name: name,
@@ -21350,9 +21335,9 @@
   var css_248z$4 = ".lf-form-react-mantine .lf-control-tabs .lf-prefix-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical .mantine-Tabs-panel, .lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-left .mantine-Tabs-panel {\n  padding-left: var(--lf-field-column-margin);\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-right .mantine-Tabs-panel {\n  padding-right: var(--lf-field-column-margin);\n}";
   styleInject(css_248z$4);
 
-  var _excluded$5 = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement"];
+  var _excluded$5 = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement", "className"];
   var MantineTabs = I18N(function (_ref) {
-    var _classNames;
+    var _makeClassName;
     var name = _ref.name,
       value = _ref.value,
       tabs = _ref.tabs,
@@ -21362,6 +21347,7 @@
       justify = _ref.justify,
       orientation = _ref.orientation,
       placement = _ref.placement,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$5);
     var active;
     if (value) {
@@ -21371,10 +21357,7 @@
         active = tabs[0].value;
       }
     }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-control-tabs', (_classNames = {}, _defineProperty$1(_classNames, "orientation-".concat(orientation), orientation != null), _defineProperty$1(_classNames, "placement-".concat(placement), placement != null), _classNames)),
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(core.Tabs, _extends({
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('tabs', name, className, (_makeClassName = {}, _defineProperty$1(_makeClassName, "orientation-".concat(orientation), orientation != null), _defineProperty$1(_makeClassName, "placement-".concat(placement), placement != null), _makeClassName)), /*#__PURE__*/React$1.createElement(core.Tabs, _extends({
       value: active,
       onChange: onChange,
       orientation: orientation,
@@ -21454,7 +21437,7 @@
     default: BiStateButton
   });
 
-  var _excluded$3 = ["name", "hint", "fullWidth", "width", "error", "onChange", "onBlur", "lfOnEnter", "accept"];
+  var _excluded$3 = ["name", "hint", "fullWidth", "width", "error", "onChange", "onBlur", "lfOnEnter", "accept", "className"];
   var MantineUpload = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -21465,13 +21448,12 @@
       onBlur = _ref.onBlur;
       _ref.lfOnEnter;
       var accept = _ref.accept,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$3);
     var handleChange = React$1.useCallback(function (value) {
       return onChange(value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(core.FileInput, _extends({
-      className: "lf-control-upload",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement(core.FileInput, _extends({}, makeClassName$1('upload', name, className), {
       style: makeWidthStyle(fullWidth, width),
       description: hint,
       error: _isString(error) ? error : undefined,
@@ -21488,7 +21470,7 @@
     default: MantineUpload
   });
 
-  var _excluded$2 = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey"];
+  var _excluded$2 = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "className"];
   var MantineMultiSelect = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -21499,13 +21481,12 @@
       options = _ref.options,
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$2);
-    return /*#__PURE__*/React$1.createElement(core.MultiSelect, _extends({
+    return /*#__PURE__*/React$1.createElement(core.MultiSelect, _extends({}, makeClassName$1('multiselect', name, className), {
       value: value,
       name: name,
       data: filterOptions(options, filterValue, filterKey) || [],
-      className: "lf-control-select",
-      "data-lf-field-name": name,
       style: makeWidthStyle(fullWidth, width),
       description: hint,
       error: _isString(error) ? error : undefined,
@@ -21538,7 +21519,7 @@
   var css_248z$1 = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
   styleInject(css_248z$1);
 
-  var _excluded$1 = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "allowStepClick", "allowStepSelect"];
+  var _excluded$1 = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "allowStepClick", "allowStepSelect", "className"];
   var i18nSteps = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -21563,6 +21544,7 @@
       labelPrevious = _ref.labelPrevious,
       allowStepClick = _ref.allowStepClick,
       allowStepSelect = _ref.allowStepSelect,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$1);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
@@ -21604,10 +21586,7 @@
         }
       }
     }, [value]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-steps",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(core.Stepper, _extends({
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('steps', name, className), /*#__PURE__*/React$1.createElement(core.Stepper, _extends({
       active: stepIdx,
       onStepClick: handleStepClick
     }, passRest(rest)), (steps || []).map(function (step) {
@@ -21670,7 +21649,7 @@
     }));
   };
 
-  var _excluded = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "showBrowserPicker"];
+  var _excluded = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "className", "showBrowserPicker"];
   var MANTINE_ICON_SIZE = {
     xs: 16,
     sm: 20,
@@ -21694,6 +21673,7 @@
       onBlur = _ref.onBlur,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
+      className = _ref.className,
       showBrowserPicker = _ref.showBrowserPicker,
       rest = _objectWithoutProperties(_ref, _excluded);
     var ref = React$1.useRef(null);
@@ -21719,9 +21699,8 @@
       }));
     }
     return /*#__PURE__*/React$1.createElement(dates.TimeInput, _extends({
-      ref: ref,
-      className: "lf-control-time",
-      "data-lf-field-name": name,
+      ref: ref
+    }, makeClassName$1('time', name, className), {
       style: makeWidthStyle(fullWidth, width),
       description: hint,
       error: _isString(error) ? error : undefined,
@@ -21740,12 +21719,11 @@
 
   var Hidden = function Hidden(_ref) {
     var name = _ref.name;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-hidden",
+    return /*#__PURE__*/React$1.createElement("div", _extends({}, makeClassName$1('hidden', name), {
       style: {
         padding: '10px'
       }
-    }, "Hidden field: ", /*#__PURE__*/React$1.createElement("em", null, name));
+    }), "Hidden field: ", /*#__PURE__*/React$1.createElement("em", null, name));
   };
   lfLog('Loaded RSuite5.Hidden');
 

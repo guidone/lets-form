@@ -1,4 +1,4 @@
-/* LetsForm react-bootstrap v0.12.3 - UMD */
+/* LetsForm react-bootstrap v0.12.4 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-hook-form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-hook-form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button'], factory) :
@@ -567,6 +567,9 @@
   }
   function _slicedToArray(arr, i) {
     return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+  }
+  function _toArray(arr) {
+    return _arrayWithHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableRest();
   }
   function _toConsumableArray(arr) {
     return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
@@ -17362,20 +17365,31 @@
     };
   }();
 
+  var makeClassName = function makeClassName() {
+    var _Array$from = Array.from(arguments),
+      _Array$from2 = _toArray(_Array$from),
+      component = _Array$from2[0],
+      name = _Array$from2[1],
+      rest = _Array$from2.slice(2);
+    return {
+      className: classNames.apply(void 0, ["lf-control-".concat(component), "lf-field-".concat(name)].concat(_toConsumableArray(rest !== null && rest !== void 0 ? rest : []))),
+      'data-lf-field-name': name
+    };
+  };
+
   var css_248z$e = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
   styleInject(css_248z$e);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
-      name = _ref.name;
+      name = _ref.name,
+      className = _ref.className;
     if (!_isEmpty(text)) {
-      return /*#__PURE__*/React$1.createElement("div", {
-        className: "lf-control-placeholder",
-        "data-lf-field-name": name,
+      return /*#__PURE__*/React$1.createElement("div", _extends({}, makeClassName('placeholder', name, className), {
         dangerouslySetInnerHTML: {
           __html: microdown.parse(text)
         }
-      });
+      }));
     } else {
       return /*#__PURE__*/React$1.createElement("div", null);
     }
@@ -17465,13 +17479,10 @@
     React$1.useEffect(function () {
       setIsOpen(open);
     }, [open]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: classNames('lf-control-group', "lf-border-".concat(border), {
-        'open': isOpen,
-        'close': !isOpen
-      })
-    }, /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('group', name, "lf-border-".concat(border), {
+      'open': isOpen,
+      'close': !isOpen
+    }), /*#__PURE__*/React$1.createElement("div", {
       role: "separator",
       className: classNames('header', align)
     }, /*#__PURE__*/React$1.createElement("span", {
@@ -17502,14 +17513,13 @@
       maxHeight = _ref.maxHeight,
       marginTop = _ref.marginTop,
       marginBottom = _ref.marginBottom,
+      className = _ref.className,
       align = _ref.align;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-placeholder-image",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement("div", _extends({}, makeClassName('placeholder-image', name, className), {
       style: {
         textAlign: align ? align : undefined
       }
-    }, url && /*#__PURE__*/React$1.createElement("img", {
+    }), url && /*#__PURE__*/React$1.createElement("img", {
       src: url,
       alt: label || name,
       style: {
@@ -17541,10 +17551,7 @@
     var name = _ref.name,
       size = _ref.size,
       color = _ref.color;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-divider",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('divider', name), /*#__PURE__*/React$1.createElement("div", {
       className: "bar",
       style: {
         height: "".concat(size, "px"),
@@ -17559,16 +17566,14 @@
     default: Divider
   });
 
-  var _excluded$h = ["name", "view"];
+  var _excluded$i = ["name", "view", "className"];
   var ReactView = function ReactView(_ref) {
     var name = _ref.name,
       view = _ref.view,
-      rest = _objectWithoutProperties(_ref, _excluded$h);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$i);
     var View = view;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-react-view",
-      "data-lf-field-name": name
-    }, View && /*#__PURE__*/React$1.createElement(View, _extends({
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('react-view', name, className), View && /*#__PURE__*/React$1.createElement(View, _extends({
       name: name
     }, rest)));
   };
@@ -18047,7 +18052,7 @@
   var css_248z$7 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$7);
 
-  var _excluded$g = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$h = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -18073,7 +18078,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$g);
+      rest = _objectWithoutProperties(_ref, _excluded$h);
     var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -18107,10 +18112,7 @@
         style: makeWidthStyle(fullWidth, width)
       }, passRest(_omit(rest, 'label')), LinkProps));
     }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-control-button', className, _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
-      "data-lf-field-name": name
-    }, inner);
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('button', name, className, _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)), inner);
   };
   var MakeButton = function MakeButton(ButtonComponent, OnStateProps, OffStateProps, LinkProps) {
     return function (props) {
@@ -18133,10 +18135,7 @@
     var name = _ref.name,
       children = _ref.children,
       columns = _ref.columns;
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-columns"
-    }, (columns || []).filter(function (column) {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('columns', name), (columns || []).filter(function (column) {
       return column.hidden !== true;
     }).map(function (column) {
       return /*#__PURE__*/React$1.createElement("div", {
@@ -20014,7 +20013,7 @@
   var css_248z$3 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
   styleInject(css_248z$3);
 
-  var _excluded$f = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
+  var _excluded$g = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
   var DEFAULT_FORM = {
     version: 2,
     fields: []
@@ -20086,7 +20085,7 @@
         resetAfterSubmit = _ref2$resetAfterSubmi === void 0 ? true : _ref2$resetAfterSubmi,
         formContext = _ref2.context,
         errors = _ref2.errors,
-        rest = _objectWithoutProperties(_ref2, _excluded$f);
+        rest = _objectWithoutProperties(_ref2, _excluded$g);
       var showErrors = form.showErrors,
         connectors = form.connectors;
       var _useState = React$1.useState(prealoadComponents),
@@ -20517,7 +20516,7 @@
     return LazyWithPreload;
   }
 
-  var _excluded$e = ["framework", "children"];
+  var _excluded$f = ["framework", "children"];
   var Fields = {
     'input-text': {
       'react-bootstrap': lazyPreload(function () {
@@ -20647,7 +20646,7 @@
   var LetsForm = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$e);
+      rest = _objectWithoutProperties(_ref, _excluded$f);
     var refForm = React$1.useRef();
     React$1.useImperativeHandle(ref, function () {
       return {
@@ -20662,7 +20661,7 @@
     }, rest), children);
   });
 
-  var _excluded$d = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "className", "inputType", "inputMode", "autocomplete", "lfLocale", "disabled", "readOnly", "plaintext", "error", "component", "required", "submitOnEnter", "prefix", "postfix", "placeholder", "fullWidth", "width", "floatingLabel", "lfOnEnter"];
+  var _excluded$e = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "className", "inputType", "inputMode", "autocomplete", "lfLocale", "disabled", "readOnly", "plaintext", "error", "component", "required", "submitOnEnter", "prefix", "postfix", "placeholder", "fullWidth", "width", "floatingLabel", "lfOnEnter"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -20685,9 +20684,9 @@
       readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
       _ref$plaintext = _ref.plaintext,
       plaintext = _ref$plaintext === void 0 ? false : _ref$plaintext,
-      error = _ref.error;
-      _ref.component;
-      var required = _ref.required,
+      error = _ref.error,
+      component = _ref.component,
+      required = _ref.required,
       _ref$submitOnEnter = _ref.submitOnEnter,
       submitOnEnter = _ref$submitOnEnter === void 0 ? false : _ref$submitOnEnter,
       prefix = _ref.prefix,
@@ -20699,7 +20698,7 @@
       floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$d);
+      rest = _objectWithoutProperties(_ref, _excluded$e);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -20726,28 +20725,24 @@
       innerGroup = /*#__PURE__*/React$1.createElement(InputGroup, null, prefix && /*#__PURE__*/React$1.createElement(InputGroup.Text, null, TextOrIcon(prefix)), inner, postfix && /*#__PURE__*/React$1.createElement(InputGroup.Text, null, TextOrIcon(postfix)));
     }
     var useFloatingLabels = floatingLabel && !needsGroup;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: className,
-      "data-lf-field-name": name
-    }, useFloatingLabels && label && /*#__PURE__*/React$1.createElement(FloatingLabel, {
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName(component, name, className), useFloatingLabels && label && /*#__PURE__*/React$1.createElement(FloatingLabel, {
       label: label
     }, innerGroup), !useFloatingLabels && label && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !useFloatingLabels && innerGroup, hint && !error && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
       type: "invalid"
     }, error));
   };
 
-  var _excluded$c = ["onChange"];
+  var _excluded$d = ["onChange"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var TextInput = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$c);
+      rest = _objectWithoutProperties(_ref, _excluded$d);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
-      className: "lf-control-input-text",
       component: "input-text",
       onChange: handleChange
     }, rest));
@@ -20759,7 +20754,7 @@
     default: TextInput
   });
 
-  var _excluded$b = ["name", "label", "hint", "value", "size", "placeholder", "options", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "floatingLabel", "filterKey", "filterValue"];
+  var _excluded$c = ["name", "label", "hint", "value", "size", "placeholder", "options", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "floatingLabel", "filterKey", "filterValue", "className"];
   var Select = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20781,7 +20776,8 @@
       floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
       filterKey = _ref.filterKey,
       filterValue = _ref.filterValue,
-      rest = _objectWithoutProperties(_ref, _excluded$b);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$c);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value !== placeholder ? e.target.value : undefined);
     }, [onChange, placeholder]);
@@ -20804,10 +20800,7 @@
         key: value
       }, label);
     }));
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-input-text",
-      "data-lf-field-name": name
-    }, !floatingLabel && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !floatingLabel && inner, floatingLabel && /*#__PURE__*/React$1.createElement(FloatingLabel, {
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName('select', name, className), !floatingLabel && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !floatingLabel && inner, floatingLabel && /*#__PURE__*/React$1.createElement(FloatingLabel, {
       label: label
     }, inner), hint && !error && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
       type: "invalid"
@@ -20822,7 +20815,7 @@
     default: Select
   });
 
-  var _excluded$a = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format"];
+  var _excluded$b = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format", "className"];
   var Checkbox = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20840,22 +20833,20 @@
       _ref.appearance;
       _ref.locale;
       _ref.format;
-      _objectWithoutProperties(_ref, _excluded$a);
+      var className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$b);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-checkbox",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Form.Check, {
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName('checkbox', name, className), /*#__PURE__*/React$1.createElement(Form.Check, {
       type: "checkbox"
-    }, /*#__PURE__*/React$1.createElement(Form.Check.Input, {
+    }, /*#__PURE__*/React$1.createElement(Form.Check.Input, _extends({
       onChange: handleChange,
       onBlur: onBlur,
       disabled: disabled,
       isInvalid: error != null,
       checked: value
-    }), label && /*#__PURE__*/React$1.createElement(Form.Check.Label, null, label), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+    }, passRest(rest))), label && /*#__PURE__*/React$1.createElement(Form.Check.Label, null, label), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
       type: "invalid"
     }, error)), hint && /*#__PURE__*/React$1.createElement(Form.Text, null, hint));
   }, ['label', 'hint']);
@@ -20866,7 +20857,7 @@
     default: Checkbox
   });
 
-  var _excluded$9 = ["name", "label", "hint", "value", "placeholder", "lfLocale", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format"];
+  var _excluded$a = ["name", "label", "hint", "value", "placeholder", "lfLocale", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format", "className"];
   var Toggle = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20885,21 +20876,19 @@
       _ref.appearance;
       _ref.locale;
       _ref.format;
-      _objectWithoutProperties(_ref, _excluded$9);
+      var className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$a);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-checkbox",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Form.Check, {
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName('checkbox', name, className), /*#__PURE__*/React$1.createElement(Form.Check, {
       type: "switch"
-    }, /*#__PURE__*/React$1.createElement(Form.Check.Input, {
+    }, /*#__PURE__*/React$1.createElement(Form.Check.Input, _extends({
       onChange: handleChange,
       onBlur: onBlur,
       disabled: disabled,
       isInvalid: error != null
-    }), label && /*#__PURE__*/React$1.createElement(Form.Check.Label, null, label), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+    }, passRest(rest))), label && /*#__PURE__*/React$1.createElement(Form.Check.Label, null, label), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
       type: "invalid"
     }, error)), hint && /*#__PURE__*/React$1.createElement(Form.Text, null, hint));
   }, ['label', 'hint']);
@@ -20910,7 +20899,7 @@
     default: Toggle
   });
 
-  var _excluded$8 = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options"];
+  var _excluded$9 = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options", "className"];
   var CheckboxGroupBootstrap = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20930,7 +20919,8 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$9);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
       values = _useState2[0],
@@ -20947,10 +20937,7 @@
       setValues(newValues);
       onChange(newValues);
     }, [onChange, values]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-checkbox-group",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref2, idx) {
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName('checkbox-group', name, className), /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref2, idx) {
       var value = _ref2.value,
         label = _ref2.label;
       return /*#__PURE__*/React$1.createElement(Form.Check, {
@@ -20988,11 +20975,9 @@
     var label = _ref.label,
       hint = _ref.hint,
       text = _ref.text,
-      name = _ref.name;
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-placeholder",
-      "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement(Form.Label, null, label), /*#__PURE__*/React$1.createElement(Placeholder, {
+      name = _ref.name,
+      className = _ref.className;
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName('placeholder', name, className), label && /*#__PURE__*/React$1.createElement(Form.Label, null, label), /*#__PURE__*/React$1.createElement(Placeholder, {
       text: text
     }), hint && /*#__PURE__*/React$1.createElement(Form.Text, null, hint));
   }, ['label', 'hint', 'text']);
@@ -21010,14 +20995,14 @@
     default: PlaceholderImage
   });
 
-  var _excluded$7 = ["onChange", "value"];
+  var _excluded$8 = ["onChange", "value"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var Date$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$7);
+      rest = _objectWithoutProperties(_ref, _excluded$8);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -21027,7 +21012,6 @@
       currentDate = value.toISOString().split('T')[0];
     }
     return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
-      className: "lf-control-date",
       inputType: "date",
       component: "date",
       value: currentDate,
@@ -21041,7 +21025,7 @@
     default: Date$1
   });
 
-  var _excluded$6 = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "disabled", "readOnly", "error", "required", "rows", "placeholder", "width", "fullWidth"];
+  var _excluded$7 = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "disabled", "readOnly", "error", "required", "rows", "placeholder", "width", "fullWidth", "className"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -21063,14 +21047,12 @@
       placeholder = _ref.placeholder,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
-      rest = _objectWithoutProperties(_ref, _excluded$6);
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$7);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-input-text",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form.Control, _extends({
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName('textarea', name, className), /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form.Control, _extends({
       name: name,
       as: "textarea",
       rows: rows,
@@ -21094,6 +21076,8 @@
     default: Textarea
   });
 
+  var _excluded$6 = ["name", "label", "hint", "value", "onChange", "onBlur", "disabled", "readOnly", "error", "required", "placeholder", "min", "max", "step", "className"];
+
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var Slider = I18N(function (_ref) {
@@ -21112,14 +21096,13 @@
       placeholder = _ref.placeholder,
       min = _ref.min,
       max = _ref.max,
-      step = _ref.step;
+      step = _ref.step,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$6);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-input-text",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form.Range, {
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName('slider', name, className), /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form.Range, _extends({
       name: name,
       defaultValue: value,
       onChange: handleChange,
@@ -21131,7 +21114,7 @@
       disabled: disabled,
       readOnly: readOnly,
       isInvalid: error != null
-    }), hint && !error && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+    }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
       type: "invalid"
     }, error));
   }, ['label', 'hint', 'placeholder']);
@@ -21170,7 +21153,7 @@
     default: Group
   });
 
-  var _excluded$5 = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options"];
+  var _excluded$5 = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options", "className"];
   var RadioGroupBootstrap = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -21190,6 +21173,7 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$5);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
@@ -21207,10 +21191,7 @@
       setValues(newValues);
       onChange(newValues);
     }, [onChange, values]);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      className: "lf-control-radio-group",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref2, idx) {
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName('radio-group', name, className), /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref2, idx) {
       var value = _ref2.value,
         label = _ref2.label;
       return /*#__PURE__*/React$1.createElement(Form.Check, {
@@ -21272,7 +21253,6 @@
       }
     }
     return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
-      className: "lf-control-date",
       inputType: "datetime-local",
       component: "datetime",
       value: currentDate,
@@ -21286,7 +21266,7 @@
     default: DateTime
   });
 
-  var _excluded$3 = ["hint", "required", "tooltip", "name", "label"];
+  var _excluded$3 = ["hint", "required", "tooltip", "name", "label", "className"];
   var ListArrayBootstrap = I18N(function (_ref) {
     var _rest$error, _rest$error2;
     var hint = _ref.hint,
@@ -21294,11 +21274,9 @@
       _ref.tooltip;
       var name = _ref.name,
       label = _ref.label,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$3);
-    return /*#__PURE__*/React$1.createElement(Form.Group, {
-      "data-lf-field-name": name,
-      className: "lf-control-array"
-    }, label && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName('array', name, className), label && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm
     }, rest)), hint && !((_rest$error = rest.error) !== null && _rest$error !== void 0 && _rest$error.errorMessage) && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString((_rest$error2 = rest.error) === null || _rest$error2 === void 0 ? void 0 : _rest$error2.errorMessage) && !_isEmpty(rest.error.errorMessage) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
       type: "invalid"
@@ -21339,7 +21317,6 @@
       }
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
-      className: "lf-control-input-number",
       component: "input-number",
       onChange: handleChange,
       inputType: "number",
@@ -21447,12 +21424,11 @@
 
   var Hidden = function Hidden(_ref) {
     var name = _ref.name;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-hidden",
+    return /*#__PURE__*/React$1.createElement("div", _extends({}, makeClassName('hidden', name), {
       style: {
         padding: '10px'
       }
-    }, "Hidden field: ", /*#__PURE__*/React$1.createElement("em", null, name));
+    }), "Hidden field: ", /*#__PURE__*/React$1.createElement("em", null, name));
   };
   lfLog('Loaded RSuite5.Hidden');
 

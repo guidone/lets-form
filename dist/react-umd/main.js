@@ -1,4 +1,4 @@
-/* LetsForm react v0.12.3 - UMD */
+/* LetsForm react v0.12.4 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-hook-form'], factory) :
@@ -567,6 +567,9 @@
   }
   function _slicedToArray(arr, i) {
     return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+  }
+  function _toArray(arr) {
+    return _arrayWithHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableRest();
   }
   function _toConsumableArray(arr) {
     return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
@@ -17386,20 +17389,31 @@
     };
   }();
 
+  var makeClassName = function makeClassName() {
+    var _Array$from = Array.from(arguments),
+      _Array$from2 = _toArray(_Array$from),
+      component = _Array$from2[0],
+      name = _Array$from2[1],
+      rest = _Array$from2.slice(2);
+    return {
+      className: classNames.apply(void 0, ["lf-control-".concat(component), "lf-field-".concat(name)].concat(_toConsumableArray(rest !== null && rest !== void 0 ? rest : []))),
+      'data-lf-field-name': name
+    };
+  };
+
   var css_248z$h = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
   styleInject(css_248z$h);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
-      name = _ref.name;
+      name = _ref.name,
+      className = _ref.className;
     if (!_isEmpty(text)) {
-      return /*#__PURE__*/React$1.createElement("div", {
-        className: "lf-control-placeholder",
-        "data-lf-field-name": name,
+      return /*#__PURE__*/React$1.createElement("div", _extends({}, makeClassName('placeholder', name, className), {
         dangerouslySetInnerHTML: {
           __html: microdown.parse(text)
         }
-      });
+      }));
     } else {
       return /*#__PURE__*/React$1.createElement("div", null);
     }
@@ -17489,13 +17503,10 @@
     React$1.useEffect(function () {
       setIsOpen(open);
     }, [open]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: classNames('lf-control-group', "lf-border-".concat(border), {
-        'open': isOpen,
-        'close': !isOpen
-      })
-    }, /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('group', name, "lf-border-".concat(border), {
+      'open': isOpen,
+      'close': !isOpen
+    }), /*#__PURE__*/React$1.createElement("div", {
       role: "separator",
       className: classNames('header', align)
     }, /*#__PURE__*/React$1.createElement("span", {
@@ -17526,14 +17537,13 @@
       maxHeight = _ref.maxHeight,
       marginTop = _ref.marginTop,
       marginBottom = _ref.marginBottom,
+      className = _ref.className,
       align = _ref.align;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-placeholder-image",
-      "data-lf-field-name": name,
+    return /*#__PURE__*/React$1.createElement("div", _extends({}, makeClassName('placeholder-image', name, className), {
       style: {
         textAlign: align ? align : undefined
       }
-    }, url && /*#__PURE__*/React$1.createElement("img", {
+    }), url && /*#__PURE__*/React$1.createElement("img", {
       src: url,
       alt: label || name,
       style: {
@@ -17553,10 +17563,7 @@
     var name = _ref.name,
       size = _ref.size,
       color = _ref.color;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-divider",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('divider', name), /*#__PURE__*/React$1.createElement("div", {
       className: "bar",
       style: {
         height: "".concat(size, "px"),
@@ -17571,16 +17578,14 @@
     default: Divider
   });
 
-  var _excluded$f = ["name", "view"];
+  var _excluded$f = ["name", "view", "className"];
   var ReactView = function ReactView(_ref) {
     var name = _ref.name,
       view = _ref.view,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$f);
     var View = view;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-react-view",
-      "data-lf-field-name": name
-    }, View && /*#__PURE__*/React$1.createElement(View, _extends({
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('react-view', name, className), View && /*#__PURE__*/React$1.createElement(View, _extends({
       name: name
     }, rest)));
   };
@@ -18119,10 +18124,7 @@
         style: makeWidthStyle(fullWidth, width)
       }, passRest(_omit(rest, 'label')), LinkProps));
     }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-control-button', className, _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)),
-      "data-lf-field-name": name
-    }, inner);
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('button', name, className, _defineProperty$1({}, "lf-control-button-".concat(size !== null && size !== void 0 ? size : ''), true)), inner);
   };
   var MakeButton = function MakeButton(ButtonComponent, OnStateProps, OffStateProps, LinkProps) {
     return function (props) {
@@ -18145,10 +18147,7 @@
     var name = _ref.name,
       children = _ref.children,
       columns = _ref.columns;
-    return /*#__PURE__*/React$1.createElement("div", {
-      "data-lf-field-name": name,
-      className: "lf-control-columns"
-    }, (columns || []).filter(function (column) {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('columns', name), (columns || []).filter(function (column) {
       return column.hidden !== true;
     }).map(function (column) {
       return /*#__PURE__*/React$1.createElement("div", {
@@ -20695,10 +20694,7 @@
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames(className, 'lf-form-react-control-group'),
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement("label", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('date', name, 'lf-form-react-control-group', className), /*#__PURE__*/React$1.createElement("label", {
       for: name
     }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("input", _extends({
       type: inputType,
@@ -20733,7 +20729,6 @@
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
       component: "input-text",
-      className: "lf-control-input-text",
       onChange: handleChange
     }, rest));
   }, ['label', 'hint', 'placeholder']);
@@ -20774,7 +20769,6 @@
     return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
       inputType: "number",
       component: "input-number",
-      className: "lf-control-input-number",
       min: min,
       max: max,
       step: step,
@@ -20806,10 +20800,7 @@
       required = _ref.required,
       rest = _objectWithoutProperties(_ref, _excluded$8);
     var hasError = error && _isString(error);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames(className, 'lf-form-react-control-group'),
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement("label", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('checkbox', name, 'lf-form-react-control-group', className), /*#__PURE__*/React$1.createElement("label", {
       for: name,
       className: "lf-form-react-checkbox"
     }, /*#__PURE__*/React$1.createElement("input", _extends({
@@ -20837,7 +20828,6 @@
     }, [onChange]);
     return /*#__PURE__*/React$1.createElement(ReactGenericCheckbox, _extends({
       inputType: "checkbox",
-      className: "lf-control-checkbox",
       onChange: handleChange
     }, rest));
   }, ['hint', 'label']);
@@ -20848,7 +20838,7 @@
     default: Checkbox
   });
 
-  var _excluded$6 = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "readOnly", "required", "size", "rows", "width", "fullWidth"];
+  var _excluded$6 = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "readOnly", "required", "size", "rows", "width", "fullWidth", "className"];
   var Textarea = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -20864,15 +20854,13 @@
       rows = _ref.rows,
       width = _ref.width,
       fullWidth = _ref.fullWidth,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$6);
     var hasError = error && _isString(error);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-textarea lf-form-react-control-group",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement("label", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('textarea', name, 'lf-form-react-control-group', className), /*#__PURE__*/React$1.createElement("label", {
       for: name
     }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("textarea", _extends({
       type: "text",
@@ -20937,11 +20925,9 @@
     var name = _ref.name,
       label = _ref.label,
       hint = _ref.hint,
-      text = _ref.text;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-form-react-control-group lf-control-placeholder",
-      "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement("label", {
+      text = _ref.text,
+      className = _ref.className;
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('placeholder', name, 'lf-form-react-control-group', className), label && /*#__PURE__*/React$1.createElement("label", {
       for: name
     }, label), /*#__PURE__*/React$1.createElement(Placeholder, {
       text: text
@@ -20956,7 +20942,7 @@
     default: PlaceholderReact
   });
 
-  var _excluded$5 = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey"];
+  var _excluded$5 = ["name", "lfLocale", "label", "hint", "value", "onChange", "onBlur", "error", "disabled", "placeholder", "readOnly", "required", "size", "width", "fullWidth", "options", "filterValue", "filterKey", "className"];
   var Select = I18N(function (_ref) {
     var _filterOptions;
     var name = _ref.name;
@@ -20977,6 +20963,7 @@
       options = _ref.options,
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$5);
     var hasError = error && _isString(error);
     var handleChange = React$1.useCallback(function (e) {
@@ -20989,10 +20976,7 @@
         label: placeholder
       }].concat(_toConsumableArray(opts));
     }
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-select lf-form-react-control-group",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement("label", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('select', name, 'lf-form-react-control-group', className), /*#__PURE__*/React$1.createElement("label", {
       for: name
     }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("select", _extends({
       id: name,
@@ -21039,7 +21023,6 @@
     return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
       inputType: "date",
       component: "date",
-      className: "lf-control-date",
       value: currentDate,
       onChange: handleChange
     }, rest));
@@ -21070,7 +21053,6 @@
     return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
       inputType: "datetime-local",
       component: "datetime",
-      className: "lf-control-datetime",
       value: currentDate,
       onChange: handleChange
     }, rest));
@@ -21100,7 +21082,6 @@
     }
     return /*#__PURE__*/React$1.createElement(ReactGenericInput, _extends({
       inputType: "time",
-      className: "lf-control-time",
       value: currentDate,
       onChange: handleChange
     }, rest));
@@ -21115,7 +21096,7 @@
   var css_248z$4 = ".lf-form-react .lf-control-common-array-item {\n  padding-bottom: 5px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-two-columns:last-child {\n  margin-bottom: 0px;\n}\n.lf-form-react .lf-control-common-array-item .lf-control-three-columns:last-child {\n  margin-bottom: 0px;\n}";
   styleInject(css_248z$4);
 
-  var _excluded$1 = ["hint", "required", "tooltip", "name", "label"];
+  var _excluded$1 = ["hint", "required", "tooltip", "name", "label", "className"];
   var ListArrayReact = I18N(function (_ref) {
     var _rest$error, _rest$error2, _rest$error3;
     var hint = _ref.hint,
@@ -21123,12 +21104,10 @@
       _ref.tooltip;
       var name = _ref.name,
       label = _ref.label,
+      className = _ref.className,
       rest = _objectWithoutProperties(_ref, _excluded$1);
     var hasError = rest.error && _isString((_rest$error = rest.error) === null || _rest$error === void 0 ? void 0 : _rest$error.errorMessage) && ((_rest$error2 = rest.error) === null || _rest$error2 === void 0 ? void 0 : _rest$error2.errorMessage);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-array lf-form-react-control-group",
-      "data-lf-field-name": name
-    }, /*#__PURE__*/React$1.createElement("label", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('array', name, 'lf-form-react-control-group', className), /*#__PURE__*/React$1.createElement("label", {
       for: name
     }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm
@@ -21310,7 +21289,8 @@
       onChange = _ref.onChange,
       multiple = _ref.multiple,
       value = _ref.value,
-      required = _ref.required;
+      required = _ref.required,
+      className = _ref.className;
     var uploadButtonId = React$1.useId();
     var _useState = React$1.useState(multiple && _isArray(value) || !multiple && _isObject(value) ? value : undefined),
       _useState2 = _slicedToArray(_useState, 2),
@@ -21347,10 +21327,7 @@
         onChange(null);
       }
     }, [onChange, multiple, currentFile]);
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-upload",
-      "data-lf-field-name": name
-    }, label && /*#__PURE__*/React$1.createElement("label", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('upload', name, 'lf-form-react-control-group', className), label && /*#__PURE__*/React$1.createElement("label", {
       for: name
     }, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", {
       className: "lf-upload-button-layout"
@@ -21417,12 +21394,11 @@
 
   var Hidden = function Hidden(_ref) {
     var name = _ref.name;
-    return /*#__PURE__*/React$1.createElement("div", {
-      className: "lf-control-hidden",
+    return /*#__PURE__*/React$1.createElement("div", _extends({}, makeClassName('hidden', name), {
       style: {
         padding: '10px'
       }
-    }, "Hidden field: ", /*#__PURE__*/React$1.createElement("em", null, name));
+    }), "Hidden field: ", /*#__PURE__*/React$1.createElement("em", null, name));
   };
   lfLog('Loaded RSuite5.Hidden');
 
