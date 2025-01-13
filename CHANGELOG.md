@@ -1,5 +1,10 @@
 # LetsForm Changelog
 
+## v0.12.5
+- feat: added `className` property to all components
+- fix: package peer dependency
+- fix: RSuite checkbox alignment
+
 ## v0.12.4
 - feat: add `hide` column param
 

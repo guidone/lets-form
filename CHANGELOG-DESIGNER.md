@@ -1,5 +1,11 @@
 # LetsForm Designer Changelog
 
+## v0.9.14
+- feat: added `className` property to all components
+- fix: broken create new form
+- fix: package peer dependency
+- fix: RSuite checkbox alignment
+
 ## v0.9.13
 - feat: add Slack channel link
 
