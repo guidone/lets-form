@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.9.15
+- fix: missing `lodash` while rendering forms
+
 ## v0.9.14
 - feat: added `className` property to all components
 - fix: broken create new form
