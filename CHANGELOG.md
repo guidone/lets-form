@@ -1,6 +1,6 @@
 # LetsForm Changelog
 
-## v0.12.6
+## v0.12.7
 - fix: relax throwing errors on unknows component params
 - fix: avoid warning for unknows params on custom components
 
