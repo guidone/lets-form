@@ -11,11 +11,15 @@ export const mergeComponents = (main, additional) => {
   if (!_.isEmpty(additional) && Object.keys(additional).length !== 0) {
     Object.keys(additional).forEach(componentName => {
       if (main[componentName] == null) {
-        main[componentName] = additional[componentName];
+        main[componentName] = {
+          ...additional[componentName],
+          custom: true
+        };
       } else {
         main[componentName] = {
           ...main[componentName],
-          ...additional[componentName]
+          ...additional[componentName],
+          custom: true
         };
       }
     });

@@ -266,7 +266,6 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     const handleChange = useCallback(
       async (values, fieldName) => {
 
-
         // reset the validation error for that field
         if (!_.isEmpty(fieldName)) {
           clearValidation(fieldName);
