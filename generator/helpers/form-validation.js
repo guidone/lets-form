@@ -257,7 +257,6 @@ const makeValidation = (fields, locale, onJavascriptError) => {
       const currentFieldName = fieldsToValidate[i];
       // pass the single value to check but also the all values
       const validationResult = await validateFns[currentFieldName](data[currentFieldName], data);
-      console.log('inner validation', currentFieldName, validationResult)
       if (validationResult) {
         validationErrors[currentFieldName] = validationResult;
       }
@@ -315,9 +314,6 @@ const useFormValidation = ({ onError, fields, locale, onJavascriptError }) => {
    */
   const validate = useCallback(
     async (data = {}) => {
-
-      console.log('validate this', data, ' for', fields);
-
       // execute validation
       const validationErrors = await mutableState.current(data, locale);
       // set status

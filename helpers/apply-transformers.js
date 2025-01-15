@@ -9,7 +9,6 @@ import { lfWarn } from './lf-log';
 
 import FIELD_MAPPINGS from '../mappings.json';
 
-
 const translateValidationKey = str => {
   if (str.startsWith('validation')) {
     str = str.replace(/^validation/, '');
@@ -35,14 +34,19 @@ const ApiFactory = function({ formName, framework, formFields, currentValues, fo
     }
   };
 
+  // define some helpers to unclutter logig below
   const isCustomComponent = component => components[component] && components[component].custom === true;
-  //const isCommonProperty = (component, key) => FIELD_MAPPINGS[component] && FIELD_MAPPINGS[component][key] == null;
+  const isCommonProperty = (component, key) => FIELD_MAPPINGS[component] && FIELD_MAPPINGS[component][key] !== undefined;
+  const isValidationProperty = (component, key) => FIELD_MAPPINGS[component] && FIELD_MAPPINGS[component][key] === 'validation';
   const isFrameworkProperty = (component, key, framework) => {
     return (
       FIELD_MAPPINGS[component]
       && _.isArray(FIELD_MAPPINGS[component][key])
       && FIELD_MAPPINGS[component][key].includes(framework)
     );
+  };
+  const isPropertyExisting = (component, key, framework) => {
+    return isCommonProperty(component, key) || isFrameworkProperty(component, key, framework);
   };
 
   const methods = {
@@ -125,12 +129,10 @@ const ApiFactory = function({ formName, framework, formFields, currentValues, fo
         field => {
           if (field.name === name) {
             // if components doesn't exist in manifest/mapping and is not a custom component
-            if (FIELD_MAPPINGS[field.component] == null && !isCustomComponent(field.component)) {
+            if (!isPropertyExisting(field.component, key, framework) && !isCustomComponent(field.component)) {
               console.warn(`[LetsForm] param "${key}" for component "${field.component}" in framework "${framework}" doesn't exist`);
-              return field;
             }
-
-            if (FIELD_MAPPINGS[field.component] && FIELD_MAPPINGS[field.component][key] === 'validation') {
+            if (isValidationProperty(field.component, key)) {
               // handle special case of validation fields
               return {
                 ...field,
