@@ -106,7 +106,8 @@ const useFormFields = ({
             transformersToRun[idx],
             defaultValues,
             onJavascriptError,
-            mutableState.current.currentContext
+            mutableState.current.currentContext,
+            components
           )) {
             const { fields: newFormFields, rerenders: newReRenders, changes } = transformResult;
             mergeReRenders(rerenders.current, newReRenders);
@@ -157,7 +158,8 @@ const useFormFields = ({
         transformer,
         values,
         onJavascriptError,
-        currentFormContext
+        currentFormContext,
+        components
       )) {
         const { fields: newFormFields, rerenders: newReRenders, changes } = transformResult;
 

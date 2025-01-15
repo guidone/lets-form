@@ -22,7 +22,7 @@ const translateValidationKey = str => {
   }
 };
 
-const ApiFactory = function(formName, framework, formFields, currenValues, formContext) {
+const ApiFactory = function({ formName, framework, formFields, currentValues, formContext, components }) {
   let fields = formFields;
   const rerenders = {}; // store re-render requests after field change
   const scheduledChanges = {};
@@ -33,7 +33,17 @@ const ApiFactory = function(formName, framework, formFields, currenValues, formC
     } else {
       throw new Error(`Field "${name}" doesn't exist in the form`);
     }
-  }
+  };
+
+  const isCustomComponent = component => components[component] && components[component].custom === true;
+  //const isCommonProperty = (component, key) => FIELD_MAPPINGS[component] && FIELD_MAPPINGS[component][key] == null;
+  const isFrameworkProperty = (component, key, framework) => {
+    return (
+      FIELD_MAPPINGS[component]
+      && _.isArray(FIELD_MAPPINGS[component][key])
+      && FIELD_MAPPINGS[component][key].includes(framework)
+    );
+  };
 
   const methods = {
     fields: () => {
@@ -114,41 +124,37 @@ const ApiFactory = function(formName, framework, formFields, currenValues, formC
         fields,
         field => {
           if (field.name === name) {
-            // check if the field exists in the manifest mapping
-            // and if needs to be added in a framework sub set
-            if (FIELD_MAPPINGS[field.component] && FIELD_MAPPINGS[field.component][key] !== undefined) {
-              if (FIELD_MAPPINGS[field.component][key] === null) {
-                // key property exists but it's just common property to all frameworks
-                return {
-                  ...field,
-                  [key]: value
-                };
-              } else if (FIELD_MAPPINGS[field.component][key] === 'validation') {
-                // handle special case of validation fields
-                return {
-                  ...field,
-                  validation: {
-                    ...(field.validation ?? {}),
-                    [translateValidationKey(key)]: value
-                  }
-                };
-                // handle special case of validation
-              } else if (_.isArray(FIELD_MAPPINGS[field.component][key]) &&  FIELD_MAPPINGS[field.component][key].includes(framework)) {
-                // key property it's a framework specific key, belongs to one or more frameworks, so it must be
-                // set in the specific subset, use the current framework so set it
-                return {
-                  ...field,
-                  [framework]: {
-                    ...(field[framework] ?? {}),
-                    [key]: value
-                  }
-                };
-              } else {
-                console.warn(`[LetsForm] cannot set key "${key}" for component "${field.component}" in framework "${framework}"`);
-              }
-            } else {
-              console.error(`[LetsForm] cannot set key "${key}" for component "${field.component}"`);
+            // if components doesn't exist in manifest/mapping and is not a custom component
+            if (FIELD_MAPPINGS[field.component] == null && !isCustomComponent(field.component)) {
+              console.warn(`[LetsForm] param "${key}" for component "${field.component}" in framework "${framework}" doesn't exist`);
+              return field;
             }
+
+            if (FIELD_MAPPINGS[field.component] && FIELD_MAPPINGS[field.component][key] === 'validation') {
+              // handle special case of validation fields
+              return {
+                ...field,
+                validation: {
+                  ...(field.validation ?? {}),
+                  [translateValidationKey(key)]: value
+                }
+              };
+            } else if (isFrameworkProperty(field.component, key, framework)) {
+              // key property it's a framework specific key, belongs to one or more frameworks, so it must be
+              // set in the specific subset, use the current framework so set it
+              return {
+                ...field,
+                [framework]: {
+                  ...(field[framework] ?? {}),
+                  [key]: value
+                }
+              };
+            }
+            // key property exists but it's just common property to all frameworks
+            return {
+              ...field,
+              [key]: value
+            };
           }
           return field;
         }
@@ -273,7 +279,7 @@ const ApiFactory = function(formName, framework, formFields, currenValues, formC
       );
     },
 
-    values: Object.freeze({ ...currenValues })
+    values: Object.freeze({ ...currentValues })
   };
 
   return methods;
@@ -298,7 +304,8 @@ const applyTransformers = async function*(
   transformers,
   values,
   onJavascriptError,
-  formContext
+  formContext,
+  components
 ) {
 
   if (_.isArray(transformers) && !_.isEmpty(transformers)) {
@@ -308,8 +315,14 @@ const applyTransformers = async function*(
     const txs = transformers/*.filter(transformer => _.isFunction(transformer))*/
     let idx;
     for(idx = 0; idx < txs.length; idx++) {
-
-      const api = new ApiFactory(formName, framework, newFields, values, formContext);
+      const api = new ApiFactory({
+        formName,
+        framework,
+        formFields: newFields,
+        currentValues: values,
+        formContext,
+        components
+      });
       try {
         for await (const f of txs[idx](api)) {
           newFields = f;
