@@ -1,5 +1,9 @@
 # LetsForm Changelog
 
+## v0.12.6
+- fix: relax throwing errors on unknows component params
+- fix: avoid warning for unknows params on custom components
+
 ## v0.12.5
 - feat: added `className` property to all components
 - fix: package peer dependency
