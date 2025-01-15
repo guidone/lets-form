@@ -1,4 +1,4 @@
-/* LetsForm react-antd v0.16.6 - UMD */
+/* LetsForm react-antd v0.12.6 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('antd'), require('react-hook-form')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'antd', 'react-hook-form'], factory) :
@@ -8148,7 +8148,13 @@
       return str;
     }
   };
-  var ApiFactory = function ApiFactory(formName, framework, formFields, currenValues, formContext) {
+  var ApiFactory = function ApiFactory(_ref2) {
+    var formName = _ref2.formName,
+      framework = _ref2.framework,
+      formFields = _ref2.formFields,
+      currentValues = _ref2.currentValues,
+      formContext = _ref2.formContext,
+      components = _ref2.components;
     var _fields = formFields;
     var rerenders = {}; // store re-render requests after field change
     var scheduledChanges = {};
@@ -8160,6 +8166,23 @@
       } else {
         throw new Error("Field \"".concat(name, "\" doesn't exist in the form"));
       }
+    };
+
+    // define some helpers to unclutter logig below
+    var isCustomComponent = function isCustomComponent(component) {
+      return components[component] && components[component].custom === true;
+    };
+    var isCommonProperty = function isCommonProperty(component, key) {
+      return FIELD_MAPPINGS[component] && FIELD_MAPPINGS[component][key] !== undefined;
+    };
+    var isValidationProperty = function isValidationProperty(component, key) {
+      return FIELD_MAPPINGS[component] && FIELD_MAPPINGS[component][key] === 'validation';
+    };
+    var isFrameworkProperty = function isFrameworkProperty(component, key, framework) {
+      return FIELD_MAPPINGS[component] && _isArray(FIELD_MAPPINGS[component][key]) && FIELD_MAPPINGS[component][key].includes(framework);
+    };
+    var isPropertyExisting = function isPropertyExisting(component, key, framework) {
+      return isCommonProperty(component, key) || isFrameworkProperty(component, key, framework);
     };
     var methods = {
       fields: function fields() {
@@ -8237,30 +8260,24 @@
         }
         _fields = mapFields(_fields, function (field) {
           if (field.name === name) {
-            // check if the field exists in the manifest mapping
-            // and if needs to be added in a framework sub set
-            if (FIELD_MAPPINGS[field.component] && FIELD_MAPPINGS[field.component][key] !== undefined) {
-              if (FIELD_MAPPINGS[field.component][key] === null) {
-                // key property exists but it's just common property to all frameworks
-                return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, key, value));
-              } else if (FIELD_MAPPINGS[field.component][key] === 'validation') {
-                var _field$validation;
-                // handle special case of validation fields
-                return _objectSpread2(_objectSpread2({}, field), {}, {
-                  validation: _objectSpread2(_objectSpread2({}, (_field$validation = field.validation) !== null && _field$validation !== void 0 ? _field$validation : {}), {}, _defineProperty$1({}, translateValidationKey(key), value))
-                });
-                // handle special case of validation
-              } else if (_isArray(FIELD_MAPPINGS[field.component][key]) && FIELD_MAPPINGS[field.component][key].includes(framework)) {
-                var _field$framework;
-                // key property it's a framework specific key, belongs to one or more frameworks, so it must be
-                // set in the specific subset, use the current framework so set it
-                return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, framework, _objectSpread2(_objectSpread2({}, (_field$framework = field[framework]) !== null && _field$framework !== void 0 ? _field$framework : {}), {}, _defineProperty$1({}, key, value))));
-              } else {
-                console.warn("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\" in framework \"").concat(framework, "\""));
-              }
-            } else {
-              console.error("[LetsForm] cannot set key \"".concat(key, "\" for component \"").concat(field.component, "\""));
+            // if components doesn't exist in manifest/mapping and is not a custom component
+            if (!isPropertyExisting(field.component, key, framework) && !isCustomComponent(field.component)) {
+              console.warn("[LetsForm] param \"".concat(key, "\" for component \"").concat(field.component, "\" in framework \"").concat(framework, "\" doesn't exist"));
             }
+            if (isValidationProperty(field.component, key)) {
+              var _field$validation;
+              // handle special case of validation fields
+              return _objectSpread2(_objectSpread2({}, field), {}, {
+                validation: _objectSpread2(_objectSpread2({}, (_field$validation = field.validation) !== null && _field$validation !== void 0 ? _field$validation : {}), {}, _defineProperty$1({}, translateValidationKey(key), value))
+              });
+            } else if (isFrameworkProperty(field.component, key, framework)) {
+              var _field$framework;
+              // key property it's a framework specific key, belongs to one or more frameworks, so it must be
+              // set in the specific subset, use the current framework so set it
+              return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, framework, _objectSpread2(_objectSpread2({}, (_field$framework = field[framework]) !== null && _field$framework !== void 0 ? _field$framework : {}), {}, _defineProperty$1({}, key, value))));
+            }
+            // key property exists but it's just common property to all frameworks
+            return _objectSpread2(_objectSpread2({}, field), {}, _defineProperty$1({}, key, value));
           }
           return field;
         });
@@ -8352,7 +8369,7 @@
           return arrayField;
         });
       },
-      values: Object.freeze(_objectSpread2({}, currenValues))
+      values: Object.freeze(_objectSpread2({}, currentValues))
     };
     return methods;
   };
@@ -8370,7 +8387,7 @@
    * @param {*} setValue
    */
   var applyTransformers = /*#__PURE__*/function () {
-    var _ref = _wrapAsyncGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(formName, framework, fields, transformers, values, onJavascriptError, formContext) {
+    var _ref = _wrapAsyncGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(formName, framework, fields, transformers, values, onJavascriptError, formContext, components) {
       var newFields, txs, idx, api, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _iterator, _step, f, error;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
@@ -8388,7 +8405,14 @@
               _context.next = 48;
               break;
             }
-            api = new ApiFactory(formName, framework, newFields, values, formContext);
+            api = new ApiFactory({
+              formName: formName,
+              framework: framework,
+              formFields: newFields,
+              currentValues: values,
+              formContext: formContext,
+              components: components
+            });
             _context.prev = 6;
             _iteratorAbruptCompletion = false;
             _didIteratorError = false;
@@ -8477,7 +8501,7 @@
         }
       }, _callee, null, [[6, 39], [9, 23, 27, 37], [28,, 32, 36]]);
     }));
-    return function applyTransformers(_x, _x2, _x3, _x4, _x5, _x6, _x7) {
+    return function applyTransformers(_x, _x2, _x3, _x4, _x5, _x6, _x7, _x8) {
       return _ref.apply(this, arguments);
     };
   }();
@@ -18263,9 +18287,13 @@
     if (!_isEmpty(additional) && Object.keys(additional).length !== 0) {
       Object.keys(additional).forEach(function (componentName) {
         if (main[componentName] == null) {
-          main[componentName] = additional[componentName];
+          main[componentName] = _objectSpread2(_objectSpread2({}, additional[componentName]), {}, {
+            custom: true
+          });
         } else {
-          main[componentName] = _objectSpread2(_objectSpread2({}, main[componentName]), additional[componentName]);
+          main[componentName] = _objectSpread2(_objectSpread2(_objectSpread2({}, main[componentName]), additional[componentName]), {}, {
+            custom: true
+          });
         }
       });
     }
@@ -18773,7 +18801,7 @@
               i = 0;
             case 3:
               if (!(i < fieldsToValidate.length)) {
-                _context5.next = 13;
+                _context5.next = 12;
                 break;
               }
               currentFieldName = fieldsToValidate[i]; // pass the single value to check but also the all values
@@ -18781,17 +18809,16 @@
               return validateFns[currentFieldName](data[currentFieldName], data);
             case 7:
               validationResult = _context5.sent;
-              console.log('inner validation', currentFieldName, validationResult);
               if (validationResult) {
                 validationErrors[currentFieldName] = validationResult;
               }
-            case 10:
+            case 9:
               i++;
               _context5.next = 3;
               break;
-            case 13:
+            case 12:
               return _context5.abrupt("return", Object.keys(validationErrors).length !== 0 ? validationErrors : undefined);
-            case 14:
+            case 13:
             case "end":
               return _context5.stop();
           }
@@ -18860,19 +18887,16 @@
         while (1) switch (_context6.prev = _context6.next) {
           case 0:
             data = _args6.length > 0 && _args6[0] !== undefined ? _args6[0] : {};
-            console.log('validate this', data, ' for', fields);
-
-            // execute validation
-            _context6.next = 4;
+            _context6.next = 3;
             return mutableState.current(data, locale);
-          case 4:
+          case 3:
             validationErrors = _context6.sent;
             // set status
             setValidationErrors(validationErrors);
             // callback errors
             onError(validationErrors);
             return _context6.abrupt("return", validationErrors);
-          case 8:
+          case 7:
           case "end":
             return _context6.stop();
         }
@@ -19466,7 +19490,7 @@
                     }
                   }, _loop);
                 });
-                _iterator = _asyncIterator(applyTransformers(formName, framework, newFields, transformersToRun[idx], defaultValues, onJavascriptError, mutableState.current.currentContext));
+                _iterator = _asyncIterator(applyTransformers(formName, framework, newFields, transformersToRun[idx], defaultValues, onJavascriptError, mutableState.current.currentContext, components));
               case 12:
                 _context2.next = 14;
                 return _iterator.next();
@@ -19573,7 +19597,7 @@
               _iteratorAbruptCompletion2 = false;
               _didIteratorError2 = false;
               _context3.prev = 6;
-              _iterator2 = _asyncIterator(applyTransformers(formName, framework, newFields, transformer, values, onJavascriptError, currentFormContext));
+              _iterator2 = _asyncIterator(applyTransformers(formName, framework, newFields, transformer, values, onJavascriptError, currentFormContext, components));
             case 8:
               _context3.next = 10;
               return _iterator2.next();
