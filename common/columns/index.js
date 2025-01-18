@@ -8,11 +8,12 @@ import './columns.scss';
 
 const Columns = ({
   name,
+  className,
   children,
   columns
 }) => {
   return (
-    <div {...makeClassName('columns', name)}>
+    <div {...makeClassName('columns', name, className)}>
       {(columns || [])
         .filter(column => column.hidden !== true)
         .map(column => (
