@@ -8,10 +8,11 @@ import { makeClassName } from '../../helpers/make-class-name';
 const Divider = ({
   name,
   size,
+  className,
   color
 }) => {
   return (
-    <div {...makeClassName('divider', name)}>
+    <div {...makeClassName('divider', name, className)}>
       <div
         className="bar"
         style={{
