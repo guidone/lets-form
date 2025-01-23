@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.9.16
+- fix: `divider` and `columns` missing className param (@ghoshorn)
+
 ## v0.9.15
 - fix: missing `lodash` while rendering forms
 

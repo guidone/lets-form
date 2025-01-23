@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.12.8
+- fix: `divider` and `columns` missing className param (@ghoshorn)
+
 ## v0.12.7
 - fix: relax throwing errors on unknows component params
 - fix: avoid warning for unknows params on custom components
