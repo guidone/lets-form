@@ -1,4 +1,4 @@
-/* LetsForm react-mantine v0.12.6 - UMD */
+/* LetsForm react-mantine v0.12.7 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('react-hook-form'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', 'react-hook-form', '@mantine/dates'], factory) :
@@ -17538,8 +17538,9 @@
   var Divider = function Divider(_ref) {
     var name = _ref.name,
       size = _ref.size,
+      className = _ref.className,
       color = _ref.color;
-    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('divider', name), /*#__PURE__*/React$1.createElement("div", {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('divider', name, className), /*#__PURE__*/React$1.createElement("div", {
       className: "bar",
       style: {
         height: "".concat(size, "px"),
@@ -18109,9 +18110,10 @@
 
   var Columns = function Columns(_ref) {
     var name = _ref.name,
+      className = _ref.className,
       children = _ref.children,
       columns = _ref.columns;
-    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('columns', name), (columns || []).filter(function (column) {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('columns', name, className), (columns || []).filter(function (column) {
       return column.hidden !== true;
     }).map(function (column) {
       return /*#__PURE__*/React$1.createElement("div", {
