@@ -56,7 +56,7 @@ const Multiselect = I18N(
           <Component
             appearance={appearance ?? undefined}
             name={name}
-            value={value}
+            value={value ?? []}
             onChange={onChange}
             readOnly={readOnly}
             onBlur={onBlur}
