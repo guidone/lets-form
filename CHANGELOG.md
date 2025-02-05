@@ -1,5 +1,10 @@
 # LetsForm Changelog
 
+## v0.12.9
+- fix: `react-hook-form` peer dependency
+- fix: Rsuite `multiselect` default value
+- feat: added `someFields` to helpers
+
 ## v0.12.8
 - fix: `divider` and `columns` missing className param (@ghoshorn)
 
