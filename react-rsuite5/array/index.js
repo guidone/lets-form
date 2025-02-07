@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form } from 'rsuite';
+import _ from 'lodash';
 
 import { RequiredIcon } from '../../components/required-icon';
 import { I18N } from '../../components/i18n';

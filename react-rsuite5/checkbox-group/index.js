@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Checkbox, CheckboxGroup } from 'rsuite';
+import _ from 'lodash';
 
 import { I18N } from '../../components/i18n';
 import { i18nOptions } from '../../helpers/i18n-options';

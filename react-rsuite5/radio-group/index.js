@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Radio, RadioGroup } from 'rsuite';
+import _ from 'lodash';
 
 import { I18N } from '../../components/i18n';
 import { RequiredIcon } from '../../components/required-icon';
