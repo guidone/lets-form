@@ -1,4 +1,4 @@
-/* LetsForm react-mantine v0.12.8 - UMD */
+/* LetsForm react-mantine v0.12.9 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', '@mantine/dates'], factory) :
