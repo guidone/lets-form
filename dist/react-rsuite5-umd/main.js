@@ -1,4 +1,4 @@
-/* LetsForm react-rsuite5 v0.12.9 - UMD */
+/* LetsForm react-rsuite5 v0.12.10 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite'], factory) :
@@ -23334,7 +23334,7 @@
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm,
       name: name
-    }, passRest(rest))), _.isString((_rest$error = rest.error) === null || _rest$error === void 0 ? void 0 : _rest$error.errorMessage) && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+    }, passRest(rest))), _isString((_rest$error = rest.error) === null || _rest$error === void 0 ? void 0 : _rest$error.errorMessage) && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       className: "array-error-message"
     }, rest.error.errorMessage), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   }, ['label', 'hint']);
@@ -23635,7 +23635,7 @@
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, makeClassName('checkbox-group', name, className), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
-      errorMessage: _.isString(error) ? error : undefined
+      errorMessage: _isString(error) ? error : undefined
     }, /*#__PURE__*/React$1.createElement(rsuite.CheckboxGroup, _extends({
       inline: true,
       name: name,
@@ -23763,7 +23763,7 @@
     }, makeClassName('radio-group', name, className)), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
-      errorMessage: _.isString(error) ? error : undefined
+      errorMessage: _isString(error) ? error : undefined
     }, /*#__PURE__*/React$1.createElement(rsuite.RadioGroup, _extends({
       inline: true,
       name: name,
