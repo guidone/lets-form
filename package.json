@@ -50,7 +50,6 @@
       "default": "./dist/react-bootstrap-esm/index.js"
     },
     "./react-bootstrap/": {
-      "types": "./react-bootstrap.d.ts",
       "import": "./dist/react-bootstrap-esm/",
       "require": "./dist/react-bootstrap-umd/",
       "default": "./dist/react-bootstrap-esm/"
@@ -62,7 +61,6 @@
       "defaul": "./dist/react-mantine-esm/index.js"
     },
     "./react-mantine/": {
-      "types": "./react-mantine.d.ts",
       "browser": "./dist/react-mantine-esm/",
       "require": "./dist/react-mantine-umd/",
       "default": "./dist/react-mantine-esm/"
@@ -74,7 +72,6 @@
       "default": "./dist/react-rsuite5-esm/index.js"
     },
     "./react-rsuite5/": {
-      "types": "./react-rsuite5.d.ts",
       "import": "./dist/react-rsuite5-esm/",
       "require": "./dist/react-rsuite5-umd/",
       "default": "./dist/react-rsuite5-esm/"
@@ -86,7 +83,6 @@
       "default": "./dist/react-antd-esm/index.js"
     },
     "./react-antd/": {
-      "types": "./react-antd.d.ts",
       "import": "./dist/react-antd-esm/",
       "require": "./dist/react-antd-umd/",
       "default": "./dist/react-antd-esm/"
@@ -98,7 +94,6 @@
       "default": "./dist/react-material-ui-esm/index.js"
     },
     "./react-material-ui/": {
-      "types": "./react-material-ui.d.ts",
       "import": "./dist/react-material-ui-esm/",
       "require": "./dist/react-material-ui-umd/",
       "default": "./dist/react-material-ui-esm/"
@@ -110,7 +105,6 @@
       "default": "./dist/react-esm/index.js"
     },
     "./react/": {
-      "types": "./react.d.ts",
       "import": "./dist/react-esm/",
       "require": "./dist/react-umd/",
       "default": "./dist/react-esm/"
