@@ -87,6 +87,7 @@ const ListArray = ({
   LetsFormComponent,
   value,
   name,
+  className,
   onChange = () => {},
   disabled = false,
   readOnly = false,
@@ -165,7 +166,7 @@ const ListArray = ({
 
   return (
     <div
-      className={classNames('lf-control-common-array', align ? `lf-${align}` : undefined)}
+      className={classNames('lf-control-common-array', className, align ? `lf-${align}` : undefined)}
       style={style}
     >
       {(_.isArray(items) ? items : []).map((item, idx) => {

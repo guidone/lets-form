@@ -12,6 +12,7 @@ import './group.scss';
 const Group = I18N(
   ({
     name,
+    className,
     label,
     disabled = false,
     open = true,
@@ -41,6 +42,7 @@ const Group = I18N(
         {...makeClassName(
           'group',
           name,
+          className,
           `lf-border-${border}`,
           { 'open': isOpen, 'close': !isOpen }
         )}
