@@ -1,4 +1,4 @@
-/* LetsForm react-rsuite5 v0.12.10 - UMD */
+/* LetsForm react-rsuite5 v0.12.11 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite'], factory) :
@@ -19761,6 +19761,7 @@
 
   var Group = I18N(function (_ref) {
     var name = _ref.name,
+      className = _ref.className,
       label = _ref.label,
       _ref$disabled = _ref.disabled,
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
@@ -19784,7 +19785,7 @@
     React$1.useEffect(function () {
       setIsOpen(open);
     }, [open]);
-    return /*#__PURE__*/React$1.createElement("div", makeClassName('group', name, "lf-border-".concat(border), {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('group', name, className, "lf-border-".concat(border), {
       'open': isOpen,
       'close': !isOpen
     }), /*#__PURE__*/React$1.createElement("div", {
@@ -20245,6 +20246,7 @@
     var LetsFormComponent = _ref3.LetsFormComponent,
       value = _ref3.value,
       name = _ref3.name,
+      className = _ref3.className,
       _ref3$onChange = _ref3.onChange,
       onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
       _ref3$disabled = _ref3.disabled,
@@ -20326,7 +20328,7 @@
       }, children);
     }
     return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-control-common-array', align ? "lf-".concat(align) : undefined),
+      className: classNames('lf-control-common-array', className, align ? "lf-".concat(align) : undefined),
       style: style
     }, (_isArray(items) ? items : []).map(function (item, idx) {
       var canAdd = idx === items.length - 1 && !isEmptyItem(item);

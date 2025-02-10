@@ -1,4 +1,4 @@
-/* LetsForm react-material-ui v0.12.10 - UMD */
+/* LetsForm react-material-ui v0.12.11 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack'], factory) :
@@ -19702,6 +19702,7 @@
 
   var Group = I18N(function (_ref) {
     var name = _ref.name,
+      className = _ref.className,
       label = _ref.label,
       _ref$disabled = _ref.disabled,
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
@@ -19725,7 +19726,7 @@
     React$1.useEffect(function () {
       setIsOpen(open);
     }, [open]);
-    return /*#__PURE__*/React$1.createElement("div", makeClassName('group', name, "lf-border-".concat(border), {
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('group', name, className, "lf-border-".concat(border), {
       'open': isOpen,
       'close': !isOpen
     }), /*#__PURE__*/React$1.createElement("div", {
@@ -20186,6 +20187,7 @@
     var LetsFormComponent = _ref3.LetsFormComponent,
       value = _ref3.value,
       name = _ref3.name,
+      className = _ref3.className,
       _ref3$onChange = _ref3.onChange,
       onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
       _ref3$disabled = _ref3.disabled,
@@ -20267,7 +20269,7 @@
       }, children);
     }
     return /*#__PURE__*/React$1.createElement("div", {
-      className: classNames('lf-control-common-array', align ? "lf-".concat(align) : undefined),
+      className: classNames('lf-control-common-array', className, align ? "lf-".concat(align) : undefined),
       style: style
     }, (_isArray(items) ? items : []).map(function (item, idx) {
       var canAdd = idx === items.length - 1 && !isEmptyItem(item);
