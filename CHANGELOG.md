@@ -1,5 +1,10 @@
 # LetsForm Changelog
 
+## v0.12.12
+- fix: add className for `group` and `array` (@ghoshorn)
+- fix: missing `lodash` dependencies
+- fix: remove `types` from folder exports
+
 ## v0.12.9
 - fix: `react-hook-form` peer dependency
 - fix: Rsuite `multiselect` default value
