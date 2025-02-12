@@ -63,6 +63,9 @@ const Fields = {
   },
   'hidden': {
     'react': lazy(() => import('./../common/hidden'))
+  },
+  'currency': {
+    'react': lazy(() => import('./currency'))
   }
   // Removed, doesn't work
   /*'toggle': {

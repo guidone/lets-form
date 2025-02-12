@@ -105,6 +105,9 @@ const Fields = {
   },
   'hidden': {
     'react-rsuite5': lazy(() => import('./../common/hidden'))
+  },
+  'currency': {
+    'react-rsuite5': lazy(() => import('./currency'))
   }
 };
 

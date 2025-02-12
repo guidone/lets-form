@@ -34,7 +34,7 @@ const ReactGenericInput = ({
   const handleKeyUp = useCallback(e => e.keyCode === 13 && lfOnEnter(), [lfOnEnter]);
 
   return (
-    <div {...makeClassName('date', name, 'lf-form-react-control-group', className)}>
+    <div {...makeClassName(component, name, 'lf-form-react-control-group', className)}>
       <label for={name}>
         {label}
         {required && <RequiredIcon />}

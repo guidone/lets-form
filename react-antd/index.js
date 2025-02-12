@@ -90,6 +90,9 @@ const Fields = {
   },
   'time': {
     'react-antd': lazy(() => import('./time'))
+  },
+  'currency': {
+    'react-antd': lazy(() => import('./currency'))
   }
 };
 

@@ -87,6 +87,9 @@ const Fields = {
   },
   'hidden': {
     'react-mantine': lazy(() => import('./../common/hidden'))
+  },
+  'currency': {
+    'react-mantine': lazy(() => import('./currency'))
   }
 };
 
