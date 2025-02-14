@@ -84,6 +84,9 @@ const Fields = {
   },
   'hidden': {
     'react-material-ui': lazy(() => import('./../common/hidden'))
+  },
+  'currency': {
+    'react-material-ui': lazy(() => import('./currency'))
   }
 };
 
