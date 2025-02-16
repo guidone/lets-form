@@ -366,6 +366,27 @@ export interface HiddenReactMaterialUiProps extends ValidationProps {
   name?: string; // The name of the field and the key of the JSON
 };
 
+export interface CurrencyReactMaterialUiProps extends ValidationProps {
+  component: 'currency';
+  name?: string; // The name of the field and the key of the JSON
+  label?: I18NObject;
+  hint?: I18NObject;
+  placeholder?: I18NObject;
+  disabled?: boolean;
+  readOnly?: boolean;
+  hidden?: boolean;
+  currency?: "AFN" | "ALL" | "DZD" | "ARS" | "AMD" | "AUD" | "AZN" | "BHD" | "BDT" | "BYN" | "BZD" | "BOB" | "BAM" | "BWP" | "BRL" | "GBP" | "BND" | "BGN" | "BIF" | "XOF" | "XAF" | "KHR" | "CAD" | "CVE" | "CLP" | "CNY" | "COP" | "KMF" | "CDF" | "CRC" | "HRK" | "CZK" | "DKK" | "DJF" | "DOP" | "EGP" | "ERN" | "EEK" | "ETB" | "EUR" | "GEL" | "GHS" | "GTQ" | "GNF" | "HNL" | "HKD" | "HUF" | "ISK" | "INR" | "IDR" | "IRR" | "IQD" | "ILS" | "JMD" | "JPY" | "JOD" | "KZT" | "KES" | "KWD" | "LVL" | "LBP" | "LYD" | "LTL" | "MOP" | "MKD" | "MGA" | "MYR" | "MUR" | "MXN" | "MDL" | "MAD" | "MZN" | "MMK" | "NAD" | "NPR" | "TWD" | "NZD" | "NIO" | "NGN" | "NOK" | "OMR" | "PKR" | "PAB" | "PYG" | "PEN" | "PHP" | "PLN" | "QAR" | "RON" | "RUB" | "RWF" | "SAR" | "RSD" | "SGD" | "SOS" | "ZAR" | "KRW" | "LKR" | "SDG" | "SEK" | "CHF" | "SYP" | "TZS" | "THB" | "TOP" | "TTD" | "TND" | "TRY" | "USD" | "UGX" | "UAH" | "AED" | "UYU" | "UZS" | "VEF" | "VND" | "YER" | "ZMK" | "ZWL";
+  fullWidth?: boolean; // Set the width of the field to 100% of the enclosing container
+  width?: number; // Set the width (in pixel) of the field
+  size?: "small" | "medium";
+  variant?: "outlined" | "filled" | "standard";
+  color?: "error" | "info" | "primary" | "secondary" | "success" | "warning";
+  floatingLabel?: boolean; // Show floating label for the control
+  disableUnderline?: boolean; // Disable underline in "filled" and "standard" variant
+  prefix?: string;
+  postfix?: string;
+};
+
 type LfFieldReactMaterialUiProps =
   | InputTextReactMaterialUiProps
   | ToggleReactMaterialUiProps
@@ -387,6 +408,7 @@ type LfFieldReactMaterialUiProps =
   | UploadReactMaterialUiProps
   | TimeReactMaterialUiProps
   | HiddenReactMaterialUiProps
+  | CurrencyReactMaterialUiProps
 
 export type { LfFieldReactMaterialUiProps };
 

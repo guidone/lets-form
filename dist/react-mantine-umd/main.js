@@ -1,4 +1,4 @@
-/* LetsForm react-mantine v0.12.11 - UMD */
+/* LetsForm react-mantine v0.12.12 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', '@mantine/dates'], factory) :
@@ -19785,7 +19785,7 @@
   };
   lfLog('Loaded Common.Divider');
 
-  var index$s = /*#__PURE__*/Object.freeze({
+  var index$t = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
@@ -20265,7 +20265,7 @@
   var css_248z$9 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$9);
 
-  var _excluded$n = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$p = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -20291,7 +20291,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$n);
+      rest = _objectWithoutProperties(_ref, _excluded$p);
     var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -22227,7 +22227,7 @@
   var css_248z$5 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
   styleInject(css_248z$5);
 
-  var _excluded$m = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
+  var _excluded$o = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
   var DEFAULT_FORM = {
     version: 2,
     fields: []
@@ -22299,7 +22299,7 @@
         resetAfterSubmit = _ref2$resetAfterSubmi === void 0 ? true : _ref2$resetAfterSubmi,
         formContext = _ref2.context,
         errors = _ref2.errors,
-        rest = _objectWithoutProperties(_ref2, _excluded$m);
+        rest = _objectWithoutProperties(_ref2, _excluded$o);
       var showErrors = form.showErrors,
         connectors = form.connectors;
       var _useState = React$1.useState(prealoadComponents),
@@ -22730,144 +22730,149 @@
     return LazyWithPreload;
   }
 
-  var _excluded$l = ["framework", "children"];
+  var _excluded$n = ["framework", "children"];
   var Fields = {
     'input-text': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$r; });
-      })
-    },
-    'input-number': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$q; });
-      })
-    },
-    'textarea': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$p; });
-      })
-    },
-    'select': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$o; });
-      })
-    },
-    'checkbox': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$n; });
-      })
-    },
-    'toggle': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$m; });
-      })
-    },
-    'array': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
-      })
-    },
-    'checkbox-group': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
-      })
-    },
-    'radio-group': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
-      })
-    },
-    'two-columns': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
-      })
-    },
-    'three-columns': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
-      })
-    },
-    'columns': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
-      })
-    },
-    'group': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
-      })
-    },
-    'date': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
-      })
-    },
-    'datetime': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
-      })
-    },
-    'rate': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
-      })
-    },
-    'placeholder': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
-      })
-    },
-    'placeholder-image': {
-      'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
-      })
-    },
-    'divider': {
       'react-mantine': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$s; });
       })
     },
+    'input-number': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$r; });
+      })
+    },
+    'textarea': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$q; });
+      })
+    },
+    'select': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$p; });
+      })
+    },
+    'checkbox': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$o; });
+      })
+    },
+    'toggle': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$n; });
+      })
+    },
+    'array': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$m; });
+      })
+    },
+    'checkbox-group': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$l; });
+      })
+    },
+    'radio-group': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$k; });
+      })
+    },
+    'two-columns': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$j; });
+      })
+    },
+    'three-columns': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$i; });
+      })
+    },
+    'columns': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$h; });
+      })
+    },
+    'group': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$g; });
+      })
+    },
+    'date': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$f; });
+      })
+    },
+    'datetime': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$e; });
+      })
+    },
+    'rate': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$d; });
+      })
+    },
+    'placeholder': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$c; });
+      })
+    },
+    'placeholder-image': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$b; });
+      })
+    },
+    'divider': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$t; });
+      })
+    },
     'slider': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
+        return Promise.resolve().then(function () { return index$a; });
       })
     },
     'input-tag': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
+        return Promise.resolve().then(function () { return index$9; });
       })
     },
     'tabs': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return index$8; });
       })
     },
     'button': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return index$7; });
       })
     },
     'upload': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return index$6; });
       })
     },
     'multiselect': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return index$5; });
       })
     },
     'steps': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return index$4; });
       })
     },
     'time': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return index$3; });
       })
     },
     'hidden': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'currency': {
       'react-mantine': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
       })
@@ -22885,7 +22890,7 @@
   var LetsForm = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$l);
+      rest = _objectWithoutProperties(_ref, _excluded$n);
     var refForm = React$1.useRef();
     React$1.useImperativeHandle(ref, function () {
       return {
@@ -22900,7 +22905,7 @@
     }, rest), children);
   });
 
-  var _excluded$k = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "className"];
+  var _excluded$m = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "className"];
   var InputText$1 = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -22915,7 +22920,7 @@
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$k);
+      rest = _objectWithoutProperties(_ref, _excluded$m);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -22937,12 +22942,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.InputText');
 
-  var index$r = /*#__PURE__*/Object.freeze({
+  var index$s = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputText$1
   });
 
-  var _excluded$j = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "className", "lfOnEnter"];
+  var _excluded$l = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "className", "lfOnEnter"];
   var MantineNumberInput = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -22955,7 +22960,7 @@
       className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$j);
+      rest = _objectWithoutProperties(_ref, _excluded$l);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -22971,12 +22976,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.InputNumber');
 
-  var index$q = /*#__PURE__*/Object.freeze({
+  var index$r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineNumberInput
   });
 
-  var _excluded$i = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "className", "lfOnEnter"];
+  var _excluded$k = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "className", "lfOnEnter"];
   var MantineTextarea = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -22991,7 +22996,7 @@
       className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$i);
+      rest = _objectWithoutProperties(_ref, _excluded$k);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -23012,12 +23017,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Textarea');
 
-  var index$p = /*#__PURE__*/Object.freeze({
+  var index$q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTextarea
   });
 
-  var _excluded$h = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "className"];
+  var _excluded$j = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "className"];
 
   // Mantine Select breaks if value is null
   var ensureNotNull = function ensureNotNull(options) {
@@ -23043,7 +23048,7 @@
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$h);
+      rest = _objectWithoutProperties(_ref, _excluded$j);
     return /*#__PURE__*/React$1.createElement(core.Select, _extends({}, makeClassName$1('select', name, className), {
       style: makeWidthStyle(fullWidth, width),
       description: hint,
@@ -23058,12 +23063,12 @@
   });
   lfLog('Loaded Mantine.Select');
 
-  var index$o = /*#__PURE__*/Object.freeze({
+  var index$p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineSelect
   });
 
-  var _excluded$g = ["name", "hint", "value", "onChange", "error", "description", "className"];
+  var _excluded$i = ["name", "hint", "value", "onChange", "error", "description", "className"];
   var MantineCheckbox = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -23072,7 +23077,7 @@
       error = _ref.error;
       _ref.description;
       var className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$g);
+      rest = _objectWithoutProperties(_ref, _excluded$i);
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
@@ -23087,12 +23092,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Checkbox');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineCheckbox
   });
 
-  var _excluded$f = ["name", "hint", "value", "onChange", "error", "description", "className"];
+  var _excluded$h = ["name", "hint", "value", "onChange", "error", "description", "className"];
   var MantineToggle = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -23101,7 +23106,7 @@
       error = _ref.error;
       _ref.description;
       var className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$f);
+      rest = _objectWithoutProperties(_ref, _excluded$h);
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
@@ -23116,12 +23121,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Toggle');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineToggle
   });
 
-  var _excluded$e = ["hint", "required", "tooltip", "name", "label", "className"];
+  var _excluded$g = ["hint", "required", "tooltip", "name", "label", "className"];
   var MantineListArray = I18N(function (_ref) {
     var _rest$error, _rest$error2;
     var hint = _ref.hint,
@@ -23130,7 +23135,7 @@
       var name = _ref.name,
       label = _ref.label,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$e);
+      rest = _objectWithoutProperties(_ref, _excluded$g);
     return /*#__PURE__*/React$1.createElement("div", makeClassName$1('array', name, className), label && /*#__PURE__*/React$1.createElement(core.Input.Label, {
       required: required
     }, label), /*#__PURE__*/React$1.createElement(ListArray, _extends({
@@ -23139,12 +23144,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded Mantine.ListArray');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineListArray
   });
 
-  var _excluded$d = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options", "className"];
+  var _excluded$f = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options", "className"];
   var CheckboxGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23170,7 +23175,7 @@
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$d);
+      rest = _objectWithoutProperties(_ref, _excluded$f);
     var _useState = React$1.useState(_isArray(value) ? value : value ? String().split(',') : []),
       _useState2 = _slicedToArray(_useState, 2),
       selected = _useState2[0],
@@ -23217,12 +23222,12 @@
   });
   lfLog('Loaded Mantine.CheckboxGroup');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroup
   });
 
-  var _excluded$c = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options", "className"];
+  var _excluded$e = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options", "className"];
   var RadioGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23248,7 +23253,7 @@
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$c);
+      rest = _objectWithoutProperties(_ref, _excluded$e);
     var _useState = React$1.useState(value),
       _useState2 = _slicedToArray(_useState, 2);
       _useState2[0];
@@ -23293,40 +23298,40 @@
   });
   lfLog('Loaded Mantine.RadioGroup');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroup
   });
 
   lfLog('Loaded Mantine.TwoColumns');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded RSuite5.ThreeColumns');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded RSuite5.Columns');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Columns
   });
 
   lfLog('Loaded RSuite5.Group');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
-  var _excluded$b = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime", "className", "name", "component"];
+  var _excluded$d = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime", "className", "name", "component"];
   var tryDate = function tryDate(value) {
     if (_isDate(value)) {
       return value;
@@ -23352,7 +23357,7 @@
       className = _ref.className,
       name = _ref.name,
       component = _ref.component,
-      rest = _objectWithoutProperties(_ref, _excluded$b);
+      rest = _objectWithoutProperties(_ref, _excluded$d);
     var Component = withTime ? dates.DateTimePicker : dates.DatePickerInput;
     return /*#__PURE__*/React$1.createElement(Component, _extends({}, makeClassName$1(component, name, className), {
       style: makeWidthStyle(fullWidth, width),
@@ -23365,12 +23370,12 @@
     }, passRest(rest)));
   };
 
-  var _excluded$a = ["onChange", "value", "lfLocale"];
+  var _excluded$c = ["onChange", "value", "lfLocale"];
   var SelectDate = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
       lfLocale = _ref.lfLocale,
-      rest = _objectWithoutProperties(_ref, _excluded$a);
+      rest = _objectWithoutProperties(_ref, _excluded$c);
     // also accepts string dates
     var initialValue;
     if (rest.dateType === 'range') {
@@ -23409,17 +23414,17 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.SelectDate');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDate
   });
 
-  var _excluded$9 = ["onChange", "value", "lfLocale"];
+  var _excluded$b = ["onChange", "value", "lfLocale"];
   var SelectDatTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
       lfLocale = _ref.lfLocale,
-      rest = _objectWithoutProperties(_ref, _excluded$9);
+      rest = _objectWithoutProperties(_ref, _excluded$b);
     // also accepts string dates
     var initialValue;
     if (rest.dateType === 'range') {
@@ -23460,12 +23465,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.SelectDateTime');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDatTime
   });
 
-  var _excluded$8 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter", "className"];
+  var _excluded$a = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter", "className"];
   var InputText = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -23480,7 +23485,7 @@
       required = _ref.required;
       _ref.lfOnEnter;
       var className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
+      rest = _objectWithoutProperties(_ref, _excluded$a);
     return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, _extends({}, makeClassName$1('rate', name, className), {
       description: hint,
       error: _isString(error) ? error : undefined,
@@ -23494,7 +23499,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Rate');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputText
   });
@@ -23515,19 +23520,19 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded Mantine.Placeholder');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderMantine
   });
 
   lfLog('Loaded Mantine.PlaceholderImage');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
-  var _excluded$7 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "className", "lfOnEnter"];
+  var _excluded$9 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "className", "lfOnEnter"];
   var SliderMantine = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -23538,7 +23543,7 @@
       required = _ref.required,
       className = _ref.className;
       _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$7);
+      var rest = _objectWithoutProperties(_ref, _excluded$9);
     return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, _extends({}, makeClassName('slider', name, className), {
       description: hint,
       error: _isString(error) ? error : undefined,
@@ -23559,12 +23564,12 @@
   });
   lfLog('Loaded Mantine.Slider');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index$a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderMantine
   });
 
-  var _excluded$6 = ["name", "hint", "value", "error", "fullWidth", "width", "data", "className"];
+  var _excluded$8 = ["name", "hint", "value", "error", "fullWidth", "width", "data", "className"];
   var MantineTags = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -23574,7 +23579,7 @@
       width = _ref.width,
       data = _ref.data,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$6);
+      rest = _objectWithoutProperties(_ref, _excluded$8);
     return /*#__PURE__*/React$1.createElement(core.TagsInput, _extends({}, makeClassName$1('input-tag', name, className), {
       style: makeWidthStyle(fullWidth, width),
       value: value,
@@ -23589,7 +23594,7 @@
   }, ['label', 'hint', 'placeholder'], i18nOptions);
   lfLog('Loaded Mantine.InputTags');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTags
   });
@@ -23597,7 +23602,7 @@
   var css_248z$4 = ".lf-form-react-mantine .lf-control-tabs .lf-prefix-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical .mantine-Tabs-panel, .lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-left .mantine-Tabs-panel {\n  padding-left: var(--lf-field-column-margin);\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-right .mantine-Tabs-panel {\n  padding-right: var(--lf-field-column-margin);\n}";
   styleInject(css_248z$4);
 
-  var _excluded$5 = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement", "className"];
+  var _excluded$7 = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement", "className"];
   var MantineTabs = I18N(function (_ref) {
     var _makeClassName;
     var name = _ref.name,
@@ -23610,7 +23615,7 @@
       orientation = _ref.orientation,
       placement = _ref.placement,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$5);
+      rest = _objectWithoutProperties(_ref, _excluded$7);
     var active;
     if (value) {
       active = value;
@@ -23647,7 +23652,7 @@
   });
   lfLog('Loaded Mantine.Tabs');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var index$8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTabs
   });
@@ -23655,13 +23660,13 @@
   var css_248z$3 = ".lf-form-react-mantine .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-mantine .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-lg .lf-icon {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-xs .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-sm .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-md .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-xl .lf-icon {\n  max-width: 28px;\n  max-height: 28px;\n}";
   styleInject(css_248z$3);
 
-  var _excluded$4 = ["label", "icon", "hint", "tooltip"];
+  var _excluded$6 = ["label", "icon", "hint", "tooltip"];
   var MantineButton = function MantineButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint,
       tooltip = _ref.tooltip,
-      rest = _objectWithoutProperties(_ref, _excluded$4);
+      rest = _objectWithoutProperties(_ref, _excluded$6);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(core.Button, _extends({
@@ -23694,12 +23699,12 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded Mantine.Button');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var index$7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton
   });
 
-  var _excluded$3 = ["name", "hint", "fullWidth", "width", "error", "onChange", "onBlur", "lfOnEnter", "accept", "className"];
+  var _excluded$5 = ["name", "hint", "fullWidth", "width", "error", "onChange", "onBlur", "lfOnEnter", "accept", "className"];
   var MantineUpload = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -23711,7 +23716,7 @@
       _ref.lfOnEnter;
       var accept = _ref.accept,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$3);
+      rest = _objectWithoutProperties(_ref, _excluded$5);
     var handleChange = React$1.useCallback(function (value) {
       return onChange(value);
     }, [onChange]);
@@ -23727,12 +23732,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Upload');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var index$6 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineUpload
   });
 
-  var _excluded$2 = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "className"];
+  var _excluded$4 = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "className"];
   var MantineMultiSelect = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -23744,7 +23749,7 @@
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$2);
+      rest = _objectWithoutProperties(_ref, _excluded$4);
     return /*#__PURE__*/React$1.createElement(core.MultiSelect, _extends({}, makeClassName$1('multiselect', name, className), {
       value: value,
       name: name,
@@ -23759,7 +23764,7 @@
   });
   lfLog('Loaded Mantine.MultiSelect');
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var index$5 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineMultiSelect
   });
@@ -23781,7 +23786,7 @@
   var css_248z$1 = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
   styleInject(css_248z$1);
 
-  var _excluded$1 = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "allowStepClick", "allowStepSelect", "className"];
+  var _excluded$3 = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "allowStepClick", "allowStepSelect", "className"];
   var i18nSteps = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -23807,7 +23812,7 @@
       allowStepClick = _ref.allowStepClick,
       allowStepSelect = _ref.allowStepSelect,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$1);
+      rest = _objectWithoutProperties(_ref, _excluded$3);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
       return obj.value === value;
@@ -23880,7 +23885,7 @@
   });
   lfLog('Loaded Mantine.Steps');
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$4 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineSteps
   });
@@ -23911,7 +23916,7 @@
     }));
   };
 
-  var _excluded = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "className", "showBrowserPicker"];
+  var _excluded$2 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "className", "showBrowserPicker"];
   var MANTINE_ICON_SIZE = {
     xs: 16,
     sm: 20,
@@ -23937,7 +23942,7 @@
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
       className = _ref.className,
       showBrowserPicker = _ref.showBrowserPicker,
-      rest = _objectWithoutProperties(_ref, _excluded);
+      rest = _objectWithoutProperties(_ref, _excluded$2);
     var ref = React$1.useRef(null);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
@@ -23974,7 +23979,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Time');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$3 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Time
   });
@@ -23989,9 +23994,211 @@
   };
   lfLog('Loaded RSuite5.Hidden');
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var index$2 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Hidden
+  });
+
+  var formatCurrency = function formatCurrency(value, locale, currency) {
+    if (value === null || value === undefined || value === '') {
+      return '';
+    }
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: currency
+    }).format(value);
+  };
+  function getDecimalSeparator(locale) {
+    var numberWithDecimalSeparator = 1.1;
+    return Intl.NumberFormat(locale).formatToParts(numberWithDecimalSeparator).find(function (part) {
+      return part.type === 'decimal';
+    }).value;
+  }
+  var parseCurrency = function parseCurrency(str, locale) {
+    if (!str) {
+      return null;
+    }
+    var thousandsMarker = getThousandsSeparator(locale);
+    var decimalMarker = getDecimalSeparator(locale);
+    var toLocalDecimal = str.replace(/[^0-9.,]/g, '') // remove everything but numbers, decimal and comma
+    .replaceAll(thousandsMarker, '') // replace thousand marker with void
+    .replaceAll(decimalMarker, '.'); // replace decimal marker with .
+
+    var parsed = parseFloat(toLocalDecimal);
+    return !isNaN(parsed) ? parsed : null;
+  };
+  function setCaretPosition(elem, caretPos) {
+    if (elem != null) {
+      if (elem.createTextRange) {
+        var range = elem.createTextRange();
+        range.move('character', caretPos);
+        range.select();
+      } else {
+        if (elem.selectionStart) {
+          elem.focus();
+          elem.setSelectionRange(caretPos, caretPos);
+        } else elem.focus();
+      }
+    }
+  }
+  var extraCharsUpToCaret = function extraCharsUpToCaret(str, position) {
+    return str.slice(0, position).replaceAll(/[0-9]/g, '').length;
+  };
+  var getThousandsSeparator = function getThousandsSeparator(locale) {
+    var _Intl$NumberFormat$fo, _Intl$NumberFormat$fo2;
+    return (_Intl$NumberFormat$fo = (_Intl$NumberFormat$fo2 = new Intl.NumberFormat(locale).formatToParts(1000).find(function (part) {
+      return part.type === 'group';
+    })) === null || _Intl$NumberFormat$fo2 === void 0 ? void 0 : _Intl$NumberFormat$fo2.value) !== null && _Intl$NumberFormat$fo !== void 0 ? _Intl$NumberFormat$fo : '';
+  };
+  var getExtraLeadingChars = function getExtraLeadingChars(locale, currency) {
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: currency
+    }).format(1).replace('1.00', '').replace('1,00', '').length;
+  };
+
+  var _excluded$1 = ["defaultValue", "control", "onChange", "locale", "currency", "fullWidth", "width"];
+  var isEvent = function isEvent(obj) {
+    return obj === null || obj === void 0 ? void 0 : obj.target;
+  };
+  var ALLOWED_CHARS = '01234567890,.';
+  var CommonCurrency = function CommonCurrency(_ref) {
+    var defaultValue = _ref.defaultValue,
+      Control = _ref.control,
+      _ref$onChange = _ref.onChange,
+      onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
+      locale = _ref.locale,
+      currency = _ref.currency,
+      _ref$fullWidth = _ref.fullWidth,
+      fullWidth = _ref$fullWidth === void 0 ? true : _ref$fullWidth,
+      width = _ref.width,
+      rest = _objectWithoutProperties(_ref, _excluded$1);
+    var ref = React$1.useRef();
+    var refCaret = React$1.useRef();
+    var _useState = React$1.useState(defaultValue),
+      _useState2 = _slicedToArray(_useState, 2),
+      value = _useState2[0],
+      setValue = _useState2[1];
+    var _useState3 = React$1.useState(formatCurrency(defaultValue, locale, currency)),
+      _useState4 = _slicedToArray(_useState3, 2),
+      visibileValue = _useState4[0],
+      setVisibleValue = _useState4[1];
+    React$1.useEffect(function () {
+      var _ref$current, _ref$current$querySel;
+      var caret = refCaret.current;
+      var element = (_ref$current = ref.current) === null || _ref$current === void 0 ? void 0 : (_ref$current$querySel = _ref$current.querySelectorAll('input')) === null || _ref$current$querySel === void 0 ? void 0 : _ref$current$querySel[0];
+      if (caret && element) {
+        setCaretPosition(element, caret);
+      }
+    });
+    var handleChange = React$1.useCallback(function () {
+      var _e$target$selectionSt;
+      // pick right value and events, differs for different frameworks
+      var e, value;
+      if (isEvent(arguments[0])) {
+        e = arguments[0];
+        value = e.target.value;
+      } else if (arguments.length >= 2 && isEvent(arguments[1])) {
+        e = arguments[1];
+        value = arguments[0];
+      }
+      var caretPosition = (_e$target$selectionSt = e.target.selectionStart) !== null && _e$target$selectionSt !== void 0 ? _e$target$selectionSt : 0;
+      var currentValue = parseCurrency(value, locale);
+      var newVisibleValue = formatCurrency(currentValue, locale, currency);
+
+      // calculate the additional chars (like currency symbol, thousands separator) in the
+      // formatted value up to the caret position in both previuos and new formatted value
+      // (consider the previous value the caret position is one characted before)
+      // also if user hit backspace, the new caret position is one less
+      var extraCharsBefore = extraCharsUpToCaret(visibileValue, caretPosition - 1);
+      var extraCharsAfter = extraCharsUpToCaret(newVisibleValue, caretPosition + (e.nativeEvent.inputType === 'deleteContentBackward' ? -1 : 0) + (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0));
+
+      //console.log('extra chars for currency', (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0))
+      //console.log(`extra chars up to caret before (${caretPosition})`, extraCharsBefore)
+      //console.log(`extra chars up to caret after (${caretPosition})`, extraCharsAfter);
+
+      // the difference between the two values, is the number of position the caret should be
+      // displaced to keep consistency with what the user is typing, for example starting
+      // with a blank value, if the user types "1" if it becomes "$ 1.00", the new caret is not
+      // 1 but 1 + 2 (the dollar and the space)
+      refCaret.current = caretPosition + extraCharsAfter - extraCharsBefore;
+
+      // set states, onKeyPress already handles invalid chars, so this alwayas updates
+      setValue(currentValue);
+      setVisibleValue(newVisibleValue);
+
+      // propagate changed value
+      onChange(currentValue);
+    }, [visibileValue]);
+    var handleKeyPress = React$1.useCallback(function (e) {
+      // stop propagation for all chars not valid for any currency, just digits , and .
+      if (!ALLOWED_CHARS.includes(String.fromCharCode(e.charCode))) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    }, []);
+
+    // redesign formatted value if changes currency and locale
+    React$1.useEffect(function () {
+      var newVisibleValue = formatCurrency(value, locale, currency);
+      setVisibleValue(newVisibleValue);
+    }, [currency, locale]);
+    return /*#__PURE__*/React$1.createElement("div", {
+      ref: ref
+    }, /*#__PURE__*/React$1.createElement(Control, _extends({
+      value: visibileValue,
+      onChange: handleChange,
+      style: makeWidthStyle(fullWidth, width),
+      onKeyPress: handleKeyPress
+    }, rest)));
+  };
+
+  var _excluded = ["name", "hint", "value", "fullWidth", "width", "error", "className", "lfLocale"];
+  var Currency = I18N(function (_ref) {
+    var name = _ref.name,
+      hint = _ref.hint,
+      value = _ref.value,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      error = _ref.error,
+      className = _ref.className,
+      lfLocale = _ref.lfLocale,
+      rest = _objectWithoutProperties(_ref, _excluded);
+    return /*#__PURE__*/React$1.createElement(CommonCurrency, _extends({
+      defaultValue: value,
+      control: core.TextInput,
+      locale: lfLocale
+    }, makeClassName$1('currency', name, className), {
+      //value={value}
+      style: makeWidthStyle(fullWidth, width),
+      description: hint,
+      error: _isString(error) ? error : undefined,
+      inputWrapperOrder: ['label', 'input', 'description', 'error']
+    }, passRest(_omit(rest, 'inputType', 'inputMode'))));
+
+    /*return (
+      <TextInput
+        {...makeClassName('currency', name, className)}
+        value={value}
+        style={makeWidthStyle(fullWidth, width)}
+        description={hint}
+        error={_.isString(error) ? error : undefined }
+        inputWrapperOrder={['label', 'input', 'description', 'error']}
+        onChange={handleChange}
+        onBlur={onBlur}
+        onKeyUp={submitOnEnter ? handleKeyUp : undefined}
+        type={rest.inputType ? rest.inputType : undefined}
+        inputmode={rest.inputMode ? rest.inputMode : undefined}
+        {...passRest(_.omit(rest, 'inputType', 'inputMode'))}
+      />*/
+    //);
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded Mantine.Currency');
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Currency
   });
 
   var css_248z = ".lf-form-react-mantine .lf-control-input-number div[data-position=right] .lf-postfix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=right] .lf-postfix-wrapper {\n  padding-right: 1em;\n}\n.lf-form-react-mantine .lf-control-input-number div[data-position=left] .lf-prefix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=left] .lf-prefix-wrapper {\n  padding-left: 1em;\n}";

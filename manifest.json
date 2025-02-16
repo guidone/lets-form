@@ -6708,6 +6708,7 @@
     "category": "general",
     "name": "esm-module",
     "description": "Generic ESM module",
+    "hidden": true,
     "frameworks": [
       "react-rsuite5"
     ],
@@ -7245,6 +7246,463 @@
         "name": "name",
         "type": "string",
         "description": "The name of the field and the key of the JSON"
+      }
+    ]
+  },
+  "currency": {
+    "label": "Currency",
+    "category": "general",
+    "name": "currency",
+    "description": "Formatted currency input box",
+    "frameworks": [
+      "react-antd",
+      "react",
+      "react-bootstrap",
+      "react-material-ui",
+      "react-rsuite5",
+      "react-mantine"
+    ],
+    "common": [
+      {
+        "name": "name",
+        "type": "string",
+        "description": "The name of the field and the key of the JSON"
+      },
+      {
+        "name": "label",
+        "type": "string | i18n",
+        "description": "Label of the field"
+      },
+      {
+        "name": "hint",
+        "type": "string | i18n",
+        "description": "Help text for the field (generally shown below the input box)"
+      },
+      {
+        "name": "placeholder",
+        "type": "string | i18n",
+        "description": "Placeholder text, visibile when the field is empty"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "description": "Disables and greys out the field"
+      },
+      {
+        "name": "readOnly",
+        "type": "boolean",
+        "description": "Put the field in read only mode"
+      },
+      {
+        "name": "hidden",
+        "type": "boolean",
+        "description": "Hides the field from the form"
+      },
+      {
+        "name": "currency",
+        "type": "string",
+        "options": [
+          "AFN",
+          "ALL",
+          "DZD",
+          "ARS",
+          "AMD",
+          "AUD",
+          "AZN",
+          "BHD",
+          "BDT",
+          "BYN",
+          "BZD",
+          "BOB",
+          "BAM",
+          "BWP",
+          "BRL",
+          "GBP",
+          "BND",
+          "BGN",
+          "BIF",
+          "XOF",
+          "XAF",
+          "KHR",
+          "CAD",
+          "CVE",
+          "CLP",
+          "CNY",
+          "COP",
+          "KMF",
+          "CDF",
+          "CRC",
+          "HRK",
+          "CZK",
+          "DKK",
+          "DJF",
+          "DOP",
+          "EGP",
+          "ERN",
+          "EEK",
+          "ETB",
+          "EUR",
+          "GEL",
+          "GHS",
+          "GTQ",
+          "GNF",
+          "HNL",
+          "HKD",
+          "HUF",
+          "ISK",
+          "INR",
+          "IDR",
+          "IRR",
+          "IQD",
+          "ILS",
+          "JMD",
+          "JPY",
+          "JOD",
+          "KZT",
+          "KES",
+          "KWD",
+          "LVL",
+          "LBP",
+          "LYD",
+          "LTL",
+          "MOP",
+          "MKD",
+          "MGA",
+          "MYR",
+          "MUR",
+          "MXN",
+          "MDL",
+          "MAD",
+          "MZN",
+          "MMK",
+          "NAD",
+          "NPR",
+          "TWD",
+          "NZD",
+          "NIO",
+          "NGN",
+          "NOK",
+          "OMR",
+          "PKR",
+          "PAB",
+          "PYG",
+          "PEN",
+          "PHP",
+          "PLN",
+          "QAR",
+          "RON",
+          "RUB",
+          "RWF",
+          "SAR",
+          "RSD",
+          "SGD",
+          "SOS",
+          "ZAR",
+          "KRW",
+          "LKR",
+          "SDG",
+          "SEK",
+          "CHF",
+          "SYP",
+          "TZS",
+          "THB",
+          "TOP",
+          "TTD",
+          "TND",
+          "TRY",
+          "USD",
+          "UGX",
+          "UAH",
+          "AED",
+          "UYU",
+          "UZS",
+          "VEF",
+          "VND",
+          "YER",
+          "ZMK",
+          "ZWL"
+        ]
+      }
+    ],
+    "react": [
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      }
+    ],
+    "react-rsuite5": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "lg",
+          "md",
+          "sm",
+          "xs"
+        ]
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "description": "Fixed heading text"
+      },
+      {
+        "name": "inside",
+        "type": "boolean",
+        "description": "Show prefix and postfix inside the input box"
+      },
+      {
+        "name": "postfix",
+        "type": "string",
+        "description": "Fixed trailing text"
+      },
+      {
+        "name": "tooltip",
+        "type": "boolean",
+        "description": "Show hint as tooltip next to label"
+      }
+    ],
+    "react-material-ui": [
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "small",
+          "medium"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "outlined",
+          "filled",
+          "standard"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "options": [
+          "error",
+          "info",
+          "primary",
+          "secondary",
+          "success",
+          "warning"
+        ]
+      },
+      {
+        "name": "floatingLabel",
+        "type": "boolean",
+        "description": "Show floating label for the control"
+      },
+      {
+        "name": "disableUnderline",
+        "type": "boolean",
+        "description": "Disable underline in \"filled\" and \"standard\" variant"
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "description": "Fixed heading text"
+      },
+      {
+        "name": "postfix",
+        "type": "string",
+        "description": "Fixed trailing text"
+      }
+    ],
+    "react-bootstrap": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "lg",
+          "sm"
+        ]
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "description": "Fixed heading text"
+      },
+      {
+        "name": "postfix",
+        "type": "string",
+        "description": "Fixed trailing text"
+      },
+      {
+        "name": "floatingLabel",
+        "type": "boolean",
+        "description": "Enable floating labels with Bootstrap’s textual form fields, not available with prefix/postfix"
+      }
+    ],
+    "react-antd": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "small",
+          "default",
+          "large"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "outlined",
+          "borderless",
+          "filled"
+        ]
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "description": "Fixed heading text"
+      },
+      {
+        "name": "postfix",
+        "type": "string",
+        "description": "Fixed trailing text"
+      },
+      {
+        "name": "showCount",
+        "type": "boolean"
+      },
+      {
+        "name": "maxLength",
+        "type": "number"
+      },
+      {
+        "name": "allowClear",
+        "type": "boolean"
+      },
+      {
+        "name": "tooltip",
+        "type": "boolean",
+        "description": "Show hint as tooltip"
+      }
+    ],
+    "react-mantine": [
+      {
+        "name": "size",
+        "type": "string",
+        "description": "Size of the field",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "options": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      {
+        "name": "variant",
+        "type": "string",
+        "options": [
+          "default",
+          "filled",
+          "unstyled"
+        ]
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "Set the width of the field to 100% of the enclosing container"
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "description": "Set the width (in pixel) of the field"
+      },
+      {
+        "name": "leftSection",
+        "type": "string"
+      },
+      {
+        "name": "rightSection",
+        "type": "string"
+      },
+      {
+        "name": "leftSectionWidth",
+        "type": "number"
+      },
+      {
+        "name": "rightSectionWidth",
+        "type": "number"
+      },
+      {
+        "name": "pointer",
+        "type": "boolean",
+        "description": "Determines whether the input should have cursor: pointer style, false by default"
+      },
+      {
+        "name": "withErrorStyles",
+        "type": "boolean",
+        "description": "Determines whether the input should have red border and red text color when the error prop is set, true by default"
       }
     ]
   }

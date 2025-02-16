@@ -1,4 +1,4 @@
-/* LetsForm react-bootstrap v0.12.11 - UMD */
+/* LetsForm react-bootstrap v0.12.12 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button'], factory) :
@@ -19821,17 +19821,17 @@
   };
   lfLog('Loaded Common.Divider');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
-  var _excluded$i = ["name", "view", "className"];
+  var _excluded$k = ["name", "view", "className"];
   var ReactView = function ReactView(_ref) {
     var name = _ref.name,
       view = _ref.view,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$i);
+      rest = _objectWithoutProperties(_ref, _excluded$k);
     var View = view;
     return /*#__PURE__*/React$1.createElement("div", makeClassName('react-view', name, className), View && /*#__PURE__*/React$1.createElement(View, _extends({
       name: name
@@ -20313,7 +20313,7 @@
   var css_248z$7 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$7);
 
-  var _excluded$h = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$j = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -20339,7 +20339,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$h);
+      rest = _objectWithoutProperties(_ref, _excluded$j);
     var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -22275,7 +22275,7 @@
   var css_248z$3 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
   styleInject(css_248z$3);
 
-  var _excluded$g = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
+  var _excluded$i = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
   var DEFAULT_FORM = {
     version: 2,
     fields: []
@@ -22347,7 +22347,7 @@
         resetAfterSubmit = _ref2$resetAfterSubmi === void 0 ? true : _ref2$resetAfterSubmi,
         formContext = _ref2.context,
         errors = _ref2.errors,
-        rest = _objectWithoutProperties(_ref2, _excluded$g);
+        rest = _objectWithoutProperties(_ref2, _excluded$i);
       var showErrors = form.showErrors,
         connectors = form.connectors;
       var _useState = React$1.useState(prealoadComponents),
@@ -22778,119 +22778,124 @@
     return LazyWithPreload;
   }
 
-  var _excluded$f = ["framework", "children"];
+  var _excluded$h = ["framework", "children"];
   var Fields = {
     'input-text': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$m; });
-      })
-    },
-    'select': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
-      })
-    },
-    'checkbox': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
-      })
-    },
-    'toggle': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
-      })
-    },
-    'checkbox-group': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
-      })
-    },
-    'placeholder': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
-      })
-    },
-    'placeholder-image': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
-      })
-    },
-    'date': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
-      })
-    },
-    'textarea': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
-      })
-    },
-    'slider': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
-      })
-    },
-    'three-columns': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
-      })
-    },
-    'columns': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
-      })
-    },
-    'two-columns': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
-      })
-    },
-    'group': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
-      })
-    },
-    'radio-group': {
-      'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
-      })
-    },
-    'divider': {
       'react-bootstrap': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$n; });
       })
     },
+    'select': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$m; });
+      })
+    },
+    'checkbox': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$l; });
+      })
+    },
+    'toggle': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$k; });
+      })
+    },
+    'checkbox-group': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$j; });
+      })
+    },
+    'placeholder': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$i; });
+      })
+    },
+    'placeholder-image': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$h; });
+      })
+    },
+    'date': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$g; });
+      })
+    },
+    'textarea': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$f; });
+      })
+    },
+    'slider': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$e; });
+      })
+    },
+    'three-columns': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$d; });
+      })
+    },
+    'columns': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$c; });
+      })
+    },
+    'two-columns': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$b; });
+      })
+    },
+    'group': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$a; });
+      })
+    },
+    'radio-group': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$9; });
+      })
+    },
+    'divider': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$o; });
+      })
+    },
     'react-view': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return index$8; });
       })
     },
     'datetime': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return index$7; });
       })
     },
     'array': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return index$6; });
       })
     },
     'input-number': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return index$5; });
       })
     },
     'tabs': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return index$4; });
       })
     },
     'button': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return index$3; });
       })
     },
     'hidden': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'currency': {
       'react-bootstrap': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
       })
@@ -22908,7 +22913,7 @@
   var LetsForm = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$f);
+      rest = _objectWithoutProperties(_ref, _excluded$h);
     var refForm = React$1.useRef();
     React$1.useImperativeHandle(ref, function () {
       return {
@@ -22923,7 +22928,7 @@
     }, rest), children);
   });
 
-  var _excluded$e = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "className", "inputType", "inputMode", "autocomplete", "lfLocale", "disabled", "readOnly", "plaintext", "error", "component", "required", "submitOnEnter", "prefix", "postfix", "placeholder", "fullWidth", "width", "floatingLabel", "lfOnEnter"];
+  var _excluded$g = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "className", "inputType", "inputMode", "autocomplete", "lfLocale", "disabled", "readOnly", "plaintext", "error", "component", "required", "submitOnEnter", "prefix", "postfix", "placeholder", "fullWidth", "width", "floatingLabel", "lfOnEnter"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -22960,7 +22965,7 @@
       floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$e);
+      rest = _objectWithoutProperties(_ref, _excluded$g);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -22994,13 +22999,13 @@
     }, error));
   };
 
-  var _excluded$d = ["onChange"];
+  var _excluded$f = ["onChange"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var TextInput = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$d);
+      rest = _objectWithoutProperties(_ref, _excluded$f);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -23011,12 +23016,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Input');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
 
-  var _excluded$c = ["name", "label", "hint", "value", "size", "placeholder", "options", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "floatingLabel", "filterKey", "filterValue", "className"];
+  var _excluded$e = ["name", "label", "hint", "value", "size", "placeholder", "options", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "floatingLabel", "filterKey", "filterValue", "className"];
   var Select = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23039,7 +23044,7 @@
       filterKey = _ref.filterKey,
       filterValue = _ref.filterValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$c);
+      rest = _objectWithoutProperties(_ref, _excluded$e);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value !== placeholder ? e.target.value : undefined);
     }, [onChange, placeholder]);
@@ -23072,12 +23077,12 @@
   });
   lfLog('Loaded ReactBootrap.Select');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select
   });
 
-  var _excluded$b = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format", "className"];
+  var _excluded$d = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format", "className"];
   var Checkbox = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23096,7 +23101,7 @@
       _ref.locale;
       _ref.format;
       var className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$b);
+      rest = _objectWithoutProperties(_ref, _excluded$d);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
@@ -23114,12 +23119,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Checkbox');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Checkbox
   });
 
-  var _excluded$a = ["name", "label", "hint", "value", "placeholder", "lfLocale", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format", "className"];
+  var _excluded$c = ["name", "label", "hint", "value", "placeholder", "lfLocale", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format", "className"];
   var Toggle = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23139,7 +23144,7 @@
       _ref.locale;
       _ref.format;
       var className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$a);
+      rest = _objectWithoutProperties(_ref, _excluded$c);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
@@ -23156,12 +23161,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Toggle');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle
   });
 
-  var _excluded$9 = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options", "className"];
+  var _excluded$b = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options", "className"];
   var CheckboxGroupBootstrap = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23182,7 +23187,7 @@
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$9);
+      rest = _objectWithoutProperties(_ref, _excluded$b);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
       values = _useState2[0],
@@ -23228,7 +23233,7 @@
   });
   lfLog('Loaded ReactBootrap.CheckboxGroup');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupBootstrap
   });
@@ -23245,26 +23250,26 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded ReactBootrap.Placeholder');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderBootstrap
   });
 
   lfLog('Loaded ReactBootrap.PlaceholderImage');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
-  var _excluded$8 = ["onChange", "value"];
+  var _excluded$a = ["onChange", "value"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var Date$1 = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
+      rest = _objectWithoutProperties(_ref, _excluded$a);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -23282,12 +23287,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Date');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Date$1
   });
 
-  var _excluded$7 = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "disabled", "readOnly", "error", "required", "rows", "placeholder", "width", "fullWidth", "className"];
+  var _excluded$9 = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "disabled", "readOnly", "error", "required", "rows", "placeholder", "width", "fullWidth", "className"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -23310,7 +23315,7 @@
       width = _ref.width,
       fullWidth = _ref.fullWidth,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$7);
+      rest = _objectWithoutProperties(_ref, _excluded$9);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -23333,12 +23338,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Textarea');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea
   });
 
-  var _excluded$6 = ["name", "label", "hint", "value", "onChange", "onBlur", "disabled", "readOnly", "error", "required", "placeholder", "min", "max", "step", "className"];
+  var _excluded$8 = ["name", "label", "hint", "value", "onChange", "onBlur", "disabled", "readOnly", "error", "required", "placeholder", "min", "max", "step", "className"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
@@ -23360,7 +23365,7 @@
       max = _ref.max,
       step = _ref.step,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$6);
+      rest = _objectWithoutProperties(_ref, _excluded$8);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -23382,40 +23387,40 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Slider');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Slider
   });
 
   lfLog('Loaded ReactBootrap.ThreeColumn');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded RSuite5.Columns');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Columns
   });
 
   lfLog('Loaded ReactBootrap.TwoColumns');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded ReactBootrap.Group');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index$a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
-  var _excluded$5 = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options", "className"];
+  var _excluded$7 = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options", "className"];
   var RadioGroupBootstrap = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23436,7 +23441,7 @@
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$5);
+      rest = _objectWithoutProperties(_ref, _excluded$7);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
       values = _useState2[0],
@@ -23483,26 +23488,26 @@
   });
   lfLog('Loaded ReactBootrap.RadioGroup');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupBootstrap
   });
 
   lfLog('Loaded ReactBootrap.ReactView');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var index$8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
 
-  var _excluded$4 = ["onChange", "value"];
+  var _excluded$6 = ["onChange", "value"];
 
   // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
 
   var DateTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$4);
+      rest = _objectWithoutProperties(_ref, _excluded$6);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -23523,12 +23528,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.DateTime');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var index$7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateTime
   });
 
-  var _excluded$3 = ["hint", "required", "tooltip", "name", "label", "className"];
+  var _excluded$5 = ["hint", "required", "tooltip", "name", "label", "className"];
   var ListArrayBootstrap = I18N(function (_ref) {
     var _rest$error, _rest$error2;
     var hint = _ref.hint,
@@ -23537,7 +23542,7 @@
       var name = _ref.name,
       label = _ref.label,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$3);
+      rest = _objectWithoutProperties(_ref, _excluded$5);
     return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName('array', name, className), label && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm
     }, rest)), hint && !((_rest$error = rest.error) !== null && _rest$error !== void 0 && _rest$error.errorMessage) && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString((_rest$error2 = rest.error) === null || _rest$error2 === void 0 ? void 0 : _rest$error2.errorMessage) && !_isEmpty(rest.error.errorMessage) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
@@ -23546,12 +23551,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Array');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var index$6 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayBootstrap
   });
 
-  var _excluded$2 = ["onChange"];
+  var _excluded$4 = ["onChange"];
   var hasDecimals = function hasDecimals(f) {
     return _isString(f) && (f.includes(',') || f.includes('.'));
   };
@@ -23560,7 +23565,7 @@
 
   var InputNumber = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$2);
+      rest = _objectWithoutProperties(_ref, _excluded$4);
     var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       var parsed;
@@ -23586,7 +23591,7 @@
     }, rest));
   }, ['label', 'hint', 'placeholder']);
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var index$5 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumber
   });
@@ -23594,7 +23599,7 @@
   var css_248z$2 = ".lf-form-react-bootstrap .lf-control-tabs [role=tabpanel] {\n  padding-top: var(--lf-field-margin);\n}";
   styleInject(css_248z$2);
 
-  var _excluded$1 = ["name", "value", "tabs", "onChange", "children", "variant", "transition", "fill", "justify"];
+  var _excluded$3 = ["name", "value", "tabs", "onChange", "children", "variant", "transition", "fill", "justify"];
   var TabsReactBootstrap = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -23605,7 +23610,7 @@
       transition = _ref.transition,
       fill = _ref.fill,
       justify = _ref.justify,
-      rest = _objectWithoutProperties(_ref, _excluded$1);
+      rest = _objectWithoutProperties(_ref, _excluded$3);
     var active;
     if (value) {
       active = value;
@@ -23636,7 +23641,7 @@
   });
   lfLog('Loaded ReactBootrap.Tabs');
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$4 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsReactBootstrap
   });
@@ -23644,12 +23649,12 @@
   var css_248z$1 = ".lf-form-react-bootstrap .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-bootstrap .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n  margin-top: -2px;\n  margin-right: 5px;\n}\n.lf-form-react-bootstrap .lf-control-button .btn-lg .lf-icon {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-form-react-bootstrap .lf-control-button .btn-sm .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}";
   styleInject(css_248z$1);
 
-  var _excluded = ["label", "icon", "hint"];
+  var _excluded$2 = ["label", "icon", "hint"];
   var BootstrapButton = function BootstrapButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint,
-      rest = _objectWithoutProperties(_ref, _excluded);
+      rest = _objectWithoutProperties(_ref, _excluded$2);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(reactBootstrap.Button, rest, /*#__PURE__*/React$1.createElement("img", {
@@ -23679,7 +23684,7 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded ReactBootrap.Button');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$3 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton
   });
@@ -23694,9 +23699,217 @@
   };
   lfLog('Loaded RSuite5.Hidden');
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var index$2 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Hidden
+  });
+
+  var formatCurrency = function formatCurrency(value, locale, currency) {
+    if (value === null || value === undefined || value === '') {
+      return '';
+    }
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: currency
+    }).format(value);
+  };
+  function getDecimalSeparator(locale) {
+    var numberWithDecimalSeparator = 1.1;
+    return Intl.NumberFormat(locale).formatToParts(numberWithDecimalSeparator).find(function (part) {
+      return part.type === 'decimal';
+    }).value;
+  }
+  var parseCurrency = function parseCurrency(str, locale) {
+    if (!str) {
+      return null;
+    }
+    var thousandsMarker = getThousandsSeparator(locale);
+    var decimalMarker = getDecimalSeparator(locale);
+    var toLocalDecimal = str.replace(/[^0-9.,]/g, '') // remove everything but numbers, decimal and comma
+    .replaceAll(thousandsMarker, '') // replace thousand marker with void
+    .replaceAll(decimalMarker, '.'); // replace decimal marker with .
+
+    var parsed = parseFloat(toLocalDecimal);
+    return !isNaN(parsed) ? parsed : null;
+  };
+  function setCaretPosition(elem, caretPos) {
+    if (elem != null) {
+      if (elem.createTextRange) {
+        var range = elem.createTextRange();
+        range.move('character', caretPos);
+        range.select();
+      } else {
+        if (elem.selectionStart) {
+          elem.focus();
+          elem.setSelectionRange(caretPos, caretPos);
+        } else elem.focus();
+      }
+    }
+  }
+  var extraCharsUpToCaret = function extraCharsUpToCaret(str, position) {
+    return str.slice(0, position).replaceAll(/[0-9]/g, '').length;
+  };
+  var getThousandsSeparator = function getThousandsSeparator(locale) {
+    var _Intl$NumberFormat$fo, _Intl$NumberFormat$fo2;
+    return (_Intl$NumberFormat$fo = (_Intl$NumberFormat$fo2 = new Intl.NumberFormat(locale).formatToParts(1000).find(function (part) {
+      return part.type === 'group';
+    })) === null || _Intl$NumberFormat$fo2 === void 0 ? void 0 : _Intl$NumberFormat$fo2.value) !== null && _Intl$NumberFormat$fo !== void 0 ? _Intl$NumberFormat$fo : '';
+  };
+  var getExtraLeadingChars = function getExtraLeadingChars(locale, currency) {
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: currency
+    }).format(1).replace('1.00', '').replace('1,00', '').length;
+  };
+
+  var _excluded$1 = ["defaultValue", "control", "onChange", "locale", "currency", "fullWidth", "width"];
+  var isEvent = function isEvent(obj) {
+    return obj === null || obj === void 0 ? void 0 : obj.target;
+  };
+  var ALLOWED_CHARS = '01234567890,.';
+  var CommonCurrency = function CommonCurrency(_ref) {
+    var defaultValue = _ref.defaultValue,
+      Control = _ref.control,
+      _ref$onChange = _ref.onChange,
+      onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
+      locale = _ref.locale,
+      currency = _ref.currency,
+      _ref$fullWidth = _ref.fullWidth,
+      fullWidth = _ref$fullWidth === void 0 ? true : _ref$fullWidth,
+      width = _ref.width,
+      rest = _objectWithoutProperties(_ref, _excluded$1);
+    var ref = React$1.useRef();
+    var refCaret = React$1.useRef();
+    var _useState = React$1.useState(defaultValue),
+      _useState2 = _slicedToArray(_useState, 2),
+      value = _useState2[0],
+      setValue = _useState2[1];
+    var _useState3 = React$1.useState(formatCurrency(defaultValue, locale, currency)),
+      _useState4 = _slicedToArray(_useState3, 2),
+      visibileValue = _useState4[0],
+      setVisibleValue = _useState4[1];
+    React$1.useEffect(function () {
+      var _ref$current, _ref$current$querySel;
+      var caret = refCaret.current;
+      var element = (_ref$current = ref.current) === null || _ref$current === void 0 ? void 0 : (_ref$current$querySel = _ref$current.querySelectorAll('input')) === null || _ref$current$querySel === void 0 ? void 0 : _ref$current$querySel[0];
+      if (caret && element) {
+        setCaretPosition(element, caret);
+      }
+    });
+    var handleChange = React$1.useCallback(function () {
+      var _e$target$selectionSt;
+      // pick right value and events, differs for different frameworks
+      var e, value;
+      if (isEvent(arguments[0])) {
+        e = arguments[0];
+        value = e.target.value;
+      } else if (arguments.length >= 2 && isEvent(arguments[1])) {
+        e = arguments[1];
+        value = arguments[0];
+      }
+      var caretPosition = (_e$target$selectionSt = e.target.selectionStart) !== null && _e$target$selectionSt !== void 0 ? _e$target$selectionSt : 0;
+      var currentValue = parseCurrency(value, locale);
+      var newVisibleValue = formatCurrency(currentValue, locale, currency);
+
+      // calculate the additional chars (like currency symbol, thousands separator) in the
+      // formatted value up to the caret position in both previuos and new formatted value
+      // (consider the previous value the caret position is one characted before)
+      // also if user hit backspace, the new caret position is one less
+      var extraCharsBefore = extraCharsUpToCaret(visibileValue, caretPosition - 1);
+      var extraCharsAfter = extraCharsUpToCaret(newVisibleValue, caretPosition + (e.nativeEvent.inputType === 'deleteContentBackward' ? -1 : 0) + (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0));
+
+      //console.log('extra chars for currency', (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0))
+      //console.log(`extra chars up to caret before (${caretPosition})`, extraCharsBefore)
+      //console.log(`extra chars up to caret after (${caretPosition})`, extraCharsAfter);
+
+      // the difference between the two values, is the number of position the caret should be
+      // displaced to keep consistency with what the user is typing, for example starting
+      // with a blank value, if the user types "1" if it becomes "$ 1.00", the new caret is not
+      // 1 but 1 + 2 (the dollar and the space)
+      refCaret.current = caretPosition + extraCharsAfter - extraCharsBefore;
+
+      // set states, onKeyPress already handles invalid chars, so this alwayas updates
+      setValue(currentValue);
+      setVisibleValue(newVisibleValue);
+
+      // propagate changed value
+      onChange(currentValue);
+    }, [visibileValue]);
+    var handleKeyPress = React$1.useCallback(function (e) {
+      // stop propagation for all chars not valid for any currency, just digits , and .
+      if (!ALLOWED_CHARS.includes(String.fromCharCode(e.charCode))) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    }, []);
+
+    // redesign formatted value if changes currency and locale
+    React$1.useEffect(function () {
+      var newVisibleValue = formatCurrency(value, locale, currency);
+      setVisibleValue(newVisibleValue);
+    }, [currency, locale]);
+    return /*#__PURE__*/React$1.createElement("div", {
+      ref: ref
+    }, /*#__PURE__*/React$1.createElement(Control, _extends({
+      value: visibileValue,
+      onChange: handleChange,
+      style: makeWidthStyle(fullWidth, width),
+      onKeyPress: handleKeyPress
+    }, rest)));
+  };
+
+  var _excluded = ["name", "label", "hint", "value", "lfLocale", "className", "disabled", "readOnly", "plaintext", "error", "component", "required", "submitOnEnter", "prefix", "postfix", "fullWidth", "width", "floatingLabel"];
+
+  // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
+
+  var Currency = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      lfLocale = _ref.lfLocale,
+      className = _ref.className;
+      _ref.disabled;
+      _ref.readOnly;
+      _ref.plaintext;
+      var error = _ref.error,
+      component = _ref.component,
+      required = _ref.required;
+      _ref.submitOnEnter;
+      var prefix = _ref.prefix,
+      postfix = _ref.postfix,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      _ref$floatingLabel = _ref.floatingLabel,
+      floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
+      rest = _objectWithoutProperties(_ref, _excluded);
+    var inner = /*#__PURE__*/React$1.createElement(CommonCurrency, _extends({
+      defaultValue: value,
+      control: Form.Control,
+      locale: lfLocale,
+      name: name,
+      type: "text",
+      isInvalid: error != null,
+      style: makeWidthStyle(fullWidth, width)
+    }, passRest(rest)));
+    var innerGroup = inner;
+    var needsGroup = postfix || prefix;
+    if (needsGroup) {
+      innerGroup = /*#__PURE__*/React$1.createElement(InputGroup, null, prefix && /*#__PURE__*/React$1.createElement(InputGroup.Text, null, TextOrIcon(prefix)), inner, postfix && /*#__PURE__*/React$1.createElement(InputGroup.Text, null, TextOrIcon(postfix)));
+    }
+    var useFloatingLabels = floatingLabel && !needsGroup;
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName(component, name, className), useFloatingLabels && label && /*#__PURE__*/React$1.createElement(FloatingLabel, {
+      label: label
+    }, innerGroup), !useFloatingLabels && label && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !useFloatingLabels && innerGroup, hint && !error && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _.isString(error) && !_.isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+      type: "invalid"
+    }, error));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded ReactBootrap.Currency');
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Currency
   });
 
   var css_248z = ".lf-form-react-bootstrap .lf-buttons {\n  display: flex;\n}\n.lf-form-react-bootstrap .lf-buttons button:not(:first-child) {\n  margin-left: 10px;\n}\n.lf-form-react-bootstrap .invalid-feedback {\n  display: inherit !important;\n}";

@@ -1,4 +1,4 @@
-/* LetsForm react-antd v0.12.11 - UMD */
+/* LetsForm react-antd v0.12.12 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('antd')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'antd'], factory) :
@@ -19785,17 +19785,17 @@
   };
   lfLog('Loaded Common.Divider');
 
-  var index$t = /*#__PURE__*/Object.freeze({
+  var index$u = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
-  var _excluded$n = ["name", "view", "className"];
+  var _excluded$p = ["name", "view", "className"];
   var ReactView = function ReactView(_ref) {
     var name = _ref.name,
       view = _ref.view,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$n);
+      rest = _objectWithoutProperties(_ref, _excluded$p);
     var View = view;
     return /*#__PURE__*/React$1.createElement("div", makeClassName$1('react-view', name, className), View && /*#__PURE__*/React$1.createElement(View, _extends({
       name: name
@@ -20277,7 +20277,7 @@
   var css_248z$g = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$g);
 
-  var _excluded$m = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$o = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -20303,7 +20303,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$m);
+      rest = _objectWithoutProperties(_ref, _excluded$o);
     var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -22299,7 +22299,7 @@
   var css_248z$c = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
   styleInject(css_248z$c);
 
-  var _excluded$l = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
+  var _excluded$n = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
   var DEFAULT_FORM = {
     version: 2,
     fields: []
@@ -22371,7 +22371,7 @@
         resetAfterSubmit = _ref2$resetAfterSubmi === void 0 ? true : _ref2$resetAfterSubmi,
         formContext = _ref2.context,
         errors = _ref2.errors,
-        rest = _objectWithoutProperties(_ref2, _excluded$l);
+        rest = _objectWithoutProperties(_ref2, _excluded$n);
       var showErrors = form.showErrors,
         connectors = form.connectors;
       var _useState = React$1.useState(prealoadComponents),
@@ -22802,149 +22802,154 @@
     return LazyWithPreload;
   }
 
-  var _excluded$k = ["framework", "children"];
+  var _excluded$m = ["framework", "children"];
   var Fields = {
     'input-text': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$s; });
-      })
-    },
-    'toggle': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$r; });
-      })
-    },
-    'checkbox': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$q; });
-      })
-    },
-    'date': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$p; });
-      })
-    },
-    'select': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$o; });
-      })
-    },
-    'radio-group': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$n; });
-      })
-    },
-    'rate': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$m; });
-      })
-    },
-    'placeholder': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
-      })
-    },
-    'placeholder-image': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
-      })
-    },
-    'input-number': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
-      })
-    },
-    'textarea': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
-      })
-    },
-    'multiselect': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
-      })
-    },
-    'three-columns': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
-      })
-    },
-    'columns': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
-      })
-    },
-    'two-columns': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
-      })
-    },
-    'group': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
-      })
-    },
-    'slider': {
-      'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
-      })
-    },
-    'divider': {
       'react-antd': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$t; });
       })
     },
+    'toggle': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$s; });
+      })
+    },
+    'checkbox': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$r; });
+      })
+    },
+    'date': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$q; });
+      })
+    },
+    'select': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$p; });
+      })
+    },
+    'radio-group': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$o; });
+      })
+    },
+    'rate': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$n; });
+      })
+    },
+    'placeholder': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$m; });
+      })
+    },
+    'placeholder-image': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$l; });
+      })
+    },
+    'input-number': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$k; });
+      })
+    },
+    'textarea': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$j; });
+      })
+    },
+    'multiselect': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$i; });
+      })
+    },
+    'three-columns': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$h; });
+      })
+    },
+    'columns': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$g; });
+      })
+    },
+    'two-columns': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$f; });
+      })
+    },
+    'group': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$e; });
+      })
+    },
+    'slider': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$d; });
+      })
+    },
+    'divider': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$u; });
+      })
+    },
     'react-view': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
+        return Promise.resolve().then(function () { return index$c; });
       })
     },
     'datetime': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
+        return Promise.resolve().then(function () { return index$b; });
       })
     },
     'array': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
+        return Promise.resolve().then(function () { return index$a; });
       })
     },
     'button': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
+        return Promise.resolve().then(function () { return index$9; });
       })
     },
     'checkbox-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return index$8; });
       })
     },
     'tabs': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return index$7; });
       })
     },
     'upload': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return index$6; });
       })
     },
     'buttons-toggle-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return index$5; });
       })
     },
     'steps': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return index$4; });
       })
     },
     'hidden': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return index$3; });
       })
     },
     'time': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'currency': {
       'react-antd': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
       })
@@ -22962,7 +22967,7 @@
   var LetsForm = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$k);
+      rest = _objectWithoutProperties(_ref, _excluded$m);
     var refForm = React$1.useRef();
     React$1.useImperativeHandle(ref, function () {
       return {
@@ -22980,7 +22985,7 @@
   var css_248z$b = ".lf-form-react-antd .lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-antd .lf-control-input-text.lf-size-small .lf-prefix-icon {\n  max-height: 12px;\n}\n.lf-form-react-antd .lf-control-input-text.lf-size-large .lf-prefix-icon {\n  max-height: 18px;\n}\n.lf-form-react-antd .lf-control-input-text input[type=color] {\n  min-width: 60px;\n}";
   styleInject(css_248z$b);
 
-  var _excluded$j = ["name", "label", "hint", "value", "size", "tooltip", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "inputType", "inputMode", "lfOnEnter", "className"];
+  var _excluded$l = ["name", "label", "hint", "value", "size", "tooltip", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "inputType", "inputMode", "lfOnEnter", "className"];
   var TextInput = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23005,7 +23010,7 @@
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$j);
+      rest = _objectWithoutProperties(_ref, _excluded$l);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -23036,12 +23041,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputText');
 
-  var index$s = /*#__PURE__*/Object.freeze({
+  var index$t = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
 
-  var _excluded$i = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "lfLocale", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "checkedChildren", "unCheckedChildren", "className"];
+  var _excluded$k = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "lfLocale", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "checkedChildren", "unCheckedChildren", "className"];
   var Toggle = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23071,7 +23076,7 @@
       var checkedChildren = _ref.checkedChildren,
       unCheckedChildren = _ref.unCheckedChildren,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$i);
+      rest = _objectWithoutProperties(_ref, _excluded$k);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('toggle', name, className), {
       label: label,
       name: name,
@@ -23094,12 +23099,12 @@
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded AntD.Toggle');
 
-  var index$r = /*#__PURE__*/Object.freeze({
+  var index$s = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle
   });
 
-  var _excluded$h = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "checkedChildren", "unCheckedChildren", "className"];
+  var _excluded$j = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "checkedChildren", "unCheckedChildren", "className"];
   var CheckboxAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23127,7 +23132,7 @@
       _ref.checkedChildren;
       _ref.unCheckedChildren;
       var className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$h);
+      rest = _objectWithoutProperties(_ref, _excluded$j);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.checked);
     }, [onChange]);
@@ -23147,7 +23152,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Checkbox');
 
-  var index$q = /*#__PURE__*/Object.freeze({
+  var index$r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxAntd
   });
@@ -23471,7 +23476,7 @@
   var dayjs_minExports = dayjs_min.exports;
   var dayjs = /*@__PURE__*/getDefaultExportFromCjs(dayjs_minExports);
 
-  var _excluded$g = ["name", "label", "hint", "value", "tooltip", "required", "error", "fullWidth", "width", "lfLocale", "className", "component"];
+  var _excluded$i = ["name", "label", "hint", "value", "tooltip", "required", "error", "fullWidth", "width", "lfLocale", "className", "component"];
   var AntdGenericDate = function AntdGenericDate(_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23487,7 +23492,7 @@
       lfLocale = _ref.lfLocale,
       className = _ref.className,
       component = _ref.component,
-      rest = _objectWithoutProperties(_ref, _excluded$g);
+      rest = _objectWithoutProperties(_ref, _excluded$i);
     // set locale for dates
     var defaultValue = value != null ? dayjs(value) : undefined;
     if (defaultValue && lfLocale) {
@@ -23512,12 +23517,12 @@
     }, passRest(rest, ['bordered']))));
   };
 
-  var _excluded$f = ["onChange", "value", "className"];
+  var _excluded$h = ["onChange", "value", "className"];
   var AntdDate = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value;
       _ref.className;
-      var rest = _objectWithoutProperties(_ref, _excluded$f);
+      var rest = _objectWithoutProperties(_ref, _excluded$h);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -23543,7 +23548,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Date');
 
-  var index$p = /*#__PURE__*/Object.freeze({
+  var index$q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdDate
   });
@@ -23551,7 +23556,7 @@
   var css_248z$a = ".lf-control-select-option-antd img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  vertical-align: middle;\n  margin-top: -2px;\n}";
   styleInject(css_248z$a);
 
-  var _excluded$e = ["name", "label", "hint", "value", "tooltip", "required", "error", "onChange", "onBlur", "width", "fullWidth", "options", "filterKey", "filterValue", "className", "showArrow", "showImageOptions"];
+  var _excluded$g = ["name", "label", "hint", "value", "tooltip", "required", "error", "onChange", "onBlur", "width", "fullWidth", "options", "filterKey", "filterValue", "className", "showArrow", "showImageOptions"];
   var AntdGenericSelect = function AntdGenericSelect(_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23573,7 +23578,7 @@
       showArrow = _ref.showArrow,
       _ref$showImageOptions = _ref.showImageOptions,
       showImageOptions = _ref$showImageOptions === void 0 ? false : _ref$showImageOptions,
-      rest = _objectWithoutProperties(_ref, _excluded$e);
+      rest = _objectWithoutProperties(_ref, _excluded$g);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, {
       "data-lf-field-name": name,
       className: className,
@@ -23613,12 +23618,12 @@
   });
   lfLog('Loaded AntD.Select');
 
-  var index$o = /*#__PURE__*/Object.freeze({
+  var index$p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectAntd
   });
 
-  var _excluded$d = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "options", "maxLength", "inline", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "optionType", "className"];
+  var _excluded$f = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "options", "maxLength", "inline", "error", "prefix", "postfix", "allowClear", "bordered", "onChange", "onBlur", "width", "optionType", "className"];
   var RadioGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23648,7 +23653,7 @@
       _ref.width;
       var optionType = _ref.optionType,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$d);
+      rest = _objectWithoutProperties(_ref, _excluded$f);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -23697,12 +23702,12 @@
   });
   lfLog('Loaded AntD.RadioGroup');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroup
   });
 
-  var _excluded$c = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "count", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "allowHalf", "bordered", "onChange", "onBlur", "width", "tooltips", "className"];
+  var _excluded$e = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "count", "tooltip", "disabled", "readOnly", "required", "maxLength", "error", "prefix", "postfix", "allowClear", "allowHalf", "bordered", "onChange", "onBlur", "width", "tooltips", "className"];
   var RateAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23732,7 +23737,7 @@
       _ref.width;
       var tooltips = _ref.tooltips,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$c);
+      rest = _objectWithoutProperties(_ref, _excluded$e);
     var mappedTooltips = (tooltips !== null && tooltips !== void 0 ? tooltips : []).map(function (item) {
       if (_isString(item)) {
         return item;
@@ -23764,7 +23769,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded AntD.Rate');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RateAntd
   });
@@ -23787,19 +23792,19 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded AntD.Placeholder');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderAntd
   });
 
   lfLog('Loaded AntD.PlaceholderImage');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
-  var _excluded$b = ["name", "label", "hint", "value", "showCount", "tooltip", "required", "maxLength", "error", "onChange", "onBlur", "width", "fullWidth", "showControl", "prefix", "postfix", "className"];
+  var _excluded$d = ["name", "label", "hint", "value", "showCount", "tooltip", "required", "maxLength", "error", "onChange", "onBlur", "width", "fullWidth", "showControl", "prefix", "postfix", "className"];
   var InputNumberAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23820,7 +23825,7 @@
       prefix = _ref.prefix,
       postfix = _ref.postfix,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$b);
+      rest = _objectWithoutProperties(_ref, _excluded$d);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({
       label: label,
       name: name
@@ -23843,12 +23848,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputNumber');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumberAntd
   });
 
-  var _excluded$a = ["name", "label", "hint", "value", "tooltip", "required", "error", "onChange", "onBlur", "width", "fullWidth", "className"];
+  var _excluded$c = ["name", "label", "hint", "value", "tooltip", "required", "error", "onChange", "onBlur", "width", "fullWidth", "className"];
   var TextareaAntd = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23864,7 +23869,7 @@
       width = _ref.width,
       fullWidth = _ref.fullWidth,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$a);
+      rest = _objectWithoutProperties(_ref, _excluded$c);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -23886,7 +23891,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Textarea');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextareaAntd
   });
@@ -23900,7 +23905,7 @@
   });
   lfLog('Loaded AntD.Multiselect');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect
   });
@@ -23910,14 +23915,14 @@
 
   lfLog('Loaded AntD.ThreeColumns');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded RSuite5.Columns');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Columns
   });
@@ -23927,7 +23932,7 @@
 
   lfLog('Loaded AntD.TwoColumns');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
@@ -23937,12 +23942,12 @@
 
   lfLog('Loaded AntD.Group');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
-  var _excluded$9 = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "keyboard", "dots", "min", "max", "step", "reverse", "tooltipOpen", "tooltipPlacement", "error", "onChange", "onBlur", "width", "marks", "included", "className"];
+  var _excluded$b = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "keyboard", "dots", "min", "max", "step", "reverse", "tooltipOpen", "tooltipPlacement", "error", "onChange", "onBlur", "width", "marks", "included", "className"];
   var SliderAnt = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23974,7 +23979,7 @@
       var marks = _ref.marks,
       included = _ref.included,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$9);
+      rest = _objectWithoutProperties(_ref, _excluded$b);
     var antdMarks = undefined;
     if (_isArray(marks) && !_isEmpty(marks)) {
       antdMarks = marks.reduce(function (accumulator, value) {
@@ -24014,23 +24019,23 @@
   });
   lfLog('Loaded AntD.Slider');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderAnt
   });
 
   lfLog('Loaded AntD.ReactView');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
 
-  var _excluded$8 = ["onChange", "value"];
+  var _excluded$a = ["onChange", "value"];
   var Datetime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
+      rest = _objectWithoutProperties(_ref, _excluded$a);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -24058,7 +24063,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.DateTime');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Datetime
   });
@@ -24066,7 +24071,7 @@
   var css_248z$6 = ".lf-form-react-antd .lf-control-common-array-item .ant-form-item {\n  margin-bottom: 0px !important;\n}\n.lf-form-react-antd .lf-control-common-array-item {\n  padding-bottom: 5px;\n}\n.lf-form-react-antd .lf-control-two-columns:last-child {\n  margin-bottom: 0px;\n}\n.lf-form-react-antd .lf-control-three-columns:last-child {\n  margin-bottom: 0px;\n}";
   styleInject(css_248z$6);
 
-  var _excluded$7 = ["hint", "required", "tooltip", "name", "label", "className"];
+  var _excluded$9 = ["hint", "required", "tooltip", "name", "label", "className"];
   var ListArrayAntd = I18N(function (_ref) {
     var _rest$error, _rest$error2, _rest$error3, _rest$error4;
     var hint = _ref.hint,
@@ -24075,7 +24080,7 @@
       name = _ref.name,
       label = _ref.label,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$7);
+      rest = _objectWithoutProperties(_ref, _excluded$9);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('array', name, className), {
       label: label,
       name: name,
@@ -24091,7 +24096,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded AntD.ListArray');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index$a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayAntd
   });
@@ -24099,13 +24104,13 @@
   var css_248z$5 = ".lf-form-react-antd .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn {\n  min-width: 32px;\n}\n.lf-form-react-antd .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n  margin-top: -2px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-lg {\n  min-width: 40px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-lg .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-sm {\n  min-width: 24px;\n}\n.lf-form-react-antd .lf-control-button .ant-btn-sm .lf-icon {\n  max-width: 14px;\n  max-height: 14px;\n}";
   styleInject(css_248z$5);
 
-  var _excluded$6 = ["label", "icon", "hint", "tooltip"];
+  var _excluded$8 = ["label", "icon", "hint", "tooltip"];
   var AntdButton = function AntdButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint;
       _ref.tooltip;
-      var rest = _objectWithoutProperties(_ref, _excluded$6);
+      var rest = _objectWithoutProperties(_ref, _excluded$8);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(antd.Button, _extends({
@@ -24137,12 +24142,12 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded AntD.Button');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton
   });
 
-  var _excluded$5 = ["name", "label", "hint", "value", "placeholder", "className", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
+  var _excluded$7 = ["name", "label", "hint", "value", "placeholder", "className", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options"];
   var CheckboxGroupRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24163,7 +24168,7 @@
       _ref.onBlur;
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
-      rest = _objectWithoutProperties(_ref, _excluded$5);
+      rest = _objectWithoutProperties(_ref, _excluded$7);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('checkbox-group', name, className), {
       label: label,
       name: name,
@@ -24184,7 +24189,7 @@
   });
   lfLog('Loaded AntD.CheckboxGroup');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var index$8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupRSuite
   });
@@ -24192,7 +24197,7 @@
   var css_248z$4 = ".lf-form-react-antd .lf-control-tabs .tab-fields {\n  margin-top: 0px;\n}";
   styleInject(css_248z$4);
 
-  var _excluded$4 = ["name", "value", "tabs", "onChange", "children", "animated", "centered", "size", "tabType"];
+  var _excluded$6 = ["name", "value", "tabs", "onChange", "children", "animated", "centered", "size", "tabType"];
   var TabsAntd = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -24203,7 +24208,7 @@
       centered = _ref.centered,
       size = _ref.size,
       tabType = _ref.tabType,
-      rest = _objectWithoutProperties(_ref, _excluded$4);
+      rest = _objectWithoutProperties(_ref, _excluded$6);
     var active;
     if (value) {
       active = value;
@@ -24236,7 +24241,7 @@
   });
   lfLog('Loaded AntD.Tabs');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var index$7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsAntd
   });
@@ -24244,7 +24249,7 @@
   var css_248z$3 = ".lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
   styleInject(css_248z$3);
 
-  var _excluded$3 = ["hint"],
+  var _excluded$5 = ["hint"],
     _excluded2 = ["name", "accept", "draggable", "draggableText", "draggableHeight", "uploadButtonLabel", "error", "label", "hint", "tooltip", "required", "size", "disabled", "value", "multiple", "listType", "maxCount", "showUploadList", "uploadButtonSize", "uploadButtonAppearance", "onChange", "className"];
   var Dragger = antd.Upload.Dragger;
   var makeDefaultValue = function makeDefaultValue(defaultValue) {
@@ -24270,7 +24275,7 @@
   };
   var ButtonWithHint = function ButtonWithHint(_ref) {
     var hint = _ref.hint,
-      props = _objectWithoutProperties(_ref, _excluded$3);
+      props = _objectWithoutProperties(_ref, _excluded$5);
     var inner = /*#__PURE__*/React$1.createElement(antd.Button, props);
     if (hint) {
       return /*#__PURE__*/React$1.createElement("div", {
@@ -24381,12 +24386,12 @@
   }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
   lfLog('Loaded AnttD.Upload');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var index$6 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntDUpload
   });
 
-  var _excluded$2 = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "multiple", "options", "className"];
+  var _excluded$4 = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "multiple", "options", "className"];
   var AntdButtonsToggleGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24405,7 +24410,7 @@
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$2);
+      rest = _objectWithoutProperties(_ref, _excluded$4);
     return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('button-toggle-group', name, className), {
       label: label,
       name: name,
@@ -24430,7 +24435,7 @@
   });
   lfLog('Loaded AntD.ButtonsToggleGroup');
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var index$5 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdButtonsToggleGroup
   });
@@ -24452,7 +24457,7 @@
   var css_248z$1 = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}\n\n.lf-form-react-antd .lf-control-steps .ant-steps-icon svg {\n  vertical-align: baseline;\n}";
   styleInject(css_248z$1);
 
-  var _excluded$1 = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "labelPlacement", "percent", "clickable", "stepsType"];
+  var _excluded$3 = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "labelPlacement", "percent", "clickable", "stepsType"];
   var i18nSteps = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -24480,7 +24485,7 @@
       percent = _ref.percent,
       clickable = _ref.clickable,
       stepsType = _ref.stepsType,
-      rest = _objectWithoutProperties(_ref, _excluded$1);
+      rest = _objectWithoutProperties(_ref, _excluded$3);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
       return obj.value === value;
@@ -24563,7 +24568,7 @@
   lfLog('Loaded AntD.Steps');
   var AntdSteps$1 = AntdSteps;
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$4 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdSteps$1
   });
@@ -24578,7 +24583,7 @@
   };
   lfLog('Loaded RSuite5.Hidden');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$3 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Hidden
   });
@@ -24606,7 +24611,7 @@
     return undefined;
   };
 
-  var _excluded = ["name", "error", "hint", "required", "label", "tooltip", "onChange", "value", "className"];
+  var _excluded$2 = ["name", "error", "hint", "required", "label", "tooltip", "onChange", "value", "className"];
   var Time = I18N(function (_ref) {
     var name = _ref.name,
       error = _ref.error,
@@ -24617,7 +24622,7 @@
       onChange = _ref.onChange,
       value = _ref.value,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded);
+      rest = _objectWithoutProperties(_ref, _excluded$2);
     // default value
     var defaultValue;
     if (isValidTime(value)) {
@@ -24645,9 +24650,202 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Time');
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var index$2 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Time
+  });
+
+  var formatCurrency = function formatCurrency(value, locale, currency) {
+    if (value === null || value === undefined || value === '') {
+      return '';
+    }
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: currency
+    }).format(value);
+  };
+  function getDecimalSeparator(locale) {
+    var numberWithDecimalSeparator = 1.1;
+    return Intl.NumberFormat(locale).formatToParts(numberWithDecimalSeparator).find(function (part) {
+      return part.type === 'decimal';
+    }).value;
+  }
+  var parseCurrency = function parseCurrency(str, locale) {
+    if (!str) {
+      return null;
+    }
+    var thousandsMarker = getThousandsSeparator(locale);
+    var decimalMarker = getDecimalSeparator(locale);
+    var toLocalDecimal = str.replace(/[^0-9.,]/g, '') // remove everything but numbers, decimal and comma
+    .replaceAll(thousandsMarker, '') // replace thousand marker with void
+    .replaceAll(decimalMarker, '.'); // replace decimal marker with .
+
+    var parsed = parseFloat(toLocalDecimal);
+    return !isNaN(parsed) ? parsed : null;
+  };
+  function setCaretPosition(elem, caretPos) {
+    if (elem != null) {
+      if (elem.createTextRange) {
+        var range = elem.createTextRange();
+        range.move('character', caretPos);
+        range.select();
+      } else {
+        if (elem.selectionStart) {
+          elem.focus();
+          elem.setSelectionRange(caretPos, caretPos);
+        } else elem.focus();
+      }
+    }
+  }
+  var extraCharsUpToCaret = function extraCharsUpToCaret(str, position) {
+    return str.slice(0, position).replaceAll(/[0-9]/g, '').length;
+  };
+  var getThousandsSeparator = function getThousandsSeparator(locale) {
+    var _Intl$NumberFormat$fo, _Intl$NumberFormat$fo2;
+    return (_Intl$NumberFormat$fo = (_Intl$NumberFormat$fo2 = new Intl.NumberFormat(locale).formatToParts(1000).find(function (part) {
+      return part.type === 'group';
+    })) === null || _Intl$NumberFormat$fo2 === void 0 ? void 0 : _Intl$NumberFormat$fo2.value) !== null && _Intl$NumberFormat$fo !== void 0 ? _Intl$NumberFormat$fo : '';
+  };
+  var getExtraLeadingChars = function getExtraLeadingChars(locale, currency) {
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: currency
+    }).format(1).replace('1.00', '').replace('1,00', '').length;
+  };
+
+  var _excluded$1 = ["defaultValue", "control", "onChange", "locale", "currency", "fullWidth", "width"];
+  var isEvent = function isEvent(obj) {
+    return obj === null || obj === void 0 ? void 0 : obj.target;
+  };
+  var ALLOWED_CHARS = '01234567890,.';
+  var CommonCurrency = function CommonCurrency(_ref) {
+    var defaultValue = _ref.defaultValue,
+      Control = _ref.control,
+      _ref$onChange = _ref.onChange,
+      onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
+      locale = _ref.locale,
+      currency = _ref.currency,
+      _ref$fullWidth = _ref.fullWidth,
+      fullWidth = _ref$fullWidth === void 0 ? true : _ref$fullWidth,
+      width = _ref.width,
+      rest = _objectWithoutProperties(_ref, _excluded$1);
+    var ref = React$1.useRef();
+    var refCaret = React$1.useRef();
+    var _useState = React$1.useState(defaultValue),
+      _useState2 = _slicedToArray(_useState, 2),
+      value = _useState2[0],
+      setValue = _useState2[1];
+    var _useState3 = React$1.useState(formatCurrency(defaultValue, locale, currency)),
+      _useState4 = _slicedToArray(_useState3, 2),
+      visibileValue = _useState4[0],
+      setVisibleValue = _useState4[1];
+    React$1.useEffect(function () {
+      var _ref$current, _ref$current$querySel;
+      var caret = refCaret.current;
+      var element = (_ref$current = ref.current) === null || _ref$current === void 0 ? void 0 : (_ref$current$querySel = _ref$current.querySelectorAll('input')) === null || _ref$current$querySel === void 0 ? void 0 : _ref$current$querySel[0];
+      if (caret && element) {
+        setCaretPosition(element, caret);
+      }
+    });
+    var handleChange = React$1.useCallback(function () {
+      var _e$target$selectionSt;
+      // pick right value and events, differs for different frameworks
+      var e, value;
+      if (isEvent(arguments[0])) {
+        e = arguments[0];
+        value = e.target.value;
+      } else if (arguments.length >= 2 && isEvent(arguments[1])) {
+        e = arguments[1];
+        value = arguments[0];
+      }
+      var caretPosition = (_e$target$selectionSt = e.target.selectionStart) !== null && _e$target$selectionSt !== void 0 ? _e$target$selectionSt : 0;
+      var currentValue = parseCurrency(value, locale);
+      var newVisibleValue = formatCurrency(currentValue, locale, currency);
+
+      // calculate the additional chars (like currency symbol, thousands separator) in the
+      // formatted value up to the caret position in both previuos and new formatted value
+      // (consider the previous value the caret position is one characted before)
+      // also if user hit backspace, the new caret position is one less
+      var extraCharsBefore = extraCharsUpToCaret(visibileValue, caretPosition - 1);
+      var extraCharsAfter = extraCharsUpToCaret(newVisibleValue, caretPosition + (e.nativeEvent.inputType === 'deleteContentBackward' ? -1 : 0) + (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0));
+
+      //console.log('extra chars for currency', (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0))
+      //console.log(`extra chars up to caret before (${caretPosition})`, extraCharsBefore)
+      //console.log(`extra chars up to caret after (${caretPosition})`, extraCharsAfter);
+
+      // the difference between the two values, is the number of position the caret should be
+      // displaced to keep consistency with what the user is typing, for example starting
+      // with a blank value, if the user types "1" if it becomes "$ 1.00", the new caret is not
+      // 1 but 1 + 2 (the dollar and the space)
+      refCaret.current = caretPosition + extraCharsAfter - extraCharsBefore;
+
+      // set states, onKeyPress already handles invalid chars, so this alwayas updates
+      setValue(currentValue);
+      setVisibleValue(newVisibleValue);
+
+      // propagate changed value
+      onChange(currentValue);
+    }, [visibileValue]);
+    var handleKeyPress = React$1.useCallback(function (e) {
+      // stop propagation for all chars not valid for any currency, just digits , and .
+      if (!ALLOWED_CHARS.includes(String.fromCharCode(e.charCode))) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    }, []);
+
+    // redesign formatted value if changes currency and locale
+    React$1.useEffect(function () {
+      var newVisibleValue = formatCurrency(value, locale, currency);
+      setVisibleValue(newVisibleValue);
+    }, [currency, locale]);
+    return /*#__PURE__*/React$1.createElement("div", {
+      ref: ref
+    }, /*#__PURE__*/React$1.createElement(Control, _extends({
+      value: visibileValue,
+      onChange: handleChange,
+      style: makeWidthStyle(fullWidth, width),
+      onKeyPress: handleKeyPress
+    }, rest)));
+  };
+
+  var _excluded = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "lfLocale", "className"];
+  var Currency = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip;
+      _ref.disabled;
+      _ref.readOnly;
+      var _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      lfLocale = _ref.lfLocale,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded);
+    return /*#__PURE__*/React$1.createElement(antd.Form.Item, _extends({}, makeClassName$1('currency', name, className), {
+      label: label,
+      name: name,
+      help: error != null ? error : hint && !tooltip ? hint : undefined,
+      required: required,
+      tooltip: tooltip && hint,
+      hasFeedback: error != null,
+      validateStatus: error ? 'error' : undefined,
+      valuePropName: null
+    }), /*#__PURE__*/React$1.createElement(CommonCurrency, _extends({
+      defaultValue: value,
+      control: antd.Input,
+      locale: lfLocale
+    }, passRest(rest))));
+  }, ['label', 'hint']);
+  lfLog('Loaded AntD.Currency');
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Currency
   });
 
   var css_248z = ".lf-form-react-antd .ant-form-item {\n  margin-bottom: 0px;\n}\n.lf-form-react-antd .lf-buttons {\n  display: flex;\n}\n.lf-form-react-antd .lf-buttons button:not(:first-child) {\n  margin-left: 10px;\n}\n.lf-form-react-antd.lf-form-react-antd-plaintext .ant-col.ant-form-item-label {\n  padding-bottom: 0px;\n}";

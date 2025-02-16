@@ -465,6 +465,29 @@ export interface HiddenReactMantineProps extends ValidationProps {
   name?: string; // The name of the field and the key of the JSON
 };
 
+export interface CurrencyReactMantineProps extends ValidationProps {
+  component: 'currency';
+  name?: string; // The name of the field and the key of the JSON
+  label?: I18NObject;
+  hint?: I18NObject;
+  placeholder?: I18NObject;
+  disabled?: boolean;
+  readOnly?: boolean;
+  hidden?: boolean;
+  currency?: "AFN" | "ALL" | "DZD" | "ARS" | "AMD" | "AUD" | "AZN" | "BHD" | "BDT" | "BYN" | "BZD" | "BOB" | "BAM" | "BWP" | "BRL" | "GBP" | "BND" | "BGN" | "BIF" | "XOF" | "XAF" | "KHR" | "CAD" | "CVE" | "CLP" | "CNY" | "COP" | "KMF" | "CDF" | "CRC" | "HRK" | "CZK" | "DKK" | "DJF" | "DOP" | "EGP" | "ERN" | "EEK" | "ETB" | "EUR" | "GEL" | "GHS" | "GTQ" | "GNF" | "HNL" | "HKD" | "HUF" | "ISK" | "INR" | "IDR" | "IRR" | "IQD" | "ILS" | "JMD" | "JPY" | "JOD" | "KZT" | "KES" | "KWD" | "LVL" | "LBP" | "LYD" | "LTL" | "MOP" | "MKD" | "MGA" | "MYR" | "MUR" | "MXN" | "MDL" | "MAD" | "MZN" | "MMK" | "NAD" | "NPR" | "TWD" | "NZD" | "NIO" | "NGN" | "NOK" | "OMR" | "PKR" | "PAB" | "PYG" | "PEN" | "PHP" | "PLN" | "QAR" | "RON" | "RUB" | "RWF" | "SAR" | "RSD" | "SGD" | "SOS" | "ZAR" | "KRW" | "LKR" | "SDG" | "SEK" | "CHF" | "SYP" | "TZS" | "THB" | "TOP" | "TTD" | "TND" | "TRY" | "USD" | "UGX" | "UAH" | "AED" | "UYU" | "UZS" | "VEF" | "VND" | "YER" | "ZMK" | "ZWL";
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
+  radius?: "xs" | "sm" | "md" | "lg" | "xl";
+  variant?: "default" | "filled" | "unstyled";
+  fullWidth?: boolean; // Set the width of the field to 100% of the enclosing container
+  width?: number; // Set the width (in pixel) of the field
+  leftSection?: string;
+  rightSection?: string;
+  leftSectionWidth?: number;
+  rightSectionWidth?: number;
+  pointer?: boolean; // Determines whether the input should have cursor: pointer style, false by default
+  withErrorStyles?: boolean; // Determines whether the input should have red border and red text color when the error prop is set, true by default
+};
+
 type LfFieldReactMantineProps =
   | InputTextReactMantineProps
   | ToggleReactMantineProps
@@ -487,6 +510,7 @@ type LfFieldReactMantineProps =
   | UploadReactMantineProps
   | TimeReactMantineProps
   | HiddenReactMantineProps
+  | CurrencyReactMantineProps
 
 export type { LfFieldReactMantineProps };
 

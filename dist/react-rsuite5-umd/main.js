@@ -1,4 +1,4 @@
-/* LetsForm react-rsuite5 v0.12.11 - UMD */
+/* LetsForm react-rsuite5 v0.12.12 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite'], factory) :
@@ -19868,17 +19868,17 @@
   };
   lfLog('Loaded Common.Divider');
 
-  var index$y = /*#__PURE__*/Object.freeze({
+  var index$z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
-  var _excluded$t = ["name", "view", "className"];
+  var _excluded$v = ["name", "view", "className"];
   var ReactView = function ReactView(_ref) {
     var name = _ref.name,
       view = _ref.view,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$t);
+      rest = _objectWithoutProperties(_ref, _excluded$v);
     var View = view;
     return /*#__PURE__*/React$1.createElement("div", makeClassName('react-view', name, className), View && /*#__PURE__*/React$1.createElement(View, _extends({
       name: name
@@ -20360,7 +20360,7 @@
   var css_248z$k = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$k);
 
-  var _excluded$s = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$u = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -20386,7 +20386,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$s);
+      rest = _objectWithoutProperties(_ref, _excluded$u);
     var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -22382,7 +22382,7 @@
   var css_248z$g = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
   styleInject(css_248z$g);
 
-  var _excluded$r = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
+  var _excluded$t = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
   var DEFAULT_FORM = {
     version: 2,
     fields: []
@@ -22454,7 +22454,7 @@
         resetAfterSubmit = _ref2$resetAfterSubmi === void 0 ? true : _ref2$resetAfterSubmi,
         formContext = _ref2.context,
         errors = _ref2.errors,
-        rest = _objectWithoutProperties(_ref2, _excluded$r);
+        rest = _objectWithoutProperties(_ref2, _excluded$t);
       var showErrors = form.showErrors,
         connectors = form.connectors;
       var _useState = React$1.useState(prealoadComponents),
@@ -22885,174 +22885,179 @@
     return LazyWithPreload;
   }
 
-  var _excluded$q = ["framework", "children"];
+  var _excluded$s = ["framework", "children"];
   var Fields = {
     'input-text': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$x; });
-      })
-    },
-    'toggle': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$w; });
-      })
-    },
-    'select': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$v; });
-      })
-    },
-    'group': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$u; });
-      })
-    },
-    'array': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$t; });
-      })
-    },
-    'two-columns': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$s; });
-      })
-    },
-    'three-columns': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$r; });
-      })
-    },
-    'columns': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$q; });
-      })
-    },
-    'input-number': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$p; });
-      })
-    },
-    'date': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$o; });
-      })
-    },
-    'checkbox': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$n; });
-      })
-    },
-    'checkbox-group': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$m; });
-      })
-    },
-    'slider': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
-      })
-    },
-    'radio-group': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
-      })
-    },
-    'input-tag': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
-      })
-    },
-    'input-mask': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
-      })
-    },
-    'textarea': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
-      })
-    },
-    'rate': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
-      })
-    },
-    'placeholder': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
-      })
-    },
-    'multiselect': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
-      })
-    },
-    'input-text-i18n': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
-      })
-    },
-    'placeholder-image': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
-      })
-    },
-    'button': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
-      })
-    },
-    'divider': {
       'react-rsuite5': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$y; });
       })
     },
+    'toggle': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$x; });
+      })
+    },
+    'select': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$w; });
+      })
+    },
+    'group': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$v; });
+      })
+    },
+    'array': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$u; });
+      })
+    },
+    'two-columns': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$t; });
+      })
+    },
+    'three-columns': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$s; });
+      })
+    },
+    'columns': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$r; });
+      })
+    },
+    'input-number': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$q; });
+      })
+    },
+    'date': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$p; });
+      })
+    },
+    'checkbox': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$o; });
+      })
+    },
+    'checkbox-group': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$n; });
+      })
+    },
+    'slider': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$m; });
+      })
+    },
+    'radio-group': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$l; });
+      })
+    },
+    'input-tag': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$k; });
+      })
+    },
+    'input-mask': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$j; });
+      })
+    },
+    'textarea': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$i; });
+      })
+    },
+    'rate': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$h; });
+      })
+    },
+    'placeholder': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$g; });
+      })
+    },
+    'multiselect': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$f; });
+      })
+    },
+    'input-text-i18n': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$e; });
+      })
+    },
+    'placeholder-image': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$d; });
+      })
+    },
+    'button': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$c; });
+      })
+    },
+    'divider': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$z; });
+      })
+    },
     'react-view': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
+        return Promise.resolve().then(function () { return index$b; });
       })
     },
     'datetime': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
+        return Promise.resolve().then(function () { return index$a; });
       })
     },
     'tabs': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
+        return Promise.resolve().then(function () { return index$9; });
       })
     },
     'radio-tile': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return index$8; });
       })
     },
     'upload': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return index$7; });
       })
     },
     'buttons-toggle-group': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return index$6; });
       })
     },
     'steps': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return index$5; });
       })
     },
     'esm-module': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return index$4; });
       })
     },
     'time': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return index$3; });
       })
     },
     'hidden': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'currency': {
       'react-rsuite5': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
       })
@@ -23070,7 +23075,7 @@
   var LetsForm = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$q);
+      rest = _objectWithoutProperties(_ref, _excluded$s);
     var refForm = React$1.useRef();
     React$1.useImperativeHandle(ref, function () {
       return {
@@ -23115,7 +23120,7 @@
   var css_248z$f = ".lf-form-react-rsuite5 .lf-control-input-text .rs-form-control-wrapper > .rs-input,\n.lf-form-react-rsuite5 .lf-control-input-text .rs-form-control-wrapper > .rs-input-number {\n  width: 100%;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-full-width .rs-input-group {\n  width: 100%;\n}\n.lf-form-react-rsuite5 .lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-lg .lf-prefix-icon {\n  max-height: 22px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-md .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-sm .lf-prefix-icon {\n  max-height: 10px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-xs .lf-prefix-icon {\n  max-height: 4px;\n}";
   styleInject(css_248z$f);
 
-  var _excluded$p = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "className", "lfOnEnter"];
+  var _excluded$r = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "className", "lfOnEnter"];
   var TextInput = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23149,7 +23154,7 @@
       className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$p);
+      rest = _objectWithoutProperties(_ref, _excluded$r);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -23182,12 +23187,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.InputText');
 
-  var index$x = /*#__PURE__*/Object.freeze({
+  var index$y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
 
-  var _excluded$o = ["name", "label", "hint", "value", "size", "tooltip", "disabled", "required", "onChange", "checkedChildren", "unCheckedChildren", "className", "error"];
+  var _excluded$q = ["name", "label", "hint", "value", "size", "tooltip", "disabled", "required", "onChange", "checkedChildren", "unCheckedChildren", "className", "error"];
   var ToggleInput = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23205,7 +23210,7 @@
       unCheckedChildren = _ref.unCheckedChildren,
       className = _ref.className,
       error = _ref.error,
-      rest = _objectWithoutProperties(_ref, _excluded$o);
+      rest = _objectWithoutProperties(_ref, _excluded$q);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({
       controlId: name
     }, makeClassName('toggle', name, className)), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
@@ -23224,7 +23229,7 @@
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded RSuite5.ToggleInput');
 
-  var index$w = /*#__PURE__*/Object.freeze({
+  var index$x = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ToggleInput
   });
@@ -23232,7 +23237,7 @@
   var css_248z$e = ".lf-control-select-option-rsuite5 img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  margin-right: 6px;\n  margin-top: -4px;\n  display: inline-block;\n}";
   styleInject(css_248z$e);
 
-  var _excluded$n = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions", "fullWidth", "width", "className"];
+  var _excluded$p = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions", "fullWidth", "width", "className"];
   var menuItem = function menuItem(_value, item) {
     return /*#__PURE__*/React$1.createElement("div", {
       className: "lf-control-select-option-rsuite5"
@@ -23275,7 +23280,7 @@
       fullWidth = _ref.fullWidth,
       width = _ref.width,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$n);
+      rest = _objectWithoutProperties(_ref, _excluded$p);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({}, makeClassName('select', name, className), {
       controlId: name,
       style: makeWidthStyle(fullWidth, width)
@@ -23306,14 +23311,14 @@
   });
   lfLog('Loaded RSuite5.Select');
 
-  var index$v = /*#__PURE__*/Object.freeze({
+  var index$w = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select
   });
 
   lfLog('Loaded RSuite5.Group');
 
-  var index$u = /*#__PURE__*/Object.freeze({
+  var index$v = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
@@ -23321,7 +23326,7 @@
   var css_248z$d = ".lf-form-react-rsuite5 .lf-control-array .array-error-message {\n  color: #ff6633;\n}";
   styleInject(css_248z$d);
 
-  var _excluded$m = ["hint", "required", "tooltip", "name", "label", "className"];
+  var _excluded$o = ["hint", "required", "tooltip", "name", "label", "className"];
   var ListArrayRSuite5 = I18N(function (_ref) {
     var _rest$error;
     var hint = _ref.hint,
@@ -23330,7 +23335,7 @@
       name = _ref.name,
       label = _ref.label,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$m);
+      rest = _objectWithoutProperties(_ref, _excluded$o);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, makeClassName('array', name, className), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
@@ -23342,28 +23347,28 @@
   }, ['label', 'hint']);
   lfLog('Loaded RSuite5.ListArray');
 
-  var index$t = /*#__PURE__*/Object.freeze({
+  var index$u = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayRSuite5
   });
 
   lfLog('Loaded RSuite5.TwoColumns');
 
-  var index$s = /*#__PURE__*/Object.freeze({
+  var index$t = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded RSuite5.ThreeColumns');
 
-  var index$r = /*#__PURE__*/Object.freeze({
+  var index$s = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded RSuite5.Columns');
 
-  var index$q = /*#__PURE__*/Object.freeze({
+  var index$r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Columns
   });
@@ -23371,7 +23376,7 @@
   var css_248z$c = ".lf-form-react-rsuite5 .lf-control-input-number.rs-form-group .rs-input-group {\n  width: auto;\n}";
   styleInject(css_248z$c);
 
-  var _excluded$l = ["name", "label", "hint", "value", "size", "placeholder", "min", "max", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "width", "fullWidth", "onChange", "step", "onBlur", "inside", "allowClear", "className"];
+  var _excluded$n = ["name", "label", "hint", "value", "size", "placeholder", "min", "max", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "width", "fullWidth", "onChange", "step", "onBlur", "inside", "allowClear", "className"];
   var hasDecimals = function hasDecimals(f) {
     return _isString(f) && (f.includes(',') || f.includes('.'));
   };
@@ -23407,7 +23412,7 @@
       inside = _ref$inside === void 0 ? false : _ref$inside,
       allowClear = _ref.allowClear,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$l);
+      rest = _objectWithoutProperties(_ref, _excluded$n);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : null),
       _useState2 = _slicedToArray(_useState, 2),
       currentValue = _useState2[0],
@@ -23468,7 +23473,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.InputNumber');
 
-  var index$p = /*#__PURE__*/Object.freeze({
+  var index$q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumberRSuite5
   });
@@ -23476,7 +23481,7 @@
   var css_248z$b = ".lf-control-date.lf-full-width .rs-picker-date {\n  width: 100%;\n}";
   styleInject(css_248z$b);
 
-  var _excluded$k = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "fullWidth", "width", "error", "onChange", "onBlur", "appearance", "format", "lfLocale", "className", "component"];
+  var _excluded$m = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "fullWidth", "width", "error", "onChange", "onBlur", "appearance", "format", "lfLocale", "className", "component"];
   var RSuiteGenericDate = function RSuiteGenericDate(_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23501,7 +23506,7 @@
       _ref.lfLocale;
       var className = _ref.className,
       component = _ref.component,
-      rest = _objectWithoutProperties(_ref, _excluded$k);
+      rest = _objectWithoutProperties(_ref, _excluded$m);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({}, makeClassName(component, name, className, {
       'lf-full-width': fullWidth || width != null
     }), {
@@ -23523,11 +23528,11 @@
     }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
   };
 
-  var _excluded$j = ["onChange", "value"];
+  var _excluded$l = ["onChange", "value"];
   var SelectDate = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$j);
+      rest = _objectWithoutProperties(_ref, _excluded$l);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -23553,7 +23558,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.SelectDate');
 
-  var index$o = /*#__PURE__*/Object.freeze({
+  var index$p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDate
   });
@@ -23561,7 +23566,7 @@
   var css_248z$a = ".lf-form-react-rsuite5 .lf-control-checkbox .rs-form-help-text {\n  align-items: inherit;\n  margin-top: -1px;\n  display: inline-block;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lf-control-checkbox .rs-form-help-text svg {\n  margin-top: -2px;\n}";
   styleInject(css_248z$a);
 
-  var _excluded$i = ["name", "label", "hint", "value", "tooltip", "indeterminate", "error", "onChange", "className"];
+  var _excluded$k = ["name", "label", "hint", "value", "tooltip", "indeterminate", "error", "onChange", "className"];
   var CheckboxRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23573,7 +23578,7 @@
       error = _ref.error,
       onChange = _ref.onChange,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$i);
+      rest = _objectWithoutProperties(_ref, _excluded$k);
     var _useState = React$1.useState(value !== null && value !== void 0 ? value : null),
       _useState2 = _slicedToArray(_useState, 2),
       isChecked = _useState2[0],
@@ -23608,12 +23613,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded RSuite5.Checkbox');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxRSuite
   });
 
-  var _excluded$h = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "color", "onChange", "onBlur", "options", "className"];
+  var _excluded$j = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "error", "color", "onChange", "onBlur", "options", "className"];
   var CheckboxGroupRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23633,7 +23638,7 @@
       var _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$h);
+      rest = _objectWithoutProperties(_ref, _excluded$j);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, makeClassName('checkbox-group', name, className), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
@@ -23659,7 +23664,7 @@
   });
   lfLog('Loaded RSuite.CheckboxGroup');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupRSuite
   });
@@ -23667,7 +23672,7 @@
   var css_248z$9 = ".lf-form-react-rsuite5 .lf-control-slider .rs-slider {\n  margin-bottom: 40px;\n}";
   styleInject(css_248z$9);
 
-  var _excluded$g = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks", "className"];
+  var _excluded$i = ["name", "label", "hint", "value", "tooltip", "disabled", "readOnly", "required", "showTooltip", "error", "onChange", "onBlur", "marks", "className"];
   var validateMarks = function validateMarks(marks) {
     return _isArray(marks) && marks.every(function (mark) {
       return _isObject(mark) && mark.value && mark.label;
@@ -23693,7 +23698,7 @@
       _ref$marks = _ref.marks,
       marks = _ref$marks === void 0 ? [] : _ref$marks,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$g);
+      rest = _objectWithoutProperties(_ref, _excluded$i);
     var handleRenderMark = React$1.useCallback(function (number) {
       var found = marks.find(function (mark) {
         return mark && mark.value === number;
@@ -23731,12 +23736,12 @@
   });
   lfLog('Loaded RSuite5.Slider');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderRsuite
   });
 
-  var _excluded$f = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options", "appearance", "className"];
+  var _excluded$h = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "options", "appearance", "className"];
   var RadioGroupRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23759,7 +23764,7 @@
       options = _ref$options === void 0 ? [] : _ref$options,
       appearance = _ref.appearance,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$f);
+      rest = _objectWithoutProperties(_ref, _excluded$h);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({
       controlId: name
     }, makeClassName('radio-group', name, className)), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
@@ -23787,7 +23792,7 @@
   });
   lfLog('Loaded RSuite.RadioGroup');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupRSuite
   });
@@ -23831,12 +23836,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputTag');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputTag
   });
 
-  var _excluded$e = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside", "fullWidth", "width", "className"];
+  var _excluded$g = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "prefix", "postfix", "onChange", "onBlur", "placeholderChar", "mask", "inside", "fullWidth", "width", "className"];
   var prepareMask = function prepareMask(str) {
     if (typeof str !== 'string' || str.length === 0) {
       return [];
@@ -23884,7 +23889,7 @@
       fullWidth = _ref.fullWidth,
       width = _ref.width,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$e);
+      rest = _objectWithoutProperties(_ref, _excluded$g);
     var parsedMask = prepareMask(mask);
     var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
@@ -23911,12 +23916,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputMask');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputMask
   });
 
-  var _excluded$d = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows", "className"];
+  var _excluded$f = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "fullWidth", "width", "rows", "className"];
   var ControlTextare = function ControlTextare(props) {
     return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends({
       as: "textarea"
@@ -23946,7 +23951,7 @@
       _ref$rows = _ref.rows,
       rows = _ref$rows === void 0 ? 10 : _ref$rows,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$d);
+      rest = _objectWithoutProperties(_ref, _excluded$f);
     var inner = /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
       errorMessage: _isString(error) ? error : undefined
     }, /*#__PURE__*/React$1.createElement(ControlTextare, _extends({
@@ -23969,12 +23974,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Textarea');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea
   });
 
-  var _excluded$c = ["name", "label", "hint", "value", "size", "tooltip", "disabled", "readOnly", "required", "error", "allowHalf", "cleanable", "max", "color", "onChange", "onBlur", "className"];
+  var _excluded$e = ["name", "label", "hint", "value", "size", "tooltip", "disabled", "readOnly", "required", "error", "allowHalf", "cleanable", "max", "color", "onChange", "onBlur", "className"];
   var RateRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23999,7 +24004,7 @@
       onChange = _ref.onChange,
       onBlur = _ref.onBlur,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$c);
+      rest = _objectWithoutProperties(_ref, _excluded$e);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({
       controlId: name
     }, makeClassName('rate', name, className)), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
@@ -24022,7 +24027,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Rate');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RateRSuite
   });
@@ -24045,12 +24050,12 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded RSuite5.Placeholder');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderRSuite5
   });
 
-  var _excluded$b = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width", "className"];
+  var _excluded$d = ["name", "label", "hint", "value", "size", "placeholder", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "fullWidth", "multiselectMode", "width", "className"];
   var Multiselect = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24082,7 +24087,7 @@
       multiselectMode = _ref.multiselectMode,
       width = _ref.width,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$b);
+      rest = _objectWithoutProperties(_ref, _excluded$d);
     var Component = multiselectMode === 'tag' ? rsuite.TagPicker : rsuite.CheckPicker;
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, _extends({}, makeClassName('checkbox-multiselect', name, className), {
       style: makeWidthStyle(fullWidth, width)
@@ -24112,7 +24117,7 @@
   });
   lfLog('Loaded RSuite5.Multiselect');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect
   });
@@ -24120,7 +24125,7 @@
   var css_248z$7 = ".lf-input-text-i18n-item-locale {\n  font-size: 0.9em;\n}\n\n.lf-input-text-i18n .rs-input-group-addon {\n  padding: 2px 4px !important;\n}\n.lf-input-text-i18n .rs-input-group-addon .status {\n  font-size: 10px;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear {\n  display: inline-block;\n  margin-left: 5px;\n  margin-top: -2px;\n  color: #666666;\n  text-decoration: none;\n}\n.lf-input-text-i18n .rs-input-group-addon .btn-clear:hover {\n  color: #1675e0;\n}\n.lf-input-text-i18n .group-input-select {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-input-text-i18n .group-input-select .translation-control {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  width: unset !important;\n  z-index: 1;\n}\n.lf-input-text-i18n .group-input-select .translation-control .translated {\n  color: #999999;\n}\n.lf-input-text-i18n .group-input-select .select-control {\n  order: 1;\n  flex: 0 0;\n  align-self: center;\n  z-index: 2;\n  margin-left: 5px;\n}\n.lf-input-text-i18n .group-input-select.textarea .rs-input-group-addon {\n  position: absolute;\n  right: 2px;\n  top: 3px;\n}\n.lf-input-text-i18n .group-input-select.textarea textarea {\n  resize: none;\n}\n.lf-input-text-i18n .group-input-select.textarea .select-control {\n  align-self: self-start;\n}";
   styleInject(css_248z$7);
 
-  var _excluded$a = ["value"];
+  var _excluded$c = ["value"];
   var LANGUAGES_OPTIONS = Object.keys(LOCALES['language-names']).map(function (lang) {
     return {
       value: lang,
@@ -24138,7 +24143,7 @@
   };
   var TextareaAccepter = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     var value = _ref.value,
-      props = _objectWithoutProperties(_ref, _excluded$a);
+      props = _objectWithoutProperties(_ref, _excluded$c);
     return /*#__PURE__*/React$1.createElement(rsuite.Input, _extends({
       ref: ref,
       as: "textarea",
@@ -24336,14 +24341,14 @@
   };
   lfLog('Loaded RSuite.InputTextI18N');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputTextI18N
   });
 
   lfLog('Loaded RSuite5.PlaceholderImage');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
@@ -24351,13 +24356,13 @@
   var css_248z$6 = ".lf-form-react-rsuite5 .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-lg .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-rsuite5 .lf-control-button .rs-btn-xs .lf-icon {\n  max-width: 12px;\n  max-height: 12px;\n}";
   styleInject(css_248z$6);
 
-  var _excluded$9 = ["label", "icon", "hint", "tooltip"];
+  var _excluded$b = ["label", "icon", "hint", "tooltip"];
   var RSuiteButton = function RSuiteButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint,
       tooltip = _ref.tooltip,
-      rest = _objectWithoutProperties(_ref, _excluded$9);
+      rest = _objectWithoutProperties(_ref, _excluded$b);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends({
@@ -24391,23 +24396,23 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded RSuite5.Button');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton
   });
 
   lfLog('Loaded RSuite5.ReactView');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
 
-  var _excluded$8 = ["onChange", "value"];
+  var _excluded$a = ["onChange", "value"];
   var SelectDatetime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
+      rest = _objectWithoutProperties(_ref, _excluded$a);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -24433,7 +24438,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.DateTime');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index$a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDatetime
   });
@@ -24441,7 +24446,7 @@
   var css_248z$5 = ".lf-form-react-rsuite5 .lf-control-tabs .tab-fields {\n  margin-top: 10px;\n}";
   styleInject(css_248z$5);
 
-  var _excluded$7 = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight", "className"];
+  var _excluded$9 = ["name", "value", "tabs", "onChange", "children", "appearance", "reversed", "justified", "pullRight", "className"];
   var Tabs = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -24453,7 +24458,7 @@
       justified = _ref.justified,
       pullRight = _ref.pullRight,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$7);
+      rest = _objectWithoutProperties(_ref, _excluded$9);
     var active;
     if (value) {
       active = value;
@@ -24482,12 +24487,12 @@
   });
   lfLog('Loaded RSuite.Tabs');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Tabs
   });
 
-  var _excluded$6 = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption", "className"];
+  var _excluded$8 = ["name", "label", "hint", "value", "placeholder", "plaintext", "inline", "iconWidth", "iconHeight", "tooltip", "disabled", "required", "error", "onChange", "onBlur", "options", "initalOption", "className"];
   var RadioTileRSuite = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24514,7 +24519,7 @@
       options = _ref$options === void 0 ? [] : _ref$options,
       initalOption = _ref.initalOption,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$6);
+      rest = _objectWithoutProperties(_ref, _excluded$8);
     var initialValue = value || initalOption;
     var _useState = React$1.useState(initialValue),
       _useState2 = _slicedToArray(_useState, 2),
@@ -24557,7 +24562,7 @@
   });
   lfLog('Loaded RSuite.RadioTile');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var index$8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioTileRSuite
   });
@@ -24565,7 +24570,7 @@
   var css_248z$4 = ".lf-form-react-rsuite5 .lf-control-upload .upload-layout {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: center;\n}\n.lf-form-react-rsuite5 .lf-control-upload .upload-layout .upload {\n  order: 0;\n  flex: 0 0 auto;\n  align-self: auto;\n}\n.lf-form-react-rsuite5 .lf-control-upload .upload-layout .hint {\n  margin-left: var(--lf-field-column-margin);\n  order: 0;\n  flex: 1 0 auto;\n  align-self: auto;\n}";
   styleInject(css_248z$4);
 
-  var _excluded$5 = ["superDisabled", "superSize", "disabled", "hint"],
+  var _excluded$7 = ["superDisabled", "superSize", "disabled", "hint"],
     _excluded2 = ["name", "label", "hint", "tooltip", "required", "onChange", "multiple", "removable", "disabledFileItem", "fileListVisible", "draggable", "disabled", "accept", "defaultValue", "listType", "uploadButtonLabel", "uploadButtonAppearance", "uploadButtonSize", "draggableText", "draggableHeight", "value", "className"];
   var makeDefaultValue = function makeDefaultValue(defaultValue) {
     if (_isArray(defaultValue)) {
@@ -24582,7 +24587,7 @@
       superSize = _ref.superSize;
       _ref.disabled;
       var hint = _ref.hint,
-      rest = _objectWithoutProperties(_ref, _excluded$5);
+      rest = _objectWithoutProperties(_ref, _excluded$7);
     var inner = /*#__PURE__*/React$1.createElement(rsuite.Button, _extends({}, rest, {
       size: superSize,
       disabled: superDisabled
@@ -24672,7 +24677,7 @@
   }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
   lfLog('Loaded RSuite.Upload');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var index$7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload
   });
@@ -24680,7 +24685,7 @@
   var css_248z$3 = ".lf-form-react-rsuite5 .lf-control-button-toggle-group .rs-form-control-wrapper {\n  display: block;\n}";
   styleInject(css_248z$3);
 
-  var _excluded$4 = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "options", "className"];
+  var _excluded$6 = ["name", "label", "hint", "value", "tooltip", "disabled", "required", "size", "error", "onChange", "options", "className"];
   var RSuiteButtonsToggleGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -24698,7 +24703,7 @@
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$4);
+      rest = _objectWithoutProperties(_ref, _excluded$6);
     return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, makeClassName('button-toggle-group', name, className), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
       tooltip: true
     }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(rsuite.Form.Control, _extends({
@@ -24717,7 +24722,7 @@
   });
   lfLog('Loaded RSuite5.ButtonsToggleGroup');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var index$6 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RSuiteButtonsToggleGroup
   });
@@ -24739,7 +24744,7 @@
   var css_248z$1 = ".lf-form-react-rsuite5 .lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-form-react-rsuite5 .lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-form-react-rsuite5 .lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-form-react-rsuite5 .lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
   styleInject(css_248z$1);
 
-  var _excluded$3 = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "className"];
+  var _excluded$5 = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "className"];
   var i18nSteps = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -24763,7 +24768,7 @@
       labelNext = _ref.labelNext,
       labelPrevious = _ref.labelPrevious,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$3);
+      rest = _objectWithoutProperties(_ref, _excluded$5);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
       return obj.value === value;
@@ -24831,12 +24836,12 @@
   });
   lfLog('Loaded Rsuite5.Steps');
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var index$5 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Rsuite5Steps
   });
 
-  var _excluded$2 = ["name", "componentUrl", "defaultExport", "exportedKey", "onChange"];
+  var _excluded$4 = ["name", "componentUrl", "defaultExport", "exportedKey", "onChange"];
   var makeModuleName = function makeModuleName(name) {
     return "".concat(name, "Module");
   };
@@ -24861,7 +24866,7 @@
       exportedKey = _ref3.exportedKey,
       _ref3$onChange = _ref3.onChange,
       onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
-      rest = _objectWithoutProperties(_ref3, _excluded$2);
+      rest = _objectWithoutProperties(_ref3, _excluded$4);
     var eventsContainerId = React$1.useId();
     var containerId = React$1.useId();
     var _useState = React$1.useState(),
@@ -24949,7 +24954,7 @@
     }), error && /*#__PURE__*/React$1.createElement("div", null, "some error"));
   };
 
-  var _excluded$1 = ["name", "componentUrl", "onChange", "value", "defaultExport", "exportedKey"];
+  var _excluded$3 = ["name", "componentUrl", "onChange", "value", "defaultExport", "exportedKey"];
   var RSuite5ModuleComponent = function RSuite5ModuleComponent(_ref) {
     var name = _ref.name,
       componentUrl = _ref.componentUrl,
@@ -24957,7 +24962,7 @@
       value = _ref.value,
       defaultExport = _ref.defaultExport,
       exportedKey = _ref.exportedKey,
-      rest = _objectWithoutProperties(_ref, _excluded$1);
+      rest = _objectWithoutProperties(_ref, _excluded$3);
     return /*#__PURE__*/React$1.createElement(ModuleComponent, _extends({
       name: name,
       onChange: onChange,
@@ -24968,7 +24973,7 @@
     }, passRest(rest)));
   };
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$4 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RSuite5ModuleComponent
   });
@@ -24990,11 +24995,11 @@
     return undefined;
   };
 
-  var _excluded = ["onChange", "value"];
+  var _excluded$2 = ["onChange", "value"];
   var SelectTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded);
+      rest = _objectWithoutProperties(_ref, _excluded$2);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -25021,7 +25026,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.SelectTime');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$3 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectTime
   });
@@ -25036,9 +25041,198 @@
   };
   lfLog('Loaded RSuite5.Hidden');
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var index$2 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Hidden
+  });
+
+  var formatCurrency = function formatCurrency(value, locale, currency) {
+    if (value === null || value === undefined || value === '') {
+      return '';
+    }
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: currency
+    }).format(value);
+  };
+  function getDecimalSeparator(locale) {
+    var numberWithDecimalSeparator = 1.1;
+    return Intl.NumberFormat(locale).formatToParts(numberWithDecimalSeparator).find(function (part) {
+      return part.type === 'decimal';
+    }).value;
+  }
+  var parseCurrency = function parseCurrency(str, locale) {
+    if (!str) {
+      return null;
+    }
+    var thousandsMarker = getThousandsSeparator(locale);
+    var decimalMarker = getDecimalSeparator(locale);
+    var toLocalDecimal = str.replace(/[^0-9.,]/g, '') // remove everything but numbers, decimal and comma
+    .replaceAll(thousandsMarker, '') // replace thousand marker with void
+    .replaceAll(decimalMarker, '.'); // replace decimal marker with .
+
+    var parsed = parseFloat(toLocalDecimal);
+    return !isNaN(parsed) ? parsed : null;
+  };
+  function setCaretPosition(elem, caretPos) {
+    if (elem != null) {
+      if (elem.createTextRange) {
+        var range = elem.createTextRange();
+        range.move('character', caretPos);
+        range.select();
+      } else {
+        if (elem.selectionStart) {
+          elem.focus();
+          elem.setSelectionRange(caretPos, caretPos);
+        } else elem.focus();
+      }
+    }
+  }
+  var extraCharsUpToCaret = function extraCharsUpToCaret(str, position) {
+    return str.slice(0, position).replaceAll(/[0-9]/g, '').length;
+  };
+  var getThousandsSeparator = function getThousandsSeparator(locale) {
+    var _Intl$NumberFormat$fo, _Intl$NumberFormat$fo2;
+    return (_Intl$NumberFormat$fo = (_Intl$NumberFormat$fo2 = new Intl.NumberFormat(locale).formatToParts(1000).find(function (part) {
+      return part.type === 'group';
+    })) === null || _Intl$NumberFormat$fo2 === void 0 ? void 0 : _Intl$NumberFormat$fo2.value) !== null && _Intl$NumberFormat$fo !== void 0 ? _Intl$NumberFormat$fo : '';
+  };
+  var getExtraLeadingChars = function getExtraLeadingChars(locale, currency) {
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: currency
+    }).format(1).replace('1.00', '').replace('1,00', '').length;
+  };
+
+  var _excluded$1 = ["defaultValue", "control", "onChange", "locale", "currency", "fullWidth", "width"];
+  var isEvent = function isEvent(obj) {
+    return obj === null || obj === void 0 ? void 0 : obj.target;
+  };
+  var ALLOWED_CHARS = '01234567890,.';
+  var CommonCurrency = function CommonCurrency(_ref) {
+    var defaultValue = _ref.defaultValue,
+      Control = _ref.control,
+      _ref$onChange = _ref.onChange,
+      onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
+      locale = _ref.locale,
+      currency = _ref.currency,
+      _ref$fullWidth = _ref.fullWidth,
+      fullWidth = _ref$fullWidth === void 0 ? true : _ref$fullWidth,
+      width = _ref.width,
+      rest = _objectWithoutProperties(_ref, _excluded$1);
+    var ref = React$1.useRef();
+    var refCaret = React$1.useRef();
+    var _useState = React$1.useState(defaultValue),
+      _useState2 = _slicedToArray(_useState, 2),
+      value = _useState2[0],
+      setValue = _useState2[1];
+    var _useState3 = React$1.useState(formatCurrency(defaultValue, locale, currency)),
+      _useState4 = _slicedToArray(_useState3, 2),
+      visibileValue = _useState4[0],
+      setVisibleValue = _useState4[1];
+    React$1.useEffect(function () {
+      var _ref$current, _ref$current$querySel;
+      var caret = refCaret.current;
+      var element = (_ref$current = ref.current) === null || _ref$current === void 0 ? void 0 : (_ref$current$querySel = _ref$current.querySelectorAll('input')) === null || _ref$current$querySel === void 0 ? void 0 : _ref$current$querySel[0];
+      if (caret && element) {
+        setCaretPosition(element, caret);
+      }
+    });
+    var handleChange = React$1.useCallback(function () {
+      var _e$target$selectionSt;
+      // pick right value and events, differs for different frameworks
+      var e, value;
+      if (isEvent(arguments[0])) {
+        e = arguments[0];
+        value = e.target.value;
+      } else if (arguments.length >= 2 && isEvent(arguments[1])) {
+        e = arguments[1];
+        value = arguments[0];
+      }
+      var caretPosition = (_e$target$selectionSt = e.target.selectionStart) !== null && _e$target$selectionSt !== void 0 ? _e$target$selectionSt : 0;
+      var currentValue = parseCurrency(value, locale);
+      var newVisibleValue = formatCurrency(currentValue, locale, currency);
+
+      // calculate the additional chars (like currency symbol, thousands separator) in the
+      // formatted value up to the caret position in both previuos and new formatted value
+      // (consider the previous value the caret position is one characted before)
+      // also if user hit backspace, the new caret position is one less
+      var extraCharsBefore = extraCharsUpToCaret(visibileValue, caretPosition - 1);
+      var extraCharsAfter = extraCharsUpToCaret(newVisibleValue, caretPosition + (e.nativeEvent.inputType === 'deleteContentBackward' ? -1 : 0) + (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0));
+
+      //console.log('extra chars for currency', (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0))
+      //console.log(`extra chars up to caret before (${caretPosition})`, extraCharsBefore)
+      //console.log(`extra chars up to caret after (${caretPosition})`, extraCharsAfter);
+
+      // the difference between the two values, is the number of position the caret should be
+      // displaced to keep consistency with what the user is typing, for example starting
+      // with a blank value, if the user types "1" if it becomes "$ 1.00", the new caret is not
+      // 1 but 1 + 2 (the dollar and the space)
+      refCaret.current = caretPosition + extraCharsAfter - extraCharsBefore;
+
+      // set states, onKeyPress already handles invalid chars, so this alwayas updates
+      setValue(currentValue);
+      setVisibleValue(newVisibleValue);
+
+      // propagate changed value
+      onChange(currentValue);
+    }, [visibileValue]);
+    var handleKeyPress = React$1.useCallback(function (e) {
+      // stop propagation for all chars not valid for any currency, just digits , and .
+      if (!ALLOWED_CHARS.includes(String.fromCharCode(e.charCode))) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    }, []);
+
+    // redesign formatted value if changes currency and locale
+    React$1.useEffect(function () {
+      var newVisibleValue = formatCurrency(value, locale, currency);
+      setVisibleValue(newVisibleValue);
+    }, [currency, locale]);
+    return /*#__PURE__*/React$1.createElement("div", {
+      ref: ref
+    }, /*#__PURE__*/React$1.createElement(Control, _extends({
+      value: visibileValue,
+      onChange: handleChange,
+      style: makeWidthStyle(fullWidth, width),
+      onKeyPress: handleKeyPress
+    }, rest)));
+  };
+
+  var _excluded = ["name", "label", "hint", "value", "tooltip", "required", "error", "className", "lfLocale"];
+  var Currency = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      _ref$tooltip = _ref.tooltip,
+      tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      className = _ref.className,
+      lfLocale = _ref.lfLocale,
+      rest = _objectWithoutProperties(_ref, _excluded);
+    // TODO get locale from context
+
+    console.log('current locale', lfLocale);
+    return /*#__PURE__*/React$1.createElement(rsuite.Form.Group, makeClassName('currency', name, className, _defineProperty$1({}, "lf-size-".concat(rest.size), rest.size != null)), label && /*#__PURE__*/React$1.createElement(rsuite.Form.ControlLabel, null, label, hint && tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, {
+      tooltip: true
+    }, hint), required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(RSuite5FieldControl, {
+      errorMessage: _isString(error) ? error : undefined
+    }, /*#__PURE__*/React$1.createElement(CommonCurrency, _extends({
+      defaultValue: value,
+      control: rsuite.Input,
+      locale: lfLocale
+    }, passRest(rest)))), hint && !tooltip && /*#__PURE__*/React$1.createElement(rsuite.Form.HelpText, null, hint));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded RSuite.Currency');
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Currency
   });
 
   var css_248z = ".lf-form-react-rsuite5 {\n  /*.lf-buttons {\n    margin-top: 24px;\n  }*/\n}\n.lf-form-react-rsuite5.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {\n  margin-bottom: unset;\n}\n.lf-form-react-rsuite5.rs-form-vertical .rs-form-group .rs-input-group {\n  width: unset;\n}\n.lf-form-react-rsuite5 .rs-form-control-label > .rs-form-help-text.rs-form-help-text-tooltip {\n  margin-top: 0px;\n  margin-left: 5px;\n}\n.lf-form-react-rsuite5 .lf-full-width .rs-form-control-wrapper {\n  width: 100%;\n}";

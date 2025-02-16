@@ -2456,5 +2456,109 @@
   "hidden": {
     "name": null,
     "info": null
+  },
+  "currency": {
+    "name": null,
+    "label": null,
+    "hint": null,
+    "placeholder": null,
+    "disabled": null,
+    "readOnly": null,
+    "hidden": null,
+    "currency": null,
+    "fullWidth": [
+      "react",
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd",
+      "react-mantine"
+    ],
+    "width": [
+      "react",
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd",
+      "react-mantine"
+    ],
+    "size": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd",
+      "react-mantine"
+    ],
+    "prefix": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "inside": [
+      "react-rsuite5"
+    ],
+    "postfix": [
+      "react-rsuite5",
+      "react-material-ui",
+      "react-bootstrap",
+      "react-antd"
+    ],
+    "tooltip": [
+      "react-rsuite5",
+      "react-antd"
+    ],
+    "variant": [
+      "react-material-ui",
+      "react-antd",
+      "react-mantine"
+    ],
+    "color": [
+      "react-material-ui"
+    ],
+    "floatingLabel": [
+      "react-material-ui",
+      "react-bootstrap"
+    ],
+    "disableUnderline": [
+      "react-material-ui"
+    ],
+    "showCount": [
+      "react-antd"
+    ],
+    "maxLength": [
+      "react-antd"
+    ],
+    "allowClear": [
+      "react-antd"
+    ],
+    "radius": [
+      "react-mantine"
+    ],
+    "leftSection": [
+      "react-mantine"
+    ],
+    "rightSection": [
+      "react-mantine"
+    ],
+    "leftSectionWidth": [
+      "react-mantine"
+    ],
+    "rightSectionWidth": [
+      "react-mantine"
+    ],
+    "pointer": [
+      "react-mantine"
+    ],
+    "withErrorStyles": [
+      "react-mantine"
+    ],
+    "validationMinLength": "validation",
+    "validationMin": "validation",
+    "validationMaxLength": "validation",
+    "validationMax": "validation",
+    "validationPattern": "validation",
+    "validationMessage": "validation",
+    "required": null
   }
 }

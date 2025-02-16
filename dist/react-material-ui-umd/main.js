@@ -1,4 +1,4 @@
-/* LetsForm react-material-ui v0.12.11 - UMD */
+/* LetsForm react-material-ui v0.12.12 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack'], factory) :
@@ -19809,17 +19809,17 @@
   };
   lfLog('Loaded Common.Divider');
 
-  var index$r = /*#__PURE__*/Object.freeze({
+  var index$s = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
 
-  var _excluded$n = ["name", "view", "className"];
+  var _excluded$p = ["name", "view", "className"];
   var ReactView = function ReactView(_ref) {
     var name = _ref.name,
       view = _ref.view,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$n);
+      rest = _objectWithoutProperties(_ref, _excluded$p);
     var View = view;
     return /*#__PURE__*/React$1.createElement("div", makeClassName('react-view', name, className), View && /*#__PURE__*/React$1.createElement(View, _extends({
       name: name
@@ -20301,7 +20301,7 @@
   var css_248z$9 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$9);
 
-  var _excluded$m = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$o = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -20327,7 +20327,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$m);
+      rest = _objectWithoutProperties(_ref, _excluded$o);
     var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -22263,7 +22263,7 @@
   var css_248z$5 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
   styleInject(css_248z$5);
 
-  var _excluded$l = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
+  var _excluded$n = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
   var DEFAULT_FORM = {
     version: 2,
     fields: []
@@ -22335,7 +22335,7 @@
         resetAfterSubmit = _ref2$resetAfterSubmi === void 0 ? true : _ref2$resetAfterSubmi,
         formContext = _ref2.context,
         errors = _ref2.errors,
-        rest = _objectWithoutProperties(_ref2, _excluded$l);
+        rest = _objectWithoutProperties(_ref2, _excluded$n);
       var showErrors = form.showErrors,
         connectors = form.connectors;
       var _useState = React$1.useState(prealoadComponents),
@@ -22766,139 +22766,144 @@
     return LazyWithPreload;
   }
 
-  var _excluded$k = ["framework", "children"];
+  var _excluded$m = ["framework", "children"];
   var Fields = {
     'input-text': {
-      'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$q; });
-      })
-    },
-    'select': {
-      'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$p; });
-      })
-    },
-    'toggle': {
-      'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$o; });
-      })
-    },
-    'checkbox': {
-      'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$n; });
-      })
-    },
-    'slider': {
-      'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$m; });
-      })
-    },
-    'placeholder': {
-      'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
-      })
-    },
-    'rate': {
-      'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
-      })
-    },
-    'date': {
-      'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
-      })
-    },
-    'three-columns': {
-      'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
-      })
-    },
-    'two-columns': {
-      'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
-      })
-    },
-    'columns': {
-      'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
-      })
-    },
-    'group': {
-      'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
-      })
-    },
-    'placeholder-image': {
-      'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
-      })
-    },
-    'divider': {
       'react-material-ui': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$r; });
       })
     },
+    'select': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$q; });
+      })
+    },
+    'toggle': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$p; });
+      })
+    },
+    'checkbox': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$o; });
+      })
+    },
+    'slider': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$n; });
+      })
+    },
+    'placeholder': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$m; });
+      })
+    },
+    'rate': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$l; });
+      })
+    },
+    'date': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$k; });
+      })
+    },
+    'three-columns': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$j; });
+      })
+    },
+    'two-columns': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$i; });
+      })
+    },
+    'columns': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$h; });
+      })
+    },
+    'group': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$g; });
+      })
+    },
+    'placeholder-image': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$f; });
+      })
+    },
+    'divider': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$s; });
+      })
+    },
     'react-view': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
+        return Promise.resolve().then(function () { return index$e; });
       })
     },
     'datetime': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
+        return Promise.resolve().then(function () { return index$d; });
       })
     },
     'array': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
+        return Promise.resolve().then(function () { return index$c; });
       })
     },
     'textarea': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
+        return Promise.resolve().then(function () { return index$b; });
       })
     },
     'multiselect': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
+        return Promise.resolve().then(function () { return index$a; });
       })
     },
     'input-number': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
+        return Promise.resolve().then(function () { return index$9; });
       })
     },
     'radio-group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return index$8; });
       })
     },
     'checkbox-group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return index$7; });
       })
     },
     'tabs': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return index$6; });
       })
     },
     'button': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return index$5; });
       })
     },
     'upload': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return index$4; });
       })
     },
     'time': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return index$3; });
       })
     },
     'hidden': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'currency': {
       'react-material-ui': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$1; });
       })
@@ -22916,7 +22921,7 @@
   var LetsForm = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$k);
+      rest = _objectWithoutProperties(_ref, _excluded$m);
     var refForm = React$1.useRef();
     React$1.useImperativeHandle(ref, function () {
       return {
@@ -22931,7 +22936,7 @@
     }, rest), children);
   });
 
-  var _excluded$j = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
+  var _excluded$l = ["name", "label", "hint", "value", "onChange", "onBlur", "inputType", "autocomplete", "inputMode", "size", "error", "disabled", "readOnly", "required", "submitOnEnter", "fullWidth", "variant", "floatingLabel", "placeholder", "color", "width", "prefix", "postfix", "component", "disableUnderline", "className", "lfOnEnter"];
 
   // DOC: https://mui.com/material-ui/api/input/
 
@@ -22968,7 +22973,7 @@
       className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$j);
+      rest = _objectWithoutProperties(_ref, _excluded$l);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -23010,12 +23015,12 @@
     }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$i = ["onChange"];
+  var _excluded$k = ["onChange"];
   // DOC: https://mui.com/material-ui/api/input/
 
   var TextInput = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$i);
+      rest = _objectWithoutProperties(_ref, _excluded$k);
     var handleChange = React$1.useCallback(function (event) {
       onChange(event.target.value);
     }, [onChange]);
@@ -23026,12 +23031,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.InputText');
 
-  var index$q = /*#__PURE__*/Object.freeze({
+  var index$r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
 
-  var _excluded$h = ["name", "label", "hint", "value", "placeholder", "options", "filterKey", "filterValue", "component", "disabled", "readOnly", "required", "error", "multiple", "fullWidth", "width", "floatingLabel", "autoWidth", "size", "variant", "onChange", "onBlur", "className", "children"];
+  var _excluded$j = ["name", "label", "hint", "value", "placeholder", "options", "filterKey", "filterValue", "component", "disabled", "readOnly", "required", "error", "multiple", "fullWidth", "width", "floatingLabel", "autoWidth", "size", "variant", "onChange", "onBlur", "className", "children"];
 
   // DOC: https://mui.com/material-ui/api/select/
 
@@ -23064,7 +23069,7 @@
       onBlur = _ref.onBlur,
       className = _ref.className;
       _ref.children;
-      var rest = _objectWithoutProperties(_ref, _excluded$h);
+      var rest = _objectWithoutProperties(_ref, _excluded$j);
     var filteredOptions = filterOptions(options, filterValue, filterKey);
     var controlId = React$1.useId();
     var items;
@@ -23124,11 +23129,11 @@
     }, passRest(rest)), items), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$g = ["onChange", "value"];
+  var _excluded$i = ["onChange", "value"];
   var MuiSelect = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$g);
+      rest = _objectWithoutProperties(_ref, _excluded$i);
     var handleChange = React$1.useCallback(function (e) {
       return onChange(e.target.value);
     }, [onChange]);
@@ -23142,12 +23147,12 @@
   });
   lfLog('Loaded MUI.Select');
 
-  var index$p = /*#__PURE__*/Object.freeze({
+  var index$q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiSelect
   });
 
-  var _excluded$f = ["name", "label", "value", "disabled", "color", "onChange", "size", "labelPlacement", "onBlur", "required", "disableRipple", "className"];
+  var _excluded$h = ["name", "label", "value", "disabled", "color", "onChange", "size", "labelPlacement", "onBlur", "required", "disableRipple", "className"];
   var Toggle = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23162,7 +23167,7 @@
       required = _ref.required,
       disableRipple = _ref.disableRipple,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$f);
+      rest = _objectWithoutProperties(_ref, _excluded$h);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
@@ -23185,12 +23190,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Toggle');
 
-  var index$o = /*#__PURE__*/Object.freeze({
+  var index$p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle
   });
 
-  var _excluded$e = ["name", "label", "value", "disabled", "color", "onChange", "size", "labelPlacement", "onBlur", "required", "disableRipple", "className"];
+  var _excluded$g = ["name", "label", "value", "disabled", "color", "onChange", "size", "labelPlacement", "onBlur", "required", "disableRipple", "className"];
 
   // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -23208,7 +23213,7 @@
       required = _ref.required,
       disableRipple = _ref.disableRipple,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$e);
+      rest = _objectWithoutProperties(_ref, _excluded$g);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.checked);
     }, [onChange]);
@@ -23231,12 +23236,12 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Checkbox');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxMUI
   });
 
-  var _excluded$d = ["name", "label", "value", "disabled", "required", "color", "onChange", "size", "valueLabelDisplay", "onBlur", "error", "min", "max", "step", "hint", "showMarks", "customMarks", "width", "fullWidth", "className"];
+  var _excluded$f = ["name", "label", "value", "disabled", "required", "color", "onChange", "size", "valueLabelDisplay", "onBlur", "error", "min", "max", "step", "hint", "showMarks", "customMarks", "width", "fullWidth", "className"];
 
   // DOCS: https://mui.com/material-ui/api/slider/
 
@@ -23262,7 +23267,7 @@
       width = _ref.width,
       fullWidth = _ref.fullWidth,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$d);
+      rest = _objectWithoutProperties(_ref, _excluded$f);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -23301,7 +23306,7 @@
   });
   lfLog('Loaded MUI.Slider');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderMui
   });
@@ -23321,12 +23326,12 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded MUI.Placeholder');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderMUI
   });
 
-  var _excluded$c = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "disabled", "readOnly", "required", "max", "precision", "color", "labelPlacement", "error", "className"];
+  var _excluded$e = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "disabled", "readOnly", "required", "max", "precision", "color", "labelPlacement", "error", "className"];
 
   // DOC: https://mui.com/material-ui/api/rating/
 
@@ -23349,7 +23354,7 @@
       labelPlacement = _ref.labelPlacement,
       error = _ref.error,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$c);
+      rest = _objectWithoutProperties(_ref, _excluded$e);
     var handleChange = React$1.useCallback(function (event) {
       onChange(parseFloat(event.target.value));
     }, [onChange]);
@@ -23382,7 +23387,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Rate');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Rate
   });
@@ -23718,7 +23723,7 @@
     return undefined;
   };
 
-  var _excluded$b = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "className", "size", "variant", "color", "readOnly", "required", "fullWidth", "placeholder", "floatingLabel", "width", "displayWeekNumber", "format", "maxDate", "minDate", "maxDateTime", "minDateTime", "lfLocale", "datetime", "views", "component"];
+  var _excluded$d = ["name", "label", "hint", "value", "onChange", "onBlur", "error", "className", "size", "variant", "color", "readOnly", "required", "fullWidth", "placeholder", "floatingLabel", "width", "displayWeekNumber", "format", "maxDate", "minDate", "maxDateTime", "minDateTime", "lfLocale", "datetime", "views", "component"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -23754,7 +23759,7 @@
       datetime = _ref$datetime === void 0 ? false : _ref$datetime,
       views = _ref.views,
       component = _ref.component,
-      rest = _objectWithoutProperties(_ref, _excluded$b);
+      rest = _objectWithoutProperties(_ref, _excluded$d);
     var controlId = React$1.useId();
     var localeCode = lfLocale && _isString(lfLocale) ? lfLocale.split('-')[0] : undefined;
     var Component = datetime ? DateTimePicker.DateTimePicker : DatePicker.DatePicker;
@@ -23807,7 +23812,7 @@
     }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
   };
 
-  var _excluded$a = ["onChange", "value"];
+  var _excluded$c = ["onChange", "value"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -23815,7 +23820,7 @@
   var MuiDate = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$a);
+      rest = _objectWithoutProperties(_ref, _excluded$c);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -23842,54 +23847,54 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.Date');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiDate
   });
 
   lfLog('Loaded MUI.ThreeColumns');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded MUI.TwoColumns');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded MUI.Columns');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Columns
   });
 
   lfLog('Loaded MUI.Group');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
   lfLog('Loaded MUI.PlaceholderImage');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
   lfLog('Loaded MUI.ReactView');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var index$e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
 
-  var _excluded$9 = ["onChange", "value"];
+  var _excluded$b = ["onChange", "value"];
 
   // DOC: https://mui.com/x/api/date-pickers/date-picker/
   //      https://mui.com/x/react-date-pickers/adapters-locale/
@@ -23897,7 +23902,7 @@
   var MuiDateTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$9);
+      rest = _objectWithoutProperties(_ref, _excluded$b);
     // also accepts string dates
     var currentValue;
     if (_isDate(value)) {
@@ -23925,7 +23930,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.DateTime');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var index$d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiDateTime
   });
@@ -23933,7 +23938,7 @@
   var css_248z$4 = ".lf-form.lf-form-react-material-ui .lf-control-common-array [class^=lf-control]:not(:last-child) {\n  margin-bottom: 10px;\n}";
   styleInject(css_248z$4);
 
-  var _excluded$8 = ["hint", "required", "tooltip", "name", "label", "className"];
+  var _excluded$a = ["hint", "required", "tooltip", "name", "label", "className"];
   var ListArrayMui = I18N(function (_ref) {
     var _rest$error, _rest$error2, _rest$error3;
     var hint = _ref.hint,
@@ -23942,7 +23947,7 @@
       var name = _ref.name,
       label = _ref.label,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
+      rest = _objectWithoutProperties(_ref, _excluded$a);
     var hasError = rest.error && _isString((_rest$error = rest.error) === null || _rest$error === void 0 ? void 0 : _rest$error.errorMessage) && ((_rest$error2 = rest.error) === null || _rest$error2 === void 0 ? void 0 : _rest$error2.errorMessage);
     var controlId = React$1.useId();
     return /*#__PURE__*/React$1.createElement("div", makeClassName('array', name, className), /*#__PURE__*/React$1.createElement(FormControl, {
@@ -23957,18 +23962,18 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Array');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayMui
   });
 
-  var _excluded$7 = ["onChange"];
+  var _excluded$9 = ["onChange"];
 
   // DOC: https://mui.com/material-ui/api/input/
 
   var Textarea = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$7);
+      rest = _objectWithoutProperties(_ref, _excluded$9);
     var handleChange = React$1.useCallback(function (event) {
       onChange(event.target.value);
     }, [onChange]);
@@ -23980,16 +23985,16 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.Textarea');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea
   });
 
-  var _excluded$6 = ["onChange", "value"];
+  var _excluded$8 = ["onChange", "value"];
   var Multiselect = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
-      rest = _objectWithoutProperties(_ref, _excluded$6);
+      rest = _objectWithoutProperties(_ref, _excluded$8);
     var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       onChange(typeof value === 'string' ? value.split(',') : value);
@@ -24016,12 +24021,12 @@
   });
   lfLog('Loaded MUI.Multiselect');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index$a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect
   });
 
-  var _excluded$5 = ["onChange"];
+  var _excluded$7 = ["onChange"];
 
   // DOC: https://mui.com/material-ui/api/input/
 
@@ -24030,7 +24035,7 @@
   };
   var InputNumber = I18N(function (_ref) {
     var onChange = _ref.onChange,
-      rest = _objectWithoutProperties(_ref, _excluded$5);
+      rest = _objectWithoutProperties(_ref, _excluded$7);
     var handleChange = React$1.useCallback(function (e) {
       var value = e.target.value;
       var parsed;
@@ -24056,12 +24061,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.InputNumber');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumber
   });
 
-  var _excluded$4 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "onBlur", "required", "className"];
+  var _excluded$6 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "onBlur", "required", "className"];
 
   // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -24082,7 +24087,7 @@
       onBlur = _ref.onBlur,
       required = _ref.required,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$4);
+      rest = _objectWithoutProperties(_ref, _excluded$6);
     var handleChange = React$1.useCallback(function (e) {
       onChange(e.target.value);
     }, [onChange]);
@@ -24124,12 +24129,12 @@
   });
   lfLog('Loaded MUI.RadioGroup');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var index$8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupMUI
   });
 
-  var _excluded$3 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "readOnly", "onBlur", "required", "className"];
+  var _excluded$5 = ["name", "label", "value", "options", "disabled", "color", "onChange", "error", "size", "row", "hint", "labelPlacement", "readOnly", "onBlur", "required", "className"];
 
   // DOCS: https://mui.com/material-ui/api/checkbox/
 
@@ -24151,7 +24156,7 @@
       _ref.onBlur;
       var required = _ref.required,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$3);
+      rest = _objectWithoutProperties(_ref, _excluded$5);
     var _useState = React$1.useState(_isArray(value) ? value : []),
       _useState2 = _slicedToArray(_useState, 2),
       currentValue = _useState2[0],
@@ -24204,7 +24209,7 @@
   });
   lfLog('Loaded MUI.CheckboxGroup');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var index$7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroup
   });
@@ -24212,7 +24217,7 @@
   var css_248z$3 = ".lf-form-react-material-ui .lf-control-tabs .tab-fields {\n  padding-top: var(--lf-field-margin);\n}";
   styleInject(css_248z$3);
 
-  var _excluded$2 = ["name", "value", "tabs", "onChange", "children", "centered", "fullWidth", "indicatorColor", "textColor"];
+  var _excluded$4 = ["name", "value", "tabs", "onChange", "children", "centered", "fullWidth", "indicatorColor", "textColor"];
   var TabsMui = I18N(function (_ref) {
     var name = _ref.name,
       value = _ref.value,
@@ -24223,7 +24228,7 @@
       fullWidth = _ref.fullWidth,
       indicatorColor = _ref.indicatorColor,
       textColor = _ref.textColor,
-      rest = _objectWithoutProperties(_ref, _excluded$2);
+      rest = _objectWithoutProperties(_ref, _excluded$4);
     var active;
     if (value) {
       active = value;
@@ -24264,7 +24269,7 @@
   });
   lfLog('Loaded MUI.Tabs');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var index$6 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsMui
   });
@@ -24272,7 +24277,7 @@
   var css_248z$2 = ".lf-form-react-material-ui .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeLarge .lf-icon {\n  max-width: 22px;\n  max-height: 22px;\n}\n.lf-form-react-material-ui .lf-control-button .MuiButton-sizeSmall .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon {\n  min-width: inherit;\n}\n.lf-form-react-material-ui .lf-control-button .only-icon .MuiButton-startIcon {\n  margin-right: 0px !important;\n}";
   styleInject(css_248z$2);
 
-  var _excluded$1 = ["label", "icon", "hint", "tooltip", "variant", "size", "color"];
+  var _excluded$3 = ["label", "icon", "hint", "tooltip", "variant", "size", "color"];
   var MuiButton = function MuiButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
@@ -24281,7 +24286,7 @@
       variant = _ref.variant,
       size = _ref.size,
       color = _ref.color,
-      rest = _objectWithoutProperties(_ref, _excluded$1);
+      rest = _objectWithoutProperties(_ref, _excluded$3);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(Button, _extends({
@@ -24322,7 +24327,7 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded MUI.Button');
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var index$5 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton
   });
@@ -24535,7 +24540,7 @@
   lfLog('Loaded MUI.Upload');
   var Upload$1 = Upload;
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$4 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload$1
   });
@@ -24563,7 +24568,7 @@
     return undefined;
   };
 
-  var _excluded = ["name", "label", "hint", "value", "onChange", "onBlur", "fullWidth", "width", "floatingLabel", "disabled", "readOnly", "required", "className", "timeStepsHours", "timeStepsMinutes", "timeStepsSeconds", "size", "variant", "color", "error", "maxTime", "minTime", "forceMobile", "format"];
+  var _excluded$2 = ["name", "label", "hint", "value", "onChange", "onBlur", "fullWidth", "width", "floatingLabel", "disabled", "readOnly", "required", "className", "timeStepsHours", "timeStepsMinutes", "timeStepsSeconds", "size", "variant", "color", "error", "maxTime", "minTime", "forceMobile", "format"];
 
   // DOC: https://mui.com/x/api/date-pickers/time-picker/
 
@@ -24593,7 +24598,7 @@
       forceMobile = _ref.forceMobile,
       _ref$format = _ref.format,
       format = _ref$format === void 0 ? 'HH:mm:ss' : _ref$format,
-      rest = _objectWithoutProperties(_ref, _excluded);
+      rest = _objectWithoutProperties(_ref, _excluded$2);
     var controlId = React$1.useId();
     var Component = forceMobile ? MobileTimePicker.MobileTimePicker : DesktopTimePicker.DesktopTimePicker;
     // default value
@@ -24649,7 +24654,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Time');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$3 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Time
   });
@@ -24664,9 +24669,221 @@
   };
   lfLog('Loaded RSuite5.Hidden');
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var index$2 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Hidden
+  });
+
+  var formatCurrency = function formatCurrency(value, locale, currency) {
+    if (value === null || value === undefined || value === '') {
+      return '';
+    }
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: currency
+    }).format(value);
+  };
+  function getDecimalSeparator(locale) {
+    var numberWithDecimalSeparator = 1.1;
+    return Intl.NumberFormat(locale).formatToParts(numberWithDecimalSeparator).find(function (part) {
+      return part.type === 'decimal';
+    }).value;
+  }
+  var parseCurrency = function parseCurrency(str, locale) {
+    if (!str) {
+      return null;
+    }
+    var thousandsMarker = getThousandsSeparator(locale);
+    var decimalMarker = getDecimalSeparator(locale);
+    var toLocalDecimal = str.replace(/[^0-9.,]/g, '') // remove everything but numbers, decimal and comma
+    .replaceAll(thousandsMarker, '') // replace thousand marker with void
+    .replaceAll(decimalMarker, '.'); // replace decimal marker with .
+
+    var parsed = parseFloat(toLocalDecimal);
+    return !isNaN(parsed) ? parsed : null;
+  };
+  function setCaretPosition(elem, caretPos) {
+    if (elem != null) {
+      if (elem.createTextRange) {
+        var range = elem.createTextRange();
+        range.move('character', caretPos);
+        range.select();
+      } else {
+        if (elem.selectionStart) {
+          elem.focus();
+          elem.setSelectionRange(caretPos, caretPos);
+        } else elem.focus();
+      }
+    }
+  }
+  var extraCharsUpToCaret = function extraCharsUpToCaret(str, position) {
+    return str.slice(0, position).replaceAll(/[0-9]/g, '').length;
+  };
+  var getThousandsSeparator = function getThousandsSeparator(locale) {
+    var _Intl$NumberFormat$fo, _Intl$NumberFormat$fo2;
+    return (_Intl$NumberFormat$fo = (_Intl$NumberFormat$fo2 = new Intl.NumberFormat(locale).formatToParts(1000).find(function (part) {
+      return part.type === 'group';
+    })) === null || _Intl$NumberFormat$fo2 === void 0 ? void 0 : _Intl$NumberFormat$fo2.value) !== null && _Intl$NumberFormat$fo !== void 0 ? _Intl$NumberFormat$fo : '';
+  };
+  var getExtraLeadingChars = function getExtraLeadingChars(locale, currency) {
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: currency
+    }).format(1).replace('1.00', '').replace('1,00', '').length;
+  };
+
+  var _excluded$1 = ["defaultValue", "control", "onChange", "locale", "currency", "fullWidth", "width"];
+  var isEvent = function isEvent(obj) {
+    return obj === null || obj === void 0 ? void 0 : obj.target;
+  };
+  var ALLOWED_CHARS = '01234567890,.';
+  var CommonCurrency = function CommonCurrency(_ref) {
+    var defaultValue = _ref.defaultValue,
+      Control = _ref.control,
+      _ref$onChange = _ref.onChange,
+      onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
+      locale = _ref.locale,
+      currency = _ref.currency,
+      _ref$fullWidth = _ref.fullWidth,
+      fullWidth = _ref$fullWidth === void 0 ? true : _ref$fullWidth,
+      width = _ref.width,
+      rest = _objectWithoutProperties(_ref, _excluded$1);
+    var ref = React$1.useRef();
+    var refCaret = React$1.useRef();
+    var _useState = React$1.useState(defaultValue),
+      _useState2 = _slicedToArray(_useState, 2),
+      value = _useState2[0],
+      setValue = _useState2[1];
+    var _useState3 = React$1.useState(formatCurrency(defaultValue, locale, currency)),
+      _useState4 = _slicedToArray(_useState3, 2),
+      visibileValue = _useState4[0],
+      setVisibleValue = _useState4[1];
+    React$1.useEffect(function () {
+      var _ref$current, _ref$current$querySel;
+      var caret = refCaret.current;
+      var element = (_ref$current = ref.current) === null || _ref$current === void 0 ? void 0 : (_ref$current$querySel = _ref$current.querySelectorAll('input')) === null || _ref$current$querySel === void 0 ? void 0 : _ref$current$querySel[0];
+      if (caret && element) {
+        setCaretPosition(element, caret);
+      }
+    });
+    var handleChange = React$1.useCallback(function () {
+      var _e$target$selectionSt;
+      // pick right value and events, differs for different frameworks
+      var e, value;
+      if (isEvent(arguments[0])) {
+        e = arguments[0];
+        value = e.target.value;
+      } else if (arguments.length >= 2 && isEvent(arguments[1])) {
+        e = arguments[1];
+        value = arguments[0];
+      }
+      var caretPosition = (_e$target$selectionSt = e.target.selectionStart) !== null && _e$target$selectionSt !== void 0 ? _e$target$selectionSt : 0;
+      var currentValue = parseCurrency(value, locale);
+      var newVisibleValue = formatCurrency(currentValue, locale, currency);
+
+      // calculate the additional chars (like currency symbol, thousands separator) in the
+      // formatted value up to the caret position in both previuos and new formatted value
+      // (consider the previous value the caret position is one characted before)
+      // also if user hit backspace, the new caret position is one less
+      var extraCharsBefore = extraCharsUpToCaret(visibileValue, caretPosition - 1);
+      var extraCharsAfter = extraCharsUpToCaret(newVisibleValue, caretPosition + (e.nativeEvent.inputType === 'deleteContentBackward' ? -1 : 0) + (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0));
+
+      //console.log('extra chars for currency', (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0))
+      //console.log(`extra chars up to caret before (${caretPosition})`, extraCharsBefore)
+      //console.log(`extra chars up to caret after (${caretPosition})`, extraCharsAfter);
+
+      // the difference between the two values, is the number of position the caret should be
+      // displaced to keep consistency with what the user is typing, for example starting
+      // with a blank value, if the user types "1" if it becomes "$ 1.00", the new caret is not
+      // 1 but 1 + 2 (the dollar and the space)
+      refCaret.current = caretPosition + extraCharsAfter - extraCharsBefore;
+
+      // set states, onKeyPress already handles invalid chars, so this alwayas updates
+      setValue(currentValue);
+      setVisibleValue(newVisibleValue);
+
+      // propagate changed value
+      onChange(currentValue);
+    }, [visibileValue]);
+    var handleKeyPress = React$1.useCallback(function (e) {
+      // stop propagation for all chars not valid for any currency, just digits , and .
+      if (!ALLOWED_CHARS.includes(String.fromCharCode(e.charCode))) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    }, []);
+
+    // redesign formatted value if changes currency and locale
+    React$1.useEffect(function () {
+      var newVisibleValue = formatCurrency(value, locale, currency);
+      setVisibleValue(newVisibleValue);
+    }, [currency, locale]);
+    return /*#__PURE__*/React$1.createElement("div", {
+      ref: ref
+    }, /*#__PURE__*/React$1.createElement(Control, _extends({
+      value: visibileValue,
+      onChange: handleChange,
+      style: makeWidthStyle(fullWidth, width),
+      onKeyPress: handleKeyPress
+    }, rest)));
+  };
+
+  var _excluded = ["name", "label", "hint", "value", "size", "error", "disabled", "readOnly", "required", "floatingLabel", "className", "lfLocale"];
+  // DOC: https://mui.com/material-ui/api/input/
+
+  var Currency = I18N(function (_ref) {
+    var _rest$variant, _rest$variant2;
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value;
+      _ref.size;
+      var error = _ref.error;
+      _ref.disabled;
+      var _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      required = _ref.required,
+      floatingLabel = _ref.floatingLabel,
+      className = _ref.className,
+      lfLocale = _ref.lfLocale,
+      rest = _objectWithoutProperties(_ref, _excluded);
+    var controlId = React$1.useId();
+    return /*#__PURE__*/React$1.createElement("div", makeClassName('currency', name, className), /*#__PURE__*/React$1.createElement(FormControl, {
+      required: required,
+      error: error != null,
+      variant: (_rest$variant = rest.variant) !== null && _rest$variant !== void 0 ? _rest$variant : undefined,
+      fullWidth: rest.fullWidth
+    }, label && !floatingLabel && /*#__PURE__*/React$1.createElement(FormLabel, {
+      id: controlId
+    }, label), /*#__PURE__*/React$1.createElement(CommonCurrency, _extends({
+      defaultValue: value,
+      control: TextField,
+      locale: lfLocale,
+      required: floatingLabel ? rest.required : undefined,
+      style: _.isNumber(rest.width) && !rest.fullWidth ? {
+        width: "".concat(parseInt(rest.width, 10), "px")
+      } : undefined,
+      InputProps: {
+        startAdornment: rest.prefix ? /*#__PURE__*/React$1.createElement(InputAdornment, {
+          position: "start"
+        }, TextOrIcon(rest.prefix)) : undefined,
+        endAdornment: rest.postfix ? /*#__PURE__*/React$1.createElement(InputAdornment, {
+          position: "end"
+        }, TextOrIcon(rest.postfix)) : undefined,
+        disableUnderline: rest.disableUnderline,
+        readOnly: readOnly,
+        autoComplete: rest.autocomplete
+      },
+      variant: (_rest$variant2 = rest.variant) !== null && _rest$variant2 !== void 0 ? _rest$variant2 : undefined,
+      label: floatingLabel ? rest.label : undefined
+    }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(FormHelperText, null, hint), error && /*#__PURE__*/React$1.createElement(FormHelperText, null, error)));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded MUI.Currency');
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Currency
   });
 
   var FormMaterialUI = function FormMaterialUI(_ref) {
