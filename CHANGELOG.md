@@ -1,5 +1,8 @@
 # LetsForm Changelog
 
+## v0.12.13
+- feat: added `currency` field
+
 ## v0.12.12
 - fix: add className for `group` and `array` (@ghoshorn)
 - fix: missing `lodash` dependencies
