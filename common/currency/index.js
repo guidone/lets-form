@@ -12,6 +12,7 @@ import {
 
 const isEvent = obj => obj?.target;
 
+const ALLOWED_CHARS = '01234567890,.';
 
 const CommonCurrency = ({
   defaultValue,
@@ -28,8 +29,6 @@ const CommonCurrency = ({
   const [value, setValue] = useState(defaultValue);
   const [visibileValue, setVisibleValue] = useState(formatCurrency(defaultValue, locale, currency));
 
-  console.log('**** refresh default:', defaultValue, 'value ', value, 'formatted ', visibileValue);
-
   useEffect(
     () => {
       const caret = refCaret.current;
@@ -40,8 +39,6 @@ const CommonCurrency = ({
       }
     }
   );
-
-
 
   const handleChange = useCallback(
     function() {
@@ -55,12 +52,9 @@ const CommonCurrency = ({
         value = arguments[0];
       }
 
-      console.log('params func', value, e);
-
       const caretPosition = e.target.selectionStart ?? 0;
       const currentValue = parseCurrency(value, locale);
       const newVisibleValue = formatCurrency(currentValue, locale, currency);
-
 
       // calculate the additional chars (like currency symbol, thousands separator) in the
       // formatted value up to the caret position in both previuos and new formatted value
@@ -74,9 +68,9 @@ const CommonCurrency = ({
           + (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0)
       );
 
-      console.log('extra chars for currency', (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0))
-      console.log(`extra chars up to caret before (${caretPosition})`, extraCharsBefore)
-      console.log(`extra chars up to caret after (${caretPosition})`, extraCharsAfter);
+      //console.log('extra chars for currency', (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0))
+      //console.log(`extra chars up to caret before (${caretPosition})`, extraCharsBefore)
+      //console.log(`extra chars up to caret after (${caretPosition})`, extraCharsAfter);
 
       // the difference between the two values, is the number of position the caret should be
       // displaced to keep consistency with what the user is typing, for example starting
@@ -84,7 +78,7 @@ const CommonCurrency = ({
       // 1 but 1 + 2 (the dollar and the space)
       refCaret.current = caretPosition + extraCharsAfter - extraCharsBefore;
 
-      // set states
+      // set states, onKeyPress already handles invalid chars, so this alwayas updates
       setValue(currentValue);
       setVisibleValue(newVisibleValue);
 
@@ -92,6 +86,18 @@ const CommonCurrency = ({
       onChange(currentValue);
     },
     [visibileValue]
+  );
+
+  const handleKeyPress = useCallback(
+    e => {
+      // stop propagation for all chars not valid for any currency, just digits , and .
+      if (!ALLOWED_CHARS.includes(String.fromCharCode(e.charCode))) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    },
+    []
   );
 
   // redesign formatted value if changes currency and locale
@@ -109,6 +115,7 @@ const CommonCurrency = ({
         value={visibileValue}
         onChange={handleChange}
         style={makeWidthStyle(fullWidth, width)}
+        onKeyPress={handleKeyPress}
         {...rest}
       />
     </div>

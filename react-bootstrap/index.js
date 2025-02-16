@@ -72,6 +72,9 @@ const Fields = {
   },
   'hidden': {
     'react-bootstrap': lazy(() => import('./../common/hidden'))
+  },
+  'currency': {
+    'react-bootstrap': lazy(() => import('./currency'))
   }
 };
 

@@ -21,18 +21,14 @@ export const parseCurrency = (str, locale) => {
   const thousandsMarker = getThousandsSeparator(locale);
   const decimalMarker = getDecimalSeparator(locale);
 
-  console.log(`${locale} thousandsMarker`, thousandsMarker, ' decimalMarker', decimalMarker)
-
-
   const toLocalDecimal = str
     .replace(/[^0-9.,]/g, '') // remove everything but numbers, decimal and comma
     .replaceAll(thousandsMarker, '') // replace thousand marker with void
     .replaceAll(decimalMarker, '.') // replace decimal marker with .
 
+  const parsed = parseFloat(toLocalDecimal)
 
-  console.log('toLocalDecimal', toLocalDecimal)
-
-  return parseFloat(toLocalDecimal);
+  return !isNaN(parsed) ? parsed : null;
 };
 
 export function setCaretPosition(elem, caretPos) {
