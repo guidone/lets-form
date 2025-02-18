@@ -2,6 +2,7 @@
 
 ## v0.12.14
 - fix: change currency prop in `currency` component
+
 ## v0.12.13
 - feat: added `currency` field
 
