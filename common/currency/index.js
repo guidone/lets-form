@@ -85,7 +85,7 @@ const CommonCurrency = ({
       // propagate changed value
       onChange(currentValue);
     },
-    [visibileValue]
+    [visibileValue, currency, locale]
   );
 
   const handleKeyPress = useCallback(
