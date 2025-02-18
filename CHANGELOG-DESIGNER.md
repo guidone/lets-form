@@ -1,5 +1,9 @@
 # LetsForm Designer Changelog
 
+## v0.9.17
+- feat: added `columns` field
+- fix: more fixes for LetsForm Builder
+
 ## v0.9.16
 - fix: `divider` and `columns` missing className param (@ghoshorn)
 
