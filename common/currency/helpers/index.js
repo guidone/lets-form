@@ -59,9 +59,13 @@ export const extraCharsUpToCaret = (str, position) => {
 export const getThousandsSeparator = locale =>
   new Intl.NumberFormat(locale).formatToParts(1000).find((part) => part.type === 'group')?.value ?? '';
 
-export const getExtraLeadingChars = (locale, currency) =>
-  new Intl.NumberFormat(locale, { style: 'currency', currency })
-    .format(1)
-    .replace('1.00', '')
-    .replace('1,00', '')
-    .length;
+export const getExtraLeadingChars = (locale, currency) => {
+  const formatted = new Intl.NumberFormat(locale, { style: 'currency', currency }).format(1);
+
+  if (formatted.includes('1.00')) {
+    return formatted.indexOf('1.00')
+  } else if (formatted.includes('1,00')) {
+    return formatted.indexOf('1,00')
+  }
+  return 0;
+};
