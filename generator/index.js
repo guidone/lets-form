@@ -276,7 +276,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
           onError(validationErrors);
         }
         // if form level transformer
-        if (!_.isEmpty(transformers.onRender)) {
+        if (!_.isEmpty(transformers?.onRender)) {
           await executeTransformer(transformers.onRender, getValues());
         }
         // if field transformer, then execute it
