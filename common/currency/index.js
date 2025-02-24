@@ -23,6 +23,7 @@ const CommonCurrency = ({
   currency,
   fullWidth = true,
   width,
+  align,
   ...rest
 }) => {
   const ref = useRef();
@@ -133,8 +134,13 @@ const CommonCurrency = ({
     <div ref={ref}>
       <Control
         value={visibileValue}
+        key={`generation_${generation}`}
         onChange={handleChange}
-        style={makeWidthStyle(fullWidth, width)}
+        style={makeWidthStyle(
+          fullWidth,
+          width,
+          { [align ? 'text-align' : undefined]: align }
+        )}
         onKeyPress={handleKeyPress}
         {...rest}
       />
