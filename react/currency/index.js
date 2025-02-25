@@ -25,7 +25,7 @@ const Currency = ({
     <div {...makeClassName('currency', name, 'lf-form-react-control-group', className)}>
       <label for={name}>
         {label}
-        {required && <RequiredIcon />}
+        {required && label && <RequiredIcon />}
       </label>
       <CommonCurrency
         defaultValue={value}

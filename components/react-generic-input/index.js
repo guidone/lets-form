@@ -37,7 +37,7 @@ const ReactGenericInput = ({
     <div {...makeClassName(component, name, 'lf-form-react-control-group', className)}>
       <label for={name}>
         {label}
-        {required && <RequiredIcon />}
+        {required && label && <RequiredIcon />}
       </label>
         <input
           type={inputType}
