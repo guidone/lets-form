@@ -1,4 +1,4 @@
-/* LetsForm react-mantine v0.12.13 - UMD */
+/* LetsForm react-mantine v0.12.14 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', '@mantine/dates'], factory) :
@@ -21377,7 +21377,7 @@
     }();
   };
   var makeErrorMessage = function makeErrorMessage(field, locale) {
-    var _field$validation7, _field$validation8, _field$label;
+    var _field$validation7, _field$validation8;
     // prepare error message
     var errorMessage;
     if (_isString((_field$validation7 = field.validation) === null || _field$validation7 === void 0 ? void 0 : _field$validation7.message)) {
@@ -21390,7 +21390,7 @@
     }
     return {
       name: field.name,
-      label: (_field$label = field.label) !== null && _field$label !== void 0 ? _field$label : field.name,
+      label: field.label || field.placeholder || field.name,
       errorMessage: errorMessage
     };
   };
@@ -23129,7 +23129,7 @@
                 _validationErrors2 = _context4.sent;
                 onError(_validationErrors2);
               case 6:
-                if (_isEmpty(transformers.onRender)) {
+                if (_isEmpty(transformers === null || transformers === void 0 ? void 0 : transformers.onRender)) {
                   _context4.next = 9;
                   break;
                 }
@@ -23704,7 +23704,7 @@
       required: required
     }, label), /*#__PURE__*/React$1.createElement(ListArray, _extends({
       LetsFormComponent: LetsForm
-    }, passRest(rest))), hint && /*#__PURE__*/React$1.createElement(core.Input.Description, null, hint), _isString((_rest$error = rest.error) === null || _rest$error === void 0 ? void 0 : _rest$error.errorMessage) && /*#__PURE__*/React$1.createElement(core.Input.Error, null, (_rest$error2 = rest.error) === null || _rest$error2 === void 0 ? void 0 : _rest$error2.errorMessage));
+    }, rest)), hint && /*#__PURE__*/React$1.createElement(core.Input.Description, null, hint), _isString((_rest$error = rest.error) === null || _rest$error === void 0 ? void 0 : _rest$error.errorMessage) && /*#__PURE__*/React$1.createElement(core.Input.Error, null, (_rest$error2 = rest.error) === null || _rest$error2 === void 0 ? void 0 : _rest$error2.errorMessage));
   }, ['label', 'hint']);
   lfLog('Loaded Mantine.ListArray');
 
@@ -24615,13 +24615,19 @@
     })) === null || _Intl$NumberFormat$fo2 === void 0 ? void 0 : _Intl$NumberFormat$fo2.value) !== null && _Intl$NumberFormat$fo !== void 0 ? _Intl$NumberFormat$fo : '';
   };
   var getExtraLeadingChars = function getExtraLeadingChars(locale, currency) {
-    return new Intl.NumberFormat(locale, {
+    var formatted = new Intl.NumberFormat(locale, {
       style: 'currency',
       currency: currency
-    }).format(1).replace('1.00', '').replace('1,00', '').length;
+    }).format(1);
+    if (formatted.includes('1.00')) {
+      return formatted.indexOf('1.00');
+    } else if (formatted.includes('1,00')) {
+      return formatted.indexOf('1,00');
+    }
+    return 0;
   };
 
-  var _excluded$1 = ["defaultValue", "control", "onChange", "locale", "currency", "fullWidth", "width"];
+  var _excluded$1 = ["defaultValue", "control", "onChange", "locale", "currency", "fullWidth", "width", "align"];
   var isEvent = function isEvent(obj) {
     return obj === null || obj === void 0 ? void 0 : obj.target;
   };
@@ -24636,6 +24642,7 @@
       _ref$fullWidth = _ref.fullWidth,
       fullWidth = _ref$fullWidth === void 0 ? true : _ref$fullWidth,
       width = _ref.width,
+      align = _ref.align,
       rest = _objectWithoutProperties(_ref, _excluded$1);
     var ref = React$1.useRef();
     var refCaret = React$1.useRef();
@@ -24647,12 +24654,19 @@
       _useState4 = _slicedToArray(_useState3, 2),
       visibileValue = _useState4[0],
       setVisibleValue = _useState4[1];
+    var _useState5 = React$1.useState(1),
+      _useState6 = _slicedToArray(_useState5, 2),
+      generation = _useState6[0],
+      setGeneration = _useState6[1];
     React$1.useEffect(function () {
       var _ref$current, _ref$current$querySel;
       var caret = refCaret.current;
       var element = (_ref$current = ref.current) === null || _ref$current === void 0 ? void 0 : (_ref$current$querySel = _ref$current.querySelectorAll('input')) === null || _ref$current$querySel === void 0 ? void 0 : _ref$current$querySel[0];
       if (caret && element) {
         setCaretPosition(element, caret);
+        // void the caret update position, otherwise any refresh of the
+        // form will steal the focus in favour of the currency box
+        refCaret.current = null;
       }
     });
     var handleChange = React$1.useCallback(function () {
@@ -24670,6 +24684,19 @@
       var currentValue = parseCurrency(value, locale);
       var newVisibleValue = formatCurrency(currentValue, locale, currency);
 
+      // if the formatted value has already a decimal separator and the user hits
+      // the decimal separator, then move the cursor after it
+      if (visibileValue && (e.nativeEvent.data === ',' || e.nativeEvent.data === '.') && (visibileValue.indexOf('.') || visibileValue.indexOf(','))) {
+        // set position of caret after the decimal separator
+        var decimalMarker = getDecimalSeparator(locale);
+        refCaret.current = visibileValue.indexOf(decimalMarker) + 1;
+        // trigger manual refresh of the component
+        setGeneration(function (generation) {
+          return generation + 1;
+        });
+        return;
+      }
+
       // calculate the additional chars (like currency symbol, thousands separator) in the
       // formatted value up to the caret position in both previuos and new formatted value
       // (consider the previous value the caret position is one characted before)
@@ -24677,15 +24704,16 @@
       var extraCharsBefore = extraCharsUpToCaret(visibileValue, caretPosition - 1);
       var extraCharsAfter = extraCharsUpToCaret(newVisibleValue, caretPosition + (e.nativeEvent.inputType === 'deleteContentBackward' ? -1 : 0) + (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0));
 
-      //console.log('extra chars for currency', (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0))
-      //console.log(`extra chars up to caret before (${caretPosition})`, extraCharsBefore)
-      //console.log(`extra chars up to caret after (${caretPosition})`, extraCharsAfter);
-
       // the difference between the two values, is the number of position the caret should be
       // displaced to keep consistency with what the user is typing, for example starting
       // with a blank value, if the user types "1" if it becomes "$ 1.00", the new caret is not
       // 1 but 1 + 2 (the dollar and the space)
       refCaret.current = caretPosition + extraCharsAfter - extraCharsBefore;
+
+      //console.log('Extra chars for currency', (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0))
+      //console.log(`Extra chars up to caret before (${caretPosition})`, extraCharsBefore)
+      //console.log(`Extra chars up to caret after (${caretPosition})`, extraCharsAfter);
+      //console.log('New caret position ', refCaret.current);
 
       // set states, onKeyPress already handles invalid chars, so this alwayas updates
       setValue(currentValue);
@@ -24712,8 +24740,9 @@
       ref: ref
     }, /*#__PURE__*/React$1.createElement(Control, _extends({
       value: visibileValue,
+      key: "generation_".concat(generation),
       onChange: handleChange,
-      style: makeWidthStyle(fullWidth, width),
+      style: makeWidthStyle(fullWidth, width, _defineProperty$1({}, align ? 'text-align' : undefined, align)),
       onKeyPress: handleKeyPress
     }, rest)));
   };
