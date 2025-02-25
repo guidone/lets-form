@@ -6,7 +6,6 @@ import { RequiredIcon } from '../../components/required-icon';
 import { I18N } from '../../components/i18n';
 import { ListArray } from '../../common/array';
 import LetsForm from '../../react-rsuite5';
-import { passRest } from '../../helpers/pass-rest';
 import { lfLog } from '../../helpers/lf-log';
 import { makeClassName } from '../../helpers/make-class-name';
 
@@ -34,7 +33,7 @@ const ListArrayRSuite5 = I18N(
         <ListArray
           LetsFormComponent={LetsForm}
           name={name}
-          {...passRest(rest)}
+          {...rest}
         />
         {_.isString(rest.error?.errorMessage) && <Form.HelpText className="array-error-message">{rest.error.errorMessage}</Form.HelpText>}
         {hint && !tooltip && <Form.HelpText>{hint}</Form.HelpText>}

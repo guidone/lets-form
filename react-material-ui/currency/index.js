@@ -11,6 +11,7 @@ import { makeClassName } from '../../helpers/make-class-name';
 import { CommonCurrency } from '../../common/currency';
 import { passRest } from '../../helpers/pass-rest';
 import { TextOrIcon } from '../../common/text-or-icon';
+
 // DOC: https://mui.com/material-ui/api/input/
 
 const Currency = I18N(
@@ -19,7 +20,6 @@ const Currency = I18N(
     label,
     hint,
     value,
-    size,
     error,
     disabled = false,
     readOnly = false,
@@ -27,6 +27,7 @@ const Currency = I18N(
     floatingLabel,
     className,
     lfLocale,
+    align,
     ...rest
   }) => {
     const controlId = useId();
@@ -53,7 +54,8 @@ const Currency = I18N(
               endAdornment: rest.postfix ? <InputAdornment position="end">{TextOrIcon(rest.postfix)}</InputAdornment>: undefined,
               disableUnderline: rest.disableUnderline,
               readOnly,
-              autoComplete: rest.autocomplete
+              autoComplete: rest.autocomplete,
+              style: { [align ? 'text-align' : undefined]: align }
             }}
             variant={rest.variant ?? undefined}
             label={floatingLabel ? rest.label : undefined}

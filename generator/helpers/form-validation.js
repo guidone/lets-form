@@ -153,7 +153,7 @@ const makeErrorMessage = (field, locale) => {
 
   return {
     name: field.name,
-    label: field.label ?? field.name,
+    label: field.label || field.placeholder || field.name,
     errorMessage
   };
 };
@@ -332,7 +332,7 @@ const useFormValidation = ({ onError, fields, locale, onJavascriptError }) => {
     validate,
     isValid: _.isEmpty(validationErrors),
     clearValidation
-  }
+  };
 };
 
 export { useFormValidation };

@@ -7,7 +7,8 @@ import {
   parseCurrency,
   setCaretPosition,
   extraCharsUpToCaret,
-  getExtraLeadingChars
+  getExtraLeadingChars,
+  getDecimalSeparator
 } from './helpers';
 
 const isEvent = obj => obj?.target;
@@ -22,12 +23,14 @@ const CommonCurrency = ({
   currency,
   fullWidth = true,
   width,
+  align,
   ...rest
 }) => {
   const ref = useRef();
   const refCaret = useRef();
   const [value, setValue] = useState(defaultValue);
   const [visibileValue, setVisibleValue] = useState(formatCurrency(defaultValue, locale, currency));
+  const [generation, setGeneration] = useState(1);
 
   useEffect(
     () => {
@@ -36,6 +39,9 @@ const CommonCurrency = ({
 
       if (caret && element) {
         setCaretPosition(element, caret);
+        // void the caret update position, otherwise any refresh of the
+        // form will steal the focus in favour of the currency box
+        refCaret.current = null;
       }
     }
   );
@@ -56,6 +62,20 @@ const CommonCurrency = ({
       const currentValue = parseCurrency(value, locale);
       const newVisibleValue = formatCurrency(currentValue, locale, currency);
 
+      // if the formatted value has already a decimal separator and the user hits
+      // the decimal separator, then move the cursor after it
+      if (visibileValue
+        && (e.nativeEvent.data === ',' || e.nativeEvent.data === '.')
+        && (visibileValue.indexOf('.') || visibileValue.indexOf(','))
+      ) {
+        // set position of caret after the decimal separator
+        const decimalMarker = getDecimalSeparator(locale);
+        refCaret.current = visibileValue.indexOf(decimalMarker) + 1;
+        // trigger manual refresh of the component
+        setGeneration(generation => generation + 1);
+        return;
+      }
+
       // calculate the additional chars (like currency symbol, thousands separator) in the
       // formatted value up to the caret position in both previuos and new formatted value
       // (consider the previous value the caret position is one characted before)
@@ -68,15 +88,16 @@ const CommonCurrency = ({
           + (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0)
       );
 
-      //console.log('extra chars for currency', (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0))
-      //console.log(`extra chars up to caret before (${caretPosition})`, extraCharsBefore)
-      //console.log(`extra chars up to caret after (${caretPosition})`, extraCharsAfter);
-
       // the difference between the two values, is the number of position the caret should be
       // displaced to keep consistency with what the user is typing, for example starting
       // with a blank value, if the user types "1" if it becomes "$ 1.00", the new caret is not
       // 1 but 1 + 2 (the dollar and the space)
       refCaret.current = caretPosition + extraCharsAfter - extraCharsBefore;
+
+      //console.log('Extra chars for currency', (visibileValue === '' ? getExtraLeadingChars(locale, currency) : 0))
+      //console.log(`Extra chars up to caret before (${caretPosition})`, extraCharsBefore)
+      //console.log(`Extra chars up to caret after (${caretPosition})`, extraCharsAfter);
+      //console.log('New caret position ', refCaret.current);
 
       // set states, onKeyPress already handles invalid chars, so this alwayas updates
       setValue(currentValue);
@@ -113,8 +134,13 @@ const CommonCurrency = ({
     <div ref={ref}>
       <Control
         value={visibileValue}
+        key={`generation_${generation}`}
         onChange={handleChange}
-        style={makeWidthStyle(fullWidth, width)}
+        style={makeWidthStyle(
+          fullWidth,
+          width,
+          { [align ? 'text-align' : undefined]: align }
+        )}
         onKeyPress={handleKeyPress}
         {...rest}
       />
