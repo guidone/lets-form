@@ -36,6 +36,7 @@ const Currency = I18N(
     fullWidth,
     width,
     floatingLabel = false,
+    align,
     ...rest
   }) => {
     const inner = (
@@ -46,7 +47,7 @@ const Currency = I18N(
         name={name}
         type="text"
         isInvalid={error != null}
-        style={makeWidthStyle(fullWidth, width)}
+        style={makeWidthStyle(fullWidth, width, { [align ? 'text-align' : undefined]: align })}
         {...passRest(rest)}
       />
     );
