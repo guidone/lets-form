@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.10.0
+- feat: LetsForm Builder generally avaiable
+
 ## v0.9.17
 - feat: added `columns` field
 - fix: more fixes for LetsForm Builder
