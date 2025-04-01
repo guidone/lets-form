@@ -24,6 +24,8 @@ import './index.scss';
 
 const DEBUG_RENDER = true;
 const DEFAULT_FORM = { version: 2, fields: [] };
+const NOOP = () => {};
+const EMPTY_OBJ = {};
 
 const GenerateGenerator = ({ Forms, Fields }) => {
 
@@ -31,21 +33,21 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     // UI framework to use, mandatory
     framework,
     form = DEFAULT_FORM, // use const, or it will refresh endlessly
-    onChange = () => {},
-    onSubmit = () => {},
-    onSubmitSuccess = () => {},
-    onSubmitError = () => {},
-    onReset = () => {},
-    onError = () => {},
-    onEnter = () => {},
-    onBlur = () => {},
-    onJavascriptError = () => {},
+    onChange = NOOP,
+    onSubmit = NOOP,
+    onSubmitSuccess = NOOP,
+    onSubmitError = NOOP,
+    onReset = NOOP,
+    onError = NOOP,
+    onEnter = NOOP,
+    onBlur = NOOP,
+    onJavascriptError,
     locale: localeProp,
     wrapper,
     groupWrapper,
     placeholderWrapper,
     bottomView,
-    defaultValues = {},
+    defaultValues = EMPTY_OBJ,
     onlyFields = false,
     debug = false,
     disabled: disabledProp = false,
