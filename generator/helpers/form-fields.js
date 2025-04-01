@@ -79,14 +79,14 @@ const useFormFields = ({
       const f = async () => {
 
         // update the mutable state, will be used inside transformers
-        mutableState.current.currentContext = {
-          ...mutableState.current.currentContext,
+        mutableState.current.currentFormContext = {
+          ...mutableState.current.currentFormContext,
           ...formContext
         };
 
         // collect fields from json and dsl
         let newFields = collectFields({ form, children, framework });
-        const formName = mutableState.current.currentContext?.formName;
+        const formName = mutableState.current.currentFormContext?.formName;
         const newTransformers = collectTransformers(newFields, form.transformer || form.script, onJavascriptError);
 
         // collect all transformers to be executed
@@ -106,7 +106,7 @@ const useFormFields = ({
             transformersToRun[idx],
             defaultValues,
             onJavascriptError,
-            mutableState.current.currentContext,
+            mutableState.current.currentFormContext,
             components
           )) {
             const { fields: newFormFields, rerenders: newReRenders, changes } = transformResult;
@@ -122,7 +122,8 @@ const useFormFields = ({
         }
 
         // set new form name
-        mutableState.current.currentContext = form.name ?? _.uniqueId('form_');
+
+        mutableState.current.currentFormContext.formName = formName ?? _.uniqueId('form_');
         setTransformers(newTransformers);
 
         // if transformed fields different than current one, then save
@@ -148,7 +149,7 @@ const useFormFields = ({
       // store current instance of fields
       let newFields = formFields;
       const formName = mutableState.current.currentFormContext?.formName;
-      const currentFormContext = mutableState.current.currentContext;
+      const currentFormContext = mutableState.current.currentFormContext;
 
       // execute the async generator transformer
       for await(const transformResult of applyTransformers(
