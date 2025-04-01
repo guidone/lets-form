@@ -28,7 +28,8 @@ const renderFields = ({
   onJavascriptError,
   Components,
   prependView,
-  rerenders
+  rerenders,
+  formName
 }) => {
   const isEditMode = Wrapper != null;
   const renderedFields = (fields || [])
@@ -45,7 +46,7 @@ const renderFields = ({
       }
       // remove mandatory fields and platform specific fields
       const additionalFields = _.omit(field, [
-        'id', 'name', 'label', /*'hint',*/ 'disabled', 'readOnly', 'plaintext', /*'size', 'placeholder',*/ 'component',
+        'id', 'name', 'label', 'disabled', 'readOnly', 'plaintext', 'component',
         ...FRAMEWORKS
       ]);
 
@@ -68,7 +69,8 @@ const renderFields = ({
         locale,
         onJavascriptError,
         Components,
-        rerenders
+        rerenders,
+        formName
       };
 
       // special case of group
@@ -189,10 +191,7 @@ const renderFields = ({
                   hint={field.hint}
                   disabled={field.disabled}
                   value={values[field.name] ?? undefined}
-                  onChange={(value, _opts) => {
-                    setValue(field.name, value);
-                    onChange({ ...getValues(), [field.name]: value }, field.name);
-                  }}
+                  onChange={onChange}
                   {...additionalFields}
                   {...field[framework]}
                 >
@@ -257,10 +256,7 @@ const renderFields = ({
                   hint={field.hint}
                   disabled={field.disabled}
                   value={values[field.name] ?? undefined}
-                  onChange={(value, _opts) => {
-                    setValue(field.name, value);
-                    onChange({ ...getValues(), [field.name]: value }, field.name);
-                  }}
+                  onChange={onChange}
                   {...additionalFields}
                   {...field[framework]}
                 >
@@ -308,6 +304,7 @@ const renderFields = ({
         );
 
       } else if (field.component === 'array' && GroupWrapper) {
+        // this only used in designer
         const component = (
           <Component
             key={field.name}
@@ -390,21 +387,13 @@ const renderFields = ({
               plaintext={plaintext}
               required={field.required}
               error={error}
-              /*error={errors && errors[field.name] && errors[field.name].errorMessage ?
-                (showErrors === 'inline' ? errors[field.name].errorMessage : true)
-                : undefined
-              }*/
               {...perComponentAdditionalFields}
               {...field[framework]}
-              onChange={value => {
-                setValue(field.name, value);
-                onChange({ ...getValues(), [field.name]: value }, field.name);
-              }}
+              onChange={onChange}
             />;
 
             return Wrapper ? <Wrapper key={`wrapper_${field.name}`} field={field} level={level} index={index}>{component}</Wrapper> : component;
-          }
-          }
+          }}
         />
       );
     });
