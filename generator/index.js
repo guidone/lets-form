@@ -428,6 +428,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         + ' children=' + (prevProps.children === nextProps.children)
         + ' custom=' + (prevProps.custom === nextProps.custom)
         + ' context=' + (prevProps.context === nextProps.context)
+        + ' disableButtons=' + (prevProps.disableButtons === nextProps.disableButtons)
       );
     }
 
@@ -440,7 +441,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       && prevProps.disabled === nextProps.disabled
       && prevProps.children === nextProps.children
       && prevProps.custom === nextProps.custom
-      && prevProps.context === nextProps.context;
+      && prevProps.context === nextProps.context
+      && prevProps.disableButtons === nextProps.disableButtons;
     console.log(`Is re-rendering? ${!isEqual}`);
     return isEqual;
   });
