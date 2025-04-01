@@ -266,7 +266,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     );
 
     const handleChange = useCallback(
-      async (values, fieldName) => {
+      async (value, fieldName) => {
+
+        // set the value in internal state
+        setValue(fieldName, value);
 
         // reset the validation error for that field
         if (!_.isEmpty(fieldName)) {
@@ -288,7 +291,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         // propagate onChange values
         onChange(getValues());
       },
-      [onChange, formFields, formName, transformers, framework, onJavascriptError]
+      [onChange, formFields, transformers]
     );
 
     const handleEnter = useCallback(
@@ -393,7 +396,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                     key={`wrapper_top_form_field`}
                     nextField={formFields && formFields.length ? formFields[0] : null}
                   />
-                )
+                ),
+                formName
               })}
               {footer}
               {formErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (
