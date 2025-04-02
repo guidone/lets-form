@@ -7422,6 +7422,16 @@
           "ZMK",
           "ZWL"
         ]
+      },
+      {
+        "name": "align",
+        "type": "string",
+        "description": "Currency alignment in the input field",
+        "options": [
+          "left",
+          "center",
+          "right"
+        ]
       }
     ],
     "react": [

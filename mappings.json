@@ -2466,6 +2466,7 @@
     "readOnly": null,
     "hidden": null,
     "currency": null,
+    "align": null,
     "fullWidth": [
       "react",
       "react-rsuite5",

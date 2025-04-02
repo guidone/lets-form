@@ -475,6 +475,7 @@ export interface CurrencyReactMantineProps extends ValidationProps {
   readOnly?: boolean;
   hidden?: boolean;
   currency?: "AFN" | "ALL" | "DZD" | "ARS" | "AMD" | "AUD" | "AZN" | "BHD" | "BDT" | "BYN" | "BZD" | "BOB" | "BAM" | "BWP" | "BRL" | "GBP" | "BND" | "BGN" | "BIF" | "XOF" | "XAF" | "KHR" | "CAD" | "CVE" | "CLP" | "CNY" | "COP" | "KMF" | "CDF" | "CRC" | "HRK" | "CZK" | "DKK" | "DJF" | "DOP" | "EGP" | "ERN" | "EEK" | "ETB" | "EUR" | "GEL" | "GHS" | "GTQ" | "GNF" | "HNL" | "HKD" | "HUF" | "ISK" | "INR" | "IDR" | "IRR" | "IQD" | "ILS" | "JMD" | "JPY" | "JOD" | "KZT" | "KES" | "KWD" | "LVL" | "LBP" | "LYD" | "LTL" | "MOP" | "MKD" | "MGA" | "MYR" | "MUR" | "MXN" | "MDL" | "MAD" | "MZN" | "MMK" | "NAD" | "NPR" | "TWD" | "NZD" | "NIO" | "NGN" | "NOK" | "OMR" | "PKR" | "PAB" | "PYG" | "PEN" | "PHP" | "PLN" | "QAR" | "RON" | "RUB" | "RWF" | "SAR" | "RSD" | "SGD" | "SOS" | "ZAR" | "KRW" | "LKR" | "SDG" | "SEK" | "CHF" | "SYP" | "TZS" | "THB" | "TOP" | "TTD" | "TND" | "TRY" | "USD" | "UGX" | "UAH" | "AED" | "UYU" | "UZS" | "VEF" | "VND" | "YER" | "ZMK" | "ZWL";
+  align?: "left" | "center" | "right"; // Currency alignment in the input field
   size?: "xs" | "sm" | "md" | "lg" | "xl";
   radius?: "xs" | "sm" | "md" | "lg" | "xl";
   variant?: "default" | "filled" | "unstyled";

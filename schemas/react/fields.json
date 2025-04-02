@@ -1346,6 +1346,14 @@
                 "ZWL"
               ]
             },
+            "align": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
             "fullWidth": {
               "type": "boolean"
             },

@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.12.14 - UMD */
+/* LetsForm Utils v0.12.15 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :

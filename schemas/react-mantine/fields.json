@@ -3397,6 +3397,14 @@
                 "ZWL"
               ]
             },
+            "align": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
             "size": {
               "type": "string",
               "enum": [

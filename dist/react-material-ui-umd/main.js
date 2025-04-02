@@ -1,4 +1,4 @@
-/* LetsForm react-material-ui v0.12.14 - UMD */
+/* LetsForm react-material-ui v0.12.15 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack'], factory) :
@@ -20378,12 +20378,12 @@
     default: Divider
   });
 
-  var _excluded$p = ["name", "view", "className"];
+  var _excluded$q = ["name", "view", "className"];
   var ReactView = function ReactView(_ref) {
     var name = _ref.name,
       view = _ref.view,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$p);
+      rest = _objectWithoutProperties(_ref, _excluded$q);
     var View = view;
     return /*#__PURE__*/React$1.createElement("div", makeClassName('react-view', name, className), View && /*#__PURE__*/React$1.createElement(View, _extends({
       name: name
@@ -20660,6 +20660,7 @@
   var css_248z$a = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
   styleInject(css_248z$a);
 
+  var NOOP$1 = function NOOP() {};
   var randomId = function randomId() {
     var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
     return Math.random().toString(36).substring(2, length + 2);
@@ -20753,7 +20754,7 @@
       name = _ref3.name,
       className = _ref3.className,
       _ref3$onChange = _ref3.onChange,
-      onChange = _ref3$onChange === void 0 ? function () {} : _ref3$onChange,
+      onChange = _ref3$onChange === void 0 ? NOOP$1 : _ref3$onChange,
       _ref3$disabled = _ref3.disabled,
       disabled = _ref3$disabled === void 0 ? false : _ref3$disabled,
       _ref3$readOnly = _ref3.readOnly,
@@ -20776,15 +20777,17 @@
       formShowErrors = _ref3.formShowErrors;
     var _useFormContext = useFormContext(),
       locales = _useFormContext.locales;
-    var form = {
-      layout: layout,
-      fluid: true,
-      locales: locales,
-      // copy the locales from the main form
-      fields: fields,
-      name: 'Array form ' + name,
-      showErrors: formShowErrors
-    };
+    var form = React$1.useMemo(function () {
+      return {
+        layout: layout,
+        fluid: true,
+        locales: locales,
+        // copy the locales from the main form
+        fields: fields,
+        name: 'Array form ' + name,
+        showErrors: formShowErrors
+      };
+    }, [layout, locales, fields, name, formShowErrors]);
     var _useState = React$1.useState(makeDefaultValue(value, arrayType, form)),
       _useState2 = _slicedToArray(_useState, 2),
       items = _useState2[0],
@@ -20865,7 +20868,7 @@
   var css_248z$9 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
   styleInject(css_248z$9);
 
-  var _excluded$o = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$p = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -20891,7 +20894,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$o);
+      rest = _objectWithoutProperties(_ref, _excluded$p);
     var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -22203,13 +22206,13 @@
     React$1.useEffect(function () {
       var f = /*#__PURE__*/function () {
         var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-          var _mutableState$current, _form$name2;
+          var _mutableState$current;
           var newFields, formName, newTransformers, transformersToRun, idx, _iteratorAbruptCompletion, _didIteratorError, _iteratorError, _loop, _iterator, _step;
           return _regeneratorRuntime().wrap(function _callee$(_context2) {
             while (1) switch (_context2.prev = _context2.next) {
               case 0:
                 // update the mutable state, will be used inside transformers
-                mutableState.current.currentContext = _objectSpread2(_objectSpread2({}, mutableState.current.currentContext), formContext);
+                mutableState.current.currentFormContext = _objectSpread2(_objectSpread2({}, mutableState.current.currentFormContext), formContext);
 
                 // collect fields from json and dsl
                 newFields = collectFields({
@@ -22217,7 +22220,7 @@
                   children: children,
                   framework: framework
                 });
-                formName = (_mutableState$current = mutableState.current.currentContext) === null || _mutableState$current === void 0 ? void 0 : _mutableState$current.formName;
+                formName = (_mutableState$current = mutableState.current.currentFormContext) === null || _mutableState$current === void 0 ? void 0 : _mutableState$current.formName;
                 newTransformers = collectTransformers(newFields, form.transformer || form.script, onJavascriptError); // collect all transformers to be executed
                 transformersToRun = Object.keys(newTransformers.onChange || {}).filter(function (fieldName) {
                   return !_isEmpty(newTransformers.onChange[fieldName]);
@@ -22256,7 +22259,7 @@
                     }
                   }, _loop);
                 });
-                _iterator = _asyncIterator(applyTransformers(formName, framework, newFields, transformersToRun[idx], defaultValues, onJavascriptError, mutableState.current.currentContext, components));
+                _iterator = _asyncIterator(applyTransformers(formName, framework, newFields, transformersToRun[idx], defaultValues, onJavascriptError, mutableState.current.currentFormContext, components));
               case 12:
                 _context2.next = 14;
                 return _iterator.next();
@@ -22304,7 +22307,8 @@
                 break;
               case 38:
                 // set new form name
-                mutableState.current.currentContext = (_form$name2 = form.name) !== null && _form$name2 !== void 0 ? _form$name2 : _uniqueId('form_');
+
+                mutableState.current.currentFormContext.formName = formName !== null && formName !== void 0 ? formName : _uniqueId('form_');
                 setTransformers(newTransformers);
 
                 // if transformed fields different than current one, then save
@@ -22359,7 +22363,7 @@
               // store current instance of fields
               newFields = formFields;
               formName = (_mutableState$current2 = mutableState.current.currentFormContext) === null || _mutableState$current2 === void 0 ? void 0 : _mutableState$current2.formName;
-              currentFormContext = mutableState.current.currentContext; // execute the async generator transformer
+              currentFormContext = mutableState.current.currentFormContext; // execute the async generator transformer
               _iteratorAbruptCompletion2 = false;
               _didIteratorError2 = false;
               _context3.prev = 6;
@@ -22488,7 +22492,7 @@
     var fields = _ref.fields,
       control = _ref.control,
       framework = _ref.framework,
-      _onChange = _ref.onChange,
+      onChange = _ref.onChange,
       onEnter = _ref.onEnter,
       getValues = _ref.getValues,
       setValue = _ref.setValue,
@@ -22507,7 +22511,8 @@
       onJavascriptError = _ref.onJavascriptError,
       Components = _ref.Components,
       prependView = _ref.prependView,
-      rerenders = _ref.rerenders;
+      rerenders = _ref.rerenders,
+      formName = _ref.formName;
     var isEditMode = Wrapper != null;
     var renderedFields = (fields || []).filter(function (field) {
       return isEditMode || field.component !== 'hidden';
@@ -22525,13 +22530,13 @@
         Component = MissingComponent;
       }
       // remove mandatory fields and platform specific fields
-      var additionalFields = _omit(field, ['id', 'name', 'label', /*'hint',*/'disabled', 'readOnly', 'plaintext', /*'size', 'placeholder',*/'component'].concat(_toConsumableArray(FRAMEWORKS)));
+      var additionalFields = _omit(field, ['id', 'name', 'label', 'disabled', 'readOnly', 'plaintext', 'component'].concat(_toConsumableArray(FRAMEWORKS)));
       var renderFieldsParams = {
         Wrapper: Wrapper,
         GroupWrapper: GroupWrapper,
         PlaceholderWrapper: PlaceholderWrapper,
         BottomView: BottomView,
-        onChange: _onChange,
+        onChange: onChange,
         onEnter: onEnter,
         control: control,
         framework: framework,
@@ -22545,7 +22550,8 @@
         locale: locale,
         onJavascriptError: onJavascriptError,
         Components: Components,
-        rerenders: rerenders
+        rerenders: rerenders,
+        formName: formName
       };
 
       // special case of group
@@ -22646,10 +22652,7 @@
               hint: field.hint,
               disabled: field.disabled,
               value: (_values$field$name = values[field.name]) !== null && _values$field$name !== void 0 ? _values$field$name : undefined,
-              onChange: function onChange(value, _opts) {
-                setValue(field.name, value);
-                _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
-              }
+              onChange: onChange
             }, additionalFields, field[framework]), function (tab) {
               return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
                 fields: field.fields && _isArray(field.fields[tab]) ? field.fields[tab] : [],
@@ -22698,10 +22701,7 @@
               hint: field.hint,
               disabled: field.disabled,
               value: (_values$field$name2 = values[field.name]) !== null && _values$field$name2 !== void 0 ? _values$field$name2 : undefined,
-              onChange: function onChange(value, _opts) {
-                setValue(field.name, value);
-                _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
-              }
+              onChange: onChange
             }, additionalFields, field[framework]), function (step) {
               return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
                 fields: field.fields && _isArray(field.fields[step]) ? field.fields[step] : [],
@@ -22732,6 +22732,7 @@
           }
         });
       } else if (field.component === 'array' && GroupWrapper) {
+        // this only used in designer
         var _component2 = /*#__PURE__*/React$1.createElement(Component, _extends({
           key: field.name,
           lfComponent: field.component,
@@ -22802,15 +22803,8 @@
             plaintext: plaintext,
             required: field.required,
             error: error
-            /*error={errors && errors[field.name] && errors[field.name].errorMessage ?
-              (showErrors === 'inline' ? errors[field.name].errorMessage : true)
-              : undefined
-            }*/
           }, perComponentAdditionalFields, field[framework], {
-            onChange: function onChange(value) {
-              setValue(field.name, value);
-              _onChange(_objectSpread2(_objectSpread2({}, getValues()), {}, _defineProperty$1({}, field.name, value)), field.name);
-            }
+            onChange: onChange
           }));
           return Wrapper ? /*#__PURE__*/React$1.createElement(Wrapper, {
             key: "wrapper_".concat(field.name),
@@ -22827,11 +22821,13 @@
   var css_248z$5 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
   styleInject(css_248z$5);
 
-  var _excluded$n = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
+  var _excluded$o = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
   var DEFAULT_FORM = {
     version: 2,
     fields: []
   };
+  var NOOP = function NOOP() {};
+  var EMPTY_OBJ = {};
   var GenerateGenerator = function GenerateGenerator(_ref) {
     var Forms = _ref.Forms,
       Fields = _ref.Fields;
@@ -22841,30 +22837,29 @@
         _ref2$form = _ref2.form,
         form = _ref2$form === void 0 ? DEFAULT_FORM : _ref2$form,
         _ref2$onChange = _ref2.onChange,
-        onChange = _ref2$onChange === void 0 ? function () {} : _ref2$onChange,
+        onChange = _ref2$onChange === void 0 ? NOOP : _ref2$onChange,
         _ref2$onSubmit = _ref2.onSubmit,
-        onSubmit = _ref2$onSubmit === void 0 ? function () {} : _ref2$onSubmit,
+        onSubmit = _ref2$onSubmit === void 0 ? NOOP : _ref2$onSubmit,
         _ref2$onSubmitSuccess = _ref2.onSubmitSuccess,
-        onSubmitSuccess = _ref2$onSubmitSuccess === void 0 ? function () {} : _ref2$onSubmitSuccess,
+        onSubmitSuccess = _ref2$onSubmitSuccess === void 0 ? NOOP : _ref2$onSubmitSuccess,
         _ref2$onSubmitError = _ref2.onSubmitError,
-        onSubmitError = _ref2$onSubmitError === void 0 ? function () {} : _ref2$onSubmitError,
+        onSubmitError = _ref2$onSubmitError === void 0 ? NOOP : _ref2$onSubmitError,
         _ref2$onReset = _ref2.onReset,
-        onReset = _ref2$onReset === void 0 ? function () {} : _ref2$onReset,
+        onReset = _ref2$onReset === void 0 ? NOOP : _ref2$onReset,
         _ref2$onError = _ref2.onError,
-        onError = _ref2$onError === void 0 ? function () {} : _ref2$onError,
+        onError = _ref2$onError === void 0 ? NOOP : _ref2$onError,
         _ref2$onEnter = _ref2.onEnter,
-        onEnter = _ref2$onEnter === void 0 ? function () {} : _ref2$onEnter,
+        onEnter = _ref2$onEnter === void 0 ? NOOP : _ref2$onEnter,
         _ref2$onBlur = _ref2.onBlur,
-        onBlur = _ref2$onBlur === void 0 ? function () {} : _ref2$onBlur,
-        _ref2$onJavascriptErr = _ref2.onJavascriptError,
-        onJavascriptError = _ref2$onJavascriptErr === void 0 ? function () {} : _ref2$onJavascriptErr,
+        onBlur = _ref2$onBlur === void 0 ? NOOP : _ref2$onBlur,
+        onJavascriptError = _ref2.onJavascriptError,
         localeProp = _ref2.locale,
         wrapper = _ref2.wrapper,
         groupWrapper = _ref2.groupWrapper,
         placeholderWrapper = _ref2.placeholderWrapper,
         bottomView = _ref2.bottomView,
         _ref2$defaultValues = _ref2.defaultValues,
-        defaultValues = _ref2$defaultValues === void 0 ? {} : _ref2$defaultValues,
+        defaultValues = _ref2$defaultValues === void 0 ? EMPTY_OBJ : _ref2$defaultValues,
         _ref2$onlyFields = _ref2.onlyFields,
         onlyFields = _ref2$onlyFields === void 0 ? false : _ref2$onlyFields,
         _ref2$debug = _ref2.debug,
@@ -22899,7 +22894,7 @@
         resetAfterSubmit = _ref2$resetAfterSubmi === void 0 ? true : _ref2$resetAfterSubmi,
         formContext = _ref2.context,
         errors = _ref2.errors,
-        rest = _objectWithoutProperties(_ref2, _excluded$n);
+        rest = _objectWithoutProperties(_ref2, _excluded$o);
       var showErrors = form.showErrors,
         connectors = form.connectors;
       var _useState = React$1.useState(prealoadComponents),
@@ -23145,43 +23140,46 @@
         }, _callee3);
       })), [onBlur]);
       var handleChange = React$1.useCallback( /*#__PURE__*/function () {
-        var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(values, fieldName) {
+        var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(value, fieldName) {
           var _validationErrors2;
           return _regeneratorRuntime().wrap(function _callee4$(_context4) {
             while (1) switch (_context4.prev = _context4.next) {
               case 0:
+                // set the value in internal state
+                setValue(fieldName, value);
+
                 // reset the validation error for that field
                 if (!_isEmpty(fieldName)) {
                   clearValidation(fieldName);
                 }
                 // if validation on change, then trigger it
                 if (!(form.validationMode === 'onChange' || form.validationMode === 'all')) {
-                  _context4.next = 6;
+                  _context4.next = 7;
                   break;
                 }
-                _context4.next = 4;
+                _context4.next = 5;
                 return _validate(getValues());
-              case 4:
+              case 5:
                 _validationErrors2 = _context4.sent;
                 onError(_validationErrors2);
-              case 6:
+              case 7:
                 if (_isEmpty(transformers === null || transformers === void 0 ? void 0 : transformers.onRender)) {
-                  _context4.next = 9;
+                  _context4.next = 10;
                   break;
                 }
-                _context4.next = 9;
+                _context4.next = 10;
                 return executeTransformer(transformers.onRender, getValues());
-              case 9:
+              case 10:
                 if (!hasTransformer(fieldName)) {
-                  _context4.next = 12;
+                  _context4.next = 13;
                   break;
                 }
-                _context4.next = 12;
+                _context4.next = 13;
                 return executeTransformer(transformers.onChange[fieldName], getValues());
-              case 12:
+              case 13:
                 // propagate onChange values
                 onChange(getValues());
-              case 13:
+              case 14:
               case "end":
                 return _context4.stop();
             }
@@ -23190,7 +23188,7 @@
         return function (_x2, _x3) {
           return _ref5.apply(this, arguments);
         };
-      }(), [onChange, formFields, formName, transformers, framework, onJavascriptError]);
+      }(), [onChange, formFields, transformers]);
       var handleEnter = React$1.useCallback(function () {
         handleSubmit(onHandleSubmit)();
         onEnter();
@@ -23278,7 +23276,8 @@
         prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
           key: "wrapper_top_form_field",
           nextField: formFields && formFields.length ? formFields[0] : null
-        })
+        }),
+        formName: formName
       }), footer, formErrors && (showErrors === 'groupedBottom' || _isEmpty(showErrors)) && /*#__PURE__*/React$1.createElement(ValidationErrors, {
         className: "bottom",
         locale: locale,
@@ -23291,9 +23290,9 @@
     var FormGenerator = /*#__PURE__*/React$1.memo(BaseFormGenerator, function (prevProps, nextProps) {
       {
         var _nextProps$form, _nextProps$form2;
-        console.log("[LetsForm] Form generator ".concat((_nextProps$form = nextProps.form) !== null && _nextProps$form !== void 0 && _nextProps$form.name ? '(' + ((_nextProps$form2 = nextProps.form) === null || _nextProps$form2 === void 0 ? void 0 : _nextProps$form2.name) + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale) + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext) + ' disabled=' + (prevProps.disabled === nextProps.disabled) + ' children=' + (prevProps.children === nextProps.children) + ' custom=' + (prevProps.custom === nextProps.custom) + ' context=' + (prevProps.context === nextProps.context));
+        console.log("[LetsForm] Form generator ".concat((_nextProps$form = nextProps.form) !== null && _nextProps$form !== void 0 && _nextProps$form.name ? '(' + ((_nextProps$form2 = nextProps.form) === null || _nextProps$form2 === void 0 ? void 0 : _nextProps$form2.name) + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale) + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext) + ' disabled=' + (prevProps.disabled === nextProps.disabled) + ' children=' + (prevProps.children === nextProps.children) + ' custom=' + (prevProps.custom === nextProps.custom) + ' context=' + (prevProps.context === nextProps.context) + ' disableButtons=' + (prevProps.disableButtons === nextProps.disableButtons));
       }
-      var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale && prevProps.plaintext === nextProps.plaintext && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children && prevProps.custom === nextProps.custom && prevProps.context === nextProps.context;
+      var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale && prevProps.plaintext === nextProps.plaintext && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children && prevProps.custom === nextProps.custom && prevProps.context === nextProps.context && prevProps.disableButtons === nextProps.disableButtons;
       console.log("Is re-rendering? ".concat(!isEqual));
       return isEqual;
     });
@@ -23301,6 +23300,26 @@
     return FormGenerator;
   };
 
+  var _excluded$n = ["onChange"];
+
+  /**
+   * wrapOnChange
+   * Wrap the component into HOC which normalize the onChange method, first argument the value,
+   * second argument the field name. This makes the onChange function of the the form generator
+   * referential stable
+   */
+  var wrapOnChange = function wrapOnChange(Component) {
+    return function (_ref) {
+      var onChange = _ref.onChange,
+        rest = _objectWithoutProperties(_ref, _excluded$n);
+      var handleChange = React$1.useCallback(function (value) {
+        return onChange(value, rest.name);
+      }, [onChange]);
+      return /*#__PURE__*/React.createElement(Component, _extends({}, rest, {
+        onChange: handleChange
+      }));
+    };
+  };
   function lazyPreload(factory) {
     var ReactLazyComponent = /*#__PURE__*/React$1.lazy(factory);
     var PreloadedComponent;
@@ -23310,7 +23329,7 @@
       // Once one of these is chosen, we must ensure that it continues to be
       // used for all subsequent renders, otherwise it can cause the
       // underlying component to be unmounted and remounted.
-      var ComponentToRender = React$1.useRef((_PreloadedComponent = PreloadedComponent) !== null && _PreloadedComponent !== void 0 ? _PreloadedComponent : ReactLazyComponent);
+      var ComponentToRender = React$1.useRef((_PreloadedComponent = PreloadedComponent) !== null && _PreloadedComponent !== void 0 ? _PreloadedComponent : wrapOnChange(ReactLazyComponent));
       return /*#__PURE__*/React$1.createElement(ComponentToRender.current, Object.assign(ref ? {
         ref: ref
       } : {}, props));
@@ -23319,7 +23338,7 @@
     LazyWithPreload.preload = function () {
       if (!factoryPromise) {
         factoryPromise = factory().then(function (module) {
-          PreloadedComponent = module.default;
+          PreloadedComponent = wrapOnChange(module.default);
           return PreloadedComponent;
         }, function (e) {
           console.log('Error preloading', e);
