@@ -1,6 +1,6 @@
 # LetsForm Changelog
 
-## v0.12.15
+## v0.12.16
 - fix: un-necessary re-render on arrays [72](https://github.com/guidone/lets-form/issues/72)
 
 ## v0.12.14
