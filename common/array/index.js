@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import _ from 'lodash';
 
 import { useFormContext } from '../../hooks';
@@ -9,6 +9,8 @@ import { ArrayItem } from './views/array-item';
 
 import './list-array.scss';
 import classNames from 'classnames';
+
+const NOOP = () => {};
 
 const randomId = function(length = 12) {
   return Math.random().toString(36).substring(2, length+2);
@@ -88,7 +90,7 @@ const ListArray = ({
   value,
   name,
   className,
-  onChange = () => {},
+  onChange = NOOP,
   disabled = false,
   readOnly = false,
   fields,
@@ -104,14 +106,21 @@ const ListArray = ({
   formShowErrors
 }) => {
   const { locales } = useFormContext();
-  const form = {
-    layout,
-    fluid: true,
-    locales, // copy the locales from the main form
-    fields,
-    name: 'Array form ' + name,
-    showErrors: formShowErrors
-  };
+
+  const form = useMemo(
+    () => {
+      return {
+        layout,
+        fluid: true,
+        locales, // copy the locales from the main form
+        fields,
+        name: 'Array form ' + name,
+        showErrors: formShowErrors
+      };
+    },
+    [layout, locales, fields, name, formShowErrors]
+  );
+
   const [items, setItems] = useState(makeDefaultValue(value, arrayType, form));
 
   let style = {};
@@ -142,7 +151,7 @@ const ListArray = ({
         const newItems = items.map(i => i.id === value.id ? value : i);
         onChange(formatArray(newItems, arrayType));
         return newItems;
-      })
+      });
     },
     [onChange, arrayType]
   );

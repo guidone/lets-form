@@ -20,6 +20,8 @@ const ListArrayAntd = I18N(
     className,
     ...rest
   }) => {
+    // Note: leave the div as first child of the Form.Item since it replaces the onChange
+    // with a function which is not referential stable and causes re-renders
     return (
       <Form.Item
         {...makeClassName('array', name, className)}
@@ -34,10 +36,13 @@ const ListArrayAntd = I18N(
         validateStatus={rest.error ? 'error': undefined}
         valuePropName={null}
       >
-        <ListArray
-          LetsFormComponent={LetsForm}
-          {...rest}
-        />
+        <div>
+          <ListArray
+            LetsFormComponent={LetsForm}
+            name={name}
+            {...rest}
+          />
+        </div>
       </Form.Item>
     );
   },

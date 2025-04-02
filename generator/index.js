@@ -24,6 +24,8 @@ import './index.scss';
 
 const DEBUG_RENDER = true;
 const DEFAULT_FORM = { version: 2, fields: [] };
+const NOOP = () => {};
+const EMPTY_OBJ = {};
 
 const GenerateGenerator = ({ Forms, Fields }) => {
 
@@ -31,21 +33,21 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     // UI framework to use, mandatory
     framework,
     form = DEFAULT_FORM, // use const, or it will refresh endlessly
-    onChange = () => {},
-    onSubmit = () => {},
-    onSubmitSuccess = () => {},
-    onSubmitError = () => {},
-    onReset = () => {},
-    onError = () => {},
-    onEnter = () => {},
-    onBlur = () => {},
-    onJavascriptError = () => {},
+    onChange = NOOP,
+    onSubmit = NOOP,
+    onSubmitSuccess = NOOP,
+    onSubmitError = NOOP,
+    onReset = NOOP,
+    onError = NOOP,
+    onEnter = NOOP,
+    onBlur = NOOP,
+    onJavascriptError,
     locale: localeProp,
     wrapper,
     groupWrapper,
     placeholderWrapper,
     bottomView,
-    defaultValues = {},
+    defaultValues = EMPTY_OBJ,
     onlyFields = false,
     debug = false,
     disabled: disabledProp = false,
@@ -264,7 +266,10 @@ const GenerateGenerator = ({ Forms, Fields }) => {
     );
 
     const handleChange = useCallback(
-      async (values, fieldName) => {
+      async (value, fieldName) => {
+
+        // set the value in internal state
+        setValue(fieldName, value);
 
         // reset the validation error for that field
         if (!_.isEmpty(fieldName)) {
@@ -286,7 +291,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         // propagate onChange values
         onChange(getValues());
       },
-      [onChange, formFields, formName, transformers, framework, onJavascriptError]
+      [onChange, formFields, transformers]
     );
 
     const handleEnter = useCallback(
@@ -391,7 +396,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
                     key={`wrapper_top_form_field`}
                     nextField={formFields && formFields.length ? formFields[0] : null}
                   />
-                )
+                ),
+                formName
               })}
               {footer}
               {formErrors && (showErrors === 'groupedBottom' || _.isEmpty(showErrors)) && (
@@ -426,6 +432,7 @@ const GenerateGenerator = ({ Forms, Fields }) => {
         + ' children=' + (prevProps.children === nextProps.children)
         + ' custom=' + (prevProps.custom === nextProps.custom)
         + ' context=' + (prevProps.context === nextProps.context)
+        + ' disableButtons=' + (prevProps.disableButtons === nextProps.disableButtons)
       );
     }
 
@@ -438,7 +445,8 @@ const GenerateGenerator = ({ Forms, Fields }) => {
       && prevProps.disabled === nextProps.disabled
       && prevProps.children === nextProps.children
       && prevProps.custom === nextProps.custom
-      && prevProps.context === nextProps.context;
+      && prevProps.context === nextProps.context
+      && prevProps.disableButtons === nextProps.disableButtons;
     console.log(`Is re-rendering? ${!isEqual}`);
     return isEqual;
   });

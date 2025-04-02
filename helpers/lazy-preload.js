@@ -1,4 +1,28 @@
-import { createElement, forwardRef, lazy, useRef } from 'react';
+import { createElement, forwardRef, lazy, useRef, useCallback } from 'react';
+
+/**
+ * wrapOnChange
+ * Wrap the component into HOC which normalize the onChange method, first argument the value,
+ * second argument the field name. This makes the onChange function of the the form generator
+ * referential stable
+ */
+const wrapOnChange = Component => {
+  return ({ onChange, ...rest }) => {
+
+    const handleChange = useCallback(
+      value => onChange(value, rest.name),
+      [onChange]
+    );
+
+    return (
+      <Component
+        {...rest}
+        onChange={handleChange}
+      />
+    );
+  };
+};
+
 
 export function lazyPreload(factory) {
   const ReactLazyComponent = lazy(factory);
@@ -10,7 +34,7 @@ export function lazyPreload(factory) {
     // used for all subsequent renders, otherwise it can cause the
     // underlying component to be unmounted and remounted.
     const ComponentToRender = useRef(
-      PreloadedComponent ?? ReactLazyComponent
+      PreloadedComponent ?? wrapOnChange(ReactLazyComponent)
     );
     return createElement(
       ComponentToRender.current,
@@ -24,7 +48,7 @@ export function lazyPreload(factory) {
     if (!factoryPromise) {
       factoryPromise = factory().then(
         (module) => {
-          PreloadedComponent = module.default;
+          PreloadedComponent = wrapOnChange(module.default);
           return PreloadedComponent;
         },
         e => {
