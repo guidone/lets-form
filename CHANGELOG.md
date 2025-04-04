@@ -1,5 +1,9 @@
 # LetsForm Changelog
 
+## v0.12.17
+- fix: missing React import
+- fix: default currency prop with warning
+
 ## v0.12.16
 - fix: un-necessary re-render on arrays [72](https://github.com/guidone/lets-form/issues/72)
 
