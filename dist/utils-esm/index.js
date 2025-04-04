@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.12.15 - ESM */
+/* LetsForm Utils v0.12.16 - ESM */
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -10305,6 +10305,16 @@ var currency = {
 				"YER",
 				"ZMK",
 				"ZWL"
+			]
+		},
+		{
+			name: "align",
+			type: "string",
+			description: "Currency alignment in the input field",
+			options: [
+				"left",
+				"center",
+				"right"
 			]
 		}
 	],

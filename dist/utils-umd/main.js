@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.12.15 - UMD */
+/* LetsForm Utils v0.12.16 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -10311,6 +10311,16 @@
   				"YER",
   				"ZMK",
   				"ZWL"
+  			]
+  		},
+  		{
+  			name: "align",
+  			type: "string",
+  			description: "Currency alignment in the input field",
+  			options: [
+  				"left",
+  				"center",
+  				"right"
   			]
   		}
   	],

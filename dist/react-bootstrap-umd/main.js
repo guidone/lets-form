@@ -1,4 +1,4 @@
-/* LetsForm react-bootstrap v0.12.15 - UMD */
+/* LetsForm react-bootstrap v0.12.16 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button'], factory) :
@@ -9643,6 +9643,7 @@
   	readOnly: null,
   	hidden: null,
   	currency: null,
+  	align: null,
   	fullWidth: [
   		"react",
   		"react-rsuite5",
@@ -16144,6 +16145,16 @@
   				"YER",
   				"ZMK",
   				"ZWL"
+  			]
+  		},
+  		{
+  			name: "align",
+  			type: "string",
+  			description: "Currency alignment in the input field",
+  			options: [
+  				"left",
+  				"center",
+  				"right"
   			]
   		}
   	],
@@ -23327,7 +23338,7 @@
       var handleChange = React$1.useCallback(function (value) {
         return onChange(value, rest.name);
       }, [onChange]);
-      return /*#__PURE__*/React.createElement(Component, _extends({}, rest, {
+      return /*#__PURE__*/React$1.createElement(Component, _extends({}, rest, {
         onChange: handleChange
       }));
     };
@@ -24362,12 +24373,13 @@
       _ref$onChange = _ref.onChange,
       onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
       locale = _ref.locale,
-      currency = _ref.currency,
+      propCurrency = _ref.currency,
       _ref$fullWidth = _ref.fullWidth,
       fullWidth = _ref$fullWidth === void 0 ? true : _ref$fullWidth,
       width = _ref.width,
       align = _ref.align,
       rest = _objectWithoutProperties(_ref, _excluded$1);
+    var currency = propCurrency || 'EUR';
     var ref = React$1.useRef();
     var refCaret = React$1.useRef();
     var _useState = React$1.useState(defaultValue),
@@ -24382,6 +24394,9 @@
       _useState6 = _slicedToArray(_useState5, 2),
       generation = _useState6[0],
       setGeneration = _useState6[1];
+    if (!propCurrency) {
+      lfWarn("Empty currency property for currency field, defaulting to \"EUR\"");
+    }
     React$1.useEffect(function () {
       var _ref$current, _ref$current$querySel;
       var caret = refCaret.current;

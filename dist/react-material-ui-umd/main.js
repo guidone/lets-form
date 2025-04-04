@@ -1,4 +1,4 @@
-/* LetsForm react-material-ui v0.12.15 - UMD */
+/* LetsForm react-material-ui v0.12.16 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack'], factory) :
@@ -9643,6 +9643,7 @@
   	readOnly: null,
   	hidden: null,
   	currency: null,
+  	align: null,
   	fullWidth: [
   		"react",
   		"react-rsuite5",
@@ -16144,6 +16145,16 @@
   				"YER",
   				"ZMK",
   				"ZWL"
+  			]
+  		},
+  		{
+  			name: "align",
+  			type: "string",
+  			description: "Currency alignment in the input field",
+  			options: [
+  				"left",
+  				"center",
+  				"right"
   			]
   		}
   	],
@@ -23315,7 +23326,7 @@
       var handleChange = React$1.useCallback(function (value) {
         return onChange(value, rest.name);
       }, [onChange]);
-      return /*#__PURE__*/React.createElement(Component, _extends({}, rest, {
+      return /*#__PURE__*/React$1.createElement(Component, _extends({}, rest, {
         onChange: handleChange
       }));
     };
@@ -25332,12 +25343,13 @@
       _ref$onChange = _ref.onChange,
       onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
       locale = _ref.locale,
-      currency = _ref.currency,
+      propCurrency = _ref.currency,
       _ref$fullWidth = _ref.fullWidth,
       fullWidth = _ref$fullWidth === void 0 ? true : _ref$fullWidth,
       width = _ref.width,
       align = _ref.align,
       rest = _objectWithoutProperties(_ref, _excluded$1);
+    var currency = propCurrency || 'EUR';
     var ref = React$1.useRef();
     var refCaret = React$1.useRef();
     var _useState = React$1.useState(defaultValue),
@@ -25352,6 +25364,9 @@
       _useState6 = _slicedToArray(_useState5, 2),
       generation = _useState6[0],
       setGeneration = _useState6[1];
+    if (!propCurrency) {
+      lfWarn("Empty currency property for currency field, defaulting to \"EUR\"");
+    }
     React$1.useEffect(function () {
       var _ref$current, _ref$current$querySel;
       var caret = refCaret.current;
