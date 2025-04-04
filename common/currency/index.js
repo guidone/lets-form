@@ -1,6 +1,7 @@
 import React, { useCallback, useState, useRef, useEffect } from 'react';
 
 import { makeWidthStyle } from '../../helpers/make-width-style';
+import { lfWarn } from '../../helpers/lf-log';
 
 import {
   formatCurrency,
@@ -20,17 +21,22 @@ const CommonCurrency = ({
   control: Control,
   onChange = () => { },
   locale,
-  currency,
+  currency: propCurrency,
   fullWidth = true,
   width,
   align,
   ...rest
 }) => {
+  const currency = propCurrency || 'EUR';
   const ref = useRef();
   const refCaret = useRef();
   const [value, setValue] = useState(defaultValue);
   const [visibileValue, setVisibleValue] = useState(formatCurrency(defaultValue, locale, currency));
   const [generation, setGeneration] = useState(1);
+
+  if (!propCurrency) {
+    lfWarn(`Empty currency property for currency field, defaulting to "EUR"`);
+  }
 
   useEffect(
     () => {
