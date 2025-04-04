@@ -1,5 +1,11 @@
 # LetsForm Designer Changelog
 
+## v0.10.1
+- fix: missing React import
+- fix: default currency prop with warning
+- fix: un-necessary re-render on arrays [72](https://github.com/guidone/lets-form/issues/72)
+- feat: added `currency` field
+
 ## v0.10.0
 - feat: LetsForm Builder generally avaiable
 
