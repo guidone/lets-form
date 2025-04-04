@@ -56,7 +56,7 @@ const mapFields = (
         needsFlatten = true;
       }
 
-      if (field.component === 'group') {
+      if (field.component === 'group' || field.component === 'object') {
         const newFields = mapFields(field.fields, predicate);
         if (newFields !== field.fields) {
           newField = {
