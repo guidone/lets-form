@@ -43,6 +43,9 @@ const Fields = {
   'group': {
     'react-mantine': lazy(() => import('./group'))
   },
+  'object': {
+    'react-mantine': lazy(() => import('./object'))
+  },
   'date': {
     'react-mantine': lazy(() => import('./date'))
   },

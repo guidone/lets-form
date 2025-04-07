@@ -40,6 +40,9 @@ const Fields = {
   'group': {
     'react-material-ui': lazy(() => import('./group'))
   },
+  'object': {
+    'react-material-ui': lazy(() => import('./object'))
+  },
   'placeholder-image': {
     'react-material-ui': lazy(() => import('./placeholder-image'))
   },
