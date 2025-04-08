@@ -107,8 +107,7 @@ const CommonObject = I18N(
                 defaultValues={value || EMPTY_OBJECT}
                 onlyFields={true}
                 onChange={onChange}
-                errors={error != null && error.errorMessages != null && error.errorMessages.length > idx ?
-                  error.errorMessages[idx] : undefined}
+                errors={error != null && error.errorMessages != null ? error.errorMessages : undefined}
               />
             }
           </div>

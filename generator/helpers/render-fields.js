@@ -361,7 +361,7 @@ const renderFields = ({
             label={field.label}
             hint={field.hint}
             disabled={field.disabled}
-            errors={errors ? errors[field.name] : null}
+            error={errors ? errors[field.name] : null}
             {...additionalFields}
           >
             <>
@@ -397,7 +397,7 @@ const renderFields = ({
 
 
       let error;
-      if (field.component === 'array') {
+      if (field.component === 'array' || field.component === 'object') {
         // pass errors down the the array component only if it's "inline"
         error = errors != null && showErrors === 'inline' ? errors[field.name] : null;
       } else if (errors && errors[field.name] && errors[field.name].errorMessage) {
@@ -409,7 +409,7 @@ const renderFields = ({
       let perComponentAdditionalFields = {
         ...additionalFields
       };
-      if (field.component === 'array') {
+      if (field.component === 'array' || field.component === 'object') {
         perComponentAdditionalFields.formShowErrors = showErrors;
       }
 

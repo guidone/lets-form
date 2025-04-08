@@ -24,13 +24,19 @@ const isEmptyArray = arr => !isArray(arr) || arr.length === 0; // null considere
 
 const needsValidation = field => {
   // doesn't required validation if it's a layout component or has neither required or validation params
-  if (
-    FIELDS_NOT_TO_VALIDATE.includes(field.component) ||
-    (!field.required && !field.validation)
-  ) {
+  if (FIELDS_NOT_TO_VALIDATE.includes(field.component)) {
     return false;
   }
-  return true;
+  // if clear validation
+  if (field.required || field.validation) {
+    return true;
+  }
+  // if an object, then validate subfields
+  if (field.component === 'object') {
+    return true;
+  }
+
+  return false;
 }
 
 const makeValidateJs = (validation, locale, onJavascriptError) => {
@@ -211,6 +217,30 @@ const makeArrayValidationFn = (field, locale, onJavascriptError) => {
 };
 
 /**
+ * makeObjectValidationFn
+ * Make a validator for an object, run the fields validation for each single field, nest errors
+ * @param {*} field
+ * @param {*} locale
+ * @param {*} onJavascriptError
+ * @returns
+ */
+const makeObjectValidationFn = (field, locale, onJavascriptError) => {
+  const validateSubFields = makeValidation(field.fields, locale);
+
+  return async (value, formValues) => {
+    const validationMessages = await validateSubFields(value);
+
+    if (validationMessages && Object.keys(validationMessages).some(o => validationMessages[o] != null)) {
+      return {
+        ..._.omit(makeErrorMessage(field, locale), 'errorMessage'),
+        errorMessages: validationMessages
+      };
+    }
+  };
+};
+
+
+/**
  * makeValidation
  * Take an array of fields and return a validation function, which takes as argument the values of the form
  * Returns null or undefined if no validation errors, otherwise an object, keys are the invalid fields, value for
@@ -220,7 +250,7 @@ const makeArrayValidationFn = (field, locale, onJavascriptError) => {
  * @returns {function}
  */
 const makeValidation = (fields, locale, onJavascriptError) => {
-  // collect all validatre functions per field
+  // collect all validate functions per field
   const validateFns = reduceFields(
     fields,
     (field, accumulator) => {
@@ -233,7 +263,12 @@ const makeValidation = (fields, locale, onJavascriptError) => {
         return {
           ...accumulator,
           [field.name]: makeArrayValidationFn(field, locale, onJavascriptError)
-        }
+        };
+      } else if (field.component === 'object') {
+        return {
+          ...accumulator,
+          [field.name]: makeObjectValidationFn(field, locale, onJavascriptError)
+        };
       } else {
         return {
           ...accumulator,
@@ -243,7 +278,8 @@ const makeValidation = (fields, locale, onJavascriptError) => {
     },
     {},
     {
-      array: false // don't collect here fields inside arrays
+      array: false, // don't collect here fields inside arrays
+      object: false // don't collect here fields inside objects
     }
   );
 
@@ -256,7 +292,7 @@ const makeValidation = (fields, locale, onJavascriptError) => {
     for (i = 0; i < fieldsToValidate.length; i++) {
       const currentFieldName = fieldsToValidate[i];
       // pass the single value to check but also the all values
-      const validationResult = await validateFns[currentFieldName](data[currentFieldName], data);
+      const validationResult = await validateFns[currentFieldName](data?.[currentFieldName], data);
       if (validationResult) {
         validationErrors[currentFieldName] = validationResult;
       }
@@ -265,8 +301,6 @@ const makeValidation = (fields, locale, onJavascriptError) => {
     return Object.keys(validationErrors).length !== 0 ? validationErrors : undefined;
   };
 };
-
-let globaloneFn;
 
 /**
  * useValidation
