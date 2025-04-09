@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.12.16 - ESM */
+/* LetsForm Utils v0.12.17 - ESM */
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -826,7 +826,7 @@ var mapFields = function mapFields(fields) {
     if (Array.isArray(newField)) {
       needsFlatten = true;
     }
-    if (field.component === 'group') {
+    if (field.component === 'group' || field.component === 'object') {
       var _newFields = mapFields(field.fields, predicate);
       if (_newFields !== field.fields) {
         newField = _objectSpread2(_objectSpread2({}, newField), {}, {
@@ -4531,7 +4531,8 @@ var reduceFields = function reduceFields(fields, predicate) {
     'array': true,
     'two-columns': true,
     'three-columns': true,
-    'columns': true
+    'columns': true,
+    'object': true
   }, opts);
   if (_isEmpty(fields) || !_isArray(fields)) {
     return accumulator;
@@ -4543,6 +4544,8 @@ var reduceFields = function reduceFields(fields, predicate) {
     }
     result = predicate(field, result);
     if (field.component === 'group' && options.group) {
+      result = reduceFields(field.fields, predicate, result, opts);
+    } else if (field.component === 'object' && options.object) {
       result = reduceFields(field.fields, predicate, result, opts);
     } else if (field.component === 'array' && options.array) {
       result = reduceFields(field.fields, predicate, result, opts);
@@ -4570,7 +4573,7 @@ var findField = function findField(fields, predicate) {
   var found = fields.find(predicate);
   fields.forEach(function (field) {
     if (!found) {
-      if (field.component === 'group' || field.component === 'array') {
+      if (field.component === 'group' || field.component === 'array' || field.component === 'group') {
         found = findField(field.fields, predicate);
       } else if (field.component === 'two-columns') {
         found = findField(field.leftFields, predicate) || findField(field.rightFields, predicate);
@@ -4617,7 +4620,7 @@ var filterFields = function filterFields(fields) {
       return null;
     }
     var newField = field;
-    if (field.component === 'group') {
+    if (field.component === 'group' || field.component === 'object') {
       var _newFields = filterFields(field.fields, predicate);
       if (_newFields !== field.fields) {
         newField = _objectSpread2(_objectSpread2({}, newField), {}, {

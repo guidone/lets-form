@@ -1,4 +1,4 @@
-/* LetsForm react-antd v0.12.16 - UMD */
+/* LetsForm react-antd v0.12.17 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('antd')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'antd'], factory) :
@@ -6801,7 +6801,7 @@
       if (Array.isArray(newField)) {
         needsFlatten = true;
       }
-      if (field.component === 'group') {
+      if (field.component === 'group' || field.component === 'object') {
         var _newFields = mapFields(field.fields, predicate);
         if (_newFields !== field.fields) {
           newField = _objectSpread2(_objectSpread2({}, newField), {}, {
@@ -7382,7 +7382,8 @@
       'array': true,
       'two-columns': true,
       'three-columns': true,
-      'columns': true
+      'columns': true,
+      'object': true
     }, opts);
     if (_isEmpty(fields) || !_isArray(fields)) {
       return accumulator;
@@ -7394,6 +7395,8 @@
       }
       result = predicate(field, result);
       if (field.component === 'group' && options.group) {
+        result = reduceFields(field.fields, predicate, result, opts);
+      } else if (field.component === 'object' && options.object) {
         result = reduceFields(field.fields, predicate, result, opts);
       } else if (field.component === 'array' && options.array) {
         result = reduceFields(field.fields, predicate, result, opts);
@@ -7421,7 +7424,7 @@
     var found = fields.find(predicate);
     fields.forEach(function (field) {
       if (!found) {
-        if (field.component === 'group' || field.component === 'array') {
+        if (field.component === 'group' || field.component === 'array' || field.component === 'group') {
           found = findField(field.fields, predicate);
         } else if (field.component === 'two-columns') {
           found = findField(field.leftFields, predicate) || findField(field.rightFields, predicate);
@@ -7612,7 +7615,7 @@
         return null;
       }
       var newField = field;
-      if (field.component === 'group') {
+      if (field.component === 'group' || field.component === 'object') {
         var _newFields = filterFields(field.fields, predicate);
         if (_newFields !== field.fields) {
           newField = _objectSpread2(_objectSpread2({}, newField), {}, {
@@ -19281,8 +19284,8 @@
     }
   }
 
-  var css_248z$o = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
-  styleInject(css_248z$o);
+  var css_248z$p = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
+  styleInject(css_248z$p);
 
   var RawValidationErrors = function RawValidationErrors(_ref) {
     var _ref$errors = _ref.errors,
@@ -19304,12 +19307,19 @@
             });
           }
         });
-      } else if (errorObj && _isString(errorObj.errorMessage)) {
+      } else if (errorObj && _isObject(errorObj.errorMessages)) {
         var label = i18n(errorObj.label, locale);
+        return /*#__PURE__*/React$1.createElement(RawValidationErrors, {
+          key: label || fieldName,
+          errors: errorObj.errorMessages,
+          scope: "".concat(label || fieldName, " - ")
+        });
+      } else if (errorObj && _isString(errorObj.errorMessage)) {
+        var _label = i18n(errorObj.label, locale);
         var errorMessage = errorObj.errorMessage ? i18n(errorObj.errorMessage, locale) : 'This is required';
         return /*#__PURE__*/React$1.createElement("div", {
           key: fieldName
-        }, /*#__PURE__*/React$1.createElement("b", null, scope, label, ":"), "\xA0", errorMessage);
+        }, /*#__PURE__*/React$1.createElement("b", null, scope, _label, ":"), "\xA0", errorMessage);
       }
     }));
   };
@@ -20174,8 +20184,8 @@
     };
   };
 
-  var css_248z$n = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
-  styleInject(css_248z$n);
+  var css_248z$o = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
+  styleInject(css_248z$o);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
@@ -20192,8 +20202,8 @@
     }
   };
 
-  var css_248z$m = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
-  styleInject(css_248z$m);
+  var css_248z$n = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
+  styleInject(css_248z$n);
 
   var ThreeColumns = function ThreeColumns(_ref) {
     var name = _ref.name,
@@ -20223,8 +20233,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$l = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
-  styleInject(css_248z$l);
+  var css_248z$m = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
+  styleInject(css_248z$m);
 
   var TwoColumns = function TwoColumns(_ref) {
     var name = _ref.name,
@@ -20248,8 +20258,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$k = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
-  styleInject(css_248z$k);
+  var css_248z$l = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject(css_248z$l);
 
   var Group = I18N(function (_ref) {
     var name = _ref.name,
@@ -20300,8 +20310,8 @@
     }, children));
   }, ['label']);
 
-  var css_248z$j = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
-  styleInject(css_248z$j);
+  var css_248z$k = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
+  styleInject(css_248z$k);
 
   var PlaceholderImage = function PlaceholderImage(_ref) {
     var url = _ref.url,
@@ -20342,8 +20352,8 @@
     }
   };
 
-  var css_248z$i = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
-  styleInject(css_248z$i);
+  var css_248z$j = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
+  styleInject(css_248z$j);
 
   var Divider = function Divider(_ref) {
     var name = _ref.name,
@@ -20360,7 +20370,7 @@
   };
   lfLog('Loaded Common.Divider');
 
-  var index$u = /*#__PURE__*/Object.freeze({
+  var index$v = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
@@ -20644,10 +20654,10 @@
     })));
   };
 
-  var css_248z$h = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
-  styleInject(css_248z$h);
+  var css_248z$i = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
+  styleInject(css_248z$i);
 
-  var NOOP$1 = function NOOP() {};
+  var NOOP$2 = function NOOP() {};
   var randomId = function randomId() {
     var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
     return Math.random().toString(36).substring(2, length + 2);
@@ -20660,63 +20670,80 @@
    */
   var isEmptyObject = function isEmptyObject(obj) {
     return _isEmpty(obj) || Object.keys(obj).every(function (key) {
-      return _isEmpty(obj[key]);
+      return obj[key] === null || obj[key] === undefined;
     });
   };
 
   /**
-   * flatArrayOfString
+   * flatArrayOfValues
    * If an array of object can be flattned (one keuy), then return a flat array, otherwise raise expection
    * @param {*} a
    * @returns
    */
-  var flatArrayOfString = function flatArrayOfString(a) {
+  var flatArrayOfValues = function flatArrayOfValues(a) {
     var canBeFlat = a.every(function (obj) {
       return Object.keys(obj).length === 1;
     });
     if (!canBeFlat) {
       throw new Error("Cannot be flattened");
     }
+    if (_isArray(a) && _isEmpty(a)) {
+      return [];
+    }
+    var firstKey = Object.keys(a[0])[0];
     return a.map(function (obj) {
-      return obj[Object.keys(obj)[0]];
+      return obj[firstKey];
     });
   };
   var formatArray = function formatArray(a) {
     var arrayType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'arrayOfObject';
+    // remove array ids and empty objects
     var cleaned = a.map(function (i) {
       return _omit(i, 'id');
     }).filter(function (i) {
       return !isEmptyObject(i);
     });
     try {
-      var flattened = flatArrayOfString(cleaned);
-      if (arrayType === 'arrayOfString') {
+      if (arrayType === 'arrayOfString' || arrayType === 'arrayOfValues') {
+        var flattened = flatArrayOfValues(cleaned);
         return flattened;
       } else if (arrayType === 'commaSeparated') {
-        return flattened.join(',');
+        var _flattened = flatArrayOfValues(cleaned);
+        return _flattened.join(',');
       }
     } catch (e) {
       // do nothing, return as is
     }
     return cleaned;
   };
+
+  /**
+   * isArrayOfValues
+   * Is an array of elements (string, boolean, number but NOT object)
+   * @param {Array} s
+   * @returns
+   */
+  var isArrayOfValues = function isArrayOfValues(s) {
+    return _isArray(s) && s.every(function (v) {
+      return !_isObject(s);
+    });
+  };
   var makeDefaultValue$1 = function makeDefaultValue(defaultValue, arrayType, form) {
-    if (arrayType === 'arrayOfString') {
-      var isArrayOfString = _isArray(defaultValue) && defaultValue.every(function (s) {
-        return _isString(s);
-      });
+    var formattedDefaultValue;
+    if (arrayType === 'arrayOfString' || arrayType === 'arrayOfValues') {
       var names = collectNames(form);
-      // if it's an array of string
-      if (isArrayOfString && names.length === 1) {
-        return defaultValue.map(function (s) {
+      // if it's an array of values, forms has just one element and not empty array
+      if (isArrayOfValues(defaultValue) && names.length === 1 && _isArray(defaultValue) && defaultValue.length > 0) {
+        formattedDefaultValue = defaultValue.map(function (s) {
           return _defineProperty$1({
             id: randomId()
           }, names[0], s);
         });
+      } else {
+        formattedDefaultValue = [{
+          id: randomId()
+        }];
       }
-      return [{
-        id: randomId()
-      }];
     } else if (arrayType === 'commaSeparated') {
       var _names = collectNames(form);
       if (_names.length === 1 && _isString(defaultValue) && !_isEmpty(defaultValue)) {
@@ -20734,6 +20761,7 @@
         id: randomId()
       }];
     }
+    return formattedDefaultValue;
   };
   var ListArray = function ListArray(_ref3) {
     var LetsFormComponent = _ref3.LetsFormComponent,
@@ -20741,7 +20769,7 @@
       name = _ref3.name,
       className = _ref3.className,
       _ref3$onChange = _ref3.onChange,
-      onChange = _ref3$onChange === void 0 ? NOOP$1 : _ref3$onChange,
+      onChange = _ref3$onChange === void 0 ? NOOP$2 : _ref3$onChange,
       _ref3$disabled = _ref3.disabled,
       disabled = _ref3$disabled === void 0 ? false : _ref3$disabled,
       _ref3$readOnly = _ref3.readOnly,
@@ -20781,7 +20809,6 @@
       setItems = _useState2[1];
     var style = {};
     if (maxHeight) {
-      //style.maxHeigth = _.isNumber(maxHeigth) ? `${maxHeigth}px` : maxHeigth;
       style = {
         maxHeight: "".concat(maxHeight, "px"),
         overflowY: 'scroll'
@@ -20852,8 +20879,8 @@
     }));
   };
 
-  var css_248z$g = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
-  styleInject(css_248z$g);
+  var css_248z$h = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
+  styleInject(css_248z$h);
 
   var _excluded$p = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
@@ -20928,8 +20955,8 @@
     };
   };
 
-  var css_248z$f = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
-  styleInject(css_248z$f);
+  var css_248z$g = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
+  styleInject(css_248z$g);
 
   var getInitialValue = function getInitialValue(value, multiple) {
     return multiple ? (_isArray(value) ? value : []).reduce(function (acc, value) {
@@ -20991,8 +21018,8 @@
     }));
   };
 
-  var css_248z$e = ".lf-control-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n}\n.lf-control-columns .lf-column {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-columns .lf-column:last-child {\n  margin-right: 0px;\n}";
-  styleInject(css_248z$e);
+  var css_248z$f = ".lf-control-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n}\n.lf-control-columns .lf-column {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-columns .lf-column:last-child {\n  margin-right: 0px;\n}";
+  styleInject(css_248z$f);
 
   var Columns = function Columns(_ref) {
     var name = _ref.name,
@@ -21013,8 +21040,8 @@
     }));
   };
 
-  var css_248z$d = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
-  styleInject(css_248z$d);
+  var css_248z$e = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
+  styleInject(css_248z$e);
 
   var PlaintextLabel = function PlaintextLabel(_ref) {
     var children = _ref.children;
@@ -21274,10 +21301,18 @@
 
   var needsValidation = function needsValidation(field) {
     // doesn't required validation if it's a layout component or has neither required or validation params
-    if (FIELDS_NOT_TO_VALIDATE.includes(field.component) || !field.required && !field.validation) {
+    if (FIELDS_NOT_TO_VALIDATE.includes(field.component)) {
       return false;
     }
-    return true;
+    // if clear validation
+    if (field.required || field.validation) {
+      return true;
+    }
+    // if an object, then validate subfields
+    if (field.component === 'object') {
+      return true;
+    }
+    return false;
   };
   var makeValidateJs = function makeValidateJs(validation, locale, onJavascriptError) {
     try {
@@ -21580,6 +21615,47 @@
   };
 
   /**
+   * makeObjectValidationFn
+   * Make a validator for an object, run the fields validation for each single field, nest errors
+   * @param {*} field
+   * @param {*} locale
+   * @param {*} onJavascriptError
+   * @returns
+   */
+  var makeObjectValidationFn = function makeObjectValidationFn(field, locale, onJavascriptError) {
+    var validateSubFields = makeValidation(field.fields, locale);
+    return /*#__PURE__*/function () {
+      var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(value, formValues) {
+        var validationMessages;
+        return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+          while (1) switch (_context5.prev = _context5.next) {
+            case 0:
+              _context5.next = 2;
+              return validateSubFields(value);
+            case 2:
+              validationMessages = _context5.sent;
+              if (!(validationMessages && Object.keys(validationMessages).some(function (o) {
+                return validationMessages[o] != null;
+              }))) {
+                _context5.next = 5;
+                break;
+              }
+              return _context5.abrupt("return", _objectSpread2(_objectSpread2({}, _omit(makeErrorMessage(field, locale), 'errorMessage')), {}, {
+                errorMessages: validationMessages
+              }));
+            case 5:
+            case "end":
+              return _context5.stop();
+          }
+        }, _callee5);
+      }));
+      return function (_x7, _x8) {
+        return _ref5.apply(this, arguments);
+      };
+    }();
+  };
+
+  /**
    * makeValidation
    * Take an array of fields and return a validation function, which takes as argument the values of the form
    * Returns null or undefined if no validation errors, otherwise an object, keys are the invalid fields, value for
@@ -21589,7 +21665,7 @@
    * @returns {function}
    */
   var makeValidation = function makeValidation(fields, locale, onJavascriptError) {
-    // collect all validatre functions per field
+    // collect all validate functions per field
     var validateFns = reduceFields(fields, function (field, accumulator) {
       // skip if not required
       if (!needsValidation(field)) {
@@ -21598,50 +21674,54 @@
       // special validation for array, otherwise field
       if (field.component === 'array') {
         return _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, field.name, makeArrayValidationFn(field, locale, onJavascriptError)));
+      } else if (field.component === 'object') {
+        return _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, field.name, makeObjectValidationFn(field, locale)));
       } else {
         return _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, field.name, makeFieldValidationFn(field, locale, onJavascriptError)));
       }
     }, {}, {
-      array: false // don't collect here fields inside arrays
+      array: false,
+      // don't collect here fields inside arrays
+      object: false // don't collect here fields inside objects
     });
 
     // check all validators
     return /*#__PURE__*/function () {
-      var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(data) {
+      var _ref6 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(data) {
         var validationErrors, i, fieldsToValidate, currentFieldName, validationResult;
-        return _regeneratorRuntime().wrap(function _callee5$(_context5) {
-          while (1) switch (_context5.prev = _context5.next) {
+        return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+          while (1) switch (_context6.prev = _context6.next) {
             case 0:
               validationErrors = {}; // iterate all validators async
               fieldsToValidate = Object.keys(validateFns);
               i = 0;
             case 3:
               if (!(i < fieldsToValidate.length)) {
-                _context5.next = 12;
+                _context6.next = 12;
                 break;
               }
               currentFieldName = fieldsToValidate[i]; // pass the single value to check but also the all values
-              _context5.next = 7;
-              return validateFns[currentFieldName](data[currentFieldName], data);
+              _context6.next = 7;
+              return validateFns[currentFieldName](data === null || data === void 0 ? void 0 : data[currentFieldName], data);
             case 7:
-              validationResult = _context5.sent;
+              validationResult = _context6.sent;
               if (validationResult) {
                 validationErrors[currentFieldName] = validationResult;
               }
             case 9:
               i++;
-              _context5.next = 3;
+              _context6.next = 3;
               break;
             case 12:
-              return _context5.abrupt("return", Object.keys(validationErrors).length !== 0 ? validationErrors : undefined);
+              return _context6.abrupt("return", Object.keys(validationErrors).length !== 0 ? validationErrors : undefined);
             case 13:
             case "end":
-              return _context5.stop();
+              return _context6.stop();
           }
-        }, _callee5);
+        }, _callee6);
       }));
-      return function (_x7) {
-        return _ref5.apply(this, arguments);
+      return function (_x9) {
+        return _ref6.apply(this, arguments);
       };
     }();
   };
@@ -21656,11 +21736,11 @@
    * @param {array} fields The form fields
    * @param {string} locale
    */
-  var useFormValidation = function useFormValidation(_ref6) {
-    var onError = _ref6.onError,
-      fields = _ref6.fields,
-      locale = _ref6.locale,
-      onJavascriptError = _ref6.onJavascriptError;
+  var useFormValidation = function useFormValidation(_ref7) {
+    var onError = _ref7.onError,
+      fields = _ref7.fields,
+      locale = _ref7.locale,
+      onJavascriptError = _ref7.onJavascriptError;
     var _useState = React$1.useState(),
       _useState2 = _slicedToArray(_useState, 2),
       validationErrors = _useState2[0],
@@ -21695,28 +21775,28 @@
      * Trigger a form validation, also changes the status (validationErrors)
      * @returns
      */
-    var validate = React$1.useCallback( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
+    var validate = React$1.useCallback( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7() {
       var data,
         validationErrors,
-        _args6 = arguments;
-      return _regeneratorRuntime().wrap(function _callee6$(_context6) {
-        while (1) switch (_context6.prev = _context6.next) {
+        _args7 = arguments;
+      return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+        while (1) switch (_context7.prev = _context7.next) {
           case 0:
-            data = _args6.length > 0 && _args6[0] !== undefined ? _args6[0] : {};
-            _context6.next = 3;
+            data = _args7.length > 0 && _args7[0] !== undefined ? _args7[0] : {};
+            _context7.next = 3;
             return mutableState.current(data, locale);
           case 3:
-            validationErrors = _context6.sent;
+            validationErrors = _context7.sent;
             // set status
             setValidationErrors(validationErrors);
             // callback errors
             onError(validationErrors);
-            return _context6.abrupt("return", validationErrors);
+            return _context7.abrupt("return", validationErrors);
           case 7:
           case "end":
-            return _context6.stop();
+            return _context7.stop();
         }
-      }, _callee6);
+      }, _callee7);
     })), [validateFn]);
     return {
       validationErrors: validationErrors,
@@ -21892,6 +21972,9 @@
   var LfGroup = function LfGroup() {
     return /*#__PURE__*/React.createElement(React.Fragment, null);
   };
+  var LfObject = function LfObject() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
   var LfColumns = function LfColumns() {
     return /*#__PURE__*/React.createElement(React.Fragment, null);
   };
@@ -21921,6 +22004,8 @@
       return '<LfField>';
     } else if (type === LfGroup) {
       return '<LfGroup>';
+    } else if (type === LfObject) {
+      return '<LfObject>';
     } else if (type === LfColumns) {
       return '<LfColumns>';
     } else if (type === LfColumn) {
@@ -22087,6 +22172,14 @@
       } else if (elementOf(element, LfGroup)) {
         return _objectSpread2(_objectSpread2({}, _.omit(element.props, 'children')), {}, {
           component: 'group',
+          fields: traverseChildren(element.props.children, {
+            components: components,
+            framework: framework
+          })
+        });
+      } else if (elementOf(element, LfObject)) {
+        return _objectSpread2(_objectSpread2({}, _.omit(element.props, 'children')), {}, {
+          component: 'object',
           fields: traverseChildren(element.props.children, {
             components: components,
             framework: framework
@@ -22535,6 +22628,7 @@
     }, lfComponent), " (", /*#__PURE__*/React$1.createElement("em", null, "\"", _isString(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/React$1.createElement("b", null, lfFramework), ")"));
   };
 
+  var NOOP$1 = function NOOP() {};
   var renderFields = function renderFields(_ref) {
     var fields = _ref.fields,
       control = _ref.control,
@@ -22792,6 +22886,8 @@
           errors: errors ? errors[field.name] : null
         }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
           fields: field.fields,
+          onChange: NOOP$1,
+          // do nothing while in edit mode
           disabled: field.disabled ? true : disabled,
           // pass disabled status to inner components
           prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
@@ -22813,9 +22909,46 @@
           index: index,
           className: "array"
         }, _component2);
+      } else if (field.component === 'object' && GroupWrapper) {
+        // this only used in designer
+        var _component3 = /*#__PURE__*/React$1.createElement(Component, _extends({
+          key: field.name,
+          lfComponent: field.component,
+          lfFramework: framework,
+          lfLocale: locale,
+          name: field.name,
+          label: field.label,
+          hint: field.hint,
+          disabled: field.disabled,
+          error: errors ? errors[field.name] : null
+        }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
+          fields: field.fields,
+          onChange: NOOP$1,
+          // do nothing while in edit mode
+          disabled: field.disabled ? true : disabled,
+          // pass disabled status to inner components
+          prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+            key: "wrapper_top_field",
+            parentField: field,
+            parentFieldTarget: "fields",
+            nextField: field.fields && field.fields.length ? field.fields[0] : null
+          })
+        })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+          context: "object",
+          key: "bottom_view_".concat(field.name),
+          field: field,
+          target: "fields"
+        })));
+        return /*#__PURE__*/React$1.createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
+          field: field,
+          level: level,
+          index: index,
+          className: "group"
+        }, _component3);
       }
       var error;
-      if (field.component === 'array') {
+      if (field.component === 'array' || field.component === 'object') {
         // pass errors down the the array component only if it's "inline"
         error = errors != null && showErrors === 'inline' ? errors[field.name] : null;
       } else if (errors && errors[field.name] && errors[field.name].errorMessage) {
@@ -22824,7 +22957,7 @@
         error = showErrors === 'inline' ? errors[field.name].errorMessage : true;
       }
       var perComponentAdditionalFields = _objectSpread2({}, additionalFields);
-      if (field.component === 'array') {
+      if (field.component === 'array' || field.component === 'object') {
         perComponentAdditionalFields.formShowErrors = showErrors;
       }
       return /*#__PURE__*/React$1.createElement(Controller, {
@@ -22865,8 +22998,8 @@
     return prependView ? [prependView].concat(_toConsumableArray(renderedFields)) : renderedFields;
   };
 
-  var css_248z$c = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
-  styleInject(css_248z$c);
+  var css_248z$d = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
+  styleInject(css_248z$d);
 
   var _excluded$o = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
   var DEFAULT_FORM = {
@@ -23337,9 +23470,9 @@
     var FormGenerator = /*#__PURE__*/React$1.memo(BaseFormGenerator, function (prevProps, nextProps) {
       {
         var _nextProps$form, _nextProps$form2;
-        console.log("[LetsForm] Form generator ".concat((_nextProps$form = nextProps.form) !== null && _nextProps$form !== void 0 && _nextProps$form.name ? '(' + ((_nextProps$form2 = nextProps.form) === null || _nextProps$form2 === void 0 ? void 0 : _nextProps$form2.name) + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale) + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext) + ' disabled=' + (prevProps.disabled === nextProps.disabled) + ' children=' + (prevProps.children === nextProps.children) + ' custom=' + (prevProps.custom === nextProps.custom) + ' context=' + (prevProps.context === nextProps.context) + ' disableButtons=' + (prevProps.disableButtons === nextProps.disableButtons));
+        console.log("[LetsForm] Form generator ".concat((_nextProps$form = nextProps.form) !== null && _nextProps$form !== void 0 && _nextProps$form.name ? '(' + ((_nextProps$form2 = nextProps.form) === null || _nextProps$form2 === void 0 ? void 0 : _nextProps$form2.name) + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale) + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext) + ' disabled=' + (prevProps.disabled === nextProps.disabled) + ' children=' + (prevProps.children === nextProps.children) + ' custom=' + (prevProps.custom === nextProps.custom) + ' context=' + (prevProps.context === nextProps.context) + ' disableButtons=' + (prevProps.disableButtons === nextProps.disableButtons) + ' errors=' + (prevProps.errors === nextProps.errors));
       }
-      var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale && prevProps.plaintext === nextProps.plaintext && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children && prevProps.custom === nextProps.custom && prevProps.context === nextProps.context && prevProps.disableButtons === nextProps.disableButtons;
+      var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale && prevProps.plaintext === nextProps.plaintext && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children && prevProps.custom === nextProps.custom && prevProps.context === nextProps.context && prevProps.disableButtons === nextProps.disableButtons && prevProps.errors === nextProps.errors;
       console.log("Is re-rendering? ".concat(!isEqual));
       return isEqual;
     });
@@ -23400,80 +23533,85 @@
   var Fields = {
     'input-text': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$t; });
+        return Promise.resolve().then(function () { return index$u; });
       })
     },
     'toggle': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$s; });
+        return Promise.resolve().then(function () { return index$t; });
       })
     },
     'checkbox': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$r; });
+        return Promise.resolve().then(function () { return index$s; });
       })
     },
     'date': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$q; });
+        return Promise.resolve().then(function () { return index$r; });
       })
     },
     'select': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$p; });
+        return Promise.resolve().then(function () { return index$q; });
       })
     },
     'radio-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$o; });
+        return Promise.resolve().then(function () { return index$p; });
       })
     },
     'rate': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$n; });
+        return Promise.resolve().then(function () { return index$o; });
       })
     },
     'placeholder': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$m; });
+        return Promise.resolve().then(function () { return index$n; });
       })
     },
     'placeholder-image': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
+        return Promise.resolve().then(function () { return index$m; });
       })
     },
     'input-number': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
+        return Promise.resolve().then(function () { return index$l; });
       })
     },
     'textarea': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
+        return Promise.resolve().then(function () { return index$k; });
       })
     },
     'multiselect': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
+        return Promise.resolve().then(function () { return index$j; });
       })
     },
     'three-columns': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return index$i; });
       })
     },
     'columns': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$h; });
       })
     },
     'two-columns': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return index$g; });
       })
     },
     'group': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$f; });
+      })
+    },
+    'object': {
       'react-antd': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$e; });
       })
@@ -23485,7 +23623,7 @@
     },
     'divider': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$u; });
+        return Promise.resolve().then(function () { return index$v; });
       })
     },
     'react-view': {
@@ -23576,8 +23714,8 @@
     }, rest), children);
   });
 
-  var css_248z$b = ".lf-form-react-antd .lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-antd .lf-control-input-text.lf-size-small .lf-prefix-icon {\n  max-height: 12px;\n}\n.lf-form-react-antd .lf-control-input-text.lf-size-large .lf-prefix-icon {\n  max-height: 18px;\n}\n.lf-form-react-antd .lf-control-input-text input[type=color] {\n  min-width: 60px;\n}";
-  styleInject(css_248z$b);
+  var css_248z$c = ".lf-form-react-antd .lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-antd .lf-control-input-text.lf-size-small .lf-prefix-icon {\n  max-height: 12px;\n}\n.lf-form-react-antd .lf-control-input-text.lf-size-large .lf-prefix-icon {\n  max-height: 18px;\n}\n.lf-form-react-antd .lf-control-input-text input[type=color] {\n  min-width: 60px;\n}";
+  styleInject(css_248z$c);
 
   var _excluded$l = ["name", "label", "hint", "value", "size", "tooltip", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "inputType", "inputMode", "lfOnEnter", "className"];
   var TextInput = I18N(function (_ref) {
@@ -23635,7 +23773,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputText');
 
-  var index$t = /*#__PURE__*/Object.freeze({
+  var index$u = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
@@ -23693,7 +23831,7 @@
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded AntD.Toggle');
 
-  var index$s = /*#__PURE__*/Object.freeze({
+  var index$t = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle
   });
@@ -23746,7 +23884,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Checkbox');
 
-  var index$r = /*#__PURE__*/Object.freeze({
+  var index$s = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxAntd
   });
@@ -24142,13 +24280,13 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Date');
 
-  var index$q = /*#__PURE__*/Object.freeze({
+  var index$r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdDate
   });
 
-  var css_248z$a = ".lf-control-select-option-antd img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  vertical-align: middle;\n  margin-top: -2px;\n}";
-  styleInject(css_248z$a);
+  var css_248z$b = ".lf-control-select-option-antd img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  vertical-align: middle;\n  margin-top: -2px;\n}";
+  styleInject(css_248z$b);
 
   var _excluded$g = ["name", "label", "hint", "value", "tooltip", "required", "error", "onChange", "onBlur", "width", "fullWidth", "options", "filterKey", "filterValue", "className", "showArrow", "showImageOptions"];
   var AntdGenericSelect = function AntdGenericSelect(_ref) {
@@ -24212,7 +24350,7 @@
   });
   lfLog('Loaded AntD.Select');
 
-  var index$p = /*#__PURE__*/Object.freeze({
+  var index$q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectAntd
   });
@@ -24296,7 +24434,7 @@
   });
   lfLog('Loaded AntD.RadioGroup');
 
-  var index$o = /*#__PURE__*/Object.freeze({
+  var index$p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroup
   });
@@ -24363,7 +24501,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded AntD.Rate');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RateAntd
   });
@@ -24386,14 +24524,14 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded AntD.Placeholder');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderAntd
   });
 
   lfLog('Loaded AntD.PlaceholderImage');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
@@ -24442,7 +24580,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputNumber');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumberAntd
   });
@@ -24485,7 +24623,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Textarea');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextareaAntd
   });
@@ -24499,46 +24637,145 @@
   });
   lfLog('Loaded AntD.Multiselect');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect
   });
 
-  var css_248z$9 = ".lf-form-react-antd .lf-control-three-columns .ant-form-item:last-child {\n  margin-bottom: 0px;\n}";
-  styleInject(css_248z$9);
+  var css_248z$a = ".lf-form-react-antd .lf-control-three-columns .ant-form-item:last-child {\n  margin-bottom: 0px;\n}";
+  styleInject(css_248z$a);
 
   lfLog('Loaded AntD.ThreeColumns');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded RSuite5.Columns');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Columns
   });
 
-  var css_248z$8 = ".lf-form-react-antd .lf-control-two-columns .ant-form-item:last-child {\n  margin-bottom: 0px;\n}";
-  styleInject(css_248z$8);
+  var css_248z$9 = ".lf-form-react-antd .lf-control-two-columns .ant-form-item:last-child {\n  margin-bottom: 0px;\n}";
+  styleInject(css_248z$9);
 
   lfLog('Loaded AntD.TwoColumns');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
-  var css_248z$7 = ".lf-form-react-antd .lf-control-group .ant-form-item:last-child {\n  margin-bottom: 0px;\n}";
-  styleInject(css_248z$7);
+  var css_248z$8 = ".lf-form-react-antd .lf-control-group .ant-form-item:last-child {\n  margin-bottom: 0px;\n}";
+  styleInject(css_248z$8);
 
   lfLog('Loaded AntD.Group');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
+  });
+
+  var css_248z$7 = ".lf-form .lf-control-object:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-object .header svg {\n  display: inline-block;\n}\n.lf-control-object.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-object.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-boxed .lf-object-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-object.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-object.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-topBottom .lf-object-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-object.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-object .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-object .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-object .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-object .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject(css_248z$7);
+
+  var EMPTY_OBJECT = {};
+  var CommonObject = I18N(function (_ref) {
+    var LetsFormComponent = _ref.LetsFormComponent,
+      name = _ref.name,
+      className = _ref.className,
+      label = _ref.label,
+      lfLocale = _ref.lfLocale,
+      _ref$layout = _ref.layout,
+      layout = _ref$layout === void 0 ? 'vertical' : _ref$layout,
+      fields = _ref.fields,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      value = _ref.value,
+      _ref$open = _ref.open,
+      open = _ref$open === void 0 ? true : _ref$open,
+      _ref$collapsible = _ref.collapsible,
+      collapsible = _ref$collapsible === void 0 ? true : _ref$collapsible,
+      _ref$border = _ref.border,
+      border = _ref$border === void 0 ? 'top' : _ref$border,
+      align = _ref.align,
+      error = _ref.error,
+      formShowErrors = _ref.formShowErrors,
+      onChange = _ref.onChange,
+      children = _ref.children;
+    var _useState = React$1.useState(open),
+      _useState2 = _slicedToArray(_useState, 2),
+      isOpen = _useState2[0],
+      setIsOpen = _useState2[1];
+    var _useFormContext = useFormContext(),
+      locales = _useFormContext.locales;
+    var handleClick = React$1.useCallback(function (event) {
+      event.preventDefault();
+      setIsOpen(!isOpen);
+    }, [isOpen]);
+    var form = React$1.useMemo(function () {
+      return {
+        layout: layout,
+        fluid: true,
+        locales: locales,
+        // copy the locales from the main form
+        fields: fields,
+        name: 'Object form ' + name,
+        showErrors: formShowErrors
+      };
+    }, [layout, locales, fields, name, formShowErrors]);
+
+    // if open changes, then change status
+    React$1.useEffect(function () {
+      setIsOpen(open);
+    }, [open]);
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('object', name, className, "lf-border-".concat(border), {
+      'open': isOpen,
+      'close': !isOpen
+    }), /*#__PURE__*/React$1.createElement("div", {
+      role: "separator",
+      className: classNames('header', align)
+    }, /*#__PURE__*/React$1.createElement("span", {
+      className: "inner-text"
+    }, label, collapsible && /*#__PURE__*/React$1.createElement("a", {
+      href: "#",
+      className: "lf-btn-collapse",
+      disabled: disabled,
+      appearance: "link",
+      onClick: handleClick
+    }, isOpen ? /*#__PURE__*/React$1.createElement(ChevronUp, {
+      color: "#3498ff"
+    }) : /*#__PURE__*/React$1.createElement(ChevronDown, {
+      color: "#3498ff"
+    })))), (isOpen || !collapsible) && /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-object-content"
+    }, children ? children : /*#__PURE__*/React$1.createElement(LetsFormComponent, {
+      form: form,
+      locale: lfLocale,
+      disabled: disabled,
+      readOnly: readOnly,
+      defaultValues: value || EMPTY_OBJECT,
+      onlyFields: true,
+      onChange: onChange,
+      errors: error != null && error.errorMessages != null ? error.errorMessages : undefined
+    })));
+  }, ['label']);
+
+  var ReactAntDObject = function ReactAntDObject(props) {
+    return /*#__PURE__*/React$1.createElement(CommonObject, _extends({
+      LetsFormComponent: LetsForm
+    }, props));
+  };
+  lfLog('Loaded AntD.Object');
+
+  var index$e = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ReactAntDObject
   });
 
   var _excluded$b = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "keyboard", "dots", "min", "max", "step", "reverse", "tooltipOpen", "tooltipPlacement", "error", "onChange", "onBlur", "width", "marks", "included", "className"];
@@ -25573,6 +25810,7 @@
   exports.LfColumns = LfColumns;
   exports.LfField = LfField;
   exports.LfGroup = LfGroup;
+  exports.LfObject = LfObject;
   exports.LfStep = LfStep;
   exports.LfSteps = LfSteps;
   exports.LfTab = LfTab;

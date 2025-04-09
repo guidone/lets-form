@@ -55,6 +55,17 @@ export interface SelectReactMaterialUiProps extends ValidationProps {
   variant?: "outlined" | "filled" | "standard";
 };
 
+export interface ObjectReactMaterialUiProps extends ValidationProps {
+  component: 'object';
+  name?: string;
+  label?: I18NObject;
+  hidden?: boolean;
+  align?: "left" | "center" | "right";
+  collapsible?: boolean;
+  open?: boolean;
+  border?: "top" | "bottom" | "topBottom" | "boxed";
+};
+
 export interface InputNumberReactMaterialUiProps extends ValidationProps {
   component: 'input-number';
   name?: string; // The name of the field and the key of the JSON
@@ -392,6 +403,7 @@ type LfFieldReactMaterialUiProps =
   | InputTextReactMaterialUiProps
   | ToggleReactMaterialUiProps
   | SelectReactMaterialUiProps
+  | ObjectReactMaterialUiProps
   | InputNumberReactMaterialUiProps
   | SliderReactMaterialUiProps
   | DateReactMaterialUiProps
@@ -468,7 +480,7 @@ export interface LfArrayReactMaterialUiProps {
   hidden?: boolean;
   align?: "top" | "center" | "bottom"; // Vertical alignment of add / remove buttons
   alignOffset?: number; // Offset of the add / remove button from the top / bottom (depends on the alignment)
-  arrayType?: "arrayOfObject" | "arrayOfString" | "commaSeparated"; // Defines the result of the list component, "arrayOfString" and "commaSeparated" only applies if list field has only one field
+  arrayType?: "arrayOfObject" | "arrayOfValues" | "commaSeparated"; // Defines the result of the list component, "arrayOfString" and "commaSeparated" only applies if list field has only one field
 };
 
 export interface LetsFormReactMaterialUiProps extends CommonLetsFormProps {

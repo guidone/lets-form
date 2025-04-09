@@ -299,6 +299,15 @@
     "open": null,
     "border": null
   },
+  "object": {
+    "name": null,
+    "label": null,
+    "hidden": null,
+    "align": null,
+    "collapsible": null,
+    "open": null,
+    "border": null
+  },
   "two-columns": {
     "name": null,
     "layout": null,
@@ -2259,14 +2268,7 @@
     ],
     "autoContrast": [
       "react-mantine"
-    ],
-    "validationMinLength": "validation",
-    "validationMin": "validation",
-    "validationMaxLength": "validation",
-    "validationMax": "validation",
-    "validationPattern": "validation",
-    "validationMessage": "validation",
-    "required": null
+    ]
   },
   "esm-module": {
     "name": null,

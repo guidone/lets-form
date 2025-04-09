@@ -363,6 +363,58 @@
         "if": {
           "properties": {
             "component": {
+              "const": "object"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "label": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/i18n"
+                }
+              ]
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "align": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            "collapsible": {
+              "type": "boolean"
+            },
+            "open": {
+              "type": "boolean"
+            },
+            "border": {
+              "type": "string",
+              "enum": [
+                "top",
+                "bottom",
+                "topBottom",
+                "boxed"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "component": {
               "const": "two-columns"
             }
           }
@@ -663,7 +715,7 @@
               "type": "string",
               "enum": [
                 "arrayOfObject",
-                "arrayOfString",
+                "arrayOfValues",
                 "commaSeparated"
               ]
             }

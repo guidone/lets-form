@@ -1,4 +1,4 @@
-/* LetsForm Generator v0.12.16 - UMD */
+/* LetsForm Generator v0.12.17 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('rsuite'), require('@mui/material/FormControlLabel'), require('@mui/material/FormGroup'), require('@mui/material/Switch'), require('@mui/material/Checkbox'), require('@mui/material/Slider'), require('@mui/material/FormHelperText'), require('@mui/material/FormControl'), require('@mui/material/FormLabel'), require('@mui/material/Rating'), require('@mui/x-date-pickers/DatePicker'), require('@mui/x-date-pickers/DateTimePicker'), require('@mui/material/InputLabel'), require('@mui/material/MenuItem'), require('@mui/material/Select'), require('@mui/material/ListItemText'), require('@mui/material/TextField'), require('@mui/material/InputAdornment'), require('@mui/material/Radio'), require('@mui/material/RadioGroup'), require('@mui/material/Tabs'), require('@mui/material/Tab'), require('@mui/material/Box'), require('@mui/material/Button'), require('@mui/x-date-pickers/MobileTimePicker'), require('@mui/x-date-pickers/DesktopTimePicker'), require('@mui/material/Stack'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button'), require('antd'), require('@mantine/core'), require('@mantine/dates')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'rsuite', '@mui/material/FormControlLabel', '@mui/material/FormGroup', '@mui/material/Switch', '@mui/material/Checkbox', '@mui/material/Slider', '@mui/material/FormHelperText', '@mui/material/FormControl', '@mui/material/FormLabel', '@mui/material/Rating', '@mui/x-date-pickers/DatePicker', '@mui/x-date-pickers/DateTimePicker', '@mui/material/InputLabel', '@mui/material/MenuItem', '@mui/material/Select', '@mui/material/ListItemText', '@mui/material/TextField', '@mui/material/InputAdornment', '@mui/material/Radio', '@mui/material/RadioGroup', '@mui/material/Tabs', '@mui/material/Tab', '@mui/material/Box', '@mui/material/Button', '@mui/x-date-pickers/MobileTimePicker', '@mui/x-date-pickers/DesktopTimePicker', '@mui/material/Stack', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button', 'antd', '@mantine/core', '@mantine/dates'], factory) :
@@ -6801,7 +6801,7 @@
       if (Array.isArray(newField)) {
         needsFlatten = true;
       }
-      if (field.component === 'group') {
+      if (field.component === 'group' || field.component === 'object') {
         var _newFields = mapFields(field.fields, predicate);
         if (_newFields !== field.fields) {
           newField = _objectSpread2(_objectSpread2({}, newField), {}, {
@@ -7382,7 +7382,8 @@
       'array': true,
       'two-columns': true,
       'three-columns': true,
-      'columns': true
+      'columns': true,
+      'object': true
     }, opts);
     if (_isEmpty(fields) || !_isArray(fields)) {
       return accumulator;
@@ -7394,6 +7395,8 @@
       }
       result = predicate(field, result);
       if (field.component === 'group' && options.group) {
+        result = reduceFields(field.fields, predicate, result, opts);
+      } else if (field.component === 'object' && options.object) {
         result = reduceFields(field.fields, predicate, result, opts);
       } else if (field.component === 'array' && options.array) {
         result = reduceFields(field.fields, predicate, result, opts);
@@ -7421,7 +7424,7 @@
     var found = fields.find(predicate);
     fields.forEach(function (field) {
       if (!found) {
-        if (field.component === 'group' || field.component === 'array') {
+        if (field.component === 'group' || field.component === 'array' || field.component === 'group') {
           found = findField(field.fields, predicate);
         } else if (field.component === 'two-columns') {
           found = findField(field.leftFields, predicate) || findField(field.rightFields, predicate);
@@ -7612,7 +7615,7 @@
         return null;
       }
       var newField = field;
-      if (field.component === 'group') {
+      if (field.component === 'group' || field.component === 'object') {
         var _newFields = filterFields(field.fields, predicate);
         if (_newFields !== field.fields) {
           newField = _objectSpread2(_objectSpread2({}, newField), {}, {
@@ -19281,8 +19284,8 @@
     }
   }
 
-  var css_248z$U = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
-  styleInject(css_248z$U);
+  var css_248z$V = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
+  styleInject(css_248z$V);
 
   var RawValidationErrors = function RawValidationErrors(_ref) {
     var _ref$errors = _ref.errors,
@@ -19304,12 +19307,19 @@
             });
           }
         });
-      } else if (errorObj && _isString(errorObj.errorMessage)) {
+      } else if (errorObj && _isObject(errorObj.errorMessages)) {
         var label = i18n(errorObj.label, locale);
+        return /*#__PURE__*/React$1.createElement(RawValidationErrors, {
+          key: label || fieldName,
+          errors: errorObj.errorMessages,
+          scope: "".concat(label || fieldName, " - ")
+        });
+      } else if (errorObj && _isString(errorObj.errorMessage)) {
+        var _label = i18n(errorObj.label, locale);
         var errorMessage = errorObj.errorMessage ? i18n(errorObj.errorMessage, locale) : 'This is required';
         return /*#__PURE__*/React$1.createElement("div", {
           key: fieldName
-        }, /*#__PURE__*/React$1.createElement("b", null, scope, label, ":"), "\xA0", errorMessage);
+        }, /*#__PURE__*/React$1.createElement("b", null, scope, _label, ":"), "\xA0", errorMessage);
       }
     }));
   };
@@ -20257,8 +20267,8 @@
     };
   };
 
-  var css_248z$T = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
-  styleInject(css_248z$T);
+  var css_248z$U = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
+  styleInject(css_248z$U);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
@@ -20275,8 +20285,8 @@
     }
   };
 
-  var css_248z$S = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
-  styleInject(css_248z$S);
+  var css_248z$T = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
+  styleInject(css_248z$T);
 
   var ThreeColumns = function ThreeColumns(_ref) {
     var name = _ref.name,
@@ -20306,8 +20316,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$R = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
-  styleInject(css_248z$R);
+  var css_248z$S = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
+  styleInject(css_248z$S);
 
   var TwoColumns = function TwoColumns(_ref) {
     var name = _ref.name,
@@ -20331,8 +20341,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$Q = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
-  styleInject(css_248z$Q);
+  var css_248z$R = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject(css_248z$R);
 
   var Group = I18N(function (_ref) {
     var name = _ref.name,
@@ -20383,8 +20393,8 @@
     }, children));
   }, ['label']);
 
-  var css_248z$P = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
-  styleInject(css_248z$P);
+  var css_248z$Q = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
+  styleInject(css_248z$Q);
 
   var PlaceholderImage = function PlaceholderImage(_ref) {
     var url = _ref.url,
@@ -20425,8 +20435,8 @@
     }
   };
 
-  var css_248z$O = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
-  styleInject(css_248z$O);
+  var css_248z$P = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
+  styleInject(css_248z$P);
 
   var Divider = function Divider(_ref) {
     var name = _ref.name,
@@ -20443,7 +20453,7 @@
   };
   lfLog('Loaded Common.Divider');
 
-  var index$2y = /*#__PURE__*/Object.freeze({
+  var index$2E = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
@@ -20727,10 +20737,10 @@
     })));
   };
 
-  var css_248z$N = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
-  styleInject(css_248z$N);
+  var css_248z$O = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
+  styleInject(css_248z$O);
 
-  var NOOP$1 = function NOOP() {};
+  var NOOP$2 = function NOOP() {};
   var randomId = function randomId() {
     var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
     return Math.random().toString(36).substring(2, length + 2);
@@ -20743,63 +20753,80 @@
    */
   var isEmptyObject = function isEmptyObject(obj) {
     return _isEmpty(obj) || Object.keys(obj).every(function (key) {
-      return _isEmpty(obj[key]);
+      return obj[key] === null || obj[key] === undefined;
     });
   };
 
   /**
-   * flatArrayOfString
+   * flatArrayOfValues
    * If an array of object can be flattned (one keuy), then return a flat array, otherwise raise expection
    * @param {*} a
    * @returns
    */
-  var flatArrayOfString = function flatArrayOfString(a) {
+  var flatArrayOfValues = function flatArrayOfValues(a) {
     var canBeFlat = a.every(function (obj) {
       return Object.keys(obj).length === 1;
     });
     if (!canBeFlat) {
       throw new Error("Cannot be flattened");
     }
+    if (_isArray(a) && _isEmpty(a)) {
+      return [];
+    }
+    var firstKey = Object.keys(a[0])[0];
     return a.map(function (obj) {
-      return obj[Object.keys(obj)[0]];
+      return obj[firstKey];
     });
   };
   var formatArray = function formatArray(a) {
     var arrayType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'arrayOfObject';
+    // remove array ids and empty objects
     var cleaned = a.map(function (i) {
       return _omit(i, 'id');
     }).filter(function (i) {
       return !isEmptyObject(i);
     });
     try {
-      var flattened = flatArrayOfString(cleaned);
-      if (arrayType === 'arrayOfString') {
+      if (arrayType === 'arrayOfString' || arrayType === 'arrayOfValues') {
+        var flattened = flatArrayOfValues(cleaned);
         return flattened;
       } else if (arrayType === 'commaSeparated') {
-        return flattened.join(',');
+        var _flattened = flatArrayOfValues(cleaned);
+        return _flattened.join(',');
       }
     } catch (e) {
       // do nothing, return as is
     }
     return cleaned;
   };
+
+  /**
+   * isArrayOfValues
+   * Is an array of elements (string, boolean, number but NOT object)
+   * @param {Array} s
+   * @returns
+   */
+  var isArrayOfValues = function isArrayOfValues(s) {
+    return _isArray(s) && s.every(function (v) {
+      return !_isObject(s);
+    });
+  };
   var makeDefaultValue$2 = function makeDefaultValue(defaultValue, arrayType, form) {
-    if (arrayType === 'arrayOfString') {
-      var isArrayOfString = _isArray(defaultValue) && defaultValue.every(function (s) {
-        return _isString(s);
-      });
+    var formattedDefaultValue;
+    if (arrayType === 'arrayOfString' || arrayType === 'arrayOfValues') {
       var names = collectNames(form);
-      // if it's an array of string
-      if (isArrayOfString && names.length === 1) {
-        return defaultValue.map(function (s) {
+      // if it's an array of values, forms has just one element and not empty array
+      if (isArrayOfValues(defaultValue) && names.length === 1 && _isArray(defaultValue) && defaultValue.length > 0) {
+        formattedDefaultValue = defaultValue.map(function (s) {
           return _defineProperty$1({
             id: randomId()
           }, names[0], s);
         });
+      } else {
+        formattedDefaultValue = [{
+          id: randomId()
+        }];
       }
-      return [{
-        id: randomId()
-      }];
     } else if (arrayType === 'commaSeparated') {
       var _names = collectNames(form);
       if (_names.length === 1 && _isString(defaultValue) && !_isEmpty(defaultValue)) {
@@ -20817,6 +20844,7 @@
         id: randomId()
       }];
     }
+    return formattedDefaultValue;
   };
   var ListArray = function ListArray(_ref3) {
     var LetsFormComponent = _ref3.LetsFormComponent,
@@ -20824,7 +20852,7 @@
       name = _ref3.name,
       className = _ref3.className,
       _ref3$onChange = _ref3.onChange,
-      onChange = _ref3$onChange === void 0 ? NOOP$1 : _ref3$onChange,
+      onChange = _ref3$onChange === void 0 ? NOOP$2 : _ref3$onChange,
       _ref3$disabled = _ref3.disabled,
       disabled = _ref3$disabled === void 0 ? false : _ref3$disabled,
       _ref3$readOnly = _ref3.readOnly,
@@ -20864,7 +20892,6 @@
       setItems = _useState2[1];
     var style = {};
     if (maxHeight) {
-      //style.maxHeigth = _.isNumber(maxHeigth) ? `${maxHeigth}px` : maxHeigth;
       style = {
         maxHeight: "".concat(maxHeight, "px"),
         overflowY: 'scroll'
@@ -20935,8 +20962,8 @@
     }));
   };
 
-  var css_248z$M = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
-  styleInject(css_248z$M);
+  var css_248z$N = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
+  styleInject(css_248z$N);
 
   var _excluded$21 = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
@@ -21011,8 +21038,8 @@
     };
   };
 
-  var css_248z$L = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
-  styleInject(css_248z$L);
+  var css_248z$M = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
+  styleInject(css_248z$M);
 
   var getInitialValue = function getInitialValue(value, multiple) {
     return multiple ? (_isArray(value) ? value : []).reduce(function (acc, value) {
@@ -21074,8 +21101,8 @@
     }));
   };
 
-  var css_248z$K = ".lf-control-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n}\n.lf-control-columns .lf-column {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-columns .lf-column:last-child {\n  margin-right: 0px;\n}";
-  styleInject(css_248z$K);
+  var css_248z$L = ".lf-control-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n}\n.lf-control-columns .lf-column {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-columns .lf-column:last-child {\n  margin-right: 0px;\n}";
+  styleInject(css_248z$L);
 
   var Columns = function Columns(_ref) {
     var name = _ref.name,
@@ -21096,8 +21123,8 @@
     }));
   };
 
-  var css_248z$J = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
-  styleInject(css_248z$J);
+  var css_248z$K = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
+  styleInject(css_248z$K);
 
   var PlaintextLabel = function PlaintextLabel(_ref) {
     var children = _ref.children;
@@ -21357,10 +21384,18 @@
 
   var needsValidation = function needsValidation(field) {
     // doesn't required validation if it's a layout component or has neither required or validation params
-    if (FIELDS_NOT_TO_VALIDATE.includes(field.component) || !field.required && !field.validation) {
+    if (FIELDS_NOT_TO_VALIDATE.includes(field.component)) {
       return false;
     }
-    return true;
+    // if clear validation
+    if (field.required || field.validation) {
+      return true;
+    }
+    // if an object, then validate subfields
+    if (field.component === 'object') {
+      return true;
+    }
+    return false;
   };
   var makeValidateJs = function makeValidateJs(validation, locale, onJavascriptError) {
     try {
@@ -21663,6 +21698,47 @@
   };
 
   /**
+   * makeObjectValidationFn
+   * Make a validator for an object, run the fields validation for each single field, nest errors
+   * @param {*} field
+   * @param {*} locale
+   * @param {*} onJavascriptError
+   * @returns
+   */
+  var makeObjectValidationFn = function makeObjectValidationFn(field, locale, onJavascriptError) {
+    var validateSubFields = makeValidation(field.fields, locale);
+    return /*#__PURE__*/function () {
+      var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(value, formValues) {
+        var validationMessages;
+        return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+          while (1) switch (_context5.prev = _context5.next) {
+            case 0:
+              _context5.next = 2;
+              return validateSubFields(value);
+            case 2:
+              validationMessages = _context5.sent;
+              if (!(validationMessages && Object.keys(validationMessages).some(function (o) {
+                return validationMessages[o] != null;
+              }))) {
+                _context5.next = 5;
+                break;
+              }
+              return _context5.abrupt("return", _objectSpread2(_objectSpread2({}, _omit(makeErrorMessage(field, locale), 'errorMessage')), {}, {
+                errorMessages: validationMessages
+              }));
+            case 5:
+            case "end":
+              return _context5.stop();
+          }
+        }, _callee5);
+      }));
+      return function (_x7, _x8) {
+        return _ref5.apply(this, arguments);
+      };
+    }();
+  };
+
+  /**
    * makeValidation
    * Take an array of fields and return a validation function, which takes as argument the values of the form
    * Returns null or undefined if no validation errors, otherwise an object, keys are the invalid fields, value for
@@ -21672,7 +21748,7 @@
    * @returns {function}
    */
   var makeValidation = function makeValidation(fields, locale, onJavascriptError) {
-    // collect all validatre functions per field
+    // collect all validate functions per field
     var validateFns = reduceFields(fields, function (field, accumulator) {
       // skip if not required
       if (!needsValidation(field)) {
@@ -21681,50 +21757,54 @@
       // special validation for array, otherwise field
       if (field.component === 'array') {
         return _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, field.name, makeArrayValidationFn(field, locale, onJavascriptError)));
+      } else if (field.component === 'object') {
+        return _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, field.name, makeObjectValidationFn(field, locale)));
       } else {
         return _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, field.name, makeFieldValidationFn(field, locale, onJavascriptError)));
       }
     }, {}, {
-      array: false // don't collect here fields inside arrays
+      array: false,
+      // don't collect here fields inside arrays
+      object: false // don't collect here fields inside objects
     });
 
     // check all validators
     return /*#__PURE__*/function () {
-      var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(data) {
+      var _ref6 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(data) {
         var validationErrors, i, fieldsToValidate, currentFieldName, validationResult;
-        return _regeneratorRuntime().wrap(function _callee5$(_context5) {
-          while (1) switch (_context5.prev = _context5.next) {
+        return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+          while (1) switch (_context6.prev = _context6.next) {
             case 0:
               validationErrors = {}; // iterate all validators async
               fieldsToValidate = Object.keys(validateFns);
               i = 0;
             case 3:
               if (!(i < fieldsToValidate.length)) {
-                _context5.next = 12;
+                _context6.next = 12;
                 break;
               }
               currentFieldName = fieldsToValidate[i]; // pass the single value to check but also the all values
-              _context5.next = 7;
-              return validateFns[currentFieldName](data[currentFieldName], data);
+              _context6.next = 7;
+              return validateFns[currentFieldName](data === null || data === void 0 ? void 0 : data[currentFieldName], data);
             case 7:
-              validationResult = _context5.sent;
+              validationResult = _context6.sent;
               if (validationResult) {
                 validationErrors[currentFieldName] = validationResult;
               }
             case 9:
               i++;
-              _context5.next = 3;
+              _context6.next = 3;
               break;
             case 12:
-              return _context5.abrupt("return", Object.keys(validationErrors).length !== 0 ? validationErrors : undefined);
+              return _context6.abrupt("return", Object.keys(validationErrors).length !== 0 ? validationErrors : undefined);
             case 13:
             case "end":
-              return _context5.stop();
+              return _context6.stop();
           }
-        }, _callee5);
+        }, _callee6);
       }));
-      return function (_x7) {
-        return _ref5.apply(this, arguments);
+      return function (_x9) {
+        return _ref6.apply(this, arguments);
       };
     }();
   };
@@ -21739,11 +21819,11 @@
    * @param {array} fields The form fields
    * @param {string} locale
    */
-  var useFormValidation = function useFormValidation(_ref6) {
-    var onError = _ref6.onError,
-      fields = _ref6.fields,
-      locale = _ref6.locale,
-      onJavascriptError = _ref6.onJavascriptError;
+  var useFormValidation = function useFormValidation(_ref7) {
+    var onError = _ref7.onError,
+      fields = _ref7.fields,
+      locale = _ref7.locale,
+      onJavascriptError = _ref7.onJavascriptError;
     var _useState = React$1.useState(),
       _useState2 = _slicedToArray(_useState, 2),
       validationErrors = _useState2[0],
@@ -21778,28 +21858,28 @@
      * Trigger a form validation, also changes the status (validationErrors)
      * @returns
      */
-    var validate = React$1.useCallback( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
+    var validate = React$1.useCallback( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7() {
       var data,
         validationErrors,
-        _args6 = arguments;
-      return _regeneratorRuntime().wrap(function _callee6$(_context6) {
-        while (1) switch (_context6.prev = _context6.next) {
+        _args7 = arguments;
+      return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+        while (1) switch (_context7.prev = _context7.next) {
           case 0:
-            data = _args6.length > 0 && _args6[0] !== undefined ? _args6[0] : {};
-            _context6.next = 3;
+            data = _args7.length > 0 && _args7[0] !== undefined ? _args7[0] : {};
+            _context7.next = 3;
             return mutableState.current(data, locale);
           case 3:
-            validationErrors = _context6.sent;
+            validationErrors = _context7.sent;
             // set status
             setValidationErrors(validationErrors);
             // callback errors
             onError(validationErrors);
-            return _context6.abrupt("return", validationErrors);
+            return _context7.abrupt("return", validationErrors);
           case 7:
           case "end":
-            return _context6.stop();
+            return _context7.stop();
         }
-      }, _callee6);
+      }, _callee7);
     })), [validateFn]);
     return {
       validationErrors: validationErrors,
@@ -21975,6 +22055,9 @@
   var LfGroup = function LfGroup() {
     return /*#__PURE__*/React.createElement(React.Fragment, null);
   };
+  var LfObject = function LfObject() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
   var LfColumns = function LfColumns() {
     return /*#__PURE__*/React.createElement(React.Fragment, null);
   };
@@ -22004,6 +22087,8 @@
       return '<LfField>';
     } else if (type === LfGroup) {
       return '<LfGroup>';
+    } else if (type === LfObject) {
+      return '<LfObject>';
     } else if (type === LfColumns) {
       return '<LfColumns>';
     } else if (type === LfColumn) {
@@ -22170,6 +22255,14 @@
       } else if (elementOf(element, LfGroup)) {
         return _objectSpread2(_objectSpread2({}, _.omit(element.props, 'children')), {}, {
           component: 'group',
+          fields: traverseChildren(element.props.children, {
+            components: components,
+            framework: framework
+          })
+        });
+      } else if (elementOf(element, LfObject)) {
+        return _objectSpread2(_objectSpread2({}, _.omit(element.props, 'children')), {}, {
+          component: 'object',
           fields: traverseChildren(element.props.children, {
             components: components,
             framework: framework
@@ -22618,6 +22711,7 @@
     }, lfComponent), " (", /*#__PURE__*/React$1.createElement("em", null, "\"", _isString(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/React$1.createElement("b", null, lfFramework), ")"));
   };
 
+  var NOOP$1 = function NOOP() {};
   var renderFields = function renderFields(_ref) {
     var fields = _ref.fields,
       control = _ref.control,
@@ -22875,6 +22969,8 @@
           errors: errors ? errors[field.name] : null
         }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
           fields: field.fields,
+          onChange: NOOP$1,
+          // do nothing while in edit mode
           disabled: field.disabled ? true : disabled,
           // pass disabled status to inner components
           prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
@@ -22896,9 +22992,46 @@
           index: index,
           className: "array"
         }, _component2);
+      } else if (field.component === 'object' && GroupWrapper) {
+        // this only used in designer
+        var _component3 = /*#__PURE__*/React$1.createElement(Component, _extends({
+          key: field.name,
+          lfComponent: field.component,
+          lfFramework: framework,
+          lfLocale: locale,
+          name: field.name,
+          label: field.label,
+          hint: field.hint,
+          disabled: field.disabled,
+          error: errors ? errors[field.name] : null
+        }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
+          fields: field.fields,
+          onChange: NOOP$1,
+          // do nothing while in edit mode
+          disabled: field.disabled ? true : disabled,
+          // pass disabled status to inner components
+          prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+            key: "wrapper_top_field",
+            parentField: field,
+            parentFieldTarget: "fields",
+            nextField: field.fields && field.fields.length ? field.fields[0] : null
+          })
+        })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+          context: "object",
+          key: "bottom_view_".concat(field.name),
+          field: field,
+          target: "fields"
+        })));
+        return /*#__PURE__*/React$1.createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
+          field: field,
+          level: level,
+          index: index,
+          className: "group"
+        }, _component3);
       }
       var error;
-      if (field.component === 'array') {
+      if (field.component === 'array' || field.component === 'object') {
         // pass errors down the the array component only if it's "inline"
         error = errors != null && showErrors === 'inline' ? errors[field.name] : null;
       } else if (errors && errors[field.name] && errors[field.name].errorMessage) {
@@ -22907,7 +23040,7 @@
         error = showErrors === 'inline' ? errors[field.name].errorMessage : true;
       }
       var perComponentAdditionalFields = _objectSpread2({}, additionalFields);
-      if (field.component === 'array') {
+      if (field.component === 'array' || field.component === 'object') {
         perComponentAdditionalFields.formShowErrors = showErrors;
       }
       return /*#__PURE__*/React$1.createElement(Controller, {
@@ -22948,8 +23081,8 @@
     return prependView ? [prependView].concat(_toConsumableArray(renderedFields)) : renderedFields;
   };
 
-  var css_248z$I = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
-  styleInject(css_248z$I);
+  var css_248z$J = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
+  styleInject(css_248z$J);
 
   var _excluded$20 = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
   var DEFAULT_FORM = {
@@ -23420,9 +23553,9 @@
     var FormGenerator = /*#__PURE__*/React$1.memo(BaseFormGenerator, function (prevProps, nextProps) {
       {
         var _nextProps$form, _nextProps$form2;
-        console.log("[LetsForm] Form generator ".concat((_nextProps$form = nextProps.form) !== null && _nextProps$form !== void 0 && _nextProps$form.name ? '(' + ((_nextProps$form2 = nextProps.form) === null || _nextProps$form2 === void 0 ? void 0 : _nextProps$form2.name) + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale) + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext) + ' disabled=' + (prevProps.disabled === nextProps.disabled) + ' children=' + (prevProps.children === nextProps.children) + ' custom=' + (prevProps.custom === nextProps.custom) + ' context=' + (prevProps.context === nextProps.context) + ' disableButtons=' + (prevProps.disableButtons === nextProps.disableButtons));
+        console.log("[LetsForm] Form generator ".concat((_nextProps$form = nextProps.form) !== null && _nextProps$form !== void 0 && _nextProps$form.name ? '(' + ((_nextProps$form2 = nextProps.form) === null || _nextProps$form2 === void 0 ? void 0 : _nextProps$form2.name) + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale) + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext) + ' disabled=' + (prevProps.disabled === nextProps.disabled) + ' children=' + (prevProps.children === nextProps.children) + ' custom=' + (prevProps.custom === nextProps.custom) + ' context=' + (prevProps.context === nextProps.context) + ' disableButtons=' + (prevProps.disableButtons === nextProps.disableButtons) + ' errors=' + (prevProps.errors === nextProps.errors));
       }
-      var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale && prevProps.plaintext === nextProps.plaintext && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children && prevProps.custom === nextProps.custom && prevProps.context === nextProps.context && prevProps.disableButtons === nextProps.disableButtons;
+      var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale && prevProps.plaintext === nextProps.plaintext && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children && prevProps.custom === nextProps.custom && prevProps.context === nextProps.context && prevProps.disableButtons === nextProps.disableButtons && prevProps.errors === nextProps.errors;
       console.log("Is re-rendering? ".concat(!isEqual));
       return isEqual;
     });
@@ -23483,183 +23616,188 @@
   var Fields$6 = {
     'input-text': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2x; });
+        return Promise.resolve().then(function () { return index$2D; });
       })
     },
     'toggle': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2w; });
+        return Promise.resolve().then(function () { return index$2C; });
       })
     },
     'select': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2v; });
+        return Promise.resolve().then(function () { return index$2B; });
       })
     },
     'group': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2u; });
+        return Promise.resolve().then(function () { return index$2A; });
       })
     },
     'array': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2t; });
+        return Promise.resolve().then(function () { return index$2z; });
       })
     },
-    'two-columns': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2s; });
-      })
-    },
-    'three-columns': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2r; });
-      })
-    },
-    'columns': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2q; });
-      })
-    },
-    'input-number': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2p; });
-      })
-    },
-    'date': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2o; });
-      })
-    },
-    'checkbox': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2n; });
-      })
-    },
-    'checkbox-group': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2m; });
-      })
-    },
-    'slider': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2l; });
-      })
-    },
-    'radio-group': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2k; });
-      })
-    },
-    'input-tag': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2j; });
-      })
-    },
-    'input-mask': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2i; });
-      })
-    },
-    'textarea': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2h; });
-      })
-    },
-    'rate': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2g; });
-      })
-    },
-    'placeholder': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2f; });
-      })
-    },
-    'multiselect': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2e; });
-      })
-    },
-    'input-text-i18n': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2d; });
-      })
-    },
-    'placeholder-image': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2c; });
-      })
-    },
-    'button': {
-      'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2b; });
-      })
-    },
-    'divider': {
+    'object': {
       'react-rsuite5': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$2y; });
       })
     },
+    'two-columns': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2x; });
+      })
+    },
+    'three-columns': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2w; });
+      })
+    },
+    'columns': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2v; });
+      })
+    },
+    'input-number': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2u; });
+      })
+    },
+    'date': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2t; });
+      })
+    },
+    'checkbox': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2s; });
+      })
+    },
+    'checkbox-group': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2r; });
+      })
+    },
+    'slider': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2q; });
+      })
+    },
+    'radio-group': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2p; });
+      })
+    },
+    'input-tag': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2o; });
+      })
+    },
+    'input-mask': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2n; });
+      })
+    },
+    'textarea': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2m; });
+      })
+    },
+    'rate': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2l; });
+      })
+    },
+    'placeholder': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2k; });
+      })
+    },
+    'multiselect': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2j; });
+      })
+    },
+    'input-text-i18n': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2i; });
+      })
+    },
+    'placeholder-image': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2h; });
+      })
+    },
+    'button': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2g; });
+      })
+    },
+    'divider': {
+      'react-rsuite5': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2E; });
+      })
+    },
     'react-view': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2a; });
+        return Promise.resolve().then(function () { return index$2f; });
       })
     },
     'datetime': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$29; });
+        return Promise.resolve().then(function () { return index$2e; });
       })
     },
     'tabs': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$28; });
+        return Promise.resolve().then(function () { return index$2d; });
       })
     },
     'radio-tile': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$27; });
+        return Promise.resolve().then(function () { return index$2c; });
       })
     },
     'upload': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$26; });
+        return Promise.resolve().then(function () { return index$2b; });
       })
     },
     'buttons-toggle-group': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$25; });
+        return Promise.resolve().then(function () { return index$2a; });
       })
     },
     'steps': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$24; });
+        return Promise.resolve().then(function () { return index$29; });
       })
     },
     'esm-module': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$23; });
+        return Promise.resolve().then(function () { return index$28; });
       })
     },
     'time': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$22; });
+        return Promise.resolve().then(function () { return index$27; });
       })
     },
     'hidden': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$21; });
+        return Promise.resolve().then(function () { return index$26; });
       })
     },
     'currency': {
       'react-rsuite5': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$20; });
+        return Promise.resolve().then(function () { return index$25; });
       })
     }
   };
   var Forms$6 = {
     'react-rsuite5': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index$1$; });
+      return Promise.resolve().then(function () { return index$24; });
     })
   };
   var FormGenerator$6 = GenerateGenerator({
@@ -23688,148 +23826,153 @@
   var Fields$5 = {
     'input-text': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1_; });
+        return Promise.resolve().then(function () { return index$23; });
       })
     },
     'select': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1Z; });
+        return Promise.resolve().then(function () { return index$22; });
       })
     },
     'toggle': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1Y; });
+        return Promise.resolve().then(function () { return index$21; });
       })
     },
     'checkbox': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1X; });
+        return Promise.resolve().then(function () { return index$20; });
       })
     },
     'slider': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1W; });
+        return Promise.resolve().then(function () { return index$1$; });
       })
     },
     'placeholder': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1V; });
+        return Promise.resolve().then(function () { return index$1_; });
       })
     },
     'rate': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1U; });
+        return Promise.resolve().then(function () { return index$1Z; });
       })
     },
     'date': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1T; });
+        return Promise.resolve().then(function () { return index$1Y; });
       })
     },
     'three-columns': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1S; });
+        return Promise.resolve().then(function () { return index$1X; });
       })
     },
     'two-columns': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1R; });
+        return Promise.resolve().then(function () { return index$1W; });
       })
     },
     'columns': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1Q; });
+        return Promise.resolve().then(function () { return index$1V; });
       })
     },
     'group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1P; });
+        return Promise.resolve().then(function () { return index$1U; });
+      })
+    },
+    'object': {
+      'react-material-ui': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$1T; });
       })
     },
     'placeholder-image': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1O; });
+        return Promise.resolve().then(function () { return index$1S; });
       })
     },
     'divider': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2y; });
+        return Promise.resolve().then(function () { return index$2E; });
       })
     },
     'react-view': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1N; });
+        return Promise.resolve().then(function () { return index$1R; });
       })
     },
     'datetime': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1M; });
+        return Promise.resolve().then(function () { return index$1Q; });
       })
     },
     'array': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1L; });
+        return Promise.resolve().then(function () { return index$1P; });
       })
     },
     'textarea': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1K; });
+        return Promise.resolve().then(function () { return index$1O; });
       })
     },
     'multiselect': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1J; });
+        return Promise.resolve().then(function () { return index$1N; });
       })
     },
     'input-number': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1I; });
+        return Promise.resolve().then(function () { return index$1M; });
       })
     },
     'radio-group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1H; });
+        return Promise.resolve().then(function () { return index$1L; });
       })
     },
     'checkbox-group': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1G; });
+        return Promise.resolve().then(function () { return index$1K; });
       })
     },
     'tabs': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1F; });
+        return Promise.resolve().then(function () { return index$1J; });
       })
     },
     'button': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1E; });
+        return Promise.resolve().then(function () { return index$1I; });
       })
     },
     'upload': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1D; });
+        return Promise.resolve().then(function () { return index$1H; });
       })
     },
     'time': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1C; });
+        return Promise.resolve().then(function () { return index$1G; });
       })
     },
     'hidden': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$21; });
+        return Promise.resolve().then(function () { return index$26; });
       })
     },
     'currency': {
       'react-material-ui': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1B; });
+        return Promise.resolve().then(function () { return index$1F; });
       })
     }
   };
   var Forms$5 = {
     'react-material-ui': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index$1A; });
+      return Promise.resolve().then(function () { return index$1E; });
     })
   };
   var FormGenerator$5 = GenerateGenerator({
@@ -23858,107 +24001,112 @@
   var Fields$4 = {
     'input-text': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1z; });
+        return Promise.resolve().then(function () { return index$1D; });
       })
     },
     'input-number': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1y; });
+        return Promise.resolve().then(function () { return index$1C; });
       })
     },
     'checkbox': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1x; });
+        return Promise.resolve().then(function () { return index$1B; });
       })
     },
     'textarea': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1w; });
+        return Promise.resolve().then(function () { return index$1A; });
       })
     },
     'three-columns': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1v; });
+        return Promise.resolve().then(function () { return index$1z; });
       })
     },
     'columns': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1u; });
+        return Promise.resolve().then(function () { return index$1y; });
       })
     },
     'two-columns': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1t; });
+        return Promise.resolve().then(function () { return index$1x; });
       })
     },
     'group': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1s; });
+        return Promise.resolve().then(function () { return index$1w; });
+      })
+    },
+    'object': {
+      'react': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$1v; });
       })
     },
     'divider': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2y; });
+        return Promise.resolve().then(function () { return index$2E; });
       })
     },
     'react-view': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1r; });
+        return Promise.resolve().then(function () { return index$1u; });
       })
     },
     'placeholder': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1q; });
+        return Promise.resolve().then(function () { return index$1t; });
       })
     },
     'select': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1p; });
+        return Promise.resolve().then(function () { return index$1s; });
       })
     },
     'date': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1o; });
+        return Promise.resolve().then(function () { return index$1r; });
       })
     },
     'datetime': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1n; });
+        return Promise.resolve().then(function () { return index$1q; });
       })
     },
     'time': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1m; });
+        return Promise.resolve().then(function () { return index$1p; });
       })
     },
     'array': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1l; });
+        return Promise.resolve().then(function () { return index$1o; });
       })
     },
     'placeholder-image': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1k; });
+        return Promise.resolve().then(function () { return index$1n; });
       })
     },
     'button': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1j; });
+        return Promise.resolve().then(function () { return index$1m; });
       })
     },
     'upload': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1i; });
+        return Promise.resolve().then(function () { return index$1l; });
       })
     },
     'hidden': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$21; });
+        return Promise.resolve().then(function () { return index$26; });
       })
     },
     'currency': {
       'react': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1h; });
+        return Promise.resolve().then(function () { return index$1k; });
       })
     }
     // Removed, doesn't work
@@ -23969,7 +24117,7 @@
 
   var Forms$4 = {
     'react': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index$1g; });
+      return Promise.resolve().then(function () { return index$1j; });
     })
   };
   var FormGenerator$4 = GenerateGenerator({
@@ -23998,128 +24146,133 @@
   var Fields$3 = {
     'input-text': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1f; });
+        return Promise.resolve().then(function () { return index$1i; });
       })
     },
     'select': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1e; });
+        return Promise.resolve().then(function () { return index$1h; });
       })
     },
     'checkbox': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1d; });
+        return Promise.resolve().then(function () { return index$1g; });
       })
     },
     'toggle': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1c; });
+        return Promise.resolve().then(function () { return index$1f; });
       })
     },
     'checkbox-group': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1b; });
+        return Promise.resolve().then(function () { return index$1e; });
       })
     },
     'placeholder': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1a; });
+        return Promise.resolve().then(function () { return index$1d; });
       })
     },
     'placeholder-image': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$19; });
+        return Promise.resolve().then(function () { return index$1c; });
       })
     },
     'date': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$18; });
+        return Promise.resolve().then(function () { return index$1b; });
       })
     },
     'textarea': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$17; });
+        return Promise.resolve().then(function () { return index$1a; });
       })
     },
     'slider': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$16; });
+        return Promise.resolve().then(function () { return index$19; });
       })
     },
     'three-columns': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$15; });
+        return Promise.resolve().then(function () { return index$18; });
       })
     },
     'columns': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$14; });
+        return Promise.resolve().then(function () { return index$17; });
       })
     },
     'two-columns': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$13; });
+        return Promise.resolve().then(function () { return index$16; });
       })
     },
     'group': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$12; });
+        return Promise.resolve().then(function () { return index$15; });
+      })
+    },
+    'object': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$14; });
       })
     },
     'radio-group': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$11; });
+        return Promise.resolve().then(function () { return index$13; });
       })
     },
     'divider': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2y; });
+        return Promise.resolve().then(function () { return index$2E; });
       })
     },
     'react-view': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$10; });
+        return Promise.resolve().then(function () { return index$12; });
       })
     },
     'datetime': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$$; });
+        return Promise.resolve().then(function () { return index$11; });
       })
     },
     'array': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$_; });
+        return Promise.resolve().then(function () { return index$10; });
       })
     },
     'input-number': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$Z; });
+        return Promise.resolve().then(function () { return index$$; });
       })
     },
     'tabs': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$Y; });
+        return Promise.resolve().then(function () { return index$_; });
       })
     },
     'button': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$X; });
+        return Promise.resolve().then(function () { return index$Z; });
       })
     },
     'hidden': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$21; });
+        return Promise.resolve().then(function () { return index$26; });
       })
     },
     'currency': {
       'react-bootstrap': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$W; });
+        return Promise.resolve().then(function () { return index$Y; });
       })
     }
   };
   var Forms$3 = {
     'react-bootstrap': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index$V; });
+      return Promise.resolve().then(function () { return index$X; });
     })
   };
   var FormGenerator$3 = GenerateGenerator({
@@ -24148,158 +24301,163 @@
   var Fields$2 = {
     'input-text': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$U; });
+        return Promise.resolve().then(function () { return index$W; });
       })
     },
     'toggle': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$T; });
+        return Promise.resolve().then(function () { return index$V; });
       })
     },
     'checkbox': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$S; });
+        return Promise.resolve().then(function () { return index$U; });
       })
     },
     'date': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$R; });
+        return Promise.resolve().then(function () { return index$T; });
       })
     },
     'select': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$Q; });
+        return Promise.resolve().then(function () { return index$S; });
       })
     },
     'radio-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$P; });
+        return Promise.resolve().then(function () { return index$R; });
       })
     },
     'rate': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$O; });
+        return Promise.resolve().then(function () { return index$Q; });
       })
     },
     'placeholder': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$N; });
+        return Promise.resolve().then(function () { return index$P; });
       })
     },
     'placeholder-image': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$M; });
+        return Promise.resolve().then(function () { return index$O; });
       })
     },
     'input-number': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$L; });
+        return Promise.resolve().then(function () { return index$N; });
       })
     },
     'textarea': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$K; });
+        return Promise.resolve().then(function () { return index$M; });
       })
     },
     'multiselect': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$J; });
+        return Promise.resolve().then(function () { return index$L; });
       })
     },
     'three-columns': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$I; });
+        return Promise.resolve().then(function () { return index$K; });
       })
     },
     'columns': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$H; });
+        return Promise.resolve().then(function () { return index$J; });
       })
     },
     'two-columns': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$G; });
+        return Promise.resolve().then(function () { return index$I; });
       })
     },
     'group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$F; });
+        return Promise.resolve().then(function () { return index$H; });
+      })
+    },
+    'object': {
+      'react-antd': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$G; });
       })
     },
     'slider': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$E; });
+        return Promise.resolve().then(function () { return index$F; });
       })
     },
     'divider': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2y; });
+        return Promise.resolve().then(function () { return index$2E; });
       })
     },
     'react-view': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$D; });
+        return Promise.resolve().then(function () { return index$E; });
       })
     },
     'datetime': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$C; });
+        return Promise.resolve().then(function () { return index$D; });
       })
     },
     'array': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$B; });
+        return Promise.resolve().then(function () { return index$C; });
       })
     },
     'button': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$A; });
+        return Promise.resolve().then(function () { return index$B; });
       })
     },
     'checkbox-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$z; });
+        return Promise.resolve().then(function () { return index$A; });
       })
     },
     'tabs': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$y; });
+        return Promise.resolve().then(function () { return index$z; });
       })
     },
     'upload': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$x; });
+        return Promise.resolve().then(function () { return index$y; });
       })
     },
     'buttons-toggle-group': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$w; });
+        return Promise.resolve().then(function () { return index$x; });
       })
     },
     'steps': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$v; });
+        return Promise.resolve().then(function () { return index$w; });
       })
     },
     'hidden': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$21; });
+        return Promise.resolve().then(function () { return index$26; });
       })
     },
     'time': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$u; });
+        return Promise.resolve().then(function () { return index$v; });
       })
     },
     'currency': {
       'react-antd': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$t; });
+        return Promise.resolve().then(function () { return index$u; });
       })
     }
   };
   var Forms$2 = {
     'react-antd': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index$s; });
+      return Promise.resolve().then(function () { return index$t; });
     })
   };
   var FormGenerator$2 = GenerateGenerator({
@@ -24328,65 +24486,70 @@
   var Fields$1 = {
     'input-text': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$r; });
+        return Promise.resolve().then(function () { return index$s; });
       })
     },
     'input-number': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$q; });
+        return Promise.resolve().then(function () { return index$r; });
       })
     },
     'textarea': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$p; });
+        return Promise.resolve().then(function () { return index$q; });
       })
     },
     'select': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$o; });
+        return Promise.resolve().then(function () { return index$p; });
       })
     },
     'checkbox': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$n; });
+        return Promise.resolve().then(function () { return index$o; });
       })
     },
     'toggle': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$m; });
+        return Promise.resolve().then(function () { return index$n; });
       })
     },
     'array': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
+        return Promise.resolve().then(function () { return index$m; });
       })
     },
     'checkbox-group': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
+        return Promise.resolve().then(function () { return index$l; });
       })
     },
     'radio-group': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
+        return Promise.resolve().then(function () { return index$k; });
       })
     },
     'two-columns': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
+        return Promise.resolve().then(function () { return index$j; });
       })
     },
     'three-columns': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return index$i; });
       })
     },
     'columns': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$h; });
       })
     },
     'group': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$g; });
+      })
+    },
+    'object': {
       'react-mantine': lazyPreload(function () {
         return Promise.resolve().then(function () { return index$f; });
       })
@@ -24418,7 +24581,7 @@
     },
     'divider': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2y; });
+        return Promise.resolve().then(function () { return index$2E; });
       })
     },
     'slider': {
@@ -24463,7 +24626,7 @@
     },
     'hidden': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$21; });
+        return Promise.resolve().then(function () { return index$26; });
       })
     },
     'currency': {
@@ -24554,8 +24717,8 @@
     }, children);
   };
 
-  var css_248z$H = ".lf-form-react-rsuite5 .lf-control-input-text .rs-form-control-wrapper > .rs-input,\n.lf-form-react-rsuite5 .lf-control-input-text .rs-form-control-wrapper > .rs-input-number {\n  width: 100%;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-full-width .rs-input-group {\n  width: 100%;\n}\n.lf-form-react-rsuite5 .lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-lg .lf-prefix-icon {\n  max-height: 22px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-md .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-sm .lf-prefix-icon {\n  max-height: 10px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-xs .lf-prefix-icon {\n  max-height: 4px;\n}";
-  styleInject(css_248z$H);
+  var css_248z$I = ".lf-form-react-rsuite5 .lf-control-input-text .rs-form-control-wrapper > .rs-input,\n.lf-form-react-rsuite5 .lf-control-input-text .rs-form-control-wrapper > .rs-input-number {\n  width: 100%;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-full-width .rs-input-group {\n  width: 100%;\n}\n.lf-form-react-rsuite5 .lf-control-input-text .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-lg .lf-prefix-icon {\n  max-height: 22px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-md .lf-prefix-icon {\n  max-height: 16px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-sm .lf-prefix-icon {\n  max-height: 10px;\n}\n.lf-form-react-rsuite5 .lf-control-input-text.lf-size-xs .lf-prefix-icon {\n  max-height: 4px;\n}";
+  styleInject(css_248z$I);
 
   var _excluded$1U = ["name", "label", "hint", "value", "size", "placeholder", "tooltip", "disabled", "readOnly", "required", "submitOnEnter", "error", "prefix", "postfix", "onChange", "onBlur", "fullWidth", "width", "autocomplete", "inputMode", "inputType", "inside", "className", "lfOnEnter"];
   var TextInput$4 = I18N(function (_ref) {
@@ -24624,7 +24787,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.InputText');
 
-  var index$2x = /*#__PURE__*/Object.freeze({
+  var index$2D = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput$4
   });
@@ -24666,13 +24829,13 @@
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded RSuite5.ToggleInput');
 
-  var index$2w = /*#__PURE__*/Object.freeze({
+  var index$2C = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ToggleInput
   });
 
-  var css_248z$G = ".lf-control-select-option-rsuite5 img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  margin-right: 6px;\n  margin-top: -4px;\n  display: inline-block;\n}";
-  styleInject(css_248z$G);
+  var css_248z$H = ".lf-control-select-option-rsuite5 img {\n  width: 20px;\n  max-width: 20px;\n  max-height: 20px;\n  margin-right: 6px;\n  margin-top: -4px;\n  display: inline-block;\n}";
+  styleInject(css_248z$H);
 
   var _excluded$1S = ["name", "label", "hint", "value", "size", "placeholder", "lfLocale", "options", "tooltip", "disabled", "readOnly", "required", "error", "block", "searchable", "cleanable", "onChange", "onBlur", "placement", "appearance", "filterKey", "filterValue", "showImageOptions", "fullWidth", "width", "className"];
   var menuItem = function menuItem(_value, item) {
@@ -24748,20 +24911,20 @@
   });
   lfLog('Loaded RSuite5.Select');
 
-  var index$2v = /*#__PURE__*/Object.freeze({
+  var index$2B = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select$2
   });
 
   lfLog('Loaded RSuite5.Group');
 
-  var index$2u = /*#__PURE__*/Object.freeze({
+  var index$2A = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
-  var css_248z$F = ".lf-form-react-rsuite5 .lf-control-array .array-error-message {\n  color: #ff6633;\n}";
-  styleInject(css_248z$F);
+  var css_248z$G = ".lf-form-react-rsuite5 .lf-control-array .array-error-message {\n  color: #ff6633;\n}";
+  styleInject(css_248z$G);
 
   var _excluded$1R = ["hint", "required", "tooltip", "name", "label", "className"];
   var ListArrayRSuite5 = I18N(function (_ref) {
@@ -24784,28 +24947,127 @@
   }, ['label', 'hint']);
   lfLog('Loaded RSuite5.ListArray');
 
-  var index$2t = /*#__PURE__*/Object.freeze({
+  var index$2z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayRSuite5
   });
 
+  var css_248z$F = ".lf-form .lf-control-object:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-object .header svg {\n  display: inline-block;\n}\n.lf-control-object.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-object.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-boxed .lf-object-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-object.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-object.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-topBottom .lf-object-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-object.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-object .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-object .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-object .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-object .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject(css_248z$F);
+
+  var EMPTY_OBJECT = {};
+  var CommonObject = I18N(function (_ref) {
+    var LetsFormComponent = _ref.LetsFormComponent,
+      name = _ref.name,
+      className = _ref.className,
+      label = _ref.label,
+      lfLocale = _ref.lfLocale,
+      _ref$layout = _ref.layout,
+      layout = _ref$layout === void 0 ? 'vertical' : _ref$layout,
+      fields = _ref.fields,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      value = _ref.value,
+      _ref$open = _ref.open,
+      open = _ref$open === void 0 ? true : _ref$open,
+      _ref$collapsible = _ref.collapsible,
+      collapsible = _ref$collapsible === void 0 ? true : _ref$collapsible,
+      _ref$border = _ref.border,
+      border = _ref$border === void 0 ? 'top' : _ref$border,
+      align = _ref.align,
+      error = _ref.error,
+      formShowErrors = _ref.formShowErrors,
+      onChange = _ref.onChange,
+      children = _ref.children;
+    var _useState = React$1.useState(open),
+      _useState2 = _slicedToArray(_useState, 2),
+      isOpen = _useState2[0],
+      setIsOpen = _useState2[1];
+    var _useFormContext = useFormContext(),
+      locales = _useFormContext.locales;
+    var handleClick = React$1.useCallback(function (event) {
+      event.preventDefault();
+      setIsOpen(!isOpen);
+    }, [isOpen]);
+    var form = React$1.useMemo(function () {
+      return {
+        layout: layout,
+        fluid: true,
+        locales: locales,
+        // copy the locales from the main form
+        fields: fields,
+        name: 'Object form ' + name,
+        showErrors: formShowErrors
+      };
+    }, [layout, locales, fields, name, formShowErrors]);
+
+    // if open changes, then change status
+    React$1.useEffect(function () {
+      setIsOpen(open);
+    }, [open]);
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('object', name, className, "lf-border-".concat(border), {
+      'open': isOpen,
+      'close': !isOpen
+    }), /*#__PURE__*/React$1.createElement("div", {
+      role: "separator",
+      className: classNames('header', align)
+    }, /*#__PURE__*/React$1.createElement("span", {
+      className: "inner-text"
+    }, label, collapsible && /*#__PURE__*/React$1.createElement("a", {
+      href: "#",
+      className: "lf-btn-collapse",
+      disabled: disabled,
+      appearance: "link",
+      onClick: handleClick
+    }, isOpen ? /*#__PURE__*/React$1.createElement(ChevronUp, {
+      color: "#3498ff"
+    }) : /*#__PURE__*/React$1.createElement(ChevronDown, {
+      color: "#3498ff"
+    })))), (isOpen || !collapsible) && /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-object-content"
+    }, children ? children : /*#__PURE__*/React$1.createElement(LetsFormComponent, {
+      form: form,
+      locale: lfLocale,
+      disabled: disabled,
+      readOnly: readOnly,
+      defaultValues: value || EMPTY_OBJECT,
+      onlyFields: true,
+      onChange: onChange,
+      errors: error != null && error.errorMessages != null ? error.errorMessages : undefined
+    })));
+  }, ['label']);
+
+  var RSuite5Object = function RSuite5Object(props) {
+    return /*#__PURE__*/React$1.createElement(CommonObject, _extends({
+      LetsFormComponent: LetsForm$5
+    }, props));
+  };
+  lfLog('Loaded RSuite5.Object');
+
+  var index$2y = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RSuite5Object
+  });
+
   lfLog('Loaded RSuite5.TwoColumns');
 
-  var index$2s = /*#__PURE__*/Object.freeze({
+  var index$2x = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded RSuite5.ThreeColumns');
 
-  var index$2r = /*#__PURE__*/Object.freeze({
+  var index$2w = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded RSuite5.Columns');
 
-  var index$2q = /*#__PURE__*/Object.freeze({
+  var index$2v = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Columns
   });
@@ -24910,7 +25172,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.InputNumber');
 
-  var index$2p = /*#__PURE__*/Object.freeze({
+  var index$2u = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumberRSuite5
   });
@@ -24995,7 +25257,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.SelectDate');
 
-  var index$2o = /*#__PURE__*/Object.freeze({
+  var index$2t = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDate$1
   });
@@ -25050,7 +25312,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded RSuite5.Checkbox');
 
-  var index$2n = /*#__PURE__*/Object.freeze({
+  var index$2s = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxRSuite
   });
@@ -25101,7 +25363,7 @@
   });
   lfLog('Loaded RSuite.CheckboxGroup');
 
-  var index$2m = /*#__PURE__*/Object.freeze({
+  var index$2r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupRSuite$1
   });
@@ -25173,7 +25435,7 @@
   });
   lfLog('Loaded RSuite5.Slider');
 
-  var index$2l = /*#__PURE__*/Object.freeze({
+  var index$2q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderRsuite
   });
@@ -25229,7 +25491,7 @@
   });
   lfLog('Loaded RSuite.RadioGroup');
 
-  var index$2k = /*#__PURE__*/Object.freeze({
+  var index$2p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupRSuite
   });
@@ -25273,7 +25535,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputTag');
 
-  var index$2j = /*#__PURE__*/Object.freeze({
+  var index$2o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputTag
   });
@@ -25353,7 +25615,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.InputMask');
 
-  var index$2i = /*#__PURE__*/Object.freeze({
+  var index$2n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputMask
   });
@@ -25411,7 +25673,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Textarea');
 
-  var index$2h = /*#__PURE__*/Object.freeze({
+  var index$2m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea$3
   });
@@ -25464,7 +25726,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.Rate');
 
-  var index$2g = /*#__PURE__*/Object.freeze({
+  var index$2l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RateRSuite
   });
@@ -25487,7 +25749,7 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded RSuite5.Placeholder');
 
-  var index$2f = /*#__PURE__*/Object.freeze({
+  var index$2k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderRSuite5
   });
@@ -25554,7 +25816,7 @@
   });
   lfLog('Loaded RSuite5.Multiselect');
 
-  var index$2e = /*#__PURE__*/Object.freeze({
+  var index$2j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect$2
   });
@@ -25778,14 +26040,14 @@
   };
   lfLog('Loaded RSuite.InputTextI18N');
 
-  var index$2d = /*#__PURE__*/Object.freeze({
+  var index$2i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputTextI18N
   });
 
   lfLog('Loaded RSuite5.PlaceholderImage');
 
-  var index$2c = /*#__PURE__*/Object.freeze({
+  var index$2h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
@@ -25833,14 +26095,14 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded RSuite5.Button');
 
-  var index$2b = /*#__PURE__*/Object.freeze({
+  var index$2g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton$5
   });
 
   lfLog('Loaded RSuite5.ReactView');
 
-  var index$2a = /*#__PURE__*/Object.freeze({
+  var index$2f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
@@ -25875,7 +26137,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.DateTime');
 
-  var index$29 = /*#__PURE__*/Object.freeze({
+  var index$2e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDatetime
   });
@@ -25924,7 +26186,7 @@
   });
   lfLog('Loaded RSuite.Tabs');
 
-  var index$28 = /*#__PURE__*/Object.freeze({
+  var index$2d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Tabs
   });
@@ -25999,7 +26261,7 @@
   });
   lfLog('Loaded RSuite.RadioTile');
 
-  var index$27 = /*#__PURE__*/Object.freeze({
+  var index$2c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioTileRSuite
   });
@@ -26114,7 +26376,7 @@
   }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
   lfLog('Loaded RSuite.Upload');
 
-  var index$26 = /*#__PURE__*/Object.freeze({
+  var index$2b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload$4
   });
@@ -26159,7 +26421,7 @@
   });
   lfLog('Loaded RSuite5.ButtonsToggleGroup');
 
-  var index$25 = /*#__PURE__*/Object.freeze({
+  var index$2a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RSuiteButtonsToggleGroup
   });
@@ -26273,7 +26535,7 @@
   });
   lfLog('Loaded Rsuite5.Steps');
 
-  var index$24 = /*#__PURE__*/Object.freeze({
+  var index$29 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Rsuite5Steps
   });
@@ -26410,7 +26672,7 @@
     }, passRest(rest)));
   };
 
-  var index$23 = /*#__PURE__*/Object.freeze({
+  var index$28 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RSuite5ModuleComponent
   });
@@ -26463,7 +26725,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite5.SelectTime');
 
-  var index$22 = /*#__PURE__*/Object.freeze({
+  var index$27 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectTime
   });
@@ -26478,7 +26740,7 @@
   };
   lfLog('Loaded RSuite5.Hidden');
 
-  var index$21 = /*#__PURE__*/Object.freeze({
+  var index$26 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Hidden
   });
@@ -26700,7 +26962,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded RSuite.Currency');
 
-  var index$20 = /*#__PURE__*/Object.freeze({
+  var index$25 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Currency$5
   });
@@ -26768,7 +27030,7 @@
   };
   lfLog('Loaded RSuite5.Form');
 
-  var index$1$ = /*#__PURE__*/Object.freeze({
+  var index$24 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormRsuite5
   });
@@ -26868,7 +27130,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.InputText');
 
-  var index$1_ = /*#__PURE__*/Object.freeze({
+  var index$23 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput$3
   });
@@ -26984,7 +27246,7 @@
   });
   lfLog('Loaded MUI.Select');
 
-  var index$1Z = /*#__PURE__*/Object.freeze({
+  var index$22 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiSelect
   });
@@ -27027,7 +27289,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Toggle');
 
-  var index$1Y = /*#__PURE__*/Object.freeze({
+  var index$21 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle$2
   });
@@ -27073,7 +27335,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Checkbox');
 
-  var index$1X = /*#__PURE__*/Object.freeze({
+  var index$20 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxMUI
   });
@@ -27143,7 +27405,7 @@
   });
   lfLog('Loaded MUI.Slider');
 
-  var index$1W = /*#__PURE__*/Object.freeze({
+  var index$1$ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderMui
   });
@@ -27163,7 +27425,7 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded MUI.Placeholder');
 
-  var index$1V = /*#__PURE__*/Object.freeze({
+  var index$1_ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderMUI
   });
@@ -27224,7 +27486,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Rate');
 
-  var index$1U = /*#__PURE__*/Object.freeze({
+  var index$1Z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Rate
   });
@@ -27684,49 +27946,61 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.Date');
 
-  var index$1T = /*#__PURE__*/Object.freeze({
+  var index$1Y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiDate
   });
 
   lfLog('Loaded MUI.ThreeColumns');
 
-  var index$1S = /*#__PURE__*/Object.freeze({
+  var index$1X = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded MUI.TwoColumns');
 
-  var index$1R = /*#__PURE__*/Object.freeze({
+  var index$1W = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded MUI.Columns');
 
-  var index$1Q = /*#__PURE__*/Object.freeze({
+  var index$1V = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Columns
   });
 
   lfLog('Loaded MUI.Group');
 
-  var index$1P = /*#__PURE__*/Object.freeze({
+  var index$1U = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
+  var ReactMUIObject = function ReactMUIObject(props) {
+    return /*#__PURE__*/React$1.createElement(CommonObject, _extends({
+      LetsFormComponent: LetsForm$4
+    }, props));
+  };
+  lfLog('Loaded MUI.Object');
+
+  var index$1T = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ReactMUIObject
+  });
+
   lfLog('Loaded MUI.PlaceholderImage');
 
-  var index$1O = /*#__PURE__*/Object.freeze({
+  var index$1S = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
   lfLog('Loaded MUI.ReactView');
 
-  var index$1N = /*#__PURE__*/Object.freeze({
+  var index$1R = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
@@ -27767,7 +28041,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.DateTime');
 
-  var index$1M = /*#__PURE__*/Object.freeze({
+  var index$1Q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MuiDateTime
   });
@@ -27799,7 +28073,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Array');
 
-  var index$1L = /*#__PURE__*/Object.freeze({
+  var index$1P = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayMui
   });
@@ -27822,7 +28096,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.Textarea');
 
-  var index$1K = /*#__PURE__*/Object.freeze({
+  var index$1O = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea$2
   });
@@ -27858,7 +28132,7 @@
   });
   lfLog('Loaded MUI.Multiselect');
 
-  var index$1J = /*#__PURE__*/Object.freeze({
+  var index$1N = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect$1
   });
@@ -27898,7 +28172,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.InputNumber');
 
-  var index$1I = /*#__PURE__*/Object.freeze({
+  var index$1M = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumber$2
   });
@@ -27966,7 +28240,7 @@
   });
   lfLog('Loaded MUI.RadioGroup');
 
-  var index$1H = /*#__PURE__*/Object.freeze({
+  var index$1L = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupMUI
   });
@@ -28046,7 +28320,7 @@
   });
   lfLog('Loaded MUI.CheckboxGroup');
 
-  var index$1G = /*#__PURE__*/Object.freeze({
+  var index$1K = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroup$1
   });
@@ -28106,7 +28380,7 @@
   });
   lfLog('Loaded MUI.Tabs');
 
-  var index$1F = /*#__PURE__*/Object.freeze({
+  var index$1J = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsMui
   });
@@ -28164,7 +28438,7 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded MUI.Button');
 
-  var index$1E = /*#__PURE__*/Object.freeze({
+  var index$1I = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton$4
   });
@@ -28377,7 +28651,7 @@
   lfLog('Loaded MUI.Upload');
   var Upload$3 = Upload$2;
 
-  var index$1D = /*#__PURE__*/Object.freeze({
+  var index$1H = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload$3
   });
@@ -28491,7 +28765,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded MUI.Time');
 
-  var index$1C = /*#__PURE__*/Object.freeze({
+  var index$1G = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Time$3
   });
@@ -28550,7 +28824,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded MUI.Currency');
 
-  var index$1B = /*#__PURE__*/Object.freeze({
+  var index$1F = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Currency$4
   });
@@ -28608,7 +28882,7 @@
   };
   lfLog('Loaded MUI.Form');
 
-  var index$1A = /*#__PURE__*/Object.freeze({
+  var index$1E = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormMaterialUI
   });
@@ -28684,7 +28958,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.InputText');
 
-  var index$1z = /*#__PURE__*/Object.freeze({
+  var index$1D = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput$2
   });
@@ -28727,7 +29001,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.InputNumber');
 
-  var index$1y = /*#__PURE__*/Object.freeze({
+  var index$1C = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumber$1
   });
@@ -28783,7 +29057,7 @@
   }, ['hint', 'label']);
   lfLog('Loaded React.Checkbox');
 
-  var index$1x = /*#__PURE__*/Object.freeze({
+  var index$1B = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Checkbox$1
   });
@@ -28831,42 +29105,54 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.Textarea');
 
-  var index$1w = /*#__PURE__*/Object.freeze({
+  var index$1A = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea$1
   });
 
   lfLog('Loaded React.ThreeColumns');
 
-  var index$1v = /*#__PURE__*/Object.freeze({
+  var index$1z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded RSuite5.Columns');
 
-  var index$1u = /*#__PURE__*/Object.freeze({
+  var index$1y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Columns
   });
 
   lfLog('Loaded React.TwoColumns');
 
-  var index$1t = /*#__PURE__*/Object.freeze({
+  var index$1x = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded React.Group');
 
-  var index$1s = /*#__PURE__*/Object.freeze({
+  var index$1w = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
+  var ReactObject = function ReactObject(props) {
+    return /*#__PURE__*/React$1.createElement(CommonObject, _extends({
+      LetsFormComponent: LetsForm$3
+    }, props));
+  };
+  lfLog('Loaded React.Object');
+
+  var index$1v = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ReactObject
+  });
+
   lfLog('Loaded React.ReactView');
 
-  var index$1r = /*#__PURE__*/Object.freeze({
+  var index$1u = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
@@ -28887,7 +29173,7 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded React.Placeholder');
 
-  var index$1q = /*#__PURE__*/Object.freeze({
+  var index$1t = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderReact
   });
@@ -28952,7 +29238,7 @@
   });
   lfLog('Loaded React.Select');
 
-  var index$1p = /*#__PURE__*/Object.freeze({
+  var index$1s = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select$1
   });
@@ -28979,7 +29265,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.Date');
 
-  var index$1o = /*#__PURE__*/Object.freeze({
+  var index$1r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateInput
   });
@@ -29009,7 +29295,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.DateTime');
 
-  var index$1n = /*#__PURE__*/Object.freeze({
+  var index$1q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateTime$1
   });
@@ -29038,7 +29324,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded React.Time');
 
-  var index$1m = /*#__PURE__*/Object.freeze({
+  var index$1p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Time$2
   });
@@ -29069,14 +29355,14 @@
   }, ['label', 'hint']);
   lfLog('Loaded React.Array');
 
-  var index$1l = /*#__PURE__*/Object.freeze({
+  var index$1o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayReact
   });
 
   lfLog('Loaded React.PlaceholderImage');
 
-  var index$1k = /*#__PURE__*/Object.freeze({
+  var index$1n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
@@ -29129,7 +29415,7 @@
   lfLog('Loaded React.Button');
   var Button = BiStateButton$3;
 
-  var index$1j = /*#__PURE__*/Object.freeze({
+  var index$1m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Button
   });
@@ -29276,7 +29562,7 @@
   lfLog('Loaded React.Upload');
   var Upload$1 = Upload;
 
-  var index$1i = /*#__PURE__*/Object.freeze({
+  var index$1l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Upload$1
   });
@@ -29311,7 +29597,7 @@
     }, error));
   };
 
-  var index$1h = /*#__PURE__*/Object.freeze({
+  var index$1k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Currency$3
   });
@@ -29366,7 +29652,7 @@
   };
   lfLog('Loaded React.Form');
 
-  var index$1g = /*#__PURE__*/Object.freeze({
+  var index$1j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormReact
   });
@@ -29459,7 +29745,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Input');
 
-  var index$1f = /*#__PURE__*/Object.freeze({
+  var index$1i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput$1
   });
@@ -29520,7 +29806,7 @@
   });
   lfLog('Loaded ReactBootrap.Select');
 
-  var index$1e = /*#__PURE__*/Object.freeze({
+  var index$1h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Select
   });
@@ -29562,7 +29848,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Checkbox');
 
-  var index$1d = /*#__PURE__*/Object.freeze({
+  var index$1g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Checkbox
   });
@@ -29604,7 +29890,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Toggle');
 
-  var index$1c = /*#__PURE__*/Object.freeze({
+  var index$1f = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle$1
   });
@@ -29676,7 +29962,7 @@
   });
   lfLog('Loaded ReactBootrap.CheckboxGroup');
 
-  var index$1b = /*#__PURE__*/Object.freeze({
+  var index$1e = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupBootstrap
   });
@@ -29693,14 +29979,14 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded ReactBootrap.Placeholder');
 
-  var index$1a = /*#__PURE__*/Object.freeze({
+  var index$1d = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderBootstrap
   });
 
   lfLog('Loaded ReactBootrap.PlaceholderImage');
 
-  var index$19 = /*#__PURE__*/Object.freeze({
+  var index$1c = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
@@ -29730,7 +30016,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Date');
 
-  var index$18 = /*#__PURE__*/Object.freeze({
+  var index$1b = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Date$1
   });
@@ -29781,7 +30067,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Textarea');
 
-  var index$17 = /*#__PURE__*/Object.freeze({
+  var index$1a = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Textarea
   });
@@ -29830,37 +30116,49 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Slider');
 
-  var index$16 = /*#__PURE__*/Object.freeze({
+  var index$19 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Slider
   });
 
   lfLog('Loaded ReactBootrap.ThreeColumn');
 
-  var index$15 = /*#__PURE__*/Object.freeze({
+  var index$18 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded RSuite5.Columns');
 
-  var index$14 = /*#__PURE__*/Object.freeze({
+  var index$17 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Columns
   });
 
   lfLog('Loaded ReactBootrap.TwoColumns');
 
-  var index$13 = /*#__PURE__*/Object.freeze({
+  var index$16 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded ReactBootrap.Group');
 
-  var index$12 = /*#__PURE__*/Object.freeze({
+  var index$15 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
+  });
+
+  var ReactBoostrapObject = function ReactBoostrapObject(props) {
+    return /*#__PURE__*/React$1.createElement(CommonObject, _extends({
+      LetsFormComponent: LetsForm$2
+    }, props));
+  };
+  lfLog('Loaded ReactBootstrap.Object');
+
+  var index$14 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ReactBoostrapObject
   });
 
   var _excluded$N = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options", "className"];
@@ -29931,14 +30229,14 @@
   });
   lfLog('Loaded ReactBootrap.RadioGroup');
 
-  var index$11 = /*#__PURE__*/Object.freeze({
+  var index$13 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroupBootstrap
   });
 
   lfLog('Loaded ReactBootrap.ReactView');
 
-  var index$10 = /*#__PURE__*/Object.freeze({
+  var index$12 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
@@ -29971,7 +30269,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.DateTime');
 
-  var index$$ = /*#__PURE__*/Object.freeze({
+  var index$11 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: DateTime
   });
@@ -29994,7 +30292,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded ReactBootrap.Array');
 
-  var index$_ = /*#__PURE__*/Object.freeze({
+  var index$10 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayBootstrap
   });
@@ -30034,7 +30332,7 @@
     }, rest));
   }, ['label', 'hint', 'placeholder']);
 
-  var index$Z = /*#__PURE__*/Object.freeze({
+  var index$$ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumber
   });
@@ -30084,7 +30382,7 @@
   });
   lfLog('Loaded ReactBootrap.Tabs');
 
-  var index$Y = /*#__PURE__*/Object.freeze({
+  var index$_ = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsReactBootstrap
   });
@@ -30127,7 +30425,7 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded ReactBootrap.Button');
 
-  var index$X = /*#__PURE__*/Object.freeze({
+  var index$Z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton$2
   });
@@ -30181,7 +30479,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded ReactBootrap.Currency');
 
-  var index$W = /*#__PURE__*/Object.freeze({
+  var index$Y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Currency$2
   });
@@ -30230,7 +30528,7 @@
   };
   lfLog('Loaded ReactBootrap.Form');
 
-  var index$V = /*#__PURE__*/Object.freeze({
+  var index$X = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormBootstrap
   });
@@ -30294,7 +30592,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputText');
 
-  var index$U = /*#__PURE__*/Object.freeze({
+  var index$W = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextInput
   });
@@ -30352,7 +30650,7 @@
   }, ['label', 'hint', 'checkedChildren', 'unCheckedChildren']);
   lfLog('Loaded AntD.Toggle');
 
-  var index$T = /*#__PURE__*/Object.freeze({
+  var index$V = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Toggle
   });
@@ -30405,7 +30703,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Checkbox');
 
-  var index$S = /*#__PURE__*/Object.freeze({
+  var index$U = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxAntd
   });
@@ -30482,7 +30780,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Date');
 
-  var index$R = /*#__PURE__*/Object.freeze({
+  var index$T = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdDate
   });
@@ -30552,7 +30850,7 @@
   });
   lfLog('Loaded AntD.Select');
 
-  var index$Q = /*#__PURE__*/Object.freeze({
+  var index$S = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectAntd
   });
@@ -30636,7 +30934,7 @@
   });
   lfLog('Loaded AntD.RadioGroup');
 
-  var index$P = /*#__PURE__*/Object.freeze({
+  var index$R = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroup$1
   });
@@ -30703,7 +31001,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded AntD.Rate');
 
-  var index$O = /*#__PURE__*/Object.freeze({
+  var index$Q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RateAntd
   });
@@ -30726,14 +31024,14 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded AntD.Placeholder');
 
-  var index$N = /*#__PURE__*/Object.freeze({
+  var index$P = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderAntd
   });
 
   lfLog('Loaded AntD.PlaceholderImage');
 
-  var index$M = /*#__PURE__*/Object.freeze({
+  var index$O = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
@@ -30782,7 +31080,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.InputNumber');
 
-  var index$L = /*#__PURE__*/Object.freeze({
+  var index$N = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputNumberAntd
   });
@@ -30825,7 +31123,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Textarea');
 
-  var index$K = /*#__PURE__*/Object.freeze({
+  var index$M = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TextareaAntd
   });
@@ -30839,7 +31137,7 @@
   });
   lfLog('Loaded AntD.Multiselect');
 
-  var index$J = /*#__PURE__*/Object.freeze({
+  var index$L = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Multiselect
   });
@@ -30849,14 +31147,14 @@
 
   lfLog('Loaded AntD.ThreeColumns');
 
-  var index$I = /*#__PURE__*/Object.freeze({
+  var index$K = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded RSuite5.Columns');
 
-  var index$H = /*#__PURE__*/Object.freeze({
+  var index$J = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Columns
   });
@@ -30866,7 +31164,7 @@
 
   lfLog('Loaded AntD.TwoColumns');
 
-  var index$G = /*#__PURE__*/Object.freeze({
+  var index$I = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
@@ -30876,9 +31174,21 @@
 
   lfLog('Loaded AntD.Group');
 
-  var index$F = /*#__PURE__*/Object.freeze({
+  var index$H = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
+  });
+
+  var ReactAntDObject = function ReactAntDObject(props) {
+    return /*#__PURE__*/React$1.createElement(CommonObject, _extends({
+      LetsFormComponent: LetsForm$1
+    }, props));
+  };
+  lfLog('Loaded AntD.Object');
+
+  var index$G = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ReactAntDObject
   });
 
   var _excluded$w = ["name", "label", "hint", "value", "size", "placeholder", "showCount", "tooltip", "disabled", "readOnly", "required", "keyboard", "dots", "min", "max", "step", "reverse", "tooltipOpen", "tooltipPlacement", "error", "onChange", "onBlur", "width", "marks", "included", "className"];
@@ -30953,14 +31263,14 @@
   });
   lfLog('Loaded AntD.Slider');
 
-  var index$E = /*#__PURE__*/Object.freeze({
+  var index$F = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderAnt
   });
 
   lfLog('Loaded AntD.ReactView');
 
-  var index$D = /*#__PURE__*/Object.freeze({
+  var index$E = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ReactView
   });
@@ -30997,7 +31307,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.DateTime');
 
-  var index$C = /*#__PURE__*/Object.freeze({
+  var index$D = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Datetime
   });
@@ -31033,7 +31343,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded AntD.ListArray');
 
-  var index$B = /*#__PURE__*/Object.freeze({
+  var index$C = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ListArrayAntd
   });
@@ -31079,7 +31389,7 @@
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded AntD.Button');
 
-  var index$A = /*#__PURE__*/Object.freeze({
+  var index$B = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BiStateButton$1
   });
@@ -31126,7 +31436,7 @@
   });
   lfLog('Loaded AntD.CheckboxGroup');
 
-  var index$z = /*#__PURE__*/Object.freeze({
+  var index$A = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroupRSuite
   });
@@ -31178,7 +31488,7 @@
   });
   lfLog('Loaded AntD.Tabs');
 
-  var index$y = /*#__PURE__*/Object.freeze({
+  var index$z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TabsAntd
   });
@@ -31323,7 +31633,7 @@
   }, ['label', 'hint', 'placeholder', 'uploadButtonLabel', 'draggableText']);
   lfLog('Loaded AnttD.Upload');
 
-  var index$x = /*#__PURE__*/Object.freeze({
+  var index$y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntDUpload
   });
@@ -31372,7 +31682,7 @@
   });
   lfLog('Loaded AntD.ButtonsToggleGroup');
 
-  var index$w = /*#__PURE__*/Object.freeze({
+  var index$x = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdButtonsToggleGroup
   });
@@ -31491,7 +31801,7 @@
   lfLog('Loaded AntD.Steps');
   var AntdSteps$1 = AntdSteps;
 
-  var index$v = /*#__PURE__*/Object.freeze({
+  var index$w = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AntdSteps$1
   });
@@ -31535,7 +31845,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded AntD.Time');
 
-  var index$u = /*#__PURE__*/Object.freeze({
+  var index$v = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Time$1
   });
@@ -31573,7 +31883,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded AntD.Currency');
 
-  var index$t = /*#__PURE__*/Object.freeze({
+  var index$u = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Currency$1
   });
@@ -31657,7 +31967,7 @@
     }, labelCancel), custom));
   };
 
-  var index$s = /*#__PURE__*/Object.freeze({
+  var index$t = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FormAntD
   });
@@ -31699,7 +32009,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.InputText');
 
-  var index$r = /*#__PURE__*/Object.freeze({
+  var index$s = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputText$1
   });
@@ -31733,7 +32043,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.InputNumber');
 
-  var index$q = /*#__PURE__*/Object.freeze({
+  var index$r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineNumberInput
   });
@@ -31774,7 +32084,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Textarea');
 
-  var index$p = /*#__PURE__*/Object.freeze({
+  var index$q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTextarea
   });
@@ -31820,7 +32130,7 @@
   });
   lfLog('Loaded Mantine.Select');
 
-  var index$o = /*#__PURE__*/Object.freeze({
+  var index$p = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineSelect
   });
@@ -31849,7 +32159,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Checkbox');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineCheckbox
   });
@@ -31878,7 +32188,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Toggle');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var index$n = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineToggle
   });
@@ -31901,7 +32211,7 @@
   }, ['label', 'hint']);
   lfLog('Loaded Mantine.ListArray');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$m = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineListArray
   });
@@ -31979,7 +32289,7 @@
   });
   lfLog('Loaded Mantine.CheckboxGroup');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$l = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroup
   });
@@ -32055,37 +32365,49 @@
   });
   lfLog('Loaded Mantine.RadioGroup');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$k = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroup
   });
 
   lfLog('Loaded Mantine.TwoColumns');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$j = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded RSuite5.ThreeColumns');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$i = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded RSuite5.Columns');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$h = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Columns
   });
 
   lfLog('Loaded RSuite5.Group');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$g = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
+  });
+
+  var ReactMantineObject = function ReactMantineObject(props) {
+    return /*#__PURE__*/React$1.createElement(CommonObject, _extends({
+      LetsFormComponent: LetsForm$2
+    }, props));
+  };
+  lfLog('Loaded Mantine.Object');
+
+  var index$f = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ReactMantineObject
   });
 
   var _excluded$c = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime", "className", "name", "component"];
@@ -32842,6 +33164,7 @@
   exports.LfColumns = LfColumns;
   exports.LfField = LfField;
   exports.LfGroup = LfGroup;
+  exports.LfObject = LfObject;
   exports.LfStep = LfStep;
   exports.LfSteps = LfSteps;
   exports.LfTab = LfTab;

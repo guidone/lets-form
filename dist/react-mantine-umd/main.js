@@ -1,9 +1,9 @@
-/* LetsForm react-mantine v0.12.16 - UMD */
+/* LetsForm react-mantine v0.12.17 - UMD */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('@mantine/dates')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', '@mantine/dates'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-mantine"] = {}, global.React$1, global.core, global.dates));
-})(this, (function (exports, React$1, core, dates) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('@mantine/core'), require('@mantine/dates'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'react', '@mantine/core', '@mantine/dates', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["lets-form/react-mantine"] = {}, global.React$1, global.core, global.dates, global.FloatingLabel, global.Form, global.InputGroup, global.reactBootstrap, global.Button));
+})(this, (function (exports, React$1, core, dates, FloatingLabel, Form, InputGroup, reactBootstrap, Button) { 'use strict';
 
   function _AsyncGenerator(gen) {
     var front, back;
@@ -6801,7 +6801,7 @@
       if (Array.isArray(newField)) {
         needsFlatten = true;
       }
-      if (field.component === 'group') {
+      if (field.component === 'group' || field.component === 'object') {
         var _newFields = mapFields(field.fields, predicate);
         if (_newFields !== field.fields) {
           newField = _objectSpread2(_objectSpread2({}, newField), {}, {
@@ -7382,7 +7382,8 @@
       'array': true,
       'two-columns': true,
       'three-columns': true,
-      'columns': true
+      'columns': true,
+      'object': true
     }, opts);
     if (_isEmpty(fields) || !_isArray(fields)) {
       return accumulator;
@@ -7394,6 +7395,8 @@
       }
       result = predicate(field, result);
       if (field.component === 'group' && options.group) {
+        result = reduceFields(field.fields, predicate, result, opts);
+      } else if (field.component === 'object' && options.object) {
         result = reduceFields(field.fields, predicate, result, opts);
       } else if (field.component === 'array' && options.array) {
         result = reduceFields(field.fields, predicate, result, opts);
@@ -7421,7 +7424,7 @@
     var found = fields.find(predicate);
     fields.forEach(function (field) {
       if (!found) {
-        if (field.component === 'group' || field.component === 'array') {
+        if (field.component === 'group' || field.component === 'array' || field.component === 'group') {
           found = findField(field.fields, predicate);
         } else if (field.component === 'two-columns') {
           found = findField(field.leftFields, predicate) || findField(field.rightFields, predicate);
@@ -7612,7 +7615,7 @@
         return null;
       }
       var newField = field;
-      if (field.component === 'group') {
+      if (field.component === 'group' || field.component === 'object') {
         var _newFields = filterFields(field.fields, predicate);
         if (_newFields !== field.fields) {
           newField = _objectSpread2(_objectSpread2({}, newField), {}, {
@@ -19281,8 +19284,8 @@
     }
   }
 
-  var css_248z$h = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
-  styleInject(css_248z$h);
+  var css_248z$l = ".lf-validation-errors {\n  border: 1px solid #eebdd2;\n  background-color: #ffddd2;\n  padding: 15px;\n  color: #000000;\n}\n.lf-validation-errors.bottom {\n  margin-top: 15px;\n}\n.lf-validation-errors.top {\n  margin-bottom: 15px;\n}";
+  styleInject(css_248z$l);
 
   var RawValidationErrors = function RawValidationErrors(_ref) {
     var _ref$errors = _ref.errors,
@@ -19304,12 +19307,19 @@
             });
           }
         });
-      } else if (errorObj && _isString(errorObj.errorMessage)) {
+      } else if (errorObj && _isObject(errorObj.errorMessages)) {
         var label = i18n(errorObj.label, locale);
+        return /*#__PURE__*/React$1.createElement(RawValidationErrors, {
+          key: label || fieldName,
+          errors: errorObj.errorMessages,
+          scope: "".concat(label || fieldName, " - ")
+        });
+      } else if (errorObj && _isString(errorObj.errorMessage)) {
+        var _label = i18n(errorObj.label, locale);
         var errorMessage = errorObj.errorMessage ? i18n(errorObj.errorMessage, locale) : 'This is required';
         return /*#__PURE__*/React$1.createElement("div", {
           key: fieldName
-        }, /*#__PURE__*/React$1.createElement("b", null, scope, label, ":"), "\xA0", errorMessage);
+        }, /*#__PURE__*/React$1.createElement("b", null, scope, _label, ":"), "\xA0", errorMessage);
       }
     }));
   };
@@ -19412,6 +19422,31 @@
     }));
   };
 
+  var Asterisk = function Asterisk(_ref) {
+    var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 24 : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 24 : _ref$height,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? '#000000' : _ref$color,
+      style = _ref.style;
+    return /*#__PURE__*/React$1.createElement("svg", {
+      width: "".concat(width, "px"),
+      height: "".concat(height, "px"),
+      style: style,
+      version: "1.1",
+      id: "_x32_",
+      className: "lf-icon-asterisk",
+      viewBox: "0 0 512 512"
+    }, /*#__PURE__*/React$1.createElement("g", null, /*#__PURE__*/React$1.createElement("polygon", {
+      style: {
+        fill: color
+      },
+      className: "st0",
+      points: "501.539,169.221 453.886,86.7 303.669,173.449 303.669,0 208.365,0 208.365,173.479 58.114,86.73\r 10.461,169.261 160.674,255.99 10.501,342.71 58.154,425.231 208.365,338.482 208.365,512 303.669,512 303.669,338.542\r 453.846,425.271 501.499,342.74 351.267,255.99 \t"
+    })));
+  };
+
   var Warning = function Warning(_ref) {
     var _ref$width = _ref.width,
       width = _ref$width === void 0 ? 24 : _ref$width,
@@ -19429,6 +19464,17 @@
       d: "M960 0c530.193 0 960 429.807 960 960s-429.807 960-960 960S0 1490.193 0 960 429.807 0 960 0Zm-9.838 1342.685c-84.47 0-153.19 68.721-153.19 153.19 0 84.47 68.72 153.192 153.19 153.192s153.19-68.721 153.19-153.191-68.72-153.19-153.19-153.19ZM1153.658 320H746.667l99.118 898.623h208.755L1153.658 320Z",
       fillRule: "evenodd"
     }));
+  };
+
+  var RequiredIcon = function RequiredIcon() {
+    return /*#__PURE__*/React$1.createElement(Asterisk, {
+      color: "#ff6633",
+      width: 12,
+      height: 12,
+      style: {
+        marginLeft: '3px'
+      }
+    });
   };
 
   var I18N = function I18N(Component) {
@@ -20174,8 +20220,8 @@
     };
   };
 
-  var css_248z$g = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
-  styleInject(css_248z$g);
+  var css_248z$k = ".lf-control-placeholder ol, .lf-control-placeholder ul {\n  padding-left: 1rem;\n}\n\n.lf-form .lf-control-placeholder:not(:first-child) {\n  margin-top: var(--lf-field-margin-top);\n}";
+  styleInject(css_248z$k);
 
   var Placeholder = function Placeholder(_ref) {
     var text = _ref.text,
@@ -20192,8 +20238,8 @@
     }
   };
 
-  var css_248z$f = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
-  styleInject(css_248z$f);
+  var css_248z$j = ".lf-control-three-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n  /*.left, .right, .center {\n    .rs-form-control-wrapper {\n      > .rs-input, > .rs-input-number {\n        //width: auto;\n      }\n    }\n  }*/\n}\n.lf-control-three-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-three-columns .center {\n  margin-right: var(--lf-field-column-margin);\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-three-columns .left:empty {\n  display: none;\n}\n.lf-control-three-columns.layout-0-1-0 .left {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-0-1-0 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-0-1-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-0-0 .center {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-0-0 .right {\n  flex: 0 0;\n}\n.lf-control-three-columns.layout-1-1-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-2-1 .center {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-1-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .left {\n  flex: 2 0;\n}\n.lf-control-three-columns.layout-2-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-2-1-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .left {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-1-3-1 .center {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-1-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .left {\n  flex: 3 0;\n}\n.lf-control-three-columns.layout-3-1-1 .center {\n  flex: 1 0;\n}\n.lf-control-three-columns.layout-3-1-1 .right {\n  flex: 1 0;\n}";
+  styleInject(css_248z$j);
 
   var ThreeColumns = function ThreeColumns(_ref) {
     var name = _ref.name,
@@ -20223,8 +20269,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$e = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
-  styleInject(css_248z$e);
+  var css_248z$i = ".lf-control-two-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  min-height: 20px;\n}\n.lf-control-two-columns .left {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-two-columns .right {\n  flex: 1 0;\n  align-self: auto;\n}\n.lf-control-two-columns.layout-1-2 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-1-3 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-1-4 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-4 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-1-5 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-5 .right {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-2-1 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-1 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-4-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-4-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-5-1 .left {\n  flex: 4 0;\n}\n.lf-control-two-columns.layout-5-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-3-2 .left {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-3-2 .right {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .left {\n  flex: 2 0;\n}\n.lf-control-two-columns.layout-2-3 .right {\n  flex: 3 0;\n}\n.lf-control-two-columns.layout-0-1 .left {\n  flex: 0 0 auto;\n}\n.lf-control-two-columns.layout-0-1 .right {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .left {\n  flex: 1 0;\n}\n.lf-control-two-columns.layout-1-0 .right {\n  flex: 0 0 auto;\n}\n\n.lf-form-react-rsuite5 .lf-two-columns {\n  margin-bottom: var(--lf-field-margin);\n}";
+  styleInject(css_248z$i);
 
   var TwoColumns = function TwoColumns(_ref) {
     var name = _ref.name,
@@ -20248,8 +20294,8 @@
     }, _isFunction(children) && children('right')));
   };
 
-  var css_248z$d = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
-  styleInject(css_248z$d);
+  var css_248z$h = ".lf-form .lf-control-group:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-group .header svg {\n  display: inline-block;\n}\n.lf-control-group.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-boxed .lf-group-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-topBottom .lf-group-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-group.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-group.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-group .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-group .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-group .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-group .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject(css_248z$h);
 
   var Group = I18N(function (_ref) {
     var name = _ref.name,
@@ -20300,8 +20346,8 @@
     }, children));
   }, ['label']);
 
-  var css_248z$c = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
-  styleInject(css_248z$c);
+  var css_248z$g = ".lf-control-placeholder-image {\n  min-height: 20px;\n}";
+  styleInject(css_248z$g);
 
   var PlaceholderImage = function PlaceholderImage(_ref) {
     var url = _ref.url,
@@ -20342,8 +20388,8 @@
     }
   };
 
-  var css_248z$b = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
-  styleInject(css_248z$b);
+  var css_248z$f = ".lf-control-divider {\n  min-height: 15px;\n  font-size: 1px;\n  display: flex;\n}\n.lf-control-divider .bar {\n  width: 100%;\n  margin-top: 5px;\n  margin-bottom: 5px;\n}";
+  styleInject(css_248z$f);
 
   var Divider = function Divider(_ref) {
     var name = _ref.name,
@@ -20360,10 +20406,22 @@
   };
   lfLog('Loaded Common.Divider');
 
-  var index$t = /*#__PURE__*/Object.freeze({
+  var index$S = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Divider
   });
+
+  var _excluded$I = ["name", "view", "className"];
+  var ReactView = function ReactView(_ref) {
+    var name = _ref.name,
+      view = _ref.view,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$I);
+    var View = view;
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('react-view', name, className), View && /*#__PURE__*/React$1.createElement(View, _extends({
+      name: name
+    }, rest)));
+  };
 
   var isEmptyItem = function isEmptyItem(obj) {
     return Object.keys(obj).filter(function (key) {
@@ -20632,10 +20690,10 @@
     })));
   };
 
-  var css_248z$a = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
-  styleInject(css_248z$a);
+  var css_248z$e = ".lf-control-common-array {\n  margin-top: 0px !important;\n}\n.lf-control-common-array.lf-center .lf-control-common-array-item .buttons {\n  align-self: center;\n}\n.lf-control-common-array.lf-top .lf-control-common-array-item .buttons {\n  align-self: flex-start;\n}\n.lf-control-common-array.lf-bottom .lf-control-common-array-item .buttons {\n  align-self: flex-end;\n}\n.lf-control-common-array .lf-control-common-array-item {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n  position: relative;\n  border-left: 5px solid #dddddd;\n  padding-left: 10px;\n  padding-top: 5px;\n  padding-bottom: 5px;\n  margin-top: 5px !important;\n  /*.rs-form-group {\n    margin-bottom: 5px !important;\n  }*/\n}\n.lf-control-common-array .lf-control-common-array-item > .inner-form {\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n  --lf-field-margin: 4px;\n  --lf-field-column-margin: 10px;\n}\n.lf-control-common-array .lf-control-common-array-item > .buttons {\n  flex: 0 0 auto;\n  align-self: center;\n  margin-left: 6px;\n}\n\n.lf-icon-button {\n  display: inline-block;\n  min-height: 16px;\n  min-width: 16px;\n  padding: 4px;\n  border-radius: 3px;\n}\n.lf-icon-button.disabled {\n  opacity: 0.6;\n}\n.lf-icon-button:not(.disabled):hover {\n  background-color: #eeeeee;\n}";
+  styleInject(css_248z$e);
 
-  var NOOP$1 = function NOOP() {};
+  var NOOP$2 = function NOOP() {};
   var randomId = function randomId() {
     var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 12;
     return Math.random().toString(36).substring(2, length + 2);
@@ -20648,63 +20706,80 @@
    */
   var isEmptyObject = function isEmptyObject(obj) {
     return _isEmpty(obj) || Object.keys(obj).every(function (key) {
-      return _isEmpty(obj[key]);
+      return obj[key] === null || obj[key] === undefined;
     });
   };
 
   /**
-   * flatArrayOfString
+   * flatArrayOfValues
    * If an array of object can be flattned (one keuy), then return a flat array, otherwise raise expection
    * @param {*} a
    * @returns
    */
-  var flatArrayOfString = function flatArrayOfString(a) {
+  var flatArrayOfValues = function flatArrayOfValues(a) {
     var canBeFlat = a.every(function (obj) {
       return Object.keys(obj).length === 1;
     });
     if (!canBeFlat) {
       throw new Error("Cannot be flattened");
     }
+    if (_isArray(a) && _isEmpty(a)) {
+      return [];
+    }
+    var firstKey = Object.keys(a[0])[0];
     return a.map(function (obj) {
-      return obj[Object.keys(obj)[0]];
+      return obj[firstKey];
     });
   };
   var formatArray = function formatArray(a) {
     var arrayType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'arrayOfObject';
+    // remove array ids and empty objects
     var cleaned = a.map(function (i) {
       return _omit(i, 'id');
     }).filter(function (i) {
       return !isEmptyObject(i);
     });
     try {
-      var flattened = flatArrayOfString(cleaned);
-      if (arrayType === 'arrayOfString') {
+      if (arrayType === 'arrayOfString' || arrayType === 'arrayOfValues') {
+        var flattened = flatArrayOfValues(cleaned);
         return flattened;
       } else if (arrayType === 'commaSeparated') {
-        return flattened.join(',');
+        var _flattened = flatArrayOfValues(cleaned);
+        return _flattened.join(',');
       }
     } catch (e) {
       // do nothing, return as is
     }
     return cleaned;
   };
+
+  /**
+   * isArrayOfValues
+   * Is an array of elements (string, boolean, number but NOT object)
+   * @param {Array} s
+   * @returns
+   */
+  var isArrayOfValues = function isArrayOfValues(s) {
+    return _isArray(s) && s.every(function (v) {
+      return !_isObject(s);
+    });
+  };
   var makeDefaultValue = function makeDefaultValue(defaultValue, arrayType, form) {
-    if (arrayType === 'arrayOfString') {
-      var isArrayOfString = _isArray(defaultValue) && defaultValue.every(function (s) {
-        return _isString(s);
-      });
+    var formattedDefaultValue;
+    if (arrayType === 'arrayOfString' || arrayType === 'arrayOfValues') {
       var names = collectNames(form);
-      // if it's an array of string
-      if (isArrayOfString && names.length === 1) {
-        return defaultValue.map(function (s) {
+      // if it's an array of values, forms has just one element and not empty array
+      if (isArrayOfValues(defaultValue) && names.length === 1 && _isArray(defaultValue) && defaultValue.length > 0) {
+        formattedDefaultValue = defaultValue.map(function (s) {
           return _defineProperty$1({
             id: randomId()
           }, names[0], s);
         });
+      } else {
+        formattedDefaultValue = [{
+          id: randomId()
+        }];
       }
-      return [{
-        id: randomId()
-      }];
     } else if (arrayType === 'commaSeparated') {
       var _names = collectNames(form);
       if (_names.length === 1 && _isString(defaultValue) && !_isEmpty(defaultValue)) {
@@ -20722,6 +20797,7 @@
         id: randomId()
       }];
     }
+    return formattedDefaultValue;
   };
   var ListArray = function ListArray(_ref3) {
     var LetsFormComponent = _ref3.LetsFormComponent,
@@ -20729,7 +20805,7 @@
       name = _ref3.name,
       className = _ref3.className,
       _ref3$onChange = _ref3.onChange,
-      onChange = _ref3$onChange === void 0 ? NOOP$1 : _ref3$onChange,
+      onChange = _ref3$onChange === void 0 ? NOOP$2 : _ref3$onChange,
       _ref3$disabled = _ref3.disabled,
       disabled = _ref3$disabled === void 0 ? false : _ref3$disabled,
       _ref3$readOnly = _ref3.readOnly,
@@ -20769,7 +20845,6 @@
       setItems = _useState2[1];
     var style = {};
     if (maxHeight) {
-      //style.maxHeigth = _.isNumber(maxHeigth) ? `${maxHeigth}px` : maxHeigth;
       style = {
         maxHeight: "".concat(maxHeight, "px"),
         overflowY: 'scroll'
@@ -20840,10 +20915,10 @@
     }));
   };
 
-  var css_248z$9 = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
-  styleInject(css_248z$9);
+  var css_248z$d = ".lf-common-icon img {\n  max-width: 32px;\n  max-height: 32px;\n}\n.lf-common-icon.small img {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-common-icon.large img {\n  max-width: 40px;\n  max-height: 40px;\n}";
+  styleInject(css_248z$d);
 
-  var _excluded$q = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
+  var _excluded$H = ["ButtonComponent", "OnStateProps", "OffStateProps", "LinkProps", "name", "labelOn", "labelOff", "labelLink", "iconOn", "iconOff", "iconLink", "size", "href", "appearance", "fullWidth", "width", "onChange", "onBlur", "value", "buttonType", "hint", "initialValue", "className"];
   var GenericButton = function GenericButton(_ref) {
     var ButtonComponent = _ref.ButtonComponent,
       OnStateProps = _ref.OnStateProps,
@@ -20869,7 +20944,7 @@
       hint = _ref.hint,
       initialValue = _ref.initialValue,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$q);
+      rest = _objectWithoutProperties(_ref, _excluded$H);
     var _useState = React$1.useState(value || initialValue),
       _useState2 = _slicedToArray(_useState, 2),
       checked = _useState2[0],
@@ -20916,11 +20991,11 @@
     };
   };
 
-  var css_248z$8 = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
-  styleInject(css_248z$8);
+  var css_248z$c = ".lf-control-button-toggle-group .lf-control-button {\n  display: inline-block;\n  margin-top: 0px !important;\n}\n.lf-control-button-toggle-group .lf-control-button:not(:first-child) {\n  margin-left: var(--lf-field-button-margin);\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width {\n  flex: 1 0;\n}\n.lf-control-button-toggle-group .lf-control-button.lf-full-width > * {\n  width: 100% !important;\n}";
+  styleInject(css_248z$c);
 
-  var css_248z$7 = ".lf-control-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n}\n.lf-control-columns .lf-column {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-columns .lf-column:last-child {\n  margin-right: 0px;\n}";
-  styleInject(css_248z$7);
+  var css_248z$b = ".lf-control-columns {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: stretch;\n}\n.lf-control-columns .lf-column {\n  flex: 1 0;\n  align-self: auto;\n  margin-right: var(--lf-field-column-margin);\n}\n.lf-control-columns .lf-column:last-child {\n  margin-right: 0px;\n}";
+  styleInject(css_248z$b);
 
   var Columns = function Columns(_ref) {
     var name = _ref.name,
@@ -20941,8 +21016,8 @@
     }));
   };
 
-  var css_248z$6 = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
-  styleInject(css_248z$6);
+  var css_248z$a = ".lf-form-plaintext {\n  font-size: var(--lf-font-size);\n}\n.lf-form-plaintext .lf-plaintext-field-label {\n  font-weight: 600;\n  color: #333333;\n}\n.lf-form-plaintext .plaintext-value:empty::before {\n  content: \"-\";\n}";
+  styleInject(css_248z$a);
 
   var PlaintextLabel = function PlaintextLabel(_ref) {
     var children = _ref.children;
@@ -21202,10 +21277,18 @@
 
   var needsValidation = function needsValidation(field) {
     // doesn't required validation if it's a layout component or has neither required or validation params
-    if (FIELDS_NOT_TO_VALIDATE.includes(field.component) || !field.required && !field.validation) {
+    if (FIELDS_NOT_TO_VALIDATE.includes(field.component)) {
       return false;
     }
-    return true;
+    // if clear validation
+    if (field.required || field.validation) {
+      return true;
+    }
+    // if an object, then validate subfields
+    if (field.component === 'object') {
+      return true;
+    }
+    return false;
   };
   var makeValidateJs = function makeValidateJs(validation, locale, onJavascriptError) {
     try {
@@ -21508,6 +21591,47 @@
   };
 
   /**
+   * makeObjectValidationFn
+   * Make a validator for an object, run the fields validation for each single field, nest errors
+   * @param {*} field
+   * @param {*} locale
+   * @param {*} onJavascriptError
+   * @returns
+   */
+  var makeObjectValidationFn = function makeObjectValidationFn(field, locale, onJavascriptError) {
+    var validateSubFields = makeValidation(field.fields, locale);
+    return /*#__PURE__*/function () {
+      var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(value, formValues) {
+        var validationMessages;
+        return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+          while (1) switch (_context5.prev = _context5.next) {
+            case 0:
+              _context5.next = 2;
+              return validateSubFields(value);
+            case 2:
+              validationMessages = _context5.sent;
+              if (!(validationMessages && Object.keys(validationMessages).some(function (o) {
+                return validationMessages[o] != null;
+              }))) {
+                _context5.next = 5;
+                break;
+              }
+              return _context5.abrupt("return", _objectSpread2(_objectSpread2({}, _omit(makeErrorMessage(field, locale), 'errorMessage')), {}, {
+                errorMessages: validationMessages
+              }));
+            case 5:
+            case "end":
+              return _context5.stop();
+          }
+        }, _callee5);
+      }));
+      return function (_x7, _x8) {
+        return _ref5.apply(this, arguments);
+      };
+    }();
+  };
+
+  /**
    * makeValidation
    * Take an array of fields and return a validation function, which takes as argument the values of the form
    * Returns null or undefined if no validation errors, otherwise an object, keys are the invalid fields, value for
@@ -21517,7 +21641,7 @@
    * @returns {function}
    */
   var makeValidation = function makeValidation(fields, locale, onJavascriptError) {
-    // collect all validatre functions per field
+    // collect all validate functions per field
     var validateFns = reduceFields(fields, function (field, accumulator) {
       // skip if not required
       if (!needsValidation(field)) {
@@ -21526,50 +21650,54 @@
       // special validation for array, otherwise field
       if (field.component === 'array') {
         return _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, field.name, makeArrayValidationFn(field, locale, onJavascriptError)));
+      } else if (field.component === 'object') {
+        return _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, field.name, makeObjectValidationFn(field, locale)));
       } else {
         return _objectSpread2(_objectSpread2({}, accumulator), {}, _defineProperty$1({}, field.name, makeFieldValidationFn(field, locale, onJavascriptError)));
       }
     }, {}, {
-      array: false // don't collect here fields inside arrays
+      array: false,
+      // don't collect here fields inside arrays
+      object: false // don't collect here fields inside objects
     });
 
     // check all validators
     return /*#__PURE__*/function () {
-      var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(data) {
+      var _ref6 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(data) {
         var validationErrors, i, fieldsToValidate, currentFieldName, validationResult;
-        return _regeneratorRuntime().wrap(function _callee5$(_context5) {
-          while (1) switch (_context5.prev = _context5.next) {
+        return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+          while (1) switch (_context6.prev = _context6.next) {
             case 0:
               validationErrors = {}; // iterate all validators async
               fieldsToValidate = Object.keys(validateFns);
               i = 0;
             case 3:
               if (!(i < fieldsToValidate.length)) {
-                _context5.next = 12;
+                _context6.next = 12;
                 break;
               }
               currentFieldName = fieldsToValidate[i]; // pass the single value to check but also the all values
-              _context5.next = 7;
-              return validateFns[currentFieldName](data[currentFieldName], data);
+              _context6.next = 7;
+              return validateFns[currentFieldName](data === null || data === void 0 ? void 0 : data[currentFieldName], data);
             case 7:
-              validationResult = _context5.sent;
+              validationResult = _context6.sent;
               if (validationResult) {
                 validationErrors[currentFieldName] = validationResult;
               }
             case 9:
               i++;
-              _context5.next = 3;
+              _context6.next = 3;
               break;
             case 12:
-              return _context5.abrupt("return", Object.keys(validationErrors).length !== 0 ? validationErrors : undefined);
+              return _context6.abrupt("return", Object.keys(validationErrors).length !== 0 ? validationErrors : undefined);
             case 13:
             case "end":
-              return _context5.stop();
+              return _context6.stop();
           }
-        }, _callee5);
+        }, _callee6);
       }));
-      return function (_x7) {
-        return _ref5.apply(this, arguments);
+      return function (_x9) {
+        return _ref6.apply(this, arguments);
       };
     }();
   };
@@ -21584,11 +21712,11 @@
    * @param {array} fields The form fields
    * @param {string} locale
    */
-  var useFormValidation = function useFormValidation(_ref6) {
-    var onError = _ref6.onError,
-      fields = _ref6.fields,
-      locale = _ref6.locale,
-      onJavascriptError = _ref6.onJavascriptError;
+  var useFormValidation = function useFormValidation(_ref7) {
+    var onError = _ref7.onError,
+      fields = _ref7.fields,
+      locale = _ref7.locale,
+      onJavascriptError = _ref7.onJavascriptError;
     var _useState = React$1.useState(),
       _useState2 = _slicedToArray(_useState, 2),
       validationErrors = _useState2[0],
@@ -21623,28 +21751,28 @@
      * Trigger a form validation, also changes the status (validationErrors)
      * @returns
      */
-    var validate = React$1.useCallback( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
+    var validate = React$1.useCallback( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7() {
       var data,
         validationErrors,
-        _args6 = arguments;
-      return _regeneratorRuntime().wrap(function _callee6$(_context6) {
-        while (1) switch (_context6.prev = _context6.next) {
+        _args7 = arguments;
+      return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+        while (1) switch (_context7.prev = _context7.next) {
           case 0:
-            data = _args6.length > 0 && _args6[0] !== undefined ? _args6[0] : {};
-            _context6.next = 3;
+            data = _args7.length > 0 && _args7[0] !== undefined ? _args7[0] : {};
+            _context7.next = 3;
             return mutableState.current(data, locale);
           case 3:
-            validationErrors = _context6.sent;
+            validationErrors = _context7.sent;
             // set status
             setValidationErrors(validationErrors);
             // callback errors
             onError(validationErrors);
-            return _context6.abrupt("return", validationErrors);
+            return _context7.abrupt("return", validationErrors);
           case 7:
           case "end":
-            return _context6.stop();
+            return _context7.stop();
         }
-      }, _callee6);
+      }, _callee7);
     })), [validateFn]);
     return {
       validationErrors: validationErrors,
@@ -21820,6 +21948,9 @@
   var LfGroup = function LfGroup() {
     return /*#__PURE__*/React.createElement(React.Fragment, null);
   };
+  var LfObject = function LfObject() {
+    return /*#__PURE__*/React.createElement(React.Fragment, null);
+  };
   var LfColumns = function LfColumns() {
     return /*#__PURE__*/React.createElement(React.Fragment, null);
   };
@@ -21849,6 +21980,8 @@
       return '<LfField>';
     } else if (type === LfGroup) {
       return '<LfGroup>';
+    } else if (type === LfObject) {
+      return '<LfObject>';
     } else if (type === LfColumns) {
       return '<LfColumns>';
     } else if (type === LfColumn) {
@@ -22015,6 +22148,14 @@
       } else if (elementOf(element, LfGroup)) {
         return _objectSpread2(_objectSpread2({}, _.omit(element.props, 'children')), {}, {
           component: 'group',
+          fields: traverseChildren(element.props.children, {
+            components: components,
+            framework: framework
+          })
+        });
+      } else if (elementOf(element, LfObject)) {
+        return _objectSpread2(_objectSpread2({}, _.omit(element.props, 'children')), {}, {
+          component: 'object',
           fields: traverseChildren(element.props.children, {
             components: components,
             framework: framework
@@ -22463,6 +22604,7 @@
     }, lfComponent), " (", /*#__PURE__*/React$1.createElement("em", null, "\"", _isString(label) ? label : 'unknown', "\""), ") is not available for this framework (", /*#__PURE__*/React$1.createElement("b", null, lfFramework), ")"));
   };
 
+  var NOOP$1 = function NOOP() {};
   var renderFields = function renderFields(_ref) {
     var fields = _ref.fields,
       control = _ref.control,
@@ -22720,6 +22862,8 @@
           errors: errors ? errors[field.name] : null
         }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
           fields: field.fields,
+          onChange: NOOP$1,
+          // do nothing while in edit mode
           disabled: field.disabled ? true : disabled,
           // pass disabled status to inner components
           prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
@@ -22741,9 +22885,46 @@
           index: index,
           className: "array"
         }, _component2);
+      } else if (field.component === 'object' && GroupWrapper) {
+        // this only used in designer
+        var _component3 = /*#__PURE__*/React$1.createElement(Component, _extends({
+          key: field.name,
+          lfComponent: field.component,
+          lfFramework: framework,
+          lfLocale: locale,
+          name: field.name,
+          label: field.label,
+          hint: field.hint,
+          disabled: field.disabled,
+          error: errors ? errors[field.name] : null
+        }, additionalFields), /*#__PURE__*/React$1.createElement(React$1.Fragment, null, renderFields(_objectSpread2(_objectSpread2({}, renderFieldsParams), {}, {
+          fields: field.fields,
+          onChange: NOOP$1,
+          // do nothing while in edit mode
+          disabled: field.disabled ? true : disabled,
+          // pass disabled status to inner components
+          prependView: PlaceholderWrapper && /*#__PURE__*/React$1.createElement(PlaceholderWrapper, {
+            key: "wrapper_top_field",
+            parentField: field,
+            parentFieldTarget: "fields",
+            nextField: field.fields && field.fields.length ? field.fields[0] : null
+          })
+        })), BottomView && /*#__PURE__*/React$1.createElement(BottomView, {
+          context: "object",
+          key: "bottom_view_".concat(field.name),
+          field: field,
+          target: "fields"
+        })));
+        return /*#__PURE__*/React$1.createElement(GroupWrapper, {
+          key: "wrapper_".concat(field.name),
+          field: field,
+          level: level,
+          index: index,
+          className: "group"
+        }, _component3);
       }
       var error;
-      if (field.component === 'array') {
+      if (field.component === 'array' || field.component === 'object') {
         // pass errors down the the array component only if it's "inline"
         error = errors != null && showErrors === 'inline' ? errors[field.name] : null;
       } else if (errors && errors[field.name] && errors[field.name].errorMessage) {
@@ -22752,7 +22933,7 @@
         error = showErrors === 'inline' ? errors[field.name].errorMessage : true;
       }
       var perComponentAdditionalFields = _objectSpread2({}, additionalFields);
-      if (field.component === 'array') {
+      if (field.component === 'array' || field.component === 'object') {
         perComponentAdditionalFields.formShowErrors = showErrors;
       }
       return /*#__PURE__*/React$1.createElement(Controller, {
@@ -22793,10 +22974,10 @@
     return prependView ? [prependView].concat(_toConsumableArray(renderedFields)) : renderedFields;
   };
 
-  var css_248z$5 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
-  styleInject(css_248z$5);
+  var css_248z$9 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
+  styleInject(css_248z$9);
 
-  var _excluded$p = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
+  var _excluded$G = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
   var DEFAULT_FORM = {
     version: 2,
     fields: []
@@ -22869,7 +23050,7 @@
         resetAfterSubmit = _ref2$resetAfterSubmi === void 0 ? true : _ref2$resetAfterSubmi,
         formContext = _ref2.context,
         errors = _ref2.errors,
-        rest = _objectWithoutProperties(_ref2, _excluded$p);
+        rest = _objectWithoutProperties(_ref2, _excluded$G);
       var showErrors = form.showErrors,
         connectors = form.connectors;
       var _useState = React$1.useState(prealoadComponents),
@@ -23265,9 +23446,9 @@
     var FormGenerator = /*#__PURE__*/React$1.memo(BaseFormGenerator, function (prevProps, nextProps) {
       {
         var _nextProps$form, _nextProps$form2;
-        console.log("[LetsForm] Form generator ".concat((_nextProps$form = nextProps.form) !== null && _nextProps$form !== void 0 && _nextProps$form.name ? '(' + ((_nextProps$form2 = nextProps.form) === null || _nextProps$form2 === void 0 ? void 0 : _nextProps$form2.name) + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale) + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext) + ' disabled=' + (prevProps.disabled === nextProps.disabled) + ' children=' + (prevProps.children === nextProps.children) + ' custom=' + (prevProps.custom === nextProps.custom) + ' context=' + (prevProps.context === nextProps.context) + ' disableButtons=' + (prevProps.disableButtons === nextProps.disableButtons));
+        console.log("[LetsForm] Form generator ".concat((_nextProps$form = nextProps.form) !== null && _nextProps$form !== void 0 && _nextProps$form.name ? '(' + ((_nextProps$form2 = nextProps.form) === null || _nextProps$form2 === void 0 ? void 0 : _nextProps$form2.name) + ")" : '', " re-render: ") + ' framework=' + (prevProps.framework === nextProps.framework) + ' onChange=' + (prevProps.onChange === nextProps.onChange) + ' wrapper=' + (prevProps.wrapper === nextProps.wrapper) + ' form=' + (prevProps.form === nextProps.form) + ' locale=' + (prevProps.locale === nextProps.locale) + ' plaintext=' + (prevProps.plaintext === nextProps.plaintext) + ' disabled=' + (prevProps.disabled === nextProps.disabled) + ' children=' + (prevProps.children === nextProps.children) + ' custom=' + (prevProps.custom === nextProps.custom) + ' context=' + (prevProps.context === nextProps.context) + ' disableButtons=' + (prevProps.disableButtons === nextProps.disableButtons) + ' errors=' + (prevProps.errors === nextProps.errors));
       }
-      var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale && prevProps.plaintext === nextProps.plaintext && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children && prevProps.custom === nextProps.custom && prevProps.context === nextProps.context && prevProps.disableButtons === nextProps.disableButtons;
+      var isEqual = prevProps.framework === nextProps.framework && prevProps.onChange === nextProps.onChange && prevProps.wrapper === nextProps.wrapper && prevProps.form === nextProps.form && prevProps.locale === nextProps.locale && prevProps.plaintext === nextProps.plaintext && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children && prevProps.custom === nextProps.custom && prevProps.context === nextProps.context && prevProps.disableButtons === nextProps.disableButtons && prevProps.errors === nextProps.errors;
       console.log("Is re-rendering? ".concat(!isEqual));
       return isEqual;
     });
@@ -23275,7 +23456,7 @@
     return FormGenerator;
   };
 
-  var _excluded$o = ["onChange"];
+  var _excluded$F = ["onChange"];
 
   /**
    * wrapOnChange
@@ -23286,7 +23467,7 @@
   var wrapOnChange = function wrapOnChange(Component) {
     return function (_ref) {
       var onChange = _ref.onChange,
-        rest = _objectWithoutProperties(_ref, _excluded$o);
+        rest = _objectWithoutProperties(_ref, _excluded$F);
       var handleChange = React$1.useCallback(function (value) {
         return onChange(value, rest.name);
       }, [onChange]);
@@ -23324,167 +23505,172 @@
     return LazyWithPreload;
   }
 
-  var _excluded$n = ["framework", "children"];
-  var Fields = {
+  var _excluded$E = ["framework", "children"];
+  var Fields$1 = {
     'input-text': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$s; });
+        return Promise.resolve().then(function () { return index$R; });
       })
     },
     'input-number': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$r; });
+        return Promise.resolve().then(function () { return index$Q; });
       })
     },
     'textarea': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$q; });
+        return Promise.resolve().then(function () { return index$P; });
       })
     },
     'select': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$p; });
+        return Promise.resolve().then(function () { return index$O; });
       })
     },
     'checkbox': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$o; });
+        return Promise.resolve().then(function () { return index$N; });
       })
     },
     'toggle': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$n; });
+        return Promise.resolve().then(function () { return index$M; });
       })
     },
     'array': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$m; });
+        return Promise.resolve().then(function () { return index$L; });
       })
     },
     'checkbox-group': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$l; });
+        return Promise.resolve().then(function () { return index$K; });
       })
     },
     'radio-group': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$k; });
+        return Promise.resolve().then(function () { return index$J; });
       })
     },
     'two-columns': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$j; });
+        return Promise.resolve().then(function () { return index$I; });
       })
     },
     'three-columns': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$i; });
+        return Promise.resolve().then(function () { return index$H; });
       })
     },
     'columns': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$h; });
+        return Promise.resolve().then(function () { return index$G; });
       })
     },
     'group': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$g; });
+        return Promise.resolve().then(function () { return index$F; });
+      })
+    },
+    'object': {
+      'react-mantine': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$E; });
       })
     },
     'date': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$f; });
+        return Promise.resolve().then(function () { return index$D; });
       })
     },
     'datetime': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$e; });
+        return Promise.resolve().then(function () { return index$C; });
       })
     },
     'rate': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$d; });
+        return Promise.resolve().then(function () { return index$B; });
       })
     },
     'placeholder': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$c; });
+        return Promise.resolve().then(function () { return index$A; });
       })
     },
     'placeholder-image': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$b; });
+        return Promise.resolve().then(function () { return index$z; });
       })
     },
     'divider': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$t; });
+        return Promise.resolve().then(function () { return index$S; });
       })
     },
     'slider': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$a; });
+        return Promise.resolve().then(function () { return index$y; });
       })
     },
     'input-tag': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$9; });
+        return Promise.resolve().then(function () { return index$x; });
       })
     },
     'tabs': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$8; });
+        return Promise.resolve().then(function () { return index$w; });
       })
     },
     'button': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$7; });
+        return Promise.resolve().then(function () { return index$v; });
       })
     },
     'upload': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$6; });
+        return Promise.resolve().then(function () { return index$u; });
       })
     },
     'multiselect': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$5; });
+        return Promise.resolve().then(function () { return index$t; });
       })
     },
     'steps': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$4; });
+        return Promise.resolve().then(function () { return index$s; });
       })
     },
     'time': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$3; });
+        return Promise.resolve().then(function () { return index$r; });
       })
     },
     'hidden': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$2; });
+        return Promise.resolve().then(function () { return index$q; });
       })
     },
     'currency': {
       'react-mantine': lazyPreload(function () {
-        return Promise.resolve().then(function () { return index$1; });
+        return Promise.resolve().then(function () { return index$p; });
       })
     }
   };
-  var Forms = {
+  var Forms$1 = {
     'react-mantine': lazyPreload(function () {
-      return Promise.resolve().then(function () { return index; });
+      return Promise.resolve().then(function () { return index$o; });
     })
   };
-  var FormGenerator = GenerateGenerator({
-    Fields: Fields,
-    Forms: Forms
+  var FormGenerator$1 = GenerateGenerator({
+    Fields: Fields$1,
+    Forms: Forms$1
   });
-  var LetsForm = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
+  var LetsForm$1 = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
     _ref.framework;
       var children = _ref.children,
-      rest = _objectWithoutProperties(_ref, _excluded$n);
+      rest = _objectWithoutProperties(_ref, _excluded$E);
     var refForm = React$1.useRef();
     React$1.useImperativeHandle(ref, function () {
       return {
@@ -23493,13 +23679,13 @@
         }
       };
     });
-    return /*#__PURE__*/React$1.createElement(FormGenerator, _extends({
+    return /*#__PURE__*/React$1.createElement(FormGenerator$1, _extends({
       ref: refForm,
       framework: "react-mantine"
     }, rest), children);
   });
 
-  var _excluded$m = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "className"];
+  var _excluded$D = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "className"];
   var InputText$1 = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -23514,7 +23700,7 @@
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$m);
+      rest = _objectWithoutProperties(_ref, _excluded$D);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -23536,12 +23722,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.InputText');
 
-  var index$s = /*#__PURE__*/Object.freeze({
+  var index$R = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputText$1
   });
 
-  var _excluded$l = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "className", "lfOnEnter"];
+  var _excluded$C = ["name", "hint", "value", "submitOnEnter", "error", "fullWidth", "width", "className", "lfOnEnter"];
   var MantineNumberInput = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -23554,7 +23740,7 @@
       className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$l);
+      rest = _objectWithoutProperties(_ref, _excluded$C);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -23570,12 +23756,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.InputNumber');
 
-  var index$r = /*#__PURE__*/Object.freeze({
+  var index$Q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineNumberInput
   });
 
-  var _excluded$k = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "className", "lfOnEnter"];
+  var _excluded$B = ["name", "label", "hint", "submitOnEnter", "error", "onChange", "fullWidth", "width", "inputType", "className", "lfOnEnter"];
   var MantineTextarea = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23590,7 +23776,7 @@
       className = _ref.className,
       _ref$lfOnEnter = _ref.lfOnEnter,
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
-      rest = _objectWithoutProperties(_ref, _excluded$k);
+      rest = _objectWithoutProperties(_ref, _excluded$B);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
     }, [lfOnEnter]);
@@ -23611,12 +23797,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Textarea');
 
-  var index$q = /*#__PURE__*/Object.freeze({
+  var index$P = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTextarea
   });
 
-  var _excluded$j = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "className"];
+  var _excluded$A = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "className"];
 
   // Mantine Select breaks if value is null
   var ensureNotNull = function ensureNotNull(options) {
@@ -23642,7 +23828,7 @@
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$j);
+      rest = _objectWithoutProperties(_ref, _excluded$A);
     return /*#__PURE__*/React$1.createElement(core.Select, _extends({}, makeClassName$1('select', name, className), {
       style: makeWidthStyle(fullWidth, width),
       description: hint,
@@ -23657,12 +23843,12 @@
   });
   lfLog('Loaded Mantine.Select');
 
-  var index$p = /*#__PURE__*/Object.freeze({
+  var index$O = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineSelect
   });
 
-  var _excluded$i = ["name", "hint", "value", "onChange", "error", "description", "className"];
+  var _excluded$z = ["name", "hint", "value", "onChange", "error", "description", "className"];
   var MantineCheckbox = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -23671,7 +23857,7 @@
       error = _ref.error;
       _ref.description;
       var className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$i);
+      rest = _objectWithoutProperties(_ref, _excluded$z);
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
@@ -23686,12 +23872,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Checkbox');
 
-  var index$o = /*#__PURE__*/Object.freeze({
+  var index$N = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineCheckbox
   });
 
-  var _excluded$h = ["name", "hint", "value", "onChange", "error", "description", "className"];
+  var _excluded$y = ["name", "hint", "value", "onChange", "error", "description", "className"];
   var MantineToggle = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -23700,7 +23886,7 @@
       error = _ref.error;
       _ref.description;
       var className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$h);
+      rest = _objectWithoutProperties(_ref, _excluded$y);
     var handleChange = React$1.useCallback(function (event) {
       return onChange(event.currentTarget.checked);
     }, [onChange]);
@@ -23715,12 +23901,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Toggle');
 
-  var index$n = /*#__PURE__*/Object.freeze({
+  var index$M = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineToggle
   });
 
-  var _excluded$g = ["hint", "required", "tooltip", "name", "label", "className"];
+  var _excluded$x = ["hint", "required", "tooltip", "name", "label", "className"];
   var MantineListArray = I18N(function (_ref) {
     var _rest$error, _rest$error2;
     var hint = _ref.hint,
@@ -23729,21 +23915,21 @@
       var name = _ref.name,
       label = _ref.label,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$g);
+      rest = _objectWithoutProperties(_ref, _excluded$x);
     return /*#__PURE__*/React$1.createElement("div", makeClassName$1('array', name, className), label && /*#__PURE__*/React$1.createElement(core.Input.Label, {
       required: required
     }, label), /*#__PURE__*/React$1.createElement(ListArray, _extends({
-      LetsFormComponent: LetsForm
+      LetsFormComponent: LetsForm$1
     }, rest)), hint && /*#__PURE__*/React$1.createElement(core.Input.Description, null, hint), _isString((_rest$error = rest.error) === null || _rest$error === void 0 ? void 0 : _rest$error.errorMessage) && /*#__PURE__*/React$1.createElement(core.Input.Error, null, (_rest$error2 = rest.error) === null || _rest$error2 === void 0 ? void 0 : _rest$error2.errorMessage));
   }, ['label', 'hint']);
   lfLog('Loaded Mantine.ListArray');
 
-  var index$m = /*#__PURE__*/Object.freeze({
+  var index$L = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineListArray
   });
 
-  var _excluded$f = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options", "className"];
+  var _excluded$w = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options", "className"];
   var CheckboxGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23769,7 +23955,7 @@
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$f);
+      rest = _objectWithoutProperties(_ref, _excluded$w);
     var _useState = React$1.useState(_isArray(value) ? value : value ? String().split(',') : []),
       _useState2 = _slicedToArray(_useState, 2),
       selected = _useState2[0],
@@ -23816,12 +24002,12 @@
   });
   lfLog('Loaded Mantine.CheckboxGroup');
 
-  var index$l = /*#__PURE__*/Object.freeze({
+  var index$K = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CheckboxGroup
   });
 
-  var _excluded$e = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options", "className"];
+  var _excluded$v = ["name", "label", "hint", "value", "placeholder", "plaintext", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "size", "radius", "color", "iconColor", "labelPosition", "options", "className"];
   var RadioGroup = I18N(function (_ref) {
     var name = _ref.name,
       label = _ref.label,
@@ -23847,7 +24033,7 @@
       _ref$options = _ref.options,
       options = _ref$options === void 0 ? [] : _ref$options,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$e);
+      rest = _objectWithoutProperties(_ref, _excluded$v);
     var _useState = React$1.useState(value),
       _useState2 = _slicedToArray(_useState, 2);
       _useState2[0];
@@ -23892,40 +24078,294 @@
   });
   lfLog('Loaded Mantine.RadioGroup');
 
-  var index$k = /*#__PURE__*/Object.freeze({
+  var index$J = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RadioGroup
   });
 
   lfLog('Loaded Mantine.TwoColumns');
 
-  var index$j = /*#__PURE__*/Object.freeze({
+  var index$I = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TwoColumns
   });
 
   lfLog('Loaded RSuite5.ThreeColumns');
 
-  var index$i = /*#__PURE__*/Object.freeze({
+  var index$H = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ThreeColumns
   });
 
   lfLog('Loaded RSuite5.Columns');
 
-  var index$h = /*#__PURE__*/Object.freeze({
+  var index$G = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Columns
   });
 
   lfLog('Loaded RSuite5.Group');
 
-  var index$g = /*#__PURE__*/Object.freeze({
+  var index$F = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Group
   });
 
-  var _excluded$d = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime", "className", "name", "component"];
+  var _excluded$u = ["framework", "children"];
+  var Fields = {
+    'input-text': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$n; });
+      })
+    },
+    'select': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$m; });
+      })
+    },
+    'checkbox': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$l; });
+      })
+    },
+    'toggle': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$k; });
+      })
+    },
+    'checkbox-group': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$j; });
+      })
+    },
+    'placeholder': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$i; });
+      })
+    },
+    'placeholder-image': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$h; });
+      })
+    },
+    'date': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$g; });
+      })
+    },
+    'textarea': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$f; });
+      })
+    },
+    'slider': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$e; });
+      })
+    },
+    'three-columns': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$d; });
+      })
+    },
+    'columns': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$c; });
+      })
+    },
+    'two-columns': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$b; });
+      })
+    },
+    'group': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$a; });
+      })
+    },
+    'object': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$9; });
+      })
+    },
+    'radio-group': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$8; });
+      })
+    },
+    'divider': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$S; });
+      })
+    },
+    'react-view': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$7; });
+      })
+    },
+    'datetime': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$6; });
+      })
+    },
+    'array': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$5; });
+      })
+    },
+    'input-number': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$4; });
+      })
+    },
+    'tabs': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$3; });
+      })
+    },
+    'button': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$2; });
+      })
+    },
+    'hidden': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$q; });
+      })
+    },
+    'currency': {
+      'react-bootstrap': lazyPreload(function () {
+        return Promise.resolve().then(function () { return index$1; });
+      })
+    }
+  };
+  var Forms = {
+    'react-bootstrap': lazyPreload(function () {
+      return Promise.resolve().then(function () { return index; });
+    })
+  };
+  var FormGenerator = GenerateGenerator({
+    Fields: Fields,
+    Forms: Forms
+  });
+  var LetsForm = /*#__PURE__*/React$1.forwardRef(function (_ref, ref) {
+    _ref.framework;
+      var children = _ref.children,
+      rest = _objectWithoutProperties(_ref, _excluded$u);
+    var refForm = React$1.useRef();
+    React$1.useImperativeHandle(ref, function () {
+      return {
+        validate: function validate() {
+          return refForm.current.validate();
+        }
+      };
+    });
+    return /*#__PURE__*/React$1.createElement(FormGenerator, _extends({
+      ref: refForm,
+      framework: "react-bootstrap"
+    }, rest), children);
+  });
+
+  var css_248z$8 = ".lf-form .lf-control-object:not(:first-child) {\n  margin-top: calc(var(--lf-group-header) + var(--lf-field-margin));\n}\n\n.lf-control-object .header svg {\n  display: inline-block;\n}\n.lf-control-object.lf-border-boxed {\n  border-bottom: 1px solid var(--lf-border-color);\n  border-left: 1px solid var(--lf-border-color);\n  border-right: 1px solid var(--lf-border-color);\n}\n.lf-control-object.lf-border-boxed .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-boxed .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-boxed .lf-object-content {\n  padding-left: var(--lf-group-padding);\n  padding-right: var(--lf-group-padding);\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-object.lf-border-topBottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-object.lf-border-topBottom .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-topBottom .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-topBottom .lf-object-content {\n  padding-bottom: var(--lf-group-padding);\n}\n.lf-control-object.lf-border-top .header:before {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-top .header:after {\n  border-top: 1px solid var(--lf-border-color);\n  content: \"\";\n  flex: 1 0;\n}\n.lf-control-object.lf-border-bottom {\n  border-bottom: 1px solid var(--lf-border-color);\n}\n.lf-control-object .header {\n  align-items: center;\n  background: transparent;\n  display: flex;\n  height: 1px;\n  flex-direction: row;\n  margin: var(--lf-group-header) 0px;\n}\n.lf-control-object .header .inner-text {\n  flex: 0 0 auto;\n  padding: 0 12px;\n  display: inline-block;\n}\n.lf-control-object .header.left:before {\n  flex: 0 0 10px;\n}\n.lf-control-object .header.right:after {\n  flex: 0 0 10px;\n}";
+  styleInject(css_248z$8);
+
+  var EMPTY_OBJECT = {};
+  var CommonObject = I18N(function (_ref) {
+    var LetsFormComponent = _ref.LetsFormComponent,
+      name = _ref.name,
+      className = _ref.className,
+      label = _ref.label,
+      lfLocale = _ref.lfLocale,
+      _ref$layout = _ref.layout,
+      layout = _ref$layout === void 0 ? 'vertical' : _ref$layout,
+      fields = _ref.fields,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      value = _ref.value,
+      _ref$open = _ref.open,
+      open = _ref$open === void 0 ? true : _ref$open,
+      _ref$collapsible = _ref.collapsible,
+      collapsible = _ref$collapsible === void 0 ? true : _ref$collapsible,
+      _ref$border = _ref.border,
+      border = _ref$border === void 0 ? 'top' : _ref$border,
+      align = _ref.align,
+      error = _ref.error,
+      formShowErrors = _ref.formShowErrors,
+      onChange = _ref.onChange,
+      children = _ref.children;
+    var _useState = React$1.useState(open),
+      _useState2 = _slicedToArray(_useState, 2),
+      isOpen = _useState2[0],
+      setIsOpen = _useState2[1];
+    var _useFormContext = useFormContext(),
+      locales = _useFormContext.locales;
+    var handleClick = React$1.useCallback(function (event) {
+      event.preventDefault();
+      setIsOpen(!isOpen);
+    }, [isOpen]);
+    var form = React$1.useMemo(function () {
+      return {
+        layout: layout,
+        fluid: true,
+        locales: locales,
+        // copy the locales from the main form
+        fields: fields,
+        name: 'Object form ' + name,
+        showErrors: formShowErrors
+      };
+    }, [layout, locales, fields, name, formShowErrors]);
+
+    // if open changes, then change status
+    React$1.useEffect(function () {
+      setIsOpen(open);
+    }, [open]);
+    return /*#__PURE__*/React$1.createElement("div", makeClassName$1('object', name, className, "lf-border-".concat(border), {
+      'open': isOpen,
+      'close': !isOpen
+    }), /*#__PURE__*/React$1.createElement("div", {
+      role: "separator",
+      className: classNames('header', align)
+    }, /*#__PURE__*/React$1.createElement("span", {
+      className: "inner-text"
+    }, label, collapsible && /*#__PURE__*/React$1.createElement("a", {
+      href: "#",
+      className: "lf-btn-collapse",
+      disabled: disabled,
+      appearance: "link",
+      onClick: handleClick
+    }, isOpen ? /*#__PURE__*/React$1.createElement(ChevronUp, {
+      color: "#3498ff"
+    }) : /*#__PURE__*/React$1.createElement(ChevronDown, {
+      color: "#3498ff"
+    })))), (isOpen || !collapsible) && /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-object-content"
+    }, children ? children : /*#__PURE__*/React$1.createElement(LetsFormComponent, {
+      form: form,
+      locale: lfLocale,
+      disabled: disabled,
+      readOnly: readOnly,
+      defaultValues: value || EMPTY_OBJECT,
+      onlyFields: true,
+      onChange: onChange,
+      errors: error != null && error.errorMessages != null ? error.errorMessages : undefined
+    })));
+  }, ['label']);
+
+  var ReactMantineObject = function ReactMantineObject(props) {
+    return /*#__PURE__*/React$1.createElement(CommonObject, _extends({
+      LetsFormComponent: LetsForm
+    }, props));
+  };
+  lfLog('Loaded Mantine.Object');
+
+  var index$E = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ReactMantineObject
+  });
+
+  var _excluded$t = ["hint", "minDate", "maxDate", "error", "onBlur", "fullWidth", "width", "lfLocale", "withTime", "className", "name", "component"];
   var tryDate = function tryDate(value) {
     if (_isDate(value)) {
       return value;
@@ -23951,7 +24391,7 @@
       className = _ref.className,
       name = _ref.name,
       component = _ref.component,
-      rest = _objectWithoutProperties(_ref, _excluded$d);
+      rest = _objectWithoutProperties(_ref, _excluded$t);
     var Component = withTime ? dates.DateTimePicker : dates.DatePickerInput;
     return /*#__PURE__*/React$1.createElement(Component, _extends({}, makeClassName$1(component, name, className), {
       style: makeWidthStyle(fullWidth, width),
@@ -23964,12 +24404,12 @@
     }, passRest(rest)));
   };
 
-  var _excluded$c = ["onChange", "value", "lfLocale"];
+  var _excluded$s = ["onChange", "value", "lfLocale"];
   var SelectDate = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
       lfLocale = _ref.lfLocale,
-      rest = _objectWithoutProperties(_ref, _excluded$c);
+      rest = _objectWithoutProperties(_ref, _excluded$s);
     // also accepts string dates
     var initialValue;
     if (rest.dateType === 'range') {
@@ -24008,17 +24448,17 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.SelectDate');
 
-  var index$f = /*#__PURE__*/Object.freeze({
+  var index$D = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDate
   });
 
-  var _excluded$b = ["onChange", "value", "lfLocale"];
+  var _excluded$r = ["onChange", "value", "lfLocale"];
   var SelectDatTime = I18N(function (_ref) {
     var onChange = _ref.onChange,
       value = _ref.value,
       lfLocale = _ref.lfLocale,
-      rest = _objectWithoutProperties(_ref, _excluded$b);
+      rest = _objectWithoutProperties(_ref, _excluded$r);
     // also accepts string dates
     var initialValue;
     if (rest.dateType === 'range') {
@@ -24059,12 +24499,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.SelectDateTime');
 
-  var index$e = /*#__PURE__*/Object.freeze({
+  var index$C = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SelectDatTime
   });
 
-  var _excluded$a = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter", "className"];
+  var _excluded$q = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "label", "required", "lfOnEnter", "className"];
   var InputText = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -24079,7 +24519,7 @@
       required = _ref.required;
       _ref.lfOnEnter;
       var className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$a);
+      rest = _objectWithoutProperties(_ref, _excluded$q);
     return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, _extends({}, makeClassName$1('rate', name, className), {
       description: hint,
       error: _isString(error) ? error : undefined,
@@ -24093,7 +24533,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Rate');
 
-  var index$d = /*#__PURE__*/Object.freeze({
+  var index$B = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: InputText
   });
@@ -24114,19 +24554,19 @@
   }, ['label', 'hint', 'text']);
   lfLog('Loaded Mantine.Placeholder');
 
-  var index$c = /*#__PURE__*/Object.freeze({
+  var index$A = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderMantine
   });
 
   lfLog('Loaded Mantine.PlaceholderImage');
 
-  var index$b = /*#__PURE__*/Object.freeze({
+  var index$z = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlaceholderImage
   });
 
-  var _excluded$9 = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "className", "lfOnEnter"];
+  var _excluded$p = ["name", "hint", "error", "onChange", "onBlur", "label", "required", "className", "lfOnEnter"];
   var SliderMantine = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -24137,7 +24577,7 @@
       required = _ref.required,
       className = _ref.className;
       _ref.lfOnEnter;
-      var rest = _objectWithoutProperties(_ref, _excluded$9);
+      var rest = _objectWithoutProperties(_ref, _excluded$p);
     return /*#__PURE__*/React$1.createElement(core.Input.Wrapper, _extends({}, makeClassName('slider', name, className), {
       description: hint,
       error: _isString(error) ? error : undefined,
@@ -24158,12 +24598,12 @@
   });
   lfLog('Loaded Mantine.Slider');
 
-  var index$a = /*#__PURE__*/Object.freeze({
+  var index$y = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SliderMantine
   });
 
-  var _excluded$8 = ["name", "hint", "value", "error", "fullWidth", "width", "data", "className"];
+  var _excluded$o = ["name", "hint", "value", "error", "fullWidth", "width", "data", "className"];
   var MantineTags = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -24173,7 +24613,7 @@
       width = _ref.width,
       data = _ref.data,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$8);
+      rest = _objectWithoutProperties(_ref, _excluded$o);
     return /*#__PURE__*/React$1.createElement(core.TagsInput, _extends({}, makeClassName$1('input-tag', name, className), {
       style: makeWidthStyle(fullWidth, width),
       value: value,
@@ -24188,15 +24628,15 @@
   }, ['label', 'hint', 'placeholder'], i18nOptions);
   lfLog('Loaded Mantine.InputTags');
 
-  var index$9 = /*#__PURE__*/Object.freeze({
+  var index$x = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTags
   });
 
-  var css_248z$4 = ".lf-form-react-mantine .lf-control-tabs .lf-prefix-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical .mantine-Tabs-panel, .lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-left .mantine-Tabs-panel {\n  padding-left: var(--lf-field-column-margin);\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-right .mantine-Tabs-panel {\n  padding-right: var(--lf-field-column-margin);\n}";
-  styleInject(css_248z$4);
+  var css_248z$7 = ".lf-form-react-mantine .lf-control-tabs .lf-prefix-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical .mantine-Tabs-panel, .lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-left .mantine-Tabs-panel {\n  padding-left: var(--lf-field-column-margin);\n}\n.lf-form-react-mantine .lf-control-tabs.orientation-vertical.placement-right .mantine-Tabs-panel {\n  padding-right: var(--lf-field-column-margin);\n}";
+  styleInject(css_248z$7);
 
-  var _excluded$7 = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement", "className"];
+  var _excluded$n = ["name", "value", "tabs", "onChange", "children", "grow", "justify", "orientation", "placement", "className"];
   var MantineTabs = I18N(function (_ref) {
     var _makeClassName;
     var name = _ref.name,
@@ -24209,7 +24649,7 @@
       orientation = _ref.orientation,
       placement = _ref.placement,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$7);
+      rest = _objectWithoutProperties(_ref, _excluded$n);
     var active;
     if (value) {
       active = value;
@@ -24246,21 +24686,21 @@
   });
   lfLog('Loaded Mantine.Tabs');
 
-  var index$8 = /*#__PURE__*/Object.freeze({
+  var index$w = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineTabs
   });
 
-  var css_248z$3 = ".lf-form-react-mantine .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-mantine .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-lg .lf-icon {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-xs .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-sm .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-md .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-xl .lf-icon {\n  max-width: 28px;\n  max-height: 28px;\n}";
-  styleInject(css_248z$3);
+  var css_248z$6 = ".lf-form-react-mantine .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-mantine .lf-control-button .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-lg .lf-icon {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-xs .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-sm .lf-icon {\n  max-width: 18px;\n  max-height: 18px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-md .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-form-react-mantine .lf-control-button.lf-control-button-xl .lf-icon {\n  max-width: 28px;\n  max-height: 28px;\n}";
+  styleInject(css_248z$6);
 
-  var _excluded$6 = ["label", "icon", "hint", "tooltip"];
+  var _excluded$m = ["label", "icon", "hint", "tooltip"];
   var MantineButton = function MantineButton(_ref) {
     var label = _ref.label,
       icon = _ref.icon,
       hint = _ref.hint,
       tooltip = _ref.tooltip,
-      rest = _objectWithoutProperties(_ref, _excluded$6);
+      rest = _objectWithoutProperties(_ref, _excluded$m);
     var inner;
     if (!_isEmpty(label) && !_isEmpty(icon)) {
       inner = /*#__PURE__*/React$1.createElement(core.Button, _extends({
@@ -24286,19 +24726,19 @@
       withArrow: true
     }, inner), (_isEmpty(hint) || !tooltip) && inner, !_isEmpty(hint) && !tooltip && /*#__PURE__*/React$1.createElement(core.Input.Description, null, hint));
   };
-  var BiStateButton = I18N(MakeButton(MantineButton, {
+  var BiStateButton$1 = I18N(MakeButton(MantineButton, {
     variant: 'filled'
   }, {
     variant: 'outline'
   }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
   lfLog('Loaded Mantine.Button');
 
-  var index$7 = /*#__PURE__*/Object.freeze({
+  var index$v = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: BiStateButton
+    default: BiStateButton$1
   });
 
-  var _excluded$5 = ["name", "hint", "fullWidth", "width", "error", "onChange", "onBlur", "lfOnEnter", "accept", "className"];
+  var _excluded$l = ["name", "hint", "fullWidth", "width", "error", "onChange", "onBlur", "lfOnEnter", "accept", "className"];
   var MantineUpload = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -24310,7 +24750,7 @@
       _ref.lfOnEnter;
       var accept = _ref.accept,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$5);
+      rest = _objectWithoutProperties(_ref, _excluded$l);
     var handleChange = React$1.useCallback(function (value) {
       return onChange(value);
     }, [onChange]);
@@ -24326,12 +24766,12 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Upload');
 
-  var index$6 = /*#__PURE__*/Object.freeze({
+  var index$u = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineUpload
   });
 
-  var _excluded$4 = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "className"];
+  var _excluded$k = ["name", "hint", "value", "error", "fullWidth", "width", "options", "filterValue", "filterKey", "className"];
   var MantineMultiSelect = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
@@ -24343,7 +24783,7 @@
       filterValue = _ref.filterValue,
       filterKey = _ref.filterKey,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$4);
+      rest = _objectWithoutProperties(_ref, _excluded$k);
     return /*#__PURE__*/React$1.createElement(core.MultiSelect, _extends({}, makeClassName$1('multiselect', name, className), {
       value: value,
       name: name,
@@ -24358,13 +24798,13 @@
   });
   lfLog('Loaded Mantine.MultiSelect');
 
-  var index$5 = /*#__PURE__*/Object.freeze({
+  var index$t = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineMultiSelect
   });
 
-  var css_248z$2 = ".lf-generic-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-generic-icon.lg {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-generic-icon .xs {\n  max-width: 12px;\n  max-height: 12px;\n}";
-  styleInject(css_248z$2);
+  var css_248z$5 = ".lf-generic-icon {\n  max-width: 16px;\n  max-height: 16px;\n}\n.lf-generic-icon.lg {\n  max-width: 20px;\n  max-height: 20px;\n}\n.lf-generic-icon .xs {\n  max-width: 12px;\n  max-height: 12px;\n}";
+  styleInject(css_248z$5);
 
   var GenericIcon = function GenericIcon(_ref) {
     var icon = _ref.icon,
@@ -24377,10 +24817,10 @@
     });
   };
 
-  var css_248z$1 = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
-  styleInject(css_248z$1);
+  var css_248z$4 = ".lf-control-steps .lf-step {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: var(--lf-field-margin);\n}\n.lf-control-steps .lf-navigation-buttons.left {\n  text-align: left;\n}\n.lf-control-steps .lf-navigation-buttons.right {\n  text-align: right;\n}\n.lf-control-steps .lf-navigation-buttons.center {\n  text-align: center;\n}";
+  styleInject(css_248z$4);
 
-  var _excluded$3 = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "allowStepClick", "allowStepSelect", "className"];
+  var _excluded$j = ["name", "children", "value", "steps", "onChange", "align", "status", "small", "labelNext", "labelPrevious", "allowStepClick", "allowStepSelect", "className"];
   var i18nSteps = function i18nSteps(value, i18n) {
     return (value !== null && value !== void 0 ? value : []).filter(function (value) {
       return value != null;
@@ -24406,7 +24846,7 @@
       allowStepClick = _ref.allowStepClick,
       allowStepSelect = _ref.allowStepSelect,
       className = _ref.className,
-      rest = _objectWithoutProperties(_ref, _excluded$3);
+      rest = _objectWithoutProperties(_ref, _excluded$j);
     var defaultStep = value;
     var defaultStepIdx = (steps || []).findIndex(function (obj) {
       return obj.value === value;
@@ -24479,7 +24919,7 @@
   });
   lfLog('Loaded Mantine.Steps');
 
-  var index$4 = /*#__PURE__*/Object.freeze({
+  var index$s = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineSteps
   });
@@ -24510,7 +24950,7 @@
     }));
   };
 
-  var _excluded$2 = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "className", "showBrowserPicker"];
+  var _excluded$i = ["name", "hint", "value", "fullWidth", "width", "submitOnEnter", "error", "onChange", "onBlur", "lfOnEnter", "className", "showBrowserPicker"];
   var MANTINE_ICON_SIZE = {
     xs: 16,
     sm: 20,
@@ -24536,7 +24976,7 @@
       lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
       className = _ref.className,
       showBrowserPicker = _ref.showBrowserPicker,
-      rest = _objectWithoutProperties(_ref, _excluded$2);
+      rest = _objectWithoutProperties(_ref, _excluded$i);
     var ref = React$1.useRef(null);
     var handleKeyUp = React$1.useCallback(function (e) {
       return e.keyCode === 13 && lfOnEnter();
@@ -24573,7 +25013,7 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Time');
 
-  var index$3 = /*#__PURE__*/Object.freeze({
+  var index$r = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Time
   });
@@ -24588,7 +25028,7 @@
   };
   lfLog('Loaded RSuite5.Hidden');
 
-  var index$2 = /*#__PURE__*/Object.freeze({
+  var index$q = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Hidden
   });
@@ -24657,7 +25097,7 @@
     return 0;
   };
 
-  var _excluded$1 = ["defaultValue", "control", "onChange", "locale", "currency", "fullWidth", "width", "align"];
+  var _excluded$h = ["defaultValue", "control", "onChange", "locale", "currency", "fullWidth", "width", "align"];
   var isEvent = function isEvent(obj) {
     return obj === null || obj === void 0 ? void 0 : obj.target;
   };
@@ -24673,7 +25113,7 @@
       fullWidth = _ref$fullWidth === void 0 ? true : _ref$fullWidth,
       width = _ref.width,
       align = _ref.align,
-      rest = _objectWithoutProperties(_ref, _excluded$1);
+      rest = _objectWithoutProperties(_ref, _excluded$h);
     var currency = propCurrency || 'EUR';
     var ref = React$1.useRef();
     var refCaret = React$1.useRef();
@@ -24781,8 +25221,8 @@
     }, rest)));
   };
 
-  var _excluded = ["name", "hint", "value", "fullWidth", "width", "error", "className", "lfLocale"];
-  var Currency = I18N(function (_ref) {
+  var _excluded$g = ["name", "hint", "value", "fullWidth", "width", "error", "className", "lfLocale"];
+  var Currency$1 = I18N(function (_ref) {
     var name = _ref.name,
       hint = _ref.hint,
       value = _ref.value,
@@ -24791,7 +25231,7 @@
       error = _ref.error,
       className = _ref.className,
       lfLocale = _ref.lfLocale,
-      rest = _objectWithoutProperties(_ref, _excluded);
+      rest = _objectWithoutProperties(_ref, _excluded$g);
     return /*#__PURE__*/React$1.createElement(CommonCurrency, _extends({
       defaultValue: value,
       control: core.TextInput,
@@ -24823,13 +25263,13 @@
   }, ['label', 'hint', 'placeholder']);
   lfLog('Loaded Mantine.Currency');
 
-  var index$1 = /*#__PURE__*/Object.freeze({
+  var index$p = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: Currency
+    default: Currency$1
   });
 
-  var css_248z = ".lf-form-react-mantine .lf-control-input-number div[data-position=right] .lf-postfix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=right] .lf-postfix-wrapper {\n  padding-right: 1em;\n}\n.lf-form-react-mantine .lf-control-input-number div[data-position=left] .lf-prefix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=left] .lf-prefix-wrapper {\n  padding-left: 1em;\n}";
-  styleInject(css_248z);
+  var css_248z$3 = ".lf-form-react-mantine .lf-control-input-number div[data-position=right] .lf-postfix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=right] .lf-postfix-wrapper {\n  padding-right: 1em;\n}\n.lf-form-react-mantine .lf-control-input-number div[data-position=left] .lf-prefix-wrapper, .lf-form-react-mantine .lf-control-input-text div[data-position=left] .lf-prefix-wrapper {\n  padding-left: 1em;\n}";
+  styleInject(css_248z$3);
 
   var MantineForm = function MantineForm() {
     var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
@@ -24880,22 +25320,899 @@
   };
   lfLog('Loaded Mantine.Form');
 
-  var index = /*#__PURE__*/Object.freeze({
+  var index$o = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MantineForm
+  });
+
+  var _excluded$f = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "className", "inputType", "inputMode", "autocomplete", "lfLocale", "disabled", "readOnly", "plaintext", "error", "component", "required", "submitOnEnter", "prefix", "postfix", "placeholder", "fullWidth", "width", "floatingLabel", "lfOnEnter"];
+
+  // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
+
+  var BootstrapGenericInput = function BootstrapGenericInput(_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      size = _ref.size,
+      className = _ref.className,
+      inputType = _ref.inputType,
+      inputMode = _ref.inputMode,
+      autocomplete = _ref.autocomplete;
+      _ref.lfLocale;
+      var _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$plaintext = _ref.plaintext,
+      plaintext = _ref$plaintext === void 0 ? false : _ref$plaintext,
+      error = _ref.error,
+      component = _ref.component,
+      required = _ref.required,
+      _ref$submitOnEnter = _ref.submitOnEnter,
+      submitOnEnter = _ref$submitOnEnter === void 0 ? false : _ref$submitOnEnter,
+      prefix = _ref.prefix,
+      postfix = _ref.postfix,
+      placeholder = _ref.placeholder,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      _ref$floatingLabel = _ref.floatingLabel,
+      floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
+      _ref$lfOnEnter = _ref.lfOnEnter,
+      lfOnEnter = _ref$lfOnEnter === void 0 ? function () {} : _ref$lfOnEnter,
+      rest = _objectWithoutProperties(_ref, _excluded$f);
+    var handleKeyUp = React$1.useCallback(function (e) {
+      return e.keyCode === 13 && lfOnEnter();
+    }, [lfOnEnter]);
+    var inner = /*#__PURE__*/React$1.createElement(Form.Control, _extends({
+      name: name,
+      type: inputType !== null && inputType !== void 0 ? inputType : 'text',
+      inputmode: inputMode,
+      autocomplete: autocomplete,
+      value: value,
+      plaintext: plaintext,
+      onChange: onChange,
+      onKeyUp: submitOnEnter ? handleKeyUp : undefined,
+      size: size,
+      placeholder: placeholder,
+      onBlur: onBlur,
+      disabled: disabled,
+      readOnly: readOnly,
+      isInvalid: error != null,
+      style: makeWidthStyle(fullWidth, width)
+    }, passRest(rest)));
+    var innerGroup = inner;
+    var needsGroup = postfix || prefix;
+    if (needsGroup) {
+      innerGroup = /*#__PURE__*/React$1.createElement(InputGroup, null, prefix && /*#__PURE__*/React$1.createElement(InputGroup.Text, null, TextOrIcon(prefix)), inner, postfix && /*#__PURE__*/React$1.createElement(InputGroup.Text, null, TextOrIcon(postfix)));
+    }
+    var useFloatingLabels = floatingLabel && !needsGroup;
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1(component, name, className), useFloatingLabels && label && /*#__PURE__*/React$1.createElement(FloatingLabel, {
+      label: label
+    }, innerGroup), !useFloatingLabels && label && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !useFloatingLabels && innerGroup, hint && !error && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+      type: "invalid"
+    }, error));
+  };
+
+  var _excluded$e = ["onChange"];
+
+  // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
+
+  var TextInput = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      rest = _objectWithoutProperties(_ref, _excluded$e);
+    var handleChange = React$1.useCallback(function (e) {
+      onChange(e.target.value);
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
+      component: "input-text",
+      onChange: handleChange
+    }, rest));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded ReactBootrap.Input');
+
+  var index$n = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: TextInput
+  });
+
+  var _excluded$d = ["name", "label", "hint", "value", "size", "placeholder", "options", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "floatingLabel", "filterKey", "filterValue", "className"];
+  var Select = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      size = _ref.size,
+      placeholder = _ref.placeholder,
+      options = _ref.options,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      _ref$floatingLabel = _ref.floatingLabel,
+      floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
+      filterKey = _ref.filterKey,
+      filterValue = _ref.filterValue,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$d);
+    var handleChange = React$1.useCallback(function (e) {
+      onChange(e.target.value !== placeholder ? e.target.value : undefined);
+    }, [onChange, placeholder]);
+    var filteredOptions = filterOptions(options, filterValue, filterKey);
+    var inner = /*#__PURE__*/React$1.createElement(Form.Select, _extends({
+      name: name,
+      value: value,
+      onChange: handleChange,
+      size: size,
+      placeholder: placeholder,
+      onBlur: onBlur,
+      disabled: disabled,
+      readOnly: readOnly,
+      isInvalid: error != null
+    }, passRest(rest)), placeholder && /*#__PURE__*/React$1.createElement("option", null, placeholder), (filteredOptions !== null && filteredOptions !== void 0 ? filteredOptions : []).map(function (_ref2) {
+      var value = _ref2.value,
+        label = _ref2.label;
+      return /*#__PURE__*/React$1.createElement("option", {
+        value: value,
+        key: value
+      }, label);
+    }));
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('select', name, className), !floatingLabel && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !floatingLabel && inner, floatingLabel && /*#__PURE__*/React$1.createElement(FloatingLabel, {
+      label: label
+    }, inner), hint && !error && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+      type: "invalid"
+    }, error));
+  }, ['label', 'hint', 'placeholder'], {
+    options: i18nOptions
+  });
+  lfLog('Loaded ReactBootrap.Select');
+
+  var index$m = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Select
+  });
+
+  var _excluded$c = ["name", "label", "hint", "value", "placeholder", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format", "className"];
+  var Checkbox = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value;
+      _ref.placeholder;
+      _ref.tooltip;
+      var _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled;
+      _ref.readOnly;
+      _ref.required;
+      var error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur;
+      _ref.appearance;
+      _ref.locale;
+      _ref.format;
+      var className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$c);
+    var handleChange = React$1.useCallback(function (e) {
+      onChange(e.target.checked);
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('checkbox', name, className), /*#__PURE__*/React$1.createElement(Form.Check, {
+      type: "checkbox"
+    }, /*#__PURE__*/React$1.createElement(Form.Check.Input, _extends({
+      onChange: handleChange,
+      onBlur: onBlur,
+      disabled: disabled,
+      isInvalid: error != null,
+      checked: value
+    }, passRest(rest))), label && /*#__PURE__*/React$1.createElement(Form.Check.Label, null, label), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+      type: "invalid"
+    }, error)), hint && /*#__PURE__*/React$1.createElement(Form.Text, null, hint));
+  }, ['label', 'hint']);
+  lfLog('Loaded ReactBootrap.Checkbox');
+
+  var index$l = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Checkbox
+  });
+
+  var _excluded$b = ["name", "label", "hint", "value", "placeholder", "lfLocale", "tooltip", "disabled", "readOnly", "required", "error", "onChange", "onBlur", "appearance", "locale", "format", "className"];
+  var Toggle = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint;
+      _ref.value;
+      _ref.placeholder;
+      _ref.lfLocale;
+      _ref.tooltip;
+      var _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled;
+      _ref.readOnly;
+      _ref.required;
+      var error = _ref.error,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur;
+      _ref.appearance;
+      _ref.locale;
+      _ref.format;
+      var className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$b);
+    var handleChange = React$1.useCallback(function (e) {
+      onChange(e.target.checked);
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('checkbox', name, className), /*#__PURE__*/React$1.createElement(Form.Check, {
+      type: "switch"
+    }, /*#__PURE__*/React$1.createElement(Form.Check.Input, _extends({
+      onChange: handleChange,
+      onBlur: onBlur,
+      disabled: disabled,
+      isInvalid: error != null
+    }, passRest(rest))), label && /*#__PURE__*/React$1.createElement(Form.Check.Label, null, label), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+      type: "invalid"
+    }, error)), hint && /*#__PURE__*/React$1.createElement(Form.Text, null, hint));
+  }, ['label', 'hint']);
+  lfLog('Loaded ReactBootrap.Toggle');
+
+  var index$k = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Toggle
+  });
+
+  var _excluded$a = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options", "className"];
+  var CheckboxGroupBootstrap = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled;
+      _ref.readOnly;
+      var _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      _ref$inline = _ref.inline,
+      inline = _ref$inline === void 0 ? false : _ref$inline,
+      _ref$reverse = _ref.reverse,
+      reverse = _ref$reverse === void 0 ? false : _ref$reverse,
+      error = _ref.error,
+      onChange = _ref.onChange;
+      _ref.onBlur;
+      var _ref$options = _ref.options,
+      options = _ref$options === void 0 ? [] : _ref$options,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$a);
+    var _useState = React$1.useState(value !== null && value !== void 0 ? value : []),
+      _useState2 = _slicedToArray(_useState, 2),
+      values = _useState2[0],
+      setValues = _useState2[1];
+    var handleChange = React$1.useCallback(function (e) {
+      var newValues;
+      if (values.includes(e.target.value)) {
+        newValues = values.filter(function (value) {
+          return value !== e.target.value;
+        });
+      } else {
+        newValues = [].concat(_toConsumableArray(values), [e.target.value]);
+      }
+      setValues(newValues);
+      onChange(newValues);
+    }, [onChange, values]);
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('checkbox-group', name, className), /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref2, idx) {
+      var value = _ref2.value,
+        label = _ref2.label;
+      return /*#__PURE__*/React$1.createElement(Form.Check, {
+        type: "checkbox",
+        key: value,
+        reverse: reverse,
+        inline: inline
+      }, /*#__PURE__*/React$1.createElement(Form.Check.Input, _extends({
+        disabled: disabled,
+        id: "".concat(name, "_").concat(value),
+        value: value,
+        name: name,
+        isInvalid: error != null,
+        checked: values.includes(value),
+        onChange: handleChange
+      }, _omit(rest, 'lfFramework', 'lfComponent'))), label && /*#__PURE__*/React$1.createElement(Form.Check.Label, {
+        htmlFor: "".concat(name, "_").concat(value)
+      }, label), _isString(error) && !_isEmpty(error) && idx === options.length - 1 && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+        type: "invalid"
+      }, error));
+    })), hint && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+      type: "invalid"
+    }, error));
+  }, ['label', 'hint'], {
+    options: i18nOptions
+  });
+  lfLog('Loaded ReactBootrap.CheckboxGroup');
+
+  var index$j = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: CheckboxGroupBootstrap
+  });
+
+  var PlaceholderBootstrap = I18N(function (_ref) {
+    var label = _ref.label,
+      hint = _ref.hint,
+      text = _ref.text,
+      name = _ref.name,
+      className = _ref.className;
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('placeholder', name, className), label && /*#__PURE__*/React$1.createElement(Form.Label, null, label), /*#__PURE__*/React$1.createElement(Placeholder, {
+      text: text
+    }), hint && /*#__PURE__*/React$1.createElement(Form.Text, null, hint));
+  }, ['label', 'hint', 'text']);
+  lfLog('Loaded ReactBootrap.Placeholder');
+
+  var index$i = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: PlaceholderBootstrap
+  });
+
+  lfLog('Loaded ReactBootrap.PlaceholderImage');
+
+  var index$h = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: PlaceholderImage
+  });
+
+  var _excluded$9 = ["onChange", "value"];
+
+  // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
+
+  var Date$1 = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties(_ref, _excluded$9);
+    var handleChange = React$1.useCallback(function (e) {
+      return onChange(e.target.value);
+    }, [onChange]);
+    var currentDate = value;
+    if (isValidDate(value)) {
+      // only take 2023-11-12
+      currentDate = value.toISOString().split('T')[0];
+    }
+    return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
+      inputType: "date",
+      component: "date",
+      value: currentDate,
+      onChange: handleChange
+    }, rest));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded ReactBootrap.Date');
+
+  var index$g = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Date$1
+  });
+
+  var _excluded$8 = ["name", "label", "hint", "value", "onChange", "onBlur", "size", "disabled", "readOnly", "error", "required", "rows", "placeholder", "width", "fullWidth", "className"];
+
+  // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
+
+  var Textarea = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      size = _ref.size,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      error = _ref.error,
+      required = _ref.required,
+      rows = _ref.rows,
+      placeholder = _ref.placeholder,
+      width = _ref.width,
+      fullWidth = _ref.fullWidth,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$8);
+    var handleChange = React$1.useCallback(function (e) {
+      onChange(e.target.value);
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('textarea', name, className), /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form.Control, _extends({
+      name: name,
+      as: "textarea",
+      rows: rows,
+      value: value,
+      onChange: handleChange,
+      size: size,
+      placeholder: placeholder,
+      onBlur: onBlur,
+      disabled: disabled,
+      readOnly: readOnly,
+      isInvalid: error != null,
+      style: makeWidthStyle(fullWidth, width)
+    }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+      type: "invalid"
+    }, error));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded ReactBootrap.Textarea');
+
+  var index$f = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Textarea
+  });
+
+  var _excluded$7 = ["name", "label", "hint", "value", "onChange", "onBlur", "disabled", "readOnly", "error", "required", "placeholder", "min", "max", "step", "className"];
+
+  // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
+
+  var Slider = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$readOnly = _ref.readOnly,
+      readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+      error = _ref.error,
+      required = _ref.required,
+      placeholder = _ref.placeholder,
+      min = _ref.min,
+      max = _ref.max,
+      step = _ref.step,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$7);
+    var handleChange = React$1.useCallback(function (e) {
+      onChange(e.target.value);
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('slider', name, className), /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(Form.Range, _extends({
+      name: name,
+      defaultValue: value,
+      onChange: handleChange,
+      min: min,
+      max: max,
+      step: step,
+      placeholder: placeholder,
+      onBlur: onBlur,
+      disabled: disabled,
+      readOnly: readOnly,
+      isInvalid: error != null
+    }, passRest(rest))), hint && !error && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+      type: "invalid"
+    }, error));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded ReactBootrap.Slider');
+
+  var index$e = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Slider
+  });
+
+  lfLog('Loaded ReactBootrap.ThreeColumn');
+
+  var index$d = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ThreeColumns
+  });
+
+  lfLog('Loaded RSuite5.Columns');
+
+  var index$c = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Columns
+  });
+
+  lfLog('Loaded ReactBootrap.TwoColumns');
+
+  var index$b = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: TwoColumns
+  });
+
+  lfLog('Loaded ReactBootrap.Group');
+
+  var index$a = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Group
+  });
+
+  var ReactBoostrapObject = function ReactBoostrapObject(props) {
+    return /*#__PURE__*/React$1.createElement(CommonObject, _extends({
+      LetsFormComponent: LetsForm
+    }, props));
+  };
+  lfLog('Loaded ReactBootstrap.Object');
+
+  var index$9 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ReactBoostrapObject
+  });
+
+  var _excluded$6 = ["name", "label", "hint", "value", "disabled", "readOnly", "required", "inline", "reverse", "error", "onChange", "onBlur", "options", "className"];
+  var RadioGroupBootstrap = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled;
+      _ref.readOnly;
+      var _ref$required = _ref.required,
+      required = _ref$required === void 0 ? false : _ref$required,
+      _ref$inline = _ref.inline,
+      inline = _ref$inline === void 0 ? false : _ref$inline,
+      _ref$reverse = _ref.reverse,
+      reverse = _ref$reverse === void 0 ? false : _ref$reverse,
+      error = _ref.error,
+      onChange = _ref.onChange;
+      _ref.onBlur;
+      var _ref$options = _ref.options,
+      options = _ref$options === void 0 ? [] : _ref$options,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$6);
+    var _useState = React$1.useState(value !== null && value !== void 0 ? value : []),
+      _useState2 = _slicedToArray(_useState, 2),
+      values = _useState2[0],
+      setValues = _useState2[1];
+    var handleChange = React$1.useCallback(function (e) {
+      var newValues;
+      if (values.includes(e.target.value)) {
+        newValues = values.filter(function (value) {
+          return value !== e.target.value;
+        });
+      } else {
+        newValues = [].concat(_toConsumableArray(values), [e.target.value]);
+      }
+      setValues(newValues);
+      onChange(newValues);
+    }, [onChange, values]);
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('radio-group', name, className), /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement("div", null, (options !== null && options !== void 0 ? options : []).map(function (_ref2, idx) {
+      var value = _ref2.value,
+        label = _ref2.label;
+      return /*#__PURE__*/React$1.createElement(Form.Check, {
+        type: "checkbox",
+        key: value,
+        reverse: reverse,
+        inline: inline
+      }, /*#__PURE__*/React$1.createElement(Form.Check.Input, _extends({
+        disabled: disabled,
+        type: "radio",
+        value: value,
+        name: name,
+        id: "".concat(name, "_").concat(value),
+        isInvalid: error != null,
+        checked: values.includes(value),
+        onChange: handleChange
+      }, _omit(rest, 'lfFramework', 'lfComponent'))), label && /*#__PURE__*/React$1.createElement(Form.Check.Label, {
+        htmlFor: "".concat(name, "_").concat(value)
+      }, label), _isString(error) && !_isEmpty(error) && idx === options.length - 1 && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+        type: "invalid"
+      }, error));
+    })), hint && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString(error) && !_isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+      type: "invalid"
+    }, error));
+  }, ['label', 'hint'], {
+    options: i18nOptions
+  });
+  lfLog('Loaded ReactBootrap.RadioGroup');
+
+  var index$8 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RadioGroupBootstrap
+  });
+
+  lfLog('Loaded ReactBootrap.ReactView');
+
+  var index$7 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ReactView
+  });
+
+  var _excluded$5 = ["onChange", "value"];
+
+  // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
+
+  var DateTime = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      value = _ref.value,
+      rest = _objectWithoutProperties(_ref, _excluded$5);
+    var handleChange = React$1.useCallback(function (e) {
+      onChange(e.target.value);
+    }, [onChange]);
+    var currentDate = value;
+    if (isValidDate(value)) {
+      // only keep iso up to the minutes digits
+      var match = value.toISOString().match(/(.*?T[0-9]{1,2}:[0-9]{1,2})/gm);
+      if (match != null) {
+        currentDate = match[0];
+      }
+    }
+    return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
+      inputType: "datetime-local",
+      component: "datetime",
+      value: currentDate,
+      onChange: handleChange
+    }, rest));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded ReactBootrap.DateTime');
+
+  var index$6 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: DateTime
+  });
+
+  var _excluded$4 = ["hint", "required", "tooltip", "name", "label", "className"];
+  var ListArrayBootstrap = I18N(function (_ref) {
+    var _rest$error, _rest$error2;
+    var hint = _ref.hint,
+      required = _ref.required;
+      _ref.tooltip;
+      var name = _ref.name,
+      label = _ref.label,
+      className = _ref.className,
+      rest = _objectWithoutProperties(_ref, _excluded$4);
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1('array', name, className), label && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), /*#__PURE__*/React$1.createElement(ListArray, _extends({
+      LetsFormComponent: LetsForm
+    }, rest)), hint && !((_rest$error = rest.error) !== null && _rest$error !== void 0 && _rest$error.errorMessage) && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _isString((_rest$error2 = rest.error) === null || _rest$error2 === void 0 ? void 0 : _rest$error2.errorMessage) && !_isEmpty(rest.error.errorMessage) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+      type: "invalid"
+    }, rest.error.errorMessage));
+  }, ['label', 'hint']);
+  lfLog('Loaded ReactBootrap.Array');
+
+  var index$5 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: ListArrayBootstrap
+  });
+
+  var _excluded$3 = ["onChange"];
+  var hasDecimals = function hasDecimals(f) {
+    return _isString(f) && (f.includes(',') || f.includes('.'));
+  };
+
+  // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
+
+  var InputNumber = I18N(function (_ref) {
+    var onChange = _ref.onChange,
+      rest = _objectWithoutProperties(_ref, _excluded$3);
+    var handleChange = React$1.useCallback(function (e) {
+      var value = e.target.value;
+      var parsed;
+      if (_isString(value)) {
+        if (value === '') {
+          // void if the user deleted all chars
+          parsed = null;
+        } else if (hasDecimals(value)) {
+          parsed = parseFloat(value);
+        } else {
+          parsed = parseInt(value, 10);
+        }
+        if (!isNaN(parsed)) {
+          onChange(parsed);
+        }
+      }
+    }, [onChange]);
+    return /*#__PURE__*/React$1.createElement(BootstrapGenericInput, _extends({
+      component: "input-number",
+      onChange: handleChange,
+      inputType: "number",
+      step: "5"
+    }, rest));
+  }, ['label', 'hint', 'placeholder']);
+
+  var index$4 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: InputNumber
+  });
+
+  var css_248z$2 = ".lf-form-react-bootstrap .lf-control-tabs [role=tabpanel] {\n  padding-top: var(--lf-field-margin);\n}";
+  styleInject(css_248z$2);
+
+  var _excluded$2 = ["name", "value", "tabs", "onChange", "children", "variant", "transition", "fill", "justify"];
+  var TabsReactBootstrap = I18N(function (_ref) {
+    var name = _ref.name,
+      value = _ref.value,
+      tabs = _ref.tabs,
+      onChange = _ref.onChange,
+      children = _ref.children,
+      variant = _ref.variant,
+      transition = _ref.transition,
+      fill = _ref.fill,
+      justify = _ref.justify,
+      rest = _objectWithoutProperties(_ref, _excluded$2);
+    var active;
+    if (value) {
+      active = value;
+    } else {
+      if (!_isEmpty(tabs)) {
+        active = tabs[0].value;
+      }
+    }
+    return /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-control-tabs",
+      "data-lf-field-name": name
+    }, /*#__PURE__*/React$1.createElement(reactBootstrap.Tabs, _extends({
+      activeKey: active,
+      onSelect: onChange,
+      variant: variant || 'tabs',
+      transition: transition === false ? false : undefined,
+      fill: fill,
+      justify: justify
+    }, passRest(rest)), (tabs || []).map(function (tab) {
+      return /*#__PURE__*/React$1.createElement(reactBootstrap.Tab, {
+        key: tab.value,
+        eventKey: tab.value,
+        title: tab.label
+      }, children(active));
+    })));
+  }, [], {
+    tabs: i18nOptions
+  });
+  lfLog('Loaded ReactBootrap.Tabs');
+
+  var index$3 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: TabsReactBootstrap
+  });
+
+  var css_248z$1 = ".lf-form-react-bootstrap .lf-control-button {\n  min-height: 20px;\n}\n.lf-form-react-bootstrap .lf-control-button .lf-icon {\n  max-width: 20px;\n  max-height: 20px;\n  margin-top: -2px;\n  margin-right: 5px;\n}\n.lf-form-react-bootstrap .lf-control-button .btn-lg .lf-icon {\n  max-width: 24px;\n  max-height: 24px;\n}\n.lf-form-react-bootstrap .lf-control-button .btn-sm .lf-icon {\n  max-width: 16px;\n  max-height: 16px;\n}";
+  styleInject(css_248z$1);
+
+  var _excluded$1 = ["label", "icon", "hint"];
+  var BootstrapButton = function BootstrapButton(_ref) {
+    var label = _ref.label,
+      icon = _ref.icon,
+      hint = _ref.hint,
+      rest = _objectWithoutProperties(_ref, _excluded$1);
+    var inner;
+    if (!_isEmpty(label) && !_isEmpty(icon)) {
+      inner = /*#__PURE__*/React$1.createElement(reactBootstrap.Button, rest, /*#__PURE__*/React$1.createElement("img", {
+        className: "lf-icon",
+        src: icon
+      }), label);
+    } else if (!_isEmpty(label) && _isEmpty(icon)) {
+      inner = /*#__PURE__*/React$1.createElement(reactBootstrap.Button, rest, label);
+    } else if (_isEmpty(label) && !_isEmpty(icon)) {
+      inner = /*#__PURE__*/React$1.createElement(reactBootstrap.Button, rest, /*#__PURE__*/React$1.createElement("img", {
+        className: "lf-icon",
+        src: icon
+      }));
+    } else {
+      inner = /*#__PURE__*/React$1.createElement(React$1.Fragment, null);
+    }
+    return /*#__PURE__*/React$1.createElement(React$1.Fragment, null, inner, hint && /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement(reactBootstrap.Form.Text, null, hint)));
+  };
+  var BiStateButton = I18N(MakeButton(BootstrapButton, function (props) {
+    return {
+      variant: props.variant || 'primary'
+    };
+  }, function (props) {
+    return {
+      variant: 'outline-' + (props.variant || 'primary')
+    };
+  }), ['labelOn', 'labelOff', 'labelLink', 'hint']);
+  lfLog('Loaded ReactBootrap.Button');
+
+  var index$2 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: BiStateButton
+  });
+
+  var _excluded = ["name", "label", "hint", "value", "lfLocale", "className", "disabled", "readOnly", "plaintext", "error", "component", "required", "submitOnEnter", "prefix", "postfix", "fullWidth", "width", "floatingLabel", "align"];
+
+  // DOC: https://react-bootstrap.github.io/forms/form-control/#form-control-props
+
+  var Currency = I18N(function (_ref) {
+    var name = _ref.name,
+      label = _ref.label,
+      hint = _ref.hint,
+      value = _ref.value,
+      lfLocale = _ref.lfLocale,
+      className = _ref.className;
+      _ref.disabled;
+      _ref.readOnly;
+      _ref.plaintext;
+      var error = _ref.error,
+      component = _ref.component,
+      required = _ref.required;
+      _ref.submitOnEnter;
+      var prefix = _ref.prefix,
+      postfix = _ref.postfix,
+      fullWidth = _ref.fullWidth,
+      width = _ref.width,
+      _ref$floatingLabel = _ref.floatingLabel,
+      floatingLabel = _ref$floatingLabel === void 0 ? false : _ref$floatingLabel,
+      align = _ref.align,
+      rest = _objectWithoutProperties(_ref, _excluded);
+    var inner = /*#__PURE__*/React$1.createElement(CommonCurrency, _extends({
+      defaultValue: value,
+      control: Form.Control,
+      locale: lfLocale,
+      name: name,
+      type: "text",
+      isInvalid: error != null,
+      style: makeWidthStyle(fullWidth, width, _defineProperty$1({}, align ? 'text-align' : undefined, align))
+    }, passRest(rest)));
+    var innerGroup = inner;
+    var needsGroup = postfix || prefix;
+    if (needsGroup) {
+      innerGroup = /*#__PURE__*/React$1.createElement(InputGroup, null, prefix && /*#__PURE__*/React$1.createElement(InputGroup.Text, null, TextOrIcon(prefix)), inner, postfix && /*#__PURE__*/React$1.createElement(InputGroup.Text, null, TextOrIcon(postfix)));
+    }
+    var useFloatingLabels = floatingLabel && !needsGroup;
+    return /*#__PURE__*/React$1.createElement(Form.Group, makeClassName$1(component, name, className), useFloatingLabels && label && /*#__PURE__*/React$1.createElement(FloatingLabel, {
+      label: label
+    }, innerGroup), !useFloatingLabels && label && /*#__PURE__*/React$1.createElement(Form.Label, null, label, required && /*#__PURE__*/React$1.createElement(RequiredIcon, null)), !useFloatingLabels && innerGroup, hint && !error && /*#__PURE__*/React$1.createElement(Form.Text, null, hint), _.isString(error) && !_.isEmpty(error) && /*#__PURE__*/React$1.createElement(Form.Control.Feedback, {
+      type: "invalid"
+    }, error));
+  }, ['label', 'hint', 'placeholder']);
+  lfLog('Loaded ReactBootrap.Currency');
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Currency
+  });
+
+  var css_248z = ".lf-form-react-bootstrap .lf-buttons {\n  display: flex;\n}\n.lf-form-react-bootstrap .lf-buttons button:not(:first-child) {\n  margin-left: 10px;\n}\n.lf-form-react-bootstrap .invalid-feedback {\n  display: inherit !important;\n}";
+  styleInject(css_248z);
+
+  var FormBootstrap = function FormBootstrap(_ref) {
+    var name = _ref.name,
+      children = _ref.children,
+      onSubmit = _ref.onSubmit,
+      buttonsAlign = _ref.buttonsAlign,
+      onReset = _ref.onReset,
+      _ref$hideToolbar = _ref.hideToolbar,
+      hideToolbar = _ref$hideToolbar === void 0 ? false : _ref$hideToolbar,
+      _ref$onlyFields = _ref.onlyFields,
+      onlyFields = _ref$onlyFields === void 0 ? false : _ref$onlyFields,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$disabledSubmit = _ref.disabledSubmit,
+      disabledSubmit = _ref$disabledSubmit === void 0 ? false : _ref$disabledSubmit,
+      plaintext = _ref.plaintext,
+      _ref$labelSubmit = _ref.labelSubmit,
+      labelSubmit = _ref$labelSubmit === void 0 ? 'Submit' : _ref$labelSubmit,
+      _ref$labelCancel = _ref.labelCancel,
+      labelCancel = _ref$labelCancel === void 0 ? 'Cancel' : _ref$labelCancel,
+      _ref$onBlur = _ref.onBlur,
+      onBlur = _ref$onBlur === void 0 ? function () {} : _ref$onBlur,
+      custom = _ref.custom;
+    return /*#__PURE__*/React$1.createElement(Form, {
+      className: classNames('lf-form lf-form-react-bootstrap', _defineProperty$1({}, buttonsAlign ? "lf-form-buttons-align-".concat(buttonsAlign) : undefined, true)),
+      "data-lf-form-name": name,
+      onSubmit: onSubmit,
+      onBlur: onBlur
+    }, /*#__PURE__*/React$1.createElement("div", null, children), !hideToolbar && !onlyFields && !plaintext && /*#__PURE__*/React$1.createElement("div", {
+      className: "lf-buttons"
+    }, /*#__PURE__*/React$1.createElement(Button, {
+      variant: "primary",
+      onClick: onSubmit,
+      disabled: disabled || disabledSubmit
+    }, labelSubmit), /*#__PURE__*/React$1.createElement(Button, {
+      variant: "secondary",
+      onClick: onReset,
+      disabled: disabled
+    }, labelCancel), custom));
+  };
+  lfLog('Loaded ReactBootrap.Form');
+
+  var index = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: FormBootstrap
   });
 
   exports.Connectors = Connectors;
   exports.FIELDS_KEY = FIELDS_KEY;
   exports.FRAMEWORKS = FRAMEWORKS;
   exports.FRAMEWORKS_LABELS = FRAMEWORKS_LABELS;
-  exports.Fields = Fields;
-  exports.Forms = Forms;
+  exports.Fields = Fields$1;
+  exports.Forms = Forms$1;
   exports.LfArray = LfArray;
   exports.LfColumn = LfColumn;
   exports.LfColumns = LfColumns;
   exports.LfField = LfField;
   exports.LfGroup = LfGroup;
+  exports.LfObject = LfObject;
   exports.LfStep = LfStep;
   exports.LfSteps = LfSteps;
   exports.LfTab = LfTab;
@@ -24905,7 +26222,7 @@
   exports.cleanUp = cleanUp;
   exports.collectIds = collectIds;
   exports.collectNames = collectNames;
-  exports.default = LetsForm;
+  exports.default = LetsForm$1;
   exports.fillIds = fillIds;
   exports.filterFields = filterFields;
   exports.filterOptions = filterOptions;
