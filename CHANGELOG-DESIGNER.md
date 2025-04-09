@@ -1,5 +1,16 @@
 # LetsForm Designer Changelog
 
+## v0.11.0
+- feat: added `object` field to all frameworks
+- feat: increase limit to 5 forms for free users
+- feat: import JSON schema in designer
+- fix: array arrayOfValues and support for primitives
+- fix: form re-renders if `errors` prop changes
+- fix: create form button in dashboard
+- fix: form builders box in dashboard
+- fix: height of modal
+- fix: cookie consent
+
 ## v0.10.1
 - fix: missing React import
 - fix: default currency prop with warning
