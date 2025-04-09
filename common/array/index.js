@@ -22,33 +22,40 @@ const randomId = function(length = 12) {
  * @returns
  */
 const isEmptyObject = obj => {
-  return _.isEmpty(obj) || Object.keys(obj).every(key => _.isEmpty(obj[key]));
+  return _.isEmpty(obj) || Object.keys(obj).every(key => obj[key] === null || obj[key] === undefined);
 };
 
 /**
- * flatArrayOfString
+ * flatArrayOfValues
  * If an array of object can be flattned (one keuy), then return a flat array, otherwise raise expection
  * @param {*} a
  * @returns
  */
- const flatArrayOfString = a => {
+ const flatArrayOfValues = a => {
   const canBeFlat = a.every(obj => Object.keys(obj).length === 1);
   if (!canBeFlat) {
     throw new Error(`Cannot be flattened`);
   }
-  return a.map(obj => obj[Object.keys(obj)[0]]);
+  if (_.isArray(a) && _.isEmpty(a)) {
+    return [];
+  }
+  const firstKey = Object.keys(a[0])[0];
+  return a.map(obj => obj[firstKey]);
 }
 
 const formatArray = (a, arrayType = 'arrayOfObject') => {
+  // remove array ids and empty objects
   const cleaned = a
     .map(i => _.omit(i, 'id'))
     .filter(i => !isEmptyObject(i));
 
   try {
-    const flattened = flatArrayOfString(cleaned);
-    if (arrayType === 'arrayOfString') {
+    if (arrayType === 'arrayOfString' || arrayType === 'arrayOfValues') {
+      const flattened = flatArrayOfValues(cleaned);
+
       return flattened;
     } else if (arrayType === 'commaSeparated') {
+      const flattened = flatArrayOfValues(cleaned);
       return flattened.join(',');
     }
   } catch(e) {
@@ -58,18 +65,32 @@ const formatArray = (a, arrayType = 'arrayOfObject') => {
 };
 
 
+/**
+ * isArrayOfValues
+ * Is an array of elements (string, boolean, number but NOT object)
+ * @param {Array} s
+ * @returns
+ */
+const isArrayOfValues = s => _.isArray(s) && s.every(v => !_.isObject(s));
+
+
 const makeDefaultValue = (defaultValue, arrayType, form) => {
-  if (arrayType === 'arrayOfString') {
-    const isArrayOfString = _.isArray(defaultValue) && defaultValue.every(s => _.isString(s));
+  let formattedDefaultValue;
+  if (arrayType === 'arrayOfString' || arrayType === 'arrayOfValues') {
     const names = collectNames(form);
-    // if it's an array of string
-    if (isArrayOfString && names.length === 1) {
-      return defaultValue.map(s => ({
+    // if it's an array of values, forms has just one element and not empty array
+    if (isArrayOfValues(defaultValue)
+      && names.length === 1
+      && _.isArray(defaultValue)
+      && defaultValue.length > 0
+    ) {
+      formattedDefaultValue = defaultValue.map(s => ({
         id: randomId(),
         [names[0]]: s
       }));
+    } else {
+      formattedDefaultValue = [{ id: randomId() }];
     }
-    return [{ id: randomId() }];
   } else if (arrayType === 'commaSeparated') {
     const names = collectNames(form);
     if (names.length === 1 && _.isString(defaultValue) && !_.isEmpty(defaultValue)) {
@@ -82,6 +103,8 @@ const makeDefaultValue = (defaultValue, arrayType, form) => {
   } else {
     return _.isArray(defaultValue) && !_.isEmpty(defaultValue) ? fillIds(defaultValue) : [{ id: randomId() }]
   }
+
+  return formattedDefaultValue;
 };
 
 
@@ -125,7 +148,6 @@ const ListArray = ({
 
   let style = {};
   if (maxHeight) {
-    //style.maxHeigth = _.isNumber(maxHeigth) ? `${maxHeigth}px` : maxHeigth;
     style = {
       maxHeight: `${maxHeight}px`,
       overflowY: 'scroll'

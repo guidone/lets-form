@@ -1,5 +1,10 @@
 # LetsForm Changelog
 
+## v0.13.0
+- feat: added `object` field for all frameworks
+- fix: array arrayOfValues and support for primitives
+- fix: form re-renders if `errors` prop changes
+
 ## v0.12.17
 - fix: missing React import
 - fix: default currency prop with warning

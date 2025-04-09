@@ -30,8 +30,16 @@ const RawValidationErrors = ({
                   />
                 );
               }
-            })
-
+            });
+        } else if (errorObj && _.isObject(errorObj.errorMessages)) {
+          const label = i18n(errorObj.label, locale);
+          return (
+            <RawValidationErrors
+              key={label || fieldName}
+              errors={errorObj.errorMessages}
+              scope={`${label || fieldName} - `}
+            />
+          );
         } else if (errorObj && _.isString(errorObj.errorMessage)) {
           const label = i18n(errorObj.label, locale);
           const errorMessage = errorObj.errorMessage ? i18n(errorObj.errorMessage, locale) : 'This is required';

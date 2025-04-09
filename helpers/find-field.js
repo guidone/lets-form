@@ -11,7 +11,7 @@ const findField = (fields, predicate) => {
 
   fields.forEach(field => {
     if (!found) {
-      if (field.component === 'group' || field.component === 'array') {
+      if (field.component === 'group' || field.component === 'array' || field.component === 'group') {
         found = findField(field.fields, predicate);
       } else if (field.component === 'two-columns') {
         found = findField(field.leftFields, predicate)

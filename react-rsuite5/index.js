@@ -19,6 +19,9 @@ const Fields = {
   'array': {
     'react-rsuite5': lazy(() => import('./array'))
   },
+  'object': {
+    'react-rsuite5': lazy(() => import('./object'))
+  },
   'two-columns': {
     'react-rsuite5': lazy(() => import('./two-columns'))
   },

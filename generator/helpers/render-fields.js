@@ -6,6 +6,8 @@ import { FRAMEWORKS } from '../../costants';
 
 import { MissingComponent } from './missing-component';
 
+const NOOP = () => {};
+
 const renderFields = ({
   fields,
   control,
@@ -322,6 +324,7 @@ const renderFields = ({
               {renderFields({
                 ...renderFieldsParams,
                 fields: field.fields,
+                onChange: NOOP, // do nothing while in edit mode
                 disabled: field.disabled ? true : disabled, // pass disabled status to inner components
                 prependView: PlaceholderWrapper && (
                   <PlaceholderWrapper
@@ -344,12 +347,57 @@ const renderFields = ({
             level={level}
             index={index}
             className="array"
-          >{component}</GroupWrapper>);
+          >{component}</GroupWrapper>
+        );
+      } else if (field.component === 'object' && GroupWrapper) {
+        // this only used in designer
+        const component = (
+          <Component
+            key={field.name}
+            lfComponent={field.component}
+            lfFramework={framework}
+            lfLocale={locale}
+            name={field.name}
+            label={field.label}
+            hint={field.hint}
+            disabled={field.disabled}
+            error={errors ? errors[field.name] : null}
+            {...additionalFields}
+          >
+            <>
+              {renderFields({
+                ...renderFieldsParams,
+                fields: field.fields,
+                onChange: NOOP, // do nothing while in edit mode
+                disabled: field.disabled ? true : disabled, // pass disabled status to inner components
+                prependView: PlaceholderWrapper && (
+                  <PlaceholderWrapper
+                    key={`wrapper_top_field`}
+                    parentField={field}
+                    parentFieldTarget="fields"
+                    nextField={field.fields && field.fields.length ? field.fields[0] : null}
+                  />
+                )
+              })}
+              {BottomView && <BottomView context="object" key={`bottom_view_${field.name}`} field={field} target="fields" />}
+            </>
+          </Component>
+        );
+
+        return (
+          <GroupWrapper
+            key={`wrapper_${field.name}`}
+            field={field}
+            level={level}
+            index={index}
+            className="group"
+          >{component}</GroupWrapper>
+        );
       }
 
 
       let error;
-      if (field.component === 'array') {
+      if (field.component === 'array' || field.component === 'object') {
         // pass errors down the the array component only if it's "inline"
         error = errors != null && showErrors === 'inline' ? errors[field.name] : null;
       } else if (errors && errors[field.name] && errors[field.name].errorMessage) {
@@ -361,7 +409,7 @@ const renderFields = ({
       let perComponentAdditionalFields = {
         ...additionalFields
       };
-      if (field.component === 'array') {
+      if (field.component === 'array' || field.component === 'object') {
         perComponentAdditionalFields.formShowErrors = showErrors;
       }
 

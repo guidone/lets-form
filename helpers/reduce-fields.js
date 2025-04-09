@@ -12,6 +12,7 @@ const reduceFields = (
     'two-columns': true,
     'three-columns': true,
     'columns': true,
+    'object': true,
     ...opts
   };
   if (_.isEmpty(fields) || !_.isArray(fields)) {
@@ -24,6 +25,8 @@ const reduceFields = (
     }
     result = predicate(field, result);
     if (field.component === 'group' && options.group) {
+      result = reduceFields(field.fields, predicate, result, opts);
+    } else if (field.component === 'object' && options.object) {
       result = reduceFields(field.fields, predicate, result, opts);
     } else if (field.component === 'array' && options.array) {
       result = reduceFields(field.fields, predicate, result, opts);

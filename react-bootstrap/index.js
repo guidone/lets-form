@@ -46,6 +46,9 @@ const Fields = {
   'group': {
     'react-bootstrap': lazy(() => import('./group'))
   },
+  'object': {
+    'react-bootstrap': lazy(() => import('./object'))
+  },
   'radio-group': {
     'react-bootstrap': lazy(() => import('./radio-group'))
   },

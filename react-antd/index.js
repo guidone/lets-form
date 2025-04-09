@@ -52,6 +52,9 @@ const Fields = {
   'group': {
     'react-antd': lazy(() => import('./group'))
   },
+  'object': {
+    'react-antd': lazy(() => import('./object'))
+  },
   'slider': {
     'react-antd': lazy(() => import('./slider'))
   },

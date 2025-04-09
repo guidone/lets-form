@@ -1,8 +1,17 @@
-const VALIDATION_PROPS = ['validationMaxLength', 'validationMinLength', 'validationMin', 'validationMax', 'validationPattern', 'validate', 'errorMessage'];
+const VALIDATION_PROPS = [
+  'validationMaxLength',
+  'validationMinLength',
+  'validationMin',
+  'validationMax',
+  'validationPattern',
+  'validate',
+  'errorMessage'
+];
 
 // create blank elements for the DSL
 export const LfField = () => (<></>);
 export const LfGroup = () => (<></>);
+export const LfObject = () => (<></>);
 export const LfColumns = () => (<></>);
 export const LfColumn = () => (<></>);
 export const LfArray = () => (<></>);
@@ -18,6 +27,7 @@ const elementToString = el => {
 const typeToString = type => {
   if (type === LfField) { return '<LfField>' } else
   if (type === LfGroup) { return '<LfGroup>' } else
+  if (type === LfObject) { return '<LfObject>' } else
   if (type === LfColumns) { return '<LfColumns>' } else
   if (type === LfColumn) { return '<LfColumn>' } else
   if (type === LfArray) { return '<LfArray>' } else
@@ -206,6 +216,12 @@ export const traverseChildren = (children, { components, framework } = {}) => {
         return {
           ..._.omit(element.props, 'children'),
           component: 'group',
+          fields: traverseChildren(element.props.children, { components, framework })
+        };
+      } else if (elementOf(element, LfObject)) {
+        return {
+          ..._.omit(element.props, 'children'),
+          component: 'object',
           fields: traverseChildren(element.props.children, { components, framework })
         };
       } else if (elementOf(element, LfColumns) &&

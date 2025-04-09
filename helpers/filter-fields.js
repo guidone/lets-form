@@ -22,7 +22,7 @@ const filterFields = (
       }
       let newField = field;
 
-      if (field.component === 'group') {
+      if (field.component === 'group' || field.component === 'object') {
         const newFields = filterFields(field.fields, predicate);
         if (newFields !== field.fields) {
           newField = {
