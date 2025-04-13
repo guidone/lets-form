@@ -1,28 +1,6 @@
-import React, { createElement, forwardRef, lazy, useRef, useCallback } from 'react';
+import React, { createElement, forwardRef, lazy, useRef } from 'react';
 
-/**
- * wrapOnChange
- * Wrap the component into HOC which normalize the onChange method, first argument the value,
- * second argument the field name. This makes the onChange function of the the form generator
- * referential stable
- */
-const wrapOnChange = Component => {
-  return ({ onChange, ...rest }) => {
-
-    const handleChange = useCallback(
-      value => onChange(value, rest.name),
-      [onChange]
-    );
-
-    return (
-      <Component
-        {...rest}
-        onChange={handleChange}
-      />
-    );
-  };
-};
-
+import { wrapOnChange } from './wrap-on-change';
 
 export function lazyPreload(factory) {
   const ReactLazyComponent = lazy(factory);
