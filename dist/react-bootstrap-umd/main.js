@@ -1,4 +1,4 @@
-/* LetsForm react-bootstrap v0.12.17 - UMD */
+/* LetsForm react-bootstrap v0.13.0 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-bootstrap/FloatingLabel'), require('react-bootstrap/Form'), require('react-bootstrap/InputGroup'), require('react-bootstrap'), require('react-bootstrap/Button')) :
   typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-bootstrap/FloatingLabel', 'react-bootstrap/Form', 'react-bootstrap/InputGroup', 'react-bootstrap', 'react-bootstrap/Button'], factory) :
@@ -8070,6 +8070,15 @@
   	open: null,
   	border: null
   };
+  var object$1 = {
+  	name: null,
+  	label: null,
+  	hidden: null,
+  	align: null,
+  	collapsible: null,
+  	open: null,
+  	border: null
+  };
   var columns$1 = {
   	name: null,
   	columns: null,
@@ -9456,14 +9465,7 @@
   	],
   	autoContrast: [
   		"react-mantine"
-  	],
-  	validationMinLength: "validation",
-  	validationMin: "validation",
-  	validationMaxLength: "validation",
-  	validationMax: "validation",
-  	validationPattern: "validation",
-  	validationMessage: "validation",
-  	required: null
+  	]
   };
   var time$1 = {
   	name: null,
@@ -9853,6 +9855,7 @@
   	toggle: toggle$1,
   	select: select$1,
   	group: group$1,
+  	object: object$1,
   	"two-columns": {
   	name: null,
   	layout: null,
@@ -11503,6 +11506,63 @@
   		}
   	]
   };
+  var object = {
+  	label: "Object",
+  	category: "layout",
+  	name: "object",
+  	description: "Group fields and field values inside an object",
+  	frameworks: [
+  		"react-antd",
+  		"react",
+  		"react-bootstrap",
+  		"react-material-ui",
+  		"react-rsuite5",
+  		"react-mantine"
+  	],
+  	common: [
+  		{
+  			name: "name",
+  			type: "string"
+  		},
+  		{
+  			name: "label",
+  			type: "string | i18n",
+  			description: "Label of the field"
+  		},
+  		{
+  			name: "hidden",
+  			type: "boolean",
+  			description: "Hides the field from the form"
+  		},
+  		{
+  			name: "align",
+  			type: "string",
+  			options: [
+  				"left",
+  				"center",
+  				"right"
+  			]
+  		},
+  		{
+  			name: "collapsible",
+  			type: "boolean"
+  		},
+  		{
+  			name: "open",
+  			type: "boolean"
+  		},
+  		{
+  			name: "border",
+  			type: "string",
+  			options: [
+  				"top",
+  				"bottom",
+  				"topBottom",
+  				"boxed"
+  			]
+  		}
+  	]
+  };
   var columns = {
   	label: "Columns",
   	category: "layout",
@@ -11533,9 +11593,10 @@
   	]
   };
   var array = {
-  	label: "List Array",
-  	category: "general",
+  	label: "Array",
+  	category: "layout",
   	name: "array",
+  	description: "Array of fields",
   	frameworks: [
   		"react-antd",
   		"react",
@@ -11598,7 +11659,7 @@
   			description: "Defines the result of the list component, \"arrayOfString\" and \"commaSeparated\" only applies if list field has only one field",
   			options: [
   				"arrayOfObject",
-  				"arrayOfString",
+  				"arrayOfValues",
   				"commaSeparated"
   			]
   		}
@@ -16887,6 +16948,7 @@
   	toggle: toggle,
   	select: select,
   	group: group,
+  	object: object,
   	"two-columns": {
   	label: "Two Columns",
   	category: "layout",
@@ -21095,6 +21157,27 @@
     }, renderFields$1(fields, locale, framework, currentValues));
   };
 
+  var _excluded$j = ["onChange"];
+
+  /**
+   * wrapOnChange
+   * Wrap the component into HOC which normalize the onChange method, first argument the value,
+   * second argument the field name. This makes the onChange function of the the form generator
+   * referential stable
+   */
+  var wrapOnChange = function wrapOnChange(Component) {
+    return function (_ref) {
+      var onChange = _ref.onChange,
+        rest = _objectWithoutProperties(_ref, _excluded$j);
+      var handleChange = React$1.useCallback(function (value) {
+        return onChange(value, rest.name);
+      }, [onChange]);
+      return /*#__PURE__*/React$1.createElement(Component, _extends({}, rest, {
+        onChange: handleChange
+      }));
+    };
+  };
+
   /**
    * Merge additional components to the main library
    * @param {*} main
@@ -21105,12 +21188,17 @@
     // if not empty, then merge, overwriting is ok
     if (!_isEmpty(additional) && Object.keys(additional).length !== 0) {
       Object.keys(additional).forEach(function (componentName) {
+        var wrappedAdditional = Object.keys(additional[componentName]).reduce(function (acc, framework) {
+          return _objectSpread2(_objectSpread2({}, acc), {}, _defineProperty$1({}, framework, wrapOnChange(additional[componentName][framework])));
+        }, {});
+
+        // merge wrapped component
         if (main[componentName] == null) {
-          main[componentName] = _objectSpread2(_objectSpread2({}, additional[componentName]), {}, {
+          main[componentName] = _objectSpread2(_objectSpread2({}, wrappedAdditional), {}, {
             custom: true
           });
         } else {
-          main[componentName] = _objectSpread2(_objectSpread2(_objectSpread2({}, main[componentName]), additional[componentName]), {}, {
+          main[componentName] = _objectSpread2(_objectSpread2(_objectSpread2({}, main[componentName]), wrappedAdditional), {}, {
             custom: true
           });
         }
@@ -22977,7 +23065,7 @@
   var css_248z$4 = ".lf-lets-form .label-test-buttons {\n  float: right;\n  background-color: #cccccc;\n  color: #555555;\n  font-size: 10px;\n  padding: 1px 3px;\n  margin-top: -16px;\n  border-top-left-radius: 3px;\n  text-transform: uppercase;\n}\n.lf-lets-form.lf-lets-form-edit-mode .lf-buttons {\n  padding: 10px;\n  background-image: linear-gradient(45deg, #eeeeee 25%, #ffffff 25%, #ffffff 50%, #eeeeee 50%, #eeeeee 75%, #ffffff 75%, #ffffff 100%);\n  background-size: 56.57px 56.57px;\n}\n\n.lf-form {\n  --lf-field-margin: 16px;\n  --lf-field-column-margin: 16px;\n  --lf-font-size: 15px;\n  --lf-field-button-margin: 10px;\n  --lf-highligh-color: #ff6633;\n  --lf-hover-color: #FF9F85;\n  --lf-drop-highlight-color: #3498ff;\n  --lf-field-margin-top: 5px;\n  --lf-border-color: #e5e5ea;\n  --lf-group-padding: 15px;\n  --lf-group-header: 15px;\n  --lf-buttons-margin: 32px;\n}\n.lf-form.lf-form-buttons-align-center .lf-buttons {\n  justify-content: center;\n}\n.lf-form.lf-form-buttons-align-left .lf-buttons {\n  justify-content: flex-start;\n}\n.lf-form.lf-form-buttons-align-right .lf-buttons {\n  justify-content: flex-end;\n}\n.lf-form .lf-buttons {\n  margin-top: var(--lf-buttons-margin);\n}\n.lf-form [class*=lf-control]:not(:first-child) {\n  margin-top: var(--lf-field-margin);\n  margin-bottom: 0px !important;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item {\n  --lf-field-margin: 15px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control] {\n  margin-bottom: 0px;\n}\n.lf-form .lf-control-common-array .lf-control-common-array-item [class^=lf-control]:not(:first-child) {\n  margin-top: 10px;\n}\n\n.lf-icon-asterisk {\n  margin-top: -3px;\n  display: inline-block;\n}\n\n.lf-missing-component {\n  border: 1px solid #bbbbbb;\n  background-color: #f6f6f6;\n  padding: 20px;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  align-content: stretch;\n  align-items: flex-start;\n}\n.lf-missing-component .icon {\n  order: 0;\n  flex: 0 0;\n  align-self: auto;\n  margin-top: 2px;\n}\n.lf-missing-component .tag-component {\n  background-color: #673ab7;\n  color: #ffffff;\n  font-size: 12px;\n  padding: 1px 4px 2px 4px;\n  border-radius: 3px;\n  line-height: 17px;\n}\n.lf-missing-component .message {\n  display: inline-block;\n  margin-left: 10px;\n  order: 0;\n  flex: 1 0;\n  align-self: auto;\n}";
   styleInject(css_248z$4);
 
-  var _excluded$j = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
+  var _excluded$i = ["framework", "form", "onChange", "onSubmit", "onSubmitSuccess", "onSubmitError", "onReset", "onError", "onEnter", "onBlur", "onJavascriptError", "locale", "wrapper", "groupWrapper", "placeholderWrapper", "bottomView", "defaultValues", "onlyFields", "debug", "disabled", "readOnly", "plaintext", "hideToolbar", "loader", "prealoadComponents", "custom", "children", "components", "className", "hideCancel", "labelCancel", "labelSubmit", "hideSubmit", "demo", "footer", "disableButtons", "disableOnSubmit", "resetAfterSubmit", "context", "errors"];
   var DEFAULT_FORM = {
     version: 2,
     fields: []
@@ -23050,7 +23138,7 @@
         resetAfterSubmit = _ref2$resetAfterSubmi === void 0 ? true : _ref2$resetAfterSubmi,
         formContext = _ref2.context,
         errors = _ref2.errors,
-        rest = _objectWithoutProperties(_ref2, _excluded$j);
+        rest = _objectWithoutProperties(_ref2, _excluded$i);
       var showErrors = form.showErrors,
         connectors = form.connectors;
       var _useState = React$1.useState(prealoadComponents),
@@ -23456,26 +23544,6 @@
     return FormGenerator;
   };
 
-  var _excluded$i = ["onChange"];
-
-  /**
-   * wrapOnChange
-   * Wrap the component into HOC which normalize the onChange method, first argument the value,
-   * second argument the field name. This makes the onChange function of the the form generator
-   * referential stable
-   */
-  var wrapOnChange = function wrapOnChange(Component) {
-    return function (_ref) {
-      var onChange = _ref.onChange,
-        rest = _objectWithoutProperties(_ref, _excluded$i);
-      var handleChange = React$1.useCallback(function (value) {
-        return onChange(value, rest.name);
-      }, [onChange]);
-      return /*#__PURE__*/React$1.createElement(Component, _extends({}, rest, {
-        onChange: handleChange
-      }));
-    };
-  };
   function lazyPreload(factory) {
     var ReactLazyComponent = /*#__PURE__*/React$1.lazy(factory);
     var PreloadedComponent;

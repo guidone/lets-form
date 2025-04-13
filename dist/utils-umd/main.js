@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.12.17 - UMD */
+/* LetsForm Utils v0.13.0 - UMD */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -5669,6 +5669,63 @@
   		}
   	]
   };
+  var object = {
+  	label: "Object",
+  	category: "layout",
+  	name: "object",
+  	description: "Group fields and field values inside an object",
+  	frameworks: [
+  		"react-antd",
+  		"react",
+  		"react-bootstrap",
+  		"react-material-ui",
+  		"react-rsuite5",
+  		"react-mantine"
+  	],
+  	common: [
+  		{
+  			name: "name",
+  			type: "string"
+  		},
+  		{
+  			name: "label",
+  			type: "string | i18n",
+  			description: "Label of the field"
+  		},
+  		{
+  			name: "hidden",
+  			type: "boolean",
+  			description: "Hides the field from the form"
+  		},
+  		{
+  			name: "align",
+  			type: "string",
+  			options: [
+  				"left",
+  				"center",
+  				"right"
+  			]
+  		},
+  		{
+  			name: "collapsible",
+  			type: "boolean"
+  		},
+  		{
+  			name: "open",
+  			type: "boolean"
+  		},
+  		{
+  			name: "border",
+  			type: "string",
+  			options: [
+  				"top",
+  				"bottom",
+  				"topBottom",
+  				"boxed"
+  			]
+  		}
+  	]
+  };
   var columns = {
   	label: "Columns",
   	category: "layout",
@@ -5699,9 +5756,10 @@
   	]
   };
   var array = {
-  	label: "List Array",
-  	category: "general",
+  	label: "Array",
+  	category: "layout",
   	name: "array",
+  	description: "Array of fields",
   	frameworks: [
   		"react-antd",
   		"react",
@@ -5764,7 +5822,7 @@
   			description: "Defines the result of the list component, \"arrayOfString\" and \"commaSeparated\" only applies if list field has only one field",
   			options: [
   				"arrayOfObject",
-  				"arrayOfString",
+  				"arrayOfValues",
   				"commaSeparated"
   			]
   		}
@@ -11053,6 +11111,7 @@
   	toggle: toggle,
   	select: select,
   	group: group,
+  	object: object,
   	"two-columns": {
   	label: "Two Columns",
   	category: "layout",

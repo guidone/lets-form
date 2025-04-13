@@ -1,4 +1,4 @@
-/* LetsForm Utils v0.12.17 - ESM */
+/* LetsForm Utils v0.13.0 - ESM */
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -5663,6 +5663,63 @@ var group = {
 		}
 	]
 };
+var object = {
+	label: "Object",
+	category: "layout",
+	name: "object",
+	description: "Group fields and field values inside an object",
+	frameworks: [
+		"react-antd",
+		"react",
+		"react-bootstrap",
+		"react-material-ui",
+		"react-rsuite5",
+		"react-mantine"
+	],
+	common: [
+		{
+			name: "name",
+			type: "string"
+		},
+		{
+			name: "label",
+			type: "string | i18n",
+			description: "Label of the field"
+		},
+		{
+			name: "hidden",
+			type: "boolean",
+			description: "Hides the field from the form"
+		},
+		{
+			name: "align",
+			type: "string",
+			options: [
+				"left",
+				"center",
+				"right"
+			]
+		},
+		{
+			name: "collapsible",
+			type: "boolean"
+		},
+		{
+			name: "open",
+			type: "boolean"
+		},
+		{
+			name: "border",
+			type: "string",
+			options: [
+				"top",
+				"bottom",
+				"topBottom",
+				"boxed"
+			]
+		}
+	]
+};
 var columns = {
 	label: "Columns",
 	category: "layout",
@@ -5693,9 +5750,10 @@ var columns = {
 	]
 };
 var array = {
-	label: "List Array",
-	category: "general",
+	label: "Array",
+	category: "layout",
 	name: "array",
+	description: "Array of fields",
 	frameworks: [
 		"react-antd",
 		"react",
@@ -5758,7 +5816,7 @@ var array = {
 			description: "Defines the result of the list component, \"arrayOfString\" and \"commaSeparated\" only applies if list field has only one field",
 			options: [
 				"arrayOfObject",
-				"arrayOfString",
+				"arrayOfValues",
 				"commaSeparated"
 			]
 		}
@@ -11047,6 +11105,7 @@ var Manifests = {
 	toggle: toggle,
 	select: select,
 	group: group,
+	object: object,
 	"two-columns": {
 	label: "Two Columns",
 	category: "layout",
