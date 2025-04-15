@@ -1,5 +1,8 @@
 # LetsForm Designer Changelog
 
+## v0.11.1
+- feat: switched form translation to OpenAPI
+
 ## v0.11.0
 - feat: added `object` field to all frameworks
 - feat: increase limit to 5 forms for free users
